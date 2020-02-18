@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->inputPosition () );
+      auto ptr = new QPoint( obj->inputPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

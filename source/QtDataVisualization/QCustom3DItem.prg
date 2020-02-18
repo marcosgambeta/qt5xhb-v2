@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->position () );
+      auto ptr = new QVector3D( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->scaling () );
+      auto ptr = new QVector3D( obj->scaling () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->rotation () );
+      auto ptr = new QQuaternion( obj->rotation () );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

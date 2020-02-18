@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->heightMap () );
+      auto ptr = new QImage( obj->heightMap () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

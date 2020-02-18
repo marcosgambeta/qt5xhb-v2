@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->sliceFrameColor () );
+      auto ptr = new QColor( obj->sliceFrameColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->sliceFrameWidths () );
+      auto ptr = new QVector3D( obj->sliceFrameWidths () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->sliceFrameGaps () );
+      auto ptr = new QVector3D( obj->sliceFrameGaps () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->sliceFrameThicknesses () );
+      auto ptr = new QVector3D( obj->sliceFrameThicknesses () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QImage * ptr = new QImage( obj->renderSlice ( (Qt::Axis) hb_parni(1), PINT(2) ) );
+      auto ptr = new QImage( obj->renderSlice ( (Qt::Axis) hb_parni(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

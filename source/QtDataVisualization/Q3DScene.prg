@@ -147,7 +147,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->viewport () );
+      auto ptr = new QRect( obj->viewport () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->primarySubViewport () );
+      auto ptr = new QRect( obj->primarySubViewport () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->secondarySubViewport () );
+      auto ptr = new QRect( obj->secondarySubViewport () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->selectionQueryPosition () );
+      auto ptr = new QPoint( obj->selectionQueryPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->graphPositionQuery () );
+      auto ptr = new QPoint( obj->graphPositionQuery () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPoint * ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
+      auto ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

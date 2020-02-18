@@ -353,7 +353,7 @@ HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor () );
+      auto ptr = new QColor( obj->backgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->windowColor () );
+      auto ptr = new QColor( obj->windowColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->labelTextColor () );
+      auto ptr = new QColor( obj->labelTextColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->labelBackgroundColor () );
+      auto ptr = new QColor( obj->labelBackgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->gridLineColor () );
+      auto ptr = new QColor( obj->gridLineColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->singleHighlightColor () );
+      auto ptr = new QColor( obj->singleHighlightColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->multiHighlightColor () );
+      auto ptr = new QColor( obj->multiHighlightColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->lightColor () );
+      auto ptr = new QColor( obj->lightColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLinearGradient * ptr = new QLinearGradient( obj->singleHighlightGradient () );
+      auto ptr = new QLinearGradient( obj->singleHighlightGradient () );
       _qt5xhb_createReturnClass ( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLinearGradient * ptr = new QLinearGradient( obj->multiHighlightGradient () );
+      auto ptr = new QLinearGradient( obj->multiHighlightGradient () );
       _qt5xhb_createReturnClass ( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( Q3DTHEME_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->position () );
+      auto ptr = new QVector3D( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

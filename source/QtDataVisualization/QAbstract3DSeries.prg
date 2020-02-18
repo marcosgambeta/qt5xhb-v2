@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->meshRotation () );
+      auto ptr = new QQuaternion( obj->meshRotation () );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->baseColor () );
+      auto ptr = new QColor( obj->baseColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLinearGradient * ptr = new QLinearGradient( obj->baseGradient () );
+      auto ptr = new QLinearGradient( obj->baseGradient () );
       _qt5xhb_createReturnClass ( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->singleHighlightColor () );
+      auto ptr = new QColor( obj->singleHighlightColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLinearGradient * ptr = new QLinearGradient( obj->singleHighlightGradient () );
+      auto ptr = new QLinearGradient( obj->singleHighlightGradient () );
       _qt5xhb_createReturnClass ( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->multiHighlightColor () );
+      auto ptr = new QColor( obj->multiHighlightColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLinearGradient * ptr = new QLinearGradient( obj->multiHighlightGradient () );
+      auto ptr = new QLinearGradient( obj->multiHighlightGradient () );
       _qt5xhb_createReturnClass ( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

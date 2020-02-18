@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_QUERIEDGRAPHPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->queriedGraphPosition () );
+      auto ptr = new QVector3D( obj->queriedGraphPosition () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1658,7 +1658,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQSIZE(2)||ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->renderToImage ( OPINT(1,0), ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QImage( obj->renderToImage ( OPINT(1,0), ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

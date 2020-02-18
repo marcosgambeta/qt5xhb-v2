@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->selectedPoint () );
+      auto ptr = new QPoint( obj->selectedPoint () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->texture () );
+      auto ptr = new QImage( obj->texture () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_INVALIDSELECTIONPOSITION )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPoint * ptr = new QPoint( QSurface3DSeries::invalidSelectionPosition () );
+      auto ptr = new QPoint( QSurface3DSeries::invalidSelectionPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

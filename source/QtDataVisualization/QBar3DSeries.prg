@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->selectedBar () );
+      auto ptr = new QPoint( obj->selectedBar () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_INVALIDSELECTIONPOSITION )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPoint * ptr = new QPoint( QBar3DSeries::invalidSelectionPosition () );
+      auto ptr = new QPoint( QBar3DSeries::invalidSelectionPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

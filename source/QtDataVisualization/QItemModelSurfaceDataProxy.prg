@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->rowRolePattern () );
+      auto ptr = new QRegExp( obj->rowRolePattern () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->columnRolePattern () );
+      auto ptr = new QRegExp( obj->columnRolePattern () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->xPosRolePattern () );
+      auto ptr = new QRegExp( obj->xPosRolePattern () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->yPosRolePattern () );
+      auto ptr = new QRegExp( obj->yPosRolePattern () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->zPosRolePattern () );
+      auto ptr = new QRegExp( obj->zPosRolePattern () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

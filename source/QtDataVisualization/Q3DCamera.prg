@@ -465,7 +465,7 @@ HB_FUNC_STATIC( Q3DCAMERA_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->target () );
+      auto ptr = new QVector3D( obj->target () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -257,7 +257,7 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->barSpacing () );
+      auto ptr = new QSizeF( obj->barSpacing () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
