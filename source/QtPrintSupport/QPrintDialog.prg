@@ -66,8 +66,8 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPrintDialog_new1 ()
 {
-  QPrintDialog * o = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QPrintDialog ( QWidget * parent = nullptr )
 */
 void QPrintDialog_new2 ()
 {
-  QPrintDialog * o = new QPrintDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPrintDialog ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )

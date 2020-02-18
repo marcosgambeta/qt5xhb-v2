@@ -130,8 +130,8 @@ QPrinter ( PrinterMode mode = ScreenResolution )
 */
 void QPrinter_new1 ()
 {
-  QPrinter * o = new QPrinter ( ISNIL(1)? (QPrinter::PrinterMode) QPrinter::ScreenResolution : (QPrinter::PrinterMode) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPrinter ( ISNIL(1)? (QPrinter::PrinterMode) QPrinter::ScreenResolution : (QPrinter::PrinterMode) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 */
 void QPrinter_new2 ()
 {
-  QPrinter * o = new QPrinter ( *PQPRINTERINFO(1), ISNIL(2)? (QPrinter::PrinterMode) QPrinter::ScreenResolution : (QPrinter::PrinterMode) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPrinter ( *PQPRINTERINFO(1), ISNIL(2)? (QPrinter::PrinterMode) QPrinter::ScreenResolution : (QPrinter::PrinterMode) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPrinter ( PrinterMode mode = ScreenResolution )

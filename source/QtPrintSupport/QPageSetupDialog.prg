@@ -58,8 +58,8 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new1 ()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +67,8 @@ QPageSetupDialog ( QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new2 ()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPageSetupDialog ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
