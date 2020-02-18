@@ -160,7 +160,7 @@ void QBluetoothServer_listen2 ()
 
   if( obj != nullptr )
   {
-      QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
+      auto ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO", true );
   }
 #endif
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothAddress * ptr = new QBluetoothAddress( obj->serverAddress () );
+      auto ptr = new QBluetoothAddress( obj->serverAddress () );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

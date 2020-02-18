@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
+      auto ptr = new QBluetoothAddress( obj->address () );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

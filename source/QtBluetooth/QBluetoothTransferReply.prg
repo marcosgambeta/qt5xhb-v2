@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothTransferRequest * ptr = new QBluetoothTransferRequest( obj->request () );
+      auto ptr = new QBluetoothTransferRequest( obj->request () );
       _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
