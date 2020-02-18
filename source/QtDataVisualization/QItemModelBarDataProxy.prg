@@ -122,8 +122,8 @@ explicit QItemModelBarDataProxy(QObject *parent = nullptr)
 void QItemModelBarDataProxy_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -133,8 +133,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent =
 void QItemModelBarDataProxy_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -144,8 +144,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &va
 void QItemModelBarDataProxy_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -155,8 +155,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 void QItemModelBarDataProxy_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -166,8 +166,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 void QItemModelBarDataProxy_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -177,8 +177,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 void QItemModelBarDataProxy_new6 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -188,8 +188,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 void QItemModelBarDataProxy_new7 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelBarDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

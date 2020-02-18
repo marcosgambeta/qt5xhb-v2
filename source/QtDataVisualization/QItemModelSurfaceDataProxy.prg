@@ -131,8 +131,8 @@ explicit QItemModelSurfaceDataProxy(QObject *parent = nullptr)
 void QItemModelSurfaceDataProxy_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -142,8 +142,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *pare
 void QItemModelSurfaceDataProxy_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -153,8 +153,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelSurfaceDataProxy_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -164,8 +164,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelSurfaceDataProxy_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -175,8 +175,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelSurfaceDataProxy_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -186,8 +186,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelSurfaceDataProxy_new6 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -197,8 +197,8 @@ explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelSurfaceDataProxy_new7 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * o = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

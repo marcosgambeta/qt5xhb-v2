@@ -72,8 +72,8 @@ QBarDataItem()
 void QBarDataItem_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * o = new QBarDataItem ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBarDataItem ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -83,8 +83,8 @@ QBarDataItem(float value)
 void QBarDataItem_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * o = new QBarDataItem ( PFLOAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBarDataItem ( PFLOAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -94,8 +94,8 @@ QBarDataItem(float value, float angle)
 void QBarDataItem_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * o = new QBarDataItem ( PFLOAT(1), PFLOAT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBarDataItem ( PFLOAT(1), PFLOAT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -105,8 +105,8 @@ QBarDataItem(const QBarDataItem &other)
 void QBarDataItem_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * o = new QBarDataItem ( *PQBARDATAITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBarDataItem ( *PQBARDATAITEM(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

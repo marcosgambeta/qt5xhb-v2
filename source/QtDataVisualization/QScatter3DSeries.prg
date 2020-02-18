@@ -72,8 +72,8 @@ explicit QScatter3DSeries(QObject *parent = nullptr)
 void QScatter3DSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * o = new QScatter3DSeries ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QScatter3DSeries ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -83,8 +83,8 @@ explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullpt
 void QScatter3DSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * o = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

@@ -73,8 +73,8 @@ explicit QBar3DSeries(QObject *parent = nullptr)
 void QBar3DSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * o = new QBar3DSeries ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBar3DSeries ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -84,8 +84,8 @@ explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
 void QBar3DSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * o = new QBar3DSeries ( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBar3DSeries ( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

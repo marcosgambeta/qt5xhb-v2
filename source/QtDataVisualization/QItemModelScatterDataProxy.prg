@@ -102,8 +102,8 @@ explicit QItemModelScatterDataProxy(QObject *parent = nullptr)
 void QItemModelScatterDataProxy_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelScatterDataProxy ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -113,8 +113,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *pare
 void QItemModelScatterDataProxy_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -124,8 +124,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelScatterDataProxy_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -135,8 +135,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString
 void QItemModelScatterDataProxy_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QItemModelScatterDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

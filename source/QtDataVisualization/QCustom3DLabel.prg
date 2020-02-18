@@ -83,8 +83,8 @@ explicit QCustom3DLabel(QObject *parent = nullptr)
 void QCustom3DLabel_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DLabel * o = new QCustom3DLabel ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCustom3DLabel ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -94,8 +94,8 @@ explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D 
 void QCustom3DLabel_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DLabel * o = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

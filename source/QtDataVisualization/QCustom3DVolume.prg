@@ -117,8 +117,8 @@ explicit QCustom3DVolume(QObject *parent = nullptr)
 void QCustom3DVolume_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DVolume * o = new QCustom3DVolume ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCustom3DVolume ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

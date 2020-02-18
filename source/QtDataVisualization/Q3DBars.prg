@@ -103,8 +103,8 @@ HB_FUNC_STATIC( Q3DBARS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
-    Q3DBars * o = new Q3DBars ( ISNIL(1)? nullptr : (QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new Q3DBars ( ISNIL(1)? nullptr : (QSurfaceFormat *) _qt5xhb_itemGetPtr(1), OPQWINDOW(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

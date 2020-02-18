@@ -77,8 +77,8 @@ QSurfaceDataItem()
 void QSurfaceDataItem_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataItem * o = new QSurfaceDataItem ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceDataItem ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QSurfaceDataItem(const QVector3D &position)
 void QSurfaceDataItem_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataItem * o = new QSurfaceDataItem ( *PQVECTOR3D(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceDataItem ( *PQVECTOR3D(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QSurfaceDataItem(const QSurfaceDataItem &other)
 void QSurfaceDataItem_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataItem * o = new QSurfaceDataItem ( *PQSURFACEDATAITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceDataItem ( *PQSURFACEDATAITEM(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

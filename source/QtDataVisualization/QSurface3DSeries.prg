@@ -85,8 +85,8 @@ explicit QSurface3DSeries(QObject *parent = nullptr)
 void QSurface3DSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * o = new QSurface3DSeries ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSurface3DSeries ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -96,8 +96,8 @@ explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullpt
 void QSurface3DSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * o = new QSurface3DSeries ( PQSURFACEDATAPROXY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSurface3DSeries ( PQSURFACEDATAPROXY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

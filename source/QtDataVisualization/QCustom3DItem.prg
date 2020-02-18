@@ -92,8 +92,8 @@ explicit QCustom3DItem(QObject *parent = nullptr)
 void QCustom3DItem_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DItem * o = new QCustom3DItem ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCustom3DItem ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -103,8 +103,8 @@ explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const
 void QCustom3DItem_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DItem * o = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

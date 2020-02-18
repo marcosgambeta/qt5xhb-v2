@@ -80,8 +80,8 @@ explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
 void QHeightMapSurfaceDataProxy_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -91,8 +91,8 @@ explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullp
 void QHeightMapSurfaceDataProxy_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -102,8 +102,8 @@ explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = n
 void QHeightMapSurfaceDataProxy_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

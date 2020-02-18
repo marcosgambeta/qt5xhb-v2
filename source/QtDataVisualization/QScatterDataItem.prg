@@ -80,8 +80,8 @@ QScatterDataItem()
 void QScatterDataItem_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * o = new QScatterDataItem ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScatterDataItem ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -91,8 +91,8 @@ QScatterDataItem(const QVector3D &position)
 void QScatterDataItem_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScatterDataItem ( *PQVECTOR3D(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -102,8 +102,8 @@ QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
 void QScatterDataItem_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1), *PQQUATERNION(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScatterDataItem ( *PQVECTOR3D(1), *PQQUATERNION(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -113,8 +113,8 @@ QScatterDataItem(const QScatterDataItem &other)
 void QScatterDataItem_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * o = new QScatterDataItem ( *PQSCATTERDATAITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScatterDataItem ( *PQSCATTERDATAITEM(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
