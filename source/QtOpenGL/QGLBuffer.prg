@@ -76,8 +76,8 @@ QGLBuffer ()
 */
 void QGLBuffer_new1 ()
 {
-  QGLBuffer * o = new QGLBuffer ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLBuffer ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QGLBuffer ( QGLBuffer::Type type )
 */
 void QGLBuffer_new2 ()
 {
-  QGLBuffer * o = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QGLBuffer ( const QGLBuffer & other )
 */
 void QGLBuffer_new3 ()
 {
-  QGLBuffer * o = new QGLBuffer ( *PQGLBUFFER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLBuffer ( *PQGLBUFFER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGLBuffer ()

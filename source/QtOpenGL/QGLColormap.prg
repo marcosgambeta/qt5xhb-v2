@@ -69,8 +69,8 @@ QGLColormap ()
 */
 void QGLColormap_new1 ()
 {
-  QGLColormap * o = new QGLColormap ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLColormap ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QGLColormap ( const QGLColormap & map )
 */
 void QGLColormap_new2 ()
 {
-  QGLColormap * o = new QGLColormap ( *PQGLCOLORMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLColormap ( *PQGLCOLORMAP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGLColormap ()

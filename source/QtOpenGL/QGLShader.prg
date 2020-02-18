@@ -63,8 +63,8 @@ QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
 */
 void QGLShader_new1 ()
 {
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -72,8 +72,8 @@ QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * pa
 */
 void QGLShader_new2 ()
 {
-  QGLShader * o = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLShader ( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )

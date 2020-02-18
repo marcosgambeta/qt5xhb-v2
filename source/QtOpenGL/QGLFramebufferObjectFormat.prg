@@ -60,8 +60,8 @@ QGLFramebufferObjectFormat ()
 */
 void QGLFramebufferObjectFormat_new1 ()
 {
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLFramebufferObjectFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
 */
 void QGLFramebufferObjectFormat_new2 ()
 {
-  QGLFramebufferObjectFormat * o = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLFramebufferObjectFormat ( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGLFramebufferObjectFormat ()

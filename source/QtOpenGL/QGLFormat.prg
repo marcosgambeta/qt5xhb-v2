@@ -115,8 +115,8 @@ QGLFormat ()
 */
 void QGLFormat_new1 ()
 {
-  QGLFormat * o = new QGLFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -124,8 +124,8 @@ QGLFormat ( QGL::FormatOptions options, int plane = 0 )
 */
 void QGLFormat_new2 ()
 {
-  QGLFormat * o = new QGLFormat ( (QGL::FormatOptions) hb_parni(1), OPINT(2,0) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLFormat ( (QGL::FormatOptions) hb_parni(1), OPINT(2,0) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -133,8 +133,8 @@ QGLFormat ( const QGLFormat & other )
 */
 void QGLFormat_new3 ()
 {
-  QGLFormat * o = new QGLFormat ( *PQGLFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGLFormat ( *PQGLFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGLFormat ()

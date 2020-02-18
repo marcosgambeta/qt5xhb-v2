@@ -71,8 +71,8 @@ QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defau
 */
 void QGLPixelBuffer_new1 ()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer ( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(2), OPQGLWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLPixelBuffer ( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(2), OPQGLWIDGET(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::de
 */
 void QGLPixelBuffer_new2 ()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer ( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(3), OPQGLWIDGET(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLPixelBuffer ( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(3), OPQGLWIDGET(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = nullptr )

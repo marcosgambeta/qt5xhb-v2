@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
   if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
-    QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QGLContext ( *PQGLFORMAT(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

@@ -81,8 +81,8 @@ QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr,
 */
 void QGLWidget_new1 ()
 {
-  QGLWidget * o = new QGLWidget ( OPQWIDGET(1,nullptr), OPQGLWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLWidget ( OPQWIDGET(1,nullptr), OPQGLWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ QGLWidget ( QGLContext * context, QWidget * parent = nullptr, const QGLWidget * 
 */
 void QGLWidget_new2 ()
 {
-  QGLWidget * o = new QGLWidget ( PQGLCONTEXT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLWidget ( PQGLCONTEXT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -99,8 +99,8 @@ QGLWidget ( const QGLFormat & format, QWidget * parent = nullptr, const QGLWidge
 */
 void QGLWidget_new3 ()
 {
-  QGLWidget * o = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGLWidget ( *PQGLFORMAT(1), OPQWIDGET(2,nullptr), OPQGLWIDGET(3,nullptr), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGLWidget ( QWidget * parent = nullptr, const QGLWidget * shareWidget = nullptr, Qt::WindowFlags f = 0 )
