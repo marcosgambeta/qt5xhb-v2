@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsWebView * o = new QGraphicsWebView ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGraphicsWebView ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

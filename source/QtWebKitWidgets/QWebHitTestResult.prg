@@ -88,8 +88,8 @@ QWebHitTestResult ()
 */
 void QWebHitTestResult_new1 ()
 {
-  QWebHitTestResult * o = new QWebHitTestResult ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebHitTestResult ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 */
 void QWebHitTestResult_new2 ()
 {
-  QWebHitTestResult * o = new QWebHitTestResult ( *PQWEBHITTESTRESULT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebHitTestResult ( *PQWEBHITTESTRESULT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QWebHitTestResult ()
