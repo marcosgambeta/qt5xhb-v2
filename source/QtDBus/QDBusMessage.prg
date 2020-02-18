@@ -146,7 +146,7 @@ void QDBusMessage_createReply2 ()
 
   if( obj != nullptr )
   {
-      QDBusMessage * ptr = new QDBusMessage( obj->createReply ( *PQVARIANT(1) ) );
+      auto ptr = new QDBusMessage( obj->createReply ( *PQVARIANT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -175,7 +175,7 @@ void QDBusMessage_createErrorReply1 ()
 
   if( obj != nullptr )
   {
-      QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDBusMessage( obj->createErrorReply ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -189,7 +189,7 @@ void QDBusMessage_createErrorReply2 ()
 
   if( obj != nullptr )
   {
-      QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( *PQDBUSERROR(1) ) );
+      auto ptr = new QDBusMessage( obj->createErrorReply ( *PQDBUSERROR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -203,7 +203,7 @@ void QDBusMessage_createErrorReply3 ()
 
   if( obj != nullptr )
   {
-      QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
+      auto ptr = new QDBusMessage( obj->createErrorReply ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
 #endif
-      QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createSignal ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      auto ptr = new QDBusMessage( QDBusMessage::createSignal ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
   {
 #endif
-      QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createMethodCall ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      auto ptr = new QDBusMessage( QDBusMessage::createMethodCall ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -652,7 +652,7 @@ static QDBusMessage createError(const QString &name, const QString &msg)
 void QDBusMessage_createError1 ()
 {
 
-      QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDBusMessage( QDBusMessage::createError ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 }
 
@@ -662,7 +662,7 @@ static inline QDBusMessage createError(const QDBusError &err)
 void QDBusMessage_createError2 ()
 {
 
-      QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( *PQDBUSERROR(1) ) );
+      auto ptr = new QDBusMessage( QDBusMessage::createError ( *PQDBUSERROR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 }
 
@@ -672,7 +672,7 @@ static inline QDBusMessage createError(QDBusError::ErrorType type, const QString
 void QDBusMessage_createError3 ()
 {
 
-      QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
+      auto ptr = new QDBusMessage( QDBusMessage::createError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 }
 

@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->asVariant () );
+      auto ptr = new QVariant( obj->asVariant () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

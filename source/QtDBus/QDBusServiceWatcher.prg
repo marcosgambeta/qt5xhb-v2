@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( obj->connection () );
+      auto ptr = new QDBusConnection( obj->connection () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

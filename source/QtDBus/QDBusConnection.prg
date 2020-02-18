@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDBusError * ptr = new QDBusError( obj->lastError () );
+      auto ptr = new QDBusError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
     if( ISBETWEEN(1,3) && ISQDBUSMESSAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QDBusMessage * ptr = new QDBusMessage( obj->call ( *PQDBUSMESSAGE(1), ISNIL(2)? (QDBus::CallMode) QDBus::Block : (QDBus::CallMode) hb_parni(2), OPINT(3,-1) ) );
+      auto ptr = new QDBusMessage( obj->call ( *PQDBUSMESSAGE(1), ISNIL(2)? (QDBus::CallMode) QDBus::Block : (QDBus::CallMode) hb_parni(2), OPINT(3,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
     if( ISBETWEEN(1,2) && ISQDBUSMESSAGE(1) && ISOPTNUM(2) )
     {
 #endif
-      QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
+      auto ptr = new QDBusPendingCall( obj->asyncCall ( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -643,7 +643,7 @@ static QDBusConnection connectToBus(BusType type, const QString &name)
 void QDBusConnection_connectToBus1 ()
 {
 
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( (QDBusConnection::BusType) hb_parni(1), PQSTRING(2) ) );
+      auto ptr = new QDBusConnection( QDBusConnection::connectToBus ( (QDBusConnection::BusType) hb_parni(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 }
 
@@ -653,7 +653,7 @@ static QDBusConnection connectToBus(const QString &address, const QString &name)
 void QDBusConnection_connectToBus2 ()
 {
 
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToBus ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDBusConnection( QDBusConnection::connectToBus ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 }
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::connectToPeer ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDBusConnection( QDBusConnection::connectToPeer ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
     if( ISNUMPAR(0) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QDBusConnection::localMachineId () );
+      auto ptr = new QByteArray( QDBusConnection::localMachineId () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
     if( ISNUMPAR(0) )
   {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sessionBus () );
+      auto ptr = new QDBusConnection( QDBusConnection::sessionBus () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
     if( ISNUMPAR(0) )
   {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::systemBus () );
+      auto ptr = new QDBusConnection( QDBusConnection::systemBus () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
     if( ISNUMPAR(0) )
   {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( QDBusConnection::sender () );
+      auto ptr = new QDBusConnection( QDBusConnection::sender () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
