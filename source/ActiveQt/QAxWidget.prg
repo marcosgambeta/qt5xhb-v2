@@ -77,8 +77,8 @@ QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new1 ()
 {
-  QAxWidget * o = new QAxWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -86,8 +86,8 @@ QAxWidget ( const QString & c, QWidget * parent = nullptr, Qt::WindowFlags f = 0
 */
 void QAxWidget_new2 ()
 {
-  QAxWidget * o = new QAxWidget ( PQSTRING(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxWidget ( PQSTRING(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ QAxWidget ( IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0 
 */
 void QAxWidget_new3 ()
 {
-  QAxWidget * o = new QAxWidget ( (IUnknown *) hb_parptr(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxWidget ( (IUnknown *) hb_parptr(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )

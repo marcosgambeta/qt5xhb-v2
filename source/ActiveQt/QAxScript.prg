@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
   {
-    QAxScript * o = new QAxScript ( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAxScript ( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

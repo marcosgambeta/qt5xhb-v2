@@ -71,8 +71,8 @@ QAxObject ( QObject * parent = nullptr )
 */
 void QAxObject_new1 ()
 {
-  QAxObject * o = new QAxObject ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxObject ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QAxObject ( const QString & c, QObject * parent = nullptr )
 */
 void QAxObject_new2 ()
 {
-  QAxObject * o = new QAxObject ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxObject ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ QAxObject ( IUnknown * iface, QObject * parent = nullptr )
 */
 void QAxObject_new3 ()
 {
-  QAxObject * o = new QAxObject ( (IUnknown *) hb_parptr(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAxObject ( (IUnknown *) hb_parptr(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QAxObject ( QObject * parent = nullptr )
