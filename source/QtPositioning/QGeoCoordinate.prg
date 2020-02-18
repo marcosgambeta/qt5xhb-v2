@@ -78,8 +78,8 @@ QGeoCoordinate()
 void QGeoCoordinate_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * o = new QGeoCoordinate ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCoordinate ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -89,8 +89,8 @@ QGeoCoordinate(double latitude, double longitude)
 void QGeoCoordinate_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -100,8 +100,8 @@ QGeoCoordinate(double latitude, double longitude, double altitude)
 void QGeoCoordinate_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -111,8 +111,8 @@ QGeoCoordinate(const QGeoCoordinate &other)
 void QGeoCoordinate_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * o = new QGeoCoordinate ( *PQGEOCOORDINATE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCoordinate ( *PQGEOCOORDINATE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

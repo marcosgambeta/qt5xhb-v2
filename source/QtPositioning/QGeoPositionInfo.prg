@@ -77,8 +77,8 @@ QGeoPositionInfo()
 void QGeoPositionInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoPositionInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
 void QGeoPositionInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoPositionInfo ( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QGeoPositionInfo(const QGeoPositionInfo &other)
 void QGeoPositionInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOPOSITIONINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoPositionInfo ( *PQGEOPOSITIONINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

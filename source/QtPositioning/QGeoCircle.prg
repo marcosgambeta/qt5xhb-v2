@@ -64,8 +64,8 @@ QGeoCircle()
 void QGeoCircle_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCircle ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -75,8 +75,8 @@ QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 void QGeoCircle_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCircle ( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -86,8 +86,8 @@ QGeoCircle(const QGeoCircle &other)
 void QGeoCircle_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOCIRCLE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCircle ( *PQGEOCIRCLE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -97,8 +97,8 @@ QGeoCircle(const QGeoShape &other)
 void QGeoCircle_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * o = new QGeoCircle ( *PQGEOSHAPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoCircle ( *PQGEOSHAPE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

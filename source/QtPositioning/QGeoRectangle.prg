@@ -77,8 +77,8 @@ QGeoRectangle()
 void QGeoRectangle_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * o = new QGeoRectangle ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRectangle ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesH
 void QGeoRectangle_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRectangle ( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
 void QGeoRectangle_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRectangle ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -110,8 +110,8 @@ QGeoRectangle(const QGeoRectangle &other)
 void QGeoRectangle_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * o = new QGeoRectangle ( *PQGEORECTANGLE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRectangle ( *PQGEORECTANGLE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -121,8 +121,8 @@ QGeoRectangle(const QGeoShape &other)
 void QGeoRectangle_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * o = new QGeoRectangle ( *PQGEOSHAPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoRectangle ( *PQGEOSHAPE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

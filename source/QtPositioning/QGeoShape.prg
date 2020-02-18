@@ -70,8 +70,8 @@ QGeoShape()
 void QGeoShape_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * o = new QGeoShape ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoShape ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -81,8 +81,8 @@ QGeoShape(const QGeoShape &other)
 void QGeoShape_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * o = new QGeoShape ( *PQGEOSHAPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoShape ( *PQGEOSHAPE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

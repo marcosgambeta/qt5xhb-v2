@@ -76,8 +76,8 @@ QGeoSatelliteInfo()
 void QGeoSatelliteInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoSatelliteInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -87,8 +87,8 @@ QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 void QGeoSatelliteInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
