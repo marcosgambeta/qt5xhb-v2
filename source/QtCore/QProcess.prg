@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment () );
+      auto ptr = new QProcessEnvironment( obj->processEnvironment () );
       _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->readAllStandardError () );
+      auto ptr = new QByteArray( obj->readAllStandardError () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->readAllStandardOutput () );
+      auto ptr = new QByteArray( obj->readAllStandardOutput () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCOLLATOR_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey ( PQSTRING(1) ) );
+      auto ptr = new QCollatorSortKey( obj->sortKey ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLLATORSORTKEY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

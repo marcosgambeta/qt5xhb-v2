@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addDays ( PINT(1) ) );
+      auto ptr = new QDate( obj->addDays ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addMonths ( PINT(1) ) );
+      auto ptr = new QDate( obj->addMonths ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addYears ( PINT(1) ) );
+      auto ptr = new QDate( obj->addYears ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QDATE_CURRENTDATE )
     if( ISNUMPAR(0) )
   {
 #endif
-      QDate * ptr = new QDate( QDate::currentDate () );
+      auto ptr = new QDate( QDate::currentDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QDate * ptr = new QDate( QDate::fromJulianDay ( PINT(1) ) );
+      auto ptr = new QDate( QDate::fromJulianDay ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -624,7 +624,7 @@ static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::Te
 void QDate_fromString1 ()
 {
 
-      QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+      auto ptr = new QDate( QDate::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 
@@ -634,7 +634,7 @@ static QDate fromString ( const QString & string, const QString & format )
 void QDate_fromString2 ()
 {
 
-      QDate * ptr = new QDate( QDate::fromString ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDate( QDate::fromString ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 }
 

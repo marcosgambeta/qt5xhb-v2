@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->padChar () );
+      auto ptr = new QChar( obj->padChar () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

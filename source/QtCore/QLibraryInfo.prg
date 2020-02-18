@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
     if( ISNUMPAR(0) )
   {
 #endif
-      QDate * ptr = new QDate( QLibraryInfo::buildDate () );
+      auto ptr = new QDate( QLibraryInfo::buildDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

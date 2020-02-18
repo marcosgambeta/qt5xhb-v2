@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
+      auto ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
       _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

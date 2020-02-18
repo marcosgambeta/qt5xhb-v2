@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->queryPairDelimiter () );
+      auto ptr = new QChar( obj->queryPairDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->queryValueDelimiter () );
+      auto ptr = new QChar( obj->queryValueDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
     if( ISNUMPAR(0) )
   {
 #endif
-      QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
+      auto ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
     if( ISNUMPAR(0) )
   {
 #endif
-      QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
+      auto ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

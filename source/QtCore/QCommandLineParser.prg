@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDVERSIONOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCommandLineOption * ptr = new QCommandLineOption( obj->addVersionOption () );
+      auto ptr = new QCommandLineOption( obj->addVersionOption () );
       _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCommandLineOption * ptr = new QCommandLineOption( obj->addHelpOption () );
+      auto ptr = new QCommandLineOption( obj->addHelpOption () );
       _qt5xhb_createReturnClass ( ptr, "QCOMMANDLINEOPTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

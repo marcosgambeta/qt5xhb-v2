@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->transposed () );
+      auto ptr = new QSizeF( obj->transposed () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -420,7 +420,7 @@ void QSizeF_scaled1 ()
 
   if( obj != nullptr )
   {
-      QSizeF * ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
+      auto ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -434,7 +434,7 @@ void QSizeF_scaled2 ()
 
   if( obj != nullptr )
   {
-      QSizeF * ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
+      auto ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->expandedTo ( *PQSIZEF(1) ) );
+      auto ptr = new QSizeF( obj->expandedTo ( *PQSIZEF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->boundedTo ( *PQSIZEF(1) ) );
+      auto ptr = new QSizeF( obj->boundedTo ( *PQSIZEF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->toSize () );
+      auto ptr = new QSize( obj->toSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->boundedTo ( *PQSIZE(1) ) );
+      auto ptr = new QSize( obj->boundedTo ( *PQSIZE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->expandedTo ( *PQSIZE(1) ) );
+      auto ptr = new QSize( obj->expandedTo ( *PQSIZE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->signal () );
+      auto ptr = new QByteArray( obj->signal () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

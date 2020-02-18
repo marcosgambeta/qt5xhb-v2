@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->decimalPoint () );
+      auto ptr = new QChar( obj->decimalPoint () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->exponential () );
+      auto ptr = new QChar( obj->exponential () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->groupSeparator () );
+      auto ptr = new QChar( obj->groupSeparator () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->negativeSign () );
+      auto ptr = new QChar( obj->negativeSign () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QLOCALE_PERCENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->percent () );
+      auto ptr = new QChar( obj->percent () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->positiveSign () );
+      auto ptr = new QChar( obj->positiveSign () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1206,7 +1206,7 @@ void QLocale_toDate1 ()
 
   if( obj != nullptr )
   {
-      QDate * ptr = new QDate( obj->toDate ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+      auto ptr = new QDate( obj->toDate ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -1220,7 +1220,7 @@ void QLocale_toDate2 ()
 
   if( obj != nullptr )
   {
-      QDate * ptr = new QDate( obj->toDate ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDate( obj->toDate ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
   }
 }
@@ -1253,7 +1253,7 @@ void QLocale_toDateTime1 ()
 
   if( obj != nullptr )
   {
-      QDateTime * ptr = new QDateTime( obj->toDateTime ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+      auto ptr = new QDateTime( obj->toDateTime ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -1267,7 +1267,7 @@ void QLocale_toDateTime2 ()
 
   if( obj != nullptr )
   {
-      QDateTime * ptr = new QDateTime( obj->toDateTime ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDateTime( obj->toDateTime ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
   }
 }
@@ -1763,7 +1763,7 @@ void QLocale_toTime1 ()
 
   if( obj != nullptr )
   {
-      QTime * ptr = new QTime( obj->toTime ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
+      auto ptr = new QTime( obj->toTime ( PQSTRING(1), ISNIL(2)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -1777,7 +1777,7 @@ void QLocale_toTime2 ()
 
   if( obj != nullptr )
   {
-      QTime * ptr = new QTime( obj->toTime ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QTime( obj->toTime ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
   }
 }
@@ -1895,7 +1895,7 @@ HB_FUNC_STATIC( QLOCALE_ZERODIGIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->zeroDigit () );
+      auto ptr = new QChar( obj->zeroDigit () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1916,7 +1916,7 @@ HB_FUNC_STATIC( QLOCALE_C )
     if( ISNUMPAR(0) )
   {
 #endif
-      QLocale * ptr = new QLocale( QLocale::c () );
+      auto ptr = new QLocale( QLocale::c () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -2062,7 +2062,7 @@ HB_FUNC_STATIC( QLOCALE_SYSTEM )
     if( ISNUMPAR(0) )
   {
 #endif
-      QLocale * ptr = new QLocale( QLocale::system () );
+      auto ptr = new QLocale( QLocale::system () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

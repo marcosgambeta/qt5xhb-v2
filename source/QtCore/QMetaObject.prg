@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo ( PINT(1) ) );
+      auto ptr = new QMetaClassInfo( obj->classInfo ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETACLASSINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->constructor ( PINT(1) ) );
+      auto ptr = new QMetaMethod( obj->constructor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator ( PINT(1) ) );
+      auto ptr = new QMetaEnum( obj->enumerator ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAENUM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->method ( PINT(1) ) );
+      auto ptr = new QMetaMethod( obj->method ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMetaProperty * ptr = new QMetaProperty( obj->property ( PINT(1) ) );
+      auto ptr = new QMetaProperty( obj->property ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaProperty * ptr = new QMetaProperty( obj->userProperty () );
+      auto ptr = new QMetaProperty( obj->userProperty () );
       _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
+      auto ptr = new QByteArray( QMetaObject::normalizedSignature ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
+      auto ptr = new QByteArray( QMetaObject::normalizedType ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

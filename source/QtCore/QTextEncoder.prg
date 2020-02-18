@@ -122,7 +122,7 @@ void QTextEncoder_fromUnicode1 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
+      auto ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
@@ -136,7 +136,7 @@ void QTextEncoder_fromUnicode2 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
+      auto ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }

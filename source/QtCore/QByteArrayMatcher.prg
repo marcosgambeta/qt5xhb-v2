@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->pattern () );
+      auto ptr = new QByteArray( obj->pattern () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

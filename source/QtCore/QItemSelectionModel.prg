@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
+      auto ptr = new QModelIndex( obj->currentIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->selection () );
+      auto ptr = new QItemSelection( obj->selection () );
       _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

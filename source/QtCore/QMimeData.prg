@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->colorData () );
+      auto ptr = new QVariant( obj->colorData () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
+      auto ptr = new QByteArray( obj->data ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->imageData () );
+      auto ptr = new QVariant( obj->imageData () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

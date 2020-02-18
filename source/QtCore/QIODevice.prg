@@ -460,7 +460,7 @@ void QIODevice_peek2 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
+      auto ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
@@ -554,7 +554,7 @@ void QIODevice_read2 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
+      auto ptr = new QByteArray( obj->read ( PQINT64(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->readAll () );
+      auto ptr = new QByteArray( obj->readAll () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -625,7 +625,7 @@ void QIODevice_readLine2 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
+      auto ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }

@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
+      auto ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent () );
+      auto ptr = new QModelIndex( obj->parent () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
+      auto ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

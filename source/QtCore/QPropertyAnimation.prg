@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->propertyName () );
+      auto ptr = new QByteArray( obj->propertyName () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -173,7 +173,7 @@ void QTextCodec_fromUnicode1 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
+      auto ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->name () );
+      auto ptr = new QByteArray( obj->name () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

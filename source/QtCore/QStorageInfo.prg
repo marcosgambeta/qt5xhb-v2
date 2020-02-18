@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->device () );
+      auto ptr = new QByteArray( obj->device () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->fileSystemType () );
+      auto ptr = new QByteArray( obj->fileSystemType () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root () );
+      auto ptr = new QStorageInfo( QStorageInfo::root () );
       _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

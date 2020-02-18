@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
+      auto ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

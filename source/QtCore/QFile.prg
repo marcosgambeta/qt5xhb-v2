@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
+      auto ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

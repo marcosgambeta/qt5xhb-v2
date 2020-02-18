@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QURL_RESOLVED )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->resolved ( *PQURL(1) ) );
+      auto ptr = new QUrl( obj->resolved ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QURL_TOENCODED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toEncoded ( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
+      auto ptr = new QByteArray( obj->toEncoded ( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1094,7 +1094,7 @@ static QUrl fromEncoded ( const QByteArray & input )
 void QUrl_fromEncoded1 ()
 {
 
-      QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
+      auto ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 
@@ -1104,7 +1104,7 @@ static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 void QUrl_fromEncoded2 ()
 {
 
-      QUrl * ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
+      auto ptr = new QUrl( QUrl::fromEncoded ( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 }
 
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QUrl * ptr = new QUrl( QUrl::fromLocalFile ( PQSTRING(1) ) );
+      auto ptr = new QUrl( QUrl::fromLocalFile ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QURL_FROMUSERINPUT )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QUrl * ptr = new QUrl( QUrl::fromUserInput ( PQSTRING(1) ) );
+      auto ptr = new QUrl( QUrl::fromUserInput ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QURL_TOACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
+      auto ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) ) );
+      auto ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

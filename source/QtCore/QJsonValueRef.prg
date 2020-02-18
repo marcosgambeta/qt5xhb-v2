@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonArray * ptr = new QJsonArray( obj->toArray () );
+      auto ptr = new QJsonArray( obj->toArray () );
       _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonObject * ptr = new QJsonObject( obj->toObject () );
+      auto ptr = new QJsonObject( obj->toObject () );
       _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

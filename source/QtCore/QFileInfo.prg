@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->absoluteDir () );
+      auto ptr = new QDir( obj->absoluteDir () );
       _qt5xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QFILEINFO_CREATED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->created () );
+      auto ptr = new QDateTime( obj->created () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->dir () );
+      auto ptr = new QDir( obj->dir () );
       _qt5xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified () );
+      auto ptr = new QDateTime( obj->lastModified () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastRead () );
+      auto ptr = new QDateTime( obj->lastRead () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

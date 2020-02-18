@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent () );
+      auto ptr = new QModelIndex( obj->parent () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
     if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
+      auto ptr = new QItemSelectionRange( obj->intersected ( *PQITEMSELECTIONRANGE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QITEMSELECTIONRANGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

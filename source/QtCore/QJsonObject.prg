@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QJSONOBJECT_TAKE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->take ( PQSTRING(1) ) );
+      auto ptr = new QJsonValue( obj->take ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QJSONOBJECT_VALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->value ( PQSTRING(1) ) );
+      auto ptr = new QJsonValue( obj->value ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

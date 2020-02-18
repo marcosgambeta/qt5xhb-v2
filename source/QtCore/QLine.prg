@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLINE_P1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->p1 () );
+      auto ptr = new QPoint( obj->p1 () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QLINE_P2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->p2 () );
+      auto ptr = new QPoint( obj->p2 () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -520,7 +520,7 @@ void QLine_translated1 ()
 
   if( obj != nullptr )
   {
-      QLine * ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
+      auto ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
@@ -534,7 +534,7 @@ void QLine_translated2 ()
 
   if( obj != nullptr )
   {
-      QLine * ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
+      auto ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }

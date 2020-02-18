@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->mirroredChar () );
+      auto ptr = new QChar( obj->mirroredChar () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->toCaseFolded () );
+      auto ptr = new QChar( obj->toCaseFolded () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->toLower () );
+      auto ptr = new QChar( obj->toLower () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->toTitleCase () );
+      auto ptr = new QChar( obj->toTitleCase () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->toUpper () );
+      auto ptr = new QChar( obj->toUpper () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

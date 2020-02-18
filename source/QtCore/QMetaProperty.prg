@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator () );
+      auto ptr = new QMetaEnum( obj->enumerator () );
       _qt5xhb_createReturnClass ( ptr, "QMETAENUM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->notifySignal () );
+      auto ptr = new QMetaMethod( obj->notifySignal () );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->read ( PQOBJECT(1) ) );
+      auto ptr = new QVariant( obj->read ( PQOBJECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

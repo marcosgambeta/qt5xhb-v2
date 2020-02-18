@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QRECTF_ADJUSTED )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->adjusted ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      auto ptr = new QRectF( obj->adjusted ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->bottomLeft () );
+      auto ptr = new QPointF( obj->bottomLeft () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->bottomRight () );
+      auto ptr = new QPointF( obj->bottomRight () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QRECTF_CENTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->center () );
+      auto ptr = new QPointF( obj->center () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTED )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->intersected ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->intersected ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QRECTF_NORMALIZED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->normalized () );
+      auto ptr = new QRectF( obj->normalized () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QRECTF_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size () );
+      auto ptr = new QSizeF( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->toAlignedRect () );
+      auto ptr = new QRect( obj->toAlignedRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QRECTF_TORECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->toRect () );
+      auto ptr = new QRect( obj->toRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QRECTF_TOPLEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->topLeft () );
+      auto ptr = new QPointF( obj->topLeft () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC( QRECTF_TOPRIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->topRight () );
+      auto ptr = new QPointF( obj->topRight () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1589,7 +1589,7 @@ void QRectF_translated1 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+      auto ptr = new QRectF( obj->translated ( PQREAL(1), PQREAL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1603,7 +1603,7 @@ void QRectF_translated2 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
+      auto ptr = new QRectF( obj->translated ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1640,7 +1640,7 @@ HB_FUNC_STATIC( QRECTF_UNITED )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->united ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->united ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

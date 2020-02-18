@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQLATIN1STRING(2) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1), *PQLATIN1STRING(2) ) );
+      auto ptr = new QStringRef( obj->value ( PQSTRING(1), *PQLATIN1STRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
     if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
+      auto ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
+      auto ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
     if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1) ) );
+      auto ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

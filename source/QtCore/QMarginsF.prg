@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMargins * ptr = new QMargins( obj->toMargins () );
+      auto ptr = new QMargins( obj->toMargins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

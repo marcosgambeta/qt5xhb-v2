@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QJSONARRAY_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->at ( PINT(1) ) );
+      auto ptr = new QJsonValue( obj->at ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QJSONARRAY_FIRST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->first () );
+      auto ptr = new QJsonValue( obj->first () );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QJSONARRAY_LAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->last () );
+      auto ptr = new QJsonValue( obj->last () );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QJSONARRAY_TAKEAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->takeAt ( PINT(1) ) );
+      auto ptr = new QJsonValue( obj->takeAt ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QJSONARRAY_FROMSTRINGLIST )
     if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-      QJsonArray * ptr = new QJsonArray( QJsonArray::fromStringList ( PQSTRINGLIST(1) ) );
+      auto ptr = new QJsonArray( QJsonArray::fromStringList ( PQSTRINGLIST(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -734,7 +734,7 @@ for (i1=0;i1<nLen1;i1++)
 {
   par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-      QJsonArray * ptr = new QJsonArray( QJsonArray::fromVariantList ( par1 ) );
+      auto ptr = new QJsonArray( QJsonArray::fromVariantList ( par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

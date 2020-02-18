@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addMSecs ( PINT(1) ) );
+      auto ptr = new QTime( obj->addMSecs ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addSecs ( PINT(1) ) );
+      auto ptr = new QTime( obj->addSecs ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
     if( ISNUMPAR(0) )
   {
 #endif
-      QTime * ptr = new QTime( QTime::currentTime () );
+      auto ptr = new QTime( QTime::currentTime () );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -555,7 +555,7 @@ static QTime fromString(const QString & string, Qt::DateFormat format = Qt::Text
 void QTime_fromString1 ()
 {
 
-      QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+      auto ptr = new QTime( QTime::fromString ( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 }
 
@@ -565,7 +565,7 @@ static QTime fromString(const QString & string, const QString & format)
 void QTime_fromString2 ()
 {
 
-      QTime * ptr = new QTime( QTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QTime( QTime::fromString ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QTIME", true );
 }
 

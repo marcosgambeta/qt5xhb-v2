@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo () );
+      auto ptr = new QFileInfo( obj->fileInfo () );
       _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
