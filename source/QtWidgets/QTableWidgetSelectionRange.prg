@@ -67,8 +67,8 @@ QTableWidgetSelectionRange()
 */
 void QTableWidgetSelectionRange_new1 ()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTableWidgetSelectionRange ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 */
 void QTableWidgetSelectionRange_new2 ()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 */
 void QTableWidgetSelectionRange_new3 ()
 {
-  QTableWidgetSelectionRange * o = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTableWidgetSelectionRange()

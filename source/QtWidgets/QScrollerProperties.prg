@@ -66,8 +66,8 @@ QScrollerProperties()
 */
 void QScrollerProperties_new1 ()
 {
-  QScrollerProperties * o = new QScrollerProperties ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScrollerProperties ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QScrollerProperties(const QScrollerProperties & sp)
 */
 void QScrollerProperties_new2 ()
 {
-  QScrollerProperties * o = new QScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QScrollerProperties()

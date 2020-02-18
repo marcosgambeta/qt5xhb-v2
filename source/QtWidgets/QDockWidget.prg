@@ -75,8 +75,8 @@ QDockWidget ( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags
 */
 void QDockWidget_new1 ()
 {
-  QDockWidget * o = new QDockWidget ( PQSTRING(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDockWidget ( PQSTRING(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QDockWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new2 ()
 {
-  QDockWidget * o = new QDockWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDockWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDockWidget ( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )

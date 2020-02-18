@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QInputDialog * o = new QInputDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QInputDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

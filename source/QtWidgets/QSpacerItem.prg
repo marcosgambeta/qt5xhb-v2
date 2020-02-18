@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
   if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
-    QSpacerItem * o = new QSpacerItem ( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSpacerItem ( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -67,8 +67,8 @@ QGraphicsEllipseItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsEllipseItem_new1 ()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsEllipseItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsEllipseItem_new2 ()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( *PQRECTF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsEllipseItem ( *PQRECTF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsIte
 */
 void QGraphicsEllipseItem_new3 ()
 {
-  QGraphicsEllipseItem * o = new QGraphicsEllipseItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsEllipseItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGraphicsEllipseItem ( QGraphicsItem * parent = nullptr )

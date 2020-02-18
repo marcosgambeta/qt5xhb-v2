@@ -129,8 +129,8 @@ QPlainTextEdit ( QWidget * parent = nullptr )
 */
 void QPlainTextEdit_new1 ()
 {
-  QPlainTextEdit * o = new QPlainTextEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPlainTextEdit ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -138,8 +138,8 @@ QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
 */
 void QPlainTextEdit_new2 ()
 {
-  QPlainTextEdit * o = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPlainTextEdit ( QWidget * parent = nullptr )

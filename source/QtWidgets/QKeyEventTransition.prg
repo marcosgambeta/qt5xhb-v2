@@ -56,8 +56,8 @@ QKeyEventTransition ( QState * sourceState = nullptr )
 */
 void QKeyEventTransition_new1 ()
 {
-  QKeyEventTransition * o = new QKeyEventTransition ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QKeyEventTransition ( OPQSTATE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -65,8 +65,8 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 */
 void QKeyEventTransition_new2 ()
 {
-  QKeyEventTransition * o = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QKeyEventTransition ( QState * sourceState = nullptr )

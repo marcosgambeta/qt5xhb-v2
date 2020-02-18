@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QGraphicsWidget * o = new QGraphicsWidget ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGraphicsWidget ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

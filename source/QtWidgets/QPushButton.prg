@@ -68,8 +68,8 @@ explicit QPushButton ( QWidget * parent = nullptr )
 */
 void QPushButton_new1 ()
 {
-  QPushButton * o = new QPushButton ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPushButton ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +77,8 @@ explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
 */
 void QPushButton_new2 ()
 {
-  QPushButton * o = new QPushButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPushButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -86,8 +86,8 @@ QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullp
 */
 void QPushButton_new3 ()
 {
-  QPushButton * o = new QPushButton ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPushButton ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -95,8 +95,8 @@ QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nul
 */
 void QPushButton_new4 ()
 {
-  QPushButton * o = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPushButton ( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QPushButton ( QWidget * parent = nullptr )

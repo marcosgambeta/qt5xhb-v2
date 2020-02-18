@@ -92,8 +92,8 @@ QGridLayout ( QWidget * parent )
 */
 void QGridLayout_new1 ()
 {
-  QGridLayout * o = new QGridLayout ( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGridLayout ( PQWIDGET(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -101,8 +101,8 @@ QGridLayout ()
 */
 void QGridLayout_new2 ()
 {
-  QGridLayout * o = new QGridLayout ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGridLayout ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGridLayout ( QWidget * parent )

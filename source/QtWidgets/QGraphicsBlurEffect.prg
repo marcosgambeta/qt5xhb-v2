@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGraphicsBlurEffect * o = new QGraphicsBlurEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGraphicsBlurEffect ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

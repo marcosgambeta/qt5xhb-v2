@@ -75,8 +75,8 @@ for (i1=0;i1<nLen1;i1++)
 {
   par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-    QGestureEvent * o = new QGestureEvent ( par1 );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QGestureEvent ( par1 );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

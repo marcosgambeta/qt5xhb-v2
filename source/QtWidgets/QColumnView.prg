@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QColumnView * o = new QColumnView ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QColumnView ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

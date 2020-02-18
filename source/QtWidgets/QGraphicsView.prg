@@ -123,8 +123,8 @@ QGraphicsView ( QWidget * parent = nullptr )
 */
 void QGraphicsView_new1 ()
 {
-  QGraphicsView * o = new QGraphicsView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsView ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -132,8 +132,8 @@ QGraphicsView ( QGraphicsScene * scene, QWidget * parent = nullptr )
 */
 void QGraphicsView_new2 ()
 {
-  QGraphicsView * o = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsView ( PQGRAPHICSSCENE(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGraphicsView ( QWidget * parent = nullptr )

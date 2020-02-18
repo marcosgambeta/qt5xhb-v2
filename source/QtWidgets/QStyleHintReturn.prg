@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
   {
-    QStyleHintReturn * o = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

@@ -66,8 +66,8 @@ QStyleOptionComboBox()
 */
 void QStyleOptionComboBox_new1 ()
 {
-  QStyleOptionComboBox * o = new QStyleOptionComboBox ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionComboBox ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QStyleOptionComboBox(const QStyleOptionComboBox &other)
 */
 void QStyleOptionComboBox_new2 ()
 {
-  QStyleOptionComboBox * o = new QStyleOptionComboBox ( *PQSTYLEOPTIONCOMBOBOX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionComboBox ( *PQSTYLEOPTIONCOMBOBOX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

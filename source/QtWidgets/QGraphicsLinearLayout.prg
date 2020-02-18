@@ -75,8 +75,8 @@ QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
 */
 void QGraphicsLinearLayout_new1 ()
 {
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( ISNIL(1)? nullptr : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsLinearLayout ( ISNIL(1)? nullptr : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * paren
 */
 void QGraphicsLinearLayout_new2 ()
 {
-  QGraphicsLinearLayout * o = new QGraphicsLinearLayout ( (Qt::Orientation) hb_parni(1), ISNIL(2)? nullptr : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsLinearLayout ( (Qt::Orientation) hb_parni(1), ISNIL(2)? nullptr : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )

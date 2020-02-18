@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QActionGroup ( PQOBJECT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

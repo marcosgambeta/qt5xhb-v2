@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QTABWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QTabWidget * o = new QTabWidget ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTabWidget ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -63,8 +63,8 @@ QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPathItem_new1 ()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr 
 */
 void QGraphicsPathItem_new2 ()
 {
-  QGraphicsPathItem * o = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )

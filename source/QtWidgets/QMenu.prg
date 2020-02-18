@@ -97,8 +97,8 @@ explicit QMenu ( QWidget * parent = nullptr )
 */
 void QMenu_new1 ()
 {
-  QMenu * o = new QMenu ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMenu ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ explicit QMenu ( const QString & title, QWidget * parent = nullptr )
 */
 void QMenu_new2 ()
 {
-  QMenu * o = new QMenu ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMenu ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QMenu ( QWidget * parent = nullptr )

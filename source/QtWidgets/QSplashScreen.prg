@@ -62,8 +62,8 @@ QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1 ()
 {
-  QSplashScreen * o = new QSplashScreen ( ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSplashScreen ( ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +71,8 @@ QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::Window
 */
 void QSplashScreen_new2 ()
 {
-  QSplashScreen * o = new QSplashScreen ( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSplashScreen ( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )

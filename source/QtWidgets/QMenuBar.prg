@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QMenuBar * o = new QMenuBar ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMenuBar ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

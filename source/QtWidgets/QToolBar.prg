@@ -91,8 +91,8 @@ QToolBar ( const QString & title, QWidget * parent = nullptr )
 */
 void QToolBar_new1 ()
 {
-  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QToolBar ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -100,8 +100,8 @@ QToolBar ( QWidget * parent = nullptr )
 */
 void QToolBar_new2 ()
 {
-  QToolBar * o = new QToolBar ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QToolBar ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QToolBar ( const QString & title, QWidget * parent = nullptr )

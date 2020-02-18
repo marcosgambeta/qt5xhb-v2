@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QWidgetItem * o = new QWidgetItem ( PQWIDGET(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QWidgetItem ( PQWIDGET(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

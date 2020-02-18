@@ -57,8 +57,8 @@ QStyleOptionSpinBox()
 */
 void QStyleOptionSpinBox_new1 ()
 {
-  QStyleOptionSpinBox * o = new QStyleOptionSpinBox ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionSpinBox ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -66,8 +66,8 @@ QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
 */
 void QStyleOptionSpinBox_new2 ()
 {
-  QStyleOptionSpinBox * o = new QStyleOptionSpinBox ( *PQSTYLEOPTIONSPINBOX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionSpinBox ( *PQSTYLEOPTIONSPINBOX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

@@ -70,8 +70,8 @@ QStyleOptionHeader()
 */
 void QStyleOptionHeader_new1 ()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionHeader ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QStyleOptionHeader(const QStyleOptionHeader &other)
 */
 void QStyleOptionHeader_new2 ()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader ( *PQSTYLEOPTIONHEADER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionHeader ( *PQSTYLEOPTIONHEADER(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

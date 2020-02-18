@@ -68,8 +68,8 @@ QGroupBox ( QWidget * parent = nullptr )
 */
 void QGroupBox_new1 ()
 {
-  QGroupBox * o = new QGroupBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGroupBox ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +77,8 @@ QGroupBox ( const QString & title, QWidget * parent = nullptr )
 */
 void QGroupBox_new2 ()
 {
-  QGroupBox * o = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGroupBox ( QWidget * parent = nullptr )

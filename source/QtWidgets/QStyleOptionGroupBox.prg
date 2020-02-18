@@ -64,8 +64,8 @@ QStyleOptionGroupBox()
 */
 void QStyleOptionGroupBox_new1 ()
 {
-  QStyleOptionGroupBox * o = new QStyleOptionGroupBox ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionGroupBox ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -73,8 +73,8 @@ QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
 */
 void QStyleOptionGroupBox_new2 ()
 {
-  QStyleOptionGroupBox * o = new QStyleOptionGroupBox ( *PQSTYLEOPTIONGROUPBOX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionGroupBox ( *PQSTYLEOPTIONGROUPBOX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

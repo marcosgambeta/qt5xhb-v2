@@ -106,8 +106,8 @@ explicit QMessageBox ( QWidget * parent = nullptr )
 */
 void QMessageBox_new1 ()
 {
-  QMessageBox * o = new QMessageBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMessageBox ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -115,8 +115,8 @@ QMessageBox ( Icon icon, const QString & title, const QString & text, StandardBu
 */
 void QMessageBox_new2 ()
 {
-  QMessageBox * o = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMessageBox ( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QMessageBox ( QWidget * parent = nullptr )

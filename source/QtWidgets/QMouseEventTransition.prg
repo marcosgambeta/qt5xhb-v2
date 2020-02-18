@@ -61,8 +61,8 @@ QMouseEventTransition ( QState * sourceState = nullptr )
 */
 void QMouseEventTransition_new1 ()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMouseEventTransition ( OPQSTATE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -70,8 +70,8 @@ QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton but
 */
 void QMouseEventTransition_new2 ()
 {
-  QMouseEventTransition * o = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMouseEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QMouseEventTransition ( QState * sourceState = nullptr )

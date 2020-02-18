@@ -121,8 +121,8 @@ QAction ( QObject * parent = nullptr )
 */
 void QAction_new1 ()
 {
-  QAction * o = new QAction ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAction ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -130,8 +130,8 @@ QAction ( const QString & text, QObject * parent = nullptr )
 */
 void QAction_new2 ()
 {
-  QAction * o = new QAction ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAction ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -139,8 +139,8 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 */
 void QAction_new3 ()
 {
-  QAction * o = new QAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QAction ( QObject * parent = nullptr )

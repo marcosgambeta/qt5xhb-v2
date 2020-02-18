@@ -67,8 +67,8 @@ QUndoView ( QWidget * parent = nullptr )
 */
 void QUndoView_new1 ()
 {
-  QUndoView * o = new QUndoView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QUndoView ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
 */
 void QUndoView_new2 ()
 {
-  QUndoView * o = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 */
 void QUndoView_new3 ()
 {
-  QUndoView * o = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QUndoView ( QWidget * parent = nullptr )

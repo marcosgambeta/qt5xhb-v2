@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QPlainTextDocumentLayout * o = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QPlainTextDocumentLayout ( PQTEXTDOCUMENT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

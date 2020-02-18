@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleHintReturnMask * o = new QStyleHintReturnMask ();
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QStyleHintReturnMask ();
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

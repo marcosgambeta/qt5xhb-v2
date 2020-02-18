@@ -60,8 +60,8 @@ QStyleOptionTitleBar()
 */
 void QStyleOptionTitleBar_new1 ()
 {
-  QStyleOptionTitleBar * o = new QStyleOptionTitleBar ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionTitleBar ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
 */
 void QStyleOptionTitleBar_new2 ()
 {
-  QStyleOptionTitleBar * o = new QStyleOptionTitleBar ( *PQSTYLEOPTIONTITLEBAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionTitleBar ( *PQSTYLEOPTIONTITLEBAR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

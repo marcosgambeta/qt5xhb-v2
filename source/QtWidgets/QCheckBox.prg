@@ -62,8 +62,8 @@ explicit QCheckBox ( QWidget * parent = nullptr )
 */
 void QCheckBox_new1 ()
 {
-  QCheckBox * o = new QCheckBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCheckBox ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +71,8 @@ explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 */
 void QCheckBox_new2 ()
 {
-  QCheckBox * o = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QCheckBox ( QWidget * parent = nullptr )

@@ -98,8 +98,8 @@ QCompleter ( QObject * parent = nullptr )
 */
 void QCompleter_new1 ()
 {
-  QCompleter * o = new QCompleter ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCompleter ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -107,8 +107,8 @@ QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
 */
 void QCompleter_new2 ()
 {
-  QCompleter * o = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCompleter ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -117,8 +117,8 @@ QCompleter ( const QStringList & list, QObject * parent = nullptr )
 void QCompleter_new3 ()
 {
 #ifndef QT_NO_STRINGLISTMODEL
-  QCompleter * o = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCompleter ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

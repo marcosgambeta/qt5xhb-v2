@@ -69,8 +69,8 @@ QShortcut(QWidget * parent)
 */
 void QShortcut_new1 ()
 {
-  QShortcut * o = new QShortcut ( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QShortcut ( PQWIDGET(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = null
 */
 void QShortcut_new2 ()
 {
-  QShortcut * o = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,nullptr), OPCONSTCHAR(4,nullptr), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QShortcut ( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,nullptr), OPCONSTCHAR(4,nullptr), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QShortcut(QWidget * parent)

@@ -66,8 +66,8 @@ QStackedLayout ()
 */
 void QStackedLayout_new1 ()
 {
-  QStackedLayout * o = new QStackedLayout ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStackedLayout ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QStackedLayout ( QWidget * parent )
 */
 void QStackedLayout_new2 ()
 {
-  QStackedLayout * o = new QStackedLayout ( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStackedLayout ( PQWIDGET(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QStackedLayout ( QLayout * parentLayout )
 */
 void QStackedLayout_new3 ()
 {
-  QStackedLayout * o = new QStackedLayout ( PQLAYOUT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStackedLayout ( PQLAYOUT(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QStackedLayout ()

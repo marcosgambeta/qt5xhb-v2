@@ -53,8 +53,8 @@ QDateEdit ( QWidget * parent = nullptr )
 */
 void QDateEdit_new1 ()
 {
-  QDateEdit * o = new QDateEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDateEdit ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -62,8 +62,8 @@ QDateEdit ( const QDate & date, QWidget * parent = nullptr )
 */
 void QDateEdit_new2 ()
 {
-  QDateEdit * o = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDateEdit ( *PQDATE(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDateEdit ( QWidget * parent = nullptr )

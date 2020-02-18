@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QFontComboBox * o = new QFontComboBox ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QFontComboBox ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

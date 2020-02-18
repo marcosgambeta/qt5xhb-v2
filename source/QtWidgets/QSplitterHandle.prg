@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQSPLITTER(2) )
   {
-    QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

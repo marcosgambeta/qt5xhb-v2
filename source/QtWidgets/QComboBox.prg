@@ -146,8 +146,8 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QComboBox * o = new QComboBox ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QComboBox ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

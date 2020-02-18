@@ -73,8 +73,8 @@ QLCDNumber ( QWidget * parent = nullptr )
 */
 void QLCDNumber_new1 ()
 {
-  QLCDNumber * o = new QLCDNumber ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QLCDNumber ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QLCDNumber ( uint numDigits, QWidget * parent = nullptr )
 */
 void QLCDNumber_new2 ()
 {
-  QLCDNumber * o = new QLCDNumber ( PUINT(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QLCDNumber ( PUINT(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QLCDNumber ( QWidget * parent = nullptr )

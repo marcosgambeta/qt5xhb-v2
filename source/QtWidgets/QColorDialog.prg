@@ -72,8 +72,8 @@ explicit QColorDialog ( QWidget * parent = nullptr )
 */
 void QColorDialog_new1 ()
 {
-  QColorDialog * o = new QColorDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QColorDialog ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -81,8 +81,8 @@ explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
 */
 void QColorDialog_new2 ()
 {
-  QColorDialog * o = new QColorDialog ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QColorDialog ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QColorDialog ( QWidget * parent = nullptr )

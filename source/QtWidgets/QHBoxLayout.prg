@@ -52,8 +52,8 @@ QHBoxLayout ()
 */
 void QHBoxLayout_new1 ()
 {
-  QHBoxLayout * o = new QHBoxLayout ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHBoxLayout ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -61,8 +61,8 @@ QHBoxLayout ( QWidget * parent )
 */
 void QHBoxLayout_new2 ()
 {
-  QHBoxLayout * o = new QHBoxLayout ( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHBoxLayout ( PQWIDGET(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QHBoxLayout ()

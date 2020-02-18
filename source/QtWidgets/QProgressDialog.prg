@@ -80,8 +80,8 @@ explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new1 ()
 {
-  QProgressDialog * o = new QProgressDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QProgressDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 */
 void QProgressDialog_new2 ()
 {
-  QProgressDialog * o = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )

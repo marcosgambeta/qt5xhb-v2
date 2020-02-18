@@ -114,8 +114,8 @@ QTableWidget ( QWidget * parent = nullptr )
 */
 void QTableWidget_new1 ()
 {
-  QTableWidget * o = new QTableWidget ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidget ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -123,8 +123,8 @@ QTableWidget ( int rows, int columns, QWidget * parent = nullptr )
 */
 void QTableWidget_new2 ()
 {
-  QTableWidget * o = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidget ( PINT(1), PINT(2), OPQWIDGET(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QTableWidget ( QWidget * parent = nullptr )

@@ -102,8 +102,8 @@ QTableWidgetItem ( int type = Type )
 */
 void QTableWidgetItem_new1 ()
 {
-  QTableWidgetItem * o = new QTableWidgetItem ( OPINT(1,QTableWidgetItem::Type) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidgetItem ( OPINT(1,QTableWidgetItem::Type) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -111,8 +111,8 @@ QTableWidgetItem ( const QString & text, int type = Type )
 */
 void QTableWidgetItem_new2 ()
 {
-  QTableWidgetItem * o = new QTableWidgetItem ( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidgetItem ( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -120,8 +120,8 @@ QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
 */
 void QTableWidgetItem_new3 ()
 {
-  QTableWidgetItem * o = new QTableWidgetItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidgetItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -129,8 +129,8 @@ QTableWidgetItem ( const QTableWidgetItem & other )
 */
 void QTableWidgetItem_new4 ()
 {
-  QTableWidgetItem * o = new QTableWidgetItem ( *PQTABLEWIDGETITEM(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTableWidgetItem ( *PQTABLEWIDGETITEM(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QTableWidgetItem ( int type = Type )

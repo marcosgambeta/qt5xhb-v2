@@ -81,8 +81,8 @@ QProxyStyle(QStyle *style = nullptr)
 */
 void QProxyStyle_new1 ()
 {
-  QProxyStyle * o = new QProxyStyle ( OPQSTYLE(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QProxyStyle ( OPQSTYLE(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ QProxyStyle(const QString &key)
 */
 void QProxyStyle_new2 ()
 {
-  QProxyStyle * o = new QProxyStyle ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QProxyStyle ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QProxyStyle(QStyle *style = nullptr)

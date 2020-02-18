@@ -61,8 +61,8 @@ QStyleOptionDockWidget()
 */
 void QStyleOptionDockWidget_new1 ()
 {
-  QStyleOptionDockWidget * o = new QStyleOptionDockWidget ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionDockWidget ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -70,8 +70,8 @@ QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
 */
 void QStyleOptionDockWidget_new2 ()
 {
-  QStyleOptionDockWidget * o = new QStyleOptionDockWidget ( *PQSTYLEOPTIONDOCKWIDGET(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionDockWidget ( *PQSTYLEOPTIONDOCKWIDGET(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

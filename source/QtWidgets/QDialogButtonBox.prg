@@ -73,8 +73,8 @@ QDialogButtonBox ( QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new1 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDialogButtonBox ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new2 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Ho
 */
 void QDialogButtonBox_new3 ()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDialogButtonBox ( QWidget * parent = nullptr )

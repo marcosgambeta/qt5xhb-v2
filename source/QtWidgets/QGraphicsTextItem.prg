@@ -93,8 +93,8 @@ QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsTextItem_new1 ()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsTextItem_new2 ()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )

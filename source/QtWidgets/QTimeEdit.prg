@@ -53,8 +53,8 @@ QTimeEdit ( QWidget * parent = nullptr )
 */
 void QTimeEdit_new1 ()
 {
-  QTimeEdit * o = new QTimeEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTimeEdit ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -62,8 +62,8 @@ QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 */
 void QTimeEdit_new2 ()
 {
-  QTimeEdit * o = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QTimeEdit ( QWidget * parent = nullptr )

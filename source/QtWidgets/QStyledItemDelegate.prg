@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QStyledItemDelegate * o = new QStyledItemDelegate ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QStyledItemDelegate ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

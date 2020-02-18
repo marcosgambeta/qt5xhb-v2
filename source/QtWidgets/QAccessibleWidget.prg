@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && ISQWIDGET(1) && ISOPTNUM(2) && ISOPTCHAR(3) )
   {
-    QAccessibleWidget * o = new QAccessibleWidget ( PQWIDGET(1), ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAccessibleWidget ( PQWIDGET(1), ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

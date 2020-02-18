@@ -60,8 +60,8 @@ QStyleOptionToolBox()
 */
 void QStyleOptionToolBox_new1 ()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionToolBox ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QStyleOptionToolBox(const QStyleOptionToolBox &other)
 */
 void QStyleOptionToolBox_new2 ()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox ( *PQSTYLEOPTIONTOOLBOX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionToolBox ( *PQSTYLEOPTIONTOOLBOX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

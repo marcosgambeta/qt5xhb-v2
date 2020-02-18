@@ -92,8 +92,8 @@ QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags 
 */
 void QDirModel_new1 ()
 {
-  QDirModel * o = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDirModel ( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -101,8 +101,8 @@ QDirModel(QObject *parent = nullptr)
 */
 void QDirModel_new2 ()
 {
-  QDirModel * o = new QDirModel ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDirModel ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)

@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QBoxLayout * o = new QBoxLayout ( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QBoxLayout ( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

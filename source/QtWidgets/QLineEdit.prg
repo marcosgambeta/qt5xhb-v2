@@ -140,8 +140,8 @@ explicit QLineEdit ( QWidget * parent = nullptr )
 */
 void QLineEdit_new1 ()
 {
-  QLineEdit * o = new QLineEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QLineEdit ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -149,8 +149,8 @@ explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
 */
 void QLineEdit_new2 ()
 {
-  QLineEdit * o = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QLineEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QLineEdit ( QWidget * parent = nullptr )

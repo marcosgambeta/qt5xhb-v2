@@ -149,8 +149,8 @@ QGraphicsScene ( QObject * parent = nullptr )
 */
 void QGraphicsScene_new1 ()
 {
-  QGraphicsScene * o = new QGraphicsScene ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsScene ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -158,8 +158,8 @@ QGraphicsScene ( const QRectF & sceneRect, QObject * parent = nullptr )
 */
 void QGraphicsScene_new2 ()
 {
-  QGraphicsScene * o = new QGraphicsScene ( *PQRECTF(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsScene ( *PQRECTF(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -167,8 +167,8 @@ QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent =
 */
 void QGraphicsScene_new3 ()
 {
-  QGraphicsScene * o = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QGraphicsScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QGraphicsScene ( QObject * parent = nullptr )

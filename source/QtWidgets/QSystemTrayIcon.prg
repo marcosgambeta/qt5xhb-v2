@@ -74,8 +74,8 @@ QSystemTrayIcon(QObject * parent = nullptr)
 */
 void QSystemTrayIcon_new1 ()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSystemTrayIcon ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -83,8 +83,8 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
 */
 void QSystemTrayIcon_new2 ()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QSystemTrayIcon(QObject * parent = nullptr)

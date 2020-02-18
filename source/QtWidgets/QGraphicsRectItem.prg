@@ -63,8 +63,8 @@ QGraphicsRectItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsRectItem_new1 ()
 {
-  QGraphicsRectItem * o = new QGraphicsRectItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsRectItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsRectItem_new2 ()
 {
-  QGraphicsRectItem * o = new QGraphicsRectItem ( *PQRECTF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsRectItem ( *PQRECTF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem *
 */
 void QGraphicsRectItem_new3 ()
 {
-  QGraphicsRectItem * o = new QGraphicsRectItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsRectItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGraphicsRectItem ( QGraphicsItem * parent = nullptr )

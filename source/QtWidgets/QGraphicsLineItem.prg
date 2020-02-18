@@ -69,8 +69,8 @@ QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsLineItem_new1 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsLineItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsLineItem_new2 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( *PQLINEF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsLineItem ( *PQLINEF(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * pare
 */
 void QGraphicsLineItem_new3 ()
 {
-  QGraphicsLineItem * o = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGraphicsLineItem ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(5) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGraphicsLineItem ( QGraphicsItem * parent = nullptr )

@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QItemEditorFactory * o = new QItemEditorFactory ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QItemEditorFactory ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

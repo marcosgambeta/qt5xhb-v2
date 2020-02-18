@@ -77,8 +77,8 @@ QStyleOptionTab()
 */
 void QStyleOptionTab_new1 ()
 {
-  QStyleOptionTab * o = new QStyleOptionTab ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionTab ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QStyleOptionTab(const QStyleOptionTab &other)
 */
 void QStyleOptionTab_new2 ()
 {
-  QStyleOptionTab * o = new QStyleOptionTab ( *PQSTYLEOPTIONTAB(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStyleOptionTab ( *PQSTYLEOPTIONTAB(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*

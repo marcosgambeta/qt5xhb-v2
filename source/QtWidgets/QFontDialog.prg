@@ -67,8 +67,8 @@ explicit QFontDialog ( QWidget * parent = nullptr )
 */
 void QFontDialog_new1 ()
 {
-  QFontDialog * o = new QFontDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFontDialog ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ explicit QFontDialog ( const QFont & initial, QWidget * parent = nullptr )
 */
 void QFontDialog_new2 ()
 {
-  QFontDialog * o = new QFontDialog ( *PQFONT(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QFontDialog ( *PQFONT(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QFontDialog ( QWidget * parent = nullptr )
