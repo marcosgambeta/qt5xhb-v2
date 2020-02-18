@@ -70,8 +70,8 @@ QXmlItem ()
 */
 void QXmlItem_new1 ()
 {
-  QXmlItem * o = new QXmlItem ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlItem ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QXmlItem ( const QXmlItem & other )
 */
 void QXmlItem_new2 ()
 {
-  QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlItem ( *PQXMLITEM(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 */
 void QXmlItem_new3 ()
 {
-  QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QXmlItem ( const QVariant & atomicValue )
 */
 void QXmlItem_new4 ()
 {
-  QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlItem ( *PQVARIANT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlItem ()

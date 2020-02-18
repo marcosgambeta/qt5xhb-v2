@@ -67,8 +67,8 @@ QXmlNodeModelIndex ()
 */
 void QXmlNodeModelIndex_new1 ()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlNodeModelIndex ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
 void QXmlNodeModelIndex_new2 ()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlNodeModelIndex ()

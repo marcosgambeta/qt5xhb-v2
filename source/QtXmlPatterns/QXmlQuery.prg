@@ -85,8 +85,8 @@ QXmlQuery ()
 */
 void QXmlQuery_new1 ()
 {
-  QXmlQuery * o = new QXmlQuery ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlQuery ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QXmlQuery ( const QXmlQuery & other )
 */
 void QXmlQuery_new2 ()
 {
-  QXmlQuery * o = new QXmlQuery ( *PQXMLQUERY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlQuery ( *PQXMLQUERY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QXmlQuery ( const QXmlNamePool & np )
 */
 void QXmlQuery_new3 ()
 {
-  QXmlQuery * o = new QXmlQuery ( *PQXMLNAMEPOOL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlQuery ( *PQXMLNAMEPOOL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool(
 */
 void QXmlQuery_new4 ()
 {
-  QXmlQuery * o = new QXmlQuery ( (QXmlQuery::QueryLanguage) hb_parni(1), ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlQuery ( (QXmlQuery::QueryLanguage) hb_parni(1), ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlQuery ()

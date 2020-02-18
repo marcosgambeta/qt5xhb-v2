@@ -68,8 +68,8 @@ QXmlName ()
 */
 void QXmlName_new1 ()
 {
-  QXmlName * o = new QXmlName ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlName ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 */
 void QXmlName_new2 ()
 {
-  QXmlName * o = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlName ( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlName ()

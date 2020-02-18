@@ -61,8 +61,8 @@ QXmlNamePool ()
 */
 void QXmlNamePool_new1 ()
 {
-  QXmlNamePool * o = new QXmlNamePool ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlNamePool ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -70,8 +70,8 @@ QXmlNamePool ( const QXmlNamePool & other )
 */
 void QXmlNamePool_new2 ()
 {
-  QXmlNamePool * o = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlNamePool ()

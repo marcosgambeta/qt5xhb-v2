@@ -81,8 +81,8 @@ QXmlSchemaValidator ()
 */
 void QXmlSchemaValidator_new1 ()
 {
-  QXmlSchemaValidator * o = new QXmlSchemaValidator ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlSchemaValidator ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -90,8 +90,8 @@ QXmlSchemaValidator ( const QXmlSchema & schema )
 */
 void QXmlSchemaValidator_new2 ()
 {
-  QXmlSchemaValidator * o = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlSchemaValidator ( *PQXMLSCHEMA(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlSchemaValidator ()

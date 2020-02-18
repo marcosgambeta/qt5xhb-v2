@@ -69,8 +69,8 @@ QSourceLocation ()
 */
 void QSourceLocation_new1 ()
 {
-  QSourceLocation * o = new QSourceLocation ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSourceLocation ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QSourceLocation ( const QSourceLocation & other )
 */
 void QSourceLocation_new2 ()
 {
-  QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSourceLocation ( *PQSOURCELOCATION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
 void QSourceLocation_new3 ()
 {
-  QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSourceLocation ()

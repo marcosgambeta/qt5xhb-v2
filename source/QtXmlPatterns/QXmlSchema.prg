@@ -80,8 +80,8 @@ QXmlSchema ()
 */
 void QXmlSchema_new1 ()
 {
-  QXmlSchema * o = new QXmlSchema ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlSchema ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QXmlSchema ( const QXmlSchema & other )
 */
 void QXmlSchema_new2 ()
 {
-  QXmlSchema * o = new QXmlSchema ( *PQXMLSCHEMA(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlSchema ( *PQXMLSCHEMA(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlSchema ()
