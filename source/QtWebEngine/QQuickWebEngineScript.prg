@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQuickWebEngineScript * o = new QQuickWebEngineScript ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QQuickWebEngineScript ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
