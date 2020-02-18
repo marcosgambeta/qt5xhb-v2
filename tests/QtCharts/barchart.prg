@@ -26,83 +26,93 @@ REQUEST QBarSet
 PROCEDURE Main ()
 
    LOCAL oApp
-   LOCAL window
+   LOCAL oWindow
+   LOCAL oSet0
+   LOCAL oSet1
+   LOCAL oSet2
+   LOCAL oSet3
+   LOCAL oSet4
+   LOCAL oSeries
+   LOCAL oChart
+   LOCAL aCategories
+   LOCAL oAxis
+   LOCAL oChartView
 
    oApp := QApplication():new()
 
-   set0 := QBarSet():new("Jane")
-   set1 := QBarSet():new("John")
-   set2 := QBarSet():new("Axel")
-   set3 := QBarSet():new("Mary")
-   set4 := QBarSet():new("Samantha")
+   oSet0 := QBarSet():new("Jane")
+   oSet1 := QBarSet():new("John")
+   oSet2 := QBarSet():new("Axel")
+   oSet3 := QBarSet():new("Mary")
+   oSet4 := QBarSet():new("Samantha")
 
-   set0:append( 1 )
-   set0:append( 2 )
-   set0:append( 3 )
-   set0:append( 4 )
-   set0:append( 5 )
-   set0:append( 6 )
+   oSet0:append( 1 )
+   oSet0:append( 2 )
+   oSet0:append( 3 )
+   oSet0:append( 4 )
+   oSet0:append( 5 )
+   oSet0:append( 6 )
 
-   set1:append( 5 )
-   set1:append( 0 )
-   set1:append( 0 )
-   set1:append( 4 )
-   set1:append( 0 )
-   set1:append( 7 )
+   oSet1:append( 5 )
+   oSet1:append( 0 )
+   oSet1:append( 0 )
+   oSet1:append( 4 )
+   oSet1:append( 0 )
+   oSet1:append( 7 )
 
-   set2:append( 3 )
-   set2:append( 5 )
-   set2:append( 8 )
-   set2:append( 13 )
-   set2:append( 8 )
-   set2:append( 5 )
+   oSet2:append( 3 )
+   oSet2:append( 5 )
+   oSet2:append( 8 )
+   oSet2:append( 13 )
+   oSet2:append( 8 )
+   oSet2:append( 5 )
 
-   set3:append( 5 )
-   set3:append( 6 )
-   set3:append( 7 )
-   set3:append( 3 )
-   set3:append( 4 )
-   set3:append( 5 )
+   oSet3:append( 5 )
+   oSet3:append( 6 )
+   oSet3:append( 7 )
+   oSet3:append( 3 )
+   oSet3:append( 4 )
+   oSet3:append( 5 )
 
-   set4:append( 9 )
-   set4:append( 7 )
-   set4:append( 5 )
-   set4:append( 3 )
-   set4:append( 1 )
-   set4:append( 2 )
+   oSet4:append( 9 )
+   oSet4:append( 7 )
+   oSet4:append( 5 )
+   oSet4:append( 3 )
+   oSet4:append( 1 )
+   oSet4:append( 2 )
 
-   series := QBarSeries():new()
-   series:append(set0)
-   series:append(set1)
-   series:append(set2)
-   series:append(set3)
-   series:append(set4)
+   oSeries := QBarSeries():new()
+   oSeries:append(oSet0)
+   oSeries:append(oSet1)
+   oSeries:append(oSet2)
+   oSeries:append(oSet3)
+   oSeries:append(oSet4)
 
-   chart := QChart():new()
-   chart:addSeries(series)
-   chart:setTitle("Simple barchart example")
-   chart:setAnimationOptions(QChart_SeriesAnimations)
+   oChart := QChart():new()
+   oChart:addSeries(oSeries)
+   oChart:setTitle("Simple barchart example")
+   oChart:setAnimationOptions(QChart_SeriesAnimations)
 
-   categories := { "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" }
-   axis := QBarCategoryAxis():new()
-   axis:append(categories)
-   chart:createDefaultAxes()
-   chart:setAxisX(axis, series)
+   aCategories := { "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" }
+   oAxis := QBarCategoryAxis():new()
+   oAxis:append(aCategories)
+   oChart:createDefaultAxes()
+   oChart:setAxisX(oAxis, oSeries)
 
-   chart:legend():setVisible(.t.)
-   chart:legend():setAlignment(Qt_AlignBottom)
+   oChart:legend():setVisible(.T.)
+   oChart:legend():setAlignment(Qt_AlignBottom)
 
-   chartView := QChartView():new(chart)
-   chartView:setRenderHint(QPainter_Antialiasing)
+   oChartView := QChartView():new(oChart)
+   oChartView:setRenderHint(QPainter_Antialiasing)
 
-   window := QMainWindow():new()
-   window:setCentralWidget(chartView)
-   window:resize(420, 300)
-   window:show()
+   oWindow := QMainWindow():new()
+   oWindow:setCentralWidget(oChartView)
+   oWindow:resize(420, 300)
+   oWindow:show()
 
    oApp:exec()
 
-   window:delete()
+   oWindow:delete()
 
    oApp:delete()
 

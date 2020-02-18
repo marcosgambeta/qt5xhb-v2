@@ -23,7 +23,14 @@ REQUEST QAbstractAxis
 PROCEDURE Main ()
 
    LOCAL oApp
-   LOCAL window
+   LOCAL oWindow
+   LOCAL oSeries0
+   LOCAL oSeries1
+   LOCAL oSeries
+   LOCAL oPen
+   LOCAL oGradient
+   LOCAL oChart
+   LOCAL oChartView
 
    oApp := QApplication():new()
 
