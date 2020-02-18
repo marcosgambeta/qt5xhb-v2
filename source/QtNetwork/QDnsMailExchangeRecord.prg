@@ -66,8 +66,8 @@ QDnsMailExchangeRecord()
 */
 void QDnsMailExchangeRecord_new1 ()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsMailExchangeRecord ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 */
 void QDnsMailExchangeRecord_new2 ()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDnsMailExchangeRecord()

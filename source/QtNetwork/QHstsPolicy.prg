@@ -77,8 +77,8 @@ QHstsPolicy()
 void QHstsPolicy_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHstsPolicy ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUr
 void QHstsPolicy_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHstsPolicy ( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QHstsPolicy(const QHstsPolicy &rhs)
 void QHstsPolicy_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ( *PQHSTSPOLICY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHstsPolicy ( *PQHSTSPOLICY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

@@ -66,8 +66,8 @@ QDnsTextRecord()
 */
 void QDnsTextRecord_new1 ()
 {
-  QDnsTextRecord * o = new QDnsTextRecord ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsTextRecord ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QDnsTextRecord(const QDnsTextRecord & other)
 */
 void QDnsTextRecord_new2 ()
 {
-  QDnsTextRecord * o = new QDnsTextRecord ( *PQDNSTEXTRECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsTextRecord ( *PQDNSTEXTRECORD(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDnsTextRecord()

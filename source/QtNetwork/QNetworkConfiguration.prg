@@ -75,8 +75,8 @@ QNetworkConfiguration ()
 */
 void QNetworkConfiguration_new1 ()
 {
-  QNetworkConfiguration * o = new QNetworkConfiguration ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkConfiguration ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
 void QNetworkConfiguration_new2 ()
 {
-  QNetworkConfiguration * o = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QNetworkConfiguration ()

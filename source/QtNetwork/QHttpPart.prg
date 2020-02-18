@@ -66,8 +66,8 @@ QHttpPart ()
 */
 void QHttpPart_new1 ()
 {
-  QHttpPart * o = new QHttpPart ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHttpPart ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QHttpPart ( const QHttpPart & other )
 */
 void QHttpPart_new2 ()
 {
-  QHttpPart * o = new QHttpPart ( *PQHTTPPART(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHttpPart ( *PQHTTPPART(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QHttpPart ()

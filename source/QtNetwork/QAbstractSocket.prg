@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

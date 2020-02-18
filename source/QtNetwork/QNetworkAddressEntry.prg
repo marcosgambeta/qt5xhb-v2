@@ -71,8 +71,8 @@ QNetworkAddressEntry ()
 */
 void QNetworkAddressEntry_new1 ()
 {
-  QNetworkAddressEntry * o = new QNetworkAddressEntry ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkAddressEntry ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
 void QNetworkAddressEntry_new2 ()
 {
-  QNetworkAddressEntry * o = new QNetworkAddressEntry ( *PQNETWORKADDRESSENTRY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkAddressEntry ( *PQNETWORKADDRESSENTRY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QNetworkAddressEntry ()

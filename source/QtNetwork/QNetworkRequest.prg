@@ -87,8 +87,8 @@ explicit QNetworkRequest ( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1 ()
 {
-  QNetworkRequest * o = new QNetworkRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QNetworkRequest ( const QNetworkRequest & other )
 */
 void QNetworkRequest_new2 ()
 {
-  QNetworkRequest * o = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )

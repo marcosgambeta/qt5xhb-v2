@@ -72,8 +72,8 @@ QAuthenticator ()
 */
 void QAuthenticator_new1 ()
 {
-  QAuthenticator * o = new QAuthenticator ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAuthenticator ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QAuthenticator ( const QAuthenticator & other )
 */
 void QAuthenticator_new2 ()
 {
-  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAuthenticator ( *PQAUTHENTICATOR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QAuthenticator ()

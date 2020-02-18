@@ -78,8 +78,8 @@ explicit QHostInfo(int lookupId = -1)
 */
 void QHostInfo_new1 ()
 {
-  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHostInfo ( OPINT(1,-1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QHostInfo ( const QHostInfo & other )
 */
 void QHostInfo_new2 ()
 {
-  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QHostInfo ( *PQHOSTINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]explicit QHostInfo(int lookupId = -1)

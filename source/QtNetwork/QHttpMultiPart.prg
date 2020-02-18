@@ -58,8 +58,8 @@ explicit QHttpMultiPart(QObject *parent = nullptr)
 */
 void QHttpMultiPart_new1 ()
 {
-  QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHttpMultiPart ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +67,8 @@ explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
 */
 void QHttpMultiPart_new2 ()
 {
-  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QHttpMultiPart(QObject *parent = nullptr)

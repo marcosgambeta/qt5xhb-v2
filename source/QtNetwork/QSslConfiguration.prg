@@ -106,8 +106,8 @@ QSslConfiguration()
 */
 void QSslConfiguration_new1 ()
 {
-  QSslConfiguration * o = new QSslConfiguration ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslConfiguration ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -115,8 +115,8 @@ QSslConfiguration( const QSslConfiguration & other )
 */
 void QSslConfiguration_new2 ()
 {
-  QSslConfiguration * o = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslConfiguration ( *PQSSLCONFIGURATION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSslConfiguration()

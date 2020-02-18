@@ -85,8 +85,8 @@ explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray 
 */
 void QNetworkCookie_new1 ()
 {
-  QNetworkCookie * o = new QNetworkCookie ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkCookie ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QNetworkCookie ( const QNetworkCookie & other )
 */
 void QNetworkCookie_new2 ()
 {
-  QNetworkCookie * o = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkCookie ( *PQNETWORKCOOKIE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())

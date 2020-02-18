@@ -86,8 +86,8 @@ QNetworkProxy ()
 */
 void QNetworkProxy_new1 ()
 {
-  QNetworkProxy * o = new QNetworkProxy ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkProxy ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -95,8 +95,8 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 */
 void QNetworkProxy_new2 ()
 {
-  QNetworkProxy * o = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -104,8 +104,8 @@ QNetworkProxy ( const QNetworkProxy & other )
 */
 void QNetworkProxy_new3 ()
 {
-  QNetworkProxy * o = new QNetworkProxy ( *PQNETWORKPROXY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QNetworkProxy ( *PQNETWORKPROXY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QNetworkProxy ()

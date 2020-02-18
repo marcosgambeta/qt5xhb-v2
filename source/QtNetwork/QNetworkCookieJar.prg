@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QNetworkCookieJar * o = new QNetworkCookieJar ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QNetworkCookieJar ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

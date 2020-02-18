@@ -68,8 +68,8 @@ QDnsServiceRecord()
 */
 void QDnsServiceRecord_new1 ()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsServiceRecord ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QDnsServiceRecord(const QDnsServiceRecord & other)
 */
 void QDnsServiceRecord_new2 ()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDnsServiceRecord()

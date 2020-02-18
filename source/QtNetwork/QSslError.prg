@@ -66,8 +66,8 @@ QSslError ()
 */
 void QSslError_new1 ()
 {
-  QSslError * o = new QSslError ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslError ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QSslError ( SslError error )
 */
 void QSslError_new2 ()
 {
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslError ( (QSslError::SslError) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QSslError ( SslError error, const QSslCertificate & certificate )
 */
 void QSslError_new3 ()
 {
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QSslError ( const QSslError & other )
 */
 void QSslError_new4 ()
 {
-  QSslError * o = new QSslError ( *PQSSLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSslError ( *PQSSLERROR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSslError ()

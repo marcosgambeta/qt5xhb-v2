@@ -65,8 +65,8 @@ QDnsDomainNameRecord()
 */
 void QDnsDomainNameRecord_new1 ()
 {
-  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsDomainNameRecord ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 */
 void QDnsDomainNameRecord_new2 ()
 {
-  QDnsDomainNameRecord * o = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDnsDomainNameRecord()
