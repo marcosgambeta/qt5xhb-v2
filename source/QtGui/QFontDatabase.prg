@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), PINT(3) ) );
+      auto ptr = new QFont( obj->font ( PQSTRING(1), PQSTRING(2), PINT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

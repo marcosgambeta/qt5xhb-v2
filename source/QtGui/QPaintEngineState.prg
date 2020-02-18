@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->backgroundBrush () );
+      auto ptr = new QBrush( obj->backgroundBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
+      auto ptr = new QBrush( obj->brush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->brushOrigin () );
+      auto ptr = new QPointF( obj->brushOrigin () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->clipPath () );
+      auto ptr = new QPainterPath( obj->clipPath () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->clipRegion () );
+      auto ptr = new QRegion( obj->clipRegion () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
+      auto ptr = new QPen( obj->pen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->transform () );
+      auto ptr = new QTransform( obj->transform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

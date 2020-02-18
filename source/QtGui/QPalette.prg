@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
     if( ISNUMPAR(1) && ISQPALETTE(1) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->resolve ( *PQPALETTE(1) ) );
+      auto ptr = new QPalette( obj->resolve ( *PQPALETTE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format () );
+      auto ptr = new QByteArray( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

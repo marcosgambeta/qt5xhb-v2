@@ -356,7 +356,7 @@ void QRegion_translated1 ()
 
   if( obj != nullptr )
   {
-      QRegion * ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
+      auto ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -370,7 +370,7 @@ void QRegion_translated2 ()
 
   if( obj != nullptr )
   {
-      QRegion * ptr = new QRegion( obj->translated ( *PQPOINT(1) ) );
+      auto ptr = new QRegion( obj->translated ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -403,7 +403,7 @@ void QRegion_united1 ()
 
   if( obj != nullptr )
   {
-      QRegion * ptr = new QRegion( obj->united ( *PQREGION(1) ) );
+      auto ptr = new QRegion( obj->united ( *PQREGION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -417,7 +417,7 @@ void QRegion_united2 ()
 
   if( obj != nullptr )
   {
-      QRegion * ptr = new QRegion( obj->united ( *PQRECT(1) ) );
+      auto ptr = new QRegion( obj->united ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QREGION_SUBTRACTED )
     if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->subtracted ( *PQREGION(1) ) );
+      auto ptr = new QRegion( obj->subtracted ( *PQREGION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QREGION_XORED )
     if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->xored ( *PQREGION(1) ) );
+      auto ptr = new QRegion( obj->xored ( *PQREGION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->boundingRect () );
+      auto ptr = new QRect( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

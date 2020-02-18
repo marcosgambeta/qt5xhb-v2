@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QPAINTERPATH_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTROLPOINTRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->controlPointRect () );
+      auto ptr = new QRectF( obj->controlPointRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CURRENTPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->currentPosition () );
+      auto ptr = new QPointF( obj->currentPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->intersected ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->intersected ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pointAtPercent ( PQREAL(1) ) );
+      auto ptr = new QPointF( obj->pointAtPercent ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->simplified () );
+      auto ptr = new QPainterPath( obj->simplified () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->subtracted ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->subtracted ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1350,7 +1350,7 @@ void QPainterPath_toFillPolygon1 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( *PQTRANSFORM(1) ) );
+      auto ptr = new QPolygonF( obj->toFillPolygon ( *PQTRANSFORM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1364,7 +1364,7 @@ void QPainterPath_toFillPolygon2 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt5xhb_itemGetPtr(1) ) );
+      auto ptr = new QPolygonF( obj->toFillPolygon ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt5xhb_itemGetPtr(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOREVERSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->toReversed () );
+      auto ptr = new QPainterPath( obj->toReversed () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1471,7 +1471,7 @@ void QPainterPath_translated1 ()
 
   if( obj != nullptr )
   {
-      QPainterPath * ptr = new QPainterPath( obj->translated ( PQREAL(1), PQREAL(2) ) );
+      auto ptr = new QPainterPath( obj->translated ( PQREAL(1), PQREAL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1485,7 +1485,7 @@ void QPainterPath_translated2 ()
 
   if( obj != nullptr )
   {
-      QPainterPath * ptr = new QPainterPath( obj->translated ( *PQPOINTF(1) ) );
+      auto ptr = new QPainterPath( obj->translated ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->united ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->united ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

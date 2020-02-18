@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QFont * ptr = new QFont( QGuiApplication::font () );
+      auto ptr = new QFont( QGuiApplication::font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPalette * ptr = new QPalette( QGuiApplication::palette () );
+      auto ptr = new QPalette( QGuiApplication::palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

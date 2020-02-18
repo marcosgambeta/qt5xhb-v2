@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

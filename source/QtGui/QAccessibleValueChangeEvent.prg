@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value () );
+      auto ptr = new QVariant( obj->value () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

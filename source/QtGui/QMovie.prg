@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor () );
+      auto ptr = new QColor( obj->backgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->currentImage () );
+      auto ptr = new QImage( obj->currentImage () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->currentPixmap () );
+      auto ptr = new QPixmap( obj->currentPixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format () );
+      auto ptr = new QByteArray( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->frameRect () );
+      auto ptr = new QRect( obj->frameRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->scaledSize () );
+      auto ptr = new QSize( obj->scaledSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

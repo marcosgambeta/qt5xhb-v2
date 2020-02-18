@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat () );
+      auto ptr = new QTextFrameFormat( obj->frameFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
+      auto ptr = new QTextCursor( obj->firstCursorPosition () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
+      auto ptr = new QTextCursor( obj->lastCursorPosition () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QImage * ptr = new QImage( obj->image ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
+      auto ptr = new QImage( obj->image ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
+      auto ptr = new QPixmap( obj->pixmap ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

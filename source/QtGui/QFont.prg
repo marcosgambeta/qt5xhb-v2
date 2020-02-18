@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      QFont * ptr = new QFont( obj->resolve ( *PQFONT(1) ) );
+      auto ptr = new QFont( obj->resolve ( *PQFONT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

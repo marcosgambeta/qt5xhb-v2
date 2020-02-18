@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect () );
+      auto ptr = new QRectF( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFormat * ptr = new QTextFormat( obj->format () );
+      auto ptr = new QTextFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

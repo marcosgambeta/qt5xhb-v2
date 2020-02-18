@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocumentFragment * ptr = new QTextDocumentFragment( obj->selection () );
+      auto ptr = new QTextDocumentFragment( obj->selection () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->block () );
+      auto ptr = new QTextBlock( obj->block () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
+      auto ptr = new QTextCharFormat( obj->charFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat () );
+      auto ptr = new QTextBlockFormat( obj->blockFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->blockCharFormat () );
+      auto ptr = new QTextCharFormat( obj->blockCharFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect () );
+      auto ptr = new QRect( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

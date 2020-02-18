@@ -217,7 +217,7 @@ void QFontMetricsF_boundingRect1 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
+      auto ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -231,7 +231,7 @@ void QFontMetricsF_boundingRect2 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->boundingRect ( *PQCHAR(1) ) );
+      auto ptr = new QRectF( obj->boundingRect ( *PQCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -246,7 +246,7 @@ void QFontMetricsF_boundingRect3 ()
   if( obj != nullptr )
   {
        int par5;
-      QRectF * ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PINT(2), PQSTRING(3), OPINT(4,0), &par5 ) );
+      auto ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PINT(2), PQSTRING(3), OPINT(4,0), &par5 ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
        hb_storni( par5, 5 );
   }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
     {
 #endif
       int par4;
-      QSizeF * ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
+      auto ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
       hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
+      auto ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
 #endif
-      QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
+      auto ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
+      auto ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

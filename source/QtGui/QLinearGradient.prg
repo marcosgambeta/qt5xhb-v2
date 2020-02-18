@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->finalStop () );
+      auto ptr = new QPointF( obj->finalStop () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->start () );
+      auto ptr = new QPointF( obj->start () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

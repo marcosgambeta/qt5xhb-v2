@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->createStroke ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->createStroke ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

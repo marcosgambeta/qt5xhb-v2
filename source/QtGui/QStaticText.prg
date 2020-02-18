@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextOption * ptr = new QTextOption( obj->textOption () );
+      auto ptr = new QTextOption( obj->textOption () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size () );
+      auto ptr = new QSizeF( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

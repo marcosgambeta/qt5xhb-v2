@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->column ( PINT(1) ) );
+      auto ptr = new QVector4D( obj->column ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->row ( PINT(1) ) );
+      auto ptr = new QVector4D( obj->row ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
     {
 #endif
       bool par1;
-      QMatrix4x4 * ptr = new QMatrix4x4( obj->inverted ( &par1 ) );
+      auto ptr = new QMatrix4x4( obj->inverted ( &par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMatrix4x4 * ptr = new QMatrix4x4( obj->transposed () );
+      auto ptr = new QMatrix4x4( obj->transposed () );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX4X4", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMatrix3x3 * ptr = new QMatrix3x3( obj->normalMatrix () );
+      auto ptr = new QMatrix3x3( obj->normalMatrix () );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX3X3", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOAFFINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMatrix * ptr = new QMatrix( obj->toAffine () );
+      auto ptr = new QMatrix( obj->toAffine () );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -997,7 +997,7 @@ void QMatrix4x4_toTransform1 ()
 
   if( obj != nullptr )
   {
-      QTransform * ptr = new QTransform( obj->toTransform () );
+      auto ptr = new QTransform( obj->toTransform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -1011,7 +1011,7 @@ void QMatrix4x4_toTransform2 ()
 
   if( obj != nullptr )
   {
-      QTransform * ptr = new QTransform( obj->toTransform ( PFLOAT(1) ) );
+      auto ptr = new QTransform( obj->toTransform ( PFLOAT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
@@ -1044,7 +1044,7 @@ void QMatrix4x4_map1 ()
 
   if( obj != nullptr )
   {
-      QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -1058,7 +1058,7 @@ void QMatrix4x4_map2 ()
 
   if( obj != nullptr )
   {
-      QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
+      auto ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -1073,7 +1073,7 @@ void QMatrix4x4_map3 ()
 
   if( obj != nullptr )
   {
-      QVector3D * ptr = new QVector3D( obj->map ( *PQVECTOR3D(1) ) );
+      auto ptr = new QVector3D( obj->map ( *PQVECTOR3D(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
   }
 #endif
@@ -1089,7 +1089,7 @@ void QMatrix4x4_map4 ()
 
   if( obj != nullptr )
   {
-      QVector4D * ptr = new QVector4D( obj->map ( *PQVECTOR4D(1) ) );
+      auto ptr = new QVector4D( obj->map ( *PQVECTOR4D(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
   }
 #endif
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->mapVector ( *PQVECTOR3D(1) ) );
+      auto ptr = new QVector3D( obj->mapVector ( *PQVECTOR3D(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1160,7 +1160,7 @@ void QMatrix4x4_mapRect1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
+      auto ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1174,7 +1174,7 @@ void QMatrix4x4_mapRect2 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }

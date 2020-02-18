@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property ( PINT(1) ) );
+      auto ptr = new QVariant( obj->property ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->colorProperty ( PINT(1) ) );
+      auto ptr = new QColor( obj->colorProperty ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPen * ptr = new QPen( obj->penProperty ( PINT(1) ) );
+      auto ptr = new QPen( obj->penProperty ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brushProperty ( PINT(1) ) );
+      auto ptr = new QBrush( obj->brushProperty ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextLength * ptr = new QTextLength( obj->lengthProperty ( PINT(1) ) );
+      auto ptr = new QTextLength( obj->lengthProperty ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlockFormat * ptr = new QTextBlockFormat( obj->toBlockFormat () );
+      auto ptr = new QTextBlockFormat( obj->toBlockFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->toCharFormat () );
+      auto ptr = new QTextCharFormat( obj->toCharFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextListFormat * ptr = new QTextListFormat( obj->toListFormat () );
+      auto ptr = new QTextListFormat( obj->toListFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextTableFormat * ptr = new QTextTableFormat( obj->toTableFormat () );
+      auto ptr = new QTextTableFormat( obj->toTableFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTTABLEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextFrameFormat * ptr = new QTextFrameFormat( obj->toFrameFormat () );
+      auto ptr = new QTextFrameFormat( obj->toFrameFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextImageFormat * ptr = new QTextImageFormat( obj->toImageFormat () );
+      auto ptr = new QTextImageFormat( obj->toImageFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTIMAGEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextTableCellFormat * ptr = new QTextTableCellFormat( obj->toTableCellFormat () );
+      auto ptr = new QTextTableCellFormat( obj->toTableCellFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->background () );
+      auto ptr = new QBrush( obj->background () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foreground () );
+      auto ptr = new QBrush( obj->foreground () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

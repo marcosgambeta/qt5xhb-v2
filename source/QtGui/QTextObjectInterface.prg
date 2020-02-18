@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     if( ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && ISNUM(2) && ISQTEXTFORMAT(3) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
+      auto ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

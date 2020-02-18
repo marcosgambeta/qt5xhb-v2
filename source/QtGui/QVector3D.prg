@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->normalized () );
+      auto ptr = new QVector3D( obj->normalized () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector2D * ptr = new QVector2D( obj->toVector2D () );
+      auto ptr = new QVector2D( obj->toVector2D () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR2D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->toVector4D () );
+      auto ptr = new QVector4D( obj->toVector4D () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->toPoint () );
+      auto ptr = new QPoint( obj->toPoint () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->toPointF () );
+      auto ptr = new QPointF( obj->toPointF () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
     if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
 #endif
-      QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+      auto ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -719,7 +719,7 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 void QVector3D_normal1 ()
 {
 
-      QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+      auto ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 }
 
@@ -729,7 +729,7 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3
 void QVector3D_normal2 ()
 {
 
-      QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+      auto ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 }
 

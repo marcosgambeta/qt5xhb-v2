@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QWINDOW_BASESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->baseSize () );
+      auto ptr = new QSize( obj->baseSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QWINDOW_CURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCursor * ptr = new QCursor( obj->cursor () );
+      auto ptr = new QCursor( obj->cursor () );
       _qt5xhb_createReturnClass ( ptr, "QCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->frameGeometry () );
+      auto ptr = new QRect( obj->frameGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMargins * ptr = new QMargins( obj->frameMargins () );
+      auto ptr = new QMargins( obj->frameMargins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QWINDOW_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFromGlobal ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapFromGlobal ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapToGlobal ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapToGlobal ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
+      auto ptr = new QSize( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
+      auto ptr = new QSize( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->requestedFormat () );
+      auto ptr = new QSurfaceFormat( obj->requestedFormat () );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1949,7 +1949,7 @@ HB_FUNC_STATIC( QWINDOW_SIZEINCREMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeIncrement () );
+      auto ptr = new QSize( obj->sizeIncrement () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2051,7 +2051,7 @@ HB_FUNC_STATIC( QWINDOW_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
+      auto ptr = new QSurfaceFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2076,7 +2076,7 @@ HB_FUNC_STATIC( QWINDOW_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2357,7 +2357,7 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->position () );
+      auto ptr = new QPoint( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2561,7 +2561,7 @@ HB_FUNC_STATIC( QWINDOW_MASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->mask () );
+      auto ptr = new QRegion( obj->mask () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2690,7 +2690,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->framePosition () );
+      auto ptr = new QPoint( obj->framePosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2817,7 +2817,7 @@ HB_FUNC_STATIC( QWINDOW_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
+      auto ptr = new QTextCharFormat( obj->charFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

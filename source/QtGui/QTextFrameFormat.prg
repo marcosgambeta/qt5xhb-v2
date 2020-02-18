@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->borderBrush () );
+      auto ptr = new QBrush( obj->borderBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextLength * ptr = new QTextLength( obj->width () );
+      auto ptr = new QTextLength( obj->width () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextLength * ptr = new QTextLength( obj->height () );
+      auto ptr = new QTextLength( obj->height () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLENGTH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

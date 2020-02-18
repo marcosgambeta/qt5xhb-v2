@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat () );
+      auto ptr = new QTextBlockFormat( obj->blockFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat () );
+      auto ptr = new QTextCharFormat( obj->charFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->next () );
+      auto ptr = new QTextBlock( obj->next () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->previous () );
+      auto ptr = new QTextBlock( obj->previous () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

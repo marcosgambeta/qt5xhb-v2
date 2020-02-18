@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->item ( PINT(1) ) );
+      auto ptr = new QTextBlock( obj->item ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextListFormat * ptr = new QTextListFormat( obj->format () );
+      auto ptr = new QTextListFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLISTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

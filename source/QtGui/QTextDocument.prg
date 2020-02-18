@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QChar * ptr = new QChar( obj->characterAt ( PINT(1) ) );
+      auto ptr = new QChar( obj->characterAt ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -679,7 +679,7 @@ void QTextDocument_find1 ()
 
   if( obj != nullptr )
   {
-      QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      auto ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -693,7 +693,7 @@ void QTextDocument_find2 ()
 
   if( obj != nullptr )
   {
-      QTextCursor * ptr = new QTextCursor( obj->find ( PQSTRING(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      auto ptr = new QTextCursor( obj->find ( PQSTRING(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -707,7 +707,7 @@ void QTextDocument_find3 ()
 
   if( obj != nullptr )
   {
-      QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -721,7 +721,7 @@ void QTextDocument_find4 ()
 
   if( obj != nullptr )
   {
-      QTextCursor * ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+      auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlock ( PINT(1) ) );
+      auto ptr = new QTextBlock( obj->findBlock ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlockByNumber ( PINT(1) ) );
+      auto ptr = new QTextBlock( obj->findBlockByNumber ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->findBlockByLineNumber ( PINT(1) ) );
+      auto ptr = new QTextBlock( obj->findBlockByLineNumber ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->begin () );
+      auto ptr = new QTextBlock( obj->begin () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_END )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->end () );
+      auto ptr = new QTextBlock( obj->end () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->firstBlock () );
+      auto ptr = new QTextBlock( obj->firstBlock () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->lastBlock () );
+      auto ptr = new QTextBlock( obj->lastBlock () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->pageSize () );
+      auto ptr = new QSizeF( obj->pageSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->defaultFont () );
+      auto ptr = new QFont( obj->defaultFont () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->resource ( PINT(1), *PQURL(2) ) );
+      auto ptr = new QVariant( obj->resource ( PINT(1), *PQURL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size () );
+      auto ptr = new QSizeF( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1795,7 +1795,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextOption * ptr = new QTextOption( obj->defaultTextOption () );
+      auto ptr = new QTextOption( obj->defaultTextOption () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRawFont * ptr = new QRawFont( obj->rawFont () );
+      auto ptr = new QRawFont( obj->rawFont () );
       _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

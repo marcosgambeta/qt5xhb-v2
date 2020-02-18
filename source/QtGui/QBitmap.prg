@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
     if( ISNUMPAR(1) && ISQTRANSFORM(1) )
     {
 #endif
-      QBitmap * ptr = new QBitmap( obj->transformed ( *PQTRANSFORM(1) ) );
+      auto ptr = new QBitmap( obj->transformed ( *PQTRANSFORM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
     if( ISBETWEEN(2,3) && ISQSIZE(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
 #endif
-      QBitmap * ptr = new QBitmap( QBitmap::fromData ( *PQSIZE(1), PCONSTUCHAR(2), ISNIL(3)? (QImage::Format) QImage::Format_MonoLSB : (QImage::Format) hb_parni(3) ) );
+      auto ptr = new QBitmap( QBitmap::fromData ( *PQSIZE(1), PCONSTUCHAR(2), ISNIL(3)? (QImage::Format) QImage::Format_MonoLSB : (QImage::Format) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
     if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
   {
 #endif
-      QBitmap * ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
+      auto ptr = new QBitmap( QBitmap::fromImage ( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

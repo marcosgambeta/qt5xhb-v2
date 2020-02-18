@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->format () );
+      auto ptr = new QTextCharFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition () );
+      auto ptr = new QTextCursor( obj->firstCursorPosition () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition () );
+      auto ptr = new QTextCursor( obj->lastCursorPosition () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

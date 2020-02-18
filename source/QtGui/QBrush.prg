@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->texture () );
+      auto ptr = new QPixmap( obj->texture () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->textureImage () );
+      auto ptr = new QImage( obj->textureImage () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->transform () );
+      auto ptr = new QTransform( obj->transform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

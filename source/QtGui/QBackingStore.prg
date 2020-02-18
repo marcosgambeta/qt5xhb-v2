@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_STATICCONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->staticContents () );
+      auto ptr = new QRegion( obj->staticContents () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

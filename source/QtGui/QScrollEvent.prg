@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->contentPos () );
+      auto ptr = new QPointF( obj->contentPos () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->overshootDistance () );
+      auto ptr = new QPointF( obj->overshootDistance () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

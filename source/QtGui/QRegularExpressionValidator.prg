@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
+      auto ptr = new QRegularExpression( obj->regularExpression () );
       _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

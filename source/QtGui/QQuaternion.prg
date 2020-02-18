@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->vector () );
+      auto ptr = new QVector3D( obj->vector () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->normalized () );
+      auto ptr = new QQuaternion( obj->normalized () );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->conjugate () );
+      auto ptr = new QQuaternion( obj->conjugate () );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->rotatedVector ( *PQVECTOR3D(1) ) );
+      auto ptr = new QVector3D( obj->rotatedVector ( *PQVECTOR3D(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->toVector4D () );
+      auto ptr = new QVector4D( obj->toVector4D () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -664,7 +664,7 @@ static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 void QQuaternion_fromAxisAndAngle1 ()
 {
 
-      QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( *PQVECTOR3D(1), PFLOAT(2) ) );
+      auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( *PQVECTOR3D(1), PFLOAT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
@@ -674,7 +674,7 @@ static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 void QQuaternion_fromAxisAndAngle2 ()
 {
 
-      QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
+      auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 }
 
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
     if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && ISNUM(3) )
   {
 #endif
-      QQuaternion * ptr = new QQuaternion( QQuaternion::slerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
+      auto ptr = new QQuaternion( QQuaternion::slerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
     if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && ISNUM(3) )
   {
 #endif
-      QQuaternion * ptr = new QQuaternion( QQuaternion::nlerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
+      auto ptr = new QQuaternion( QQuaternion::nlerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

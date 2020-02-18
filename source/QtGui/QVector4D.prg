@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->normalized () );
+      auto ptr = new QVector4D( obj->normalized () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector2D * ptr = new QVector2D( obj->toVector2D () );
+      auto ptr = new QVector2D( obj->toVector2D () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR2D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector2D * ptr = new QVector2D( obj->toVector2DAffine () );
+      auto ptr = new QVector2D( obj->toVector2DAffine () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR2D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->toVector3D () );
+      auto ptr = new QVector3D( obj->toVector3D () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->toVector3DAffine () );
+      auto ptr = new QVector3D( obj->toVector3DAffine () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->toPoint () );
+      auto ptr = new QPoint( obj->toPoint () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->toPointF () );
+      auto ptr = new QPointF( obj->toPointF () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

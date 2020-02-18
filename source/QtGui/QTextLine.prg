@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTLINE_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect () );
+      auto ptr = new QRectF( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->naturalTextRect () );
+      auto ptr = new QRectF( obj->naturalTextRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTEXTLINE_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position () );
+      auto ptr = new QPointF( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

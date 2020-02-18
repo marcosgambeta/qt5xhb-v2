@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
+      auto ptr = new QSurfaceFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

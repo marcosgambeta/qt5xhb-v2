@@ -1729,7 +1729,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->borderColor () );
+      auto ptr = new QColor( obj->borderColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

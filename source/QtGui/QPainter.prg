@@ -322,7 +322,7 @@ void QPainter_boundingRect1 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PINT(2), PQSTRING(3) ) );
+      auto ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PINT(2), PQSTRING(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -336,7 +336,7 @@ void QPainter_boundingRect2 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( *PQRECT(1), PINT(2), PQSTRING(3) ) );
+      auto ptr = new QRect( obj->boundingRect ( *PQRECT(1), PINT(2), PQSTRING(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -350,7 +350,7 @@ void QPainter_boundingRect3 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6) ) );
+      auto ptr = new QRect( obj->boundingRect ( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -364,7 +364,7 @@ void QPainter_boundingRect4 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PQSTRING(2), ISNIL(3)? QTextOption() : *(QTextOption *) _qt5xhb_itemGetPtr(3) ) );
+      auto ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PQSTRING(2), ISNIL(3)? QTextOption() : *(QTextOption *) _qt5xhb_itemGetPtr(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->brushOrigin () );
+      auto ptr = new QPoint( obj->brushOrigin () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->clipPath () );
+      auto ptr = new QPainterPath( obj->clipPath () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QPAINTER_CLIPREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->clipRegion () );
+      auto ptr = new QRegion( obj->clipRegion () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->combinedTransform () );
+      auto ptr = new QTransform( obj->combinedTransform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2957,7 +2957,7 @@ HB_FUNC_STATIC( QPAINTER_FONTINFO )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFontInfo * ptr = new QFontInfo( obj->fontInfo () );
+      auto ptr = new QFontInfo( obj->fontInfo () );
       _qt5xhb_createReturnClass ( ptr, "QFONTINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2982,7 +2982,7 @@ HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics () );
+      auto ptr = new QFontMetrics( obj->fontMetrics () );
       _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4245,7 +4245,7 @@ HB_FUNC_STATIC( QPAINTER_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->viewport () );
+      auto ptr = new QRect( obj->viewport () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4270,7 +4270,7 @@ HB_FUNC_STATIC( QPAINTER_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->window () );
+      auto ptr = new QRect( obj->window () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

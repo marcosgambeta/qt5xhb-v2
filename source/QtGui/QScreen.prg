@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSCREEN_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSCREEN_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSCREEN_PHYSICALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->physicalSize () );
+      auto ptr = new QSizeF( obj->physicalSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->availableSize () );
+      auto ptr = new QSize( obj->availableSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->availableGeometry () );
+      auto ptr = new QRect( obj->availableGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->virtualSize () );
+      auto ptr = new QSize( obj->virtualSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->virtualGeometry () );
+      auto ptr = new QRect( obj->virtualGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->availableVirtualSize () );
+      auto ptr = new QSize( obj->availableVirtualSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEVIRTUALGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->availableVirtualGeometry () );
+      auto ptr = new QRect( obj->availableVirtualGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
+      auto ptr = new QTransform( obj->transformBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
     {
 #endif
-      QRect * ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
+      auto ptr = new QRect( obj->mapBetween ( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
     if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->grabWindow ( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
+      auto ptr = new QPixmap( obj->grabWindow ( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

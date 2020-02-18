@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->hotSpot () );
+      auto ptr = new QPoint( obj->hotSpot () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap () );
+      auto ptr = new QPixmap( obj->pixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCURSOR_POS )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPoint * ptr = new QPoint( QCursor::pos () );
+      auto ptr = new QPoint( QCursor::pos () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

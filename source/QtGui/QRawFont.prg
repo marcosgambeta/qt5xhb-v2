@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQTRANSFORM(3)||ISNIL(3)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1), ISNIL(2)? (QRawFont::AntialiasingType) QRawFont::SubPixelAntialiasing : (QRawFont::AntialiasingType) hb_parni(2), ISNIL(3)? QTransform() : *(QTransform *) _qt5xhb_itemGetPtr(3) ) );
+      auto ptr = new QImage( obj->alphaMapForGlyph ( PQUINT32(1), ISNIL(2)? (QRawFont::AntialiasingType) QRawFont::SubPixelAntialiasing : (QRawFont::AntialiasingType) hb_parni(2), ISNIL(3)? QTransform() : *(QTransform *) _qt5xhb_itemGetPtr(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
+      auto ptr = new QPainterPath( obj->pathForGlyph ( PQUINT32(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect ( PQUINT32(1) ) );
+      auto ptr = new QRectF( obj->boundingRect ( PQUINT32(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->fontTable ( PCONSTCHAR(1) ) );
+      auto ptr = new QByteArray( obj->fontTable ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QRAWFONT_FROMFONT )
     if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
   {
 #endif
-      QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
+      auto ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

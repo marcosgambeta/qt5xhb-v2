@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->cursorRectangle () );
+      auto ptr = new QRectF( obj->cursorRectangle () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->inputItemTransform () );
+      auto ptr = new QTransform( obj->inputItemTransform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->keyboardRectangle () );
+      auto ptr = new QRectF( obj->keyboardRectangle () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

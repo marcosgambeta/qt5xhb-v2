@@ -270,7 +270,7 @@ void QPolygonF_translated1 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+      auto ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -284,7 +284,7 @@ void QPolygonF_translated2 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
+      auto ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPolygon * ptr = new QPolygon( obj->toPolygon () );
+      auto ptr = new QPolygon( obj->toPolygon () );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->united ( *PQPOLYGONF(1) ) );
+      auto ptr = new QPolygonF( obj->united ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->intersected ( *PQPOLYGONF(1) ) );
+      auto ptr = new QPolygonF( obj->intersected ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->subtracted ( *PQPOLYGONF(1) ) );
+      auto ptr = new QPolygonF( obj->subtracted ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

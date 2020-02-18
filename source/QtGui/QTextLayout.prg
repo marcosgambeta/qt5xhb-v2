@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->createLine () );
+      auto ptr = new QTextLine( obj->createLine () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineAt ( PINT(1) ) );
+      auto ptr = new QTextLine( obj->lineAt ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineForTextPosition ( PINT(1) ) );
+      auto ptr = new QTextLine( obj->lineForTextPosition ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position () );
+      auto ptr = new QPointF( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

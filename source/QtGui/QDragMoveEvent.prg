@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->answerRect () );
+      auto ptr = new QRect( obj->answerRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

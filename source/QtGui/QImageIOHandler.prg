@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->currentImageRect () );
+      auto ptr = new QRect( obj->currentImageRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format () );
+      auto ptr = new QByteArray( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

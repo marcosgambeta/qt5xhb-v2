@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QSize * ptr = new QSize( obj->actualSize ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+      auto ptr = new QSize( obj->actualSize ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -423,7 +423,7 @@ void QIcon_pixmap1 ()
 
   if( obj != nullptr )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+      auto ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -437,7 +437,7 @@ void QIcon_pixmap2 ()
 
   if( obj != nullptr )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
+      auto ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -451,7 +451,7 @@ void QIcon_pixmap3 ()
 
   if( obj != nullptr )
   {
-      QPixmap * ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+      auto ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
   {
 #endif
-      QIcon * ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
