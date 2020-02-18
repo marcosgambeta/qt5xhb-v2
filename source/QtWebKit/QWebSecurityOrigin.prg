@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 {
   if( ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1) )
   {
-    QWebSecurityOrigin * o = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QWebSecurityOrigin ( *PQWEBSECURITYORIGIN(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

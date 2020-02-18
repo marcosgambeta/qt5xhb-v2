@@ -68,8 +68,8 @@ QWebElementCollection ()
 */
 void QWebElementCollection_new1 ()
 {
-  QWebElementCollection * o = new QWebElementCollection ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebElementCollection ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QWebElementCollection ( const QWebElement & contextElement, const QString & quer
 */
 void QWebElementCollection_new2 ()
 {
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebElementCollection ( *PQWEBELEMENT(1), PQSTRING(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QWebElementCollection ( const QWebElementCollection & other )
 */
 void QWebElementCollection_new3 ()
 {
-  QWebElementCollection * o = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebElementCollection ( *PQWEBELEMENTCOLLECTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QWebElementCollection ()

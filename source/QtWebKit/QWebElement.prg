@@ -120,8 +120,8 @@ QWebElement ()
 */
 void QWebElement_new1 ()
 {
-  QWebElement * o = new QWebElement ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebElement ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -129,8 +129,8 @@ QWebElement ( const QWebElement & other )
 */
 void QWebElement_new2 ()
 {
-  QWebElement * o = new QWebElement ( *PQWEBELEMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebElement ( *PQWEBELEMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QWebElement ()
