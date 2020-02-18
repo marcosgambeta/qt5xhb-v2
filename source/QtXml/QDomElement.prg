@@ -88,8 +88,8 @@ QDomElement ()
 */
 void QDomElement_new1 ()
 {
-  QDomElement * o = new QDomElement ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomElement ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QDomElement ( const QDomElement & x )
 */
 void QDomElement_new2 ()
 {
-  QDomElement * o = new QDomElement ( *PQDOMELEMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomElement ( *PQDOMELEMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomElement ()

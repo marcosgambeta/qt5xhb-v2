@@ -53,8 +53,8 @@ QDomComment ()
 */
 void QDomComment_new1 ()
 {
-  QDomComment * o = new QDomComment ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomComment ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -62,8 +62,8 @@ QDomComment ( const QDomComment & x )
 */
 void QDomComment_new2 ()
 {
-  QDomComment * o = new QDomComment ( *PQDOMCOMMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomComment ( *PQDOMCOMMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomComment ()

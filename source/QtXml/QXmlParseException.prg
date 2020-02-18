@@ -66,8 +66,8 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 */
 void QXmlParseException_new1 ()
 {
-  QXmlParseException * o = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QXmlParseException ( const QXmlParseException & other )
 */
 void QXmlParseException_new2 ()
 {
-  QXmlParseException * o = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )

@@ -56,8 +56,8 @@ QDomEntity ()
 */
 void QDomEntity_new1 ()
 {
-  QDomEntity * o = new QDomEntity ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomEntity ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -65,8 +65,8 @@ QDomEntity ( const QDomEntity & x )
 */
 void QDomEntity_new2 ()
 {
-  QDomEntity * o = new QDomEntity ( *PQDOMENTITY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomEntity ( *PQDOMENTITY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomEntity ()

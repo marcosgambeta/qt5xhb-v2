@@ -74,8 +74,8 @@ QDomNamedNodeMap ()
 */
 void QDomNamedNodeMap_new1 ()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNamedNodeMap ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 */
 void QDomNamedNodeMap_new2 ()
 {
-  QDomNamedNodeMap * o = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomNamedNodeMap ()

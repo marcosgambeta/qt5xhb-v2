@@ -68,8 +68,8 @@ QDomNodeList ()
 */
 void QDomNodeList_new1 ()
 {
-  QDomNodeList * o = new QDomNodeList ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNodeList ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QDomNodeList ( const QDomNodeList & n )
 */
 void QDomNodeList_new2 ()
 {
-  QDomNodeList * o = new QDomNodeList ( *PQDOMNODELIST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNodeList ( *PQDOMNODELIST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomNodeList ()

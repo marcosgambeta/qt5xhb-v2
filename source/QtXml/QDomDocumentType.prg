@@ -60,8 +60,8 @@ QDomDocumentType ()
 */
 void QDomDocumentType_new1 ()
 {
-  QDomDocumentType * o = new QDomDocumentType ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomDocumentType ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QDomDocumentType ( const QDomDocumentType & n )
 */
 void QDomDocumentType_new2 ()
 {
-  QDomDocumentType * o = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomDocumentType ()

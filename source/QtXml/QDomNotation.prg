@@ -55,8 +55,8 @@ QDomNotation ()
 */
 void QDomNotation_new1 ()
 {
-  QDomNotation * o = new QDomNotation ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNotation ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -64,8 +64,8 @@ QDomNotation ( const QDomNotation & x )
 */
 void QDomNotation_new2 ()
 {
-  QDomNotation * o = new QDomNotation ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomNotation ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomNotation ()

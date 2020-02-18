@@ -59,8 +59,8 @@ QDomAttr ()
 */
 void QDomAttr_new1 ()
 {
-  QDomAttr * o = new QDomAttr ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomAttr ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QDomAttr ( const QDomAttr & x )
 */
 void QDomAttr_new2 ()
 {
-  QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomAttr ( *PQDOMATTR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomAttr ()

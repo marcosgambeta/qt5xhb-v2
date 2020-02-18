@@ -56,8 +56,8 @@ QDomProcessingInstruction ()
 */
 void QDomProcessingInstruction_new1 ()
 {
-  QDomProcessingInstruction * o = new QDomProcessingInstruction ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomProcessingInstruction ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -65,8 +65,8 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2 ()
 {
-  QDomProcessingInstruction * o = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomProcessingInstruction ()

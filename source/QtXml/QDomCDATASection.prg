@@ -53,8 +53,8 @@ QDomCDATASection ()
 */
 void QDomCDATASection_new1 ()
 {
-  QDomCDATASection * o = new QDomCDATASection ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomCDATASection ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -62,8 +62,8 @@ QDomCDATASection ( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2 ()
 {
-  QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QDomCDATASection ()
