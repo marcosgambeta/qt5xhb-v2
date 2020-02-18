@@ -76,8 +76,8 @@ explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpReq
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
 {
-  QWebEngineHttpRequest * o = new QWebEngineHttpRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebEngineHttpRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW2 )
 {
-  QWebEngineHttpRequest * o = new QWebEngineHttpRequest ( *PQWEBENGINEHTTPREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QWebEngineHttpRequest ( *PQWEBENGINEHTTPREQUEST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpRequest::Method &method = QWebEngineHttpRequest::Get)
