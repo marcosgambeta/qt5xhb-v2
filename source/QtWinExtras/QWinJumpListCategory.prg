@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
-    QWinJumpListCategory * o = new QWinJumpListCategory ( OPQSTRING(1,QString()) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QWinJumpListCategory ( OPQSTRING(1,QString()) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

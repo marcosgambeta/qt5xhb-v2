@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinThumbnailToolBar * o = new QWinThumbnailToolBar ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QWinThumbnailToolBar ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

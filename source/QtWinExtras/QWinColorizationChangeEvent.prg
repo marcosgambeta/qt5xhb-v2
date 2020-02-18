@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    QWinColorizationChangeEvent * o = new QWinColorizationChangeEvent ( PQRGB(1), PBOOL(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QWinColorizationChangeEvent ( PQRGB(1), PBOOL(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
