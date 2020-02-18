@@ -71,8 +71,8 @@ QScriptContextInfo(const QScriptContext * context)
 */
 void QScriptContextInfo_new1 ()
 {
-  QScriptContextInfo * o = new QScriptContextInfo ( PQSCRIPTCONTEXT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptContextInfo ( PQSCRIPTCONTEXT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QScriptContextInfo(const QScriptContextInfo & other)
 */
 void QScriptContextInfo_new2 ()
 {
-  QScriptContextInfo * o = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptContextInfo ( *PQSCRIPTCONTEXTINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QScriptContextInfo()
 */
 void QScriptContextInfo_new3 ()
 {
-  QScriptContextInfo * o = new QScriptContextInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptContextInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QScriptContextInfo(const QScriptContext * context)

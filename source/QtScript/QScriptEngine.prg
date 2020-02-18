@@ -99,8 +99,8 @@ QScriptEngine()
 */
 void QScriptEngine_new1 ()
 {
-  QScriptEngine * o = new QScriptEngine ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QScriptEngine ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ QScriptEngine(QObject * parent)
 */
 void QScriptEngine_new2 ()
 {
-  QScriptEngine * o = new QScriptEngine ( PQOBJECT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QScriptEngine ( PQOBJECT(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QScriptEngine()

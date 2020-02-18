@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
-    QScriptClass * o = new QScriptClass ( PQSCRIPTENGINE(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QScriptClass ( PQSCRIPTENGINE(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

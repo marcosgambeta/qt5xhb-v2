@@ -65,8 +65,8 @@ QScriptProgram()
 */
 void QScriptProgram_new1 ()
 {
-  QScriptProgram * o = new QScriptProgram ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptProgram ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QScriptProgram(const QString & sourceCode, const QString fileName = QString(), i
 */
 void QScriptProgram_new2 ()
 {
-  QScriptProgram * o = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QScriptProgram(const QScriptProgram & other)
 */
 void QScriptProgram_new3 ()
 {
-  QScriptProgram * o = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QScriptProgram()

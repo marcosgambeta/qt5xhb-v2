@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
-    QScriptEngineAgent * o = new QScriptEngineAgent ( PQSCRIPTENGINE(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QScriptEngineAgent ( PQSCRIPTENGINE(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {
