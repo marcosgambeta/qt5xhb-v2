@@ -86,8 +86,8 @@ explicit QQuickWidget(QWidget *parent = nullptr)
 void QQuickWidget_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickWidget ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -97,8 +97,8 @@ QQuickWidget(QQmlEngine* engine, QWidget *parent)
 void QQuickWidget_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( PQQMLENGINE(1), PQWIDGET(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickWidget ( PQQMLENGINE(1), PQWIDGET(2) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -108,8 +108,8 @@ QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 void QQuickWidget_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QQuickWidget ( *PQURL(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
