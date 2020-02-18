@@ -56,8 +56,8 @@ QPaintEvent ( const QRegion & paintRegion )
 */
 void QPaintEvent_new1 ()
 {
-  QPaintEvent * o = new QPaintEvent ( *PQREGION(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPaintEvent ( *PQREGION(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -65,8 +65,8 @@ QPaintEvent ( const QRect & paintRect )
 */
 void QPaintEvent_new2 ()
 {
-  QPaintEvent * o = new QPaintEvent ( *PQRECT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPaintEvent ( *PQRECT(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPaintEvent ( const QRegion & paintRegion )

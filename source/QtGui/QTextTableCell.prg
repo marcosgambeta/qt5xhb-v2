@@ -77,8 +77,8 @@ QTextTableCell()
 */
 void QTextTableCell_new1 ()
 {
-  QTextTableCell * o = new QTextTableCell ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextTableCell ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QTextTableCell(const QTextTableCell &o)
 */
 void QTextTableCell_new2 ()
 {
-  QTextTableCell * o = new QTextTableCell ( *PQTEXTTABLECELL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextTableCell ( *PQTEXTTABLECELL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTextTableCell()

@@ -106,8 +106,8 @@ QPainterPath ()
 */
 void QPainterPath_new1 ()
 {
-  QPainterPath * o = new QPainterPath ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainterPath ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -115,8 +115,8 @@ QPainterPath ( const QPointF & startPoint )
 */
 void QPainterPath_new2 ()
 {
-  QPainterPath * o = new QPainterPath ( *PQPOINTF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainterPath ( *PQPOINTF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -124,8 +124,8 @@ QPainterPath ( const QPainterPath & path )
 */
 void QPainterPath_new3 ()
 {
-  QPainterPath * o = new QPainterPath ( *PQPAINTERPATH(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainterPath ( *PQPAINTERPATH(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPainterPath ()

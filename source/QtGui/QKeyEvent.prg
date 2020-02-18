@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
   if( ISBETWEEN(3,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) )
   {
-    QKeyEvent * o = new QKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

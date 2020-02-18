@@ -83,8 +83,8 @@ QImageWriter ()
 */
 void QImageWriter_new1 ()
 {
-  QImageWriter * o = new QImageWriter ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageWriter ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 */
 void QImageWriter_new2 ()
 {
-  QImageWriter * o = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageWriter_new3 ()
 {
-  QImageWriter * o = new QImageWriter ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageWriter ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QImageWriter ()

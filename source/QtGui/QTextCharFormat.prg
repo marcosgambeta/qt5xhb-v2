@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextCharFormat * o = new QTextCharFormat ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QTextCharFormat ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

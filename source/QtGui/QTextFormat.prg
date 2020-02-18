@@ -117,8 +117,8 @@ QTextFormat()
 */
 void QTextFormat_new1 ()
 {
-  QTextFormat * o = new QTextFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QTextFormat(int type)
 */
 void QTextFormat_new2 ()
 {
-  QTextFormat * o = new QTextFormat ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextFormat ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -135,8 +135,8 @@ QTextFormat(const QTextFormat &rhs)
 */
 void QTextFormat_new3 ()
 {
-  QTextFormat * o = new QTextFormat ( *PQTEXTFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextFormat ( *PQTEXTFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTextFormat()

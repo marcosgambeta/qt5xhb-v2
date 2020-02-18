@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
   if( ISBETWEEN(2,3) && ISQKEYSEQUENCE(1) && ISNUM(2) && ISOPTLOG(3) )
   {
-    QShortcutEvent * o = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QShortcutEvent ( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

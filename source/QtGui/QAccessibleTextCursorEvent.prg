@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    QAccessibleTextCursorEvent * o = new QAccessibleTextCursorEvent ( PQOBJECT(1), PINT(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAccessibleTextCursorEvent ( PQOBJECT(1), PINT(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

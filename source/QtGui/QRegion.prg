@@ -74,8 +74,8 @@ QRegion()
 */
 void QRegion_new1 ()
 {
-  QRegion * o = new QRegion ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
 */
 void QRegion_new2 ()
 {
-  QRegion * o = new QRegion ( PINT(1), PINT(2), PINT(3), PINT(4), ISNIL(5)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(5) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ( PINT(1), PINT(2), PINT(3), PINT(4), ISNIL(5)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(5) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QRegion(const QRect &r, RegionType t = Rectangle)
 */
 void QRegion_new3 ()
 {
-  QRegion * o = new QRegion ( *PQRECT(1), ISNIL(2)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ( *PQRECT(1), ISNIL(2)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
 */
 void QRegion_new4 ()
 {
-  QRegion * o = new QRegion ( *PQPOLYGON(1), ISNIL(2)? (Qt::FillRule) Qt::OddEvenFill : (Qt::FillRule) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ( *PQPOLYGON(1), ISNIL(2)? (Qt::FillRule) Qt::OddEvenFill : (Qt::FillRule) hb_parni(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -110,8 +110,8 @@ QRegion(const QRegion &region)
 */
 void QRegion_new5 ()
 {
-  QRegion * o = new QRegion ( *PQREGION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ( *PQREGION(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -119,8 +119,8 @@ QRegion(const QBitmap &bitmap)
 */
 void QRegion_new6 ()
 {
-  QRegion * o = new QRegion ( *PQBITMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QRegion ( *PQBITMAP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QRegion()

@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSCREEN(1)||ISNIL(1)) )
   {
-    QOffscreenSurface * o = new QOffscreenSurface ( OPQSCREEN(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QOffscreenSurface ( OPQSCREEN(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

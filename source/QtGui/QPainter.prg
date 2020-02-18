@@ -165,8 +165,8 @@ QPainter ()
 */
 void QPainter_new1 ()
 {
-  QPainter * o = new QPainter ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainter ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -174,8 +174,8 @@ QPainter ( QPaintDevice * device )
 */
 void QPainter_new2 ()
 {
-  QPainter * o = new QPainter ( PQPAINTDEVICE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainter ( PQPAINTDEVICE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPainter ()

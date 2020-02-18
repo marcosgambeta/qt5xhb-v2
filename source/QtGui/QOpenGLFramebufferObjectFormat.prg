@@ -71,8 +71,8 @@ QOpenGLFramebufferObjectFormat()
 */
 void QOpenGLFramebufferObjectFormat_new1 ()
 {
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObjectFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 */
 void QOpenGLFramebufferObjectFormat_new2 ()
 {
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObjectFormat ( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QOpenGLFramebufferObjectFormat()

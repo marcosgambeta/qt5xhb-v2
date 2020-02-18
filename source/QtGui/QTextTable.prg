@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QTEXTTABLE_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QTextTable * o = new QTextTable ( PQTEXTDOCUMENT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTextTable ( PQTEXTDOCUMENT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

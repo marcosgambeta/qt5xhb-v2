@@ -71,8 +71,8 @@ QGlyphRun ()
 */
 void QGlyphRun_new1 ()
 {
-  QGlyphRun * o = new QGlyphRun ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGlyphRun ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QGlyphRun ( const QGlyphRun & other )
 */
 void QGlyphRun_new2 ()
 {
-  QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QGlyphRun ( *PQGLYPHRUN(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QGlyphRun ()

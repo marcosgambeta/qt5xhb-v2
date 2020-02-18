@@ -63,8 +63,8 @@ QPicture ( int formatVersion = -1 )
 */
 void QPicture_new1 ()
 {
-  QPicture * o = new QPicture ( OPINT(1,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPicture ( OPINT(1,-1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QPicture ( const QPicture & pic )
 */
 void QPicture_new2 ()
 {
-  QPicture * o = new QPicture ( *PQPICTURE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPicture ( *PQPICTURE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPicture ( int formatVersion = -1 )

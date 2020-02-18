@@ -57,8 +57,8 @@ QRegularExpressionValidator(QObject *parent = nullptr)
 */
 void QRegularExpressionValidator_new1 ()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRegularExpressionValidator ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +66,8 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = null
 */
 void QRegularExpressionValidator_new2 ()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QRegularExpressionValidator(QObject *parent = nullptr)

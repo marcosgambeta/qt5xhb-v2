@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent ( PQOBJECT(1), PINT(2), PINT(3) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAccessibleTextSelectionEvent ( PQOBJECT(1), PINT(2), PINT(3) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

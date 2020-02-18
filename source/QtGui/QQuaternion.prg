@@ -85,8 +85,8 @@ QQuaternion()
 */
 void QQuaternion_new1 ()
 {
-  QQuaternion * o = new QQuaternion ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQuaternion ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QQuaternion(float scalar, float xpos, float ypos, float zpos)
 */
 void QQuaternion_new2 ()
 {
-  QQuaternion * o = new QQuaternion ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQuaternion ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QQuaternion(float scalar, const QVector3D& vector)
 */
 void QQuaternion_new3 ()
 {
-  QQuaternion * o = new QQuaternion ( PFLOAT(1), *PQVECTOR3D(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQuaternion ( PFLOAT(1), *PQVECTOR3D(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QQuaternion(const QVector4D& vector)
 */
 void QQuaternion_new4 ()
 {
-  QQuaternion * o = new QQuaternion ( *PQVECTOR4D(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QQuaternion ( *PQVECTOR4D(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QQuaternion()

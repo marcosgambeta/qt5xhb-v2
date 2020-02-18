@@ -111,8 +111,8 @@ QStandardItemModel(QObject *parent = nullptr)
 */
 void QStandardItemModel_new1 ()
 {
-  QStandardItemModel * o = new QStandardItemModel ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItemModel ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -120,8 +120,8 @@ QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
 */
 void QStandardItemModel_new2 ()
 {
-  QStandardItemModel * o = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItemModel ( PINT(1), PINT(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QStandardItemModel(QObject *parent = nullptr)

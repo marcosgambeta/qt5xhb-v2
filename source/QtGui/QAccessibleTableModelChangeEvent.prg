@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent ( PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAccessibleTableModelChangeEvent ( PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

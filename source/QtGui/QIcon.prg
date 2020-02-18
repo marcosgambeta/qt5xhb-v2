@@ -84,8 +84,8 @@ QIcon ()
 */
 void QIcon_new1 ()
 {
-  QIcon * o = new QIcon ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QIcon ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QIcon ( const QPixmap & pixmap )
 */
 void QIcon_new2 ()
 {
-  QIcon * o = new QIcon ( *PQPIXMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QIcon ( *PQPIXMAP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QIcon ( const QIcon & other )
 */
 void QIcon_new3 ()
 {
-  QIcon * o = new QIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QIcon ( const QString & fileName )
 */
 void QIcon_new4 ()
 {
-  QIcon * o = new QIcon ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QIcon ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QIcon ()

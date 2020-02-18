@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
-    QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QWindowStateChangeEvent ( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

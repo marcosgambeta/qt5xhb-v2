@@ -77,8 +77,8 @@ QPainterPathStroker ()
 */
 void QPainterPathStroker_new1 ()
 {
-  QPainterPathStroker * o = new QPainterPathStroker ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainterPathStroker ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QPainterPathStroker( const QPen & pen )
 void QPainterPathStroker_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPainterPathStroker * o = new QPainterPathStroker ( *PQPEN(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPainterPathStroker ( *PQPEN(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

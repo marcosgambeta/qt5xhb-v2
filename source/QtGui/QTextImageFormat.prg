@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextImageFormat * o = new QTextImageFormat ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QTextImageFormat ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

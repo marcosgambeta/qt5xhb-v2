@@ -76,8 +76,8 @@ QStaticText()
 */
 void QStaticText_new1 ()
 {
-  QStaticText * o = new QStaticText ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStaticText ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QStaticText(const QString &text)
 */
 void QStaticText_new2 ()
 {
-  QStaticText * o = new QStaticText ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStaticText ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QStaticText(const QStaticText &other)
 */
 void QStaticText_new3 ()
 {
-  QStaticText * o = new QStaticText ( *PQSTATICTEXT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QStaticText ( *PQSTATICTEXT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QStaticText()

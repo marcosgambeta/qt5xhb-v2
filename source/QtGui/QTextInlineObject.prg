@@ -80,8 +80,8 @@ QTextInlineObject()
 */
 void QTextInlineObject_new2 ()
 {
-  QTextInlineObject * o = new QTextInlineObject ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QTextInlineObject ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QTextInlineObject(int i, QTextEngine *e)

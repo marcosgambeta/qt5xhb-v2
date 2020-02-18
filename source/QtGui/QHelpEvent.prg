@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
-    QHelpEvent * o = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -57,8 +57,8 @@ QConicalGradient ()
 */
 void QConicalGradient_new1 ()
 {
-  QConicalGradient * o = new QConicalGradient ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QConicalGradient ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +66,8 @@ QConicalGradient ( const QPointF & center, qreal angle )
 */
 void QConicalGradient_new2 ()
 {
-  QConicalGradient * o = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QConicalGradient ( qreal cx, qreal cy, qreal angle )
 */
 void QConicalGradient_new3 ()
 {
-  QConicalGradient * o = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QConicalGradient ()

@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

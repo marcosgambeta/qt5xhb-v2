@@ -187,8 +187,8 @@ QWindow(QScreen * screen = nullptr)
 */
 void QWindow_new1 ()
 {
-  QWindow * o = new QWindow ( OPQSCREEN(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QWindow ( OPQSCREEN(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -196,8 +196,8 @@ QWindow(QWindow * parent)
 */
 void QWindow_new2 ()
 {
-  QWindow * o = new QWindow ( PQWINDOW(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QWindow ( PQWINDOW(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*

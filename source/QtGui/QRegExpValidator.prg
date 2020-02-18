@@ -56,8 +56,8 @@ QRegExpValidator ( QObject * parent = nullptr )
 */
 void QRegExpValidator_new1 ()
 {
-  QRegExpValidator * o = new QRegExpValidator ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRegExpValidator ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -65,8 +65,8 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 */
 void QRegExpValidator_new2 ()
 {
-  QRegExpValidator * o = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QRegExpValidator ( QObject * parent = nullptr )

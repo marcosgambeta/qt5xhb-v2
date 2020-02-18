@@ -68,8 +68,8 @@ explicit QPdfWriter(const QString & filename)
 */
 void QPdfWriter_new1 ()
 {
-  QPdfWriter * o = new QPdfWriter ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPdfWriter ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +77,8 @@ explicit QPdfWriter(QIODevice * device)
 */
 void QPdfWriter_new2 ()
 {
-  QPdfWriter * o = new QPdfWriter ( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPdfWriter ( PQIODEVICE(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]explicit QPdfWriter(const QString & filename)

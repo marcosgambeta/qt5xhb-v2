@@ -60,8 +60,8 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos,
 */
 void QContextMenuEvent_new1 ()
 {
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -69,8 +69,8 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 */
 void QContextMenuEvent_new2 ()
 {
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 */
 void QContextMenuEvent_new3 ()
 {
-  QContextMenuEvent * o = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )

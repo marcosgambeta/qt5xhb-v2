@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextTableCellFormat * o = new QTextTableCellFormat ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QTextTableCellFormat ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

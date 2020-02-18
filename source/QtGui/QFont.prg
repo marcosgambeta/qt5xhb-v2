@@ -123,8 +123,8 @@ QFont ()
 */
 void QFont_new1 ()
 {
-  QFont * o = new QFont ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFont ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -132,8 +132,8 @@ QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic
 */
 void QFont_new2 ()
 {
-  QFont * o = new QFont ( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFont ( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -141,8 +141,8 @@ QFont ( const QFont & font, QPaintDevice * pd )
 */
 void QFont_new3 ()
 {
-  QFont * o = new QFont ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFont ( *PQFONT(1), PQPAINTDEVICE(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -150,8 +150,8 @@ QFont ( const QFont & font )
 */
 void QFont_new4 ()
 {
-  QFont * o = new QFont ( *PQFONT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFont ( *PQFONT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QFont ()

@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
-    QResizeEvent * o = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

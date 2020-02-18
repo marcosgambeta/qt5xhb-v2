@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 {
   if( ISNUMPAR(1) && ISQWINDOW(1) )
   {
-    QBackingStore * o = new QBackingStore ( PQWINDOW(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QBackingStore ( PQWINDOW(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

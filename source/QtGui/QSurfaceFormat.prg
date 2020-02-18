@@ -90,8 +90,8 @@ QSurfaceFormat()
 */
 void QSurfaceFormat_new1 ()
 {
-  QSurfaceFormat * o = new QSurfaceFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -99,8 +99,8 @@ QSurfaceFormat(FormatOptions options)
 */
 void QSurfaceFormat_new2 ()
 {
-  QSurfaceFormat * o = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ QSurfaceFormat(const QSurfaceFormat &other)
 */
 void QSurfaceFormat_new3 ()
 {
-  QSurfaceFormat * o = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QSurfaceFormat()

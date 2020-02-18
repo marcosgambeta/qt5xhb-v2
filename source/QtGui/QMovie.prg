@@ -99,8 +99,8 @@ QMovie ( QObject * parent = nullptr )
 */
 void QMovie_new1 ()
 {
-  QMovie * o = new QMovie ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMovie ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject *
 */
 void QMovie_new2 ()
 {
-  QMovie * o = new QMovie ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMovie ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -117,8 +117,8 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 */
 void QMovie_new3 ()
 {
-  QMovie * o = new QMovie ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMovie ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), OPQOBJECT(3,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QMovie ( QObject * parent = nullptr )

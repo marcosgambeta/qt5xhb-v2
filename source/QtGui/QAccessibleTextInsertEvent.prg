@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISCHAR(3) )
   {
-    QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAccessibleTextInsertEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

@@ -74,8 +74,8 @@ QFontInfo ( const QFont & font )
 */
 void QFontInfo_new1 ()
 {
-  QFontInfo * o = new QFontInfo ( *PQFONT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFontInfo ( *PQFONT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QFontInfo ( const QFontInfo & fi )
 */
 void QFontInfo_new2 ()
 {
-  QFontInfo * o = new QFontInfo ( *PQFONTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QFontInfo ( *PQFONTINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QFontInfo ( const QFont & font )

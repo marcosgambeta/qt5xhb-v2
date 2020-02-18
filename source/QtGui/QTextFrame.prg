@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QTextFrame * o = new QTextFrame ( PQTEXTDOCUMENT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTextFrame ( PQTEXTDOCUMENT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

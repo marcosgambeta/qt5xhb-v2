@@ -62,8 +62,8 @@ QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::Mou
 */
 void QMouseEvent_new1 ()
 {
-  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +71,8 @@ QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::
 */
 void QMouseEvent_new2 ()
 {
-  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -80,8 +80,8 @@ QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, cons
 */
 void QMouseEvent_new3 ()
 {
-  QMouseEvent * o = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QMouseEvent ( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)

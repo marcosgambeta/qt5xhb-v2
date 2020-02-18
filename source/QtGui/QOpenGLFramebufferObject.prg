@@ -91,8 +91,8 @@ QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW1 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW2 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
@@ -111,8 +111,8 @@ QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target 
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW3 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum tar
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
@@ -147,8 +147,8 @@ QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target 
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -156,8 +156,8 @@ QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum tar
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW6 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 #endif
@@ -167,8 +167,8 @@ QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW7 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( *PQSIZE(1), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( *PQSIZE(1), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -176,8 +176,8 @@ QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFo
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW8 )
 {
-  QOpenGLFramebufferObject * o = new QOpenGLFramebufferObject ( PINT(1), PINT(2), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QOpenGLFramebufferObject ( PINT(1), PINT(2), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)

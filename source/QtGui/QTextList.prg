@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QTEXTLIST_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QTextList * o = new QTextList ( PQTEXTDOCUMENT(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QTextList ( PQTEXTDOCUMENT(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

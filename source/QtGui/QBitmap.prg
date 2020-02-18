@@ -60,8 +60,8 @@ QBitmap ()
 */
 void QBitmap_new1 ()
 {
-  QBitmap * o = new QBitmap ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitmap ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QBitmap ( const QPixmap & pixmap )
 */
 void QBitmap_new2 ()
 {
-  QBitmap * o = new QBitmap ( *PQPIXMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitmap ( *PQPIXMAP(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QBitmap ( int width, int height )
 */
 void QBitmap_new3 ()
 {
-  QBitmap * o = new QBitmap ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitmap ( PINT(1), PINT(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QBitmap ( const QSize & size )
 */
 void QBitmap_new4 ()
 {
-  QBitmap * o = new QBitmap ( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitmap ( *PQSIZE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QBitmap ( const QString & fileName, const char * format = nullptr )
 */
 void QBitmap_new5 ()
 {
-  QBitmap * o = new QBitmap ( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBitmap ( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QBitmap ()

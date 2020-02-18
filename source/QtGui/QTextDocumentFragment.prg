@@ -66,8 +66,8 @@ QTextDocumentFragment()
 */
 void QTextDocumentFragment_new1 ()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDocumentFragment ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QTextDocumentFragment(const QTextDocument *document)
 */
 void QTextDocumentFragment_new2 ()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment ( PQTEXTDOCUMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDocumentFragment ( PQTEXTDOCUMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QTextDocumentFragment(const QTextCursor &range)
 */
 void QTextDocumentFragment_new3 ()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTCURSOR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDocumentFragment ( *PQTEXTCURSOR(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QTextDocumentFragment(const QTextDocumentFragment &rhs)
 */
 void QTextDocumentFragment_new4 ()
 {
-  QTextDocumentFragment * o = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextDocumentFragment ( *PQTEXTDOCUMENTFRAGMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTextDocumentFragment()

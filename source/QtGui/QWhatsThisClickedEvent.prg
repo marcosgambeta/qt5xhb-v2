@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QWhatsThisClickedEvent * o = new QWhatsThisClickedEvent ( PQSTRING(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QWhatsThisClickedEvent ( PQSTRING(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

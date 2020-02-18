@@ -94,8 +94,8 @@ QMatrix(Qt::Initialization)
 */
 void QMatrix_new1 ()
 {
-  QMatrix * o = new QMatrix ( (Qt::Initialization) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMatrix ( (Qt::Initialization) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QMatrix()
 */
 void QMatrix_new2 ()
 {
-  QMatrix * o = new QMatrix ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMatrix ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 */
 void QMatrix_new3 ()
 {
-  QMatrix * o = new QMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMatrix ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QMatrix(const QMatrix &matrix)
 */
 void QMatrix_new4 ()
 {
-  QMatrix * o = new QMatrix ( *PQMATRIX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMatrix ( *PQMATRIX(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QMatrix(Qt::Initialization)

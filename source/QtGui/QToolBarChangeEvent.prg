@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISLOG(1) )
   {
-    QToolBarChangeEvent * o = new QToolBarChangeEvent ( PBOOL(1) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QToolBarChangeEvent ( PBOOL(1) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

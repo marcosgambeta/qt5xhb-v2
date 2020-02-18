@@ -108,8 +108,8 @@ QImageReader ()
 */
 void QImageReader_new1 ()
 {
-  QImageReader * o = new QImageReader ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageReader ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 void QImageReader_new2 ()
 {
-  QImageReader * o = new QImageReader ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageReader ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QImageReader ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageReader_new3 ()
 {
-  QImageReader * o = new QImageReader ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageReader ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QImageReader ()

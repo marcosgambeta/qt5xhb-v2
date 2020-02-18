@@ -73,8 +73,8 @@ QPolygonF()
 */
 void QPolygonF_new1 ()
 {
-  QPolygonF * o = new QPolygonF ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QPolygonF(int size)
 */
 void QPolygonF_new2 ()
 {
-  QPolygonF * o = new QPolygonF ( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ( PINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QPolygonF(const QPolygonF &a)
 */
 void QPolygonF_new3 ()
 {
-  QPolygonF * o = new QPolygonF ( *PQPOLYGONF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ( *PQPOLYGONF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ for (i1=0;i1<nLen1;i1++)
 {
   par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-  QPolygonF * o = new QPolygonF ( par1 );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ( par1 );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QPolygonF(const QRectF &r)
 */
 void QPolygonF_new5 ()
 {
-  QPolygonF * o = new QPolygonF ( *PQRECTF(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ( *PQRECTF(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QPolygonF(const QPolygon &a)
 */
 void QPolygonF_new6 ()
 {
-  QPolygonF * o = new QPolygonF ( *PQPOLYGON(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QPolygonF ( *PQPOLYGON(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QPolygonF()

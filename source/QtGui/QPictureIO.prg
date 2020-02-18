@@ -87,8 +87,8 @@ QPictureIO()
 */
 void QPictureIO_new1 ()
 {
-  QPictureIO * o = new QPictureIO ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPictureIO ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -96,8 +96,8 @@ QPictureIO(QIODevice *ioDevice, const char *format)
 */
 void QPictureIO_new2 ()
 {
-  QPictureIO * o = new QPictureIO ( PQIODEVICE(1), PCONSTCHAR(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPictureIO ( PQIODEVICE(1), PCONSTCHAR(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -105,8 +105,8 @@ QPictureIO(const QString &fileName, const char *format)
 */
 void QPictureIO_new3 ()
 {
-  QPictureIO * o = new QPictureIO ( PQSTRING(1), PCONSTCHAR(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QPictureIO ( PQSTRING(1), PCONSTCHAR(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QPictureIO()

@@ -144,8 +144,8 @@ QStandardItem()
 */
 void QStandardItem_new1 ()
 {
-  QStandardItem * o = new QStandardItem ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItem ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -153,8 +153,8 @@ QStandardItem(const QString &text)
 */
 void QStandardItem_new2 ()
 {
-  QStandardItem * o = new QStandardItem ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItem ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -162,8 +162,8 @@ QStandardItem(const QIcon &icon, const QString &text)
 */
 void QStandardItem_new3 ()
 {
-  QStandardItem * o = new QStandardItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -171,8 +171,8 @@ QStandardItem(int rows, int columns = 1)
 */
 void QStandardItem_new4 ()
 {
-  QStandardItem * o = new QStandardItem ( PINT(1), OPINT(2,1) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QStandardItem ( PINT(1), OPINT(2,1) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QStandardItem()

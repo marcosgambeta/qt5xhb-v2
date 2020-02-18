@@ -62,8 +62,8 @@ QDoubleValidator ( QObject * parent = nullptr )
 */
 void QDoubleValidator_new1 ()
 {
-  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDoubleValidator ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +71,8 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = n
 */
 void QDoubleValidator_new2 ()
 {
-  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QDoubleValidator ( QObject * parent = nullptr )

@@ -75,8 +75,8 @@ QTextFragment()
 */
 void QTextFragment_new2 ()
 {
-  QTextFragment * o = new QTextFragment ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextFragment ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QTextFragment(const QTextFragment &o)
 */
 void QTextFragment_new3 ()
 {
-  QTextFragment * o = new QTextFragment ( *PQTEXTFRAGMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QTextFragment ( *PQTEXTFRAGMENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)

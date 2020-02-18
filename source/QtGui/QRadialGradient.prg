@@ -63,8 +63,8 @@ QRadialGradient()
 */
 void QRadialGradient_new1 ()
 {
-  QRadialGradient * o = new QRadialGradient ();
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ();
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -72,8 +72,8 @@ QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint
 */
 void QRadialGradient_new2 ()
 {
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -81,8 +81,8 @@ QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
 */
 void QRadialGradient_new3 ()
 {
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ QRadialGradient(const QPointF & center, qreal radius)
 */
 void QRadialGradient_new4 ()
 {
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( *PQPOINTF(1), PQREAL(2) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -99,8 +99,8 @@ QRadialGradient(qreal cx, qreal cy, qreal radius)
 */
 void QRadialGradient_new5 ()
 {
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & foca
 */
 void QRadialGradient_new6 ()
 {
-  QRadialGradient * o = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3), PQREAL(4) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( *PQPOINTF(1), PQREAL(2), *PQPOINTF(3), PQREAL(4) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -117,8 +117,8 @@ QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qrea
 */
 void QRadialGradient_new7 ()
 {
-  QRadialGradient * o = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QRadialGradient ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 //[1]QRadialGradient()

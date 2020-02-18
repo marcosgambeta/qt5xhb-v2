@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLTimerQuery * o = new QOpenGLTimerQuery ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QOpenGLTimerQuery ( OPQOBJECT(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

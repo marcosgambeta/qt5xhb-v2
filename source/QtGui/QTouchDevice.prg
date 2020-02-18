@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTouchDevice * o = new QTouchDevice ();
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QTouchDevice ();
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {
