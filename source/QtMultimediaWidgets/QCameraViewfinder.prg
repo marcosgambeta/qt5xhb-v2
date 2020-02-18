@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QCameraViewfinder * o = new QCameraViewfinder ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QCameraViewfinder ( OPQWIDGET(1,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {
