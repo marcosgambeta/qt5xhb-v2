@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->initialSize () );
+      auto ptr = new QSize( obj->initialSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source () );
+      auto ptr = new QUrl( obj->source () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

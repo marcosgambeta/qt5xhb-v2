@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->method () );
+      auto ptr = new QMetaMethod( obj->method () );
       _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaProperty * ptr = new QMetaProperty( obj->property () );
+      auto ptr = new QMetaProperty( obj->property () );
       _qt5xhb_createReturnClass ( ptr, "QMETAPROPERTY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -690,7 +690,7 @@ void QDeclarativeProperty_read1 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->read () );
+      auto ptr = new QVariant( obj->read () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -701,7 +701,7 @@ static QVariant read ( QObject * object, const QString & name )
 void QDeclarativeProperty_read2 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
+      auto ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -711,7 +711,7 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeConte
 void QDeclarativeProperty_read3 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
+      auto ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
@@ -721,7 +721,7 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeEngin
 void QDeclarativeProperty_read4 ()
 {
 
-      QVariant * ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
+      auto ptr = new QVariant( QDeclarativeProperty::read ( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 

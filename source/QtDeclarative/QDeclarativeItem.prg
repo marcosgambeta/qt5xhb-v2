@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->childrenRect () );
+      auto ptr = new QRectF( obj->childrenRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->mapFromItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      auto ptr = new QScriptValue( obj->mapFromItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->mapToItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      auto ptr = new QScriptValue( obj->mapToItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

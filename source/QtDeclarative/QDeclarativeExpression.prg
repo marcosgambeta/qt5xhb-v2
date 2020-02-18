@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeError * ptr = new QDeclarativeError( obj->error () );
+      auto ptr = new QDeclarativeError( obj->error () );
       _qt5xhb_createReturnClass ( ptr, "QDECLARATIVEERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
     {
 #endif
       bool par1;
-      QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
+      auto ptr = new QVariant( obj->evaluate ( &par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
