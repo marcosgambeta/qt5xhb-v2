@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QBluetoothServer * o = new QBluetoothServer ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QBluetoothServer ( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

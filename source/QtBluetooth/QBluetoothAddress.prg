@@ -70,8 +70,8 @@ QBluetoothAddress()
 void QBluetoothAddress_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothAddress ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -81,8 +81,8 @@ QBluetoothAddress(quint64 address)
 void QBluetoothAddress_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( PQUINT64(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothAddress ( PQUINT64(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -92,8 +92,8 @@ QBluetoothAddress(const QString &address)
 void QBluetoothAddress_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothAddress ( PQSTRING(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -103,8 +103,8 @@ QBluetoothAddress(const QBluetoothAddress &other)
 void QBluetoothAddress_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * o = new QBluetoothAddress ( *PQBLUETOOTHADDRESS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothAddress ( *PQBLUETOOTHADDRESS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

@@ -72,8 +72,8 @@ QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
 void QBluetoothDeviceDiscoveryAgent_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceDiscoveryAgent * o = new QBluetoothDeviceDiscoveryAgent ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBluetoothDeviceDiscoveryAgent ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -83,8 +83,8 @@ QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *
 void QBluetoothDeviceDiscoveryAgent_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceDiscoveryAgent * o = new QBluetoothDeviceDiscoveryAgent ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBluetoothDeviceDiscoveryAgent ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

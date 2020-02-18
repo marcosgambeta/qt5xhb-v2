@@ -75,8 +75,8 @@ QBluetoothLocalDevice(QObject *parent = nullptr)
 void QBluetoothLocalDevice_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBluetoothLocalDevice ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -86,8 +86,8 @@ QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullpt
 void QBluetoothLocalDevice_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * o = new QBluetoothLocalDevice ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBluetoothLocalDevice ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

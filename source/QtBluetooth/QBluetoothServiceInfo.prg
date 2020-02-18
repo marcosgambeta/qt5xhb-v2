@@ -97,8 +97,8 @@ QBluetoothServiceInfo()
 void QBluetoothServiceInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * o = new QBluetoothServiceInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothServiceInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -108,8 +108,8 @@ QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
 void QBluetoothServiceInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * o = new QBluetoothServiceInfo ( *PQBLUETOOTHSERVICEINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothServiceInfo ( *PQBLUETOOTHSERVICEINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

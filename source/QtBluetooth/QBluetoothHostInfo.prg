@@ -71,8 +71,8 @@ QBluetoothHostInfo()
 void QBluetoothHostInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothHostInfo ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -82,8 +82,8 @@ QBluetoothHostInfo(const QBluetoothHostInfo &other)
 void QBluetoothHostInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
