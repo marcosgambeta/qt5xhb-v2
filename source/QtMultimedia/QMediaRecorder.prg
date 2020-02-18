@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QMediaRecorder * o = new QMediaRecorder ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMediaRecorder ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

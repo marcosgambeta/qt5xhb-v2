@@ -73,8 +73,8 @@ QMediaContent()
 */
 void QMediaContent_new1 ()
 {
-  QMediaContent * o = new QMediaContent ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QMediaContent(const QUrl & contentUrl)
 */
 void QMediaContent_new2 ()
 {
-  QMediaContent * o = new QMediaContent ( *PQURL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( *PQURL(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QMediaContent(const QNetworkRequest & contentRequest)
 */
 void QMediaContent_new3 ()
 {
-  QMediaContent * o = new QMediaContent ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( *PQNETWORKREQUEST(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QMediaContent(const QMediaResource & contentResource)
 */
 void QMediaContent_new4 ()
 {
-  QMediaContent * o = new QMediaContent ( *PQMEDIARESOURCE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( *PQMEDIARESOURCE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ for (i1=0;i1<nLen1;i1++)
 {
   par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
-  QMediaContent * o = new QMediaContent ( par1 );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( par1 );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -126,8 +126,8 @@ QMediaContent(const QMediaContent & other)
 */
 void QMediaContent_new6 ()
 {
-  QMediaContent * o = new QMediaContent ( *PQMEDIACONTENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( *PQMEDIACONTENT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -135,8 +135,8 @@ QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool 
 */
 void QMediaContent_new7 ()
 {
-  QMediaContent * o = new QMediaContent ( PQMEDIAPLAYLIST(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2), OPBOOL(3,false) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaContent ( PQMEDIAPLAYLIST(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2), OPBOOL(3,false) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QMediaContent()

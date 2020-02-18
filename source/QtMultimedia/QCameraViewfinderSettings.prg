@@ -79,8 +79,8 @@ QCameraViewfinderSettings()
 void QCameraViewfinderSettings_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * o = new QCameraViewfinderSettings ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCameraViewfinderSettings ();
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 
@@ -90,8 +90,8 @@ QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
 void QCameraViewfinderSettings_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * o = new QCameraViewfinderSettings ( *PQCAMERAVIEWFINDERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QCameraViewfinderSettings ( *PQCAMERAVIEWFINDERSETTINGS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 #endif
 }
 

@@ -75,8 +75,8 @@ QMediaServiceProviderHint()
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QMediaServiceProviderHint(const QByteArray &device)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QMediaServiceProviderHint(QCamera::Position position)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( (QCamera::Position) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ( (QCamera::Position) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QMediaServiceProviderHint(Features features)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) hb_parni(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
 {
-  QMediaServiceProviderHint * o = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QMediaServiceProviderHint()

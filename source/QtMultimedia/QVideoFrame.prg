@@ -91,8 +91,8 @@ QVideoFrame ()
 */
 void QVideoFrame_new1 ()
 {
-  QVideoFrame * o = new QVideoFrame ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoFrame ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat for
 */
 void QVideoFrame_new2 ()
 {
-  QVideoFrame * o = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoFrame ( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -109,8 +109,8 @@ QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat forma
 */
 void QVideoFrame_new3 ()
 {
-  QVideoFrame * o = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoFrame ( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -118,8 +118,8 @@ QVideoFrame ( const QImage & image )
 */
 void QVideoFrame_new4 ()
 {
-  QVideoFrame * o = new QVideoFrame ( *PQIMAGE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoFrame ( *PQIMAGE(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -127,8 +127,8 @@ QVideoFrame ( const QVideoFrame & other )
 */
 void QVideoFrame_new5 ()
 {
-  QVideoFrame * o = new QVideoFrame ( *PQVIDEOFRAME(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoFrame ( *PQVIDEOFRAME(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QVideoFrame ()

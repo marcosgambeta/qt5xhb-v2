@@ -77,8 +77,8 @@ QAudioEncoderSettings()
 */
 void QAudioEncoderSettings_new1 ()
 {
-  QAudioEncoderSettings * o = new QAudioEncoderSettings ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAudioEncoderSettings ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 */
 void QAudioEncoderSettings_new2 ()
 {
-  QAudioEncoderSettings * o = new QAudioEncoderSettings ( *PQAUDIOENCODERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAudioEncoderSettings ( *PQAUDIOENCODERSETTINGS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QAudioEncoderSettings()

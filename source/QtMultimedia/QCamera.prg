@@ -96,8 +96,8 @@ explicit QCamera(QObject *parent = nullptr)
 */
 void QCamera_new1 ()
 {
-  QCamera * o = new QCamera ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCamera ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -105,8 +105,8 @@ explicit QCamera(const QByteArray& deviceName, QObject *parent = nullptr)
 */
 void QCamera_new2 ()
 {
-  QCamera * o = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCamera ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 }
 
 /*
@@ -115,8 +115,8 @@ explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = nullptr)
 void QCamera_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * o = new QCamera ( *PQCAMERAINFO(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCamera ( *PQCAMERAINFO(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -126,8 +126,8 @@ explicit QCamera(QCamera::Position position, QObject *parent = nullptr)
 void QCamera_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * o = new QCamera ( (QCamera::Position) hb_parni(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCamera ( (QCamera::Position) hb_parni(1), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

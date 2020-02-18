@@ -78,8 +78,8 @@ QVideoEncoderSettings()
 */
 void QVideoEncoderSettings_new1 ()
 {
-  QVideoEncoderSettings * o = new QVideoEncoderSettings ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoEncoderSettings ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 */
 void QVideoEncoderSettings_new2 ()
 {
-  QVideoEncoderSettings * o = new QVideoEncoderSettings ( *PQVIDEOENCODERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoEncoderSettings ( *PQVIDEOENCODERSETTINGS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QVideoEncoderSettings()

@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QMediaPlayer * o = new QMediaPlayer ( OPQOBJECT(1,nullptr), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QMediaPlayer ( OPQOBJECT(1,nullptr), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

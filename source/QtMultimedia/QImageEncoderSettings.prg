@@ -72,8 +72,8 @@ QImageEncoderSettings()
 */
 void QImageEncoderSettings_new1 ()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageEncoderSettings ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -81,8 +81,8 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 */
 void QImageEncoderSettings_new2 ()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings ( *PQIMAGEENCODERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QImageEncoderSettings ( *PQIMAGEENCODERSETTINGS(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QImageEncoderSettings()

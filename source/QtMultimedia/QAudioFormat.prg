@@ -81,8 +81,8 @@ QAudioFormat ()
 */
 void QAudioFormat_new1 ()
 {
-  QAudioFormat * o = new QAudioFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAudioFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -90,8 +90,8 @@ QAudioFormat ( const QAudioFormat & other )
 */
 void QAudioFormat_new2 ()
 {
-  QAudioFormat * o = new QAudioFormat ( *PQAUDIOFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QAudioFormat ( *PQAUDIOFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QAudioFormat ()

@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
   if( ISNUMPAR(1) && ISQCAMERAFOCUSZONE(1) )
   {
-    QCameraFocusZone * o = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
-    _qt5xhb_returnNewObject( o, true );
+    auto obj = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
+    _qt5xhb_returnNewObject( obj, true );
   }
   else
   {

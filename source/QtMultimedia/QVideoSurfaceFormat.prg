@@ -88,8 +88,8 @@ QVideoSurfaceFormat ()
 */
 void QVideoSurfaceFormat_new1 ()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ();
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoSurfaceFormat ();
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbst
 */
 void QVideoSurfaceFormat_new2 ()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), ISNIL(3)? (QAbstractVideoBuffer::HandleType) QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoSurfaceFormat ( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), ISNIL(3)? (QAbstractVideoBuffer::HandleType) QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(3) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 */
 void QVideoSurfaceFormat_new3 ()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat ( *PQVIDEOSURFACEFORMAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  auto obj = new QVideoSurfaceFormat ( *PQVIDEOSURFACEFORMAT(1) );
+  _qt5xhb_returnNewObject( obj, true );
 }
 
 //[1]QVideoSurfaceFormat ()
