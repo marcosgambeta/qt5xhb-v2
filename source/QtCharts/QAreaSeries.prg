@@ -106,8 +106,8 @@ explicit QAreaSeries(QObject *parent = nullptr)
 void QAreaSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAreaSeries ( OPQOBJECT(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -117,8 +117,8 @@ explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullpt
 void QAreaSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

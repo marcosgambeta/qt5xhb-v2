@@ -63,8 +63,8 @@ explicit QChartView(QWidget *parent = nullptr)
 void QChartView_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * o = new QChartView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QChartView ( OPQWIDGET(1,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -74,8 +74,8 @@ explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 void QChartView_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * o = new QChartView ( PQCHART(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QChartView ( PQCHART(1), OPQWIDGET(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

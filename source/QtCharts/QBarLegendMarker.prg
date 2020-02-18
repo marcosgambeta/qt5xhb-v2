@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(3,4) && ISQABSTRACTBARSERIES(1) && ISQBARSET(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    QBarLegendMarker * o = new QBarLegendMarker ( PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QBarLegendMarker ( PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

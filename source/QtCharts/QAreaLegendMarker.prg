@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQAREASERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QAreaLegendMarker * o = new QAreaLegendMarker ( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    auto obj = new QAreaLegendMarker ( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    _qt5xhb_returnNewObject( obj, false );
   }
   else
   {

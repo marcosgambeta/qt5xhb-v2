@@ -84,8 +84,8 @@ explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 void QBoxSet_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -95,8 +95,8 @@ explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, 
 void QBoxSet_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 

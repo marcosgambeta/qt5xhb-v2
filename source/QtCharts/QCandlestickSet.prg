@@ -91,8 +91,8 @@ explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 void QCandlestickSet_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSet * o = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
@@ -102,8 +102,8 @@ explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal t
 void QCandlestickSet_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSet * o = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  auto obj = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
+  _qt5xhb_returnNewObject( obj, false );
 #endif
 }
 
