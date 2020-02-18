@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->min () );
+      auto ptr = new QDateTime( obj->min () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MAX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->max () );
+      auto ptr = new QDateTime( obj->max () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

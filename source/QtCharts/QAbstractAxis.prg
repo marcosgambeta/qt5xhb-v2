@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->linePen () );
+      auto ptr = new QPen( obj->linePen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPENCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->linePenColor () );
+      auto ptr = new QColor( obj->linePenColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->gridLinePen () );
+      auto ptr = new QPen( obj->gridLinePen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->minorGridLinePen () );
+      auto ptr = new QPen( obj->minorGridLinePen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->gridLineColor () );
+      auto ptr = new QColor( obj->gridLineColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->minorGridLineColor () );
+      auto ptr = new QColor( obj->minorGridLineColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->labelsBrush () );
+      auto ptr = new QBrush( obj->labelsBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->labelsFont () );
+      auto ptr = new QFont( obj->labelsFont () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->labelsColor () );
+      auto ptr = new QColor( obj->labelsColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->titleBrush () );
+      auto ptr = new QBrush( obj->titleBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->titleFont () );
+      auto ptr = new QFont( obj->titleFont () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->shadesPen () );
+      auto ptr = new QPen( obj->shadesPen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->shadesBrush () );
+      auto ptr = new QBrush( obj->shadesBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->shadesColor () );
+      auto ptr = new QColor( obj->shadesColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->shadesBorderColor () );
+      auto ptr = new QColor( obj->shadesBorderColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

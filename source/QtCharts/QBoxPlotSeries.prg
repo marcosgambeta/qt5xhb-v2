@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
+      auto ptr = new QBrush( obj->brush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
+      auto ptr = new QPen( obj->pen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

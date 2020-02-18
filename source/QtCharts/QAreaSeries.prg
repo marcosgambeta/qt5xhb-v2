@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
+      auto ptr = new QColor( obj->color () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->borderColor () );
+      auto ptr = new QColor( obj->borderColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->pointLabelsFont () );
+      auto ptr = new QFont( obj->pointLabelsFont () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->pointLabelsColor () );
+      auto ptr = new QColor( obj->pointLabelsColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
+      auto ptr = new QPen( obj->pen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
+      auto ptr = new QBrush( obj->brush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
