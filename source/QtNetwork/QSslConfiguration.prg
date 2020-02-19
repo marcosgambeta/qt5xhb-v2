@@ -375,8 +375,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
       QList<QSslCertificate> list = obj->localCertificateChain ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -541,8 +540,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
       QList<QSslCertificate> list = obj->peerCertificateChain ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -696,8 +694,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
       QList<QSslCipher> list = obj->ciphers ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -780,8 +777,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SUPPORTEDCIPHERS )
       QList<QSslCipher> list = QSslConfiguration::supportedCiphers ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -833,8 +829,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
       QList<QSslCertificate> list = obj->caCertificates ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -917,8 +912,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
       QList<QSslCertificate> list = QSslConfiguration::systemCaCertificates ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1281,8 +1275,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_ALLOWEDNEXTPROTOCOLS )
       QList<QByteArray> list = obj->allowedNextProtocols ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

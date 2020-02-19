@@ -394,8 +394,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
       QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -447,8 +446,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
       QList<QDnsHostAddressRecord> list = obj->hostAddressRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSHOSTADDRESSRECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -500,8 +498,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
       QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSMAILEXCHANGERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -553,8 +550,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
       QList<QDnsDomainNameRecord> list = obj->nameServerRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -606,8 +602,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
       QList<QDnsDomainNameRecord> list = obj->pointerRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -659,8 +654,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
       QList<QDnsServiceRecord> list = obj->serviceRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSSERVICERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -712,8 +706,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
       QList<QDnsTextRecord> list = obj->textRecords ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSTEXTRECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

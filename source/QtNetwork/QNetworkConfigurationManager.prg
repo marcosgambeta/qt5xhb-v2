@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
       QList<QNetworkConfiguration> list = obj->allConfigurations ( ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

@@ -110,8 +110,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
       QList<QNetworkCookie> list = obj->cookiesForUrl ( *PQURL(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

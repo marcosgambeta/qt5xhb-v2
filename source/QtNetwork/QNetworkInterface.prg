@@ -145,8 +145,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
       QList<QNetworkAddressEntry> list = obj->addressEntries ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -338,8 +337,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
       QList<QHostAddress> list = QNetworkInterface::allAddresses ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -386,8 +384,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
       QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
