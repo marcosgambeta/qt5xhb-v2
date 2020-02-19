@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
     if( ISNUMPAR(0) )
   {
 #endif
-      QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
+      auto ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
       _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->defaultPageSize () );
+      auto ptr = new QPageSize( obj->defaultPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize () );
+      auto ptr = new QPageSize( obj->minimumPhysicalPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize () );
+      auto ptr = new QPageSize( obj->maximumPhysicalPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
+      auto ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

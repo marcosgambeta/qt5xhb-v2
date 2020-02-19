@@ -1017,7 +1017,7 @@ void QPrinter_pageRect1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->pageRect () );
+      auto ptr = new QRect( obj->pageRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1031,7 +1031,7 @@ void QPrinter_pageRect2 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
+      auto ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1064,7 +1064,7 @@ void QPrinter_paperRect1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->paperRect () );
+      auto ptr = new QRect( obj->paperRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -1078,7 +1078,7 @@ void QPrinter_paperRect2 ()
 
   if( obj != nullptr )
   {
-      QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
+      auto ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
@@ -1124,7 +1124,7 @@ void QPrinter_paperSize2 ()
 
   if( obj != nullptr )
   {
-      QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
+      auto ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
@@ -2024,7 +2024,7 @@ HB_FUNC_STATIC( QPRINTER_PAGELAYOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageLayout * ptr = new QPageLayout( obj->pageLayout () );
+      auto ptr = new QPageLayout( obj->pageLayout () );
       _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
