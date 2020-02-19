@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ITEMCHANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->itemChange ( (QGraphicsItem::GraphicsItemChange) hb_parni(1), *PQVARIANT(2) ) );
+      auto ptr = new QVariant( obj->itemChange ( (QGraphicsItem::GraphicsItemChange) hb_parni(1), *PQVARIANT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SIZEHINT )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSIZEF(2) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) hb_parni(1), *PQSIZEF(2) ) );
+      auto ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) hb_parni(1), *PQSIZEF(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

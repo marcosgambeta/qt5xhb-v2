@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->boundingRect () );
+      auto ptr = new QRect( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->element () );
+      auto ptr = new QWebElement( obj->element () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->enclosingBlockElement () );
+      auto ptr = new QWebElement( obj->enclosingBlockElement () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->imageUrl () );
+      auto ptr = new QUrl( obj->imageUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->linkElement () );
+      auto ptr = new QWebElement( obj->linkElement () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->linkTitle () );
+      auto ptr = new QUrl( obj->linkTitle () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->linkUrl () );
+      auto ptr = new QUrl( obj->linkUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap () );
+      auto ptr = new QPixmap( obj->pixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->pos () );
+      auto ptr = new QPoint( obj->pos () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_MEDIAURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->mediaUrl () );
+      auto ptr = new QUrl( obj->mediaUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

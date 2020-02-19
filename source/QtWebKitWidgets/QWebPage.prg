@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->viewportSize () );
+      auto ptr = new QSize( obj->viewportSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->preferredContentsSize () );
+      auto ptr = new QSize( obj->preferredContentsSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QWEBPAGE_PALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette () );
+      auto ptr = new QPalette( obj->palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->requestedUrl () );
+      auto ptr = new QUrl( obj->requestedUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUrl () );
+      auto ptr = new QUrl( obj->baseUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->contentsSize () );
+      auto ptr = new QSize( obj->contentsSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->scrollPosition () );
+      auto ptr = new QPoint( obj->scrollPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->documentElement () );
+      auto ptr = new QWebElement( obj->documentElement () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements ( PQSTRING(1) ) );
+      auto ptr = new QWebElementCollection( obj->findAllElements ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->findFirstElement ( PQSTRING(1) ) );
+      auto ptr = new QWebElement( obj->findFirstElement ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QWebHitTestResult * ptr = new QWebHitTestResult( obj->hitTestContent ( *PQPOINT(1) ) );
+      auto ptr = new QWebHitTestResult( obj->hitTestContent ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBHITTESTRESULT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->pos () );
+      auto ptr = new QPoint( obj->pos () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) hb_parni(1) ) );
+      auto ptr = new QRect( obj->scrollBarGeometry ( (Qt::Orientation) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->securityOrigin () );
+      auto ptr = new QWebSecurityOrigin( obj->securityOrigin () );
       _qt5xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
