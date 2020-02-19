@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptString * ptr = new QScriptString( obj->name () );
+      auto ptr = new QScriptString( obj->name () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTSTRING", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->object () );
+      auto ptr = new QScriptValue( obj->object () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
+      auto ptr = new QScriptValue( obj->argument ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->thisObject () );
+      auto ptr = new QScriptValue( obj->thisObject () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

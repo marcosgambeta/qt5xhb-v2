@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->extension ( (QScriptClass::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QVariant( obj->extension ( (QScriptClass::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
     if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && ISNUM(3) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->property ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
+      auto ptr = new QScriptValue( obj->property ( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->prototype () );
+      auto ptr = new QScriptValue( obj->prototype () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

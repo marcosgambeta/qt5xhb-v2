@@ -272,7 +272,7 @@ void QScriptValue_call2 ()
 
   if( obj != nullptr )
   {
-      QScriptValue * ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
+      auto ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
@@ -305,7 +305,7 @@ void QScriptValue_construct2 ()
 
   if( obj != nullptr )
   {
-      QScriptValue * ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
+      auto ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->data () );
+      auto ptr = new QScriptValue( obj->data () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->prototype () );
+      auto ptr = new QScriptValue( obj->prototype () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toDateTime () );
+      auto ptr = new QDateTime( obj->toDateTime () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->toRegExp () );
+      auto ptr = new QRegExp( obj->toRegExp () );
       _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toVariant () );
+      auto ptr = new QVariant( obj->toVariant () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

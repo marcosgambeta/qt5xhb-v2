@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->activationObject () );
+      auto ptr = new QScriptValue( obj->activationObject () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->argument ( PINT(1) ) );
+      auto ptr = new QScriptValue( obj->argument ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->argumentsObject () );
+      auto ptr = new QScriptValue( obj->argumentsObject () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->callee () );
+      auto ptr = new QScriptValue( obj->callee () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->thisObject () );
+      auto ptr = new QScriptValue( obj->thisObject () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -425,7 +425,7 @@ void QScriptContext_throwError1 ()
 
   if( obj != nullptr )
   {
-      QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
+      auto ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
@@ -439,7 +439,7 @@ void QScriptContext_throwError2 ()
 
   if( obj != nullptr )
   {
-      QScriptValue * ptr = new QScriptValue( obj->throwError ( PQSTRING(1) ) );
+      auto ptr = new QScriptValue( obj->throwError ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->throwValue ( *PQSCRIPTVALUE(1) ) );
+      auto ptr = new QScriptValue( obj->throwValue ( *PQSCRIPTVALUE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptString * ptr = new QScriptString( obj->scriptName () );
+      auto ptr = new QScriptString( obj->scriptName () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTSTRING", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->value () );
+      auto ptr = new QScriptValue( obj->value () );
       _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
