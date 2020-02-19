@@ -265,8 +265,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
       QList<QColor> list = obj->baseColors ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -796,8 +795,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
       QList<QLinearGradient> list = obj->baseGradients ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLINEARGRADIENT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1694,8 +1692,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
@@ -1783,8 +1780,7 @@ HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DTHEME" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QLINEARGRADIENT" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
