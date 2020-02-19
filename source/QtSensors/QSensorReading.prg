@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
+      auto ptr = new QVariant( obj->value ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
