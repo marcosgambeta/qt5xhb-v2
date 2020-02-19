@@ -142,8 +142,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
       QList<QHelpSearchQuery> list = obj->query ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
