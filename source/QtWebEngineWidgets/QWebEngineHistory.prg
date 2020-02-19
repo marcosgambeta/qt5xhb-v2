@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem () );
+      auto ptr = new QWebEngineHistoryItem( obj->backItem () );
       _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem () );
+      auto ptr = new QWebEngineHistoryItem( obj->currentItem () );
       _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem () );
+      auto ptr = new QWebEngineHistoryItem( obj->forwardItem () );
       _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt ( PINT(1) ) );
+      auto ptr = new QWebEngineHistoryItem( obj->itemAt ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
