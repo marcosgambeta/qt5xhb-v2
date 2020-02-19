@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QQUICKITEM_CHILDRENRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->childrenRect () );
+      auto ptr = new QRectF( obj->childrenRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QQUICKITEM_CURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCursor * ptr = new QCursor( obj->cursor () );
+      auto ptr = new QCursor( obj->cursor () );
       _qt5xhb_createReturnClass ( ptr, "QCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapFromItem ( PQQUICKITEM(1), *PQPOINTF(2) ) );
+      auto ptr = new QPointF( obj->mapFromItem ( PQQUICKITEM(1), *PQPOINTF(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapFromScene ( *PQPOINTF(1) ) );
+      auto ptr = new QPointF( obj->mapFromScene ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQRECTF(2) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->mapRectFromItem ( PQQUICKITEM(1), *PQRECTF(2) ) );
+      auto ptr = new QRectF( obj->mapRectFromItem ( PQQUICKITEM(1), *PQRECTF(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->mapRectFromScene ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->mapRectFromScene ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQRECTF(2) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->mapRectToItem ( PQQUICKITEM(1), *PQRECTF(2) ) );
+      auto ptr = new QRectF( obj->mapRectToItem ( PQQUICKITEM(1), *PQRECTF(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->mapRectToScene ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->mapRectToScene ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
     if( ISNUMPAR(2) && ISQQUICKITEM(1) && ISQPOINTF(2) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapToItem ( PQQUICKITEM(1), *PQPOINTF(2) ) );
+      auto ptr = new QPointF( obj->mapToItem ( PQQUICKITEM(1), *PQPOINTF(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINTF(1) ) );
+      auto ptr = new QPointF( obj->mapToScene ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->image () );
+      auto ptr = new QImage( obj->image () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->textureSize () );
+      auto ptr = new QSize( obj->textureSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->clipRect () );
+      auto ptr = new QRectF( obj->clipRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

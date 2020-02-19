@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
+      auto ptr = new QColor( obj->color () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_GRABWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->grabWindow () );
+      auto ptr = new QImage( obj->grabWindow () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->renderTargetSize () );
+      auto ptr = new QSize( obj->renderTargetSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
