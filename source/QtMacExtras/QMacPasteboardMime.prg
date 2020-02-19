@@ -232,7 +232,7 @@ for (i2=0;i2<nLen2;i2++)
 {
   par2 << *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
 }
-      QVariant * ptr = new QVariant( obj->convertToMime ( PQSTRING(1), par2, PQSTRING(3) ) );
+      auto ptr = new QVariant( obj->convertToMime ( PQSTRING(1), par2, PQSTRING(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
