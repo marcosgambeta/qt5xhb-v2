@@ -733,8 +733,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
 #endif
       QList<QWebSocketProtocol::Version> list = obj->supportedVersions ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -1109,8 +1108,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {

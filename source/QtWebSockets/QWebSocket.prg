@@ -1980,8 +1980,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
