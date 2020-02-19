@@ -1141,8 +1141,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
       QList<QByteArray> list = QSensor::sensorTypes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1191,8 +1190,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
       QList<QByteArray> list = QSensor::sensorsForType ( *PQBYTEARRAY(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
