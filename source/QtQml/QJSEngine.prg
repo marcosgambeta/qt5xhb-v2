@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
+      auto ptr = new QJSValue( obj->evaluate ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->globalObject () );
+      auto ptr = new QJSValue( obj->globalObject () );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->newArray ( OPUINT(1,0) ) );
+      auto ptr = new QJSValue( obj->newArray ( OPUINT(1,0) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->newObject () );
+      auto ptr = new QJSValue( obj->newObject () );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->newQObject ( PQOBJECT(1) ) );
+      auto ptr = new QJSValue( obj->newQObject ( PQOBJECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

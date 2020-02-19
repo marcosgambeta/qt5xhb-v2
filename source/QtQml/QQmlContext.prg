@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUrl () );
+      auto ptr = new QUrl( obj->baseUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->contextProperty ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
+      auto ptr = new QUrl( obj->resolvedUrl ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

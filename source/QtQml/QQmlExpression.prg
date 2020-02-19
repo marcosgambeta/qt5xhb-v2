@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlError * ptr = new QQmlError( obj->error () );
+      auto ptr = new QQmlError( obj->error () );
       _qt5xhb_createReturnClass ( ptr, "QQMLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
     {
 #endif
       bool par1;
-      QVariant * ptr = new QVariant( obj->evaluate ( &par1 ) );
+      auto ptr = new QVariant( obj->evaluate ( &par1 ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

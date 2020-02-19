@@ -655,7 +655,7 @@ void QJSValue_property1 ()
 
   if( obj != nullptr )
   {
-      QJSValue * ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
+      auto ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
@@ -669,7 +669,7 @@ void QJSValue_property2 ()
 
   if( obj != nullptr )
   {
-      QJSValue * ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
+      auto ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->prototype () );
+      auto ptr = new QJSValue( obj->prototype () );
       _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QJSVALUE_TODATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toDateTime () );
+      auto ptr = new QDateTime( obj->toDateTime () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QJSVALUE_TOVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toVariant () );
+      auto ptr = new QVariant( obj->toVariant () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
