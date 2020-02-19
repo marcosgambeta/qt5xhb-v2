@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->authorizationUrl () );
+      auto ptr = new QUrl( obj->authorizationUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

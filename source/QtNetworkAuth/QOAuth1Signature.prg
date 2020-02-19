@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->take ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->take ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QVariant( obj->value ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_HMACSHA1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->hmacSha1 () );
+      auto ptr = new QByteArray( obj->hmacSha1 () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->rsaSha1 () );
+      auto ptr = new QByteArray( obj->rsaSha1 () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -553,7 +553,7 @@ void QOAuth1Signature_plainText1 ()
 
   if( obj != nullptr )
   {
-      QByteArray * ptr = new QByteArray( obj->plainText () );
+      auto ptr = new QByteArray( obj->plainText () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 #endif
@@ -566,7 +566,7 @@ void QOAuth1Signature_plainText2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 
-      QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #endif
 }
