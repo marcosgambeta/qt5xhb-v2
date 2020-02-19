@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
+      auto ptr = new QSize( obj->iconSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->tabData ( PINT(1) ) );
+      auto ptr = new QVariant( obj->tabData ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
+      auto ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->tabRect ( PINT(1) ) );
+      auto ptr = new QRect( obj->tabRect ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->tabTextColor ( PINT(1) ) );
+      auto ptr = new QColor( obj->tabTextColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QTABBAR_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

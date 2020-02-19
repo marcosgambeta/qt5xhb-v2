@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

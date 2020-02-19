@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->offset () );
+      auto ptr = new QPointF( obj->offset () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap () );
+      auto ptr = new QPixmap( obj->pixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
+      auto ptr = new QPainterPath( obj->opaqueArea () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
+      auto ptr = new QPainterPath( obj->shape () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->background () );
+      auto ptr = new QBrush( obj->background () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( PINT(1) ) );
+      auto ptr = new QVariant( obj->data ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foreground () );
+      auto ptr = new QBrush( obj->foreground () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor () );
+      auto ptr = new QColor( obj->backgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->textColor () );
+      auto ptr = new QColor( obj->textColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

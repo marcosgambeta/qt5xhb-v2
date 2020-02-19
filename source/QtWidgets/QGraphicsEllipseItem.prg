@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect () );
+      auto ptr = new QRectF( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
+      auto ptr = new QPainterPath( obj->opaqueArea () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
+      auto ptr = new QPainterPath( obj->shape () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

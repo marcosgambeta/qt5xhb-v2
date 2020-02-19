@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->delta () );
+      auto ptr = new QPointF( obj->delta () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->lastOffset () );
+      auto ptr = new QPointF( obj->lastOffset () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->offset () );
+      auto ptr = new QPointF( obj->offset () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

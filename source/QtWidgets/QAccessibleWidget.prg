@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect () );
+      auto ptr = new QRect( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOREGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->foregroundColor () );
+      auto ptr = new QColor( obj->foregroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor () );
+      auto ptr = new QColor( obj->backgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

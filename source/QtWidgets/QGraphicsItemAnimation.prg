@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMatrix * ptr = new QMatrix( obj->matrixAt ( PQREAL(1) ) );
+      auto ptr = new QMatrix( obj->matrixAt ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->posAt ( PQREAL(1) ) );
+      auto ptr = new QPointF( obj->posAt ( PQREAL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

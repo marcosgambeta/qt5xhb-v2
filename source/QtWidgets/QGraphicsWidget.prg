@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette () );
+      auto ptr = new QPalette( obj->palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect () );
+      auto ptr = new QRectF( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->size () );
+      auto ptr = new QSizeF( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->windowFrameGeometry () );
+      auto ptr = new QRectF( obj->windowFrameGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_WINDOWFRAMERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->windowFrameRect () );
+      auto ptr = new QRectF( obj->windowFrameRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
+      auto ptr = new QPainterPath( obj->shape () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

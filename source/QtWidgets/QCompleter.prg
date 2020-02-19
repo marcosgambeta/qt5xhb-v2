@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
+      auto ptr = new QModelIndex( obj->currentIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

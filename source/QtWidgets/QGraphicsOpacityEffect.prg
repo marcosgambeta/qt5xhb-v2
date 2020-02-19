@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->opacityMask () );
+      auto ptr = new QBrush( obj->opacityMask () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

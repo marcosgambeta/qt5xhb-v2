@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
+      auto ptr = new QSurfaceFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->grabFramebuffer () );
+      auto ptr = new QImage( obj->grabFramebuffer () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

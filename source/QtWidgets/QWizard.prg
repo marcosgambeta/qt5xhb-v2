@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->field ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->field ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
+      auto ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

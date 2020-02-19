@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->backgroundBrush () );
+      auto ptr = new QBrush( obj->backgroundBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foregroundBrush () );
+      auto ptr = new QBrush( obj->foregroundBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -607,7 +607,7 @@ void QGraphicsView_mapFromScene1 ()
 
   if( obj != nullptr )
   {
-      QPoint * ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
+      auto ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -621,7 +621,7 @@ void QGraphicsView_mapFromScene2 ()
 
   if( obj != nullptr )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
+      auto ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -635,7 +635,7 @@ void QGraphicsView_mapFromScene3 ()
 
   if( obj != nullptr )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
+      auto ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -649,7 +649,7 @@ void QGraphicsView_mapFromScene4 ()
 
   if( obj != nullptr )
   {
-      QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -663,7 +663,7 @@ void QGraphicsView_mapFromScene5 ()
 
   if( obj != nullptr )
   {
-      QPoint * ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
+      auto ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
@@ -677,7 +677,7 @@ void QGraphicsView_mapFromScene6 ()
 
   if( obj != nullptr )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      auto ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
@@ -730,7 +730,7 @@ void QGraphicsView_mapToScene1 ()
 
   if( obj != nullptr )
   {
-      QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
+      auto ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -744,7 +744,7 @@ void QGraphicsView_mapToScene2 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
+      auto ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -758,7 +758,7 @@ void QGraphicsView_mapToScene3 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
+      auto ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -772,7 +772,7 @@ void QGraphicsView_mapToScene4 ()
 
   if( obj != nullptr )
   {
-      QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
+      auto ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
@@ -786,7 +786,7 @@ void QGraphicsView_mapToScene5 ()
 
   if( obj != nullptr )
   {
-      QPointF * ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
+      auto ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
@@ -800,7 +800,7 @@ void QGraphicsView_mapToScene6 ()
 
   if( obj != nullptr )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
+      auto ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMatrix * ptr = new QMatrix( obj->matrix () );
+      auto ptr = new QMatrix( obj->matrix () );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->sceneRect () );
+      auto ptr = new QRectF( obj->sceneRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->transform () );
+      auto ptr = new QTransform( obj->transform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->viewportTransform () );
+      auto ptr = new QTransform( obj->viewportTransform () );
       _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1825,7 +1825,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1850,7 +1850,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

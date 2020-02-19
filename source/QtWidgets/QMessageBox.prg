@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->iconPixmap () );
+      auto ptr = new QPixmap( obj->iconPixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDICON )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QPixmap * ptr = new QPixmap( QMessageBox::standardIcon ( (QMessageBox::Icon) hb_parni(1) ) );
+      auto ptr = new QPixmap( QMessageBox::standardIcon ( (QMessageBox::Icon) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

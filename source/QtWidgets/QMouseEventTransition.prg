@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->hitTestPath () );
+      auto ptr = new QPainterPath( obj->hitTestPath () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

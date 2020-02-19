@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -702,7 +702,7 @@ static QFont font ()
 void QApplication_font1 ()
 {
 
-      QFont * ptr = new QFont( QApplication::font () );
+      auto ptr = new QFont( QApplication::font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -712,7 +712,7 @@ static QFont font ( const QWidget * widget )
 void QApplication_font2 ()
 {
 
-      QFont * ptr = new QFont( QApplication::font ( PQWIDGET(1) ) );
+      auto ptr = new QFont( QApplication::font ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -722,7 +722,7 @@ static QFont font ( const char * className )
 void QApplication_font3 ()
 {
 
-      QFont * ptr = new QFont( QApplication::font ( PCONSTCHAR(1) ) );
+      auto ptr = new QFont( QApplication::font ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONTMETRICS )
     if( ISNUMPAR(0) )
   {
 #endif
-      QFontMetrics * ptr = new QFontMetrics( QApplication::fontMetrics () );
+      auto ptr = new QFontMetrics( QApplication::fontMetrics () );
       _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QSize * ptr = new QSize( QApplication::globalStrut () );
+      auto ptr = new QSize( QApplication::globalStrut () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -949,7 +949,7 @@ static QPalette palette ()
 void QApplication_palette1 ()
 {
 
-      QPalette * ptr = new QPalette( QApplication::palette () );
+      auto ptr = new QPalette( QApplication::palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -959,7 +959,7 @@ static QPalette palette ( const QWidget * widget )
 void QApplication_palette2 ()
 {
 
-      QPalette * ptr = new QPalette( QApplication::palette ( PQWIDGET(1) ) );
+      auto ptr = new QPalette( QApplication::palette ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -969,7 +969,7 @@ static QPalette palette ( const char * className )
 void QApplication_palette3 ()
 {
 
-      QPalette * ptr = new QPalette( QApplication::palette ( PCONSTCHAR(1) ) );
+      auto ptr = new QPalette( QApplication::palette ( PCONSTCHAR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 }
 
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC( QAPPLICATION_WINDOWICON )
     if( ISNUMPAR(0) )
   {
 #endif
-      QIcon * ptr = new QIcon( QApplication::windowIcon () );
+      auto ptr = new QIcon( QApplication::windowIcon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

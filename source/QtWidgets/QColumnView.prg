@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
+      auto ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
+      auto ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

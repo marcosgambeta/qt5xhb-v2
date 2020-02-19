@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
+      auto ptr = new QSize( obj->iconSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->itemData ( PINT(1), OPINT(2,Qt::UserRole) ) );
+      auto ptr = new QVariant( obj->itemData ( PINT(1), OPINT(2,Qt::UserRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
+      auto ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->rootModelIndex () );
+      auto ptr = new QModelIndex( obj->rootModelIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1620,7 +1620,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->cleanIcon () );
+      auto ptr = new QIcon( obj->cleanIcon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

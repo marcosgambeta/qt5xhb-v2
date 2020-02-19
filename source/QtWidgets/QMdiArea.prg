@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->background () );
+      auto ptr = new QBrush( obj->background () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

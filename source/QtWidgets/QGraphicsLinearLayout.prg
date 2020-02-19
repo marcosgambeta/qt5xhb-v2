@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQSIZEF(2)||ISNIL(2)) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) hb_parni(1), ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QSizeF( obj->sizeHint ( (Qt::SizeHint) hb_parni(1), ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->newSize () );
+      auto ptr = new QSizeF( obj->newSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->oldSize () );
+      auto ptr = new QSizeF( obj->oldSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

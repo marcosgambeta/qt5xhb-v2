@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->currentColor () );
+      auto ptr = new QColor( obj->currentColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->selectedColor () );
+      auto ptr = new QColor( obj->selectedColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QColor * ptr = new QColor( QColorDialog::customColor ( PINT(1) ) );
+      auto ptr = new QColor( QColorDialog::customColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
     if( ISBETWEEN(0,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
 #endif
-      QColor * ptr = new QColor( QColorDialog::getColor ( ISNIL(1)? Qt::white : *(QColor *) _qt5xhb_itemGetPtr(1), OPQWIDGET(2,nullptr), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
+      auto ptr = new QColor( QColorDialog::getColor ( ISNIL(1)? Qt::white : *(QColor *) _qt5xhb_itemGetPtr(1), OPQWIDGET(2,nullptr), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_STANDARDCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QColor * ptr = new QColor( QColorDialog::standardColor ( PINT(1) ) );
+      auto ptr = new QColor( QColorDialog::standardColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

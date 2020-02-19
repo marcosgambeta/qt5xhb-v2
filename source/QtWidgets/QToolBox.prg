@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
+      auto ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

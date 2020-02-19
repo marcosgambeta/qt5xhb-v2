@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect ( PQTREEWIDGETITEM(1) ) );
+      auto ptr = new QRect( obj->visualItemRect ( PQTREEWIDGETITEM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

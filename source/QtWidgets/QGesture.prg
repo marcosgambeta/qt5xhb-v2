@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->hotSpot () );
+      auto ptr = new QPointF( obj->hotSpot () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

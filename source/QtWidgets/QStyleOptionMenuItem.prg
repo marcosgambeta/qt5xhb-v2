@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MENURECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRect * ptr = new QRect( obj->menuRect  );
+      auto ptr = new QRect( obj->menuRect  );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
+      auto ptr = new QIcon( obj->icon  );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_FONT )
   {
     if( ISNUMPAR(0) )
     {
-      QFont * ptr = new QFont( obj->font  );
+      auto ptr = new QFont( obj->font  );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
     }
     else

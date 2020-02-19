@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
     if( ISNUMPAR(4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), PQWIDGET(4) ) );
+      auto ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), PQWIDGET(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
     if( ISNUMPAR(3) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGET(3) )
     {
 #endif
-      QRect * ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), PQWIDGET(3) ) );
+      auto ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), PQWIDGET(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
     if( ISNUMPAR(4) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISNUM(3) && ISQWIDGET(4) )
     {
 #endif
-      QRect * ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), PQWIDGET(4) ) );
+      auto ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), PQWIDGET(4) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
     if( ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && ISNUM(3) && ISLOG(4) && ISCHAR(5) )
     {
 #endif
-      QRect * ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
+      auto ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
     if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISQPIXMAP(3) )
     {
 #endif
-      QRect * ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
+      auto ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
+      auto ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,nullptr) ) );
+      auto ptr = new QPixmap( obj->standardPixmap ( (QStyle::StandardPixmap) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,nullptr) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
     if( ISNUMPAR(3) && ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
+      auto ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->standardPalette () );
+      auto ptr = new QPalette( obj->standardPalette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

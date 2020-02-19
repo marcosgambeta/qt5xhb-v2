@@ -88,7 +88,7 @@ void QDesktopWidget_availableGeometry1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
+      auto ptr = new QRect( obj->availableGeometry ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -102,7 +102,7 @@ void QDesktopWidget_availableGeometry2 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( PQWIDGET(1) ) );
+      auto ptr = new QRect( obj->availableGeometry ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -116,7 +116,7 @@ void QDesktopWidget_availableGeometry3 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
+      auto ptr = new QRect( obj->availableGeometry ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -251,7 +251,7 @@ void QDesktopWidget_screenGeometry1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
+      auto ptr = new QRect( obj->screenGeometry ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -265,7 +265,7 @@ void QDesktopWidget_screenGeometry2 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( PQWIDGET(1) ) );
+      auto ptr = new QRect( obj->screenGeometry ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -279,7 +279,7 @@ void QDesktopWidget_screenGeometry3 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
+      auto ptr = new QRect( obj->screenGeometry ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }

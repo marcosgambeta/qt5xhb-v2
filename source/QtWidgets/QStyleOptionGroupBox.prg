@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
   {
     if( ISNUMPAR(0) )
     {
-      QColor * ptr = new QColor( obj->textColor  );
+      auto ptr = new QColor( obj->textColor  );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else

@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
+      auto ptr = new QTextCharFormat( obj->dateTextFormat ( *PQDATE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->headerTextFormat () );
+      auto ptr = new QTextCharFormat( obj->headerTextFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->maximumDate () );
+      auto ptr = new QDate( obj->maximumDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->minimumDate () );
+      auto ptr = new QDate( obj->minimumDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->selectedDate () );
+      auto ptr = new QDate( obj->selectedDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat ( (Qt::DayOfWeek) hb_parni(1) ) );
+      auto ptr = new QTextCharFormat( obj->weekdayTextFormat ( (Qt::DayOfWeek) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

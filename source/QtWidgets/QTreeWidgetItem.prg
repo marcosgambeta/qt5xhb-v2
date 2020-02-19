@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUND )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->background ( PINT(1) ) );
+      auto ptr = new QBrush( obj->background ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_DATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( PINT(1), PINT(2) ) );
+      auto ptr = new QVariant( obj->data ( PINT(1), PINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FONT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font ( PINT(1) ) );
+      auto ptr = new QFont( obj->font ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_FOREGROUND )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foreground ( PINT(1) ) );
+      auto ptr = new QBrush( obj->foreground ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_ICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon ( PINT(1) ) );
+      auto ptr = new QIcon( obj->icon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SIZEHINT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint ( PINT(1) ) );
+      auto ptr = new QSize( obj->sizeHint ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_BACKGROUNDCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor ( PINT(1) ) );
+      auto ptr = new QColor( obj->backgroundColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1789,7 +1789,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_TEXTCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->textColor ( PINT(1) ) );
+      auto ptr = new QColor( obj->textColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

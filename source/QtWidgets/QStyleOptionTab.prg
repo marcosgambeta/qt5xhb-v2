@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
+      auto ptr = new QIcon( obj->icon  );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->iconSize  );
+      auto ptr = new QSize( obj->iconSize  );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_LEFTBUTTONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->leftButtonSize  );
+      auto ptr = new QSize( obj->leftButtonSize  );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_RIGHTBUTTONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->rightButtonSize  );
+      auto ptr = new QSize( obj->rightButtonSize  );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else

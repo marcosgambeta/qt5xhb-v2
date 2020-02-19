@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
+      auto ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
+      auto ptr = new QModelIndex( obj->rootIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

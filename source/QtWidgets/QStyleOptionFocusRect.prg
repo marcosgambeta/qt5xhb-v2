@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
   {
     if( ISNUMPAR(0) )
     {
-      QColor * ptr = new QColor( obj->backgroundColor  );
+      auto ptr = new QColor( obj->backgroundColor  );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
     }
     else

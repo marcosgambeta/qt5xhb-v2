@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
+      auto ptr = new QColor( obj->color () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->offset () );
+      auto ptr = new QPointF( obj->offset () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

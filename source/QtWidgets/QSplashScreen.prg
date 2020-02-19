@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap () );
+      auto ptr = new QPixmap( obj->pixmap () );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

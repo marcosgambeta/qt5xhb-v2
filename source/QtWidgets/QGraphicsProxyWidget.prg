@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->subWidgetRect ( PQWIDGET(1) ) );
+      auto ptr = new QRectF( obj->subWidgetRect ( PQWIDGET(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

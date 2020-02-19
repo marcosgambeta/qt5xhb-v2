@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRectF * ptr = new QRectF( obj->exposedRect  );
+      auto ptr = new QRectF( obj->exposedRect  );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
   {
     if( ISNUMPAR(0) )
     {
-      QMatrix * ptr = new QMatrix( obj->matrix  );
+      auto ptr = new QMatrix( obj->matrix  );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
     }
     else

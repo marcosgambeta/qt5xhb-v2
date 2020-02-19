@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRect * ptr = new QRect( obj->rect  );
+      auto ptr = new QRect( obj->rect  );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
   {
     if( ISNUMPAR(0) )
     {
-      QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics  );
+      auto ptr = new QFontMetrics( obj->fontMetrics  );
       _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
   {
     if( ISNUMPAR(0) )
     {
-      QPalette * ptr = new QPalette( obj->palette  );
+      auto ptr = new QPalette( obj->palette  );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
     }
     else

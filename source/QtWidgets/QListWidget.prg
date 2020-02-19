@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
     if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect ( PQLISTWIDGETITEM(1) ) );
+      auto ptr = new QRect( obj->visualItemRect ( PQLISTWIDGETITEM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

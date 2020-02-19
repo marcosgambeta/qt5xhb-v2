@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
+      auto ptr = new QModelIndex( obj->currentIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
+      auto ptr = new QSize( obj->iconSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
+      auto ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->rootIndex () );
+      auto ptr = new QModelIndex( obj->rootIndex () );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHintForIndex ( *PQMODELINDEX(1) ) );
+      auto ptr = new QSize( obj->sizeHintForIndex ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1593,7 +1593,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
+      auto ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

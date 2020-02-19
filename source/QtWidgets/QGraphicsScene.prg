@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->backgroundBrush () );
+      auto ptr = new QBrush( obj->backgroundBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foregroundBrush () );
+      auto ptr = new QBrush( obj->foregroundBrush () );
       _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->itemsBoundingRect () );
+      auto ptr = new QRectF( obj->itemsBoundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette () );
+      auto ptr = new QPalette( obj->palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->sceneRect () );
+      auto ptr = new QRectF( obj->sceneRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->selectionArea () );
+      auto ptr = new QPainterPath( obj->selectionArea () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

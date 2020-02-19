@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMargins * ptr = new QMargins( obj->contentsMargins () );
+      auto ptr = new QMargins( obj->contentsMargins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->contentsRect () );
+      auto ptr = new QRect( obj->contentsRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
+      auto ptr = new QSize( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
+      auto ptr = new QSize( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2) )
   {
 #endif
-      QSize * ptr = new QSize( QLayout::closestAcceptableSize ( PQWIDGET(1), *PQSIZE(2) ) );
+      auto ptr = new QSize( QLayout::closestAcceptableSize ( PQWIDGET(1), *PQSIZE(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

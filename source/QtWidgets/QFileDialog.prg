@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveState () );
+      auto ptr = new QByteArray( obj->saveState () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->directory () );
+      auto ptr = new QDir( obj->directory () );
       _qt5xhb_createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->directoryUrl () );
+      auto ptr = new QUrl( obj->directoryUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1722,7 +1722,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
     if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-      QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+      auto ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1742,7 +1742,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
     if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-      QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+      auto ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1762,7 +1762,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
     if( ISBETWEEN(0,5) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
   {
 #endif
-      QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
+      auto ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

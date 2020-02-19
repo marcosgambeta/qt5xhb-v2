@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
     if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect ( PQTABLEWIDGETITEM(1) ) );
+      auto ptr = new QRect( obj->visualItemRect ( PQTABLEWIDGETITEM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

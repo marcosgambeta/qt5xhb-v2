@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
+      auto ptr = new QSize( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
+      auto ptr = new QSize( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

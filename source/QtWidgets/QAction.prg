@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QACTION_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data () );
+      auto ptr = new QVariant( obj->data () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QACTION_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QACTION_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QKeySequence * ptr = new QKeySequence( obj->shortcut () );
+      auto ptr = new QKeySequence( obj->shortcut () );
       _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

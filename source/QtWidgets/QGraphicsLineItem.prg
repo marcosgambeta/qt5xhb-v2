@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineF * ptr = new QLineF( obj->line () );
+      auto ptr = new QLineF( obj->line () );
       _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
+      auto ptr = new QPen( obj->pen () );
       _qt5xhb_createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect () );
+      auto ptr = new QRectF( obj->boundingRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea () );
+      auto ptr = new QPainterPath( obj->opaqueArea () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape () );
+      auto ptr = new QPainterPath( obj->shape () );
       _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

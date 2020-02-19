@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
+      auto ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

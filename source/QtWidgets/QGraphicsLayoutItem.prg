@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->contentsRect () );
+      auto ptr = new QRectF( obj->contentsRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQSIZEF(2)||ISNIL(2)) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->effectiveSizeHint ( (Qt::SizeHint) hb_parni(1), ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QSizeF( obj->effectiveSizeHint ( (Qt::SizeHint) hb_parni(1), ISNIL(2)? QSizeF() : *(QSizeF *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->geometry () );
+      auto ptr = new QRectF( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->maximumSize () );
+      auto ptr = new QSizeF( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->minimumSize () );
+      auto ptr = new QSizeF( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->preferredSize () );
+      auto ptr = new QSizeF( obj->preferredSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizePolicy * ptr = new QSizePolicy( obj->sizePolicy () );
+      auto ptr = new QSizePolicy( obj->sizePolicy () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEPOLICY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valuePropertyName () );
+      auto ptr = new QByteArray( obj->valuePropertyName () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

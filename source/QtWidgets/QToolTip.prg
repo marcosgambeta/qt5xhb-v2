@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTOOLTIP_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
+      auto ptr = new QFont( obj->font () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTOOLTIP_PALETTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette () );
+      auto ptr = new QPalette( obj->palette () );
       _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

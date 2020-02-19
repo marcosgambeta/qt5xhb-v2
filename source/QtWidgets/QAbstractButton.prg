@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
+      auto ptr = new QSize( obj->iconSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QKeySequence * ptr = new QKeySequence( obj->shortcut () );
+      auto ptr = new QKeySequence( obj->shortcut () );
       _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

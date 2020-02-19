@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRect * ptr = new QRect( obj->tabBarRect  );
+      auto ptr = new QRect( obj->tabBarRect  );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRect * ptr = new QRect( obj->selectedTabRect  );
+      auto ptr = new QRect( obj->selectedTabRect  );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else

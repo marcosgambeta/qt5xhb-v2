@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->actionGeometry ( PQACTION(1) ) );
+      auto ptr = new QRect( obj->actionGeometry ( PQACTION(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QMENU_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
+      auto ptr = new QIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QMENU_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

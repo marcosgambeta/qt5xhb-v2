@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->currentCharFormat () );
+      auto ptr = new QTextCharFormat( obj->currentCharFormat () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->currentFont () );
+      auto ptr = new QFont( obj->currentFont () );
       _qt5xhb_createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
+      auto ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -455,7 +455,7 @@ void QTextEdit_cursorRect1 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
+      auto ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -469,7 +469,7 @@ void QTextEdit_cursorRect2 ()
 
   if( obj != nullptr )
   {
-      QRect * ptr = new QRect( obj->cursorRect () );
+      auto ptr = new QRect( obj->cursorRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
+      auto ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->textBackgroundColor () );
+      auto ptr = new QColor( obj->textBackgroundColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->textColor () );
+      auto ptr = new QColor( obj->textColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->textCursor () );
+      auto ptr = new QTextCursor( obj->textCursor () );
       _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

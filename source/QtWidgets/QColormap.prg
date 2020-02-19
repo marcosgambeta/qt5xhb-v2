@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->colorAt ( PUINT(1) ) );
+      auto ptr = new QColor( obj->colorAt ( PUINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
+      auto ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLORMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

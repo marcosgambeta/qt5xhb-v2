@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
+      auto ptr = new QIcon( obj->icon  );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else

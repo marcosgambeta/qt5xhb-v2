@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCROLLER_FINALPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->finalPosition () );
+      auto ptr = new QPointF( obj->finalPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSCROLLER_PIXELPERMETER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pixelPerMeter () );
+      auto ptr = new QPointF( obj->pixelPerMeter () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScrollerProperties * ptr = new QScrollerProperties( obj->scrollerProperties () );
+      auto ptr = new QScrollerProperties( obj->scrollerProperties () );
       _qt5xhb_createReturnClass ( ptr, "QSCROLLERPROPERTIES", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QSCROLLER_VELOCITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->velocity () );
+      auto ptr = new QPointF( obj->velocity () );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
+      auto ptr = new QIcon( obj->icon  );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->iconSize  );
+      auto ptr = new QSize( obj->iconSize  );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else

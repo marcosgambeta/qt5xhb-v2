@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
+      auto ptr = new QSize( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
+      auto ptr = new QSize( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

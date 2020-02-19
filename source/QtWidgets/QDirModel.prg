@@ -150,7 +150,7 @@ void QDirModel_index1 ()
 
   if( obj != nullptr )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
+      auto ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -164,7 +164,7 @@ void QDirModel_index2 ()
 
   if( obj != nullptr )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
+      auto ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDIRMODEL_PARENT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
+      auto ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISCHAR(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
+      auto ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEICON )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
+      auto ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -991,7 +991,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
+      auto ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

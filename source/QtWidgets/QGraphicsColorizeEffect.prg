@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
+      auto ptr = new QColor( obj->color () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

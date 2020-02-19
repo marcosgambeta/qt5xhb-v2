@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_POPUPRECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRect * ptr = new QRect( obj->popupRect  );
+      auto ptr = new QRect( obj->popupRect  );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->currentIcon  );
+      auto ptr = new QIcon( obj->currentIcon  );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->iconSize  );
+      auto ptr = new QSize( obj->iconSize  );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
     }
     else

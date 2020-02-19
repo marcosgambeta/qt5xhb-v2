@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QKeySequence * ptr = new QKeySequence( obj->keySequence () );
+      auto ptr = new QKeySequence( obj->keySequence () );
       _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

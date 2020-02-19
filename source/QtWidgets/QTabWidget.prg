@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QTABWIDGET_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
+      auto ptr = new QSize( obj->iconSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QTABWIDGET_TABICON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
+      auto ptr = new QIcon( obj->tabIcon ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QTABWIDGET_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QTABWIDGET_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

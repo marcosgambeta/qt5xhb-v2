@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMargins * ptr = new QMargins( obj->textMargins () );
+      auto ptr = new QMargins( obj->textMargins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

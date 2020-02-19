@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QWIDGET_BASESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->baseSize () );
+      auto ptr = new QSize( obj->baseSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->childrenRect () );
+      auto ptr = new QRect( obj->childrenRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->childrenRegion () );
+      auto ptr = new QRegion( obj->childrenRegion () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMargins * ptr = new QMargins( obj->contentsMargins () );
+      auto ptr = new QMargins( obj->contentsMargins () );
       _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->contentsRect () );
+      auto ptr = new QRect( obj->contentsRect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QWIDGET_CURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCursor * ptr = new QCursor( obj->cursor () );
+      auto ptr = new QCursor( obj->cursor () );
       _qt5xhb_createReturnClass ( ptr, "QCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QWIDGET_FONTINFO )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFontInfo * ptr = new QFontInfo( obj->fontInfo () );
+      auto ptr = new QFontInfo( obj->fontInfo () );
       _qt5xhb_createReturnClass ( ptr, "QFONTINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QWIDGET_FONTMETRICS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics () );
+      auto ptr = new QFontMetrics( obj->fontMetrics () );
       _qt5xhb_createReturnClass ( ptr, "QFONTMETRICS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->frameGeometry () );
+      auto ptr = new QRect( obj->frameGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1521,7 +1521,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->frameSize () );
+      auto ptr = new QSize( obj->frameSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1989,7 +1989,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2519,7 +2519,7 @@ HB_FUNC_STATIC( QWIDGET_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2596,7 +2596,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROM )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFrom ( PQWIDGET(1), *PQPOINT(2) ) );
+      auto ptr = new QPoint( obj->mapFrom ( PQWIDGET(1), *PQPOINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2621,7 +2621,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFromGlobal ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapFromGlobal ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2646,7 +2646,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMPARENT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFromParent ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapFromParent ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2671,7 +2671,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTO )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapTo ( PQWIDGET(1), *PQPOINT(2) ) );
+      auto ptr = new QPoint( obj->mapTo ( PQWIDGET(1), *PQPOINT(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2696,7 +2696,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapToGlobal ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapToGlobal ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2721,7 +2721,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOPARENT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapToParent ( *PQPOINT(1) ) );
+      auto ptr = new QPoint( obj->mapToParent ( *PQPOINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2746,7 +2746,7 @@ HB_FUNC_STATIC( QWIDGET_MASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->mask () );
+      auto ptr = new QRegion( obj->mask () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2970,7 +2970,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
+      auto ptr = new QSize( obj->minimumSizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3045,7 +3045,7 @@ HB_FUNC_STATIC( QWIDGET_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->pos () );
+      auto ptr = new QPoint( obj->pos () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3169,7 +3169,7 @@ HB_FUNC_STATIC( QWIDGET_NORMALGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->normalGeometry () );
+      auto ptr = new QRect( obj->normalGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3321,7 +3321,7 @@ HB_FUNC_STATIC( QWIDGET_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect () );
+      auto ptr = new QRect( obj->rect () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -3665,7 +3665,7 @@ HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveGeometry () );
+      auto ptr = new QByteArray( obj->saveGeometry () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4118,7 +4118,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
+      auto ptr = new QSize( obj->maximumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4192,7 +4192,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
+      auto ptr = new QSize( obj->minimumSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4371,7 +4371,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeIncrement () );
+      auto ptr = new QSize( obj->sizeIncrement () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4445,7 +4445,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizePolicy * ptr = new QSizePolicy( obj->sizePolicy () );
+      auto ptr = new QSizePolicy( obj->sizePolicy () );
       _qt5xhb_createReturnClass ( ptr, "QSIZEPOLICY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4679,7 +4679,7 @@ HB_FUNC_STATIC( QWIDGET_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -4704,7 +4704,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
+      auto ptr = new QSize( obj->sizeHint () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -5209,7 +5209,7 @@ HB_FUNC_STATIC( QWIDGET_VISIBLEREGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->visibleRegion () );
+      auto ptr = new QRegion( obj->visibleRegion () );
       _qt5xhb_createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -5485,7 +5485,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->windowIcon () );
+      auto ptr = new QIcon( obj->windowIcon () );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -6262,7 +6262,7 @@ HB_FUNC_STATIC( QWIDGET_GRAB )
     if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->grab ( ISNIL(1)? QRect(QPoint(0, 0), QSize(-1, -1)) : *(QRect *) _qt5xhb_itemGetPtr(1) ) );
+      auto ptr = new QPixmap( obj->grab ( ISNIL(1)? QRect(QPoint(0, 0), QSize(-1, -1)) : *(QRect *) _qt5xhb_itemGetPtr(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
