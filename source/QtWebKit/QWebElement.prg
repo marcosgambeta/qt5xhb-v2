@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->clone () );
+      auto ptr = new QWebElement( obj->clone () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->document () );
+      auto ptr = new QWebElement( obj->document () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->evaluateJavaScript ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll ( PQSTRING(1) ) );
+      auto ptr = new QWebElementCollection( obj->findAll ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENTCOLLECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->findFirst ( PQSTRING(1) ) );
+      auto ptr = new QWebElement( obj->findFirst ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->firstChild () );
+      auto ptr = new QWebElement( obj->firstChild () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->geometry () );
+      auto ptr = new QRect( obj->geometry () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->lastChild () );
+      auto ptr = new QWebElement( obj->lastChild () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->nextSibling () );
+      auto ptr = new QWebElement( obj->nextSibling () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->parent () );
+      auto ptr = new QWebElement( obj->parent () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->previousSibling () );
+      auto ptr = new QWebElement( obj->previousSibling () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

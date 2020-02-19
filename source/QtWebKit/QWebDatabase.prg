@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin () );
+      auto ptr = new QWebSecurityOrigin( obj->origin () );
       _qt5xhb_createReturnClass ( ptr, "QWEBSECURITYORIGIN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

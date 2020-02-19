@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->userStyleSheetUrl () );
+      auto ptr = new QUrl( obj->userStyleSheetUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
     if( ISNUMPAR(1) && ISQURL(1) )
   {
 #endif
-      QIcon * ptr = new QIcon( QWebSettings::iconForUrl ( *PQURL(1) ) );
+      auto ptr = new QIcon( QWebSettings::iconForUrl ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QPixmap * ptr = new QPixmap( QWebSettings::webGraphic ( (QWebSettings::WebGraphic) hb_parni(1) ) );
+      auto ptr = new QPixmap( QWebSettings::webGraphic ( (QWebSettings::WebGraphic) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

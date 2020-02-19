@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->at ( PINT(1) ) );
+      auto ptr = new QWebElement( obj->at ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->first () );
+      auto ptr = new QWebElement( obj->first () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->last () );
+      auto ptr = new QWebElement( obj->last () );
       _qt5xhb_createReturnClass ( ptr, "QWEBELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
