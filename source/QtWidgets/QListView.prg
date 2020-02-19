@@ -951,8 +951,7 @@ HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLISTVIEW" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {

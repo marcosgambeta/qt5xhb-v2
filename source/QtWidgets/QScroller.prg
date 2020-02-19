@@ -551,8 +551,7 @@ HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
       QList<QScroller *> list = QScroller::activeScrollers ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSCROLLER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

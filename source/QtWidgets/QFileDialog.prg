@@ -1260,8 +1260,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
       QList<QUrl> list = obj->sidebarUrls ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1524,8 +1523,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
       QList<QUrl> list = obj->selectedUrls ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1785,8 +1783,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
       QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -2034,8 +2031,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1 [i]) );
               hb_arrayAddForward( pArg1, pTempItem );
@@ -2228,8 +2224,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFILEDIALOG" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
