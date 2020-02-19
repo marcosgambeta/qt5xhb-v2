@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QGEOLOCATION_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoAddress * ptr = new QGeoAddress( obj->address () );
+      auto ptr = new QGeoAddress( obj->address () );
       _qt5xhb_createReturnClass ( ptr, "QGEOADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGEOLOCATION_COORDINATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate () );
+      auto ptr = new QGeoCoordinate( obj->coordinate () );
       _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGEOLOCATION_BOUNDINGBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoRectangle * ptr = new QGeoRectangle( obj->boundingBox () );
+      auto ptr = new QGeoRectangle( obj->boundingBox () );
       _qt5xhb_createReturnClass ( ptr, "QGEORECTANGLE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

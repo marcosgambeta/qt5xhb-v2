@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition ( OPBOOL(1,false) ) );
+      auto ptr = new QGeoPositionInfo( obj->lastKnownPosition ( OPBOOL(1,false) ) );
       _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

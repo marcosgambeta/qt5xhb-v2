@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->center () );
+      auto ptr = new QGeoCoordinate( obj->center () );
       _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QGeoCircle * ptr = new QGeoCircle( obj->translated ( PDOUBLE(1), PDOUBLE(2) ) );
+      auto ptr = new QGeoCircle( obj->translated ( PDOUBLE(1), PDOUBLE(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QGEOCIRCLE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
