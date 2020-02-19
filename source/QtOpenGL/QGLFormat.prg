@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
+      auto ptr = new QGLFormat( QGLFormat::defaultFormat () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
     if( ISNUMPAR(0) )
   {
 #endif
-      QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
+      auto ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

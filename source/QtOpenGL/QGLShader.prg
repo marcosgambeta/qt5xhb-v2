@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->sourceCode () );
+      auto ptr = new QByteArray( obj->sourceCode () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

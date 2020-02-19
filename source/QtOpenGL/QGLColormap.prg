@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->entryColor ( PINT(1) ) );
+      auto ptr = new QColor( obj->entryColor ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

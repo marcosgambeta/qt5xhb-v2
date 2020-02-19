@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFramebufferObjectFormat * ptr = new QGLFramebufferObjectFormat( obj->format () );
+      auto ptr = new QGLFramebufferObjectFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->toImage () );
+      auto ptr = new QImage( obj->toImage () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

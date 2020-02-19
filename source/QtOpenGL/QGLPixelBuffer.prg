@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->format () );
+      auto ptr = new QGLFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
+      auto ptr = new QSize( obj->size () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->toImage () );
+      auto ptr = new QImage( obj->toImage () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

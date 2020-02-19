@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->format () );
+      auto ptr = new QGLFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      QImage * ptr = new QImage( obj->grabFrameBuffer ( OPBOOL(1,false) ) );
+      auto ptr = new QImage( obj->grabFrameBuffer ( OPBOOL(1,false) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
     if( ISBETWEEN(0,3) && ISOPTNUM(1) && ISOPTNUM(2) && ISOPTLOG(3) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->renderPixmap ( OPINT(1,0), OPINT(2,0), OPBOOL(3,false) ) );
+      auto ptr = new QPixmap( obj->renderPixmap ( OPINT(1,0), OPINT(2,0), OPBOOL(3,false) ) );
       _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
 #endif
-      QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
+      auto ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

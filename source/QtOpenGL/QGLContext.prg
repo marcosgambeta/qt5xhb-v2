@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->format () );
+      auto ptr = new QGLFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->overlayTransparentColor () );
+      auto ptr = new QColor( obj->overlayTransparentColor () );
       _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->requestedFormat () );
+      auto ptr = new QGLFormat( obj->requestedFormat () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
