@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QWEBSOCKET_LOCALADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->localAddress () );
+      auto ptr = new QHostAddress( obj->localAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PEERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
+      auto ptr = new QHostAddress( obj->peerAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
+      auto ptr = new QNetworkProxy( obj->proxy () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QWEBSOCKET_REQUESTURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->requestUrl () );
+      auto ptr = new QUrl( obj->requestUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
+      auto ptr = new QSslConfiguration( obj->sslConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
