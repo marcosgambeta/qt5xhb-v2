@@ -701,8 +701,7 @@ HB_FUNC_STATIC( QPICTUREIO_INPUTFORMATS )
       QList<QByteArray> list = QPictureIO::inputFormats ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -749,8 +748,7 @@ HB_FUNC_STATIC( QPICTUREIO_OUTPUTFORMATS )
       QList<QByteArray> list = QPictureIO::outputFormats ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

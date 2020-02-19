@@ -169,8 +169,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
       QList<QOpenGLShader *> list = obj->shaders ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLSHADER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

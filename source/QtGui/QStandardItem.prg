@@ -2092,8 +2092,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
       QList<QStandardItem *> list = obj->takeRow ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -2141,8 +2140,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
       QList<QStandardItem *> list = obj->takeColumn ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

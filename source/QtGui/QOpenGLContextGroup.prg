@@ -85,8 +85,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
       QList<QOpenGLContext *> list = obj->shares ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

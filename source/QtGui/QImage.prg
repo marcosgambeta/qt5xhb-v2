@@ -451,8 +451,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 #endif
       QVector<QRgb> list = obj->colorTable ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (QRgb) list[i] );
         hb_arrayAddForward( pArray, pItem );

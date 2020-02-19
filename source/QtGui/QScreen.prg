@@ -473,8 +473,7 @@ HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
       QList<QScreen *> list = obj->virtualSiblings ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSCREEN" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
