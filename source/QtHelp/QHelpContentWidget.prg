@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexOf ( *PQURL(1) ) );
+      auto ptr = new QModelIndex( obj->indexOf ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
