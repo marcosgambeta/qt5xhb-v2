@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->at ( PINT(1) ) );
+      auto ptr = new QDomNode( obj->at ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->item ( PINT(1) ) );
+      auto ptr = new QDomNode( obj->item ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

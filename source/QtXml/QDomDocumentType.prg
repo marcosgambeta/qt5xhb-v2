@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities () );
+      auto ptr = new QDomNamedNodeMap( obj->entities () );
       _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations () );
+      auto ptr = new QDomNamedNodeMap( obj->notations () );
       _qt5xhb_createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

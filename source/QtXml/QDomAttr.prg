@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->ownerElement () );
+      auto ptr = new QDomElement( obj->ownerElement () );
       _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

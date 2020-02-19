@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->createAttribute ( PQSTRING(1) ) );
+      auto ptr = new QDomAttr( obj->createAttribute ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->createAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDomAttr( obj->createAttributeNS ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMATTR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection ( PQSTRING(1) ) );
+      auto ptr = new QDomCDATASection( obj->createCDATASection ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMCDATASECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomComment * ptr = new QDomComment( obj->createComment ( PQSTRING(1) ) );
+      auto ptr = new QDomComment( obj->createComment ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMCOMMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
+      auto ptr = new QDomDocumentFragment( obj->createDocumentFragment () );
       _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTFRAGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->createElement ( PQSTRING(1) ) );
+      auto ptr = new QDomElement( obj->createElement ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->createElementNS ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDomElement( obj->createElementNS ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference ( PQSTRING(1) ) );
+      auto ptr = new QDomEntityReference( obj->createEntityReference ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMENTITYREFERENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDomProcessingInstruction( obj->createProcessingInstruction ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMPROCESSINGINSTRUCTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomText * ptr = new QDomText( obj->createTextNode ( PQSTRING(1) ) );
+      auto ptr = new QDomText( obj->createTextNode ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMTEXT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomDocumentType * ptr = new QDomDocumentType( obj->doctype () );
+      auto ptr = new QDomDocumentType( obj->doctype () );
       _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->documentElement () );
+      auto ptr = new QDomElement( obj->documentElement () );
       _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->elementById ( PQSTRING(1) ) );
+      auto ptr = new QDomElement( obj->elementById ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName ( PQSTRING(1) ) );
+      auto ptr = new QDomNodeList( obj->elementsByTagName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS ( PQSTRING(1), PQSTRING(2) ) );
+      auto ptr = new QDomNodeList( obj->elementsByTagNameNS ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMNODELIST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomImplementation * ptr = new QDomImplementation( obj->implementation () );
+      auto ptr = new QDomImplementation( obj->implementation () );
       _qt5xhb_createReturnClass ( ptr, "QDOMIMPLEMENTATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISLOG(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->importNode ( *PQDOMNODE(1), PBOOL(2) ) );
+      auto ptr = new QDomNode( obj->importNode ( *PQDOMNODE(1), PBOOL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toByteArray ( OPINT(1,1) ) );
+      auto ptr = new QByteArray( obj->toByteArray ( OPINT(1,1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

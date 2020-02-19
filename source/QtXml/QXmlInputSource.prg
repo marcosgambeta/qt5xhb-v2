@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->next () );
+      auto ptr = new QChar( obj->next () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
