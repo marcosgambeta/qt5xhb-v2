@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toAtomicValue () );
+      auto ptr = new QVariant( obj->toAtomicValue () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
+      auto ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
       _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

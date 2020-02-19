@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->documentUri ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QUrl( obj->documentUri ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
+      auto ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QXmlName * ptr = new QXmlName( obj->name ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QXmlName( obj->name ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QXmlNodeModelIndex( obj->root ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QSourceLocation( obj->sourceLocation ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSOURCELOCATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->typedValue ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QVariant( obj->typedValue ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

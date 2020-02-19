@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlItem * ptr = new QXmlItem( obj->current () );
+      auto ptr = new QXmlItem( obj->current () );
       _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlItem * ptr = new QXmlItem( obj->next () );
+      auto ptr = new QXmlItem( obj->next () );
       _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

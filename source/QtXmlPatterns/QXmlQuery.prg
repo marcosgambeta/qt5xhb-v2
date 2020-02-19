@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlName * ptr = new QXmlName( obj->initialTemplateName () );
+      auto ptr = new QXmlName( obj->initialTemplateName () );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
+      auto ptr = new QXmlNamePool( obj->namePool () );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

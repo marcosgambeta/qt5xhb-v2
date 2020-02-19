@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
   {
 #endif
-      QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
+      auto ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

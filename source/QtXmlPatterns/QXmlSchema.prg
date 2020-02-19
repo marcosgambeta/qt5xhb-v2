@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->documentUri () );
+      auto ptr = new QUrl( obj->documentUri () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
+      auto ptr = new QXmlNamePool( obj->namePool () );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

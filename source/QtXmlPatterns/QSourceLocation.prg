@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->uri () );
+      auto ptr = new QUrl( obj->uri () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

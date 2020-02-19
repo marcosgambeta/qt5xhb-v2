@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
     if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
+      auto ptr = new QUrl( obj->baseUri ( *PQXMLNODEMODELINDEX(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
+      auto ptr = new QXmlNodeModelIndex( obj->elementById ( *PQXMLNAME(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
