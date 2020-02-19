@@ -734,8 +734,7 @@ HB_FUNC_STATIC( QPIESERIES_SLICES )
       QList<QPieSlice *> list = obj->slices ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -879,8 +878,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
@@ -1364,8 +1362,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {

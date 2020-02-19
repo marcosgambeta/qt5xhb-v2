@@ -942,8 +942,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
       QList<QCandlestickSet *> list = obj->sets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1223,8 +1222,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
@@ -1312,8 +1310,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {

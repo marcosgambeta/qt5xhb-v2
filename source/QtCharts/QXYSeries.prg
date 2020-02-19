@@ -955,8 +955,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
       QList<QPointF> list = obj->points ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1010,8 +1009,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
       QVector<QPointF> list = obj->pointsVector ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

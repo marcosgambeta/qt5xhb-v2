@@ -562,8 +562,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
       QList<QBarSet *> list = obj->barSets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -653,8 +652,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
@@ -742,8 +740,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
