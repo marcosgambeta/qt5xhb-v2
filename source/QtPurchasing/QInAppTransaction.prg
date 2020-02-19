@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->timestamp () );
+      auto ptr = new QDateTime( obj->timestamp () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
