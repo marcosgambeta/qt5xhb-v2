@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->senderAddress () );
+      auto ptr = new QHostAddress( obj->senderAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->destinationAddress () );
+      auto ptr = new QHostAddress( obj->destinationAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->data () );
+      auto ptr = new QByteArray( obj->data () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->makeReply ( *PQBYTEARRAY(1) ) );
+      auto ptr = new QNetworkDatagram( obj->makeReply ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

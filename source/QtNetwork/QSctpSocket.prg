@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->readDatagram () );
+      auto ptr = new QNetworkDatagram( obj->readDatagram () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

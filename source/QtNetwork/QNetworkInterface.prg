@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
+      auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
+      auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->version () );
+      auto ptr = new QByteArray( obj->version () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->serialNumber () );
+      auto ptr = new QByteArray( obj->serialNumber () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->digest ( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
+      auto ptr = new QByteArray( obj->digest ( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->effectiveDate () );
+      auto ptr = new QDateTime( obj->effectiveDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expiryDate () );
+      auto ptr = new QDateTime( obj->expiryDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslKey * ptr = new QSslKey( obj->publicKey () );
+      auto ptr = new QSslKey( obj->publicKey () );
       _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toPem () );
+      auto ptr = new QByteArray( obj->toPem () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toDer () );
+      auto ptr = new QByteArray( obj->toDer () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->value () );
+      auto ptr = new QHostAddress( obj->value () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

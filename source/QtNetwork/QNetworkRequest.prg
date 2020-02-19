@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
+      auto ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
+      auto ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
+      auto ptr = new QSslConfiguration( obj->sslConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

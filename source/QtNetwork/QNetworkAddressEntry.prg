@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->broadcast () );
+      auto ptr = new QHostAddress( obj->broadcast () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->ip () );
+      auto ptr = new QHostAddress( obj->ip () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->netmask () );
+      auto ptr = new QHostAddress( obj->netmask () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

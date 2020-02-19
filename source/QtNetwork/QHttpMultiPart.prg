@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->boundary () );
+      auto ptr = new QByteArray( obj->boundary () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

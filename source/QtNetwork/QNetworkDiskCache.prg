@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
+      auto ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
+      auto ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

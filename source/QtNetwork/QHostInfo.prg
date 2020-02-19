@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
+      auto ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QHOSTINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
+      auto ptr = new QSslCertificate( obj->certificate () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

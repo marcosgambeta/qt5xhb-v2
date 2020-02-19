@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration () );
+      auto ptr = new QNetworkConfiguration( obj->configuration () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkInterface * ptr = new QNetworkInterface( obj->interface () );
+      auto ptr = new QNetworkInterface( obj->interface () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->sessionProperty ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->sessionProperty ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

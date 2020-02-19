@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_EXPIRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expiry () );
+      auto ptr = new QDateTime( obj->expiry () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

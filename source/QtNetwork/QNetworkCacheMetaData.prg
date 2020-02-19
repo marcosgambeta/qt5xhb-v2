@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified () );
+      auto ptr = new QDateTime( obj->lastModified () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expirationDate () );
+      auto ptr = new QDateTime( obj->expirationDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

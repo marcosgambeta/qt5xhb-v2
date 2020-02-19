@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
+      auto ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
+      auto ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

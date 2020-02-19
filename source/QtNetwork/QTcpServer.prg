@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->serverAddress () );
+      auto ptr = new QHostAddress( obj->serverAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
+      auto ptr = new QNetworkProxy( obj->proxy () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

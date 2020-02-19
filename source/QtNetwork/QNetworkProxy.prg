@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
     if( ISNUMPAR(0) )
   {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
+      auto ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
+      auto ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

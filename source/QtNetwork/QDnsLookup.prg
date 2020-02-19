@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->nameserver () );
+      auto ptr = new QHostAddress( obj->nameserver () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

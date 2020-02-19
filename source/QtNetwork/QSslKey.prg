@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toDer ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
+      auto ptr = new QByteArray( obj->toDer ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toPem ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
+      auto ptr = new QByteArray( obj->toPem ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

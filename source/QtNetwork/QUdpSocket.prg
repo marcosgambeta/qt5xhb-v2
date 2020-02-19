@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkInterface * ptr = new QNetworkInterface( obj->multicastInterface () );
+      auto ptr = new QNetworkInterface( obj->multicastInterface () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram ( OPQINT64(1,-1) ) );
+      auto ptr = new QNetworkDatagram( obj->receiveDatagram ( OPQINT64(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

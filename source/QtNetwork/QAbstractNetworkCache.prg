@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
+      auto ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

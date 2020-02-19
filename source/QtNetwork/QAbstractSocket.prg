@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->localAddress () );
+      auto ptr = new QHostAddress( obj->localAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
+      auto ptr = new QHostAddress( obj->peerAddress () );
       _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
+      auto ptr = new QNetworkProxy( obj->proxy () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

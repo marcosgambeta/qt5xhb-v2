@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
+      auto ptr = new QNetworkProxy( obj->proxy () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration () );
+      auto ptr = new QNetworkConfiguration( obj->configuration () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->activeConfiguration () );
+      auto ptr = new QNetworkConfiguration( obj->activeConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

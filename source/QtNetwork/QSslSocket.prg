@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
+      auto ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
+      auto ptr = new QSslConfiguration( obj->sslConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->localCertificate () );
+      auto ptr = new QSslCertificate( obj->localCertificate () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate () );
+      auto ptr = new QSslCertificate( obj->peerCertificate () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCipher * ptr = new QSslCipher( obj->sessionCipher () );
+      auto ptr = new QSslCipher( obj->sessionCipher () );
       _qt5xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslKey * ptr = new QSslKey( obj->privateKey () );
+      auto ptr = new QSslKey( obj->privateKey () );
       _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

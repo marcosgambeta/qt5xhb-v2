@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expirationDate () );
+      auto ptr = new QDateTime( obj->expirationDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->name () );
+      auto ptr = new QByteArray( obj->name () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toRawForm ( ISNIL(1)? (QNetworkCookie::RawForm) QNetworkCookie::Full : (QNetworkCookie::RawForm) hb_parni(1) ) );
+      auto ptr = new QByteArray( obj->toRawForm ( ISNIL(1)? (QNetworkCookie::RawForm) QNetworkCookie::Full : (QNetworkCookie::RawForm) hb_parni(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->value () );
+      auto ptr = new QByteArray( obj->value () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
