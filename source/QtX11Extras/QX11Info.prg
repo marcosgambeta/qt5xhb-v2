@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
     if( ISNUMPAR(0) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QX11Info::nextStartupId () );
+      auto ptr = new QByteArray( QX11Info::nextStartupId () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
