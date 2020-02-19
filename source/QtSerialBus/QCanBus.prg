@@ -125,8 +125,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
       QList<QCanBusDeviceInfo> list = obj->availableDevices ( PQSTRING(1), NULL );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
