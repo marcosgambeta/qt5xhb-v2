@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_PAYLOAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->payload () );
+      auto ptr = new QByteArray( obj->payload () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
