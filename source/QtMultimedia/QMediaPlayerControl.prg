@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaTimeRange * ptr = new QMediaTimeRange( obj->availablePlaybackRanges () );
+      auto ptr = new QMediaTimeRange( obj->availablePlaybackRanges () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIATIMERANGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->media () );
+      auto ptr = new QMediaContent( obj->media () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

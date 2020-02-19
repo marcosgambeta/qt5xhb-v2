@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QCAMERA_VIEWFINDERSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCameraViewfinderSettings * ptr = new QCameraViewfinderSettings( obj->viewfinderSettings () );
+      auto ptr = new QCameraViewfinderSettings( obj->viewfinderSettings () );
       _qt5xhb_createReturnClass ( ptr, "QCAMERAVIEWFINDERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->nextMedia () );
+      auto ptr = new QMediaContent( obj->nextMedia () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->media () );
+      auto ptr = new QMediaContent( obj->media () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->currentMedia () );
+      auto ptr = new QMediaContent( obj->currentMedia () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration () );
+      auto ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

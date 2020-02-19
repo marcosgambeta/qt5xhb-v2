@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source () );
+      auto ptr = new QUrl( obj->source () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

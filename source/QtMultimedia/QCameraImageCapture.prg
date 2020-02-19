@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings () );
+      auto ptr = new QImageEncoderSettings( obj->encodingSettings () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

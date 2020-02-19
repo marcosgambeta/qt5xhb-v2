@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest () );
+      auto ptr = new QNetworkRequest( obj->canonicalRequest () );
       _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaResource * ptr = new QMediaResource( obj->canonicalResource () );
+      auto ptr = new QMediaResource( obj->canonicalResource () );
       _qt5xhb_createReturnClass ( ptr, "QMEDIARESOURCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->canonicalUrl () );
+      auto ptr = new QUrl( obj->canonicalUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

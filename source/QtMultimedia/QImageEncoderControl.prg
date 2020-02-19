@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings () );
+      auto ptr = new QImageEncoderSettings( obj->imageSettings () );
       _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->resolution () );
+      auto ptr = new QSize( obj->resolution () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->encodingOption ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->encodingOption ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

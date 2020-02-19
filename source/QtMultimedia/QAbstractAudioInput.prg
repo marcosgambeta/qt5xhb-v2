@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAudioFormat * ptr = new QAudioFormat( obj->format () );
+      auto ptr = new QAudioFormat( obj->format () );
       _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

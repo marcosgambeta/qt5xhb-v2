@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->handle () );
+      auto ptr = new QVariant( obj->handle () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

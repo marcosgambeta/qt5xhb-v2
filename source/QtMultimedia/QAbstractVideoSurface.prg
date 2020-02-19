@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NATIVERESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->nativeResolution () );
+      auto ptr = new QSize( obj->nativeResolution () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
+      auto ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
+      auto ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
       _qt5xhb_createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

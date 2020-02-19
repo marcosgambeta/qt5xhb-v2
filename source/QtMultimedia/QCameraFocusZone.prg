@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->area () );
+      auto ptr = new QRectF( obj->area () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

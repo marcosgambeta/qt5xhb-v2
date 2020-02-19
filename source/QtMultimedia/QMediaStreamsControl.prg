@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
+      auto ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

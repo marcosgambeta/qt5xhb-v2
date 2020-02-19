@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings () );
+      auto ptr = new QAudioEncoderSettings( obj->audioSettings () );
       _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
