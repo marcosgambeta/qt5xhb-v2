@@ -795,8 +795,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVEENGINE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
