@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_POSTDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->postData () );
+      auto ptr = new QByteArray( obj->postData () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->header ( *PQBYTEARRAY(1) ) );
+      auto ptr = new QByteArray( obj->header ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
