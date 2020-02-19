@@ -311,8 +311,7 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
       QList<QCameraInfo> list = QCameraInfo::availableCameras ( ISNIL(1)? (QCamera::Position) QCamera::UnspecifiedPosition : (QCamera::Position) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

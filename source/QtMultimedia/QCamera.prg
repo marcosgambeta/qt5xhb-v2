@@ -887,8 +887,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
       QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings ( ISNIL(1)? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *) _qt5xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAVIEWFINDERSETTINGS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -942,8 +941,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
       QList<QSize> list = obj->supportedViewfinderResolutions ( ISNIL(1)? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *) _qt5xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -1000,8 +998,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedViewfinderPixelFormats ( ISNIL(1)? QCameraViewfinderSettings() : *(QCameraViewfinderSettings *) _qt5xhb_itemGetPtr(1) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -1031,8 +1028,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
       QList<QByteArray> list = QCamera::availableDevices ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

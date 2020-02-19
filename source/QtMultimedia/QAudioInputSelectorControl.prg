@@ -117,8 +117,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
 #endif
       QList<QString> list = obj->availableInputs ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) list[i].toLatin1().data() );
         hb_arrayAddForward( pArray, pItem );
