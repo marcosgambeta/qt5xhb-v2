@@ -118,8 +118,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
       QList<QAction *> list = obj->taskActions ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
