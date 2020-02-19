@@ -315,8 +315,7 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
       QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -359,8 +358,7 @@ void QGeoAreaMonitorSource_activeMonitors2 ()
       QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *PQGEOSHAPE(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

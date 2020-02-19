@@ -397,8 +397,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
@@ -486,8 +485,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOSATELLITEINFOSOURCE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            int i;
-            for(i=0;i<arg1.count();i++)
+            for( auto i = 0; i < arg1.count(); i++ )
             {
               if( pDynSym )
               {
