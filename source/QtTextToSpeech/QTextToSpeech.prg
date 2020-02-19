@@ -438,8 +438,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
       QVector<QLocale> list = obj->availableLocales ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -493,8 +492,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
       QVector<QVoice> list = obj->availableVoices ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVOICE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
