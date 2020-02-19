@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->handle () );
+      auto ptr = new QVariant( obj->handle () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlError * ptr = new QSqlError( obj->lastError () );
+      auto ptr = new QSqlError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
+      auto ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
+      auto ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

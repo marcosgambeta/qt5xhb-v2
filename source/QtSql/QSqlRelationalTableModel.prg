@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QSqlRelation * ptr = new QSqlRelation( obj->relation ( PINT(1) ) );
+      auto ptr = new QSqlRelation( obj->relation ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRELATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

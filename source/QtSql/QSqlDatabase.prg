@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
 #endif
-      QSqlQuery * ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
+      auto ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlError * ptr = new QSqlError( obj->lastError () );
+      auto ptr = new QSqlError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
+      auto ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
+      auto ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
     if( ISNUMPAR(2) && ISQSQLDATABASE(1) && ISCHAR(2) )
   {
 #endif
-      QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
+      auto ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }

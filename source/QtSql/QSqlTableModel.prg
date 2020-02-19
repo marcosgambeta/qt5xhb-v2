@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlDatabase * ptr = new QSqlDatabase( obj->database () );
+      auto ptr = new QSqlDatabase( obj->database () );
       _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryKey () );
+      auto ptr = new QSqlIndex( obj->primaryKey () );
       _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -873,7 +873,7 @@ void QSqlTableModel_record1 ()
 
   if( obj != nullptr )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record () );
+      auto ptr = new QSqlRecord( obj->record () );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -887,7 +887,7 @@ void QSqlTableModel_record2 ()
 
   if( obj != nullptr )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
+      auto ptr = new QSqlRecord( obj->record ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }

@@ -289,7 +289,7 @@ void QSqlQuery_boundValue1 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -303,7 +303,7 @@ void QSqlQuery_boundValue2 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
+      auto ptr = new QVariant( obj->boundValue ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlError * ptr = new QSqlError( obj->lastError () );
+      auto ptr = new QSqlError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->lastInsertId () );
+      auto ptr = new QVariant( obj->lastInsertId () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record () );
+      auto ptr = new QSqlRecord( obj->record () );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1065,7 +1065,7 @@ void QSqlQuery_value1 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
+      auto ptr = new QVariant( obj->value ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -1079,7 +1079,7 @@ void QSqlQuery_value2 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->value ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }

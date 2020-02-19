@@ -269,7 +269,7 @@ void QSqlRecord_field1 ()
 
   if( obj != nullptr )
   {
-      QSqlField * ptr = new QSqlField( obj->field ( PINT(1) ) );
+      auto ptr = new QSqlField( obj->field ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
@@ -283,7 +283,7 @@ void QSqlRecord_field2 ()
 
   if( obj != nullptr )
   {
-      QSqlField * ptr = new QSqlField( obj->field ( PQSTRING(1) ) );
+      auto ptr = new QSqlField( obj->field ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
@@ -703,7 +703,7 @@ void QSqlRecord_value1 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
+      auto ptr = new QVariant( obj->value ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -717,7 +717,7 @@ void QSqlRecord_value2 ()
 
   if( obj != nullptr )
   {
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->value ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
     if( ISNUMPAR(1) && ISQSQLRECORD(1) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->keyValues ( *PQSQLRECORD(1) ) );
+      auto ptr = new QSqlRecord( obj->keyValues ( *PQSQLRECORD(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

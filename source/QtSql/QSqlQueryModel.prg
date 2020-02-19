@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlError * ptr = new QSqlError( obj->lastError () );
+      auto ptr = new QSqlError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSqlQuery * ptr = new QSqlQuery( obj->query () );
+      auto ptr = new QSqlQuery( obj->query () );
       _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,7 +239,7 @@ void QSqlQueryModel_record1 ()
 
   if( obj != nullptr )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
+      auto ptr = new QSqlRecord( obj->record ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -253,7 +253,7 @@ void QSqlQueryModel_record2 ()
 
   if( obj != nullptr )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record () );
+      auto ptr = new QSqlRecord( obj->record () );
       _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      auto ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
