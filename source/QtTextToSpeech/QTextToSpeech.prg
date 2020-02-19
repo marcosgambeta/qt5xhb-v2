@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
+      auto ptr = new QLocale( obj->locale () );
       _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVoice * ptr = new QVoice( obj->voice () );
+      auto ptr = new QVoice( obj->voice () );
       _qt5xhb_createReturnClass ( ptr, "QVOICE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
