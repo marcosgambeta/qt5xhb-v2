@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->request () );
+      auto ptr = new QPlaceSearchRequest( obj->request () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->previousPageRequest () );
+      auto ptr = new QPlaceSearchRequest( obj->previousPageRequest () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_NEXTPAGEREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->nextPageRequest () );
+      auto ptr = new QPlaceSearchRequest( obj->nextPageRequest () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

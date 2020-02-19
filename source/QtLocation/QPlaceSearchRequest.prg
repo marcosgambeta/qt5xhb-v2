@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoShape * ptr = new QGeoShape( obj->searchArea () );
+      auto ptr = new QGeoShape( obj->searchArea () );
       _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->searchContext () );
+      auto ptr = new QVariant( obj->searchContext () );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

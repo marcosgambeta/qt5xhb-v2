@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoRouteRequest * ptr = new QGeoRouteRequest( obj->request () );
+      auto ptr = new QGeoRouteRequest( obj->request () );
       _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

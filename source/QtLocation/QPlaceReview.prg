@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_DATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->dateTime () );
+      auto ptr = new QDateTime( obj->dateTime () );
       _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

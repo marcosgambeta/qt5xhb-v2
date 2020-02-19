@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlace * ptr = new QPlace( obj->place () );
+      auto ptr = new QPlace( obj->place () );
       _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

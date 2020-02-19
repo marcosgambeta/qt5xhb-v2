@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEXTROUTESEGMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoRouteSegment * ptr = new QGeoRouteSegment( obj->nextRouteSegment () );
+      auto ptr = new QGeoRouteSegment( obj->nextRouteSegment () );
       _qt5xhb_createReturnClass ( ptr, "QGEOROUTESEGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_MANEUVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoManeuver * ptr = new QGeoManeuver( obj->maneuver () );
+      auto ptr = new QGeoManeuver( obj->maneuver () );
       _qt5xhb_createReturnClass ( ptr, "QGEOMANEUVER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

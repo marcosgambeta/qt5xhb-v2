@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
+      auto ptr = new QUrl( obj->url () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
+      auto ptr = new QPlaceIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

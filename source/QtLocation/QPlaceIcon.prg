@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QPLACEICON_URL )
     if( ISBETWEEN(0,1) && (ISQSIZE(1)||ISNIL(1)) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url ( ISNIL(1)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(1) ) );
+      auto ptr = new QUrl( obj->url ( ISNIL(1)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

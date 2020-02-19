@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->position () );
+      auto ptr = new QGeoCoordinate( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_WAYPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->waypoint () );
+      auto ptr = new QGeoCoordinate( obj->waypoint () );
       _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

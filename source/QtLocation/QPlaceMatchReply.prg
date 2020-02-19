@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request () );
+      auto ptr = new QPlaceMatchRequest( obj->request () );
       _qt5xhb_createReturnClass ( ptr, "QPLACEMATCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

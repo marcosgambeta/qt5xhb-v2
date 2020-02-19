@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoShape * ptr = new QGeoShape( obj->viewport () );
+      auto ptr = new QGeoShape( obj->viewport () );
       _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

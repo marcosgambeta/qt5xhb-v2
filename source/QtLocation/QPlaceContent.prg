@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SUPPLIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier () );
+      auto ptr = new QPlaceSupplier( obj->supplier () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESUPPLIER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QPLACECONTENT_USER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceUser * ptr = new QPlaceUser( obj->user () );
+      auto ptr = new QPlaceUser( obj->user () );
       _qt5xhb_createReturnClass ( ptr, "QPLACEUSER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

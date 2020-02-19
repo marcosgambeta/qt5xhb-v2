@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
+      auto ptr = new QPlaceIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

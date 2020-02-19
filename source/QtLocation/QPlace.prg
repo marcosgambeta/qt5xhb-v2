@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPLACE_LOCATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoLocation * ptr = new QGeoLocation( obj->location () );
+      auto ptr = new QGeoLocation( obj->location () );
       _qt5xhb_createReturnClass ( ptr, "QGEOLOCATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPLACE_RATINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceRatings * ptr = new QPlaceRatings( obj->ratings () );
+      auto ptr = new QPlaceRatings( obj->ratings () );
       _qt5xhb_createReturnClass ( ptr, "QPLACERATINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QPLACE_SUPPLIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSupplier * ptr = new QPlaceSupplier( obj->supplier () );
+      auto ptr = new QPlaceSupplier( obj->supplier () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESUPPLIER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QPLACE_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
+      auto ptr = new QPlaceIcon( obj->icon () );
       _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QPLACE_PRIMARYWEBSITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->primaryWebsite () );
+      auto ptr = new QUrl( obj->primaryWebsite () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QPlaceAttribute * ptr = new QPlaceAttribute( obj->extendedAttribute ( PQSTRING(1) ) );
+      auto ptr = new QPlaceAttribute( obj->extendedAttribute ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPLACEATTRIBUTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

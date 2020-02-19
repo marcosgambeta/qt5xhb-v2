@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CATEGORY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QPlaceCategory * ptr = new QPlaceCategory( obj->category ( PQSTRING(1) ) );
+      auto ptr = new QPlaceCategory( obj->category ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPLACECATEGORY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_COMPATIBLEPLACE )
     if( ISNUMPAR(1) && ISQPLACE(1) )
     {
 #endif
-      QPlace * ptr = new QPlace( obj->compatiblePlace ( *PQPLACE(1) ) );
+      auto ptr = new QPlace( obj->compatiblePlace ( *PQPLACE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

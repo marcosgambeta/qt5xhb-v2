@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceSearchRequest * ptr = new QPlaceSearchRequest( obj->searchRequest () );
+      auto ptr = new QPlaceSearchRequest( obj->searchRequest () );
       _qt5xhb_createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
