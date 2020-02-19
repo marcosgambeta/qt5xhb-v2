@@ -249,8 +249,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
       QList<QWinJumpListCategory *> list = obj->categories ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWINJUMPLISTCATEGORY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
