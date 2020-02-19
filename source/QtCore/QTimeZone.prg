@@ -611,8 +611,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS1 )
       QList<QByteArray> list = QTimeZone::availableTimeZoneIds ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -661,8 +660,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS2 )
       QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( (QLocale::Country) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -711,8 +709,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
       QList<QByteArray> list = QTimeZone::availableTimeZoneIds ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -847,8 +844,7 @@ void QTimeZone_windowsIdToIanaIds1 ()
       QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *PQBYTEARRAY(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -887,8 +883,7 @@ void QTimeZone_windowsIdToIanaIds2 ()
       QList<QByteArray> list = QTimeZone::windowsIdToIanaIds ( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

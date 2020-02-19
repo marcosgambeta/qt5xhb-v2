@@ -127,8 +127,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
       QList<QAbstractAnimation *> list = obj->animations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -337,8 +336,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
       QList<QAbstractState *> list = obj->targetStates ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {

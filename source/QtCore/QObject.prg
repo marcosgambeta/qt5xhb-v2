@@ -355,8 +355,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
       QObjectList list = obj->children ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -457,8 +456,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
       QList<QByteArray> list = obj->dynamicPropertyNames ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -580,8 +578,7 @@ void QObject_findChildren1 ()
       QList<QObject *> list = obj->findChildren<QObject *> ( OPQSTRING(1,QString()), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -619,8 +616,7 @@ void QObject_findChildren2 ()
       QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGEXP(1), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
@@ -659,8 +655,7 @@ void QObject_findChildren3 ()
       QList<QObject *> list = obj->findChildren<QObject *> ( *PQREGULAREXPRESSION(1), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( auto i = 0; i < list.count(); i++ )
       {
         if( pDynSym )
         {
