@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundsOnElement ( PQSTRING(1) ) );
+      auto ptr = new QRectF( obj->boundsOnElement ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->defaultSize () );
+      auto ptr = new QSize( obj->defaultSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QMatrix * ptr = new QMatrix( obj->matrixForElement ( PQSTRING(1) ) );
+      auto ptr = new QMatrix( obj->matrixForElement ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->viewBox () );
+      auto ptr = new QRect( obj->viewBox () );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->viewBoxF () );
+      auto ptr = new QRectF( obj->viewBoxF () );
       _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
