@@ -1,6 +1,6 @@
 /*
 
-  Qt5xHb/C++ Project - Test Program
+  Qt5xHb/C++11 Project - Test Program
 
   Copyright (C) 2020 Marcos Antonio Gambeta
 
