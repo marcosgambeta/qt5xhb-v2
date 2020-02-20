@@ -552,9 +552,8 @@ QStringList _qt5xhb_convert_array_parameter_to_qstringlist ( int numpar )
 
   if( pArray )
   {
-    int i;
     int nLen = hb_arrayLen(pArray);
-    for (i=0; i<nLen; i++)
+    for( auto i = 0; i < nLen; i++ )
     {
       QString temp = QLatin1String( hb_arrayGetCPtr(pArray, i+1) );
       list << temp;
@@ -586,9 +585,8 @@ QVariantList _qt5xhb_convert_array_parameter_to_qvariantlist ( int numpar )
 
   if( pArray )
   {
-    int i;
     int nLen = hb_arrayLen(pArray);
-    for (i=0; i<nLen; i++)
+    for( auto i = 0; i < nLen; i++ )
     {
       list << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( pArray, i+1 ), "POINTER", 0 ) );
     }
@@ -606,9 +604,9 @@ void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
 
   PHB_ITEM pArray = hb_itemArrayNew(0);
 
-  for( auto i = 0; i < list.count(); i++ )
+  if( pDynSym )
   {
-    if( pDynSym )
+    for( auto i = 0; i < list.count(); i++ )
     {
       hb_vmPushDynSym( pDynSym );
       hb_vmPushNil();
@@ -626,10 +624,10 @@ void _qt5xhb_convert_qvariantlist_to_array ( const QVariantList list )
       hb_arrayAddForward( pArray, pObject );
       hb_itemRelease( pObject );
     }
-    else
-    {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
-    }
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
   }
 
   hb_itemReturnRelease(pArray);
