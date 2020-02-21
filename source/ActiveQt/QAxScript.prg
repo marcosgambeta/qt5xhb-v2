@@ -273,7 +273,7 @@ void entered()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -333,7 +333,7 @@ void error( int code, const QString & description, int sourcePosition, const QSt
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -401,7 +401,7 @@ void finished()
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -461,7 +461,7 @@ void finished( const QVariant & result )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -523,7 +523,7 @@ void finished( int code, const QString & source, const QString & description, co
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -591,7 +591,7 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
-  QAxScript * sender = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxScript * sender = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
