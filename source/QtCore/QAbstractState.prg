@@ -131,7 +131,7 @@ void entered()
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
-  QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * sender = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -191,7 +191,7 @@ void exited()
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
-  QAbstractState * sender = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * sender = (QAbstractState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

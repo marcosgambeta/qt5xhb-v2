@@ -373,7 +373,7 @@ void triggered()
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
-  QAbstractTransition * sender = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractTransition * sender = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

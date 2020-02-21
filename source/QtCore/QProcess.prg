@@ -1519,7 +1519,7 @@ void error( QProcess::ProcessError error )
 */
 HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1581,7 +1581,7 @@ void finished( int exitCode, QProcess::ExitStatus exitStatus )
 */
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1645,7 +1645,7 @@ void readyReadStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1705,7 +1705,7 @@ void readyReadStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1765,7 +1765,7 @@ void started()
 */
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1825,7 +1825,7 @@ void stateChanged( QProcess::ProcessState newState )
 */
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1888,7 +1888,7 @@ void errorOccurred( QProcess::ProcessError error )
 HB_FUNC_STATIC( QPROCESS_ONERROROCCURRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QProcess * sender = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * sender = (QProcess *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

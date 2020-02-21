@@ -689,7 +689,7 @@ void selectionChanged( const QItemSelection & selected, const QItemSelection & d
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionModel * sender = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -753,7 +753,7 @@ void currentChanged( const QModelIndex & current, const QModelIndex & previous )
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionModel * sender = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -817,7 +817,7 @@ void currentRowChanged( const QModelIndex & current, const QModelIndex & previou
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionModel * sender = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -881,7 +881,7 @@ void currentColumnChanged( const QModelIndex & current, const QModelIndex & prev
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-  QItemSelectionModel * sender = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionModel * sender = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

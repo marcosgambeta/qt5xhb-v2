@@ -337,7 +337,7 @@ void valueChanged( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-  QVariantAnimation * sender = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariantAnimation * sender = (QVariantAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -594,7 +594,7 @@ void aboutToBlock()
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 {
-  QAbstractEventDispatcher * sender = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractEventDispatcher * sender = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -654,7 +654,7 @@ void awake()
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 {
-  QAbstractEventDispatcher * sender = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractEventDispatcher * sender = (QAbstractEventDispatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

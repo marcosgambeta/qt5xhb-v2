@@ -915,7 +915,7 @@ void aboutToQuit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
-  QCoreApplication * sender = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCoreApplication * sender = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

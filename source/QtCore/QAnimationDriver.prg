@@ -271,7 +271,7 @@ void started()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 {
-  QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAnimationDriver * sender = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -331,7 +331,7 @@ void stopped()
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 {
-  QAnimationDriver * sender = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAnimationDriver * sender = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

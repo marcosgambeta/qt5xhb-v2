@@ -563,7 +563,7 @@ void finished()
 */
 HB_FUNC_STATIC( QTHREAD_ONFINISHED )
 {
-  QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QThread * sender = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -623,7 +623,7 @@ void started()
 */
 HB_FUNC_STATIC( QTHREAD_ONSTARTED )
 {
-  QThread * sender = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QThread * sender = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
