@@ -324,7 +324,7 @@ void dataProxyChanged( QBarDataProxy * proxy )
 HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBar3DSeries * sender = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -390,7 +390,7 @@ void selectedBarChanged( const QPoint & position )
 HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBar3DSeries * sender = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -456,7 +456,7 @@ void meshAngleChanged( float angle )
 HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * sender = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBar3DSeries * sender = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

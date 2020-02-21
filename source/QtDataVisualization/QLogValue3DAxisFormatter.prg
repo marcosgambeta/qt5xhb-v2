@@ -295,7 +295,7 @@ void autoSubGridChanged( bool enabled )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -361,7 +361,7 @@ void baseChanged( qreal base )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -427,7 +427,7 @@ void showEdgeLabelsChanged( bool enabled )
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLogValue3DAxisFormatter * sender = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
