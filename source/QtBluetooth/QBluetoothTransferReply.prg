@@ -276,7 +276,7 @@ void finished( QBluetoothTransferReply * r )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothTransferReply * sender = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -342,7 +342,7 @@ void transferProgress( qint64 bytesTransferred, qint64 bytesTotal )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferReply * sender = (QBluetoothTransferReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothTransferReply * sender = (QBluetoothTransferReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -130,7 +130,7 @@ void finished( QBluetoothTransferReply * reply )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManager * sender = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothTransferManager * sender = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
