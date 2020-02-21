@@ -1108,7 +1108,7 @@ void angleSpanChanged()
 HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1172,7 +1172,7 @@ void borderColorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1236,7 +1236,7 @@ void borderWidthChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1300,7 +1300,7 @@ void brushChanged()
 HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1364,7 +1364,7 @@ void clicked()
 HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1428,7 +1428,7 @@ void colorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1492,7 +1492,7 @@ void doubleClicked()
 HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1556,7 +1556,7 @@ void hovered( bool state )
 HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1622,7 +1622,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1686,7 +1686,7 @@ void labelChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1750,7 +1750,7 @@ void labelColorChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1814,7 +1814,7 @@ void labelFontChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1878,7 +1878,7 @@ void labelVisibleChanged()
 HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1942,7 +1942,7 @@ void penChanged()
 HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2006,7 +2006,7 @@ void percentageChanged()
 HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2070,7 +2070,7 @@ void pressed()
 HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2134,7 +2134,7 @@ void released()
 HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2198,7 +2198,7 @@ void startAngleChanged()
 HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2262,7 +2262,7 @@ void valueChanged()
 HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * sender = (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSlice * sender = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

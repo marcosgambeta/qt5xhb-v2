@@ -953,7 +953,7 @@ void backgroundVisibleChanged( bool visible )
 HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1019,7 +1019,7 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1085,7 +1085,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1151,7 +1151,7 @@ void fontChanged( QFont font )
 HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1217,7 +1217,7 @@ void labelColorChanged( QColor color )
 HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1283,7 +1283,7 @@ void markerShapeChanged( QLegend::MarkerShape shape )
 HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1349,7 +1349,7 @@ void reverseMarkersChanged( bool reverseMarkers )
 HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1415,7 +1415,7 @@ void showToolTipsChanged( bool showToolTips )
 HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * sender = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * sender = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

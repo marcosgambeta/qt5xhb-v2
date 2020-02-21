@@ -1189,7 +1189,7 @@ void clicked( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1255,7 +1255,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1321,7 +1321,7 @@ void doubleClicked( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1387,7 +1387,7 @@ void hovered( const QPointF & point, bool state )
 HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1455,7 +1455,7 @@ void penChanged( const QPen & pen )
 HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1521,7 +1521,7 @@ void pointAdded( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1587,7 +1587,7 @@ void pointLabelsClippingChanged( bool clipping )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1653,7 +1653,7 @@ void pointLabelsColorChanged( const QColor & color )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1719,7 +1719,7 @@ void pointLabelsFontChanged( const QFont & font )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1785,7 +1785,7 @@ void pointLabelsFormatChanged( const QString & format )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1851,7 +1851,7 @@ void pointLabelsVisibilityChanged( bool visible )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1917,7 +1917,7 @@ void pointRemoved( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1983,7 +1983,7 @@ void pointReplaced( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2049,7 +2049,7 @@ void pointsRemoved( int index, int count )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2117,7 +2117,7 @@ void pointsReplaced()
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2181,7 +2181,7 @@ void pressed( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2247,7 +2247,7 @@ void released( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * sender = (QXYSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QXYSeries * sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

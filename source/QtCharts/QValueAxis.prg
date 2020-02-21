@@ -475,7 +475,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -541,7 +541,7 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -607,7 +607,7 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -673,7 +673,7 @@ void minorTickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -739,7 +739,7 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -807,7 +807,7 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * sender = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
