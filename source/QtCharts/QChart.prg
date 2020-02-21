@@ -1865,7 +1865,7 @@ void plotAreaChanged( const QRectF & plotArea )
 HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChart * sender = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChart * sender = (QChart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
