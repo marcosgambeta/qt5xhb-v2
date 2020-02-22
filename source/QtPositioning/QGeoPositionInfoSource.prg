@@ -485,7 +485,7 @@ void positionUpdated( const QGeoPositionInfo & update )
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -551,7 +551,7 @@ void updateTimeout()
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -615,7 +615,7 @@ void error( QGeoPositionInfoSource::Error error )
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoPositionInfoSource * sender = (QGeoPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
