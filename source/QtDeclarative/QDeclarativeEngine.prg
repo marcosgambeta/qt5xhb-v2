@@ -712,7 +712,7 @@ void quit()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeEngine * sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -772,7 +772,7 @@ void warnings( const QList<QDeclarativeError> & warnings )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  QDeclarativeEngine * sender = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeEngine * sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -795,9 +795,9 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVEENGINE" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -811,10 +811,10 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

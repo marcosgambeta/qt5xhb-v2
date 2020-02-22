@@ -407,7 +407,7 @@ void sceneResized( QSize size )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
-  QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * sender = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -469,7 +469,7 @@ void statusChanged( QDeclarativeView::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
-  QDeclarativeView * sender = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * sender = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

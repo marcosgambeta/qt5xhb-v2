@@ -293,7 +293,7 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 {
-  QDeclarativePropertyMap * sender = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativePropertyMap * sender = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

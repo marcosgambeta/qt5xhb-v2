@@ -481,7 +481,7 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 {
-  QDeclarativeExpression * sender = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeExpression * sender = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
