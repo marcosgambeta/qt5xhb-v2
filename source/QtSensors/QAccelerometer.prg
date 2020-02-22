@@ -181,7 +181,7 @@ void accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode 
 HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * sender = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAccelerometer * sender = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

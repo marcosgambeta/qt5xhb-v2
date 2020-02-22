@@ -181,7 +181,7 @@ void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * sender = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTapSensor * sender = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
