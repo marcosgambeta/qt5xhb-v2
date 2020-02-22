@@ -413,7 +413,7 @@ void fullScreenChanged( bool fullScreen )
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
 {
-  QVideoWidgetControl * sender = (QVideoWidgetControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidgetControl * sender = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -475,7 +475,7 @@ void brightnessChanged( int brightness )
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
 {
-  QVideoWidgetControl * sender = (QVideoWidgetControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidgetControl * sender = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -537,7 +537,7 @@ void contrastChanged( int contrast )
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
 {
-  QVideoWidgetControl * sender = (QVideoWidgetControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidgetControl * sender = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -599,7 +599,7 @@ void hueChanged( int hue )
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
 {
-  QVideoWidgetControl * sender = (QVideoWidgetControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidgetControl * sender = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -661,7 +661,7 @@ void saturationChanged( int saturation )
 */
 HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
 {
-  QVideoWidgetControl * sender = (QVideoWidgetControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidgetControl * sender = (QVideoWidgetControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
