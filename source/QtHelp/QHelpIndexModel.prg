@@ -133,7 +133,7 @@ void indexCreated()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-  QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * sender = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -193,7 +193,7 @@ void indexCreationStarted()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-  QHelpIndexModel * sender = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * sender = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -719,7 +719,7 @@ void currentFilterChanged( const QString & newFilter )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
-  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpEngineCore * sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -781,7 +781,7 @@ void setupFinished()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
-  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpEngineCore * sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -841,7 +841,7 @@ void setupStarted()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
-  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpEngineCore * sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -901,7 +901,7 @@ void warning( const QString & msg )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
-  QHelpEngineCore * sender = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpEngineCore * sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
