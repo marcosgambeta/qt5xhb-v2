@@ -142,7 +142,7 @@ void finished( QDBusPendingCallWatcher * self )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {
-  QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDBusPendingCallWatcher * sender = (QDBusPendingCallWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
