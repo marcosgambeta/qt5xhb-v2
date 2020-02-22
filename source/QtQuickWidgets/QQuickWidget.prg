@@ -571,7 +571,7 @@ void statusChanged( QQuickWidget::Status status )
 HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWidget * sender = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -637,7 +637,7 @@ void sceneGraphError( QQuickWindow::SceneGraphError error, const QString & messa
 HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * sender = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWidget * sender = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
