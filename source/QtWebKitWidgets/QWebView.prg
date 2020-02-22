@@ -998,7 +998,7 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1058,7 +1058,7 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1120,7 +1120,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1182,7 +1182,7 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1244,7 +1244,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1304,7 +1304,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1364,7 +1364,7 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1426,7 +1426,7 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1488,7 +1488,7 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
-  QWebView * sender = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebView * sender = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
