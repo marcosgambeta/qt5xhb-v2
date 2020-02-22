@@ -351,7 +351,7 @@ void finished()
 HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodeReply * sender = (QGeoCodeReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoCodeReply * sender = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -415,7 +415,7 @@ void error( QGeoCodeReply::Error error, const QString & errorString = QString() 
 HB_FUNC_STATIC( QGEOCODEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodeReply * sender = (QGeoCodeReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoCodeReply * sender = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

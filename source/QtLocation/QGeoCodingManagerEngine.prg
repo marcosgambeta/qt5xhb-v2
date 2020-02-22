@@ -273,7 +273,7 @@ void finished( QGeoCodeReply * reply )
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * sender = (QGeoCodingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoCodingManagerEngine * sender = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -339,7 +339,7 @@ void error( QGeoCodeReply * reply, QGeoCodeReply::Error error, QString errorStri
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManagerEngine * sender = (QGeoCodingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoCodingManagerEngine * sender = (QGeoCodingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
