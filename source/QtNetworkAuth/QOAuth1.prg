@@ -565,7 +565,7 @@ void clientSharedSecretChanged( const QString & credential )
 HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * sender = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -631,7 +631,7 @@ void signatureMethodChanged( QOAuth1::SignatureMethod method )
 HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * sender = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -697,7 +697,7 @@ void temporaryCredentialsUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * sender = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -763,7 +763,7 @@ void tokenCredentialsUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * sender = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -829,7 +829,7 @@ void tokenSecretChanged( const QString & token )
 HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * sender = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * sender = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
