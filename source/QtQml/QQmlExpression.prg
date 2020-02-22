@@ -520,7 +520,7 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  QQmlExpression * sender = (QQmlExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlExpression * sender = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

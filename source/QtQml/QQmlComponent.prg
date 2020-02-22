@@ -540,7 +540,7 @@ void progressChanged( qreal progress )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {
-  QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlComponent * sender = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -602,7 +602,7 @@ void statusChanged( QQmlComponent::Status status )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_ONSTATUSCHANGED )
 {
-  QQmlComponent * sender = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlComponent * sender = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
