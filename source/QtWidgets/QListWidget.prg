@@ -904,7 +904,7 @@ void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -968,7 +968,7 @@ void currentRowChanged( int currentRow )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1030,7 +1030,7 @@ void currentTextChanged( const QString & currentText )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1092,7 +1092,7 @@ void itemActivated( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1154,7 +1154,7 @@ void itemChanged( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1216,7 +1216,7 @@ void itemClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1278,7 +1278,7 @@ void itemDoubleClicked( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1340,7 +1340,7 @@ void itemEntered( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1402,7 +1402,7 @@ void itemPressed( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1464,7 +1464,7 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QListWidget * sender = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * sender = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

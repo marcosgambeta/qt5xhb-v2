@@ -367,7 +367,7 @@ void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QA
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
-  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -431,7 +431,7 @@ void commitData( QWidget * editor )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
-  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -493,7 +493,7 @@ void sizeHintChanged( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
-  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemDelegate * sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

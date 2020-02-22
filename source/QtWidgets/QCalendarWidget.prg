@@ -1174,7 +1174,7 @@ void activated( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
-  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCalendarWidget * sender = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1236,7 +1236,7 @@ void clicked( const QDate & date )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
-  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCalendarWidget * sender = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1298,7 +1298,7 @@ void currentPageChanged( int year, int month )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCalendarWidget * sender = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1362,7 +1362,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-  QCalendarWidget * sender = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCalendarWidget * sender = (QCalendarWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

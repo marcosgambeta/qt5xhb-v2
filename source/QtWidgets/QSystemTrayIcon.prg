@@ -471,7 +471,7 @@ void activated( QSystemTrayIcon::ActivationReason reason )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * sender = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -533,7 +533,7 @@ void messageClicked()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  QSystemTrayIcon * sender = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * sender = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -268,7 +268,7 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 {
-  QCheckBox * sender = (QCheckBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCheckBox * sender = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

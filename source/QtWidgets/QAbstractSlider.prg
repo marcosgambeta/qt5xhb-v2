@@ -704,7 +704,7 @@ void actionTriggered( int action )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONACTIONTRIGGERED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -766,7 +766,7 @@ void rangeChanged( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONRANGECHANGED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -830,7 +830,7 @@ void sliderMoved( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERMOVED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -892,7 +892,7 @@ void sliderPressed()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERPRESSED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -952,7 +952,7 @@ void sliderReleased()
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONSLIDERRELEASED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1012,7 +1012,7 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ONVALUECHANGED )
 {
-  QAbstractSlider * sender = (QAbstractSlider *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSlider * sender = (QAbstractSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

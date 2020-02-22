@@ -836,7 +836,7 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 {
-  QMenuBar * sender = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMenuBar * sender = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -898,7 +898,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 {
-  QMenuBar * sender = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMenuBar * sender = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

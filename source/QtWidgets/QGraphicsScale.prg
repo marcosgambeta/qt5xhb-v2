@@ -328,7 +328,7 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
-  QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScale * sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -388,7 +388,7 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
-  QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScale * sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -448,7 +448,7 @@ void xScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
-  QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScale * sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -508,7 +508,7 @@ void yScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
-  QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScale * sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -568,7 +568,7 @@ void zScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
-  QGraphicsScale * sender = (QGraphicsScale *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScale * sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

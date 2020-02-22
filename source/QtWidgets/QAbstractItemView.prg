@@ -1926,7 +1926,7 @@ void activated( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1988,7 +1988,7 @@ void clicked( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2050,7 +2050,7 @@ void doubleClicked( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2112,7 +2112,7 @@ void entered( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2174,7 +2174,7 @@ void pressed( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2236,7 +2236,7 @@ void viewportEntered()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
-  QAbstractItemView * sender = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * sender = (QAbstractItemView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -360,7 +360,7 @@ void currentChanged(int index)
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
 {
-  QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStackedLayout * sender = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -422,7 +422,7 @@ void widgetRemoved(int index)
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
 {
-  QStackedLayout * sender = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStackedLayout * sender = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

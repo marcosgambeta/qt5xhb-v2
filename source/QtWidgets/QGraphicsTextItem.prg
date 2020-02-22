@@ -850,7 +850,7 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 {
-  QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * sender = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -912,7 +912,7 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 {
-  QGraphicsTextItem * sender = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * sender = (QGraphicsTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

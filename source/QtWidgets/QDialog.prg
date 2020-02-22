@@ -569,7 +569,7 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -629,7 +629,7 @@ void finished( int result )
 */
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -691,7 +691,7 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  QDialog * sender = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

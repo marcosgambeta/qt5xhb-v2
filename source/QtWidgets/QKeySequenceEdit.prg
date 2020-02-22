@@ -212,7 +212,7 @@ void editingFinished()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequenceEdit * sender = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -276,7 +276,7 @@ void keySequenceChanged( const QKeySequence & keySequence )
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * sender = (QKeySequenceEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QKeySequenceEdit * sender = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

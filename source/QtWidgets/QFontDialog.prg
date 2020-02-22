@@ -394,7 +394,7 @@ void currentFontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
 {
-  QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * sender = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -456,7 +456,7 @@ void fontSelected( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
 {
-  QFontDialog * sender = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFontDialog * sender = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

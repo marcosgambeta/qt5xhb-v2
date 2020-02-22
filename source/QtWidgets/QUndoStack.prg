@@ -722,7 +722,7 @@ void canRedoChanged( bool canRedo )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCANREDOCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -784,7 +784,7 @@ void canUndoChanged( bool canUndo )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCANUNDOCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -846,7 +846,7 @@ void cleanChanged( bool clean )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONCLEANCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -908,7 +908,7 @@ void indexChanged( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONINDEXCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -970,7 +970,7 @@ void redoTextChanged( const QString & redoText )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONREDOTEXTCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1032,7 +1032,7 @@ void undoTextChanged( const QString & undoText )
 */
 HB_FUNC_STATIC( QUNDOSTACK_ONUNDOTEXTCHANGED )
 {
-  QUndoStack * sender = (QUndoStack *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoStack * sender = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

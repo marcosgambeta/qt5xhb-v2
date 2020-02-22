@@ -399,7 +399,7 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGroupBox * sender = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -461,7 +461,7 @@ void toggled( bool on )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  QGroupBox * sender = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGroupBox * sender = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -273,7 +273,7 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
-  QSplashScreen * sender = (QSplashScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSplashScreen * sender = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

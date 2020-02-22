@@ -1888,7 +1888,7 @@ void cursorPositionChanged( int oldPos, int newPos )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1952,7 +1952,7 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2013,7 +2013,7 @@ void inputRejected()
 HB_FUNC_STATIC( QLINEEDIT_ONINPUTREJECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2076,7 +2076,7 @@ void returnPressed()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2136,7 +2136,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2196,7 +2196,7 @@ void textChanged( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2258,7 +2258,7 @@ void textEdited( const QString & text )
 */
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 {
-  QLineEdit * sender = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * sender = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

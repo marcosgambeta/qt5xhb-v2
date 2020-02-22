@@ -698,7 +698,7 @@ void scrollerPropertiesChanged( const QScrollerProperties & newProperties )
 */
 HB_FUNC_STATIC( QSCROLLER_ONSCROLLERPROPERTIESCHANGED )
 {
-  QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScroller * sender = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -760,7 +760,7 @@ void stateChanged( QScroller::State newState )
 */
 HB_FUNC_STATIC( QSCROLLER_ONSTATECHANGED )
 {
-  QScroller * sender = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScroller * sender = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

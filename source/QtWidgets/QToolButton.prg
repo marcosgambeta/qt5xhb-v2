@@ -499,7 +499,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
-  QToolButton * sender = (QToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolButton * sender = (QToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

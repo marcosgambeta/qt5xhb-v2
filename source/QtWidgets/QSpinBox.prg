@@ -507,7 +507,7 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 {
-  QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSpinBox * sender = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -569,7 +569,7 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
 {
-  QSpinBox * sender = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSpinBox * sender = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
