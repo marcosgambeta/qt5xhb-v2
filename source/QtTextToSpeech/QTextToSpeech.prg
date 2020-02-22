@@ -668,7 +668,7 @@ void localeChanged( const QLocale & locale )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONLOCALECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -734,7 +734,7 @@ void pitchChanged( double pitch )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONPITCHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -800,7 +800,7 @@ void rateChanged( double rate )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -866,7 +866,7 @@ void stateChanged( QTextToSpeech::State state )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -932,7 +932,7 @@ void voiceChanged( const QVoice & voice )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOICECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -998,7 +998,7 @@ void volumeChanged( int volume )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1064,7 +1064,7 @@ void volumeChanged( double volume )
 HB_FUNC_STATIC( QTEXTTOSPEECH_ONVOLUMECHANGED2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * sender = (QTextToSpeech *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextToSpeech * sender = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
