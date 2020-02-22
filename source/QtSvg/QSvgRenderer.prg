@@ -584,7 +584,7 @@ void repaintNeeded()
 */
 HB_FUNC_STATIC( QSVGRENDERER_ONREPAINTNEEDED )
 {
-  QSvgRenderer * sender = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgRenderer * sender = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
