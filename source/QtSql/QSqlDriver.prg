@@ -718,7 +718,7 @@ void notification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION1 )
 {
-  QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlDriver * sender = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -780,7 +780,7 @@ void notification( const QString & name, QSqlDriver::NotificationSource source, 
 */
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION2 )
 {
-  QSqlDriver * sender = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlDriver * sender = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

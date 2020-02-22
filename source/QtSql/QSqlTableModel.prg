@@ -940,7 +940,7 @@ void beforeDelete( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
-  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlTableModel * sender = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1002,7 +1002,7 @@ void beforeInsert( QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
-  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlTableModel * sender = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1064,7 +1064,7 @@ void beforeUpdate( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
-  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlTableModel * sender = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1128,7 +1128,7 @@ void primeInsert( int row, QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
-  QSqlTableModel * sender = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlTableModel * sender = (QSqlTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
