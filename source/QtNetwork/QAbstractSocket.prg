@@ -1087,7 +1087,7 @@ void connected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1147,7 +1147,7 @@ void disconnected()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1207,7 +1207,7 @@ void error( QAbstractSocket::SocketError socketError )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1269,7 +1269,7 @@ void hostFound()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1329,7 +1329,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1393,7 +1393,7 @@ void stateChanged( QAbstractSocket::SocketState socketState )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 {
-  QAbstractSocket * sender = (QAbstractSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSocket * sender = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

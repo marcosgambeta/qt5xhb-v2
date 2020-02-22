@@ -626,7 +626,7 @@ void closed()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -686,7 +686,7 @@ void error( QNetworkSession::SessionError error )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -748,7 +748,7 @@ void newConfigurationActivated()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -808,7 +808,7 @@ void opened()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -868,7 +868,7 @@ void preferredConfigurationChanged( const QNetworkConfiguration & config, bool i
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -932,7 +932,7 @@ void stateChanged( QNetworkSession::State state )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -994,7 +994,7 @@ void usagePoliciesChanged( QNetworkSession::UsagePolicies usagePolicies )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ONUSAGEPOLICIESCHANGED )
 {
-  QNetworkSession * sender = (QNetworkSession *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkSession * sender = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

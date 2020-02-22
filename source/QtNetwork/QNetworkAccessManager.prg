@@ -1155,7 +1155,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1219,7 +1219,7 @@ void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticat
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1283,7 +1283,7 @@ void finished( QNetworkReply * reply )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1346,7 +1346,7 @@ void encrypted( QNetworkReply * reply )
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1411,7 +1411,7 @@ void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1435,9 +1435,9 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg2 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg2.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg2.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -1451,10 +1451,10 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -1498,7 +1498,7 @@ void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKey
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1565,7 +1565,7 @@ void networkSessionConnected()
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1625,7 +1625,7 @@ void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility acces
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

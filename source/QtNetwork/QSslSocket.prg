@@ -2264,7 +2264,7 @@ void encrypted()
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2324,7 +2324,7 @@ void encryptedBytesWritten( qint64 written )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2386,7 +2386,7 @@ void modeChanged( QSslSocket::SslMode mode )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2448,7 +2448,7 @@ void peerVerifyError( const QSslError & error )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2511,7 +2511,7 @@ void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenti
 HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2576,7 +2576,7 @@ void sslErrors( const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
-  QSslSocket * sender = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2599,9 +2599,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSSLSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -2615,10 +2615,10 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

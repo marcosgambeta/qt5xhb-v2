@@ -799,7 +799,7 @@ void finished()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 {
-  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDnsLookup * sender = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -859,7 +859,7 @@ void nameChanged( const QString & name )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 {
-  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDnsLookup * sender = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -921,7 +921,7 @@ void nameserverChanged( const QHostAddress & nameserver )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 {
-  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDnsLookup * sender = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -983,7 +983,7 @@ void typeChanged( QDnsLookup::Type type )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 {
-  QDnsLookup * sender = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDnsLookup * sender = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

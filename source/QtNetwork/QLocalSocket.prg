@@ -739,7 +739,7 @@ void connected()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
-  QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLocalSocket * sender = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -799,7 +799,7 @@ void disconnected()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
-  QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLocalSocket * sender = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -859,7 +859,7 @@ void error( QLocalSocket::LocalSocketError socketError )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
-  QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLocalSocket * sender = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -921,7 +921,7 @@ void stateChanged( QLocalSocket::LocalSocketState socketState )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
-  QLocalSocket * sender = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLocalSocket * sender = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
