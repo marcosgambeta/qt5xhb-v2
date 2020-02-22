@@ -603,7 +603,7 @@ void stateChanged(QAudio::State)
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
 {
-  QAudioInput * sender = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioInput * sender = (QAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -665,7 +665,7 @@ void notify()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ONNOTIFY )
 {
-  QAudioInput * sender = (QAudioInput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioInput * sender = (QAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

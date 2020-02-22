@@ -259,7 +259,7 @@ void currentDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -321,7 +321,7 @@ void currentOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -383,7 +383,7 @@ void maximumDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -445,7 +445,7 @@ void maximumOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -507,7 +507,7 @@ void requestedDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -569,7 +569,7 @@ void requestedOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
 {
-  QCameraZoomControl * sender = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

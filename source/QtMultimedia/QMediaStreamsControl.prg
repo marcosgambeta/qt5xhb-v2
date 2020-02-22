@@ -207,7 +207,7 @@ void activeStreamsChanged()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {
-  QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaStreamsControl * sender = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -267,7 +267,7 @@ void streamsChanged()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 {
-  QMediaStreamsControl * sender = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaStreamsControl * sender = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

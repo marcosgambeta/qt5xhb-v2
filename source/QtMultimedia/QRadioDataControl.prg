@@ -310,7 +310,7 @@ void stationIdChanged( QString stationId )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -372,7 +372,7 @@ void programTypeChanged( QRadioData::ProgramType programType )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPECHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -434,7 +434,7 @@ void programTypeNameChanged( QString programTypeName )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONPROGRAMTYPENAMECHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -496,7 +496,7 @@ void stationNameChanged( QString stationName )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONNAMECHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -558,7 +558,7 @@ void radioTextChanged( QString radioText )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONRADIOTEXTCHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -620,7 +620,7 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void error( QRadioData::Error err )
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_ONERROR )
 {
-  QRadioDataControl * sender = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * sender = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

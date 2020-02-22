@@ -534,7 +534,7 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -594,7 +594,7 @@ void loopCountChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -654,7 +654,7 @@ void loopsRemainingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -714,7 +714,7 @@ void volumeChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -774,7 +774,7 @@ void mutedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -834,7 +834,7 @@ void loadedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -894,7 +894,7 @@ void playingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -954,7 +954,7 @@ void statusChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1014,7 +1014,7 @@ void categoryChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
-  QSoundEffect * sender = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSoundEffect * sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

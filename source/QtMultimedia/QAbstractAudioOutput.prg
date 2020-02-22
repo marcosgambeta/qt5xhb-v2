@@ -647,7 +647,7 @@ void errorChanged( QAudio::Error error )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONERRORCHANGED )
 {
-  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -709,7 +709,7 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONSTATECHANGED )
 {
-  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -771,7 +771,7 @@ void notify()
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_ONNOTIFY )
 {
-  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractAudioOutput * sender = (QAbstractAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

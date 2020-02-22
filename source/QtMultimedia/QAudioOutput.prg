@@ -655,7 +655,7 @@ void notify()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
-  QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioOutput * sender = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -715,7 +715,7 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
-  QAudioOutput * sender = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioOutput * sender = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -80,7 +80,7 @@ void audioBufferProbed( const QAudioBuffer & buffer )
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 {
-  QMediaAudioProbeControl * sender = (QMediaAudioProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaAudioProbeControl * sender = (QMediaAudioProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -142,7 +142,7 @@ void flush()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
 {
-  QMediaAudioProbeControl * sender = (QMediaAudioProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaAudioProbeControl * sender = (QMediaAudioProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

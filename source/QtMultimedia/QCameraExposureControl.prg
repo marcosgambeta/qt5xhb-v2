@@ -237,7 +237,7 @@ void actualValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
-  QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraExposureControl * sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -299,7 +299,7 @@ void parameterRangeChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
-  QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraExposureControl * sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -361,7 +361,7 @@ void requestedValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
-  QCameraExposureControl * sender = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraExposureControl * sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

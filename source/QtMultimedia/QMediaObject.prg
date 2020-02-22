@@ -362,7 +362,7 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -424,7 +424,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED2 )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -486,7 +486,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATAAVAILABLECHANGED )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -548,7 +548,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED1 )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -608,7 +608,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONMETADATACHANGED2 )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -672,7 +672,7 @@ void notifyIntervalChanged( int milliseconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ONNOTIFYINTERVALCHANGED )
 {
-  QMediaObject * sender = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * sender = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

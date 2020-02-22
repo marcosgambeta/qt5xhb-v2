@@ -231,7 +231,7 @@ void devicesChanged()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 {
-  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -291,7 +291,7 @@ void selectedDeviceChanged( int index )
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED1 )
 {
-  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -353,7 +353,7 @@ void selectedDeviceChanged( const QString & name )
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONSELECTEDDEVICECHANGED2 )
 {
-  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoDeviceSelectorControl * sender = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

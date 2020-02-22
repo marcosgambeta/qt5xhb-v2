@@ -370,7 +370,7 @@ void actualLocationChanged( const QUrl & location )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONACTUALLOCATIONCHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -432,7 +432,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONDURATIONCHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -494,7 +494,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONERROR )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -558,7 +558,7 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONMUTEDCHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -620,7 +620,7 @@ void stateChanged( QMediaRecorder::State state )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATECHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void statusChanged( QMediaRecorder::Status status )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONSTATUSCHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -744,7 +744,7 @@ void volumeChanged( qreal gain )
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_ONVOLUMECHANGED )
 {
-  QMediaRecorderControl * sender = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * sender = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -80,7 +80,7 @@ void flush()
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 {
-  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -140,7 +140,7 @@ void videoFrameProbed( const QVideoFrame & frame )
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONVIDEOFRAMEPROBED )
 {
-  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaVideoProbeControl * sender = (QMediaVideoProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

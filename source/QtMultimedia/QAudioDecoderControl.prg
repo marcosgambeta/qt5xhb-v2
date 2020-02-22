@@ -426,7 +426,7 @@ void bufferAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERAVAILABLECHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -488,7 +488,7 @@ void bufferReady()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONBUFFERREADY )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -548,7 +548,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONDURATIONCHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -610,7 +610,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONERROR )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -674,7 +674,7 @@ void finished()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFINISHED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -734,7 +734,7 @@ void formatChanged( const QAudioFormat & format )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONFORMATCHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -796,7 +796,7 @@ void positionChanged( qint64 position )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONPOSITIONCHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -858,7 +858,7 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSOURCECHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -918,7 +918,7 @@ void stateChanged( QAudioDecoder::State state )
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_ONSTATECHANGED )
 {
-  QAudioDecoderControl * sender = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * sender = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

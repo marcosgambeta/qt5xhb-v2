@@ -210,7 +210,7 @@ void advancedToNextMedia()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 {
-  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -270,7 +270,7 @@ void crossfadeTimeChanged( qreal crossfadeTime )
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 {
-  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -332,7 +332,7 @@ void nextMediaChanged( const QMediaContent & media )
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 {
-  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaGaplessPlaybackControl * sender = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

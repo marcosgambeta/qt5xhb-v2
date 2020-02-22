@@ -479,7 +479,7 @@ void digitalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
-  QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -541,7 +541,7 @@ void focusZonesChanged()
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
-  QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -601,7 +601,7 @@ void maximumDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -663,7 +663,7 @@ void maximumOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -725,7 +725,7 @@ void opticalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
-  QCameraFocus * sender = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

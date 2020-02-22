@@ -218,7 +218,7 @@ void audioInputChanged( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {
-  QAudioRecorder * sender = (QAudioRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioRecorder * sender = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -280,7 +280,7 @@ void availableAudioInputsChanged()
 */
 HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 {
-  QAudioRecorder * sender = (QAudioRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioRecorder * sender = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
