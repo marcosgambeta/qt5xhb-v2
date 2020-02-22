@@ -961,7 +961,7 @@ void focusObjectChanged( QObject * focusObject )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSOBJECTCHANGED )
 {
-  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * sender = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1023,7 +1023,7 @@ void focusWindowChanged( QWindow * focusWindow )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 {
-  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * sender = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1085,7 +1085,7 @@ void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
 {
-  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * sender = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1145,7 +1145,7 @@ void lastWindowClosed()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * sender = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1205,7 +1205,7 @@ void screenAdded( QScreen * screen )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
 {
-  QGuiApplication * sender = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * sender = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

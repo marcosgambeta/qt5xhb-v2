@@ -368,7 +368,7 @@ void documentSizeChanged( const QSizeF & newSize )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {
-  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -430,7 +430,7 @@ void pageCountChanged( int newPages )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
 {
-  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -492,7 +492,7 @@ void update( const QRectF & rect = QRectF( 0., 0., 1000000000., 1000000000. ) )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
 {
-  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -554,7 +554,7 @@ void updateBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
 {
-  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractTextDocumentLayout * sender = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

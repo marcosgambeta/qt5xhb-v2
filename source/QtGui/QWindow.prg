@@ -3022,7 +3022,7 @@ void activeChanged()
 HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3085,7 +3085,7 @@ void contentOrientationChanged(Qt::ScreenOrientation orientation)
 */
 HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3147,7 +3147,7 @@ void focusObjectChanged(QObject *object)
 */
 HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3209,7 +3209,7 @@ void heightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3271,7 +3271,7 @@ void maximumHeightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3333,7 +3333,7 @@ void maximumWidthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3395,7 +3395,7 @@ void minimumHeightChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3457,7 +3457,7 @@ void minimumWidthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3519,7 +3519,7 @@ void modalityChanged(Qt::WindowModality modality)
 */
 HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3582,7 +3582,7 @@ void opacityChanged(qreal opacity)
 HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3647,7 +3647,7 @@ void screenChanged(QScreen *screen)
 */
 HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3710,7 +3710,7 @@ void visibilityChanged(QWindow::Visibility visibility)
 HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3775,7 +3775,7 @@ void visibleChanged(bool arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3837,7 +3837,7 @@ void widthChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3899,7 +3899,7 @@ void windowStateChanged(Qt::WindowState windowState)
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -3961,7 +3961,7 @@ void windowTitleChanged(const QString &title)
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -4023,7 +4023,7 @@ void xChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -4085,7 +4085,7 @@ void yChanged(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {
-  QWindow * sender = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * sender = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

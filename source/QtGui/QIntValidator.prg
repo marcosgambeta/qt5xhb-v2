@@ -351,7 +351,7 @@ void changed()
 */
 HB_FUNC_STATIC( QINTVALIDATOR_ONCHANGED )
 {
-  QIntValidator * sender = (QIntValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QIntValidator * sender = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
