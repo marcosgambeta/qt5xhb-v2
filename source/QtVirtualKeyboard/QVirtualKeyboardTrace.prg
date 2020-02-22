@@ -542,7 +542,7 @@ void traceIdChanged( int traceId )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -604,7 +604,7 @@ void channelsChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -664,7 +664,7 @@ void lengthChanged( int length )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -726,7 +726,7 @@ void finalChanged( bool isFinal )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -788,7 +788,7 @@ void canceledChanged( bool isCanceled )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -850,7 +850,7 @@ void opacityChanged( qreal opacity )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 {
-  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * sender = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
