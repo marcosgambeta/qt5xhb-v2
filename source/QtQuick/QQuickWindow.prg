@@ -758,7 +758,7 @@ void afterRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONAFTERRENDERING )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -818,7 +818,7 @@ void beforeRendering()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORERENDERING )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -878,7 +878,7 @@ void beforeSynchronizing()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONBEFORESYNCHRONIZING )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -938,7 +938,7 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONCOLORCHANGED )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1000,7 +1000,7 @@ void frameSwapped()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONFRAMESWAPPED )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1060,7 +1060,7 @@ void sceneGraphInitialized()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINITIALIZED )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1120,7 +1120,7 @@ void sceneGraphInvalidated()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ONSCENEGRAPHINVALIDATED )
 {
-  QQuickWindow * sender = (QQuickWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWindow * sender = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

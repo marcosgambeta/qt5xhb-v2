@@ -366,7 +366,7 @@ void statusChanged( QQuickView::Status status )
 */
 HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 {
-  QQuickView * sender = (QQuickView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickView * sender = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
