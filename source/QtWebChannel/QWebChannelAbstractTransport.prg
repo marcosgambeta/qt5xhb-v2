@@ -115,7 +115,7 @@ void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannelAbstractTransport * sender = (QWebChannelAbstractTransport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebChannelAbstractTransport * sender = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
