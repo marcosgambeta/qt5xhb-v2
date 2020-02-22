@@ -143,7 +143,7 @@ void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusServer * sender = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QModbusServer * sender = (QModbusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

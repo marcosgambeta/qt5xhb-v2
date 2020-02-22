@@ -126,7 +126,7 @@ void timeoutChanged( int newTimeout )
 HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusClient * sender = (QModbusClient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QModbusClient * sender = (QModbusClient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
