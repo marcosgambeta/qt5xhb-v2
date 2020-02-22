@@ -652,9 +652,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -668,10 +668,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -740,9 +740,9 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -756,10 +756,10 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

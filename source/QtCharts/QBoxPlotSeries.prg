@@ -704,9 +704,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -720,10 +720,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -792,9 +792,9 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
-            for( auto i = 0; i < arg1.count(); i++ )
+            if( pDynSym )
             {
-              if( pDynSym )
+              for( auto i = 0; i < arg1.count(); i++ )
               {
                 hb_vmPushDynSym( pDynSym );
                 hb_vmPushNil();
@@ -808,10 +808,10 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
                 hb_itemRelease( pTempObject );
                 hb_itemRelease( pTempItem );
               }
-              else
-              {
-                hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
-              }
+            }
+            else
+            {
+              hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
             }
             hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
