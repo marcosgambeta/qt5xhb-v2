@@ -347,7 +347,7 @@ void accepted( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  QPrintDialog * sender = (QPrintDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPrintDialog * sender = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
