@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QPIESERIES_ONADDED )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QPIESLICE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QPIESERIES_ONCOUNTCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QPIESERIES_ONDOUBLECLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QPIESLICE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QPIESERIES_ONHOVERED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QPIESLICE" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QPIESERIES_ONPRESSED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QPIESLICE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QPIESERIES_ONRELEASED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QPIESLICE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QPIESERIES_ONREMOVED )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC( QPIESERIES_ONSUMCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

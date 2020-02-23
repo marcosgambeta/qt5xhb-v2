@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1207,7 +1207,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1537,7 +1537,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1603,7 +1603,7 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1668,7 +1668,7 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

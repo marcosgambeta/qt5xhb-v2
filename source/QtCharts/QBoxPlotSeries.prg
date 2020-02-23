@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBOXSET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBOXSET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QBOXSET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBOXSET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1401,7 +1401,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXPLOTSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBOXSET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

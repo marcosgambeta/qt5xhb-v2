@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QDATETIME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDATETIMEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
