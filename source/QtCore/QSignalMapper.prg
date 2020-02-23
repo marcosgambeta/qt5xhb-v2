@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED1 )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED2 )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED3 )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWIDGET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSIGNALMAPPER" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QOBJECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

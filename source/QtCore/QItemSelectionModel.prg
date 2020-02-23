@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QITEMSELECTION" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QITEMSELECTION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QMODELINDEX" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QMODELINDEX" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QMODELINDEX" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QMODELINDEX" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMSELECTIONMODEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QMODELINDEX" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QMODELINDEX" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
