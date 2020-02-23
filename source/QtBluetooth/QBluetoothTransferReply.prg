@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
