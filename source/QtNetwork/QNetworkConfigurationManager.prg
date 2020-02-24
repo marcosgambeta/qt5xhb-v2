@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKCONFIGURATIONMANAGER" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

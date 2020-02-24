@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONENCRYPTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1341,7 +1341,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ONREDIRECTALLOWED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
