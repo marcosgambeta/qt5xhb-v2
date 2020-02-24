@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );

@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
