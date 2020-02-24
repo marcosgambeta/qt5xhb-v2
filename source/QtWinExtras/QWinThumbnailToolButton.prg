@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWINTHUMBNAILTOOLBUTTON" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
