@@ -1288,7 +1288,7 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMENU" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMENU" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QMENU_ONHOVERED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMENU" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QACTION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QMENU_ONTRIGGERED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMENU" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QACTION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

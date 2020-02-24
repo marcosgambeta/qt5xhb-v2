@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPROGRESSDIALOG" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

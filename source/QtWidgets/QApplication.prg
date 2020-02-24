@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAPPLICATION" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWIDGET" );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QWIDGET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1772,7 +1772,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAPPLICATION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAPPLICATION" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

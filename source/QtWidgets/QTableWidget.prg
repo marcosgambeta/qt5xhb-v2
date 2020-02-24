@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1455,7 +1455,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1713,7 +1713,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
             PHB_ITEM pArg4 = hb_itemPutNI( NULL, arg4 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 5, pSender, pArg1, pArg2, pArg3, pArg4 );
+            hb_vmEvalBlockV( cb, 5, pSender, pArg1, pArg2, pArg3, pArg4 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1779,7 +1779,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1904,7 +1904,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1966,7 +1966,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2028,7 +2028,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2090,7 +2090,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2152,7 +2152,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QTABLEWIDGETITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2213,7 +2213,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTABLEWIDGET" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
