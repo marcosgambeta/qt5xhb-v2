@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
