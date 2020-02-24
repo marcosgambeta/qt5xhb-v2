@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QGEOPOSITIONINFO" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QGEOAREAMONITORINFO" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOAREAMONITORSOURCE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
