@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBYTEARRAY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

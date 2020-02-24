@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QOAUTH1_ONCLIENTSHAREDSECRETCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QOAUTH1_ONSIGNATUREMETHODCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTEMPORARYCREDENTIALSURLCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENCREDENTIALSURLCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QOAUTH1_ONTOKENSECRETCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOAUTH1" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

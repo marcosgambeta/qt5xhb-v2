@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = Signals4_return_object( (void *) &arg3, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }

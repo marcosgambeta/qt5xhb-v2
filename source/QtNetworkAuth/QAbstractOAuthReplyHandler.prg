@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBYTEARRAY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTHREPLYHANDLER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBYTEARRAY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
