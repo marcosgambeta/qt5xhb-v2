@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCOOKIE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCOOKIE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
