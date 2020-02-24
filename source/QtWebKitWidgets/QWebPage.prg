@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONAPPLICATIONCACHEQUOTAEXCEEDED )
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QWEBSECURITYORIGIN" );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
             PHB_ITEM pArg3 = hb_itemPutNLL( NULL, arg3 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1441,7 +1441,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1503,7 +1503,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1566,7 +1566,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKREQUEST" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1693,7 +1693,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFEATUREPERMISSIONREQUESTED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1756,7 +1756,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1818,7 +1818,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1880,7 +1880,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -2008,7 +2008,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2070,7 +2070,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -2192,7 +2192,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -2314,7 +2314,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2376,7 +2376,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2438,7 +2438,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2501,7 +2501,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QWEBFRAME" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QWEBHISTORYITEM" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -2566,7 +2566,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = Signals4_return_object( (void *) &arg3, "QRECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 4, pSender, pArg1, pArg2, pArg3 );
+            hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -2629,7 +2629,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -2690,7 +2690,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2752,7 +2752,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2814,7 +2814,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2876,7 +2876,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QNETWORKREPLY" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -2937,7 +2937,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONVIEWPORTCHANGEREQUESTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -2997,7 +2997,7 @@ HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBPAGE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
