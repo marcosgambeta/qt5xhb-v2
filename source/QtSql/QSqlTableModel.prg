@@ -962,7 +962,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSQLRECORD" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QSQLRECORD" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSQLTABLEMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QSQLRECORD" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
