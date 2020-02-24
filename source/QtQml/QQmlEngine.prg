@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQMLENGINE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 

@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQMLAPPLICATIONENGINE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QOBJECT" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QURL" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
