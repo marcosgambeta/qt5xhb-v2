@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QMOVIE_ONERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QMOVIE_ONFINISHED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QMOVIE_ONRESIZED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSIZE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTARTED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QMOVIE_ONUPDATED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMOVIE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
