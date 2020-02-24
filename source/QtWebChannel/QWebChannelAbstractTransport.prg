@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBCHANNELABSTRACTTRANSPORT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QJSONOBJECT" );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QWEBCHANNELABSTRACTTRANSPORT" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 3, pSender, pArg1, pArg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
             hb_itemRelease( pArg2 );
