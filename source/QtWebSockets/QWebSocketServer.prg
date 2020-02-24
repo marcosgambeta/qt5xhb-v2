@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSSLERROR" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
             {
               hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
             }
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 2, pSender, pArg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
           }
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
-            hb_vmEvalBlockV( (PHB_ITEM) cb, 1, pSender );
+            hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
