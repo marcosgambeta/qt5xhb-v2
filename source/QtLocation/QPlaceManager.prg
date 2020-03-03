@@ -720,7 +720,7 @@ void finished( QPlaceReply * reply )
 HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -786,7 +786,7 @@ void error( QPlaceReply * reply, QPlaceReply::Error error, const QString & error
 HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -856,7 +856,7 @@ void placeAdded( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -922,7 +922,7 @@ void placeUpdated( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -988,7 +988,7 @@ void placeRemoved( const QString & placeId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1054,7 +1054,7 @@ void categoryAdded( const QPlaceCategory & category, const QString & parentId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1122,7 +1122,7 @@ void categoryUpdated( const QPlaceCategory & category, const QString & parentId 
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1190,7 +1190,7 @@ void categoryRemoved( const QString & categoryId, const QString & parentId )
 HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1258,7 +1258,7 @@ void dataChanged()
 HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

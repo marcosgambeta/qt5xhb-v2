@@ -237,7 +237,7 @@ void finished()
 HB_FUNC_STATIC( QPLACEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * sender = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -301,7 +301,7 @@ void error( QPlaceReply::Error error, const QString & errorString = QString() )
 HB_FUNC_STATIC( QPLACEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * sender = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

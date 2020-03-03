@@ -465,7 +465,7 @@ void finished( QGeoRouteReply * reply )
 HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -531,7 +531,7 @@ void error( QGeoRouteReply * reply, QGeoRouteReply::Error error, QString errorSt
 HB_FUNC_STATIC( QGEOROUTINGMANAGERENGINE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManagerEngine * sender = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoRoutingManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
