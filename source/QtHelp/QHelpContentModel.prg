@@ -283,7 +283,7 @@ void contentsCreated()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
-  QHelpContentModel * sender = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -343,7 +343,7 @@ void contentsCreationStarted()
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
-  QHelpContentModel * sender = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpContentModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -100,7 +100,7 @@ void requestShowLink( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 {
-  QHelpSearchResultWidget * sender = (QHelpSearchResultWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchResultWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

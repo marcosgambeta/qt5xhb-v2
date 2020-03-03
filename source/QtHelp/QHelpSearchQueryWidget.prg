@@ -144,7 +144,7 @@ void search()
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
-  QHelpSearchQueryWidget * sender = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

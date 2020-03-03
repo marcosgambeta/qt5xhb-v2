@@ -102,7 +102,7 @@ void linkActivated( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 {
-  QHelpContentWidget * sender = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
