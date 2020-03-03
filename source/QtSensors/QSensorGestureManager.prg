@@ -201,7 +201,7 @@ void newSensorGestureAvailable()
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * sender = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

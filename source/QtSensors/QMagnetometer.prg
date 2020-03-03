@@ -181,7 +181,7 @@ void returnGeoValuesChanged( bool returnGeoValues )
 HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * sender = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
