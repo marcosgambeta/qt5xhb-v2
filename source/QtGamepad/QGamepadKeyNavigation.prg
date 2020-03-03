@@ -1162,7 +1162,7 @@ void activeChanged( bool isActive )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1228,7 +1228,7 @@ void gamepadChanged( QGamepad * gamepad )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1294,7 +1294,7 @@ void upKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1360,7 +1360,7 @@ void downKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1426,7 +1426,7 @@ void leftKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1492,7 +1492,7 @@ void rightKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1558,7 +1558,7 @@ void buttonAKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1624,7 +1624,7 @@ void buttonBKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1690,7 +1690,7 @@ void buttonXKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1756,7 +1756,7 @@ void buttonYKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1822,7 +1822,7 @@ void buttonSelectKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1888,7 +1888,7 @@ void buttonStartKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1954,7 +1954,7 @@ void buttonGuideKeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2020,7 +2020,7 @@ void buttonL1KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2086,7 +2086,7 @@ void buttonR1KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2152,7 +2152,7 @@ void buttonL2KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2218,7 +2218,7 @@ void buttonR2KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2284,7 +2284,7 @@ void buttonL3KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2350,7 +2350,7 @@ void buttonR3KeyChanged( Qt::Key key )
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepadKeyNavigation * sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepadKeyNavigation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
