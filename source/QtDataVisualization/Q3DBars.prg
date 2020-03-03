@@ -899,7 +899,7 @@ void multiSeriesUniformChanged( bool uniform )
 HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -965,7 +965,7 @@ void barThicknessChanged( float thicknessRatio )
 HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1031,7 +1031,7 @@ void barSpacingChanged( const QSizeF & spacing )
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1097,7 +1097,7 @@ void barSpacingRelativeChanged( bool relative )
 HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1163,7 +1163,7 @@ void rowAxisChanged( QCategory3DAxis * axis )
 HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1229,7 +1229,7 @@ void columnAxisChanged( QCategory3DAxis * axis )
 HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1295,7 +1295,7 @@ void valueAxisChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1361,7 +1361,7 @@ void primarySeriesChanged( QBar3DSeries * series )
 HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1427,7 +1427,7 @@ void selectedSeriesChanged( QBar3DSeries * series )
 HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1493,7 +1493,7 @@ void floorLevelChanged( float level )
 HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -1548,7 +1548,7 @@ void autoColumnCategoriesChanged( bool enable )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1614,7 +1614,7 @@ void autoRowCategoriesChanged( bool enable )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1680,7 +1680,7 @@ void columnCategoriesChanged()
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1744,7 +1744,7 @@ void columnRoleChanged( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1810,7 +1810,7 @@ void columnRolePatternChanged( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1876,7 +1876,7 @@ void columnRoleReplaceChanged( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1942,7 +1942,7 @@ void itemModelChanged( const QAbstractItemModel * itemModel )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2008,7 +2008,7 @@ void multiMatchBehaviorChanged( QItemModelSurfaceDataProxy::MultiMatchBehavior b
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2074,7 +2074,7 @@ void rowCategoriesChanged()
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2138,7 +2138,7 @@ void rowRoleChanged( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2204,7 +2204,7 @@ void rowRolePatternChanged( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2270,7 +2270,7 @@ void rowRoleReplaceChanged( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2336,7 +2336,7 @@ void useModelCategoriesChanged( bool enable )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2402,7 +2402,7 @@ void xPosRoleChanged( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2468,7 +2468,7 @@ void xPosRolePatternChanged( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2534,7 +2534,7 @@ void xPosRoleReplaceChanged( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2600,7 +2600,7 @@ void yPosRoleChanged( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2666,7 +2666,7 @@ void yPosRolePatternChanged( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2732,7 +2732,7 @@ void yPosRoleReplaceChanged( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2798,7 +2798,7 @@ void zPosRoleChanged( const QString & role )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2864,7 +2864,7 @@ void zPosRolePatternChanged( const QRegExp & pattern )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2930,7 +2930,7 @@ void zPosRoleReplaceChanged( const QString & replace )
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

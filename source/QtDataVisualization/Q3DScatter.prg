@@ -523,7 +523,7 @@ void axisXChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScatter * sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -589,7 +589,7 @@ void axisYChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScatter * sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -655,7 +655,7 @@ void axisZChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSCATTER_ONAXISZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScatter * sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -721,7 +721,7 @@ void selectedSeriesChanged( QScatter3DSeries * series )
 HB_FUNC_STATIC( Q3DSCATTER_ONSELECTEDSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScatter * sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

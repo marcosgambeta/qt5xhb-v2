@@ -325,7 +325,7 @@ void dataProxyChanged( QScatterDataProxy * proxy )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -391,7 +391,7 @@ void itemSizeChanged( float size )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -457,7 +457,7 @@ void selectedItemChanged( int index )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

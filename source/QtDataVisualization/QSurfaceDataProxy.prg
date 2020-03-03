@@ -369,7 +369,7 @@ void arrayReset()
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -433,7 +433,7 @@ void columnCountChanged( int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -499,7 +499,7 @@ void itemChanged( int rowIndex, int columnIndex )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -567,7 +567,7 @@ void rowCountChanged( int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -633,7 +633,7 @@ void rowsAdded( int startIndex, int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -701,7 +701,7 @@ void rowsChanged( int startIndex, int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -769,7 +769,7 @@ void rowsInserted( int startIndex, int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -837,7 +837,7 @@ void rowsRemoved( int startIndex, int count )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -905,7 +905,7 @@ void seriesChanged( QSurface3DSeries * series )
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

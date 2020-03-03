@@ -580,7 +580,7 @@ void axisXChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -646,7 +646,7 @@ void axisYChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -712,7 +712,7 @@ void axisZChanged( QValue3DAxis * axis )
 HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -778,7 +778,7 @@ void flipHorizontalGridChanged( bool flip )
 HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -844,7 +844,7 @@ void selectedSeriesChanged( QSurface3DSeries * series )
 HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

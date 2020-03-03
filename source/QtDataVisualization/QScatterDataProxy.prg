@@ -335,7 +335,7 @@ void arrayReset()
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -399,7 +399,7 @@ void itemCountChanged( int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -465,7 +465,7 @@ void itemsAdded( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -533,7 +533,7 @@ void itemsChanged( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -601,7 +601,7 @@ void itemsInserted( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -669,7 +669,7 @@ void itemsRemoved( int startIndex, int count )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -737,7 +737,7 @@ void seriesChanged( QScatter3DSeries * series )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataProxy * sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

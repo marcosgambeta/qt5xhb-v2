@@ -160,7 +160,7 @@ void labelsChanged()
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategory3DAxis * sender = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

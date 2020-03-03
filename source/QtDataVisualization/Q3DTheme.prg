@@ -1471,7 +1471,7 @@ void ambientLightStrengthChanged( float strength )
 HB_FUNC_STATIC( Q3DTHEME_ONAMBIENTLIGHTSTRENGTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1537,7 +1537,7 @@ void backgroundColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1603,7 +1603,7 @@ void backgroundEnabledChanged( bool enabled )
 HB_FUNC_STATIC( Q3DTHEME_ONBACKGROUNDENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1669,7 +1669,7 @@ void baseColorsChanged( const QList<QColor> & colors )
 HB_FUNC_STATIC( Q3DTHEME_ONBASECOLORSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1757,7 +1757,7 @@ void baseGradientsChanged( const QList<QLinearGradient> & gradients )
 HB_FUNC_STATIC( Q3DTHEME_ONBASEGRADIENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1845,7 +1845,7 @@ void colorStyleChanged( Q3DTheme::ColorStyle style )
 HB_FUNC_STATIC( Q3DTHEME_ONCOLORSTYLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1911,7 +1911,7 @@ void fontChanged( const QFont & font )
 HB_FUNC_STATIC( Q3DTHEME_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1977,7 +1977,7 @@ void gridEnabledChanged( bool enabled )
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2043,7 +2043,7 @@ void gridLineColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONGRIDLINECOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2109,7 +2109,7 @@ void highlightLightStrengthChanged( float strength )
 HB_FUNC_STATIC( Q3DTHEME_ONHIGHLIGHTLIGHTSTRENGTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2175,7 +2175,7 @@ void labelBackgroundColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2241,7 +2241,7 @@ void labelBackgroundEnabledChanged( bool enabled )
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBACKGROUNDENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2307,7 +2307,7 @@ void labelBorderEnabledChanged( bool enabled )
 HB_FUNC_STATIC( Q3DTHEME_ONLABELBORDERENABLEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2373,7 +2373,7 @@ void labelTextColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONLABELTEXTCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2439,7 +2439,7 @@ void lightColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2505,7 +2505,7 @@ void lightStrengthChanged( float strength )
 HB_FUNC_STATIC( Q3DTHEME_ONLIGHTSTRENGTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2571,7 +2571,7 @@ void multiHighlightColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2637,7 +2637,7 @@ void multiHighlightGradientChanged( const QLinearGradient & gradient )
 HB_FUNC_STATIC( Q3DTHEME_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2703,7 +2703,7 @@ void singleHighlightColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2769,7 +2769,7 @@ void singleHighlightGradientChanged( const QLinearGradient & gradient )
 HB_FUNC_STATIC( Q3DTHEME_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2835,7 +2835,7 @@ void typeChanged( Q3DTheme::Theme themeType )
 HB_FUNC_STATIC( Q3DTHEME_ONTYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2901,7 +2901,7 @@ void windowColorChanged( const QColor & color )
 HB_FUNC_STATIC( Q3DTHEME_ONWINDOWCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
