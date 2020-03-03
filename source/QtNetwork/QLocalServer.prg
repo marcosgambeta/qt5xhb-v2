@@ -524,7 +524,7 @@ void newConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
 {
-  QLocalServer * sender = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

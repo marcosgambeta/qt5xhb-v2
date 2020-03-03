@@ -2264,7 +2264,7 @@ void encrypted()
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2324,7 +2324,7 @@ void encryptedBytesWritten( qint64 written )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2386,7 +2386,7 @@ void modeChanged( QSslSocket::SslMode mode )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2448,7 +2448,7 @@ void peerVerifyError( const QSslError & error )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2511,7 +2511,7 @@ void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenti
 HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2576,7 +2576,7 @@ void sslErrors( const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
-  QSslSocket * sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

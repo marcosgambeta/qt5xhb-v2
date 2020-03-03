@@ -1155,7 +1155,7 @@ void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * 
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1219,7 +1219,7 @@ void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticat
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1283,7 +1283,7 @@ void finished( QNetworkReply * reply )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONFINISHED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1346,7 +1346,7 @@ void encrypted( QNetworkReply * reply )
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONENCRYPTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1411,7 +1411,7 @@ void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONSSLERRORS )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1498,7 +1498,7 @@ void preSharedKeyAuthenticationRequired( QNetworkReply * reply, QSslPreSharedKey
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1565,7 +1565,7 @@ void networkSessionConnected()
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKSESSIONCONNECTED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1625,7 +1625,7 @@ void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility acces
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED )
 {
-  QNetworkAccessManager * sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
