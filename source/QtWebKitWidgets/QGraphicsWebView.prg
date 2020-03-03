@@ -1050,7 +1050,7 @@ void iconChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONICONCHANGED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1110,7 +1110,7 @@ void linkClicked( const QUrl & url )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLINKCLICKED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1172,7 +1172,7 @@ void loadFinished( bool ok )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADFINISHED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1234,7 +1234,7 @@ void loadProgress( int progress )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADPROGRESS )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1296,7 +1296,7 @@ void loadStarted()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONLOADSTARTED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1356,7 +1356,7 @@ void statusBarMessage( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1418,7 +1418,7 @@ void titleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONTITLECHANGED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1480,7 +1480,7 @@ void urlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ONURLCHANGED )
 {
-  QGraphicsWebView * sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
