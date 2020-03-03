@@ -374,7 +374,7 @@ void satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -462,7 +462,7 @@ void satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINUSEUPDATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -550,7 +550,7 @@ void requestTimeout()
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONREQUESTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -614,7 +614,7 @@ void error( QGeoSatelliteInfoSource::Error error )
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
