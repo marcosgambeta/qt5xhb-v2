@@ -456,7 +456,7 @@ void actionChanged( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
-  QDrag * sender = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -518,7 +518,7 @@ void targetChanged( QObject * newTarget )
 */
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
-  QDrag * sender = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDrag *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

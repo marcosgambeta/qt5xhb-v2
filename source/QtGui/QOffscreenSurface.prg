@@ -358,7 +358,7 @@ void screenChanged( QScreen * screen )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
-  QOffscreenSurface * sender = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

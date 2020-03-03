@@ -1633,7 +1633,7 @@ void itemChanged( QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 {
-  QStandardItemModel * sender = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

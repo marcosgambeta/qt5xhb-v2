@@ -322,7 +322,7 @@ void messageLogged( const QOpenGLDebugMessage & debugMessage )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 {
-  QOpenGLDebugLogger * sender = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

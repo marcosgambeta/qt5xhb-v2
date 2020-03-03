@@ -558,7 +558,7 @@ void aboutToBeDestroyed()
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
 {
-  QOpenGLContext * sender = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

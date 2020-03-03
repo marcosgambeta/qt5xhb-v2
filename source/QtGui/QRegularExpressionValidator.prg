@@ -162,7 +162,7 @@ void regularExpressionChanged( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
-  QRegularExpressionValidator * sender = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -868,7 +868,7 @@ void error( QImageReader::ImageReaderError error )
 */
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -930,7 +930,7 @@ void finished()
 */
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -990,7 +990,7 @@ void frameChanged( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1052,7 +1052,7 @@ void resized( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1114,7 +1114,7 @@ void started()
 */
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1174,7 +1174,7 @@ void stateChanged( QMovie::MovieState state )
 */
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1236,7 +1236,7 @@ void updated( const QRect & rect )
 */
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
-  QMovie * sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -449,7 +449,7 @@ void changed( QClipboard::Mode mode )
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
 {
-  QClipboard * sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -511,7 +511,7 @@ void dataChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
 {
-  QClipboard * sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -571,7 +571,7 @@ void findBufferChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
-  QClipboard * sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -631,7 +631,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
-  QClipboard * sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

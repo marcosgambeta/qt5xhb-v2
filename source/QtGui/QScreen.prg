@@ -879,7 +879,7 @@ void geometryChanged( const QRect & geometry )
 */
 HB_FUNC_STATIC( QSCREEN_ONGEOMETRYCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -941,7 +941,7 @@ void physicalSizeChanged( const QSizeF & size )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALSIZECHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1003,7 +1003,7 @@ void physicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONPHYSICALDOTSPERINCHCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1065,7 +1065,7 @@ void logicalDotsPerInchChanged( qreal dpi )
 */
 HB_FUNC_STATIC( QSCREEN_ONLOGICALDOTSPERINCHCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1127,7 +1127,7 @@ void virtualGeometryChanged( const QRect & rect )
 */
 HB_FUNC_STATIC( QSCREEN_ONVIRTUALGEOMETRYCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1189,7 +1189,7 @@ void primaryOrientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONPRIMARYORIENTATIONCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1251,7 +1251,7 @@ void orientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREEN_ONORIENTATIONCHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1313,7 +1313,7 @@ void refreshRateChanged( qreal refreshRate )
 */
 HB_FUNC_STATIC( QSCREEN_ONREFRESHRATECHANGED )
 {
-  QScreen * sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
