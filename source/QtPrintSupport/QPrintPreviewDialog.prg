@@ -218,7 +218,7 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-  QPrintPreviewDialog * sender = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
