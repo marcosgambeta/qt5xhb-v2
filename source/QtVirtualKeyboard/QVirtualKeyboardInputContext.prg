@@ -710,7 +710,7 @@ void preeditTextChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -770,7 +770,7 @@ void inputMethodHintsChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -830,7 +830,7 @@ void surroundingTextChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -890,7 +890,7 @@ void selectedTextChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -950,7 +950,7 @@ void anchorPositionChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1010,7 +1010,7 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1070,7 +1070,7 @@ void anchorRectangleChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1130,7 +1130,7 @@ void cursorRectangleChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1190,7 +1190,7 @@ void shiftActiveChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1250,7 +1250,7 @@ void capsLockActiveChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1310,7 +1310,7 @@ void uppercaseChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1370,7 +1370,7 @@ void animatingChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1430,7 +1430,7 @@ void localeChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1490,7 +1490,7 @@ void selectionControlVisibleChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1550,7 +1550,7 @@ void anchorRectIntersectsClipRectChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1610,7 +1610,7 @@ void cursorRectIntersectsClipRectChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANGED )
 {
-  QVirtualKeyboardInputContext * sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

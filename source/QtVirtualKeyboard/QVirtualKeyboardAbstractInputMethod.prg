@@ -532,7 +532,7 @@ void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -594,7 +594,7 @@ void selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type ty
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTACTIVEITEMCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -658,7 +658,7 @@ void selectionListsChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTSCHANGED )
 {
-  QVirtualKeyboardAbstractInputMethod * sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
