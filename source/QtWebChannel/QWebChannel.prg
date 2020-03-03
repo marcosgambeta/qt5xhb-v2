@@ -268,7 +268,7 @@ void blockUpdatesChanged( bool block )
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * sender = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
