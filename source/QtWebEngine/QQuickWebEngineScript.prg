@@ -469,7 +469,7 @@ void injectionPointChanged( QQuickWebEngineScript::InjectionPoint injectionPoint
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -535,7 +535,7 @@ void nameChanged( const QString & name )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -601,7 +601,7 @@ void runOnSubframesChanged( bool on )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONRUNONSUBFRAMESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -667,7 +667,7 @@ void sourceCodeChanged( const QString & code )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCECODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -733,7 +733,7 @@ void sourceUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONSOURCEURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -799,7 +799,7 @@ void worldIdChanged( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONWORLDIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
