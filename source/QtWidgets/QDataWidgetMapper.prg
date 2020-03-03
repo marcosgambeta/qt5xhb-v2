@@ -778,7 +778,7 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {
-  QDataWidgetMapper * sender = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

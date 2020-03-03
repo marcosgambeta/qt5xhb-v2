@@ -219,7 +219,7 @@ void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
-  QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -281,7 +281,7 @@ void blurRadiusChanged( qreal radius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
-  QGraphicsBlurEffect * sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

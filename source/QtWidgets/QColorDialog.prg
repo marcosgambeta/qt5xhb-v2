@@ -523,7 +523,7 @@ void colorSelected( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 {
-  QColorDialog * sender = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_ONCOLORSELECTED )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_ONCURRENTCOLORCHANGED )
 {
-  QColorDialog * sender = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

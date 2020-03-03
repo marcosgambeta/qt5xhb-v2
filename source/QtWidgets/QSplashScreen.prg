@@ -273,7 +273,7 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
-  QSplashScreen * sender = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

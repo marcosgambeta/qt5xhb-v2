@@ -1413,7 +1413,7 @@ void dateChanged( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATECHANGED )
 {
-  QDateTimeEdit * sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1475,7 +1475,7 @@ void dateTimeChanged( const QDateTime & datetime )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONDATETIMECHANGED )
 {
-  QDateTimeEdit * sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1537,7 +1537,7 @@ void timeChanged( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIMEEDIT_ONTIMECHANGED )
 {
-  QDateTimeEdit * sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

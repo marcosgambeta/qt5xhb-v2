@@ -959,7 +959,7 @@ void subWindowActivated( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
-  QMdiArea * sender = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMdiArea *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -928,7 +928,7 @@ void indexesMoved( const QModelIndexList & indexes )
 */
 HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 {
-  QListView * sender = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

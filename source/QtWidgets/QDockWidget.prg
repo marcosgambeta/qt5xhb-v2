@@ -432,7 +432,7 @@ void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {
-  QDockWidget * sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -494,7 +494,7 @@ void dockLocationChanged( Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONDOCKLOCATIONCHANGED )
 {
-  QDockWidget * sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -556,7 +556,7 @@ void featuresChanged( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONFEATURESCHANGED )
 {
-  QDockWidget * sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -618,7 +618,7 @@ void topLevelChanged( bool topLevel )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONTOPLEVELCHANGED )
 {
-  QDockWidget * sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -680,7 +680,7 @@ void visibilityChanged( bool visible )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ONVISIBILITYCHANGED )
 {
-  QDockWidget * sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

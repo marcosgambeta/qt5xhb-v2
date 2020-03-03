@@ -1158,7 +1158,7 @@ void currentIdChanged( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
-  QWizard * sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1220,7 +1220,7 @@ void customButtonClicked( int which )
 */
 HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-  QWizard * sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1282,7 +1282,7 @@ void helpRequested()
 */
 HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
-  QWizard * sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1342,7 +1342,7 @@ void pageAdded( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
-  QWizard * sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1404,7 +1404,7 @@ void pageRemoved( int id )
 */
 HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
-  QWizard * sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

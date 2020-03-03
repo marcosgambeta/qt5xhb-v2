@@ -205,7 +205,7 @@ void enabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
-  QGraphicsEffect * sender = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

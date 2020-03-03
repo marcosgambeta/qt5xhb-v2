@@ -135,7 +135,7 @@ void enabledChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -195,7 +195,7 @@ void opacityChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -255,7 +255,7 @@ void parentChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -315,7 +315,7 @@ void rotationChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -375,7 +375,7 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -435,7 +435,7 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -495,7 +495,7 @@ void xChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -555,7 +555,7 @@ void yChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -615,7 +615,7 @@ void zChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
 {
-  QGraphicsObject * sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

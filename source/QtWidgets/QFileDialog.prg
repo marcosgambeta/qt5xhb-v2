@@ -1823,7 +1823,7 @@ void currentChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1885,7 +1885,7 @@ void directoryEntered( const QString & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1947,7 +1947,7 @@ void fileSelected( const QString & file )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2009,7 +2009,7 @@ void filesSelected( const QStringList & selected )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2077,7 +2077,7 @@ void filterSelected( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2139,7 +2139,7 @@ void urlSelected( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2201,7 +2201,7 @@ void urlsSelected( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2285,7 +2285,7 @@ void currentUrlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2347,7 +2347,7 @@ void directoryUrlEntered( const QUrl & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-  QFileDialog * sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

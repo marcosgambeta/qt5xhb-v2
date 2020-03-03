@@ -1042,7 +1042,7 @@ void linkActivated( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
-  QLabel * sender = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1104,7 +1104,7 @@ void linkHovered( const QString & link )
 */
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
-  QLabel * sender = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

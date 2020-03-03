@@ -6752,7 +6752,7 @@ void windowTitleChanged( const QString & title )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWidget * sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -6818,7 +6818,7 @@ void windowIconChanged( const QIcon & icon )
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWidget * sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -6883,7 +6883,7 @@ void windowIconTextChanged( const QString & iconText )
 */
 HB_FUNC_STATIC( QWIDGET_ONWINDOWICONTEXTCHANGED )
 {
-  QWidget * sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -6945,7 +6945,7 @@ void customContextMenuRequested( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
-  QWidget * sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

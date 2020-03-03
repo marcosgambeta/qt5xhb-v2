@@ -1687,7 +1687,7 @@ void focusChanged( QWidget * old, QWidget * now )
 */
 HB_FUNC_STATIC( QAPPLICATION_ONFOCUSCHANGED )
 {
-  QApplication * sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1751,7 +1751,7 @@ void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QAPPLICATION_ONFONTDATABASECHANGED )
 {
-  QApplication * sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1811,7 +1811,7 @@ void lastWindowClosed()
 */
 HB_FUNC_STATIC( QAPPLICATION_ONLASTWINDOWCLOSED )
 {
-  QApplication * sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

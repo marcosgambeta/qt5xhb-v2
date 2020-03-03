@@ -615,7 +615,7 @@ void valueChanged( double d )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-  QDoubleSpinBox * sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -677,7 +677,7 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-  QDoubleSpinBox * sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

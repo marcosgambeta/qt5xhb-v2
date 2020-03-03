@@ -1741,7 +1741,7 @@ void activated( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1803,7 +1803,7 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1865,7 +1865,7 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1927,7 +1927,7 @@ void currentIndexChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1989,7 +1989,7 @@ void currentTextChanged(const QString &text)
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2051,7 +2051,7 @@ void editTextChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2113,7 +2113,7 @@ void highlighted( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2175,7 +2175,7 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
-  QComboBox * sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

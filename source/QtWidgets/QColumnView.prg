@@ -475,7 +475,7 @@ void updatePreviewWidget( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
-  QColumnView * sender = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

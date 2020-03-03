@@ -533,7 +533,7 @@ void completeChanged()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
-  QWizardPage * sender = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

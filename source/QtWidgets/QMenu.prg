@@ -1267,7 +1267,7 @@ void aboutToHide()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOHIDE )
 {
-  QMenu * sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1327,7 +1327,7 @@ void aboutToShow()
 */
 HB_FUNC_STATIC( QMENU_ONABOUTTOSHOW )
 {
-  QMenu * sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1387,7 +1387,7 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONHOVERED )
 {
-  QMenu * sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1449,7 +1449,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QMENU_ONTRIGGERED )
 {
-  QMenu * sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMenu *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

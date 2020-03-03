@@ -1873,7 +1873,7 @@ void changed( const QList<QRectF> & region )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
 {
-  QGraphicsScene * sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1957,7 +1957,7 @@ void sceneRectChanged( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
 {
-  QGraphicsScene * sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2019,7 +2019,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
 {
-  QGraphicsScene * sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

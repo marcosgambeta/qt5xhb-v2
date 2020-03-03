@@ -619,7 +619,7 @@ void anchorClicked( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -681,7 +681,7 @@ void backwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -743,7 +743,7 @@ void forwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -805,7 +805,7 @@ void highlighted( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -867,7 +867,7 @@ void highlighted( const QString & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -929,7 +929,7 @@ void historyChanged()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -989,7 +989,7 @@ void sourceChanged( const QUrl & src )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-  QTextBrowser * sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

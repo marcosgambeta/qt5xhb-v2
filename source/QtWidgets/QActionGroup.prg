@@ -395,7 +395,7 @@ void hovered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {
-  QActionGroup * sender = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -457,7 +457,7 @@ void triggered( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 {
-  QActionGroup * sender = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -1259,7 +1259,7 @@ void directoryLoaded( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
-  QFileSystemModel * sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1321,7 +1321,7 @@ void fileRenamed( const QString & path, const QString & oldName, const QString &
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
-  QFileSystemModel * sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1387,7 +1387,7 @@ void rootPathChanged( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
-  QFileSystemModel * sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

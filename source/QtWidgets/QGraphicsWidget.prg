@@ -1473,7 +1473,7 @@ void geometryChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ONGEOMETRYCHANGED )
 {
-  QGraphicsWidget * sender = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

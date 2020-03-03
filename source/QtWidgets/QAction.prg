@@ -1631,7 +1631,7 @@ void changed()
 */
 HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
-  QAction * sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1691,7 +1691,7 @@ void hovered()
 */
 HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
-  QAction * sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1751,7 +1751,7 @@ void toggled( bool checked )
 */
 HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
-  QAction * sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1813,7 +1813,7 @@ void triggered( bool checked = false )
 */
 HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
-  QAction * sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

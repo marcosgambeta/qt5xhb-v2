@@ -423,7 +423,7 @@ void activated()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
-  QShortcut * sender = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -483,7 +483,7 @@ void activatedAmbiguously()
 */
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
-  QShortcut * sender = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

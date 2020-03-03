@@ -1480,7 +1480,7 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {
-  QTabBar * sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1542,7 +1542,7 @@ void tabCloseRequested( int index )
 */
 HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 {
-  QTabBar * sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1604,7 +1604,7 @@ void tabMoved( int from, int to )
 */
 HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 {
-  QTabBar * sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

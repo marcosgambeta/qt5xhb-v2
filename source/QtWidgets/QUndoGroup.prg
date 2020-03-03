@@ -488,7 +488,7 @@ void activeStackChanged( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -550,7 +550,7 @@ void canRedoChanged( bool canRedo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -612,7 +612,7 @@ void canUndoChanged( bool canUndo )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -674,7 +674,7 @@ void cleanChanged( bool clean )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -736,7 +736,7 @@ void indexChanged( int idx )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -798,7 +798,7 @@ void redoTextChanged( const QString & redoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -860,7 +860,7 @@ void undoTextChanged( const QString & undoText )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
-  QUndoGroup * sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

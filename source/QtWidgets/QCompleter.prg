@@ -1002,7 +1002,7 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
-  QCompleter * sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1064,7 +1064,7 @@ void activated( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
-  QCompleter * sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1126,7 +1126,7 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-  QCompleter * sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1188,7 +1188,7 @@ void highlighted( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-  QCompleter * sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

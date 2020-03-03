@@ -352,7 +352,7 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 {
-  QStatusBar * sender = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -1594,7 +1594,7 @@ void collapsed( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  QTreeView * sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1656,7 +1656,7 @@ void expanded( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  QTreeView * sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

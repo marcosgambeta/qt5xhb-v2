@@ -690,7 +690,7 @@ void valueChanged( int value )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
 {
-  QProgressBar * sender = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

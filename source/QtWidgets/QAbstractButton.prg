@@ -837,7 +837,7 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONCLICKED )
 {
-  QAbstractButton * sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -899,7 +899,7 @@ void pressed()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONPRESSED )
 {
-  QAbstractButton * sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -959,7 +959,7 @@ void released()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONRELEASED )
 {
-  QAbstractButton * sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1019,7 +1019,7 @@ void toggled( bool checked )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ONTOGGLED )
 {
-  QAbstractButton * sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

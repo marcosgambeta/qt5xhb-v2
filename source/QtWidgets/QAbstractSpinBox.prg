@@ -972,7 +972,7 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-  QAbstractSpinBox * sender = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -194,7 +194,7 @@ void opacityChanged( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
-  QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -256,7 +256,7 @@ void opacityMaskChanged( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
-  QGraphicsOpacityEffect * sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

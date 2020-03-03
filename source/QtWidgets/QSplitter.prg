@@ -719,7 +719,7 @@ void splitterMoved( int pos, int index )
 */
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
-  QSplitter * sender = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSplitter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

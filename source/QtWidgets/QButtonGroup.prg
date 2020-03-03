@@ -405,7 +405,7 @@ void buttonClicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -467,7 +467,7 @@ void buttonClicked( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -529,7 +529,7 @@ void buttonPressed( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -591,7 +591,7 @@ void buttonPressed( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -653,7 +653,7 @@ void buttonReleased( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -715,7 +715,7 @@ void buttonReleased( int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
-  QButtonGroup * sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -275,7 +275,7 @@ void currentFontChanged( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 {
-  QFontComboBox * sender = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFontComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

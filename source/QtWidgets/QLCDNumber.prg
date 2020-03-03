@@ -657,7 +657,7 @@ void overflow()
 */
 HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 {
-  QLCDNumber * sender = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

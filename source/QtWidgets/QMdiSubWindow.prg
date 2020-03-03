@@ -517,7 +517,7 @@ void aboutToActivate()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 {
-  QMdiSubWindow * sender = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -577,7 +577,7 @@ void windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 {
-  QMdiSubWindow * sender = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -1304,7 +1304,7 @@ void cellActivated( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1368,7 +1368,7 @@ void cellChanged( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1432,7 +1432,7 @@ void cellClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1496,7 +1496,7 @@ void cellDoubleClicked( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1560,7 +1560,7 @@ void cellEntered( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1624,7 +1624,7 @@ void cellPressed( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1688,7 +1688,7 @@ void currentCellChanged( int currentRow, int currentColumn, int previousRow, int
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1756,7 +1756,7 @@ void currentItemChanged( QTableWidgetItem * current, QTableWidgetItem * previous
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1820,7 +1820,7 @@ void itemActivated( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1882,7 +1882,7 @@ void itemChanged( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1944,7 +1944,7 @@ void itemClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2006,7 +2006,7 @@ void itemDoubleClicked( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2068,7 +2068,7 @@ void itemEntered( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2130,7 +2130,7 @@ void itemPressed( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2192,7 +2192,7 @@ void itemSelectionChanged()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTableWidget * sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTableWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

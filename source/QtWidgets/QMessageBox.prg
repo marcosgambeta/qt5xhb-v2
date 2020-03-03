@@ -1323,7 +1323,7 @@ void buttonClicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-  QMessageBox * sender = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

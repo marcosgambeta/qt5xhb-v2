@@ -743,7 +743,7 @@ void canceled()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {
-  QProgressDialog * sender = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
