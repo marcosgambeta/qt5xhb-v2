@@ -466,7 +466,7 @@ void clientIdentifierSharedKeyChanged( const QString & clientIdentifierSharedKey
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -532,7 +532,7 @@ void error( const QString & error, const QString & errorDescription, const QUrl 
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -602,7 +602,7 @@ void expirationAtChanged( const QDateTime & expiration )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -668,7 +668,7 @@ void responseTypeChanged( const QString & responseType )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -734,7 +734,7 @@ void scopeChanged( const QString & scope )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -800,7 +800,7 @@ void stateChanged( const QString & state )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -866,7 +866,7 @@ void userAgentChanged( const QString & userAgent )
 HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -497,7 +497,7 @@ void clientIdentifierChanged( const QString & clientIdentifier )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCLIENTIDENTIFIERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -563,7 +563,7 @@ void tokenChanged( const QString & token )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONTOKENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -629,7 +629,7 @@ void statusChanged( QAbstractOAuth::Status status )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONSTATUSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -695,7 +695,7 @@ void authorizationUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -765,7 +765,7 @@ void contentTypeChanged( QAbstractOAuth::ContentType contentType )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -831,7 +831,7 @@ void requestFailed( const QAbstractOAuth::Error error )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -897,7 +897,7 @@ void authorizeWithBrowser( const QUrl & url )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZEWITHBROWSER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -963,7 +963,7 @@ void granted()
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONGRANTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1027,7 +1027,7 @@ void finished( QNetworkReply * reply )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1093,7 +1093,7 @@ void replyDataReceived( const QByteArray & data )
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth * sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuth *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

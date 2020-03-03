@@ -148,7 +148,7 @@ void callbackDataReceived( const QByteArray & data )
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -218,7 +218,7 @@ void replyDataReceived( const QByteArray & data )
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * sender = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
