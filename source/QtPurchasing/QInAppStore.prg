@@ -214,7 +214,7 @@ void productRegistered( QInAppProduct * product )
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {
-  QInAppStore * sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -276,7 +276,7 @@ void productUnknown( QInAppProduct::ProductType productType, const QString & ide
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 {
-  QInAppStore * sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -340,7 +340,7 @@ void transactionReady( QInAppTransaction * transaction )
 */
 HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 {
-  QInAppStore * sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
