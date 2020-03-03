@@ -521,7 +521,7 @@ void currentLoopChanged( int currentLoop )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
-  QAbstractAnimation * sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -583,7 +583,7 @@ void directionChanged( QAbstractAnimation::Direction newDirection )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
-  QAbstractAnimation * sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -645,7 +645,7 @@ void finished()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
-  QAbstractAnimation * sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -705,7 +705,7 @@ void stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
-  QAbstractAnimation * sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

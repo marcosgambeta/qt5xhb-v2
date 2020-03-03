@@ -343,7 +343,7 @@ void timeout()
 */
 HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
 {
-  QTimer * sender = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

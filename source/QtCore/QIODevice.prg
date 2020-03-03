@@ -889,7 +889,7 @@ void aboutToClose()
 */
 HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
-  QIODevice * sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -949,7 +949,7 @@ void bytesWritten( qint64 bytes )
 */
 HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
-  QIODevice * sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1011,7 +1011,7 @@ void readChannelFinished()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
-  QIODevice * sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1071,7 +1071,7 @@ void readyRead()
 */
 HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
-  QIODevice * sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

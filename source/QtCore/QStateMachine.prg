@@ -632,7 +632,7 @@ void started()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 {
-  QStateMachine * sender = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -692,7 +692,7 @@ void stopped()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 {
-  QStateMachine * sender = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

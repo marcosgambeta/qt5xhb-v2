@@ -446,7 +446,7 @@ void finished()
 */
 HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
-  QState * sender = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -506,7 +506,7 @@ void propertiesAssigned()
 */
 HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
-  QState * sender = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

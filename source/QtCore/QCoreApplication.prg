@@ -915,7 +915,7 @@ void aboutToQuit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
-  QCoreApplication * sender = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

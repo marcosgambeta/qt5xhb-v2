@@ -937,7 +937,7 @@ void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1003,7 +1003,7 @@ void columnsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, i
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1073,7 +1073,7 @@ void columnsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1139,7 +1139,7 @@ void columnsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1205,7 +1205,7 @@ void columnsMoved( const QModelIndex & sourceParent, int sourceStart, int source
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1275,7 +1275,7 @@ void columnsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1341,7 +1341,7 @@ void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1405,7 +1405,7 @@ void headerDataChanged( Qt::Orientation orientation, int first, int last )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1471,7 +1471,7 @@ void layoutAboutToBeChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1531,7 +1531,7 @@ void layoutChanged()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1591,7 +1591,7 @@ void modelAboutToBeReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1651,7 +1651,7 @@ void modelReset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1711,7 +1711,7 @@ void rowsAboutToBeInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1777,7 +1777,7 @@ void rowsAboutToBeMoved( const QModelIndex & sourceParent, int sourceStart, int 
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1847,7 +1847,7 @@ void rowsAboutToBeRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1913,7 +1913,7 @@ void rowsInserted( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1979,7 +1979,7 @@ void rowsMoved( const QModelIndex & sourceParent, int sourceStart, int sourceEnd
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2049,7 +2049,7 @@ void rowsRemoved( const QModelIndex & parent, int start, int end )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
-  QAbstractItemModel * sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

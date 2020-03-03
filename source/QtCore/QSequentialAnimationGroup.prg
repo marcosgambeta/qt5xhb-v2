@@ -194,7 +194,7 @@ void currentAnimationChanged ( QAbstractAnimation * current )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {
-  QSequentialAnimationGroup * sender = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

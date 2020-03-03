@@ -2242,7 +2242,7 @@ void destroyed( QObject * obj = nullptr )
 */
 HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
 {
-  QObject * sender = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2305,7 +2305,7 @@ void objectNameChanged( const QString & objectName )
 */
 HB_FUNC_STATIC( QOBJECT_ONOBJECTNAMECHANGED )
 {
-  QObject * sender = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

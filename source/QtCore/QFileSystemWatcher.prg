@@ -264,7 +264,7 @@ void directoryChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 {
-  QFileSystemWatcher * sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -326,7 +326,7 @@ void fileChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
 {
-  QFileSystemWatcher * sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
