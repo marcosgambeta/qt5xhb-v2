@@ -517,7 +517,7 @@ void progressChanged( qreal progress )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  QDeclarativeComponent * sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -579,7 +579,7 @@ void statusChanged( QDeclarativeComponent::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  QDeclarativeComponent * sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

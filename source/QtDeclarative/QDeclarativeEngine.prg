@@ -712,7 +712,7 @@ void quit()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  QDeclarativeEngine * sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -772,7 +772,7 @@ void warnings( const QList<QDeclarativeError> & warnings )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  QDeclarativeEngine * sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
