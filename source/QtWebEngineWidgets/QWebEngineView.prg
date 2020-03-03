@@ -710,7 +710,7 @@ void loadStarted()
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -774,7 +774,7 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -840,7 +840,7 @@ void loadFinished( bool b )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -906,7 +906,7 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -972,7 +972,7 @@ void selectionChanged()
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1036,7 +1036,7 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1102,7 +1102,7 @@ void iconUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEVIEW_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineView * sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

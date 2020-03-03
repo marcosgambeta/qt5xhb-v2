@@ -761,7 +761,7 @@ void loadStarted()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -825,7 +825,7 @@ void loadProgress( int progress )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -891,7 +891,7 @@ void loadFinished( bool ok )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -957,7 +957,7 @@ void linkHovered( const QString & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1023,7 +1023,7 @@ void selectionChanged()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1087,7 +1087,7 @@ void geometryChangeRequested( const QRect & geom )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1153,7 +1153,7 @@ void windowCloseRequested()
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1217,7 +1217,7 @@ void featurePermissionRequested( const QUrl & securityOrigin, QWebEnginePage::Fe
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1285,7 +1285,7 @@ void featurePermissionRequestCanceled( const QUrl & securityOrigin, QWebEnginePa
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1353,7 +1353,7 @@ void authenticationRequired( const QUrl & requestUrl, QAuthenticator * authentic
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1421,7 +1421,7 @@ void proxyAuthenticationRequired( const QUrl & requestUrl, QAuthenticator * auth
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1491,7 +1491,7 @@ void titleChanged( const QString & title )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1557,7 +1557,7 @@ void urlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1623,7 +1623,7 @@ void iconUrlChanged( const QUrl & url )
 HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
