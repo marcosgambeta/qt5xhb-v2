@@ -523,7 +523,7 @@ void clicked()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -587,7 +587,7 @@ void changed()
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinThumbnailToolButton * sender = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWinThumbnailToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
