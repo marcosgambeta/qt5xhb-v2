@@ -261,7 +261,7 @@ void propertyChanged( const QString & name, const QVariant & value )
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 {
-  QDesignerPropertyEditorInterface * sender = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
