@@ -821,7 +821,7 @@ void quit()
 */
 HB_FUNC_STATIC( QQMLENGINE_ONQUIT )
 {
-  QQmlEngine * sender = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

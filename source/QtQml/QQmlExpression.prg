@@ -520,7 +520,7 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  QQmlExpression * sender = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -293,7 +293,7 @@ void valueChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_ONVALUECHANGED )
 {
-  QQmlPropertyMap * sender = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
