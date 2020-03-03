@@ -342,7 +342,7 @@ void customFocusPointChanged( const QPointF & point )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONCUSTOMFOCUSPOINTCHANGED )
 {
-  QCameraFocusControl * sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -404,7 +404,7 @@ void focusModeChanged( QCameraFocus::FocusModes mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSMODECHANGED )
 {
-  QCameraFocusControl * sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -466,7 +466,7 @@ void focusPointModeChanged( QCameraFocus::FocusPointMode mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSPOINTMODECHANGED )
 {
-  QCameraFocusControl * sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -528,7 +528,7 @@ void focusZonesChanged()
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ONFOCUSZONESCHANGED )
 {
-  QCameraFocusControl * sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

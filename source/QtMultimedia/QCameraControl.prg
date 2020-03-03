@@ -259,7 +259,7 @@ void captureModeChanged( QCamera::CaptureModes mode )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 {
-  QCameraControl * sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -321,7 +321,7 @@ void error( int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONERROR )
 {
-  QCameraControl * sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -385,7 +385,7 @@ void stateChanged( QCamera::State state )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATECHANGED )
 {
-  QCameraControl * sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -447,7 +447,7 @@ void statusChanged( QCamera::Status status )
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ONSTATUSCHANGED )
 {
-  QCameraControl * sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

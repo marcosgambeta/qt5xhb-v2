@@ -175,7 +175,7 @@ void audioRoleChanged(QAudio::Role role)
 HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * sender = (QAudioRoleControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAudioRoleControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

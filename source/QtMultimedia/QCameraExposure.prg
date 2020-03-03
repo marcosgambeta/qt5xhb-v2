@@ -852,7 +852,7 @@ void apertureChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURECHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -914,7 +914,7 @@ void apertureRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONAPERTURERANGECHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -974,7 +974,7 @@ void exposureCompensationChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONEXPOSURECOMPENSATIONCHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1036,7 +1036,7 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONFLASHREADY )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1098,7 +1098,7 @@ void isoSensitivityChanged( int value )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONISOSENSITIVITYCHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1160,7 +1160,7 @@ void shutterSpeedChanged( qreal speed )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDCHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1222,7 +1222,7 @@ void shutterSpeedRangeChanged()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ONSHUTTERSPEEDRANGECHANGED )
 {
-  QCameraExposure * sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposure *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

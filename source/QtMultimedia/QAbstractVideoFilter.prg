@@ -169,7 +169,7 @@ void activeChanged()
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * sender = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

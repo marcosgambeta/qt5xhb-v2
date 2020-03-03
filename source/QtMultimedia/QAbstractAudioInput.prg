@@ -595,7 +595,7 @@ void errorChanged( QAudio::Error error )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONERRORCHANGED )
 {
-  QAbstractAudioInput * sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -657,7 +657,7 @@ void stateChanged( QAudio::State state )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONSTATECHANGED )
 {
-  QAbstractAudioInput * sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -719,7 +719,7 @@ void notify()
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_ONNOTIFY )
 {
-  QAbstractAudioInput * sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractAudioInput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

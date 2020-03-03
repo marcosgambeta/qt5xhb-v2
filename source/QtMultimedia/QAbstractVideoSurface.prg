@@ -329,7 +329,7 @@ void activeChanged(bool active)
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
 {
-  QAbstractVideoSurface * sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -391,7 +391,7 @@ void surfaceFormatChanged(const QVideoSurfaceFormat &format)
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
 {
-  QAbstractVideoSurface * sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -453,7 +453,7 @@ void supportedFormatsChanged()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
 {
-  QAbstractVideoSurface * sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -513,7 +513,7 @@ void nativeResolutionChanged(const QSize &)
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
 {
-  QAbstractVideoSurface * sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

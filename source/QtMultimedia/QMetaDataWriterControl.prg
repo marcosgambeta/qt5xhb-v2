@@ -209,7 +209,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
 {
-  QMetaDataWriterControl * sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -269,7 +269,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED2 )
 {
-  QMetaDataWriterControl * sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -333,7 +333,7 @@ void writableChanged( bool writable )
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONWRITABLECHANGED )
 {
-  QMetaDataWriterControl * sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -395,7 +395,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATAAVAILABLECHANGED )
 {
-  QMetaDataWriterControl * sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

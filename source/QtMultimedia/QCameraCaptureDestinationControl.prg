@@ -154,7 +154,7 @@ void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destina
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 {
-  QCameraCaptureDestinationControl * sender = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

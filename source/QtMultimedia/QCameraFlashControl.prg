@@ -179,7 +179,7 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
-  QCameraFlashControl * sender = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

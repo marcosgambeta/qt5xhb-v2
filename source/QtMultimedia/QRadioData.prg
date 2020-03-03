@@ -382,7 +382,7 @@ void stationIdChanged( QString stationId )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -444,7 +444,7 @@ void programTypeChanged( QRadioData::ProgramType programType )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -506,7 +506,7 @@ void programTypeNameChanged( QString programTypeName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -568,7 +568,7 @@ void stationNameChanged( QString stationName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -630,7 +630,7 @@ void radioTextChanged( QString radioText )
 */
 HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -692,7 +692,7 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -754,7 +754,7 @@ void error( QRadioData::Error error )
 */
 HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
-  QRadioData * sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -162,7 +162,7 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 {
-  QCameraCaptureBufferFormatControl * sender = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

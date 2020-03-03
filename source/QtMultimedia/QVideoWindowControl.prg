@@ -554,7 +554,7 @@ void fullScreenChanged( bool fullScreen )
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONFULLSCREENCHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -616,7 +616,7 @@ void brightnessChanged( int brightness )
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONBRIGHTNESSCHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -678,7 +678,7 @@ void contrastChanged( int contrast )
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONCONTRASTCHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -740,7 +740,7 @@ void hueChanged( int hue )
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONHUECHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -802,7 +802,7 @@ void saturationChanged( int saturation )
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONSATURATIONCHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -864,7 +864,7 @@ void nativeSizeChanged()
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ONNATIVESIZECHANGED )
 {
-  QVideoWindowControl * sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

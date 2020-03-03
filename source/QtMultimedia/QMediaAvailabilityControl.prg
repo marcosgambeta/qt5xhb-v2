@@ -102,7 +102,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 {
-  QMediaAvailabilityControl * sender = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

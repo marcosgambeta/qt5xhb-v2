@@ -181,7 +181,7 @@ void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCam
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 {
-  QCameraLocksControl * sender = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

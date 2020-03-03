@@ -628,7 +628,7 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -690,7 +690,7 @@ void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destina
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONCAPTUREDESTINATIONCHANGED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -752,7 +752,7 @@ void error( int id, QCameraImageCapture::Error error, const QString & errorStrin
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONERROR )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -818,7 +818,7 @@ void imageAvailable( int id, const QVideoFrame & buffer )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEAVAILABLE )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -882,7 +882,7 @@ void imageCaptured( int id, const QImage & preview )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGECAPTURED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -946,7 +946,7 @@ void imageExposed( int id )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEEXPOSED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1008,7 +1008,7 @@ void imageMetadataAvailable( int id, const QString & key, const QVariant & value
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGEMETADATAAVAILABLE )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1074,7 +1074,7 @@ void imageSaved( int id, const QString & fileName )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONIMAGESAVED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1138,7 +1138,7 @@ void readyForCaptureChanged( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONREADYFORCAPTURECHANGED )
 {
-  QCameraImageCapture * sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

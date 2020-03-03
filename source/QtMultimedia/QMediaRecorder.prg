@@ -1158,7 +1158,7 @@ void actualLocationChanged( const QUrl & location )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1220,7 +1220,7 @@ void availabilityChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED1 )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1282,7 +1282,7 @@ void availabilityChanged( QMultimedia::AvailabilityStatus availability )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONAVAILABILITYCHANGED2 )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1344,7 +1344,7 @@ void durationChanged( qint64 duration )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONDURATIONCHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1406,7 +1406,7 @@ void error( QMediaRecorder::Error error )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONERROR )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1468,7 +1468,7 @@ void metaDataAvailableChanged( bool available )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAAVAILABLECHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1530,7 +1530,7 @@ void metaDataChanged()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED1 )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1590,7 +1590,7 @@ void metaDataChanged( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATACHANGED2 )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1654,7 +1654,7 @@ void metaDataWritableChanged( bool writable )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMETADATAWRITABLECHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1716,7 +1716,7 @@ void mutedChanged( bool muted )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONMUTEDCHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1778,7 +1778,7 @@ void stateChanged( QMediaRecorder::State state )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATECHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1840,7 +1840,7 @@ void statusChanged( QMediaRecorder::Status status )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONSTATUSCHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1902,7 +1902,7 @@ void volumeChanged( qreal volume )
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ONVOLUMECHANGED )
 {
-  QMediaRecorder * sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
