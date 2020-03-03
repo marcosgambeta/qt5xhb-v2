@@ -176,7 +176,7 @@ void newConnection( const QDBusConnection & connection )
 */
 HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {
-  QDBusServer * sender = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

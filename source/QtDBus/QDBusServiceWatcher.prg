@@ -322,7 +322,7 @@ void serviceRegistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
 {
-  QDBusServiceWatcher * sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -384,7 +384,7 @@ void serviceUnregistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
 {
-  QDBusServiceWatcher * sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -446,7 +446,7 @@ void serviceOwnerChanged( const QString & service, const QString & oldOwner, con
 */
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
 {
-  QDBusServiceWatcher * sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusServiceWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -91,7 +91,7 @@ void serviceRegistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 {
-  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -153,7 +153,7 @@ void serviceUnregistered( const QString & service )
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 {
-  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -215,7 +215,7 @@ void serviceOwnerChanged( const QString & name, const QString & oldOwner, const 
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 {
-  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -281,7 +281,7 @@ void callWithCallbackFailed( const QDBusError & error, const QDBusMessage & call
 */
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 {
-  QDBusConnectionInterface * sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusConnectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
