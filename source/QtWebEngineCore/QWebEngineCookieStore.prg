@@ -216,7 +216,7 @@ void cookieAdded(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 {
-  QWebEngineCookieStore * sender = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -278,7 +278,7 @@ void cookieRemoved(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
 {
-  QWebEngineCookieStore * sender = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
