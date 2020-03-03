@@ -357,7 +357,7 @@ void nativeSizeChanged( const QSizeF & size )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 {
-  QGraphicsVideoItem * sender = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
