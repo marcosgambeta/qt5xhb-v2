@@ -810,7 +810,7 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -876,7 +876,7 @@ void brushChanged()
 HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -940,7 +940,7 @@ void clicked( int index )
 HB_FUNC_STATIC( QBARSET_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1006,7 +1006,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1072,7 +1072,7 @@ void doubleClicked( int index )
 HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1138,7 +1138,7 @@ void hovered( bool status, int index )
 HB_FUNC_STATIC( QBARSET_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1206,7 +1206,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1270,7 +1270,7 @@ void labelChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1334,7 +1334,7 @@ void labelColorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1400,7 +1400,7 @@ void labelFontChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1464,7 +1464,7 @@ void penChanged()
 HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1528,7 +1528,7 @@ void pressed( int index )
 HB_FUNC_STATIC( QBARSET_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1594,7 +1594,7 @@ void released( int index )
 HB_FUNC_STATIC( QBARSET_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1660,7 +1660,7 @@ void valueChanged( int index )
 HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1726,7 +1726,7 @@ void valuesAdded( int index, int count )
 HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1794,7 +1794,7 @@ void valuesRemoved( int index, int count )
 HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

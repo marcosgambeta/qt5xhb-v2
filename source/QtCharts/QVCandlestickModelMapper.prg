@@ -505,7 +505,7 @@ void closeRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -569,7 +569,7 @@ void firstSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -633,7 +633,7 @@ void highRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -697,7 +697,7 @@ void lastSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -761,7 +761,7 @@ void lowRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -825,7 +825,7 @@ void openRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -889,7 +889,7 @@ void timestampRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QVCandlestickModelMapper * sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

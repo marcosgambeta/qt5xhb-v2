@@ -557,7 +557,7 @@ void categoriesChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -621,7 +621,7 @@ void countChanged()
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -685,7 +685,7 @@ void maxChanged( const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -751,7 +751,7 @@ void minChanged( const QString & min )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -817,7 +817,7 @@ void rangeChanged( const QString & min, const QString & max )
 HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

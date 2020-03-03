@@ -394,7 +394,7 @@ void formatChanged( QString format )
 HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -460,7 +460,7 @@ void maxChanged( QDateTime max )
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -526,7 +526,7 @@ void minChanged( QDateTime min )
 HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -592,7 +592,7 @@ void rangeChanged( QDateTime min, QDateTime max )
 HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -660,7 +660,7 @@ void tickCountChanged( int tick )
 HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

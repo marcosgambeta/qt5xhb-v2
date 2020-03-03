@@ -426,7 +426,7 @@ void columnCountChanged()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -490,7 +490,7 @@ void firstBarSetRowChanged()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTBARSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -554,7 +554,7 @@ void firstColumnChanged()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -618,7 +618,7 @@ void lastBarSetRowChanged()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONLASTBARSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -746,7 +746,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QHBARMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

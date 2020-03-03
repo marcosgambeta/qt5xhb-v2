@@ -426,7 +426,7 @@ void firstRowChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -490,7 +490,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -554,7 +554,7 @@ void rowCountChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -618,7 +618,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void xColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -746,7 +746,7 @@ void yColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVXYModelMapper * sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -445,7 +445,7 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QSCATTERSERIES_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -511,7 +511,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QSCATTERSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -577,7 +577,7 @@ void markerShapeChanged( QScatterSeries::MarkerShape shape )
 HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -643,7 +643,7 @@ void markerSizeChanged( qreal size )
 HB_FUNC_STATIC( QSCATTERSERIES_ONMARKERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -554,7 +554,7 @@ void brushChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -618,7 +618,7 @@ void clicked()
 HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void fontChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -746,7 +746,7 @@ void hovered( bool status )
 HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -812,7 +812,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -876,7 +876,7 @@ void labelChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -940,7 +940,7 @@ void penChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1004,7 +1004,7 @@ void shapeChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1068,7 +1068,7 @@ void visibleChanged()
 HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
