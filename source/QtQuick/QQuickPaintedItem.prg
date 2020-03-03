@@ -628,7 +628,7 @@ void contentsScaleChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-  QQuickPaintedItem * sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -688,7 +688,7 @@ void contentsSizeChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-  QQuickPaintedItem * sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -748,7 +748,7 @@ void fillColorChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-  QQuickPaintedItem * sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -808,7 +808,7 @@ void renderTargetChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-  QQuickPaintedItem * sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
