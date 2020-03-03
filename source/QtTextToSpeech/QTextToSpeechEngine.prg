@@ -626,7 +626,7 @@ void stateChanged( QTextToSpeech::State state )
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechEngine * sender = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
