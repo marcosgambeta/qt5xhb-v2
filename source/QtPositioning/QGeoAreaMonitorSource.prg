@@ -315,9 +315,9 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
       QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -335,10 +335,10 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
   }
@@ -358,9 +358,9 @@ void QGeoAreaMonitorSource_activeMonitors2 ()
       QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *PQGEOSHAPE(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -378,10 +378,10 @@ void QGeoAreaMonitorSource_activeMonitors2 ()
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
   }
