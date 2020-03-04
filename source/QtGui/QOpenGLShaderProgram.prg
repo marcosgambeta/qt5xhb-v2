@@ -169,9 +169,9 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
       QList<QOpenGLShader *> list = obj->shaders ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLSHADER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOPENGLSHADER", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOPENGLSHADER", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
