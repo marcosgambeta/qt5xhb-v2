@@ -127,9 +127,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
       QList<QAbstractAnimation *> list = obj->animations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTANIMATION", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTANIMATION", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -336,9 +336,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
       QList<QAbstractState *> list = obj->targetStates ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -352,10 +352,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTSTATE", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTSTATE", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
