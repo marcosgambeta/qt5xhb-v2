@@ -139,9 +139,9 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
       QList<QWebHistoryItem> list = obj->backItems ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -389,9 +389,9 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
       QList<QWebHistoryItem> list = obj->forwardItems ( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -409,10 +409,10 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -492,9 +492,9 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
       QList<QWebHistoryItem> list = obj->items ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBHISTORYITEM" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( auto i = 0; i < list.count(); i++ )
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( auto i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -512,10 +512,10 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBHISTORYITEM", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
