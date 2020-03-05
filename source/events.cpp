@@ -204,7 +204,7 @@ void Events_release_codeblocks ()
   {
     const int listsize = s_events->list1.size();
 
-    for (int i = 0; i < listsize; ++i)
+    for( auto i = 0; i < listsize; ++i )
     {
       if( s_events->list1.at(i) != nullptr )
       {
@@ -231,7 +231,7 @@ void Events_disconnect_all_events (QObject * obj, bool children)
       const int listsize = s_events->list1.size();
 
       // percorre toda a lista de eventos
-      for (int i = 0; i < listsize; ++i)
+      for( auto i = 0; i < listsize; ++i )
       {
         // elimina eventos ativos (true) ligados ao objeto (obj)
         if( ( (QObject *) s_events->list1.at(i) == (QObject *) obj ) )
@@ -260,13 +260,13 @@ void Events_disconnect_all_events (QObject * obj, bool children)
       const int listsize = list.size();
 
       // percorre toda a lista de objetos
-      for (int i = 0; i < listsize; ++i)
+      for( auto i = 0; i < listsize; ++i )
       {
         const int listsize2 = s_events->list1.size();
         const QObject * obj2 = (QObject *) list.at(i);
 
         // percorre toda a lista de eventos
-        for (int ii = 0; ii < listsize2; ++ii)
+        for( auto ii = 0; ii < listsize2; ++ii )
         {
           // elimina eventos ativos (true) ligados ao objeto list.at(i)
           if( ( (QObject *) s_events->list1.at(ii) == (QObject *) obj2 ) )
@@ -320,7 +320,7 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
     int count = 0;
     const int listsize = s_events->list1.size();
     // percorre toda a lista de eventos
-    for (int i = 0; i < listsize; ++i)
+    for( auto i = 0; i < listsize; ++i )
     {
       if( s_events->list1.at(i) != nullptr )
       {
