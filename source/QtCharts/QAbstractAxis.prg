@@ -151,7 +151,7 @@ QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QABSTRACTAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractAxis * obj = (QAbstractAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

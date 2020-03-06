@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_NEW )
 HB_FUNC_STATIC( QHORIZONTALSTACKEDBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHorizontalStackedBarSeries * obj = (QHorizontalStackedBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHorizontalStackedBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

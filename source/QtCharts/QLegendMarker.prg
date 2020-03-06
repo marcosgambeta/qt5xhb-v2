@@ -95,7 +95,7 @@ virtual ~QLegendMarker()
 HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -106,7 +106,7 @@ explicit QLegend(QChart *chart) [private]
 HB_FUNC_STATIC( QLEGEND_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPERCENTBARSERIES_NEW )
 HB_FUNC_STATIC( QPERCENTBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPercentBarSeries * obj = (QPercentBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPercentBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -157,7 +157,7 @@ explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags w
 HB_FUNC_STATIC( QCHART_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChart * obj = (QChart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QChart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAREASERIES_NEW )
 HB_FUNC_STATIC( QAREASERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAreaSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

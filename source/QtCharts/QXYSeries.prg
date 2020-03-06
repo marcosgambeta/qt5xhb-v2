@@ -114,7 +114,7 @@ explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QXYSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

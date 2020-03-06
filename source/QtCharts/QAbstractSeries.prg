@@ -87,7 +87,7 @@ QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected
 HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractSeries * obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeries * obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

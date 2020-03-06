@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSPLINESERIES_NEW )
 HB_FUNC_STATIC( QSPLINESERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSplineSeries * obj = (QSplineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

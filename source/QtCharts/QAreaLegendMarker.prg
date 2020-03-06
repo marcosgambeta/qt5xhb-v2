@@ -84,7 +84,7 @@ virtual ~QAreaLegendMarker()
 HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaLegendMarker * obj = (QAreaLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAreaLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

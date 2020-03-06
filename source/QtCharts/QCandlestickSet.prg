@@ -132,7 +132,7 @@ virtual ~QCandlestickSet()
 HB_FUNC_STATIC( QCANDLESTICKSET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSet * obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

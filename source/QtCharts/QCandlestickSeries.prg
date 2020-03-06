@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

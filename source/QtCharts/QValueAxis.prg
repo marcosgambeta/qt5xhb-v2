@@ -101,7 +101,7 @@ QValueAxis(QValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QVALUEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

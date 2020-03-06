@@ -84,7 +84,7 @@ virtual ~QXYLegendMarker()
 HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

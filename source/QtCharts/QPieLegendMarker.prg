@@ -86,7 +86,7 @@ virtual ~QPieLegendMarker()
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

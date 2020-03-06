@@ -162,7 +162,7 @@ virtual ~QPieSlice();
 HB_FUNC_STATIC( QPIESLICE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieSlice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

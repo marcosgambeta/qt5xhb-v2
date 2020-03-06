@@ -122,7 +122,7 @@ virtual ~QBarSet()
 HB_FUNC_STATIC( QBARSET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

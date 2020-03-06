@@ -82,7 +82,7 @@ virtual ~QCandlestickLegendMarker()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

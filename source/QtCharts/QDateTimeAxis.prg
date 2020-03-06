@@ -100,7 +100,7 @@ QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QDATETIMEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDateTimeAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

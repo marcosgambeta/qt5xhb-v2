@@ -102,7 +102,7 @@ QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

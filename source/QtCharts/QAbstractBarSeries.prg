@@ -96,7 +96,7 @@ virtual ~QAbstractBarSeries()
 HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractBarSeries * obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -102,7 +102,7 @@ QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = nullptr) [protect
 HB_FUNC_STATIC( QBARCATEGORYAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * obj = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
