@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

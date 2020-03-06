@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 
 HB_FUNC_STATIC( QFILEINFO_DELETE )
 {
-  QFileInfo * obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

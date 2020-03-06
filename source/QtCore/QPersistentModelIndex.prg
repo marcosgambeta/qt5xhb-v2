@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
 {
-  QPersistentModelIndex * obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 
 HB_FUNC_STATIC( QVARIANT_DELETE )
 {
-  QVariant * obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVariant *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

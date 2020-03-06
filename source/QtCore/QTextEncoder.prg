@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTEXTENCODER_NEW )
 
 HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 {
-  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

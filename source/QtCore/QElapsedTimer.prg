@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 
 HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

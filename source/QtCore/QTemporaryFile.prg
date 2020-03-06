@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

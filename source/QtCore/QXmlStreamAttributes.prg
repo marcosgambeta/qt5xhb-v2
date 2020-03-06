@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

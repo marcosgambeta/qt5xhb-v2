@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

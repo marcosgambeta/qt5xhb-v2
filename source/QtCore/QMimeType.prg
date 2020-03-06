@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
 
 HB_FUNC_STATIC( QMIMETYPE_DELETE )
 {
-  QMimeType * obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

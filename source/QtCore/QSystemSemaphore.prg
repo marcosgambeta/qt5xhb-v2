@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-  QSystemSemaphore * obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

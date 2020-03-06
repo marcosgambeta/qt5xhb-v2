@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
 
 HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

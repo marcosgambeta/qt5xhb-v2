@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMIMEDATABASE_NEW )
 
 HB_FUNC_STATIC( QMIMEDATABASE_DELETE )
 {
-  QMimeDatabase * obj = (QMimeDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

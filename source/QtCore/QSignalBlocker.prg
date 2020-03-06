@@ -93,7 +93,7 @@ explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QSIGNALBLOCKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSignalBlocker * obj = (QSignalBlocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSignalBlocker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

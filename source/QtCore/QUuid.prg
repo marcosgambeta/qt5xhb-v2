@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 HB_FUNC_STATIC( QUUID_DELETE )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

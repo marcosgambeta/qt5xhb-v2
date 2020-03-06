@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QJSONPARSEERROR_DELETE )
 {
-  QJsonParseError * obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

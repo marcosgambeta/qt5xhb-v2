@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_DELETE )
 {
-  QItemSelectionRange * obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

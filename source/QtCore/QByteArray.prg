@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NEW )
 
 HB_FUNC_STATIC( QBYTEARRAY_DELETE )
 {
-  QByteArray * obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

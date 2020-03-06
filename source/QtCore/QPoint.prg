@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 HB_FUNC_STATIC( QPOINT_DELETE )
 {
-  QPoint * obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

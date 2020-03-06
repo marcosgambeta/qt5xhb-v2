@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 
 HB_FUNC_STATIC( QLOCALE_DELETE )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

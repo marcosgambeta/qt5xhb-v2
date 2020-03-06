@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 
 HB_FUNC_STATIC( QDATASTREAM_DELETE )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

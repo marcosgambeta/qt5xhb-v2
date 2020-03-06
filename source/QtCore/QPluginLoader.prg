@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 {
-  QPluginLoader * obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPluginLoader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 HB_FUNC_STATIC( QSTORAGEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStorageInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

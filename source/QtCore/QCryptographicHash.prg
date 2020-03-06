@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QFILEDEVICE_DELETE )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

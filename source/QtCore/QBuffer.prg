@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

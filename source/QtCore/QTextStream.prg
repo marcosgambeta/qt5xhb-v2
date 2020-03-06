@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
 
 HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 
 HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
 {
-  QJsonValueRef * obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

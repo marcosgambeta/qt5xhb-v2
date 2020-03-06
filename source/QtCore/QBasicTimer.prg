@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 
 HB_FUNC_STATIC( QBASICTIMER_DELETE )
 {
-  QBasicTimer * obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

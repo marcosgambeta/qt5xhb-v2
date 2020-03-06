@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
 
 HB_FUNC_STATIC( QURLQUERY_DELETE )
 {
-  QUrlQuery * obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -83,7 +83,7 @@ RETURN
 
 HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

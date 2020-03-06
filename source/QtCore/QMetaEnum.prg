@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
 
 HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
-  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
 
 HB_FUNC_STATIC( QDEBUGSTATESAVER_DELETE )
 {
-  QDebugStateSaver * obj = (QDebugStateSaver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebugStateSaver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

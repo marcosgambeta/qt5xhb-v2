@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 HB_FUNC_STATIC( QSIZE_DELETE )
 {
-  QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

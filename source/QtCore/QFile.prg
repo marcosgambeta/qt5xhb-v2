@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFILE_NEW )
 
 HB_FUNC_STATIC( QFILE_DELETE )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

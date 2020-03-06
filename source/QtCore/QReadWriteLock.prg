@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 
 HB_FUNC_STATIC( QREADWRITELOCK_DELETE )
 {
-  QReadWriteLock * obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QReadWriteLock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

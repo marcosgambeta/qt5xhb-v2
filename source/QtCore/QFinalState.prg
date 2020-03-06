@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
 
 HB_FUNC_STATIC( QFINALSTATE_DELETE )
 {
-  QFinalState * obj = (QFinalState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFinalState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

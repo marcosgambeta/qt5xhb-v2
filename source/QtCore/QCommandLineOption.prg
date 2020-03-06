@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

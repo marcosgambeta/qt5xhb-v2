@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
-  QEasingCurve * obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

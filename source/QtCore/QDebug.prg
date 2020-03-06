@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

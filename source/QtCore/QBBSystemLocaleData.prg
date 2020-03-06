@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
 {
-  QBBSystemLocaleData * obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
-  QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

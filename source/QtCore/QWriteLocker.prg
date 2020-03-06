@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWRITELOCKER_NEW )
 
 HB_FUNC_STATIC( QWRITELOCKER_DELETE )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

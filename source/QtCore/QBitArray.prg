@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 
 HB_FUNC_STATIC( QBITARRAY_DELETE )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 HB_FUNC_STATIC( QMARGINS_DELETE )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -97,7 +97,7 @@ RETURN
 
 HB_FUNC_STATIC( QMETAOBJECT_DELETE )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

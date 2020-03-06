@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 
 HB_FUNC_STATIC( QDATETIME_DELETE )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

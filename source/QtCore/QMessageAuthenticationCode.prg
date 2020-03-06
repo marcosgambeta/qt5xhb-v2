@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_DELETE )
 {
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

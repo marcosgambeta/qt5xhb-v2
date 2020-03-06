@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_NEW )
 
 HB_FUNC_STATIC( QANIMATIONDRIVER_DELETE )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAnimationDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

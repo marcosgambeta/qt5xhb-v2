@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_DELETE )
 {
-  QRegularExpressionMatchIterator * obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionMatchIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

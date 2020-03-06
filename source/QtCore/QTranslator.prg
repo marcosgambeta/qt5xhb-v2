@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

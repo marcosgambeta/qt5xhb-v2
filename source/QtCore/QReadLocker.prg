@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QREADLOCKER_NEW )
 
 HB_FUNC_STATIC( QREADLOCKER_DELETE )
 {
-  QReadLocker * obj = (QReadLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QReadLocker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
 
 HB_FUNC_STATIC( QREGEXP_DELETE )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

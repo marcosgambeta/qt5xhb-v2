@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSocketNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

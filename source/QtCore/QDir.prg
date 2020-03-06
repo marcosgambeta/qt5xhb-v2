@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDIR_NEW )
 
 HB_FUNC_STATIC( QDIR_DELETE )
 {
-  QDir * obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

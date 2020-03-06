@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DELETE )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

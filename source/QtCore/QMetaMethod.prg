@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
 
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
-  QMetaMethod * obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

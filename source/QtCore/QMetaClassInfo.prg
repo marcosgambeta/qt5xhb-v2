@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 {
-  QMetaClassInfo * obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

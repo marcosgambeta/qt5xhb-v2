@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 HB_FUNC_STATIC( QSIZEF_DELETE )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

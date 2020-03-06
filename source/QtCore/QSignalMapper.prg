@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 
 HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

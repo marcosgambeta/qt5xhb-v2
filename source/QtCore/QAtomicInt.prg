@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 HB_FUNC_STATIC( QATOMICINT_DELETE )
 {
-  QAtomicInt * obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAtomicInt *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

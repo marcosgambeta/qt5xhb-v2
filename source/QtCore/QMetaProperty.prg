@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
 
 HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
 {
-  QMetaProperty * obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaProperty *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

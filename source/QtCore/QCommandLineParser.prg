@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEW )
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCommandLineParser * obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLineParser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

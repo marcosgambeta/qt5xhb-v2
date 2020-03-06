@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
 {
-  QEventLoopLocker * obj = (QEventLoopLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoopLocker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

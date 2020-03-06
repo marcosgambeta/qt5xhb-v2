@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

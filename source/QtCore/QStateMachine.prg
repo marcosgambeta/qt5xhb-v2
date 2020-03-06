@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 
 HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

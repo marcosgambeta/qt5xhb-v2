@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 
 HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

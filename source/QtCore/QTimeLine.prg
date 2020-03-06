@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
 
 HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
-  QTimeLine * obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

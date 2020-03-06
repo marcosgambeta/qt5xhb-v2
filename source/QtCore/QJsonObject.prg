@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
 
 HB_FUNC_STATIC( QJSONOBJECT_DELETE )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

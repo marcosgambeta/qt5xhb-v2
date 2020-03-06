@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 HB_FUNC_STATIC( QMARGINSF_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMarginsF * obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

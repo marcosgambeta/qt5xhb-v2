@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_DELETE )
 {
-  QAbstractNativeEventFilter * obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 
 HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
 {
-  QCollatorSortKey * obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

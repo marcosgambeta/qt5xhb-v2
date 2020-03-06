@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTHREADPOOL_NEW )
 
 HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

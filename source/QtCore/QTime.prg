@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 HB_FUNC_STATIC( QTIME_DELETE )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

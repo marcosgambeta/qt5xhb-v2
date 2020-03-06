@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

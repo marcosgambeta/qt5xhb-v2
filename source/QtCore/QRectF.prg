@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QRECTF_NEW )
 
 HB_FUNC_STATIC( QRECTF_DELETE )
 {
-  QRectF * obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRectF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

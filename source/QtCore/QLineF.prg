@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
 
 HB_FUNC_STATIC( QLINEF_DELETE )
 {
-  QLineF * obj = (QLineF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLineF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

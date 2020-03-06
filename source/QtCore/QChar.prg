@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
 
 HB_FUNC_STATIC( QCHAR_DELETE )
 {
-  QChar * obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QChar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

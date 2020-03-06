@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTHREAD_NEW )
 
 HB_FUNC_STATIC( QTHREAD_DELETE )
 {
-  QThread * obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThread *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
