@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QAXSELECT_NEW )
 */
 HB_FUNC_STATIC( QAXSELECT_DELETE )
 {
-  QAxSelect * obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

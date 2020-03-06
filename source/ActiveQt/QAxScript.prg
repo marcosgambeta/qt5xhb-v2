@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

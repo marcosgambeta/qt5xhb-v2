@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

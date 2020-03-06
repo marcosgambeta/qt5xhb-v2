@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

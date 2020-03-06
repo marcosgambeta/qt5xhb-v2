@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 {
-  QAxScriptManager * obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

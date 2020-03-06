@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
 
 HB_FUNC_STATIC( QAXOBJECT_DELETE )
 {
-  QAxObject * obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

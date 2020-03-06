@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXBASE_DELETE )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
