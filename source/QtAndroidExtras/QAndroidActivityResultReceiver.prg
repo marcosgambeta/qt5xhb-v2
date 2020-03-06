@@ -70,7 +70,7 @@ virtual ~QAndroidActivityResultReceiver()
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QAndroidActivityResultReceiver * obj = (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAndroidActivityResultReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

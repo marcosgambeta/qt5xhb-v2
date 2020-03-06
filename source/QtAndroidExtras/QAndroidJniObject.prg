@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW )
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAndroidJniObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
