@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 HB_FUNC_STATIC( QBLUETOOTHUUID_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

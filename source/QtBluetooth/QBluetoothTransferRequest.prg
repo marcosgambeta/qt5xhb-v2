@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothTransferRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

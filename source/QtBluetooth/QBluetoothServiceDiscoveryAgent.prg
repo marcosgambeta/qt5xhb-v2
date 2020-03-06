@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothServiceDiscoveryAgent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

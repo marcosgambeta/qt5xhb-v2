@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceInfo * obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothServiceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

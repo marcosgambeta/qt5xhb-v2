@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
