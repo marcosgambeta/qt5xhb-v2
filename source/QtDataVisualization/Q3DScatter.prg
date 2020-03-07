@@ -97,7 +97,7 @@ virtual ~Q3DScatter()
 HB_FUNC_STATIC( Q3DSCATTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScatter * obj = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

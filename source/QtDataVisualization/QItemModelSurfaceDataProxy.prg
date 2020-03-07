@@ -252,7 +252,7 @@ virtual ~QItemModelSurfaceDataProxy()
 HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelSurfaceDataProxy * obj = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemModelSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

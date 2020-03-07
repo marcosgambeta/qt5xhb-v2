@@ -90,7 +90,7 @@ virtual ~Q3DInputHandler()
 HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

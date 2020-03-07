@@ -109,7 +109,7 @@ virtual ~Q3DCamera()
 HB_FUNC_STATIC( Q3DCAMERA_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DCamera * obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -175,7 +175,7 @@ virtual ~QItemModelScatterDataProxy()
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemModelScatterDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

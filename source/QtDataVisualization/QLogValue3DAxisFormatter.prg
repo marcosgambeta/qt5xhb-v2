@@ -91,7 +91,7 @@ virtual ~QLogValue3DAxisFormatter()
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

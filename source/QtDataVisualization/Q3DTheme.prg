@@ -176,7 +176,7 @@ virtual ~Q3DTheme()
 HB_FUNC_STATIC( Q3DTHEME_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DTheme * obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DTheme *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

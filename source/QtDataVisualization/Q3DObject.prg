@@ -88,7 +88,7 @@ virtual ~Q3DObject()
 HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

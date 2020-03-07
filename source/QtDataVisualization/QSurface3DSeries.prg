@@ -130,7 +130,7 @@ virtual ~QSurface3DSeries()
 HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

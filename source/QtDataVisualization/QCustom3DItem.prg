@@ -137,7 +137,7 @@ virtual ~QCustom3DItem()
 HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DItem * obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCustom3DItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

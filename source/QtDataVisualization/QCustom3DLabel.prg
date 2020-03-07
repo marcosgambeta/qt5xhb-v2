@@ -124,7 +124,7 @@ virtual ~QCustom3DLabel()
 HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DLabel * obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCustom3DLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

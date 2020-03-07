@@ -141,7 +141,7 @@ virtual ~QHeightMapSurfaceDataProxy()
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHeightMapSurfaceDataProxy * obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHeightMapSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

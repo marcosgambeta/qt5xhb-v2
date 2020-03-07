@@ -115,7 +115,7 @@ virtual ~QAbstract3DSeries()
 HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

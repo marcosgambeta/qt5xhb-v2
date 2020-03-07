@@ -146,7 +146,7 @@ virtual ~QAbstract3DGraph()
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstract3DGraph * obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DGraph *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

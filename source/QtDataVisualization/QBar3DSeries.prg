@@ -114,7 +114,7 @@ virtual ~QBar3DSeries()
 HB_FUNC_STATIC( QBAR3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

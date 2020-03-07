@@ -115,7 +115,7 @@ virtual ~Q3DScene()
 HB_FUNC_STATIC( Q3DSCENE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

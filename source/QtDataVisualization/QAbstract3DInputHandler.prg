@@ -75,7 +75,7 @@ virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

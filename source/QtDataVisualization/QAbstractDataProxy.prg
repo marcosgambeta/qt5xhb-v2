@@ -63,7 +63,7 @@ virtual ~QAbstractDataProxy()
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstractDataProxy * obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

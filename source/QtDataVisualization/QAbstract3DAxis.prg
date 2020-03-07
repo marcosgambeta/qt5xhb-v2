@@ -93,7 +93,7 @@ virtual ~QAbstract3DAxis()
 HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAbstract3DAxis * obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

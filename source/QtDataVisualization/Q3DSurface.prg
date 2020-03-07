@@ -100,7 +100,7 @@ virtual ~Q3DSurface()
 HB_FUNC_STATIC( Q3DSURFACE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DSurface * obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

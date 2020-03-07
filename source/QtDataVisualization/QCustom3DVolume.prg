@@ -147,7 +147,7 @@ virtual ~QCustom3DVolume()
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCustom3DVolume * obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCustom3DVolume *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -119,7 +119,7 @@ virtual ~Q3DBars()
 HB_FUNC_STATIC( Q3DBARS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
