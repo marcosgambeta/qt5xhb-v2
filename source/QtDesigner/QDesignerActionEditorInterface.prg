@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
-  QDesignerActionEditorInterface * obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

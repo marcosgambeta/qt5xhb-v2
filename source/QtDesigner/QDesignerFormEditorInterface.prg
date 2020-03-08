@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 {
-  QDesignerFormEditorInterface * obj = (QDesignerFormEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

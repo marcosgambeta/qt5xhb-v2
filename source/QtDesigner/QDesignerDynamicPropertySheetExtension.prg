@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

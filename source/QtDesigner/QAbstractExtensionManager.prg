@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

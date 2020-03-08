@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
 {
-  QDesignerContainerExtension * obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

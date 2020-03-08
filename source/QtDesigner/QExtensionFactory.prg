@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
-  QDesignerTaskMenuExtension * obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

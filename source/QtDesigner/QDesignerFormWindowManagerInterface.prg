@@ -85,7 +85,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
 {
-  QDesignerFormWindowManagerInterface * obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowManagerInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

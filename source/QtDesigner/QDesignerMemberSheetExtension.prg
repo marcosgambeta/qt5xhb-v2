@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 {
-  QDesignerMemberSheetExtension * obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

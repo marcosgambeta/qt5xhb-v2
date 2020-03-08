@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
-  QExtensionManager * obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

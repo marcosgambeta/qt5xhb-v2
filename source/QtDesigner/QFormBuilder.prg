@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 {
-  QFormBuilder * obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
