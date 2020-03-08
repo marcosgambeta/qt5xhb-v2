@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 
 HB_FUNC_STATIC( QDBUSCONTEXT_DELETE )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -129,7 +129,7 @@ HB_FUNC( QDBUSSIGNATURE_NEW )
 
 HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
 {
-  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

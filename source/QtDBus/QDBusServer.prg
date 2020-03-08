@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
 
 HB_FUNC_STATIC( QDBUSSERVER_DELETE )
 {
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -116,7 +116,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_DELETE )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

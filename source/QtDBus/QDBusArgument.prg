@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 
 HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
 {
-  QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

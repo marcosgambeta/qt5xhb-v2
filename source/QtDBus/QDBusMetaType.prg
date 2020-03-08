@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QDBUSMETATYPE_DELETE )
 {
-  QDBusMetaType * obj = (QDBusMetaType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMetaType *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_DELETE )
 {
-  QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCallWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

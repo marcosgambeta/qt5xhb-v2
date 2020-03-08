@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 
 HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

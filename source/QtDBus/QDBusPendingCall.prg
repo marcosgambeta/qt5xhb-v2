@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 
 HB_FUNC_STATIC( QDBUSPENDINGCALL_DELETE )
 {
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -130,7 +130,7 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
 
 HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

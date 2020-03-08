@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
 
 HB_FUNC_STATIC( QDBUSERROR_DELETE )
 {
-  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

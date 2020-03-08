@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
 {
-  QDBusConnection * obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
