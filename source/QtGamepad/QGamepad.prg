@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
 HB_FUNC_STATIC( QGAMEPAD_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QGamepad * obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
