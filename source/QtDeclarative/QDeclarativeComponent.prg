@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

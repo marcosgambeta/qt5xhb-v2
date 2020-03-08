@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 {
-  QDeclarativeExpression * obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeExpression *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

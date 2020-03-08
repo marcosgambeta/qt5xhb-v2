@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_DELETE )
 {
-  QDeclarativeNetworkAccessManagerFactory * obj = (QDeclarativeNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

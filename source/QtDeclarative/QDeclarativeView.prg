@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

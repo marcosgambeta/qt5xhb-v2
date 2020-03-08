@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
-  QDeclarativeItem * obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

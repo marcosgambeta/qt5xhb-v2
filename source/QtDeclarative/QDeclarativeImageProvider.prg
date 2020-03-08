@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
