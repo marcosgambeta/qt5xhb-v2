@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DELETE )
 {
-  QGLFramebufferObject * obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

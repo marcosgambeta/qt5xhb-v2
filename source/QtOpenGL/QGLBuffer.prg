@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
 
 HB_FUNC_STATIC( QGLBUFFER_DELETE )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

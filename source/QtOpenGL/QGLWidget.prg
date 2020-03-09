@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
 
 HB_FUNC_STATIC( QGLWIDGET_DELETE )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

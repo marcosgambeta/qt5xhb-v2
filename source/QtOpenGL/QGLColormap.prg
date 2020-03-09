@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

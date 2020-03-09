@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 
 HB_FUNC_STATIC( QGLFUNCTIONS_DELETE )
 {
-  QGLFunctions * obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLFunctions *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

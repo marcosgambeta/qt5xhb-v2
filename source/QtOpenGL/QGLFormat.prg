@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
 
 HB_FUNC_STATIC( QGLFORMAT_DELETE )
 {
-  QGLFormat * obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
