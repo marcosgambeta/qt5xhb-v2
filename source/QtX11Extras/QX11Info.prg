@@ -77,7 +77,7 @@ RETURN
 HB_FUNC_STATIC( QX11INFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QX11Info * obj = (QX11Info *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QX11Info *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
