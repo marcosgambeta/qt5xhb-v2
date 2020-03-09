@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 HB_FUNC_STATIC( QSQLERROR_DELETE )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

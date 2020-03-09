@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 {
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
-  QSqlDriverPlugin * obj = (QSqlDriverPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriverPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

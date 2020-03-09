@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSQLRECORD_NEW )
 
 HB_FUNC_STATIC( QSQLRECORD_DELETE )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

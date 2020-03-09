@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
 
 HB_FUNC_STATIC( QSQLFIELD_DELETE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

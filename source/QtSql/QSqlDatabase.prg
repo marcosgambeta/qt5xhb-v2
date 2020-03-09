@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
 
 HB_FUNC_STATIC( QSQLDATABASE_DELETE )
 {
-  QSqlDatabase * obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

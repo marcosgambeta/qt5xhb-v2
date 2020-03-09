@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_DELETE )
 {
-  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriverCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

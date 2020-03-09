@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
-  QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

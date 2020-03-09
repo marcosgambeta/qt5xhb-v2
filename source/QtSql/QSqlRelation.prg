@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 
 HB_FUNC_STATIC( QSQLRELATION_DELETE )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
