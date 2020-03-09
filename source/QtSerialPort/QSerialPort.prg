@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW )
 HB_FUNC_STATIC( QSERIALPORT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPort * obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
