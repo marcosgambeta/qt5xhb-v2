@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_DELETE )
 {
-  QXmlDefaultHandler * obj = (QXmlDefaultHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDefaultHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

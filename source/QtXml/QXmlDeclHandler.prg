@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

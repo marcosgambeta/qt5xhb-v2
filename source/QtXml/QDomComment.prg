@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 
 HB_FUNC_STATIC( QDOMCOMMENT_DELETE )
 {
-  QDomComment * obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

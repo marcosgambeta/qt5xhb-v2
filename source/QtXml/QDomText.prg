@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 
 HB_FUNC_STATIC( QDOMTEXT_DELETE )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

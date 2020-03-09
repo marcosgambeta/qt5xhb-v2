@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDOMNODE_NEW )
 
 HB_FUNC_STATIC( QDOMNODE_DELETE )
 {
-  QDomNode * obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

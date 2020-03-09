@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 
 HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETE )
 {
-  QDomCharacterData * obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomCharacterData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

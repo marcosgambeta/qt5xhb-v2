@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

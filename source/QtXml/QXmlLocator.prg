@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLLOCATOR_DELETE )
 {
-  QXmlLocator * obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLocator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

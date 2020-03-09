@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 
 HB_FUNC_STATIC( QDOMELEMENT_DELETE )
 {
-  QDomElement * obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomElement *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

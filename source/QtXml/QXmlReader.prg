@@ -82,7 +82,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLREADER_DELETE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

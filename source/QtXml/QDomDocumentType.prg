@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_DELETE )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

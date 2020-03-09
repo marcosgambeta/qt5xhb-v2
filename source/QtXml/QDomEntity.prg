@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
 
 HB_FUNC_STATIC( QDOMENTITY_DELETE )
 {
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

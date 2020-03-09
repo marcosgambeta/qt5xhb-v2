@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 
 HB_FUNC_STATIC( QDOMNOTATION_DELETE )
 {
-  QDomNotation * obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

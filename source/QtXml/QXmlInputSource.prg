@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 {
-  QXmlInputSource * obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlInputSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
