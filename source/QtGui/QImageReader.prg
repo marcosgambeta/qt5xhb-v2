@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEW )
 
 HB_FUNC_STATIC( QIMAGEREADER_DELETE )
 {
-  QImageReader * obj = (QImageReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

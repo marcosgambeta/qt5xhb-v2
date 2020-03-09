@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 
 HB_FUNC_STATIC( QEXPOSEEVENT_DELETE )
 {
-  QExposeEvent * obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

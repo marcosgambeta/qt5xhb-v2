@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

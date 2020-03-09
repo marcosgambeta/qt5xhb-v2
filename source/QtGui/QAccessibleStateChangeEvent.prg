@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLESTATECHANGEEVENT_DELETE )
 {
-  QAccessibleStateChangeEvent * obj = (QAccessibleStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

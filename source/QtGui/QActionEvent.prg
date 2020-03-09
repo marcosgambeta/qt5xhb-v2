@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

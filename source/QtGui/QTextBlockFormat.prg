@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlockFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

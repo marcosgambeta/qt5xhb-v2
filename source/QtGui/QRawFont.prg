@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 
 HB_FUNC_STATIC( QRAWFONT_DELETE )
 {
-  QRawFont * obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRawFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

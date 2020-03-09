@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

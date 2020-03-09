@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
 
 HB_FUNC_STATIC( QMATRIX4X4_DELETE )
 {
-  QMatrix4x4 * obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix4x4 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

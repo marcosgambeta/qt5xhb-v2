@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
 
 HB_FUNC_STATIC( QQUATERNION_DELETE )
 {
-  QQuaternion * obj = (QQuaternion *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuaternion *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

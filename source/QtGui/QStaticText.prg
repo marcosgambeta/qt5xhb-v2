@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 
 HB_FUNC_STATIC( QSTATICTEXT_DELETE )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

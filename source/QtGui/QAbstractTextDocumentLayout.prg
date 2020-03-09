@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DELETE )
 {
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTextDocumentLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_DELETE )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

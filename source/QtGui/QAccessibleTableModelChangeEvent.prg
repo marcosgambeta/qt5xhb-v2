@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_DELETE )
 {
-  QAccessibleTableModelChangeEvent * obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTableModelChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

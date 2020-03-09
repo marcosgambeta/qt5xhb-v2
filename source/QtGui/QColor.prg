@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 
 HB_FUNC_STATIC( QCOLOR_DELETE )
 {
-  QColor * obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTEXTLIST_NEW )
 
 HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  QStatusTipEvent * obj = (QStatusTipEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusTipEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

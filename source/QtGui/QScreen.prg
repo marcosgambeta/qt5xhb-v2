@@ -95,7 +95,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCREEN_DELETE )
 {
-  QScreen * obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

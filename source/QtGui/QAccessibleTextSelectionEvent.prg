@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_DELETE )
 {
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

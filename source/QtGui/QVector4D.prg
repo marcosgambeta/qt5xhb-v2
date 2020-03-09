@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
 
 HB_FUNC_STATIC( QVECTOR4D_DELETE )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

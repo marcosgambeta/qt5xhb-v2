@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

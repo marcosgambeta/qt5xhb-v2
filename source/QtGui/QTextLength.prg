@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

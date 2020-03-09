@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_DELETE )
 {
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

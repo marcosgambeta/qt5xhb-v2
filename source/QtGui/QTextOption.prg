@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 {
-  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

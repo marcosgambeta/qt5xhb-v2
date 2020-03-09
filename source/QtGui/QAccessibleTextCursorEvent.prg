@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_DELETE )
 {
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

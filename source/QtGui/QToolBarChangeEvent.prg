@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

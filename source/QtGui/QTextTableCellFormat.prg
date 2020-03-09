@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_DELETE )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableCellFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

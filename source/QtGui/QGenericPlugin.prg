@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_DELETE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 HB_FUNC_STATIC( QVECTOR3D_DELETE )
 {
-  QVector3D * obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 {
-  QTextLayout * obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

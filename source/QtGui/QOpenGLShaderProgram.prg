@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_NEW )
 
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_DELETE )
 {
-  QOpenGLShaderProgram * obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShaderProgram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

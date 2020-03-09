@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 {
-  QTextFormat * obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEW )
 
 HB_FUNC_STATIC( QPDFWRITER_DELETE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

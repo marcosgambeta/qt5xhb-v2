@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 HB_FUNC_STATIC( QPAGELAYOUT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageLayout * obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

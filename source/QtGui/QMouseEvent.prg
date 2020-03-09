@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

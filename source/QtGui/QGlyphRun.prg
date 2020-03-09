@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

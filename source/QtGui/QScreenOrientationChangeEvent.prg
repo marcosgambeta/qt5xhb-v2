@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
 {
-  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QFONT_NEW )
 
 HB_FUNC_STATIC( QFONT_DELETE )
 {
-  QFont * obj = (QFont *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFont *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

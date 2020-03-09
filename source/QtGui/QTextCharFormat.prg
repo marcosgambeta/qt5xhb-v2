@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 {
-  QTextCharFormat * obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

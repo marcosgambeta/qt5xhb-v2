@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 
 HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
-  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

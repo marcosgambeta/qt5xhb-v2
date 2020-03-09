@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {
-  QImageIOHandler * obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_DELETE )
 {
-  QAccessibleTableCellInterface * obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTableCellInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

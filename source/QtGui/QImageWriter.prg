@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

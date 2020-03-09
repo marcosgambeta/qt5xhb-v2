@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 
 HB_FUNC_STATIC( QRADIALGRADIENT_DELETE )
 {
-  QRadialGradient * obj = (QRadialGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadialGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

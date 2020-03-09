@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_DELETE )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

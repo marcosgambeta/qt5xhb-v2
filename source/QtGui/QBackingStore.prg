@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 
 HB_FUNC_STATIC( QBACKINGSTORE_DELETE )
 {
-  QBackingStore * obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBackingStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

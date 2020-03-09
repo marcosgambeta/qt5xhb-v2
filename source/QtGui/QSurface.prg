@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QSURFACE_DELETE )
 {
-  QSurface * obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

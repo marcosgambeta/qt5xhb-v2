@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTITEM_DELETE )
 {
-  QTextItem * obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

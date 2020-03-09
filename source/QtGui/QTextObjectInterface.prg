@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

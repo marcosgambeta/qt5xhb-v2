@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
-  QFocusEvent * obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

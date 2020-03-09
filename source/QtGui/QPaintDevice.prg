@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

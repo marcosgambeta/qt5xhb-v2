@@ -83,7 +83,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

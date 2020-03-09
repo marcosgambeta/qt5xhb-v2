@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
-  QHoverEvent * obj = (QHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

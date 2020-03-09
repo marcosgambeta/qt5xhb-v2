@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 
 HB_FUNC_STATIC( QPALETTE_DELETE )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

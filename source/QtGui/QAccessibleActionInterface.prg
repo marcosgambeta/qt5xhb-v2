@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DELETE )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

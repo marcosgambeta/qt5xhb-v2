@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 
 HB_FUNC_STATIC( QPAINTER_DELETE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

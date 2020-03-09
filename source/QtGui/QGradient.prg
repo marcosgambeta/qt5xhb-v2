@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRADIENT_DELETE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

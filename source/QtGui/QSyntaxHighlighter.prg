@@ -66,7 +66,7 @@ virtual ~QSyntaxHighlighter()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

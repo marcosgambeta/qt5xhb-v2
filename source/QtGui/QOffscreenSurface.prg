@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 
 HB_FUNC_STATIC( QOFFSCREENSURFACE_DELETE )
 {
-  QOffscreenSurface * obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

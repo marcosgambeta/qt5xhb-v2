@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
 
 HB_FUNC_STATIC( QMOVIE_DELETE )
 {
-  QMovie * obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMovie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

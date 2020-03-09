@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

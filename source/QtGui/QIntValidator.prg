@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

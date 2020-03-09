@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
 
 HB_FUNC_STATIC( QPIXMAP_DELETE )
 {
-  QPixmap * obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPixmap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

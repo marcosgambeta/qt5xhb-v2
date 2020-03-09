@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

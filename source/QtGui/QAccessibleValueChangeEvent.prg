@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_DELETE )
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

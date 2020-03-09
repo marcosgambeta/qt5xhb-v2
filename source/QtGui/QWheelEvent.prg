@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 
 HB_FUNC_STATIC( QWHEELEVENT_DELETE )
 {
-  QWheelEvent * obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWheelEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

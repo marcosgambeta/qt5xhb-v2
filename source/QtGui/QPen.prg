@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 HB_FUNC_STATIC( QPEN_DELETE )
 {
-  QPen * obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

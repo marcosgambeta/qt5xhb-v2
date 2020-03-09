@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
 {
-  QPainterPathStroker * obj = (QPainterPathStroker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainterPathStroker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DELETE )
 {
-  QStandardItemModel * obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStandardItemModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

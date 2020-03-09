@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

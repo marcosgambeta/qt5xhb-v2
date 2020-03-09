@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

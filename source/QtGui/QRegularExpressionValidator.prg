@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

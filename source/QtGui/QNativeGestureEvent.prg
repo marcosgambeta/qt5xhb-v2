@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_DELETE )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

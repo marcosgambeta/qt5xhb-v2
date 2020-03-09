@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 {
-  QTextDocument * obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

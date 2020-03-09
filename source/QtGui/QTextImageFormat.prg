@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextImageFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

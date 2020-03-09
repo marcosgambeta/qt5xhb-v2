@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_NEW )
 
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_DELETE )
 {
-  QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugLogger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

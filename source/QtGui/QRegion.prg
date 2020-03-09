@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QREGION_NEW )
 
 HB_FUNC_STATIC( QREGION_DELETE )
 {
-  QRegion * obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegion *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

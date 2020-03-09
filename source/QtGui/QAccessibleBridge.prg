@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
 {
-  QAccessibleBridge * obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

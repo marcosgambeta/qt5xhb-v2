@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
-  QInputEvent * obj = (QInputEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

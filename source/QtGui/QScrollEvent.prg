@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 
 HB_FUNC_STATIC( QSCROLLEVENT_DELETE )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

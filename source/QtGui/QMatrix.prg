@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
 
 HB_FUNC_STATIC( QMATRIX_DELETE )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

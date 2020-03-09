@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

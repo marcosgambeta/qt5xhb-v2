@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

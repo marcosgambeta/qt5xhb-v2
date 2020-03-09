@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DELETE )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

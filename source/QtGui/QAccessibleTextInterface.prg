@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_DELETE )
 {
-  QAccessibleTextInterface * obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 {
-  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

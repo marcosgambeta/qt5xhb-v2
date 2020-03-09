@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  QKeyEvent * obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

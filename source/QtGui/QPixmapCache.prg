@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QPIXMAPCACHE_DELETE )
 {
-  QPixmapCache * obj = (QPixmapCache *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPixmapCache *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

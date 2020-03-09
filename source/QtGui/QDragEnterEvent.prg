@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGENTEREVENT_DELETE )
 {
-  QDragEnterEvent * obj = (QDragEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_NEW )
 
 HB_FUNC_STATIC( QOPENGLCONTEXT_DELETE )
 {
-  QOpenGLContext * obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

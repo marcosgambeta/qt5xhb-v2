@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
 
 HB_FUNC_STATIC( QFONTDATABASE_DELETE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

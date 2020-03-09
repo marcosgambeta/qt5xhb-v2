@@ -228,7 +228,7 @@ virtual ~QWindow()
 */
 HB_FUNC_STATIC( QWINDOW_DELETE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

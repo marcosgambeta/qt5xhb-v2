@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 
 HB_FUNC_STATIC( QFONTINFO_DELETE )
 {
-  QFontInfo * obj = (QFontInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

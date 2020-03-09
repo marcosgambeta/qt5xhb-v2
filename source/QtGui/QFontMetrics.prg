@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
 
 HB_FUNC_STATIC( QFONTMETRICS_DELETE )
 {
-  QFontMetrics * obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetrics *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

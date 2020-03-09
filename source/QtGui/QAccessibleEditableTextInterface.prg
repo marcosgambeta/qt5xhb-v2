@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_DELETE )
 {
-  QAccessibleEditableTextInterface * obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEditableTextInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

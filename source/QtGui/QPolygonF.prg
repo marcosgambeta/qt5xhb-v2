@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
 
 HB_FUNC_STATIC( QPOLYGONF_DELETE )
 {
-  QPolygonF * obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPolygonF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

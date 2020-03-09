@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QICON_NEW )
 
 HB_FUNC_STATIC( QICON_DELETE )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

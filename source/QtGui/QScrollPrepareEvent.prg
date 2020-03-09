@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_NEW )
 
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_DELETE )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

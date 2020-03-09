@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
-  QValidator * obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

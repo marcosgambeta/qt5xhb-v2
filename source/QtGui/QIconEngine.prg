@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

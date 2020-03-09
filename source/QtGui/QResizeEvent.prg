@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

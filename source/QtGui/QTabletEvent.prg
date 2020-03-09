@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
 
 HB_FUNC_STATIC( QTABLETEVENT_DELETE )
 {
-  QTabletEvent * obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabletEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

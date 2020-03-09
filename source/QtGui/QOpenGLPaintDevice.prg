@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DELETE )
 {
-  QOpenGLPaintDevice * obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

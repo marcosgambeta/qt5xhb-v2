@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

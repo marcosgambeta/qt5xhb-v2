@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 
 HB_FUNC_STATIC( QTRANSFORM_DELETE )
 {
-  QTransform * obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
