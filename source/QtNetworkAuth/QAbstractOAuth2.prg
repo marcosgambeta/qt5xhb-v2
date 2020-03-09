@@ -89,7 +89,7 @@ explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [p
 HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractOAuth2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

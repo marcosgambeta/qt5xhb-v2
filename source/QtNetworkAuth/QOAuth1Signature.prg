@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

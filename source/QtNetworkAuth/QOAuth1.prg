@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
 HB_FUNC_STATIC( QOAUTH1_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

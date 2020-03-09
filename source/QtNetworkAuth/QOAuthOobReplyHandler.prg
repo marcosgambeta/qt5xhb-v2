@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthOobReplyHandler * obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
