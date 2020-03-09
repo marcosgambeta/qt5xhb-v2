@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

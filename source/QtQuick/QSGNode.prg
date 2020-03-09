@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSGNODE_NEW )
 
 HB_FUNC_STATIC( QSGNODE_DELETE )
 {
-  QSGNode * obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

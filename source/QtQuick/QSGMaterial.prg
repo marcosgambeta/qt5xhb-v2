@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGMATERIAL_DELETE )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

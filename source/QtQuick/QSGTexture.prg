@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGTEXTURE_DELETE )
 {
-  QSGTexture * obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGTexture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

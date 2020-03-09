@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 
 HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

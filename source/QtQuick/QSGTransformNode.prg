@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
 
 HB_FUNC_STATIC( QSGTRANSFORMNODE_DELETE )
 {
-  QSGTransformNode * obj = (QSGTransformNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGTransformNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

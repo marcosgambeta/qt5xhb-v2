@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 
 HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_DELETE )
 {
-  QSGVertexColorMaterial * obj = (QSGVertexColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGVertexColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

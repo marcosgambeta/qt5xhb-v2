@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

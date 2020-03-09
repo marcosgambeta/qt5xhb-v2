@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_NEW )
 
 HB_FUNC_STATIC( QSGCLIPNODE_DELETE )
 {
-  QSGClipNode * obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGClipNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

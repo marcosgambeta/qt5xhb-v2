@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
 
 HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

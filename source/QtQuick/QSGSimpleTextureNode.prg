@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_NEW )
 
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_DELETE )
 {
-  QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGSimpleTextureNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

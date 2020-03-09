@@ -77,7 +77,7 @@ RETURN
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_DELETE )
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

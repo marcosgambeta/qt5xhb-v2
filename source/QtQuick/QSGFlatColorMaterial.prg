@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
 
 HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_DELETE )
 {
-  QSGFlatColorMaterial * obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

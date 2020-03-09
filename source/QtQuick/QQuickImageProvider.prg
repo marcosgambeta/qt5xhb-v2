@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

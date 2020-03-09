@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QQUICKITEM_NEW )
 
 HB_FUNC_STATIC( QQUICKITEM_DELETE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
