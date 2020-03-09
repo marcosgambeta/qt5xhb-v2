@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

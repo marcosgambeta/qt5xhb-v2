@@ -132,7 +132,7 @@ QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = nullpt
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
