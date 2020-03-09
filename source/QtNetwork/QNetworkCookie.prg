@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

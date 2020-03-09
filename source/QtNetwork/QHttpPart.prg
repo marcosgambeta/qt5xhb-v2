@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 */
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
 */
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
-  QLocalServer * obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

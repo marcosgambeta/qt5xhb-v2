@@ -72,7 +72,7 @@ virtual ~QAbstractNetworkCache()
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 {
-  QAbstractNetworkCache * obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractNetworkCache *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

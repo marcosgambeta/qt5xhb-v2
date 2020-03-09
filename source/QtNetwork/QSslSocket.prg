@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSSLSOCKET_NEW )
 */
 HB_FUNC_STATIC( QSSLSOCKET_DELETE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

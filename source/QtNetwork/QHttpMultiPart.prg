@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpMultiPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

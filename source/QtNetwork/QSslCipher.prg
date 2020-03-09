@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
 */
 HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

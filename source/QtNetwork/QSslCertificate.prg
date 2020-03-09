@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

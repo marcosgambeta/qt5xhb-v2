@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
 {
-  QAuthenticator * obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

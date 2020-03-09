@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 {
-  QHostAddress * obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostAddress *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

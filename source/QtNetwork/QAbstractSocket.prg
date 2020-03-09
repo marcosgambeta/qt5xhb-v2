@@ -121,7 +121,7 @@ virtual ~QAbstractSocket()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
-  QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

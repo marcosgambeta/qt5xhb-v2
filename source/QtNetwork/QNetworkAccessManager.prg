@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 {
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkAccessManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

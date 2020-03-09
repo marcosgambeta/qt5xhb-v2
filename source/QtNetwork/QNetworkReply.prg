@@ -99,7 +99,7 @@ QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
 */
 HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
-  QNetworkReply * obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

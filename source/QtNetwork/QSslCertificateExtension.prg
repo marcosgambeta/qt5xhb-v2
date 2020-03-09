@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_DELETE )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

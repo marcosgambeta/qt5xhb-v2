@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

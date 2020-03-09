@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 {
-  QNetworkProxy * obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

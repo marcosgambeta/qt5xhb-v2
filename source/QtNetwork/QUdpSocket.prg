@@ -83,7 +83,7 @@ virtual ~QUdpSocket()
 */
 HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 {
-  QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

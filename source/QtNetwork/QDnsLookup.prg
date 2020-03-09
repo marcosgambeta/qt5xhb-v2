@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
 {
-  QDnsLookup * obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsLookup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

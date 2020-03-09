@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_DELETE )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

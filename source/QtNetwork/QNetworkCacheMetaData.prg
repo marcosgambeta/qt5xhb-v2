@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
 {
-  QNetworkCacheMetaData * obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

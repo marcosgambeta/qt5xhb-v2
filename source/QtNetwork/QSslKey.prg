@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 */
 HB_FUNC_STATIC( QSSLKEY_DELETE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

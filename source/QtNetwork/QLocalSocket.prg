@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

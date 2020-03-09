@@ -99,7 +99,7 @@ virtual ~QNetworkSession()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

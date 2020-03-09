@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_DELETE )
 {
-  QDnsTextRecord * obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsTextRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

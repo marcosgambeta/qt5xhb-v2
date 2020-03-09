@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

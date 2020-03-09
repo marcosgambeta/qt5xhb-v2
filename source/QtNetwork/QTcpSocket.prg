@@ -77,7 +77,7 @@ virtual ~QTcpSocket()
 */
 HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 {
-  QTcpSocket * obj = (QTcpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTcpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

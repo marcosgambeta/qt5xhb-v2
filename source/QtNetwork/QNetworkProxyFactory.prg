@@ -71,7 +71,7 @@ virtual ~QNetworkProxyFactory()
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
 {
-  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

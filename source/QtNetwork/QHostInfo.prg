@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QHOSTINFO_NEW )
 */
 HB_FUNC_STATIC( QHOSTINFO_DELETE )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_DELETE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

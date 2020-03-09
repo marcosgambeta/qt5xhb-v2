@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 */
 HB_FUNC_STATIC( QSSLERROR_DELETE )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

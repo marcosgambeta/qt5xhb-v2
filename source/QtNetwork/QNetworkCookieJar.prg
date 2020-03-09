@@ -77,7 +77,7 @@ virtual ~QNetworkCookieJar()
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

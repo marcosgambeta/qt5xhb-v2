@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

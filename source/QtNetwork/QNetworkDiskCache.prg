@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_DELETE )
 {
-  QNetworkDiskCache * obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDiskCache *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

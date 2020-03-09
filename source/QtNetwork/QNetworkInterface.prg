@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

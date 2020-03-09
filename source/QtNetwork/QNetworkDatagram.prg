@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

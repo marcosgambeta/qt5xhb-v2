@@ -99,7 +99,7 @@ virtual ~QTcpServer()
 */
 HB_FUNC_STATIC( QTCPSERVER_DELETE )
 {
-  QTcpServer * obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTcpServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
