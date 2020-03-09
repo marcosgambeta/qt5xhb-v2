@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_NEW )
 HB_FUNC_STATIC( QWEBENGINEPAGE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

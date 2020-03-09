@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
