@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 HB_FUNC_STATIC( QCANBUSFRAME_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

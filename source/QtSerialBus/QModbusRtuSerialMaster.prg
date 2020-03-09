@@ -63,7 +63,7 @@ QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = null
 HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusRtuSerialMaster * obj = (QModbusRtuSerialMaster *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QModbusRtuSerialMaster *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

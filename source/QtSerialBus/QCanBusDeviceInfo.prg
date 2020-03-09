@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * obj = (QCanBusDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCanBusDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
