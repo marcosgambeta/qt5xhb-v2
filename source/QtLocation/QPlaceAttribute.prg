@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
 HB_FUNC_STATIC( QPLACEATTRIBUTE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

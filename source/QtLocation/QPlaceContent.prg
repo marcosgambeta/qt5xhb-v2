@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
 HB_FUNC_STATIC( QPLACECONTENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 HB_FUNC_STATIC( QGEOMANEUVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoManeuver * obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoManeuver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

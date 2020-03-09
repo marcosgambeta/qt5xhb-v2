@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
 HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -96,7 +96,7 @@ RETURN
 HB_FUNC_STATIC( QPLACEMANAGERENGINE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManagerEngine * obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceManagerEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPLACESEARCHREPLY_NEW )
 HB_FUNC_STATIC( QPLACESEARCHREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

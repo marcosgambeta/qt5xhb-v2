@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 HB_FUNC_STATIC( QGEOCODEREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodeReply * obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodeReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

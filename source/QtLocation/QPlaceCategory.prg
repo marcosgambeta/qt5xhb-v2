@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 HB_FUNC_STATIC( QPLACECATEGORY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

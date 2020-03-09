@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 HB_FUNC_STATIC( QPLACECONTENTREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

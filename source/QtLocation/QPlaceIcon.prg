@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
 HB_FUNC_STATIC( QPLACEICON_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

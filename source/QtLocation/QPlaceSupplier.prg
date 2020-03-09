@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 HB_FUNC_STATIC( QPLACESUPPLIER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

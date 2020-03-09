@@ -73,7 +73,7 @@ RETURN
 HB_FUNC_STATIC( QGEOROUTINGMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoutingManager * obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRoutingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

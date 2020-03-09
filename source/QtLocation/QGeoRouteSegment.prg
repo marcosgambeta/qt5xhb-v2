@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 HB_FUNC_STATIC( QGEOROUTESEGMENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteSegment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

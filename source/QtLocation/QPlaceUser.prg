@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
 HB_FUNC_STATIC( QPLACEUSER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
