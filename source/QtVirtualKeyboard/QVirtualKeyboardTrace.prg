@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -52,7 +52,7 @@ virtual ~QVirtualKeyboardExtensionPlugin()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 {
-  QVirtualKeyboardExtensionPlugin * obj = (QVirtualKeyboardExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

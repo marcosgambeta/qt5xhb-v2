@@ -71,7 +71,7 @@ explicit QVirtualKeyboardSelectionListModel(QObject *parent = nullptr) [private]
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DELETE )
 {
-  QVirtualKeyboardSelectionListModel * obj = (QVirtualKeyboardSelectionListModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardSelectionListModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

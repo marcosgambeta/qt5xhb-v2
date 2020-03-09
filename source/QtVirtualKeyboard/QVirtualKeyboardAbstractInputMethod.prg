@@ -81,7 +81,7 @@ explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullptr) [abstrac
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_DELETE )
 {
-  QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardAbstractInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

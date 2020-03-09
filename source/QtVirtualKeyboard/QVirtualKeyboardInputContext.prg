@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_NEW )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_DELETE )
 {
-  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
