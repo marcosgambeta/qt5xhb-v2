@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

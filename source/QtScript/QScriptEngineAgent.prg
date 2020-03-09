@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
-  QScriptEngineAgent * obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

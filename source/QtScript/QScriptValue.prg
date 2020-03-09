@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
 {
-  QScriptValue * obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptValue *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
