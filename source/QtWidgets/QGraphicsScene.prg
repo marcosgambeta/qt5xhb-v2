@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

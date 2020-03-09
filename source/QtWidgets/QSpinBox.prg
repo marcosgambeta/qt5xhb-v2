@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
 
 HB_FUNC_STATIC( QSPINBOX_DELETE )
 {
-  QSpinBox * obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

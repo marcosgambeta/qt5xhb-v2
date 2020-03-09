@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 
 HB_FUNC_STATIC( QCHECKBOX_DELETE )
 {
-  QCheckBox * obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

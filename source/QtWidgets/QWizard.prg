@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWIZARD_NEW )
 
 HB_FUNC_STATIC( QWIZARD_DELETE )
 {
-  QWizard * obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizard *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

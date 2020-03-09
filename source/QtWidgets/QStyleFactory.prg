@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEFACTORY_DELETE )
 {
-  QStyleFactory * obj = (QStyleFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

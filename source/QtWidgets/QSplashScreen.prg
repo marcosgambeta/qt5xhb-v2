@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
-  QSplashScreen * obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

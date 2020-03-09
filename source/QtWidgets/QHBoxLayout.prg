@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
 {
-  QHBoxLayout * obj = (QHBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

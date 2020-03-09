@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
 
 HB_FUNC_STATIC( QTREEVIEW_DELETE )
 {
-  QTreeView * obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

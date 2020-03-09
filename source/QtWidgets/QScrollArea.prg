@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
 
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
-  QScrollArea * obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

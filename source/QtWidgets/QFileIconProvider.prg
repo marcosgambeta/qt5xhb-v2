@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 
 HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 {
-  QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

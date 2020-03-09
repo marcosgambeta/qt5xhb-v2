@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
-  QItemDelegate * obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

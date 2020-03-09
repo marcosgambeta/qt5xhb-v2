@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_DELETE )
 {
-  QTreeWidgetItemIterator * obj = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeWidgetItemIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

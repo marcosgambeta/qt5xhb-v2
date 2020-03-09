@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 {
-  QMouseEventTransition * obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

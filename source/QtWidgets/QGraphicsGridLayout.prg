@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_DELETE )
 {
-  QGraphicsGridLayout * obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

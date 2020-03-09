@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 
 HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

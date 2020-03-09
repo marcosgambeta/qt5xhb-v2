@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
-  QItemEditorCreatorBase * obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

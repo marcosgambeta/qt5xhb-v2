@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 
 HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
-  QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 {
-  QGraphicsRotation * obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

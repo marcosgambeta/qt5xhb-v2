@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 
 HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

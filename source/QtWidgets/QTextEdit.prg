@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
 
 HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 {
-  QTextEdit * obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

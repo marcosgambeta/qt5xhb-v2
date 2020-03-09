@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
 
 HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 {
-  QComboBox * obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

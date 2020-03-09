@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
 
 HB_FUNC_STATIC( QSPACERITEM_DELETE )
 {
-  QSpacerItem * obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSpacerItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

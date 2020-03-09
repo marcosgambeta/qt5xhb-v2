@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
 
 HB_FUNC_STATIC( QWIDGETITEMV2_DELETE )
 {
-  QWidgetItemV2 * obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItemV2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

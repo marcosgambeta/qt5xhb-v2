@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
 
 HB_FUNC_STATIC( QLINEEDIT_DELETE )
 {
-  QLineEdit * obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLineEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

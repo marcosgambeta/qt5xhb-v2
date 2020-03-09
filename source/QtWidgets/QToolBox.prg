@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTOOLBOX_NEW )
 
 HB_FUNC_STATIC( QTOOLBOX_DELETE )
 {
-  QToolBox * obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
-  QShortcut * obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QShortcut *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

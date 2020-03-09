@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

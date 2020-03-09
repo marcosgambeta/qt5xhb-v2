@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

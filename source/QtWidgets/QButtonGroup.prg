@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 
 HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
-  QButtonGroup * obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QButtonGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

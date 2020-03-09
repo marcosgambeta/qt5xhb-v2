@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
-  QStatusBar * obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

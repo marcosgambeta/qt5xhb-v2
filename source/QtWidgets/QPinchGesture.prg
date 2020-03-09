@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QPINCHGESTURE_DELETE )
 {
-  QPinchGesture * obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPinchGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

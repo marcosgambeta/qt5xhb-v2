@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 
 HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 {
-  QRadioButton * obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

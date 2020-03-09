@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

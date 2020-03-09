@@ -86,7 +86,7 @@ for (i1=0;i1<nLen1;i1++)
 
 HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
-  QGestureEvent * obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 
 HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
-  QCommonStyle * obj = (QCommonStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommonStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

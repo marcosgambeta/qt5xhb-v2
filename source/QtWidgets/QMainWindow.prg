@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
 
 HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 {
-  QMainWindow * obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
-  QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

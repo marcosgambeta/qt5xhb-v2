@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 
 HB_FUNC_STATIC( QGROUPBOX_DELETE )
 {
-  QGroupBox * obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

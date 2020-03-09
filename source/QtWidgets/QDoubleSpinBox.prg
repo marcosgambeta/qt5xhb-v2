@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_DELETE )
 {
-  QDoubleSpinBox * obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

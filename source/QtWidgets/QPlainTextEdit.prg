@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DELETE )
 {
-  QPlainTextEdit * obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

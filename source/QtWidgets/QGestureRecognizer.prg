@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {
-  QGestureRecognizer * obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

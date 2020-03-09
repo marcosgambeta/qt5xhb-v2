@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  QKeyEventTransition * obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

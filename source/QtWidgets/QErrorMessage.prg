@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

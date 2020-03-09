@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 
 HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

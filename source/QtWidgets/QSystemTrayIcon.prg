@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

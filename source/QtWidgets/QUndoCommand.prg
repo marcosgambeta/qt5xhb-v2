@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 
 HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 {
-  QUndoCommand * obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

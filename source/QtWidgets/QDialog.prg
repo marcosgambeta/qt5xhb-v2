@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
 
 HB_FUNC_STATIC( QDIALOG_DELETE )
 {
-  QDialog * obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

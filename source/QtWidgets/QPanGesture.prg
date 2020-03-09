@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QPANGESTURE_DELETE )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

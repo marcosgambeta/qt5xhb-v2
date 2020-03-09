@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

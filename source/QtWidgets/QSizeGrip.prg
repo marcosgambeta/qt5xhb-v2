@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

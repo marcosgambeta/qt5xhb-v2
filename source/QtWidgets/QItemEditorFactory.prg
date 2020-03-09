@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
-  QItemEditorFactory * obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

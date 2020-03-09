@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 
 HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
 {
-  QFormLayout * obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFormLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

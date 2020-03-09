@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
-  QGesture * obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLISTWIDGET_NEW )
 
 HB_FUNC_STATIC( QLISTWIDGET_DELETE )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -125,7 +125,7 @@ QTableView(QTableViewPrivate &, QWidget *parent) [protected]
 */
 HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 {
-  QTableView * obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

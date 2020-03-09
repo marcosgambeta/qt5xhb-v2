@@ -86,7 +86,7 @@ RETURN
 
 HB_FUNC_STATIC( QLAYOUT_DELETE )
 {
-  QLayout * obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

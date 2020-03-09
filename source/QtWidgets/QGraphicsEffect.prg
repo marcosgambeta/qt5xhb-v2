@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

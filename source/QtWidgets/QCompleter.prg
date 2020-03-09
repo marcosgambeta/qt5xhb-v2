@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 */
 HB_FUNC_STATIC( QCOMPLETER_DELETE )
 {
-  QCompleter * obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCompleter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -97,7 +97,7 @@ QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = nullptr) [protecte
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {
-  QAbstractButton * obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
 {
-  QStylePlugin * obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

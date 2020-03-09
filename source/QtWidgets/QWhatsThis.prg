@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
-  QWhatsThis * obj = (QWhatsThis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWhatsThis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

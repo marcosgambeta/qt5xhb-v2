@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_DELETE )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

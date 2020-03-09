@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QTOOLTIP_DELETE )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

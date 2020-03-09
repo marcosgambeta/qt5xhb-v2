@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
 
 HB_FUNC_STATIC( QFONTDIALOG_DELETE )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

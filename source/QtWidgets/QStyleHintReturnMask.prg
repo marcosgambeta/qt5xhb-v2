@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
 {
-  QStyleHintReturnMask * obj = (QStyleHintReturnMask *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHintReturnMask *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

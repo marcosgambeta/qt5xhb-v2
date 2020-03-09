@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

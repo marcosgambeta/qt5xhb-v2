@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

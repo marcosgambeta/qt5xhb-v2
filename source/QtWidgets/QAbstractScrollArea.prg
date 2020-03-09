@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

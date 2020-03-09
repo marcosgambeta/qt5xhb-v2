@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDIAL_NEW )
 
 HB_FUNC_STATIC( QDIAL_DELETE )
 {
-  QDial * obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

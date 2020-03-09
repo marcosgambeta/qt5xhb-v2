@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 
 HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplitterHandle *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  QFrame * obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

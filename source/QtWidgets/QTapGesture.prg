@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
-  QTapGesture * obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapGesture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

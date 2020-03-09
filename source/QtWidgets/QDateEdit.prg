@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
 
 HB_FUNC_STATIC( QDATEEDIT_DELETE )
 {
-  QDateEdit * obj = (QDateEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDateEdit *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

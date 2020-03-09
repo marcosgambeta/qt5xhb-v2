@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 
 HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

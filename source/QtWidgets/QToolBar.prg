@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
 
 HB_FUNC_STATIC( QTOOLBAR_DELETE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

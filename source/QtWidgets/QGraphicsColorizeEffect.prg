@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

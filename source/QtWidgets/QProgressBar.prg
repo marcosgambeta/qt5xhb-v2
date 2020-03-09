@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 
 HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

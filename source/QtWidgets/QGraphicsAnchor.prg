@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsAnchor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

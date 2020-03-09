@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

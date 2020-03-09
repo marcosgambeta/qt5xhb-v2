@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
-  QTableWidgetSelectionRange * obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

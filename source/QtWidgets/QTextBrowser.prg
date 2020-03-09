@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 
 HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
 {
-  QTextBrowser * obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 
 HB_FUNC_STATIC( QSLIDER_DELETE )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

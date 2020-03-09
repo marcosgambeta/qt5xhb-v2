@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
 
 HB_FUNC_STATIC( QMENUBAR_DELETE )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_DELETE )
 {
-  QGraphicsItemAnimation * obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 
 HB_FUNC_STATIC( QWIZARDPAGE_DELETE )
 {
-  QWizardPage * obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

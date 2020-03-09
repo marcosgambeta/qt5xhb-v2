@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 
 HB_FUNC_STATIC( QPROXYSTYLE_DELETE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

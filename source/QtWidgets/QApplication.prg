@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  QApplication * obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

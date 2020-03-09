@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QHEADERVIEW_NEW )
 
 HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 {
-  QHeaderView * obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHeaderView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

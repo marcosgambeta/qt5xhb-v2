@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QUNDOSTACK_NEW )
 
 HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 {
-  QUndoStack * obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoStack *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
-  QGraphicsScale * obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

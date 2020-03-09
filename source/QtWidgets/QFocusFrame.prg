@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 
 HB_FUNC_STATIC( QFOCUSFRAME_DELETE )
 {
-  QFocusFrame * obj = (QFocusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
