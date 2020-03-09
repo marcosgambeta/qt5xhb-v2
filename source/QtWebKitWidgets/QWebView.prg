@@ -123,7 +123,7 @@ virtual ~QWebView()
 */
 HB_FUNC_STATIC( QWEBVIEW_DELETE )
 {
-  QWebView * obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

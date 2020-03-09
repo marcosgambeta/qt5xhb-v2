@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_DELETE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

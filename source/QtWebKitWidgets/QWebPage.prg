@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWEBPAGE_NEW )
 */
 HB_FUNC_STATIC( QWEBPAGE_DELETE )
 {
-  QWebPage * obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebPage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

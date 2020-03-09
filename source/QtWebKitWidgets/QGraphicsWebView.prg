@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsWebView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

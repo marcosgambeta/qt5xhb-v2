@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
