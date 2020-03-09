@@ -68,7 +68,7 @@ explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QOb
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

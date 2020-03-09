@@ -62,7 +62,7 @@ explicit QInAppProduct(const QString &price, const QString &title, const QString
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

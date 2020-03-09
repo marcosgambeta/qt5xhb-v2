@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 */
 HB_FUNC_STATIC( QINAPPSTORE_DELETE )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
