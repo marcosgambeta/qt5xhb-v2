@@ -64,7 +64,7 @@ virtual ~QWebEngineCookieStore()
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

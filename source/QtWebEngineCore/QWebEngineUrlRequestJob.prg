@@ -63,7 +63,7 @@ QWebEngineUrlRequestJob(QtWebEngineCore::URLRequestCustomJobDelegate *) [private
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_DELETE )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

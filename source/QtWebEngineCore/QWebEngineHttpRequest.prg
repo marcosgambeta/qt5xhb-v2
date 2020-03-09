@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_DELETE )
 {
-  QWebEngineHttpRequest * obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_DELETE )
 {
-  QWebEngineUrlSchemeHandler * obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
