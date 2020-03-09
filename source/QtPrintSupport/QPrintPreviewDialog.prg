@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

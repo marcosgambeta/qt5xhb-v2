@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 {
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

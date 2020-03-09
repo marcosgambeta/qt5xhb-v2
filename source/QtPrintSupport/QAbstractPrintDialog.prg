@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_DELETE )
 {
-  QAbstractPrintDialog * obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

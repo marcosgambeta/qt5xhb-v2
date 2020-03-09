@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPRINTER_NEW )
 
 HB_FUNC_STATIC( QPRINTER_DELETE )
 {
-  QPrinter * obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrinter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

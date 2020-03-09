@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

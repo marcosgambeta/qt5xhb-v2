@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrinterInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
