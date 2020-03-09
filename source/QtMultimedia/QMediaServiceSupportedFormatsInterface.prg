@@ -62,7 +62,7 @@ virtual ~QMediaServiceSupportedFormatsInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

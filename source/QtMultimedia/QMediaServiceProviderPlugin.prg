@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
 {
-  QMediaServiceProviderPlugin * obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

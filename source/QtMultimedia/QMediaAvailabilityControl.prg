@@ -58,7 +58,7 @@ explicit QMediaAvailabilityControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_DELETE )
 {
-  QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaAvailabilityControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_DELETE )
 {
-  QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

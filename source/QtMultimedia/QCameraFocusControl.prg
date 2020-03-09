@@ -71,7 +71,7 @@ explicit QCameraFocusControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_DELETE )
 {
-  QCameraFocusControl * obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

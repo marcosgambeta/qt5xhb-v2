@@ -60,7 +60,7 @@ explicit QVideoRendererControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
 {
-  QVideoRendererControl * obj = (QVideoRendererControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoRendererControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

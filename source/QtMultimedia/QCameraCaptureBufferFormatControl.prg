@@ -60,7 +60,7 @@ explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr) [protected
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

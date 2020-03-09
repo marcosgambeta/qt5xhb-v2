@@ -65,7 +65,7 @@ virtual ~QAudioRoleControl()
 HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QAudioRoleControl * obj = (QAudioRoleControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioRoleControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 {
-  QAudioFormat * obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

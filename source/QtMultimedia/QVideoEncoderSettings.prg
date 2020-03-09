@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_DELETE )
 {
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

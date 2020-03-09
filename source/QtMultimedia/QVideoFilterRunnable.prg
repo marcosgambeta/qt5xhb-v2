@@ -67,7 +67,7 @@ virtual ~QVideoFilterRunnable()
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QVideoFilterRunnable * obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

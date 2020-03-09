@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DELETE )
 {
-  QAudioDeviceInfo * obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_DELETE )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

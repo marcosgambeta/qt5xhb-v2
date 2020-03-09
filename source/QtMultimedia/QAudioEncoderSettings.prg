@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_DELETE )
 {
-  QAudioEncoderSettings * obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

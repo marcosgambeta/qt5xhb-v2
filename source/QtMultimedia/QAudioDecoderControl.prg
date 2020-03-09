@@ -81,7 +81,7 @@ explicit QAudioDecoderControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_DELETE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -65,7 +65,7 @@ explicit QCameraExposureControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

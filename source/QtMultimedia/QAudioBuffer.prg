@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DELETE )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

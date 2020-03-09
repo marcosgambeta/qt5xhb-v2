@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 */
 HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

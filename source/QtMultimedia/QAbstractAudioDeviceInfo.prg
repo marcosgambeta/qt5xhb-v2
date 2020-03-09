@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_DELETE )
 {
-  QAbstractAudioDeviceInfo * obj = (QAbstractAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

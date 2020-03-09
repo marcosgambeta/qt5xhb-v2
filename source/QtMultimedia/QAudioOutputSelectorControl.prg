@@ -63,7 +63,7 @@ virtual ~QAudioOutputSelectorControl()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DELETE )
 {
-  QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

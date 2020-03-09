@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_DELETE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

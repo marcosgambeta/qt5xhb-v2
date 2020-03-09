@@ -82,7 +82,7 @@ explicit QVideoWindowControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DELETE )
 {
-  QVideoWindowControl * obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWindowControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

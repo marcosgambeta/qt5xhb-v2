@@ -63,7 +63,7 @@ virtual ~QAudioInputSelectorControl()
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

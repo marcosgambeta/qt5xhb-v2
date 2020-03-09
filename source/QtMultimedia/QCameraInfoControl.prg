@@ -62,7 +62,7 @@ virtual ~QCameraInfoControl()
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

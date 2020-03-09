@@ -72,7 +72,7 @@ explicit QRadioDataControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )
 {
-  QRadioDataControl * obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioDataControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

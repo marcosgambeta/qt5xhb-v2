@@ -134,7 +134,7 @@ QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *pa
 */
 HB_FUNC_STATIC( QMEDIARECORDER_DELETE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

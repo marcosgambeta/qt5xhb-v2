@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QAUDIODECODER_NEW )
 */
 HB_FUNC_STATIC( QAUDIODECODER_DELETE )
 {
-  QAudioDecoder * obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

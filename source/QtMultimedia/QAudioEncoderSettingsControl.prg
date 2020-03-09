@@ -61,7 +61,7 @@ virtual ~QAudioEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_DELETE )
 {
-  QAudioEncoderSettingsControl * obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

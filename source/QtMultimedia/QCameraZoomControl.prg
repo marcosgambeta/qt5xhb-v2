@@ -69,7 +69,7 @@ explicit QCameraZoomControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )
 {
-  QCameraZoomControl * obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

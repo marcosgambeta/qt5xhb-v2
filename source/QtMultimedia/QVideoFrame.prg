@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 {
-  QVideoFrame * obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 */
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

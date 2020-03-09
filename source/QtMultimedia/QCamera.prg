@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCAMERA_NEW )
 */
 HB_FUNC_STATIC( QCAMERA_DELETE )
 {
-  QCamera * obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCamera *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

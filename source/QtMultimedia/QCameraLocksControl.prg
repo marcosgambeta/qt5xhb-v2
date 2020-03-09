@@ -61,7 +61,7 @@ explicit QCameraLocksControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

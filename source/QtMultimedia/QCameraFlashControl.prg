@@ -61,7 +61,7 @@ explicit QCameraFlashControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

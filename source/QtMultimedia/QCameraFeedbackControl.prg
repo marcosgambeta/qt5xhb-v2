@@ -60,7 +60,7 @@ explicit QCameraFeedbackControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

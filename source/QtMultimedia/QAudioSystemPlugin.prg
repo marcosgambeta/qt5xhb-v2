@@ -63,7 +63,7 @@ explicit QAudioSystemPlugin(QObject *parent = nullptr) (abstract)
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_DELETE )
 {
-  QAudioSystemPlugin * obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

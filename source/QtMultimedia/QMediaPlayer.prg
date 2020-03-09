@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_DELETE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

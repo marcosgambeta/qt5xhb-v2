@@ -62,7 +62,7 @@ virtual ~QImageEncoderControl()
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_DELETE )
 {
-  QImageEncoderControl * obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

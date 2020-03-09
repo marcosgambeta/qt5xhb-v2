@@ -60,7 +60,7 @@ virtual ~QMediaNetworkAccessControl()
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_DELETE )
 {
-  QMediaNetworkAccessControl * obj = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

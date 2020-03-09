@@ -64,7 +64,7 @@ virtual ~QCameraViewfinderSettingsControl2()
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

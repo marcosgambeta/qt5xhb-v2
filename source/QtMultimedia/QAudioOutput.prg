@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 {
-  QAudioOutput * obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

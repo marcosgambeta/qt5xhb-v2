@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_DELETE )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
 */
 HB_FUNC_STATIC( QRADIODATA_DELETE )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

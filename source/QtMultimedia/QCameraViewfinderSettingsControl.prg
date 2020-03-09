@@ -59,7 +59,7 @@ explicit QCameraViewfinderSettingsControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
 {
-  QCameraViewfinderSettingsControl * obj = (QCameraViewfinderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

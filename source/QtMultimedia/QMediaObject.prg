@@ -82,7 +82,7 @@ QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) [
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

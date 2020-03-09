@@ -74,7 +74,7 @@ explicit QAbstractVideoSurface(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

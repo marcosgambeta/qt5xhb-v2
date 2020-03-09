@@ -63,7 +63,7 @@ explicit QMetaDataReaderControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

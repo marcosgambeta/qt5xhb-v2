@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

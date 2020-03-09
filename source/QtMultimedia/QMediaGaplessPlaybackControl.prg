@@ -65,7 +65,7 @@ virtual ~QMediaGaplessPlaybackControl()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DELETE )
 {
-  QMediaServiceProviderHint * obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

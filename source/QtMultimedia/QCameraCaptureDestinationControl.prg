@@ -60,7 +60,7 @@ explicit QCameraCaptureDestinationControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

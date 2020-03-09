@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

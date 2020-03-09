@@ -68,7 +68,7 @@ virtual ~QAudioSystemFactoryInterface()
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_DELETE )
 {
-  QAudioSystemFactoryInterface * obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

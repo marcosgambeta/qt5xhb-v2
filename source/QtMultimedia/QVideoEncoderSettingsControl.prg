@@ -63,7 +63,7 @@ virtual ~QVideoEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_DELETE )
 {
-  QVideoEncoderSettingsControl * obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

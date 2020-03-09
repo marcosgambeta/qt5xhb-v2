@@ -61,7 +61,7 @@ virtual ~QMediaServiceProviderFactoryInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_DELETE )
 {
-  QMediaServiceProviderFactoryInterface * obj = (QMediaServiceProviderFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

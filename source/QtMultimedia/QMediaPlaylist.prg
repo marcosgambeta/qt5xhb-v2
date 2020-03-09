@@ -106,7 +106,7 @@ virtual ~QMediaPlaylist()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_DELETE )
 {
-  QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

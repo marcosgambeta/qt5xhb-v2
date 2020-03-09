@@ -66,7 +66,7 @@ explicit QMetaDataWriterControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_DELETE )
 {
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaDataWriterControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

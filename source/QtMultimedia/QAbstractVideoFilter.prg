@@ -66,7 +66,7 @@ explicit QAbstractVideoFilter(QObject *parent = nullptr) (abstract)
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

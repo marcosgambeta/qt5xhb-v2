@@ -95,7 +95,7 @@ explicit QMediaPlayerControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DELETE )
 {
-  QMediaPlayerControl * obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlayerControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_DELETE )
 {
-  QVideoSurfaceFormat * obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

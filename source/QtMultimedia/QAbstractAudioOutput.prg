@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_DELETE )
 {
-  QAbstractAudioOutput * obj = (QAbstractAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractAudioOutput *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

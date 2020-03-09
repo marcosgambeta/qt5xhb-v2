@@ -68,7 +68,7 @@ explicit QCameraImageCaptureControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

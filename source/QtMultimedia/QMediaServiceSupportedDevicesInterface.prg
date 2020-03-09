@@ -63,7 +63,7 @@ virtual ~QMediaServiceSupportedDevicesInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_DELETE )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

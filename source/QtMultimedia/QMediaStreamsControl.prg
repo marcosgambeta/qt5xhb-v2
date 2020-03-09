@@ -64,7 +64,7 @@ virtual ~QMediaStreamsControl()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

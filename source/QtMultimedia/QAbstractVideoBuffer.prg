@@ -72,7 +72,7 @@ virtual ~QAbstractVideoBuffer()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

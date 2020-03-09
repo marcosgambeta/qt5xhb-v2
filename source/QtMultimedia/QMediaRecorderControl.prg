@@ -77,7 +77,7 @@ virtual ~QMediaRecorderControl()
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DELETE )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaRecorderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

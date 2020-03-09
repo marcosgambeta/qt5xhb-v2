@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

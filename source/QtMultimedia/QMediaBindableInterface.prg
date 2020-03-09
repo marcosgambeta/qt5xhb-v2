@@ -62,7 +62,7 @@ virtual ~QMediaBindableInterface()
 */
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_DELETE )
 {
-  QMediaBindableInterface * obj = (QMediaBindableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaBindableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

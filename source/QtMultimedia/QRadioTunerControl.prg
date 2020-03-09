@@ -92,7 +92,7 @@ explicit QRadioTunerControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )
 {
-  QRadioTunerControl * obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioTunerControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

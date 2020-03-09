@@ -61,7 +61,7 @@ virtual ~QMediaContainerControl()
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_DELETE )
 {
-  QMediaContainerControl * obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

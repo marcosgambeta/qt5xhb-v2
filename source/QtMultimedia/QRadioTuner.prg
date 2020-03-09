@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QRADIOTUNER_NEW )
 */
 HB_FUNC_STATIC( QRADIOTUNER_DELETE )
 {
-  QRadioTuner * obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioTuner *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

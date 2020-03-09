@@ -65,7 +65,7 @@ virtual ~QVideoDeviceSelectorControl()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoDeviceSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

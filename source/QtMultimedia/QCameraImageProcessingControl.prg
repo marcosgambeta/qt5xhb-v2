@@ -60,7 +60,7 @@ explicit QCameraImageProcessingControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_DELETE )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
