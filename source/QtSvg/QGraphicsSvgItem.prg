@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_DELETE )
 {
-  QGraphicsSvgItem * obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

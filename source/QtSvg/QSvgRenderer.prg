@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
 
 HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 {
-  QSvgRenderer * obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgRenderer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

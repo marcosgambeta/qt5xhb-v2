@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 
 HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
 {
-  QSvgGenerator * obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
