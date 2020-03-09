@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QQMLENGINE_NEW )
 
 HB_FUNC_STATIC( QQMLENGINE_DELETE )
 {
-  QQmlEngine * obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

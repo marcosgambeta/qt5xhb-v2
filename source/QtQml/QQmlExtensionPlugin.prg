@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_DELETE )
 {
-  QQmlExtensionPlugin * obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

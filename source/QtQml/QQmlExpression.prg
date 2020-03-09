@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 
 HB_FUNC_STATIC( QQMLEXPRESSION_DELETE )
 {
-  QQmlExpression * obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

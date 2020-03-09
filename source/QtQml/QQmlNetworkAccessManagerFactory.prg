@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_DELETE )
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

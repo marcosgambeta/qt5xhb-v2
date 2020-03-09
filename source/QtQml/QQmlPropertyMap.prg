@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
 
 HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

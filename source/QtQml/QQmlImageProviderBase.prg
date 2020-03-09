@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_DELETE )
 {
-  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlImageProviderBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

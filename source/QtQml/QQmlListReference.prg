@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

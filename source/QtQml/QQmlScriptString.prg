@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 {
-  QQmlScriptString * obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

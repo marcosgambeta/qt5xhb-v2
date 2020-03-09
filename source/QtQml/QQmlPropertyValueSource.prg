@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_DELETE )
 {
-  QQmlPropertyValueSource * obj = (QQmlPropertyValueSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyValueSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

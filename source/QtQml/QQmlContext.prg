@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 
 HB_FUNC_STATIC( QQMLCONTEXT_DELETE )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 
 HB_FUNC_STATIC( QJSVALUEITERATOR_DELETE )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 
 HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
 {
-  QQmlIncubator * obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

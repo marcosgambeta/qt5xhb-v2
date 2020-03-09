@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
 
 HB_FUNC_STATIC( QQMLERROR_DELETE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
