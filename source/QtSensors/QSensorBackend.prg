@@ -69,7 +69,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORBACKEND_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

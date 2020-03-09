@@ -54,7 +54,7 @@ RETURN
 HB_FUNC_STATIC( QHOLSTERFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterFilter * obj = (QHolsterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHolsterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -62,7 +62,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

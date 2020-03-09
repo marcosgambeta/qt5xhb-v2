@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

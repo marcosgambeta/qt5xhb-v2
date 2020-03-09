@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QPROXIMITYREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

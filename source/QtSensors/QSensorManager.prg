@@ -70,7 +70,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorManager * obj = (QSensorManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -54,7 +54,7 @@ RETURN
 HB_FUNC_STATIC( QORIENTATIONFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationFilter * obj = (QOrientationFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOrientationFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

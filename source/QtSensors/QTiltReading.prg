@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC( QTILTREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTiltReading * obj = (QTiltReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTiltReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

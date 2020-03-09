@@ -60,7 +60,7 @@ RETURN
 HB_FUNC_STATIC( QGYROSCOPEREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeReading * obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGyroscopeReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

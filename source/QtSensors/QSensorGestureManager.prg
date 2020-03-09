@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGestureManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
