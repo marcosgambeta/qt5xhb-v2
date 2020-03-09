@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

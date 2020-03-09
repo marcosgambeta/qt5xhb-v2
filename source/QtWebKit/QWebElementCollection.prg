@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

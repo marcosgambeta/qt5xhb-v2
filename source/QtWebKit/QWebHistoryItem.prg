@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 
 HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

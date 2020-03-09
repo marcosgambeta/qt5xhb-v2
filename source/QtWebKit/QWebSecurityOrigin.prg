@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

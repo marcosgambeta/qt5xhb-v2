@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

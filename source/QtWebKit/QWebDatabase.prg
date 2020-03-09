@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
 
 HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
