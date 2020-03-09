@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
