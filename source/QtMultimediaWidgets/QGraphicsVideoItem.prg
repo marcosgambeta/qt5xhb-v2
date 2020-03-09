@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_DELETE )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

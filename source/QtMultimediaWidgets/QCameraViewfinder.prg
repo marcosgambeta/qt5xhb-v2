@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_DELETE )
 {
-  QCameraViewfinder * obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
