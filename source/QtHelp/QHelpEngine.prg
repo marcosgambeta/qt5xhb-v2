@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
-  QHelpEngine * obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

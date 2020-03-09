@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

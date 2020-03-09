@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_DELETE )
 {
-  QHelpSearchQuery * obj = (QHelpSearchQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchQuery *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
