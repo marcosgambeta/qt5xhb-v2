@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListItem * obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

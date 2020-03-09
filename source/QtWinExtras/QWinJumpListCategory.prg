@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

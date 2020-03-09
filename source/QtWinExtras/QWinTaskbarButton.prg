@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_NEW )
 HB_FUNC_STATIC( QWINTASKBARBUTTON_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
