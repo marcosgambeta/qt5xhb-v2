@@ -86,7 +86,7 @@ explicit QTextToSpeechEngine(QObject *parent = nullptr) (abstract)
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeechEngine * obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
