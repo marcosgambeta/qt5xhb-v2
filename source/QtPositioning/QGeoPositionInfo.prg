@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 HB_FUNC_STATIC( QGEOPOSITIONINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoPositionInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

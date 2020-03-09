@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_NEW )
 HB_FUNC_STATIC( QNMEAPOSITIONINFOSOURCE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNmeaPositionInfoSource * obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNmeaPositionInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

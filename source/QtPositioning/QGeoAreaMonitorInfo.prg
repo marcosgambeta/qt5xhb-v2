@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorInfo * obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

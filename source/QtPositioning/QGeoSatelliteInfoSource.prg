@@ -71,7 +71,7 @@ RETURN
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfoSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
