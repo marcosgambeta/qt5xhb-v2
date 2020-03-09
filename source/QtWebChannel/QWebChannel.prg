@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
