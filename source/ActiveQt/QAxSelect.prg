@@ -93,7 +93,7 @@ QString clsid() const
 */
 HB_FUNC_STATIC( QAXSELECT_CLSID )
 {
-  QAxSelect * obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ SandboxingLevel sandboxingLevel() const
 HB_FUNC_STATIC( QAXSELECT_SANDBOXINGLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  QAxSelect * obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxSelect *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

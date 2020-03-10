@@ -105,7 +105,7 @@ QVariant call ( const QString & function, const QVariant & var1 = QVariant(), co
 */
 void QAxScript_call1 ()
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ QVariant call ( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScript_call2 ()
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QStringList functions ( FunctionFlags flags = FunctionNames ) const
 */
 HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool load ( const QString & code, const QString & language = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ QString scriptCode () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ QAxScriptEngine * scriptEngine () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QString scriptName () const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {
-  QAxScript * obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScript *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -98,7 +98,7 @@ QVariant asVariant () const
 */
 HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QAXBASE_CLEAR )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ QString control () const
 */
 HB_FUNC_STATIC( QAXBASE_CONTROL )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ void disableClassInfo ()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ void disableEventSink ()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ void disableMetaObject ()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant()
 */
 void QAxBase_dynamicCall1 ()
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
 */
 void QAxBase_dynamicCall2 ()
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ QString generateDocumentation ()
 */
 HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QAXBASE_ISNULL )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ virtual bool propertyWritable ( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant
 */
 void QAxBase_querySubObject1 ()
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
 */
 void QAxBase_querySubObject2 ()
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -417,7 +417,7 @@ bool setControl ( const QString & )
 */
 HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ virtual void setPropertyWritable ( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ QStringList verbs () const
 */
 HB_FUNC_STATIC( QAXBASE_VERBS )
 {
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ unsigned long QAxBase::classContext() const
 HB_FUNC_STATIC( QAXBASE_CLASSCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ void QAxBase::setClassContext(unsigned long classContext)
 HB_FUNC_STATIC( QAXBASE_SETCLASSCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  QAxBase * obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

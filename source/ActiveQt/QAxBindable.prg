@@ -99,7 +99,7 @@ virtual QAxAggregated * createAggregate ()
 */
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ virtual bool readData ( QIODevice * source, const QString & format )
 */
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ void reportError ( int code, const QString & src, const QString & desc, const QS
 */
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ virtual bool writeData ( QIODevice * sink )
 */
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
-  QAxBindable * obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxBindable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

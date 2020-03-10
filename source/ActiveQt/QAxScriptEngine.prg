@@ -94,7 +94,7 @@ void addItem ( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ bool hasIntrospection () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QString scriptLanguage () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ void setState ( State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ State state () const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
-  QAxScriptEngine * obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAxScriptEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
