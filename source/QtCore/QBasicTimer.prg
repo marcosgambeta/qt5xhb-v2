@@ -98,7 +98,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
-  QBasicTimer * obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ void start ( int msec, QObject * object )
 */
 HB_FUNC_STATIC( QBASICTIMER_START )
 {
-  QBasicTimer * obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QBASICTIMER_STOP )
 {
-  QBasicTimer * obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ int timerId () const
 */
 HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {
-  QBasicTimer * obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBasicTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

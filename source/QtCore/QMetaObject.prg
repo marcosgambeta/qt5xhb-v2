@@ -117,7 +117,7 @@ QMetaClassInfo classInfo ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ int classInfoCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ int classInfoOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSINFOOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ const char * className () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CLASSNAME )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ QMetaMethod constructor ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ int constructorCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTORCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ QMetaEnum enumerator ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ int enumeratorCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATORCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ int enumeratorOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOROFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ int indexOfClassInfo ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ int indexOfConstructor ( const char * constructor ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ int indexOfEnumerator ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ int indexOfMethod ( const char * method ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ int indexOfProperty ( const char * name ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -456,7 +456,7 @@ int indexOfSignal ( const char * signal ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -480,7 +480,7 @@ int indexOfSlot ( const char * slot ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -504,7 +504,7 @@ QMetaMethod method ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHOD )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -529,7 +529,7 @@ int methodCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -553,7 +553,7 @@ int methodOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_METHODOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -581,7 +581,7 @@ QMetaProperty property ( int index ) const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -606,7 +606,7 @@ int propertyCount () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYCOUNT )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -630,7 +630,7 @@ int propertyOffset () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_PROPERTYOFFSET )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -654,7 +654,7 @@ const QMetaObject * superClass () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -679,7 +679,7 @@ QMetaProperty userProperty () const
 */
 HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
 {
-  QMetaObject * obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

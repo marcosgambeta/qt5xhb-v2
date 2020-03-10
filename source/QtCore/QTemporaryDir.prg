@@ -120,7 +120,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool remove()
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

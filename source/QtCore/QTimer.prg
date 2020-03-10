@@ -99,7 +99,7 @@ int interval () const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool isSingleShot () const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ void setInterval ( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ void setSingleShot ( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ int timerId () const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void start ( int msec )
 */
 void QTimer_start1 ()
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ void start ()
 */
 void QTimer_start2 ()
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

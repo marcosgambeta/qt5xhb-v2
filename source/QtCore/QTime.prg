@@ -132,7 +132,7 @@ QTime addMSecs(int ms) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QTime addSecs(int s) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ int elapsed() const
 */
 HB_FUNC_STATIC( QTIME_ELAPSED )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ int hour() const
 */
 HB_FUNC_STATIC( QTIME_HOUR )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTIME_ISNULL )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ bool isValid() const
 */
 void QTime_isValid1 ()
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ int minute() const
 */
 HB_FUNC_STATIC( QTIME_MINUTE )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ int msec() const
 */
 HB_FUNC_STATIC( QTIME_MSEC )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ int msecsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ int restart()
 */
 HB_FUNC_STATIC( QTIME_RESTART )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ int second() const
 */
 HB_FUNC_STATIC( QTIME_SECOND )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ int secsTo(const QTime & t) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ bool setHMS(int h, int m, int s, int ms = 0)
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -463,7 +463,7 @@ void start()
 */
 HB_FUNC_STATIC( QTIME_START )
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ QString toString(const QString & format) const
 */
 void QTime_toString1 ()
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -502,7 +502,7 @@ QString toString(Qt::DateFormat format = Qt::TextDate) const
 */
 void QTime_toString2 ()
 {
-  QTime * obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

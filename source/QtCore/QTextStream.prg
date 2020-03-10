@@ -202,7 +202,7 @@ void setCodec(QTextCodec *codec)
 */
 void QTextStream_setCodec1 ()
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void setCodec(const char *codecName)
 */
 void QTextStream_setCodec2 ()
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QTextCodec *codec() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setAutoDetectUnicode(bool enabled)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ bool autoDetectUnicode() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ void setGenerateByteOrderMark(bool generate)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ bool generateByteOrderMark() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -376,7 +376,7 @@ void setLocale(const QLocale &locale)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ void setDevice(QIODevice *device)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ QIODevice *device() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ void setStatus(Status status)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ void resetStatus()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -562,7 +562,7 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -586,7 +586,7 @@ void reset()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_RESET )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -612,7 +612,7 @@ void flush()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -638,7 +638,7 @@ bool seek(qint64 pos)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -662,7 +662,7 @@ qint64 pos() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_POS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -686,7 +686,7 @@ void skipWhiteSpace()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -712,7 +712,7 @@ QString readLine(qint64 maxlen = 0)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -736,7 +736,7 @@ QString readAll()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -760,7 +760,7 @@ QString read(qint64 maxlen)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READ )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -784,7 +784,7 @@ void setFieldAlignment(FieldAlignment alignment)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -810,7 +810,7 @@ FieldAlignment fieldAlignment() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -834,7 +834,7 @@ void setPadChar(QChar ch)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETPADCHAR )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -860,7 +860,7 @@ QChar padChar() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -885,7 +885,7 @@ void setFieldWidth(int width)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -911,7 +911,7 @@ int fieldWidth() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -935,7 +935,7 @@ void setNumberFlags(NumberFlags flags)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -961,7 +961,7 @@ NumberFlags numberFlags() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -985,7 +985,7 @@ void setIntegerBase(int base)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1011,7 +1011,7 @@ int integerBase() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1035,7 +1035,7 @@ void setRealNumberNotation(RealNumberNotation notation)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1061,7 +1061,7 @@ RealNumberNotation realNumberNotation() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1085,7 +1085,7 @@ void setRealNumberPrecision(int precision)
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1111,7 +1111,7 @@ int realNumberPrecision() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
 {
-  QTextStream * obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

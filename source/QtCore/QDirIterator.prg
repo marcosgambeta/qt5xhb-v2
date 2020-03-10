@@ -152,7 +152,7 @@ QFileInfo fileInfo () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QString filePath () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ bool hasNext () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QString next ()
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {
-  QDirIterator * obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDirIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

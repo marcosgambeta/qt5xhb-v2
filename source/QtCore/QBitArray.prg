@@ -142,7 +142,7 @@ bool at ( int i ) const
 */
 HB_FUNC_STATIC( QBITARRAY_AT )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QBITARRAY_CLEAR )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ void clearBit ( int i )
 */
 HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ int count () const
 */
 void QBitArray_count1 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ int count ( bool on ) const
 */
 void QBitArray_count2 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ bool fill ( bool value, int size = -1 )
 */
 void QBitArray_fill1 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void fill ( bool value, int begin, int end )
 */
 void QBitArray_fill2 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QBITARRAY_ISNULL )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ void resize ( int size )
 */
 HB_FUNC_STATIC( QBITARRAY_RESIZE )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ void setBit ( int i )
 */
 void QBitArray_setBit1 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void setBit ( int i, bool value )
 */
 void QBitArray_setBit2 ()
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ int size () const
 */
 HB_FUNC_STATIC( QBITARRAY_SIZE )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -457,7 +457,7 @@ bool testBit ( int i ) const
 */
 HB_FUNC_STATIC( QBITARRAY_TESTBIT )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ bool toggleBit ( int i )
 */
 HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -505,7 +505,7 @@ void truncate ( int pos )
 */
 HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
 {
-  QBitArray * obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

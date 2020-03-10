@@ -100,7 +100,7 @@ void start(QRunnable *runnable, int priority = 0)
 */
 HB_FUNC_STATIC( QTHREADPOOL_START )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ bool tryStart(QRunnable *runnable)
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ int expiryTimeout() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ void setExpiryTimeout(int expiryTimeout)
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ int maxThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ void setMaxThreadCount(int maxThreadCount)
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ int activeThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ void reserveThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void releaseThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ bool waitForDone(int msecs = -1)
 */
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ void clear()
 */
 HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 {
-  QThreadPool * obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QThreadPool *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

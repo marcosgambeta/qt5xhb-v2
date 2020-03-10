@@ -86,7 +86,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QParallelAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

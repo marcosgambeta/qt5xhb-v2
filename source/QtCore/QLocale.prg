@@ -237,7 +237,7 @@ QString amText () const
 */
 HB_FUNC_STATIC( QLOCALE_AMTEXT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ QString bcp47Name () const
 */
 HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ Country country () const
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRY )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ QString createSeparatedList ( const QStringList & list ) const
 */
 HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 */
 HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ QString dateFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ QString dateTimeFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ QString dayName ( int day, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DAYNAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ QChar decimalPoint () const
 */
 HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -454,7 +454,7 @@ QChar exponential () const
 */
 HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ Qt::DayOfWeek firstDayOfWeek () const
 */
 HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -503,7 +503,7 @@ QChar groupSeparator () const
 */
 HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -528,7 +528,7 @@ Language language () const
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -552,7 +552,7 @@ MeasurementSystem measurementSystem () const
 */
 HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -576,7 +576,7 @@ QString monthName ( int month, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QLOCALE_NAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ QString nativeCountryName () const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -648,7 +648,7 @@ QString nativeLanguageName () const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -672,7 +672,7 @@ QChar negativeSign () const
 */
 HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -697,7 +697,7 @@ NumberOptions numberOptions () const
 */
 HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -721,7 +721,7 @@ QChar percent () const
 */
 HB_FUNC_STATIC( QLOCALE_PERCENT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -746,7 +746,7 @@ QString pmText () const
 */
 HB_FUNC_STATIC( QLOCALE_PMTEXT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -770,7 +770,7 @@ QChar positiveSign () const
 */
 HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ QString quoteString ( const QString & str, QuotationStyle style = StandardQuotat
 */
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING1 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -819,7 +819,7 @@ QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuo
 */
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -851,7 +851,7 @@ Script script () const
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -875,7 +875,7 @@ void setNumberOptions ( NumberOptions options )
 */
 HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -901,7 +901,7 @@ QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -925,7 +925,7 @@ QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -949,7 +949,7 @@ Qt::LayoutDirection textDirection () const
 */
 HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -973,7 +973,7 @@ QString timeFormat ( FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -997,7 +997,7 @@ QString toCurrencyString ( qlonglong value, const QString & symbol = QString() )
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1021,7 +1021,7 @@ QString toCurrencyString ( short value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1045,7 +1045,7 @@ QString toCurrencyString ( ushort value, const QString & symbol = QString() ) co
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1069,7 +1069,7 @@ QString toCurrencyString ( int value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1093,7 +1093,7 @@ QString toCurrencyString ( uint value, const QString & symbol = QString() ) cons
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1117,7 +1117,7 @@ QString toCurrencyString ( float value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1141,7 +1141,7 @@ QString toCurrencyString ( qulonglong value, const QString & symbol = QString() 
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1165,7 +1165,7 @@ QString toCurrencyString ( double value, const QString & symbol = QString() ) co
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1202,7 +1202,7 @@ QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 */
 void QLocale_toDate1 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1216,7 +1216,7 @@ QDate toDate ( const QString & string, const QString & format ) const
 */
 void QLocale_toDate2 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1249,7 +1249,7 @@ QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) 
 */
 void QLocale_toDateTime1 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1263,7 +1263,7 @@ QDateTime toDateTime ( const QString & string, const QString & format ) const
 */
 void QLocale_toDateTime2 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1296,7 +1296,7 @@ double toDouble ( const QString & s, bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1322,7 +1322,7 @@ float toFloat ( const QString & s, bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1348,7 +1348,7 @@ QString toLower ( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLOWER )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1372,7 +1372,7 @@ QString toString ( qlonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1396,7 +1396,7 @@ QString toString ( const QDate & date, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1420,7 +1420,7 @@ QString toString ( const QDate & date, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1444,7 +1444,7 @@ QString toString ( const QTime & time, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1468,7 +1468,7 @@ QString toString ( const QTime & time, FormatType format = LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1492,7 +1492,7 @@ QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) 
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1516,7 +1516,7 @@ QString toString ( const QDateTime & dateTime, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1540,7 +1540,7 @@ QString toString ( short i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1564,7 +1564,7 @@ QString toString ( ushort i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1588,7 +1588,7 @@ QString toString ( int i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1612,7 +1612,7 @@ QString toString ( uint i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1636,7 +1636,7 @@ QString toString ( float i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1660,7 +1660,7 @@ QString toString ( qulonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1684,7 +1684,7 @@ QString toString ( double i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1759,7 +1759,7 @@ QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 */
 void QLocale_toTime1 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1773,7 +1773,7 @@ QTime toTime ( const QString & string, const QString & format ) const
 */
 void QLocale_toTime2 ()
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1806,7 +1806,7 @@ QString toUpper ( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUPPER )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1830,7 +1830,7 @@ QStringList uiLanguages () const
 */
 HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1854,7 +1854,7 @@ QList<Qt::DayOfWeek> weekdays () const
 */
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1886,7 +1886,7 @@ QChar zeroDigit () const
 */
 HB_FUNC_STATIC( QLOCALE_ZERODIGIT )
 {
-  QLocale * obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocale *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -161,7 +161,7 @@ QIODevice *device() const
 */
 HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setDevice(QIODevice *)
 */
 HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void unsetDevice()
 */
 HB_FUNC_STATIC( QDATASTREAM_UNSETDEVICE )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QDATASTREAM_ATEND )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QDATASTREAM_STATUS )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ void setStatus(Status status)
 */
 HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ void resetStatus()
 */
 HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ FloatingPointPrecision floatingPointPrecision() const
 */
 HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ void setFloatingPointPrecision(FloatingPointPrecision precision)
 */
 HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ ByteOrder byteOrder() const
 */
 HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -412,7 +412,7 @@ void setByteOrder(ByteOrder)
 */
 HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ int version() const
 */
 HB_FUNC_STATIC( QDATASTREAM_VERSION )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ void setVersion(int)
 */
 HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ int readRawData(char *, int len)
 */
 HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,7 +516,7 @@ QDataStream &writeBytes(const char *, uint len)
 */
 HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -541,7 +541,7 @@ int writeRawData(const char *, int len)
 */
 HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -565,7 +565,7 @@ int skipRawData(int len)
 */
 HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
 {
-  QDataStream * obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataStream *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

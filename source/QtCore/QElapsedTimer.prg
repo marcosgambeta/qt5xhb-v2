@@ -106,7 +106,7 @@ qint64 elapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ bool hasExpired(qint64 timeout) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ void invalidate()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ qint64 msecsSinceReference() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ qint64 msecsTo(const QElapsedTimer & other) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ qint64 nsecsElapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ qint64 restart()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ qint64 secsTo(const QElapsedTimer & other) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ void start()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_START )
 {
-  QElapsedTimer * obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QElapsedTimer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -109,7 +109,7 @@ bool isEnabled() const
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ void setEnabled(bool enable)
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

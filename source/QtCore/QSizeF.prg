@@ -144,7 +144,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ void setWidth(qreal w)
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setHeight(qreal h)
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ void transpose()
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ QSizeF transposed() const
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
 */
 void QSizeF_scale1 ()
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void scale(const QSizeF &s, Qt::AspectRatioMode mode)
 */
 void QSizeF_scale2 ()
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ QSizeF scaled(qreal w, qreal h, Qt::AspectRatioMode mode) const
 */
 void QSizeF_scaled1 ()
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ QSizeF scaled(const QSizeF &s, Qt::AspectRatioMode mode) const
 */
 void QSizeF_scaled2 ()
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -463,7 +463,7 @@ QSizeF expandedTo(const QSizeF &) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ QSizeF boundedTo(const QSizeF &) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ QSize toSize() const
 */
 HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
-  QSizeF * obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

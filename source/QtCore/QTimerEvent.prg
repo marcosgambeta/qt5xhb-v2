@@ -86,7 +86,7 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
-  QTimerEvent * obj = (QTimerEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimerEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -95,7 +95,7 @@ QString select(const QString &filePath) const
 */
 void QFileSelector_select1 ()
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QUrl select(const QUrl &filePath) const
 */
 void QFileSelector_select2 ()
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ QStringList extraSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ void setExtraSelectors(const QStringList &list)
 */
 HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QStringList allSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 {
-  QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -96,7 +96,7 @@ void swap(QCollatorSortKey &other)
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 {
-  QCollatorSortKey * obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ int compare(const QCollatorSortKey &key) const
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
 {
-  QCollatorSortKey * obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

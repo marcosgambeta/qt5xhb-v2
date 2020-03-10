@@ -124,7 +124,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ int left() const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ int top() const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int right() const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ void setLeft(int left)
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ void setTop(int top)
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ void setRight(int right)
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ void setBottom(int bottom)
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
-  QMargins * obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -117,7 +117,7 @@ QString toUnicode(const char * chars, int len)
 */
 void QTextDecoder_toUnicode1 ()
 {
-  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QString toUnicode(const QByteArray & ba)
 */
 void QTextDecoder_toUnicode3 ()
 {
-  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 {
-  QTextDecoder * obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

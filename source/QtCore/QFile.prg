@@ -164,7 +164,7 @@ bool copy ( const QString & newName )
 */
 void QFile_copy1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ FileError error () const
 */
 HB_FUNC_STATIC( QFILE_ERROR )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ bool exists () const
 */
 void QFile_exists1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QFILE_FILENAME )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ bool flush ()
 */
 HB_FUNC_STATIC( QFILE_FLUSH )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ int handle () const
 */
 HB_FUNC_STATIC( QFILE_HANDLE )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ bool link ( const QString & linkName )
 */
 void QFile_link1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ bool open(OpenMode flags)
 */
 void QFile_open1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -400,7 +400,7 @@ bool open(FILE *f, OpenMode ioFlags, FileHandleFlags handleFlags=DontCloseHandle
 */
 void QFile_open2 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ bool open(int fd, OpenMode ioFlags, FileHandleFlags handleFlags=DontCloseHandle)
 */
 void QFile_open3 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ Permissions permissions () const
 */
 void QFile_permissions1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -491,7 +491,7 @@ bool remove ()
 */
 void QFile_remove1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -532,7 +532,7 @@ bool rename ( const QString & newName )
 */
 void QFile_rename1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ bool resize ( qint64 sz )
 */
 void QFile_resize1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -614,7 +614,7 @@ void setFileName ( const QString & name )
 */
 HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -640,7 +640,7 @@ bool setPermissions ( Permissions permissions )
 */
 void QFile_setPermissions1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -681,7 +681,7 @@ QString symLinkTarget () const
 */
 void QFile_symLinkTarget1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -722,7 +722,7 @@ bool unmap ( uchar * address )
 */
 HB_FUNC_STATIC( QFILE_UNMAP )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -746,7 +746,7 @@ void unsetError ()
 */
 HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -772,7 +772,7 @@ virtual bool atEnd () const
 */
 HB_FUNC_STATIC( QFILE_ATEND )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -796,7 +796,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QFILE_CLOSE )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -822,7 +822,7 @@ virtual bool isSequential () const
 */
 HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -846,7 +846,7 @@ virtual qint64 pos () const
 */
 HB_FUNC_STATIC( QFILE_POS )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -870,7 +870,7 @@ virtual bool seek ( qint64 pos )
 */
 HB_FUNC_STATIC( QFILE_SEEK )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -894,7 +894,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QFILE_SIZE )
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -975,7 +975,7 @@ QString readLink() const
 */
 void QFile_readLink1 ()
 {
-  QFile * obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

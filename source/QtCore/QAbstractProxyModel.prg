@@ -74,7 +74,7 @@ virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int r
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DROPMIMEDATA )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent 
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_INDEX )
 {
-  QAbstractProxyModel * obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

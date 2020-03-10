@@ -82,7 +82,7 @@ FileError error() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ERROR )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ int handle() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ virtual Permissions permissions() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ virtual bool resize(qint64 sz)
 */
 HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ virtual bool setPermissions(Permissions permissions)
 */
 HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ void unsetError()
 */
 HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ATEND )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ virtual void close()
 */
 HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_POS )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ virtual bool seek(qint64 pos)
 */
 HB_FUNC_STATIC( QFILEDEVICE_SEEK )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_SIZE )
 {
-  QFileDevice * obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

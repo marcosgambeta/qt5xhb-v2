@@ -94,7 +94,7 @@ int exec ( ProcessEventsFlags flags = AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isRunning () const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
 void QEventLoop_processEvents1 ()
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2 ()
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void wakeUp ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
-  QEventLoop * obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

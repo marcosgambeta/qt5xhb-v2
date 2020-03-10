@@ -151,7 +151,7 @@ QString cap ( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_CAP )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ int captureCount () const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QStringList capturedTexts () const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ Qt::CaseSensitivity caseSensitivity () const
 */
 HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ bool exactMatch ( const QString & str ) const
 */
 HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAt
 */
 HB_FUNC_STATIC( QREGEXP_INDEXIN )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ bool isMinimal () const
 */
 HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QREGEXP_ISVALID )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = Ca
 */
 HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ int matchedLength () const
 */
 HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ QString pattern () const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERN )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -463,7 +463,7 @@ PatternSyntax patternSyntax () const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -487,7 +487,7 @@ int pos ( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_POS )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -511,7 +511,7 @@ void setCaseSensitivity ( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ void setMinimal ( bool minimal )
 */
 HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -563,7 +563,7 @@ void setPattern ( const QString & pattern )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -589,7 +589,7 @@ void setPatternSyntax ( PatternSyntax syntax )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 {
-  QRegExp * obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExp *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -100,7 +100,7 @@ void reset()
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void addData(const char *data, int length)
 */
 void QCryptographicHash_addData1 ()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ void addData(const QByteArray &data)
 */
 void QCryptographicHash_addData2 ()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ bool addData(QIODevice* device)
 */
 void QCryptographicHash_addData3 ()
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ QByteArray result() const
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {
-  QCryptographicHash * obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCryptographicHash *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

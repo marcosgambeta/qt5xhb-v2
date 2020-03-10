@@ -102,7 +102,7 @@ bool isEnabled(QtMsgType type) const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void setEnabled(QtMsgType type, bool enable)
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ bool isDebugEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool isWarningEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ bool isCriticalEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ const char *categoryName() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

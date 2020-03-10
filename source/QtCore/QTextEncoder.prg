@@ -118,7 +118,7 @@ QByteArray fromUnicode(const QString & str)
 */
 void QTextEncoder_fromUnicode1 ()
 {
-  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ QByteArray fromUnicode(const QChar * uc, int len)
 */
 void QTextEncoder_fromUnicode2 ()
 {
-  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTENCODER_HASFAILURE )
 {
-  QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

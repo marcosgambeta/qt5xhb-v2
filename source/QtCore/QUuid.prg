@@ -130,7 +130,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QUUID_ISNULL )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ QByteArray toByteArray() const
 */
 HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ QByteArray toRfc4122() const
 */
 HB_FUNC_STATIC( QUUID_TORFC4122 )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QUUID_TOSTRING )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ QUuid::Variant variant() const
 */
 HB_FUNC_STATIC( QUUID_VARIANT )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ QUuid::Version version() const
 */
 HB_FUNC_STATIC( QUUID_VERSION )
 {
-  QUuid * obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

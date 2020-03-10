@@ -91,7 +91,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ bool load(const QString & filename, const QString & directory = QString(), const
 */
 void QTranslator_load1 ()
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ bool load(const QLocale & locale, const QString & filename, const QString & pref
 */
 void QTranslator_load2 ()
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ bool load(const uchar * data, int len, const QString & directory = QString())
 */
 void QTranslator_load3 ()
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ virtual QString translate(const char * context, const char * sourceText, const c
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  QTranslator * obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTranslator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

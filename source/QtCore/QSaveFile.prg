@@ -142,7 +142,7 @@ QString fileName() const
 HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ void setFileName(const QString &name)
 HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ bool open(OpenMode flags)
 HB_FUNC_STATIC( QSAVEFILE_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ bool commit()
 HB_FUNC_STATIC( QSAVEFILE_COMMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void cancelWriting()
 HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setDirectWriteFallback(bool enabled)
 HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ bool directWriteFallback() const
 HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSaveFile *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

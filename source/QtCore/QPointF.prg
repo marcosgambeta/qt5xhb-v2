@@ -137,7 +137,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINTF_ISNULL )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ qreal manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ void setX(qreal x)
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setY(qreal y)
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QPOINTF_TOPOINT )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QPOINTF_X )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QPOINTF_Y )
 {
-  QPointF * obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPointF *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

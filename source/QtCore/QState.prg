@@ -127,7 +127,7 @@ void addTransition ( QAbstractTransition * transition )
 */
 void QState_addTransition1 ()
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbst
 */
 void QState_addTransition2 ()
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ QAbstractTransition * addTransition ( QAbstractState * target )
 */
 void QState_addTransition3 ()
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void assignProperty ( QObject * object, const char * name, const QVariant & valu
 */
 HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ ChildMode childMode () const
 */
 HB_FUNC_STATIC( QSTATE_CHILDMODE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ QAbstractState * errorState () const
 */
 HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ QAbstractState * initialState () const
 */
 HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ void removeTransition ( QAbstractTransition * transition )
 */
 HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ void setChildMode ( ChildMode mode )
 */
 HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ void setErrorState ( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ void setInitialState ( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ QList<QAbstractTransition *> transitions () const
 */
 HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {
-  QState * obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

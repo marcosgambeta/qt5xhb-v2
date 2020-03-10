@@ -128,7 +128,7 @@ bool contains(const QString & key) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ int count() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_COUNT )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool empty() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_EMPTY )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_ISEMPTY )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_KEYS )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ int length() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void remove(const QString & key)
 */
 HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ int size() const
 */
 HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ QJsonValue take(const QString & key)
 */
 HB_FUNC_STATIC( QJSONOBJECT_TAKE )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ QJsonValue value(const QString & key) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_VALUE )
 {
-  QJsonObject * obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

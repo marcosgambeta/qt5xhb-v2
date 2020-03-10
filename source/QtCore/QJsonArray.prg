@@ -143,7 +143,7 @@ void append(const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_APPEND )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QJsonValue at(int i) const
 */
 HB_FUNC_STATIC( QJSONARRAY_AT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ bool contains(const QJsonValue & value) const
 */
 HB_FUNC_STATIC( QJSONARRAY_CONTAINS )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ int count() const
 */
 HB_FUNC_STATIC( QJSONARRAY_COUNT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ bool empty() const
 */
 HB_FUNC_STATIC( QJSONARRAY_EMPTY )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ QJsonValue first() const
 */
 HB_FUNC_STATIC( QJSONARRAY_FIRST )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ void insert(int i, const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_INSERT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -317,7 +317,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QJSONARRAY_ISEMPTY )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ QJsonValue last() const
 */
 HB_FUNC_STATIC( QJSONARRAY_LAST )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ void pop_back()
 */
 HB_FUNC_STATIC( QJSONARRAY_POP_BACK )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ void pop_front()
 */
 HB_FUNC_STATIC( QJSONARRAY_POP_FRONT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ void prepend(const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_PREPEND )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ void push_back(const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -470,7 +470,7 @@ void push_front(const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -496,7 +496,7 @@ void removeAt(int i)
 */
 HB_FUNC_STATIC( QJSONARRAY_REMOVEAT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ void removeFirst()
 */
 HB_FUNC_STATIC( QJSONARRAY_REMOVEFIRST )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ void removeLast()
 */
 HB_FUNC_STATIC( QJSONARRAY_REMOVELAST )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ void replace(int i, const QJsonValue & value)
 */
 HB_FUNC_STATIC( QJSONARRAY_REPLACE )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ int size() const
 */
 HB_FUNC_STATIC( QJSONARRAY_SIZE )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ QJsonValue takeAt(int i)
 */
 HB_FUNC_STATIC( QJSONARRAY_TAKEAT )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -649,7 +649,7 @@ QVariantList toVariantList() const
 */
 HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
 {
-  QJsonArray * obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonArray *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -111,7 +111,7 @@ QAbstractState *defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ void setDefaultState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setHistoryType(HistoryType type)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
-  QHistoryState * obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

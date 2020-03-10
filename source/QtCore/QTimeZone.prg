@@ -197,7 +197,7 @@ void swap(QTimeZone &other)
 HB_FUNC_STATIC( QTIMEZONE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ bool isValid() const
 HB_FUNC_STATIC( QTIMEZONE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QByteArray id() const
 HB_FUNC_STATIC( QTIMEZONE_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QLocale::Country country() const
 HB_FUNC_STATIC( QTIMEZONE_COUNTRY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ QString comment() const
 HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = Q
 void QTimeZone_displayName1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = 
 void QTimeZone_displayName2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ QString abbreviation(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_ABBREVIATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ int offsetFromUtc(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_OFFSETFROMUTC )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ int standardTimeOffset(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_STANDARDTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -457,7 +457,7 @@ int daylightTimeOffset(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_DAYLIGHTTIMEOFFSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ bool hasDaylightTime() const
 HB_FUNC_STATIC( QTIMEZONE_HASDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ bool isDaylightTime(const QDateTime &atDateTime) const
 HB_FUNC_STATIC( QTIMEZONE_ISDAYLIGHTTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ bool hasTransitions() const
 HB_FUNC_STATIC( QTIMEZONE_HASTRANSITIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

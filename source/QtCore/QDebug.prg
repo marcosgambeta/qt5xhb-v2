@@ -140,7 +140,7 @@ void swap(QDebug &other)
 */
 HB_FUNC_STATIC( QDEBUG_SWAP )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QDebug &space()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QDebug &nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ QDebug &maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ bool autoInsertSpaces() const
 */
 HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setAutoInsertSpaces(bool b)
 */
 HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
 {
-  QDebug * obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
