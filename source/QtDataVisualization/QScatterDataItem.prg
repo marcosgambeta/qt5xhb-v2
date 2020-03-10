@@ -175,7 +175,7 @@ void setPosition(const QVector3D &pos)
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ QVector3D position() const
 HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ void setRotation(const QQuaternion &rot)
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ QQuaternion rotation() const
 HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ void setX(float value)
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ void setY(float value)
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ void setZ(float value)
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ float x() const
 HB_FUNC_STATIC( QSCATTERDATAITEM_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ float y() const
 HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -421,7 +421,7 @@ float z() const
 HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterDataItem * obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatterDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

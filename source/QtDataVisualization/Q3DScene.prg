@@ -139,7 +139,7 @@ QRect viewport() const
 HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QRect primarySubViewport() const
 HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ void setPrimarySubViewport(const QRect &primarySubViewport)
 HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ QRect secondarySubViewport() const
 HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void setSecondarySubViewport(const QRect &secondarySubViewport)
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ QPoint selectionQueryPosition() const
 HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ void setSelectionQueryPosition(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ bool isSecondarySubviewOnTop() const
 HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ void setSecondarySubviewOnTop(bool isSecondaryOnTop)
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ bool isSlicingActive() const
 HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ void setSlicingActive(bool isSlicing)
 HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ Q3DCamera *activeCamera() const
 HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -466,7 +466,7 @@ void setActiveCamera(Q3DCamera *camera)
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -494,7 +494,7 @@ Q3DLight *activeLight() const
 HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ void setActiveLight(Q3DLight *light)
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -549,7 +549,7 @@ float devicePixelRatio() const
 HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -575,7 +575,7 @@ void setDevicePixelRatio(float pixelRatio)
 HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -603,7 +603,7 @@ QPoint graphPositionQuery() const
 HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -630,7 +630,7 @@ void setGraphPositionQuery(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -658,7 +658,7 @@ bool isPointInPrimarySubView(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -684,7 +684,7 @@ bool isPointInSecondarySubView(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

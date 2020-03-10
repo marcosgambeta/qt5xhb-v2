@@ -126,7 +126,7 @@ int rowCount() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ int columnCount() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ QSurface3DSeries *series() const
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 void QSurfaceDataProxy_itemAt1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ const QSurfaceDataItem *itemAt(const QPoint &position) const
 void QSurfaceDataProxy_itemAt2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
 void QSurfaceDataProxy_setItem1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ void setItem(const QPoint &position, const QSurfaceDataItem &item)
 void QSurfaceDataProxy_setItem2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ void removeRows(int rowIndex, int removeCount)
 HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

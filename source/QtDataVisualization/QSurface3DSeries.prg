@@ -154,7 +154,7 @@ QSurfaceDataProxy *dataProxy() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void setDataProxy(QSurfaceDataProxy *proxy)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QPoint selectedPoint() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setSelectedPoint(const QPoint &position)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ bool isFlatShadingEnabled() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setFlatShadingEnabled(bool enabled)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ bool isFlatShadingSupported() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGSUPPORTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ QSurface3DSeries::DrawFlags drawMode() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ void setDrawMode(DrawFlags mode)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ QImage texture() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ void setTexture(const QImage &texture)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ QString textureFile() const
 HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ void setTextureFile(const QString &filename)
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSurface3DSeries * obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

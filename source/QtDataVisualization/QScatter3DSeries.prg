@@ -141,7 +141,7 @@ QScatterDataProxy *dataProxy() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ void setDataProxy(QScatterDataProxy *proxy)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int selectedItem() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ void setSelectedItem(int index)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ float itemSize() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setItemSize(float size)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatter3DSeries * obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

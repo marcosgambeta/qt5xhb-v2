@@ -137,7 +137,7 @@ int rowCount() const
 HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ QStringList rowLabels() const
 HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ void setRowLabels(const QStringList &labels)
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ QStringList columnLabels() const
 HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void setColumnLabels(const QStringList &labels)
 HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ QBar3DSeries *series() const
 HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
 void QBarDataProxy_itemAt1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ const QBarDataItem *itemAt(const QPoint &position) const
 void QBarDataProxy_itemAt2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 void QBarDataProxy_setItem1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ void setItem(const QPoint &position, const QBarDataItem &item)
 void QBarDataProxy_setItem2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -520,7 +520,7 @@ void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

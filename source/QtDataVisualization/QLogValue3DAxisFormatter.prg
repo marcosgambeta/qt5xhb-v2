@@ -113,7 +113,7 @@ qreal base() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ void setBase(qreal base)
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ bool autoSubGrid() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ void setAutoSubGrid(bool enabled)
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ bool showEdgeLabels() const
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void setShowEdgeLabels(bool enabled)
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

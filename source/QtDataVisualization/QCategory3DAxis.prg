@@ -106,7 +106,7 @@ QStringList labels() const
 HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ void setLabels(const QStringList &labels)
 HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

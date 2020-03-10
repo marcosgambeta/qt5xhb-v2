@@ -100,7 +100,7 @@ virtual void touchEvent(QTouchEvent *event)
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QTouch3DInputHandler * obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

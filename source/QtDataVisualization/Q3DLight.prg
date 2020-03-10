@@ -106,7 +106,7 @@ void setAutoPosition(bool enabled)
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ bool isAutoPosition()
 HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -141,7 +141,7 @@ bool isMultiSeriesUniform() const
 HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ void setMultiSeriesUniform(bool uniform)
 HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ float barThickness() const
 HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setBarThickness(float thicknessRatio)
 HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QSizeF barSpacing() const
 HB_FUNC_STATIC( Q3DBARS_BARSPACING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setBarSpacing(const QSizeF &spacing)
 HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ bool isBarSpacingRelative() const
 HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ void setBarSpacingRelative(bool relative)
 HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ QCategory3DAxis *rowAxis() const
 HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ void setRowAxis(QCategory3DAxis *axis)
 HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ QCategory3DAxis *columnAxis() const
 HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -440,7 +440,7 @@ void setColumnAxis(QCategory3DAxis *axis)
 HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ QValue3DAxis *valueAxis() const
 HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -495,7 +495,7 @@ void setValueAxis(QValue3DAxis *axis)
 HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ QBar3DSeries *primarySeries() const
 HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ void setPrimarySeries(QBar3DSeries *series)
 HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -578,7 +578,7 @@ QBar3DSeries *selectedSeries() const
 HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -605,7 +605,7 @@ float floorLevel() const
 HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -631,7 +631,7 @@ void setFloorLevel(float level)
 HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -659,7 +659,7 @@ void addSeries(QBar3DSeries *series)
 HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -687,7 +687,7 @@ void removeSeries(QBar3DSeries *series)
 HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -715,7 +715,7 @@ void insertSeries(int index, QBar3DSeries *series)
 HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -743,7 +743,7 @@ QList<QBar3DSeries *> seriesList() const
 HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -793,7 +793,7 @@ void addAxis(QAbstract3DAxis *axis)
 HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ void releaseAxis(QAbstract3DAxis *axis)
 HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -849,7 +849,7 @@ QList<QAbstract3DAxis *> axes() const
 HB_FUNC_STATIC( Q3DBARS_AXES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DBars * obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DBars *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

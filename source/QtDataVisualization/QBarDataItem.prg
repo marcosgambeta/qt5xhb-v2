@@ -167,7 +167,7 @@ void setValue(float val)
 HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ float value() const
 HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setRotation(float angle)
 HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ float rotation() const
 HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -113,7 +113,7 @@ int segmentCount() const
 HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ void setSegmentCount(int count)
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ int subSegmentCount() const
 HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ void setSubSegmentCount(int count)
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ QString labelFormat() const
 HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void setLabelFormat(const QString &format)
 HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ QValue3DAxisFormatter *formatter() const
 HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ void setFormatter(QValue3DAxisFormatter *formatter)
 HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ bool reversed() const
 HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ void setReversed(bool enable)
 HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValue3DAxis * obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValue3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

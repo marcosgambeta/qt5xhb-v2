@@ -112,7 +112,7 @@ Q3DScene *parentScene()
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ QVector3D position() const
 HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void setPosition(const QVector3D &position)
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ virtual void copyValuesFrom(const Q3DObject &source)
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
