@@ -78,7 +78,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QCandlestickSeries *series() const
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ void setSeries(QCandlestickSeries *series)
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ virtual Qt::Orientation orientation() const = 0
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

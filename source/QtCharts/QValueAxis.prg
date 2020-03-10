@@ -123,7 +123,7 @@ int tickCount() const
 HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void setTickCount(int count)
 HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ qreal min() const
 HB_FUNC_STATIC( QVALUEAXIS_MIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setMin(qreal min)
 HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ qreal max() const
 HB_FUNC_STATIC( QVALUEAXIS_MAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ void setMax(qreal max)
 HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ QString labelFormat() const
 HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void setLabelFormat(const QString &format)
 HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ int minorTickCount() const
 HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ void setMinorTickCount(int count)
 HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ AxisType type() const
 HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ void setRange(qreal min, qreal max)
 HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ void applyNiceNumbers()
 HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

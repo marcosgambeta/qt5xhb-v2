@@ -106,7 +106,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual QXYSeries* series()
 HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYLegendMarker * obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

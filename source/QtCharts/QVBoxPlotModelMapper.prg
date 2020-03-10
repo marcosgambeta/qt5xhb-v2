@@ -100,7 +100,7 @@ QBoxPlotSeries *series() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void setSeries(QBoxPlotSeries *series)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ int firstBoxSetColumn() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_FIRSTBOXSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setFirstBoxSetColumn(int firstBoxSetColumn)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETFIRSTBOXSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ int lastBoxSetColumn() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_LASTBOXSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setLastBoxSetColumn(int lastBoxSetColumn)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETLASTBOXSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ int firstRow() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_FIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setFirstRow(int firstRow)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETFIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ int rowCount() const
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setRowCount(int rowCount)
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBoxPlotModelMapper * obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -100,7 +100,7 @@ QAbstractBarSeries *series() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void setSeries(QAbstractBarSeries *series)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ int firstBarSetRow() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTBARSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setFirstBarSetRow(int firstBarSetRow)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTBARSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ int lastBarSetRow() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_LASTBARSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setLastBarSetRow(int lastBarSetRow)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETLASTBARSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ int firstColumn() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setFirstColumn(int firstColumn)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ int columnCount() const
 HB_FUNC_STATIC( QHBARMODELMAPPER_COLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setColumnCount(int columnCount)
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETCOLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHBarModelMapper * obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -130,7 +130,7 @@ RubberBands rubberBand() const
 HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ QChart *chart() const
 HB_FUNC_STATIC( QCHARTVIEW_CHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ void setChart(QChart *chart)
 HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

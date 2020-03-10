@@ -119,7 +119,7 @@ QString label() const
 HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ void setLabel(const QString &label)
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ QBrush labelBrush() const
 HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ void setLabelBrush(const QBrush &brush)
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ QFont font() const
 HB_FUNC_STATIC( QLEGENDMARKER_FONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ void setFont(const QFont &font)
 HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ QPen pen() const
 HB_FUNC_STATIC( QLEGENDMARKER_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ bool isVisible() const
 HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ void setVisible(bool visible)
 HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ QLegend::MarkerShape shape() const
 HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ void setShape(QLegend::MarkerShape shape)
 HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ virtual LegendMarkerType type() = 0
 HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -527,7 +527,7 @@ virtual QAbstractSeries* series() = 0
 HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegendMarker * obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

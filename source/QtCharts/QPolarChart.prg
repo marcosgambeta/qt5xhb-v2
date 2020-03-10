@@ -101,7 +101,7 @@ void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
 HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPolarChart * obj = (QPolarChart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPolarChart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

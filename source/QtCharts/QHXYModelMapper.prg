@@ -100,7 +100,7 @@ QXYSeries *series() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void setSeries(QXYSeries *series)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ int xRow() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_XROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setXRow(int xRow)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETXROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ int yRow() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_YROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setYRow(int yRow)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETYROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ int firstColumn() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_FIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setFirstColumn(int firstColumn)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETFIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ int columnCount() const
 HB_FUNC_STATIC( QHXYMODELMAPPER_COLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setColumnCount(int columnCount)
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHXYModelMapper * obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

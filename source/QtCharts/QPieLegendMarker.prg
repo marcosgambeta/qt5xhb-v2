@@ -108,7 +108,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ virtual QPieSeries* series()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QPieSlice* slice()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieLegendMarker * obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

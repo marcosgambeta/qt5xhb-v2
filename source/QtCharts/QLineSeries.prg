@@ -107,7 +107,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QLINESERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLineSeries * obj = (QLineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

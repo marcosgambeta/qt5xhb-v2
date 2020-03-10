@@ -100,7 +100,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QHORIZONTALPERCENTBARSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QHorizontalPercentBarSeries * obj = (QHorizontalPercentBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHorizontalPercentBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
