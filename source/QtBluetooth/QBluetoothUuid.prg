@@ -225,7 +225,7 @@ int minimumSize() const
 HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ quint16 toUInt16(bool *ok = nullptr) const
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ quint32 toUInt32(bool *ok = nullptr) const
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

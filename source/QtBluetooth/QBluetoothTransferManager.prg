@@ -103,7 +103,7 @@ QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
