@@ -157,7 +157,7 @@ ErrorType type() const
 */
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
-  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSERROR_NAME )
 {
-  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
 {
-  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 {
-  QDBusError * obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

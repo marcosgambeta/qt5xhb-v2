@@ -150,7 +150,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ void setPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
 {
-  QDBusObjectPath * obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

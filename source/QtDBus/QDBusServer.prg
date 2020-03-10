@@ -103,7 +103,7 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
 {
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
 {
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QString address() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
 {
-  QDBusServer * obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

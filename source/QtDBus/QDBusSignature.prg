@@ -149,7 +149,7 @@ QString signature() const
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
 {
-  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ void setSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
 {
-  QDBusSignature * obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

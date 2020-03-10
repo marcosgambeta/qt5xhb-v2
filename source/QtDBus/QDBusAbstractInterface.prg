@@ -87,7 +87,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ISVALID )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ QString service() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QString interface() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ void setTimeout(int timeout)
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ int timeout() const
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const 
 */
 void QDBusAbstractInterface_call1 ()
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg
 */
 void QDBusAbstractInterface_call2 ()
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ QDBusMessage callWithArgumentList(QDBus::CallMode mode,const QString &method,con
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject 
 */
 void QDBusAbstractInterface_callWithCallback1 ()
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject 
 */
 void QDBusAbstractInterface_callWithCallback2 ()
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ QDBusPendingCall asyncCall(const QString &method,const QVariant &arg1 = QVariant
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ QDBusPendingCall asyncCallWithArgumentList(const QString &method,const QList<QVa
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
 {
-  QDBusAbstractInterface * obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

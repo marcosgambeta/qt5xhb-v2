@@ -105,7 +105,7 @@ void swap(QDBusPendingCall &other)
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_SWAP )
 {
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ bool isFinished() const
 HB_FUNC_STATIC( QDBUSPENDINGCALL_ISFINISHED )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void waitForFinished()
 HB_FUNC_STATIC( QDBUSPENDINGCALL_WAITFORFINISHED )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ bool isError() const
 HB_FUNC_STATIC( QDBUSPENDINGCALL_ISERROR )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ bool isValid() const
 HB_FUNC_STATIC( QDBUSPENDINGCALL_ISVALID )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ QDBusError error() const
 HB_FUNC_STATIC( QDBUSPENDINGCALL_ERROR )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ QDBusMessage reply() const
 HB_FUNC_STATIC( QDBUSPENDINGCALL_REPLY )
 {
 #ifndef Q_QDOC
-  QDBusPendingCall * obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusPendingCall *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

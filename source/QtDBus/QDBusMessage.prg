@@ -142,7 +142,7 @@ QDBusMessage createReply(const QVariant &argument) const
 */
 void QDBusMessage_createReply2 ()
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ QDBusMessage createErrorReply(const QString name, const QString &msg) const
 */
 void QDBusMessage_createErrorReply1 ()
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QDBusMessage createErrorReply(const QDBusError &err) const
 */
 void QDBusMessage_createErrorReply2 ()
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) co
 */
 void QDBusMessage_createErrorReply3 ()
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ QString service() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SERVICE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_PATH )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ QString interface() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_INTERFACE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ QString member() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_MEMBER )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ QString errorName() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ERRORNAME )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ QString errorMessage() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ERRORMESSAGE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ MessageType type() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_TYPE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ QString signature() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SIGNATURE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ bool isReplyRequired() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ISREPLYREQUIRED )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ void setDelayedReply(bool enable) const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETDELAYEDREPLY )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ bool isDelayedReply() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ISDELAYEDREPLY )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -503,7 +503,7 @@ void setAutoStartService(bool enable)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETAUTOSTARTSERVICE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -529,7 +529,7 @@ bool autoStartService() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_AUTOSTARTSERVICE )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -553,7 +553,7 @@ void setArguments(const QList<QVariant> &arguments)
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETARGUMENTS )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ QList<QVariant> arguments() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ARGUMENTS )
 {
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -706,7 +706,7 @@ bool QDBusMessage::isInteractiveAuthorizationAllowed() const
 HB_FUNC_STATIC( QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -732,7 +732,7 @@ void QDBusMessage::setInteractiveAuthorizationAllowed(bool enable)
 HB_FUNC_STATIC( QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QDBusMessage * obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

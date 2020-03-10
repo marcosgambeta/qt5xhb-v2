@@ -104,7 +104,7 @@ bool calledFromDBus() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ QDBusConnection connection() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ const QDBusMessage &message() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ bool isDelayedReply() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ void setDelayedReply(bool enable) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ void sendErrorReply(const QString &name, const QString &msg = QString()) const
 */
 void QDBusContext_sendErrorReply1 ()
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) 
 */
 void QDBusContext_sendErrorReply2 ()
 {
-  QDBusContext * obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
