@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 {
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlSchemaValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

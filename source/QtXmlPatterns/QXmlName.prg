@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
 
 HB_FUNC_STATIC( QXMLNAME_DELETE )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

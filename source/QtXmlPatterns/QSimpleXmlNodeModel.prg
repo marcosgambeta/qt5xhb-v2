@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {
-  QSimpleXmlNodeModel * obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSimpleXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

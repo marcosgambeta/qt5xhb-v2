@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

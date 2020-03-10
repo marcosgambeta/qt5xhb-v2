@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 
 HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

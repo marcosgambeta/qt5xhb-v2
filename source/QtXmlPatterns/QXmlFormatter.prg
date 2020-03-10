@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 
 HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
 {
-  QXmlFormatter * obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

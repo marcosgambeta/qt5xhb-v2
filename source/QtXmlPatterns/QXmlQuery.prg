@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
 
 HB_FUNC_STATIC( QXMLQUERY_DELETE )
 {
-  QXmlQuery * obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

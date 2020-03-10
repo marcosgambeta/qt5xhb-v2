@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

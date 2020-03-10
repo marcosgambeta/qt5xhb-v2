@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DELETE )
 {
-  QXmlNodeModelIndex * obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNodeModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractMessageHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

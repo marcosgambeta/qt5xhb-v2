@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 
 HB_FUNC_STATIC( QXMLSERIALIZER_DELETE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlSerializer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

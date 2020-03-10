@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
-  QXmlSchema * obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlSchema *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

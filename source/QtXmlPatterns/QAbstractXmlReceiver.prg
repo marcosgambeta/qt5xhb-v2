@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_DELETE )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
