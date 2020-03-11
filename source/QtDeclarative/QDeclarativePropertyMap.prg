@@ -96,7 +96,7 @@ void clear ( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ bool contains ( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ void insert ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ QStringList keys () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ QVariant value ( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativePropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

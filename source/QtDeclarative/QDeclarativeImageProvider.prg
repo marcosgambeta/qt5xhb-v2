@@ -99,7 +99,7 @@ ImageType imageType () const
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ virtual QImage requestImage ( const QString & id, QSize * size, const QSize & re
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & 
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  QDeclarativeImageProvider * obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
