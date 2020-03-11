@@ -79,7 +79,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
-  QAbstractExtensionFactory * obj = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

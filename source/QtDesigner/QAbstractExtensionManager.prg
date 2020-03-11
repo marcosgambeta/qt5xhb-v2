@@ -81,7 +81,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  QAbstractExtensionManager * obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

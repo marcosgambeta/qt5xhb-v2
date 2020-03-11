@@ -100,7 +100,7 @@ virtual QWidget * load ( QIODevice * device, QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ virtual void save ( QIODevice * device, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ void setWorkingDirectory ( const QDir & directory )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
