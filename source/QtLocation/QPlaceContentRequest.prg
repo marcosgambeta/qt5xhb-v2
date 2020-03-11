@@ -138,7 +138,7 @@ QPlaceContent::Type contentType() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ void setContentType(QPlaceContent::Type type)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ QString placeId() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void setPlaceId(const QString &identifier)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETPLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ QVariant contentContext() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void setContentContext(const QVariant &context)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ int limit() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ void setLimit(int limit)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ void clear()
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

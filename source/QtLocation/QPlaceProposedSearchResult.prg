@@ -99,7 +99,7 @@ QPlaceSearchRequest searchRequest() const
 HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void setSearchRequest(const QPlaceSearchRequest &request)
 HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceProposedSearchResult * obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceProposedSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

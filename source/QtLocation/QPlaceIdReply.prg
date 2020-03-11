@@ -100,7 +100,7 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ OperationType operationType() const
 HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QString id() const
 HB_FUNC_STATIC( QPLACEIDREPLY_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIdReply * obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

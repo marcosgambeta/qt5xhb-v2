@@ -105,7 +105,7 @@ bool isFinished() const
 HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ virtual Type type() const
 HB_FUNC_STATIC( QPLACEREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QString errorString() const
 HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QPlaceReply::Error error() const
 HB_FUNC_STATIC( QPLACEREPLY_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ virtual void abort()
 HB_FUNC_STATIC( QPLACEREPLY_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

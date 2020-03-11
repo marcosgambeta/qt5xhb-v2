@@ -131,7 +131,7 @@ QList<QPlace> places() const
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ void setPlaces(const QList<QPlace> places)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setResults(const QList<QPlaceSearchResult> &results)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ void clear()
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

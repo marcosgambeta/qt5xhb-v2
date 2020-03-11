@@ -106,7 +106,7 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACESEARCHREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ QList<QPlaceSearchResult> results() const
 HB_FUNC_STATIC( QPLACESEARCHREPLY_RESULTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QPlaceSearchRequest request() const
 HB_FUNC_STATIC( QPLACESEARCHREPLY_REQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ QPlaceSearchRequest previousPageRequest() const
 HB_FUNC_STATIC( QPLACESEARCHREPLY_PREVIOUSPAGEREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ QPlaceSearchRequest nextPageRequest() const
 HB_FUNC_STATIC( QPLACESEARCHREPLY_NEXTPAGEREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchReply * obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

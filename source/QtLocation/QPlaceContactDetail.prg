@@ -131,7 +131,7 @@ QString label() const
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setLabel(const QString &label)
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QString value() const
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setValue(const QString &value)
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ void clear()
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

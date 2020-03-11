@@ -103,7 +103,7 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ int totalCount() const
 HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QPlaceContentRequest request() const
 HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QPlaceContentRequest previousPageRequest() const
 HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QPlaceContentRequest nextPageRequest() const
 HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentReply * obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentReply *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

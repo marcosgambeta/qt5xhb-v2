@@ -91,7 +91,7 @@ QString managerName() const
 HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ int managerVersion() const
 HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGe
 void QGeoCodingManager_geocode1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset =
 void QGeoCodingManager_geocode2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape 
 HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setLocale(const QLocale &locale)
 HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QLocale locale() const
 HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -137,7 +137,7 @@ QString name() const
 HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ void setName(const QString &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QString supplierId() const
 HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void setSupplierId(const QString &identifier)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QUrl url() const
 HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void setUrl(const QUrl &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

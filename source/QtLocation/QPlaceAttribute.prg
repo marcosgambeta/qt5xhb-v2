@@ -131,7 +131,7 @@ QString label() const
 HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setLabel(const QString &label)
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QString text() const
 HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setText(const QString &text)
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACEATTRIBUTE_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceAttribute *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

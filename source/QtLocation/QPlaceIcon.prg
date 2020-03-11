@@ -134,7 +134,7 @@ QUrl url(const QSize &size = QSize()) const
 HB_FUNC_STATIC( QPLACEICON_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QPlaceManager *manager() const
 HB_FUNC_STATIC( QPLACEICON_MANAGER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ void setManager(QPlaceManager *manager)
 HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

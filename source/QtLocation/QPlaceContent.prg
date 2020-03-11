@@ -138,7 +138,7 @@ QPlaceContent::Type type() const
 HB_FUNC_STATIC( QPLACECONTENT_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ QPlaceSupplier supplier() const
 HB_FUNC_STATIC( QPLACECONTENT_SUPPLIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void setSupplier(const QPlaceSupplier &supplier)
 HB_FUNC_STATIC( QPLACECONTENT_SETSUPPLIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ QPlaceUser user() const
 HB_FUNC_STATIC( QPLACECONTENT_USER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ void setUser(const QPlaceUser &user)
 HB_FUNC_STATIC( QPLACECONTENT_SETUSER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ QString attribution() const
 HB_FUNC_STATIC( QPLACECONTENT_ATTRIBUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void setAttribution(const QString &attribution)
 HB_FUNC_STATIC( QPLACECONTENT_SETATTRIBUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

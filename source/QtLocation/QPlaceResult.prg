@@ -101,7 +101,7 @@ qreal distance() const
 HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void setDistance(qreal distance)
 HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QPlace place() const
 HB_FUNC_STATIC( QPLACERESULT_PLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setPlace(const QPlace &place)
 HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ bool isSponsored() const
 HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setSponsored(bool sponsored)
 HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
