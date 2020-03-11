@@ -112,7 +112,7 @@ virtual QString convertorName() = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ virtual bool canConvert(const QString &mime, QString flav) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ virtual QString mimeFor(QString flav) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ virtual QString flavorFor(const QString &mime) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QStr
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QS
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ virtual int count(QMimeData *mimeData)
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
