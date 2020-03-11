@@ -70,7 +70,7 @@ virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

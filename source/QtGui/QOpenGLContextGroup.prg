@@ -74,7 +74,7 @@ QList<QOpenGLContext *> shares() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
-  QOpenGLContextGroup * obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

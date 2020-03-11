@@ -265,7 +265,7 @@ const QColor & color () const
 */
 HB_FUNC_STATIC( QBRUSH_COLOR )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ const QGradient * gradient () const
 */
 HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ bool isOpaque () const
 */
 HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ const QMatrix & matrix () const // TODO: revisar e corrigir(?)
 */
 HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ void setColor ( const QColor & color )
 */
 void QBrush_setColor1 ()
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ void setColor ( Qt::GlobalColor color )
 */
 void QBrush_setColor2 ()
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ void setMatrix ( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ void setStyle ( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -465,7 +465,7 @@ void setTexture ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -491,7 +491,7 @@ void setTextureImage ( const QImage & image )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -517,7 +517,7 @@ void setTransform ( const QTransform & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -543,7 +543,7 @@ Qt::BrushStyle style () const
 */
 HB_FUNC_STATIC( QBRUSH_STYLE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -567,7 +567,7 @@ QPixmap texture () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -592,7 +592,7 @@ QImage textureImage () const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -642,7 +642,7 @@ QVariant toVariant ()
 */
 void QBrush_toVariant1 ()
 {
-  QBrush * obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBrush *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

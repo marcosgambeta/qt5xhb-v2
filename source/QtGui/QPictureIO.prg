@@ -155,7 +155,7 @@ const QPicture &picture() const
 */
 HB_FUNC_STATIC( QPICTUREIO_PICTURE )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ int status() const
 */
 HB_FUNC_STATIC( QPICTUREIO_STATUS )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ const char *format() const
 */
 HB_FUNC_STATIC( QPICTUREIO_FORMAT )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ QIODevice *ioDevice() const
 */
 HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QPICTUREIO_FILENAME )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ int quality() const
 */
 HB_FUNC_STATIC( QPICTUREIO_QUALITY )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ const char *parameters() const
 */
 HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ float gamma() const
 */
 HB_FUNC_STATIC( QPICTUREIO_GAMMA )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ void setPicture(const QPicture &)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void setStatus(int)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ void setFormat ( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ void setIODevice(QIODevice *)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -477,7 +477,7 @@ void setFileName(const QString &)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -503,7 +503,7 @@ void setQuality(int)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -529,7 +529,7 @@ void setDescription(const QString &)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ void setParameters ( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -581,7 +581,7 @@ void setGamma(float)
 */
 HB_FUNC_STATIC( QPICTUREIO_SETGAMMA )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -607,7 +607,7 @@ bool read()
 */
 HB_FUNC_STATIC( QPICTUREIO_READ )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -631,7 +631,7 @@ bool write()
 */
 HB_FUNC_STATIC( QPICTUREIO_WRITE )
 {
-  QPictureIO * obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureIO *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

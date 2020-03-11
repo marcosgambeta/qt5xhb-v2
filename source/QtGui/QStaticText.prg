@@ -144,7 +144,7 @@ void swap(QStaticText &other)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SWAP )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ void setText(const QString &text)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ void setTextFormat(Qt::TextFormat textFormat)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ Qt::TextFormat textFormat() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ void setTextWidth(qreal textWidth)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ qreal textWidth() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ void setTextOption(const QTextOption &textOption)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ QTextOption textOption() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -371,7 +371,7 @@ QSizeF size() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont(
 */
 HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ void setPerformanceHint(PerformanceHint performanceHint)
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ PerformanceHint performanceHint() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
 {
-  QStaticText * obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStaticText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

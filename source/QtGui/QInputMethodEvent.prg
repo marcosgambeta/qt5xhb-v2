@@ -116,7 +116,7 @@ const QString & commitString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ const QString & preeditString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ int replacementLength () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ int replacementStart () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void setCommitString ( const QString & commitString, int replaceFrom = 0, int re
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

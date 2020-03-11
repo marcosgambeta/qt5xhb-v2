@@ -89,7 +89,7 @@ Qt::InputMethodQueries queries() const
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
 {
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ void setValue(Qt::InputMethodQuery query, const QVariant & value)
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
 {
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ QVariant value(Qt::InputMethodQuery query) const
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
 {
-  QInputMethodQueryEvent * obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodQueryEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

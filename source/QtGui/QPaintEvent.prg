@@ -110,7 +110,7 @@ const QRect & rect () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
-  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ const QRegion & region () const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
-  QPaintEvent * obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

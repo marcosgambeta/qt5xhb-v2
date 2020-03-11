@@ -80,7 +80,7 @@ virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextF
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *do
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
-  QTextObjectInterface * obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

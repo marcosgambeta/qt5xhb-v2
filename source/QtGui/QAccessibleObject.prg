@@ -58,7 +58,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -82,7 +82,7 @@ QObject *object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ void setText(QAccessible::Text t, const QString &text)
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ QAccessibleInterface *childAt(int x, int y) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
 {
-  QAccessibleObject * obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

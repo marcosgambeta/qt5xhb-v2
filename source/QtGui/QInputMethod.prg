@@ -80,7 +80,7 @@ QRectF cursorRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ Qt::LayoutDirection inputDirection() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ QTransform inputItemTransform() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ bool isAnimating() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ QRectF keyboardRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ void setInputItemTransform(const QTransform & transform)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ void commit()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ void hide()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ void invokeAction(Action a, int cursorPosition)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void reset()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_RESET )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void show()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ void update(Qt::InputMethodQueries queries)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
 {
-  QInputMethod * obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

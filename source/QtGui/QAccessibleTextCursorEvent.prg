@@ -87,7 +87,7 @@ void setCursorPosition(int position)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
 {
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ int cursorPosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
 {
-  QAccessibleTextCursorEvent * obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextCursorEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

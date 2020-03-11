@@ -94,7 +94,7 @@ Qt::NativeGestureType gestureType() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GESTURETYPE )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ qreal value() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_VALUE )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ const QPoint pos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_POS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ const QPoint globalPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_GLOBALPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ const QPointF &localPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_LOCALPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ const QPointF &windowPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_WINDOWPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ const QPointF &screenPos() const
 */
 HB_FUNC_STATIC( QNATIVEGESTUREEVENT_SCREENPOS )
 {
-  QNativeGestureEvent * obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNativeGestureEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

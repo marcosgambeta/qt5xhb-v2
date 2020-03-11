@@ -254,7 +254,7 @@ QOpenGLFramebufferObjectFormat format() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_FORMAT )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISVALID )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ bool isBound() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISBOUND )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ bool bind()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BIND )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ bool release()
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_RELEASE )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ int width() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_WIDTH )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ int height() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HEIGHT )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ GLuint texture() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TEXTURE )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ QSize size() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SIZE )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -472,7 +472,7 @@ QImage toImage() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TOIMAGE )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ Attachment attachment() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ void setAttachment(Attachment attachment)
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -547,7 +547,7 @@ GLuint handle() const
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HANDLE )
 {
-  QOpenGLFramebufferObject * obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLFramebufferObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

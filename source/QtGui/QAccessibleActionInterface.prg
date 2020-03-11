@@ -88,7 +88,7 @@ virtual QStringList actionNames() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ virtual QString localizedActionName(const QString &name) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ virtual QString localizedActionDescription(const QString &name) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ virtual void doAction(const QString &actionName) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
 {
-  QAccessibleActionInterface * obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleActionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

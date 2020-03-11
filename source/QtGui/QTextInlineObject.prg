@@ -121,7 +121,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setWidth(qreal w)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ void setAscent(qreal a)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ void setDescent(qreal d)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ int textPosition() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

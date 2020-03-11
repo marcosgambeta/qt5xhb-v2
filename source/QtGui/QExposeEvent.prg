@@ -87,7 +87,7 @@ const QRegion & region() const
 */
 HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
 {
-  QExposeEvent * obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

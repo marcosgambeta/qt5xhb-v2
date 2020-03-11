@@ -90,7 +90,7 @@ QScreen *screen() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
 {
-  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ Qt::ScreenOrientation orientation() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
 {
-  QScreenOrientationChangeEvent * obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScreenOrientationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

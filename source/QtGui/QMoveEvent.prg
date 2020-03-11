@@ -88,7 +88,7 @@ const QPoint & oldPos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
-  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QMOVEEVENT_POS )
 {
-  QMoveEvent * obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

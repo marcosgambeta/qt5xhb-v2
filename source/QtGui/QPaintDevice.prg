@@ -92,7 +92,7 @@ int colorCount () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ int height () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ int heightMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ int logicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ int logicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ virtual QPaintEngine * paintEngine () const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ bool paintingActive () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ int physicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ int physicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ int width () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ int widthMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ virtual int devType() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVTYPE )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ int devicePixelRatio() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVICEPIXELRATIO )
 {
-  QPaintDevice * obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

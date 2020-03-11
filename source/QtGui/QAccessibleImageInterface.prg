@@ -80,7 +80,7 @@ virtual QString imageDescription() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ virtual QSize imageSize() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

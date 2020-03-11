@@ -59,7 +59,7 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
-  QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
-  QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QTextDocument *document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
-  QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
-  QTextObject * obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -88,7 +88,7 @@ const QSize &size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ const QSize &oldSize() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

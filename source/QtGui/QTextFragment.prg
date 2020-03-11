@@ -130,7 +130,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ bool contains(int position) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

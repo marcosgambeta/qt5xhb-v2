@@ -111,7 +111,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -180,7 +180,7 @@ uint count () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ SequenceMatch matches ( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ QString toString ( SequenceFormat format = PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  QKeySequence * obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

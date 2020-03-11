@@ -86,7 +86,7 @@ void setDocument(QTextDocument *doc)
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ QTextDocument *document() const
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ void rehighlight()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ void rehighlightBlock(const QTextBlock &block)
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSyntaxHighlighter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

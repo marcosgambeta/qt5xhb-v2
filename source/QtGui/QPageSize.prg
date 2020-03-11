@@ -196,7 +196,7 @@ void swap(QPageSize &other)
 HB_FUNC_STATIC( QPAGESIZE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ bool isEquivalentTo(const QPageSize &other) const
 HB_FUNC_STATIC( QPAGESIZE_ISEQUIVALENTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ bool isValid() const
 HB_FUNC_STATIC( QPAGESIZE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ QString key() const
 void QPageSize_key1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ QString name() const
 void QPageSize_name1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ PageSizeId id() const
 void QPageSize_id1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -443,7 +443,7 @@ int windowsId() const
 void QPageSize_windowsId1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ QSizeF definitionSize() const
 void QPageSize_definitionSize1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ Unit definitionUnits() const
 void QPageSize_definitionUnits1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -580,7 +580,7 @@ QSizeF size(Unit units) const
 void QPageSize_size1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -627,7 +627,7 @@ QSize sizePoints() const
 void QPageSize_sizePoints1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -674,7 +674,7 @@ QSize sizePixels(int resolution) const
 void QPageSize_sizePixels1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -721,7 +721,7 @@ QRectF rect(Unit units) const
 HB_FUNC_STATIC( QPAGESIZE_RECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -748,7 +748,7 @@ QRect rectPoints() const
 HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -775,7 +775,7 @@ QRect rectPixels(int resolution) const
 HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

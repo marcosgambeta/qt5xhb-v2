@@ -128,7 +128,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ int x () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ int y () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {
-  QContextMenuEvent * obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

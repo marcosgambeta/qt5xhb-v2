@@ -130,7 +130,7 @@ Qt::MouseButton button () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ Qt::MouseButtons buttons () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ int x () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ int y () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -87,7 +87,7 @@ QString textRemoved() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ int changePosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION )
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -98,7 +98,7 @@ void acceptProposedAction ()
 */
 HB_FUNC_STATIC( QDROPEVENT_ACCEPTPROPOSEDACTION )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ Qt::DropAction dropAction () const
 */
 HB_FUNC_STATIC( QDROPEVENT_DROPACTION )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ Qt::KeyboardModifiers keyboardModifiers () const
 */
 HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ const QMimeData * mimeData () const
 */
 HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ Qt::MouseButtons mouseButtons () const
 */
 HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ Qt::DropActions possibleActions () const
 */
 HB_FUNC_STATIC( QDROPEVENT_POSSIBLEACTIONS )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ Qt::DropAction proposedAction () const
 */
 HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ void setDropAction ( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ QObject * source () const
 */
 HB_FUNC_STATIC( QDROPEVENT_SOURCE )
 {
-  QDropEvent * obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDropEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

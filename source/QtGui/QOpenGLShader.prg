@@ -100,7 +100,7 @@ QOpenGLShader::ShaderType shaderType() const
 */
 HB_FUNC_STATIC( QOPENGLSHADER_SHADERTYPE )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ bool compileSourceCode(const char *source)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE1 )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ bool compileSourceCode(const QByteArray& source)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE2 )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ bool compileSourceCode(const QString& source)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE3 )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ bool compileSourceFile(const QString& fileName)
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCEFILE )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ QByteArray sourceCode() const
 */
 HB_FUNC_STATIC( QOPENGLSHADER_SOURCECODE )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ bool isCompiled() const
 */
 HB_FUNC_STATIC( QOPENGLSHADER_ISCOMPILED )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QString log() const
 */
 HB_FUNC_STATIC( QOPENGLSHADER_LOG )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ GLuint shaderId() const
 */
 HB_FUNC_STATIC( QOPENGLSHADER_SHADERID )
 {
-  QOpenGLShader * obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

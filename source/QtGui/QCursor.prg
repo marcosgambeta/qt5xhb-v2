@@ -172,7 +172,7 @@ const QBitmap * bitmap () const
 */
 HB_FUNC_STATIC( QCURSOR_BITMAP )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ QPoint hotSpot () const
 */
 HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ const QBitmap * mask () const
 */
 HB_FUNC_STATIC( QCURSOR_MASK )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QCURSOR_PIXMAP )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void setShape ( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ Qt::CursorShape shape () const
 */
 HB_FUNC_STATIC( QCURSOR_SHAPE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

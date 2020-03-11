@@ -91,7 +91,7 @@ virtual QSize actualSize(const QSize & size, QIcon::Mode mode, QIcon::State stat
 */
 HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ virtual void addFile(const QString & fileName, const QSize & size, QIcon::Mode m
 */
 HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ virtual void addPixmap(const QPixmap & pixmap, QIcon::Mode mode, QIcon::State st
 */
 HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::Sta
 */
 HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ virtual QIconEngine * clone() const = 0
 */
 HB_FUNC_STATIC( QICONENGINE_CLONE )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ virtual QString iconName() const
 */
 HB_FUNC_STATIC( QICONENGINE_ICONNAME )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ virtual QString key() const
 */
 HB_FUNC_STATIC( QICONENGINE_KEY )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ virtual void paint(QPainter * painter, const QRect & rect, QIcon::Mode mode, QIc
 */
 HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ virtual QPixmap pixmap(const QSize & size, QIcon::Mode mode, QIcon::State state)
 */
 HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ virtual bool read(QDataStream & in)
 */
 HB_FUNC_STATIC( QICONENGINE_READ )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ virtual void virtual_hook(int id, void * data)
 */
 HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -394,7 +394,7 @@ virtual bool write(QDataStream & out) const
 */
 HB_FUNC_STATIC( QICONENGINE_WRITE )
 {
-  QIconEngine * obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

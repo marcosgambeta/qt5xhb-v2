@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SAMPLECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_SETSAMPLECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_CREATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_DESTROY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RECORDSAMPLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_ISRESULTAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QOPENGLTIMEMONITOR_RESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)
-  QOpenGLTimeMonitor * obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLTimeMonitor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

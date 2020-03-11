@@ -145,7 +145,7 @@ void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void setTextDirection(Qt::LayoutDirection aDirection)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ void setWrapMode(WrapMode wrap)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ WrapMode wrapMode() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ void setFlags(Flags flags)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ Flags flags() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ void setTabStop(qreal tabStop)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -371,7 +371,7 @@ qreal tabStop() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ void setTabArray(const QList<qreal> &tabStops)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ QList<qreal> tabArray() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -456,7 +456,7 @@ void setUseDesignMetrics(bool b)
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ bool useDesignMetrics() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_USEDESIGNMETRICS )
 {
-  QTextOption * obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextOption *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

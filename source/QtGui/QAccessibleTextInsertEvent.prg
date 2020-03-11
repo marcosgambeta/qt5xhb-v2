@@ -87,7 +87,7 @@ QString textInserted() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED )
 {
-  QAccessibleTextInsertEvent * obj = (QAccessibleTextInsertEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextInsertEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ int changePosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION )
 {
-  QAccessibleTextInsertEvent * obj = (QAccessibleTextInsertEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleTextInsertEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

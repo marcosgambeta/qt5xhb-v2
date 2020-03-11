@@ -219,7 +219,7 @@ const QBrush & background () const
 */
 HB_FUNC_STATIC( QPAINTER_BACKGROUND )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ Qt::BGMode backgroundMode () const
 */
 HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ bool begin ( QPaintDevice * device )
 */
 HB_FUNC_STATIC( QPAINTER_BEGIN )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -292,7 +292,7 @@ void beginNativePainting ()
 */
 HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text 
 */
 void QPainter_boundingRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
 */
 void QPainter_boundingRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text
 */
 void QPainter_boundingRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTex
 */
 void QPainter_boundingRect4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ const QBrush & brush () const
 */
 HB_FUNC_STATIC( QPAINTER_BRUSH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -428,7 +428,7 @@ QPoint brushOrigin () const
 */
 HB_FUNC_STATIC( QPAINTER_BRUSHORIGIN )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ QPainterPath clipPath () const
 */
 HB_FUNC_STATIC( QPAINTER_CLIPPATH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -478,7 +478,7 @@ QRegion clipRegion () const
 */
 HB_FUNC_STATIC( QPAINTER_CLIPREGION )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -503,7 +503,7 @@ QTransform combinedTransform () const
 */
 HB_FUNC_STATIC( QPAINTER_COMBINEDTRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -528,7 +528,7 @@ CompositionMode compositionMode () const
 */
 HB_FUNC_STATIC( QPAINTER_COMPOSITIONMODE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -552,7 +552,7 @@ QPaintDevice * device () const
 */
 HB_FUNC_STATIC( QPAINTER_DEVICE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -577,7 +577,7 @@ const QTransform & deviceTransform () const
 */
 HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawArc1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawArc2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -632,7 +632,7 @@ void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngl
 */
 void QPainter_drawArc3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -671,7 +671,7 @@ void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawChord1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -686,7 +686,7 @@ void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawChord2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -701,7 +701,7 @@ void drawChord ( int x, int y, int width, int height, int startAngle, int spanAn
 */
 void QPainter_drawChord3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -740,7 +740,7 @@ void drawConvexPolygon ( const QPolygonF & polygon )
 */
 void QPainter_drawConvexPolygon3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -755,7 +755,7 @@ void drawConvexPolygon ( const QPolygon & polygon )
 */
 void QPainter_drawConvexPolygon4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -791,7 +791,7 @@ void drawEllipse ( const QRectF & rectangle )
 */
 void QPainter_drawEllipse1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -806,7 +806,7 @@ void drawEllipse ( const QRect & rectangle )
 */
 void QPainter_drawEllipse2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ void drawEllipse ( int x, int y, int width, int height )
 */
 void QPainter_drawEllipse3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -836,7 +836,7 @@ void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
 */
 void QPainter_drawEllipse4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -851,7 +851,7 @@ void drawEllipse ( const QPoint & center, int rx, int ry )
 */
 void QPainter_drawEllipse5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -900,7 +900,7 @@ void drawImage ( const QRectF & target, const QImage & image, const QRectF & sou
 */
 void QPainter_drawImage1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -915,7 +915,7 @@ void drawImage ( const QRect & target, const QImage & image, const QRect & sourc
 */
 void QPainter_drawImage2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -930,7 +930,7 @@ void drawImage ( const QPointF & point, const QImage & image )
 */
 void QPainter_drawImage3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -945,7 +945,7 @@ void drawImage ( const QPoint & point, const QImage & image )
 */
 void QPainter_drawImage4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -960,7 +960,7 @@ void drawImage ( const QPointF & point, const QImage & image, const QRectF & sou
 */
 void QPainter_drawImage5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -975,7 +975,7 @@ void drawImage ( const QPoint & point, const QImage & image, const QRect & sourc
 */
 void QPainter_drawImage6 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -990,7 +990,7 @@ void drawImage ( const QRectF & rectangle, const QImage & image )
 */
 void QPainter_drawImage7 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1005,7 +1005,7 @@ void drawImage ( const QRect & rectangle, const QImage & image )
 */
 void QPainter_drawImage8 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1020,7 +1020,7 @@ void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int
 */
 void QPainter_drawImage9 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1089,7 +1089,7 @@ void drawLine ( const QLineF & line )
 */
 void QPainter_drawLine1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1104,7 +1104,7 @@ void drawLine ( const QLine & line )
 */
 void QPainter_drawLine2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1119,7 +1119,7 @@ void drawLine ( const QPoint & p1, const QPoint & p2 )
 */
 void QPainter_drawLine3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1134,7 +1134,7 @@ void drawLine ( const QPointF & p1, const QPointF & p2 )
 */
 void QPainter_drawLine4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1149,7 +1149,7 @@ void drawLine ( int x1, int y1, int x2, int y2 )
 */
 void QPainter_drawLine5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1198,7 +1198,7 @@ void drawLines ( const QVector<QPointF> & pointPairs )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWLINES5 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1232,7 +1232,7 @@ void drawLines ( const QVector<QPoint> & pointPairs )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWLINES6 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1266,7 +1266,7 @@ void drawLines ( const QVector<QLineF> & lines )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWLINES7 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1300,7 +1300,7 @@ void drawLines ( const QVector<QLine> & lines )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWLINES8 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1347,7 +1347,7 @@ void drawPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWPATH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1373,7 +1373,7 @@ void drawPicture ( const QPointF & point, const QPicture & picture )
 */
 void QPainter_drawPicture1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1388,7 +1388,7 @@ void drawPicture ( const QPoint & point, const QPicture & picture )
 */
 void QPainter_drawPicture2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1403,7 +1403,7 @@ void drawPicture ( int x, int y, const QPicture & picture )
 */
 void QPainter_drawPicture3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1442,7 +1442,7 @@ void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawPie1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1457,7 +1457,7 @@ void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
 */
 void QPainter_drawPie2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1472,7 +1472,7 @@ void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngl
 */
 void QPainter_drawPie3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1511,7 +1511,7 @@ void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & 
 */
 void QPainter_drawPixmap1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1526,7 +1526,7 @@ void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & so
 */
 void QPainter_drawPixmap2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1541,7 +1541,7 @@ void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & 
 */
 void QPainter_drawPixmap3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1556,7 +1556,7 @@ void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & so
 */
 void QPainter_drawPixmap4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1571,7 +1571,7 @@ void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
 */
 void QPainter_drawPixmap5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1586,7 +1586,7 @@ void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
 */
 void QPainter_drawPixmap6 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1601,7 +1601,7 @@ void drawPixmap ( int x, int y, const QPixmap & pixmap )
 */
 void QPainter_drawPixmap7 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1616,7 +1616,7 @@ void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
 */
 void QPainter_drawPixmap8 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1631,7 +1631,7 @@ void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
 */
 void QPainter_drawPixmap9 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1646,7 +1646,7 @@ void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, in
 */
 void QPainter_drawPixmap10 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1661,7 +1661,7 @@ void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, 
 */
 void QPainter_drawPixmap11 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1740,7 +1740,7 @@ void drawPoint ( const QPointF & position )
 */
 void QPainter_drawPoint1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1755,7 +1755,7 @@ void drawPoint ( const QPoint & position )
 */
 void QPainter_drawPoint2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1770,7 +1770,7 @@ void drawPoint ( int x, int y )
 */
 void QPainter_drawPoint3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1809,7 +1809,7 @@ void drawPoints ( const QPolygonF & points )
 */
 void QPainter_drawPoints3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1824,7 +1824,7 @@ void drawPoints ( const QPolygon & points )
 */
 void QPainter_drawPoints4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1860,7 +1860,7 @@ void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEven
 */
 void QPainter_drawPolygon3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1875,7 +1875,7 @@ void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenF
 */
 void QPainter_drawPolygon4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1911,7 +1911,7 @@ void drawPolyline ( const QPolygonF & points )
 */
 void QPainter_drawPolyline3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1926,7 +1926,7 @@ void drawPolyline ( const QPolygon & points )
 */
 void QPainter_drawPolyline4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1962,7 +1962,7 @@ void drawRect ( const QRectF & rectangle )
 */
 void QPainter_drawRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1977,7 +1977,7 @@ void drawRect ( const QRect & rectangle )
 */
 void QPainter_drawRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1992,7 +1992,7 @@ void drawRect ( int x, int y, int width, int height )
 */
 void QPainter_drawRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2031,7 +2031,7 @@ void drawRects ( const QVector<QRectF> & rectangles )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWRECTS3 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2065,7 +2065,7 @@ void drawRects ( const QVector<QRect> & rectangles )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWRECTS4 )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2108,7 +2108,7 @@ void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::Si
 */
 void QPainter_drawRoundedRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2123,7 +2123,7 @@ void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::Siz
 */
 void QPainter_drawRoundedRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2138,7 +2138,7 @@ void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius,
 */
 void QPainter_drawRoundedRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2177,7 +2177,7 @@ void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & stati
 */
 void QPainter_drawStaticText1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2192,7 +2192,7 @@ void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & static
 */
 void QPainter_drawStaticText2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2207,7 +2207,7 @@ void drawStaticText ( int left, int top, const QStaticText & staticText )
 */
 void QPainter_drawStaticText3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2246,7 +2246,7 @@ void drawText ( const QPointF & position, const QString & text )
 */
 void QPainter_drawText1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2261,7 +2261,7 @@ void drawText ( const QPoint & position, const QString & text )
 */
 void QPainter_drawText2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2276,7 +2276,7 @@ void drawText ( const QRectF & rectangle, int flags, const QString & text, QRect
 */
 void QPainter_drawText3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2291,7 +2291,7 @@ void drawText ( const QRect & rectangle, int flags, const QString & text, QRect 
 */
 void QPainter_drawText4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2306,7 +2306,7 @@ void drawText ( int x, int y, const QString & text )
 */
 void QPainter_drawText5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2321,7 +2321,7 @@ void drawText ( int x, int y, int width, int height, int flags, const QString & 
 */
 void QPainter_drawText6 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2336,7 +2336,7 @@ void drawText ( const QRectF & rectangle, const QString & text, const QTextOptio
 */
 void QPainter_drawText7 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2395,7 +2395,7 @@ void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const Q
 */
 void QPainter_drawTiledPixmap1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2410,7 +2410,7 @@ void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QP
 */
 void QPainter_drawTiledPixmap2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2425,7 +2425,7 @@ void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixm
 */
 void QPainter_drawTiledPixmap3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2464,7 +2464,7 @@ bool end ()
 */
 HB_FUNC_STATIC( QPAINTER_END )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2488,7 +2488,7 @@ void endNativePainting ()
 */
 HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2514,7 +2514,7 @@ void eraseRect ( const QRectF & rectangle )
 */
 void QPainter_eraseRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2529,7 +2529,7 @@ void eraseRect ( const QRect & rectangle )
 */
 void QPainter_eraseRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2544,7 +2544,7 @@ void eraseRect ( int x, int y, int width, int height )
 */
 void QPainter_eraseRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2583,7 +2583,7 @@ void fillPath ( const QPainterPath & path, const QBrush & brush )
 */
 HB_FUNC_STATIC( QPAINTER_FILLPATH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2609,7 +2609,7 @@ void fillRect ( const QRectF & rectangle, const QBrush & brush )
 */
 void QPainter_fillRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2624,7 +2624,7 @@ void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
 */
 void QPainter_fillRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2639,7 +2639,7 @@ void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
 */
 void QPainter_fillRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2654,7 +2654,7 @@ void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
 */
 void QPainter_fillRect4 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2669,7 +2669,7 @@ void fillRect ( const QRect & rectangle, const QBrush & brush )
 */
 void QPainter_fillRect5 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2684,7 +2684,7 @@ void fillRect ( const QRect & rectangle, const QColor & color )
 */
 void QPainter_fillRect6 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2699,7 +2699,7 @@ void fillRect ( const QRectF & rectangle, const QColor & color )
 */
 void QPainter_fillRect7 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2714,7 +2714,7 @@ void fillRect ( int x, int y, int width, int height, const QBrush & brush )
 */
 void QPainter_fillRect8 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2729,7 +2729,7 @@ void fillRect ( int x, int y, int width, int height, const QColor & color )
 */
 void QPainter_fillRect9 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2744,7 +2744,7 @@ void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
 */
 void QPainter_fillRect10 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2759,7 +2759,7 @@ void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
 */
 void QPainter_fillRect11 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2774,7 +2774,7 @@ void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
 */
 void QPainter_fillRect12 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2790,7 +2790,7 @@ void fillRect(int x, int y, int width, int height, QGradient::Preset preset)
 void QPainter_fillRect13 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2807,7 +2807,7 @@ void fillRect ( const QRect &rectangle, QGradient::Preset preset)
 void QPainter_fillRect14 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2824,7 +2824,7 @@ void fillRect(const QRectF &rectangle, QGradient::Preset preset)
 void QPainter_fillRect15 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2924,7 +2924,7 @@ const QFont & font () const
 */
 HB_FUNC_STATIC( QPAINTER_FONT )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2949,7 +2949,7 @@ QFontInfo fontInfo () const
 */
 HB_FUNC_STATIC( QPAINTER_FONTINFO )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2974,7 +2974,7 @@ QFontMetrics fontMetrics () const
 */
 HB_FUNC_STATIC( QPAINTER_FONTMETRICS )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2999,7 +2999,7 @@ bool hasClipping () const
 */
 HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3023,7 +3023,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QPAINTER_ISACTIVE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3047,7 +3047,7 @@ Qt::LayoutDirection layoutDirection () const
 */
 HB_FUNC_STATIC( QPAINTER_LAYOUTDIRECTION )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3071,7 +3071,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QPAINTER_OPACITY )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3095,7 +3095,7 @@ QPaintEngine * paintEngine () const
 */
 HB_FUNC_STATIC( QPAINTER_PAINTENGINE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3120,7 +3120,7 @@ const QPen & pen () const
 */
 HB_FUNC_STATIC( QPAINTER_PEN )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3145,7 +3145,7 @@ RenderHints renderHints () const
 */
 HB_FUNC_STATIC( QPAINTER_RENDERHINTS )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3169,7 +3169,7 @@ void resetTransform ()
 */
 HB_FUNC_STATIC( QPAINTER_RESETTRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3195,7 +3195,7 @@ void restore ()
 */
 HB_FUNC_STATIC( QPAINTER_RESTORE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3221,7 +3221,7 @@ void rotate ( qreal angle )
 */
 HB_FUNC_STATIC( QPAINTER_ROTATE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3247,7 +3247,7 @@ void save ()
 */
 HB_FUNC_STATIC( QPAINTER_SAVE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3273,7 +3273,7 @@ void scale ( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QPAINTER_SCALE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3299,7 +3299,7 @@ void setBackground ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3325,7 +3325,7 @@ void setBackgroundMode ( Qt::BGMode mode )
 */
 HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3351,7 +3351,7 @@ void setBrush ( const QBrush & brush )
 */
 void QPainter_setBrush1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3366,7 +3366,7 @@ void setBrush ( Qt::BrushStyle style )
 */
 void QPainter_setBrush2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3400,7 +3400,7 @@ void setBrushOrigin ( const QPointF & position )
 */
 void QPainter_setBrushOrigin1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3415,7 +3415,7 @@ void setBrushOrigin ( const QPoint & position )
 */
 void QPainter_setBrushOrigin2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3430,7 +3430,7 @@ void setBrushOrigin ( int x, int y )
 */
 void QPainter_setBrushOrigin3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3469,7 +3469,7 @@ void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3495,7 +3495,7 @@ void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::R
 */
 void QPainter_setClipRect1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3510,7 +3510,7 @@ void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operat
 */
 void QPainter_setClipRect2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3525,7 +3525,7 @@ void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::Re
 */
 void QPainter_setClipRect3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3564,7 +3564,7 @@ void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::R
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3590,7 +3590,7 @@ void setClipping ( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3616,7 +3616,7 @@ void setCompositionMode ( CompositionMode mode )
 */
 HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3642,7 +3642,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QPAINTER_SETFONT )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3668,7 +3668,7 @@ void setLayoutDirection ( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3694,7 +3694,7 @@ void setOpacity ( qreal opacity )
 */
 HB_FUNC_STATIC( QPAINTER_SETOPACITY )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3720,7 +3720,7 @@ void setPen ( const QPen & pen )
 */
 void QPainter_setPen1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3735,7 +3735,7 @@ void setPen ( const QColor & color )
 */
 void QPainter_setPen2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3750,7 +3750,7 @@ void setPen ( Qt::PenStyle style )
 */
 void QPainter_setPen3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3789,7 +3789,7 @@ void setRenderHint ( RenderHint hint, bool on = true )
 */
 HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3815,7 +3815,7 @@ void setRenderHints ( RenderHints hints, bool on = true )
 */
 HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3841,7 +3841,7 @@ void setTransform ( const QTransform & transform, bool combine = false )
 */
 HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3867,7 +3867,7 @@ void setViewTransformEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3893,7 +3893,7 @@ void setViewport ( const QRect & rectangle )
 */
 void QPainter_setViewport1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3908,7 +3908,7 @@ void setViewport ( int x, int y, int width, int height )
 */
 void QPainter_setViewport2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3942,7 +3942,7 @@ void setWindow ( const QRect & rectangle )
 */
 void QPainter_setWindow1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3957,7 +3957,7 @@ void setWindow ( int x, int y, int width, int height )
 */
 void QPainter_setWindow2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -3991,7 +3991,7 @@ void setWorldMatrixEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4017,7 +4017,7 @@ void setWorldTransform ( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4043,7 +4043,7 @@ void shear ( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QPAINTER_SHEAR )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4069,7 +4069,7 @@ void strokePath ( const QPainterPath & path, const QPen & pen )
 */
 HB_FUNC_STATIC( QPAINTER_STROKEPATH )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4095,7 +4095,7 @@ bool testRenderHint ( RenderHint hint ) const
 */
 HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4119,7 +4119,7 @@ const QTransform & transform () const
 */
 HB_FUNC_STATIC( QPAINTER_TRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4144,7 +4144,7 @@ void translate ( const QPointF & offset )
 */
 void QPainter_translate1 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4159,7 +4159,7 @@ void translate ( const QPoint & offset )
 */
 void QPainter_translate2 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4174,7 +4174,7 @@ void translate ( qreal dx, qreal dy )
 */
 void QPainter_translate3 ()
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4213,7 +4213,7 @@ bool viewTransformEnabled () const
 */
 HB_FUNC_STATIC( QPAINTER_VIEWTRANSFORMENABLED )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4237,7 +4237,7 @@ QRect viewport () const
 */
 HB_FUNC_STATIC( QPAINTER_VIEWPORT )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4262,7 +4262,7 @@ QRect window () const
 */
 HB_FUNC_STATIC( QPAINTER_WINDOW )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4287,7 +4287,7 @@ bool worldMatrixEnabled () const
 */
 HB_FUNC_STATIC( QPAINTER_WORLDMATRIXENABLED )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -4311,7 +4311,7 @@ const QTransform & worldTransform () const
 */
 HB_FUNC_STATIC( QPAINTER_WORLDTRANSFORM )
 {
-  QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

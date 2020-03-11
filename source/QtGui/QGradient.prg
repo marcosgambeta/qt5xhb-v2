@@ -83,7 +83,7 @@ CoordinateMode coordinateMode () const
 */
 HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ void setColorAt ( qreal position, const QColor & color )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ void setCoordinateMode ( CoordinateMode mode )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ void setSpread ( Spread method )
 */
 HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ Spread spread () const
 */
 HB_FUNC_STATIC( QGRADIENT_SPREAD )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QGRADIENT_TYPE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

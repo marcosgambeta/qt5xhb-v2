@@ -100,7 +100,7 @@ int count() const
 */
 HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QTEXTLIST_ISEMPTY )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QTextBlock item(int i) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ int itemNumber(const QTextBlock &) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ QString itemText(const QTextBlock &) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void removeItem(int i)
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void remove(const QTextBlock &)
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void add(const QTextBlock &block)
 */
 HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ void setFormat(const QTextListFormat &format)
 */
 HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ QTextListFormat format() const
 */
 HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {
-  QTextList * obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

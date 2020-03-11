@@ -205,7 +205,7 @@ const QBrush & alternateBase () const
 */
 HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ const QBrush & base () const
 */
 HB_FUNC_STATIC( QPALETTE_BASE )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ const QBrush & brightText () const
 */
 HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ const QBrush & brush ( ColorGroup group, ColorRole role ) const
 */
 void QPalette_brush1 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ const QBrush & brush ( ColorRole role ) const
 */
 void QPalette_brush2 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ const QBrush & button () const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTON )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ const QBrush & buttonText () const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -401,7 +401,7 @@ const QColor & color ( ColorGroup group, ColorRole role ) const
 */
 void QPalette_color1 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ const QColor & color ( ColorRole role ) const
 */
 void QPalette_color2 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ ColorGroup currentColorGroup () const
 */
 HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -472,7 +472,7 @@ const QBrush & dark () const
 */
 HB_FUNC_STATIC( QPALETTE_DARK )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ const QBrush & highlight () const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ const QBrush & highlightedText () const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -547,7 +547,7 @@ bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -571,7 +571,7 @@ bool isCopyOf ( const QPalette & p ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -595,7 +595,7 @@ bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -619,7 +619,7 @@ const QBrush & light () const
 */
 HB_FUNC_STATIC( QPALETTE_LIGHT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -644,7 +644,7 @@ const QBrush & link () const
 */
 HB_FUNC_STATIC( QPALETTE_LINK )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -669,7 +669,7 @@ const QBrush & linkVisited () const
 */
 HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -694,7 +694,7 @@ const QBrush & mid () const
 */
 HB_FUNC_STATIC( QPALETTE_MID )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -719,7 +719,7 @@ const QBrush & midlight () const
 */
 HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -744,7 +744,7 @@ QPalette resolve ( const QPalette & other ) const
 */
 HB_FUNC_STATIC( QPALETTE_RESOLVE )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -769,7 +769,7 @@ void setBrush ( ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush1 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -784,7 +784,7 @@ void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush2 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -818,7 +818,7 @@ void setColor ( ColorGroup group, ColorRole role, const QColor & color )
 */
 void QPalette_setColor1 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -833,7 +833,7 @@ void setColor ( ColorRole role, const QColor & color )
 */
 void QPalette_setColor2 ()
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -867,7 +867,7 @@ void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & bu
 */
 HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -893,7 +893,7 @@ void setCurrentColorGroup ( ColorGroup cg )
 */
 HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -919,7 +919,7 @@ const QBrush & shadow () const
 */
 HB_FUNC_STATIC( QPALETTE_SHADOW )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -944,7 +944,7 @@ const QBrush & text () const
 */
 HB_FUNC_STATIC( QPALETTE_TEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -969,7 +969,7 @@ const QBrush & toolTipBase () const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -994,7 +994,7 @@ const QBrush & toolTipText () const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1019,7 +1019,7 @@ const QBrush & window () const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOW )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1044,7 +1044,7 @@ const QBrush & windowText () const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 {
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1070,7 +1070,7 @@ const QBrush &QPalette::placeholderText() const
 HB_FUNC_STATIC( QPALETTE_PLACEHOLDERTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QPalette * obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPalette *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

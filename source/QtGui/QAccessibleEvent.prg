@@ -101,7 +101,7 @@ QAccessible::Event type() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ QObject *object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ void setChild(int chld)
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ virtual QAccessibleInterface *accessibleInterface() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

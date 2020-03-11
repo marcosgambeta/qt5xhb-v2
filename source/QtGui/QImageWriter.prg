@@ -151,7 +151,7 @@ bool canWrite () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ int compression () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ ImageWriterError error () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ float gamma () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ int quality () const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ void setCompression ( int compression )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -421,7 +421,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ void setGamma ( float gamma )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -499,7 +499,7 @@ void setQuality ( int quality )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -525,7 +525,7 @@ void setText ( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -551,7 +551,7 @@ bool supportsOption ( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -575,7 +575,7 @@ bool write ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
-  QImageWriter * obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

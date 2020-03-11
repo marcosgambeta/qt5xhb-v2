@@ -89,7 +89,7 @@ const QKeySequence &key() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ int shortcutId() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ bool isAmbiguous() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QShortcutEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

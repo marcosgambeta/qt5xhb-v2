@@ -135,7 +135,7 @@ void allocate(const void * data, int count)
 */
 void QOpenGLBuffer_allocate1 ()
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ void allocate(int count)
 */
 void QOpenGLBuffer_allocate2 ()
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ bool bind()
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_BIND )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ GLuint bufferId() const
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_BUFFERID )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ bool create()
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_CREATE )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_DESTROY )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_ISCREATED )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ void * map(QOpenGLBuffer::Access access)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ bool read(int offset, void * data, int count)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_READ )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ void release()
 */
 void QOpenGLBuffer_release1 ()
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void setUsagePattern(QOpenGLBuffer::UsagePattern value)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ int size() const
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_SIZE )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ QOpenGLBuffer::Type type() const
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_TYPE )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ bool unmap()
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_UNMAP )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ QOpenGLBuffer::UsagePattern usagePattern() const
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_USAGEPATTERN )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ void write(int offset, const void * data, int count)
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
 {
-  QOpenGLBuffer * obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

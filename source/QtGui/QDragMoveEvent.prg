@@ -89,7 +89,7 @@ void accept ( const QRect & rectangle )
 */
 void QDragMoveEvent_accept1 ()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ void accept ()
 */
 void QDragMoveEvent_accept2 ()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ QRect answerRect () const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ void ignore ( const QRect & rectangle )
 */
 void QDragMoveEvent_ignore1 ()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ void ignore ()
 */
 void QDragMoveEvent_ignore2 ()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

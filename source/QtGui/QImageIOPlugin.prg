@@ -71,7 +71,7 @@ virtual Capabilities capabilities ( QIODevice * device, const QByteArray & forma
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

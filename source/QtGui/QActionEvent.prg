@@ -90,7 +90,7 @@ QAction * action () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ QAction * before () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -88,7 +88,7 @@ void setValue(const QVariant & val)
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ QVariant value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
 {
-  QAccessibleValueChangeEvent * obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

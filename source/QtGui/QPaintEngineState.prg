@@ -103,7 +103,7 @@ QBrush backgroundBrush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ Qt::BGMode backgroundMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ bool brushNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QPointF brushOrigin () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ Qt::ClipOperation clipOperation () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ QPainterPath clipPath () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ QRegion clipRegion () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ QPainter::CompositionMode compositionMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ bool isClipEnabled () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -397,7 +397,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ bool penNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ QPainter::RenderHints renderHints () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -495,7 +495,7 @@ QPaintEngine::DirtyFlags state () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -519,7 +519,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {
-  QPaintEngineState * obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

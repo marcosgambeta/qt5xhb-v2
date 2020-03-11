@@ -143,7 +143,7 @@ void setFormat (const QByteArray &format)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void setDevice (QIODevice *device)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ QIODevice *device () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ void setFileName (const QString &fileName)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ bool write(const QTextDocument *document)
 */
 void QTextDocumentWriter_write1 ()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ bool write(const QTextDocumentFragment &fragment)
 */
 void QTextDocumentWriter_write2 ()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ void setCodec(QTextCodec *codec)
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ QTextCodec *codec() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -168,7 +168,7 @@ QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) c
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Q
 */
 void QIcon_paint1 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment align
 */
 void QIcon_paint2 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) con
 */
 void QIcon_pixmap1 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap2 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap3 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ QVariant toVariant ()
 */
 void QIcon_toVariant1 ()
 {
-  QIcon * obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

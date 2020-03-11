@@ -100,7 +100,7 @@ void setFrameFormat(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QTextFrame *parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  QTextFrame * obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -80,7 +80,7 @@ QObject * create ( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ QStringList keys ()
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {
-  QGenericPluginFactory * obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGenericPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

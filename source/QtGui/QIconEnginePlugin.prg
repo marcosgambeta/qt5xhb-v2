@@ -70,7 +70,7 @@ virtual QIconEngine * create(const QString & filename = QString()) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -123,7 +123,7 @@ void swap(QOpenGLDebugMessage &debugMessage)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ Source source() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ Severity severity() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ GLuint id() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
 {
-  QOpenGLDebugMessage * obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

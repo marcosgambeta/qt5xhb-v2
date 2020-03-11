@@ -118,7 +118,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ virtual void fixup(QString & input) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void setBottom(int)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setLocale(const QLocale & locale)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ virtual void setRange(int bottom, int top)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void setTop(int)
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ int top() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ virtual State validate(QString & input, int & pos) const = 0
 */
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
-  QIntValidator * obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIntValidator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

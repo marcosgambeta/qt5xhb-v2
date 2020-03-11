@@ -74,7 +74,7 @@ QString file () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

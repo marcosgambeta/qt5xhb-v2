@@ -156,7 +156,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QBitmap transformed ( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QVariant toVariant ()
 */
 void QBitmap_toVariant1 ()
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

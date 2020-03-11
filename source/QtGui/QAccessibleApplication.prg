@@ -79,7 +79,7 @@ QWindow *window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILDCOUNT )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ int indexOfChild(const QAccessibleInterface*) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QAccessibleInterface *focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QAccessibleInterface *parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ QAccessibleInterface *child(int index) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ QString text(QAccessible::Text t) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QAccessible::Role role() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_ROLE )
 {
-  QAccessibleApplication * obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

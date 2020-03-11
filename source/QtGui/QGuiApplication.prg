@@ -186,7 +186,7 @@ virtual bool notify(QObject * object, QEvent * event)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
-  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

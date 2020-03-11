@@ -71,7 +71,7 @@ virtual bool loadPicture(const QString &format, const QString &filename, QPictur
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ virtual bool savePicture(const QString &format, const QString &filename, const Q
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ virtual bool installIOHandler(const QString &format) = 0
 */
 HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
 {
-  QPictureFormatPlugin * obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPictureFormatPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

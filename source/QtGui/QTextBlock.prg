@@ -158,7 +158,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool contains(int position) const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QTextLayout *layout() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ int blockFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ const QTextDocument *document() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ QTextList *textList() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ QTextBlockUserData *userData() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ void setUserData(QTextBlockUserData *data)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -552,7 +552,7 @@ int userState() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -576,7 +576,7 @@ void setUserState(int state)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ int revision() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void setRevision(int rev)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -676,7 +676,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -702,7 +702,7 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -726,7 +726,7 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -750,7 +750,7 @@ void setLineCount(int count)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -776,7 +776,7 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -800,7 +800,7 @@ QTextBlock next() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -825,7 +825,7 @@ QTextBlock previous() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -854,7 +854,7 @@ int fragmentIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FRAGMENTINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

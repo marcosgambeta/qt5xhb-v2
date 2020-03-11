@@ -125,7 +125,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ bool overline () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ QRawFont rawFont () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ void setOverline ( bool overline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ void setRawFont ( const QRawFont & rawFont )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ void setStrikeOut ( bool strikeOut )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ void setUnderline ( bool underline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ bool strikeOut () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ bool underline () const
 */
 HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
 {
-  QGlyphRun * obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGlyphRun *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

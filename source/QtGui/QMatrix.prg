@@ -176,7 +176,7 @@ void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QMATRIX_SETMATRIX )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ qreal m11() const
 */
 HB_FUNC_STATIC( QMATRIX_M11 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ qreal m12() const
 */
 HB_FUNC_STATIC( QMATRIX_M12 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ qreal m21() const
 */
 HB_FUNC_STATIC( QMATRIX_M21 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ qreal m22() const
 */
 HB_FUNC_STATIC( QMATRIX_M22 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ qreal dx() const
 */
 HB_FUNC_STATIC( QMATRIX_DX )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ qreal dy() const
 */
 HB_FUNC_STATIC( QMATRIX_DY )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ void map(int x, int y, int *tx, int *ty) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP1 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -376,7 +376,7 @@ void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP2 )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ QPoint map(const QPoint &p) const
 */
 void QMatrix_map3 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ QPointF map(const QPointF&p) const
 */
 void QMatrix_map4 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ QLine map(const QLine &l) const
 */
 void QMatrix_map5 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ QLineF map(const QLineF &l) const
 */
 void QMatrix_map6 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ QPolygon map(const QPolygon &a) const
 */
 void QMatrix_map7 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ QPolygonF map(const QPolygonF &a) const
 */
 void QMatrix_map8 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ QRegion map(const QRegion &r) const
 */
 void QMatrix_map9 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -504,7 +504,7 @@ QPainterPath map(const QPainterPath &p) const
 */
 void QMatrix_map10 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -577,7 +577,7 @@ QRect mapRect(const QRect &) const
 */
 void QMatrix_mapRect1 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -591,7 +591,7 @@ QRectF mapRect(const QRectF &) const
 */
 void QMatrix_mapRect2 ()
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ QPolygon mapToPolygon(const QRect &r) const
 */
 HB_FUNC_STATIC( QMATRIX_MAPTOPOLYGON )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -649,7 +649,7 @@ void reset()
 */
 HB_FUNC_STATIC( QMATRIX_RESET )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -675,7 +675,7 @@ bool isIdentity() const
 */
 HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -699,7 +699,7 @@ QMatrix &translate(qreal dx, qreal dy)
 */
 HB_FUNC_STATIC( QMATRIX_TRANSLATE )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -724,7 +724,7 @@ QMatrix &scale(qreal sx, qreal sy)
 */
 HB_FUNC_STATIC( QMATRIX_SCALE )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -749,7 +749,7 @@ QMatrix &shear(qreal sh, qreal sv)
 */
 HB_FUNC_STATIC( QMATRIX_SHEAR )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -774,7 +774,7 @@ QMatrix &rotate(qreal a)
 */
 HB_FUNC_STATIC( QMATRIX_ROTATE )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -799,7 +799,7 @@ bool isInvertible() const
 */
 HB_FUNC_STATIC( QMATRIX_ISINVERTIBLE )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -823,7 +823,7 @@ qreal determinant() const
 */
 HB_FUNC_STATIC( QMATRIX_DETERMINANT )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -847,7 +847,7 @@ QMatrix inverted(bool *invertible = nullptr) const
 */
 HB_FUNC_STATIC( QMATRIX_INVERTED )
 {
-  QMatrix * obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMatrix *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

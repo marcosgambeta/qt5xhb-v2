@@ -148,7 +148,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ QString toHtml(const QByteArray &encoding = QByteArray()) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
-  QTextDocumentFragment * obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDocumentFragment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

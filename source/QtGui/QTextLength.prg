@@ -118,7 +118,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ qreal value(qreal maximumLength) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ qreal rawValue() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

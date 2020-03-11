@@ -226,7 +226,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVECTOR4D_ISNULL )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ float x() const
 */
 HB_FUNC_STATIC( QVECTOR4D_X )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ float y() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Y )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ float z() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Z )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ float w() const
 */
 HB_FUNC_STATIC( QVECTOR4D_W )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ void setX(float x)
 */
 HB_FUNC_STATIC( QVECTOR4D_SETX )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ void setY(float y)
 */
 HB_FUNC_STATIC( QVECTOR4D_SETY )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setZ(float z)
 */
 HB_FUNC_STATIC( QVECTOR4D_SETZ )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ void setW(float w)
 */
 HB_FUNC_STATIC( QVECTOR4D_SETW )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ float length() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTH )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ float lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ QVector4D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ void normalize()
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -549,7 +549,7 @@ QVector2D toVector2D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ QVector2D toVector2DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -599,7 +599,7 @@ QVector3D toVector3D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ QVector3D toVector3DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -649,7 +649,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -674,7 +674,7 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
 {
-  QVector4D * obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector4D *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -87,7 +87,7 @@ Qt::WindowStates oldState() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ bool isOverride() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

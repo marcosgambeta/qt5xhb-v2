@@ -95,7 +95,7 @@ QPointF startPos() const
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_STARTPOS )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ QSizeF viewportSize() const
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_VIEWPORTSIZE )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ QRectF contentPosRange() const
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_CONTENTPOSRANGE )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QPointF contentPos() const
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_CONTENTPOS )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void setViewportSize(const QSizeF &size)
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETVIEWPORTSIZE )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setContentPosRange(const QRectF &rect)
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void setContentPos(const QPointF &pos)
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOS )
 {
-  QScrollPrepareEvent * obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollPrepareEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

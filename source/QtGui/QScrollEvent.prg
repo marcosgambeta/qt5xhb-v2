@@ -89,7 +89,7 @@ QPointF contentPos() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ QPointF overshootDistance() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ ScrollState scrollState() const
 */
 HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
 {
-  QScrollEvent * obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

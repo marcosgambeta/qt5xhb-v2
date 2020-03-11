@@ -86,7 +86,7 @@ bool toggle() const
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBarChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -91,7 +91,7 @@ bool create()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_CREATE )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_DESTROY )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_ISCREATED )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ GLuint objectId() const
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_OBJECTID )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ void bind()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_BIND )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void release()
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_RELEASE )
 {
-  QOpenGLVertexArrayObject * obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLVertexArrayObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

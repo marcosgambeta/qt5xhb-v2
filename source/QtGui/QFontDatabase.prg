@@ -119,7 +119,7 @@ bool bold ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ QStringList families ( WritingSystem writingSystem = Any ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ QFont font ( const QString & family, const QString & style, int pointSize ) cons
 */
 HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool isBitmapScalable ( const QString & family, const QString & style = QString(
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ bool isFixedPitch ( const QString & family, const QString & style = QString() ) 
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ bool isScalable ( const QString & family, const QString & style = QString() ) co
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ bool isSmoothlyScalable ( const QString & family, const QString & style = QStrin
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ bool italic ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ QList<int> pointSizes ( const QString & family, const QString & style = QString(
 */
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -337,7 +337,7 @@ QList<int> smoothSizes ( const QString & family, const QString & style )
 */
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ QString styleString ( const QFont & font )
 */
 void QFontDatabase_styleString1 ()
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ QString styleString ( const QFontInfo & fontInfo )
 */
 void QFontDatabase_styleString2 ()
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ QStringList styles ( const QString & family ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ int weight ( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
-  QFontDatabase * obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
