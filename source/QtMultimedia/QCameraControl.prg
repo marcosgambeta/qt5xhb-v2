@@ -87,7 +87,7 @@ virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status st
 */
 HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ virtual QCamera::CaptureModes captureMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ virtual void setState(QCamera::State state) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ virtual QCamera::State state() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_STATE )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ virtual QCamera::Status status() const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
 {
-  QCameraControl * obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

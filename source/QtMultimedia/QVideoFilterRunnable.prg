@@ -89,7 +89,7 @@ virtual QVideoFrame run(QVideoFrame *input, const QVideoSurfaceFormat &surfaceFo
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QVideoFilterRunnable * obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

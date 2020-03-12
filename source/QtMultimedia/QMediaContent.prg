@@ -208,7 +208,7 @@ QNetworkRequest canonicalRequest() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QMediaResource canonicalResource() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ QUrl canonicalUrl() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -307,7 +307,7 @@ QMediaPlaylist * playlist() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ QMediaResourceList resources() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

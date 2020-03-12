@@ -93,7 +93,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ bool setSource(QMediaObject * source)
 */
 void QVideoProbe_setSource1 ()
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ bool setSource(QMediaRecorder * source)
 */
 void QVideoProbe_setSource2 ()
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

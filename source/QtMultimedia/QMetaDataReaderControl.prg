@@ -83,7 +83,7 @@ virtual bool isMetaDataAvailable() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ virtual QVariant metaData(const QString &key) const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual QStringList availableMetaData() const = 0
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaDataReaderControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

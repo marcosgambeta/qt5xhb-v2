@@ -84,7 +84,7 @@ virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ virtual int cameraOrientation(const QString &deviceName) const = 0
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

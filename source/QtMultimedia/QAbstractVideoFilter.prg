@@ -88,7 +88,7 @@ bool isActive() const
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ void setActive(bool v)
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ virtual QVideoFilterRunnable *createFilterRunnable() = 0
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

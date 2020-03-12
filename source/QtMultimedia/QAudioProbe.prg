@@ -93,7 +93,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ bool setSource(QMediaObject * source)
 */
 void QAudioProbe_setSource1 ()
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ bool setSource(QMediaRecorder * source)
 */
 void QAudioProbe_setSource2 ()
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

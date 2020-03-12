@@ -95,7 +95,7 @@ int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ void setLoops(int)
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void play()
 */
 void QSound_play1 ()
 {
-  QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

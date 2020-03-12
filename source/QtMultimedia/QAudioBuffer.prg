@@ -159,7 +159,7 @@ int byteCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void * data()
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ qint64 duration() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ int frameCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ int sampleCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ qint64 startTime() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -104,7 +104,7 @@ int notifyInterval() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ void setNotifyInterval(int milliSeconds)
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ virtual QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ QStringList availableMetaData() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ virtual bool bind(QObject * object)
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ virtual bool isAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ bool isMetaDataAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ QVariant metaData(const QString & key) const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ virtual QMediaService * service() const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ virtual void unbind(QObject * object)
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 {
-  QMediaObject * obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaObject *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

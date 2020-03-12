@@ -81,7 +81,7 @@ virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &
 */
 HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

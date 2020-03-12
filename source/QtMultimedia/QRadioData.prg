@@ -111,7 +111,7 @@ QString stationId() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONID )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ QString programTypeName() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QString stationName() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QString radioText() const
 */
 HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ bool isAlternativeFrequenciesEnabled() const
 */
 HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ void setAlternativeFrequenciesEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QMediaObject *mediaObject() const override
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 {
-  QRadioData * obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

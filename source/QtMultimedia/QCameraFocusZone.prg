@@ -113,7 +113,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QRectF area() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ FocusZoneStatus status() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 {
-  QCameraFocusZone * obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
