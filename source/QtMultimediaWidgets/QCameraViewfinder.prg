@@ -87,7 +87,7 @@ virtual QMediaObject * mediaObject() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
 {
-  QCameraViewfinder * obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
