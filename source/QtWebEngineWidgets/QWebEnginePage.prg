@@ -143,7 +143,7 @@ QWebEngineHistory *history() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QWidget *view() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ void setView(QWidget *view)
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ bool hasSelection() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_HASSELECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QString selectedText() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_SELECTEDTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ QAction *action(WebAction action) const
 HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ virtual void triggerAction(WebAction action, bool checked = false)
 HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ virtual bool event(QEvent*)
 HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ QMenu *createStandardContextMenu()
 HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ void setFeaturePermission(const QUrl &securityOrigin, Feature feature, Permissio
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -417,7 +417,7 @@ void load(const QUrl &url)
 HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -445,7 +445,7 @@ void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ void setContent(const QByteArray &data, const QString &mimeType = QString(), con
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ QString title() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ QUrl url() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -562,7 +562,7 @@ void setUrl(const QUrl &url)
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -590,7 +590,7 @@ QUrl requestedUrl() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_REQUESTEDURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ QUrl iconUrl() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_ICONURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -644,7 +644,7 @@ qreal zoomFactor() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -670,7 +670,7 @@ void setZoomFactor(qreal factor)
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -698,7 +698,7 @@ void runJavaScript(const QString& scriptSource)
 void QWebEnginePage_runJavaScript1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -734,7 +734,7 @@ QWebEngineSettings *settings() const
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEnginePage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
