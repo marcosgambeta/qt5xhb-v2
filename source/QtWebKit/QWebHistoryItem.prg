@@ -108,7 +108,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QDateTime lastVisited () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QUrl originalUrl () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ void setUserData ( const QVariant & userData )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ QVariant userData () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {
-  QWebHistoryItem * obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

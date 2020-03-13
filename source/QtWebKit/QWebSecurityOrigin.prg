@@ -109,7 +109,7 @@ qint64 databaseQuota () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ qint64 databaseUsage () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QList<QWebDatabase> databases () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QString host () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ int port () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QString scheme () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ void setDatabaseQuota ( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

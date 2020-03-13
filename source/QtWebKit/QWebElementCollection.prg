@@ -136,7 +136,7 @@ void append ( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ QWebElement at ( int i ) const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ int count () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ QWebElement first () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ QWebElement last () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ QList<QWebElement> toList () const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
-  QWebElementCollection * obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebElementCollection *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

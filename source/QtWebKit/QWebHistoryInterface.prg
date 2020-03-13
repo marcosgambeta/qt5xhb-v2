@@ -75,7 +75,7 @@ virtual void addHistoryEntry ( const QString & url ) = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ virtual bool historyContains ( const QString & url ) const = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

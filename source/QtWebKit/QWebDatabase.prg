@@ -105,7 +105,7 @@ QString displayName () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ qint64 expectedSize () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QWebSecurityOrigin origin () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
-  QWebDatabase * obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -74,7 +74,7 @@ virtual QObject * create ( const QString & mimeType, const QUrl & url, const QSt
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ virtual void refreshPlugins ()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebPluginFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
