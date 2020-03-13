@@ -170,7 +170,7 @@ QSsl::KeyAlgorithm algorithm () const
 */
 HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ int length () const
 */
 HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TODER )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ QSsl::KeyType type () const
 */
 HB_FUNC_STATIC( QSSLKEY_TYPE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ void swap(QSslKey &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLKEY_SWAP )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ Qt::HANDLE handle() const
 */
 HB_FUNC_STATIC( QSSLKEY_HANDLE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

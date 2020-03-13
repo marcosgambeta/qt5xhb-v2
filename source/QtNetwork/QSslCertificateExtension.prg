@@ -125,7 +125,7 @@ void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ QString oid() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QVariant value() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ bool isCritical() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ bool isSupported() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
 {
-  QSslCertificateExtension * obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificateExtension *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

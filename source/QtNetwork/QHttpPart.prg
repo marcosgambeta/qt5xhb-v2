@@ -123,7 +123,7 @@ void setBody ( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void setBodyDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ void swap(QHttpPart &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHTTPPART_SWAP )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

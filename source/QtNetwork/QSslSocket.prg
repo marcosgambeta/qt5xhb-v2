@@ -173,7 +173,7 @@ void resume() Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_RESUME )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode
 */
 void QSslSocket_connectToHostEncrypted1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ void connectToHostEncrypted(const QString &hostName, quint16 port, const QString
 */
 void QSslSocket_connectToHostEncrypted2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ bool setSocketDescriptor(qintptr socketDescriptor, SocketState state = Connected
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void connectToHost(const QString &hostName, quint16 port, OpenMode openMode = Re
 */
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOST )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ void disconnectFromHost() Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_DISCONNECTFROMHOST )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ virtual void setSocketOption(QAbstractSocket::SocketOption option, const QVarian
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ virtual QVariant socketOption(QAbstractSocket::SocketOption option) Q_DECL_OVERR
 */
 HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ SslMode mode() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_MODE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ bool isEncrypted() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ISENCRYPTED )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ void setProtocol(QSsl::SslProtocol protocol)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ QSslSocket::PeerVerifyMode peerVerifyMode() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYMODE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ int peerVerifyDepth() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYDEPTH )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -547,7 +547,7 @@ void setPeerVerifyDepth(int depth)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ QString peerVerifyName() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYNAME )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ void setPeerVerifyName(const QString &hostName)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYNAME )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -623,7 +623,7 @@ qint64 bytesAvailable() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_BYTESAVAILABLE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ qint64 bytesToWrite() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_BYTESTOWRITE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -671,7 +671,7 @@ bool canReadLine() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_CANREADLINE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -695,7 +695,7 @@ void close() Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_CLOSE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -721,7 +721,7 @@ bool atEnd() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_ATEND )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -745,7 +745,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QSSLSOCKET_FLUSH )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -769,7 +769,7 @@ void abort()
 */
 HB_FUNC_STATIC( QSSLSOCKET_ABORT )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ void setReadBufferSize(qint64 size) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETREADBUFFERSIZE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ qint64 encryptedBytesAvailable() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -845,7 +845,7 @@ qint64 encryptedBytesToWrite() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESTOWRITE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -869,7 +869,7 @@ QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -894,7 +894,7 @@ void setSslConfiguration(const QSslConfiguration &config)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -921,7 +921,7 @@ void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
 HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -957,7 +957,7 @@ QList<QSslCertificate> localCertificateChain() const
 HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1010,7 +1010,7 @@ void setLocalCertificate(const QSslCertificate &certificate)
 */
 void QSslSocket_setLocalCertificate1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1025,7 +1025,7 @@ void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = 
 */
 void QSslSocket_setLocalCertificate2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1059,7 +1059,7 @@ QSslCertificate localCertificate() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1084,7 +1084,7 @@ QSslCertificate peerCertificate() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1109,7 +1109,7 @@ QList<QSslCertificate> peerCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1161,7 +1161,7 @@ QSslCipher sessionCipher() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1187,7 +1187,7 @@ QSsl::SslProtocol sessionProtocol() const
 HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1212,7 +1212,7 @@ void setPrivateKey(const QSslKey &key)
 */
 void QSslSocket_setPrivateKey1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1227,7 +1227,7 @@ void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl:
 */
 void QSslSocket_setPrivateKey2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1261,7 +1261,7 @@ QSslKey privateKey() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1286,7 +1286,7 @@ QList<QSslCipher> ciphers() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1338,7 +1338,7 @@ void setCiphers(const QList<QSslCipher> &ciphers)
 */
 void QSslSocket_setCiphers1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1361,7 +1361,7 @@ void setCiphers(const QString &ciphers)
 */
 void QSslSocket_setCiphers2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1518,7 +1518,7 @@ bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::
 */
 void QSslSocket_addCaCertificates1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1531,7 +1531,7 @@ void addCaCertificates(const QList<QSslCertificate> &certificates)
 */
 void QSslSocket_addCaCertificates2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1573,7 +1573,7 @@ void addCaCertificate(const QSslCertificate &certificate)
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1599,7 +1599,7 @@ void setCaCertificates(const QList<QSslCertificate> &certificates)
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1633,7 +1633,7 @@ QList<QSslCertificate> caCertificates() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1876,7 +1876,7 @@ bool waitForConnected(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1900,7 +1900,7 @@ bool waitForEncrypted(int msecs = 30000)
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1924,7 +1924,7 @@ bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1948,7 +1948,7 @@ bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1972,7 +1972,7 @@ bool waitForDisconnected(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1996,7 +1996,7 @@ QList<QSslError> sslErrors() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2147,7 +2147,7 @@ void ignoreSslErrors(const QList<QSslError> &errors)
 */
 void QSslSocket_ignoreSslErrors1 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2170,7 +2170,7 @@ void ignoreSslErrors() (slot)
 */
 void QSslSocket_ignoreSslErrors2 ()
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2204,7 +2204,7 @@ void startClientEncryption() (slot)
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2230,7 +2230,7 @@ void startServerEncryption() (slot)
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 {
-  QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_DISCONNECTFROMHOST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_MAXIMUMCHANNELCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_ISINDATAGRAMMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  QSctpSocket * obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

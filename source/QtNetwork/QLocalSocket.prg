@@ -120,7 +120,7 @@ void connectToServer(OpenMode openMode = ReadWrite)
 */
 void QLocalSocket_connectToServer1 ()
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
 */
 void QLocalSocket_connectToServer2 ()
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ void disconnectFromServer()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void setServerName(const QString &name)
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETSERVERNAME )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ void abort()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ virtual bool isSequential() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ virtual bool canReadLine() const Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ virtual bool open(OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_OPEN )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ virtual void close() Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ LocalSocketError error() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -465,7 +465,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ void setReadBufferSize(qint64 size)
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -563,7 +563,7 @@ bool setSocketDescriptor(qintptr socketDescriptor, LocalSocketState socketState 
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETSOCKETDESCRIPTOR )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ qintptr socketDescriptor() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SOCKETDESCRIPTOR )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -611,7 +611,7 @@ LocalSocketState state() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -635,7 +635,7 @@ bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -659,7 +659,7 @@ bool waitForConnected(int msecs = 30000)
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -683,7 +683,7 @@ bool waitForDisconnected(int msecs = 30000)
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -707,7 +707,7 @@ bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {
-  QLocalSocket * obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLocalSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

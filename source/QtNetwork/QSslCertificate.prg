@@ -168,7 +168,7 @@ void swap(QSslCertificate &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SWAP )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ bool isValid() const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 {
 #if QT_DEPRECATED_SINCE(5,0)
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ bool isBlacklisted() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISBLACKLISTED )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ bool isSelfSigned() const
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ QByteArray version () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ QByteArray serialNumber () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ QByteArray digest(QCryptographicHash::Algorithm algorithm = QCryptographicHash::
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ QStringList issuerInfo ( SubjectInfo subject ) const
 */
 void QSslCertificate_issuerInfo1 ()
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ QStringList issuerInfo ( const QByteArray & attribute ) const
 */
 void QSslCertificate_issuerInfo2 ()
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -440,7 +440,7 @@ QStringList subjectInfo ( SubjectInfo subject ) const
 */
 void QSslCertificate_subjectInfo1 ()
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ QStringList subjectInfo ( const QByteArray & attribute ) const
 */
 void QSslCertificate_subjectInfo2 ()
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ QList<QByteArray> subjectInfoAttributes() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ QList<QByteArray> issuerInfoAttributes() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ QDateTime effectiveDate () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -622,7 +622,7 @@ QDateTime expiryDate () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ QSslKey publicKey () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -672,7 +672,7 @@ QList<QSslCertificateExtension> extensions() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -724,7 +724,7 @@ QByteArray toPem () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -749,7 +749,7 @@ QByteArray toDer () const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -774,7 +774,7 @@ QString toText() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -998,7 +998,7 @@ Qt::HANDLE handle() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_HANDLE )
 {
-  QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

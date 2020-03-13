@@ -125,7 +125,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ quint16 port() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ quint16 priority() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ QString target() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ quint16 weight() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
 {
-  QDnsServiceRecord * obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

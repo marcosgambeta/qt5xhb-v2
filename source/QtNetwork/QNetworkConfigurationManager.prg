@@ -101,7 +101,7 @@ QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFla
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ QNetworkConfigurationManager::Capabilities capabilities () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QNetworkConfiguration configurationFromIdentifier ( const QString & identifier )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ QNetworkConfiguration defaultConfiguration () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ bool isOnline () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ void updateConfigurations () (slot)
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {
-  QNetworkConfigurationManager * obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfigurationManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

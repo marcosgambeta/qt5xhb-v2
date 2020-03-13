@@ -125,7 +125,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QHostAddress value() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

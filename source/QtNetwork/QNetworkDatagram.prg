@@ -168,7 +168,7 @@ void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ void clear()
 HB_FUNC_STATIC( QNETWORKDATAGRAM_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ bool isValid() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ bool isNull() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ uint interfaceIndex() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_INTERFACEINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ void setInterfaceIndex(uint index)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETINTERFACEINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ QHostAddress senderAddress() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ QHostAddress destinationAddress() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ int senderPort() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ int destinationPort() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ void setSender(const QHostAddress &address, quint16 port = 0)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETSENDER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ void setDestination(const QHostAddress &address, quint16 port)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDESTINATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ int hopLimit() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_HOPLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ void setHopLimit(int count)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETHOPLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -546,7 +546,7 @@ QByteArray data() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ void setData(const QByteArray &data)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -601,7 +601,7 @@ QNetworkDatagram makeReply(const QByteArray &paylaod) const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -132,7 +132,7 @@ BearerType bearerType () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ BearerType bearerTypeFamily() const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QString bearerTypeName () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ QList<QNetworkConfiguration> children () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ QString identifier () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ bool isRoamingAvailable () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ Purpose purpose () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -378,7 +378,7 @@ StateFlags state () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -426,7 +426,7 @@ void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
 {
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ int connectTimeout() const
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ bool setConnectTimeout(int timeout)
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QNetworkConfiguration * obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkConfiguration *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -119,7 +119,7 @@ quint64 activeTime () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ quint64 bytesReceived () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ quint64 bytesWritten () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QNetworkConfiguration configuration () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ SessionError error () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ QNetworkInterface interface () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ bool isOpen () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ QVariant sessionProperty ( const QString & key ) const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ void setSessionProperty ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ State state () const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ bool waitForOpened ( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -412,7 +412,7 @@ void accept () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ void close () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ void ignore () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ void migrate () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,7 +516,7 @@ void open () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -542,7 +542,7 @@ void reject () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -568,7 +568,7 @@ void stop () (slot)
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -594,7 +594,7 @@ QNetworkSession::UsagePolicies usagePolicies() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_USAGEPOLICIES )
 {
-  QNetworkSession * obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkSession *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -99,7 +99,7 @@ virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ virtual bool insertCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ virtual bool updateCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ virtual bool deleteCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

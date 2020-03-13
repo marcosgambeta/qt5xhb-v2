@@ -123,7 +123,7 @@ QString exchange() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ quint16 preference() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
 {
-  QDnsMailExchangeRecord * obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

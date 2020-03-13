@@ -142,7 +142,7 @@ QString domain () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QDateTime expirationDate () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ bool isHttpOnly () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ bool isSecure () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ bool isSessionCookie () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ QByteArray name () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ QString path () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ void setDomain ( const QString & domain )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ void setExpirationDate ( const QDateTime & date )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ void setHttpOnly ( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ void setName ( const QByteArray & cookieName )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ void setPath ( const QString & path )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -442,7 +442,7 @@ void setSecure ( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ void setValue ( const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -494,7 +494,7 @@ QByteArray toRawForm ( RawForm form = Full ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -519,7 +519,7 @@ QByteArray value () const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -591,7 +591,7 @@ void swap(QNetworkCookie &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SWAP )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ bool hasSameIdentifier(const QNetworkCookie &other) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_HASSAMEIDENTIFIER )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -641,7 +641,7 @@ void normalize(const QUrl &url)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NORMALIZE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookie *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -158,7 +158,7 @@ QString authenticationMethod () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QString encryptionMethod () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ QString keyExchangeMethod () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_NAME )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QSsl::SslProtocol protocol () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ QString protocolString () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ int supportedBits () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ int usedBits () const
 */
 HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ void swap(QSslCipher &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCIPHER_SWAP )
 {
-  QSslCipher * obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSslCipher *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

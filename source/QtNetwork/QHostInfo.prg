@@ -136,7 +136,7 @@ void swap(QHostInfo &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QHOSTINFO_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ QString hostName() const
 */
 HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ void setHostName(const QString &name)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ QList<QHostAddress> addresses() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setAddresses(const QList<QHostAddress> &addresses)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ HostInfoError error() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ void setError(HostInfoError error)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ void setErrorString(const QString &errorString)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void setLookupId(int id)
 */
 HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ int lookupId() const
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 {
-  QHostInfo * obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

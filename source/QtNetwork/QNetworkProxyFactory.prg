@@ -91,7 +91,7 @@ virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNe
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 {
-  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxyFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
