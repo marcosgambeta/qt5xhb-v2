@@ -130,7 +130,7 @@ ShapeType type() const
 HB_FUNC_STATIC( QGEOSHAPE_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ bool isValid() const
 HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ bool contains(const QGeoCoordinate &coordinate) const
 HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

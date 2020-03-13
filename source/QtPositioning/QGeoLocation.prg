@@ -140,7 +140,7 @@ QGeoAddress address() const
 HB_FUNC_STATIC( QGEOLOCATION_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ void setAddress(const QGeoAddress &address)
 HB_FUNC_STATIC( QGEOLOCATION_SETADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ QGeoCoordinate coordinate() const
 HB_FUNC_STATIC( QGEOLOCATION_COORDINATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ void setCoordinate(const QGeoCoordinate &position)
 HB_FUNC_STATIC( QGEOLOCATION_SETCOORDINATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ QGeoRectangle boundingBox() const
 HB_FUNC_STATIC( QGEOLOCATION_BOUNDINGBOX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ void setBoundingBox(const QGeoRectangle &box)
 HB_FUNC_STATIC( QGEOLOCATION_SETBOUNDINGBOX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QGEOLOCATION_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
