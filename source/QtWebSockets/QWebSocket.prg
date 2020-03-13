@@ -154,7 +154,7 @@ void abort()
 HB_FUNC_STATIC( QWEBSOCKET_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QAbstractSocket::SocketError error() const
 HB_FUNC_STATIC( QWEBSOCKET_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ QString errorString() const
 HB_FUNC_STATIC( QWEBSOCKET_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ bool flush()
 HB_FUNC_STATIC( QWEBSOCKET_FLUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ bool isValid() const
 HB_FUNC_STATIC( QWEBSOCKET_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ QHostAddress localAddress() const
 HB_FUNC_STATIC( QWEBSOCKET_LOCALADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ quint16 localPort() const
 HB_FUNC_STATIC( QWEBSOCKET_LOCALPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ QAbstractSocket::PauseModes pauseMode() const
 HB_FUNC_STATIC( QWEBSOCKET_PAUSEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ QHostAddress peerAddress() const
 HB_FUNC_STATIC( QWEBSOCKET_PEERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ QString peerName() const
 HB_FUNC_STATIC( QWEBSOCKET_PEERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ quint16 peerPort() const
 HB_FUNC_STATIC( QWEBSOCKET_PEERPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ QNetworkProxy proxy() const
 HB_FUNC_STATIC( QWEBSOCKET_PROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ void setProxy(const QNetworkProxy &networkProxy)
 HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -499,7 +499,7 @@ const QMaskGenerator *maskGenerator() const
 HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ void setMaskGenerator(const QMaskGenerator *maskGenerator)
 HB_FUNC_STATIC( QWEBSOCKET_SETMASKGENERATOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -554,7 +554,7 @@ qint64 readBufferSize() const
 HB_FUNC_STATIC( QWEBSOCKET_READBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -580,7 +580,7 @@ void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC( QWEBSOCKET_SETREADBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -608,7 +608,7 @@ void resume()
 HB_FUNC_STATIC( QWEBSOCKET_RESUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -636,7 +636,7 @@ void setPauseMode(QAbstractSocket::PauseModes pauseMode)
 HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -664,7 +664,7 @@ QAbstractSocket::SocketState state() const
 HB_FUNC_STATIC( QWEBSOCKET_STATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -690,7 +690,7 @@ QWebSocketProtocol::Version version() const
 HB_FUNC_STATIC( QWEBSOCKET_VERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -716,7 +716,7 @@ QString resourceName() const
 HB_FUNC_STATIC( QWEBSOCKET_RESOURCENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -742,7 +742,7 @@ QUrl requestUrl() const
 HB_FUNC_STATIC( QWEBSOCKET_REQUESTURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -769,7 +769,7 @@ QString origin() const
 HB_FUNC_STATIC( QWEBSOCKET_ORIGIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ QWebSocketProtocol::CloseCode closeCode() const
 HB_FUNC_STATIC( QWEBSOCKET_CLOSECODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ QString closeReason() const
 HB_FUNC_STATIC( QWEBSOCKET_CLOSEREASON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -847,7 +847,7 @@ qint64 sendTextMessage(const QString &message)
 HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -873,7 +873,7 @@ qint64 sendBinaryMessage(const QByteArray &data)
 HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -899,7 +899,7 @@ void ignoreSslErrors(const QList<QSslError> &errors)
 void QWebSocket_ignoreSslErrors1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -924,7 +924,7 @@ void ignoreSslErrors()
 void QWebSocket_ignoreSslErrors2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -960,7 +960,7 @@ QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -987,7 +987,7 @@ void setSslConfiguration(const QSslConfiguration &sslConfiguration)
 HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1015,7 +1015,7 @@ void close(QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCo
 HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1043,7 +1043,7 @@ void open(const QUrl &url)
 HB_FUNC_STATIC( QWEBSOCKET_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1071,7 +1071,7 @@ void ping(const QByteArray &payload = QByteArray())
 HB_FUNC_STATIC( QWEBSOCKET_PING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

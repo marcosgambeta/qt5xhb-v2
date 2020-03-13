@@ -133,7 +133,7 @@ void swap(QWebSocketCorsAuthenticator &other)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QString origin() const
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ORIGIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ bool allowed() const
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ void setAllowed(bool allowed)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
