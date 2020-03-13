@@ -88,7 +88,7 @@ QStringList plugins() const
 HB_FUNC_STATIC( QCANBUS_PLUGINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorM
 HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName,
 HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
