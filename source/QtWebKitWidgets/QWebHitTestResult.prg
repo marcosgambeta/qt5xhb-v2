@@ -145,7 +145,7 @@ QString alternateText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ QWebElement element () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ QWebElement enclosingBlockElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ QWebFrame * frame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ QUrl imageUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ bool isContentEditable () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ bool isContentSelected () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ QWebElement linkElement () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ QWebFrame * linkTargetFrame () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ QString linkText () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -440,7 +440,7 @@ QUrl linkTitle () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -465,7 +465,7 @@ QUrl linkUrl () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -515,7 +515,7 @@ QPoint pos () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -540,7 +540,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -565,7 +565,7 @@ QString linkTitleString() const
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLESTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -591,7 +591,7 @@ QUrl mediaUrl() const
 HB_FUNC_STATIC( QWEBHITTESTRESULT_MEDIAURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWebHitTestResult * obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHitTestResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

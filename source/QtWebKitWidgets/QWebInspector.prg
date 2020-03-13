@@ -94,7 +94,7 @@ QWebPage * page () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ void setPage ( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ virtual bool event ( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  QWebInspector * obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
