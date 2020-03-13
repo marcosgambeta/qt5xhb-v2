@@ -108,7 +108,7 @@ QAction * action(DebuggerAction action) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ void attachTo(QScriptEngine * engine)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ bool autoShowStandardWindow() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QMenu * createStandardMenu(QWidget * parent = nullptr)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ QToolBar * createStandardToolBar(QWidget * parent = nullptr)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ void detach()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void setAutoShowStandardWindow(bool autoShow)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ QMainWindow * standardWindow() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ DebuggerState state() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ QWidget * widget(DebuggerWidget widget) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
-  QScriptEngineDebugger * obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineDebugger *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
