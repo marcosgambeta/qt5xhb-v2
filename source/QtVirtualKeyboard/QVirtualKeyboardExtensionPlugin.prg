@@ -72,7 +72,7 @@ virtual void registerTypes(const char *uri) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  QVirtualKeyboardExtensionPlugin * obj = (QVirtualKeyboardExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

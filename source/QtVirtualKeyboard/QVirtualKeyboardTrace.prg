@@ -114,7 +114,7 @@ int traceId() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ void setTraceId(int id)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ QStringList channels() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ void setChannels(const QStringList &channels)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ int length() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_LENGTH )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ bool isFinal() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ void setFinal(bool final)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ bool isCanceled() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ void setCanceled(bool canceled)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ void setOpacity(qreal opacity)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ Q_INVOKABLE QVariantList points(int pos = 0, int count = -1) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -440,7 +440,7 @@ Q_INVOKABLE int addPoint(const QPointF &point)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ Q_INVOKABLE void setChannelData(const QString &channel, int index, const QVarian
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int co
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
