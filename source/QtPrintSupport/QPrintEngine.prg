@@ -84,7 +84,7 @@ virtual bool abort () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual bool newPage () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ virtual QPrinter::PrinterState printerState () const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) 
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
