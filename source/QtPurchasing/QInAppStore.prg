@@ -99,7 +99,7 @@ Q_INVOKABLE void restorePurchases()
 */
 HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const Q
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString 
 */
 HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

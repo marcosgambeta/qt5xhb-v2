@@ -90,7 +90,7 @@ TransactionStatus status() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ QInAppProduct *product() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ virtual QString orderId() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ virtual FailureReason failureReason() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ virtual QString errorString() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ virtual QDateTime timestamp() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ Q_INVOKABLE virtual void finalize() = 0
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
 {
-  QInAppTransaction * obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInAppTransaction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
