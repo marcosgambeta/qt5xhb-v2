@@ -129,7 +129,7 @@ State state() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QLocale locale() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setLocale(const QLocale &locale)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ QVoice voice() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ void setVoice(const QVoice &voice)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ double rate() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ void setRate(double rate)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ double pitch() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ void setPitch(double pitch)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ double volume() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void setVolume(double volume)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ QVector<QLocale> availableLocales() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLELOCALES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ QVector<QVoice> availableVoices() const
 HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEVOICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -556,7 +556,7 @@ void say(const QString &text)
 HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -584,7 +584,7 @@ void stop()
 HB_FUNC_STATIC( QTEXTTOSPEECH_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -612,7 +612,7 @@ void pause()
 HB_FUNC_STATIC( QTEXTTOSPEECH_PAUSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -640,7 +640,7 @@ void resume()
 HB_FUNC_STATIC( QTEXTTOSPEECH_RESUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeech *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
