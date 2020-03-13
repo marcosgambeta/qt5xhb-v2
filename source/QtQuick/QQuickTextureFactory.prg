@@ -80,7 +80,7 @@ virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual QImage image() const
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ virtual int textureByteCount() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ virtual QSize textureSize() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
 {
-  QQuickTextureFactory * obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickTextureFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

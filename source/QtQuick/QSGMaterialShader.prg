@@ -81,7 +81,7 @@ virtual void activate()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ virtual void deactivate()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QOpenGLShaderProgram * program()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

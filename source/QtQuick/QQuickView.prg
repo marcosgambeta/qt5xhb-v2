@@ -141,7 +141,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QSize initialSize() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ QQmlContext * rootContext() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ QQuickItem * rootObject() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setResizeMode(ResizeMode)
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_STATUS )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ void setSource(const QUrl & url)
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
 {
-  QQuickView * obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

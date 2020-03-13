@@ -93,7 +93,7 @@ virtual Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ virtual ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ virtual QImage requestImage(const QString & id, QSize * size, const QSize & requ
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ virtual QPixmap requestPixmap(const QString & id, QSize * size, const QSize & re
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ virtual QQuickTextureFactory * requestTexture(const QString & id, QSize * size, 
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
 {
-  QQuickImageProvider * obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickImageProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

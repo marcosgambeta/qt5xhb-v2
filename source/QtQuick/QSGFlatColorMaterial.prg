@@ -88,7 +88,7 @@ const QColor & color() const
 */
 HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
 {
-  QSGFlatColorMaterial * obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ void setColor(const QColor & color)
 */
 HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_SETCOLOR )
 {
-  QSGFlatColorMaterial * obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGFlatColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -84,7 +84,7 @@ virtual int compare(const QSGMaterial * other) const
 */
 HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ virtual QSGMaterialShader * createShader() const = 0
 */
 HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QSGMaterial::Flags flags() const
 */
 HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setFlag(Flags flags, bool on = true)
 */
 HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ virtual QSGMaterialType * type() const = 0
 */
 HB_FUNC_STATIC( QSGMATERIAL_TYPE )
 {
-  QSGMaterial * obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

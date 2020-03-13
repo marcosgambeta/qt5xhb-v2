@@ -90,7 +90,7 @@ QSGMaterial * material() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ QSGMaterial * opaqueMaterial() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ void setMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void setOpaqueMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

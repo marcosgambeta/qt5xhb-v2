@@ -71,7 +71,7 @@ QSGGeometry * geometry()
 */
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ void setGeometry(QSGGeometry * geometry)
 */
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
 {
-  QSGBasicGeometryNode * obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGBasicGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

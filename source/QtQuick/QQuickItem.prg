@@ -182,7 +182,7 @@ bool acceptHoverEvents() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ACCEPTHOVEREVENTS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ Qt::MouseButtons acceptedMouseButtons() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ACCEPTEDMOUSEBUTTONS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool antialiasing() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ANTIALIASING )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ qreal baselineOffset() const
 */
 HB_FUNC_STATIC( QQUICKITEM_BASELINEOFFSET )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QQuickItem * childAt(qreal x, qreal y) const
 */
 HB_FUNC_STATIC( QQUICKITEM_CHILDAT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ QRectF childrenRect()
 */
 HB_FUNC_STATIC( QQUICKITEM_CHILDRENRECT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -328,7 +328,7 @@ bool clip() const
 */
 HB_FUNC_STATIC( QQUICKITEM_CLIP )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ virtual bool contains(const QPointF & point) const
 */
 HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -376,7 +376,7 @@ QCursor cursor() const
 */
 HB_FUNC_STATIC( QQUICKITEM_CURSOR )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -401,7 +401,7 @@ bool filtersChildMouseEvents() const
 */
 HB_FUNC_STATIC( QQUICKITEM_FILTERSCHILDMOUSEEVENTS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ Flags flags() const
 */
 HB_FUNC_STATIC( QQUICKITEM_FLAGS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ void forceActiveFocus()
 */
 HB_FUNC_STATIC( QQUICKITEM_FORCEACTIVEFOCUS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -475,7 +475,7 @@ void grabMouse()
 */
 HB_FUNC_STATIC( QQUICKITEM_GRABMOUSE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ bool hasActiveFocus() const
 */
 HB_FUNC_STATIC( QQUICKITEM_HASACTIVEFOCUS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -525,7 +525,7 @@ bool hasFocus() const
 */
 HB_FUNC_STATIC( QQUICKITEM_HASFOCUS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -549,7 +549,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QQUICKITEM_HEIGHT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ qreal implicitHeight() const
 */
 HB_FUNC_STATIC( QQUICKITEM_IMPLICITHEIGHT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ qreal implicitWidth() const
 */
 HB_FUNC_STATIC( QQUICKITEM_IMPLICITWIDTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -621,7 +621,7 @@ virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 */
 HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -646,7 +646,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ISENABLED )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -670,7 +670,7 @@ bool isFocusScope() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ISFOCUSSCOPE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -694,7 +694,7 @@ virtual bool isTextureProvider() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ISTEXTUREPROVIDER )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -718,7 +718,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ISVISIBLE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -742,7 +742,7 @@ bool keepMouseGrab() const
 */
 HB_FUNC_STATIC( QQUICKITEM_KEEPMOUSEGRAB )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -766,7 +766,7 @@ bool keepTouchGrab() const
 */
 HB_FUNC_STATIC( QQUICKITEM_KEEPTOUCHGRAB )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -790,7 +790,7 @@ QPointF mapFromItem(const QQuickItem * item, const QPointF & point) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -815,7 +815,7 @@ QPointF mapFromScene(const QPointF & point) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -840,7 +840,7 @@ QRectF mapRectFromItem(const QQuickItem * item, const QRectF & rect) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -865,7 +865,7 @@ QRectF mapRectFromScene(const QRectF & rect) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -890,7 +890,7 @@ QRectF mapRectToItem(const QQuickItem * item, const QRectF & rect) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -915,7 +915,7 @@ QRectF mapRectToScene(const QRectF & rect) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -940,7 +940,7 @@ QPointF mapToItem(const QQuickItem * item, const QPointF & point) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -965,7 +965,7 @@ QPointF mapToScene(const QPointF & point) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -990,7 +990,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QQUICKITEM_OPACITY )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1014,7 +1014,7 @@ QQuickItem * parentItem() const
 */
 HB_FUNC_STATIC( QQUICKITEM_PARENTITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1039,7 +1039,7 @@ void polish()
 */
 HB_FUNC_STATIC( QQUICKITEM_POLISH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1065,7 +1065,7 @@ void resetHeight()
 */
 HB_FUNC_STATIC( QQUICKITEM_RESETHEIGHT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1091,7 +1091,7 @@ void resetWidth()
 */
 HB_FUNC_STATIC( QQUICKITEM_RESETWIDTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1117,7 +1117,7 @@ qreal rotation() const
 */
 HB_FUNC_STATIC( QQUICKITEM_ROTATION )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1141,7 +1141,7 @@ qreal scale() const
 */
 HB_FUNC_STATIC( QQUICKITEM_SCALE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1165,7 +1165,7 @@ QQuickItem * scopedFocusItem() const
 */
 HB_FUNC_STATIC( QQUICKITEM_SCOPEDFOCUSITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1190,7 +1190,7 @@ void setAcceptHoverEvents(bool enabled)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETACCEPTHOVEREVENTS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1216,7 +1216,7 @@ void setAcceptedMouseButtons(Qt::MouseButtons buttons)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1242,7 +1242,7 @@ void setAntialiasing(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETANTIALIASING )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1268,7 +1268,7 @@ void setBaselineOffset(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETBASELINEOFFSET )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1294,7 +1294,7 @@ void setClip(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETCLIP )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1320,7 +1320,7 @@ void setCursor(const QCursor & cursor)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1346,7 +1346,7 @@ void setEnabled(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETENABLED )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1372,7 +1372,7 @@ void setFiltersChildMouseEvents(bool filter)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1398,7 +1398,7 @@ void setFlag(Flag flag, bool enabled = true)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1424,7 +1424,7 @@ void setFlags(Flags flags)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1450,7 +1450,7 @@ void setFocus(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFOCUS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1476,7 +1476,7 @@ void setHeight(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETHEIGHT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1502,7 +1502,7 @@ void setImplicitHeight(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITHEIGHT )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1528,7 +1528,7 @@ void setImplicitWidth(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITWIDTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1554,7 +1554,7 @@ void setKeepMouseGrab(bool keep)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETKEEPMOUSEGRAB )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1580,7 +1580,7 @@ void setKeepTouchGrab(bool keep)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETKEEPTOUCHGRAB )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1606,7 +1606,7 @@ void setOpacity(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETOPACITY )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1632,7 +1632,7 @@ void setParentItem(QQuickItem * parent)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETPARENTITEM )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1658,7 +1658,7 @@ void setRotation(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETROTATION )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1684,7 +1684,7 @@ void setScale(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSCALE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1710,7 +1710,7 @@ void setSmooth(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSMOOTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1736,7 +1736,7 @@ void setState(const QString &)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSTATE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1762,7 +1762,7 @@ void setTransformOrigin(TransformOrigin)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1788,7 +1788,7 @@ void setVisible(bool)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETVISIBLE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1814,7 +1814,7 @@ void setWidth(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETWIDTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1840,7 +1840,7 @@ void setX(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETX )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1866,7 +1866,7 @@ void setY(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETY )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1892,7 +1892,7 @@ void setZ(qreal)
 */
 HB_FUNC_STATIC( QQUICKITEM_SETZ )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1918,7 +1918,7 @@ bool smooth() const
 */
 HB_FUNC_STATIC( QQUICKITEM_SMOOTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1942,7 +1942,7 @@ void stackAfter(const QQuickItem * sibling)
 */
 HB_FUNC_STATIC( QQUICKITEM_STACKAFTER )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1968,7 +1968,7 @@ void stackBefore(const QQuickItem * sibling)
 */
 HB_FUNC_STATIC( QQUICKITEM_STACKBEFORE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1994,7 +1994,7 @@ QString state() const
 */
 HB_FUNC_STATIC( QQUICKITEM_STATE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2018,7 +2018,7 @@ virtual QSGTextureProvider * textureProvider() const
 */
 HB_FUNC_STATIC( QQUICKITEM_TEXTUREPROVIDER )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2043,7 +2043,7 @@ TransformOrigin transformOrigin() const
 */
 HB_FUNC_STATIC( QQUICKITEM_TRANSFORMORIGIN )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2067,7 +2067,7 @@ void ungrabMouse()
 */
 HB_FUNC_STATIC( QQUICKITEM_UNGRABMOUSE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2093,7 +2093,7 @@ void ungrabTouchPoints()
 */
 HB_FUNC_STATIC( QQUICKITEM_UNGRABTOUCHPOINTS )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2119,7 +2119,7 @@ void unsetCursor()
 */
 HB_FUNC_STATIC( QQUICKITEM_UNSETCURSOR )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2145,7 +2145,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QQUICKITEM_WIDTH )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2169,7 +2169,7 @@ QQuickWindow * window() const
 */
 HB_FUNC_STATIC( QQUICKITEM_WINDOW )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2194,7 +2194,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QQUICKITEM_X )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2218,7 +2218,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QQUICKITEM_Y )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2242,7 +2242,7 @@ qreal z() const
 */
 HB_FUNC_STATIC( QQUICKITEM_Z )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2266,7 +2266,7 @@ void update()
 */
 HB_FUNC_STATIC( QQUICKITEM_UPDATE )
 {
-  QQuickItem * obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

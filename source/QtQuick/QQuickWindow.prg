@@ -133,7 +133,7 @@ QQuickItem * activeFocusItem() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ACTIVEFOCUSITEM )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool clearBeforeRendering() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CLEARBEFORERENDERING )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QColor color() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_COLOR )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QQuickItem * contentItem() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptio
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QSGTexture * createTextureFromImage(const QImage & image) const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ QImage grabWindow()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_GRABWINDOW )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -307,7 +307,7 @@ QQmlIncubationController * incubationController() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_INCUBATIONCONTROLLER )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ bool isPersistentOpenGLContext() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTOPENGLCONTEXT )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ bool isPersistentSceneGraph() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ISPERSISTENTSCENEGRAPH )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ QQuickItem * mouseGrabberItem() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_MOUSEGRABBERITEM )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ QOpenGLContext * openglContext() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_OPENGLCONTEXT )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ QOpenGLFramebufferObject * renderTarget() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGET )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -455,7 +455,7 @@ uint renderTargetId() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETID )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ QSize renderTargetSize() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETSIZE )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -504,7 +504,7 @@ bool sendEvent(QQuickItem * item, QEvent * e)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SENDEVENT )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -528,7 +528,7 @@ void setClearBeforeRendering(bool enabled)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -554,7 +554,7 @@ void setColor(const QColor & color)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETCOLOR )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -580,7 +580,7 @@ void setPersistentOpenGLContext(bool persistent)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -606,7 +606,7 @@ void setPersistentSceneGraph(bool persistent)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -632,7 +632,7 @@ void setRenderTarget(QOpenGLFramebufferObject * fbo)
 */
 void QQuickWindow_setRenderTarget1 ()
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ void setRenderTarget(uint fboId, const QSize & size)
 */
 void QQuickWindow_setRenderTarget2 ()
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -681,7 +681,7 @@ virtual QAccessibleInterface * accessibleRoot() const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_ACCESSIBLEROOT )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -706,7 +706,7 @@ void releaseResources()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_RELEASERESOURCES )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -732,7 +732,7 @@ void update()
 */
 HB_FUNC_STATIC( QQUICKWINDOW_UPDATE )
 {
-  QQuickWindow * obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWindow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
