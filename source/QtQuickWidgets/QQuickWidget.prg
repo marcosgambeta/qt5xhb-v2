@@ -164,7 +164,7 @@ QUrl source() const
 HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void setSource(const QUrl&)
 HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ QQmlEngine* engine() const
 HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ QQmlContext* rootContext() const
 HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ QQuickItem *rootObject() const
 HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ ResizeMode resizeMode() const
 HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ void setResizeMode(ResizeMode)
 HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ Status status() const
 HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ QList<QQmlError> errors() const
 HB_FUNC_STATIC( QQUICKWIDGET_ERRORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ QSize sizeHint() const
 HB_FUNC_STATIC( QQUICKWIDGET_SIZEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ QSize initialSize() const
 HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
 HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,7 +516,7 @@ QSurfaceFormat format() const
 HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -543,7 +543,7 @@ void setFormat(const QSurfaceFormat &format)
 HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
