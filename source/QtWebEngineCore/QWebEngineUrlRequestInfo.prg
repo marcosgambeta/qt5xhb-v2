@@ -78,7 +78,7 @@ ResourceType resourceType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_RESOURCETYPE )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ NavigationType navigationType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QUrl requestUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTURL )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ QUrl firstPartyUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_FIRSTPARTYURL )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ QByteArray requestMethod() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REQUESTMETHOD )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ bool changed() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_CHANGED )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ void block(bool shouldBlock)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_BLOCK )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ void redirect(const QUrl &url)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ void setHttpHeader(const QByteArray &name, const QByteArray &value)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_SETHTTPHEADER )
 {
-  QWebEngineUrlRequestInfo * obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

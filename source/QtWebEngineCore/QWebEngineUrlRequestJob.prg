@@ -85,7 +85,7 @@ QUrl requestUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTURL )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ QByteArray requestMethod() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTMETHOD )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ void reply(const QByteArray &contentType, QIODevice *device)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REPLY )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ void fail(Error error)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_FAIL )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ void redirect(const QUrl &url)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REDIRECT )
 {
-  QWebEngineUrlRequestJob * obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

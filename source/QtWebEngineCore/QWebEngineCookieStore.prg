@@ -86,7 +86,7 @@ void setCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ void deleteCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ void deleteSessionCookies()
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ void deleteAllCookies()
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETEALLCOOKIES )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ void loadAllCookies()
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
 {
-  QWebEngineCookieStore * obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineCookieStore *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

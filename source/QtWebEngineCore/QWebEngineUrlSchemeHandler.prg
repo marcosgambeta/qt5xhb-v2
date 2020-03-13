@@ -92,7 +92,7 @@ virtual void requestStarted(QWebEngineUrlRequestJob*) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED )
 {
-  QWebEngineUrlSchemeHandler * obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

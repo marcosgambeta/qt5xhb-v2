@@ -69,7 +69,7 @@ virtual void interceptRequest(QWebEngineUrlRequestInfo &info) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST )
 {
-  QWebEngineUrlRequestInterceptor * obj = (QWebEngineUrlRequestInterceptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInterceptor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
