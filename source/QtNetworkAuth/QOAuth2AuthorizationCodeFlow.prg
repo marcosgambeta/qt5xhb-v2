@@ -175,7 +175,7 @@ QUrl accessTokenUrl() const
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ void setAccessTokenUrl(const QUrl &accessTokenUrl)
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ void grant() override (slot)
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ void refreshAccessToken() (slot)
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth2AuthorizationCodeFlow *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

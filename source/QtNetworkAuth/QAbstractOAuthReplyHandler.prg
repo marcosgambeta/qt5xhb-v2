@@ -94,7 +94,7 @@ virtual QString callback() const = 0
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractOAuthReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

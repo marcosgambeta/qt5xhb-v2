@@ -141,7 +141,7 @@ QString clientSharedSecret() const
 HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ void setClientSharedSecret(const QString &clientSharedSecret)
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setClientCredentials(const QString &clientIdentifier, const QString &client
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ QString tokenSecret() const
 HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ void setTokenSecret(const QString &tokenSecret)
 HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ void setTokenCredentials(const QString &token, const QString &tokenSecret)
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ QUrl temporaryCredentialsUrl() const
 HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ void setTemporaryCredentialsUrl(const QUrl &url)
 HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ QUrl tokenCredentialsUrl() const
 HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -409,7 +409,7 @@ void setTokenCredentialsUrl(const QUrl &url)
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ void setSignatureMethod(SignatureMethod value)
 HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ void grant() override (slot)
 HB_FUNC_STATIC( QOAUTH1_GRANT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -517,7 +517,7 @@ void continueGrantWithVerifier(const QString &verifier) (slot)
 HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuth1 *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
