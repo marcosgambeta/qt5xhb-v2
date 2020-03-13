@@ -100,7 +100,7 @@ QTapReading *reading() const
 HB_FUNC_STATIC( QTAPSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ bool returnDoubleTapEvents() const
 HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -96,7 +96,7 @@ QCompassReading *reading() const
 HB_FUNC_STATIC( QCOMPASS_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompass * obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

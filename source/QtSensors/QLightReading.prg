@@ -77,7 +77,7 @@ qreal lux() const
 HB_FUNC_STATIC( QLIGHTREADING_LUX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightReading * obj = (QLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ void setLux(qreal lux)
 HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightReading * obj = (QLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

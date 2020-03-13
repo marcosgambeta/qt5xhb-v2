@@ -65,7 +65,7 @@ virtual bool filter(QSensorReading *reading) = 0
 HB_FUNC_STATIC( QSENSORFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorFilter * obj = (QSensorFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

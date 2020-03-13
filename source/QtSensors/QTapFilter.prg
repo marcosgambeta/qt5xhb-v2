@@ -76,7 +76,7 @@ virtual bool filter(QTapReading *reading) = 0
 HB_FUNC_STATIC( QTAPFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapFilter * obj = (QTapFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -96,7 +96,7 @@ QPressureReading *reading() const
 HB_FUNC_STATIC( QPRESSURESENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QPressureSensor * obj = (QPressureSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPressureSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

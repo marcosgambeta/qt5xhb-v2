@@ -93,7 +93,7 @@ virtual void start() = 0
 HB_FUNC_STATIC( QSENSORBACKEND_START )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ virtual void stop() = 0
 HB_FUNC_STATIC( QSENSORBACKEND_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ virtual bool isFeatureSupported(QSensor::Feature feature) const
 HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ void addDataRate(qreal min, qreal max)
 HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setDataRates(const QSensor *otherSensor)
 HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ void addOutputRange(qreal min, qreal max, qreal accuracy)
 HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void setDescription(const QString &description)
 HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ QSensorReading *reading() const
 HB_FUNC_STATIC( QSENSORBACKEND_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ QSensor *sensor() const
 HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ void newReadingAvailable()
 HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ void sensorStopped()
 HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -397,7 +397,7 @@ void sensorBusy()
 HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ void sensorError(int error)
 HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackend * obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackend *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -68,7 +68,7 @@ virtual QSensorBackend *createBackend(QSensor *sensor) = 0
 HB_FUNC_STATIC( QSENSORBACKENDFACTORY_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackendFactory * obj = (QSensorBackendFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorBackendFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

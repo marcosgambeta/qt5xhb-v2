@@ -76,7 +76,7 @@ virtual bool filter(QCompassReading *reading) = 0
 HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QCompassFilter * obj = (QCompassFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCompassFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

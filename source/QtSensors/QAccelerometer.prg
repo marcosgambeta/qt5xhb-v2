@@ -100,7 +100,7 @@ AccelerationMode accelerationMode() const
 HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void setAccelerationMode(AccelerationMode accelerationMode)
 HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ QAccelerometerReading *reading() const
 HB_FUNC_STATIC( QACCELEROMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

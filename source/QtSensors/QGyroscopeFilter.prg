@@ -76,7 +76,7 @@ virtual bool filter(QGyroscopeReading *reading) = 0
 HB_FUNC_STATIC( QGYROSCOPEFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QGyroscopeFilter * obj = (QGyroscopeFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGyroscopeFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

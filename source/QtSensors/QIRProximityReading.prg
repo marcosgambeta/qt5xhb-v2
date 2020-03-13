@@ -80,7 +80,7 @@ qreal reflectance() const
 HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QIRProximityReading * obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ void setReflectance(qreal reflectance)
 HB_FUNC_STATIC( QIRPROXIMITYREADING_SETREFLECTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QIRProximityReading * obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

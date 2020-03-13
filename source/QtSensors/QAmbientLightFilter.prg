@@ -76,7 +76,7 @@ virtual bool filter(QAmbientLightReading *reading) = 0
 HB_FUNC_STATIC( QAMBIENTLIGHTFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientLightFilter * obj = (QAmbientLightFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

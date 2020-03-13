@@ -76,7 +76,7 @@ virtual bool filter(QProximityReading *reading) = 0
 HB_FUNC_STATIC( QPROXIMITYFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityFilter * obj = (QProximityFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProximityFilter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -100,7 +100,7 @@ QRotationReading *reading() const
 HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ bool hasZ() const
 HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setHasZ(bool hasZ)
 HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
