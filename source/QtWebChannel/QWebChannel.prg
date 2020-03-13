@@ -102,7 +102,7 @@ Q_INVOKABLE void registerObject(const QString &id, QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ Q_INVOKABLE void deregisterObject(QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool blockUpdates() const
 HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ void setBlockUpdates(bool block)
 HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void connectTo(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ void disconnectFrom(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebChannel * obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

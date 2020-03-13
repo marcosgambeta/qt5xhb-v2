@@ -112,7 +112,7 @@ Q_INVOKABLE void connectTo(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ Q_INVOKABLE void disconnectFrom(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
