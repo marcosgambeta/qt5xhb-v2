@@ -123,7 +123,7 @@ QColor entryColor ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QRgb entryRgb ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ int find ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int findNearest ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void setEntry ( int idx, QRgb color )
 */
 void QGLColormap_setEntry1 ()
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ void setEntry ( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2 ()
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ int size () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
-  QGLColormap * obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

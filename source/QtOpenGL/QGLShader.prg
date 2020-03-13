@@ -117,7 +117,7 @@ bool compileSourceCode ( const char * source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ bool compileSourceCode ( const QByteArray & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ bool compileSourceCode ( const QString & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ bool compileSourceFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ bool isCompiled () const
 */
 HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QString log () const
 */
 HB_FUNC_STATIC( QGLSHADER_LOG )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ GLuint shaderId () const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERID )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QGLShader::ShaderType shaderType () const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ QByteArray sourceCode () const
 */
 HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 {
-  QGLShader * obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLShader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

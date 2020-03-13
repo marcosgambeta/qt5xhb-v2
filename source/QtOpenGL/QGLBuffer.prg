@@ -144,7 +144,7 @@ void allocate ( const void * data, int count )
 */
 void QGLBuffer_allocate1 ()
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ void allocate ( int count )
 */
 void QGLBuffer_allocate2 ()
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ bool bind ()
 */
 HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ GLuint bufferId () const
 */
 HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ bool create ()
 */
 HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void destroy ()
 */
 HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ bool isCreated () const
 */
 HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ void * map ( QGLBuffer::Access access )
 */
 HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ bool read ( int offset, void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_READ )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ void release ()
 */
 void QGLBuffer_release1 ()
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void setUsagePattern ( QGLBuffer::UsagePattern value )
 */
 HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ int size () const
 */
 HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ QGLBuffer::Type type () const
 */
 HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ bool unmap ()
 */
 HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -506,7 +506,7 @@ QGLBuffer::UsagePattern usagePattern () const
 */
 HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ void write ( int offset, const void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_WRITE )
 {
-  QGLBuffer * obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

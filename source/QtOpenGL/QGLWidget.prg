@@ -151,7 +151,7 @@ GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint 
 */
 void QGLWidget_bindTexture1 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLin
 */
 void QGLWidget_bindTexture2 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLConte
 */
 void QGLWidget_bindTexture3 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLCon
 */
 void QGLWidget_bindTexture4 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ GLuint bindTexture ( const QString & fileName )
 */
 void QGLWidget_bindTexture5 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ const QGLColormap & colormap () const
 */
 HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ const QGLContext * context () const
 */
 HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void deleteTexture ( GLuint id )
 */
 HB_FUNC_STATIC( QGLWIDGET_DELETETEXTURE )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ void doneCurrent ()
 */
 HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ bool doubleBuffer () const
 */
 HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -376,7 +376,7 @@ void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget
 */
 void QGLWidget_drawTexture1 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget
 */
 void QGLWidget_drawTexture2 ()
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ QGLFormat format () const
 */
 HB_FUNC_STATIC( QGLWIDGET_FORMAT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ QImage grabFrameBuffer ( bool withAlpha = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -475,7 +475,7 @@ bool isSharing () const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -499,7 +499,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISVALID )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ void makeCurrent ()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -549,7 +549,7 @@ void makeOverlayCurrent ()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -575,7 +575,7 @@ const QGLContext * overlayContext () const
 */
 HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ void qglClearColor ( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCLEARCOLOR )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void qglColor ( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCOLOR )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -692,7 +692,7 @@ void setColormap ( const QGLColormap & cmap )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -718,7 +718,7 @@ void setMouseTracking ( bool enable )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -744,7 +744,7 @@ void swapBuffers ()
 */
 HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -770,7 +770,7 @@ virtual void updateGL ()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -796,7 +796,7 @@ virtual void updateOverlayGL ()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
 {
-  QGLWidget * obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
