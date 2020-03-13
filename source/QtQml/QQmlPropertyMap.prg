@@ -96,7 +96,7 @@ void clear(const QString & key)
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ bool contains(const QString & key) const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ int count() const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ void insert(const QString & key, const QVariant & value)
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_ISEMPTY )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_KEYS )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ int size() const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ QVariant value(const QString & key) const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

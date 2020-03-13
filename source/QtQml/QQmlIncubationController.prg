@@ -101,7 +101,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void incubateFor(int msecs)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ void incubateWhile(volatile bool * flag, int msecs = 0)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ int incubatingObjectCount() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

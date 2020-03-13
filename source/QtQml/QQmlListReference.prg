@@ -128,7 +128,7 @@ bool append(QObject * object) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QObject * at(int index) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ bool canAppend() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ bool canAt() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ bool canClear() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ bool canCount() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ bool clear() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ int count() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ const QMetaObject * listElementType() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
 {
-  QQmlListReference * obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlListReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

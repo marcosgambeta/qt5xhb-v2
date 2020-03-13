@@ -78,7 +78,7 @@ virtual void setTarget(const QQmlProperty & property) = 0
 */
 HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
 {
-  QQmlPropertyValueSource * obj = (QQmlPropertyValueSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlPropertyValueSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

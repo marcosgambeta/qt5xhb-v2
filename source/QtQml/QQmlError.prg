@@ -126,7 +126,7 @@ int column() const
 */
 HB_FUNC_STATIC( QQMLERROR_COLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLERROR_ISVALID )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ int line() const
 */
 HB_FUNC_STATIC( QQMLERROR_LINE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ void setColumn(int column)
 */
 HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void setDescription(const QString & description)
 */
 HB_FUNC_STATIC( QQMLERROR_SETDESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ void setLine(int line)
 */
 HB_FUNC_STATIC( QQMLERROR_SETLINE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void setUrl(const QUrl & url)
 */
 HB_FUNC_STATIC( QQMLERROR_SETURL )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QQMLERROR_TOSTRING )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QQMLERROR_URL )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

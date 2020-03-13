@@ -126,7 +126,7 @@ QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_BASEURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ QObject * contextObject() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ QVariant contextProperty(const QString & name) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_ENGINE )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ QString nameForObject(QObject * object) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ QQmlContext * parentContext() const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ QUrl resolvedUrl(const QUrl & src)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ void setBaseUrl(const QUrl & baseUrl)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ void setContextObject(QObject * object)
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -376,7 +376,7 @@ void setContextProperty(const QString & name, QObject * value)
 */
 void QQmlContext_setContextProperty1 ()
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ void setContextProperty(const QString & name, const QVariant & value)
 */
 void QQmlContext_setContextProperty2 ()
 {
-  QQmlContext * obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

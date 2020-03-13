@@ -81,7 +81,7 @@ virtual QNetworkAccessManager * create(QObject * parent) = 0
 */
 HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_CREATE )
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

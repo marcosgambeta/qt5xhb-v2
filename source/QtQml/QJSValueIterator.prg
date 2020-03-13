@@ -99,7 +99,7 @@ bool hasNext() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool next()
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ QJSValue value() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
 {
-  QJSValueIterator * obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

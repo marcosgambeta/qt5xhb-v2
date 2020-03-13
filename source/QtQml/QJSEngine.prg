@@ -113,7 +113,7 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ QJSValue evaluate(const QString & program, const QString & fileName = QString(),
 */
 HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ QJSValue globalObject() const
 */
 HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ QJSValue newArray(uint length = 0)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ QJSValue newObject()
 */
 HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ QJSValue newQObject(QObject * object)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
