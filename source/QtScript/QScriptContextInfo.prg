@@ -139,7 +139,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ int functionEndLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ int functionMetaIndex() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ QString functionName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ QStringList functionParameterNames() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ int functionStartLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ FunctionType functionType() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -307,7 +307,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ qint64 scriptId() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

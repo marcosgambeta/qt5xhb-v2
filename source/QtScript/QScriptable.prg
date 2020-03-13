@@ -88,7 +88,7 @@ QScriptValue argument(int index) const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ int argumentCount() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QScriptContext * context() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
 {
-  QScriptable * obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptable *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

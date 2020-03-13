@@ -98,7 +98,7 @@ QScriptValue activationObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QScriptValue argument(int index) const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ int argumentCount() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ QScriptValue argumentsObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ QStringList backtrace() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ QScriptValue callee() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ bool isCalledAsConstructor() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ QScriptContext * parentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ void setActivationObject(const QScriptValue & activation)
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ void setThisObject(const QScriptValue & thisObject)
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ ExecutionState state() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -421,7 +421,7 @@ QScriptValue throwError(Error error, const QString & text)
 */
 void QScriptContext_throwError1 ()
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ QScriptValue throwError(const QString & text)
 */
 void QScriptContext_throwError2 ()
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ QScriptValue throwValue(const QScriptValue & value)
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -493,7 +493,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
 {
-  QScriptContext * obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

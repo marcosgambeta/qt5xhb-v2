@@ -133,7 +133,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ QString sourceCode() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {
-  QScriptProgram * obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

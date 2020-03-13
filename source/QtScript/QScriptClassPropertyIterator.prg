@@ -91,7 +91,7 @@ virtual QScriptValue::PropertyFlags flags() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_FLAGS )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ virtual bool hasNext() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASNEXT )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ virtual bool hasPrevious() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_HASPREVIOUS )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ virtual uint id() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_ID )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ virtual QScriptString name() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NAME )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ virtual void next() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_NEXT )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ QScriptValue object() const
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_OBJECT )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ virtual void previous() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_PREVIOUS )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ virtual void toBack() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOBACK )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ virtual void toFront() = 0
 */
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_TOFRONT )
 {
-  QScriptClassPropertyIterator * obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptClassPropertyIterator *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

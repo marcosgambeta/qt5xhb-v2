@@ -117,7 +117,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
-  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
-  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

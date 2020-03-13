@@ -98,7 +98,7 @@ int errorColumnNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ int errorLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ QString errorMessage() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ State state() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
 {
-  QScriptSyntaxCheckResult * obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptSyntaxCheckResult *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

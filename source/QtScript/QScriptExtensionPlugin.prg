@@ -74,7 +74,7 @@ QScriptValue setupPackage(const QString & key, QScriptEngine * engine) const
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ virtual void initialize(const QString & key, QScriptEngine * engine) = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
