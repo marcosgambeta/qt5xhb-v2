@@ -91,7 +91,7 @@ QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, cons
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex 
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
-  QSqlRelationalDelegate * obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

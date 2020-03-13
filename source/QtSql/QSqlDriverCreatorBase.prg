@@ -81,7 +81,7 @@ virtual QSqlDriver * createObject () const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERCREATORBASE_CREATEOBJECT )
 {
-  QSqlDriverCreatorBase * obj = (QSqlDriverCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriverCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

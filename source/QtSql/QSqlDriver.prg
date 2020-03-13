@@ -109,7 +109,7 @@ virtual bool beginTransaction ()
 */
 HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ virtual void close () = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ virtual bool commitTransaction ()
 */
 HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ virtual QSqlResult * createResult () const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ virtual QString escapeIdentifier ( const QString & identifier, IdentifierType ty
 */
 HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ virtual QString formatValue ( const QSqlField & field, bool trimStrings = false 
 */
 HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ virtual bool hasFeature ( DriverFeature feature ) const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ virtual bool isIdentifierEscaped ( const QString & identifier, IdentifierType ty
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ virtual bool isOpen () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ bool isOpenError () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -426,7 +426,7 @@ virtual bool open ( const QString & db, const QString & user = QString(), const 
 */
 HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ virtual QSqlIndex primaryIndex ( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -475,7 +475,7 @@ virtual QSqlRecord record ( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ virtual bool rollbackTransaction ()
 */
 HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -524,7 +524,7 @@ void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolic
 */
 HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ virtual QString sqlStatement ( StatementType type, const QString & tableName, co
 */
 HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ virtual QString stripDelimiters ( const QString & identifier, IdentifierType typ
 */
 HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -598,7 +598,7 @@ virtual bool subscribeToNotification ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -622,7 +622,7 @@ virtual QStringList subscribedToNotifications () const
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -646,7 +646,7 @@ virtual QStringList tables ( QSql::TableType tableType ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -670,7 +670,7 @@ virtual bool unsubscribeFromNotification ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -694,7 +694,7 @@ virtual bool cancelQuery()
 */
 HB_FUNC_STATIC( QSQLDRIVER_CANCELQUERY )
 {
-  QSqlDriver * obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

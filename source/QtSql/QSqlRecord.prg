@@ -139,7 +139,7 @@ void append ( const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_APPEND )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void clearValues ()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ bool contains ( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ int count () const
 */
 HB_FUNC_STATIC( QSQLRECORD_COUNT )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ QSqlField field ( int index ) const
 */
 void QSqlRecord_field1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ QSqlField field ( const QString & name ) const
 */
 void QSqlRecord_field2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ QString fieldName ( int index ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ int indexOf ( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ void insert ( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_INSERT )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -386,7 +386,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ bool isGenerated ( const QString & name ) const
 */
 void QSqlRecord_isGenerated1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ bool isGenerated ( int index ) const
 */
 void QSqlRecord_isGenerated2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -455,7 +455,7 @@ bool isNull ( const QString & name ) const
 */
 void QSqlRecord_isNull1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ bool isNull ( int index ) const
 */
 void QSqlRecord_isNull2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ void remove ( int pos )
 */
 HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ void replace ( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_REPLACE )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -552,7 +552,7 @@ void setGenerated ( const QString & name, bool generated )
 */
 void QSqlRecord_setGenerated1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -567,7 +567,7 @@ void setGenerated ( int index, bool generated )
 */
 void QSqlRecord_setGenerated2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -601,7 +601,7 @@ void setNull ( int index )
 */
 void QSqlRecord_setNull1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -616,7 +616,7 @@ void setNull ( const QString & name )
 */
 void QSqlRecord_setNull2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -650,7 +650,7 @@ void setValue ( int index, const QVariant & val )
 */
 void QSqlRecord_setValue1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -665,7 +665,7 @@ void setValue ( const QString & name, const QVariant & val )
 */
 void QSqlRecord_setValue2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -699,7 +699,7 @@ QVariant value ( int index ) const
 */
 void QSqlRecord_value1 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -713,7 +713,7 @@ QVariant value ( const QString & name ) const
 */
 void QSqlRecord_value2 ()
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -746,7 +746,7 @@ QSqlRecord keyValues(const QSqlRecord &keyFields) const
 */
 HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
 {
-  QSqlRecord * obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRecord *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
