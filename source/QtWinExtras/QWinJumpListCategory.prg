@@ -117,7 +117,7 @@ Type type() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ bool isVisible() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ void setVisible(bool visible)
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ QString title() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ void setTitle(const QString &title)
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ int count() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ QList<QWinJumpListItem *> items() const
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ void addItem(QWinJumpListItem *item)
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ QWinJumpListItem *addDestination(const QString &filePath)
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ QWinJumpListItem *addLink(const QString &title, const QString &executablePath, c
 void QWinJumpListCategory_addLink1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString
 void QWinJumpListCategory_addLink2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -459,7 +459,7 @@ QWinJumpListItem *addSeparator()
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ void clear()
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpListCategory * obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinJumpListCategory *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

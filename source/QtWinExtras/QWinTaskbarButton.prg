@@ -109,7 +109,7 @@ QWindow *window() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ void setWindow(QWindow *window)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ QIcon overlayIcon() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void setOverlayIcon(const QIcon &icon)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ void clearOverlayIcon()
 HB_FUNC_STATIC( QWINTASKBARBUTTON_CLEAROVERLAYICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ QString overlayAccessibleDescription() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void setOverlayAccessibleDescription(const QString &description)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ QWinTaskbarProgress *progress() const
 HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -328,7 +328,7 @@ bool eventFilter(QObject *, QEvent *)
 HB_FUNC_STATIC( QWINTASKBARBUTTON_EVENTFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarButton * obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinTaskbarButton *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
