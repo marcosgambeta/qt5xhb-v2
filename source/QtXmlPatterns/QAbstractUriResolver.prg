@@ -75,7 +75,7 @@ virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
-  QAbstractUriResolver * obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

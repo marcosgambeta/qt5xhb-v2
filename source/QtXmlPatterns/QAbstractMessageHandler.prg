@@ -72,7 +72,7 @@ void message ( QtMsgType type, const QString & description, const QUrl & identif
 */
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractMessageHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -90,7 +90,7 @@ virtual QUrl baseUri ( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ virtual QXmlNodeModelIndex::DocumentOrder compareOrder ( const QXmlNodeModelInde
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ virtual QUrl documentUri ( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ virtual QXmlNodeModelIndex::NodeKind kind ( const QXmlNodeModelIndex & ni ) cons
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ virtual QXmlName name ( const QXmlNodeModelIndex & ni ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & n ) con
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) cons
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ virtual QXmlNodeModelIndex root ( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ QSourceLocation sourceLocation ( const QXmlNodeModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ virtual QString stringValue ( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ virtual QVariant typedValue ( const QXmlNodeModelIndex & node ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
 {
-  QAbstractXmlNodeModel * obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlNodeModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

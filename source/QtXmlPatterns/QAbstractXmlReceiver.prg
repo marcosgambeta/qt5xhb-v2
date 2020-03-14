@@ -89,7 +89,7 @@ virtual void atomicValue ( const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATOMICVALUE )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ATTRIBUTE )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ virtual void characters ( const QStringRef & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_CHARACTERS )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ virtual void comment ( const QString & value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_COMMENT )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ virtual void endDocument () = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDDOCUMENT )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ virtual void endElement () = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDELEMENT )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ virtual void endOfSequence () = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_ENDOFSEQUENCE )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ virtual void namespaceBinding ( const QXmlName & name ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_NAMESPACEBINDING )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ virtual void processingInstruction ( const QXmlName & target, const QString & va
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ virtual void startDocument () = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTDOCUMENT )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ virtual void startElement ( const QXmlName & name ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTELEMENT )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ virtual void startOfSequence () = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLRECEIVER_STARTOFSEQUENCE )
 {
-  QAbstractXmlReceiver * obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractXmlReceiver *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -152,7 +152,7 @@ bool isAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool isNode () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ QVariant toAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QXmlNodeModelIndex toNodeModelIndex () const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

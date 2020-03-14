@@ -137,7 +137,7 @@ qint64 column () const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ qint64 line () const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ void setColumn ( qint64 newColumn )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ void setLine ( qint64 newLine )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ void setUri ( const QUrl & newUri )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ QUrl uri () const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_URI )
 {
-  QSourceLocation * obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSourceLocation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

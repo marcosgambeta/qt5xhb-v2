@@ -122,7 +122,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ QString localName ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ QString prefix ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ QString toClarkName ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
