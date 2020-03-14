@@ -128,7 +128,7 @@ QColor currentColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setCurrentColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ void open ()
 void QColorDialog_open1 ()
 {
 #ifdef Q_NO_USING_KEYWORD
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ void open ( QObject * receiver, const char * member )
 */
 void QColorDialog_open2 ()
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ ColorDialogOptions options () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_OPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ void setOptions ( ColorDialogOptions options )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ QColor selectedColor () const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ void setOption ( ColorDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ bool testOption ( ColorDialogOption option ) const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
-  QColorDialog * obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColorDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -77,7 +77,7 @@ QPointF finalPosition() const
 */
 HB_FUNC_STATIC( QSCROLLER_FINALPOSITION )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ bool handleInput(Input input, const QPointF & position, qint64 timestamp = 0)
 */
 HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QPointF pixelPerMeter() const
 */
 HB_FUNC_STATIC( QSCROLLER_PIXELPERMETER )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ QScrollerProperties scrollerProperties() const
 */
 HB_FUNC_STATIC( QSCROLLER_SCROLLERPROPERTIES )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ void setSnapPositionsX(const QList<qreal> & positions)
 */
 void QScroller_setSnapPositionsX1 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ void setSnapPositionsX(qreal first, qreal interval)
 */
 void QScroller_setSnapPositionsX2 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ void setSnapPositionsY(const QList<qreal> & positions)
 */
 void QScroller_setSnapPositionsY1 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ void setSnapPositionsY(qreal first, qreal interval)
 */
 void QScroller_setSnapPositionsY2 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ State state() const
 */
 HB_FUNC_STATIC( QSCROLLER_STATE )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSCROLLER_STOP )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ QObject * target() const
 */
 HB_FUNC_STATIC( QSCROLLER_TARGET )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ QPointF velocity() const
 */
 HB_FUNC_STATIC( QSCROLLER_VELOCITY )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -394,7 +394,7 @@ void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
 */
 void QScroller_ensureVisible1 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -409,7 +409,7 @@ void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scroll
 */
 void QScroller_ensureVisible2 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -443,7 +443,7 @@ void resendPrepareEvent()
 */
 HB_FUNC_STATIC( QSCROLLER_RESENDPREPAREEVENT )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -469,7 +469,7 @@ void scrollTo(const QPointF & pos)
 */
 void QScroller_scrollTo1 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ void scrollTo(const QPointF & pos, int scrollTime)
 */
 void QScroller_scrollTo2 ()
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ void setScrollerProperties(const QScrollerProperties & prop)
 */
 HB_FUNC_STATIC( QSCROLLER_SETSCROLLERPROPERTIES )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -672,7 +672,7 @@ void ungrabGesture(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_UNGRABGESTURE )
 {
-  QScroller * obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScroller *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

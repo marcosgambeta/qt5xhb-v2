@@ -92,7 +92,7 @@ void move ( int x, int y )
 */
 void QRubberBand_move1 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ void move ( const QPoint & p )
 */
 void QRubberBand_move2 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ void resize ( int width, int height )
 */
 void QRubberBand_resize1 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ void resize ( const QSize & size )
 */
 void QRubberBand_resize2 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ void setGeometry ( const QRect & rect )
 */
 void QRubberBand_setGeometry1 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ void setGeometry ( int x, int y, int width, int height )
 */
 void QRubberBand_setGeometry2 ()
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ Shape shape () const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
-  QRubberBand * obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

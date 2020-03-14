@@ -137,7 +137,7 @@ QIcon cleanIcon () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ QString emptyLabel () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QUndoGroup * group () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setCleanIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ void setEmptyLabel ( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ QUndoStack * stack () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ void setGroup ( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ void setStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
-  QUndoView * obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

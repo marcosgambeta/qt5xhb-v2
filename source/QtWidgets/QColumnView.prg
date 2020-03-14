@@ -108,7 +108,7 @@ QList<int> columnWidths () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QWidget * previewWidget () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool resizeGripsVisible () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setColumnWidths ( const QList<int> & list )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void setPreviewWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ void setResizeGripsVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
 {
-  QColumnView * obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

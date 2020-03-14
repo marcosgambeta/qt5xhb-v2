@@ -106,7 +106,7 @@ QStyleOptionFrame::FrameFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ QColor textColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

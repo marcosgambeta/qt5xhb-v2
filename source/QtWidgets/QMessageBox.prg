@@ -162,7 +162,7 @@ void addButton ( QAbstractButton * button, ButtonRole role )
 */
 void QMessageBox_addButton1 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QPushButton * addButton ( const QString & text, ButtonRole role )
 */
 void QMessageBox_addButton2 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QPushButton * addButton ( StandardButton button )
 */
 void QMessageBox_addButton3 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ QAbstractButton * button ( StandardButton which ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ ButtonRole buttonRole ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QList<QAbstractButton *> buttons () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ QAbstractButton * clickedButton () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ QPushButton * defaultButton () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ QString detailedText () const
 HB_FUNC_STATIC( QMESSAGEBOX_DETAILEDTEXT )
 {
 #ifndef QT_NO_TEXTEDIT
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ void setDetailedText ( const QString & text )
 HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 {
 #ifndef QT_NO_TEXTEDIT
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ QAbstractButton * escapeButton () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -455,7 +455,7 @@ Icon icon () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ void setIcon ( Icon )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -505,7 +505,7 @@ QPixmap iconPixmap () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ void setIconPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -556,7 +556,7 @@ QString informativeText () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -580,7 +580,7 @@ void setInformativeText ( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -606,7 +606,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -632,7 +632,7 @@ void removeButton ( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -658,7 +658,7 @@ void setDefaultButton ( QPushButton * button )
 */
 void QMessageBox_setDefaultButton1 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -673,7 +673,7 @@ void setDefaultButton ( StandardButton button )
 */
 void QMessageBox_setDefaultButton2 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -707,7 +707,7 @@ void setEscapeButton ( QAbstractButton * button )
 */
 void QMessageBox_setEscapeButton1 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -722,7 +722,7 @@ void setEscapeButton ( StandardButton button )
 */
 void QMessageBox_setEscapeButton2 ()
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ void setWindowModality ( Qt::WindowModality windowModality )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -782,7 +782,7 @@ void setWindowTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -808,7 +808,7 @@ StandardButton standardButton ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -832,7 +832,7 @@ StandardButtons standardButtons () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -856,7 +856,7 @@ void setStandardButtons ( StandardButtons buttons )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -882,7 +882,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -906,7 +906,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -932,7 +932,7 @@ Qt::TextFormat textFormat () const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -956,7 +956,7 @@ void setTextFormat ( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -983,7 +983,7 @@ void setVisible ( bool visible )
 HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 {
 #ifdef Q_OS_WINCE
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1010,7 +1010,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1152,7 +1152,7 @@ Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1176,7 +1176,7 @@ void setTextInteractionFlags (Qt::TextInteractionFlags flags)
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTINTERACTIONFLAGS )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1202,7 +1202,7 @@ QCheckBox * checkBox() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1227,7 +1227,7 @@ void setCheckBox (QCheckBox *cb)
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1273,7 +1273,7 @@ QString buttonText(int button) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1297,7 +1297,7 @@ void setButtonText(int button, const QString &text)
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
 {
-  QMessageBox * obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

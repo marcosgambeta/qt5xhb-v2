@@ -91,7 +91,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  QSizeGrip * obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -101,7 +101,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ FrameFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ QFrame::Shape frameShape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFrame *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

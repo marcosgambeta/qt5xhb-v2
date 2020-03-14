@@ -90,7 +90,7 @@ void showMessage ( const QString & message )
 */
 void QErrorMessage_showMessage1 ()
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ void showMessage ( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2 ()
 {
-  QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

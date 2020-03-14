@@ -97,7 +97,7 @@ QRubberBand::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ bool opaque
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
 {
-  QStyleOptionRubberBand * obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

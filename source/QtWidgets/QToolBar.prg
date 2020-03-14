@@ -147,7 +147,7 @@ QAction * actionAt ( int x, int y ) const
 */
 void QToolBar_actionAt1 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QAction * actionAt ( const QPoint & p ) const
 */
 void QToolBar_actionAt2 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void addAction ( QAction * action )
 */
 void QToolBar_addAction1 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QAction * addAction ( const QString & text )
 */
 void QToolBar_addAction2 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ QAction * addAction ( const QIcon & icon, const QString & text )
 */
 void QToolBar_addAction3 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ QAction * addAction ( const QString & text, const QObject * receiver, const char
 */
 void QToolBar_addAction4 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QAction * addAction ( const QIcon & icon, const QString & text, const QObject * 
 */
 void QToolBar_addAction5 ()
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ QAction * addSeparator ()
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ QAction * addWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ Qt::ToolBarAreas allowedAreas () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ QSize iconSize () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ QAction * insertSeparator ( QAction * before )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ QAction * insertWidget ( QAction * before, QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ bool isAreaAllowed ( Qt::ToolBarArea area ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ bool isFloatable () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ bool isFloating () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -546,7 +546,7 @@ bool isMovable () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -570,7 +570,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -594,7 +594,7 @@ void setAllowedAreas ( Qt::ToolBarAreas areas )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -620,7 +620,7 @@ void setFloatable ( bool floatable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -646,7 +646,7 @@ void setMovable ( bool movable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -672,7 +672,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -698,7 +698,7 @@ QAction * toggleViewAction () const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -723,7 +723,7 @@ Qt::ToolButtonStyle toolButtonStyle () const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -747,7 +747,7 @@ QWidget * widgetForAction ( QAction * action ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -772,7 +772,7 @@ void setIconSize ( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -798,7 +798,7 @@ void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 {
-  QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

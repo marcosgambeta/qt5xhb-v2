@@ -152,7 +152,7 @@ int addTab ( const QString & text )
 */
 void QTabBar_addTab1 ()
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ int addTab ( const QIcon & icon, const QString & text )
 */
 void QTabBar_addTab2 ()
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ int count () const
 */
 HB_FUNC_STATIC( QTABBAR_COUNT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ bool documentMode () const
 */
 HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ bool drawBase () const
 */
 HB_FUNC_STATIC( QTABBAR_DRAWBASE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ Qt::TextElideMode elideMode () const
 */
 HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -317,7 +317,7 @@ bool expanding () const
 */
 HB_FUNC_STATIC( QTABBAR_EXPANDING )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ QSize iconSize () const
 */
 HB_FUNC_STATIC( QTABBAR_ICONSIZE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ int insertTab ( int index, const QString & text )
 */
 void QTabBar_insertTab1 ()
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ int insertTab ( int index, const QIcon & icon, const QString & text )
 */
 void QTabBar_insertTab2 ()
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ bool isMovable () const
 */
 HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ bool isTabEnabled ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -459,7 +459,7 @@ void moveTab ( int from, int to )
 */
 HB_FUNC_STATIC( QTABBAR_MOVETAB )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ void removeTab ( int index )
 */
 HB_FUNC_STATIC( QTABBAR_REMOVETAB )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -511,7 +511,7 @@ SelectionBehavior selectionBehaviorOnRemove () const
 */
 HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ void setDocumentMode ( bool set )
 */
 HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -561,7 +561,7 @@ void setDrawBase ( bool drawTheBase )
 */
 HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ void setElideMode ( Qt::TextElideMode )
 */
 HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -613,7 +613,7 @@ void setExpanding ( bool enabled )
 */
 HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -639,7 +639,7 @@ void setIconSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -665,7 +665,7 @@ void setMovable ( bool movable )
 */
 HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -691,7 +691,7 @@ void setSelectionBehaviorOnRemove ( SelectionBehavior behavior )
 */
 HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -717,7 +717,7 @@ void setShape ( Shape shape )
 */
 HB_FUNC_STATIC( QTABBAR_SETSHAPE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -743,7 +743,7 @@ void setTabButton ( int index, ButtonPosition position, QWidget * widget )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -769,7 +769,7 @@ void setTabData ( int index, const QVariant & data )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABDATA )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ void setTabEnabled ( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ void setTabIcon ( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABICON )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -847,7 +847,7 @@ void setTabText ( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -873,7 +873,7 @@ void setTabTextColor ( int index, const QColor & color )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -899,7 +899,7 @@ void setTabToolTip ( int index, const QString & tip )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -925,7 +925,7 @@ void setTabWhatsThis ( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -951,7 +951,7 @@ void setTabsClosable ( bool closable )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -977,7 +977,7 @@ void setUsesScrollButtons ( bool useButtons )
 */
 HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1003,7 +1003,7 @@ Shape shape () const
 */
 HB_FUNC_STATIC( QTABBAR_SHAPE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1027,7 +1027,7 @@ int tabAt ( const QPoint & position ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABAT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1051,7 +1051,7 @@ QWidget * tabButton ( int index, ButtonPosition position ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABBUTTON )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1076,7 +1076,7 @@ QVariant tabData ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABDATA )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1101,7 +1101,7 @@ QIcon tabIcon ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABICON )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1126,7 +1126,7 @@ QRect tabRect ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABRECT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1151,7 +1151,7 @@ QString tabText ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTEXT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1175,7 +1175,7 @@ QColor tabTextColor ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1200,7 +1200,7 @@ QString tabToolTip ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1224,7 +1224,7 @@ QString tabWhatsThis ( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1248,7 +1248,7 @@ bool tabsClosable () const
 */
 HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1272,7 +1272,7 @@ bool usesScrollButtons () const
 */
 HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1296,7 +1296,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1321,7 +1321,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QTABBAR_SIZEHINT )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1346,7 +1346,7 @@ void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
 {
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1373,7 +1373,7 @@ bool autoHide() const
 HB_FUNC_STATIC( QTABBAR_AUTOHIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1399,7 +1399,7 @@ void setAutoHide(bool hide)
 HB_FUNC_STATIC( QTABBAR_SETAUTOHIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1427,7 +1427,7 @@ bool changeCurrentOnDrag() const
 HB_FUNC_STATIC( QTABBAR_CHANGECURRENTONDRAG )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1453,7 +1453,7 @@ void setChangeCurrentOnDrag(bool change)
 HB_FUNC_STATIC( QTABBAR_SETCHANGECURRENTONDRAG )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QTabBar * obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTabBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

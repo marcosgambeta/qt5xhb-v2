@@ -104,7 +104,7 @@ const QColor colorAt ( uint pixel ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ const QVector<QColor> colormap () const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QCOLORMAP_MODE )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ uint pixel ( const QColor & color ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ int size () const
 */
 HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {
-  QColormap * obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColormap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
