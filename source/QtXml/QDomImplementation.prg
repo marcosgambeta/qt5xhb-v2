@@ -123,7 +123,7 @@ QDomDocument createDocument ( const QString & nsURI, const QString & qName, cons
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QDomDocumentType createDocumentType ( const QString & qName, const QString & pub
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ bool hasFeature ( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ bool isNull ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
-  QDomImplementation * obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -122,7 +122,7 @@ QDomNode at ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {
-  QDomNodeList * obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNodeList *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -81,7 +81,7 @@ virtual bool error ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ virtual bool fatalError ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ virtual bool warning ( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
 {
-  QXmlErrorHandler * obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlErrorHandler *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

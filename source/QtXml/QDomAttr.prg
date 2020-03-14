@@ -113,7 +113,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QDOMATTR_NAME )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QDomElement ownerElement () const
 */
 HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setValue ( const QString & v )
 */
 HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ bool specified () const
 */
 HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ QString value () const
 */
 HB_FUNC_STATIC( QDOMATTR_VALUE )
 {
-  QDomAttr * obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomAttr *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

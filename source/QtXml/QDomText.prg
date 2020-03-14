@@ -108,7 +108,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ QDomText splitText ( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

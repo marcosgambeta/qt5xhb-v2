@@ -103,7 +103,7 @@ void popContext ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ QString prefix ( const QString & uri ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ QStringList prefixes () const
 */
 void QXmlNamespaceSupport_prefixes1 ()
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QStringList prefixes ( const QString & uri ) const
 */
 void QXmlNamespaceSupport_prefixes2 ()
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ void processName ( const QString & qname, bool isAttribute, QString & nsuri, QSt
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ void pushContext ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ void setPrefix ( const QString & pre, const QString & uri )
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ void splitName ( const QString & qname, QString & prefix, QString & localname ) 
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ QString uri ( const QString & prefix ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {
-  QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -110,7 +110,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QString notationName () const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
-  QDomEntity * obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -128,7 +128,7 @@ bool contains ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QDomNode namedItem ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ QDomNode removeNamedItem ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ QDomNode setNamedItem ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
-  QDomNamedNodeMap * obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

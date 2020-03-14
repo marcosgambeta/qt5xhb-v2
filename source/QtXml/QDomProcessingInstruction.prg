@@ -110,7 +110,7 @@ QString data () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void setData ( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QString target () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

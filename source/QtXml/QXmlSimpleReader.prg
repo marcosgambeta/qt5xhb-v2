@@ -87,7 +87,7 @@ virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ virtual bool parseContinue ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

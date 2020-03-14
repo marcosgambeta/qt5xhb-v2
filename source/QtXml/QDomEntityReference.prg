@@ -107,7 +107,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {
-  QDomEntityReference * obj = (QDomEntityReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntityReference *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

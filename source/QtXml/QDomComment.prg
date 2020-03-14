@@ -107,7 +107,7 @@ QDomNode::NodeType nodeType () cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomComment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
