@@ -132,8 +132,8 @@ void QMimeDatabase_mimeTypeForFile1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForFile ( PQSTRING(1), ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForFile ( PQSTRING(1), ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -146,8 +146,8 @@ void QMimeDatabase_mimeTypeForFile2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForFile ( *PQFILEINFO(1), ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForFile ( *PQFILEINFO(1), ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -231,8 +231,8 @@ void QMimeDatabase_mimeTypeForData1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForData ( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForData ( *PQBYTEARRAY(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -245,8 +245,8 @@ void QMimeDatabase_mimeTypeForData2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForData ( PQIODEVICE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForData ( PQIODEVICE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -303,8 +303,8 @@ void QMimeDatabase_mimeTypeForFileNameAndData1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), PQIODEVICE(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), PQIODEVICE(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 
@@ -317,8 +317,8 @@ void QMimeDatabase_mimeTypeForFileNameAndData2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), *PQBYTEARRAY(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+    auto ptr = new QMimeType( obj->mimeTypeForFileNameAndData ( PQSTRING(1), *PQBYTEARRAY(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
   }
 }
 

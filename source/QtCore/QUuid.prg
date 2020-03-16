@@ -277,8 +277,8 @@ static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 void QUuid_createUuidV31 ()
 {
 
-      auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 /*
@@ -287,8 +287,8 @@ static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 void QUuid_createUuidV32 ()
 {
 
-      auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), PQSTRING(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 //[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
@@ -316,8 +316,8 @@ static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 void QUuid_createUuidV51 ()
 {
 
-      auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 /*
@@ -326,8 +326,8 @@ static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 void QUuid_createUuidV52 ()
 {
 
-      auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), PQSTRING(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 }
 
 //[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
@@ -355,11 +355,11 @@ static QUuid fromRfc4122(const QByteArray & bytes)
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      auto ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+    auto ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

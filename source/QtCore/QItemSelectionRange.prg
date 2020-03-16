@@ -410,7 +410,7 @@ void QItemSelectionRange_contains1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -423,7 +423,7 @@ void QItemSelectionRange_contains2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
 

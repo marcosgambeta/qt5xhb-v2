@@ -352,7 +352,7 @@ void QRect_contains1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
+    RBOOL( obj->contains ( *PQPOINT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -365,7 +365,7 @@ void QRect_contains2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2), PBOOL(3) ) );
   }
 }
 
@@ -378,7 +378,7 @@ void QRect_contains3 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( PINT(1), PINT(2) ) );
+    RBOOL( obj->contains ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -391,7 +391,7 @@ void QRect_contains4 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
+    RBOOL( obj->contains ( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
 
@@ -438,14 +438,14 @@ HB_FUNC_STATIC( QRECT_GETCOORDS )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->getCoords ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,14 +472,14 @@ HB_FUNC_STATIC( QRECT_GETRECT )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->getRect ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,7 +826,7 @@ void QRect_moveTo1 ()
 
   if( obj != nullptr )
   {
-      obj->moveTo ( PINT(1), PINT(2) );
+    obj->moveTo ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -841,7 +841,7 @@ void QRect_moveTo2 ()
 
   if( obj != nullptr )
   {
-      obj->moveTo ( *PQPOINT(1) );
+    obj->moveTo ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1491,7 +1491,7 @@ void QRect_translate1 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( PINT(1), PINT(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1506,7 +1506,7 @@ void QRect_translate2 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( *PQPOINT(1) );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1540,8 +1540,8 @@ void QRect_translated1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRect( obj->translated ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    auto ptr = new QRect( obj->translated ( PINT(1), PINT(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -1554,8 +1554,8 @@ void QRect_translated2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRect( obj->translated ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    auto ptr = new QRect( obj->translated ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

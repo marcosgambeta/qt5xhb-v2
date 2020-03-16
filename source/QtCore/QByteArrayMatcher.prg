@@ -151,7 +151,7 @@ void QByteArrayMatcher_indexIn1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
+    RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
 }
 
@@ -164,7 +164,7 @@ void QByteArrayMatcher_indexIn2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 

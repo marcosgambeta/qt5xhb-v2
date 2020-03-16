@@ -222,7 +222,7 @@ void QBitArray_count1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->count () );
+    RINT( obj->count () );
   }
 }
 
@@ -235,7 +235,7 @@ void QBitArray_count2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->count ( PBOOL(1) ) );
+    RINT( obj->count ( PBOOL(1) ) );
   }
 }
 
@@ -267,7 +267,7 @@ void QBitArray_fill1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
+    RBOOL( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
   }
 }
 
@@ -280,7 +280,7 @@ void QBitArray_fill2 ()
 
   if( obj != nullptr )
   {
-      obj->fill ( PBOOL(1), PINT(2), PINT(3) );
+    obj->fill ( PBOOL(1), PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -388,7 +388,7 @@ void QBitArray_setBit1 ()
 
   if( obj != nullptr )
   {
-      obj->setBit ( PINT(1) );
+    obj->setBit ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -403,7 +403,7 @@ void QBitArray_setBit2 ()
 
   if( obj != nullptr )
   {
-      obj->setBit ( PINT(1), PBOOL(2) );
+    obj->setBit ( PINT(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

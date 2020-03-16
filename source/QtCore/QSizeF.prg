@@ -371,7 +371,7 @@ void QSizeF_scale1 ()
 
   if( obj != nullptr )
   {
-      obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -386,7 +386,7 @@ void QSizeF_scale2 ()
 
   if( obj != nullptr )
   {
-      obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -420,8 +420,8 @@ void QSizeF_scaled1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    auto ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -434,8 +434,8 @@ void QSizeF_scaled2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    auto ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 

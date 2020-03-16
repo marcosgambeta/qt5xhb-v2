@@ -121,7 +121,7 @@ void QTextDecoder_toUnicode1 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
+    RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
   }
 }
 
@@ -138,7 +138,7 @@ void QTextDecoder_toUnicode3 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
   }
 }
 

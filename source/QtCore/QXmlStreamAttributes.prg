@@ -107,7 +107,7 @@ void QXmlStreamAttributes_append1 ()
 
   if( obj != nullptr )
   {
-      obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->append ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -122,7 +122,7 @@ void QXmlStreamAttributes_append2 ()
 
   if( obj != nullptr )
   {
-      obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
+    obj->append ( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,7 +137,7 @@ void QXmlStreamAttributes_append3 ()
 
   if( obj != nullptr )
   {
-      obj->append ( PQSTRING(1), PQSTRING(2) );
+    obj->append ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -176,7 +176,7 @@ void QXmlStreamAttributes_hasAttribute1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1) ) );
   }
 }
 
@@ -189,7 +189,7 @@ void QXmlStreamAttributes_hasAttribute2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->hasAttribute ( *PQLATIN1STRING(1) ) );
+    RBOOL( obj->hasAttribute ( *PQLATIN1STRING(1) ) );
   }
 }
 
@@ -202,7 +202,7 @@ void QXmlStreamAttributes_hasAttribute3 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->hasAttribute ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 

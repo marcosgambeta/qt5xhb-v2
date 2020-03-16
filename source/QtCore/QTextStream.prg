@@ -206,7 +206,7 @@ void QTextStream_setCodec1 ()
 
   if( obj != nullptr )
   {
-      obj->setCodec ( PQTEXTCODEC(1) );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,7 +221,7 @@ void QTextStream_setCodec2 ()
 
   if( obj != nullptr )
   {
-      obj->setCodec ( PCONSTCHAR(1) );
+    obj->setCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

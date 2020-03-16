@@ -207,7 +207,7 @@ void QXmlStreamReader_addData1 ()
 
   if( obj != nullptr )
   {
-      obj->addData ( *PQBYTEARRAY(1) );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -222,7 +222,7 @@ void QXmlStreamReader_addData2 ()
 
   if( obj != nullptr )
   {
-      obj->addData ( PQSTRING(1) );
+    obj->addData ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -237,7 +237,7 @@ void QXmlStreamReader_addData3 ()
 
   if( obj != nullptr )
   {
-      obj->addData ( PCONSTCHAR(1) );
+    obj->addData ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

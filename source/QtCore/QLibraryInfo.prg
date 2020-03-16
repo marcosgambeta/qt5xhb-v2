@@ -84,10 +84,10 @@ static QString licensee()
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QLibraryInfo::licensee () );
+    RQSTRING( QLibraryInfo::licensee () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -103,10 +103,10 @@ static QString licensedProducts()
 HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QLibraryInfo::licensedProducts () );
+    RQSTRING( QLibraryInfo::licensedProducts () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -122,11 +122,11 @@ static QDate buildDate()
 HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      auto ptr = new QDate( QLibraryInfo::buildDate () );
-      _qt5xhb_createReturnClass ( ptr, "QDATE", true );
+    auto ptr = new QDate( QLibraryInfo::buildDate () );
+    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -142,10 +142,10 @@ static bool isDebugBuild()
 HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QLibraryInfo::isDebugBuild () );
+    RBOOL( QLibraryInfo::isDebugBuild () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -161,10 +161,10 @@ static QString location(LibraryLocation)
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
+    RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

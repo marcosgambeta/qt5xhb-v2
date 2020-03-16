@@ -128,7 +128,7 @@ void QSemaphore_tryAcquire1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
+    RBOOL( obj->tryAcquire ( OPINT(1,1) ) );
   }
 }
 
@@ -141,7 +141,7 @@ void QSemaphore_tryAcquire2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
+    RBOOL( obj->tryAcquire ( PINT(1), PINT(2) ) );
   }
 }
 

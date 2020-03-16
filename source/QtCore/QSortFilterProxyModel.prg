@@ -185,7 +185,7 @@ void QSortFilterProxyModel_setFilterRegExp1 ()
 
   if( obj != nullptr )
   {
-      obj->setFilterRegExp ( *PQREGEXP(1) );
+    obj->setFilterRegExp ( *PQREGEXP(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,7 +200,7 @@ void QSortFilterProxyModel_setFilterRegExp2 ()
 
   if( obj != nullptr )
   {
-      obj->setFilterRegExp ( PQSTRING(1) );
+    obj->setFilterRegExp ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -265,7 +265,7 @@ void QSortFilterProxyModel_setFilterRegularExpression1 ()
 
   if( obj != nullptr )
   {
-      obj->setFilterRegularExpression ( PQSTRING(1) );
+    obj->setFilterRegularExpression ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,7 +284,7 @@ void QSortFilterProxyModel_setFilterRegularExpression2 ()
 
   if( obj != nullptr )
   {
-      obj->setFilterRegularExpression ( *PQREGULAREXPRESSION(1) );
+    obj->setFilterRegularExpression ( *PQREGULAREXPRESSION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1002,8 +1002,8 @@ void QSortFilterProxyModel_parent1 ()
 
   if( obj != nullptr )
   {
-      QObject * ptr = obj->parent ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->parent ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -1016,8 +1016,8 @@ void QSortFilterProxyModel_parent2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    auto ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -1274,13 +1274,13 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       QMimeData * ptr = obj->mimeData ( par1 );
       _qt5xhb_createReturnQObjectClass ( ptr, "QMIMEDATA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

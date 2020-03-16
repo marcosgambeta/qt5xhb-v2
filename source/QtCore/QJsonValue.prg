@@ -403,8 +403,8 @@ void QJsonValue_toArray1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJsonArray( obj->toArray ( *PQJSONARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+    auto ptr = new QJsonArray( obj->toArray ( *PQJSONARRAY(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
   }
 }
 
@@ -417,8 +417,8 @@ void QJsonValue_toArray2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJsonArray( obj->toArray () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+    auto ptr = new QJsonArray( obj->toArray () );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
   }
 }
 
@@ -498,8 +498,8 @@ void QJsonValue_toObject1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJsonObject( obj->toObject ( *PQJSONOBJECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
+    auto ptr = new QJsonObject( obj->toObject ( *PQJSONOBJECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
   }
 }
 
@@ -512,8 +512,8 @@ void QJsonValue_toObject2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJsonObject( obj->toObject () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
+    auto ptr = new QJsonObject( obj->toObject () );
+    _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
   }
 }
 
@@ -615,11 +615,11 @@ static QJsonValue fromVariant(const QVariant & variant)
 HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
 #endif
-      auto ptr = new QJsonValue( QJsonValue::fromVariant ( *PQVARIANT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
+    auto ptr = new QJsonValue( QJsonValue::fromVariant ( *PQVARIANT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

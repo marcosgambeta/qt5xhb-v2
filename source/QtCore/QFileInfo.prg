@@ -1155,7 +1155,7 @@ void QFileInfo_setFile1 ()
 
   if( obj != nullptr )
   {
-      obj->setFile ( PQSTRING(1) );
+    obj->setFile ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1170,7 +1170,7 @@ void QFileInfo_setFile2 ()
 
   if( obj != nullptr )
   {
-      obj->setFile ( *PQFILE(1) );
+    obj->setFile ( *PQFILE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1185,7 +1185,7 @@ void QFileInfo_setFile3 ()
 
   if( obj != nullptr )
   {
-      obj->setFile ( *PQDIR(1), PQSTRING(2) );
+    obj->setFile ( *PQDIR(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

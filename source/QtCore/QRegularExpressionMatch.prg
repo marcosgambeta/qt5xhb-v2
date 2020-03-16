@@ -114,7 +114,7 @@ void QRegularExpressionMatch_captured1 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->captured ( OPINT(1,0) ) );
+    RQSTRING( obj->captured ( OPINT(1,0) ) );
   }
 }
 
@@ -127,7 +127,7 @@ void QRegularExpressionMatch_captured2 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->captured ( PQSTRING(1) ) );
+    RQSTRING( obj->captured ( PQSTRING(1) ) );
   }
 }
 
@@ -159,7 +159,7 @@ void QRegularExpressionMatch_capturedEnd1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedEnd ( OPINT(1,0) ) );
+    RINT( obj->capturedEnd ( OPINT(1,0) ) );
   }
 }
 
@@ -172,7 +172,7 @@ void QRegularExpressionMatch_capturedEnd2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedEnd ( PQSTRING(1) ) );
+    RINT( obj->capturedEnd ( PQSTRING(1) ) );
   }
 }
 
@@ -204,7 +204,7 @@ void QRegularExpressionMatch_capturedLength1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedLength ( OPINT(1,0) ) );
+    RINT( obj->capturedLength ( OPINT(1,0) ) );
   }
 }
 
@@ -217,7 +217,7 @@ void QRegularExpressionMatch_capturedLength2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedLength ( PQSTRING(1) ) );
+    RINT( obj->capturedLength ( PQSTRING(1) ) );
   }
 }
 
@@ -249,8 +249,8 @@ void QRegularExpressionMatch_capturedRef1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QStringRef( obj->capturedRef ( OPINT(1,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    auto ptr = new QStringRef( obj->capturedRef ( OPINT(1,0) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -263,8 +263,8 @@ void QRegularExpressionMatch_capturedRef2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QStringRef( obj->capturedRef ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+    auto ptr = new QStringRef( obj->capturedRef ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
   }
 }
 
@@ -296,7 +296,7 @@ void QRegularExpressionMatch_capturedStart1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedStart ( OPINT(1,0) ) );
+    RINT( obj->capturedStart ( OPINT(1,0) ) );
   }
 }
 
@@ -309,7 +309,7 @@ void QRegularExpressionMatch_capturedStart2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->capturedStart ( PQSTRING(1) ) );
+    RINT( obj->capturedStart ( PQSTRING(1) ) );
   }
 }
 
