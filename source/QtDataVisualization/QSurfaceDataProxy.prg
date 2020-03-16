@@ -213,8 +213,8 @@ void QSurfaceDataProxy_itemAt1 ()
 
   if( obj != nullptr )
   {
-      const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
 }
@@ -229,8 +229,8 @@ void QSurfaceDataProxy_itemAt2 ()
 
   if( obj != nullptr )
   {
-      const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
 }
@@ -276,7 +276,7 @@ void QSurfaceDataProxy_setItem1 ()
 
   if( obj != nullptr )
   {
-      obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
+    obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -293,7 +293,7 @@ void QSurfaceDataProxy_setItem2 ()
 
   if( obj != nullptr )
   {
-      obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
+    obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

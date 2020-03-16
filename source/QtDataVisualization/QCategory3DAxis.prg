@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

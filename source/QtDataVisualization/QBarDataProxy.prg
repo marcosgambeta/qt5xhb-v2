@@ -310,8 +310,8 @@ void QBarDataProxy_itemAt1 ()
 
   if( obj != nullptr )
   {
-      const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
+    const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
 #endif
 }
@@ -326,8 +326,8 @@ void QBarDataProxy_itemAt2 ()
 
   if( obj != nullptr )
   {
-      const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
+    const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
 #endif
 }
@@ -411,7 +411,7 @@ void QBarDataProxy_setItem1 ()
 
   if( obj != nullptr )
   {
-      obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
+    obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -428,7 +428,7 @@ void QBarDataProxy_setItem2 ()
 
   if( obj != nullptr )
   {
-      obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
+    obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONARRAYRESET )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONCOLUMNLABELSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONITEMCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWCOUNTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWLABELSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSADDED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSINSERTED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONROWSREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ONSERIESCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
