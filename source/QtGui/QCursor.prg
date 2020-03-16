@@ -323,11 +323,11 @@ static QPoint pos ()
 HB_FUNC_STATIC( QCURSOR_POS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      auto ptr = new QPoint( QCursor::pos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    auto ptr = new QPoint( QCursor::pos () );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -343,7 +343,7 @@ static void setPos ( int x, int y )
 void QCursor_setPos1 ()
 {
 
-      QCursor::setPos ( PINT(1), PINT(2) );
+  QCursor::setPos ( PINT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -354,7 +354,7 @@ static void setPos ( const QPoint & p )
 void QCursor_setPos2 ()
 {
 
-      QCursor::setPos ( *PQPOINT(1) );
+  QCursor::setPos ( *PQPOINT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

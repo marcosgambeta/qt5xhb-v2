@@ -280,7 +280,7 @@ void QPageSize_key1 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->key () );
+    RQSTRING( obj->key () );
   }
 #endif
 }
@@ -292,7 +292,7 @@ void QPageSize_key2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RQSTRING( QPageSize::key ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  RQSTRING( QPageSize::key ( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
 
@@ -325,7 +325,7 @@ void QPageSize_name1 ()
 
   if( obj != nullptr )
   {
-      RQSTRING( obj->name () );
+    RQSTRING( obj->name () );
   }
 #endif
 }
@@ -337,7 +337,7 @@ void QPageSize_name2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RQSTRING( QPageSize::name ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  RQSTRING( QPageSize::name ( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
 
@@ -370,7 +370,7 @@ void QPageSize_id1 ()
 
   if( obj != nullptr )
   {
-      RENUM( obj->id () );
+    RENUM( obj->id () );
   }
 #endif
 }
@@ -382,7 +382,7 @@ void QPageSize_id2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RENUM( QPageSize::id ( *PQSIZE(1), ISNIL(2)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(2) ) );
+  RENUM( QPageSize::id ( *PQSIZE(1), ISNIL(2)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(2) ) );
 #endif
 }
 
@@ -393,7 +393,7 @@ void QPageSize_id3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RENUM( QPageSize::id ( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) ) );
+  RENUM( QPageSize::id ( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) ) );
 #endif
 }
 
@@ -404,7 +404,7 @@ void QPageSize_id4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RENUM( QPageSize::id ( PINT(1) ) );
+  RENUM( QPageSize::id ( PINT(1) ) );
 #endif
 }
 
@@ -447,7 +447,7 @@ void QPageSize_windowsId1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->windowsId () );
+    RINT( obj->windowsId () );
   }
 #endif
 }
@@ -459,7 +459,7 @@ void QPageSize_windowsId2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RINT( QPageSize::windowsId ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  RINT( QPageSize::windowsId ( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
 
@@ -492,8 +492,8 @@ void QPageSize_definitionSize1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSizeF( obj->definitionSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    auto ptr = new QSizeF( obj->definitionSize () );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 #endif
 }
@@ -505,8 +505,8 @@ void QPageSize_definitionSize2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      auto ptr = new QSizeF( QPageSize::definitionSize ( (QPageSize::PageSizeId) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+  auto ptr = new QSizeF( QPageSize::definitionSize ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #endif
 }
 
@@ -539,7 +539,7 @@ void QPageSize_definitionUnits1 ()
 
   if( obj != nullptr )
   {
-      RENUM( obj->definitionUnits () );
+    RENUM( obj->definitionUnits () );
   }
 #endif
 }
@@ -551,7 +551,7 @@ void QPageSize_definitionUnits2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      RENUM( QPageSize::definitionUnits ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  RENUM( QPageSize::definitionUnits ( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
 
@@ -584,8 +584,8 @@ void QPageSize_size1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSizeF( obj->size ( (QPageSize::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    auto ptr = new QSizeF( obj->size ( (QPageSize::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 #endif
 }
@@ -597,8 +597,8 @@ void QPageSize_size2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      auto ptr = new QSizeF( QPageSize::size ( (QPageSize::PageSizeId) hb_parni(1), (QPageSize::Unit) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+  auto ptr = new QSizeF( QPageSize::size ( (QPageSize::PageSizeId) hb_parni(1), (QPageSize::Unit) hb_parni(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
 #endif
 }
 
@@ -631,8 +631,8 @@ void QPageSize_sizePoints1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSize( obj->sizePoints () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    auto ptr = new QSize( obj->sizePoints () );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -644,8 +644,8 @@ void QPageSize_sizePoints2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      auto ptr = new QSize( QPageSize::sizePoints ( (QPageSize::PageSizeId) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+  auto ptr = new QSize( QPageSize::sizePoints ( (QPageSize::PageSizeId) hb_parni(1) ) );
+  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #endif
 }
 
@@ -678,8 +678,8 @@ void QPageSize_sizePixels1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSize( obj->sizePixels ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    auto ptr = new QSize( obj->sizePixels ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -691,8 +691,8 @@ void QPageSize_sizePixels2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
-      auto ptr = new QSize( QPageSize::sizePixels ( (QPageSize::PageSizeId) hb_parni(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+  auto ptr = new QSize( QPageSize::sizePixels ( (QPageSize::PageSizeId) hb_parni(1), PINT(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #endif
 }
 

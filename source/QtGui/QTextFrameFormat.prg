@@ -643,7 +643,7 @@ void QTextFrameFormat_setWidth1 ()
 
   if( obj != nullptr )
   {
-      obj->setWidth ( PQREAL(1) );
+    obj->setWidth ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -658,7 +658,7 @@ void QTextFrameFormat_setWidth2 ()
 
   if( obj != nullptr )
   {
-      obj->setWidth ( *PQTEXTLENGTH(1) );
+    obj->setWidth ( *PQTEXTLENGTH(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -717,7 +717,7 @@ void QTextFrameFormat_setHeight1 ()
 
   if( obj != nullptr )
   {
-      obj->setHeight ( PQREAL(1) );
+    obj->setHeight ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -732,7 +732,7 @@ void QTextFrameFormat_setHeight2 ()
 
   if( obj != nullptr )
   {
-      obj->setHeight ( *PQTEXTLENGTH(1) );
+    obj->setHeight ( *PQTEXTLENGTH(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -864,7 +864,7 @@ void QTextLayout_drawCursor1 ()
 
   if( obj != nullptr )
   {
-      obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3) );
+    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -879,7 +879,7 @@ void QTextLayout_drawCursor2 ()
 
   if( obj != nullptr )
   {
-      obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3), PINT(4) );
+    obj->drawCursor ( PQPAINTER(1), *PQPOINTF(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -211,10 +211,10 @@ static const QString &pressAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::pressAction () );
+    RQSTRING( QAccessibleActionInterface::pressAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -230,10 +230,10 @@ static const QString &increaseAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::increaseAction () );
+    RQSTRING( QAccessibleActionInterface::increaseAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -249,10 +249,10 @@ static const QString &decreaseAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::decreaseAction () );
+    RQSTRING( QAccessibleActionInterface::decreaseAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -268,10 +268,10 @@ static const QString &showMenuAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::showMenuAction () );
+    RQSTRING( QAccessibleActionInterface::showMenuAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -287,10 +287,10 @@ static const QString &setFocusAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::setFocusAction () );
+    RQSTRING( QAccessibleActionInterface::setFocusAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -306,10 +306,10 @@ static const QString &toggleAction()
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QAccessibleActionInterface::toggleAction () );
+    RQSTRING( QAccessibleActionInterface::toggleAction () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

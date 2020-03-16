@@ -250,7 +250,7 @@ void QPdfWriter_setPageSize1 ()
 
   if( obj != nullptr )
   {
-      obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
+    obj->setPageSize ( (QPagedPaintDevice::PageSize) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -266,7 +266,7 @@ void QPdfWriter_setPageSize2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
+    RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
   }
 #endif
 }
@@ -459,7 +459,7 @@ void QPdfWriter_setPageMargins1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
+    RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
   }
 #endif
 }
@@ -474,7 +474,7 @@ void QPdfWriter_setPageMargins2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+    RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
   }
 #endif
 }

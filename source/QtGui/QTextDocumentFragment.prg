@@ -221,11 +221,11 @@ static QTextDocumentFragment fromPlainText(const QString &plainText)
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+    auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromPlainText ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -241,8 +241,8 @@ static QTextDocumentFragment fromHtml(const QString &html)
 void QTextDocumentFragment_fromHtml1 ()
 {
 
-      auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+  auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1) ) );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
 /*
@@ -251,8 +251,8 @@ static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *
 void QTextDocumentFragment_fromHtml2 ()
 {
 
-      auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+  auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml ( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
 
 //[1]static QTextDocumentFragment fromHtml(const QString &html)

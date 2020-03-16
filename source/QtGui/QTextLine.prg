@@ -463,9 +463,9 @@ void QTextLine_cursorToX1 ()
 
   if( obj != nullptr )
   {
-       int par1;
-      RQREAL( obj->cursorToX ( &par1, ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
-       hb_storni( par1, 1 );
+    int par1;
+    RQREAL( obj->cursorToX ( &par1, ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
+    hb_storni( par1, 1 );
   }
 }
 
@@ -478,7 +478,7 @@ void QTextLine_cursorToX2 ()
 
   if( obj != nullptr )
   {
-      RQREAL( obj->cursorToX ( PINT(1), ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
+    RQREAL( obj->cursorToX ( PINT(1), ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
   }
 }
 
@@ -560,7 +560,7 @@ void QTextLine_setNumColumns1 ()
 
   if( obj != nullptr )
   {
-      obj->setNumColumns ( PINT(1) );
+    obj->setNumColumns ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -575,7 +575,7 @@ void QTextLine_setNumColumns2 ()
 
   if( obj != nullptr )
   {
-      obj->setNumColumns ( PINT(1), PQREAL(2) );
+    obj->setNumColumns ( PINT(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

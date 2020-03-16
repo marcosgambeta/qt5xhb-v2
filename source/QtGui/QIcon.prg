@@ -373,7 +373,7 @@ void QIcon_paint1 ()
 
   if( obj != nullptr )
   {
-      obj->paint ( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
+    obj->paint ( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -388,7 +388,7 @@ void QIcon_paint2 ()
 
   if( obj != nullptr )
   {
-      obj->paint ( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
+    obj->paint ( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -422,8 +422,8 @@ void QIcon_pixmap1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -436,8 +436,8 @@ void QIcon_pixmap2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -450,8 +450,8 @@ void QIcon_pixmap3 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -485,11 +485,11 @@ static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() 
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
   {
 #endif
-      auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -505,10 +505,10 @@ static bool hasThemeIcon ( const QString & name )
 HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
+    RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -524,10 +524,10 @@ static void setThemeName ( const QString & name )
 HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QIcon::setThemeName ( PQSTRING(1) );
+    QIcon::setThemeName ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -545,10 +545,10 @@ static void setThemeSearchPaths ( const QStringList & paths )
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-      QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
+    QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -566,10 +566,10 @@ static QString themeName ()
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QIcon::themeName () );
+    RQSTRING( QIcon::themeName () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -585,10 +585,10 @@ static QStringList themeSearchPaths ()
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QIcon::themeSearchPaths () );
+    RQSTRINGLIST( QIcon::themeSearchPaths () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -605,10 +605,10 @@ HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QIcon::fallbackThemeName () );
+    RQSTRING( QIcon::fallbackThemeName () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -626,10 +626,10 @@ HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QIcon::setFallbackThemeName ( PQSTRING(1) );
+    QIcon::setFallbackThemeName ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

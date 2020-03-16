@@ -299,7 +299,7 @@ void QTextDocumentWriter_write1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->write ( PQTEXTDOCUMENT(1) ) );
+    RBOOL( obj->write ( PQTEXTDOCUMENT(1) ) );
   }
 }
 
@@ -312,7 +312,7 @@ void QTextDocumentWriter_write2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
+    RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
 

@@ -101,14 +101,14 @@ QPolygon(const QVector<QPoint> &v)
 */
 void QPolygon_new4 ()
 {
-      QVector<QPoint> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+  QVector<QPoint> par1;
+  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+  int i1;
+  int nLen1 = hb_arrayLen(aList1);
+  for (i1=0;i1<nLen1;i1++)
+  {
+    par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+  }
   auto obj = new QPolygon ( par1 );
   _qt5xhb_returnNewObject( obj, true );
 }
@@ -213,7 +213,7 @@ void QPolygon_translate1 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( PINT(1), PINT(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -228,7 +228,7 @@ void QPolygon_translate2 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( *PQPOINT(1) );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -262,8 +262,8 @@ void QPolygon_translated1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPolygon( obj->translated ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    auto ptr = new QPolygon( obj->translated ( PINT(1), PINT(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -276,8 +276,8 @@ void QPolygon_translated2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPolygon( obj->translated ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    auto ptr = new QPolygon( obj->translated ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -334,11 +334,11 @@ void QPolygon_point1 ()
 
   if( obj != nullptr )
   {
-       int par2;
-int par3;
-      obj->point ( PINT(1), &par2, &par3 );
-       hb_storni( par2, 2 );
-hb_storni( par3, 3 );
+    int par2;
+    int par3;
+    obj->point ( PINT(1), &par2, &par3 );
+    hb_storni( par2, 2 );
+    hb_storni( par3, 3 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -353,8 +353,8 @@ void QPolygon_point2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPoint( obj->point ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    auto ptr = new QPoint( obj->point ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -386,7 +386,7 @@ void QPolygon_setPoint1 ()
 
   if( obj != nullptr )
   {
-      obj->setPoint ( PINT(1), PINT(2), PINT(3) );
+    obj->setPoint ( PINT(1), PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -401,7 +401,7 @@ void QPolygon_setPoint2 ()
 
   if( obj != nullptr )
   {
-      obj->setPoint ( PINT(1), *PQPOINT(2) );
+    obj->setPoint ( PINT(1), *PQPOINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

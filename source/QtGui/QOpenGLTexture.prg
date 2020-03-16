@@ -302,7 +302,7 @@ void QOpenGLTexture_bind1 ()
 
   if( obj != nullptr )
   {
-      obj->bind ();
+    obj->bind ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -319,7 +319,7 @@ void QOpenGLTexture_bind2 ()
 
   if( obj != nullptr )
   {
-      obj->bind ( PUINT(1), ISNIL(2)? (QOpenGLTexture::TextureUnitReset) QOpenGLTexture::DontResetTextureUnit : (QOpenGLTexture::TextureUnitReset) hb_parni(2) );
+    obj->bind ( PUINT(1), ISNIL(2)? (QOpenGLTexture::TextureUnitReset) QOpenGLTexture::DontResetTextureUnit : (QOpenGLTexture::TextureUnitReset) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,7 +355,7 @@ void QOpenGLTexture_release1 ()
 
   if( obj != nullptr )
   {
-      obj->release ();
+    obj->release ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -372,7 +372,7 @@ void QOpenGLTexture_release2 ()
 
   if( obj != nullptr )
   {
-      obj->release ( PUINT(1), ISNIL(2)? (QOpenGLTexture::TextureUnitReset) QOpenGLTexture::DontResetTextureUnit : (QOpenGLTexture::TextureUnitReset) hb_parni(2) );
+    obj->release ( PUINT(1), ISNIL(2)? (QOpenGLTexture::TextureUnitReset) QOpenGLTexture::DontResetTextureUnit : (QOpenGLTexture::TextureUnitReset) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,7 +408,7 @@ void QOpenGLTexture_isBound1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isBound () );
+    RBOOL( obj->isBound () );
   }
 #endif
 }
@@ -423,7 +423,7 @@ void QOpenGLTexture_isBound2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isBound ( PUINT(1) ) );
+    RBOOL( obj->isBound ( PUINT(1) ) );
   }
 #endif
 }
@@ -1129,7 +1129,7 @@ void QOpenGLTexture_generateMipMaps1 ()
 
   if( obj != nullptr )
   {
-      obj->generateMipMaps ();
+    obj->generateMipMaps ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1146,7 +1146,7 @@ void QOpenGLTexture_generateMipMaps2 ()
 
   if( obj != nullptr )
   {
-      obj->generateMipMaps ( PINT(1), OPBOOL(2,true) );
+    obj->generateMipMaps ( PINT(1), OPBOOL(2,true) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1182,7 +1182,7 @@ void QOpenGLTexture_setSwizzleMask1 ()
 
   if( obj != nullptr )
   {
-      obj->setSwizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2) );
+    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleComponent) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1199,7 +1199,7 @@ void QOpenGLTexture_setSwizzleMask2 ()
 
   if( obj != nullptr )
   {
-      obj->setSwizzleMask ( (QOpenGLTexture::SwizzleValue) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2), (QOpenGLTexture::SwizzleValue) hb_parni(3), (QOpenGLTexture::SwizzleValue) hb_parni(4) );
+    obj->setSwizzleMask ( (QOpenGLTexture::SwizzleValue) hb_parni(1), (QOpenGLTexture::SwizzleValue) hb_parni(2), (QOpenGLTexture::SwizzleValue) hb_parni(3), (QOpenGLTexture::SwizzleValue) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1505,7 +1505,7 @@ void QOpenGLTexture_setWrapMode1 ()
 
   if( obj != nullptr )
   {
-      obj->setWrapMode ( (QOpenGLTexture::WrapMode) hb_parni(1) );
+    obj->setWrapMode ( (QOpenGLTexture::WrapMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1522,7 +1522,7 @@ void QOpenGLTexture_setWrapMode2 ()
 
   if( obj != nullptr )
   {
-      obj->setWrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1), (QOpenGLTexture::WrapMode) hb_parni(2) );
+    obj->setWrapMode ( (QOpenGLTexture::CoordinateDirection) hb_parni(1), (QOpenGLTexture::WrapMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1998,7 +1998,7 @@ void QOpenGLTexture_boundTextureId1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-      RGLUINT( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
+  RGLUINT( QOpenGLTexture::boundTextureId ( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
 #endif
 }
 
@@ -2009,7 +2009,7 @@ void QOpenGLTexture_boundTextureId2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 
-      RGLUINT( QOpenGLTexture::boundTextureId ( PUINT(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
+  RGLUINT( QOpenGLTexture::boundTextureId ( PUINT(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
 #endif
 }
 
@@ -2039,10 +2039,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_HASFEATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RBOOL( QOpenGLTexture::hasFeature ( (QOpenGLTexture::Feature) hb_parni(1) ) );
+    RBOOL( QOpenGLTexture::hasFeature ( (QOpenGLTexture::Feature) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

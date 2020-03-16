@@ -290,7 +290,7 @@ void QPagedPaintDevice_setPageMargins1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
+    RBOOL( obj->setPageMargins ( *PQMARGINSF(1) ) );
   }
 #endif
 }
@@ -305,7 +305,7 @@ void QPagedPaintDevice_setPageMargins2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+    RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
   }
 #endif
 }

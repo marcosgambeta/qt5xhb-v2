@@ -262,7 +262,7 @@ void QRegion_contains1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( *PQPOINT(1) ) );
+    RBOOL( obj->contains ( *PQPOINT(1) ) );
   }
 }
 
@@ -275,7 +275,7 @@ void QRegion_contains2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->contains ( *PQRECT(1) ) );
+    RBOOL( obj->contains ( *PQRECT(1) ) );
   }
 }
 
@@ -307,7 +307,7 @@ void QRegion_translate1 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( PINT(1), PINT(2) );
+    obj->translate ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -322,7 +322,7 @@ void QRegion_translate2 ()
 
   if( obj != nullptr )
   {
-      obj->translate ( *PQPOINT(1) );
+    obj->translate ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -356,8 +356,8 @@ void QRegion_translated1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    auto ptr = new QRegion( obj->translated ( PINT(1), PINT(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -370,8 +370,8 @@ void QRegion_translated2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRegion( obj->translated ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    auto ptr = new QRegion( obj->translated ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -403,8 +403,8 @@ void QRegion_united1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRegion( obj->united ( *PQREGION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    auto ptr = new QRegion( obj->united ( *PQREGION(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -417,8 +417,8 @@ void QRegion_united2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRegion( obj->united ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    auto ptr = new QRegion( obj->united ( *PQRECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -500,7 +500,7 @@ void QRegion_intersects1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->intersects ( *PQREGION(1) ) );
+    RBOOL( obj->intersects ( *PQREGION(1) ) );
   }
 }
 
@@ -513,7 +513,7 @@ void QRegion_intersects2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->intersects ( *PQRECT(1) ) );
+    RBOOL( obj->intersects ( *PQRECT(1) ) );
   }
 }
 

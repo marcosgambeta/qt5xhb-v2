@@ -1439,8 +1439,8 @@ void QWindow_parent1 ()
 
   if( obj != nullptr )
   {
-      QWindow * ptr = obj->parent ( (QWindow::AncestorMode) hb_parni(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+    QWindow * ptr = obj->parent ( (QWindow::AncestorMode) hb_parni(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
   }
 #endif
 }
@@ -1454,8 +1454,8 @@ void QWindow_parent2 ()
 
   if( obj != nullptr )
   {
-      QWindow * ptr = obj->parent ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+    QWindow * ptr = obj->parent ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
   }
 }
 
@@ -1512,7 +1512,7 @@ void QWindow_resize1 ()
 
   if( obj != nullptr )
   {
-      obj->resize ( *PQSIZE(1) );
+    obj->resize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1527,7 +1527,7 @@ void QWindow_resize2 ()
 
   if( obj != nullptr )
   {
-      obj->resize ( PINT(1), PINT(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1666,7 +1666,7 @@ void QWindow_setGeometry1 ()
 
   if( obj != nullptr )
   {
-      obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1681,7 +1681,7 @@ void QWindow_setGeometry2 ()
 
   if( obj != nullptr )
   {
-      obj->setGeometry ( *PQRECT(1) );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2378,7 +2378,7 @@ void QWindow_setPosition1 ()
 
   if( obj != nullptr )
   {
-      obj->setPosition ( *PQPOINT(1) );
+    obj->setPosition ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2393,7 +2393,7 @@ void QWindow_setPosition2 ()
 
   if( obj != nullptr )
   {
-      obj->setPosition ( PINT(1), PINT(2) );
+    obj->setPosition ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2864,11 +2864,11 @@ static QWindow *fromWinId(WId id)
 HB_FUNC_STATIC( QWINDOW_FROMWINID )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISPOINTER(1) )
+  if( ISNUMPAR(1) && ISPOINTER(1) )
   {
 #endif
-      QWindow * ptr = QWindow::fromWinId ( (WId) hb_parptr(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+    QWindow * ptr = QWindow::fromWinId ( (WId) hb_parptr(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -3076,7 +3076,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -3638,7 +3638,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -3766,7 +3766,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

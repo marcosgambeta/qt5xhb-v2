@@ -959,8 +959,8 @@ void QTransform_map1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    auto ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -973,8 +973,8 @@ void QTransform_map2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+    auto ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -987,8 +987,8 @@ void QTransform_map3 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QLine( obj->map ( *PQLINE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINE", true );
+    auto ptr = new QLine( obj->map ( *PQLINE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
 
@@ -1001,8 +1001,8 @@ void QTransform_map4 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+    auto ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -1015,8 +1015,8 @@ void QTransform_map5 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    auto ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -1029,8 +1029,8 @@ void QTransform_map6 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    auto ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -1043,8 +1043,8 @@ void QTransform_map7 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRegion( obj->map ( *PQREGION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    auto ptr = new QRegion( obj->map ( *PQREGION(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -1057,8 +1057,8 @@ void QTransform_map8 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    auto ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1071,11 +1071,11 @@ void QTransform_map9 ()
 
   if( obj != nullptr )
   {
-       int par3;
-int par4;
-      obj->map ( PINT(1), PINT(2), &par3, &par4 );
-       hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+    int par3;
+    int par4;
+    obj->map ( PINT(1), PINT(2), &par3, &par4 );
+    hb_storni( par3, 3 );
+    hb_storni( par4, 4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1090,11 +1090,11 @@ void QTransform_map10 ()
 
   if( obj != nullptr )
   {
-       qreal par3;
-qreal par4;
-      obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
-       hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+    qreal par3;
+    qreal par4;
+    obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
+    hb_stornd( par3, 3 );
+    hb_stornd( par4, 4 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1193,8 +1193,8 @@ void QTransform_mapRect1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    auto ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -1207,8 +1207,8 @@ void QTransform_mapRect2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    auto ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -1262,10 +1262,10 @@ static bool squareToQuad(const QPolygonF &square, QTransform &result)
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
+  if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
   {
 #endif
-      RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
+    RBOOL( QTransform::squareToQuad ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1281,10 +1281,10 @@ static bool quadToSquare(const QPolygonF &quad, QTransform &result)
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
+  if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
   {
 #endif
-      RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
+    RBOOL( QTransform::quadToSquare ( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1300,10 +1300,10 @@ static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &res
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPOLYGONF(1) && ISQPOLYGONF(2) && ISQTRANSFORM(3) )
+  if( ISNUMPAR(3) && ISQPOLYGONF(1) && ISQPOLYGONF(2) && ISQTRANSFORM(3) )
   {
 #endif
-      RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
+    RBOOL( QTransform::quadToQuad ( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1319,11 +1319,11 @@ static QTransform fromTranslate(qreal dx, qreal dy)
 HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
 #endif
-      auto ptr = new QTransform( QTransform::fromTranslate ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    auto ptr = new QTransform( QTransform::fromTranslate ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1339,11 +1339,11 @@ static QTransform fromScale(qreal dx, qreal dy)
 HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
 #endif
-      auto ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    auto ptr = new QTransform( QTransform::fromScale ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -194,7 +194,7 @@ void QPicture_load1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
+    RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
@@ -207,7 +207,7 @@ void QPicture_load2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
+    RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
@@ -263,7 +263,7 @@ void QPicture_save1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
+    RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 
@@ -276,7 +276,7 @@ void QPicture_save2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,nullptr) ) );
   }
 }
 

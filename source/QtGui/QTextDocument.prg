@@ -679,8 +679,8 @@ void QTextDocument_find1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    auto ptr = new QTextCursor( obj->find ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -693,8 +693,8 @@ void QTextDocument_find2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QTextCursor( obj->find ( PQSTRING(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    auto ptr = new QTextCursor( obj->find ( PQSTRING(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -707,8 +707,8 @@ void QTextDocument_find3 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), OPINT(2,0), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -721,8 +721,8 @@ void QTextDocument_find4 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+    auto ptr = new QTextCursor( obj->find ( *PQREGEXP(1), *PQTEXTCURSOR(2), ISNIL(3)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
   }
 }
 
@@ -1892,7 +1892,7 @@ void QTextDocument_undo1 ()
 
   if( obj != nullptr )
   {
-      obj->undo ( PQTEXTCURSOR(1) );
+    obj->undo ( PQTEXTCURSOR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1907,7 +1907,7 @@ void QTextDocument_undo2 ()
 
   if( obj != nullptr )
   {
-      obj->undo ();
+    obj->undo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1941,7 +1941,7 @@ void QTextDocument_redo1 ()
 
   if( obj != nullptr )
   {
-      obj->redo ( PQTEXTCURSOR(1) );
+    obj->redo ( PQTEXTCURSOR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1956,7 +1956,7 @@ void QTextDocument_redo2 ()
 
   if( obj != nullptr )
   {
-      obj->redo ();
+    obj->redo ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
