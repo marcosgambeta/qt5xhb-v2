@@ -157,8 +157,8 @@ void QAndroidJniObject_callObjectMethod1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QAndroidJniObject( obj->callObjectMethod ( PCONSTCHAR(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( obj->callObjectMethod ( PCONSTCHAR(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
   }
 #endif
 }
@@ -342,11 +342,11 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      auto ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -381,11 +381,11 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMLOCALREF )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      auto ptr = new QAndroidJniObject( QAndroidJniObject::fromLocalRef ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( QAndroidJniObject::fromLocalRef ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -403,11 +403,11 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      auto ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( QAndroidJniObject::fromString ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -433,11 +433,11 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-      auto ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField ( PCONSTCHAR(1), PCONSTCHAR(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -455,11 +455,11 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
   {
 #endif
-      auto ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField ( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
+    auto ptr = new QAndroidJniObject( QAndroidJniObject::getStaticObjectField ( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QANDROIDJNIOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -498,10 +498,10 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
+    RBOOL( QAndroidJniObject::isClassAvailable ( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
