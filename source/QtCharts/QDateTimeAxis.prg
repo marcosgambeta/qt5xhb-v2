@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONFORMATCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMAXCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONMINCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONRANGECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_ONTICKCOUNTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

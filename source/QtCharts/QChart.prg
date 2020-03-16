@@ -1487,7 +1487,7 @@ void QChart_zoomIn1 ()
 
   if( obj != nullptr )
   {
-      obj->zoomIn ();
+    obj->zoomIn ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1504,7 +1504,7 @@ void QChart_zoomIn2 ()
 
   if( obj != nullptr )
   {
-      obj->zoomIn ( *PQRECTF(1) );
+    obj->zoomIn ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1921,7 +1921,7 @@ HB_FUNC_STATIC( QCHART_ONPLOTAREACHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

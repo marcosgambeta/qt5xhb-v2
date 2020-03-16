@@ -523,7 +523,7 @@ void QXYSeries_append1 ()
 
   if( obj != nullptr )
   {
-      obj->append ( PQREAL(1), PQREAL(2) );
+    obj->append ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -540,7 +540,7 @@ void QXYSeries_append2 ()
 
   if( obj != nullptr )
   {
-      obj->append ( *PQPOINTF(1) );
+    obj->append ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -557,15 +557,15 @@ void QXYSeries_append3 ()
 
   if( obj != nullptr )
   {
-       QList<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->append ( par1 );
+    QList<QPointF> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->append ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -606,7 +606,7 @@ void QXYSeries_replace1 ()
 
   if( obj != nullptr )
   {
-      obj->replace ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->replace ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -623,7 +623,7 @@ void QXYSeries_replace2 ()
 
   if( obj != nullptr )
   {
-      obj->replace ( *PQPOINTF(1), *PQPOINTF(2) );
+    obj->replace ( *PQPOINTF(1), *PQPOINTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -640,7 +640,7 @@ void QXYSeries_replace3 ()
 
   if( obj != nullptr )
   {
-      obj->replace ( PINT(1), PQREAL(2), PQREAL(3) );
+    obj->replace ( PINT(1), PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -657,7 +657,7 @@ void QXYSeries_replace4 ()
 
   if( obj != nullptr )
   {
-      obj->replace ( PINT(1), *PQPOINTF(2) );
+    obj->replace ( PINT(1), *PQPOINTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -674,15 +674,15 @@ void QXYSeries_replace5 ()
 
   if( obj != nullptr )
   {
-       QList<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->replace ( par1 );
+    QList<QPointF> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->replace ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -699,15 +699,15 @@ void QXYSeries_replace6 ()
 
   if( obj != nullptr )
   {
-       QVector<QPointF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->replace ( par1 );
+    QVector<QPointF> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->replace ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -763,7 +763,7 @@ void QXYSeries_remove1 ()
 
   if( obj != nullptr )
   {
-      obj->remove ( PQREAL(1), PQREAL(2) );
+    obj->remove ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -780,7 +780,7 @@ void QXYSeries_remove2 ()
 
   if( obj != nullptr )
   {
-      obj->remove ( *PQPOINTF(1) );
+    obj->remove ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -797,7 +797,7 @@ void QXYSeries_remove3 ()
 
   if( obj != nullptr )
   {
-      obj->remove ( PINT(1) );
+    obj->remove ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1445,7 +1445,7 @@ HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1511,7 +1511,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1577,7 +1577,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1643,7 +1643,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1775,7 +1775,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1841,7 +1841,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1907,7 +1907,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1973,7 +1973,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2039,7 +2039,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2107,7 +2107,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2171,7 +2171,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2237,7 +2237,7 @@ HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2303,7 +2303,7 @@ HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

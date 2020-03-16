@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1482,7 +1482,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1676,7 +1676,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1740,7 +1740,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1804,7 +1804,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1932,7 +1932,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1996,7 +1996,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2060,7 +2060,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2124,7 +2124,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2188,7 +2188,7 @@ HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2252,7 +2252,7 @@ HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2316,7 +2316,7 @@ HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
