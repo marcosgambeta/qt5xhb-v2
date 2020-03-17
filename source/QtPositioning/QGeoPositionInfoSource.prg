@@ -421,11 +421,11 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( PQOBJECT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
+    QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource ( PQOBJECT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -443,11 +443,11 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-      QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( PQSTRING(1), PQOBJECT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
+    QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource ( PQSTRING(1), PQOBJECT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -465,10 +465,10 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_AVAILABLESOURCES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QGeoPositionInfoSource::availableSources () );
+    RQSTRINGLIST( QGeoPositionInfoSource::availableSources () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONPOSITIONUPDATED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONUPDATETIMEOUT )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
