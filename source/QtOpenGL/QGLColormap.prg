@@ -252,7 +252,7 @@ void QGLColormap_setEntry1 ()
 
   if( obj != nullptr )
   {
-      obj->setEntry ( PINT(1), PQRGB(2) );
+    obj->setEntry ( PINT(1), PQRGB(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -267,7 +267,7 @@ void QGLColormap_setEntry2 ()
 
   if( obj != nullptr )
   {
-      obj->setEntry ( PINT(1), ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
+    obj->setEntry ( PINT(1), ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

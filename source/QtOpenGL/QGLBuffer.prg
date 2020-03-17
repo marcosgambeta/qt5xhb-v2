@@ -148,7 +148,7 @@ void QGLBuffer_allocate1 ()
 
   if( obj != nullptr )
   {
-      obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
+    obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -163,7 +163,7 @@ void QGLBuffer_allocate2 ()
 
   if( obj != nullptr )
   {
-      obj->allocate ( PINT(1) );
+    obj->allocate ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -367,7 +367,7 @@ void QGLBuffer_release1 ()
 
   if( obj != nullptr )
   {
-      obj->release ();
+    obj->release ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -379,7 +379,7 @@ static void release ( QGLBuffer::Type type )
 void QGLBuffer_release2 ()
 {
 
-      QGLBuffer::release ( (QGLBuffer::Type) hb_parni(1) );
+  QGLBuffer::release ( (QGLBuffer::Type) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
