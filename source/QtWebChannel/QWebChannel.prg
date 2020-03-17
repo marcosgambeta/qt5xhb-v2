@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

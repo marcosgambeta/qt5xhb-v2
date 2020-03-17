@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
