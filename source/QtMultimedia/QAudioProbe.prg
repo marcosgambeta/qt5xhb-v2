@@ -121,7 +121,7 @@ void QAudioProbe_setSource1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
   }
 }
 
@@ -134,7 +134,7 @@ void QAudioProbe_setSource2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
   }
 }
 

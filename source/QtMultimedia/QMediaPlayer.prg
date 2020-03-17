@@ -771,7 +771,7 @@ void QMediaPlayer_setVideoOutput1 ()
 
   if( obj != nullptr )
   {
-      obj->setVideoOutput ( PQVIDEOWIDGET(1) );
+    obj->setVideoOutput ( PQVIDEOWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -786,7 +786,7 @@ void QMediaPlayer_setVideoOutput2 ()
 
   if( obj != nullptr )
   {
-      obj->setVideoOutput ( PQGRAPHICSVIDEOITEM(1) );
+    obj->setVideoOutput ( PQGRAPHICSVIDEOITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -801,7 +801,7 @@ void QMediaPlayer_setVideoOutput3 ()
 
   if( obj != nullptr )
   {
-      obj->setVideoOutput ( PQABSTRACTVIDEOSURFACE(1) );
+    obj->setVideoOutput ( PQABSTRACTVIDEOSURFACE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -921,13 +921,13 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
     {
 #endif
       QList<QNetworkConfiguration> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->setNetworkConfigurations ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -999,10 +999,10 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
   {
 #endif
-      RENUM( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
+    RENUM( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1018,10 +1018,10 @@ static QStringList supportedMimeTypes(Flags flags = Flags())
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      RQSTRINGLIST( QMediaPlayer::supportedMimeTypes ( ISNIL(1)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(1) ) );
+    RQSTRINGLIST( QMediaPlayer::supportedMimeTypes ( ISNIL(1)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ONAUDIOROLECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

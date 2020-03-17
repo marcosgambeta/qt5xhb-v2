@@ -215,7 +215,7 @@ void QVideoFrame_bytesPerLine1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->bytesPerLine () );
+    RINT( obj->bytesPerLine () );
   }
 }
 
@@ -228,7 +228,7 @@ void QVideoFrame_bytesPerLine2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->bytesPerLine ( PINT(1) ) );
+    RINT( obj->bytesPerLine ( PINT(1) ) );
   }
 }
 
@@ -826,10 +826,10 @@ static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
+    RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -845,10 +845,10 @@ static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
+    RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

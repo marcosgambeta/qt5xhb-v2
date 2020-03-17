@@ -164,7 +164,7 @@ void QMediaTimeRange_addInterval1 ()
 
   if( obj != nullptr )
   {
-      obj->addInterval ( *PQMEDIATIMEINTERVAL(1) );
+    obj->addInterval ( *PQMEDIATIMEINTERVAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -179,7 +179,7 @@ void QMediaTimeRange_addInterval2 ()
 
   if( obj != nullptr )
   {
-      obj->addInterval ( PQINT64(1), PQINT64(2) );
+    obj->addInterval ( PQINT64(1), PQINT64(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -437,7 +437,7 @@ void QMediaTimeRange_removeInterval1 ()
 
   if( obj != nullptr )
   {
-      obj->removeInterval ( *PQMEDIATIMEINTERVAL(1) );
+    obj->removeInterval ( *PQMEDIATIMEINTERVAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -452,7 +452,7 @@ void QMediaTimeRange_removeInterval2 ()
 
   if( obj != nullptr )
   {
-      obj->removeInterval ( PQINT64(1), PQINT64(2) );
+    obj->removeInterval ( PQINT64(1), PQINT64(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
