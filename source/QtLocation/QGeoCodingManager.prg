@@ -147,8 +147,8 @@ void QGeoCodingManager_geocode1 ()
 
   if( obj != nullptr )
   {
-      QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -163,8 +163,8 @@ void QGeoCodingManager_geocode2 ()
 
   if( obj != nullptr )
   {
-      QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), OPINT(2,-1), OPINT(3,0), ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), OPINT(2,-1), OPINT(3,0), ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

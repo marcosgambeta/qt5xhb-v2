@@ -144,8 +144,8 @@ void QGeoCodingManagerEngine_geocode1 ()
 
   if( obj != nullptr )
   {
-      QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -160,8 +160,8 @@ void QGeoCodingManagerEngine_geocode2 ()
 
   if( obj != nullptr )
   {
-      QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

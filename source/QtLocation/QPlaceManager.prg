@@ -611,13 +611,13 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
     {
 #endif
       QList<QLocale> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->setLocales ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONFINISHED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEADDED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEUPDATED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1044,7 +1044,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONPLACEREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYADDED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYUPDATED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONCATEGORYREMOVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_ONDATACHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
