@@ -272,8 +272,8 @@ void QScriptValue_call2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    auto ptr = new QScriptValue( obj->call ( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -305,8 +305,8 @@ void QScriptValue_construct2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    auto ptr = new QScriptValue( obj->construct ( *PQSCRIPTVALUE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
