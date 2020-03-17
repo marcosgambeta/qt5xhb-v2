@@ -259,38 +259,38 @@ static QList<QPrinterInfo> availablePrinters ()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( auto i = 0; i < list.count(); i++ )
       {
-        for( auto i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPRINTERINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPRINTERINFO", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -306,11 +306,11 @@ static QPrinterInfo defaultPrinter ()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      auto ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-      _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    auto ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
+    _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -639,10 +639,10 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
+    RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -660,10 +660,10 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRING( QPrinterInfo::defaultPrinterName () );
+    RQSTRING( QPrinterInfo::defaultPrinterName () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -680,11 +680,11 @@ static QPrinterInfo printerInfo(const QString &printerName)
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      auto ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    auto ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
