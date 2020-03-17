@@ -542,7 +542,7 @@ void QWebView_load1 ()
 
   if( obj != nullptr )
   {
-      obj->load ( *PQURL(1) );
+    obj->load ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -557,7 +557,7 @@ void QWebView_load2 ()
 
   if( obj != nullptr )
   {
-      obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) );
+    obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
