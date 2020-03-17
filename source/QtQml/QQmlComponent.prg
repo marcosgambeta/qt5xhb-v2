@@ -227,8 +227,8 @@ void QQmlComponent_create1 ()
 
   if( obj != nullptr )
   {
-      QObject * ptr = obj->create ( OPQQMLCONTEXT(1,nullptr) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->create ( OPQQMLCONTEXT(1,nullptr) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
   }
 }
 
@@ -241,7 +241,7 @@ void QQmlComponent_create2 ()
 
   if( obj != nullptr )
   {
-      obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,nullptr), OPQQMLCONTEXT(3,nullptr) );
+    obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,nullptr), OPQQMLCONTEXT(3,nullptr) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -469,7 +469,7 @@ void QQmlComponent_loadUrl1 ()
 
   if( obj != nullptr )
   {
-      obj->loadUrl ( *PQURL(1) );
+    obj->loadUrl ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -484,7 +484,7 @@ void QQmlComponent_loadUrl2 ()
 
   if( obj != nullptr )
   {
-      obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
+    obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

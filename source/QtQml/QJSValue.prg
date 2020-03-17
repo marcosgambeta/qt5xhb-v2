@@ -655,8 +655,8 @@ void QJSValue_property1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+    auto ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
 
@@ -669,8 +669,8 @@ void QJSValue_property2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+    auto ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
 
@@ -727,7 +727,7 @@ void QJSValue_setProperty1 ()
 
   if( obj != nullptr )
   {
-      obj->setProperty ( PQSTRING(1), *PQJSVALUE(2) );
+    obj->setProperty ( PQSTRING(1), *PQJSVALUE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -742,7 +742,7 @@ void QJSValue_setProperty2 ()
 
   if( obj != nullptr )
   {
-      obj->setProperty ( PQUINT32(1), *PQJSVALUE(2) );
+    obj->setProperty ( PQUINT32(1), *PQJSVALUE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

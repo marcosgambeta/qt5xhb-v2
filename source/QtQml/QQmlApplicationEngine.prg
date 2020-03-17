@@ -193,7 +193,7 @@ void QQmlApplicationEngine_load1 ()
 
   if( obj != nullptr )
   {
-      obj->load ( *PQURL(1) );
+    obj->load ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -210,7 +210,7 @@ void QQmlApplicationEngine_load2 ()
 
   if( obj != nullptr )
   {
-      obj->load ( PQSTRING(1) );
+    obj->load ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

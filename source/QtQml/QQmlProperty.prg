@@ -228,7 +228,7 @@ void QQmlProperty_connectNotifySignal1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -241,7 +241,7 @@ void QQmlProperty_connectNotifySignal2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
+    RBOOL( obj->connectNotifySignal ( PQOBJECT(1), PINT(2) ) );
   }
 }
 
@@ -660,8 +660,8 @@ void QQmlProperty_read1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QVariant( obj->read () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    auto ptr = new QVariant( obj->read () );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -671,8 +671,8 @@ static QVariant read(QObject * object, const QString & name)
 void QQmlProperty_read2 ()
 {
 
-      auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+  auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -681,8 +681,8 @@ static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
 void QQmlProperty_read3 ()
 {
 
-      auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+  auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) ) );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 /*
@@ -691,8 +691,8 @@ static QVariant read(QObject * object, const QString & name, QQmlEngine * engine
 void QQmlProperty_read4 ()
 {
 
-      auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+  auto ptr = new QVariant( QQmlProperty::read ( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) ) );
+  _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
 }
 
 //[1]QVariant read() const
@@ -781,7 +781,7 @@ void QQmlProperty_write1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->write ( *PQVARIANT(1) ) );
+    RBOOL( obj->write ( *PQVARIANT(1) ) );
   }
 }
 
@@ -791,7 +791,7 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 void QQmlProperty_write2 ()
 {
 
-      RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
+  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
 /*
@@ -800,7 +800,7 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 void QQmlProperty_write3 ()
 {
 
-      RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4) ) );
+  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLCONTEXT(4) ) );
 }
 
 /*
@@ -809,7 +809,7 @@ static bool write(QObject * object, const QString & name, const QVariant & value
 void QQmlProperty_write4 ()
 {
 
-      RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4) ) );
+  RBOOL( QQmlProperty::write ( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4) ) );
 }
 
 //[1]bool write(const QVariant & value) const
