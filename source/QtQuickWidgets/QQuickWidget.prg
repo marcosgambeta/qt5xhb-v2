@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSTATUSCHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ONSCENEGRAPHERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
