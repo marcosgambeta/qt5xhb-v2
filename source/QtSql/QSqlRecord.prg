@@ -269,8 +269,8 @@ void QSqlRecord_field1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSqlField( obj->field ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
+    auto ptr = new QSqlField( obj->field ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
 
@@ -283,8 +283,8 @@ void QSqlRecord_field2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSqlField( obj->field ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
+    auto ptr = new QSqlField( obj->field ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSQLFIELD", true );
   }
 }
 
@@ -414,7 +414,7 @@ void QSqlRecord_isGenerated1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isGenerated ( PQSTRING(1) ) );
+    RBOOL( obj->isGenerated ( PQSTRING(1) ) );
   }
 }
 
@@ -427,7 +427,7 @@ void QSqlRecord_isGenerated2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isGenerated ( PINT(1) ) );
+    RBOOL( obj->isGenerated ( PINT(1) ) );
   }
 }
 
@@ -459,7 +459,7 @@ void QSqlRecord_isNull1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isNull ( PQSTRING(1) ) );
+    RBOOL( obj->isNull ( PQSTRING(1) ) );
   }
 }
 
@@ -472,7 +472,7 @@ void QSqlRecord_isNull2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isNull ( PINT(1) ) );
+    RBOOL( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -556,7 +556,7 @@ void QSqlRecord_setGenerated1 ()
 
   if( obj != nullptr )
   {
-      obj->setGenerated ( PQSTRING(1), PBOOL(2) );
+    obj->setGenerated ( PQSTRING(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -571,7 +571,7 @@ void QSqlRecord_setGenerated2 ()
 
   if( obj != nullptr )
   {
-      obj->setGenerated ( PINT(1), PBOOL(2) );
+    obj->setGenerated ( PINT(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -605,7 +605,7 @@ void QSqlRecord_setNull1 ()
 
   if( obj != nullptr )
   {
-      obj->setNull ( PINT(1) );
+    obj->setNull ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -620,7 +620,7 @@ void QSqlRecord_setNull2 ()
 
   if( obj != nullptr )
   {
-      obj->setNull ( PQSTRING(1) );
+    obj->setNull ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -654,7 +654,7 @@ void QSqlRecord_setValue1 ()
 
   if( obj != nullptr )
   {
-      obj->setValue ( PINT(1), *PQVARIANT(2) );
+    obj->setValue ( PINT(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -669,7 +669,7 @@ void QSqlRecord_setValue2 ()
 
   if( obj != nullptr )
   {
-      obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
+    obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -703,8 +703,8 @@ void QSqlRecord_value1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QVariant( obj->value ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    auto ptr = new QVariant( obj->value ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -717,8 +717,8 @@ void QSqlRecord_value2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    auto ptr = new QVariant( obj->value ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

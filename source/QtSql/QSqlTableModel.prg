@@ -307,7 +307,7 @@ void QSqlTableModel_isDirty1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isDirty () );
+    RBOOL( obj->isDirty () );
   }
 }
 
@@ -320,7 +320,7 @@ void QSqlTableModel_isDirty2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isDirty ( *PQMODELINDEX(1) ) );
+    RBOOL( obj->isDirty ( *PQMODELINDEX(1) ) );
   }
 }
 
@@ -873,8 +873,8 @@ void QSqlTableModel_record1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSqlRecord( obj->record () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    auto ptr = new QSqlRecord( obj->record () );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -887,8 +887,8 @@ void QSqlTableModel_record2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QSqlRecord( obj->record ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    auto ptr = new QSqlRecord( obj->record ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
