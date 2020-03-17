@@ -903,15 +903,15 @@ void QWebSocket_ignoreSslErrors1 ()
 
   if( obj != nullptr )
   {
-       QList<QSslError> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->ignoreSslErrors ( par1 );
+    QList<QSslError> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->ignoreSslErrors ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -928,7 +928,7 @@ void QWebSocket_ignoreSslErrors2 ()
 
   if( obj != nullptr )
   {
-      obj->ignoreSslErrors ();
+    obj->ignoreSslErrors ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONABOUTTOCLOSE )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONCONNECTED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONDISCONNECTED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1347,7 +1347,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSTATECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1415,7 +1415,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1479,7 +1479,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONREADCHANNELFINISHED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTFRAMERECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1615,7 +1615,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYFRAMERECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONTEXTMESSAGERECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1747,7 +1747,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBINARYMESSAGERECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1813,7 +1813,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONERROR )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1881,7 +1881,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONPONG )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1947,7 +1947,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONBYTESWRITTEN )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -2035,7 +2035,7 @@ HB_FUNC_STATIC( QWEBSOCKET_ONSSLERRORS )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
