@@ -613,7 +613,7 @@ void QVirtualKeyboardInputContext_commit1 ()
 
   if( obj != nullptr )
   {
-      obj->commit ();
+    obj->commit ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -628,7 +628,7 @@ void QVirtualKeyboardInputContext_commit2 ()
 
   if( obj != nullptr )
   {
-      obj->commit ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+    obj->commit ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
