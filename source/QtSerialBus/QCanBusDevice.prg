@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONERROROCCURRED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESRECEIVED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONFRAMESWRITTEN )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ONSTATECHANGED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
