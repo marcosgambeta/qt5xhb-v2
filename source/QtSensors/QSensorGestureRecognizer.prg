@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
