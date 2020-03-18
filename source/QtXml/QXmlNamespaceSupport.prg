@@ -157,7 +157,7 @@ void QXmlNamespaceSupport_prefixes1 ()
 
   if( obj != nullptr )
   {
-      RQSTRINGLIST( obj->prefixes () );
+    RQSTRINGLIST( obj->prefixes () );
   }
 }
 
@@ -170,7 +170,7 @@ void QXmlNamespaceSupport_prefixes2 ()
 
   if( obj != nullptr )
   {
-      RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
   }
 }
 
@@ -207,10 +207,10 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
     {
 #endif
       QString par3 = hb_parc(3);
-QString par4 = hb_parc(4);
+      QString par4 = hb_parc(4);
       obj->processName ( PQSTRING(1), PBOOL(2), par3, par4 );
       hb_storc( QSTRINGTOSTRING(par3), 3);
-hb_storc( QSTRINGTOSTRING(par4), 4);
+      hb_storc( QSTRINGTOSTRING(par4), 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,10 +315,10 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
     {
 #endif
       QString par2 = hb_parc(2);
-QString par3 = hb_parc(3);
+      QString par3 = hb_parc(3);
       obj->splitName ( PQSTRING(1), par2, par3 );
       hb_storc( QSTRINGTOSTRING(par2), 2);
-hb_storc( QSTRINGTOSTRING(par3), 3);
+      hb_storc( QSTRINGTOSTRING(par3), 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -226,7 +226,7 @@ void QXmlInputSource_setData1 ()
 
   if( obj != nullptr )
   {
-      obj->setData ( PQSTRING(1) );
+    obj->setData ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -241,7 +241,7 @@ void QXmlInputSource_setData2 ()
 
   if( obj != nullptr )
   {
-      obj->setData ( *PQBYTEARRAY(1) );
+    obj->setData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

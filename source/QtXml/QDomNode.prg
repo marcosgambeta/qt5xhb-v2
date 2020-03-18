@@ -1323,7 +1323,7 @@ void QDomNode_save1 ()
 
   if( obj != nullptr )
   {
-      obj->save ( *PQTEXTSTREAM(1), PINT(2) );
+    obj->save ( *PQTEXTSTREAM(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1338,7 +1338,7 @@ void QDomNode_save2 ()
 
   if( obj != nullptr )
   {
-      obj->save ( *PQTEXTSTREAM(1), PINT(2), (QDomNode::EncodingPolicy) hb_parni(3) );
+    obj->save ( *PQTEXTSTREAM(1), PINT(2), (QDomNode::EncodingPolicy) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -222,10 +222,10 @@ static InvalidDataPolicy invalidDataPolicy ()
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RENUM( QDomImplementation::invalidDataPolicy () );
+    RENUM( QDomImplementation::invalidDataPolicy () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -241,10 +241,10 @@ static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
+    QDomImplementation::setInvalidDataPolicy ( (QDomImplementation::InvalidDataPolicy) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
