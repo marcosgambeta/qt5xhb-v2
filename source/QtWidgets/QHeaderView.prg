@@ -563,7 +563,7 @@ void QHeaderView_logicalIndexAt1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->logicalIndexAt ( PINT(1) ) );
+    RINT( obj->logicalIndexAt ( PINT(1) ) );
   }
 }
 
@@ -576,7 +576,7 @@ void QHeaderView_logicalIndexAt2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
+    RINT( obj->logicalIndexAt ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -589,7 +589,7 @@ void QHeaderView_logicalIndexAt3 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
+    RINT( obj->logicalIndexAt ( *PQPOINT(1) ) );
   }
 }
 
@@ -1600,7 +1600,7 @@ void QHeaderView_setSectionResizeMode1 ()
 
   if( obj != nullptr )
   {
-      obj->setSectionResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
+    obj->setSectionResizeMode ( (QHeaderView::ResizeMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1615,7 +1615,7 @@ void QHeaderView_setSectionResizeMode2 ()
 
   if( obj != nullptr )
   {
-      obj->setSectionResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
+    obj->setSectionResizeMode ( PINT(1), (QHeaderView::ResizeMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

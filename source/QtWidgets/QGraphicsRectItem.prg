@@ -160,7 +160,7 @@ void QGraphicsRectItem_setRect1 ()
 
   if( obj != nullptr )
   {
-      obj->setRect ( *PQRECTF(1) );
+    obj->setRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -175,7 +175,7 @@ void QGraphicsRectItem_setRect2 ()
 
   if( obj != nullptr )
   {
-      obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -196,14 +196,14 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ void QGraphicsLayoutItem_setMaximumSize1 ()
 
   if( obj != nullptr )
   {
-      obj->setMaximumSize ( *PQSIZEF(1) );
+    obj->setMaximumSize ( *PQSIZEF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -609,7 +609,7 @@ void QGraphicsLayoutItem_setMaximumSize2 ()
 
   if( obj != nullptr )
   {
-      obj->setMaximumSize ( PQREAL(1), PQREAL(2) );
+    obj->setMaximumSize ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -695,7 +695,7 @@ void QGraphicsLayoutItem_setMinimumSize1 ()
 
   if( obj != nullptr )
   {
-      obj->setMinimumSize ( *PQSIZEF(1) );
+    obj->setMinimumSize ( *PQSIZEF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -710,7 +710,7 @@ void QGraphicsLayoutItem_setMinimumSize2 ()
 
   if( obj != nullptr )
   {
-      obj->setMinimumSize ( PQREAL(1), PQREAL(2) );
+    obj->setMinimumSize ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -822,7 +822,7 @@ void QGraphicsLayoutItem_setPreferredSize1 ()
 
   if( obj != nullptr )
   {
-      obj->setPreferredSize ( *PQSIZEF(1) );
+    obj->setPreferredSize ( *PQSIZEF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -837,7 +837,7 @@ void QGraphicsLayoutItem_setPreferredSize2 ()
 
   if( obj != nullptr )
   {
-      obj->setPreferredSize ( PQREAL(1), PQREAL(2) );
+    obj->setPreferredSize ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -897,7 +897,7 @@ void QGraphicsLayoutItem_setSizePolicy1 ()
 
   if( obj != nullptr )
   {
-      obj->setSizePolicy ( *PQSIZEPOLICY(1) );
+    obj->setSizePolicy ( *PQSIZEPOLICY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -912,7 +912,7 @@ void QGraphicsLayoutItem_setSizePolicy2 ()
 
   if( obj != nullptr )
   {
-      obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
+    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

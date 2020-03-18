@@ -67,14 +67,14 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
-      QList<QGesture *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+    QList<QGesture *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
     auto obj = new QGestureEvent ( par1 );
     _qt5xhb_returnNewObject( obj, false );
   }
@@ -110,7 +110,7 @@ void QGestureEvent_accept1 ()
 
   if( obj != nullptr )
   {
-      obj->accept ();
+    obj->accept ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -125,7 +125,7 @@ void QGestureEvent_accept2 ()
 
   if( obj != nullptr )
   {
-      obj->accept ( PQGESTURE(1) );
+    obj->accept ( PQGESTURE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,7 +140,7 @@ void QGestureEvent_accept3 ()
 
   if( obj != nullptr )
   {
-      obj->accept ( (Qt::GestureType) hb_parni(1) );
+    obj->accept ( (Qt::GestureType) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -348,7 +348,7 @@ void QGestureEvent_ignore1 ()
 
   if( obj != nullptr )
   {
-      obj->ignore ();
+    obj->ignore ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -363,7 +363,7 @@ void QGestureEvent_ignore2 ()
 
   if( obj != nullptr )
   {
-      obj->ignore ( PQGESTURE(1) );
+    obj->ignore ( PQGESTURE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -378,7 +378,7 @@ void QGestureEvent_ignore3 ()
 
   if( obj != nullptr )
   {
-      obj->ignore ( (Qt::GestureType) hb_parni(1) );
+    obj->ignore ( (Qt::GestureType) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -417,7 +417,7 @@ void QGestureEvent_isAccepted1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isAccepted () );
+    RBOOL( obj->isAccepted () );
   }
 }
 
@@ -430,7 +430,7 @@ void QGestureEvent_isAccepted2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isAccepted ( PQGESTURE(1) ) );
+    RBOOL( obj->isAccepted ( PQGESTURE(1) ) );
   }
 }
 
@@ -443,7 +443,7 @@ void QGestureEvent_isAccepted3 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->isAccepted ( (Qt::GestureType) hb_parni(1) ) );
+    RBOOL( obj->isAccepted ( (Qt::GestureType) hb_parni(1) ) );
   }
 }
 
@@ -505,7 +505,7 @@ void QGestureEvent_setAccepted1 ()
 
   if( obj != nullptr )
   {
-      obj->setAccepted ( PBOOL(1) );
+    obj->setAccepted ( PBOOL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -520,7 +520,7 @@ void QGestureEvent_setAccepted2 ()
 
   if( obj != nullptr )
   {
-      obj->setAccepted ( PQGESTURE(1), PBOOL(2) );
+    obj->setAccepted ( PQGESTURE(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -535,7 +535,7 @@ void QGestureEvent_setAccepted3 ()
 
   if( obj != nullptr )
   {
-      obj->setAccepted ( (Qt::GestureType) hb_parni(1), PBOOL(2) );
+    obj->setAccepted ( (Qt::GestureType) hb_parni(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

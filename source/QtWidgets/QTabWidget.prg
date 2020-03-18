@@ -149,7 +149,7 @@ void QTabWidget_addTab1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
+    RINT( obj->addTab ( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
 
@@ -162,7 +162,7 @@ void QTabWidget_addTab2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->addTab ( PQWIDGET(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->addTab ( PQWIDGET(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
 
@@ -571,7 +571,7 @@ void QTabWidget_insertTab1 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
 
@@ -584,7 +584,7 @@ void QTabWidget_insertTab2 ()
 
   if( obj != nullptr )
   {
-      RINT( obj->insertTab ( PINT(1), PQWIDGET(2), ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
+    RINT( obj->insertTab ( PINT(1), PQWIDGET(2), ISOBJECT(3)? *(QIcon *) _qt5xhb_itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
   }
 }
 
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARCLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 
@@ -1596,7 +1596,7 @@ HB_FUNC_STATIC( QTABWIDGET_ONTABBARDOUBLECLICKED )
     hb_retl( false );
   }
 #else
-hb_retl( false );
+  hb_retl( false );
 #endif
 }
 

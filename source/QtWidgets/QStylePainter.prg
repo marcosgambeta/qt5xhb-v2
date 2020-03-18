@@ -114,7 +114,7 @@ void QStylePainter_begin1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->begin ( PQWIDGET(1) ) );
+    RBOOL( obj->begin ( PQWIDGET(1) ) );
   }
 }
 
@@ -127,7 +127,7 @@ void QStylePainter_begin2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->begin ( PQPAINTDEVICE(1), PQWIDGET(2) ) );
+    RBOOL( obj->begin ( PQPAINTDEVICE(1), PQWIDGET(2) ) );
   }
 }
 

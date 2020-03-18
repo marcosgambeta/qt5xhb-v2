@@ -306,7 +306,7 @@ void QGraphicsDropShadowEffect_setOffset1 ()
 
   if( obj != nullptr )
   {
-      obj->setOffset ( *PQPOINTF(1) );
+    obj->setOffset ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -321,7 +321,7 @@ void QGraphicsDropShadowEffect_setOffset2 ()
 
   if( obj != nullptr )
   {
-      obj->setOffset ( PQREAL(1), PQREAL(2) );
+    obj->setOffset ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -336,7 +336,7 @@ void QGraphicsDropShadowEffect_setOffset3 ()
 
   if( obj != nullptr )
   {
-      obj->setOffset ( PQREAL(1) );
+    obj->setOffset ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

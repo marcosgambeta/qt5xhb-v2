@@ -101,8 +101,8 @@ void QFileIconProvider_icon1 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    auto ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 
@@ -115,8 +115,8 @@ void QFileIconProvider_icon2 ()
 
   if( obj != nullptr )
   {
-      auto ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    auto ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QICON", true );
   }
 }
 

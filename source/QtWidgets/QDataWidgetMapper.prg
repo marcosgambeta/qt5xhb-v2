@@ -124,7 +124,7 @@ void QDataWidgetMapper_addMapping1 ()
 
   if( obj != nullptr )
   {
-      obj->addMapping ( PQWIDGET(1), PINT(2) );
+    obj->addMapping ( PQWIDGET(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,7 +139,7 @@ void QDataWidgetMapper_addMapping2 ()
 
   if( obj != nullptr )
   {
-      obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
+    obj->addMapping ( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
