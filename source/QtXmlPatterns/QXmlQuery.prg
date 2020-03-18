@@ -171,7 +171,7 @@ void QXmlQuery_bindVariable1 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( *PQXMLNAME(1), *PQXMLITEM(2) );
+    obj->bindVariable ( *PQXMLNAME(1), *PQXMLITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -186,7 +186,7 @@ void QXmlQuery_bindVariable2 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( *PQXMLNAME(1), PQIODEVICE(2) );
+    obj->bindVariable ( *PQXMLNAME(1), PQIODEVICE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,7 +201,7 @@ void QXmlQuery_bindVariable3 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( *PQXMLNAME(1), *PQXMLQUERY(2) );
+    obj->bindVariable ( *PQXMLNAME(1), *PQXMLQUERY(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -216,7 +216,7 @@ void QXmlQuery_bindVariable4 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( PQSTRING(1), *PQXMLITEM(2) );
+    obj->bindVariable ( PQSTRING(1), *PQXMLITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -231,7 +231,7 @@ void QXmlQuery_bindVariable5 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( PQSTRING(1), PQIODEVICE(2) );
+    obj->bindVariable ( PQSTRING(1), PQIODEVICE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -246,7 +246,7 @@ void QXmlQuery_bindVariable6 ()
 
   if( obj != nullptr )
   {
-      obj->bindVariable ( PQSTRING(1), *PQXMLQUERY(2) );
+    obj->bindVariable ( PQSTRING(1), *PQXMLQUERY(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -300,7 +300,7 @@ void QXmlQuery_evaluateTo1 ()
 
   if( obj != nullptr )
   {
-      obj->evaluateTo ( PQXMLRESULTITEMS(1) );
+    obj->evaluateTo ( PQXMLRESULTITEMS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,7 +315,7 @@ void QXmlQuery_evaluateTo2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->evaluateTo ( PQABSTRACTXMLRECEIVER(1) ) );
+    RBOOL( obj->evaluateTo ( PQABSTRACTXMLRECEIVER(1) ) );
   }
 }
 
@@ -336,7 +336,7 @@ void QXmlQuery_evaluateTo5 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->evaluateTo ( PQIODEVICE(1) ) );
+    RBOOL( obj->evaluateTo ( PQIODEVICE(1) ) );
   }
 }
 
@@ -523,7 +523,7 @@ void QXmlQuery_setFocus1 ()
 
   if( obj != nullptr )
   {
-      obj->setFocus ( *PQXMLITEM(1) );
+    obj->setFocus ( *PQXMLITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -538,7 +538,7 @@ void QXmlQuery_setFocus2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setFocus ( *PQURL(1) ) );
+    RBOOL( obj->setFocus ( *PQURL(1) ) );
   }
 }
 
@@ -551,7 +551,7 @@ void QXmlQuery_setFocus3 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setFocus ( PQIODEVICE(1) ) );
+    RBOOL( obj->setFocus ( PQIODEVICE(1) ) );
   }
 }
 
@@ -564,7 +564,7 @@ void QXmlQuery_setFocus4 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->setFocus ( PQSTRING(1) ) );
+    RBOOL( obj->setFocus ( PQSTRING(1) ) );
   }
 }
 
@@ -606,7 +606,7 @@ void QXmlQuery_setInitialTemplateName1 ()
 
   if( obj != nullptr )
   {
-      obj->setInitialTemplateName ( *PQXMLNAME(1) );
+    obj->setInitialTemplateName ( *PQXMLNAME(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -621,7 +621,7 @@ void QXmlQuery_setInitialTemplateName2 ()
 
   if( obj != nullptr )
   {
-      obj->setInitialTemplateName ( PQSTRING(1) );
+    obj->setInitialTemplateName ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -707,7 +707,7 @@ void QXmlQuery_setQuery1 ()
 
   if( obj != nullptr )
   {
-      obj->setQuery ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
+    obj->setQuery ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -722,7 +722,7 @@ void QXmlQuery_setQuery2 ()
 
   if( obj != nullptr )
   {
-      obj->setQuery ( *PQURL(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
+    obj->setQuery ( *PQURL(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -737,7 +737,7 @@ void QXmlQuery_setQuery3 ()
 
   if( obj != nullptr )
   {
-      obj->setQuery ( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
+    obj->setQuery ( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -187,7 +187,7 @@ void QXmlSchema_load1 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( *PQURL(1) ) );
+    RBOOL( obj->load ( *PQURL(1) ) );
   }
 }
 
@@ -200,7 +200,7 @@ void QXmlSchema_load2 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
+    RBOOL( obj->load ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
   }
 }
 
@@ -213,7 +213,7 @@ void QXmlSchema_load3 ()
 
   if( obj != nullptr )
   {
-      RBOOL( obj->load ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
+    RBOOL( obj->load ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
   }
 }
 
