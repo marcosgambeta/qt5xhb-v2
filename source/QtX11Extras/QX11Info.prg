@@ -100,10 +100,10 @@ HB_FUNC_STATIC( QX11INFO_ISPLATFORMX11 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QX11Info::isPlatformX11 () );
+    RBOOL( QX11Info::isPlatformX11 () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -121,10 +121,10 @@ HB_FUNC_STATIC( QX11INFO_APPDPIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      RINT( QX11Info::appDpiX ( OPINT(1,-1) ) );
+    RINT( QX11Info::appDpiX ( OPINT(1,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -142,10 +142,10 @@ HB_FUNC_STATIC( QX11INFO_APPDPIY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      RINT( QX11Info::appDpiY ( OPINT(1,-1) ) );
+    RINT( QX11Info::appDpiY ( OPINT(1,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -163,10 +163,10 @@ HB_FUNC_STATIC( QX11INFO_APPROOTWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-      RUNSIGNEDLONG( QX11Info::appRootWindow ( OPINT(1,-1) ) );
+    RUNSIGNEDLONG( QX11Info::appRootWindow ( OPINT(1,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -184,10 +184,10 @@ HB_FUNC_STATIC( QX11INFO_APPSCREEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RINT( QX11Info::appScreen () );
+    RINT( QX11Info::appScreen () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -205,10 +205,10 @@ HB_FUNC_STATIC( QX11INFO_APPTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RUNSIGNEDLONG( QX11Info::appTime () );
+    RUNSIGNEDLONG( QX11Info::appTime () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -226,10 +226,10 @@ HB_FUNC_STATIC( QX11INFO_APPUSERTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RUNSIGNEDLONG( QX11Info::appUserTime () );
+    RUNSIGNEDLONG( QX11Info::appUserTime () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -247,10 +247,10 @@ HB_FUNC_STATIC( QX11INFO_SETAPPTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QX11Info::setAppTime ( PUNSIGNEDLONG(1) );
+    QX11Info::setAppTime ( PUNSIGNEDLONG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -270,10 +270,10 @@ HB_FUNC_STATIC( QX11INFO_SETAPPUSERTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QX11Info::setAppUserTime ( PUNSIGNEDLONG(1) );
+    QX11Info::setAppUserTime ( PUNSIGNEDLONG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -293,10 +293,10 @@ HB_FUNC_STATIC( QX11INFO_GETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RUNSIGNEDLONG( QX11Info::getTimestamp () );
+    RUNSIGNEDLONG( QX11Info::getTimestamp () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -314,10 +314,10 @@ HB_FUNC_STATIC( QX11INFO_DISPLAY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      hb_retptr( (Display *) QX11Info::display () );
+    hb_retptr( (Display *) QX11Info::display () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -335,10 +335,10 @@ HB_FUNC_STATIC( QX11INFO_CONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      hb_retptr( (xcb_connection_t *) QX11Info::connection () );
+    hb_retptr( (xcb_connection_t *) QX11Info::connection () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -356,11 +356,11 @@ HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      auto ptr = new QByteArray( QX11Info::nextStartupId () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    auto ptr = new QByteArray( QX11Info::nextStartupId () );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -378,10 +378,10 @@ HB_FUNC_STATIC( QX11INFO_SETNEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      QX11Info::setNextStartupId ( *PQBYTEARRAY(1) );
+    QX11Info::setNextStartupId ( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
