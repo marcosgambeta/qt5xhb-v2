@@ -292,7 +292,7 @@ void QWinJumpList_addCategory1 ()
 
   if( obj != nullptr )
   {
-      obj->addCategory ( PQWINJUMPLISTCATEGORY(1) );
+    obj->addCategory ( PQWINJUMPLISTCATEGORY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
