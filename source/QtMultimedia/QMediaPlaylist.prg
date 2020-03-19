@@ -272,9 +272,8 @@ void QMediaPlaylist_addMedia2 ()
   {
     QList<QMediaContent> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
@@ -397,9 +396,8 @@ void QMediaPlaylist_insertMedia2 ()
   {
     QList<QMediaContent> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
     int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
+    for( auto i2 = 0; i2 < nLen2; i2++ )
     {
       par2 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
