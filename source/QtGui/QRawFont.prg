@@ -363,10 +363,9 @@ void QRawFont_advancesForGlyphIndexes1 ()
   {
     QVector<quint32> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
     quint32 temp1;
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
       par1 << temp1;

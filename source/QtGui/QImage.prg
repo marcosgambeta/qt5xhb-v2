@@ -493,10 +493,9 @@ void QImage_convertToFormat2 ()
   {
     QVector<QRgb> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
     int nLen2 = hb_arrayLen(aList2);
     QRgb temp2;
-    for (i2=0;i2<nLen2;i2++)
+    for( auto i2 = 0; i2 < nLen2; i2++ )
     {
       temp2 = (QRgb) hb_arrayGetNI(aList2, i2+1);
       par2 << temp2;
