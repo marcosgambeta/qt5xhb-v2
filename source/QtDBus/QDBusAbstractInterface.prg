@@ -329,9 +329,8 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 #endif
       QList<QVariant> par3;
       PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
-      int i3;
       int nLen3 = hb_arrayLen(aList3);
-      for (i3=0;i3<nLen3;i3++)
+      for( auto i3 = 0; i3 < nLen3; i3++ )
       {
         par3 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) );
       }
@@ -358,9 +357,8 @@ void QDBusAbstractInterface_callWithCallback1 ()
   {
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
     int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
+    for( auto i2 = 0; i2 < nLen2; i2++ )
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
@@ -379,9 +377,8 @@ void QDBusAbstractInterface_callWithCallback2 ()
   {
     QList<QVariant> par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-    int i2;
     int nLen2 = hb_arrayLen(aList2);
-    for (i2=0;i2<nLen2;i2++)
+    for( auto i2 = 0; i2 < nLen2; i2++ )
     {
       par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
@@ -437,9 +434,8 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
 #endif
       QList<QVariant> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-      int i2;
       int nLen2 = hb_arrayLen(aList2);
-      for (i2=0;i2<nLen2;i2++)
+      for( auto i2 = 0; i2 < nLen2; i2++ )
       {
         par2 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
       }
