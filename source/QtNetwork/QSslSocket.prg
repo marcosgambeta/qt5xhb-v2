@@ -931,9 +931,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
 #endif
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( auto i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -1344,9 +1343,8 @@ void QSslSocket_setCiphers1 ()
   {
     QList<QSslCipher> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
@@ -1401,9 +1399,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 #endif
     QList<QSslCipher> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
@@ -1537,9 +1534,8 @@ void QSslSocket_addCaCertificates2 ()
   {
     QList<QSslCertificate> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
@@ -1609,9 +1605,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 #endif
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
       int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      for( auto i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
@@ -1718,9 +1713,8 @@ void QSslSocket_addDefaultCaCertificates2 ()
 
   QList<QSslCertificate> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
   int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
+  for( auto i1 = 0; i1 < nLen1; i1++ )
   {
     par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
@@ -1759,9 +1753,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 #endif
     QList<QSslCertificate> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
@@ -2153,9 +2146,8 @@ void QSslSocket_ignoreSslErrors1 ()
   {
     QList<QSslError> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
     int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    for( auto i1 = 0; i1 < nLen1; i1++ )
     {
       par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
