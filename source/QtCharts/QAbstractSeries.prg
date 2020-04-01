@@ -87,7 +87,7 @@ QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected
 HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ virtual SeriesType type() const = 0
 HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QString name() const
 HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ void setName(const QString &name)
 HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ bool isVisible() const
 HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void setVisible(bool visible = true)
 HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ qreal opacity() const
 HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ void setOpacity(qreal opacity)
 HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ bool useOpenGL() const
 HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ void setUseOpenGL(bool enable = true)
 HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ QChart *chart() const
 HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
     {
 #endif
       QChart * ptr = obj->chart ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCHART" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QCHART" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ bool attachAxis(QAbstractAxis *axis)
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ bool detachAxis(QAbstractAxis *axis)
 HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ QList<QAbstractAxis*> attachedAxes()
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ void show()
 HB_FUNC_STATIC( QABSTRACTSERIES_SHOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ void hide()
 HB_FUNC_STATIC( QABSTRACTSERIES_HIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -538,7 +538,7 @@ void nameChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -602,7 +602,7 @@ void opacityChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONOPACITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -666,7 +666,7 @@ void useOpenGLChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONUSEOPENGLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -730,7 +730,7 @@ void visibleChanged()
 HB_FUNC_STATIC( QABSTRACTSERIES_ONVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

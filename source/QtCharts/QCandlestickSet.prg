@@ -92,7 +92,7 @@ void QCandlestickSet_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -103,7 +103,7 @@ void QCandlestickSet_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -132,7 +132,7 @@ virtual ~QCandlestickSet()
 HB_FUNC_STATIC( QCANDLESTICKSET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ qreal timestamp() const
 HB_FUNC_STATIC( QCANDLESTICKSET_TIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setTimestamp(qreal timestamp)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ qreal open() const
 HB_FUNC_STATIC( QCANDLESTICKSET_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setOpen(qreal open)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ qreal high() const
 HB_FUNC_STATIC( QCANDLESTICKSET_HIGH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setHigh(qreal high)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ qreal low() const
 HB_FUNC_STATIC( QCANDLESTICKSET_LOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setLow(qreal low)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ qreal close() const
 HB_FUNC_STATIC( QCANDLESTICKSET_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setClose(qreal close)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -426,7 +426,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ QPen pen() const
 HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
     {
 #endif
       auto ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ void brushChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -600,7 +600,7 @@ void clicked()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -664,7 +664,7 @@ void closeChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONCLOSECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -728,7 +728,7 @@ void doubleClicked()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -792,7 +792,7 @@ void highChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONHIGHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -856,7 +856,7 @@ void hovered( bool status )
 HB_FUNC_STATIC( QCANDLESTICKSET_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -922,7 +922,7 @@ void lowChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONLOWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -986,7 +986,7 @@ void openChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONOPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1050,7 +1050,7 @@ void penChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1114,7 +1114,7 @@ void pressed()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1178,7 +1178,7 @@ void released()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1242,7 +1242,7 @@ void timestampChanged()
 HB_FUNC_STATIC( QCANDLESTICKSET_ONTIMESTAMPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QCandlestickSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCandlestickSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

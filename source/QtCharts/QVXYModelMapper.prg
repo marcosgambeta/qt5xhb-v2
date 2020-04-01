@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QVXYModelMapper ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -100,7 +100,7 @@ QXYSeries *series() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
     {
 #endif
       QXYSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QXYSERIES" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QXYSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ void setSeries(QXYSeries *series)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ int xColumn() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_XCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setXColumn(int xColumn)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETXCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ int yColumn() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_YCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setYColumn(int yColumn)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETYCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ int firstRow() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_FIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setFirstRow(int firstRow)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETFIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ int rowCount() const
 HB_FUNC_STATIC( QVXYMODELMAPPER_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ void setRowCount(int rowCount)
 HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -426,7 +426,7 @@ void firstRowChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -490,7 +490,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -554,7 +554,7 @@ void rowCountChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONROWCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -618,7 +618,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -682,7 +682,7 @@ void xColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONXCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -746,7 +746,7 @@ void yColumnChanged()
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONYCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QVXYModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVXYModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

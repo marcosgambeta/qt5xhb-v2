@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QCategoryAxis ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -95,7 +95,7 @@ QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ qreal startValue(const QString &categoryLabel = QString()) const
 HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ void setStartValue(qreal min)
 HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ QStringList categoriesLabels()
 HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ int count() const
 HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ QCategoryAxis::AxisLabelsPosition labelsPosition() const
 HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
 HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ AxisType type() const
 HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ void append(const QString &label, qreal categoryEndValue)
 HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ void remove(const QString &label)
 HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -359,7 +359,7 @@ void replaceLabel(const QString &oldLabel, const QString &newLabel)
 HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ qreal endValue(const QString &categoryLabel) const
 HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ void categoriesChanged()
 HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -477,7 +477,7 @@ void labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 HB_FUNC_STATIC( QCATEGORYAXIS_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QCategoryAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

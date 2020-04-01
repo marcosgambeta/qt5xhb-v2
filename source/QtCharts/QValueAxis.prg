@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QVALUEAXIS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QValueAxis ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -101,7 +101,7 @@ QValueAxis(QValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QVALUEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ int tickCount() const
 HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void setTickCount(int count)
 HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ qreal min() const
 HB_FUNC_STATIC( QVALUEAXIS_MIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setMin(qreal min)
 HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ qreal max() const
 HB_FUNC_STATIC( QVALUEAXIS_MAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ void setMax(qreal max)
 HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ QString labelFormat() const
 HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void setLabelFormat(const QString &format)
 HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ int minorTickCount() const
 HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ void setMinorTickCount(int count)
 HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ AxisType type() const
 HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ void setRange(qreal min, qreal max)
 HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ void applyNiceNumbers()
 HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -475,7 +475,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -541,7 +541,7 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -607,7 +607,7 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -673,7 +673,7 @@ void minorTickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -739,7 +739,7 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -807,7 +807,7 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

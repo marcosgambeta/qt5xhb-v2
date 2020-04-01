@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QBARSET_NEW )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QBarSet ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -122,7 +122,7 @@ virtual ~QBarSet()
 HB_FUNC_STATIC( QBARSET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ QString label() const
 HB_FUNC_STATIC( QBARSET_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ void setLabel(const QString label)
 HB_FUNC_STATIC( QBARSET_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ QPen pen() const
 HB_FUNC_STATIC( QBARSET_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QBARSET_PEN )
     {
 #endif
       auto ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QBARSET_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QBARSET_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QBARSET_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QBARSET_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ QBrush labelBrush() const
 HB_FUNC_STATIC( QBARSET_LABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QBARSET_LABELBRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->labelBrush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ void setLabelBrush(const QBrush &brush)
 HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ QFont labelFont() const
 HB_FUNC_STATIC( QBARSET_LABELFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QBARSET_LABELFONT )
     {
 #endif
       auto ptr = new QFont( obj->labelFont () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ void setLabelFont(const QFont &font)
 HB_FUNC_STATIC( QBARSET_SETLABELFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ QColor color()
 HB_FUNC_STATIC( QBARSET_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QBARSET_COLOR )
     {
 #endif
       auto ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ void setColor(QColor color)
 HB_FUNC_STATIC( QBARSET_SETCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -475,7 +475,7 @@ QColor borderColor()
 HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->borderColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,7 +502,7 @@ void setBorderColor(QColor color)
 HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ QColor labelColor()
 HB_FUNC_STATIC( QBARSET_LABELCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QBARSET_LABELCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->labelColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ void setLabelColor(QColor color)
 HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -585,7 +585,7 @@ void append(const qreal value)
 void QBarSet_append1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ void append(const QList<qreal> &values)
 void QBarSet_append2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ void insert(const int index, const qreal value)
 HB_FUNC_STATIC( QBARSET_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -675,7 +675,7 @@ void remove(const int index, const int count = 1)
 HB_FUNC_STATIC( QBARSET_REMOVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -703,7 +703,7 @@ void replace(const int index, const qreal value)
 HB_FUNC_STATIC( QBARSET_REPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -731,7 +731,7 @@ qreal at(const int index) const
 HB_FUNC_STATIC( QBARSET_AT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -757,7 +757,7 @@ int count() const
 HB_FUNC_STATIC( QBARSET_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -783,7 +783,7 @@ qreal sum() const
 HB_FUNC_STATIC( QBARSET_SUM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -809,7 +809,7 @@ void borderColorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -875,7 +875,7 @@ void brushChanged()
 HB_FUNC_STATIC( QBARSET_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -939,7 +939,7 @@ void clicked( int index )
 HB_FUNC_STATIC( QBARSET_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1005,7 +1005,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1071,7 +1071,7 @@ void doubleClicked( int index )
 HB_FUNC_STATIC( QBARSET_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1137,7 +1137,7 @@ void hovered( bool status, int index )
 HB_FUNC_STATIC( QBARSET_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1205,7 +1205,7 @@ void labelBrushChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1269,7 +1269,7 @@ void labelChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1333,7 +1333,7 @@ void labelColorChanged( QColor color )
 HB_FUNC_STATIC( QBARSET_ONLABELCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1399,7 +1399,7 @@ void labelFontChanged()
 HB_FUNC_STATIC( QBARSET_ONLABELFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1463,7 +1463,7 @@ void penChanged()
 HB_FUNC_STATIC( QBARSET_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1527,7 +1527,7 @@ void pressed( int index )
 HB_FUNC_STATIC( QBARSET_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1593,7 +1593,7 @@ void released( int index )
 HB_FUNC_STATIC( QBARSET_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1659,7 +1659,7 @@ void valueChanged( int index )
 HB_FUNC_STATIC( QBARSET_ONVALUECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1725,7 +1725,7 @@ void valuesAdded( int index, int count )
 HB_FUNC_STATIC( QBARSET_ONVALUESADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1793,7 +1793,7 @@ void valuesRemoved( int index, int count )
 HB_FUNC_STATIC( QBARSET_ONVALUESREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

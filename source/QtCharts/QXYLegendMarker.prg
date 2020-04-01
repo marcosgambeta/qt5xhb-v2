@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
   if( ISBETWEEN(2,3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     auto obj = new QXYLegendMarker ( PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -84,7 +84,7 @@ virtual ~QXYLegendMarker()
 HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual QXYSeries* series()
 HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
     {
 #endif
       QXYSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QXYSERIES" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QXYSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

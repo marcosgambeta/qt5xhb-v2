@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QHORIZONTALBARSERIES_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QHorizontalBarSeries ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QHORIZONTALBARSERIES_NEW )
 HB_FUNC_STATIC( QHORIZONTALBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QHorizontalBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHorizontalBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QHORIZONTALBARSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QHorizontalBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHorizontalBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

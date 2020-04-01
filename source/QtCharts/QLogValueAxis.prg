@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QLogValueAxis ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -102,7 +102,7 @@ QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ qreal min() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ void setMin(qreal min)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ qreal max() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ void setMax(qreal max)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ QString labelFormat() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ void setLabelFormat(const QString &format)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ qreal base() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ void setBase(qreal base)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ int tickCount() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ int minorTickCount() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ void setMinorTickCount(int minorTickCount)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ AxisType type() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ void setRange(qreal min, qreal max)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ void baseChanged( qreal base )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -540,7 +540,7 @@ void labelFormatChanged( const QString & format )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -606,7 +606,7 @@ void maxChanged( qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -672,7 +672,7 @@ void minChanged( qreal min )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -738,7 +738,7 @@ void minorTickCountChanged( int minorTickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -804,7 +804,7 @@ void rangeChanged( qreal min, qreal max )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -872,7 +872,7 @@ void tickCountChanged( int tickCount )
 HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

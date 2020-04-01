@@ -96,7 +96,7 @@ virtual ~QAbstractBarSeries()
 HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ qreal barWidth() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_BARWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ void setBarWidth(qreal width)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ int count() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ bool isLabelsVisible() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ISLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ void setLabelsVisible(bool visible = true)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QString labelsFormat() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ void setLabelsFormat(const QString &format)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ qreal labelsAngle() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSANGLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ void setLabelsAngle(qreal angle)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ QAbstractBarSeries::LabelsPosition labelsPosition() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ bool append(QBarSet *set)
 void QAbstractBarSeries_append1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ bool append(QList<QBarSet *> sets)
 void QAbstractBarSeries_append2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -472,7 +472,7 @@ bool remove(QBarSet *set)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ bool take(QBarSet *set)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -524,7 +524,7 @@ bool insert(int index, QBarSet *set)
 HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ QList<QBarSet *> barSets() const
 HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ void clear()
 HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -628,7 +628,7 @@ void barsetsAdded( QList<QBarSet*> sets )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -716,7 +716,7 @@ void barsetsRemoved( QList<QBarSet*> sets )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -804,7 +804,7 @@ void clicked( int index, QBarSet * barset )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -872,7 +872,7 @@ void countChanged()
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -936,7 +936,7 @@ void doubleClicked( int index, QBarSet * barset )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1004,7 +1004,7 @@ void hovered( bool status, int index, QBarSet * barset )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1074,7 +1074,7 @@ void labelsAngleChanged( qreal angle )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1140,7 +1140,7 @@ void labelsFormatChanged( const QString & format )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1206,7 +1206,7 @@ void labelsPositionChanged( QAbstractBarSeries::LabelsPosition position )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1272,7 +1272,7 @@ void labelsVisibleChanged()
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1336,7 +1336,7 @@ void pressed( int index, QBarSet * barset )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1404,7 +1404,7 @@ void released( int index, QBarSet * barset )
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstractBarSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QBoxPlotSeries ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 HB_FUNC_STATIC( QBOXPLOTSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ int count() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ bool boxOutlineVisible()
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setBoxOutlineVisible(bool visible)
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ qreal boxWidth()
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ void setBoxWidth(qreal width)
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ QPen pen() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
     {
 #endif
       auto ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -378,7 +378,7 @@ bool append(QBoxSet *box)
 void QBoxPlotSeries_append1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ bool append(QList<QBoxSet *> boxes)
 void QBoxPlotSeries_append2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ bool remove(QBoxSet *box)
 HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ bool take(QBoxSet *box)
 HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ bool insert(int index, QBoxSet *box)
 HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -512,7 +512,7 @@ QList<QBoxSet *> boxSets() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_BOXSETS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -562,7 +562,7 @@ void clear()
 HB_FUNC_STATIC( QBOXPLOTSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -590,7 +590,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QBOXPLOTSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -616,7 +616,7 @@ void boxOutlineVisibilityChanged()
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXOUTLINEVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -680,7 +680,7 @@ void boxsetsAdded( QList<QBoxSet*> sets )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -768,7 +768,7 @@ void boxsetsRemoved( QList<QBoxSet*> sets )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXSETSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -856,7 +856,7 @@ void boxWidthChanged()
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBOXWIDTHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -920,7 +920,7 @@ void brushChanged()
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONBRUSHCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -984,7 +984,7 @@ void clicked( QBoxSet * boxset )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1050,7 +1050,7 @@ void countChanged()
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1114,7 +1114,7 @@ void doubleClicked( QBoxSet * boxset )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1180,7 +1180,7 @@ void hovered( bool status, QBoxSet * boxset )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1248,7 +1248,7 @@ void penChanged()
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1312,7 +1312,7 @@ void pressed( QBoxSet * boxset )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1378,7 +1378,7 @@ void released( QBoxSet * boxset )
 HB_FUNC_STATIC( QBOXPLOTSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QBoxPlotSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

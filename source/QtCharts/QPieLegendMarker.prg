@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
   if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     auto obj = new QPieLegendMarker ( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -86,7 +86,7 @@ virtual ~QPieLegendMarker()
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ virtual QPieSeries* series()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
     {
 #endif
       QPieSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPIESERIES" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QPIESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ QPieSlice* slice()
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QPieLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPieLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
     {
 #endif
       QPieSlice * ptr = obj->slice ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPIESLICE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QPIESLICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

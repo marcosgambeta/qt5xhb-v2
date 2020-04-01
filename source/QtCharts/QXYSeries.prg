@@ -114,7 +114,7 @@ explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QXYSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ bool pointsVisible() const
 HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ void setPointsVisible(bool visible = true)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ virtual QColor color() const
 HB_FUNC_STATIC( QXYSERIES_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QXYSERIES_COLOR )
     {
 #endif
       auto ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ virtual void setColor(const QColor &color)
 HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ QString pointLabelsFormat() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void setPointLabelsFormat(const QString &format)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ bool pointLabelsVisible() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ void setPointLabelsVisible(bool visible = true)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ QFont pointLabelsFont() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
     {
 #endif
       auto ptr = new QFont( obj->pointLabelsFont () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ void setPointLabelsFont(const QFont &font)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ QColor pointLabelsColor() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->pointLabelsColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ void setPointLabelsColor(const QColor &color)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setPointLabelsColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setPointLabelsColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ bool pointLabelsClipping() const
 HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -491,7 +491,7 @@ void setPointLabelsClipping(bool enabled = true)
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -519,7 +519,7 @@ void append(qreal x, qreal y)
 void QXYSeries_append1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ void append(const QPointF &point)
 void QXYSeries_append2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -553,7 +553,7 @@ void append(const QList<QPointF> &points)
 void QXYSeries_append3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -601,7 +601,7 @@ void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 void QXYSeries_replace1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -618,7 +618,7 @@ void replace(const QPointF &oldPoint, const QPointF &newPoint)
 void QXYSeries_replace2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -635,7 +635,7 @@ void replace(int index, qreal newX, qreal newY)
 void QXYSeries_replace3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ void replace(int index, const QPointF &newPoint)
 void QXYSeries_replace4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -669,7 +669,7 @@ void replace(QList<QPointF> points)
 void QXYSeries_replace5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -693,7 +693,7 @@ void replace(QVector<QPointF> points)
 void QXYSeries_replace6 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ void remove(qreal x, qreal y)
 void QXYSeries_remove1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -773,7 +773,7 @@ void remove(const QPointF &point)
 void QXYSeries_remove2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -790,7 +790,7 @@ void remove(int index)
 void QXYSeries_remove3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -831,7 +831,7 @@ void removePoints(int index, int count)
 HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -859,7 +859,7 @@ void insert(int index, const QPointF &point)
 HB_FUNC_STATIC( QXYSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -887,7 +887,7 @@ void clear()
 HB_FUNC_STATIC( QXYSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -915,7 +915,7 @@ int count() const
 HB_FUNC_STATIC( QXYSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -941,7 +941,7 @@ QList<QPointF> points() const
 HB_FUNC_STATIC( QXYSERIES_POINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -995,7 +995,7 @@ QVector<QPointF> pointsVector() const
 HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1049,7 +1049,7 @@ const QPointF &at(int index) const
 HB_FUNC_STATIC( QXYSERIES_AT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
     {
 #endif
       const QPointF * ptr = &obj->at ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1076,7 +1076,7 @@ virtual void setPen(const QPen &pen)
 HB_FUNC_STATIC( QXYSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1104,7 +1104,7 @@ QPen pen() const
 HB_FUNC_STATIC( QXYSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QXYSERIES_PEN )
     {
 #endif
       auto ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1131,7 +1131,7 @@ virtual void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1159,7 +1159,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QXYSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1186,7 +1186,7 @@ void clicked( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1252,7 +1252,7 @@ void colorChanged( QColor color )
 HB_FUNC_STATIC( QXYSERIES_ONCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1318,7 +1318,7 @@ void doubleClicked( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONDOUBLECLICKED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1384,7 +1384,7 @@ void hovered( const QPointF & point, bool state )
 HB_FUNC_STATIC( QXYSERIES_ONHOVERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1452,7 +1452,7 @@ void penChanged( const QPen & pen )
 HB_FUNC_STATIC( QXYSERIES_ONPENCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1518,7 +1518,7 @@ void pointAdded( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTADDED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1584,7 +1584,7 @@ void pointLabelsClippingChanged( bool clipping )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCLIPPINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1650,7 +1650,7 @@ void pointLabelsColorChanged( const QColor & color )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSCOLORCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1716,7 +1716,7 @@ void pointLabelsFontChanged( const QFont & font )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFONTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1782,7 +1782,7 @@ void pointLabelsFormatChanged( const QString & format )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSFORMATCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1848,7 +1848,7 @@ void pointLabelsVisibilityChanged( bool visible )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTLABELSVISIBILITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1914,7 +1914,7 @@ void pointRemoved( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1980,7 +1980,7 @@ void pointReplaced( int index )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2046,7 +2046,7 @@ void pointsRemoved( int index, int count )
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREMOVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2114,7 +2114,7 @@ void pointsReplaced()
 HB_FUNC_STATIC( QXYSERIES_ONPOINTSREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2178,7 +2178,7 @@ void pressed( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONPRESSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2244,7 +2244,7 @@ void released( const QPointF & point )
 HB_FUNC_STATIC( QXYSERIES_ONRELEASED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

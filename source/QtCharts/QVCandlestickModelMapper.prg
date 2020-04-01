@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QVCandlestickModelMapper ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -101,7 +101,7 @@ int timestampRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_TIMESTAMPROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void setTimestampRow(int timestampRow)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETTIMESTAMPROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ int openRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_OPENROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void setOpenRow(int openRow)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETOPENROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ int highRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_HIGHROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ void setHighRow(int highRow)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETHIGHROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ int lowRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LOWROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ void setLowRow(int lowRow)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLOWROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -317,7 +317,7 @@ int closeRow() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_CLOSEROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ void setCloseRow(int closeRow)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETCLOSEROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -371,7 +371,7 @@ int firstSetColumn() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_FIRSTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -397,7 +397,7 @@ void setFirstSetColumn(int firstSetColumn)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETFIRSTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ int lastSetColumn() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LASTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ void setLastSetColumn(int lastSetColumn)
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLASTSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ Qt::Orientation orientation() const
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -505,7 +505,7 @@ void closeRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -569,7 +569,7 @@ void firstSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -633,7 +633,7 @@ void highRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -697,7 +697,7 @@ void lastSetColumnChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -761,7 +761,7 @@ void lowRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -825,7 +825,7 @@ void openRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -889,7 +889,7 @@ void timestampRowChanged()
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QVCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

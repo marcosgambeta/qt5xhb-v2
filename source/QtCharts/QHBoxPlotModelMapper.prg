@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QHBoxPlotModelMapper ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -102,7 +102,7 @@ QBoxPlotSeries *series() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
     {
 #endif
       QBoxPlotSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QBOXPLOTSERIES" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QBOXPLOTSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ void setSeries(QBoxPlotSeries *series)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ int firstBoxSetRow() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ void setFirstBoxSetRow(int firstBoxSetRow)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ int lastBoxSetRow() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_LASTBOXSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -292,7 +292,7 @@ void setLastBoxSetRow(int lastBoxSetRow)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ int firstColumn() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ void setFirstColumn(int firstColumn)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ int columnCount() const
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_COLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -400,7 +400,7 @@ void setColumnCount(int rowCount)
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -428,7 +428,7 @@ void columnCountChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -492,7 +492,7 @@ void firstBoxSetRowChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -556,7 +556,7 @@ void firstColumnChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -620,7 +620,7 @@ void lastBoxSetRowChanged()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONLASTBOXSETROWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -684,7 +684,7 @@ void modelReplaced()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONMODELREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -748,7 +748,7 @@ void seriesReplaced()
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONSERIESREPLACED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QHBoxPlotModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHBoxPlotModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
