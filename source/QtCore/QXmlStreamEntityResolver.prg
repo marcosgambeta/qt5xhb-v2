@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_DELETE )
 {
-  auto obj = (QXmlStreamEntityResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamEntityResolver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -78,7 +78,7 @@ virtual QString resolveUndeclaredEntity(const QString & name)
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
 {
-  auto obj = (QXmlStreamEntityResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamEntityResolver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

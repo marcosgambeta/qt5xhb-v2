@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QParallelAnimationGroup ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
-  auto obj = (QParallelAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QParallelAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  auto obj = (QParallelAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QParallelAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

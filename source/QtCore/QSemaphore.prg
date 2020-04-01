@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     auto obj = new QSemaphore ( OPINT(1,0) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ void acquire(int n = 1)
 */
 HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ bool tryAcquire(int n = 1)
 */
 void QSemaphore_tryAcquire1 ()
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ bool tryAcquire(int n, int timeout)
 */
 void QSemaphore_tryAcquire2 ()
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ void release(int n = 1)
 */
 HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ int available() const
 */
 HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {
-  auto obj = (QSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

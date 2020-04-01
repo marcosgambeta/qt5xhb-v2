@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
     auto obj = new QFinalState ( OPQSTATE(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
 
 HB_FUNC_STATIC( QFINALSTATE_DELETE )
 {
-  auto obj = (QFinalState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFinalState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

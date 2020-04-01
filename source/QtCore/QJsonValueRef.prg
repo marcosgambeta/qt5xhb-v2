@@ -81,7 +81,7 @@ QJsonValueRef(QJsonArray *array, int idx)
 void QJsonValueRef_new1 ()
 {
   auto obj = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QJsonValueRef(QJsonObject *object, int idx)
 void QJsonValueRef_new2 ()
 {
   auto obj = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QJsonValueRef(QJsonArray *array, int idx)
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 
 HB_FUNC_STATIC( QJSONVALUEREF_DELETE )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QJsonValue::Type type() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ bool isBool() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ bool isDouble() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool isString() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ bool isArray() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ bool isObject() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ bool isUndefined() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ bool toBool() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ int toInt() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ double toDouble() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ QJsonArray toArray() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
     {
 #endif
       auto ptr = new QJsonArray( obj->toArray () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ QJsonObject toObject() const
 */
 HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
 {
-  auto obj = (QJsonValueRef *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJsonValueRef *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
     {
 #endif
       auto ptr = new QJsonObject( obj->toObject () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QJSONOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

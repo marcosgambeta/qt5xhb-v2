@@ -62,7 +62,7 @@ QMessageLogger()
 void QMessageLogger_new1 ()
 {
   auto obj = new QMessageLogger ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QMessageLogger(const char *file, int line, const char *function)
 void QMessageLogger_new2 ()
 {
   auto obj = new QMessageLogger ( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QMessageLogger(const char *file, int line, const char *function, const char *cat
 void QMessageLogger_new3 ()
 {
   auto obj = new QMessageLogger ( PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PCONSTCHAR(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QMessageLogger()
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 
 HB_FUNC_STATIC( QMESSAGELOGGER_DELETE )
 {
-  auto obj = (QMessageLogger *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMessageLogger *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

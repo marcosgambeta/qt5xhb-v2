@@ -78,7 +78,7 @@ QLine()
 void QLine_new1 ()
 {
   auto obj = new QLine ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QLine(const QPoint & p1, const QPoint & p2)
 void QLine_new2 ()
 {
   auto obj = new QLine ( *PQPOINT(1), *PQPOINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,7 +96,7 @@ QLine(int x1, int y1, int x2, int y2)
 void QLine_new3 ()
 {
   auto obj = new QLine ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QLine()
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QLINE_NEW )
 
 HB_FUNC_STATIC( QLINE_DELETE )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ QPoint p1() const
 */
 HB_FUNC_STATIC( QLINE_P1 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QLINE_P1 )
     {
 #endif
       auto ptr = new QPoint( obj->p1 () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ QPoint p2() const
 */
 HB_FUNC_STATIC( QLINE_P2 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QLINE_P2 )
     {
 #endif
       auto ptr = new QPoint( obj->p2 () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ int x1() const
 */
 HB_FUNC_STATIC( QLINE_X1 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ int x2() const
 */
 HB_FUNC_STATIC( QLINE_X2 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ int y1() const
 */
 HB_FUNC_STATIC( QLINE_Y1 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ int y2() const
 */
 HB_FUNC_STATIC( QLINE_Y2 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ int dx() const
 */
 HB_FUNC_STATIC( QLINE_DX )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ int dy() const
 */
 HB_FUNC_STATIC( QLINE_DY )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QLINE_ISNULL )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ void setP1(const QPoint & p1)
 */
 HB_FUNC_STATIC( QLINE_SETP1 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ void setP2(const QPoint & p2)
 */
 HB_FUNC_STATIC( QLINE_SETP2 )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ void setLine(int x1, int y1, int x2, int y2)
 */
 HB_FUNC_STATIC( QLINE_SETLINE )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ void setPoints(const QPoint & p1, const QPoint & p2)
 */
 HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ void translate(const QPoint & offset)
 */
 void QLine_translate1 ()
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ void translate(int dx, int dy)
 */
 void QLine_translate2 ()
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,12 +516,12 @@ QLine translated(const QPoint & offset) const
 */
 void QLine_translated1 ()
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QLine( obj->translated ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
+    Qt5xHb::createReturnClass ( ptr, "QLINE", true );
   }
 }
 
@@ -530,12 +530,12 @@ QLine translated(int dx, int dy) const
 */
 void QLine_translated2 ()
 {
-  auto obj = (QLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QLine( obj->translated ( PINT(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
+    Qt5xHb::createReturnClass ( ptr, "QLINE", true );
   }
 }
 

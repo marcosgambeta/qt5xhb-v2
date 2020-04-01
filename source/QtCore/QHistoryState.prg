@@ -58,7 +58,7 @@ QHistoryState(QState *parent = nullptr)
 void QHistoryState_new1 ()
 {
   auto obj = new QHistoryState ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QHistoryState(HistoryType type, QState *parent = nullptr)
 void QHistoryState_new2 ()
 {
   auto obj = new QHistoryState ( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QHistoryState(QState *parent = nullptr)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 {
-  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QAbstractState *defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
-  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     {
 #endif
       QAbstractState * ptr = obj->defaultState ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ void setDefaultState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
-  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
-  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setHistoryType(HistoryType type)
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
-  auto obj = (QHistoryState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHistoryState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     auto obj = new QTimerEvent ( PINT(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
 
 HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 {
-  auto obj = (QTimerEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimerEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
 {
-  auto obj = (QTimerEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimerEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

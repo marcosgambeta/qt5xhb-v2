@@ -88,7 +88,7 @@ QSettings ( const QString & organization, const QString & application = QString(
 void QSettings_new1 ()
 {
   auto obj = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -97,7 +97,7 @@ QSettings ( Scope scope, const QString & organization, const QString & applicati
 void QSettings_new2 ()
 {
   auto obj = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,7 +106,7 @@ QSettings ( Format format, Scope scope, const QString & organization, const QStr
 void QSettings_new3 ()
 {
   auto obj = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -115,7 +115,7 @@ QSettings ( const QString & fileName, Format format, QObject * parent = nullptr 
 void QSettings_new4 ()
 {
   auto obj = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -124,7 +124,7 @@ QSettings ( QObject * parent = nullptr )
 void QSettings_new5 ()
 {
   auto obj = new QSettings ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QStringList allKeys () const
 */
 HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QString applicationName () const
 */
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ void beginGroup ( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ int beginReadArray ( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ void beginWriteArray ( const QString & prefix, int size = -1 )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ QStringList childGroups () const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ QStringList childKeys () const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -383,7 +383,7 @@ bool contains ( const QString & key ) const
 */
 HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ void endArray ()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ void endGroup ()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -459,7 +459,7 @@ bool fallbacksEnabled () const
 */
 HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -507,7 +507,7 @@ Format format () const
 */
 HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -531,7 +531,7 @@ QString group () const
 */
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ QTextCodec * iniCodec () const
 */
 HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
     {
 #endif
       QTextCodec * ptr = obj->iniCodec ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ bool isWritable () const
 */
 HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -604,7 +604,7 @@ QString organizationName () const
 */
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -628,7 +628,7 @@ void remove ( const QString & key )
 */
 HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -654,7 +654,7 @@ Scope scope () const
 */
 HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -678,7 +678,7 @@ void setArrayIndex ( int i )
 */
 HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -704,7 +704,7 @@ void setFallbacksEnabled ( bool b )
 */
 HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -730,7 +730,7 @@ void setIniCodec ( QTextCodec * codec )
 */
 void QSettings_setIniCodec1 ()
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -745,7 +745,7 @@ void setIniCodec ( const char * codecName )
 */
 void QSettings_setIniCodec2 ()
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -776,7 +776,7 @@ void setValue ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -802,7 +802,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -826,7 +826,7 @@ void sync ()
 */
 HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -852,7 +852,7 @@ QVariant value ( const QString & key, const QVariant & defaultValue = QVariant()
 */
 HB_FUNC_STATIC( QSETTINGS_VALUE )
 {
-  auto obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -860,8 +860,8 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->value ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->value ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

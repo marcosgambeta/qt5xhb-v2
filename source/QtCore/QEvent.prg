@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     auto obj = new QEvent ( (QEvent::Type) hb_parni(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
 
 HB_FUNC_STATIC( QEVENT_DELETE )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ void accept ()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void ignore ()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ bool isAccepted () const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ void setAccepted ( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ bool spontaneous () const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {
-  auto obj = (QEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -118,7 +118,7 @@ QDir(const QDir & dir)
 void QDir_new1 ()
 {
   auto obj = new QDir ( *PQDIR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -127,7 +127,7 @@ QDir(const QString & path = QString())
 void QDir_new2 ()
 {
   auto obj = new QDir ( OPQSTRING(1,QString()) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -136,7 +136,7 @@ QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlag
 void QDir_new3 ()
 {
   auto obj = new QDir ( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QDir::SortFlags) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : (QDir::SortFlags) hb_parni(3), ISNIL(4)? (QDir::Filters) QDir::AllEntries : (QDir::Filters) hb_parni(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDir(const QDir & dir)
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDIR_NEW )
 
 HB_FUNC_STATIC( QDIR_DELETE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QString absoluteFilePath(const QString & fileName) const
 */
 HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QString absolutePath() const
 */
 HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QString canonicalPath() const
 */
 HB_FUNC_STATIC( QDIR_CANONICALPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ bool cd(const QString & dirName)
 */
 HB_FUNC_STATIC( QDIR_CD )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ bool cdUp()
 */
 HB_FUNC_STATIC( QDIR_CDUP )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ uint count() const
 */
 HB_FUNC_STATIC( QDIR_COUNT )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ QString dirName() const
 */
 HB_FUNC_STATIC( QDIR_DIRNAME )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = N
 */
 void QDir_entryInfoList1 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -394,7 +394,7 @@ QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort)
 */
 void QDir_entryInfoList2 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -454,7 +454,7 @@ QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilte
 */
 void QDir_entryList1 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 */
 void QDir_entryList2 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -499,7 +499,7 @@ bool exists(const QString & name) const
 */
 void QDir_exists1 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -512,7 +512,7 @@ bool exists() const
 */
 void QDir_exists2 ()
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -544,7 +544,7 @@ QString filePath(const QString & fileName) const
 */
 HB_FUNC_STATIC( QDIR_FILEPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -568,7 +568,7 @@ Filters filter() const
 */
 HB_FUNC_STATIC( QDIR_FILTER )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -592,7 +592,7 @@ bool isAbsolute() const
 */
 HB_FUNC_STATIC( QDIR_ISABSOLUTE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -616,7 +616,7 @@ bool isReadable() const
 */
 HB_FUNC_STATIC( QDIR_ISREADABLE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -640,7 +640,7 @@ bool isRelative() const
 */
 HB_FUNC_STATIC( QDIR_ISRELATIVE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -664,7 +664,7 @@ bool isRoot() const
 */
 HB_FUNC_STATIC( QDIR_ISROOT )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -688,7 +688,7 @@ bool makeAbsolute()
 */
 HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -712,7 +712,7 @@ bool mkdir(const QString & dirName) const
 */
 HB_FUNC_STATIC( QDIR_MKDIR )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -736,7 +736,7 @@ bool mkpath(const QString & dirPath) const
 */
 HB_FUNC_STATIC( QDIR_MKPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -760,7 +760,7 @@ QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QDIR_NAMEFILTERS )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -784,7 +784,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDIR_PATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -808,7 +808,7 @@ void refresh() const
 */
 HB_FUNC_STATIC( QDIR_REFRESH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -834,7 +834,7 @@ QString relativeFilePath(const QString & fileName) const
 */
 HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -858,7 +858,7 @@ bool remove(const QString & fileName)
 */
 HB_FUNC_STATIC( QDIR_REMOVE )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -882,7 +882,7 @@ bool removeRecursively()
 */
 HB_FUNC_STATIC( QDIR_REMOVERECURSIVELY )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -906,7 +906,7 @@ bool rename(const QString & oldName, const QString & newName)
 */
 HB_FUNC_STATIC( QDIR_RENAME )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -930,7 +930,7 @@ bool rmdir(const QString & dirName) const
 */
 HB_FUNC_STATIC( QDIR_RMDIR )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -954,7 +954,7 @@ bool rmpath(const QString & dirPath) const
 */
 HB_FUNC_STATIC( QDIR_RMPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -978,7 +978,7 @@ void setFilter(Filters filters)
 */
 HB_FUNC_STATIC( QDIR_SETFILTER )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1004,7 +1004,7 @@ void setNameFilters(const QStringList & nameFilters)
 */
 HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1030,7 +1030,7 @@ void setPath(const QString & path)
 */
 HB_FUNC_STATIC( QDIR_SETPATH )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1056,7 +1056,7 @@ void setSorting(SortFlags sort)
 */
 HB_FUNC_STATIC( QDIR_SETSORTING )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1082,7 +1082,7 @@ SortFlags sorting() const
 */
 HB_FUNC_STATIC( QDIR_SORTING )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1106,7 +1106,7 @@ void swap(QDir & other)
 */
 HB_FUNC_STATIC( QDIR_SWAP )
 {
-  auto obj = (QDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QDIR_CURRENT )
   {
 #endif
     auto ptr = new QDir( QDir::current () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+    Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC( QDIR_HOME )
   {
 #endif
     auto ptr = new QDir( QDir::home () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+    Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QDIR_ROOT )
   {
 #endif
     auto ptr = new QDir( QDir::root () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+    Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1454,7 +1454,7 @@ HB_FUNC_STATIC( QDIR_SEPARATOR )
   {
 #endif
     auto ptr = new QChar( QDir::separator () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1514,7 +1514,7 @@ HB_FUNC_STATIC( QDIR_TEMP )
   {
 #endif
     auto ptr = new QDir( QDir::temp () );
-    _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+    Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

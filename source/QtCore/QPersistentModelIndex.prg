@@ -77,7 +77,7 @@ QPersistentModelIndex()
 void QPersistentModelIndex_new1 ()
 {
   auto obj = new QPersistentModelIndex ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QPersistentModelIndex(const QModelIndex &index)
 void QPersistentModelIndex_new2 ()
 {
   auto obj = new QPersistentModelIndex ( *PQMODELINDEX(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QPersistentModelIndex(const QPersistentModelIndex &other)
 void QPersistentModelIndex_new3 ()
 {
   auto obj = new QPersistentModelIndex ( *PQPERSISTENTMODELINDEX(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QPersistentModelIndex()
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ void swap(QPersistentModelIndex &other)
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ int row() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ROW )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ int column() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void *internalPointer() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ quintptr internalId() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALID )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ QModelIndex parent() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
     {
 #endif
       auto ptr = new QModelIndex( obj->parent () );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ QModelIndex sibling(int row, int column) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
     {
 #endif
       auto ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ QModelIndex child(int row, int column) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
     {
 #endif
       auto ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ QVariant data(int role = Qt::DisplayRole) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
     {
 #endif
       auto ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ const QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_ISVALID )
 {
-  auto obj = (QPersistentModelIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPersistentModelIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

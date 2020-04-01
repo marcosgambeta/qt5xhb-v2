@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QMetaMethod ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
 
 HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ const char *typeName() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ QList<QByteArray> parameterTypes() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ QList<QByteArray> parameterNames() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ const char *tag() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TAG )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ Access access() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ MethodType methodType() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ int attributes() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ int methodIndex() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ int revision() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -386,7 +386,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ QByteArray methodSignature() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
     {
 #endif
       auto ptr = new QByteArray( obj->methodSignature () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ QByteArray name() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_NAME )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NAME )
     {
 #endif
       auto ptr = new QByteArray( obj->name () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,7 +487,7 @@ int returnType() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -511,7 +511,7 @@ int parameterCount() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ int parameterType(int index) const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -559,7 +559,7 @@ void getParameterTypes(int *types) const
 */
 HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
 {
-  auto obj = (QMetaMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

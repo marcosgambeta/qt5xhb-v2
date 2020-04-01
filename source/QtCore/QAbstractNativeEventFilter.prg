@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_DELETE )
 {
-  auto obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractNativeEventFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -69,7 +69,7 @@ virtual bool nativeEventFilter(const QByteArray & eventType, void * message, lon
 */
 HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
 {
-  auto obj = (QAbstractNativeEventFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractNativeEventFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

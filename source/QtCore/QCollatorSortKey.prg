@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
   if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
   {
     auto obj = new QCollatorSortKey ( *PQCOLLATORSORTKEY(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 
 HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
 {
-  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ void swap(QCollatorSortKey &other)
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 {
-  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ int compare(const QCollatorSortKey &key) const
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
 {
-  auto obj = (QCollatorSortKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCollatorSortKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -65,7 +65,7 @@ QFileSystemWatcher(QObject * parent = nullptr)
 void QFileSystemWatcher_new1 ()
 {
   auto obj = new QFileSystemWatcher ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -74,7 +74,7 @@ QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
 void QFileSystemWatcher_new2 ()
 {
   auto obj = new QFileSystemWatcher ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QFileSystemWatcher(QObject * parent = nullptr)
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ bool addPath(const QString & path)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QStringList addPaths(const QStringList & paths)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QStringList directories() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ QStringList files() const
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ bool removePath(const QString & path)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ QStringList removePaths(const QStringList & paths)
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {
-  auto obj = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ void directoryChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 {
-  auto sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -326,7 +326,7 @@ void fileChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
 {
-  auto sender = (QFileSystemWatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

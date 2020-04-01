@@ -57,7 +57,7 @@ void QWinEventNotifier_new1 ()
 {
 #ifdef Q_OS_WIN
   auto obj = new QWinEventNotifier ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 {
 #ifdef Q_OS_WIN
-  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ bool isEnabled() const
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
 {
 #ifdef Q_OS_WIN
-  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ void setEnabled(bool enable)
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
 {
 #ifdef Q_OS_WIN
-  auto obj = (QWinEventNotifier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEventNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

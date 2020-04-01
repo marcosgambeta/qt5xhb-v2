@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QTimeLine ( OPINT(1,1000), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
 
 HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ int currentFrame () const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ int currentTime () const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ qreal currentValue () const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ CurveShape curveShape () const
 */
 HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ Direction direction () const
 */
 HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ int duration () const
 */
 HB_FUNC_STATIC( QTIMELINE_DURATION )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ int endFrame () const
 */
 HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ int frameForTime ( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ int loopCount () const
 */
 HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -337,7 +337,7 @@ void setCurveShape ( CurveShape shape )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ void setDirection ( Direction direction )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ void setDuration ( int duration )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ void setEasingCurve ( const QEasingCurve & curve )
 */
 HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ void setEndFrame ( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ void setFrameRange ( int startFrame, int endFrame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -493,7 +493,7 @@ void setLoopCount ( int count )
 */
 HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -519,7 +519,7 @@ void setStartFrame ( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -545,7 +545,7 @@ void setUpdateInterval ( int interval )
 */
 HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -571,7 +571,7 @@ int startFrame () const
 */
 HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -595,7 +595,7 @@ State state () const
 */
 HB_FUNC_STATIC( QTIMELINE_STATE )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -619,7 +619,7 @@ int updateInterval () const
 */
 HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -643,7 +643,7 @@ virtual qreal valueForTime ( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -667,7 +667,7 @@ void resume ()
 */
 HB_FUNC_STATIC( QTIMELINE_RESUME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -693,7 +693,7 @@ void setCurrentTime ( int msec )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -719,7 +719,7 @@ void setPaused ( bool paused )
 */
 HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -745,7 +745,7 @@ void start ()
 */
 HB_FUNC_STATIC( QTIMELINE_START )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -771,7 +771,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QTIMELINE_STOP )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -797,7 +797,7 @@ void toggleDirection ()
 */
 HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 {
-  auto obj = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -823,7 +823,7 @@ void finished()
 */
 HB_FUNC_STATIC( QTIMELINE_ONFINISHED )
 {
-  auto sender = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -883,7 +883,7 @@ void frameChanged( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_ONFRAMECHANGED )
 {
-  auto sender = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -945,7 +945,7 @@ void stateChanged( QTimeLine::State newState )
 */
 HB_FUNC_STATIC( QTIMELINE_ONSTATECHANGED )
 {
-  auto sender = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1007,7 +1007,7 @@ void valueChanged( qreal value )
 */
 HB_FUNC_STATIC( QTIMELINE_ONVALUECHANGED )
 {
-  auto sender = (QTimeLine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTimeLine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

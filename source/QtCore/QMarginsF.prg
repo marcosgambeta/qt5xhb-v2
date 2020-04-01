@@ -78,7 +78,7 @@ void QMarginsF_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = new QMarginsF ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ void QMarginsF_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -100,7 +100,7 @@ void QMarginsF_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = new QMarginsF ( *PQMARGINS(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 HB_FUNC_STATIC( QMARGINSF_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ bool isNull() const
 HB_FUNC_STATIC( QMARGINSF_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ qreal left() const
 HB_FUNC_STATIC( QMARGINSF_LEFT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ qreal top() const
 HB_FUNC_STATIC( QMARGINSF_TOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ qreal right() const
 HB_FUNC_STATIC( QMARGINSF_RIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ qreal bottom() const
 HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ void setLeft(qreal left)
 HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void setTop(qreal top)
 HB_FUNC_STATIC( QMARGINSF_SETTOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ void setRight(qreal right)
 HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ void setBottom(qreal bottom)
 HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ QMargins toMargins() const
 HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QMarginsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMarginsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
     {
 #endif
       auto ptr = new QMargins( obj->toMargins () );
-      _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
+      Qt5xHb::createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

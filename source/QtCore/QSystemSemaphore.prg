@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
     auto obj = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ void setKey(const QString &key, int initialValue = 0, AccessMode mode = Open)
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QString key() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ bool acquire()
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ bool release(int n = 1)
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ SystemSemaphoreError error() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
 {
-  auto obj = (QSystemSemaphore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QXmlStreamAttributes ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ void append(const QString & namespaceUri, const QString & name, const QString & 
 */
 void QXmlStreamAttributes_append1 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ void append(const QXmlStreamAttribute & attribute)
 */
 void QXmlStreamAttributes_append2 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ void append(const QString & qualifiedName, const QString & value)
 */
 void QXmlStreamAttributes_append3 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ bool hasAttribute(const QString & qualifiedName) const
 */
 void QXmlStreamAttributes_hasAttribute1 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ bool hasAttribute(QLatin1String qualifiedName) const
 */
 void QXmlStreamAttributes_hasAttribute2 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ bool hasAttribute(const QString & namespaceUri, const QString & name) const
 */
 void QXmlStreamAttributes_hasAttribute3 ()
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ QStringRef value(const QString & namespaceUri, const QString & name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
     {
 #endif
       auto ptr = new QStringRef( obj->value ( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ QStringRef value(const QString & namespaceUri, QLatin1String name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
     {
 #endif
       auto ptr = new QStringRef( obj->value ( PQSTRING(1), *PQLATIN1STRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
     {
 #endif
       auto ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ QStringRef value(const QString & qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
     {
 #endif
       auto ptr = new QStringRef( obj->value ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ QStringRef value(QLatin1String qualifiedName) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
 {
-  auto obj = (QXmlStreamAttributes *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
     {
 #endif
       auto ptr = new QStringRef( obj->value ( *PQLATIN1STRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

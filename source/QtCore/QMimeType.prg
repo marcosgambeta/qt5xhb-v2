@@ -79,7 +79,7 @@ QMimeType()
 void QMimeType_new1 ()
 {
   auto obj = new QMimeType ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QMimeType(const QMimeType &other)
 void QMimeType_new2 ()
 {
   auto obj = new QMimeType ( *PQMIMETYPE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QMimeType()
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
 
 HB_FUNC_STATIC( QMIMETYPE_DELETE )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ void swap(QMimeType &other)
 */
 HB_FUNC_STATIC( QMIMETYPE_SWAP )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ISVALID )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QMIMETYPE_NAME )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ QString comment() const
 */
 HB_FUNC_STATIC( QMIMETYPE_COMMENT )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QString genericIconName() const
 */
 HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ QString iconName() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ QStringList globPatterns() const
 */
 HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ QStringList parentMimeTypes() const
 */
 HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ QStringList allAncestors() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ QStringList aliases() const
 */
 HB_FUNC_STATIC( QMIMETYPE_ALIASES )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ QStringList suffixes() const
 */
 HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ QString preferredSuffix() const
 */
 HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ bool inherits(const QString &mimeTypeName) const
 */
 HB_FUNC_STATIC( QMIMETYPE_INHERITS )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -470,7 +470,7 @@ QString filterString() const
 */
 HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
 {
-  auto obj = (QMimeType *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMimeType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

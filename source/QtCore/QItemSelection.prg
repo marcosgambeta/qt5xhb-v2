@@ -68,7 +68,7 @@ QItemSelection()
 void QItemSelection_new1 ()
 {
   auto obj = new QItemSelection ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 void QItemSelection_new2 ()
 {
   auto obj = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QItemSelection()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTION_DELETE )
 {
-  auto obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 {
-  auto obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool contains(const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 {
-  auto obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ QModelIndexList indexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 {
-  auto obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags comm
 */
 HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 {
-  auto obj = (QItemSelection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemSelection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -71,7 +71,7 @@ QMargins()
 void QMargins_new1 ()
 {
   auto obj = new QMargins ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QMargins(int left, int top, int right, int bottom)
 void QMargins_new2 ()
 {
   auto obj = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QMargins()
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 HB_FUNC_STATIC( QMARGINS_DELETE )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ int left() const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ int top() const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int right() const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ void setLeft(int left)
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ void setTop(int top)
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ void setRight(int right)
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ void setBottom(int bottom)
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
-  auto obj = (QMargins *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMargins *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

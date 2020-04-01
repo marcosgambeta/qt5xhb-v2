@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QBBSystemLocaleData ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DELETE )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ uint measurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ QVariant timeFormat(QLocale::FormatType)
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
     {
 #endif
       auto ptr = new QVariant( obj->timeFormat ( (QLocale::FormatType) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ QVariant dateTimeFormat(QLocale::FormatType)
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
     {
 #endif
       auto ptr = new QVariant( obj->dateTimeFormat ( (QLocale::FormatType) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ QLocale languageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_LANGUAGELOCALE )
     {
 #endif
       auto ptr = new QLocale( obj->languageLocale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ QLocale regionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_REGIONLOCALE )
     {
 #endif
       auto ptr = new QLocale( obj->regionLocale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ void installSocketNotifiers()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_INSTALLSOCKETNOTIFIERS )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void readLanguageLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READLANGUAGELOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void readRegionLocale()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READREGIONLOCALE )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ void readMeasurementSystem()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READMEASUREMENTSYSTEM )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ void readHourFormat()
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_READHOURFORMAT )
 {
-  auto obj = (QBBSystemLocaleData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBBSystemLocaleData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

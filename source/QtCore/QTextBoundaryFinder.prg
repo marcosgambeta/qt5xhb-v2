@@ -73,7 +73,7 @@ QTextBoundaryFinder()
 void QTextBoundaryFinder_new1 ()
 {
   auto obj = new QTextBoundaryFinder ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QTextBoundaryFinder(const QTextBoundaryFinder &other)
 void QTextBoundaryFinder_new2 ()
 {
   auto obj = new QTextBoundaryFinder ( *PQTEXTBOUNDARYFINDER(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QTextBoundaryFinder(BoundaryType type, const QString &string)
 void QTextBoundaryFinder_new3 ()
 {
   auto obj = new QTextBoundaryFinder ( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_DELETE )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ BoundaryType type() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ QString string() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_STRING )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void toStart()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOSTART )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void toEnd()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOEND )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ void setPosition(int position)
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -319,7 +319,7 @@ int toNextBoundary()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TONEXTBOUNDARY )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ int toPreviousBoundary()
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TOPREVIOUSBOUNDARY )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ bool isAtBoundary() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ BoundaryReasons boundaryReasons() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 {
-  auto obj = (QTextBoundaryFinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBoundaryFinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

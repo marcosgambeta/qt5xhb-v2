@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QFileSelector ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
 
 HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ QString select(const QString &filePath) const
 */
 void QFileSelector_select1 ()
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,12 +108,12 @@ QUrl select(const QUrl &filePath) const
 */
 void QFileSelector_select2 ()
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QUrl( obj->select ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    Qt5xHb::createReturnClass ( ptr, "QURL", true );
   }
 }
 
@@ -141,7 +141,7 @@ QStringList extraSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ void setExtraSelectors(const QStringList &list)
 */
 HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QStringList allSelectors() const
 */
 HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
 {
-  auto obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSelector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

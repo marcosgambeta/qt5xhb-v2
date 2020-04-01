@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QEventLoop ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ int exec ( ProcessEventsFlags flags = AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ void exit ( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isRunning () const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ bool processEvents ( ProcessEventsFlags flags = AllEvents )
 */
 void QEventLoop_processEvents1 ()
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void processEvents ( ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2 ()
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void wakeUp ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
-  auto obj = (QEventLoop *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventLoop *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

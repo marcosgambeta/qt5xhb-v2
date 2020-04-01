@@ -64,7 +64,7 @@ QTextDecoder(const QTextCodec * codec)
 void QTextDecoder_new1 ()
 {
   auto obj = new QTextDecoder ( PQTEXTCODEC(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 void QTextDecoder_new2 ()
 {
   auto obj = new QTextDecoder ( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QTextDecoder(const QTextCodec * codec)
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTDECODER_NEW )
 
 HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 {
-  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ QString toUnicode(const char * chars, int len)
 */
 void QTextDecoder_toUnicode1 ()
 {
-  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QString toUnicode(const QByteArray & ba)
 */
 void QTextDecoder_toUnicode3 ()
 {
-  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ bool hasFailure() const
 */
 HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
 {
-  auto obj = (QTextDecoder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

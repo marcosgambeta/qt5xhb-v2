@@ -111,7 +111,7 @@ QFileInfo()
 void QFileInfo_new1 ()
 {
   auto obj = new QFileInfo ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QFileInfo(const QString & file)
 void QFileInfo_new2 ()
 {
   auto obj = new QFileInfo ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -129,7 +129,7 @@ QFileInfo(const QFile & file)
 void QFileInfo_new3 ()
 {
   auto obj = new QFileInfo ( *PQFILE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -138,7 +138,7 @@ QFileInfo(const QDir & dir, const QString & file)
 void QFileInfo_new4 ()
 {
   auto obj = new QFileInfo ( *PQDIR(1), PQSTRING(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -147,7 +147,7 @@ QFileInfo(const QFileInfo & fileinfo)
 void QFileInfo_new5 ()
 {
   auto obj = new QFileInfo ( *PQFILEINFO(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QFileInfo()
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 
 HB_FUNC_STATIC( QFILEINFO_DELETE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ QDir absoluteDir() const
 */
 HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QFILEINFO_ABSOLUTEDIR )
     {
 #endif
       auto ptr = new QDir( obj->absoluteDir () );
-      _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ QString absoluteFilePath() const
 */
 HB_FUNC_STATIC( QFILEINFO_ABSOLUTEFILEPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ QString absolutePath() const
 */
 HB_FUNC_STATIC( QFILEINFO_ABSOLUTEPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ QString baseName() const
 */
 HB_FUNC_STATIC( QFILEINFO_BASENAME )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ QString bundleName() const
 */
 HB_FUNC_STATIC( QFILEINFO_BUNDLENAME )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ bool caching() const
 */
 HB_FUNC_STATIC( QFILEINFO_CACHING )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ QString canonicalFilePath() const
 */
 HB_FUNC_STATIC( QFILEINFO_CANONICALFILEPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ QString canonicalPath() const
 */
 HB_FUNC_STATIC( QFILEINFO_CANONICALPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ QString completeBaseName() const
 */
 HB_FUNC_STATIC( QFILEINFO_COMPLETEBASENAME )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ QString completeSuffix() const
 */
 HB_FUNC_STATIC( QFILEINFO_COMPLETESUFFIX )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ QDateTime created() const
 */
 HB_FUNC_STATIC( QFILEINFO_CREATED )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QFILEINFO_CREATED )
     {
 #endif
       auto ptr = new QDateTime( obj->created () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,7 +472,7 @@ QDir dir() const
 */
 HB_FUNC_STATIC( QFILEINFO_DIR )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
     {
 #endif
       auto ptr = new QDir( obj->dir () );
-      _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ bool exists() const
 */
 HB_FUNC_STATIC( QFILEINFO_EXISTS )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QFILEINFO_FILENAME )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -545,7 +545,7 @@ QString filePath() const
 */
 HB_FUNC_STATIC( QFILEINFO_FILEPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -569,7 +569,7 @@ QString group() const
 */
 HB_FUNC_STATIC( QFILEINFO_GROUP )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -593,7 +593,7 @@ uint groupId() const
 */
 HB_FUNC_STATIC( QFILEINFO_GROUPID )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ bool isAbsolute() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISABSOLUTE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -641,7 +641,7 @@ bool isBundle() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISBUNDLE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -665,7 +665,7 @@ bool isDir() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISDIR )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -689,7 +689,7 @@ bool isExecutable() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISEXECUTABLE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -713,7 +713,7 @@ bool isFile() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISFILE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -737,7 +737,7 @@ bool isHidden() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISHIDDEN )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -761,7 +761,7 @@ bool isNativePath() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISNATIVEPATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -785,7 +785,7 @@ bool isReadable() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISREADABLE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -809,7 +809,7 @@ bool isRelative() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISRELATIVE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -833,7 +833,7 @@ bool isRoot() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISROOT )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -857,7 +857,7 @@ bool isSymLink() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISSYMLINK )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -881,7 +881,7 @@ bool isWritable() const
 */
 HB_FUNC_STATIC( QFILEINFO_ISWRITABLE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -905,7 +905,7 @@ QDateTime lastModified() const
 */
 HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTMODIFIED )
     {
 #endif
       auto ptr = new QDateTime( obj->lastModified () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -930,7 +930,7 @@ QDateTime lastRead() const
 */
 HB_FUNC_STATIC( QFILEINFO_LASTREAD )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QFILEINFO_LASTREAD )
     {
 #endif
       auto ptr = new QDateTime( obj->lastRead () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -955,7 +955,7 @@ bool makeAbsolute()
 */
 HB_FUNC_STATIC( QFILEINFO_MAKEABSOLUTE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -979,7 +979,7 @@ QString owner() const
 */
 HB_FUNC_STATIC( QFILEINFO_OWNER )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1003,7 +1003,7 @@ uint ownerId() const
 */
 HB_FUNC_STATIC( QFILEINFO_OWNERID )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1027,7 +1027,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QFILEINFO_PATH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1051,7 +1051,7 @@ bool permission(QFile::Permissions permissions) const
 */
 HB_FUNC_STATIC( QFILEINFO_PERMISSION )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1075,7 +1075,7 @@ QFile::Permissions permissions() const
 */
 HB_FUNC_STATIC( QFILEINFO_PERMISSIONS )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1099,7 +1099,7 @@ void refresh()
 */
 HB_FUNC_STATIC( QFILEINFO_REFRESH )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1125,7 +1125,7 @@ void setCaching(bool enable)
 */
 HB_FUNC_STATIC( QFILEINFO_SETCACHING )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1151,7 +1151,7 @@ void setFile(const QString & file)
 */
 void QFileInfo_setFile1 ()
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1166,7 +1166,7 @@ void setFile(const QFile & file)
 */
 void QFileInfo_setFile2 ()
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1181,7 +1181,7 @@ void setFile(const QDir & dir, const QString & file)
 */
 void QFileInfo_setFile3 ()
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1220,7 +1220,7 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QFILEINFO_SIZE )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1244,7 +1244,7 @@ QString suffix() const
 */
 HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1268,7 +1268,7 @@ void swap(QFileInfo & other)
 */
 HB_FUNC_STATIC( QFILEINFO_SWAP )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1294,7 +1294,7 @@ QString symLinkTarget() const
 */
 HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
 {
-  auto obj = (QFileInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

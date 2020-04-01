@@ -77,7 +77,7 @@ QSizeF()
 void QSizeF_new1 ()
 {
   auto obj = new QSizeF ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QSizeF(const QSize &sz)
 void QSizeF_new2 ()
 {
   auto obj = new QSizeF ( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QSizeF(qreal w, qreal h)
 void QSizeF_new3 ()
 {
   auto obj = new QSizeF ( PQREAL(1), PQREAL(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QSizeF()
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 HB_FUNC_STATIC( QSIZEF_DELETE )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSIZEF_ISNULL )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZEF_ISEMPTY )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSIZEF_ISVALID )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QSIZEF_WIDTH )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QSIZEF_HEIGHT )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ void setWidth(qreal w)
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ void setHeight(qreal h)
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ void transpose()
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSE )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ QSizeF transposed() const
 */
 HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
     {
 #endif
       auto ptr = new QSizeF( obj->transposed () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
 */
 void QSizeF_scale1 ()
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void scale(const QSizeF &s, Qt::AspectRatioMode mode)
 */
 void QSizeF_scale2 ()
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,12 +416,12 @@ QSizeF scaled(qreal w, qreal h, Qt::AspectRatioMode mode) const
 */
 void QSizeF_scaled1 ()
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QSizeF( obj->scaled ( PQREAL(1), PQREAL(2), (Qt::AspectRatioMode) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -430,12 +430,12 @@ QSizeF scaled(const QSizeF &s, Qt::AspectRatioMode mode) const
 */
 void QSizeF_scaled2 ()
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QSizeF( obj->scaled ( *PQSIZEF(1), (Qt::AspectRatioMode) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -463,7 +463,7 @@ QSizeF expandedTo(const QSizeF &) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
     {
 #endif
       auto ptr = new QSizeF( obj->expandedTo ( *PQSIZEF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ QSizeF boundedTo(const QSizeF &) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
     {
 #endif
       auto ptr = new QSizeF( obj->boundedTo ( *PQSIZEF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ QSize toSize() const
 */
 HB_FUNC_STATIC( QSIZEF_TOSIZE )
 {
-  auto obj = (QSizeF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QSIZEF_TOSIZE )
     {
 #endif
       auto ptr = new QSize( obj->toSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

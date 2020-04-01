@@ -58,7 +58,7 @@ QEventTransition(QState * sourceState = nullptr)
 void QEventTransition_new1 ()
 {
   auto obj = new QEventTransition ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nul
 void QEventTransition_new2 ()
 {
   auto obj = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QEventTransition(QState * sourceState = nullptr)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-  auto obj = (QEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QObject * eventSource() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
-  auto obj = (QEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
     {
 #endif
       QObject * ptr = obj->eventSource ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ QEvent::Type eventType() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
-  auto obj = (QEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ void setEventSource(QObject * object)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
-  auto obj = (QEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setEventType(QEvent::Type type)
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
-  auto obj = (QEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

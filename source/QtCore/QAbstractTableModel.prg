@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DELETE )
 {
-  auto obj = (QAbstractTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -71,7 +71,7 @@ virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int r
 */
 HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DROPMIMEDATA )
 {
-  auto obj = (QAbstractTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QM
 */
 HB_FUNC_STATIC( QABSTRACTTABLEMODEL_INDEX )
 {
-  auto obj = (QAbstractTableModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QABSTRACTTABLEMODEL_INDEX )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

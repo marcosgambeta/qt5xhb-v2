@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QMetaEnum ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
 
 HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ const char *name() const
 */
 HB_FUNC_STATIC( QMETAENUM_NAME )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ bool isFlag() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ int keyCount() const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ const char *key(int index) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEY )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ int value(int index) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ const char *scope() const
 */
 HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ int keyToValue(const char *key) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ const char* valueToKey(int value) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ int keysToValue(const char * keys) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ QByteArray valueToKeys(int value) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
     {
 #endif
       auto ptr = new QByteArray( obj->valueToKeys ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISVALID )
 {
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -401,7 +401,7 @@ const char *QMetaEnum::enumName() const
 HB_FUNC_STATIC( QMETAENUM_ENUMNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ bool QMetaEnum::isScoped() const
 HB_FUNC_STATIC( QMETAENUM_ISSCOPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaEnum *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

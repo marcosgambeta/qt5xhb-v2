@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ void addAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ QList<QAbstractAnimation *> animations () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
     {
 #endif
       QStateMachine * ptr = obj->machine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ void removeAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void setTargetState ( QAbstractState * target )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ void setTargetStates ( const QList<QAbstractState *> & targets )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ QState * sourceState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
     {
 #endif
       QState * ptr = obj->sourceState ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSTATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ QAbstractState * targetState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
     {
 #endif
       QAbstractState * ptr = obj->targetState ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ QList<QAbstractState *> targetStates () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
-  auto obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ void triggered()
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
-  auto sender = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

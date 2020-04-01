@@ -68,7 +68,7 @@ QDebug(QIODevice *device)
 void QDebug_new1 ()
 {
   auto obj = new QDebug ( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QDebug(QtMsgType t)
 void QDebug_new3 ()
 {
   auto obj = new QDebug ( (QtMsgType) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QDebug(const QDebug &o)
 void QDebug_new4 ()
 {
   auto obj = new QDebug ( *PQDEBUG(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDebug(QIODevice *device)
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 HB_FUNC_STATIC( QDEBUG_DELETE )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ void swap(QDebug &other)
 */
 HB_FUNC_STATIC( QDEBUG_SWAP )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ QDebug &space()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     {
 #endif
       QDebug * ptr = &obj->space ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      Qt5xHb::createReturnClass ( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ QDebug &nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
     {
 #endif
       QDebug * ptr = &obj->nospace ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      Qt5xHb::createReturnClass ( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ QDebug &maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     {
 #endif
       QDebug * ptr = &obj->maybeSpace ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      Qt5xHb::createReturnClass ( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ bool autoInsertSpaces() const
 */
 HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setAutoInsertSpaces(bool b)
 */
 HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
 {
-  auto obj = (QDebug *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

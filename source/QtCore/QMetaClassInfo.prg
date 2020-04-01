@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QMetaClassInfo ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 
 HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 {
-  auto obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaClassInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ const char *name() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 {
-  auto obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaClassInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ const char *value() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 {
-  auto obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaClassInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ const QMetaObject *enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
 {
-  auto obj = (QMetaClassInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMetaClassInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

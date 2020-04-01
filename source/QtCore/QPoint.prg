@@ -68,7 +68,7 @@ QPoint()
 void QPoint_new1 ()
 {
   auto obj = new QPoint ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QPoint(int xpos, int ypos)
 void QPoint_new2 ()
 {
   auto obj = new QPoint ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QPoint()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 HB_FUNC_STATIC( QPOINT_DELETE )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ int manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ void setX(int x)
 */
 HB_FUNC_STATIC( QPOINT_SETX )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void setY(int y)
 */
 HB_FUNC_STATIC( QPOINT_SETY )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ int x() const
 */
 HB_FUNC_STATIC( QPOINT_X )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ int y() const
 */
 HB_FUNC_STATIC( QPOINT_Y )
 {
-  auto obj = (QPoint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPoint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

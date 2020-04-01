@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QLIBRARYINFO_DELETE )
 {
-  auto obj = (QLibraryInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLibraryInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
   {
 #endif
     auto ptr = new QDate( QLibraryInfo::buildDate () );
-    _qt5xhb_createReturnClass ( ptr, "QDATE", true );
+    Qt5xHb::createReturnClass ( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

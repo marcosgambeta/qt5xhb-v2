@@ -78,7 +78,7 @@ QEasingCurve ( Type type = Linear )
 void QEasingCurve_new1 ()
 {
   auto obj = new QEasingCurve ( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QEasingCurve ( const QEasingCurve & other )
 void QEasingCurve_new2 ()
 {
   auto obj = new QEasingCurve ( *PQEASINGCURVE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QEasingCurve(Type type = Linear)
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF
 */
 HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
 */
 HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ qreal amplitude() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ qreal overshoot() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ qreal period() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ void setAmplitude(qreal amplitude)
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ void setOvershoot(qreal overshoot)
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -307,7 +307,7 @@ void setPeriod(qreal period)
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ void setType(Type type)
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -359,7 +359,7 @@ void swap(QEasingCurve & other)
 */
 HB_FUNC_STATIC( QEASINGCURVE_SWAP )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ QVector<QPointF> toCubicSpline() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -437,7 +437,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ qreal valueForProgress(qreal progress) const
 */
 HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
 {
-  auto obj = (QEasingCurve *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QEasingCurve *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

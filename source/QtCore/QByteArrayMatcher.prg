@@ -66,7 +66,7 @@ QByteArrayMatcher ()
 void QByteArrayMatcher_new1 ()
 {
   auto obj = new QByteArrayMatcher ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QByteArrayMatcher ( const QByteArray & pattern )
 void QByteArrayMatcher_new2 ()
 {
   auto obj = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QByteArrayMatcher ( const char * pattern, int length )
 void QByteArrayMatcher_new3 ()
 {
   auto obj = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,7 +93,7 @@ QByteArrayMatcher ( const QByteArrayMatcher & other )
 void QByteArrayMatcher_new4 ()
 {
   auto obj = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QByteArrayMatcher()
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 {
-  auto obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn1 ()
 {
-  auto obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ int indexIn ( const char * str, int len, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn2 ()
 {
-  auto obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ QByteArray pattern () const
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
-  auto obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
     {
 #endif
       auto ptr = new QByteArray( obj->pattern () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ void setPattern ( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {
-  auto obj = (QByteArrayMatcher *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -81,7 +81,7 @@ QUrlQuery()
 void QUrlQuery_new1 ()
 {
   auto obj = new QUrlQuery ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QUrlQuery(const QUrl & url)
 void QUrlQuery_new2 ()
 {
   auto obj = new QUrlQuery ( *PQURL(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -99,7 +99,7 @@ QUrlQuery(const QString & queryString)
 void QUrlQuery_new3 ()
 {
   auto obj = new QUrlQuery ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,7 +108,7 @@ QUrlQuery(const QUrlQuery & other)
 void QUrlQuery_new4 ()
 {
   auto obj = new QUrlQuery ( *PQURLQUERY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QUrlQuery()
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
 
 HB_FUNC_STATIC( QURLQUERY_DELETE )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ void addQueryItem(const QString & key, const QString & value)
 */
 HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOpt
 */
 HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void clear()
 */
 HB_FUNC_STATIC( QURLQUERY_CLEAR )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ bool hasQueryItem(const QString & key) const
 */
 HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) c
 */
 HB_FUNC_STATIC( QURLQUERY_QUERY )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions enc
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ QChar queryPairDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
     {
 #endif
       auto ptr = new QChar( obj->queryPairDelimiter () );
-      _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ QChar queryValueDelimiter() const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
     {
 #endif
       auto ptr = new QChar( obj->queryValueDelimiter () );
-      _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ void removeAllQueryItems(const QString & key)
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ void removeQueryItem(const QString & key)
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ void setQuery(const QString & queryString)
 */
 HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ void swap(QUrlQuery & other)
 */
 HB_FUNC_STATIC( QURLQUERY_SWAP )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded
 */
 HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 {
-  auto obj = (QUrlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUrlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
   {
 #endif
     auto ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
   {
 #endif
     auto ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

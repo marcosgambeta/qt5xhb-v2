@@ -73,7 +73,7 @@ QSize ()
 void QSize_new1 ()
 {
   auto obj = new QSize ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QSize ( int width, int height )
 void QSize_new2 ()
 {
   auto obj = new QSize ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QSize ()
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 HB_FUNC_STATIC( QSIZE_DELETE )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QSize boundedTo ( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     {
 #endif
       auto ptr = new QSize( obj->boundedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ QSize expandedTo ( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
     {
 #endif
       auto ptr = new QSize( obj->expandedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ int height () const
 */
 HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSIZE_ISNULL )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSIZE_ISVALID )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void scale ( int width, int height, Qt::AspectRatioMode mode )
 */
 void QSize_scale1 ()
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
 void QSize_scale2 ()
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ void setHeight ( int height )
 */
 HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ void setWidth ( int width )
 */
 HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ void transpose ()
 */
 HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ int width () const
 */
 HB_FUNC_STATIC( QSIZE_WIDTH )
 {
-  auto obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

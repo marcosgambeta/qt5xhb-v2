@@ -67,7 +67,7 @@ QTemporaryDir()
 void QTemporaryDir_new1 ()
 {
   auto obj = new QTemporaryDir ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QTemporaryDir(const QString & templateName)
 void QTemporaryDir_new2 ()
 {
   auto obj = new QTemporaryDir ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QTemporaryDir()
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool remove()
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {
-  auto obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
