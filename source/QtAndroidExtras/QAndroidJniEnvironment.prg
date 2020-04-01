@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QAndroidJniEnvironment ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
 HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QAndroidJniEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
