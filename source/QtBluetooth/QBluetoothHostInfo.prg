@@ -72,7 +72,7 @@ void QBluetoothHostInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QBluetoothHostInfo ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,7 +83,7 @@ void QBluetoothHostInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothHostInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ QBluetoothAddress address() const
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothHostInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
     {
 #endif
       auto ptr = new QBluetoothAddress( obj->address () );
-      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
+      Qt5xHb::createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ void setAddress(const QBluetoothAddress &address)
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothHostInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QString name() const
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothHostInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void setName(const QString &name)
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothHostInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothHostInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

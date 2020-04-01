@@ -92,7 +92,7 @@ void QBluetoothDeviceInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QBluetoothDeviceInfo ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -103,7 +103,7 @@ void QBluetoothDeviceInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QBluetoothDeviceInfo ( *PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -114,7 +114,7 @@ void QBluetoothDeviceInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   auto obj = new QBluetoothDeviceInfo ( *PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -125,7 +125,7 @@ void QBluetoothDeviceInfo_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QBluetoothDeviceInfo ( *PQBLUETOOTHDEVICEINFO(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ bool isValid() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ bool isCached() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ISCACHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ void setCached(bool cached)
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETCACHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ QBluetoothAddress address() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_ADDRESS )
     {
 #endif
       auto ptr = new QBluetoothAddress( obj->address () );
-      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
+      Qt5xHb::createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ QString name() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ ServiceClasses serviceClasses() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICECLASSES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ MajorDeviceClass majorDeviceClass() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MAJORDEVICECLASS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ quint8 minorDeviceClass() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MINORDEVICECLASS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ qint16 rssi() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_RSSI )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ void setRssi(qint16 signal)
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETRSSI )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -450,7 +450,7 @@ void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness comple
 void QBluetoothDeviceInfo_setServiceUuids1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
 void QBluetoothDeviceInfo_setServiceUuids2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ DataCompleteness serviceUuidsCompleteness() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICEUUIDSCOMPLETENESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -547,7 +547,7 @@ QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_CORECONFIGURATIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ void setCoreConfigurations(QBluetoothDeviceInfo::CoreConfigurations coreConfigs)
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETCORECONFIGURATIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -601,7 +601,7 @@ QBluetoothUuid deviceUuid() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_DEVICEUUID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_DEVICEUUID )
     {
 #endif
       auto ptr = new QBluetoothUuid( obj->deviceUuid () );
-      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHUUID", true );
+      Qt5xHb::createReturnClass ( ptr, "QBLUETOOTHUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ void setDeviceUuid(const QBluetoothUuid &uuid)
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETDEVICEUUID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -656,7 +656,7 @@ QByteArray manufacturerData(quint16 manufacturerId) const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERDATA )
     {
 #endif
       auto ptr = new QByteArray( obj->manufacturerData ( PQUINT16(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ bool setManufacturerData(quint16 manufacturerId, const QByteArray &data)
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETMANUFACTURERDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -713,7 +713,7 @@ QVector<quint16> manufacturerIds() const
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  auto obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBluetoothDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
