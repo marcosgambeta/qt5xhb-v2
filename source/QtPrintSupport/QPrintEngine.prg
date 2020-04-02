@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ virtual bool abort () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual bool newPage () = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ virtual QPrinter::PrinterState printerState () const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
     {
 #endif
       auto ptr = new QVariant( obj->property ( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) 
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
-  auto obj = (QPrintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

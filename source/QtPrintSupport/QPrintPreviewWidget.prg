@@ -79,7 +79,7 @@ explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Q
 void QPrintPreviewWidget_new1 ()
 {
   auto obj = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -88,7 +88,7 @@ explicit QPrintPreviewWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags
 void QPrintPreviewWidget_new2 ()
 {
   auto obj = new QPrintPreviewWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_DELETE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ int currentPage () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ QPrinter::Orientation orientation () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ int pageCount () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ ViewMode viewMode () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ qreal zoomFactor () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ ZoomMode zoomMode () const
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ void fitInView ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -328,7 +328,7 @@ void fitToWidth ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ void print ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ void setAllPagesViewMode ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ void setCurrentPage ( int page )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ void setFacingPagesViewMode ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ void setLandscapeOrientation ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ void setOrientation ( QPrinter::Orientation orientation )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ void setPortraitOrientation ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ void setSinglePageViewMode ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -562,7 +562,7 @@ void setViewMode ( ViewMode mode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -588,7 +588,7 @@ void setZoomFactor ( qreal factor )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -614,7 +614,7 @@ void setZoomMode ( ZoomMode zoomMode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -640,7 +640,7 @@ void updatePreview ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -666,7 +666,7 @@ void zoomIn ( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -692,7 +692,7 @@ void zoomOut ( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
 {
-  auto obj = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -718,7 +718,7 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-  auto sender = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -780,7 +780,7 @@ void previewChanged()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-  auto sender = (QPrintPreviewWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -62,7 +62,7 @@ explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Q
 void QPrintPreviewDialog_new1 ()
 {
   auto obj = new QPrintPreviewDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -71,7 +71,7 @@ explicit QPrintPreviewDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags
 void QPrintPreviewDialog_new2 ()
 {
   auto obj = new QPrintPreviewDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 {
-  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
-  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
-  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer ();
-      _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+      Qt5xHb::createReturnClass ( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ virtual void done ( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
-  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
-  auto obj = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void paintRequested( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 {
-  auto sender = (QPrintPreviewDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

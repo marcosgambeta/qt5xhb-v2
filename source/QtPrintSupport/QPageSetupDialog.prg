@@ -59,7 +59,7 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = nullptr )
 void QPageSetupDialog_new1 ()
 {
   auto obj = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QPageSetupDialog ( QWidget * parent = nullptr )
 void QPageSetupDialog_new2 ()
 {
   auto obj = new QPageSetupDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer ();
-      _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+      Qt5xHb::createReturnClass ( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ virtual int exec()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ void done(int result)
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 {
-  auto obj = (QPageSetupDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPageSetupDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

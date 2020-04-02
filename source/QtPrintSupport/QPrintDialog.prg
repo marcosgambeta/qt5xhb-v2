@@ -67,7 +67,7 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
 void QPrintDialog_new1 ()
 {
   auto obj = new QPrintDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QPrintDialog ( QWidget * parent = nullptr )
 void QPrintDialog_new2 ()
 {
   auto obj = new QPrintDialog ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 
 HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ PrintDialogOptions options () const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QPrinter * printer ()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer ();
-      _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+      Qt5xHb::createReturnClass ( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ void setOption ( PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void setOptions ( PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ bool testOption ( PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ void done ( int result )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ int exec ()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
-  auto obj = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ void accepted( QPrinter * printer )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  auto sender = (QPrintDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPrintDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
