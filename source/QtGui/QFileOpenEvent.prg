@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -74,7 +74,7 @@ QString file () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ bool openFile ( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  auto obj = (QFileOpenEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileOpenEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

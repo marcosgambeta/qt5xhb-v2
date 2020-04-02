@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QAccessibleApplication ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -79,7 +79,7 @@ QWindow *window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
     {
 #endif
       QWindow * ptr = obj->window ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILDCOUNT )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ int indexOfChild(const QAccessibleInterface*) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QAccessibleInterface *focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
     {
 #endif
       QAccessibleInterface * ptr = obj->focusChild ();
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ QAccessibleInterface *parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
     {
 #endif
       QAccessibleInterface * ptr = obj->parent ();
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ QAccessibleInterface *child(int index) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
     {
 #endif
       QAccessibleInterface * ptr = obj->child ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ QString text(QAccessible::Text t) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ QAccessible::Role role() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_ROLE )
 {
-  auto obj = (QAccessibleApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

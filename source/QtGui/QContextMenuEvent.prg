@@ -61,7 +61,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos,
 void QContextMenuEvent_new1 ()
 {
   auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3), (Qt::KeyboardModifiers) hb_parni(4) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos 
 void QContextMenuEvent_new2 ()
 {
   auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QContextMenuEvent ( Reason reason, const QPoint & pos )
 void QContextMenuEvent_new3 ()
 {
   auto obj = new QContextMenuEvent ( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ int x () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ int y () const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {
-  auto obj = (QContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

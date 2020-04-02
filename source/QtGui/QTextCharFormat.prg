@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QTextCharFormat ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ void setFont(const QFont &font)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ void setFontFamily(const QString &family)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ QString fontFamily() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void setFontPointSize(qreal size)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ qreal fontPointSize() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ void setFontWeight(int weight)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -348,7 +348,7 @@ int fontWeight() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ void setFontItalic(bool italic)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ bool fontItalic() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ void setFontCapitalization(QFont::Capitalization capitalization)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ QFont::Capitalization fontCapitalization() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -472,7 +472,7 @@ void setFontLetterSpacingType(QFont::SpacingType letterSpacingType)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACINGTYPE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ QFont::SpacingType fontLetterSpacingType() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACINGTYPE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ void setFontLetterSpacing(qreal spacing)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ qreal fontLetterSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -572,7 +572,7 @@ void setFontWordSpacing(qreal spacing)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -598,7 +598,7 @@ qreal fontWordSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -622,7 +622,7 @@ void setFontUnderline(bool underline)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -648,7 +648,7 @@ bool fontUnderline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -672,7 +672,7 @@ void setFontOverline(bool overline)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -698,7 +698,7 @@ bool fontOverline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -722,7 +722,7 @@ void setFontStrikeOut(bool strikeOut)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -748,7 +748,7 @@ bool fontStrikeOut() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -772,7 +772,7 @@ void setUnderlineColor(const QColor &color)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setUnderlineColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setUnderlineColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -798,7 +798,7 @@ QColor underlineColor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
     {
 #endif
       auto ptr = new QColor( obj->underlineColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -823,7 +823,7 @@ void setFontFixedPitch(bool fixedPitch)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -849,7 +849,7 @@ bool fontFixedPitch() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -873,7 +873,7 @@ void setFontStretch(int factor)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRETCH )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -899,7 +899,7 @@ int fontStretch() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRETCH )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -923,7 +923,7 @@ void setFontStyleHint(QFont::StyleHint hint, QFont::StyleStrategy strategy = QFo
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -949,7 +949,7 @@ void setFontStyleStrategy(QFont::StyleStrategy strategy)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -975,7 +975,7 @@ QFont::StyleHint fontStyleHint() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -999,7 +999,7 @@ QFont::StyleStrategy fontStyleStrategy() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1023,7 +1023,7 @@ void setFontHintingPreference(QFont::HintingPreference hintingPreference)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1049,7 +1049,7 @@ QFont::HintingPreference fontHintingPreference() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1073,7 +1073,7 @@ void setFontKerning(bool enable)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1099,7 +1099,7 @@ bool fontKerning() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1123,7 +1123,7 @@ void setUnderlineStyle(UnderlineStyle style)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1149,7 +1149,7 @@ UnderlineStyle underlineStyle() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1173,7 +1173,7 @@ void setVerticalAlignment(VerticalAlignment alignment)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1199,7 +1199,7 @@ VerticalAlignment verticalAlignment() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1223,7 +1223,7 @@ void setTextOutline(const QPen &pen)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1249,7 +1249,7 @@ QPen textOutline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
     {
 #endif
       auto ptr = new QPen( obj->textOutline () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1274,7 +1274,7 @@ void setToolTip(const QString &tip)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1300,7 +1300,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1324,7 +1324,7 @@ void setAnchor(bool anchor)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1350,7 +1350,7 @@ bool isAnchor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1374,7 +1374,7 @@ void setAnchorHref(const QString &value)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1400,7 +1400,7 @@ QString anchorHref() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1424,7 +1424,7 @@ void setAnchorName(const QString &name)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAME )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1450,7 +1450,7 @@ QString anchorName() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAME )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1474,7 +1474,7 @@ void setAnchorNames(const QStringList &names)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1500,7 +1500,7 @@ QStringList anchorNames() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1524,7 +1524,7 @@ void setTableCellRowSpan(int tableCellRowSpan)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTABLECELLROWSPAN )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1550,7 +1550,7 @@ int tableCellRowSpan() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLROWSPAN )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1574,7 +1574,7 @@ void setTableCellColumnSpan(int tableCellColumnSpan)
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTABLECELLCOLUMNSPAN )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1600,7 +1600,7 @@ int tableCellColumnSpan() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TABLECELLCOLUMNSPAN )
 {
-  auto obj = (QTextCharFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCharFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

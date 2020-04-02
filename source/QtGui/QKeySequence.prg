@@ -71,7 +71,7 @@ QKeySequence ()
 void QKeySequence_new1 ()
 {
   auto obj = new QKeySequence ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QKeySequence ( const QString & key )
 void QKeySequence_new2 ()
 {
   auto obj = new QKeySequence ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QKeySequence ( const QString & key, SequenceFormat format )
 void QKeySequence_new3 ()
 {
   auto obj = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 void QKeySequence_new4 ()
 {
   auto obj = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -107,7 +107,7 @@ QKeySequence ( const QKeySequence & keysequence )
 void QKeySequence_new5 ()
 {
   auto obj = new QKeySequence ( *PQKEYSEQUENCE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -116,7 +116,7 @@ QKeySequence ( StandardKey key )
 void QKeySequence_new6 ()
 {
   auto obj = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QKeySequence ()
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ uint count () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ SequenceMatch matches ( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ QString toString ( SequenceFormat format = PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  auto obj = (QKeySequence *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeySequence *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
   {
 #endif
     auto ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    Qt5xHb::createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
   {
 #endif
     auto ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    Qt5xHb::createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

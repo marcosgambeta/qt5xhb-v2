@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
     auto obj = new QHelpEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 
 HB_FUNC_STATIC( QHELPEVENT_DELETE )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ const QPoint & globalPos () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ const QPoint & pos () const
 */
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ int x () const
 */
 HB_FUNC_STATIC( QHELPEVENT_X )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ int y () const
 */
 HB_FUNC_STATIC( QHELPEVENT_Y )
 {
-  auto obj = (QHelpEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

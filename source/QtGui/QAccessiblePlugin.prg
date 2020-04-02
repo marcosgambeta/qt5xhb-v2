@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 {
-  auto obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -70,7 +70,7 @@ virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
 {
-  auto obj = (QAccessiblePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessiblePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
     {
 #endif
       QAccessibleInterface * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -59,7 +59,7 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
-  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
     {
 #endif
       auto ptr = new QTextFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -84,7 +84,7 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
-  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QTextDocument *document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
-  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
-  auto obj = (QTextObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

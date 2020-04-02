@@ -64,7 +64,7 @@ QPicture ( int formatVersion = -1 )
 void QPicture_new1 ()
 {
   auto obj = new QPicture ( OPINT(1,-1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QPicture ( const QPicture & pic )
 void QPicture_new2 ()
 {
   auto obj = new QPicture ( *PQPICTURE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QPicture ( int formatVersion = -1 )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRect( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ const char * data () const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ bool load ( const QString & fileName, const char * format = nullptr )
 */
 void QPicture_load1 ()
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ bool load ( QIODevice * dev, const char * format = nullptr )
 */
 void QPicture_load2 ()
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ bool play ( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ bool save ( const QString & fileName, const char * format = nullptr )
 */
 void QPicture_save1 ()
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ bool save ( QIODevice * dev, const char * format = nullptr )
 */
 void QPicture_save2 ()
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ void setBoundingRect ( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ virtual void setData ( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ uint size () const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ void swap ( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {
-  auto obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     auto obj = new QStatusTipEvent ( PQSTRING(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  auto obj = (QStatusTipEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusTipEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ QString tip() const
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
-  auto obj = (QStatusTipEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusTipEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

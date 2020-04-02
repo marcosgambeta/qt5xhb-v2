@@ -58,7 +58,7 @@ QConicalGradient ()
 void QConicalGradient_new1 ()
 {
   auto obj = new QConicalGradient ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QConicalGradient ( const QPointF & center, qreal angle )
 void QConicalGradient_new2 ()
 {
   auto obj = new QConicalGradient ( *PQPOINTF(1), PQREAL(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QConicalGradient ( qreal cx, qreal cy, qreal angle )
 void QConicalGradient_new3 ()
 {
   auto obj = new QConicalGradient ( PQREAL(1), PQREAL(2), PQREAL(3) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QConicalGradient ()
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 
 HB_FUNC_STATIC( QCONICALGRADIENT_DELETE )
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ qreal angle () const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ QPointF center () const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
     {
 #endif
       auto ptr = new QPointF( obj->center () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ void setAngle ( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ void setCenter ( const QPointF & center )
 */
 void QConicalGradient_setCenter1 ()
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void setCenter ( qreal x, qreal y )
 */
 void QConicalGradient_setCenter2 ()
 {
-  auto obj = (QConicalGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QConicalGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

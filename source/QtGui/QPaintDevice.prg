@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ int colorCount () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ int height () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ int heightMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ int logicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ int logicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ virtual QPaintEngine * paintEngine () const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE", false );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ bool paintingActive () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ int physicalDpiX () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ int physicalDpiY () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ int width () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ int widthMM () const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ virtual int devType() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVTYPE )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ int devicePixelRatio() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEVICEPIXELRATIO )
 {
-  auto obj = (QPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

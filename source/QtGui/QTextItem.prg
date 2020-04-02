@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTITEM_DELETE )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTITEM_WIDTH )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ RenderFlags renderFlags() const
 */
 HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTITEM_TEXT )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTITEM_FONT )
 {
-  auto obj = (QTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

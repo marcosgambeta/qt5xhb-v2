@@ -69,7 +69,7 @@ QOpenGLPaintDevice()
 void QOpenGLPaintDevice_new1 ()
 {
   auto obj = new QOpenGLPaintDevice ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QOpenGLPaintDevice(const QSize &size)
 void QOpenGLPaintDevice_new2 ()
 {
   auto obj = new QOpenGLPaintDevice ( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,7 +87,7 @@ QOpenGLPaintDevice(int width, int height)
 void QOpenGLPaintDevice_new3 ()
 {
   auto obj = new QOpenGLPaintDevice ( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QOpenGLPaintDevice()
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DELETE )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ int devType() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ QPaintEngine *paintEngine() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE", false );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ QOpenGLContext *context() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
     {
 #endif
       QOpenGLContext * ptr = obj->context ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ QSize size() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
     {
 #endif
       auto ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ void setSize(const QSize &size)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ void setDevicePixelRatio(qreal devicePixelRatio)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ qreal dotsPerMeterX() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERX )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ qreal dotsPerMeterY() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ void setDotsPerMeterX(qreal)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ void setDotsPerMeterY(qreal)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ void setPaintFlipped(bool flipped)
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETPAINTFLIPPED )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ bool paintFlipped() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTFLIPPED )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -437,7 +437,7 @@ virtual void ensureActiveTarget()
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_ENSUREACTIVETARGET )
 {
-  auto obj = (QOpenGLPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

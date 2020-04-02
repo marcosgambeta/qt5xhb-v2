@@ -57,7 +57,7 @@ QRegExpValidator ( QObject * parent = nullptr )
 void QRegExpValidator_new1 ()
 {
   auto obj = new QRegExpValidator ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 void QRegExpValidator_new2 ()
 {
   auto obj = new QRegExpValidator ( *PQREGEXP(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QRegExpValidator ( QObject * parent = nullptr )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  auto obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ const QRegExp & regExp () const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  auto obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     {
 #endif
       const QRegExp * ptr = &obj->regExp ();
-      _qt5xhb_createReturnClass ( ptr, "QREGEXP", false );
+      Qt5xHb::createReturnClass ( ptr, "QREGEXP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ void setRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  auto obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ virtual QValidator::State validate ( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  auto obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

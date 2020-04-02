@@ -85,7 +85,7 @@ QPen ()
 void QPen_new1 ()
 {
   auto obj = new QPen ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QPen ( Qt::PenStyle style )
 void QPen_new2 ()
 {
   auto obj = new QPen ( (Qt::PenStyle) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QPen ( const QColor & color )
 */
 void QPen_new3 ()
 {
-  auto obj = new QPen ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QPen ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,7 +112,7 @@ QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt
 void QPen_new4 ()
 {
   auto obj = new QPen ( *PQBRUSH(1), PQREAL(2), ISNIL(3)? (Qt::PenStyle) Qt::SolidLine : (Qt::PenStyle) hb_parni(3), ISNIL(4)? (Qt::PenCapStyle) Qt::SquareCap : (Qt::PenCapStyle) hb_parni(4), ISNIL(5)? (Qt::PenJoinStyle) Qt::BevelJoin : (Qt::PenJoinStyle) hb_parni(5) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,7 +121,7 @@ QPen ( const QPen & pen )
 void QPen_new5 ()
 {
   auto obj = new QPen ( *PQPEN(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QPen ()
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 HB_FUNC_STATIC( QPEN_DELETE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QPEN_BRUSH )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QPEN_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ Qt::PenCapStyle capStyle () const
 */
 HB_FUNC_STATIC( QPEN_CAPSTYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ QColor color () const
 */
 HB_FUNC_STATIC( QPEN_COLOR )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
     {
 #endif
       auto ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ qreal dashOffset () const
 */
 HB_FUNC_STATIC( QPEN_DASHOFFSET )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ bool isCosmetic () const
 */
 HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ bool isSolid () const
 */
 HB_FUNC_STATIC( QPEN_ISSOLID )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ Qt::PenJoinStyle joinStyle () const
 */
 HB_FUNC_STATIC( QPEN_JOINSTYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ qreal miterLimit () const
 */
 HB_FUNC_STATIC( QPEN_MITERLIMIT )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ void setBrush ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPEN_SETBRUSH )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -400,7 +400,7 @@ void setCapStyle ( Qt::PenCapStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -426,7 +426,7 @@ void setColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QPEN_SETCOLOR )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ void setCosmetic ( bool cosmetic )
 */
 HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -478,7 +478,7 @@ void setDashOffset ( qreal offset )
 */
 HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -504,7 +504,7 @@ void setJoinStyle ( Qt::PenJoinStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ void setMiterLimit ( qreal limit )
 */
 HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -556,7 +556,7 @@ void setStyle ( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETSTYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -582,7 +582,7 @@ void setWidth ( int width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTH )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -608,7 +608,7 @@ void setWidthF ( qreal width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTHF )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -634,7 +634,7 @@ Qt::PenStyle style () const
 */
 HB_FUNC_STATIC( QPEN_STYLE )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -658,7 +658,7 @@ int width () const
 */
 HB_FUNC_STATIC( QPEN_WIDTH )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -682,7 +682,7 @@ qreal widthF () const
 */
 HB_FUNC_STATIC( QPEN_WIDTHF )
 {
-  auto obj = (QPen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

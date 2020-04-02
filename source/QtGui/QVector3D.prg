@@ -90,7 +90,7 @@ QVector3D()
 void QVector3D_new1 ()
 {
   auto obj = new QVector3D ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -99,7 +99,7 @@ QVector3D(float xpos, float ypos, float zpos)
 void QVector3D_new2 ()
 {
   auto obj = new QVector3D ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,7 +108,7 @@ QVector3D(const QPoint& point)
 void QVector3D_new3 ()
 {
   auto obj = new QVector3D ( *PQPOINT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,7 +117,7 @@ QVector3D(const QPointF& point)
 void QVector3D_new4 ()
 {
   auto obj = new QVector3D ( *PQPOINTF(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -126,7 +126,7 @@ QVector3D(const QVector2D& vector)
 void QVector3D_new5 ()
 {
   auto obj = new QVector3D ( *PQVECTOR2D(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -135,7 +135,7 @@ QVector3D(const QVector2D& vector, float zpos)
 void QVector3D_new6 ()
 {
   auto obj = new QVector3D ( *PQVECTOR2D(1), PFLOAT(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -144,7 +144,7 @@ QVector3D(const QVector4D& vector)
 void QVector3D_new7 ()
 {
   auto obj = new QVector3D ( *PQVECTOR4D(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QVector3D()
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 HB_FUNC_STATIC( QVECTOR3D_DELETE )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVECTOR3D_ISNULL )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ float x() const
 */
 HB_FUNC_STATIC( QVECTOR3D_X )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ float y() const
 */
 HB_FUNC_STATIC( QVECTOR3D_Y )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ float z() const
 */
 HB_FUNC_STATIC( QVECTOR3D_Z )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ void setX(float x)
 */
 HB_FUNC_STATIC( QVECTOR3D_SETX )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ void setY(float y)
 */
 HB_FUNC_STATIC( QVECTOR3D_SETY )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ void setZ(float z)
 */
 HB_FUNC_STATIC( QVECTOR3D_SETZ )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ float length() const
 */
 HB_FUNC_STATIC( QVECTOR3D_LENGTH )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ float lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR3D_LENGTHSQUARED )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ QVector3D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
     {
 #endif
       auto ptr = new QVector3D( obj->normalized () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ void normalize()
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMALIZE )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ float distanceToPoint(const QVector3D& point) const
 */
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPOINT )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
 */
 void QVector3D_distanceToPlane1 ()
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QV
 */
 void QVector3D_distanceToPlane2 ()
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ float distanceToLine(const QVector3D& point, const QVector3D& direction) const
 */
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -579,7 +579,7 @@ QVector2D toVector2D() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
     {
 #endif
       auto ptr = new QVector2D( obj->toVector2D () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR2D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR2D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -604,7 +604,7 @@ QVector4D toVector4D() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
     {
 #endif
       auto ptr = new QVector4D( obj->toVector4D () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR4D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,7 +629,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
     {
 #endif
       auto ptr = new QPoint( obj->toPoint () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
 {
-  auto obj = (QVector3D *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
     {
 #endif
       auto ptr = new QPointF( obj->toPointF () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
   {
 #endif
     auto ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+    Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -720,7 +720,7 @@ void QVector3D_normal1 ()
 {
 
   auto ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 }
 
 /*
@@ -730,7 +730,7 @@ void QVector3D_normal2 ()
 {
 
   auto ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
-  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 }
 
 //[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)

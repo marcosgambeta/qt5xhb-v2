@@ -123,7 +123,7 @@ QImage ()
 void QImage_new1 ()
 {
   auto obj = new QImage ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -132,7 +132,7 @@ QImage ( const QSize & size, Format format )
 void QImage_new2 ()
 {
   auto obj = new QImage ( *PQSIZE(1), (QImage::Format) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -141,7 +141,7 @@ QImage ( int width, int height, Format format )
 void QImage_new3 ()
 {
   auto obj = new QImage ( PINT(1), PINT(2), (QImage::Format) hb_parni(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -150,7 +150,7 @@ QImage ( uchar * data, int width, int height, Format format )
 void QImage_new4 ()
 {
   auto obj = new QImage ( (uchar *) hb_parc(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -159,7 +159,7 @@ QImage ( const uchar * data, int width, int height, Format format )
 void QImage_new5 ()
 {
   auto obj = new QImage ( PCONSTUCHAR(1), PINT(2), PINT(3), (QImage::Format) hb_parni(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -168,7 +168,7 @@ QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
 void QImage_new6 ()
 {
   auto obj = new QImage ( (uchar *) hb_parc(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -177,7 +177,7 @@ QImage ( const uchar * data, int width, int height, int bytesPerLine, Format for
 void QImage_new7 ()
 {
   auto obj = new QImage ( PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), (QImage::Format) hb_parni(5) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -190,7 +190,7 @@ QImage ( const QString & fileName, const char * format = nullptr )
 HB_FUNC_STATIC( QIMAGE_NEW9 )
 {
   auto obj = new QImage ( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -199,7 +199,7 @@ QImage ( const char * fileName, const char * format = nullptr )
 HB_FUNC_STATIC( QIMAGE_NEW10 )
 {
   auto obj = new QImage ( PCONSTCHAR(1), OPCONSTCHAR(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -208,7 +208,7 @@ QImage ( const QImage & image )
 void QImage_new11 ()
 {
   auto obj = new QImage ( *PQIMAGE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[01]QImage ()
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 
 HB_FUNC_STATIC( QIMAGE_DELETE )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ bool allGray () const
 */
 HB_FUNC_STATIC( QIMAGE_ALLGRAY )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ int bitPlaneCount () const
 */
 HB_FUNC_STATIC( QIMAGE_BITPLANECOUNT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ int byteCount () const
 */
 HB_FUNC_STATIC( QIMAGE_BYTECOUNT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ int bytesPerLine () const
 */
 HB_FUNC_STATIC( QIMAGE_BYTESPERLINE )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ QRgb color ( int i ) const
 */
 HB_FUNC_STATIC( QIMAGE_COLOR )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -417,7 +417,7 @@ int colorCount () const
 */
 HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ QVector<QRgb> colorTable () const
 */
 HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,12 +473,12 @@ QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::Aut
 */
 void QImage_convertToFormat1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->convertToFormat ( (QImage::Format) hb_parni(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -487,7 +487,7 @@ QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::Im
 */
 void QImage_convertToFormat2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ void QImage_convertToFormat2 ()
       par2 << temp2;
     }
     auto ptr = new QImage( obj->convertToFormat ( (QImage::Format) hb_parni(1), par2, ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -529,12 +529,12 @@ QImage copy ( const QRect & rectangle = QRect() ) const
 */
 void QImage_copy1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QImage( obj->copy ( ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    auto ptr = new QImage( obj->copy ( ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) ) );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -543,12 +543,12 @@ QImage copy ( int x, int y, int width, int height ) const
 */
 void QImage_copy2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->copy ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -576,7 +576,7 @@ QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
     {
 #endif
       auto ptr = new QImage( obj->createAlphaMask ( ISNIL(1)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ QImage createHeuristicMask ( bool clipTight = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
     {
 #endif
       auto ptr = new QImage( obj->createHeuristicMask ( OPBOOL(1,true) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -626,7 +626,7 @@ QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) c
 */
 HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
     {
 #endif
       auto ptr = new QImage( obj->createMaskFromColor ( PQRGB(1), ISNIL(2)? (Qt::MaskMode) Qt::MaskInColor : (Qt::MaskMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -651,7 +651,7 @@ int depth () const
 */
 HB_FUNC_STATIC( QIMAGE_DEPTH )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -675,7 +675,7 @@ int dotsPerMeterX () const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERX )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -699,7 +699,7 @@ int dotsPerMeterY () const
 */
 HB_FUNC_STATIC( QIMAGE_DOTSPERMETERY )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -723,7 +723,7 @@ void fill ( uint pixelValue )
 */
 void QImage_fill1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -738,7 +738,7 @@ void fill ( Qt::GlobalColor color )
 */
 void QImage_fill2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -753,11 +753,11 @@ void fill ( const QColor & color )
 */
 void QImage_fill3 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->fill ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+    obj->fill ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -792,7 +792,7 @@ Format format () const
 */
 HB_FUNC_STATIC( QIMAGE_FORMAT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -816,7 +816,7 @@ bool hasAlphaChannel () const
 */
 HB_FUNC_STATIC( QIMAGE_HASALPHACHANNEL )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -840,7 +840,7 @@ int height () const
 */
 HB_FUNC_STATIC( QIMAGE_HEIGHT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -864,7 +864,7 @@ void invertPixels ( InvertMode mode = InvertRgb )
 */
 HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -890,7 +890,7 @@ bool isGrayscale () const
 */
 HB_FUNC_STATIC( QIMAGE_ISGRAYSCALE )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -914,7 +914,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QIMAGE_ISNULL )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -938,7 +938,7 @@ bool load ( const QString & fileName, const char * format = nullptr )
 */
 void QImage_load1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -951,7 +951,7 @@ bool load ( QIODevice * device, const char * format )
 */
 void QImage_load2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -983,7 +983,7 @@ bool loadFromData ( const uchar * data, int len, const char * format = nullptr )
 */
 void QImage_loadFromData1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -996,7 +996,7 @@ bool loadFromData ( const QByteArray & data, const char * format = nullptr )
 */
 void QImage_loadFromData2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1028,7 +1028,7 @@ QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_MIRRORED )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
     {
 #endif
       auto ptr = new QImage( obj->mirrored ( OPBOOL(1,false), OPBOOL(2,true) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1053,7 +1053,7 @@ QPoint offset () const
 */
 HB_FUNC_STATIC( QIMAGE_OFFSET )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QIMAGE_OFFSET )
     {
 #endif
       auto ptr = new QPoint( obj->offset () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1078,7 +1078,7 @@ QRgb pixel ( const QPoint & position ) const
 */
 void QImage_pixel1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1091,7 +1091,7 @@ QRgb pixel ( int x, int y ) const
 */
 void QImage_pixel2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1123,7 +1123,7 @@ int pixelIndex ( const QPoint & position ) const
 */
 void QImage_pixelIndex1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1136,7 +1136,7 @@ int pixelIndex ( int x, int y ) const
 */
 void QImage_pixelIndex2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1168,7 +1168,7 @@ QRect rect () const
 */
 HB_FUNC_STATIC( QIMAGE_RECT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QIMAGE_RECT )
     {
 #endif
       auto ptr = new QRect( obj->rect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1193,7 +1193,7 @@ QImage rgbSwapped () const
 */
 HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
     {
 #endif
       auto ptr = new QImage( obj->rgbSwapped () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1218,7 +1218,7 @@ bool save ( const QString & fileName, const char * format = nullptr, int quality
 */
 void QImage_save1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1231,7 +1231,7 @@ bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 
 */
 void QImage_save2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1263,12 +1263,12 @@ QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::Ig
 */
 void QImage_scaled1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->scaled ( *PQSIZE(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2), ISNIL(3)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -1277,12 +1277,12 @@ QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt:
 */
 void QImage_scaled2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->scaled ( PINT(1), PINT(2), ISNIL(3)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(3), ISNIL(4)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -1310,7 +1310,7 @@ QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransf
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
     {
 #endif
       auto ptr = new QImage( obj->scaledToHeight ( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1335,7 +1335,7 @@ QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransfor
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
     {
 #endif
       auto ptr = new QImage( obj->scaledToWidth ( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1375,7 +1375,7 @@ void setColor ( int index, QRgb colorValue )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLOR )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1401,7 +1401,7 @@ void setColorCount ( int colorCount )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1427,7 +1427,7 @@ void setDotsPerMeterX ( int x )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1453,7 +1453,7 @@ void setDotsPerMeterY ( int y )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1479,7 +1479,7 @@ void setOffset ( const QPoint & offset )
 */
 HB_FUNC_STATIC( QIMAGE_SETOFFSET )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1505,7 +1505,7 @@ void setPixel ( const QPoint & position, uint index_or_rgb )
 */
 void QImage_setPixel1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1520,7 +1520,7 @@ void setPixel ( int x, int y, uint index_or_rgb )
 */
 void QImage_setPixel2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1554,7 +1554,7 @@ void setText ( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGE_SETTEXT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1580,7 +1580,7 @@ QSize size () const
 */
 HB_FUNC_STATIC( QIMAGE_SIZE )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QIMAGE_SIZE )
     {
 #endif
       auto ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1605,7 +1605,7 @@ void swap ( QImage & other )
 */
 HB_FUNC_STATIC( QIMAGE_SWAP )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1631,7 +1631,7 @@ QString text ( const QString & key = QString() ) const
 */
 HB_FUNC_STATIC( QIMAGE_TEXT )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1655,7 +1655,7 @@ QStringList textKeys () const
 */
 HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1679,12 +1679,12 @@ QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::F
 */
 void QImage_transformed1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->transformed ( *PQMATRIX(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -1693,12 +1693,12 @@ QImage transformed ( const QTransform & matrix, Qt::TransformationMode mode = Qt
 */
 void QImage_transformed2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QImage( obj->transformed ( *PQTRANSFORM(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
   }
 }
 
@@ -1726,7 +1726,7 @@ bool valid ( const QPoint & pos ) const
 */
 void QImage_valid1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1739,7 +1739,7 @@ bool valid ( int x, int y ) const
 */
 void QImage_valid2 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1771,7 +1771,7 @@ int width () const
 */
 HB_FUNC_STATIC( QIMAGE_WIDTH )
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1797,7 +1797,7 @@ void QImage_fromData1 ()
 {
 
   auto ptr = new QImage( QImage::fromData ( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,nullptr) ) );
-  _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+  Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 }
 
 /*
@@ -1807,7 +1807,7 @@ void QImage_fromData2 ()
 {
 
   auto ptr = new QImage( QImage::fromData ( *PQBYTEARRAY(1), OPCONSTCHAR(2,nullptr) ) );
-  _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+  Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 }
 
 //[1]static QImage fromData(const uchar *data, int size, const char *format = nullptr)
@@ -1836,7 +1836,7 @@ void QImage_trueMatrix1 ()
 {
 
   auto ptr = new QMatrix( QImage::trueMatrix ( *PQMATRIX(1), PINT(2), PINT(3) ) );
-  _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
+  Qt5xHb::createReturnClass ( ptr, "QMATRIX", true );
 }
 
 /*
@@ -1846,7 +1846,7 @@ void QImage_trueMatrix2 ()
 {
 
   auto ptr = new QTransform( QImage::trueMatrix ( *PQTRANSFORM(1), PINT(2), PINT(3) ) );
-  _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+  Qt5xHb::createReturnClass ( ptr, "QTRANSFORM", true );
 }
 
 //[1]QMatrix trueMatrix(const QMatrix &matrix, int width, int height)
@@ -1874,12 +1874,12 @@ QColor QImage::pixelColor(const QPoint &position) const
 void QImage_pixelColor1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QColor( obj->pixelColor ( *PQPOINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
   }
 #endif
 }
@@ -1890,12 +1890,12 @@ QColor QImage::pixelColor(int x, int y) const
 void QImage_pixelColor2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QColor( obj->pixelColor ( PINT(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
   }
 #endif
 }
@@ -1925,7 +1925,7 @@ bool QImage::reinterpretAsFormat(Format format)
 HB_FUNC_STATIC( QIMAGE_REINTERPRETASFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1951,11 +1951,11 @@ void QImage::setPixelColor(const QPoint &position, const QColor &color)
 void QImage_setPixelColor1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setPixelColor ( *PQPOINT(1), ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
+    obj->setPixelColor ( *PQPOINT(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1968,11 +1968,11 @@ void QImage::setPixelColor(int x, int y, const QColor &color)
 void QImage_setPixelColor2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setPixelColor ( PINT(1), PINT(2), ISOBJECT(3)? *(QColor *) _qt5xhb_itemGetPtr(3) : QColor(hb_parc(3)) );
+    obj->setPixelColor ( PINT(1), PINT(2), ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2004,7 +2004,7 @@ void QImage::convertTo(QImage::Format format, Qt::ImageConversionFlags flags = Q
 HB_FUNC_STATIC( QIMAGE_CONVERTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2031,13 +2031,13 @@ QVariant toVariant ()
 */
 void QImage_toVariant1 ()
 {
-  auto obj = (QImage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QImage>( *obj );
-    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
   }
 }
 
@@ -2049,7 +2049,7 @@ void QImage_toVariant2 ()
   QImage * image = (QImage *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QImage>( *image );
-  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant ()
@@ -2080,7 +2080,7 @@ HB_FUNC_STATIC( QIMAGE_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QImage * image = new QImage( variant->value<QImage>() );
-    _qt5xhb_createReturnClass ( image, "QIMAGE", true );
+    Qt5xHb::createReturnClass ( image, "QIMAGE", true );
   }
   else
   {

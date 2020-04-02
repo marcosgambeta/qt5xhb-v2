@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QIconDragEvent ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 
 HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
-  auto obj = (QIconDragEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIconDragEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

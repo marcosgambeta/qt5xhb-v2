@@ -58,7 +58,7 @@ QInputMethodEvent ()
 void QInputMethodEvent_new1 ()
 {
   auto obj = new QInputMethodEvent ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -71,7 +71,7 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 void QInputMethodEvent_new3 ()
 {
   auto obj = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QInputMethodEvent ()
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ const QString & commitString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ const QString & preeditString () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ int replacementLength () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ int replacementStart () const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void setCommitString ( const QString & commitString, int replaceFrom = 0, int re
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  auto obj = (QInputMethodEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethodEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

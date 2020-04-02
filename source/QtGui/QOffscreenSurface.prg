@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
   if( ISBETWEEN(0,1) && (ISQSCREEN(1)||ISNIL(1)) )
   {
     auto obj = new QOffscreenSurface ( OPQSCREEN(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 
 HB_FUNC_STATIC( QOFFSCREENSURFACE_DELETE )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ QSurface::SurfaceType surfaceType() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SURFACETYPE )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void create()
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_CREATE )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_DESTROY )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ISVALID )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ void setFormat(const QSurfaceFormat &format)
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ QSurfaceFormat format() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_FORMAT )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_FORMAT )
     {
 #endif
       auto ptr = new QSurfaceFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ QSurfaceFormat requestedFormat() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_REQUESTEDFORMAT )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_REQUESTEDFORMAT )
     {
 #endif
       auto ptr = new QSurfaceFormat( obj->requestedFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ QSize size() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
     {
 #endif
       auto ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ QScreen *screen() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
     {
 #endif
       QScreen * ptr = obj->screen ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ void setScreen(QScreen *screen)
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
 {
-  auto obj = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ void screenChanged( QScreen * screen )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 {
-  auto sender = (QOffscreenSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     auto obj = new QFocusEvent ( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
-  auto obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ bool gotFocus () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
-  auto obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ bool lostFocus () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
-  auto obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ Qt::FocusReason reason () const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
-  auto obj = (QFocusEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFocusEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

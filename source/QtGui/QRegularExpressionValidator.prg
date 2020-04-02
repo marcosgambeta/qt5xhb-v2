@@ -58,7 +58,7 @@ QRegularExpressionValidator(QObject *parent = nullptr)
 void QRegularExpressionValidator_new1 ()
 {
   auto obj = new QRegularExpressionValidator ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = null
 void QRegularExpressionValidator_new2 ()
 {
   auto obj = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QRegularExpressionValidator(QObject *parent = nullptr)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 {
-  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
-  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     {
 #endif
       auto ptr = new QRegularExpression( obj->regularExpression () );
-      _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+      Qt5xHb::createReturnClass ( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
-  auto obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ void regularExpressionChanged( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
-  auto sender = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

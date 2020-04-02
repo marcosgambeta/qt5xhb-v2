@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESKTOPSERVICES_DELETE )
 {
-  auto obj = (QDesktopServices *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesktopServices *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -84,7 +84,7 @@ QFontMetricsF ( const QFont & font )
 void QFontMetricsF_new1 ()
 {
   auto obj = new QFontMetricsF ( *PQFONT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,7 +93,7 @@ QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 void QFontMetricsF_new2 ()
 {
   auto obj = new QFontMetricsF ( *PQFONT(1), PQPAINTDEVICE(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,7 +102,7 @@ QFontMetricsF ( const QFontMetrics & fontMetrics )
 void QFontMetricsF_new3 ()
 {
   auto obj = new QFontMetricsF ( *PQFONTMETRICS(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,7 +111,7 @@ QFontMetricsF ( const QFontMetricsF & fm )
 void QFontMetricsF_new4 ()
 {
   auto obj = new QFontMetricsF ( *PQFONTMETRICSF(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QFontMetricsF ( const QFont & font )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 
 HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ qreal ascent () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ qreal averageCharWidth () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,12 +213,12 @@ QRectF boundingRect ( const QString & text ) const
 */
 void QFontMetricsF_boundingRect1 ()
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRectF( obj->boundingRect ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -227,12 +227,12 @@ QRectF boundingRect ( QChar ch ) const
 */
 void QFontMetricsF_boundingRect2 ()
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRectF( obj->boundingRect ( *PQCHAR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -241,13 +241,13 @@ QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int 
 */
 void QFontMetricsF_boundingRect3 ()
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     int par5;
     auto ptr = new QRectF( obj->boundingRect ( *PQRECTF(1), PINT(2), PQSTRING(3), OPINT(4,0), &par5 ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
     hb_storni( par5, 5 );
   }
 }
@@ -281,7 +281,7 @@ qreal descent () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, 
 */
 HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ qreal height () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ bool inFontUcs4 ( uint ch ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ qreal leading () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -401,7 +401,7 @@ qreal lineSpacing () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ qreal lineWidth () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ qreal maxWidth () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ qreal minLeftBearing () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -497,7 +497,7 @@ qreal minRightBearing () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -521,7 +521,7 @@ qreal overlinePos () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -545,7 +545,7 @@ QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray 
 */
 HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 #endif
       int par4;
       auto ptr = new QSizeF( obj->size ( PINT(1), PQSTRING(2), OPINT(3,0), &par4 ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
       hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -572,7 +572,7 @@ qreal strikeOutPos () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -596,7 +596,7 @@ QRectF tightBoundingRect ( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->tightBoundingRect ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,7 +621,7 @@ qreal underlinePos () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -645,7 +645,7 @@ qreal width ( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -669,7 +669,7 @@ qreal xHeight () const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
 {
-  auto obj = (QFontMetricsF *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFontMetricsF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

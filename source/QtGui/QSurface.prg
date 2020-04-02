@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QSURFACE_DELETE )
 {
-  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ SurfaceClass surfaceClass() const
 */
 HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
 {
-  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ virtual QSurfaceFormat format() const = 0
 */
 HB_FUNC_STATIC( QSURFACE_FORMAT )
 {
-  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
     {
 #endif
       auto ptr = new QSurfaceFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ virtual SurfaceType surfaceType() const = 0
 */
 HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
 {
-  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ virtual QSize size() const = 0
 */
 HB_FUNC_STATIC( QSURFACE_SIZE )
 {
-  auto obj = (QSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
     {
 #endif
       auto ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

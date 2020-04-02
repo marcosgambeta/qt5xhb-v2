@@ -104,7 +104,7 @@ QTextLayout()
 void QTextLayout_new1 ()
 {
   auto obj = new QTextLayout ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QTextLayout(const QString& text)
 void QTextLayout_new2 ()
 {
   auto obj = new QTextLayout ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 
 */
 void QTextLayout_new3 ()
 {
-  auto obj = new QTextLayout ( PQSTRING(1), *PQFONT(2), ISNIL(3)? nullptr : (QPaintDevice *) _qt5xhb_itemGetPtr(3) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QTextLayout ( PQSTRING(1), *PQFONT(2), ISNIL(3)? nullptr : (QPaintDevice *) Qt5xHb::itemGetPtr(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -131,7 +131,7 @@ QTextLayout(const QTextBlock &b)
 void QTextLayout_new4 ()
 {
   auto obj = new QTextLayout ( *PQTEXTBLOCK(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QTextLayout()
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ void setFont(const QFont &f)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ void setRawFont(const QRawFont &rawFont)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETRAWFONT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ void setText(const QString& string)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -312,7 +312,7 @@ void setTextOption(const QTextOption &option)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ const QTextOption &textOption() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
     {
 #endif
       const QTextOption * ptr = &obj->textOption ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTOPTION", false );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTOPTION", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ void setPreeditArea(int position, const QString &text)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ int preeditAreaPosition() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ QString preeditAreaText() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -437,7 +437,7 @@ void clearAdditionalFormats()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -463,7 +463,7 @@ void setCacheEnabled(bool enable)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ bool cacheEnabled() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ void setCursorMoveStyle(Qt::CursorMoveStyle style)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -539,7 +539,7 @@ Qt::CursorMoveStyle cursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -563,7 +563,7 @@ void beginLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -589,7 +589,7 @@ void endLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -615,7 +615,7 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -641,7 +641,7 @@ QTextLine createLine()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
     {
 #endif
       auto ptr = new QTextLine( obj->createLine () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -666,7 +666,7 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -690,7 +690,7 @@ QTextLine lineAt(int i) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
     {
 #endif
       auto ptr = new QTextLine( obj->lineAt ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -715,7 +715,7 @@ QTextLine lineForTextPosition(int pos) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
     {
 #endif
       auto ptr = new QTextLine( obj->lineForTextPosition ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTLINE", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ bool isValidCursorPosition(int pos) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -764,7 +764,7 @@ int nextCursorPosition(int oldPos, CursorMode mode = SkipCharacters) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -788,7 +788,7 @@ int previousCursorPosition(int oldPos, CursorMode mode = SkipCharacters) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -812,7 +812,7 @@ int leftCursorPosition(int oldPos) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -836,7 +836,7 @@ int rightCursorPosition(int oldPos) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -860,7 +860,7 @@ void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
 */
 void QTextLayout_drawCursor1 ()
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -875,7 +875,7 @@ void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) 
 */
 void QTextLayout_drawCursor2 ()
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -909,7 +909,7 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
     {
 #endif
       auto ptr = new QPointF( obj->position () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,7 +934,7 @@ void setPosition(const QPointF &p)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -960,7 +960,7 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -985,7 +985,7 @@ qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1009,7 +1009,7 @@ qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1037,7 +1037,7 @@ void setFlags(int flags)
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETFLAGS )
 {
-  auto obj = (QTextLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

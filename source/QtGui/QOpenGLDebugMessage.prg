@@ -70,7 +70,7 @@ QOpenGLDebugMessage()
 void QOpenGLDebugMessage_new1 ()
 {
   auto obj = new QOpenGLDebugMessage ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 void QOpenGLDebugMessage_new2 ()
 {
   auto obj = new QOpenGLDebugMessage ( *PQOPENGLDEBUGMESSAGE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QOpenGLDebugMessage()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_DELETE )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ void swap(QOpenGLDebugMessage &debugMessage)
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ Source source() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ Severity severity() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ GLuint id() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
 {
-  auto obj = (QOpenGLDebugMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLDebugMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
   {
 #endif
     auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
   {
 #endif
     auto ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
+    Qt5xHb::createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

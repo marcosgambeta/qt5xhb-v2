@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
     auto obj = new QExposeEvent ( *PQREGION(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 
 HB_FUNC_STATIC( QEXPOSEEVENT_DELETE )
 {
-  auto obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExposeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -87,7 +87,7 @@ const QRegion & region() const
 */
 HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
 {
-  auto obj = (QExposeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExposeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
     {
 #endif
       const QRegion * ptr = &obj->region ();
-      _qt5xhb_createReturnClass ( ptr, "QREGION", false );
+      Qt5xHb::createReturnClass ( ptr, "QREGION", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

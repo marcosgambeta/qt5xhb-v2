@@ -77,7 +77,7 @@ void clear ( Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ QImage image ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
     {
 #endif
       auto ptr = new QImage( obj->image ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ const QMimeData * mimeData ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
     {
 #endif
       const QMimeData * ptr = obj->mimeData ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMIMEDATA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ bool ownsClipboard () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ bool ownsFindBuffer () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ bool ownsSelection () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ QPixmap pixmap ( Mode mode = Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ void setImage ( const QImage & image, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setMimeData ( QMimeData * src, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -328,7 +328,7 @@ void setText ( const QString & text, Mode mode = Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ bool supportsFindBuffer () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -378,7 +378,7 @@ bool supportsSelection () const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ QString text ( Mode mode = Clipboard ) const
 */
 void QClipboard_text1 ()
 {
-  auto obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ void changed( QClipboard::Mode mode )
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONCHANGED )
 {
-  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -511,7 +511,7 @@ void dataChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONDATACHANGED )
 {
-  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -571,7 +571,7 @@ void findBufferChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONFINDBUFFERCHANGED )
 {
-  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -631,7 +631,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QCLIPBOARD_ONSELECTIONCHANGED )
 {
-  auto sender = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 {
-  auto obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -78,7 +78,7 @@ QWindow *window() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 {
-  auto obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
     {
 #endif
       QWindow * ptr = obj->window ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,7 +103,7 @@ QObject *target() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
 {
-  auto obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
     {
 #endif
       QObject * ptr = obj->target ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ Qt::TouchPointStates touchPointStates() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 {
-  auto obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QTouchDevice *device() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
 {
-  auto obj = (QTouchEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
     {
 #endif
       QTouchDevice * ptr = obj->device ();
-      _qt5xhb_createReturnClass ( ptr, "QTOUCHDEVICE", false );
+      Qt5xHb::createReturnClass ( ptr, "QTOUCHDEVICE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

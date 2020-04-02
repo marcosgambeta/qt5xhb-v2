@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QTextTableFormat ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ int columns() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ void setColumns(int columns)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNS )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ void setColumnWidthConstraints(const QVector<QTextLength> &constraints)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QVector<QTextLength> columnWidthConstraints() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void clearColumnWidthConstraints()
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ qreal cellSpacing() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ void setCellSpacing(qreal spacing)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ qreal cellPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -359,7 +359,7 @@ void setCellPadding(qreal padding)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ void setHeaderRowCount(int count)
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ int headerRowCount() const
 */
 HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
 {
-  auto obj = (QTextTableFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextTableFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

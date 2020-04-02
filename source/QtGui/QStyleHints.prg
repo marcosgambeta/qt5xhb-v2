@@ -62,7 +62,7 @@ int mouseDoubleClickInterval() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_MOUSEDOUBLECLICKINTERVAL )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ int startDragDistance() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGDISTANCE )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ int startDragTime() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGTIME )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ int startDragVelocity() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_STARTDRAGVELOCITY )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ int keyboardInputInterval() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDINPUTINTERVAL )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ int keyboardAutoRepeatRate() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_KEYBOARDAUTOREPEATRATE )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ int cursorFlashTime() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_CURSORFLASHTIME )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool showIsFullScreen() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_SHOWISFULLSCREEN )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ int passwordMaskDelay() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_PASSWORDMASKDELAY )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ qreal fontSmoothingGamma() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_FONTSMOOTHINGGAMMA )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ bool useRtlExtensions() const
 */
 HB_FUNC_STATIC( QSTYLEHINTS_USERTLEXTENSIONS )
 {
-  auto obj = (QStyleHints *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHints *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

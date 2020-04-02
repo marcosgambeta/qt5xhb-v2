@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QTextListFormat ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ void setStyle(Style style)
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ Style style() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ void setIndent(int indent)
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ int indent() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void setNumberPrefix(const QString &numberPrefix)
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ QString numberPrefix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ void setNumberSuffix(const QString &numberSuffix)
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ QString numberSuffix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {
-  auto obj = (QTextListFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextListFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

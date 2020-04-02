@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_DELETE )
 {
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
 {
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ PageSize pageSize() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
 {
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ virtual void setPageSize(PageSize size)
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ QSizeF pageSizeMM() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
 {
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
     {
 #endif
       auto ptr = new QSizeF( obj->pageSizeMM () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ virtual void setPageSizeMM(const QSizeF & size)
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
 {
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QPageLayout pageLayout() const
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
     {
 #endif
       auto ptr = new QPageLayout( obj->pageLayout () );
-      _qt5xhb_createReturnClass ( ptr, "QPAGELAYOUT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAGELAYOUT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ bool setPageLayout(const QPageLayout &pageLayout)
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ bool setPageOrientation(QPageLayout::Orientation orientation)
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ bool setPageMargins(const QMarginsF &margins)
 void QPagedPaintDevice_setPageMargins1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 void QPagedPaintDevice_setPageMargins2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QPagedPaintDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPagedPaintDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

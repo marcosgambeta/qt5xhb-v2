@@ -134,7 +134,7 @@ QTextCursor()
 void QTextCursor_new1 ()
 {
   auto obj = new QTextCursor ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -143,7 +143,7 @@ QTextCursor(QTextDocument *document)
 void QTextCursor_new2 ()
 {
   auto obj = new QTextCursor ( PQTEXTDOCUMENT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -156,7 +156,7 @@ QTextCursor(QTextFrame *frame)
 void QTextCursor_new4 ()
 {
   auto obj = new QTextCursor ( PQTEXTFRAME(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -165,7 +165,7 @@ QTextCursor(const QTextBlock &block)
 void QTextCursor_new5 ()
 {
   auto obj = new QTextCursor ( *PQTEXTBLOCK(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -178,7 +178,7 @@ QTextCursor(const QTextCursor &cursor)
 void QTextCursor_new7 ()
 {
   auto obj = new QTextCursor ( *PQTEXTCURSOR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QTextCursor()
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 
 HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ void swap(QTextCursor &other)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SWAP )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ void setPosition(int pos, MoveMode mode = MoveAnchor)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ int positionInBlock() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ int anchor() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ void insertText(const QString &text)
 */
 void QTextCursor_insertText1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ void insertText(const QString &text, const QTextCharFormat &format)
 */
 void QTextCursor_insertText2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ bool movePosition(MoveOperation op, MoveMode = MoveAnchor, int n = 1)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ bool visualNavigation() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ void setVisualNavigation(bool b)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ void setVerticalMovementX(int x)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ int verticalMovementX() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -560,7 +560,7 @@ void setKeepPositionOnInsert(bool b)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -586,7 +586,7 @@ bool keepPositionOnInsert() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -610,7 +610,7 @@ void deleteChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -636,7 +636,7 @@ void deletePreviousChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -662,7 +662,7 @@ void select(SelectionType selection)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -688,7 +688,7 @@ bool hasSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -712,7 +712,7 @@ bool hasComplexSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -736,7 +736,7 @@ void removeSelectedText()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -762,7 +762,7 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -788,7 +788,7 @@ int selectionStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -812,7 +812,7 @@ int selectionEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -836,7 +836,7 @@ QString selectedText() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -860,7 +860,7 @@ QTextDocumentFragment selection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
     {
 #endif
       auto ptr = new QTextDocumentFragment( obj->selection () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,7 +885,7 @@ void selectedTableCells(int *firstRow, int *numRows, int *firstColumn, int *numC
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -919,7 +919,7 @@ QTextBlock block() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
     {
 #endif
       auto ptr = new QTextBlock( obj->block () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -944,7 +944,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
     {
 #endif
       auto ptr = new QTextCharFormat( obj->charFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -969,7 +969,7 @@ void setCharFormat(const QTextCharFormat &format)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -995,7 +995,7 @@ void mergeCharFormat(const QTextCharFormat &modifier)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1021,7 +1021,7 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
     {
 #endif
       auto ptr = new QTextBlockFormat( obj->blockFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1046,7 +1046,7 @@ void setBlockFormat(const QTextBlockFormat &format)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1072,7 +1072,7 @@ void mergeBlockFormat(const QTextBlockFormat &modifier)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1098,7 +1098,7 @@ QTextCharFormat blockCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
     {
 #endif
       auto ptr = new QTextCharFormat( obj->blockCharFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1123,7 +1123,7 @@ void setBlockCharFormat(const QTextCharFormat &format)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1149,7 +1149,7 @@ void mergeBlockCharFormat(const QTextCharFormat &modifier)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1175,7 +1175,7 @@ bool atBlockStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1199,7 +1199,7 @@ bool atBlockEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1223,7 +1223,7 @@ bool atStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1247,7 +1247,7 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1271,7 +1271,7 @@ void insertBlock()
 */
 void QTextCursor_insertBlock1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1286,7 +1286,7 @@ void insertBlock(const QTextBlockFormat &format)
 */
 void QTextCursor_insertBlock2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1301,7 +1301,7 @@ void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charForm
 */
 void QTextCursor_insertBlock3 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1340,12 +1340,12 @@ QTextList *insertList(const QTextListFormat &format)
 */
 void QTextCursor_insertList1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextList * ptr = obj->insertList ( *PQTEXTLISTFORMAT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1354,12 +1354,12 @@ QTextList *insertList(QTextListFormat::Style style)
 */
 void QTextCursor_insertList2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextList * ptr = obj->insertList ( (QTextListFormat::Style) hb_parni(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1387,12 +1387,12 @@ QTextList *createList(const QTextListFormat &format)
 */
 void QTextCursor_createList1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextList * ptr = obj->createList ( *PQTEXTLISTFORMAT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1401,12 +1401,12 @@ QTextList *createList(QTextListFormat::Style style)
 */
 void QTextCursor_createList2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextList * ptr = obj->createList ( (QTextListFormat::Style) hb_parni(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1434,7 +1434,7 @@ QTextList *currentList() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
     {
 #endif
       QTextList * ptr = obj->currentList ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1459,12 +1459,12 @@ QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
 */
 void QTextCursor_insertTable1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1473,12 +1473,12 @@ QTextTable *insertTable(int rows, int cols)
 */
 void QTextCursor_insertTable2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1506,7 +1506,7 @@ QTextTable *currentTable() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
     {
 #endif
       QTextTable * ptr = obj->currentTable ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTTABLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1531,7 +1531,7 @@ QTextFrame *insertFrame(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
     {
 #endif
       QTextFrame * ptr = obj->insertFrame ( *PQTEXTFRAMEFORMAT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTFRAME" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTFRAME" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1556,7 +1556,7 @@ QTextFrame *currentFrame() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
     {
 #endif
       QTextFrame * ptr = obj->currentFrame ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTFRAME" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTFRAME" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1581,7 +1581,7 @@ void insertFragment(const QTextDocumentFragment &fragment)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1607,7 +1607,7 @@ void insertHtml(const QString &html)
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1633,7 +1633,7 @@ void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alig
 */
 void QTextCursor_insertImage1 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1648,7 +1648,7 @@ void insertImage(const QTextImageFormat &format)
 */
 void QTextCursor_insertImage2 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1663,7 +1663,7 @@ void insertImage(const QString &name)
 */
 void QTextCursor_insertImage3 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1678,7 +1678,7 @@ void insertImage(const QImage &image, const QString &name = QString())
 */
 void QTextCursor_insertImage4 ()
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1722,7 +1722,7 @@ void beginEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1748,7 +1748,7 @@ void joinPreviousEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1774,7 +1774,7 @@ void endEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1800,7 +1800,7 @@ bool isCopyOf(const QTextCursor &other) const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1824,7 +1824,7 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1848,7 +1848,7 @@ int columnNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1872,7 +1872,7 @@ QTextDocument *document() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 {
-  auto obj = (QTextCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1881,7 +1881,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

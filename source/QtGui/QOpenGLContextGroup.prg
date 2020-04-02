@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 {
-  auto obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -74,7 +74,7 @@ QList<QOpenGLContext *> shares() const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 {
-  auto obj = (QOpenGLContextGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOpenGLContextGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
   {
 #endif
     QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXTGROUP" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QOPENGLCONTEXTGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

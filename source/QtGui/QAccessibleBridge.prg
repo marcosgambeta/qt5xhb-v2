@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
 {
-  auto obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleBridge *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ virtual void setRootObject(QAccessibleInterface *) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
 {
-  auto obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleBridge *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual void notifyAccessibilityUpdate(QAccessibleEvent *event) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
 {
-  auto obj = (QAccessibleBridge *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleBridge *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

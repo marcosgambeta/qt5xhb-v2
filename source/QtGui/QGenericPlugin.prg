@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
-  auto obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGenericPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -70,7 +70,7 @@ virtual QObject * create ( const QString & key, const QString & specification ) 
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
-  auto obj = (QGenericPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGenericPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
     {
 #endif
       QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

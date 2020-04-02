@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTENGINE_DELETE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ virtual bool begin ( QPaintDevice * pdev ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ virtual void drawEllipse ( const QRectF & rect )
 */
 void QPaintEngine_drawEllipse1 ()
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ virtual void drawEllipse ( const QRect & rect )
 */
 void QPaintEngine_drawEllipse2 ()
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ virtual void drawImage ( const QRectF & rectangle, const QImage & image, const Q
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ virtual void drawPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & s
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, cons
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ virtual bool end () = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_END )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ bool hasFeature ( PaintEngineFeatures feature ) const
 */
 HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_ISACTIVE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -401,7 +401,7 @@ QPaintDevice * paintDevice () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTDEVICE )
     {
 #endif
       QPaintDevice * ptr = obj->paintDevice ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE", false );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTDEVICE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
     {
 #endif
       QPainter * ptr = obj->painter ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTER", false );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,7 +451,7 @@ void setActive ( bool state )
 */
 HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -477,7 +477,7 @@ virtual Type type () const = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_TYPE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ virtual void updateState ( const QPaintEngineState & state ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
 {
-  auto obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

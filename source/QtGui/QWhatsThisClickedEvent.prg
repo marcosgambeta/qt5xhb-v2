@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     auto obj = new QWhatsThisClickedEvent ( PQSTRING(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
-  auto obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWhatsThisClickedEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ QString href() const
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
-  auto obj = (QWhatsThisClickedEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWhatsThisClickedEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

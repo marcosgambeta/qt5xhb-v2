@@ -80,7 +80,7 @@ QRectF cursorRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_CURSORRECTANGLE )
     {
 #endif
       auto ptr = new QRectF( obj->cursorRectangle () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ Qt::LayoutDirection inputDirection() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTDIRECTION )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ QTransform inputItemTransform() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INPUTITEMTRANSFORM )
     {
 #endif
       auto ptr = new QTransform( obj->inputItemTransform () );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+      Qt5xHb::createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ bool isAnimating() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISANIMATING )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ISVISIBLE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ QRectF keyboardRectangle() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_KEYBOARDRECTANGLE )
     {
 #endif
       auto ptr = new QRectF( obj->keyboardRectangle () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
     {
 #endif
       auto ptr = new QLocale( obj->locale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ void setInputItemTransform(const QTransform & transform)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ void commit()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_COMMIT )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ void hide()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ void invokeAction(Action a, int cursorPosition)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void reset()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_RESET )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void show()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ void update(Qt::InputMethodQueries queries)
 */
 HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
 {
-  auto obj = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ void animatingChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONANIMATINGCHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -520,7 +520,7 @@ void cursorRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONCURSORRECTANGLECHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -580,7 +580,7 @@ void inputDirectionChanged( Qt::LayoutDirection newDirection )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONINPUTDIRECTIONCHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -642,7 +642,7 @@ void keyboardRectangleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONKEYBOARDRECTANGLECHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -702,7 +702,7 @@ void localeChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONLOCALECHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -762,7 +762,7 @@ void visibleChanged()
 */
 HB_FUNC_STATIC( QINPUTMETHOD_ONVISIBLECHANGED )
 {
-  auto sender = (QInputMethod *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

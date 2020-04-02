@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QTouchDevice ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
 
 HB_FUNC_STATIC( QTOUCHDEVICE_DELETE )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ DeviceType type() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ void setName(const QString &name)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ void setType(DeviceType devType)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ void setCapabilities(Capabilities caps)
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
 {
-  auto obj = (QTouchDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouchDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -85,7 +85,7 @@ QIcon ()
 void QIcon_new1 ()
 {
   auto obj = new QIcon ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QIcon ( const QPixmap & pixmap )
 void QIcon_new2 ()
 {
   auto obj = new QIcon ( *PQPIXMAP(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QIcon ( const QIcon & other )
 */
 void QIcon_new3 ()
 {
-  auto obj = new QIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,7 +112,7 @@ QIcon ( const QString & fileName )
 void QIcon_new4 ()
 {
   auto obj = new QIcon ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QIcon ()
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QICON_NEW )
 
 HB_FUNC_STATIC( QICON_DELETE )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) c
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     {
 #endif
       auto ptr = new QSize( obj->actualSize ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
     if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->addFile ( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
+      obj->addFile ( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ qint64 cacheKey () const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Q
 */
 void QIcon_paint1 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment align
 */
 void QIcon_paint2 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,12 +418,12 @@ QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) con
 */
 void QIcon_pixmap1 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -432,12 +432,12 @@ QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap2 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -446,12 +446,12 @@ QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
 void QIcon_pixmap3 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
   }
 }
 
@@ -488,8 +488,8 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
   {
 #endif
-    auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) Qt5xHb::itemGetPtr(2) ) );
+    Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -647,13 +647,13 @@ QVariant toVariant ()
 */
 void QIcon_toVariant1 ()
 {
-  auto obj = (QIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QIcon>( *obj );
-    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
   }
 }
 
@@ -665,7 +665,7 @@ void QIcon_toVariant2 ()
   QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QIcon>( *icon );
-  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant ()
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QICON_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon * icon = new QIcon( variant->value<QIcon>() );
-    _qt5xhb_createReturnClass ( icon, "QICON", true );
+    Qt5xHb::createReturnClass ( icon, "QICON", true );
   }
   else
   {

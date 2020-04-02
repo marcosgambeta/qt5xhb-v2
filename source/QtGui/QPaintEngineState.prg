@@ -83,7 +83,7 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ QBrush backgroundBrush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDBRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->backgroundBrush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ Qt::BGMode backgroundMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BACKGROUNDMODE )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QBrush brush () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSH )
     {
 #endif
       auto ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ bool brushNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHNEEDSRESOLVING )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QPointF brushOrigin () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_BRUSHORIGIN )
     {
 #endif
       auto ptr = new QPointF( obj->brushOrigin () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ Qt::ClipOperation clipOperation () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPOPERATION )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ QPainterPath clipPath () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPPATH )
     {
 #endif
       auto ptr = new QPainterPath( obj->clipPath () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ QRegion clipRegion () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_CLIPREGION )
     {
 #endif
       auto ptr = new QRegion( obj->clipRegion () );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+      Qt5xHb::createReturnClass ( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ QPainter::CompositionMode compositionMode () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_COMPOSITIONMODE )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ bool isClipEnabled () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_ISCLIPENABLED )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_OPACITY )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -397,7 +397,7 @@ QPainter * painter () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PAINTER )
     {
 #endif
       QPainter * ptr = obj->painter ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTER", false );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ QPen pen () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_PEN )
     {
 #endif
       auto ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ bool penNeedsResolving () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_PENNEEDSRESOLVING )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ QPainter::RenderHints renderHints () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_RENDERHINTS )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -495,7 +495,7 @@ QPaintEngine::DirtyFlags state () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_STATE )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -519,7 +519,7 @@ QTransform transform () const
 */
 HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
 {
-  auto obj = (QPaintEngineState *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QPAINTENGINESTATE_TRANSFORM )
     {
 #endif
       auto ptr = new QTransform( obj->transform () );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+      Qt5xHb::createReturnClass ( ptr, "QTRANSFORM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

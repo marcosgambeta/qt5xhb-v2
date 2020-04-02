@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ virtual bool canRead () const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ virtual int currentImageNumber () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ virtual QRect currentImageRect () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
     {
 #endif
       auto ptr = new QRect( obj->currentImageRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ QIODevice * device () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ QByteArray format () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
     {
 #endif
       auto ptr = new QByteArray( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ virtual int imageCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ virtual bool jumpToImage ( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ virtual bool jumpToNextImage ()
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ virtual int loopCount () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ virtual int nextImageDelay () const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ virtual QVariant option ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     {
 #endif
       auto ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ virtual bool read ( QImage * image ) = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ void setDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ void setFormat ( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -445,7 +445,7 @@ virtual void setOption ( ImageOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ virtual bool supportsOption ( ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -495,7 +495,7 @@ virtual bool write ( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {
-  auto obj = (QImageIOHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageIOHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 {
-  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextF
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {
-  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
     {
 #endif
       auto ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *do
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
-  auto obj = (QTextObjectInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextObjectInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

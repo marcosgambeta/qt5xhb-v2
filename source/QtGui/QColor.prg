@@ -151,7 +151,7 @@ QColor ()
 void QColor_new1 ()
 {
   auto obj = new QColor ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -160,7 +160,7 @@ QColor ( int r, int g, int b, int a = 255 )
 void QColor_new2 ()
 {
   auto obj = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -169,7 +169,7 @@ QColor ( QRgb color )
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
   auto obj = new QColor ( PQRGB(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -178,7 +178,7 @@ QColor ( const QString & name )
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
   auto obj = new QColor ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -187,7 +187,7 @@ QColor ( const char * name )
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
   auto obj = new QColor ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -195,8 +195,8 @@ QColor ( const QColor & color )
 */
 void QColor_new6 ()
 {
-  auto obj = new QColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -205,7 +205,7 @@ QColor ( Qt::GlobalColor color )
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
   auto obj = new QColor ( (Qt::GlobalColor) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 // TODO: resolver conflitos: [3] e [4] - [4] e [5]
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QCOLOR_NEW )
 
 HB_FUNC_STATIC( QCOLOR_DELETE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ int alpha () const
 */
 HB_FUNC_STATIC( QCOLOR_ALPHA )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ qreal alphaF () const
 */
 HB_FUNC_STATIC( QCOLOR_ALPHAF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ int black () const
 */
 HB_FUNC_STATIC( QCOLOR_BLACK )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ qreal blackF () const
 */
 HB_FUNC_STATIC( QCOLOR_BLACKF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ int blue () const
 */
 HB_FUNC_STATIC( QCOLOR_BLUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ qreal blueF () const
 */
 HB_FUNC_STATIC( QCOLOR_BLUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ QColor convertTo ( Spec colorSpec ) const
 */
 HB_FUNC_STATIC( QCOLOR_CONVERTTO )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
     {
 #endif
       auto ptr = new QColor( obj->convertTo ( (QColor::Spec) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ int cyan () const
 */
 HB_FUNC_STATIC( QCOLOR_CYAN )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ qreal cyanF () const
 */
 HB_FUNC_STATIC( QCOLOR_CYANF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ QColor darker ( int factor = 200 ) const
 */
 HB_FUNC_STATIC( QCOLOR_DARKER )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
     {
 #endif
       auto ptr = new QColor( obj->darker ( OPINT(1,200) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ void getCmyk ( int * c, int * m, int * y, int * k, int * a = nullptr )
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYK )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -545,7 +545,7 @@ void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = nullptr 
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYKF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -581,7 +581,7 @@ void getHsl ( int * h, int * s, int * l, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSL )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -615,7 +615,7 @@ void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSLF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -649,7 +649,7 @@ void getHsv ( int * h, int * s, int * v, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSV )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -683,7 +683,7 @@ void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSVF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -717,7 +717,7 @@ void getRgb ( int * r, int * g, int * b, int * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGB )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -751,7 +751,7 @@ void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = nullptr ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGBF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -785,7 +785,7 @@ int green () const
 */
 HB_FUNC_STATIC( QCOLOR_GREEN )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -809,7 +809,7 @@ qreal greenF () const
 */
 HB_FUNC_STATIC( QCOLOR_GREENF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -833,7 +833,7 @@ int hslHue () const
 */
 HB_FUNC_STATIC( QCOLOR_HSLHUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -857,7 +857,7 @@ qreal hslHueF () const
 */
 HB_FUNC_STATIC( QCOLOR_HSLHUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -881,7 +881,7 @@ int hslSaturation () const
 */
 HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -905,7 +905,7 @@ qreal hslSaturationF () const
 */
 HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -929,7 +929,7 @@ int hsvHue () const
 */
 HB_FUNC_STATIC( QCOLOR_HSVHUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -953,7 +953,7 @@ qreal hsvHueF () const
 */
 HB_FUNC_STATIC( QCOLOR_HSVHUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -977,7 +977,7 @@ int hsvSaturation () const
 */
 HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1001,7 +1001,7 @@ qreal hsvSaturationF () const
 */
 HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1025,7 +1025,7 @@ int hue () const
 */
 HB_FUNC_STATIC( QCOLOR_HUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1049,7 +1049,7 @@ qreal hueF () const
 */
 HB_FUNC_STATIC( QCOLOR_HUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1073,7 +1073,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QCOLOR_ISVALID )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1097,7 +1097,7 @@ QColor lighter ( int factor = 150 ) const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTER )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
     {
 #endif
       auto ptr = new QColor( obj->lighter ( OPINT(1,150) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1122,7 +1122,7 @@ int lightness () const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1146,7 +1146,7 @@ qreal lightnessF () const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1170,7 +1170,7 @@ int magenta () const
 */
 HB_FUNC_STATIC( QCOLOR_MAGENTA )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1194,7 +1194,7 @@ qreal magentaF () const
 */
 HB_FUNC_STATIC( QCOLOR_MAGENTAF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1218,7 +1218,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QCOLOR_NAME )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1242,7 +1242,7 @@ int red () const
 */
 HB_FUNC_STATIC( QCOLOR_RED )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1266,7 +1266,7 @@ qreal redF () const
 */
 HB_FUNC_STATIC( QCOLOR_REDF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1290,7 +1290,7 @@ QRgb rgb () const
 */
 HB_FUNC_STATIC( QCOLOR_RGB )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1314,7 +1314,7 @@ QRgb rgba () const
 */
 HB_FUNC_STATIC( QCOLOR_RGBA )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1338,7 +1338,7 @@ int saturation () const
 */
 HB_FUNC_STATIC( QCOLOR_SATURATION )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1362,7 +1362,7 @@ qreal saturationF () const
 */
 HB_FUNC_STATIC( QCOLOR_SATURATIONF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1386,7 +1386,7 @@ void setAlpha ( int alpha )
 */
 HB_FUNC_STATIC( QCOLOR_SETALPHA )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1412,7 +1412,7 @@ void setAlphaF ( qreal alpha )
 */
 HB_FUNC_STATIC( QCOLOR_SETALPHAF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1438,7 +1438,7 @@ void setBlue ( int blue )
 */
 HB_FUNC_STATIC( QCOLOR_SETBLUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1464,7 +1464,7 @@ void setBlueF ( qreal blue )
 */
 HB_FUNC_STATIC( QCOLOR_SETBLUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1490,7 +1490,7 @@ void setCmyk ( int c, int m, int y, int k, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETCMYK )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1516,7 +1516,7 @@ void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETCMYKF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1542,7 +1542,7 @@ void setGreen ( int green )
 */
 HB_FUNC_STATIC( QCOLOR_SETGREEN )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1568,7 +1568,7 @@ void setGreenF ( qreal green )
 */
 HB_FUNC_STATIC( QCOLOR_SETGREENF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1594,7 +1594,7 @@ void setHsl ( int h, int s, int l, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSL )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1620,7 +1620,7 @@ void setHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSLF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1646,7 +1646,7 @@ void setHsv ( int h, int s, int v, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSV )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1672,7 +1672,7 @@ void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSVF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1698,7 +1698,7 @@ void setNamedColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1724,7 +1724,7 @@ void setRed ( int red )
 */
 HB_FUNC_STATIC( QCOLOR_SETRED )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1750,7 +1750,7 @@ void setRedF ( qreal red )
 */
 HB_FUNC_STATIC( QCOLOR_SETREDF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1776,7 +1776,7 @@ void setRgb ( int r, int g, int b, int a = 255 )
 */
 void QColor_setRgb1 ()
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1791,7 +1791,7 @@ void setRgb ( QRgb rgb )
 */
 void QColor_setRgb2 ()
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1825,7 +1825,7 @@ void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETRGBF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1851,7 +1851,7 @@ void setRgba ( QRgb rgba )
 */
 HB_FUNC_STATIC( QCOLOR_SETRGBA )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1877,7 +1877,7 @@ Spec spec () const
 */
 HB_FUNC_STATIC( QCOLOR_SPEC )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1901,7 +1901,7 @@ QColor toCmyk () const
 */
 HB_FUNC_STATIC( QCOLOR_TOCMYK )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
     {
 #endif
       auto ptr = new QColor( obj->toCmyk () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1926,7 +1926,7 @@ QColor toHsl () const
 */
 HB_FUNC_STATIC( QCOLOR_TOHSL )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1935,7 +1935,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
     {
 #endif
       auto ptr = new QColor( obj->toHsl () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1951,7 +1951,7 @@ QColor toHsv () const
 */
 HB_FUNC_STATIC( QCOLOR_TOHSV )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1960,7 +1960,7 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
     {
 #endif
       auto ptr = new QColor( obj->toHsv () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1976,7 +1976,7 @@ QColor toRgb () const
 */
 HB_FUNC_STATIC( QCOLOR_TORGB )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1985,7 +1985,7 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
     {
 #endif
       auto ptr = new QColor( obj->toRgb () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2001,7 +2001,7 @@ int value () const
 */
 HB_FUNC_STATIC( QCOLOR_VALUE )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2025,7 +2025,7 @@ qreal valueF () const
 */
 HB_FUNC_STATIC( QCOLOR_VALUEF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2049,7 +2049,7 @@ int yellow () const
 */
 HB_FUNC_STATIC( QCOLOR_YELLOW )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2073,7 +2073,7 @@ qreal yellowF () const
 */
 HB_FUNC_STATIC( QCOLOR_YELLOWF )
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2121,7 +2121,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
   {
 #endif
     auto ptr = new QColor( QColor::fromCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2141,7 +2141,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
   {
 #endif
     auto ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
   {
 #endif
     auto ptr = new QColor( QColor::fromHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2181,7 +2181,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
   {
 #endif
     auto ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2201,7 +2201,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
   {
 #endif
     auto ptr = new QColor( QColor::fromHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2221,7 +2221,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
   {
 #endif
     auto ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2238,7 +2238,7 @@ void QColor_fromRgb1 ()
 {
 
   auto ptr = new QColor( QColor::fromRgb ( PQRGB(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+  Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 }
 
 /*
@@ -2248,7 +2248,7 @@ void QColor_fromRgb2 ()
 {
 
   auto ptr = new QColor( QColor::fromRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+  Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 }
 
 //[1]QColor fromRgb ( QRgb rgb )
@@ -2280,7 +2280,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
   {
 #endif
     auto ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2300,7 +2300,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
   {
 #endif
     auto ptr = new QColor( QColor::fromRgba ( PQRGB(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2469,13 +2469,13 @@ QVariant toVariant ()
 */
 void QColor_toVariant1 ()
 {
-  auto obj = (QColor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QColor>( *obj );
-    _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
   }
 }
 
@@ -2487,7 +2487,7 @@ void QColor_toVariant2 ()
   QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QColor>( *color );
-  _qt5xhb_createReturnClass ( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant ()
@@ -2518,7 +2518,7 @@ HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QColor * color = new QColor( variant->value<QColor>() );
-    _qt5xhb_createReturnClass ( color, "QCOLOR", true );
+    Qt5xHb::createReturnClass ( color, "QCOLOR", true );
   }
   else
   {

@@ -104,7 +104,7 @@ QTextBlock()
 void QTextBlock_new2 ()
 {
   auto obj = new QTextBlock ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QTextBlock(const QTextBlock &o)
 void QTextBlock_new3 ()
 {
   auto obj = new QTextBlock ( *PQTEXTBLOCK(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QTextBlock(QTextDocumentPrivate *priv, int b)
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ bool contains(int position) const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QTextLayout *layout() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
     {
 #endif
       QTextLayout * ptr = obj->layout ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTLAYOUT", false );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTLAYOUT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
     {
 #endif
       auto ptr = new QTextBlockFormat( obj->blockFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCKFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ int blockFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
     {
 #endif
       auto ptr = new QTextCharFormat( obj->charFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ const QTextDocument *document() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
     {
 #endif
       const QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ QTextList *textList() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
     {
 #endif
       QTextList * ptr = obj->textList ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTLIST" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ QTextBlockUserData *userData() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
     {
 #endif
       QTextBlockUserData * ptr = obj->userData ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCKUSERDATA", false );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCKUSERDATA", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ void setUserData(QTextBlockUserData *data)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -552,7 +552,7 @@ int userState() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -576,7 +576,7 @@ void setUserState(int state)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ int revision() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void setRevision(int rev)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -676,7 +676,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -702,7 +702,7 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -726,7 +726,7 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -750,7 +750,7 @@ void setLineCount(int count)
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -776,7 +776,7 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -800,7 +800,7 @@ QTextBlock next() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
     {
 #endif
       auto ptr = new QTextBlock( obj->next () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,7 +825,7 @@ QTextBlock previous() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
     {
 #endif
       auto ptr = new QTextBlock( obj->previous () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTBLOCK", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTBLOCK", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -854,7 +854,7 @@ int fragmentIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FRAGMENTINDEX )
 {
-  auto obj = (QTextBlock *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBlock *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

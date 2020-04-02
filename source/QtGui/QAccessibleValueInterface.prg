@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_DELETE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ virtual QVariant currentValue() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_CURRENTVALUE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_CURRENTVALUE )
     {
 #endif
       auto ptr = new QVariant( obj->currentValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,7 +108,7 @@ virtual void setCurrentValue(const QVariant &value) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_SETCURRENTVALUE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ virtual QVariant maximumValue() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MAXIMUMVALUE )
     {
 #endif
       auto ptr = new QVariant( obj->maximumValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ virtual QVariant minimumValue() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMVALUE )
     {
 #endif
       auto ptr = new QVariant( obj->minimumValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ virtual QVariant minimumStepSize() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE )
 {
-  auto obj = (QAccessibleValueInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAccessibleValueInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUEINTERFACE_MINIMUMSTEPSIZE )
     {
 #endif
       auto ptr = new QVariant( obj->minimumStepSize () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

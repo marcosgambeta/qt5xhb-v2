@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   if( ISBETWEEN(3,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) )
   {
     auto obj = new QKeyEvent ( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ int count () const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ bool isAutoRepeat () const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ bool matches ( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ quint32 nativeModifiers () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ quint32 nativeScanCode () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ quint32 nativeVirtualKey () const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  auto obj = (QKeyEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

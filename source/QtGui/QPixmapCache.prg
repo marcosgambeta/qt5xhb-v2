@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QPIXMAPCACHE_DELETE )
 {
-  auto obj = (QPixmapCache *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPixmapCache *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
   {
 #endif
     QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
-    _qt5xhb_createReturnClass ( ptr, "QPIXMAP", false );
+    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

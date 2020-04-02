@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
     auto obj = new QTextFrame ( PQTEXTDOCUMENT(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ void setFrameFormat(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
     {
 #endif
       auto ptr = new QTextFrameFormat( obj->frameFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTFRAMEFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTFRAMEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
     {
 #endif
       auto ptr = new QTextCursor( obj->firstCursorPosition () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
     {
 #endif
       auto ptr = new QTextCursor( obj->lastCursorPosition () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QTextFrame *parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  auto obj = (QTextFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
     {
 #endif
       QTextFrame * ptr = obj->parentFrame ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTFRAME" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTFRAME" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

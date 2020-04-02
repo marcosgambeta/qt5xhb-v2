@@ -91,7 +91,7 @@ QSurfaceFormat()
 void QSurfaceFormat_new1 ()
 {
   auto obj = new QSurfaceFormat ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,7 +100,7 @@ QSurfaceFormat(FormatOptions options)
 void QSurfaceFormat_new2 ()
 {
   auto obj = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -109,7 +109,7 @@ QSurfaceFormat(const QSurfaceFormat &other)
 void QSurfaceFormat_new3 ()
 {
   auto obj = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QSurfaceFormat()
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 
 HB_FUNC_STATIC( QSURFACEFORMAT_DELETE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void setDepthBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ int depthBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ void setStencilBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ int stencilBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ void setRedBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ int redBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ void setGreenBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ int greenBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ void setBlueBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ int blueBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void setAlphaBufferSize(int size)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ int alphaBufferSize() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ void setSamples(int numSamples)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ int samples() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -508,7 +508,7 @@ void setSwapBehavior(SwapBehavior behavior)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -534,7 +534,7 @@ SwapBehavior swapBehavior() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -558,7 +558,7 @@ bool hasAlpha() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -582,7 +582,7 @@ void setProfile(OpenGLContextProfile profile)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -608,7 +608,7 @@ OpenGLContextProfile profile() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -632,7 +632,7 @@ void setRenderableType(RenderableType type)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -658,7 +658,7 @@ RenderableType renderableType() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -682,7 +682,7 @@ void setMajorVersion(int majorVersion)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -708,7 +708,7 @@ int majorVersion() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -732,7 +732,7 @@ void setMinorVersion(int minorVersion)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -758,7 +758,7 @@ int minorVersion() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -782,7 +782,7 @@ bool stereo() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -806,7 +806,7 @@ void setStereo(bool enable)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -832,7 +832,7 @@ void setOption(QSurfaceFormat::FormatOptions opt)
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -858,7 +858,7 @@ bool testOption(QSurfaceFormat::FormatOptions opt) const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
 {
-  auto obj = (QSurfaceFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
