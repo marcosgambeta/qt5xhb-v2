@@ -91,7 +91,7 @@ explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = null
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_DELETE )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ Qt::Key activeKey() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ACTIVEKEY )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ Qt::Key previousKey() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PREVIOUSKEY )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QVirtualKeyboardAbstractInputMethod *inputMethod() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
     {
 #endif
       QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ void setInputMethod(QVirtualKeyboardAbstractInputMethod *inputMethod)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMETHOD )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ QList<int> inputModes() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
     {
 #endif
       QList<int> list = obj->inputModes ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ void setInputMode(InputMode inputMode)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ QList<int> patternRecognitionModes() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
     {
 #endif
       QList<int> list = obj->patternRecognitionModes ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ QVirtualKeyboardSelectionListModel *wordCandidateListModel() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
     {
 #endif
       QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ bool wordCandidateListVisibleHint() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTVISIBLEHINT )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ Q_INVOKABLE bool virtualKeyPress(Qt::Key key, const QString &text, Qt::KeyboardM
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYPRESS )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ Q_INVOKABLE void virtualKeyCancel()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCANCEL )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ Q_INVOKABLE bool virtualKeyRelease(Qt::Key key, const QString &text, Qt::Keyboar
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -419,7 +419,7 @@ Q_INVOKABLE bool virtualKeyClick(Qt::Key key, const QString &text, Qt::KeyboardM
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -443,7 +443,7 @@ QVirtualKeyboardInputContext *inputContext() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
     {
 #endif
       QVirtualKeyboardInputContext * ptr = obj->inputContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,7 +472,7 @@ Q_INVOKABLE bool traceEnd(QVirtualKeyboardTrace *trace)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_TRACEEND )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ bool clickPreeditText(int cursorPosition)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
 {
-  auto obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -616,7 +616,7 @@ void activeKeyChanged( Qt::Key key )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -678,7 +678,7 @@ void previousKeyChanged( Qt::Key key )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -740,7 +740,7 @@ void inputMethodChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -800,7 +800,7 @@ void inputMethodReset()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -860,7 +860,7 @@ void inputMethodUpdate()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -920,7 +920,7 @@ void inputModesChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -980,7 +980,7 @@ void inputModeChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1040,7 +1040,7 @@ void patternRecognitionModesChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1100,7 +1100,7 @@ void wordCandidateListModelChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1160,7 +1160,7 @@ void wordCandidateListVisibleHintChanged()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGED )
 {
-  auto sender = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
