@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
   if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
     auto obj = new QJSValueIterator ( *PQJSVALUE(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 
 HB_FUNC_STATIC( QJSVALUEITERATOR_DELETE )
 {
-  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ bool hasNext() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
 {
-  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
 {
-  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool next()
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
 {
-  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ QJSValue value() const
 */
 HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
 {
-  auto obj = (QJSValueIterator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValueIterator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
     {
 #endif
       auto ptr = new QJSValue( obj->value () );
-      _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

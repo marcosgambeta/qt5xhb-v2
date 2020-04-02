@@ -104,7 +104,7 @@ QJSValue(SpecialValue value = UndefinedValue)
 HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
   auto obj = new QJSValue ( ISNIL(1)? (QJSValue::SpecialValue) QJSValue::UndefinedValue : (QJSValue::SpecialValue) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QJSValue(const QJSValue & other)
 void QJSValue_new2 ()
 {
   auto obj = new QJSValue ( *PQJSVALUE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -122,7 +122,7 @@ QJSValue(bool value)
 void QJSValue_new3 ()
 {
   auto obj = new QJSValue ( PBOOL(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -131,7 +131,7 @@ QJSValue(int value)
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
   auto obj = new QJSValue ( PINT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -140,7 +140,7 @@ QJSValue(uint value)
 HB_FUNC_STATIC( QJSVALUE_NEW5 )
 {
   auto obj = new QJSValue ( PUINT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -149,7 +149,7 @@ QJSValue(double value)
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
   auto obj = new QJSValue ( PDOUBLE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -158,7 +158,7 @@ QJSValue(const QString & value)
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
   auto obj = new QJSValue ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -167,7 +167,7 @@ QJSValue(const QLatin1String & value)
 void QJSValue_new8 ()
 {
   auto obj = new QJSValue ( *PQLATIN1STRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -176,7 +176,7 @@ QJSValue(const char * value)
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
   auto obj = new QJSValue ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QJSValue(SpecialValue value = UndefinedValue)
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
 
 HB_FUNC_STATIC( QJSVALUE_DELETE )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ bool deleteProperty(const QString & name)
 */
 HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ bool equals(const QJSValue & other) const
 */
 HB_FUNC_STATIC( QJSVALUE_EQUALS )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ bool hasOwnProperty(const QString & name) const
 */
 HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ bool hasProperty(const QString & name) const
 */
 HB_FUNC_STATIC( QJSVALUE_HASPROPERTY )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ bool isArray() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISARRAY )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ bool isBool() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISBOOL )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ bool isCallable() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISCALLABLE )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ bool isDate() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISDATE )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ bool isError() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISERROR )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -459,7 +459,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISNULL )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ bool isNumber() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISNUMBER )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -507,7 +507,7 @@ bool isObject() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISOBJECT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -531,7 +531,7 @@ bool isQObject() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISQOBJECT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ bool isRegExp() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISREGEXP )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -579,7 +579,7 @@ bool isString() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISSTRING )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -603,7 +603,7 @@ bool isUndefined() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISUNDEFINED )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -627,7 +627,7 @@ bool isVariant() const
 */
 HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -651,12 +651,12 @@ QJSValue property(const QString & name) const
 */
 void QJSValue_property1 ()
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QJSValue( obj->property ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+    Qt5xHb::createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
 
@@ -665,12 +665,12 @@ QJSValue property(quint32 arrayIndex) const
 */
 void QJSValue_property2 ()
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QJSValue( obj->property ( PQUINT32(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+    Qt5xHb::createReturnClass ( ptr, "QJSVALUE", true );
   }
 }
 
@@ -698,7 +698,7 @@ QJSValue prototype() const
 */
 HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
     {
 #endif
       auto ptr = new QJSValue( obj->prototype () );
-      _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass ( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,7 +723,7 @@ void setProperty(const QString & name, const QJSValue & value)
 */
 void QJSValue_setProperty1 ()
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -738,7 +738,7 @@ void setProperty(quint32 arrayIndex, const QJSValue & value)
 */
 void QJSValue_setProperty2 ()
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -772,7 +772,7 @@ void setPrototype(const QJSValue & prototype)
 */
 HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -798,7 +798,7 @@ bool strictlyEquals(const QJSValue & other) const
 */
 HB_FUNC_STATIC( QJSVALUE_STRICTLYEQUALS )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -822,7 +822,7 @@ bool toBool() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOBOOL )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -846,7 +846,7 @@ QDateTime toDateTime() const
 */
 HB_FUNC_STATIC( QJSVALUE_TODATETIME )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QJSVALUE_TODATETIME )
     {
 #endif
       auto ptr = new QDateTime( obj->toDateTime () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -871,7 +871,7 @@ qint32 toInt() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOINT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -895,7 +895,7 @@ double toNumber() const
 */
 HB_FUNC_STATIC( QJSVALUE_TONUMBER )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -919,7 +919,7 @@ QObject * toQObject() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QJSVALUE_TOQOBJECT )
     {
 #endif
       QObject * ptr = obj->toQObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -944,7 +944,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOSTRING )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -968,7 +968,7 @@ quint32 toUInt() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOUINT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -992,7 +992,7 @@ QVariant toVariant() const
 */
 HB_FUNC_STATIC( QJSVALUE_TOVARIANT )
 {
-  auto obj = (QJSValue *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QJSValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QJSVALUE_TOVARIANT )
     {
 #endif
       auto ptr = new QVariant( obj->toVariant () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -68,7 +68,7 @@ QQmlScriptString()
 void QQmlScriptString_new1 ()
 {
   auto obj = new QQmlScriptString ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QQmlScriptString(const QQmlScriptString & other)
 void QQmlScriptString_new2 ()
 {
   auto obj = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QQmlScriptString()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ bool booleanLiteral(bool * ok) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ bool isNullLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ bool isUndefinedLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ qreal numberLiteral(bool * ok) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QString stringLiteral() const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
 {
-  auto obj = (QQmlScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

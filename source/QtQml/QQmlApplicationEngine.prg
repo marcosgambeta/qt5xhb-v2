@@ -64,7 +64,7 @@ void QQmlApplicationEngine_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QQmlApplicationEngine ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -75,7 +75,7 @@ void QQmlApplicationEngine_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QQmlApplicationEngine ( *PQURL(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -86,7 +86,7 @@ void QQmlApplicationEngine_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QQmlApplicationEngine ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ QList<QObject*> rootObjects()
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ void load(const QUrl &url)
 void QQmlApplicationEngine_load1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ void load(const QString &filePath)
 void QQmlApplicationEngine_load2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ void loadData(const QByteArray &data, const QUrl &url = QUrl())
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
     if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
     {
 #endif
-      obj->loadData ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) );
+      obj->loadData ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ void objectCreated( QObject * obj, const QUrl & url )
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ONOBJECTCREATED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QQmlApplicationEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQmlApplicationEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

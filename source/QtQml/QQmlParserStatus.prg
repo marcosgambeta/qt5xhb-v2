@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLPARSERSTATUS_DELETE )
 {
-  auto obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlParserStatus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ virtual void classBegin() = 0
 */
 HB_FUNC_STATIC( QQMLPARSERSTATUS_CLASSBEGIN )
 {
-  auto obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlParserStatus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual void componentComplete() = 0
 */
 HB_FUNC_STATIC( QQMLPARSERSTATUS_COMPONENTCOMPLETE )
 {
-  auto obj = (QQmlParserStatus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlParserStatus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

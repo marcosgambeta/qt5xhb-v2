@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_DELETE )
 {
-  auto obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -70,7 +70,7 @@ virtual void initializeEngine(QQmlEngine * engine, const char * uri)
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
-  auto obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ virtual void registerTypes(const char * uri) = 0
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  auto obj = (QQmlExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

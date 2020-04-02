@@ -78,7 +78,7 @@ QQmlExpression()
 void QQmlExpression_new1 ()
 {
   auto obj = new QQmlExpression ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,7 +87,7 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 void QQmlExpression_new2 ()
 {
   auto obj = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -96,7 +96,7 @@ QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QO
 void QQmlExpression_new3 ()
 {
   auto obj = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QQmlExpression()
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 
 HB_FUNC_STATIC( QQMLEXPRESSION_DELETE )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ void clearError()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_CLEARERROR )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ int columnNumber() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ QQmlContext * context() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
     {
 #endif
       QQmlContext * ptr = obj->context ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ QQmlError error() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
     {
 #endif
       auto ptr = new QQmlError( obj->error () );
-      _qt5xhb_createReturnClass ( ptr, "QQMLERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QQMLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ QVariant evaluate(bool * valueIsUndefined = nullptr)
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 #endif
       bool par1;
       auto ptr = new QVariant( obj->evaluate ( &par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -297,7 +297,7 @@ QString expression() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ bool hasError() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_HASERROR )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ bool notifyOnValueChanged() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_NOTIFYONVALUECHANGED )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ QObject * scopeObject() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
     {
 #endif
       QObject * ptr = obj->scopeObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ void setExpression(const QString & expression)
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ void setNotifyOnValueChanged(bool notifyOnChange)
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -470,7 +470,7 @@ void setSourceLocation(const QString & url, int line, int column = 0)
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -496,7 +496,7 @@ QString sourceFile() const
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
 {
-  auto obj = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -520,7 +520,7 @@ void valueChanged()
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 {
-  auto sender = (QQmlExpression *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

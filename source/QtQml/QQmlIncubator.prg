@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
     auto obj = new QQmlIncubator ( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 
 HB_FUNC_STATIC( QQMLINCUBATOR_DELETE )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ void clear()
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ void forceCompletion()
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ IncubationMode incubationMode() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ bool isError() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ bool isLoading() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ bool isReady() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
     {
 #endif
       QObject * ptr = obj->object ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
 {
-  auto obj = (QQmlIncubator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

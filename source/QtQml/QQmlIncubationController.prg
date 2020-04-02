@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QQmlIncubationController ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_DELETE )
 {
-  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
 {
-  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ void incubateFor(int msecs)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 {
-  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ void incubateWhile(volatile bool * flag, int msecs = 0)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 {
-  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ int incubatingObjectCount() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
 {
-  auto obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
