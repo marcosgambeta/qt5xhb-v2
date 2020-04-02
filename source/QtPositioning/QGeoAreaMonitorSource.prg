@@ -73,7 +73,7 @@ RETURN
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ virtual QGeoPositionInfoSource* positionInfoSource() const
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
     {
 #endif
       QGeoPositionInfoSource * ptr = obj->positionInfoSource ();
-      _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
+      Qt5xHb::createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ QString sourceName() const
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SOURCENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ virtual Error error() const = 0
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ virtual AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char *signa
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 void QGeoAreaMonitorSource_activeMonitors1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) c
 void QGeoAreaMonitorSource_activeMonitors2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
   {
 #endif
     QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource ( PQOBJECT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
   {
 #endif
     QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( PQSTRING(1), PQOBJECT(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -478,7 +478,7 @@ void areaEntered( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & 
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -546,7 +546,7 @@ void areaExited( const QGeoAreaMonitorInfo & monitor, const QGeoPositionInfo & u
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAEXITED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -614,7 +614,7 @@ void monitorExpired( const QGeoAreaMonitorInfo & monitor )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONMONITOREXPIRED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -680,7 +680,7 @@ void error( QGeoAreaMonitorSource::Error error )
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto sender = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

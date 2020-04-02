@@ -77,7 +77,7 @@ void QGeoSatelliteInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QGeoSatelliteInfo ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -88,7 +88,7 @@ void QGeoSatelliteInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 HB_FUNC_STATIC( QGEOSATELLITEINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ void setSatelliteSystem(SatelliteSystem system)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ SatelliteSystem satelliteSystem() const
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ void setSatelliteIdentifier(int satId)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ int satelliteIdentifier() const
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ void setSignalStrength(int signalStrength)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSIGNALSTRENGTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ int signalStrength() const
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ void setAttribute(Attribute attribute, qreal value)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ qreal attribute(Attribute attribute) const
 HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ void removeAttribute(Attribute attribute)
 HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ bool hasAttribute(Attribute attribute) const
 HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QGeoSatelliteInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoSatelliteInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
