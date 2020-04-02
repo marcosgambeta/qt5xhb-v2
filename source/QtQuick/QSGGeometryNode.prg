@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QSGGeometryNode ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 
 HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
 {
-  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ QSGMaterial * material() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
 {
-  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
     {
 #endif
       QSGMaterial * ptr = obj->material ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ QSGMaterial * opaqueMaterial() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 {
-  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
     {
 #endif
       QSGMaterial * ptr = obj->opaqueMaterial ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ void setMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 {
-  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void setOpaqueMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
 {
-  auto obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

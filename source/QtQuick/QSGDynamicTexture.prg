@@ -51,7 +51,7 @@ virtual bool updateTexture() = 0
 */
 HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
 {
-  auto obj = (QSGDynamicTexture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGDynamicTexture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

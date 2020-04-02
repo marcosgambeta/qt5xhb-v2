@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSGNODE_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QSGNode ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSGNODE_NEW )
 
 HB_FUNC_STATIC( QSGNODE_DELETE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ void appendChildNode(QSGNode * node)
 */
 HB_FUNC_STATIC( QSGNODE_APPENDCHILDNODE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ QSGNode * childAtIndex(int i) const
 */
 HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
     {
 #endif
       QSGNode * ptr = obj->childAtIndex ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QSGNODE_CHILDCOUNT )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ QSGNode * firstChild() const
 */
 HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
     {
 #endif
       QSGNode * ptr = obj->firstChild ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ Flags flags() const
 */
 HB_FUNC_STATIC( QSGNODE_FLAGS )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ void insertChildNodeAfter(QSGNode * node, QSGNode * after)
 */
 HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEAFTER )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ void insertChildNodeBefore(QSGNode * node, QSGNode * before)
 */
 HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEBEFORE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ virtual bool isSubtreeBlocked() const
 */
 HB_FUNC_STATIC( QSGNODE_ISSUBTREEBLOCKED )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ QSGNode * lastChild() const
 */
 HB_FUNC_STATIC( QSGNODE_LASTCHILD )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
     {
 #endif
       QSGNode * ptr = obj->lastChild ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ void markDirty(DirtyState bits)
 */
 HB_FUNC_STATIC( QSGNODE_MARKDIRTY )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ QSGNode * nextSibling() const
 */
 HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
     {
 #endif
       QSGNode * ptr = obj->nextSibling ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ QSGNode * parent() const
 */
 HB_FUNC_STATIC( QSGNODE_PARENT )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
     {
 #endif
       QSGNode * ptr = obj->parent ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ void prependChildNode(QSGNode * node)
 */
 HB_FUNC_STATIC( QSGNODE_PREPENDCHILDNODE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ virtual void preprocess()
 */
 HB_FUNC_STATIC( QSGNODE_PREPROCESS )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ QSGNode * previousSibling() const
 */
 HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
     {
 #endif
       QSGNode * ptr = obj->previousSibling ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ void removeAllChildNodes()
 */
 HB_FUNC_STATIC( QSGNODE_REMOVEALLCHILDNODES )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ void removeChildNode(QSGNode * node)
 */
 HB_FUNC_STATIC( QSGNODE_REMOVECHILDNODE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -544,7 +544,7 @@ void setFlag(Flag f, bool enabled = true)
 */
 HB_FUNC_STATIC( QSGNODE_SETFLAG )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -570,7 +570,7 @@ void setFlags(Flags f, bool enabled = true)
 */
 HB_FUNC_STATIC( QSGNODE_SETFLAGS )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -596,7 +596,7 @@ NodeType type() const
 */
 HB_FUNC_STATIC( QSGNODE_TYPE )
 {
-  auto obj = (QSGNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

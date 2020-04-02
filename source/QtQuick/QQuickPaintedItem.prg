@@ -77,7 +77,7 @@ RETURN
 
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_DELETE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ bool antialiasing() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ANTIALIASING )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ QRectF contentsBoundingRect() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSBOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->contentsBoundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ qreal contentsScale() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSCALE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QSize contentsSize() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_CONTENTSSIZE )
     {
 #endif
       auto ptr = new QSize( obj->contentsSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ QColor fillColor() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_FILLCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->fillColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ bool mipmap() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_MIPMAP )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ bool opaquePainting() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_OPAQUEPAINTING )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ virtual void paint(QPainter * painter) = 0
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -294,7 +294,7 @@ PerformanceHints performanceHints() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -318,7 +318,7 @@ RenderTarget renderTarget() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ void resetContentsSize()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_RESETCONTENTSSIZE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ void setAntialiasing(bool enable)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -394,7 +394,7 @@ void setContentsScale(qreal)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ void setContentsSize(const QSize &)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ void setFillColor(const QColor &)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setFillColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setFillColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,7 +472,7 @@ void setMipmap(bool enable)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ void setOpaquePainting(bool opaque)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -524,7 +524,7 @@ void setPerformanceHint(PerformanceHint hint, bool enabled = true)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ void setPerformanceHints(PerformanceHints hints)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -576,7 +576,7 @@ void setRenderTarget(RenderTarget target)
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ void update(const QRect & rect = QRect())
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
 {
-  auto obj = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
     if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
     {
 #endif
-      obj->update ( ISNIL(1)? QRect() : *(QRect *) _qt5xhb_itemGetPtr(1) );
+      obj->update ( ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ void contentsScaleChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSCALECHANGED )
 {
-  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -688,7 +688,7 @@ void contentsSizeChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONCONTENTSSIZECHANGED )
 {
-  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -748,7 +748,7 @@ void fillColorChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONFILLCOLORCHANGED )
 {
-  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -808,7 +808,7 @@ void renderTargetChanged()
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_ONRENDERTARGETCHANGED )
 {
-  auto sender = (QQuickPaintedItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

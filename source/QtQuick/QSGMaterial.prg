@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGMATERIAL_DELETE )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ virtual int compare(const QSGMaterial * other) const
 */
 HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ virtual QSGMaterialShader * createShader() const = 0
 */
 HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
     {
 #endif
       QSGMaterialShader * ptr = obj->createShader ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIALSHADER", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGMATERIALSHADER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ QSGMaterial::Flags flags() const
 */
 HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setFlag(Flags flags, bool on = true)
 */
 HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ virtual QSGMaterialType * type() const = 0
 */
 HB_FUNC_STATIC( QSGMATERIAL_TYPE )
 {
-  auto obj = (QSGMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSGMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
     {
 #endif
       QSGMaterialType * ptr = obj->type ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIALTYPE", false );
+      Qt5xHb::createReturnClass ( ptr, "QSGMATERIALTYPE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
