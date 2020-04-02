@@ -109,7 +109,7 @@ void QSerialPort_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QSerialPort ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -120,7 +120,7 @@ void QSerialPort_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QSerialPort ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -131,7 +131,7 @@ void QSerialPort_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QSerialPort ( *PQSERIALPORTINFO(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSERIALPORT_NEW )
 HB_FUNC_STATIC( QSERIALPORT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ void setPortName(const QString &name)
 HB_FUNC_STATIC( QSERIALPORT_SETPORTNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ QString portName() const
 HB_FUNC_STATIC( QSERIALPORT_PORTNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ void setPort(const QSerialPortInfo &info)
 HB_FUNC_STATIC( QSERIALPORT_SETPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ bool open(OpenMode mode) Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_OPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ void close() Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ void setSettingsRestoredOnClose(bool restore)
 HB_FUNC_STATIC( QSERIALPORT_SETSETTINGSRESTOREDONCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ bool settingsRestoredOnClose() const
 HB_FUNC_STATIC( QSERIALPORT_SETTINGSRESTOREDONCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -378,7 +378,7 @@ bool setBaudRate(qint32 baudRate, Directions dir = AllDirections)
 HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -404,7 +404,7 @@ qint32 baudRate(Directions dir = AllDirections) const
 HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ bool setDataBits(DataBits dataBits)
 HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -456,7 +456,7 @@ DataBits dataBits() const
 HB_FUNC_STATIC( QSERIALPORT_DATABITS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ bool setParity(Parity parity)
 HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -508,7 +508,7 @@ Parity parity() const
 HB_FUNC_STATIC( QSERIALPORT_PARITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -534,7 +534,7 @@ bool setStopBits(StopBits stopBits)
 HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -560,7 +560,7 @@ StopBits stopBits() const
 HB_FUNC_STATIC( QSERIALPORT_STOPBITS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -586,7 +586,7 @@ bool setFlowControl(FlowControl flow)
 HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -612,7 +612,7 @@ FlowControl flowControl() const
 HB_FUNC_STATIC( QSERIALPORT_FLOWCONTROL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -638,7 +638,7 @@ bool setDataTerminalReady(bool set)
 HB_FUNC_STATIC( QSERIALPORT_SETDATATERMINALREADY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -664,7 +664,7 @@ bool isDataTerminalReady()
 HB_FUNC_STATIC( QSERIALPORT_ISDATATERMINALREADY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -690,7 +690,7 @@ bool setRequestToSend(bool set)
 HB_FUNC_STATIC( QSERIALPORT_SETREQUESTTOSEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -716,7 +716,7 @@ bool isRequestToSend()
 HB_FUNC_STATIC( QSERIALPORT_ISREQUESTTOSEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -742,7 +742,7 @@ PinoutSignals pinoutSignals()
 HB_FUNC_STATIC( QSERIALPORT_PINOUTSIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -768,7 +768,7 @@ bool flush()
 HB_FUNC_STATIC( QSERIALPORT_FLUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -794,7 +794,7 @@ bool clear(Directions dir = AllDirections)
 HB_FUNC_STATIC( QSERIALPORT_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -820,7 +820,7 @@ bool atEnd() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_ATEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -846,7 +846,7 @@ bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy)
 HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -872,7 +872,7 @@ DataErrorPolicy dataErrorPolicy() const
 HB_FUNC_STATIC( QSERIALPORT_DATAERRORPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -898,7 +898,7 @@ SerialPortError error() const
 HB_FUNC_STATIC( QSERIALPORT_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -924,7 +924,7 @@ void clearError()
 HB_FUNC_STATIC( QSERIALPORT_CLEARERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -952,7 +952,7 @@ qint64 readBufferSize() const
 HB_FUNC_STATIC( QSERIALPORT_READBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -978,7 +978,7 @@ void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC( QSERIALPORT_SETREADBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1006,7 +1006,7 @@ bool isSequential() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_ISSEQUENTIAL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1032,7 +1032,7 @@ qint64 bytesAvailable() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_BYTESAVAILABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1058,7 +1058,7 @@ qint64 bytesToWrite() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_BYTESTOWRITE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1084,7 +1084,7 @@ bool canReadLine() const Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_CANREADLINE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1110,7 +1110,7 @@ bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_WAITFORREADYREAD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1136,7 +1136,7 @@ bool waitForBytesWritten(int msecs) Q_DECL_OVERRIDE
 HB_FUNC_STATIC( QSERIALPORT_WAITFORBYTESWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1162,7 +1162,7 @@ bool sendBreak(int duration = 0)
 HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1188,7 +1188,7 @@ bool setBreakEnabled(bool set = true)
 HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1214,7 +1214,7 @@ void baudRateChanged( qint32 baudRate, QSerialPort::Directions dir )
 HB_FUNC_STATIC( QSERIALPORT_ONBAUDRATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1282,7 +1282,7 @@ void dataBitsChanged( QSerialPort::DataBits dataBits )
 HB_FUNC_STATIC( QSERIALPORT_ONDATABITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1348,7 +1348,7 @@ void parityChanged( QSerialPort::Parity parity )
 HB_FUNC_STATIC( QSERIALPORT_ONPARITYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1414,7 +1414,7 @@ void stopBitsChanged( QSerialPort::StopBits stopBits )
 HB_FUNC_STATIC( QSERIALPORT_ONSTOPBITSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1480,7 +1480,7 @@ void flowControlChanged( QSerialPort::FlowControl flow )
 HB_FUNC_STATIC( QSERIALPORT_ONFLOWCONTROLCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1546,7 +1546,7 @@ void dataErrorPolicyChanged( QSerialPort::DataErrorPolicy policy )
 HB_FUNC_STATIC( QSERIALPORT_ONDATAERRORPOLICYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1612,7 +1612,7 @@ void dataTerminalReadyChanged( bool set )
 HB_FUNC_STATIC( QSERIALPORT_ONDATATERMINALREADYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1678,7 +1678,7 @@ void requestToSendChanged( bool set )
 HB_FUNC_STATIC( QSERIALPORT_ONREQUESTTOSENDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1744,7 +1744,7 @@ void error( QSerialPort::SerialPortError serialPortError )
 HB_FUNC_STATIC( QSERIALPORT_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1810,7 +1810,7 @@ void settingsRestoredOnCloseChanged( bool restore )
 HB_FUNC_STATIC( QSERIALPORT_ONSETTINGSRESTOREDONCLOSECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSerialPort *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSerialPort *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
