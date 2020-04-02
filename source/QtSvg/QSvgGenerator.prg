@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QSvgGenerator ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 
 HB_FUNC_STATIC( QSVGGENERATOR_DELETE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QIODevice * outputDevice () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
     {
 #endif
       QIODevice * ptr = obj->outputDevice ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ int resolution () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ void setFileName ( const QString & fileName )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ void setOutputDevice ( QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ void setResolution ( int dpi )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ void setSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ void setViewBox ( const QRect & viewBox )
 */
 void QSvgGenerator_setViewBox1 ()
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ void setViewBox ( const QRectF & viewBox )
 */
 void QSvgGenerator_setViewBox2 ()
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ QSize size () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
     {
 #endif
       auto ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -455,7 +455,7 @@ QRect viewBox () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
     {
 #endif
       auto ptr = new QRect( obj->viewBox () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ QRectF viewBoxF () const
 */
 HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
 {
-  auto obj = (QSvgGenerator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
     {
 #endif
       auto ptr = new QRectF( obj->viewBoxF () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

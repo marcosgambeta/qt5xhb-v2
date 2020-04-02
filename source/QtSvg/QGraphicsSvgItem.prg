@@ -66,8 +66,8 @@ QGraphicsSvgItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new1 ()
 {
-  auto obj = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSvgItem_new2 ()
 {
-  auto obj = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_DELETE )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ QString elementId () const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QSize maximumCacheSize () const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumCacheSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ QSvgRenderer * renderer () const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
     {
 #endif
       QSvgRenderer * ptr = obj->renderer ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSVGRENDERER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSVGRENDERER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ void setElementId ( const QString & id )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ void setMaximumCacheSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ void setSharedRenderer ( QSvgRenderer * renderer )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -323,7 +323,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
 {
-  auto obj = (QGraphicsSvgItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSvgItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
