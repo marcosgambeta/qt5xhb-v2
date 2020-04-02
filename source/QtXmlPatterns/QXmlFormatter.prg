@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
   if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
   {
     auto obj = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 
 HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ int indentationDepth () const
 */
 HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ void setIndentationDepth ( int depth )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ virtual void atomicValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ virtual void attribute ( const QXmlName & name, const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ virtual void characters ( const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,7 +226,7 @@ virtual void comment ( const QString & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ virtual void endDocument ()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ virtual void endElement ()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -304,7 +304,7 @@ virtual void endOfSequence ()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ virtual void processingInstruction ( const QXmlName & name, const QString & valu
 */
 HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ virtual void startDocument ()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ virtual void startElement ( const QXmlName & name )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ virtual void startOfSequence ()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
 {
-  auto obj = (QXmlFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

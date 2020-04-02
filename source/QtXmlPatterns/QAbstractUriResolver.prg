@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 {
-  auto obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractUriResolver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -75,7 +75,7 @@ virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
 {
-  auto obj = (QAbstractUriResolver *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractUriResolver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     {
 #endif
       auto ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

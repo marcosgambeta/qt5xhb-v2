@@ -62,7 +62,7 @@ QXmlNamePool ()
 void QXmlNamePool_new1 ()
 {
   auto obj = new QXmlNamePool ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QXmlNamePool ( const QXmlNamePool & other )
 void QXmlNamePool_new2 ()
 {
   auto obj = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QXmlNamePool ()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_DELETE )
 {
-  auto obj = (QXmlNamePool *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlNamePool *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

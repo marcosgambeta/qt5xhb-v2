@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QXmlResultItems ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 
 HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 {
-  auto obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QXmlItem current () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
-  auto obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
     {
 #endif
       auto ptr = new QXmlItem( obj->current () );
-      _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
+      Qt5xHb::createReturnClass ( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ bool hasError () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
-  auto obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ QXmlItem next ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
-  auto obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
     {
 #endif
       auto ptr = new QXmlItem( obj->next () );
-      _qt5xhb_createReturnClass ( ptr, "QXMLITEM", true );
+      Qt5xHb::createReturnClass ( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
