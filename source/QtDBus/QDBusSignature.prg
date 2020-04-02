@@ -68,7 +68,7 @@ QDBusSignature()
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
   auto obj = new QDBusSignature ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -77,7 +77,7 @@ explicit QDBusSignature(const char *signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
   auto obj = new QDBusSignature ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -86,7 +86,7 @@ explicit QDBusSignature(QLatin1String signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
   auto obj = new QDBusSignature ( *PQLATIN1STRING(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -95,7 +95,7 @@ explicit QDBusSignature(const QString &signature)
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
   auto obj = new QDBusSignature ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDBusSignature()
@@ -129,7 +129,7 @@ HB_FUNC( QDBUSSIGNATURE_NEW )
 
 HB_FUNC_STATIC( QDBUSSIGNATURE_DELETE )
 {
-  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ QString signature() const
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
 {
-  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ void setSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
 {
-  auto obj = (QDBusSignature *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusSignature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

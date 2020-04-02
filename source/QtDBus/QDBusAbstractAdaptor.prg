@@ -52,7 +52,7 @@ QDBusAbstractAdaptor(QObject *parent) [protected]
 
 HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_DELETE )
 {
-  auto obj = (QDBusAbstractAdaptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusAbstractAdaptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

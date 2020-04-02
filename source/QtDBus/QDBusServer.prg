@@ -61,7 +61,7 @@ QDBusServer(const QString &address, QObject *parent = nullptr)
 void QDBusServer_new1 ()
 {
   auto obj = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QDBusServer(QObject *parent = nullptr)
 void QDBusServer_new2 ()
 {
   auto obj = new QDBusServer ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDBusServer(const QString &address, QObject *parent = nullptr)
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
 
 HB_FUNC_STATIC( QDBUSSERVER_DELETE )
 {
-  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
 {
-  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
 {
-  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
     {
 #endif
       auto ptr = new QDBusError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDBUSERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ QString address() const
 */
 HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
 {
-  auto obj = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ void newConnection( const QDBusConnection & connection )
 */
 HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {
-  auto sender = (QDBusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

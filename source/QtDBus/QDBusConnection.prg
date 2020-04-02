@@ -99,7 +99,7 @@ QDBusConnection(const QString &name)
 void QDBusConnection_new1 ()
 {
   auto obj = new QDBusConnection ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,7 +108,7 @@ QDBusConnection(const QDBusConnection &other)
 void QDBusConnection_new2 ()
 {
   auto obj = new QDBusConnection ( *PQDBUSCONNECTION(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDBusConnection(const QString &name)
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ bool isConnected() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -165,7 +165,7 @@ QString baseService() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ QDBusError lastError() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
     {
 #endif
       auto ptr = new QDBusError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDBUSERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ ConnectionCapabilities connectionCapabilities() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ bool send(const QDBusMessage &message) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char 
 */
 void QDBusConnection_callWithCallback1 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char 
 */
 void QDBusConnection_callWithCallback2 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Blo
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
     {
 #endif
       auto ptr = new QDBusMessage( obj->call ( *PQDBUSMESSAGE(1), ISNIL(2)? (QDBus::CallMode) QDBus::Block : (QDBus::CallMode) hb_parni(2), OPINT(3,-1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDBUSMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
     {
 #endif
       auto ptr = new QDBusPendingCall( obj->asyncCall ( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+      Qt5xHb::createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 void QDBusConnection_connect1 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -383,7 +383,7 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 void QDBusConnection_connect2 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ bool connect(const QString &service, const QString &path, const QString &interfa
 */
 void QDBusConnection_connect3 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 void QDBusConnection_disconnect1 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 void QDBusConnection_disconnect2 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ bool disconnect(const QString &service, const QString &path, const QString &inte
 */
 void QDBusConnection_disconnect3 ()
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -466,7 +466,7 @@ bool registerObject(const QString &path, QObject *object,RegisterOptions options
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -490,7 +490,7 @@ void unregisterObject(const QString &path, UnregisterMode mode = UnregisterNode)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,7 +516,7 @@ QObject *objectRegisteredAt(const QString &path) const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
     {
 #endif
       QObject * ptr = obj->objectRegisteredAt ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,7 +545,7 @@ bool registerService(const QString &serviceName)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -569,7 +569,7 @@ bool unregisterService(const QString &serviceName)
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -593,7 +593,7 @@ QDBusConnectionInterface *interface() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
     {
 #endif
       QDBusConnectionInterface * ptr = obj->interface ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,7 +618,7 @@ void *internalPointer() const
 */
 HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
 {
-  auto obj = (QDBusConnection *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusConnection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -644,7 +644,7 @@ void QDBusConnection_connectToBus1 ()
 {
 
   auto ptr = new QDBusConnection( QDBusConnection::connectToBus ( (QDBusConnection::BusType) hb_parni(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+  Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 }
 
 /*
@@ -654,7 +654,7 @@ void QDBusConnection_connectToBus2 ()
 {
 
   auto ptr = new QDBusConnection( QDBusConnection::connectToBus ( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+  Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 }
 
 //[1]static QDBusConnection connectToBus(BusType type, const QString &name)
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOPEER )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::connectToPeer ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+    Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LOCALMACHINEID )
   {
 #endif
     auto ptr = new QByteArray( QDBusConnection::localMachineId () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SESSIONBUS )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::sessionBus () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+    Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SYSTEMBUS )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::systemBus () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+    Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SENDER )
   {
 #endif
     auto ptr = new QDBusConnection( QDBusConnection::sender () );
-    _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+    Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

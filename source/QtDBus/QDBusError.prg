@@ -67,7 +67,7 @@ QDBusError()
 void QDBusError_new1 ()
 {
   auto obj = new QDBusError ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QDBusError(const QDBusMessage& msg)
 void QDBusError_new3 ()
 {
   auto obj = new QDBusError ( *PQDBUSMESSAGE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QDBusError(ErrorType error, const QString &message)
 void QDBusError_new4 ()
 {
   auto obj = new QDBusError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QDBusError(const QDBusError &other)
 void QDBusError_new5 ()
 {
   auto obj = new QDBusError ( *PQDBUSERROR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDBusError()
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
 
 HB_FUNC_STATIC( QDBUSERROR_DELETE )
 {
-  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ ErrorType type() const
 */
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
-  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDBUSERROR_NAME )
 {
-  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ QString message() const
 */
 HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
 {
-  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 {
-  auto obj = (QDBusError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

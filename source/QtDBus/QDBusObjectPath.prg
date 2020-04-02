@@ -67,7 +67,7 @@ QDBusObjectPath()
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
 {
   auto obj = new QDBusObjectPath ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,7 +76,7 @@ explicit QDBusObjectPath(const char *path)
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
   auto obj = new QDBusObjectPath ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,7 +85,7 @@ explicit QDBusObjectPath(QLatin1String path)
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
   auto obj = new QDBusObjectPath ( *PQLATIN1STRING(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -94,7 +94,7 @@ explicit QDBusObjectPath(const QString &path)
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
   auto obj = new QDBusObjectPath ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDBusObjectPath()
@@ -130,7 +130,7 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
 
 HB_FUNC_STATIC( QDBUSOBJECTPATH_DELETE )
 {
-  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 {
-  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ void setPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
 {
-  auto obj = (QDBusObjectPath *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDBusObjectPath *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
