@@ -74,7 +74,7 @@ void QWebSocketCorsAuthenticator_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = new QWebSocketCorsAuthenticator ( PQSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -85,7 +85,7 @@ void QWebSocketCorsAuthenticator_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   auto obj = new QWebSocketCorsAuthenticator ( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ void swap(QWebSocketCorsAuthenticator &other)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ QString origin() const
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ORIGIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ bool allowed() const
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ void setAllowed(bool allowed)
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QWebSocketCorsAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
