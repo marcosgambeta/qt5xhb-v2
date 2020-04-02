@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
-  auto obj = (QSqlDriverPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriverPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -75,7 +75,7 @@ virtual QSqlDriver * create ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
-  auto obj = (QSqlDriverPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDriverPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
     {
 #endif
       QSqlDriver * ptr = obj->create ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSQLDRIVER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

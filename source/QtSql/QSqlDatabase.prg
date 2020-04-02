@@ -113,7 +113,7 @@ QSqlDatabase ()
 void QSqlDatabase_new1 ()
 {
   auto obj = new QSqlDatabase ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -122,7 +122,7 @@ QSqlDatabase ( const QSqlDatabase & other )
 void QSqlDatabase_new2 ()
 {
   auto obj = new QSqlDatabase ( *PQSQLDATABASE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QSqlDatabase ()
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
 
 HB_FUNC_STATIC( QSQLDATABASE_DELETE )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void close ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ bool commit ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ QString connectOptions () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ void setConnectOptions ( const QString & options = QString() )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ QString connectionName () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ QString databaseName () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ void setDatabaseName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ QSqlDriver * driver () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
     {
 #endif
       QSqlDriver * ptr = obj->driver ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSQLDRIVER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ QString driverName () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ QSqlQuery exec ( const QString & query = QString() ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
     {
 #endif
       auto ptr = new QSqlQuery( obj->exec ( OPQSTRING(1,QString()) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLQUERY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ QString hostName () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ void setHostName ( const QString & host )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ bool isOpen () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ bool isOpenError () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -512,7 +512,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
     {
 #endif
       auto ptr = new QSqlError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -585,7 +585,7 @@ void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolic
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -611,7 +611,7 @@ bool open ()
 */
 void QSqlDatabase_open1 ()
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ bool open ( const QString & user, const QString & password )
 */
 void QSqlDatabase_open2 ()
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -656,7 +656,7 @@ QString password () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -680,7 +680,7 @@ void setPassword ( const QString & password )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -706,7 +706,7 @@ int port () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PORT )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -730,7 +730,7 @@ void setPort ( int port )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ QSqlIndex primaryIndex ( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
     {
 #endif
       auto ptr = new QSqlIndex( obj->primaryIndex ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -781,7 +781,7 @@ QSqlRecord record ( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
     {
 #endif
       auto ptr = new QSqlRecord( obj->record ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -806,7 +806,7 @@ bool rollback ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -830,7 +830,7 @@ QStringList tables ( QSql::TableType type = QSql::Tables ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -854,7 +854,7 @@ bool transaction ()
 */
 HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -878,7 +878,7 @@ QString userName () const
 */
 HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -902,7 +902,7 @@ void setUserName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 {
-  auto obj = (QSqlDatabase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
   {
 #endif
     auto ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

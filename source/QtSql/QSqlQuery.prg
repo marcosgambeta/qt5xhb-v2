@@ -105,7 +105,7 @@ explicit QSqlQuery ( QSqlResult * result )
 void QSqlQuery_new1 ()
 {
   auto obj = new QSqlQuery ( PQSQLRESULT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -113,8 +113,8 @@ explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDa
 */
 void QSqlQuery_new2 ()
 {
-  auto obj = new QSqlQuery ( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QSqlQuery ( OPQSTRING(1,QString()), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -123,7 +123,7 @@ explicit QSqlQuery ( QSqlDatabase db )
 void QSqlQuery_new3 ()
 {
   auto obj = new QSqlQuery ( *PQSQLDATABASE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -132,7 +132,7 @@ QSqlQuery ( const QSqlQuery & other )
 void QSqlQuery_new4 ()
 {
   auto obj = new QSqlQuery ( *PQSQLQUERY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]explicit QSqlQuery ( QSqlResult * result )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
 
 HB_FUNC_STATIC( QSQLQUERY_DELETE )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ int at () const
 */
 HB_FUNC_STATIC( QSQLQUERY_AT )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamT
 */
 void QSqlQuery_bindValue1 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql
 */
 void QSqlQuery_bindValue2 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,12 +285,12 @@ QVariant boundValue ( const QString & placeholder ) const
 */
 void QSqlQuery_boundValue1 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -299,12 +299,12 @@ QVariant boundValue ( int pos ) const
 */
 void QSqlQuery_boundValue2 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QVariant( obj->boundValue ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -332,7 +332,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ const QSqlDriver * driver () const
 */
 HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
     {
 #endif
       const QSqlDriver * ptr = obj->driver ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSQLDRIVER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ bool exec ( const QString & query )
 */
 void QSqlQuery_exec1 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ bool exec ()
 */
 void QSqlQuery_exec2 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -428,7 +428,7 @@ bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -452,7 +452,7 @@ QString executedQuery () const
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ void finish ()
 */
 HB_FUNC_STATIC( QSQLQUERY_FINISH )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -502,7 +502,7 @@ bool first ()
 */
 HB_FUNC_STATIC( QSQLQUERY_FIRST )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ bool isForwardOnly () const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ void setForwardOnly ( bool forward )
 */
 HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ bool isNull ( int field ) const
 */
 void QSqlQuery_isNull1 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -614,7 +614,7 @@ bool isNull(const QString &name) const
 void QSqlQuery_isNull2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ bool isSelect () const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -671,7 +671,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -695,7 +695,7 @@ bool last ()
 */
 HB_FUNC_STATIC( QSQLQUERY_LAST )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -719,7 +719,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
     {
 #endif
       auto ptr = new QSqlError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -744,7 +744,7 @@ QVariant lastInsertId () const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
     {
 #endif
       auto ptr = new QVariant( obj->lastInsertId () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,7 +769,7 @@ QString lastQuery () const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -793,7 +793,7 @@ bool next ()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXT )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -817,7 +817,7 @@ bool nextResult ()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -841,7 +841,7 @@ int numRowsAffected () const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -865,7 +865,7 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -889,7 +889,7 @@ void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolic
 */
 HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -915,7 +915,7 @@ bool prepare ( const QString & query )
 */
 HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -939,7 +939,7 @@ bool previous ()
 */
 HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -963,7 +963,7 @@ QSqlRecord record () const
 */
 HB_FUNC_STATIC( QSQLQUERY_RECORD )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
     {
 #endif
       auto ptr = new QSqlRecord( obj->record () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLRECORD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -988,7 +988,7 @@ const QSqlResult * result () const
 */
 HB_FUNC_STATIC( QSQLQUERY_RESULT )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
     {
 #endif
       const QSqlResult * ptr = obj->result ();
-      _qt5xhb_createReturnClass ( ptr, "QSQLRESULT", false );
+      Qt5xHb::createReturnClass ( ptr, "QSQLRESULT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1013,7 +1013,7 @@ bool seek ( int index, bool relative = false )
 */
 HB_FUNC_STATIC( QSQLQUERY_SEEK )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1037,7 +1037,7 @@ int size () const
 */
 HB_FUNC_STATIC( QSQLQUERY_SIZE )
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1061,12 +1061,12 @@ QVariant value ( int index ) const
 */
 void QSqlQuery_value1 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QVariant( obj->value ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -1075,12 +1075,12 @@ QVariant value(const QString& name) const
 */
 void QSqlQuery_value2 ()
 {
-  auto obj = (QSqlQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

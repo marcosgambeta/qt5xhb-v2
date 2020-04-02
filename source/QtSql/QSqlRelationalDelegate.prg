@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QSqlRelationalDelegate ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 {
-  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -91,7 +91,7 @@ QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, cons
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
-  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex 
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
-  auto obj = (QSqlRelationalDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlRelationalDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

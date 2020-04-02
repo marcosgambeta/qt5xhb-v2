@@ -60,7 +60,7 @@ explicit QSqlIndex ( const QString & cursorname = QString(), const QString & nam
 void QSqlIndex_new1 ()
 {
   auto obj = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QSqlIndex ( const QSqlIndex & other )
 void QSqlIndex_new2 ()
 {
   auto obj = new QSqlIndex ( *PQSQLINDEX(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ void append ( const QSqlField & field )
 */
 void QSqlIndex_append1 ()
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ void append ( const QSqlField & field, bool desc )
 */
 void QSqlIndex_append2 ()
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ QString cursorName () const
 */
 HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setCursorName ( const QString & cursorName )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ bool isDescending ( int i ) const
 */
 HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ void setDescending ( int i, bool desc )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -262,7 +262,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ void setName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {
-  auto obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

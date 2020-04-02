@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QSqlQueryModel ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ QSqlError lastError () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
     {
 #endif
       auto ptr = new QSqlError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLERROR", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ QSqlQuery query () const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
     {
 #endif
       auto ptr = new QSqlQuery( obj->query () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLQUERY", true );
+      Qt5xHb::createReturnClass ( ptr, "QSQLQUERY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ void setQuery ( const QSqlQuery & query )
 */
 void QSqlQueryModel_setQuery1 ()
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,11 +201,11 @@ void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() 
 */
 void QSqlQueryModel_setQuery2 ()
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setQuery ( PQSTRING(1), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
+    obj->setQuery ( PQSTRING(1), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,12 +235,12 @@ QSqlRecord record ( int row ) const
 */
 void QSqlQueryModel_record1 ()
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QSqlRecord( obj->record ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    Qt5xHb::createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -249,12 +249,12 @@ QSqlRecord record () const
 */
 void QSqlQueryModel_record2 ()
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QSqlRecord( obj->record () );
-    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    Qt5xHb::createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -282,7 +282,7 @@ bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->canFetchMore ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RBOOL( obj->canFetchMore ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ int columnCount ( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
     {
 #endif
       auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ void fetchMore ( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      obj->fetchMore ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) );
+      obj->fetchMore ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::D
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
     {
 #endif
       auto ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ bool insertColumns ( int column, int count, const QModelIndex & parent = QModelI
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->insertColumns ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
+      RBOOL( obj->insertColumns ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,7 +454,7 @@ bool removeColumns ( int column, int count, const QModelIndex & parent = QModelI
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeColumns ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {
-  auto obj = (QSqlQueryModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSqlQueryModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
