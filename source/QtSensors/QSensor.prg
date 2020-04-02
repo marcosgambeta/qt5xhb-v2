@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSENSOR_NEW )
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QSensor ( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSENSOR_NEW )
 HB_FUNC_STATIC( QSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ QByteArray identifier() const
 HB_FUNC_STATIC( QSENSOR_IDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSENSOR_IDENTIFIER )
     {
 #endif
       auto ptr = new QByteArray( obj->identifier () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ void setIdentifier(const QByteArray &identifier)
 HB_FUNC_STATIC( QSENSOR_SETIDENTIFIER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ QByteArray type() const
 HB_FUNC_STATIC( QSENSOR_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSENSOR_TYPE )
     {
 #endif
       auto ptr = new QByteArray( obj->type () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ bool connectToBackend()
 HB_FUNC_STATIC( QSENSOR_CONNECTTOBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ bool isConnectedToBackend() const
 HB_FUNC_STATIC( QSENSOR_ISCONNECTEDTOBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ bool isBusy() const
 HB_FUNC_STATIC( QSENSOR_ISBUSY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ void setActive(bool active)
 HB_FUNC_STATIC( QSENSOR_SETACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ bool isActive() const
 HB_FUNC_STATIC( QSENSOR_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ bool isAlwaysOn() const
 HB_FUNC_STATIC( QSENSOR_ISALWAYSON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ void setAlwaysOn(bool alwaysOn)
 HB_FUNC_STATIC( QSENSOR_SETALWAYSON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -421,7 +421,7 @@ bool skipDuplicates() const
 HB_FUNC_STATIC( QSENSOR_SKIPDUPLICATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ void setSkipDuplicates(bool skipDuplicates)
 HB_FUNC_STATIC( QSENSOR_SETSKIPDUPLICATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ int dataRate() const
 HB_FUNC_STATIC( QSENSOR_DATARATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -505,7 +505,7 @@ void setDataRate(int rate)
 HB_FUNC_STATIC( QSENSOR_SETDATARATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ int outputRange() const
 HB_FUNC_STATIC( QSENSOR_OUTPUTRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -563,7 +563,7 @@ void setOutputRange(int index)
 HB_FUNC_STATIC( QSENSOR_SETOUTPUTRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -591,7 +591,7 @@ QString description() const
 HB_FUNC_STATIC( QSENSOR_DESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -617,7 +617,7 @@ int error() const
 HB_FUNC_STATIC( QSENSOR_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -643,7 +643,7 @@ void addFilter(QSensorFilter *filter)
 HB_FUNC_STATIC( QSENSOR_ADDFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -671,7 +671,7 @@ void removeFilter(QSensorFilter *filter)
 HB_FUNC_STATIC( QSENSOR_REMOVEFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -703,7 +703,7 @@ QSensorReading *reading() const
 HB_FUNC_STATIC( QSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QSENSOR_READING )
     {
 #endif
       QSensorReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSENSORREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSENSORREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ bool isFeatureSupported(Feature feature) const
 HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ AxesOrientationMode axesOrientationMode() const
 HB_FUNC_STATIC( QSENSOR_AXESORIENTATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -782,7 +782,7 @@ void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
 HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -810,7 +810,7 @@ int currentOrientation() const
 HB_FUNC_STATIC( QSENSOR_CURRENTORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -836,7 +836,7 @@ void setCurrentOrientation(int currentOrientation)
 HB_FUNC_STATIC( QSENSOR_SETCURRENTORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -864,7 +864,7 @@ int userOrientation() const
 HB_FUNC_STATIC( QSENSOR_USERORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -890,7 +890,7 @@ void setUserOrientation(int userOrientation)
 HB_FUNC_STATIC( QSENSOR_SETUSERORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -918,7 +918,7 @@ int maxBufferSize() const
 HB_FUNC_STATIC( QSENSOR_MAXBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -944,7 +944,7 @@ void setMaxBufferSize(int maxBufferSize)
 HB_FUNC_STATIC( QSENSOR_SETMAXBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -972,7 +972,7 @@ int efficientBufferSize() const
 HB_FUNC_STATIC( QSENSOR_EFFICIENTBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -998,7 +998,7 @@ void setEfficientBufferSize(int efficientBufferSize)
 HB_FUNC_STATIC( QSENSOR_SETEFFICIENTBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1026,7 +1026,7 @@ int bufferSize() const
 HB_FUNC_STATIC( QSENSOR_BUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1052,7 +1052,7 @@ void setBufferSize(int bufferSize)
 HB_FUNC_STATIC( QSENSOR_SETBUFFERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1080,7 +1080,7 @@ bool start()
 HB_FUNC_STATIC( QSENSOR_START )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1106,7 +1106,7 @@ void stop()
 HB_FUNC_STATIC( QSENSOR_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
   {
 #endif
     auto ptr = new QByteArray( QSensor::defaultSensorForType ( *PQBYTEARRAY(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1254,7 +1254,7 @@ void busyChanged()
 HB_FUNC_STATIC( QSENSOR_ONBUSYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1318,7 +1318,7 @@ void activeChanged()
 HB_FUNC_STATIC( QSENSOR_ONACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1382,7 +1382,7 @@ void readingChanged()
 HB_FUNC_STATIC( QSENSOR_ONREADINGCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1446,7 +1446,7 @@ void sensorError( int error )
 HB_FUNC_STATIC( QSENSOR_ONSENSORERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1512,7 +1512,7 @@ void availableSensorsChanged()
 HB_FUNC_STATIC( QSENSOR_ONAVAILABLESENSORSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1576,7 +1576,7 @@ void alwaysOnChanged()
 HB_FUNC_STATIC( QSENSOR_ONALWAYSONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1640,7 +1640,7 @@ void dataRateChanged()
 HB_FUNC_STATIC( QSENSOR_ONDATARATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1704,7 +1704,7 @@ void skipDuplicatesChanged( bool skipDuplicates )
 HB_FUNC_STATIC( QSENSOR_ONSKIPDUPLICATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1770,7 +1770,7 @@ void axesOrientationModeChanged( QSensor::AxesOrientationMode axesOrientationMod
 HB_FUNC_STATIC( QSENSOR_ONAXESORIENTATIONMODECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1836,7 +1836,7 @@ void currentOrientationChanged( int currentOrientation )
 HB_FUNC_STATIC( QSENSOR_ONCURRENTORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1902,7 +1902,7 @@ void userOrientationChanged( int userOrientation )
 HB_FUNC_STATIC( QSENSOR_ONUSERORIENTATIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1968,7 +1968,7 @@ void maxBufferSizeChanged( int maxBufferSize )
 HB_FUNC_STATIC( QSENSOR_ONMAXBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2034,7 +2034,7 @@ void efficientBufferSizeChanged( int efficientBufferSize )
 HB_FUNC_STATIC( QSENSOR_ONEFFICIENTBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2100,7 +2100,7 @@ void bufferSizeChanged( int bufferSize )
 HB_FUNC_STATIC( QSENSOR_ONBUFFERSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

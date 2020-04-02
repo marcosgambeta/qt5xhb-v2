@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QIRPROXIMITYREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIRProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ qreal reflectance() const
 HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIRProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ void setReflectance(qreal reflectance)
 HB_FUNC_STATIC( QIRPROXIMITYREADING_SETREFLECTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QIRProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QIRProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

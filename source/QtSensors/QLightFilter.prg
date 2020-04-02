@@ -51,7 +51,7 @@ RETURN
 HB_FUNC_STATIC( QLIGHTFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -73,7 +73,7 @@ virtual bool filter(QLightReading *reading) = 0
 HB_FUNC_STATIC( QLIGHTFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

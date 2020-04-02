@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QTapSensor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
 HB_FUNC_STATIC( QTAPSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QTapReading *reading() const
 HB_FUNC_STATIC( QTAPSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
     {
 #endif
       QTapReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTAPREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTAPREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ bool returnDoubleTapEvents() const
 HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

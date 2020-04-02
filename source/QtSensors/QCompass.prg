@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QCOMPASS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QCompass ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QCOMPASS_NEW )
 HB_FUNC_STATIC( QCOMPASS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCompass *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ QCompassReading *reading() const
 HB_FUNC_STATIC( QCOMPASS_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompass *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCompass *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCOMPASS_READING )
     {
 #endif
       QCompassReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCOMPASSREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QCOMPASSREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

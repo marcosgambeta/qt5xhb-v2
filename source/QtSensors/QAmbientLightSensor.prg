@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QAmbientLightSensor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ QAmbientLightReading *reading() const
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
     {
 #endif
       QAmbientLightReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QAMBIENTLIGHTREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QAMBIENTLIGHTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

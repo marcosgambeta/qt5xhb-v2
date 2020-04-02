@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QALTIMETER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QAltimeter ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QALTIMETER_NEW )
 HB_FUNC_STATIC( QALTIMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAltimeter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAltimeter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ QAltimeterReading *reading() const
 HB_FUNC_STATIC( QALTIMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAltimeter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAltimeter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QALTIMETER_READING )
     {
 #endif
       QAltimeterReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QALTIMETERREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QALTIMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

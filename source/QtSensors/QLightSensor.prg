@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QLightSensor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QLightReading *reading() const
 HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
     {
 #endif
       QLightReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QLIGHTREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QLIGHTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ qreal fieldOfView() const
 HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setFieldOfView(qreal fieldOfView)
 HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void fieldOfViewChanged( qreal fieldOfView )
 HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

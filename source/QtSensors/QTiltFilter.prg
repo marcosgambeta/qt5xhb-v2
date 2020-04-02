@@ -54,7 +54,7 @@ RETURN
 HB_FUNC_STATIC( QTILTFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTiltFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -76,7 +76,7 @@ virtual bool filter(QTiltReading *reading) = 0
 HB_FUNC_STATIC( QTILTFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTiltFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

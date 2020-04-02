@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QMagnetometer ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QMagnetometerReading *reading() const
 HB_FUNC_STATIC( QMAGNETOMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
     {
 #endif
       QMagnetometerReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMAGNETOMETERREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMAGNETOMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ bool returnGeoValues() const
 HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setReturnGeoValues(bool returnGeoValues)
 HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void returnGeoValuesChanged( bool returnGeoValues )
 HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

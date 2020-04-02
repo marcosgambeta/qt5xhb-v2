@@ -70,7 +70,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
   {
 #endif
     QSensorBackend * ptr = QSensorManager::createBackend ( PQSENSOR(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QSENSORBACKEND" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QSENSORBACKEND" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

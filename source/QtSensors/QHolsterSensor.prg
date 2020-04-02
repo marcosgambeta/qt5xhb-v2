@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QHolsterSensor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_NEW )
 HB_FUNC_STATIC( QHOLSTERSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QHolsterSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHolsterSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ QHolsterReading *reading() const
 HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QHolsterSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHolsterSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
     {
 #endif
       QHolsterReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QHOLSTERREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QHOLSTERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

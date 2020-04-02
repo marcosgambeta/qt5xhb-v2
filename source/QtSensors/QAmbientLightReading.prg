@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ LightLevel lightLevel() const
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_LIGHTLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ void setLightLevel(LightLevel lightLevel)
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientLightReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAmbientLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

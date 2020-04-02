@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_NEW )
   if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QSensorGesture ( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 HB_FUNC_STATIC( QSENSORGESTURE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ bool isActive()
 HB_FUNC_STATIC( QSENSORGESTURE_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ QStringList validIds() const
 HB_FUNC_STATIC( QSENSORGESTURE_VALIDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QStringList invalidIds() const
 HB_FUNC_STATIC( QSENSORGESTURE_INVALIDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ QStringList gestureSignals() const
 HB_FUNC_STATIC( QSENSORGESTURE_GESTURESIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ void startDetection()
 HB_FUNC_STATIC( QSENSORGESTURE_STARTDETECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ void stopDetection()
 HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

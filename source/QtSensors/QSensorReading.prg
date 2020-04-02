@@ -59,7 +59,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ quint64 timestamp() const
 HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ void setTimestamp(quint64 timestamp)
 HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ int valueCount() const
 HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ QVariant value(int index) const
 HB_FUNC_STATIC( QSENSORREADING_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUE )
     {
 #endif
       auto ptr = new QVariant( obj->value ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

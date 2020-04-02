@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QRotationSensor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QRotationReading *reading() const
 HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
     {
 #endif
       QRotationReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QROTATIONREADING" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QROTATIONREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ bool hasZ() const
 HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setHasZ(bool hasZ)
 HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ void hasZChanged( bool hasZ )
 HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto sender = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
