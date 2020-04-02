@@ -63,7 +63,7 @@ explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -87,7 +87,7 @@ virtual void sendMessage(const QJsonObject &message) = 0
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ void messageReceived( const QJsonObject & message, QWebChannelAbstractTransport 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

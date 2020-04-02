@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QWebChannel ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ Q_INVOKABLE void registerObject(const QString &id, QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ Q_INVOKABLE void deregisterObject(QObject *object)
 HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool blockUpdates() const
 HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ void setBlockUpdates(bool block)
 HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void connectTo(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ void disconnectFrom(QWebChannelAbstractTransport *transport)
 HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ void blockUpdatesChanged( bool block )
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
