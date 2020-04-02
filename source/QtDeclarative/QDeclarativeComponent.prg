@@ -76,7 +76,7 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr 
 void QDeclarativeComponent_new1 ()
 {
   auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, Q
 void QDeclarativeComponent_new2 ()
 {
   auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -94,7 +94,7 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject *
 void QDeclarativeComponent_new3 ()
 {
   auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ virtual QObject * beginCreate ( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     {
 #endif
       QObject * ptr = obj->beginCreate ( PQDECLARATIVECONTEXT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ virtual void completeCreate ()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ virtual QObject * create ( QDeclarativeContext * context = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     {
 #endif
       QObject * ptr = obj->create ( OPQDECLARATIVECONTEXT(1,nullptr) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ QDeclarativeContext * creationContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->creationContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ bool isError () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ bool isLoading () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ bool isReady () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ void loadUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ qreal progress () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -442,7 +442,7 @@ void setData ( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
-  auto obj = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ void progressChanged( qreal progress )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  auto sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -579,7 +579,7 @@ void statusChanged( QDeclarativeComponent::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  auto sender = (QDeclarativeComponent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

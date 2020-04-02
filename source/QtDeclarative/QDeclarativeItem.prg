@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   if( ISBETWEEN(0,1) && (ISQDECLARATIVEITEM(1)||ISNIL(1)) )
   {
     auto obj = new QDeclarativeItem ( OPQDECLARATIVEITEM(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ qreal baselineOffset () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QDeclarativeItem * childAt ( qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     {
 #endif
       QDeclarativeItem * ptr = obj->childAt ( PQREAL(1), PQREAL(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVEITEM" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVEITEM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ QRectF childrenRect ()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
     {
 #endif
       auto ptr = new QRectF( obj->childrenRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ bool clip () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ void forceActiveFocus ()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ qreal implicitHeight () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ qreal implicitWidth () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ bool keepMouseGrab () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     {
 #endif
       auto ptr = new QScriptValue( obj->mapFromItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     {
 #endif
       auto ptr = new QScriptValue( obj->mapToItem ( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ QDeclarativeItem * parentItem () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
     {
 #endif
       QDeclarativeItem * ptr = obj->parentItem ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVEITEM" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVEITEM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ void setBaselineOffset ( qreal )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -406,7 +406,7 @@ void setClip ( bool )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ void setKeepMouseGrab ( bool keep )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ void setParentItem ( QDeclarativeItem * parent )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -484,7 +484,7 @@ void setSmooth ( bool smooth )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ void setTransformOrigin ( TransformOrigin origin )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -536,7 +536,7 @@ bool smooth () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -560,7 +560,7 @@ TransformOrigin transformOrigin () const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {
-  auto obj = (QDeclarativeItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

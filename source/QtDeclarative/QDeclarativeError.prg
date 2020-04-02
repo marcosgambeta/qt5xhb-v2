@@ -72,7 +72,7 @@ QDeclarativeError ()
 void QDeclarativeError_new1 ()
 {
   auto obj = new QDeclarativeError ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QDeclarativeError ( const QDeclarativeError & other )
 void QDeclarativeError_new2 ()
 {
   auto obj = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDeclarativeError ()
@@ -108,7 +108,7 @@ int column () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ int line () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ void setColumn ( int column )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ void setLine ( int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ void setUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ QString toString () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
-  auto obj = (QDeclarativeError *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

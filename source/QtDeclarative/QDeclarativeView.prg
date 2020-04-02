@@ -77,7 +77,7 @@ QDeclarativeView ( QWidget * parent = nullptr )
 void QDeclarativeView_new1 ()
 {
   auto obj = new QDeclarativeView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 void QDeclarativeView_new2 ()
 {
   auto obj = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeView ( QWidget * parent = nullptr )
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ QDeclarativeEngine * engine () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ QList<QDeclarativeError> errors () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QSize initialSize () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
     {
 #endif
       auto ptr = new QSize( obj->initialSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ ResizeMode resizeMode () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ QDeclarativeContext * rootContext () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ QGraphicsObject * rootObject () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
     {
 #endif
       QGraphicsObject * ptr = obj->rootObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGRAPHICSOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QGRAPHICSOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ void setResizeMode ( ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ void setSource ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ QUrl source () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
     {
 #endif
       auto ptr = new QUrl( obj->source () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ Status status () const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
-  auto obj = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ void sceneResized( QSize size )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
-  auto sender = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -469,7 +469,7 @@ void statusChanged( QDeclarativeView::Status status )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
-  auto sender = (QDeclarativeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

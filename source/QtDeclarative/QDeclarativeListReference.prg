@@ -72,7 +72,7 @@ QDeclarativeListReference ()
 void QDeclarativeListReference_new1 ()
 {
   auto obj = new QDeclarativeListReference ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -81,7 +81,7 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 void QDeclarativeListReference_new2 ()
 {
   auto obj = new QDeclarativeListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDeclarativeListReference ()
@@ -108,7 +108,7 @@ bool append ( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ QObject * at ( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
     {
 #endif
       QObject * ptr = obj->at ( PINT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ bool canAppend () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ bool canAt () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ bool canClear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ bool canCount () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ bool clear () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ QObject * object () const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
-  auto obj = (QDeclarativeListReference *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDeclarativeListReference *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
