@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -87,7 +87,7 @@ QHelpContentItem * child ( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
     {
 #endif
       QHelpContentItem * ptr = obj->child ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ int childCount () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ int childPosition ( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ QHelpContentItem * parent () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
     {
 #endif
       QHelpContentItem * ptr = obj->parent ();
-      _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ int row () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
-  auto obj = (QHelpContentItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

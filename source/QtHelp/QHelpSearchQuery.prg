@@ -62,7 +62,7 @@ QHelpSearchQuery ()
 void QHelpSearchQuery_new1 ()
 {
   auto obj = new QHelpSearchQuery ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 void QHelpSearchQuery_new2 ()
 {
   auto obj = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QHelpSearchQuery ()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_DELETE )
 {
-  auto obj = (QHelpSearchQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

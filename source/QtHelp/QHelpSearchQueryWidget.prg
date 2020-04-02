@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QHelpSearchQueryWidget ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
-  auto obj = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ QList<QHelpSearchQuery> query () const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
-  auto obj = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ void search()
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
-  auto sender = (QHelpSearchQueryWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchQueryWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

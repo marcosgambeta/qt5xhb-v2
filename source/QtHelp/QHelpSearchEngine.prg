@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
   if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QHelpSearchEngine ( PQHELPENGINECORE(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ int hitCount () const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ QList<QHelpSearchQuery> query () const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QHelpSearchQueryWidget * queryWidget ()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     {
 #endif
       QHelpSearchQueryWidget * ptr = obj->queryWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QHELPSEARCHQUERYWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ QHelpSearchResultWidget * resultWidget ()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     {
 #endif
       QHelpSearchResultWidget * ptr = obj->resultWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QHELPSEARCHRESULTWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ void cancelIndexing ()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void cancelSearching ()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ void reindexDocumentation ()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void search ( const QList<QHelpSearchQuery> & queryList )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
-  auto obj = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void indexingFinished()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-  auto sender = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -404,7 +404,7 @@ void indexingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-  auto sender = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -464,7 +464,7 @@ void searchingFinished( int hits )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-  auto sender = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -526,7 +526,7 @@ void searchingStarted()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-  auto sender = (QHelpSearchEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpSearchEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

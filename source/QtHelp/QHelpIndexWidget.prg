@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 {
-  auto obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -75,7 +75,7 @@ void activateCurrentItem ()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
-  auto obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ void filterIndices ( const QString & filter, const QString & wildcard = QString(
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
-  auto obj = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ void linkActivated( const QUrl & link, const QString & keyword )
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 {
-  auto sender = (QHelpIndexWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpIndexWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

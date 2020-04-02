@@ -58,7 +58,7 @@ void createIndex ( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  auto obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -84,7 +84,7 @@ QModelIndex filter ( const QString & filter, const QString & wildcard = QString(
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  auto obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     {
 #endif
       auto ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ bool isCreatingIndex () const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  auto obj = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ void indexCreated()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-  auto sender = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -193,7 +193,7 @@ void indexCreationStarted()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-  auto sender = (QHelpIndexModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

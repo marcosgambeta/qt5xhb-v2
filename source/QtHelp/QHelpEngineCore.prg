@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ bool addCustomFilter ( const QString & filterName, const QStringList & attribute
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ bool autoSaveFilter () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ QString collectionFile () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ bool copyCollectionFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ QString currentFilter () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ QStringList customFilters () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ QVariant customValue ( const QString & key, const QVariant & defaultValue = QVar
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,8 +274,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->customValue ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->customValue ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ QString documentationFileName ( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ QString error () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ QByteArray fileData ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     {
 #endif
       auto ptr = new QByteArray( obj->fileData ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ QStringList filterAttributes () const
 */
 void QHelpEngineCore_filterAttributes1 ()
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ QStringList filterAttributes ( const QString & filterName ) const
 */
 void QHelpEngineCore_filterAttributes2 ()
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -409,7 +409,7 @@ QUrl findFile ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
     {
 #endif
       auto ptr = new QUrl( obj->findFile ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ bool registerDocumentation ( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ QStringList registeredDocumentations () const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ bool removeCustomFilter ( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -506,7 +506,7 @@ bool removeCustomValue ( const QString & key )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ void setAutoSaveFilter ( bool save )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -556,7 +556,7 @@ void setCollectionFile ( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -582,7 +582,7 @@ void setCurrentFilter ( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -608,7 +608,7 @@ bool setCustomValue ( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -632,7 +632,7 @@ bool setupData ()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -656,7 +656,7 @@ bool unregisterDocumentation ( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 {
-  auto obj = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   {
 #endif
     auto ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -719,7 +719,7 @@ void currentFilterChanged( const QString & newFilter )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
-  auto sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -781,7 +781,7 @@ void setupFinished()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
-  auto sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -841,7 +841,7 @@ void setupStarted()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
-  auto sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -901,7 +901,7 @@ void warning( const QString & msg )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
-  auto sender = (QHelpEngineCore *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

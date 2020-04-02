@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 {
-  auto obj = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -77,7 +77,7 @@ QModelIndex indexOf ( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 {
-  auto obj = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexOf ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ void linkActivated( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 {
-  auto sender = (QHelpContentWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QHelpContentWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
