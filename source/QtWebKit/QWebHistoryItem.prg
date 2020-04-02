@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
   if( ISNUMPAR(1) && ISQWEBHISTORYITEM(1) )
   {
     auto obj = new QWebHistoryItem ( *PQWEBHISTORYITEM(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 
 HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
     {
 #endif
       auto ptr = new QIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ QDateTime lastVisited () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
     {
 #endif
       auto ptr = new QDateTime( obj->lastVisited () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ QUrl originalUrl () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
     {
 #endif
       auto ptr = new QUrl( obj->originalUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ void setUserData ( const QVariant & userData )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ QVariant userData () const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {
-  auto obj = (QWebHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
     {
 #endif
       auto ptr = new QVariant( obj->userData () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
