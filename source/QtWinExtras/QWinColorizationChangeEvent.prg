@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
   if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
     auto obj = new QWinColorizationChangeEvent ( PQRGB(1), PBOOL(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
 HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinColorizationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinColorizationChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ QRgb color() const
 HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinColorizationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinColorizationChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ bool opaqueBlend() const
 HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_OPAQUEBLEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinColorizationChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinColorizationChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

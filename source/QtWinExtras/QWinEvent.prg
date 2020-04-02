@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     auto obj = new QWinEvent ( PINT(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 HB_FUNC_STATIC( QWINEVENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWinEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
