@@ -76,7 +76,7 @@ QNetworkCacheMetaData ()
 void QNetworkCacheMetaData_new1 ()
 {
   auto obj = new QNetworkCacheMetaData ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 void QNetworkCacheMetaData_new2 ()
 {
   auto obj = new QNetworkCacheMetaData ( *PQNETWORKCACHEMETADATA(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QNetworkCacheMetaData ()
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SWAP )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ QDateTime lastModified() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
     {
 #endif
       auto ptr = new QDateTime( obj->lastModified () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ void setLastModified(const QDateTime &dateTime)
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -292,7 +292,7 @@ QDateTime expirationDate() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
     {
 #endif
       auto ptr = new QDateTime( obj->expirationDate () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ void setExpirationDate(const QDateTime &dateTime)
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,7 +343,7 @@ bool saveToDisk() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ void setSaveToDisk(bool allow)
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 {
-  auto obj = (QNetworkCacheMetaData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCacheMetaData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

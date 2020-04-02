@@ -67,7 +67,7 @@ QDnsMailExchangeRecord()
 void QDnsMailExchangeRecord_new1 ()
 {
   auto obj = new QDnsMailExchangeRecord ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 void QDnsMailExchangeRecord_new2 ()
 {
   auto obj = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDnsMailExchangeRecord()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_DELETE )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QString exchange() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ quint16 preference() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
 {
-  auto obj = (QDnsMailExchangeRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsMailExchangeRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

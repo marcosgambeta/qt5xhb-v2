@@ -78,7 +78,7 @@ QNetworkInterface ()
 void QNetworkInterface_new1 ()
 {
   auto obj = new QNetworkInterface ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QNetworkInterface ( const QNetworkInterface & other )
 void QNetworkInterface_new2 ()
 {
   auto obj = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QNetworkInterface ()
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QList<QNetworkAddressEntry> addressEntries () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ InterfaceFlags flags () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ QString hardwareAddress () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ QString humanReadableName () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ int index () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
   {
 #endif
     auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    Qt5xHb::createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
   {
 #endif
     auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    Qt5xHb::createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -506,7 +506,7 @@ void swap(QNetworkInterface &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
 {
-  auto obj = (QNetworkInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -87,8 +87,8 @@ explicit QNetworkRequest ( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1 ()
 {
-  auto obj = new QNetworkRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QNetworkRequest ( ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -97,7 +97,7 @@ QNetworkRequest ( const QNetworkRequest & other )
 void QNetworkRequest_new2 ()
 {
   auto obj = new QNetworkRequest ( *PQNETWORKREQUEST(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() 
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->attribute ( (QNetworkRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ bool hasRawHeader ( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ QVariant header ( KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
     {
 #endif
       auto ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ QObject * originatingObject () const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
     {
 #endif
       QObject * ptr = obj->originatingObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ Priority priority () const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ QByteArray rawHeader ( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
     {
 #endif
       auto ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ QList<QByteArray> rawHeaderList () const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ void setAttribute ( Attribute code, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -370,7 +370,7 @@ void setHeader ( KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ void setOriginatingObject ( QObject * object )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -422,7 +422,7 @@ void setPriority ( Priority priority )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ void setSslConfiguration ( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ void setUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ QSslConfiguration sslConfiguration () const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
     {
 #endif
       auto ptr = new QSslConfiguration( obj->sslConfiguration () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+      Qt5xHb::createReturnClass ( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_URL )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,7 +576,7 @@ void swap(QNetworkRequest &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SWAP )
 {
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -603,7 +603,7 @@ int maximumRedirectsAllowed() const
 HB_FUNC_STATIC( QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -629,7 +629,7 @@ void setMaximumRedirectsAllowed(int maximumRedirectsAllowed)
 HB_FUNC_STATIC( QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  auto obj = (QNetworkRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

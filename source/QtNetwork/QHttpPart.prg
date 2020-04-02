@@ -67,7 +67,7 @@ QHttpPart ()
 void QHttpPart_new1 ()
 {
   auto obj = new QHttpPart ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QHttpPart ( const QHttpPart & other )
 void QHttpPart_new2 ()
 {
   auto obj = new QHttpPart ( *PQHTTPPART(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QHttpPart ()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 */
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ void setBody ( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void setBodyDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ void swap(QHttpPart &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHTTPPART_SWAP )
 {
-  auto obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

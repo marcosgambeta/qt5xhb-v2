@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QUDPSOCKET_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QUdpSocket ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -83,7 +83,7 @@ virtual ~QUdpSocket()
 */
 HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ bool joinMulticastGroup(const QHostAddress &groupAddress)
 */
 void QUdpSocket_joinMulticastGroup1 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterfac
 */
 void QUdpSocket_joinMulticastGroup2 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ bool leaveMulticastGroup(const QHostAddress &groupAddress)
 */
 void QUdpSocket_leaveMulticastGroup1 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterfa
 */
 void QUdpSocket_leaveMulticastGroup2 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ QNetworkInterface multicastInterface() const
 */
 HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
     {
 #endif
       auto ptr = new QNetworkInterface( obj->multicastInterface () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+      Qt5xHb::createReturnClass ( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ void setMulticastInterface(const QNetworkInterface &iface)
 */
 HB_FUNC_STATIC( QUDPSOCKET_SETMULTICASTINTERFACE )
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ bool hasPendingDatagrams() const
 */
 HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -268,7 +268,7 @@ qint64 pendingDatagramSize() const
 */
 HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
 HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
     {
 #endif
       auto ptr = new QNetworkDatagram( obj->receiveDatagram ( OPQINT64(1,-1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
+      Qt5xHb::createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ qint64 writeDatagram(const QNetworkDatagram &datagram)
 void QUdpSocket_writeDatagram1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, qui
 */
 void QUdpSocket_writeDatagram2 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint
 */
 void QUdpSocket_writeDatagram3 ()
 {
-  auto obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

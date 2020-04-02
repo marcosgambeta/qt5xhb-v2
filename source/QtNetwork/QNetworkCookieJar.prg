@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QNetworkCookieJar ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -77,7 +77,7 @@ virtual ~QNetworkCookieJar()
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ virtual bool insertCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ virtual bool updateCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ virtual bool deleteCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
 {
-  auto obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

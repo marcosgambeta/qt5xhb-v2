@@ -87,7 +87,7 @@ QNetworkProxy ()
 void QNetworkProxy_new1 ()
 {
   auto obj = new QNetworkProxy ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,7 +96,7 @@ QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 po
 void QNetworkProxy_new2 ()
 {
   auto obj = new QNetworkProxy ( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,7 +105,7 @@ QNetworkProxy ( const QNetworkProxy & other )
 void QNetworkProxy_new3 ()
 {
   auto obj = new QNetworkProxy ( *PQNETWORKPROXY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QNetworkProxy ()
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setType ( QNetworkProxy::ProxyType type )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QNetworkProxy::ProxyType type () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ void setCapabilities ( Capabilities capabilities )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ Capabilities capabilities () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ bool isCachingProxy () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ bool isTransparentProxy () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ void setUser ( const QString & userName )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ QString user () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_USER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ void setPassword ( const QString & password )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ QString password () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ void setHostName ( const QString & hostName )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ QString hostName () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -455,7 +455,7 @@ void setPort ( quint16 port )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ quint16 port () const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
   {
 #endif
     auto ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
-    _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    Qt5xHb::createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -546,7 +546,7 @@ QVariant header(QNetworkRequest::KnownHeaders header) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
     {
 #endif
       auto ptr = new QVariant( obj->header ( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,7 +571,7 @@ void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETHEADER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ bool hasRawHeader(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HASRAWHEADER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -621,7 +621,7 @@ QList<QByteArray> rawHeaderList() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADERLIST )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -673,7 +673,7 @@ QByteArray rawHeader(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
     {
 #endif
       auto ptr = new QByteArray( obj->rawHeader ( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -698,7 +698,7 @@ void setRawHeader(const QByteArray &headerName, const QByteArray &value)
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETRAWHEADER )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -724,7 +724,7 @@ void swap(QNetworkProxy &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SWAP )
 {
-  auto obj = (QNetworkProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QNetworkProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

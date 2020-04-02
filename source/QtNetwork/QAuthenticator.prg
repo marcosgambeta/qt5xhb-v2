@@ -73,7 +73,7 @@ QAuthenticator ()
 void QAuthenticator_new1 ()
 {
   auto obj = new QAuthenticator ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QAuthenticator ( const QAuthenticator & other )
 void QAuthenticator_new2 ()
 {
   auto obj = new QAuthenticator ( *PQAUTHENTICATOR(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QAuthenticator ()
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ QString user() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setUser(const QString &user)
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ QString password() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setPassword(const QString &password)
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ QString realm() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ void setRealm(const QString &realm)
 HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ QVariant option(const QString &opt) const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
     {
 #endif
       auto ptr = new QVariant( obj->option ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ void setOption(const QString &opt, const QVariant &value)
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ void detach()
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_DETACH )
 {
-  auto obj = (QAuthenticator *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAuthenticator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

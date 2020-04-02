@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QSctpServer ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSCTPSERVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  auto obj = (QSctpServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSCTPSERVER_SETMAXIMUMCHANNELCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  auto obj = (QSctpServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSCTPSERVER_MAXIMUMCHANNELCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  auto obj = (QSctpServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-  auto obj = (QSctpServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSctpServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
     {
 #endif
       QSctpSocket * ptr = obj->nextPendingDatagramConnection ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCTPSOCKET" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSCTPSOCKET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

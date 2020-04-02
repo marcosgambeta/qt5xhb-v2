@@ -69,7 +69,7 @@ QDnsServiceRecord()
 void QDnsServiceRecord_new1 ()
 {
   auto obj = new QDnsServiceRecord ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QDnsServiceRecord(const QDnsServiceRecord & other)
 void QDnsServiceRecord_new2 ()
 {
   auto obj = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDnsServiceRecord()
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_DELETE )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ quint16 port() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ quint16 priority() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ QString target() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ quint16 weight() const
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
 {
-  auto obj = (QDnsServiceRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDnsServiceRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
