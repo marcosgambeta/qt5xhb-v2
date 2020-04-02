@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsVideoItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    auto obj = new QGraphicsVideoItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_DELETE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ QMediaObject *mediaObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ Qt::AspectRatioMode aspectRatioMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ASPECTRATIOMODE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setAspectRatioMode(Qt::AspectRatioMode mode)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
     {
 #endif
       auto ptr = new QPointF( obj->offset () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ void setOffset(const QPointF &offset)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ QSizeF size() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
     {
 #endif
       auto ptr = new QSizeF( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ void setSize(const QSizeF &size)
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ QSizeF nativeSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
     {
 #endif
       auto ptr = new QSizeF( obj->nativeSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *w
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
 {
-  auto obj = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ void nativeSizeChanged( const QSizeF & size )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 {
-  auto sender = (QGraphicsVideoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

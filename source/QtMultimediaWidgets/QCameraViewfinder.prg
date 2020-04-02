@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QCameraViewfinder ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_DELETE )
 {
-  auto obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -87,7 +87,7 @@ virtual QMediaObject * mediaObject() const
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
 {
-  auto obj = (QCameraViewfinder *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraViewfinder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

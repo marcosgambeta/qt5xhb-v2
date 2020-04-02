@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QVideoWidget ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
 
 HB_FUNC_STATIC( QVIDEOWIDGET_DELETE )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ QMediaObject *mediaObject() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ bool isFullScreen() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ISFULLSCREEN )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ Qt::AspectRatioMode aspectRatioMode() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ASPECTRATIOMODE )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ int brightness() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_BRIGHTNESS )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ int contrast() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_CONTRAST )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ int hue() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_HUE )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ int saturation() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SATURATION )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -279,7 +279,7 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ void setFullScreen(bool fullScreen)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETFULLSCREEN )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ void setAspectRatioMode(Qt::AspectRatioMode mode)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETASPECTRATIOMODE )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ void setBrightness(int brightness)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETBRIGHTNESS )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void setContrast(int contrast)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETCONTRAST )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void setHue(int hue)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETHUE )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ void setSaturation(int saturation)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETSATURATION )
 {
-  auto obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ void fullScreenChanged( bool fullScreen )
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ONFULLSCREENCHANGED )
 {
-  auto sender = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -522,7 +522,7 @@ void brightnessChanged( int brightness )
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ONBRIGHTNESSCHANGED )
 {
-  auto sender = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -584,7 +584,7 @@ void contrastChanged( int contrast )
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ONCONTRASTCHANGED )
 {
-  auto sender = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -646,7 +646,7 @@ void hueChanged( int hue )
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ONHUECHANGED )
 {
-  auto sender = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -708,7 +708,7 @@ void saturationChanged( int saturation )
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ONSATURATIONCHANGED )
 {
-  auto sender = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
