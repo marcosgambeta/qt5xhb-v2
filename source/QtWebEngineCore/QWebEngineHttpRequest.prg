@@ -76,8 +76,8 @@ explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpReq
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
 {
-  auto obj = new QWebEngineHttpRequest ( ISNIL(1)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QWebEngineHttpRequest ( ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW2 )
 {
   auto obj = new QWebEngineHttpRequest ( *PQWEBENGINEHTTPREQUEST(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpRequest::Method &method = QWebEngineHttpRequest::Get)
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_DELETE )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ void swap(QWebEngineHttpRequest &other)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SWAP )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ Method method() const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_METHOD )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ void setMethod(QWebEngineHttpRequest::Method method)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETMETHOD )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_URL )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ void setUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETURL )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ QByteArray postData() const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_POSTDATA )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_POSTDATA )
     {
 #endif
       auto ptr = new QByteArray( obj->postData () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ void setPostData(const QByteArray &postData)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETPOSTDATA )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ bool hasHeader(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HASHEADER )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ QVector<QByteArray> headers() const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ QByteArray header(const QByteArray &headerName) const
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADER )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADER )
     {
 #endif
       auto ptr = new QByteArray( obj->header ( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ void setHeader(const QByteArray &headerName, const QByteArray &value)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETHEADER )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -430,7 +430,7 @@ void unsetHeader(const QByteArray &headerName)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_UNSETHEADER )
 {
-  auto obj = (QWebEngineHttpRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineHttpRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

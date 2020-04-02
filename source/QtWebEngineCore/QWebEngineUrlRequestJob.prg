@@ -63,7 +63,7 @@ QWebEngineUrlRequestJob(QtWebEngineCore::URLRequestCustomJobDelegate *) [private
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_DELETE )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -85,7 +85,7 @@ QUrl requestUrl() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTURL )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTURL )
     {
 #endif
       auto ptr = new QUrl( obj->requestUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ QByteArray requestMethod() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTMETHOD )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTMETHOD )
     {
 #endif
       auto ptr = new QByteArray( obj->requestMethod () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ void reply(const QByteArray &contentType, QIODevice *device)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REPLY )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ void fail(Error error)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_FAIL )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ void redirect(const QUrl &url)
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REDIRECT )
 {
-  auto obj = (QWebEngineUrlRequestJob *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestJob *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QWebEngineUrlRequestInterceptor ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -69,7 +69,7 @@ virtual void interceptRequest(QWebEngineUrlRequestInfo &info) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST )
 {
-  auto obj = (QWebEngineUrlRequestInterceptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlRequestInterceptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QWebEngineUrlSchemeHandler ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_DELETE )
 {
-  auto obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlSchemeHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ virtual void requestStarted(QWebEngineUrlRequestJob*) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED )
 {
-  auto obj = (QWebEngineUrlSchemeHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebEngineUrlSchemeHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
