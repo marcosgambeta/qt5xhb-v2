@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QOAuthOobReplyHandler ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuthOobReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ QString callback() const override
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QOAuthOobReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QOAuthOobReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
