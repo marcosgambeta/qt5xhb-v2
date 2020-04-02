@@ -86,7 +86,7 @@ explicit QTextToSpeechEngine(QObject *parent = nullptr) (abstract)
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ virtual QVector<QLocale> availableLocales() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLELOCALES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ virtual QVector<QVoice> availableVoices() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLEVOICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ virtual void say(const QString &text) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SAY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ virtual void stop() = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ virtual void pause() = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_PAUSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ virtual void resume() = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_RESUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -330,7 +330,7 @@ virtual double rate() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_RATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ virtual bool setRate(double rate) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETRATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ virtual double pitch() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_PITCH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ virtual bool setPitch(double pitch) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETPITCH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ virtual QLocale locale() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_LOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_LOCALE )
     {
 #endif
       auto ptr = new QLocale( obj->locale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ virtual bool setLocale(const QLocale &locale) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETLOCALE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -487,7 +487,7 @@ virtual double volume() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ virtual bool setVolume(double volume) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -539,7 +539,7 @@ virtual QVoice voice() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOICE )
     {
 #endif
       auto ptr = new QVoice( obj->voice () );
-      _qt5xhb_createReturnClass ( ptr, "QVOICE", true );
+      Qt5xHb::createReturnClass ( ptr, "QVOICE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ virtual bool setVoice(const QVoice &voice) = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -592,7 +592,7 @@ virtual QTextToSpeech::State state() const = 0
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto obj = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void stateChanged( QTextToSpeech::State state )
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  auto sender = (QTextToSpeechEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextToSpeechEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
