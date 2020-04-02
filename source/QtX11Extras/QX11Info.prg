@@ -77,7 +77,7 @@ RETURN
 HB_FUNC_STATIC( QX11INFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QX11Info *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QX11Info *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
   {
 #endif
     auto ptr = new QByteArray( QX11Info::nextStartupId () );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
