@@ -122,7 +122,7 @@ QAction ( QObject * parent = nullptr )
 void QAction_new1 ()
 {
   auto obj = new QAction ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -131,7 +131,7 @@ QAction ( const QString & text, QObject * parent = nullptr )
 void QAction_new2 ()
 {
   auto obj = new QAction ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -139,8 +139,8 @@ QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 */
 void QAction_new3 ()
 {
-  auto obj = new QAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QAction ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QAction ( QObject * parent = nullptr )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QACTION_NEW )
 
 HB_FUNC_STATIC( QACTION_DELETE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QActionGroup * actionGroup () const
 */
 HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->actionGroup ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTIONGROUP" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QACTIONGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ void activate ( ActionEvent event )
 */
 HB_FUNC_STATIC( QACTION_ACTIVATE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ QList<QGraphicsWidget *> associatedGraphicsWidgets () const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ QList<QWidget *> associatedWidgets () const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -338,7 +338,7 @@ bool autoRepeat () const
 */
 HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ QVariant data () const
 */
 HB_FUNC_STATIC( QACTION_DATA )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QACTION_DATA )
     {
 #endif
       auto ptr = new QVariant( obj->data () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QACTION_FONT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QACTION_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QACTION_ICON )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QACTION_ICON )
     {
 #endif
       auto ptr = new QIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ QString iconText () const
 */
 HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ bool isCheckable () const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ bool isChecked () const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QACTION_ISENABLED )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -533,7 +533,7 @@ bool isIconVisibleInMenu () const
 */
 HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -557,7 +557,7 @@ bool isSeparator () const
 */
 HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -581,7 +581,7 @@ bool isVisible () const
 */
 HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -605,7 +605,7 @@ QMenu * menu () const
 */
 HB_FUNC_STATIC( QACTION_MENU )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QACTION_MENU )
     {
 #endif
       QMenu * ptr = obj->menu ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,7 +630,7 @@ MenuRole menuRole () const
 */
 HB_FUNC_STATIC( QACTION_MENUROLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -654,7 +654,7 @@ QWidget * parentWidget () const
 */
 HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,7 +679,7 @@ Priority priority () const
 */
 HB_FUNC_STATIC( QACTION_PRIORITY )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -703,7 +703,7 @@ void setActionGroup ( QActionGroup * group )
 */
 HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -729,7 +729,7 @@ void setAutoRepeat ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -755,7 +755,7 @@ void setCheckable ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -781,7 +781,7 @@ void setData ( const QVariant & userData )
 */
 HB_FUNC_STATIC( QACTION_SETDATA )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -807,7 +807,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QACTION_SETFONT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -833,7 +833,7 @@ void setIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QACTION_SETICON )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,7 +859,7 @@ void setIconText ( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETICONTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -885,7 +885,7 @@ void setIconVisibleInMenu ( bool visible )
 */
 HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -911,7 +911,7 @@ void setMenu ( QMenu * menu )
 */
 HB_FUNC_STATIC( QACTION_SETMENU )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -937,7 +937,7 @@ void setMenuRole ( MenuRole menuRole )
 */
 HB_FUNC_STATIC( QACTION_SETMENUROLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -963,7 +963,7 @@ void setPriority ( Priority priority )
 */
 HB_FUNC_STATIC( QACTION_SETPRIORITY )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -989,7 +989,7 @@ void setSeparator ( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1015,7 +1015,7 @@ void setShortcut ( const QKeySequence & shortcut )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1041,7 +1041,7 @@ void setShortcutContext ( Qt::ShortcutContext context )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1067,7 +1067,7 @@ void setShortcuts ( const QList<QKeySequence> & shortcuts )
 */
 void QAction_setShortcuts1 ()
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1089,7 +1089,7 @@ void setShortcuts ( QKeySequence::StandardKey key )
 */
 void QAction_setShortcuts2 ()
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1123,7 +1123,7 @@ void setStatusTip ( const QString & statusTip )
 */
 HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1149,7 +1149,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1175,7 +1175,7 @@ void setToolTip ( const QString & tip )
 */
 HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1201,7 +1201,7 @@ void setWhatsThis ( const QString & what )
 */
 HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1227,7 +1227,7 @@ QKeySequence shortcut () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
     {
 #endif
       auto ptr = new QKeySequence( obj->shortcut () );
-      _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+      Qt5xHb::createReturnClass ( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1252,7 +1252,7 @@ Qt::ShortcutContext shortcutContext () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1276,7 +1276,7 @@ QList<QKeySequence> shortcuts () const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1328,7 +1328,7 @@ bool showStatusText ( QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1352,7 +1352,7 @@ QString statusTip () const
 */
 HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1376,7 +1376,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QACTION_TEXT )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1400,7 +1400,7 @@ QString toolTip () const
 */
 HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1424,7 +1424,7 @@ QString whatsThis () const
 */
 HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1448,7 +1448,7 @@ void hover ()
 */
 HB_FUNC_STATIC( QACTION_HOVER )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1474,7 +1474,7 @@ void setChecked ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKED )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1500,7 +1500,7 @@ void setDisabled ( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETDISABLED )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1526,7 +1526,7 @@ void setEnabled ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETENABLED )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1552,7 +1552,7 @@ void setVisible ( bool )
 */
 HB_FUNC_STATIC( QACTION_SETVISIBLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1578,7 +1578,7 @@ void toggle ()
 */
 HB_FUNC_STATIC( QACTION_TOGGLE )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1604,7 +1604,7 @@ void trigger ()
 */
 HB_FUNC_STATIC( QACTION_TRIGGER )
 {
-  auto obj = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1630,7 +1630,7 @@ void changed()
 */
 HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
-  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1690,7 +1690,7 @@ void hovered()
 */
 HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
-  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1750,7 +1750,7 @@ void toggled( bool checked )
 */
 HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
-  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1812,7 +1812,7 @@ void triggered( bool checked = false )
 */
 HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
-  auto sender = (QAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

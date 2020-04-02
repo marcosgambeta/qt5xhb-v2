@@ -63,8 +63,8 @@ QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPathItem_new1 ()
 {
-  auto obj = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr 
 */
 void QGraphicsPathItem_new2 ()
 {
-  auto obj = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_DELETE )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ QPainterPath path () const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
     {
 #endif
       auto ptr = new QPainterPath( obj->path () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ void setPath ( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
     {
 #endif
       auto ptr = new QPainterPath( obj->opaqueArea () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -292,7 +292,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
     {
 #endif
       auto ptr = new QPainterPath( obj->shape () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
 {
-  auto obj = (QGraphicsPathItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPathItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

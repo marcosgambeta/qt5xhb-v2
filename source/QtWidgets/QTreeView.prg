@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QTreeView ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
 
 HB_FUNC_STATIC( QTREEVIEW_DELETE )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ bool allColumnsShowFocus () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ int autoExpandDelay () const
 */
 HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ int columnAt ( int x ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ int columnViewportPosition ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ int columnWidth ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ bool expandsOnDoubleClick () const
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ QHeaderView * header () const
 */
 HB_FUNC_STATIC( QTREEVIEW_HEADER )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     {
 #endif
       QHeaderView * ptr = obj->header ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QHEADERVIEW" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QHEADERVIEW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ int indentation () const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ QModelIndex indexAbove ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexAbove ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ QModelIndex indexBelow ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexBelow ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ bool isAnimated () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ bool isColumnHidden ( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ bool isExpanded ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -468,7 +468,7 @@ bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ bool isHeaderHidden () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -516,7 +516,7 @@ bool isRowHidden ( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -540,7 +540,7 @@ bool isSortingEnabled () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -564,7 +564,7 @@ bool itemsExpandable () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -588,7 +588,7 @@ bool rootIsDecorated () const
 */
 HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -612,7 +612,7 @@ void setAllColumnsShowFocus ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -638,7 +638,7 @@ void setAnimated ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -664,7 +664,7 @@ void setAutoExpandDelay ( int delay )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -690,7 +690,7 @@ void setColumnHidden ( int column, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -716,7 +716,7 @@ void setColumnWidth ( int column, int width )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -742,7 +742,7 @@ void setExpanded ( const QModelIndex & index, bool expanded )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -768,7 +768,7 @@ void setExpandsOnDoubleClick ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -794,7 +794,7 @@ void setFirstColumnSpanned ( int row, const QModelIndex & parent, bool span )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -820,7 +820,7 @@ void setHeader ( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADER )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -846,7 +846,7 @@ void setHeaderHidden ( bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -872,7 +872,7 @@ void setIndentation ( int i )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -898,7 +898,7 @@ void setItemsExpandable ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -924,7 +924,7 @@ void setRootIsDecorated ( bool show )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -950,7 +950,7 @@ void setRowHidden ( int row, const QModelIndex & parent, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -976,7 +976,7 @@ void setSortingEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1002,7 +1002,7 @@ void setUniformRowHeights ( bool uniform )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1028,7 +1028,7 @@ void setWordWrap ( bool on )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1054,7 +1054,7 @@ void sortByColumn ( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1080,7 +1080,7 @@ bool uniformRowHeights () const
 */
 HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1104,7 +1104,7 @@ bool wordWrap () const
 */
 HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1128,7 +1128,7 @@ virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bott
 */
 HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1154,7 +1154,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1179,7 +1179,7 @@ virtual void keyboardSearch ( const QString & search )
 */
 HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1205,7 +1205,7 @@ virtual void reset ()
 */
 HB_FUNC_STATIC( QTREEVIEW_RESET )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1231,7 +1231,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1257,7 +1257,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1283,7 +1283,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETMODEL )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1309,7 +1309,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1335,7 +1335,7 @@ virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSELECTIONMODEL )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1361,7 +1361,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
     {
 #endif
       auto ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1386,7 +1386,7 @@ void collapse ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1412,7 +1412,7 @@ void collapseAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1438,7 +1438,7 @@ void expand ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1464,7 +1464,7 @@ void expandAll ()
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1490,7 +1490,7 @@ void expandToDepth ( int depth )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1516,7 +1516,7 @@ void hideColumn ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1542,7 +1542,7 @@ void resizeColumnToContents ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1568,7 +1568,7 @@ void showColumn ( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
 {
-  auto obj = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1594,7 +1594,7 @@ void collapsed( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  auto sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1656,7 +1656,7 @@ void expanded( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  auto sender = (QTreeView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTreeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

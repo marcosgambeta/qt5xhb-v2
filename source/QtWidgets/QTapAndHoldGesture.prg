@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 {
-  auto obj = (QTapAndHoldGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -73,7 +73,7 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 {
-  auto obj = (QTapAndHoldGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
     {
 #endif
       auto ptr = new QPointF( obj->position () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,7 +98,7 @@ void setPosition(const QPointF & pos)
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 {
-  auto obj = (QTapAndHoldGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTapAndHoldGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

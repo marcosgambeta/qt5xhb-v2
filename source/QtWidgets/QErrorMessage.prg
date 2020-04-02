@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QErrorMessage ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ void showMessage ( const QString & message )
 */
 void QErrorMessage_showMessage1 ()
 {
-  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ void showMessage ( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2 ()
 {
-  auto obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
   {
 #endif
     QErrorMessage * ptr = QErrorMessage::qtHandler ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ QSize maximumViewportSize () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumViewportSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QWidget * cornerWidget () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
     {
 #endif
       QWidget * ptr = obj->cornerWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ void setCornerWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ QScrollBar * horizontalScrollBar () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
     {
 #endif
       QScrollBar * ptr = obj->horizontalScrollBar ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ void setHorizontalScrollBar ( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ void setViewport ( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -373,7 +373,7 @@ QScrollBar * verticalScrollBar () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
     {
 #endif
       QScrollBar * ptr = obj->verticalScrollBar ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QSCROLLBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ void setVerticalScrollBar ( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ Qt::ScrollBarPolicy verticalScrollBarPolicy () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ QWidget * viewport () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
     {
 #endif
       QWidget * ptr = obj->viewport ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ virtual void setupViewport(QWidget *viewport)
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETUPVIEWPORT )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -575,7 +575,7 @@ SizeAdjustPolicy sizeAdjustPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -599,7 +599,7 @@ void setSizeAdjustPolicy(SizeAdjustPolicy policy)
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY )
 {
-  auto obj = (QAbstractScrollArea *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractScrollArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

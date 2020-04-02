@@ -68,7 +68,7 @@ QUndoView ( QWidget * parent = nullptr )
 void QUndoView_new1 ()
 {
   auto obj = new QUndoView ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -77,7 +77,7 @@ QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
 void QUndoView_new2 ()
 {
   auto obj = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 void QUndoView_new3 ()
 {
   auto obj = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QUndoView ( QWidget * parent = nullptr )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QIcon cleanIcon () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
     {
 #endif
       auto ptr = new QIcon( obj->cleanIcon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ QString emptyLabel () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QUndoGroup * group () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
     {
 #endif
       QUndoGroup * ptr = obj->group ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QUNDOGROUP" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QUNDOGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ void setCleanIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setCleanIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setCleanIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ void setEmptyLabel ( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ QUndoStack * stack () const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
     {
 #endif
       QUndoStack * ptr = obj->stack ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QUNDOSTACK" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QUNDOSTACK" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ void setGroup ( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ void setStack ( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
-  auto obj = (QUndoView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

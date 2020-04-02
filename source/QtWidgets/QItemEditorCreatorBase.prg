@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 {
-  auto obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorCreatorBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ virtual QWidget *createWidget(QWidget *parent) const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 {
-  auto obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorCreatorBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
     {
 #endif
       QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ virtual QByteArray valuePropertyName() const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
 {
-  auto obj = (QItemEditorCreatorBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorCreatorBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
     {
 #endif
       auto ptr = new QByteArray( obj->valuePropertyName () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

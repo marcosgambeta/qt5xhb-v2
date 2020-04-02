@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QFileSystemModel ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QIcon fileIcon ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
     {
 #endif
       auto ptr = new QIcon( obj->fileIcon ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ QFileInfo fileInfo ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
     {
 #endif
       auto ptr = new QFileInfo( obj->fileInfo ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QFILEINFO", true );
+      Qt5xHb::createReturnClass ( ptr, "QFILEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ QString fileName ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ QString filePath ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ QDir::Filters filter () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ void setFilter ( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -292,7 +292,7 @@ QFileIconProvider * iconProvider () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
     {
 #endif
       QFileIconProvider * ptr = obj->iconProvider ();
-      _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER", false );
+      Qt5xHb::createReturnClass ( ptr, "QFILEICONPROVIDER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ void setIconProvider ( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -343,12 +343,12 @@ QModelIndex index ( const QString & path, int column = 0 ) const
 */
 void QFileSystemModel_index1 ()
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -357,12 +357,12 @@ QModelIndex index ( int row, int column, const QModelIndex & parent = QModelInde
 */
 void QFileSystemModel_index2 ()
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    auto ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+    Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -390,7 +390,7 @@ bool isDir ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -414,7 +414,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ void setReadOnly ( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ QDateTime lastModified ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
     {
 #endif
       auto ptr = new QDateTime( obj->lastModified ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
     {
 #endif
       auto ptr = new QModelIndex( obj->mkdir ( *PQMODELINDEX(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,7 +514,7 @@ QVariant myComputer ( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
     {
 #endif
       auto ptr = new QVariant( obj->myComputer ( OPINT(1,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ bool nameFilterDisables () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -563,7 +563,7 @@ void setNameFilterDisables ( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -589,7 +589,7 @@ QStringList nameFilters () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -613,7 +613,7 @@ void setNameFilters ( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -639,7 +639,7 @@ QFile::Permissions permissions ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -663,7 +663,7 @@ bool remove ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -687,7 +687,7 @@ bool resolveSymlinks () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -711,7 +711,7 @@ void setResolveSymlinks ( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -737,7 +737,7 @@ bool rmdir ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -761,7 +761,7 @@ QDir rootDirectory () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
     {
 #endif
       auto ptr = new QDir( obj->rootDirectory () );
-      _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -786,7 +786,7 @@ QString rootPath () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -810,7 +810,7 @@ QModelIndex setRootPath ( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
     {
 #endif
       auto ptr = new QModelIndex( obj->setRootPath ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -835,7 +835,7 @@ qint64 size ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -859,7 +859,7 @@ QString type ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -883,7 +883,7 @@ bool canFetchMore ( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -907,7 +907,7 @@ int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RINT( obj->columnCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -931,7 +931,7 @@ QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
     {
 #endif
       auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -956,7 +956,7 @@ bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::E
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -980,7 +980,7 @@ bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int 
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1004,7 +1004,7 @@ void fetchMore ( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1030,7 +1030,7 @@ Qt::ItemFlags flags ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1054,7 +1054,7 @@ bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->hasChildren ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1078,7 +1078,7 @@ QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::D
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
     {
 #endif
       auto ptr = new QVariant( obj->headerData ( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1103,7 +1103,7 @@ QMimeData * mimeData ( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
         par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData ( par1 );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMIMEDATA" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMIMEDATA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1135,7 +1135,7 @@ QStringList mimeTypes () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1159,7 +1159,7 @@ QModelIndex parent ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
     {
 #endif
       auto ptr = new QModelIndex( obj->parent ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1184,7 +1184,7 @@ int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(1) ) );
+      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1208,7 +1208,7 @@ void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1234,7 +1234,7 @@ Qt::DropActions supportedDropActions () const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
 {
-  auto obj = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1258,7 +1258,7 @@ void directoryLoaded( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
-  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1320,7 +1320,7 @@ void fileRenamed( const QString & path, const QString & oldName, const QString &
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
-  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1386,7 +1386,7 @@ void rootPathChanged( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
-  auto sender = (QFileSystemModel *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileSystemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

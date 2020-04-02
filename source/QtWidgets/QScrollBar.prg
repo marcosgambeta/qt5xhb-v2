@@ -57,7 +57,7 @@ QScrollBar ( QWidget * parent = nullptr )
 void QScrollBar_new1 ()
 {
   auto obj = new QScrollBar ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
 void QScrollBar_new2 ()
 {
   auto obj = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QScrollBar ( QWidget * parent = nullptr )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
-  auto obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ virtual bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
-  auto obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
-  auto obj = (QScrollBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScrollBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

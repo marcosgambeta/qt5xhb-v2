@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsScale ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ QVector3D origin () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
     {
 #endif
       auto ptr = new QVector3D( obj->origin () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ void setOrigin ( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ void setXScale ( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ void setYScale ( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ void setZScale ( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ qreal xScale () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ qreal yScale () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ qreal zScale () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
 {
-  auto obj = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -328,7 +328,7 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
-  auto sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -388,7 +388,7 @@ void scaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -448,7 +448,7 @@ void xScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -508,7 +508,7 @@ void yScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -568,7 +568,7 @@ void zScaleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
-  auto sender = (QGraphicsScale *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsScale *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

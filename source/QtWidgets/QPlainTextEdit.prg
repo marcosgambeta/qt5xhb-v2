@@ -130,7 +130,7 @@ QPlainTextEdit ( QWidget * parent = nullptr )
 void QPlainTextEdit_new1 ()
 {
   auto obj = new QPlainTextEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -139,7 +139,7 @@ QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
 void QPlainTextEdit_new2 ()
 {
   auto obj = new QPlainTextEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QPlainTextEdit ( QWidget * parent = nullptr )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DELETE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QString anchorAt ( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ bool backgroundVisible () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_BACKGROUNDVISIBLE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ int blockCount () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_BLOCKCOUNT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ bool canPaste () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CANPASTE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ bool centerOnScroll () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERONSCROLL )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QMenu * createStandardContextMenu ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ QTextCharFormat currentCharFormat () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
     {
 #endif
       auto ptr = new QTextCharFormat( obj->currentCharFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ QTextCursor cursorForPosition ( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
     {
 #endif
       auto ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,12 +380,12 @@ QRect cursorRect ( const QTextCursor & cursor ) const
 */
 void QPlainTextEdit_cursorRect1 ()
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -394,12 +394,12 @@ QRect cursorRect () const
 */
 void QPlainTextEdit_cursorRect2 ()
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRect( obj->cursorRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -427,7 +427,7 @@ int cursorWidth () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORWIDTH )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ QTextDocument * document () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ QString documentTitle () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENTTITLE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ void ensureCursorVisible ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ENSURECURSORVISIBLE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -526,7 +526,7 @@ bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -550,7 +550,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ISREADONLY )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ bool isUndoRedoEnabled () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ISUNDOREDOENABLED )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -598,7 +598,7 @@ LineWrapMode lineWrapMode () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_LINEWRAPMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -622,7 +622,7 @@ virtual QVariant loadResource ( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
     {
 #endif
       auto ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,7 +647,7 @@ int maximumBlockCount () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -671,7 +671,7 @@ void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -697,7 +697,7 @@ void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mo
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -723,7 +723,7 @@ bool overwriteMode () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -747,7 +747,7 @@ void print ( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_PRINT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -773,7 +773,7 @@ void setBackgroundVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -799,7 +799,7 @@ void setCenterOnScroll ( bool enabled )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCENTERONSCROLL )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -825,7 +825,7 @@ void setCurrentCharFormat ( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURRENTCHARFORMAT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -851,7 +851,7 @@ void setCursorWidth ( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURSORWIDTH )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -877,7 +877,7 @@ void setDocument ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -903,7 +903,7 @@ void setDocumentTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -929,7 +929,7 @@ void setLineWrapMode ( LineWrapMode mode )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETLINEWRAPMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -955,7 +955,7 @@ void setMaximumBlockCount ( int maximum )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -981,7 +981,7 @@ void setOverwriteMode ( bool overwrite )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETOVERWRITEMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1007,7 +1007,7 @@ void setReadOnly ( bool ro )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETREADONLY )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1033,7 +1033,7 @@ void setTabChangesFocus ( bool b )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABCHANGESFOCUS )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1059,7 +1059,7 @@ void setTabStopWidth ( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABSTOPWIDTH )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1085,7 +1085,7 @@ void setTextCursor ( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTCURSOR )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1111,7 +1111,7 @@ void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1137,7 +1137,7 @@ void setUndoRedoEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETUNDOREDOENABLED )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1163,7 +1163,7 @@ void setWordWrapMode ( QTextOption::WrapMode policy )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1189,7 +1189,7 @@ bool tabChangesFocus () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TABCHANGESFOCUS )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1213,7 +1213,7 @@ int tabStopWidth () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TABSTOPWIDTH )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1237,7 +1237,7 @@ QTextCursor textCursor () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTCURSOR )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTCURSOR )
     {
 #endif
       auto ptr = new QTextCursor( obj->textCursor () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1262,7 +1262,7 @@ Qt::TextInteractionFlags textInteractionFlags () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1286,7 +1286,7 @@ QString toPlainText () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_TOPLAINTEXT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1310,7 +1310,7 @@ QTextOption::WrapMode wordWrapMode () const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_WORDWRAPMODE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1334,7 +1334,7 @@ void appendHtml ( const QString & html )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1360,7 +1360,7 @@ void appendPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1386,7 +1386,7 @@ void centerCursor ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CENTERCURSOR )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1412,7 +1412,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CLEAR )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1438,7 +1438,7 @@ void copy ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_COPY )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1464,7 +1464,7 @@ void cut ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CUT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1490,7 +1490,7 @@ void insertPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1516,7 +1516,7 @@ void paste ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_PASTE )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1542,7 +1542,7 @@ void redo ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_REDO )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1568,7 +1568,7 @@ void selectAll ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SELECTALL )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1594,7 +1594,7 @@ void setPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1620,7 +1620,7 @@ void undo ()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_UNDO )
 {
-  auto obj = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1646,7 +1646,7 @@ void blockCountChanged( int newBlockCount )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1708,7 +1708,7 @@ void copyAvailable( bool yes )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1770,7 +1770,7 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1830,7 +1830,7 @@ void modificationChanged( bool changed )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1892,7 +1892,7 @@ void redoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1954,7 +1954,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2014,7 +2014,7 @@ void textChanged()
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2074,7 +2074,7 @@ void undoAvailable( bool available )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2136,7 +2136,7 @@ void updateRequest( const QRect & rect, int dy )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
 {
-  auto sender = (QPlainTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

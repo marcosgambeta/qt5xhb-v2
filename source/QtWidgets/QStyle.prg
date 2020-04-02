@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLE_DELETE )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComp
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ virtual void drawControl ( ControlElement element, const QStyleOption * option, 
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int a
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int ali
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ virtual void drawPrimitive ( PrimitiveElement element, const QStyleOption * opti
 */
 HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixm
 */
 HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
     {
 #endif
       auto ptr = new QPixmap( obj->generatedIconPixmap ( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ virtual SubControl hitTestComplexControl ( ComplexControl control, const QStyleO
 */
 HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPi
 */
 HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
     {
 #endif
       auto ptr = new QRect( obj->itemPixmapRect ( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectang
 */
 HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
     {
 #endif
       auto ptr = new QRect( obj->itemTextRect ( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ int layoutSpacing ( QSizePolicy::ControlType control1, QSizePolicy::ControlType 
 */
 HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
     if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) )
     {
 #endif
-      RINT( obj->layoutSpacing ( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), ISNIL(4)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(4), OPQWIDGET(5,nullptr) ) );
+      RINT( obj->layoutSpacing ( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), ISNIL(4)? nullptr : (QStyleOption *) Qt5xHb::itemGetPtr(4), OPQWIDGET(5,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = null
 */
 HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      RINT( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
+      RINT( obj->pixelMetric ( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ virtual void polish ( QWidget * widget )
 */
 void QStyle_polish1 ()
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -395,7 +395,7 @@ virtual void polish ( QApplication * application )
 */
 void QStyle_polish2 ()
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ virtual void polish ( QPalette & palette )
 */
 void QStyle_polish3 ()
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -449,7 +449,7 @@ const QStyle * proxy () const
 */
 HB_FUNC_STATIC( QSTYLE_PROXY )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
     {
 #endif
       const QStyle * ptr = obj->proxy ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option,
 */
 HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
     {
 #endif
       auto ptr = new QSize( obj->sizeFromContents ( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4,nullptr) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = 
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDICON )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -507,8 +507,8 @@ HB_FUNC_STATIC( QSTYLE_STANDARDICON )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      auto ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->standardIcon ( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,nullptr) ) );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ virtual QPalette standardPalette () const
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
     {
 #endif
       auto ptr = new QPalette( obj->standardPalette () );
-      _qt5xhb_createReturnClass ( ptr, "QPALETTE", true );
+      Qt5xHb::createReturnClass ( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ virtual int styleHint ( StyleHint hint, const QStyleOption * option = nullptr, c
 */
 HB_FUNC_STATIC( QSTYLE_STYLEHINT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSTYLE_STYLEHINT )
     if( ISBETWEEN(1,4) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
     {
 #endif
-      RINT( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,nullptr), ISNIL(4)? nullptr : (QStyleHintReturn *) _qt5xhb_itemGetPtr(4) ) );
+      RINT( obj->styleHint ( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? nullptr : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,nullptr), ISNIL(4)? nullptr : (QStyleHintReturn *) Qt5xHb::itemGetPtr(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,7 +573,7 @@ virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex
 */
 HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
     {
 #endif
       auto ptr = new QRect( obj->subControlRect ( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), OPQWIDGET(4,nullptr) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ virtual QRect subElementRect ( SubElement element, const QStyleOption * option, 
 */
 HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
     {
 #endif
       auto ptr = new QRect( obj->subElementRect ( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,nullptr) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,7 +623,7 @@ virtual void unpolish ( QWidget * widget )
 */
 void QStyle_unpolish1 ()
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -638,7 +638,7 @@ virtual void unpolish ( QApplication * application )
 */
 void QStyle_unpolish2 ()
 {
-  auto obj = (QStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
   {
 #endif
     auto ptr = new QRect( QStyle::alignedRect ( (Qt::LayoutDirection) hb_parni(1), (Qt::Alignment) hb_parni(2), *PQSIZE(3), *PQRECT(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALPOS )
   {
 #endif
     auto ptr = new QPoint( QStyle::visualPos ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQPOINT(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
   {
 #endif
     auto ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQRECT(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

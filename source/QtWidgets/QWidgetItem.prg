@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     auto obj = new QWidgetItem ( PQWIDGET(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ virtual QSizePolicy::ControlTypes controlTypes() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_CONTROLTYPES )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
     {
 #endif
       auto ptr = new QRect( obj->geometry () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ virtual int heightForWidth(int w) const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -244,7 +244,7 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->minimumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ virtual void setGeometry(const QRect & rect)
 */
 HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {
-  auto obj = (QWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

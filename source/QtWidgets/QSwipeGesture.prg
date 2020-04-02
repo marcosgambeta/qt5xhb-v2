@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 {
-  auto obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -72,7 +72,7 @@ SwipeDirection horizontalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 {
-  auto obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -96,7 +96,7 @@ void setSwipeAngle(qreal value)
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 {
-  auto obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ qreal swipeAngle() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 {
-  auto obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ SwipeDirection verticalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 {
-  auto obj = (QSwipeGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSwipeGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

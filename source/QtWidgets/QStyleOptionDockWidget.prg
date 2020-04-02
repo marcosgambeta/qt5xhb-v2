@@ -62,7 +62,7 @@ QStyleOptionDockWidget()
 void QStyleOptionDockWidget_new1 ()
 {
   auto obj = new QStyleOptionDockWidget ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
 void QStyleOptionDockWidget_new2 ()
 {
   auto obj = new QStyleOptionDockWidget ( *PQSTYLEOPTIONDOCKWIDGET(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,7 +103,7 @@ QString title
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ bool closable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ bool movable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ bool floatable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ bool verticalTitleBar
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_VERTICALTITLEBAR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETVERTICALTITLEBAR )
 {
-  auto obj = (QStyleOptionDockWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

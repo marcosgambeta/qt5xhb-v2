@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     auto obj = new QBoxLayout ( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ void addLayout ( QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ void addSpacerItem ( QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ void addSpacing ( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ void addStretch ( int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ void addStrut ( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -251,7 +251,7 @@ void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -277,7 +277,7 @@ Direction direction () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ void insertLayout ( int index, QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ void insertSpacerItem ( int index, QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ void insertSpacing ( int index, int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -379,7 +379,7 @@ void insertStretch ( int index, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment 
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -431,7 +431,7 @@ void setDirection ( Direction direction )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -457,7 +457,7 @@ void setSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ void setStretch ( int index, int stretch )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ bool setStretchFactor ( QWidget * widget, int stretch )
 */
 void QBoxLayout_setStretchFactor1 ()
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ bool setStretchFactor ( QLayout * layout, int stretch )
 */
 void QBoxLayout_setStretchFactor2 ()
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -554,7 +554,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -578,7 +578,7 @@ int stretch ( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -602,7 +602,7 @@ virtual void addItem ( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -628,7 +628,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -676,7 +676,7 @@ virtual bool hasHeightForWidth () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -700,7 +700,7 @@ virtual int heightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -724,7 +724,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -750,7 +750,7 @@ virtual QLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
     {
 #endif
       QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -775,7 +775,7 @@ virtual QSize maximumSize () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -800,7 +800,7 @@ virtual int minimumHeightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -824,7 +824,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->minimumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -849,7 +849,7 @@ virtual void setGeometry ( const QRect & r )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -875,7 +875,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -900,7 +900,7 @@ virtual QLayoutItem * takeAt ( int index )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 {
-  auto obj = (QBoxLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

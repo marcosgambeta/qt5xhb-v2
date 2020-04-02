@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     auto obj = new QWidgetAction ( PQOBJECT(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 
 HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 {
-  auto obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -93,7 +93,7 @@ QWidget * defaultWidget() const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
-  auto obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     {
 #endif
       QWidget * ptr = obj->defaultWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ void releaseWidget(QWidget * widget)
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
-  auto obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ QWidget * requestWidget(QWidget * parent)
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
-  auto obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     {
 #endif
       QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ void setDefaultWidget(QWidget * widget)
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
-  auto obj = (QWidgetAction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWidgetAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

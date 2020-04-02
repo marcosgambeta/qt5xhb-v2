@@ -69,7 +69,7 @@ QGroupBox ( QWidget * parent = nullptr )
 void QGroupBox_new1 ()
 {
   auto obj = new QGroupBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,7 +78,7 @@ QGroupBox ( const QString & title, QWidget * parent = nullptr )
 void QGroupBox_new2 ()
 {
   auto obj = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QGroupBox ( QWidget * parent = nullptr )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 
 HB_FUNC_STATIC( QGROUPBOX_DELETE )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ bool isCheckable () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ bool isChecked () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ void setAlignment ( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ void setCheckable ( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ void setFlat ( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -348,7 +348,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ void setChecked ( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
-  auto obj = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ void clicked( bool checked = false )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  auto sender = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -461,7 +461,7 @@ void toggled( bool on )
 */
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  auto sender = (QGroupBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

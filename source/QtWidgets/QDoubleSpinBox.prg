@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QDoubleSpinBox ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_DELETE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QString cleanText () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ int decimals () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ void setDecimals ( int prec )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ double maximum () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ void setMaximum ( double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ double minimum () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void setMinimum ( double min )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ QString prefix () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ void setPrefix ( const QString & prefix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ void setRange ( double min, double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ double singleStep () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ void setSingleStep ( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ QString suffix () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ void setSuffix ( const QString & suffix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ virtual QString textFromValue ( double value ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ double value () const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ void setValue ( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ virtual double valueFromText ( const QString & text ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -559,7 +559,7 @@ virtual void fixup ( QString & str ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ virtual QValidator::State validate ( QString & text, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 {
-  auto obj = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -615,7 +615,7 @@ void valueChanged( double d )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-  auto sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -677,7 +677,7 @@ void valueChanged( const QString & text )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-  auto sender = (QDoubleSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDoubleSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

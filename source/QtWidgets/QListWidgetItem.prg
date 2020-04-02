@@ -108,7 +108,7 @@ QListWidgetItem ( QListWidget * parent = nullptr, int type = Type )
 void QListWidgetItem_new1 ()
 {
   auto obj = new QListWidgetItem ( OPQLISTWIDGET(1,nullptr), OPINT(2,QListWidgetItem::Type) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -117,7 +117,7 @@ QListWidgetItem ( const QString & text, QListWidget * parent = nullptr, int type
 void QListWidgetItem_new2 ()
 {
   auto obj = new QListWidgetItem ( PQSTRING(1), OPQLISTWIDGET(2,nullptr), OPINT(3,QListWidgetItem::Type) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -125,8 +125,8 @@ QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent
 */
 void QListWidgetItem_new3 ()
 {
-  auto obj = new QListWidgetItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,nullptr), OPINT(4,QListWidgetItem::Type) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QListWidgetItem ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,nullptr), OPINT(4,QListWidgetItem::Type) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -135,7 +135,7 @@ QListWidgetItem ( const QListWidgetItem & other )
 void QListWidgetItem_new4 ()
 {
   auto obj = new QListWidgetItem ( *PQLISTWIDGETITEM(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QListWidgetItem ( QListWidget * parent = nullptr, int type = Type )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_DELETE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ QBrush background () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
     {
 #endif
       auto ptr = new QBrush( obj->background () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ void setBackground ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUND )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -240,7 +240,7 @@ Qt::CheckState checkState () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CHECKSTATE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -264,7 +264,7 @@ void setCheckState ( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ virtual QListWidgetItem * clone () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
     {
 #endif
       QListWidgetItem * ptr = obj->clone ();
-      _qt5xhb_createReturnClass ( ptr, "QLISTWIDGETITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLISTWIDGETITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ virtual QVariant data ( int role ) const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
     {
 #endif
       auto ptr = new QVariant( obj->data ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ virtual void setData ( int role, const QVariant & value )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ Qt::ItemFlags flags () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FLAGS )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ void setFlags ( Qt::ItemFlags flags )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFLAGS )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFONT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -467,7 +467,7 @@ QBrush foreground () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
     {
 #endif
       auto ptr = new QBrush( obj->foreground () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ void setForeground ( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETFOREGROUND )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ QIcon icon () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
     {
 #endif
       auto ptr = new QIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ void setIcon ( const QIcon & icon )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ bool isHidden () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISHIDDEN )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -593,7 +593,7 @@ void setHidden ( bool hide )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -619,7 +619,7 @@ bool isSelected () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_ISSELECTED )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -643,7 +643,7 @@ void setSelected ( bool select )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -669,7 +669,7 @@ QListWidget * listWidget () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
     {
 #endif
       QListWidget * ptr = obj->listWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QLISTWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QLISTWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -694,7 +694,7 @@ virtual void read ( QDataStream & in )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_READ )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -720,7 +720,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,7 +745,7 @@ void setSizeHint ( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSIZEHINT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -771,7 +771,7 @@ QString statusTip () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_STATUSTIP )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ void setStatusTip ( const QString & statusTip )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -821,7 +821,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -845,7 +845,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -871,7 +871,7 @@ int textAlignment () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTALIGNMENT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -895,7 +895,7 @@ void setTextAlignment ( int alignment )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -921,7 +921,7 @@ QString toolTip () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TOOLTIP )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -945,7 +945,7 @@ void setToolTip ( const QString & toolTip )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -971,7 +971,7 @@ int type () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TYPE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -995,7 +995,7 @@ QString whatsThis () const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_WHATSTHIS )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1019,7 +1019,7 @@ void setWhatsThis ( const QString & whatsThis )
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1045,7 +1045,7 @@ virtual void write ( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_WRITE )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1071,7 +1071,7 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUNDCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->backgroundColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1096,7 +1096,7 @@ virtual void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUNDCOLOR )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUNDCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBackgroundColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBackgroundColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1122,7 +1122,7 @@ QColor textColor() const
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_TEXTCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->textColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1147,7 +1147,7 @@ void setTextColor(const QColor &color)
 */
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTCOLOR )
 {
-  auto obj = (QListWidgetItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListWidgetItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1155,7 +1155,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setTextColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setTextColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

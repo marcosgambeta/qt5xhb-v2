@@ -93,7 +93,7 @@ QGridLayout ( QWidget * parent )
 void QGridLayout_new1 ()
 {
   auto obj = new QGridLayout ( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -102,7 +102,7 @@ QGridLayout ()
 void QGridLayout_new2 ()
 {
   auto obj = new QGridLayout ();
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QGridLayout ( QWidget * parent )
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int col
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment 
 */
 void QGridLayout_addLayout1 ()
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnS
 */
 void QGridLayout_addLayout2 ()
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment 
 */
 void QGridLayout_addWidget1 ()
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int
 */
 void QGridLayout_addWidget2 ()
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ QRect cellRect ( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
     {
 #endif
       auto ptr = new QRect( obj->cellRect ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ int columnCount () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ int columnMinimumWidth ( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -345,7 +345,7 @@ int columnStretch ( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -369,7 +369,7 @@ void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * 
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ int horizontalSpacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ QLayoutItem * itemAtPosition ( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
     {
 #endif
       QLayoutItem * ptr = obj->itemAtPosition ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ Qt::Corner originCorner () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -476,7 +476,7 @@ int rowCount () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ int rowMinimumHeight ( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -524,7 +524,7 @@ int rowStretch ( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ void setColumnMinimumWidth ( int column, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ void setColumnStretch ( int column, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ void setHorizontalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void setOriginCorner ( Qt::Corner corner )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ void setRowMinimumHeight ( int row, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -678,7 +678,7 @@ void setRowStretch ( int row, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -704,7 +704,7 @@ void setSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -730,7 +730,7 @@ void setVerticalSpacing ( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -780,7 +780,7 @@ int verticalSpacing () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -804,7 +804,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -828,7 +828,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -852,7 +852,7 @@ virtual bool hasHeightForWidth () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -876,7 +876,7 @@ virtual int heightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -900,7 +900,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -926,7 +926,7 @@ virtual QLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
     {
 #endif
       QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -951,7 +951,7 @@ virtual QSize maximumSize () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -976,7 +976,7 @@ virtual int minimumHeightForWidth ( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1000,7 +1000,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->minimumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1025,7 +1025,7 @@ virtual void setGeometry ( const QRect & rect )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1051,7 +1051,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1076,7 +1076,7 @@ virtual QLayoutItem * takeAt ( int index )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 {
-  auto obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGridLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

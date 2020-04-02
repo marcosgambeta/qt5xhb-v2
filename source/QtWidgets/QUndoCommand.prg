@@ -70,8 +70,8 @@ QUndoCommand(QUndoCommand * parent = nullptr)
 */
 void QUndoCommand_new1 ()
 {
-  auto obj = new QUndoCommand ( ISNIL(1)? nullptr : (QUndoCommand *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QUndoCommand ( ISNIL(1)? nullptr : (QUndoCommand *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -79,8 +79,8 @@ QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
 */
 void QUndoCommand_new2 ()
 {
-  auto obj = new QUndoCommand ( PQSTRING(1), ISNIL(2)? nullptr : (QUndoCommand *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QUndoCommand ( PQSTRING(1), ISNIL(2)? nullptr : (QUndoCommand *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QUndoCommand(QUndoCommand * parent = nullptr)
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 
 HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -124,7 +124,7 @@ QString actionText() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ const QUndoCommand * child(int index) const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
     {
 #endif
       const QUndoCommand * ptr = obj->child ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QUNDOCOMMAND", false );
+      Qt5xHb::createReturnClass ( ptr, "QUNDOCOMMAND", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ virtual int id() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ virtual bool mergeWith(const QUndoCommand * command)
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ virtual void redo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -271,7 +271,7 @@ void setText(const QString & text)
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -297,7 +297,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ virtual void undo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 {
-  auto obj = (QUndoCommand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QUndoCommand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

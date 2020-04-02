@@ -57,7 +57,7 @@ explicit QRadioButton ( QWidget * parent = nullptr )
 void QRadioButton_new1 ()
 {
   auto obj = new QRadioButton ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,7 +66,7 @@ explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
 void QRadioButton_new2 ()
 {
   auto obj = new QRadioButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]explicit QRadioButton ( QWidget * parent = nullptr )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 
 HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 {
-  auto obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {
-  auto obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 {
-  auto obj = (QRadioButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

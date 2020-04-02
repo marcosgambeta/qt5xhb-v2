@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QWizardPage ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 
 HB_FUNC_STATIC( QWIZARDPAGE_DELETE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QString buttonText ( QWizard::WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ void setButtonText ( QWizard::WizardButton which, const QString & text )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ virtual void cleanupPage ()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ virtual void initializePage ()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ bool isCommitPage () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ void setCommitPage ( bool commitPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ virtual bool isComplete () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ bool isFinalPage () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ void setFinalPage ( bool finalPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -334,7 +334,7 @@ virtual int nextId () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ QPixmap pixmap ( QWizard::WizardPixmap which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap ( (QWizard::WizardPixmap) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -409,7 +409,7 @@ QString subTitle () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ void setSubTitle ( const QString & subTitle )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -459,7 +459,7 @@ QString title () const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ void setTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -509,7 +509,7 @@ virtual bool validatePage ()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
 {
-  auto obj = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -533,7 +533,7 @@ void completeChanged()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
-  auto sender = (QWizardPage *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QWizardPage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

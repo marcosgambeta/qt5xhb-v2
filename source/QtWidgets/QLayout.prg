@@ -86,7 +86,7 @@ RETURN
 
 HB_FUNC_STATIC( QLAYOUT_DELETE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ bool activate ()
 */
 HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual void addItem ( QLayoutItem * item ) = 0
 */
 HB_FUNC_STATIC( QLAYOUT_ADDITEM )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void addWidget ( QWidget * w )
 */
 HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QMargins contentsMargins () const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
     {
 #endif
       auto ptr = new QMargins( obj->contentsMargins () );
-      _qt5xhb_createReturnClass ( ptr, "QMARGINS", true );
+      Qt5xHb::createReturnClass ( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ QRect contentsRect () const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
     {
 #endif
       auto ptr = new QRect( obj->contentsRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ virtual int count () const = 0
 */
 HB_FUNC_STATIC( QLAYOUT_COUNT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ virtual int indexOf ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ virtual QLayoutItem * itemAt ( int index ) const = 0
 */
 HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
     {
 #endif
       QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ QWidget * menuBar () const
 */
 HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QLAYOUT_MENUBAR )
     {
 #endif
       QWidget * ptr = obj->menuBar ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ QWidget * parentWidget () const
 */
 HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ void removeItem ( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ void removeWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 */
 void QLayout_setAlignment1 ()
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -446,7 +446,7 @@ void setAlignment ( Qt::Alignment alignment )
 */
 void QLayout_setAlignment2 ()
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 */
 void QLayout_setAlignment3 ()
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -498,7 +498,7 @@ void setContentsMargins ( int left, int top, int right, int bottom )
 */
 void QLayout_setContentsMargins1 ()
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ void setContentsMargins ( const QMargins & margins )
 */
 void QLayout_setContentsMargins2 ()
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -547,7 +547,7 @@ void setEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QLAYOUT_SETENABLED )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ void setMenuBar ( QWidget * widget )
 */
 HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -599,7 +599,7 @@ void setSizeConstraint ( SizeConstraint )
 */
 HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -625,7 +625,7 @@ void setSpacing ( int )
 */
 HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -651,7 +651,7 @@ SizeConstraint sizeConstraint () const
 */
 HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -675,7 +675,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QLAYOUT_SPACING )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -699,7 +699,7 @@ virtual QLayoutItem * takeAt ( int index ) = 0
 */
 HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      Qt5xHb::createReturnClass ( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -724,7 +724,7 @@ void update ()
 */
 HB_FUNC_STATIC( QLAYOUT_UPDATE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -750,7 +750,7 @@ virtual Qt::Orientations expandingDirections () const
 */
 HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -774,7 +774,7 @@ virtual QRect geometry () const
 */
 HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
     {
 #endif
       auto ptr = new QRect( obj->geometry () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -799,7 +799,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -825,7 +825,7 @@ virtual bool isEmpty () const
 */
 HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -849,7 +849,7 @@ virtual QLayout * layout ()
 */
 HB_FUNC_STATIC( QLAYOUT_LAYOUT )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QLAYOUT_LAYOUT )
     {
 #endif
       QLayout * ptr = obj->layout ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QLAYOUT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QLAYOUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -874,7 +874,7 @@ virtual QSize maximumSize () const
 */
 HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->maximumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -899,7 +899,7 @@ virtual QSize minimumSize () const
 */
 HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
     {
 #endif
       auto ptr = new QSize( obj->minimumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,7 +924,7 @@ virtual void setGeometry ( const QRect & r )
 */
 HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
 {
-  auto obj = (QLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
   {
 #endif
     auto ptr = new QSize( QLayout::closestAcceptableSize ( PQWIDGET(1), *PQSIZE(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

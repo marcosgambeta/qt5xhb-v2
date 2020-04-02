@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -75,7 +75,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ QPointF pos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
     {
 #endif
       auto ptr = new QPointF( obj->pos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ Reason reason () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QPointF scenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
     {
 #endif
       auto ptr = new QPointF( obj->scenePos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ QPoint screenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
 {
-  auto obj = (QGraphicsSceneContextMenuEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSceneContextMenuEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
     {
 #endif
       auto ptr = new QPoint( obj->screenPos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -74,7 +74,7 @@ QLCDNumber ( QWidget * parent = nullptr )
 void QLCDNumber_new1 ()
 {
   auto obj = new QLCDNumber ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QLCDNumber ( uint numDigits, QWidget * parent = nullptr )
 void QLCDNumber_new2 ()
 {
   auto obj = new QLCDNumber ( PUINT(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QLCDNumber ( QWidget * parent = nullptr )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ bool checkOverflow ( double num ) const
 */
 void QLCDNumber_checkOverflow1 ()
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ bool checkOverflow ( int num ) const
 */
 void QLCDNumber_checkOverflow2 ()
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ int digitCount () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ int intValue () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ SegmentStyle segmentStyle () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ void setDigitCount ( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void setMode ( Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -337,7 +337,7 @@ void setSegmentStyle ( SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ bool smallDecimalPoint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ double value () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ void display ( const QString & s )
 */
 void QLCDNumber_display1 ()
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -451,7 +451,7 @@ void display ( double num )
 */
 void QLCDNumber_display2 ()
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -466,7 +466,7 @@ void display ( int num )
 */
 void QLCDNumber_display3 ()
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -527,7 +527,7 @@ void setBinMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -553,7 +553,7 @@ void setDecMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -579,7 +579,7 @@ void setHexMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -605,7 +605,7 @@ void setOctMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -631,7 +631,7 @@ void setSmallDecimalPoint ( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  auto obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -657,7 +657,7 @@ void overflow()
 */
 HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 {
-  auto sender = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

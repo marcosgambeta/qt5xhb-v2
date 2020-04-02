@@ -62,8 +62,8 @@ QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1 ()
 {
-  auto obj = new QSplashScreen ( ISNIL(1)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QSplashScreen ( ISNIL(1)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +71,8 @@ QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::Window
 */
 void QSplashScreen_new2 ()
 {
-  auto obj = new QSplashScreen ( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) _qt5xhb_itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QSplashScreen ( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 
 HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ void finish ( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ const QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap () );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ void setPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ void repaint ()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ void clearMessage ()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
-  auto obj = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && (ISQCOLOR(3)||ISNIL(3)) )
     {
 #endif
-      obj->showMessage ( PQSTRING(1), OPINT(2,Qt::AlignLeft), ISNIL(3)? Qt::black : *(QColor *) _qt5xhb_itemGetPtr(3) );
+      obj->showMessage ( PQSTRING(1), OPINT(2,Qt::AlignLeft), ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
-  auto sender = (QSplashScreen *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSplashScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

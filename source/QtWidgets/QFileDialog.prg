@@ -136,7 +136,7 @@ QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 void QFileDialog_new1 ()
 {
   auto obj = new QFileDialog ( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -145,7 +145,7 @@ QFileDialog ( QWidget * parent = nullptr, const QString & caption = QString(), c
 void QFileDialog_new2 ()
 {
   auto obj = new QFileDialog ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 
 HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ AcceptMode acceptMode () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ void setAcceptMode ( AcceptMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ bool confirmOverwrite () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setConfirmOverwrite ( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ QString defaultSuffix () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ void setDefaultSuffix ( const QString & suffix )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ FileMode fileMode () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ void setFileMode ( FileMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -391,7 +391,7 @@ QDir::Filters filter () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -415,7 +415,7 @@ void setFilter ( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -441,7 +441,7 @@ QStringList history () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -465,7 +465,7 @@ void setHistory ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -491,7 +491,7 @@ QFileIconProvider * iconProvider () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
     {
 #endif
       QFileIconProvider * ptr = obj->iconProvider ();
-      _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER", false );
+      Qt5xHb::createReturnClass ( ptr, "QFILEICONPROVIDER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,7 +516,7 @@ void setIconProvider ( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -542,7 +542,7 @@ bool isNameFilterDetailsVisible () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -566,7 +566,7 @@ void setNameFilterDetailsVisible ( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -592,7 +592,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -616,7 +616,7 @@ void setReadOnly ( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -642,7 +642,7 @@ QAbstractItemDelegate * itemDelegate () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,7 +667,7 @@ void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -693,7 +693,7 @@ QString labelText ( DialogLabel label ) const
 */
 HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -717,7 +717,7 @@ void setLabelText ( DialogLabel label, const QString & text )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -743,7 +743,7 @@ QStringList nameFilters () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -767,7 +767,7 @@ void setNameFilters ( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -793,7 +793,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFILEDIALOG_OPEN )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -819,7 +819,7 @@ Options options () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -843,7 +843,7 @@ void setOptions ( Options options )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -870,7 +870,7 @@ QAbstractProxyModel * proxyModel () const
 HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 {
 #ifndef QT_NO_PROXYMODEL
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
     {
 #endif
       QAbstractProxyModel * ptr = obj->proxyModel ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTPROXYMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTPROXYMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -897,7 +897,7 @@ void setProxyModel ( QAbstractProxyModel * proxyModel )
 HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
 {
 #ifndef QT_NO_PROXYMODEL
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -924,7 +924,7 @@ bool resolveSymlinks () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -948,7 +948,7 @@ void setResolveSymlinks ( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -974,7 +974,7 @@ bool restoreState ( const QByteArray & state )
 */
 HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -998,7 +998,7 @@ QByteArray saveState () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
     {
 #endif
       auto ptr = new QByteArray( obj->saveState () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,7 +1023,7 @@ void selectFile ( const QString & filename )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1049,7 +1049,7 @@ void selectNameFilter ( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1075,7 +1075,7 @@ QStringList selectedFiles () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1099,7 +1099,7 @@ QString selectedNameFilter () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1123,7 +1123,7 @@ QDir directory () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
     {
 #endif
       auto ptr = new QDir( obj->directory () );
-      _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+      Qt5xHb::createReturnClass ( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1148,7 +1148,7 @@ void setDirectory ( const QString & directory )
 */
 void QFileDialog_setDirectory1 ()
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1163,7 +1163,7 @@ void setDirectory ( const QDir & directory )
 */
 void QFileDialog_setDirectory2 ()
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1197,7 +1197,7 @@ void setNameFilter ( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1223,7 +1223,7 @@ void setOption ( Option option, bool on = true )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1249,7 +1249,7 @@ QList<QUrl> sidebarUrls () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1301,7 +1301,7 @@ void setSidebarUrls ( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1334,7 +1334,7 @@ bool testOption ( Option option ) const
 */
 HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1358,7 +1358,7 @@ ViewMode viewMode () const
 */
 HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1382,7 +1382,7 @@ void setViewMode ( ViewMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1408,7 +1408,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1434,7 +1434,7 @@ QUrl directoryUrl() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
     {
 #endif
       auto ptr = new QUrl( obj->directoryUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1459,7 +1459,7 @@ void setDirectoryUrl(const QUrl &directory)
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORYURL )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1485,7 +1485,7 @@ void selectUrl(const QUrl &url)
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTURL )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1511,7 +1511,7 @@ QList<QUrl> selectedUrls() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1563,7 +1563,7 @@ QStringList mimeTypeFilters() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_MIMETYPEFILTERS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1587,7 +1587,7 @@ void setMimeTypeFilters(const QStringList &filters)
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETMIMETYPEFILTERS )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1613,7 +1613,7 @@ void selectMimeTypeFilter(const QString &filter)
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTMIMETYPEFILTER )
 {
-  auto obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1719,8 +1719,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    auto ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    auto ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+    Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1739,8 +1739,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    auto ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    auto ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+    Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1759,8 +1759,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
   if( ISBETWEEN(0,5) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
   {
 #endif
-    auto ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    auto ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
+    Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1779,7 +1779,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
+    QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,nullptr), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1822,7 +1822,7 @@ void currentChanged( const QString & path )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1884,7 +1884,7 @@ void directoryEntered( const QString & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1946,7 +1946,7 @@ void fileSelected( const QString & file )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2008,7 +2008,7 @@ void filesSelected( const QStringList & selected )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2076,7 +2076,7 @@ void filterSelected( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2138,7 +2138,7 @@ void urlSelected( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSELECTED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2200,7 +2200,7 @@ void urlsSelected( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONURLSSELECTED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2284,7 +2284,7 @@ void currentUrlChanged( const QUrl & url )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTURLCHANGED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2346,7 +2346,7 @@ void directoryUrlEntered( const QUrl & directory )
 */
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYURLENTERED )
 {
-  auto sender = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

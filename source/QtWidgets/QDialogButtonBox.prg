@@ -74,7 +74,7 @@ QDialogButtonBox ( QWidget * parent = nullptr )
 void QDialogButtonBox_new1 ()
 {
   auto obj = new QDialogButtonBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
 void QDialogButtonBox_new2 ()
 {
   auto obj = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -92,7 +92,7 @@ QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Ho
 void QDialogButtonBox_new3 ()
 {
   auto obj = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QDialogButtonBox ( QWidget * parent = nullptr )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ void addButton ( QAbstractButton * button, ButtonRole role )
 */
 void QDialogButtonBox_addButton1 ()
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,12 +158,12 @@ QPushButton * addButton ( const QString & text, ButtonRole role )
 */
 void QDialogButtonBox_addButton2 ()
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -172,12 +172,12 @@ QPushButton * addButton ( StandardButton button )
 */
 void QDialogButtonBox_addButton3 ()
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -210,7 +210,7 @@ QPushButton * button ( StandardButton which ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     {
 #endif
       QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ ButtonRole buttonRole ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ bool centerButtons () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ void removeButton ( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -359,7 +359,7 @@ void setCenterButtons ( bool center )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ void setOrientation ( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ void setStandardButtons ( StandardButtons buttons )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -437,7 +437,7 @@ StandardButton standardButton ( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ StandardButtons standardButtons () const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {
-  auto obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -485,7 +485,7 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-  auto sender = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -545,7 +545,7 @@ void clicked( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-  auto sender = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -607,7 +607,7 @@ void helpRequested()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-  auto sender = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -667,7 +667,7 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-  auto sender = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialogButtonBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

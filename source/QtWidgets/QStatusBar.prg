@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QStatusBar ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ void addPermanentWidget ( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void addWidget ( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QString currentMessage () const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ bool isSizeGripEnabled () const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void removeWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ void setSizeGripEnabled ( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void clearMessage ()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ void showMessage ( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
-  auto obj = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ void messageChanged( const QString & message )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 {
-  auto sender = (QStatusBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStatusBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

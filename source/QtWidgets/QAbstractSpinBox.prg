@@ -87,7 +87,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ virtual void fixup ( QString & input ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ bool hasAcceptableInput () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ void interpretText ()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ bool isAccelerated () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setAccelerated ( bool on )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ void setAlignment ( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ ButtonSymbols buttonSymbols () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -311,7 +311,7 @@ void setButtonSymbols ( ButtonSymbols bs )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -337,7 +337,7 @@ CorrectionMode correctionMode () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ void setCorrectionMode ( CorrectionMode cm )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ bool hasFrame () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ void setFrame ( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -437,7 +437,7 @@ bool keyboardTracking () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -461,7 +461,7 @@ void setKeyboardTracking ( bool kt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -487,7 +487,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -511,7 +511,7 @@ void setReadOnly ( bool r )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ QString specialValueText () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -561,7 +561,7 @@ void setSpecialValueText ( const QString & txt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -587,7 +587,7 @@ bool wrapping () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -611,7 +611,7 @@ void setWrapping ( bool w )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -637,7 +637,7 @@ virtual void stepBy ( int steps )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -663,7 +663,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -687,7 +687,7 @@ virtual QValidator::State validate ( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -715,7 +715,7 @@ bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -739,7 +739,7 @@ QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
     {
 #endif
       auto ptr = new QVariant( obj->inputMethodQuery ( (Qt::InputMethodQuery) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,7 +764,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -789,7 +789,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,7 +814,7 @@ virtual void clear ()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -840,7 +840,7 @@ void selectAll ()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -866,7 +866,7 @@ void stepDown ()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -892,7 +892,7 @@ void stepUp ()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -919,7 +919,7 @@ bool isGroupSeparatorShown() const
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -945,7 +945,7 @@ void setGroupSeparatorShown(bool shown)
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -972,7 +972,7 @@ void editingFinished()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ONEDITINGFINISHED )
 {
-  auto sender = (QAbstractSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

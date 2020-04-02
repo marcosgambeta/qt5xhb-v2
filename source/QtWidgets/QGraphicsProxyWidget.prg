@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QGraphicsProxyWidget ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    auto obj = new QGraphicsProxyWidget ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
     {
 #endif
       QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGRAPHICSPROXYWIDGET" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QGRAPHICSPROXYWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QRectF subWidgetRect ( const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
     {
 #endif
       auto ptr = new QRectF( obj->subWidgetRect ( PQWIDGET(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ virtual void setGeometry ( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
 {
-  auto obj = (QGraphicsProxyWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsProxyWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

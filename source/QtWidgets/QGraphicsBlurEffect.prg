@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsBlurEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ BlurHints blurHints () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ qreal blurRadius () const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ void setBlurHints ( BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ void setBlurRadius ( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  auto obj = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 {
-  auto sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -281,7 +281,7 @@ void blurRadiusChanged( qreal radius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 {
-  auto sender = (QGraphicsBlurEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsBlurEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

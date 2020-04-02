@@ -61,7 +61,7 @@ QStyleOptionGraphicsItem()
 void QStyleOptionGraphicsItem_new1 ()
 {
   auto obj = new QStyleOptionGraphicsItem ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -70,7 +70,7 @@ QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
 void QStyleOptionGraphicsItem_new2 ()
 {
   auto obj = new QStyleOptionGraphicsItem ( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,14 +121,14 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
       auto ptr = new QRectF( obj->exposedRect  );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
     }
     else
     {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,14 +160,14 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
       auto ptr = new QMatrix( obj->matrix  );
-      _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMATRIX", true );
     }
     else
     {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  auto obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

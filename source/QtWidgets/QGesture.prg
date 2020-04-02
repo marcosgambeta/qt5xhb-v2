@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGesture ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ GestureCancelPolicy gestureCancelPolicy() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ Qt::GestureType gestureType() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ bool hasHotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QPointF hotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     {
 #endif
       auto ptr = new QPointF( obj->hotSpot () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ void setGestureCancelPolicy(GestureCancelPolicy policy)
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ void setHotSpot(const QPointF & value)
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ Qt::GestureState state() const
 */
 HB_FUNC_STATIC( QGESTURE_STATE )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -270,7 +270,7 @@ void unsetHotSpot()
 */
 HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {
-  auto obj = (QGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QColumnView ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 
 HB_FUNC_STATIC( QCOLUMNVIEW_DELETE )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ QList<int> columnWidths () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_COLUMNWIDTHS )
     {
 #endif
       QList<int> list = obj->columnWidths ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ QWidget * previewWidget () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_PREVIEWWIDGET )
     {
 #endif
       QWidget * ptr = obj->previewWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ bool resizeGripsVisible () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_RESIZEGRIPSVISIBLE )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ void setColumnWidths ( const QList<int> & list )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void setPreviewWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETPREVIEWWIDGET )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void setResizeGripsVisible ( bool visible )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -269,7 +269,7 @@ virtual QModelIndex indexAt ( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ virtual void selectAll ()
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SELECTALL )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -346,7 +346,7 @@ virtual void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETMODEL )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -372,7 +372,7 @@ virtual void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETROOTINDEX )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -398,7 +398,7 @@ virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SETSELECTIONMODEL )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -424,7 +424,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
 {
-  auto obj = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     {
 #endif
       auto ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ void updatePreviewWidget( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_ONUPDATEPREVIEWWIDGET )
 {
-  auto sender = (QColumnView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

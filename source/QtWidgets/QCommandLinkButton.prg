@@ -58,7 +58,7 @@ QCommandLinkButton ( QWidget * parent = nullptr )
 void QCommandLinkButton_new1 ()
 {
   auto obj = new QCommandLinkButton ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
 void QCommandLinkButton_new2 ()
 {
   auto obj = new QCommandLinkButton ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 void QCommandLinkButton_new3 ()
 {
   auto obj = new QCommandLinkButton ( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QCommandLinkButton ( QWidget * parent = nullptr )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 {
-  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ QString description () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -151,7 +151,7 @@ void setDescription ( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  auto obj = (QCommandLinkButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCommandLinkButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 {
-  auto obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -85,7 +85,7 @@ virtual QGesture * create(QObject * target)
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 {
-  auto obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
     {
 #endif
       QGesture * ptr = obj->create ( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGESTURE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QGESTURE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ virtual Result recognize(QGesture * gesture, QObject * watched, QEvent * event) 
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
-  auto obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ virtual void reset(QGesture * gesture)
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 {
-  auto obj = (QGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsRotation ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ qreal angle () const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -121,7 +121,7 @@ QVector3D axis () const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
     {
 #endif
       auto ptr = new QVector3D( obj->axis () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ QVector3D origin () const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
     {
 #endif
       auto ptr = new QVector3D( obj->origin () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ void setAngle ( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ void setAxis ( const QVector3D & axis )
 */
 void QGraphicsRotation_setAxis1 ()
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void setAxis ( Qt::Axis axis )
 */
 void QGraphicsRotation_setAxis2 ()
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ void setOrigin ( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ virtual void applyTo ( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 {
-  auto obj = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ void angleChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
-  auto sender = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -358,7 +358,7 @@ void axisChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
-  auto sender = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -418,7 +418,7 @@ void originChanged()
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
-  auto sender = (QGraphicsRotation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsItemGroup ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    auto obj = new QGraphicsItemGroup ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ void addToGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ void removeFromGroup ( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
     {
 #endif
       auto ptr = new QPainterPath( obj->opaqueArea () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {
-  auto obj = (QGraphicsItemGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsItemGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

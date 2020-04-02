@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     auto obj = new QDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
 
 HB_FUNC_STATIC( QDIALOG_DELETE )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -112,7 +112,7 @@ bool isSizeGripEnabled () const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ void setSizeGripEnabled ( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ int result () const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setModal ( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void setResult ( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ virtual void accept ()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ virtual void done ( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -366,7 +366,7 @@ virtual int exec ()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ virtual void open ()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -416,7 +416,7 @@ virtual void reject ()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -442,7 +442,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -466,7 +466,7 @@ void setOrientation (Qt::Orientation orientation)
 */
 HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ QWidget* extension () const
 */
 HB_FUNC_STATIC( QDIALOG_EXTENSION )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
     {
 #endif
       QWidget * ptr = obj->extension ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ void setExtension (QWidget* extension)
 */
 HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -543,7 +543,7 @@ void showExtension(bool)
 */
 HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
 {
-  auto obj = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -569,7 +569,7 @@ void accepted()
 */
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  auto sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -629,7 +629,7 @@ void finished( int result )
 */
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  auto sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -691,7 +691,7 @@ void rejected()
 */
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  auto sender = (QDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

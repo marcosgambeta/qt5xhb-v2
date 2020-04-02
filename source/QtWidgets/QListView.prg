@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QListView ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
 
 HB_FUNC_STATIC( QLISTVIEW_DELETE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ int batchSize () const
 */
 HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void clearPropertyFlags ()
 */
 HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ Flow flow () const
 */
 HB_FUNC_STATIC( QLISTVIEW_FLOW )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QSize gridSize () const
 */
 HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
     {
 #endif
       auto ptr = new QSize( obj->gridSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ bool isRowHidden ( int row ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ bool isSelectionRectVisible () const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ bool isWrapping () const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ LayoutMode layoutMode () const
 */
 HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -320,7 +320,7 @@ int modelColumn () const
 */
 HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -344,7 +344,7 @@ Movement movement () const
 */
 HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ ResizeMode resizeMode () const
 */
 HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -392,7 +392,7 @@ void setBatchSize ( int batchSize )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -418,7 +418,7 @@ void setFlow ( Flow flow )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ void setGridSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -470,7 +470,7 @@ void setLayoutMode ( LayoutMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -496,7 +496,7 @@ void setModelColumn ( int column )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ void setMovement ( Movement movement )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ void setResizeMode ( ResizeMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -574,7 +574,7 @@ void setRowHidden ( int row, bool hide )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -600,7 +600,7 @@ void setSelectionRectVisible ( bool show )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -626,7 +626,7 @@ void setSpacing ( int space )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -652,7 +652,7 @@ void setUniformItemSizes ( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -678,7 +678,7 @@ void setViewMode ( ViewMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -704,7 +704,7 @@ void setWordWrap ( bool on )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -730,7 +730,7 @@ void setWrapping ( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -756,7 +756,7 @@ int spacing () const
 */
 HB_FUNC_STATIC( QLISTVIEW_SPACING )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -780,7 +780,7 @@ bool uniformItemSizes () const
 */
 HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -804,7 +804,7 @@ ViewMode viewMode () const
 */
 HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -828,7 +828,7 @@ bool wordWrap () const
 */
 HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -852,7 +852,7 @@ virtual QModelIndex indexAt ( const QPoint & p ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
     {
 #endif
       auto ptr = new QModelIndex( obj->indexAt ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,7 +877,7 @@ virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisib
 */
 HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -903,7 +903,7 @@ virtual QRect visualRect ( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
 {
-  auto obj = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
     {
 #endif
       auto ptr = new QRect( obj->visualRect ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -928,7 +928,7 @@ void indexesMoved( const QModelIndexList & indexes )
 */
 HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 {
-  auto sender = (QListView *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

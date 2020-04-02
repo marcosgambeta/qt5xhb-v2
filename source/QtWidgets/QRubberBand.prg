@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     auto obj = new QRubberBand ( (QRubberBand::Shape) hb_parni(1), OPQWIDGET(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 
 HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ void move ( int x, int y )
 */
 void QRubberBand_move1 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ void move ( const QPoint & p )
 */
 void QRubberBand_move2 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ void resize ( int width, int height )
 */
 void QRubberBand_resize1 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ void resize ( const QSize & size )
 */
 void QRubberBand_resize2 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ void setGeometry ( const QRect & rect )
 */
 void QRubberBand_setGeometry1 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ void setGeometry ( int x, int y, int width, int height )
 */
 void QRubberBand_setGeometry2 ()
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ Shape shape () const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
-  auto obj = (QRubberBand *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

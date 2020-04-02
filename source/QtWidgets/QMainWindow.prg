@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     auto obj = new QMainWindow ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
 
 HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 */
 void QMainWindow_addDockWidget1 ()
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orie
 */
 void QMainWindow_addDockWidget2 ()
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 */
 void QMainWindow_addToolBar1 ()
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void addToolBar ( QToolBar * toolbar )
 */
 void QMainWindow_addToolBar2 ()
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -226,12 +226,12 @@ QToolBar * addToolBar ( const QString & title )
 */
 void QMainWindow_addToolBar3 ()
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QToolBar * ptr = obj->addToolBar ( PQSTRING(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QTOOLBAR" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QTOOLBAR" );
   }
 }
 
@@ -264,7 +264,7 @@ void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ QWidget * centralWidget () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     {
 #endif
       QWidget * ptr = obj->centralWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ Qt::DockWidgetArea corner ( Qt::Corner corner ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CORNER )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ virtual QMenu * createPopupMenu ()
 */
 HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
     {
 #endif
       QMenu * ptr = obj->createPopupMenu ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ DockOptions dockOptions () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -412,7 +412,7 @@ bool documentMode () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ QSize iconSize () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
     {
 #endif
       auto ptr = new QSize( obj->iconSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ void insertToolBar ( QToolBar * before, QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -487,7 +487,7 @@ void insertToolBarBreak ( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -513,7 +513,7 @@ bool isAnimated () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -537,7 +537,7 @@ bool isDockNestingEnabled () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -561,7 +561,7 @@ QMenuBar * menuBar () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
     {
 #endif
       QMenuBar * ptr = obj->menuBar ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENUBAR" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENUBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,7 +586,7 @@ QWidget * menuWidget () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     {
 #endif
       QWidget * ptr = obj->menuWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,7 +611,7 @@ void removeDockWidget ( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -637,7 +637,7 @@ void removeToolBar ( QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -663,7 +663,7 @@ void removeToolBarBreak ( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -689,7 +689,7 @@ bool restoreDockWidget ( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -713,7 +713,7 @@ bool restoreState ( const QByteArray & state, int version = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -737,7 +737,7 @@ QByteArray saveState ( int version = 0 ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
     {
 #endif
       auto ptr = new QByteArray( obj->saveState ( OPINT(1,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -762,7 +762,7 @@ void setCentralWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -788,7 +788,7 @@ void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -814,7 +814,7 @@ void setDockOptions ( DockOptions options )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -840,7 +840,7 @@ void setDocumentMode ( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -866,7 +866,7 @@ void setIconSize ( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -892,7 +892,7 @@ void setMenuBar ( QMenuBar * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -918,7 +918,7 @@ void setMenuWidget ( QWidget * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -944,7 +944,7 @@ void setStatusBar ( QStatusBar * statusbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -970,7 +970,7 @@ void setTabPosition ( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosi
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -996,7 +996,7 @@ void setTabShape ( QTabWidget::TabShape tabShape )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1022,7 +1022,7 @@ void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1048,7 +1048,7 @@ void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientatio
 */
 HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1074,7 +1074,7 @@ QStatusBar * statusBar () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     {
 #endif
       QStatusBar * ptr = obj->statusBar ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QSTATUSBAR" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QSTATUSBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1099,7 +1099,7 @@ QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1123,7 +1123,7 @@ QTabWidget::TabShape tabShape () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1147,7 +1147,7 @@ void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1173,7 +1173,7 @@ Qt::ToolBarArea toolBarArea ( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1197,7 +1197,7 @@ bool toolBarBreak ( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1221,7 +1221,7 @@ Qt::ToolButtonStyle toolButtonStyle () const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1245,7 +1245,7 @@ void setAnimated ( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1271,7 +1271,7 @@ void setDockNestingEnabled ( bool enabled ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
 {
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1298,7 +1298,7 @@ QWidget * takeCentralWidget ()
 HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TAKECENTRALWIDGET )
     {
 #endif
       QWidget * ptr = obj->takeCentralWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1324,7 +1324,7 @@ void iconSizeChanged( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-  auto sender = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1386,7 +1386,7 @@ void toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-  auto sender = (QMainWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

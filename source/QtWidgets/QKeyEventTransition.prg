@@ -57,7 +57,7 @@ QKeyEventTransition ( QState * sourceState = nullptr )
 void QKeyEventTransition_new1 ()
 {
   auto obj = new QKeyEventTransition ( OPQSTATE(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sou
 void QKeyEventTransition_new2 ()
 {
   auto obj = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QKeyEventTransition ( QState * sourceState = nullptr )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ int key () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ Qt::KeyboardModifiers modifierMask () const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void setKey ( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ void setModifierMask ( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  auto obj = (QKeyEventTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QKeyEventTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

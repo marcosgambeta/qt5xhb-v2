@@ -68,7 +68,7 @@ QTableWidgetSelectionRange()
 void QTableWidgetSelectionRange_new1 ()
 {
   auto obj = new QTableWidgetSelectionRange ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QTableWidgetSelectionRange(int top, int left, int bottom, int right)
 void QTableWidgetSelectionRange_new2 ()
 {
   auto obj = new QTableWidgetSelectionRange ( PINT(1), PINT(2), PINT(3), PINT(4) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 void QTableWidgetSelectionRange_new3 ()
 {
   auto obj = new QTableWidgetSelectionRange ( *PQTABLEWIDGETSELECTIONRANGE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QTableWidgetSelectionRange()
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_DELETE )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ int bottomRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_BOTTOMROW )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_COLUMNCOUNT )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ int leftColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_LEFTCOLUMN )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ int rightColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_RIGHTCOLUMN )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_ROWCOUNT )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ int topRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_TOPROW )
 {
-  auto obj = (QTableWidgetSelectionRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTableWidgetSelectionRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

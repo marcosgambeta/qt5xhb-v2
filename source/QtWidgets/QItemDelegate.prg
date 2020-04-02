@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QItemDelegate ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
-  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -93,7 +93,7 @@ bool hasClipping () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
-  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ QItemEditorFactory * itemEditorFactory () const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
     {
 #endif
       QItemEditorFactory * ptr = obj->itemEditorFactory ();
-      _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+      Qt5xHb::createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ void setClipping ( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
-  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ void setItemEditorFactory ( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  auto obj = (QItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

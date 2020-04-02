@@ -58,7 +58,7 @@ QStyleOptionSpinBox()
 void QStyleOptionSpinBox_new1 ()
 {
   auto obj = new QStyleOptionSpinBox ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -67,7 +67,7 @@ QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
 void QStyleOptionSpinBox_new2 ()
 {
   auto obj = new QStyleOptionSpinBox ( *PQSTYLEOPTIONSPINBOX(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -99,7 +99,7 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QAbstractSpinBox::StepEnabled stepEnabled
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
-  auto obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QStyleHintReturnMask ();
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_DELETE )
 {
-  auto obj = (QStyleHintReturnMask *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleHintReturnMask *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

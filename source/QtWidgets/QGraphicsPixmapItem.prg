@@ -71,8 +71,8 @@ QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPixmapItem_new1 ()
 {
-  auto obj = new QGraphicsPixmapItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsPixmapItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPixmapItem_new2 ()
 {
-  auto obj = new QGraphicsPixmapItem ( *PQPIXMAP(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsPixmapItem ( *PQPIXMAP(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QGraphicsPixmapItem ( QGraphicsItem * parent = nullptr )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ QPointF offset () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
     {
 #endif
       auto ptr = new QPointF( obj->offset () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap () );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ void setOffset ( const QPointF & offset )
 */
 void QGraphicsPixmapItem_setOffset1 ()
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ void setOffset ( qreal x, qreal y )
 */
 void QGraphicsPixmapItem_setOffset2 ()
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ void setPixmap ( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ void setShapeMode ( ShapeMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setTransformationMode ( Qt::TransformationMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ ShapeMode shapeMode () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ Qt::TransformationMode transformationMode () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
     {
 #endif
       auto ptr = new QPainterPath( obj->opaqueArea () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
     {
 #endif
       auto ptr = new QPainterPath( obj->shape () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
 {
-  auto obj = (QGraphicsPixmapItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsPixmapItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

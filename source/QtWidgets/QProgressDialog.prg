@@ -81,7 +81,7 @@ explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 void QProgressDialog_new1 ()
 {
   auto obj = new QProgressDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -90,7 +90,7 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 void QProgressDialog_new2 ()
 {
   auto obj = new QProgressDialog ( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,nullptr), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ bool autoClose () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ void setAutoClose ( bool close )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ bool autoReset () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ void setAutoReset ( bool reset )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ QString labelText () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ void setLabelText ( const QString & text )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -286,7 +286,7 @@ int maximum () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ void setMaximum ( int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ int minimum () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ void setMinimum ( int minimum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -386,7 +386,7 @@ int minimumDuration () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ void setMinimumDuration ( int ms )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ void setBar ( QProgressBar * bar )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -488,7 +488,7 @@ void setCancelButton ( QPushButton * cancelButton )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -514,7 +514,7 @@ void setLabel ( QLabel * label )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -540,7 +540,7 @@ int value () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -564,7 +564,7 @@ void setValue ( int progress )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -590,7 +590,7 @@ bool wasCanceled () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -614,7 +614,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ void cancel ()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -665,7 +665,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -691,7 +691,7 @@ void setCancelButtonText ( const QString & text )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -717,7 +717,7 @@ void setRange ( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
 {
-  auto obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -743,7 +743,7 @@ void canceled()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {
-  auto sender = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

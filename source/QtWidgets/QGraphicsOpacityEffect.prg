@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsOpacityEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
-  auto obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -93,7 +93,7 @@ qreal opacity () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
-  auto obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ QBrush opacityMask () const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
-  auto obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
     {
 #endif
       auto ptr = new QBrush( obj->opacityMask () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ void setOpacity ( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
-  auto obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ void setOpacityMask ( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
-  auto obj = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void opacityChanged( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
-  auto sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -256,7 +256,7 @@ void opacityMaskChanged( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
-  auto sender = (QGraphicsOpacityEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsOpacityEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

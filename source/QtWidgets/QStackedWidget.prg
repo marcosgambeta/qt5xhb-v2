@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QStackedWidget ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 
 HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ int addWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ int count () const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ QWidget * currentWidget () const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ int indexOf ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ int insertWidget ( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ void removeWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ QWidget * widget ( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -324,7 +324,7 @@ void setCurrentWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
 {
-  auto obj = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -350,7 +350,7 @@ void currentChanged( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONCURRENTCHANGED )
 {
-  auto sender = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -412,7 +412,7 @@ void widgetRemoved( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 {
-  auto sender = (QStackedWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

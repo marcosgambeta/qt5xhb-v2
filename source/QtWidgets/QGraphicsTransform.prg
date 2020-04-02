@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 {
-  auto obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsTransform *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -69,7 +69,7 @@ virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {
-  auto obj = (QGraphicsTransform *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsTransform *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

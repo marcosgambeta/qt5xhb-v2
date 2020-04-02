@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     auto obj = new QSizeGrip ( PQWIDGET(1) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -91,7 +91,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  auto obj = (QSizeGrip *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSizeGrip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

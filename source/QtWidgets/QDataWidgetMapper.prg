@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QDataWidgetMapper ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -120,7 +120,7 @@ void addMapping ( QWidget * widget, int section )
 */
 void QDataWidgetMapper_addMapping1 ()
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ void addMapping ( QWidget * widget, int section, const QByteArray & propertyName
 */
 void QDataWidgetMapper_addMapping2 ()
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ void clearMapping ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -219,7 +219,7 @@ QAbstractItemDelegate * itemDelegate () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ QByteArray mappedPropertyName ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
     {
 #endif
       auto ptr = new QByteArray( obj->mappedPropertyName ( PQWIDGET(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ int mappedSection ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -293,7 +293,7 @@ QWidget * mappedWidgetAt ( int section ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
     {
 #endif
       QWidget * ptr = obj->mappedWidgetAt ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ void removeMapping ( QWidget * widget )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -393,7 +393,7 @@ QModelIndex rootIndex () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
     {
 #endif
       auto ptr = new QModelIndex( obj->rootIndex () );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -444,7 +444,7 @@ void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -470,7 +470,7 @@ void setOrientation ( Qt::Orientation aOrientation )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -496,7 +496,7 @@ void setRootIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ void setSubmitPolicy ( SubmitPolicy policy )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -548,7 +548,7 @@ SubmitPolicy submitPolicy () const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -572,7 +572,7 @@ void revert ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -598,7 +598,7 @@ virtual void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -624,7 +624,7 @@ void setCurrentModelIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -650,7 +650,7 @@ bool submit ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -674,7 +674,7 @@ void toFirst ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -700,7 +700,7 @@ void toLast ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -726,7 +726,7 @@ void toNext ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -752,7 +752,7 @@ void toPrevious ()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {
-  auto obj = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -778,7 +778,7 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED )
 {
-  auto sender = (QDataWidgetMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

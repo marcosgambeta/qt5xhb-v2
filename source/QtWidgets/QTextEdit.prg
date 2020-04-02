@@ -154,7 +154,7 @@ QTextEdit ( QWidget * parent = nullptr )
 void QTextEdit_new1 ()
 {
   auto obj = new QTextEdit ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -163,7 +163,7 @@ QTextEdit ( const QString & text, QWidget * parent = nullptr )
 void QTextEdit_new2 ()
 {
   auto obj = new QTextEdit ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QTextEdit ( QWidget * parent = nullptr )
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
 
 HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ bool acceptRichText () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ QString anchorAt ( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ AutoFormatting autoFormatting () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ bool canPaste () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,12 +329,12 @@ QMenu * createStandardContextMenu ()
 */
 void QTextEdit_createStandardContextMenu1 ()
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QMenu * ptr = obj->createStandardContextMenu ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -343,12 +343,12 @@ QMenu * createStandardContextMenu ( const QPoint & position )
 */
 void QTextEdit_createStandardContextMenu2 ()
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     QMenu * ptr = obj->createStandardContextMenu ( *PQPOINT(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -376,7 +376,7 @@ QTextCharFormat currentCharFormat () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
     {
 #endif
       auto ptr = new QTextCharFormat( obj->currentCharFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ QFont currentFont () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
     {
 #endif
       auto ptr = new QFont( obj->currentFont () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ QTextCursor cursorForPosition ( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
     {
 #endif
       auto ptr = new QTextCursor( obj->cursorForPosition ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,12 +451,12 @@ QRect cursorRect ( const QTextCursor & cursor ) const
 */
 void QTextEdit_cursorRect1 ()
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -465,12 +465,12 @@ QRect cursorRect () const
 */
 void QTextEdit_cursorRect2 ()
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     auto ptr = new QRect( obj->cursorRect () );
-    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -498,7 +498,7 @@ int cursorWidth () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -522,7 +522,7 @@ QTextDocument * document () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,7 +547,7 @@ QString documentTitle () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -571,7 +571,7 @@ void ensureCursorVisible ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_FIND )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -621,7 +621,7 @@ QString fontFamily () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -645,7 +645,7 @@ bool fontItalic () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -669,7 +669,7 @@ qreal fontPointSize () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -693,7 +693,7 @@ bool fontUnderline () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -717,7 +717,7 @@ int fontWeight () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -741,7 +741,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -765,7 +765,7 @@ bool isUndoRedoEnabled () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -789,7 +789,7 @@ int lineWrapColumnOrWidth () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -813,7 +813,7 @@ LineWrapMode lineWrapMode () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -837,7 +837,7 @@ virtual QVariant loadResource ( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
     {
 #endif
       auto ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -862,7 +862,7 @@ void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -888,7 +888,7 @@ void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mo
 */
 HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -914,7 +914,7 @@ bool overwriteMode () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -938,7 +938,7 @@ void print ( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QTEXTEDIT_PRINT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -964,7 +964,7 @@ void setAcceptRichText ( bool accept )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -990,7 +990,7 @@ void setAutoFormatting ( AutoFormatting features )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1016,7 +1016,7 @@ void setCurrentCharFormat ( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1042,7 +1042,7 @@ void setCursorWidth ( int width )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1068,7 +1068,7 @@ void setDocument ( QTextDocument * document )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1094,7 +1094,7 @@ void setDocumentTitle ( const QString & title )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1120,7 +1120,7 @@ void setLineWrapColumnOrWidth ( int w )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1146,7 +1146,7 @@ void setLineWrapMode ( LineWrapMode mode )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1172,7 +1172,7 @@ void setOverwriteMode ( bool overwrite )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1198,7 +1198,7 @@ void setReadOnly ( bool ro )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1224,7 +1224,7 @@ void setTabChangesFocus ( bool b )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1250,7 +1250,7 @@ void setTabStopWidth ( int width )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1276,7 +1276,7 @@ void setTextCursor ( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1302,7 +1302,7 @@ void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1328,7 +1328,7 @@ void setUndoRedoEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1354,7 +1354,7 @@ void setWordWrapMode ( QTextOption::WrapMode policy )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1380,7 +1380,7 @@ bool tabChangesFocus () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1404,7 +1404,7 @@ int tabStopWidth () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1428,7 +1428,7 @@ QColor textBackgroundColor () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1437,7 +1437,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->textBackgroundColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1453,7 +1453,7 @@ QColor textColor () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->textColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1478,7 +1478,7 @@ QTextCursor textCursor () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
     {
 #endif
       auto ptr = new QTextCursor( obj->textCursor () );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCURSOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1503,7 +1503,7 @@ Qt::TextInteractionFlags textInteractionFlags () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1527,7 +1527,7 @@ QString toHtml () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1551,7 +1551,7 @@ QString toPlainText () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1575,7 +1575,7 @@ QTextOption::WrapMode wordWrapMode () const
 */
 HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1599,7 +1599,7 @@ void append ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_APPEND )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1625,7 +1625,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1651,7 +1651,7 @@ void copy ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_COPY )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1677,7 +1677,7 @@ void cut ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_CUT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1703,7 +1703,7 @@ void insertHtml ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1729,7 +1729,7 @@ void insertPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1755,7 +1755,7 @@ void paste ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1781,7 +1781,7 @@ void redo ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_REDO )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1807,7 +1807,7 @@ void scrollToAnchor ( const QString & name )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1833,7 +1833,7 @@ void selectAll ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1859,7 +1859,7 @@ void setAlignment ( Qt::Alignment a )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1885,7 +1885,7 @@ void setCurrentFont ( const QFont & f )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1911,7 +1911,7 @@ void setFontFamily ( const QString & fontFamily )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1937,7 +1937,7 @@ void setFontItalic ( bool italic )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1963,7 +1963,7 @@ void setFontPointSize ( qreal s )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1989,7 +1989,7 @@ void setFontUnderline ( bool underline )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2015,7 +2015,7 @@ void setFontWeight ( int weight )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2041,7 +2041,7 @@ void setHtml ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2067,7 +2067,7 @@ void setPlainText ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2093,7 +2093,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2119,7 +2119,7 @@ void setTextBackgroundColor ( const QColor & c )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setTextBackgroundColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setTextBackgroundColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2145,7 +2145,7 @@ void setTextColor ( const QColor & c )
 */
 HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2153,7 +2153,7 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setTextColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setTextColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2171,7 +2171,7 @@ void undo ()
 */
 HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2197,7 +2197,7 @@ void zoomIn ( int range = 1 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2223,7 +2223,7 @@ void zoomOut ( int range = 1 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
 {
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2250,7 +2250,7 @@ void setMarkdown(const QString &markdown)
 HB_FUNC_STATIC( QTEXTEDIT_SETMARKDOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2278,7 +2278,7 @@ QString toMarkdown(QTextDocument::MarkdownFeatures features = QTextDocument::Mar
 HB_FUNC_STATIC( QTEXTEDIT_TOMARKDOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-  auto obj = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -2303,7 +2303,7 @@ void copyAvailable( bool yes )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2365,7 +2365,7 @@ void currentCharFormatChanged( const QTextCharFormat & f )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2427,7 +2427,7 @@ void cursorPositionChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2487,7 +2487,7 @@ void redoAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2549,7 +2549,7 @@ void selectionChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2609,7 +2609,7 @@ void textChanged()
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2669,7 +2669,7 @@ void undoAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-  auto sender = (QTextEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     auto obj = new QFrame ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ QRect frameRect () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
     {
 #endif
       auto ptr = new QRect( obj->frameRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ Shadow frameShadow () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ Shape frameShape () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ int frameStyle () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ int frameWidth () const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ int lineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ int midLineWidth () const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -273,7 +273,7 @@ void setFrameRect ( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -299,7 +299,7 @@ void setFrameShadow ( Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ void setFrameShape ( Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ void setFrameStyle ( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ void setLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -403,7 +403,7 @@ void setMidLineWidth ( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  auto obj = (QFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

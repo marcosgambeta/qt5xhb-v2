@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {
-  auto obj = (QWhatsThis *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWhatsThis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
   {
 #endif
     QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

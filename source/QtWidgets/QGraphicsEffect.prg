@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ void setEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ void update ()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  auto obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ void enabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 {
-  auto sender = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

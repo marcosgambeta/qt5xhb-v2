@@ -55,7 +55,7 @@ QStyleOptionFocusRect()
 void QStyleOptionFocusRect_new1 ()
 {
   auto obj = new QStyleOptionFocusRect ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -64,7 +64,7 @@ QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
 void QStyleOptionFocusRect_new2 ()
 {
   auto obj = new QStyleOptionFocusRect ( *PQSTYLEOPTIONFOCUSRECT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,14 +96,14 @@ QColor backgroundColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 {
-  auto obj = (QStyleOptionFocusRect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFocusRect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
     if( ISNUMPAR(0) )
     {
       auto ptr = new QColor( obj->backgroundColor  );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
     }
     else
     {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 {
-  auto obj = (QStyleOptionFocusRect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionFocusRect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

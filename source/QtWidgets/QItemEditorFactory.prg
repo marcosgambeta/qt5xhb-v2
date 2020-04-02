@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QItemEditorFactory ();
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DELETE )
 {
-  auto obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ virtual QWidget *createEditor(int userType, QWidget *parent) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
 {
-  auto obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor ( PINT(1), PQWIDGET(2) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ virtual QByteArray valuePropertyName(int userType) const
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
 {
-  auto obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
     {
 #endif
       auto ptr = new QByteArray( obj->valuePropertyName ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ void registerEditor(int userType, QItemEditorCreatorBase *creator)
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
 {
-  auto obj = (QItemEditorFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QItemEditorFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
   {
 #endif
     const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
-    _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+    Qt5xHb::createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

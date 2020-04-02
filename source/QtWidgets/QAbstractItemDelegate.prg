@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor ( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, co
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -189,7 +189,7 @@ virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -215,7 +215,7 @@ virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint ( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -335,7 +335,7 @@ virtual QVector<int> paintingRoles() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 {
-  auto obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -367,7 +367,7 @@ void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QA
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCLOSEEDITOR )
 {
-  auto sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -431,7 +431,7 @@ void commitData( QWidget * editor )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONCOMMITDATA )
 {
-  auto sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -493,7 +493,7 @@ void sizeHintChanged( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED )
 {
-  auto sender = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

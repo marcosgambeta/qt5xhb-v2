@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEPLUGIN_DELETE )
 {
-  auto obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStylePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -72,7 +72,7 @@ virtual QStyle *create(const QString &key) = 0
 */
 HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
 {
-  auto obj = (QStylePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStylePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
     {
 #endif
       QStyle * ptr = obj->create ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

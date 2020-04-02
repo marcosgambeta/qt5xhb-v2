@@ -63,7 +63,7 @@ explicit QCheckBox ( QWidget * parent = nullptr )
 void QCheckBox_new1 ()
 {
   auto obj = new QCheckBox ( OPQWIDGET(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -72,7 +72,7 @@ explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 void QCheckBox_new2 ()
 {
   auto obj = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]explicit QCheckBox ( QWidget * parent = nullptr )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 
 HB_FUNC_STATIC( QCHECKBOX_DELETE )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ Qt::CheckState checkState () const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ bool isTristate () const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ void setCheckState ( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ void setTristate ( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
-  auto obj = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ void stateChanged( int state )
 */
 HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 {
-  auto sender = (QCheckBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCheckBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

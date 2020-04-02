@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsDropShadowEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ qreal blurRadius () const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -127,7 +127,7 @@ QColor color () const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
     {
 #endif
       auto ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ QPointF offset () const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
     {
 #endif
       auto ptr = new QPointF( obj->offset () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ qreal xOffset () const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -201,7 +201,7 @@ qreal yOffset () const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ void setBlurRadius ( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setColor ( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ void setOffset ( const QPointF & ofs )
 */
 void QGraphicsDropShadowEffect_setOffset1 ()
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -317,7 +317,7 @@ void setOffset ( qreal dx, qreal dy )
 */
 void QGraphicsDropShadowEffect_setOffset2 ()
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ void setOffset ( qreal d )
 */
 void QGraphicsDropShadowEffect_setOffset3 ()
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -371,7 +371,7 @@ void setXOffset ( qreal dx )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -397,7 +397,7 @@ void setYOffset ( qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {
-  auto obj = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ void blurRadiusChanged( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -485,7 +485,7 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -547,7 +547,7 @@ void offsetChanged( const QPointF & offset )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
-  auto sender = (QGraphicsDropShadowEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QTextBrowser ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 
 HB_FUNC_STATIC( QTEXTBROWSER_DELETE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -118,7 +118,7 @@ int backwardHistoryCount () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ void clearHistory ()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -168,7 +168,7 @@ int forwardHistoryCount () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ QString historyTitle ( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ QUrl historyUrl ( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
     {
 #endif
       auto ptr = new QUrl( obj->historyUrl ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ bool isBackwardAvailable () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ bool isForwardAvailable () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ bool openExternalLinks () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ bool openLinks () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -337,7 +337,7 @@ QStringList searchPaths () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ void setOpenExternalLinks ( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -387,7 +387,7 @@ void setOpenLinks ( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ void setSearchPaths ( const QStringList & paths )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ QUrl source () const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
     {
 #endif
       auto ptr = new QUrl( obj->source () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ virtual QVariant loadResource ( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
     {
 #endif
       auto ptr = new QVariant( obj->loadResource ( PINT(1), *PQURL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ virtual void backward ()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -515,7 +515,7 @@ virtual void forward ()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -541,7 +541,7 @@ virtual void home ()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -567,7 +567,7 @@ virtual void reload ()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -593,7 +593,7 @@ virtual void setSource ( const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {
-  auto obj = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -619,7 +619,7 @@ void anchorClicked( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -681,7 +681,7 @@ void backwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -743,7 +743,7 @@ void forwardAvailable( bool available )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -805,7 +805,7 @@ void highlighted( const QUrl & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -867,7 +867,7 @@ void highlighted( const QString & link )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -929,7 +929,7 @@ void historyChanged()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -989,7 +989,7 @@ void sourceChanged( const QUrl & src )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-  auto sender = (QTextBrowser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

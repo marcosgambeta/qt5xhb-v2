@@ -57,7 +57,7 @@ QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Co
 void QStyleOptionComplex_new1 ()
 {
   auto obj = new QStyleOptionComplex ( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QStyleOptionComplex(const QStyleOptionComplex &other)
 void QStyleOptionComplex_new2 ()
 {
   auto obj = new QStyleOptionComplex ( *PQSTYLEOPTIONCOMPLEX(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  auto obj = (QStyleOptionComplex *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

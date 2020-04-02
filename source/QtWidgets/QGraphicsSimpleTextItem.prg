@@ -68,8 +68,8 @@ QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsSimpleTextItem_new1 ()
 {
-  auto obj = new QGraphicsSimpleTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsSimpleTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = nullptr
 */
 void QGraphicsSimpleTextItem_new2 ()
 {
-  auto obj = new QGraphicsSimpleTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  auto obj = new QGraphicsSimpleTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = nullptr )
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -122,7 +122,7 @@ QFont font () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
     {
 #endif
       auto ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ void setFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -173,7 +173,7 @@ void setText ( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
     {
 #endif
       auto ptr = new QRectF( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -272,7 +272,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -296,7 +296,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
     {
 #endif
       auto ptr = new QPainterPath( obj->opaqueArea () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
     {
 #endif
       auto ptr = new QPainterPath( obj->shape () );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
 {
-  auto obj = (QGraphicsSimpleTextItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsSimpleTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

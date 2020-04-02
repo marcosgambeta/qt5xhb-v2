@@ -75,7 +75,7 @@ QSystemTrayIcon(QObject * parent = nullptr)
 void QSystemTrayIcon_new1 ()
 {
   auto obj = new QSystemTrayIcon ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -83,8 +83,8 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
 */
 void QSystemTrayIcon_new2 ()
 {
-  auto obj = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  auto obj = new QSystemTrayIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QSystemTrayIcon(QObject * parent = nullptr)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ QMenu * contextMenu() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->contextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
     {
 #endif
       auto ptr = new QRect( obj->geometry () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
     {
 #endif
       auto ptr = new QIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ void setContextMenu(QMenu * menu)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ void setIcon(const QIcon & icon)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ void setToolTip(const QString & tip)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ void showMessage(const QString & title, const QString & message, MessageIcon ico
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ void hide()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -407,7 +407,7 @@ void show()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {
-  auto obj = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -471,7 +471,7 @@ void activated( QSystemTrayIcon::ActivationReason reason )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  auto sender = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -533,7 +533,7 @@ void messageClicked()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  auto sender = (QSystemTrayIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

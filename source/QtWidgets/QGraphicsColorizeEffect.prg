@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsColorizeEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
-  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -93,7 +93,7 @@ QColor color () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
-  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
     {
 #endif
       auto ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ qreal strength () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
-  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,7 +142,7 @@ void setColor ( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
-  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ void setStrength ( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
-  auto obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ void colorChanged( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
-  auto sender = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -256,7 +256,7 @@ void strengthChanged( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
-  auto sender = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

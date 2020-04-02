@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QComboBox ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
 
 HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,11 +179,11 @@ void addItem ( const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_addItem1 ()
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->addItem ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) );
+    obj->addItem ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -194,11 +194,11 @@ void addItem ( const QIcon & icon, const QString & text, const QVariant & userDa
 */
 void QComboBox_addItem2 ()
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->addItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
+    obj->addItem ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -228,7 +228,7 @@ void addItems ( const QStringList & texts )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ QCompleter * completer () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
     {
 #endif
       QCompleter * ptr = obj->completer ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCOMPLETER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QCOMPLETER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ int count () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ QString currentText () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -351,7 +351,7 @@ bool duplicatesEnabled () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -375,7 +375,7 @@ int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags fl
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -399,7 +399,7 @@ int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Q
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -423,7 +423,7 @@ bool hasFrame () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -447,7 +447,7 @@ virtual void hidePopup ()
 */
 HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -473,7 +473,7 @@ QSize iconSize () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
     {
 #endif
       auto ptr = new QSize( obj->iconSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,11 +498,11 @@ void insertItem ( int index, const QString & text, const QVariant & userData = Q
 */
 void QComboBox_insertItem1 ()
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->insertItem ( PINT(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
+    obj->insertItem ( PINT(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -513,11 +513,11 @@ void insertItem ( int index, const QIcon & icon, const QString & text, const QVa
 */
 void QComboBox_insertItem2 ()
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->insertItem ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4) );
+    obj->insertItem ( PINT(1), ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -547,7 +547,7 @@ void insertItems ( int index, const QStringList & list )
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -573,7 +573,7 @@ InsertPolicy insertPolicy () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -597,7 +597,7 @@ void insertSeparator ( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -623,7 +623,7 @@ bool isEditable () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -647,7 +647,7 @@ QVariant itemData ( int index, int role = Qt::UserRole ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
     {
 #endif
       auto ptr = new QVariant( obj->itemData ( PINT(1), OPINT(2,Qt::UserRole) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,7 +672,7 @@ QAbstractItemDelegate * itemDelegate () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ QIcon itemIcon ( int index ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
     {
 #endif
       auto ptr = new QIcon( obj->itemIcon ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -722,7 +722,7 @@ QString itemText ( int index ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -746,7 +746,7 @@ QLineEdit * lineEdit () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
     {
 #endif
       QLineEdit * ptr = obj->lineEdit ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QLINEEDIT" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QLINEEDIT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -771,7 +771,7 @@ int maxCount () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -795,7 +795,7 @@ int maxVisibleItems () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -819,7 +819,7 @@ int minimumContentsLength () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -843,7 +843,7 @@ QAbstractItemModel * model () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODEL )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -868,7 +868,7 @@ int modelColumn () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -892,7 +892,7 @@ void removeItem ( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -918,7 +918,7 @@ QModelIndex rootModelIndex () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
     {
 #endif
       auto ptr = new QModelIndex( obj->rootModelIndex () );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -943,7 +943,7 @@ void setCompleter ( QCompleter * completer )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETCOMPLETER )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -969,7 +969,7 @@ void setDuplicatesEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETDUPLICATESENABLED )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -995,7 +995,7 @@ void setEditable ( bool editable )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETEDITABLE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1021,7 +1021,7 @@ void setFrame ( bool )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETFRAME )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1047,7 +1047,7 @@ void setIconSize ( const QSize & size )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETICONSIZE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1073,7 +1073,7 @@ void setInsertPolicy ( InsertPolicy policy )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1099,7 +1099,7 @@ void setItemData ( int index, const QVariant & value, int role = Qt::UserRole )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1125,7 +1125,7 @@ void setItemDelegate ( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMDELEGATE )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1151,7 +1151,7 @@ void setItemIcon ( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
     if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setItemIcon ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)) );
+      obj->setItemIcon ( PINT(1), ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1177,7 +1177,7 @@ void setItemText ( int index, const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1203,7 +1203,7 @@ void setLineEdit ( QLineEdit * edit )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETLINEEDIT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1229,7 +1229,7 @@ void setMaxCount ( int max )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1255,7 +1255,7 @@ void setMaxVisibleItems ( int maxItems )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1281,7 +1281,7 @@ void setMinimumContentsLength ( int characters )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1307,7 +1307,7 @@ void setModel ( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMODEL )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1333,7 +1333,7 @@ void setModelColumn ( int visibleColumn )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1359,7 +1359,7 @@ void setRootModelIndex ( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1385,7 +1385,7 @@ void setSizeAdjustPolicy ( SizeAdjustPolicy policy )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1411,7 +1411,7 @@ void setValidator ( const QValidator * validator )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETVALIDATOR )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1437,7 +1437,7 @@ void setView ( QAbstractItemView * itemView )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1463,7 +1463,7 @@ virtual void showPopup ()
 */
 HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1489,7 +1489,7 @@ SizeAdjustPolicy sizeAdjustPolicy () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1513,7 +1513,7 @@ const QValidator * validator () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
     {
 #endif
       const QValidator * ptr = obj->validator ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QVALIDATOR" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QVALIDATOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1538,7 +1538,7 @@ QAbstractItemView * view () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VIEW )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1547,7 +1547,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
     {
 #endif
       QAbstractItemView * ptr = obj->view ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QABSTRACTITEMVIEW" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QABSTRACTITEMVIEW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1563,7 +1563,7 @@ virtual bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QCOMBOBOX_EVENT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1587,7 +1587,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1596,7 +1596,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1612,7 +1612,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1621,7 +1621,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1637,7 +1637,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1663,7 +1663,7 @@ void clearEditText ()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1689,7 +1689,7 @@ void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1715,7 +1715,7 @@ void setEditText ( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
 {
-  auto obj = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1741,7 +1741,7 @@ void activated( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1803,7 +1803,7 @@ void activated( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1865,7 +1865,7 @@ void currentIndexChanged( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1927,7 +1927,7 @@ void currentIndexChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1989,7 +1989,7 @@ void currentTextChanged(const QString &text)
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTTEXTCHANGED )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2051,7 +2051,7 @@ void editTextChanged( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2113,7 +2113,7 @@ void highlighted( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2175,7 +2175,7 @@ void highlighted( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
-  auto sender = (QComboBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
