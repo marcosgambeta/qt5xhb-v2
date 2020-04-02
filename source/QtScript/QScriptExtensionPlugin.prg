@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {
-  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -74,7 +74,7 @@ QScriptValue setupPackage(const QString & key, QScriptEngine * engine) const
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 {
-  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     {
 #endif
       auto ptr = new QScriptValue( obj->setupPackage ( PQSTRING(1), PQSCRIPTENGINE(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -99,7 +99,7 @@ virtual void initialize(const QString & key, QScriptEngine * engine) = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 {
-  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {
-  auto obj = (QScriptExtensionPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

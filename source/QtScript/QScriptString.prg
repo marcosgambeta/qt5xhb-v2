@@ -64,7 +64,7 @@ QScriptString()
 void QScriptString_new1 ()
 {
   auto obj = new QScriptString ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QScriptString(const QScriptString & other)
 void QScriptString_new2 ()
 {
   auto obj = new QScriptString ( *PQSCRIPTSTRING(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QScriptString()
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
 {
-  auto obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -117,7 +117,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
-  auto obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
-  auto obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

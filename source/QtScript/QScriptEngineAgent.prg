@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
   if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
     auto obj = new QScriptEngineAgent ( PQSCRIPTENGINE(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ virtual void contextPop()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -136,7 +136,7 @@ virtual void contextPush()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
     {
 #endif
       QScriptEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCRIPTENGINE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSCRIPTENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ virtual void exceptionCatch(qint64 scriptId, const QScriptValue & exception)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ virtual void exceptionThrow(qint64 scriptId, const QScriptValue & exception, boo
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ virtual QVariant extension(Extension extension, const QVariant & argument = QVar
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->extension ( (QScriptEngineAgent::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->extension ( (QScriptEngineAgent::Extension) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ virtual void functionEntry(qint64 scriptId)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -290,7 +290,7 @@ virtual void functionExit(qint64 scriptId, const QScriptValue & returnValue)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -316,7 +316,7 @@ virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -342,7 +342,7 @@ virtual void scriptLoad(qint64 id, const QString & program, const QString & file
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -368,7 +368,7 @@ virtual void scriptUnload(qint64 id)
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -394,7 +394,7 @@ virtual bool supportsExtension(Extension extension) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
 {
-  auto obj = (QScriptEngineAgent *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptEngineAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

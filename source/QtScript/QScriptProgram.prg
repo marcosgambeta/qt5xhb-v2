@@ -66,7 +66,7 @@ QScriptProgram()
 void QScriptProgram_new1 ()
 {
   auto obj = new QScriptProgram ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QScriptProgram(const QString & sourceCode, const QString fileName = QString(), i
 void QScriptProgram_new2 ()
 {
   auto obj = new QScriptProgram ( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QScriptProgram(const QScriptProgram & other)
 void QScriptProgram_new3 ()
 {
   auto obj = new QScriptProgram ( *PQSCRIPTPROGRAM(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QScriptProgram()
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_DELETE )
 {
-  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FILENAME )
 {
-  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_FIRSTLINENUMBER )
 {
-  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_ISNULL )
 {
-  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ QString sourceCode() const
 */
 HB_FUNC_STATIC( QSCRIPTPROGRAM_SOURCECODE )
 {
-  auto obj = (QScriptProgram *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScriptProgram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
