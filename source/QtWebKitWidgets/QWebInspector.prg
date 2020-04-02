@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     auto obj = new QWebInspector ( OPQWIDGET(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ QWebPage * page () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWEBPAGE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QWEBPAGE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ void setPage ( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ virtual bool event ( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  auto obj = (QWebInspector *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QWebInspector *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     {
 #endif
       auto ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
