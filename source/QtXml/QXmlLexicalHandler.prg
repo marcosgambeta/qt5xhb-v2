@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_DELETE )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -85,7 +85,7 @@ virtual bool comment ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -109,7 +109,7 @@ virtual bool endCDATA () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -133,7 +133,7 @@ virtual bool endDTD () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ virtual bool endEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -181,7 +181,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -205,7 +205,7 @@ virtual bool startCDATA () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -229,7 +229,7 @@ virtual bool startDTD ( const QString & name, const QString & publicId, const QS
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ virtual bool startEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
 {
-  auto obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

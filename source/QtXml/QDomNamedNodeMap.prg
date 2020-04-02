@@ -75,7 +75,7 @@ QDomNamedNodeMap ()
 void QDomNamedNodeMap_new1 ()
 {
   auto obj = new QDomNamedNodeMap ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 void QDomNamedNodeMap_new2 ()
 {
   auto obj = new QDomNamedNodeMap ( *PQDOMNAMEDNODEMAP(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDomNamedNodeMap ()
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_DELETE )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ bool contains ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ int count () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -176,7 +176,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -200,7 +200,7 @@ QDomNode item ( int index ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
     {
 #endif
       auto ptr = new QDomNode( obj->item ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ uint length () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -249,7 +249,7 @@ QDomNode namedItem ( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
     {
 #endif
       auto ptr = new QDomNode( obj->namedItem ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
     {
 #endif
       auto ptr = new QDomNode( obj->namedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ QDomNode removeNamedItem ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
     {
 #endif
       auto ptr = new QDomNode( obj->removeNamedItem ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
     {
 #endif
       auto ptr = new QDomNode( obj->removeNamedItemNS ( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ QDomNode setNamedItem ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
     {
 #endif
       auto ptr = new QDomNode( obj->setNamedItem ( *PQDOMNODE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ QDomNode setNamedItemNS ( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
     {
 #endif
       auto ptr = new QDomNode( obj->setNamedItemNS ( *PQDOMNODE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ int size () const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
-  auto obj = (QDomNamedNodeMap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomNamedNodeMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

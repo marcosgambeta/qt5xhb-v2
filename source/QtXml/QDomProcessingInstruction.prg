@@ -57,7 +57,7 @@ QDomProcessingInstruction ()
 void QDomProcessingInstruction_new1 ()
 {
   auto obj = new QDomProcessingInstruction ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 void QDomProcessingInstruction_new2 ()
 {
   auto obj = new QDomProcessingInstruction ( *PQDOMPROCESSINGINSTRUCTION(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDomProcessingInstruction ()
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 {
-  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ QString data () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ void setData ( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QString target () const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  auto obj = (QDomProcessingInstruction *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomProcessingInstruction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

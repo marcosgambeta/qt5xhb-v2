@@ -57,7 +57,7 @@ QDomEntity ()
 void QDomEntity_new1 ()
 {
   auto obj = new QDomEntity ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QDomEntity ( const QDomEntity & x )
 void QDomEntity_new2 ()
 {
   auto obj = new QDomEntity ( *PQDOMENTITY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDomEntity ()
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMENTITY_NEW )
 
 HB_FUNC_STATIC( QDOMENTITY_DELETE )
 {
-  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -110,7 +110,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
-  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QString notationName () const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
-  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -158,7 +158,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
-  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
-  auto obj = (QDomEntity *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomEntity *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

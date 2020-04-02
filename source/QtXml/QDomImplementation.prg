@@ -70,7 +70,7 @@ QDomImplementation ()
 void QDomImplementation_new1 ()
 {
   auto obj = new QDomImplementation ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QDomImplementation ( const QDomImplementation & x )
 void QDomImplementation_new2 ()
 {
   auto obj = new QDomImplementation ( *PQDOMIMPLEMENTATION(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QDomImplementation ()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 {
-  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QDomDocument createDocument ( const QString & nsURI, const QString & qName, cons
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
-  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     {
 #endif
       auto ptr = new QDomDocument( obj->createDocument ( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENT", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ QDomDocumentType createDocumentType ( const QString & qName, const QString & pub
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
-  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     {
 #endif
       auto ptr = new QDomDocumentType( obj->createDocumentType ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
+      Qt5xHb::createReturnClass ( ptr, "QDOMDOCUMENTTYPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ bool hasFeature ( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
-  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -197,7 +197,7 @@ bool isNull ()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
-  auto obj = (QDomImplementation *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDomImplementation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

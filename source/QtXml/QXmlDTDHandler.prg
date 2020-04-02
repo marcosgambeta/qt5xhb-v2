@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 {
-  auto obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDTDHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
-  auto obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDTDHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ virtual bool notationDecl ( const QString & name, const QString & publicId, cons
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
-  auto obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDTDHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ virtual bool unparsedEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
-  auto obj = (QXmlDTDHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QXmlDTDHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
