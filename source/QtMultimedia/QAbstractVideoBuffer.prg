@@ -72,7 +72,7 @@ virtual ~QAbstractVideoBuffer()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
     {
 #endif
       auto ptr = new QVariant( obj->handle () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HandleType handleType () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -145,7 +145,7 @@ virtual MapMode mapMode () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ virtual void unmap () = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ virtual void release()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_RELEASE )
 {
-  auto obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

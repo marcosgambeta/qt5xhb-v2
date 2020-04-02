@@ -76,7 +76,7 @@ QMediaServiceProviderHint()
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 {
   auto obj = new QMediaServiceProviderHint ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
   auto obj = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QMediaServiceProviderHint(const QByteArray &device)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
   auto obj = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,7 +103,7 @@ QMediaServiceProviderHint(QCamera::Position position)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
   auto obj = new QMediaServiceProviderHint ( (QCamera::Position) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,7 +112,7 @@ QMediaServiceProviderHint(Features features)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
   auto obj = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,7 +121,7 @@ QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
 {
   auto obj = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QMediaServiceProviderHint()
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DELETE )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_ISNULL )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ QString mimeType() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_MIMETYPE )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -256,7 +256,7 @@ QStringList codecs() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CODECS )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -280,7 +280,7 @@ QByteArray device() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
     {
 #endif
       auto ptr = new QByteArray( obj->device () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ Features features() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ QCamera::Position cameraPosition() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CAMERAPOSITION )
 {
-  auto obj = (QMediaServiceProviderHint *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaServiceProviderHint *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

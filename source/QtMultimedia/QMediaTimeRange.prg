@@ -76,7 +76,7 @@ QMediaTimeRange()
 void QMediaTimeRange_new1 ()
 {
   auto obj = new QMediaTimeRange ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QMediaTimeRange(qint64 start, qint64 end)
 void QMediaTimeRange_new2 ()
 {
   auto obj = new QMediaTimeRange ( PQINT64(1), PQINT64(2) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QMediaTimeRange(const QMediaTimeInterval & interval)
 void QMediaTimeRange_new3 ()
 {
   auto obj = new QMediaTimeRange ( *PQMEDIATIMEINTERVAL(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,7 +103,7 @@ QMediaTimeRange(const QMediaTimeRange & range)
 void QMediaTimeRange_new4 ()
 {
   auto obj = new QMediaTimeRange ( *PQMEDIATIMERANGE(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QMediaTimeRange()
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ void addInterval(const QMediaTimeInterval & interval)
 */
 void QMediaTimeRange_addInterval1 ()
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ void addInterval(qint64 start, qint64 end)
 */
 void QMediaTimeRange_addInterval2 ()
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ void addTimeRange(const QMediaTimeRange & range)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -235,7 +235,7 @@ void clear()
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -261,7 +261,7 @@ bool contains(qint64 time) const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ qint64 earliestTime() const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_EARLIESTTIME )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ QList<QMediaTimeInterval> intervals() const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_INTERVALS )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ bool isContinuous() const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_ISCONTINUOUS )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_ISEMPTY )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -409,7 +409,7 @@ qint64 latestTime() const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -433,7 +433,7 @@ void removeInterval(const QMediaTimeInterval & interval)
 */
 void QMediaTimeRange_removeInterval1 ()
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ void removeInterval(qint64 start, qint64 end)
 */
 void QMediaTimeRange_removeInterval2 ()
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ void removeTimeRange(const QMediaTimeRange & range)
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
 {
-  auto obj = (QMediaTimeRange *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

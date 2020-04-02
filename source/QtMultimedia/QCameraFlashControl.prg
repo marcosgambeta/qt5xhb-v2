@@ -61,7 +61,7 @@ explicit QCameraFlashControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )
 {
-  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ virtual QCameraExposure::FlashModes flashMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
 {
-  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
 {
-  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ virtual bool isFlashReady() const = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
 {
-  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
 {
-  auto obj = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -179,7 +179,7 @@ void flashReady( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {
-  auto sender = (QCameraFlashControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

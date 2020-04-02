@@ -82,7 +82,7 @@ FocusModes focusMode() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ void setFocusMode(FocusModes mode)
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ FocusPointMode focusPointMode() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ void setFocusPointMode(FocusPointMode mode)
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QPointF customFocusPoint() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
     {
 #endif
       auto ptr = new QPointF( obj->customFocusPoint () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ void setCustomFocusPoint(const QPointF & point)
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ QCameraFocusZoneList focusZones() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ qreal opticalZoom() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ qreal digitalZoom() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -333,7 +333,7 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ bool isFocusModeSupported(FocusModes mode) const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -381,7 +381,7 @@ bool isFocusPointModeSupported(FocusPointMode mode) const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -405,7 +405,7 @@ qreal maximumDigitalZoom() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ qreal maximumOpticalZoom() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ void zoomTo(qreal opticalZoom, qreal digitalZoom)
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
 {
-  auto obj = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -479,7 +479,7 @@ void digitalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -541,7 +541,7 @@ void focusZonesChanged()
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 {
-  auto sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -601,7 +601,7 @@ void maximumDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -663,7 +663,7 @@ void maximumOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -725,7 +725,7 @@ void opticalZoomChanged( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraFocus *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

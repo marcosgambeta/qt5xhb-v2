@@ -60,7 +60,7 @@ virtual ~QMediaNetworkAccessControl()
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_DELETE )
 {
-  auto obj = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ virtual QNetworkConfiguration currentConfiguration() const = 0
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
 {
-  auto obj = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
     {
 #endif
       auto ptr = new QNetworkConfiguration( obj->currentConfiguration () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+      Qt5xHb::createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ virtual void setConfigurations(const QList<QNetworkConfiguration> & configuratio
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
 {
-  auto obj = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ void configurationChanged( const QNetworkConfiguration & configuration )
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {
-  auto sender = (QMediaNetworkAccessControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaNetworkAccessControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

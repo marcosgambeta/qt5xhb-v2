@@ -60,7 +60,7 @@ explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr) [protected
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
 {
-  auto obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
 {
-  auto obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -104,7 +104,7 @@ virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
 {
-  auto obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
 {
-  auto obj = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ void bufferFormatChanged( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 {
-  auto sender = (QCameraCaptureBufferFormatControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

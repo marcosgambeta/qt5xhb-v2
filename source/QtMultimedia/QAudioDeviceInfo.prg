@@ -77,7 +77,7 @@ QAudioDeviceInfo ()
 void QAudioDeviceInfo_new1 ()
 {
   auto obj = new QAudioDeviceInfo ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 void QAudioDeviceInfo_new2 ()
 {
   auto obj = new QAudioDeviceInfo ( *PQAUDIODEVICEINFO(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DELETE )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QString deviceName () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ bool isFormatSupported ( const QAudioFormat & format ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ QAudioFormat nearestFormat ( const QAudioFormat & format ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
     {
 #endif
       auto ptr = new QAudioFormat( obj->nearestFormat ( *PQAUDIOFORMAT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ QAudioFormat preferredFormat () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
     {
 #endif
       auto ptr = new QAudioFormat( obj->preferredFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIOFORMAT", true );
+      Qt5xHb::createReturnClass ( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ QList<QAudioFormat::Endian> supportedByteOrders () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ QList<int> supportedChannelCounts () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
     {
 #endif
       QList<int> list = obj->supportedChannelCounts ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ QStringList supportedCodecs () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -340,7 +340,7 @@ QList<int> supportedSampleRates () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
     {
 #endif
       QList<int> list = obj->supportedSampleRates ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ QList<int> supportedSampleSizes () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
     {
 #endif
       QList<int> list = obj->supportedSampleSizes ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ QList<QAudioFormat::SampleType> supportedSampleTypes () const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
-  auto obj = (QAudioDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioDeviceInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
   {
 #endif
     auto ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+    Qt5xHb::createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
   {
 #endif
     auto ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
-    _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+    Qt5xHb::createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -65,7 +65,7 @@ explicit QCameraExposureControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -85,7 +85,7 @@ virtual QVariant actualValue(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
     {
 #endif
       auto ptr = new QVariant( obj->actualValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ virtual bool isParameterSupported(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ virtual QVariant requestedValue(ExposureParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
     {
 #endif
       auto ptr = new QVariant( obj->requestedValue ( (QCameraExposureControl::ExposureParameter) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool *
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
 {
-  auto obj = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ void actualValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONACTUALVALUECHANGED )
 {
-  auto sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -299,7 +299,7 @@ void parameterRangeChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONPARAMETERRANGECHANGED )
 {
-  auto sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -361,7 +361,7 @@ void requestedValueChanged( int parameter )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ONREQUESTEDVALUECHANGED )
 {
-  auto sender = (QCameraExposureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QRadioData ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
 */
 HB_FUNC_STATIC( QRADIODATA_DELETE )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ QString stationId() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONID )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ QString programTypeName() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -183,7 +183,7 @@ QString stationName() const
 */
 HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -207,7 +207,7 @@ QString radioText() const
 */
 HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ bool isAlternativeFrequenciesEnabled() const
 */
 HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ void setAlternativeFrequenciesEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -281,7 +281,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ QMediaObject *mediaObject() const override
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -354,7 +354,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 {
-  auto obj = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -382,7 +382,7 @@ void stationIdChanged( QString stationId )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -444,7 +444,7 @@ void programTypeChanged( QRadioData::ProgramType programType )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -506,7 +506,7 @@ void programTypeNameChanged( QString programTypeName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -568,7 +568,7 @@ void stationNameChanged( QString stationName )
 */
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -630,7 +630,7 @@ void radioTextChanged( QString radioText )
 */
 HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -692,7 +692,7 @@ void alternativeFrequenciesEnabledChanged( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -754,7 +754,7 @@ void error( QRadioData::Error error )
 */
 HB_FUNC_STATIC( QRADIODATA_ONERROR )
 {
-  auto sender = (QRadioData *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QRadioData *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

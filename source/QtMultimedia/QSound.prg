@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QSound ( PQSTRING(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 */
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -95,7 +95,7 @@ int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -119,7 +119,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ void setLoops(int)
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -243,7 +243,7 @@ void play()
 */
 void QSound_play1 ()
 {
-  auto obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

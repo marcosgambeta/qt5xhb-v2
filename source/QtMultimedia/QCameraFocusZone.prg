@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
   if( ISNUMPAR(1) && ISQCAMERAFOCUSZONE(1) )
   {
     auto obj = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
-    _qt5xhb_returnNewObject( obj, true );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_DELETE )
 {
-  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
 {
-  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QRectF area() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
 {
-  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
     {
 #endif
       auto ptr = new QRectF( obj->area () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ FocusZoneStatus status() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 {
-  auto obj = (QCameraFocusZone *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraFocusZone *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

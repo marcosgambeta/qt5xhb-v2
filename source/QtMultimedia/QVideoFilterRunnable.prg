@@ -67,7 +67,7 @@ virtual ~QVideoFilterRunnable()
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,7 +89,7 @@ virtual QVideoFrame run(QVideoFrame *input, const QVideoSurfaceFormat &surfaceFo
 HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QVideoFilterRunnable *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QVideoFilterRunnable *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QVIDEOFILTERRUNNABLE_RUN )
     {
 #endif
       auto ptr = new QVideoFrame( obj->run ( PQVIDEOFRAME(1), *PQVIDEOSURFACEFORMAT(2), (QVideoFilterRunnable::RunFlags) hb_parni(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVIDEOFRAME", true );
+      Qt5xHb::createReturnClass ( ptr, "QVIDEOFRAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

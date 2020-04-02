@@ -61,7 +61,7 @@ virtual ~QAudioEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_DELETE )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ virtual QAudioEncoderSettings audioSettings() const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
     {
 #endif
       auto ptr = new QAudioEncoderSettings( obj->audioSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS", true );
+      Qt5xHb::createReturnClass ( ptr, "QAUDIOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ virtual QString codecDescription(const QString & codecName) const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ virtual void setAudioSettings(const QAudioEncoderSettings & settings) = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ virtual QStringList supportedAudioCodecs() const = 0
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -180,7 +180,7 @@ virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, 
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
 {
-  auto obj = (QAudioEncoderSettingsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioEncoderSettingsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
 #endif
       bool par2;
       QList<int> list = obj->supportedSampleRates ( *PQAUDIOENCODERSETTINGS(1), &par2 );
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      Qt5xHb::convert_qlist_int_to_array ( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

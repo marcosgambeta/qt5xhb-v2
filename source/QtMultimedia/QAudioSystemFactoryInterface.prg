@@ -68,7 +68,7 @@ virtual ~QAudioSystemFactoryInterface()
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_DELETE )
 {
-  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ virtual QList<QByteArray> availableDevices(QAudio::Mode) const = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_AVAILABLEDEVICES )
 {
-  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ virtual QAbstractAudioInput* createInput(const QByteArray& device) = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT )
 {
-  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEINPUT )
     {
 #endif
       QAbstractAudioInput * ptr = obj->createInput ( *PQBYTEARRAY(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIOINPUT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIOINPUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ virtual QAbstractAudioOutput* createOutput(const QByteArray& device) = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT )
 {
-  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEOUTPUT )
     {
 #endif
       QAbstractAudioOutput * ptr = obj->createOutput ( *PQBYTEARRAY(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAu
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO )
 {
-  auto obj = (QAudioSystemFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMFACTORYINTERFACE_CREATEDEVICEINFO )
     {
 #endif
       QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *PQBYTEARRAY(1), (QAudio::Mode) hb_parni(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

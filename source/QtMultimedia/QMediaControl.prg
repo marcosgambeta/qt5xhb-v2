@@ -60,7 +60,7 @@ explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = nullptr) [pro
 */
 HB_FUNC_STATIC( QMEDIACONTROL_DELETE )
 {
-  auto obj = (QMediaControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

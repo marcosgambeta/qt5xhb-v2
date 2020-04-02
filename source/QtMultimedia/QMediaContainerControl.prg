@@ -61,7 +61,7 @@ virtual ~QMediaContainerControl()
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_DELETE )
 {
-  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ virtual QString containerDescription(const QString & formatMimeType) const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERDESCRIPTION )
 {
-  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -105,7 +105,7 @@ virtual QString containerFormat() const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_CONTAINERFORMAT )
 {
-  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -129,7 +129,7 @@ virtual void setContainerFormat(const QString & format) = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SETCONTAINERFORMAT )
 {
-  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -155,7 +155,7 @@ virtual QStringList supportedContainers() const = 0
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_SUPPORTEDCONTAINERS )
 {
-  auto obj = (QMediaContainerControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaContainerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -63,7 +63,7 @@ virtual ~QAudioOutputSelectorControl()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DELETE )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ virtual QString activeOutput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ACTIVEOUTPUT )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -107,7 +107,7 @@ virtual QList<QString> availableOutputs() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_AVAILABLEOUTPUTS )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ virtual QString defaultOutput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ virtual QString outputDescription(const QString & name) const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ virtual void setActiveOutput(const QString & name) = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
 {
-  auto obj = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -213,7 +213,7 @@ void activeOutputChanged( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONACTIVEOUTPUTCHANGED )
 {
-  auto sender = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -275,7 +275,7 @@ void availableOutputsChanged()
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_ONAVAILABLEOUTPUTSCHANGED )
 {
-  auto sender = (QAudioOutputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAudioOutputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

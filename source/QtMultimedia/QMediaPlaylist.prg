@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QMediaPlaylist ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -106,7 +106,7 @@ virtual ~QMediaPlaylist()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_DELETE )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ PlaybackMode playbackMode() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ void setPlaybackMode(PlaybackMode mode)
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ QMediaContent currentMedia() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTMEDIA )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTMEDIA )
     {
 #endif
       auto ptr = new QMediaContent( obj->currentMedia () );
-      _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
+      Qt5xHb::createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTINDEX )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -227,7 +227,7 @@ void setCurrentIndex(int index)
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -253,7 +253,7 @@ bool addMedia(const QMediaContent & content)
 */
 void QMediaPlaylist_addMedia1 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -266,7 +266,7 @@ bool addMedia(const QList<QMediaContent> & items)
 */
 void QMediaPlaylist_addMedia2 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -305,7 +305,7 @@ bool clear()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_CLEAR )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -329,7 +329,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ERROR )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -353,7 +353,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -377,7 +377,7 @@ bool insertMedia(int pos, const QMediaContent & content)
 */
 void QMediaPlaylist_insertMedia1 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -390,7 +390,7 @@ bool insertMedia(int pos, const QList<QMediaContent> & items)
 */
 void QMediaPlaylist_insertMedia2 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -429,7 +429,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ISEMPTY )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -477,7 +477,7 @@ void load(const QNetworkRequest & request, const char * format = nullptr)
 */
 void QMediaPlaylist_load1 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ void load(const QUrl & location, const char * format = nullptr)
 */
 void QMediaPlaylist_load2 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -507,7 +507,7 @@ void load(QIODevice * device, const char * format = nullptr)
 */
 void QMediaPlaylist_load3 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -546,7 +546,7 @@ QMediaContent media(int index) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
     {
 #endif
       auto ptr = new QMediaContent( obj->media ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
+      Qt5xHb::createReturnClass ( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,7 +571,7 @@ int mediaCount() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIACOUNT )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -595,7 +595,7 @@ int nextIndex(int steps = 1) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -619,7 +619,7 @@ int previousIndex(int steps = 1) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -643,7 +643,7 @@ bool removeMedia(int pos)
 */
 void QMediaPlaylist_removeMedia1 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -656,7 +656,7 @@ bool removeMedia(int start, int end)
 */
 void QMediaPlaylist_removeMedia2 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -688,7 +688,7 @@ bool save(const QUrl & location, const char * format = nullptr)
 */
 void QMediaPlaylist_save1 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -701,7 +701,7 @@ bool save(QIODevice * device, const char * format)
 */
 void QMediaPlaylist_save2 ()
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -733,7 +733,7 @@ virtual QMediaObject *mediaObject() const override
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -758,7 +758,7 @@ void next()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXT )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -784,7 +784,7 @@ void previous()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUS )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -810,7 +810,7 @@ void shuffle()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SHUFFLE )
 {
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -837,7 +837,7 @@ bool moveMedia(int from, int to)
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -866,7 +866,7 @@ void currentIndexChanged( int position )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -928,7 +928,7 @@ void currentMediaChanged( const QMediaContent & content )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTMEDIACHANGED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -990,7 +990,7 @@ void loadFailed()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADFAILED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1050,7 +1050,7 @@ void loaded()
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONLOADED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1110,7 +1110,7 @@ void mediaAboutToBeInserted( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEINSERTED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1174,7 +1174,7 @@ void mediaAboutToBeRemoved( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAABOUTTOBEREMOVED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1238,7 +1238,7 @@ void mediaChanged( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIACHANGED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1302,7 +1302,7 @@ void mediaInserted( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAINSERTED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1366,7 +1366,7 @@ void mediaRemoved( int start, int end )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONMEDIAREMOVED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1430,7 +1430,7 @@ void playbackModeChanged( QMediaPlaylist::PlaybackMode mode )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONPLAYBACKMODECHANGED )
 {
-  auto sender = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

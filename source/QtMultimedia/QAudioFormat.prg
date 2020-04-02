@@ -82,7 +82,7 @@ QAudioFormat ()
 void QAudioFormat_new1 ()
 {
   auto obj = new QAudioFormat ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QAudioFormat ( const QAudioFormat & other )
 void QAudioFormat_new2 ()
 {
   auto obj = new QAudioFormat ( *PQAUDIOFORMAT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QAudioFormat ()
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ QAudioFormat::Endian byteOrder () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ int channelCount () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QString codec () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -234,7 +234,7 @@ int sampleRate () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ int sampleSize () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -282,7 +282,7 @@ QAudioFormat::SampleType sampleType () const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -306,7 +306,7 @@ void setByteOrder ( QAudioFormat::Endian byteOrder )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -332,7 +332,7 @@ void setChannelCount ( int channelCount )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -358,7 +358,7 @@ void setCodec ( const QString & codec )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ void setSampleRate ( int sampleRate )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -410,7 +410,7 @@ void setSampleSize ( int sampleSize )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -436,7 +436,7 @@ void setSampleType ( QAudioFormat::SampleType sampleType )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -462,7 +462,7 @@ qint32 bytesForDuration(qint64 duration) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORDURATION )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -486,7 +486,7 @@ qint64 durationForBytes(qint32 byteCount) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DURATIONFORBYTES )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -510,7 +510,7 @@ qint32 bytesForFrames(qint32 frameCount) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORFRAMES )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -534,7 +534,7 @@ qint32 framesForBytes(qint32 byteCount) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORBYTES )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -558,7 +558,7 @@ qint32 framesForDuration(qint64 duration) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORDURATION )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -582,7 +582,7 @@ qint64 durationForFrames(qint32 frameCount) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DURATIONFORFRAMES )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -606,7 +606,7 @@ int bytesPerFrame() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTESPERFRAME )
 {
-  auto obj = (QAudioFormat *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioFormat *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

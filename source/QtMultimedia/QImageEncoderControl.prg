@@ -62,7 +62,7 @@ virtual ~QImageEncoderControl()
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_DELETE )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -82,7 +82,7 @@ virtual QStringList supportedImageCodecs() const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ virtual QString imageCodecDescription(const QString &codecName) const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ virtual QImageEncoderSettings imageSettings() const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
     {
 #endif
       auto ptr = new QImageEncoderSettings( obj->imageSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
+      Qt5xHb::createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
 {
-  auto obj = (QImageEncoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QImageEncoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -68,7 +68,7 @@ explicit QCameraImageCaptureControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ virtual void cancelCapture() = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -114,7 +114,7 @@ virtual int capture(const QString & fileName) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ virtual QCameraImageCapture::DriveMode driveMode() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ virtual bool isReadyForCapture() const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
 {
-  auto obj = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ void error( int id, int error, const QString & errorString )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -278,7 +278,7 @@ void imageAvailable( int requestId, const QVideoFrame & buffer )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -342,7 +342,7 @@ void imageCaptured( int requestId, const QImage & preview )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -406,7 +406,7 @@ void imageExposed( int requestId )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -468,7 +468,7 @@ void imageMetadataAvailable( int id, const QString & key, const QVariant & value
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -534,7 +534,7 @@ void imageSaved( int requestId, const QString & fileName )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -598,7 +598,7 @@ void readyForCaptureChanged( bool ready )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
 {
-  auto sender = (QCameraImageCaptureControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

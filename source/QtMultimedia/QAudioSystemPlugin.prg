@@ -63,7 +63,7 @@ explicit QAudioSystemPlugin(QObject *parent = nullptr) (abstract)
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_DELETE )
 {
-  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -83,7 +83,7 @@ virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES )
 {
-  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ virtual QAbstractAudioInput* createInput(const QByteArray& device) override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
 {
-  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
     {
 #endif
       QAbstractAudioInput * ptr = obj->createInput ( *PQBYTEARRAY(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIOINPUT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIOINPUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ virtual QAbstractAudioOutput* createOutput(const QByteArray& device) override = 
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
 {
-  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
     {
 #endif
       QAbstractAudioOutput * ptr = obj->createOutput ( *PQBYTEARRAY(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIOOUTPUT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAu
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
 {
-  auto obj = (QAudioSystemPlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAudioSystemPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
     {
 #endif
       QAbstractAudioDeviceInfo * ptr = obj->createDeviceInfo ( *PQBYTEARRAY(1), (QAudio::Mode) hb_parni(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTAUDIODEVICEINFO" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

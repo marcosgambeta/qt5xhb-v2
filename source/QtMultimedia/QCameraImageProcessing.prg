@@ -78,7 +78,7 @@ qreal contrast() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ qreal denoisingLevel() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_DENOISINGLEVEL )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -174,7 +174,7 @@ qreal manualWhiteBalance() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -198,7 +198,7 @@ qreal saturation() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ void setContrast(qreal value)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCONTRAST )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void setDenoisingLevel(qreal value)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -274,7 +274,7 @@ void setManualWhiteBalance(qreal colorTemperature)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ void setSaturation(qreal value)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSATURATION )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -326,7 +326,7 @@ void setSharpeningLevel(qreal level)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -352,7 +352,7 @@ void setWhiteBalanceMode(WhiteBalanceMode mode)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -378,7 +378,7 @@ qreal sharpeningLevel() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -402,7 +402,7 @@ WhiteBalanceMode whiteBalanceMode() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
 {
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -427,7 +427,7 @@ qreal brightness() const
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_BRIGHTNESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -453,7 +453,7 @@ void setBrightness(qreal value)
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -481,7 +481,7 @@ ColorFilter colorFilter() const
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_COLORFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -507,7 +507,7 @@ void setColorFilter(ColorFilter filter)
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCOLORFILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -535,7 +535,7 @@ bool isColorFilterSupported(ColorFilter filter) const
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISCOLORFILTERSUPPORTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  auto obj = (QCameraImageProcessing *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraImageProcessing *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -69,7 +69,7 @@ explicit QCameraZoomControl(QObject *parent = nullptr) [protected]
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,7 +89,7 @@ virtual qreal currentDigitalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTDIGITALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -113,7 +113,7 @@ virtual qreal currentOpticalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_CURRENTOPTICALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ virtual qreal maximumDigitalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMDIGITALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -161,7 +161,7 @@ virtual qreal maximumOpticalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_MAXIMUMOPTICALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ virtual qreal requestedDigitalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDDIGITALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -209,7 +209,7 @@ virtual qreal requestedOpticalZoom() const = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -233,7 +233,7 @@ virtual void zoomTo(qreal optical, qreal digital) = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
 {
-  auto obj = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -259,7 +259,7 @@ void currentDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -321,7 +321,7 @@ void currentOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONCURRENTOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -383,7 +383,7 @@ void maximumDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -445,7 +445,7 @@ void maximumOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONMAXIMUMOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -507,7 +507,7 @@ void requestedDigitalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDDIGITALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -569,7 +569,7 @@ void requestedOpticalZoomChanged( qreal zoom )
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ONREQUESTEDOPTICALZOOMCHANGED )
 {
-  auto sender = (QCameraZoomControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

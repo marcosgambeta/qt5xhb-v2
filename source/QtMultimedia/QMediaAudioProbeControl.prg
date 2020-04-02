@@ -60,7 +60,7 @@ virtual ~QMediaAudioProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
 {
-  auto obj = (QMediaAudioProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -80,7 +80,7 @@ void audioBufferProbed( const QAudioBuffer & buffer )
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 {
-  auto sender = (QMediaAudioProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -142,7 +142,7 @@ void flush()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
 {
-  auto sender = (QMediaAudioProbeControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QMediaAudioProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QSoundEffect ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_DELETE )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
     {
 #endif
       auto ptr = new QUrl( obj->source () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ void setSource(const QUrl &url)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -167,7 +167,7 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ void setLoopCount(int loopCount)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ qreal volume() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void setVolume(qreal volume)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ bool isMuted() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ void setMuted(bool muted)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -341,7 +341,7 @@ bool isPlaying() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -365,7 +365,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -389,7 +389,7 @@ QString category() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -413,7 +413,7 @@ void setCategory(const QString &category)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -463,7 +463,7 @@ void play()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -489,7 +489,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
 {
-  auto obj = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -534,7 +534,7 @@ void sourceChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -594,7 +594,7 @@ void loopCountChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -654,7 +654,7 @@ void loopsRemainingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -714,7 +714,7 @@ void volumeChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -774,7 +774,7 @@ void mutedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -834,7 +834,7 @@ void loadedChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -894,7 +894,7 @@ void playingChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -954,7 +954,7 @@ void statusChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1014,7 +1014,7 @@ void categoryChanged()
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 {
-  auto sender = (QSoundEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QSoundEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
