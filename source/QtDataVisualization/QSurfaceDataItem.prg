@@ -78,7 +78,7 @@ void QSurfaceDataItem_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = new QSurfaceDataItem ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ void QSurfaceDataItem_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = new QSurfaceDataItem ( *PQVECTOR3D(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -100,7 +100,7 @@ void QSurfaceDataItem_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = new QSurfaceDataItem ( *PQSURFACEDATAITEM(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 HB_FUNC_STATIC( QSURFACEDATAITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ void setPosition(const QVector3D &pos)
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QVector3D position() const
 HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
     {
 #endif
       auto ptr = new QVector3D( obj->position () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ void setX(float value)
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ void setY(float value)
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ void setZ(float value)
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ float x() const
 HB_FUNC_STATIC( QSURFACEDATAITEM_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -321,7 +321,7 @@ float y() const
 HB_FUNC_STATIC( QSURFACEDATAITEM_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -347,7 +347,7 @@ float z() const
 HB_FUNC_STATIC( QSURFACEDATAITEM_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

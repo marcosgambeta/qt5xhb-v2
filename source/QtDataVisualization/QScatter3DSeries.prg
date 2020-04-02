@@ -73,7 +73,7 @@ void QScatter3DSeries_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = new QScatter3DSeries ( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -84,7 +84,7 @@ void QScatter3DSeries_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -117,7 +117,7 @@ virtual ~QScatter3DSeries()
 HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -141,7 +141,7 @@ QScatterDataProxy *dataProxy() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
     {
 #endif
       QScatterDataProxy * ptr = obj->dataProxy ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCATTERDATAPROXY" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QSCATTERDATAPROXY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ void setDataProxy(QScatterDataProxy *proxy)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int selectedItem() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -222,7 +222,7 @@ void setSelectedItem(int index)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -250,7 +250,7 @@ float itemSize() const
 HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ void setItemSize(float size)
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -325,7 +325,7 @@ void dataProxyChanged( QScatterDataProxy * proxy )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -391,7 +391,7 @@ void itemSizeChanged( float size )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -457,7 +457,7 @@ void selectedItemChanged( int index )
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QScatter3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QScatter3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( Q3DSCENE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new Q3DScene ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -115,7 +115,7 @@ virtual ~Q3DScene()
 HB_FUNC_STATIC( Q3DSCENE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -139,7 +139,7 @@ QRect viewport() const
 HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
     {
 #endif
       auto ptr = new QRect( obj->viewport () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ QRect primarySubViewport() const
 HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
     {
 #endif
       auto ptr = new QRect( obj->primarySubViewport () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ void setPrimarySubViewport(const QRect &primarySubViewport)
 HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -221,7 +221,7 @@ QRect secondarySubViewport() const
 HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
     {
 #endif
       auto ptr = new QRect( obj->secondarySubViewport () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ void setSecondarySubViewport(const QRect &secondarySubViewport)
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -276,7 +276,7 @@ QPoint selectionQueryPosition() const
 HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
     {
 #endif
       auto ptr = new QPoint( obj->selectionQueryPosition () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ void setSelectionQueryPosition(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -331,7 +331,7 @@ bool isSecondarySubviewOnTop() const
 HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -357,7 +357,7 @@ void setSecondarySubviewOnTop(bool isSecondaryOnTop)
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -385,7 +385,7 @@ bool isSlicingActive() const
 HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ void setSlicingActive(bool isSlicing)
 HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -439,7 +439,7 @@ Q3DCamera *activeCamera() const
 HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
     {
 #endif
       Q3DCamera * ptr = obj->activeCamera ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "Q3DCAMERA" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DCAMERA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ void setActiveCamera(Q3DCamera *camera)
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -494,7 +494,7 @@ Q3DLight *activeLight() const
 HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
     {
 #endif
       Q3DLight * ptr = obj->activeLight ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "Q3DLIGHT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DLIGHT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ void setActiveLight(Q3DLight *light)
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -549,7 +549,7 @@ float devicePixelRatio() const
 HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -575,7 +575,7 @@ void setDevicePixelRatio(float pixelRatio)
 HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -603,7 +603,7 @@ QPoint graphPositionQuery() const
 HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
     {
 #endif
       auto ptr = new QPoint( obj->graphPositionQuery () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,7 +630,7 @@ void setGraphPositionQuery(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -658,7 +658,7 @@ bool isPointInPrimarySubView(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -684,7 +684,7 @@ bool isPointInSecondarySubView(const QPoint &point)
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
   {
 #endif
     auto ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -732,7 +732,7 @@ void activeCameraChanged( Q3DCamera * camera )
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -798,7 +798,7 @@ void activeLightChanged( Q3DLight * light )
 HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -864,7 +864,7 @@ void devicePixelRatioChanged( float pixelRatio )
 HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -930,7 +930,7 @@ void graphPositionQueryChanged( const QPoint & position )
 HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -996,7 +996,7 @@ void primarySubViewportChanged( const QRect & subViewport )
 HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1062,7 +1062,7 @@ void secondarySubviewOnTopChanged( bool isSecondaryOnTop )
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1128,7 +1128,7 @@ void secondarySubViewportChanged( const QRect & subViewport )
 HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1194,7 +1194,7 @@ void selectionQueryPositionChanged( const QPoint & position )
 HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1260,7 +1260,7 @@ void slicingActiveChanged( bool isSlicingActive )
 HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1326,7 +1326,7 @@ void viewportChanged( const QRect & viewport )
 HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

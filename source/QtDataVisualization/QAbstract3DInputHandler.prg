@@ -75,7 +75,7 @@ virtual ~QAbstract3DInputHandler()
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ InputView inputView() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -125,7 +125,7 @@ void setInputView(InputView inputView)
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -153,7 +153,7 @@ QPoint inputPosition() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
     {
 #endif
       auto ptr = new QPoint( obj->inputPosition () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ void setInputPosition(const QPoint &position)
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -208,7 +208,7 @@ Q3DScene *scene() const
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     {
 #endif
       Q3DScene * ptr = obj->scene ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DSCENE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ void setScene(Q3DScene *scene)
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -303,7 +303,7 @@ void inputViewChanged( QAbstract3DInputHandler::InputView view )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -369,7 +369,7 @@ void positionChanged( const QPoint & position )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -435,7 +435,7 @@ void sceneChanged( Q3DScene * scene )
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto sender = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

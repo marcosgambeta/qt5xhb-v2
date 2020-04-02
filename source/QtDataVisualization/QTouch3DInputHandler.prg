@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QTouch3DInputHandler ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ virtual ~QTouch3DInputHandler()
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouch3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ virtual void touchEvent(QTouchEvent *event)
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = (QTouch3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QTouch3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
