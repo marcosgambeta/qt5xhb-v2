@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DELETE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ virtual int count () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_COUNT )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -116,7 +116,7 @@ virtual QString declaredInClass ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -140,7 +140,7 @@ virtual int indexOf ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INDEXOF )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ virtual bool inheritedFromWidget ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -188,7 +188,7 @@ virtual bool isSignal ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -212,7 +212,7 @@ virtual bool isSlot ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISSLOT )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -236,7 +236,7 @@ virtual bool isVisible ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -260,7 +260,7 @@ virtual QString memberGroup ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ virtual QString memberName ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -308,7 +308,7 @@ virtual QList<QByteArray> parameterNames ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -360,7 +360,7 @@ virtual QList<QByteArray> parameterTypes ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -412,7 +412,7 @@ virtual void setMemberGroup ( int index, const QString & group ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -438,7 +438,7 @@ virtual void setVisible ( int index, bool visible ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -464,7 +464,7 @@ virtual QString signature ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE )
 {
-  auto obj = (QDesignerMemberSheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerMemberSheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

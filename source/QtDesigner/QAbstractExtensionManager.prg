@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_DELETE )
 {
-  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -81,7 +81,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
 {
-  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  auto obj = (QAbstractExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

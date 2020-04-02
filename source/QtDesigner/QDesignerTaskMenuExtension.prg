@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 {
-  auto obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerTaskMenuExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -82,7 +82,7 @@ virtual QAction * preferredEditAction () const
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 {
-  auto obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerTaskMenuExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
     {
 #endif
       QAction * ptr = obj->preferredEditAction ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,7 +107,7 @@ virtual QList<QAction *> taskActions () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
 {
-  auto obj = (QDesignerTaskMenuExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerTaskMenuExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

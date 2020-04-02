@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QExtensionManager ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
-  auto obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
-  auto obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QSt
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  auto obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const Q
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  auto obj = (QExtensionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QExtensionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

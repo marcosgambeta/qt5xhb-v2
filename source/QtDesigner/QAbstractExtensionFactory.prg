@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_DELETE )
 {
-  auto obj = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ virtual QObject * extension ( QObject * object, const QString & iid ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
 {
-  auto obj = (QAbstractExtensionFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QAbstractExtensionFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
     {
 #endif
       QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

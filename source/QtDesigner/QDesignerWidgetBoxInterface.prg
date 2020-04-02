@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -75,7 +75,7 @@ virtual QString fileName () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -99,7 +99,7 @@ virtual bool load () = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ virtual bool save () = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -147,7 +147,7 @@ virtual void setFileName ( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
-  auto obj = (QDesignerWidgetBoxInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerWidgetBoxInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

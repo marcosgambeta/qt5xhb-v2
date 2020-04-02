@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -82,7 +82,7 @@ virtual int addDynamicProperty ( const QString & propertyName, const QVariant & 
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -106,7 +106,7 @@ virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ virtual bool dynamicPropertiesAllowed () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -154,7 +154,7 @@ virtual bool isDynamicProperty ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ virtual bool removeDynamicProperty ( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
 {
-  auto obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

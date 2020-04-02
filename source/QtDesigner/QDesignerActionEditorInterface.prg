@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
-  auto obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -77,7 +77,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {
-  auto obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ virtual void manageAction ( QAction * action ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 {
-  auto obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
 {
-  auto obj = (QDesignerActionEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerActionEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

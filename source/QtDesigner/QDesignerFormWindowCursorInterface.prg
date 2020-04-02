@@ -72,7 +72,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -92,7 +92,7 @@ virtual QWidget * current () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT )
     {
 #endif
       QWidget * ptr = obj->current ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ virtual QDesignerFormWindowInterface * formWindow () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->formWindow ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ virtual bool hasSelection () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -166,7 +166,7 @@ bool isWidgetSelected ( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -190,7 +190,7 @@ virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor 
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ virtual int position () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -238,7 +238,7 @@ virtual QWidget * selectedWidget ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET )
     {
 #endif
       QWidget * ptr = obj->selectedWidget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ virtual int selectedWidgetCount () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -287,7 +287,7 @@ virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -313,7 +313,7 @@ virtual QWidget * widget ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ virtual int widgetCount () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT )
 {
-  auto obj = (QDesignerFormWindowCursorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerFormWindowCursorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

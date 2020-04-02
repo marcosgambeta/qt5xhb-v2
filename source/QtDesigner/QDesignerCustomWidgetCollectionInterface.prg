@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
 {
-  auto obj = (QDesignerCustomWidgetCollectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerCustomWidgetCollectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -79,7 +79,7 @@ virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
 {
-  auto obj = (QDesignerCustomWidgetCollectionInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerCustomWidgetCollectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

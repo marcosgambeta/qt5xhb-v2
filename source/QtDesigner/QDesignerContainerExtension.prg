@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_DELETE )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -85,7 +85,7 @@ virtual void addWidget ( QWidget * page ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_ADDWIDGET )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -111,7 +111,7 @@ virtual int count () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_COUNT )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -135,7 +135,7 @@ virtual int currentIndex () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_CURRENTINDEX )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ virtual void insertWidget ( int index, QWidget * page ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_INSERTWIDGET )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ virtual void remove ( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_REMOVE )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ virtual void setCurrentIndex ( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -237,7 +237,7 @@ virtual QWidget * widget ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
 {
-  auto obj = (QDesignerContainerExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QDesignerContainerExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDESIGNERCONTAINEREXTENSION_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
