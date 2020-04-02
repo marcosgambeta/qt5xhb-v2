@@ -72,7 +72,7 @@ void QPlaceContactDetail_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceContactDetail ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,7 +83,7 @@ void QPlaceContactDetail_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ QString label() const
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -157,7 +157,7 @@ void setLabel(const QString &label)
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ QString value() const
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -211,7 +211,7 @@ void setValue(const QString &value)
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -239,7 +239,7 @@ void clear()
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContactDetail *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContactDetail *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

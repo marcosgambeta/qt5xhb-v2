@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     auto obj = new QGeoRouteReply ( (QGeoRouteReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
 HB_FUNC_STATIC( QGEOROUTEREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -108,7 +108,7 @@ bool isFinished() const
 HB_FUNC_STATIC( QGEOROUTEREPLY_ISFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ Error error() const
 HB_FUNC_STATIC( QGEOROUTEREPLY_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ QString errorString() const
 HB_FUNC_STATIC( QGEOROUTEREPLY_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ QGeoRouteRequest request() const
 HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGEOROUTEREPLY_REQUEST )
     {
 #endif
       auto ptr = new QGeoRouteRequest( obj->request () );
-      _qt5xhb_createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
+      Qt5xHb::createReturnClass ( ptr, "QGEOROUTEREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ QList<QGeoRoute> routes() const
 HB_FUNC_STATIC( QGEOROUTEREPLY_ROUTES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -267,7 +267,7 @@ virtual void abort()
 HB_FUNC_STATIC( QGEOROUTEREPLY_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -295,7 +295,7 @@ void finished()
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -359,7 +359,7 @@ void error( QGeoRouteReply::Error error, const QString & errorString = QString()
 HB_FUNC_STATIC( QGEOROUTEREPLY_ONERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto sender = (QGeoRouteReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGeoRouteReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

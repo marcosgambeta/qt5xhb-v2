@@ -71,7 +71,7 @@ void QPlaceUser_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceUser ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -82,7 +82,7 @@ void QPlaceUser_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceUser ( *PQPLACEUSER(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
 HB_FUNC_STATIC( QPLACEUSER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -130,7 +130,7 @@ QString userId() const
 HB_FUNC_STATIC( QPLACEUSER_USERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -156,7 +156,7 @@ void setUserId(const QString &identifier)
 HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -184,7 +184,7 @@ QString name() const
 HB_FUNC_STATIC( QPLACEUSER_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -210,7 +210,7 @@ void setName(const QString &name)
 HB_FUNC_STATIC( QPLACEUSER_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceUser *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceUser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

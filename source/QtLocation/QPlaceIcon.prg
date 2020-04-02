@@ -75,7 +75,7 @@ void QPlaceIcon_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceIcon ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -86,7 +86,7 @@ void QPlaceIcon_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceIcon ( *PQPLACEICON(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
 HB_FUNC_STATIC( QPLACEICON_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ QUrl url(const QSize &size = QSize()) const
 HB_FUNC_STATIC( QPLACEICON_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -142,8 +142,8 @@ HB_FUNC_STATIC( QPLACEICON_URL )
     if( ISBETWEEN(0,1) && (ISQSIZE(1)||ISNIL(1)) )
     {
 #endif
-      auto ptr = new QUrl( obj->url ( ISNIL(1)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url ( ISNIL(1)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(1) ) );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ QPlaceManager *manager() const
 HB_FUNC_STATIC( QPLACEICON_MANAGER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPLACEICON_MANAGER )
     {
 #endif
       QPlaceManager * ptr = obj->manager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEMANAGER" );
+      Qt5xHb::createReturnQObjectClass ( ptr, "QPLACEMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ void setManager(QPlaceManager *manager)
 HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -216,7 +216,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIcon *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

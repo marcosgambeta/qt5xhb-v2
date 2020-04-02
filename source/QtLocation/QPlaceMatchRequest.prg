@@ -72,7 +72,7 @@ void QPlaceMatchRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceMatchRequest ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,7 +83,7 @@ void QPlaceMatchRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceMatchRequest ( *PQPLACEMATCHREQUEST(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -131,7 +131,7 @@ QList<QPlace> places() const
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -185,7 +185,7 @@ void setPlaces(const QList<QPlace> places)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ void setResults(const QList<QPlaceSearchResult> &results)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ void clear()
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

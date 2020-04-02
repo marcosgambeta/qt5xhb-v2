@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     auto obj = new QPlaceMatchReply ( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
 HB_FUNC_STATIC( QPLACEMATCHREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -102,7 +102,7 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -128,7 +128,7 @@ QList<QPlace> places() const
 HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -182,7 +182,7 @@ QPlaceMatchRequest request() const
 HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceMatchReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceMatchReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
     {
 #endif
       auto ptr = new QPlaceMatchRequest( obj->request () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACEMATCHREQUEST", true );
+      Qt5xHb::createReturnClass ( ptr, "QPLACEMATCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

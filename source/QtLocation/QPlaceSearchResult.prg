@@ -75,7 +75,7 @@ void QPlaceSearchResult_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceSearchResult ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -86,7 +86,7 @@ void QPlaceSearchResult_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceSearchResult ( *PQPLACESEARCHRESULT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 HB_FUNC_STATIC( QPLACESEARCHRESULT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -134,7 +134,7 @@ SearchResultType type() const
 HB_FUNC_STATIC( QPLACESEARCHRESULT_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -160,7 +160,7 @@ QString title() const
 HB_FUNC_STATIC( QPLACESEARCHRESULT_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -186,7 +186,7 @@ void setTitle(const QString &title)
 HB_FUNC_STATIC( QPLACESEARCHRESULT_SETTITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -214,7 +214,7 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
     {
 #endif
       auto ptr = new QPlaceIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC( QPLACESEARCHRESULT_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSearchResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSearchResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

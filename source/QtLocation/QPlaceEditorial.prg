@@ -64,7 +64,7 @@ void QPlaceEditorial_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceEditorial ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -75,7 +75,7 @@ void QPlaceEditorial_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceEditorial ( *PQPLACECONTENT(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 HB_FUNC_STATIC( QPLACEEDITORIAL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QString text() const
 HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -149,7 +149,7 @@ void setText(const QString &text)
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -177,7 +177,7 @@ QString title() const
 HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -203,7 +203,7 @@ void setTitle(const QString &data)
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -231,7 +231,7 @@ QString language() const
 HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -257,7 +257,7 @@ void setLanguage(const QString &data)
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceEditorial *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceEditorial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

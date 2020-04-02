@@ -78,7 +78,7 @@ void QPlaceSupplier_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceSupplier ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ void QPlaceSupplier_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceSupplier ( *PQPLACESUPPLIER(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 HB_FUNC_STATIC( QPLACESUPPLIER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -137,7 +137,7 @@ QString name() const
 HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -163,7 +163,7 @@ void setName(const QString &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -191,7 +191,7 @@ QString supplierId() const
 HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ void setSupplierId(const QString &identifier)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -245,7 +245,7 @@ QUrl url() const
 HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
     {
 #endif
       auto ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      Qt5xHb::createReturnClass ( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ void setUrl(const QUrl &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -300,7 +300,7 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
     {
 #endif
       auto ptr = new QPlaceIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
+      Qt5xHb::createReturnClass ( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

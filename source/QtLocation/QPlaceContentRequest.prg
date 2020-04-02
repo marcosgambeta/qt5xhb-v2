@@ -79,7 +79,7 @@ void QPlaceContentRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceContentRequest ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -90,7 +90,7 @@ void QPlaceContentRequest_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = new QPlaceContentRequest ( *PQPLACECONTENTREQUEST(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -138,7 +138,7 @@ QPlaceContent::Type contentType() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -164,7 +164,7 @@ void setContentType(QPlaceContent::Type type)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -192,7 +192,7 @@ QString placeId() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -218,7 +218,7 @@ void setPlaceId(const QString &identifier)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETPLACEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -246,7 +246,7 @@ QVariant contentContext() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
     {
 #endif
       auto ptr = new QVariant( obj->contentContext () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ void setContentContext(const QVariant &context)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -301,7 +301,7 @@ int limit() const
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -327,7 +327,7 @@ void setLimit(int limit)
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -355,7 +355,7 @@ void clear()
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceContentRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceContentRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

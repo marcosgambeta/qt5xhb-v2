@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QPlaceIdReply ( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -100,7 +100,7 @@ QPlaceReply::Type type() const
 HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ OperationType operationType() const
 HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ QString id() const
 HB_FUNC_STATIC( QPLACEIDREPLY_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = (QPlaceIdReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QPlaceIdReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
