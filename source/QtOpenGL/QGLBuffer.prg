@@ -77,7 +77,7 @@ QGLBuffer ()
 void QGLBuffer_new1 ()
 {
   auto obj = new QGLBuffer ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QGLBuffer ( QGLBuffer::Type type )
 void QGLBuffer_new2 ()
 {
   auto obj = new QGLBuffer ( (QGLBuffer::Type) hb_parni(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QGLBuffer ( const QGLBuffer & other )
 void QGLBuffer_new3 ()
 {
   auto obj = new QGLBuffer ( *PQGLBUFFER(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QGLBuffer ()
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
 
 HB_FUNC_STATIC( QGLBUFFER_DELETE )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -144,7 +144,7 @@ void allocate ( const void * data, int count )
 */
 void QGLBuffer_allocate1 ()
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -159,7 +159,7 @@ void allocate ( int count )
 */
 void QGLBuffer_allocate2 ()
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -193,7 +193,7 @@ bool bind ()
 */
 HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -217,7 +217,7 @@ GLuint bufferId () const
 */
 HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -241,7 +241,7 @@ bool create ()
 */
 HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -265,7 +265,7 @@ void destroy ()
 */
 HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -291,7 +291,7 @@ bool isCreated () const
 */
 HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -315,7 +315,7 @@ void * map ( QGLBuffer::Access access )
 */
 HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -339,7 +339,7 @@ bool read ( int offset, void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_READ )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -363,7 +363,7 @@ void release ()
 */
 void QGLBuffer_release1 ()
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -408,7 +408,7 @@ void setUsagePattern ( QGLBuffer::UsagePattern value )
 */
 HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -434,7 +434,7 @@ int size () const
 */
 HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -458,7 +458,7 @@ QGLBuffer::Type type () const
 */
 HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -482,7 +482,7 @@ bool unmap ()
 */
 HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -506,7 +506,7 @@ QGLBuffer::UsagePattern usagePattern () const
 */
 HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -530,7 +530,7 @@ void write ( int offset, const void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_WRITE )
 {
-  auto obj = (QGLBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

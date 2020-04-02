@@ -70,7 +70,7 @@ QGLColormap ()
 void QGLColormap_new1 ()
 {
   auto obj = new QGLColormap ();
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QGLColormap ( const QGLColormap & map )
 void QGLColormap_new2 ()
 {
   auto obj = new QGLColormap ( *PQGLCOLORMAP(1) );
-  _qt5xhb_returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 //[1]QGLColormap ()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -123,7 +123,7 @@ QColor entryColor ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
     {
 #endif
       auto ptr = new QColor( obj->entryColor ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ QRgb entryRgb ( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -172,7 +172,7 @@ int find ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -196,7 +196,7 @@ int findNearest ( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -220,7 +220,7 @@ bool isEmpty () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -248,7 +248,7 @@ void setEntry ( int idx, QRgb color )
 */
 void QGLColormap_setEntry1 ()
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -263,11 +263,11 @@ void setEntry ( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2 ()
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setEntry ( PINT(1), ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
+    obj->setEntry ( PINT(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -297,7 +297,7 @@ int size () const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
-  auto obj = (QGLColormap *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGLColormap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
