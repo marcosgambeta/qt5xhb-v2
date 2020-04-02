@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     auto obj = new QGamepad ( OPINT(1,0), OPQOBJECT(2,nullptr) );
-    _qt5xhb_returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
 HB_FUNC_STATIC( QGAMEPAD_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -152,7 +152,7 @@ int deviceId() const
 HB_FUNC_STATIC( QGAMEPAD_DEVICEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -178,7 +178,7 @@ void setDeviceId(int number) (slot)
 HB_FUNC_STATIC( QGAMEPAD_SETDEVICEID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -206,7 +206,7 @@ bool isConnected() const
 HB_FUNC_STATIC( QGAMEPAD_ISCONNECTED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -232,7 +232,7 @@ QString name() const
 HB_FUNC_STATIC( QGAMEPAD_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -258,7 +258,7 @@ double axisLeftX() const
 HB_FUNC_STATIC( QGAMEPAD_AXISLEFTX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -284,7 +284,7 @@ double axisLeftY() const
 HB_FUNC_STATIC( QGAMEPAD_AXISLEFTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -310,7 +310,7 @@ double axisRightX() const
 HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -336,7 +336,7 @@ double axisRightY() const
 HB_FUNC_STATIC( QGAMEPAD_AXISRIGHTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -362,7 +362,7 @@ bool buttonA() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -388,7 +388,7 @@ bool buttonB() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONB )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -414,7 +414,7 @@ bool buttonX() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -440,7 +440,7 @@ bool buttonY() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -466,7 +466,7 @@ bool buttonL1() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -492,7 +492,7 @@ bool buttonR1() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -518,7 +518,7 @@ double buttonL2() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -544,7 +544,7 @@ double buttonR2() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -570,7 +570,7 @@ bool buttonSelect() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONSELECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -596,7 +596,7 @@ bool buttonStart() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONSTART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -622,7 +622,7 @@ bool buttonL3() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONL3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -648,7 +648,7 @@ bool buttonR3() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONR3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -674,7 +674,7 @@ bool buttonUp() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONUP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -700,7 +700,7 @@ bool buttonDown() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONDOWN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -726,7 +726,7 @@ bool buttonLeft() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONLEFT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -752,7 +752,7 @@ bool buttonRight() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONRIGHT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -778,7 +778,7 @@ bool buttonCenter() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONCENTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -804,7 +804,7 @@ bool buttonGuide() const
 HB_FUNC_STATIC( QGAMEPAD_BUTTONGUIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto obj = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -830,7 +830,7 @@ void axisLeftXChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -896,7 +896,7 @@ void axisLeftYChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISLEFTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -962,7 +962,7 @@ void axisRightXChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1028,7 +1028,7 @@ void axisRightYChanged( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONAXISRIGHTYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1094,7 +1094,7 @@ void buttonAChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONACHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1160,7 +1160,7 @@ void buttonBChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONBCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1226,7 +1226,7 @@ void buttonCenterChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONCENTERCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1292,7 +1292,7 @@ void buttonDownChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONDOWNCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1358,7 +1358,7 @@ void buttonGuideChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONGUIDECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1424,7 +1424,7 @@ void buttonL1Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1490,7 +1490,7 @@ void buttonL2Changed( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1556,7 +1556,7 @@ void buttonL3Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONL3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1622,7 +1622,7 @@ void buttonLeftChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONLEFTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1688,7 +1688,7 @@ void buttonR1Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR1CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1754,7 +1754,7 @@ void buttonR2Changed( double value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR2CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1820,7 +1820,7 @@ void buttonR3Changed( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONR3CHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1886,7 +1886,7 @@ void buttonRightChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONRIGHTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -1952,7 +1952,7 @@ void buttonSelectChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSELECTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2018,7 +2018,7 @@ void buttonStartChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONSTARTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2084,7 +2084,7 @@ void buttonUpChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONUPCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2150,7 +2150,7 @@ void buttonXChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONXCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2216,7 +2216,7 @@ void buttonYChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONBUTTONYCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2282,7 +2282,7 @@ void connectedChanged( bool value )
 HB_FUNC_STATIC( QGAMEPAD_ONCONNECTEDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2348,7 +2348,7 @@ void deviceIdChanged( int value )
 HB_FUNC_STATIC( QGAMEPAD_ONDEVICEIDCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
@@ -2414,7 +2414,7 @@ void nameChanged( QString value )
 HB_FUNC_STATIC( QGAMEPAD_ONNAMECHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  auto sender = (QGamepad *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QGamepad *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
