@@ -63,7 +63,7 @@ QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullpt
 HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusRtuSerialSlave *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QModbusRtuSerialSlave *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {

@@ -65,7 +65,7 @@ QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -143,7 +143,7 @@ void dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusServer *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {

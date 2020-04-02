@@ -65,7 +65,7 @@ QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto obj = (QModbusClient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto obj = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -126,7 +126,7 @@ void timeoutChanged( int newTimeout )
 HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  auto sender = (QModbusClient *) _qt5xhb_itemGetPtrStackSelfItem();
+  auto sender = (QModbusClient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
   {
