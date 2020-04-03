@@ -37,7 +37,7 @@ HB_FUNC_STATIC( QANDROIDSERVICE_NEW )
   argv = hb_cmdargARGV();
   QAndroidService * o = NULL;
   o = new QAndroidService( argc, argv );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 $addMethod=new
 
