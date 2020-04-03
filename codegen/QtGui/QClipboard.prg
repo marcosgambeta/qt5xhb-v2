@@ -78,7 +78,7 @@ $prototype=QString text ( QString & subtype, Mode mode = Clipboard ) const
 %% $internalMethod=|QString|text,text2|QString &,QClipboard::Mode=QClipboard::Clipboard
 void QClipboard_text2 ()
 {
-  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
