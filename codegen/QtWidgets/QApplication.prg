@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   argv = hb_cmdargARGV();
   QApplication * o = nullptr;
   o = new QApplication( argc, argv );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 $addMethod=new
 
