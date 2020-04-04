@@ -44,7 +44,7 @@ CLASS QQmlError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlError
+PROCEDURE destroyObject() CLASS QQmlError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,18 +70,18 @@ RETURN
 /*
 QQmlError()
 */
-void QQmlError_new1 ()
+void QQmlError_new1()
 {
-  auto obj = new QQmlError ();
+  auto obj = new QQmlError();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QQmlError(const QQmlError & other)
 */
-void QQmlError_new2 ()
+void QQmlError_new2()
 {
-  auto obj = new QQmlError ( *PQQMLERROR(1) );
+  auto obj = new QQmlError( *PQQMLERROR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QQMLERROR_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->column () );
+      RINT( obj->column() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QQMLERROR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QQMLERROR_LINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->line () );
+      RINT( obj->line() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumn ( PINT(1) );
+      obj->setColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QQMLERROR_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QQMLERROR_SETLINE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLine ( PINT(1) );
+      obj->setLine( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QQMLERROR_SETURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUrl ( *PQURL(1) );
+      obj->setUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QQMLERROR_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,8 +358,8 @@ HB_FUNC_STATIC( QQMLERROR_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -39,7 +39,7 @@ CLASS QQmlScriptString
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlScriptString
+PROCEDURE destroyObject() CLASS QQmlScriptString
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QQmlScriptString()
 */
-void QQmlScriptString_new1 ()
+void QQmlScriptString_new1()
 {
-  auto obj = new QQmlScriptString ();
+  auto obj = new QQmlScriptString();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QQmlScriptString(const QQmlScriptString & other)
 */
-void QQmlScriptString_new2 ()
+void QQmlScriptString_new2()
 {
-  auto obj = new QQmlScriptString ( *PQQMLSCRIPTSTRING(1) );
+  auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
     {
 #endif
       bool par1;
-      RBOOL( obj->booleanLiteral ( &par1 ) );
+      RBOOL( obj->booleanLiteral( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISNULLLITERAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNullLiteral () );
+      RBOOL( obj->isNullLiteral() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isUndefinedLiteral () );
+      RBOOL( obj->isUndefinedLiteral() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
     {
 #endif
       bool par1;
-      RQREAL( obj->numberLiteral ( &par1 ) );
+      RQREAL( obj->numberLiteral( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_STRINGLITERAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->stringLiteral () );
+      RQSTRING( obj->stringLiteral() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

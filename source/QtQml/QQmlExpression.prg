@@ -46,7 +46,7 @@ CLASS QQmlExpression INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlExpression
+PROCEDURE destroyObject() CLASS QQmlExpression
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,27 +75,27 @@ RETURN
 /*
 QQmlExpression()
 */
-void QQmlExpression_new1 ()
+void QQmlExpression_new1()
 {
-  auto obj = new QQmlExpression ();
+  auto obj = new QQmlExpression();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
 */
-void QQmlExpression_new2 ()
+void QQmlExpression_new2()
 {
-  auto obj = new QQmlExpression ( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QQmlExpression( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
 */
-void QQmlExpression_new3 ()
+void QQmlExpression_new3()
 {
-  auto obj = new QQmlExpression ( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
+  auto obj = new QQmlExpression( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,nullptr), OPQOBJECT(3,nullptr), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CLEARERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearError ();
+      obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_COLUMNNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnNumber () );
+      RINT( obj->columnNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,8 +203,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->context ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+      QQmlContext * ptr = obj->context();
+      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,8 +228,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      QQmlEngine * ptr = obj->engine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,8 +253,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QQmlError( obj->error () );
-      Qt5xHb::createReturnClass ( ptr, "QQMLERROR", true );
+      auto ptr = new QQmlError( obj->error() );
+      Qt5xHb::createReturnClass( ptr, "QQMLERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,8 +279,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
     {
 #endif
       bool par1;
-      auto ptr = new QVariant( obj->evaluate ( &par1 ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->evaluate( &par1 ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->expression () );
+      RQSTRING( obj->expression() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_HASERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasError () );
+      RBOOL( obj->hasError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_LINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineNumber () );
+      RINT( obj->lineNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NOTIFYONVALUECHANGED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->notifyOnValueChanged () );
+      RBOOL( obj->notifyOnValueChanged() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,8 +401,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->scopeObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->scopeObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setExpression ( PQSTRING(1) );
+      obj->setExpression( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setNotifyOnValueChanged ( PBOOL(1) );
+      obj->setNotifyOnValueChanged( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->setSourceLocation ( PQSTRING(1), PINT(2), OPINT(3,0) );
+      obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SOURCEFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceFile () );
+      RQSTRING( obj->sourceFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQMLEXPRESSION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QQMLEXPRESSION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

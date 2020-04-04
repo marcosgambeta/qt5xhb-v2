@@ -43,7 +43,7 @@ CLASS QQmlIncubator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlIncubator
+PROCEDURE destroyObject() CLASS QQmlIncubator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    auto obj = new QQmlIncubator ( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
+    auto obj = new QQmlIncubator( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->forceCompletion ();
+      obj->forceCompletion();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->incubationMode () );
+      RENUM( obj->incubationMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isError () );
+      RBOOL( obj->isError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISLOADING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoading () );
+      RBOOL( obj->isLoading() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_ISREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReady () );
+      RBOOL( obj->isReady() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,8 +284,8 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
