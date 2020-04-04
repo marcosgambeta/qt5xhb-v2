@@ -43,7 +43,7 @@ CLASS QSslCipher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslCipher
+PROCEDURE destroyObject() CLASS QSslCipher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,19 +69,19 @@ RETURN
 /*
 QSslCipher()
 */
-void QSslCipher_new1 ()
+void QSslCipher_new1()
 {
-  auto obj = new QSslCipher ();
+  auto obj = new QSslCipher();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 explicit QSslCipher(const QString &name)
 */
-void QSslCipher_new2 ()
+void QSslCipher_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QSslCipher ( PQSTRING(1) );
+  auto obj = new QSslCipher( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -89,18 +89,18 @@ void QSslCipher_new2 ()
 /*
 QSslCipher( const QString & name, QSsl::SslProtocol protocol )
 */
-void QSslCipher_new3 ()
+void QSslCipher_new3()
 {
-  auto obj = new QSslCipher ( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
+  auto obj = new QSslCipher( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QSslCipher( const QSslCipher & other )
 */
-void QSslCipher_new4 ()
+void QSslCipher_new4()
 {
-  auto obj = new QSslCipher ( *PQSSLCIPHER(1) );
+  auto obj = new QSslCipher( *PQSSLCIPHER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->authenticationMethod () );
+      RQSTRING( obj->authenticationMethod() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->encryptionMethod () );
+      RQSTRING( obj->encryptionMethod() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->keyExchangeMethod () );
+      RQSTRING( obj->keyExchangeMethod() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->protocol () );
+      RENUM( obj->protocol() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->protocolString () );
+      RQSTRING( obj->protocolString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->supportedBits () );
+      RINT( obj->supportedBits() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->usedBits () );
+      RINT( obj->usedBits() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SWAP )
     if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
     {
 #endif
-      obj->swap ( *PQSSLCIPHER(1) );
+      obj->swap( *PQSSLCIPHER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -24,7 +24,7 @@ CLASS QTcpSocket INHERIT QAbstractSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTcpSocket
+PROCEDURE destroyObject() CLASS QTcpSocket
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QTcpSocket ( OPQOBJECT(1,nullptr) );
+    auto obj = new QTcpSocket( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();

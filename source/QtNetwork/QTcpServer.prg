@@ -48,7 +48,7 @@ CLASS QTcpServer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTcpServer
+PROCEDURE destroyObject() CLASS QTcpServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QTcpServer ( OPQOBJECT(1,nullptr) );
+    auto obj = new QTcpServer( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      RBOOL( obj->listen ( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
+      RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTCPSERVER_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isListening () );
+      RBOOL( obj->isListening() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxPendingConnections ( PINT(1) );
+      obj->setMaxPendingConnections( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTCPSERVER_MAXPENDINGCONNECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maxPendingConnections () );
+      RINT( obj->maxPendingConnections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->serverPort () );
+      RQUINT16( obj->serverPort() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,8 +275,8 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QHostAddress( obj->serverAddress () );
-      Qt5xHb::createReturnClass ( ptr, "QHOSTADDRESS", true );
+      auto ptr = new QHostAddress( obj->serverAddress() );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINTPTR( obj->socketDescriptor () );
+      RQINTPTR( obj->socketDescriptor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setSocketDescriptor ( PQINTPTR(1) ) );
+      RBOOL( obj->setSocketDescriptor( PQINTPTR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
     {
 #endif
       bool par2;
-      RBOOL( obj->waitForNewConnection ( OPINT(1,0), &par2 ) );
+      RBOOL( obj->waitForNewConnection( OPINT(1,0), &par2 ) );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasPendingConnections () );
+      RBOOL( obj->hasPendingConnections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,8 +398,8 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTcpSocket * ptr = obj->nextPendingConnection ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QTCPSOCKET" );
+      QTcpSocket * ptr = obj->nextPendingConnection();
+      Qt5xHb::createReturnQObjectClass( ptr, "QTCPSOCKET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->serverError () );
+      RENUM( obj->serverError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QTCPSERVER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTCPSERVER_PAUSEACCEPTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pauseAccepting ();
+      obj->pauseAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTCPSERVER_RESUMEACCEPTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resumeAccepting ();
+      obj->resumeAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
     {
 #endif
-      obj->setProxy ( *PQNETWORKPROXY(1) );
+      obj->setProxy( *PQNETWORKPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,8 +549,8 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QNetworkProxy( obj->proxy () );
-      Qt5xHb::createReturnClass ( ptr, "QNETWORKPROXY", true );
+      auto ptr = new QNetworkProxy( obj->proxy() );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONACCEPTERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QTCPSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTCPSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QTCPSERVER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

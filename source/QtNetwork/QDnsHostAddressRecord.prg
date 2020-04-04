@@ -38,7 +38,7 @@ CLASS QDnsHostAddressRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsHostAddressRecord
+PROCEDURE destroyObject() CLASS QDnsHostAddressRecord
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,18 +66,18 @@ RETURN
 /*
 QDnsHostAddressRecord()
 */
-void QDnsHostAddressRecord_new1 ()
+void QDnsHostAddressRecord_new1()
 {
-  auto obj = new QDnsHostAddressRecord ();
+  auto obj = new QDnsHostAddressRecord();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 */
-void QDnsHostAddressRecord_new2 ()
+void QDnsHostAddressRecord_new2()
 {
-  auto obj = new QDnsHostAddressRecord ( *PQDNSHOSTADDRESSRECORD(1) );
+  auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
     if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
     {
 #endif
-      obj->swap ( *PQDNSHOSTADDRESSRECORD(1) );
+      obj->swap( *PQDNSHOSTADDRESSRECORD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->timeToLive () );
+      RQUINT32( obj->timeToLive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,8 +207,8 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QHostAddress( obj->value () );
-      Qt5xHb::createReturnClass ( ptr, "QHOSTADDRESS", true );
+      auto ptr = new QHostAddress( obj->value() );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

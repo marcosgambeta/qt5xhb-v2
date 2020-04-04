@@ -53,7 +53,7 @@ CLASS QDnsLookup INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsLookup
+PROCEDURE destroyObject() CLASS QDnsLookup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,28 +81,28 @@ RETURN
 /*
 explicit QDnsLookup(QObject *parent = nullptr)
 */
-void QDnsLookup_new1 ()
+void QDnsLookup_new1()
 {
-  auto obj = new QDnsLookup ( OPQOBJECT(1,nullptr) );
+  auto obj = new QDnsLookup( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
 */
-void QDnsLookup_new2 ()
+void QDnsLookup_new2()
 {
-  auto obj = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
 */
-void QDnsLookup_new3 ()
+void QDnsLookup_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QDnsLookup ( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QDnsLookup::Type) hb_parni(1) );
+      obj->setType( (QDnsLookup::Type) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,8 +313,8 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QHostAddress( obj->nameserver () );
-      Qt5xHb::createReturnClass ( ptr, "QHOSTADDRESS", true );
+      auto ptr = new QHostAddress( obj->nameserver() );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
     if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
     {
 #endif
-      obj->setNameserver ( *PQHOSTADDRESS(1) );
+      obj->setNameserver( *PQHOSTADDRESS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords ();
+      QList<QDnsDomainNameRecord> list = obj->canonicalNameRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_CANONICALNAMERECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsHostAddressRecord> list = obj->hostAddressRecords ();
+      QList<QDnsHostAddressRecord> list = obj->hostAddressRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSHOSTADDRESSRECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_HOSTADDRESSRECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsHostAddressRecord *) new QDnsHostAddressRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsHostAddressRecord *) new QDnsHostAddressRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords ();
+      QList<QDnsMailExchangeRecord> list = obj->mailExchangeRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSMAILEXCHANGERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_MAILEXCHANGERECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsMailExchangeRecord *) new QDnsMailExchangeRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsMailExchangeRecord *) new QDnsMailExchangeRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->nameServerRecords ();
+      QList<QDnsDomainNameRecord> list = obj->nameServerRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVERRECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsDomainNameRecord> list = obj->pointerRecords ();
+      QList<QDnsDomainNameRecord> list = obj->pointerRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSDOMAINNAMERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_POINTERRECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsDomainNameRecord *) new QDnsDomainNameRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsServiceRecord> list = obj->serviceRecords ();
+      QList<QDnsServiceRecord> list = obj->serviceRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSSERVICERECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SERVICERECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsServiceRecord *) new QDnsServiceRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsServiceRecord *) new QDnsServiceRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDnsTextRecord> list = obj->textRecords ();
+      QList<QDnsTextRecord> list = obj->textRecords();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDNSTEXTRECORD" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDnsTextRecord *) new QDnsTextRecord ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDnsTextRecord *) new QDnsTextRecord( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->abort ();
+      obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->lookup ();
+      obj->lookup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDNSLOOKUP" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDNSLOOKUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONNAMESERVERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDNSLOOKUP" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QHOSTADDRESS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ONTYPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDNSLOOKUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDNSLOOKUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

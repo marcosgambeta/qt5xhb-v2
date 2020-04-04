@@ -49,7 +49,7 @@ CLASS QNetworkInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkInterface
+PROCEDURE destroyObject() CLASS QNetworkInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 QNetworkInterface ()
 */
-void QNetworkInterface_new1 ()
+void QNetworkInterface_new1()
 {
-  auto obj = new QNetworkInterface ();
+  auto obj = new QNetworkInterface();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QNetworkInterface ( const QNetworkInterface & other )
 */
-void QNetworkInterface_new2 ()
+void QNetworkInterface_new2()
 {
-  auto obj = new QNetworkInterface ( *PQNETWORKINTERFACE(1) );
+  auto obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QNetworkAddressEntry> list = obj->addressEntries ();
+      QList<QNetworkAddressEntry> list = obj->addressEntries();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkAddressEntry *) new QNetworkAddressEntry ( list[i] ) );
+          hb_itemPutPtr( pItem, (QNetworkAddressEntry *) new QNetworkAddressEntry( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->hardwareAddress () );
+      RQSTRING( obj->hardwareAddress() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->humanReadableName () );
+      RQSTRING( obj->humanReadableName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->index () );
+      RINT( obj->index() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QHostAddress> list = QNetworkInterface::allAddresses ();
+    QList<QHostAddress> list = QNetworkInterface::allAddresses();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress ( list[i] ) );
+        hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QNetworkInterface> list = QNetworkInterface::allInterfaces ();
+    QList<QNetworkInterface> list = QNetworkInterface::allInterfaces();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkInterface *) new QNetworkInterface ( list[i] ) );
+        hb_itemPutPtr( pItem, (QNetworkInterface *) new QNetworkInterface( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -428,8 +428,8 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex ( PINT(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex( PINT(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -448,8 +448,8 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName ( PQSTRING(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+    auto ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName( PQSTRING(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEINDEXFROMNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RINT( QNetworkInterface::interfaceIndexFromName ( PQSTRING(1) ) );
+    RINT( QNetworkInterface::interfaceIndexFromName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACENAMEFROMINDEX )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QNetworkInterface::interfaceNameFromIndex ( PINT(1) ) );
+    RQSTRING( QNetworkInterface::interfaceNameFromIndex( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
     if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
     {
 #endif
-      obj->swap ( *PQNETWORKINTERFACE(1) );
+      obj->swap( *PQNETWORKINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

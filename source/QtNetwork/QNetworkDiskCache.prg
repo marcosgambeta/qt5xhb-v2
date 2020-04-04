@@ -39,7 +39,7 @@ CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkDiskCache
+PROCEDURE destroyObject() CLASS QNetworkDiskCache
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QNetworkDiskCache ( OPQOBJECT(1,nullptr) );
+    auto obj = new QNetworkDiskCache( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHEDIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->cacheDirectory () );
+      RQSTRING( obj->cacheDirectory() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETCACHEDIRECTORY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCacheDirectory ( PQSTRING(1) );
+      obj->setCacheDirectory( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_MAXIMUMCACHESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->maximumCacheSize () );
+      RQINT64( obj->maximumCacheSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximumCacheSize ( PQINT64(1) );
+      obj->setMaximumCacheSize( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CACHESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->cacheSize () );
+      RQINT64( obj->cacheSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,8 +237,8 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QNetworkCacheMetaData( obj->metaData ( *PQURL(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
+      auto ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_UPDATEMETADATA )
     if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
     {
 #endif
-      obj->updateMetaData ( *PQNETWORKCACHEMETADATA(1) );
+      obj->updateMetaData( *PQNETWORKCACHEMETADATA(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,8 +288,8 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_DATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QIODevice * ptr = obj->data ( *PQURL(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->data( *PQURL(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      RBOOL( obj->remove ( *PQURL(1) ) );
+      RBOOL( obj->remove( *PQURL(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,8 +337,8 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_PREPARE )
     if( ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1) )
     {
 #endif
-      QIODevice * ptr = obj->prepare ( *PQNETWORKCACHEMETADATA(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_INSERT )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->insert ( PQIODEVICE(1) );
+      obj->insert( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,8 +388,8 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      auto ptr = new QNetworkCacheMetaData( obj->fileMetaData ( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QNETWORKCACHEMETADATA", true );
+      auto ptr = new QNetworkCacheMetaData( obj->fileMetaData( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKCACHEMETADATA", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -47,7 +47,7 @@ CLASS QNetworkConfiguration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkConfiguration
+PROCEDURE destroyObject() CLASS QNetworkConfiguration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,18 +73,18 @@ RETURN
 /*
 QNetworkConfiguration ()
 */
-void QNetworkConfiguration_new1 ()
+void QNetworkConfiguration_new1()
 {
-  auto obj = new QNetworkConfiguration ();
+  auto obj = new QNetworkConfiguration();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
-void QNetworkConfiguration_new2 ()
+void QNetworkConfiguration_new2()
 {
-  auto obj = new QNetworkConfiguration ( *PQNETWORKCONFIGURATION(1) );
+  auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->bearerType () );
+      RENUM( obj->bearerType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->bearerTypeFamily () );
+      RENUM( obj->bearerTypeFamily() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->bearerTypeName () );
+      RQSTRING( obj->bearerTypeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QNetworkConfiguration> list = obj->children ();
+      QList<QNetworkConfiguration> list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration ( list[i] ) );
+          hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->identifier () );
+      RQSTRING( obj->identifier() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRoamingAvailable () );
+      RBOOL( obj->isRoamingAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->purpose () );
+      RENUM( obj->purpose() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
     if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
     {
 #endif
-      obj->swap ( *PQNETWORKCONFIGURATION(1) );
+      obj->swap( *PQNETWORKCONFIGURATION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->connectTimeout () );
+      RINT( obj->connectTimeout() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setConnectTimeout ( PINT(1) ) );
+      RBOOL( obj->setConnectTimeout( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

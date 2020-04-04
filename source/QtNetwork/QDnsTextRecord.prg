@@ -38,7 +38,7 @@ CLASS QDnsTextRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsTextRecord
+PROCEDURE destroyObject() CLASS QDnsTextRecord
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QDnsTextRecord()
 */
-void QDnsTextRecord_new1 ()
+void QDnsTextRecord_new1()
 {
-  auto obj = new QDnsTextRecord ();
+  auto obj = new QDnsTextRecord();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDnsTextRecord(const QDnsTextRecord & other)
 */
-void QDnsTextRecord_new2 ()
+void QDnsTextRecord_new2()
 {
-  auto obj = new QDnsTextRecord ( *PQDNSTEXTRECORD(1) );
+  auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
     if( ISNUMPAR(1) && ISQDNSTEXTRECORD(1) )
     {
 #endif
-      obj->swap ( *PQDNSTEXTRECORD(1) );
+      obj->swap( *PQDNSTEXTRECORD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_TIMETOLIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->timeToLive () );
+      RQUINT32( obj->timeToLive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->values ();
+      QList<QByteArray> list = obj->values();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_VALUES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );

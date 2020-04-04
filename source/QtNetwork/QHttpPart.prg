@@ -38,7 +38,7 @@ CLASS QHttpPart
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHttpPart
+PROCEDURE destroyObject() CLASS QHttpPart
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QHttpPart ()
 */
-void QHttpPart_new1 ()
+void QHttpPart_new1()
 {
-  auto obj = new QHttpPart ();
+  auto obj = new QHttpPart();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QHttpPart ( const QHttpPart & other )
 */
-void QHttpPart_new2 ()
+void QHttpPart_new2()
 {
-  auto obj = new QHttpPart ( *PQHTTPPART(1) );
+  auto obj = new QHttpPart( *PQHTTPPART(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setBody ( *PQBYTEARRAY(1) );
+      obj->setBody( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setBodyDevice ( PQIODEVICE(1) );
+      obj->setBodyDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setHeader ( (QNetworkRequest::KnownHeaders) hb_parni(1), *PQVARIANT(2) );
+      obj->setHeader( (QNetworkRequest::KnownHeaders) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      obj->setRawHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      obj->setRawHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QHTTPPART_SWAP )
     if( ISNUMPAR(1) && ISQHTTPPART(1) )
     {
 #endif
-      obj->swap ( *PQHTTPPART(1) );
+      obj->swap( *PQHTTPPART(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

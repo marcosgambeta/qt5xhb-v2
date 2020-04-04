@@ -37,7 +37,7 @@ CLASS QDnsDomainNameRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsDomainNameRecord
+PROCEDURE destroyObject() CLASS QDnsDomainNameRecord
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QDnsDomainNameRecord()
 */
-void QDnsDomainNameRecord_new1 ()
+void QDnsDomainNameRecord_new1()
 {
-  auto obj = new QDnsDomainNameRecord ();
+  auto obj = new QDnsDomainNameRecord();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 */
-void QDnsDomainNameRecord_new2 ()
+void QDnsDomainNameRecord_new2()
 {
-  auto obj = new QDnsDomainNameRecord ( *PQDNSDOMAINNAMERECORD(1) );
+  auto obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
     if( ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1) )
     {
 #endif
-      obj->swap ( *PQDNSDOMAINNAMERECORD(1) );
+      obj->swap( *PQDNSDOMAINNAMERECORD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->timeToLive () );
+      RQUINT32( obj->timeToLive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->value () );
+      RQSTRING( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
