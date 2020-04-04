@@ -24,7 +24,7 @@ CLASS QDragLeaveEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDragLeaveEvent
+PROCEDURE destroyObject() CLASS QDragLeaveEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QDragLeaveEvent ();
+    auto obj = new QDragLeaveEvent();
     Qt5xHb::returnNewObject( obj, false );
   }
   else

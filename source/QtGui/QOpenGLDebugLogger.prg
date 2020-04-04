@@ -35,7 +35,7 @@ CLASS QOpenGLDebugLogger INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLDebugLogger
+PROCEDURE destroyObject() CLASS QOpenGLDebugLogger
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QOpenGLDebugLogger ( OPQOBJECT(1,nullptr) );
+    auto obj = new QOpenGLDebugLogger( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_INITIALIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->initialize () );
+      RBOOL( obj->initialize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ISLOGGING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLogging () );
+      RBOOL( obj->isLogging() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGGINGMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->loggingMode () );
+      RENUM( obj->loggingMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->maximumMessageLength () );
+      RQINT64( obj->maximumMessageLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->pushGroup ( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Source) QOpenGLDebugMessage::ApplicationSource : (QOpenGLDebugMessage::Source) hb_parni(3) );
+      obj->pushGroup( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Source) QOpenGLDebugMessage::ApplicationSource : (QOpenGLDebugMessage::Source) hb_parni(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_POPGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->popGroup ();
+      obj->popGroup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
     if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
     {
 #endif
-      obj->logMessage ( *PQOPENGLDEBUGMESSAGE(1) );
+      obj->logMessage( *PQOPENGLDEBUGMESSAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->startLogging ( ISNIL(1)? (QOpenGLDebugLogger::LoggingMode) QOpenGLDebugLogger::AsynchronousLogging : (QOpenGLDebugLogger::LoggingMode) hb_parni(1) );
+      obj->startLogging( ISNIL(1)? (QOpenGLDebugLogger::LoggingMode) QOpenGLDebugLogger::AsynchronousLogging : (QOpenGLDebugLogger::LoggingMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STOPLOGGING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stopLogging ();
+      obj->stopLogging();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ONMESSAGELOGGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOPENGLDEBUGLOGGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOPENGLDEBUGLOGGER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QOPENGLDEBUGMESSAGE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

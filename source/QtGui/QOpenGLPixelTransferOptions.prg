@@ -50,7 +50,7 @@ CLASS QOpenGLPixelTransferOptions
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLPixelTransferOptions
+PROCEDURE destroyObject() CLASS QOpenGLPixelTransferOptions
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,18 +76,18 @@ RETURN
 /*
 QOpenGLPixelTransferOptions()
 */
-void QOpenGLPixelTransferOptions_new1 ()
+void QOpenGLPixelTransferOptions_new1()
 {
-  auto obj = new QOpenGLPixelTransferOptions ();
+  auto obj = new QOpenGLPixelTransferOptions();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 */
-void QOpenGLPixelTransferOptions_new2 ()
+void QOpenGLPixelTransferOptions_new2()
 {
-  auto obj = new QOpenGLPixelTransferOptions ( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+  auto obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
     if( ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1) )
     {
 #endif
-      obj->swap ( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+      obj->swap( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( PINT(1) );
+      obj->setAlignment( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->alignment () );
+      RINT( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPIMAGES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSkipImages ( PINT(1) );
+      obj->setSkipImages( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPIMAGES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->skipImages () );
+      RINT( obj->skipImages() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPROWS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSkipRows ( PINT(1) );
+      obj->setSkipRows( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPROWS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->skipRows () );
+      RINT( obj->skipRows() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPPIXELS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSkipPixels ( PINT(1) );
+      obj->setSkipPixels( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPPIXELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->skipPixels () );
+      RINT( obj->skipPixels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETIMAGEHEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setImageHeight ( PINT(1) );
+      obj->setImageHeight( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_IMAGEHEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->imageHeight () );
+      RINT( obj->imageHeight() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETROWLENGTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRowLength ( PINT(1) );
+      obj->setRowLength( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ROWLENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowLength () );
+      RINT( obj->rowLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETLEASTSIGNIFICANTBYTEFIRST )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setLeastSignificantByteFirst ( PBOOL(1) );
+      obj->setLeastSignificantByteFirst( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISLEASTSIGNIFICANTBITFIRST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLeastSignificantBitFirst () );
+      RBOOL( obj->isLeastSignificantBitFirst() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSWAPBYTESENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSwapBytesEnabled ( PBOOL(1) );
+      obj->setSwapBytesEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISSWAPBYTESENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSwapBytesEnabled () );
+      RBOOL( obj->isSwapBytesEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -26,7 +26,7 @@ CLASS QImageIOPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageIOPlugin
+PROCEDURE destroyObject() CLASS QImageIOPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      RENUM( obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+      RENUM( obj->capabilities( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-      Qt5xHb::createReturnClass ( ptr, "QIMAGEIOHANDLER", false );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+      Qt5xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

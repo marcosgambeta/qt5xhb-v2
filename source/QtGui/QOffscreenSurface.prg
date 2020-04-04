@@ -39,7 +39,7 @@ CLASS QOffscreenSurface INHERIT QObject,QSurface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOffscreenSurface
+PROCEDURE destroyObject() CLASS QOffscreenSurface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSCREEN(1)||ISNIL(1)) )
   {
-    auto obj = new QOffscreenSurface ( OPQSCREEN(1,nullptr) );
+    auto obj = new QOffscreenSurface( OPQSCREEN(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SURFACETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->surfaceType () );
+      RENUM( obj->surfaceType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_CREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->create ();
+      obj->create();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_DESTROY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->destroy ();
+      obj->destroy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
     {
 #endif
-      obj->setFormat ( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,8 +236,8 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      auto ptr = new QSurfaceFormat( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,8 +261,8 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_REQUESTEDFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->requestedFormat () );
-      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      auto ptr = new QSurfaceFormat( obj->requestedFormat() );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,8 +286,8 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->size () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->size() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,8 +311,8 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSCREEN" );
+      QScreen * ptr = obj->screen();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
     if( ISNUMPAR(1) && ISQSCREEN(1) )
     {
 #endif
-      obj->setScreen ( PQSCREEN(1) );
+      obj->setScreen( PQSCREEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ONSCREENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOFFSCREENSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOFFSCREENSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSCREEN" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

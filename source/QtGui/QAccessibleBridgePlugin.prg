@@ -25,7 +25,7 @@ CLASS QAccessibleBridgePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleBridgePlugin
+PROCEDURE destroyObject() CLASS QAccessibleBridgePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGEPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QAccessibleBridge * ptr = obj->create ( PQSTRING(1) );
-      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEBRIDGE", false );
+      QAccessibleBridge * ptr = obj->create( PQSTRING(1) );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEBRIDGE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

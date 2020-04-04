@@ -43,7 +43,7 @@ CLASS QTextFragment
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextFragment
+PROCEDURE destroyObject() CLASS QTextFragment
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,18 +73,18 @@ QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
 /*
 QTextFragment()
 */
-void QTextFragment_new2 ()
+void QTextFragment_new2()
 {
-  auto obj = new QTextFragment ();
+  auto obj = new QTextFragment();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTextFragment(const QTextFragment &o)
 */
-void QTextFragment_new3 ()
+void QTextFragment_new3()
 {
-  auto obj = new QTextFragment ( *PQTEXTFRAGMENT(1) );
+  auto obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->position () );
+      RINT( obj->position() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->length () );
+      RINT( obj->length() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->contains ( PINT(1) ) );
+      RBOOL( obj->contains( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,8 +234,8 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->charFormat () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      auto ptr = new QTextCharFormat( obj->charFormat() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->charFormatIndex () );
+      RINT( obj->charFormatIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      QList<QGlyphRun> list = obj->glyphRuns ( OPINT(1,-1), OPINT(2,-1) );
+      QList<QGlyphRun> list = obj->glyphRuns( OPINT(1,-1), OPINT(2,-1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QGlyphRun *) new QGlyphRun ( list[i] ) );
+          hb_itemPutPtr( pItem, (QGlyphRun *) new QGlyphRun( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );

@@ -24,7 +24,7 @@ CLASS QHoverEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHoverEvent
+PROCEDURE destroyObject() CLASS QHoverEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
-    auto obj = new QHoverEvent ( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    auto obj = new QHoverEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

@@ -39,7 +39,7 @@ CLASS QTouchDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTouchDevice
+PROCEDURE destroyObject() CLASS QTouchDevice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QTouchDevice ();
+    auto obj = new QTouchDevice();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->capabilities () );
+      RENUM( obj->capabilities() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QTouchDevice::DeviceType) hb_parni(1) );
+      obj->setType( (QTouchDevice::DeviceType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCapabilities ( (QTouchDevice::Capabilities) hb_parni(1) );
+      obj->setCapabilities( (QTouchDevice::Capabilities) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

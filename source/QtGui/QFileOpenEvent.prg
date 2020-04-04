@@ -27,7 +27,7 @@ CLASS QFileOpenEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileOpenEvent
+PROCEDURE destroyObject() CLASS QFileOpenEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->file () );
+      RQSTRING( obj->file() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
     if( ISNUMPAR(2) && ISQFILE(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->openFile ( *PQFILE(1), (QIODevice::OpenMode) hb_parni(2) ) );
+      RBOOL( obj->openFile( *PQFILE(1), (QIODevice::OpenMode) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

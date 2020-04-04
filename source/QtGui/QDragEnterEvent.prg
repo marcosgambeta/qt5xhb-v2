@@ -24,7 +24,7 @@ CLASS QDragEnterEvent INHERIT QDragMoveEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDragEnterEvent
+PROCEDURE destroyObject() CLASS QDragEnterEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 {
   if( ISNUMPAR(5) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) )
   {
-    auto obj = new QDragEnterEvent ( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
+    auto obj = new QDragEnterEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

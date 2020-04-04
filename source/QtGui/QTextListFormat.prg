@@ -33,7 +33,7 @@ CLASS QTextListFormat INHERIT QTextFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextListFormat
+PROCEDURE destroyObject() CLASS QTextListFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QTextListFormat ();
+    auto obj = new QTextListFormat();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStyle ( (QTextListFormat::Style) hb_parni(1) );
+      obj->setStyle( (QTextListFormat::Style) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->style () );
+      RENUM( obj->style() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setIndent ( PINT(1) );
+      obj->setIndent( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->indent () );
+      RINT( obj->indent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setNumberPrefix ( PQSTRING(1) );
+      obj->setNumberPrefix( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->numberPrefix () );
+      RQSTRING( obj->numberPrefix() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setNumberSuffix ( PQSTRING(1) );
+      obj->setNumberSuffix( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->numberSuffix () );
+      RQSTRING( obj->numberSuffix() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

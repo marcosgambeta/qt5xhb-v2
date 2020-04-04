@@ -25,7 +25,7 @@ CLASS QWhatsThisClickedEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWhatsThisClickedEvent
+PROCEDURE destroyObject() CLASS QWhatsThisClickedEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    auto obj = new QWhatsThisClickedEvent ( PQSTRING(1) );
+    auto obj = new QWhatsThisClickedEvent( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->href () );
+      RQSTRING( obj->href() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

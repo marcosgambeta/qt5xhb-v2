@@ -24,7 +24,7 @@ CLASS QCloseEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCloseEvent
+PROCEDURE destroyObject() CLASS QCloseEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QCloseEvent ();
+    auto obj = new QCloseEvent();
     Qt5xHb::returnNewObject( obj, false );
   }
   else

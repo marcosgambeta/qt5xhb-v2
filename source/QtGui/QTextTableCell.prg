@@ -47,7 +47,7 @@ CLASS QTextTableCell
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextTableCell
+PROCEDURE destroyObject() CLASS QTextTableCell
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 QTextTableCell()
 */
-void QTextTableCell_new1 ()
+void QTextTableCell_new1()
 {
-  auto obj = new QTextTableCell ();
+  auto obj = new QTextTableCell();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTextTableCell(const QTextTableCell &o)
 */
-void QTextTableCell_new2 ()
+void QTextTableCell_new2()
 {
-  auto obj = new QTextTableCell ( *PQTEXTTABLECELL(1) );
+  auto obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
     if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
     {
 #endif
-      obj->setFormat ( *PQTEXTCHARFORMAT(1) );
+      obj->setFormat( *PQTEXTCHARFORMAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,8 +165,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextCharFormat( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCHARFORMAT", true );
+      auto ptr = new QTextCharFormat( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->row () );
+      RINT( obj->row() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->column () );
+      RINT( obj->column() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowSpan () );
+      RINT( obj->rowSpan() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_COLUMNSPAN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnSpan () );
+      RINT( obj->columnSpan() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,8 +310,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextCursor( obj->firstCursorPosition () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
+      auto ptr = new QTextCursor( obj->firstCursorPosition() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,8 +335,8 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTCURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextCursor( obj->lastCursorPosition () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
+      auto ptr = new QTextCursor( obj->lastCursorPosition() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_FIRSTPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstPosition () );
+      RINT( obj->firstPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_LASTPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lastPosition () );
+      RINT( obj->lastPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_TABLECELLFORMATINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->tableCellFormatIndex () );
+      RINT( obj->tableCellFormatIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

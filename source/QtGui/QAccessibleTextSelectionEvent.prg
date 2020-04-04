@@ -27,7 +27,7 @@ CLASS QAccessibleTextSelectionEvent INHERIT QAccessibleTextCursorEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTextSelectionEvent
+PROCEDURE destroyObject() CLASS QAccessibleTextSelectionEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
-    auto obj = new QAccessibleTextSelectionEvent ( PQOBJECT(1), PINT(2), PINT(3) );
+    auto obj = new QAccessibleTextSelectionEvent( PQOBJECT(1), PINT(2), PINT(3) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setSelection ( PINT(1), PINT(2) );
+      obj->setSelection( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectionStart () );
+      RINT( obj->selectionStart() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectionEnd () );
+      RINT( obj->selectionEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ CLASS QStatusTipEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStatusTipEvent
+PROCEDURE destroyObject() CLASS QStatusTipEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    auto obj = new QStatusTipEvent ( PQSTRING(1) );
+    auto obj = new QStatusTipEvent( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->tip () );
+      RQSTRING( obj->tip() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

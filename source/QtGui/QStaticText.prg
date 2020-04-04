@@ -48,7 +48,7 @@ CLASS QStaticText
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStaticText
+PROCEDURE destroyObject() CLASS QStaticText
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,27 +74,27 @@ RETURN
 /*
 QStaticText()
 */
-void QStaticText_new1 ()
+void QStaticText_new1()
 {
-  auto obj = new QStaticText ();
+  auto obj = new QStaticText();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStaticText(const QString &text)
 */
-void QStaticText_new2 ()
+void QStaticText_new2()
 {
-  auto obj = new QStaticText ( PQSTRING(1) );
+  auto obj = new QStaticText( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStaticText(const QStaticText &other)
 */
-void QStaticText_new3 ()
+void QStaticText_new3()
 {
-  auto obj = new QStaticText ( *PQSTATICTEXT(1) );
+  auto obj = new QStaticText( *PQSTATICTEXT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SWAP )
     if( ISNUMPAR(1) && ISQSTATICTEXT(1) )
     {
 #endif
-      obj->swap ( *PQSTATICTEXT(1) );
+      obj->swap( *PQSTATICTEXT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextFormat ( (Qt::TextFormat) hb_parni(1) );
+      obj->setTextFormat( (Qt::TextFormat) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->textFormat () );
+      RENUM( obj->textFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextWidth ( PQREAL(1) );
+      obj->setTextWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->textWidth () );
+      RQREAL( obj->textWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
     if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
     {
 #endif
-      obj->setTextOption ( *PQTEXTOPTION(1) );
+      obj->setTextOption( *PQTEXTOPTION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,8 +354,8 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTOPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextOption( obj->textOption () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTOPTION", true );
+      auto ptr = new QTextOption( obj->textOption() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTOPTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,8 +379,8 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSizeF( obj->size () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
+      auto ptr = new QSizeF( obj->size() );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
     if( ISBETWEEN(0,2) && (ISQTRANSFORM(1)||ISNIL(1)) && (ISQFONT(2)||ISNIL(2)) )
     {
 #endif
-      obj->prepare ( ISNIL(1)? QTransform() : *(QTransform *) Qt5xHb::itemGetPtr(1), ISNIL(2)? QFont() : *(QFont *) Qt5xHb::itemGetPtr(2) );
+      obj->prepare( ISNIL(1)? QTransform() : *(QTransform *) Qt5xHb::itemGetPtr(1), ISNIL(2)? QFont() : *(QFont *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPerformanceHint ( (QStaticText::PerformanceHint) hb_parni(1) );
+      obj->setPerformanceHint( (QStaticText::PerformanceHint) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->performanceHint () );
+      RENUM( obj->performanceHint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

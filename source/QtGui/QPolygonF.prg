@@ -45,7 +45,7 @@ CLASS QPolygonF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPolygonF
+PROCEDURE destroyObject() CLASS QPolygonF
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,34 +71,34 @@ RETURN
 /*
 QPolygonF()
 */
-void QPolygonF_new1 ()
+void QPolygonF_new1()
 {
-  auto obj = new QPolygonF ();
+  auto obj = new QPolygonF();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPolygonF(int size)
 */
-void QPolygonF_new2 ()
+void QPolygonF_new2()
 {
-  auto obj = new QPolygonF ( PINT(1) );
+  auto obj = new QPolygonF( PINT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPolygonF(const QPolygonF &a)
 */
-void QPolygonF_new3 ()
+void QPolygonF_new3()
 {
-  auto obj = new QPolygonF ( *PQPOLYGONF(1) );
+  auto obj = new QPolygonF( *PQPOLYGONF(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPolygonF(const QVector<QPointF> &v)
 */
-void QPolygonF_new4 ()
+void QPolygonF_new4()
 {
   QVector<QPointF> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -107,25 +107,25 @@ void QPolygonF_new4 ()
   {
     par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  auto obj = new QPolygonF ( par1 );
+  auto obj = new QPolygonF( par1 );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPolygonF(const QRectF &r)
 */
-void QPolygonF_new5 ()
+void QPolygonF_new5()
 {
-  auto obj = new QPolygonF ( *PQRECTF(1) );
+  auto obj = new QPolygonF( *PQRECTF(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPolygonF(const QPolygon &a)
 */
-void QPolygonF_new6 ()
+void QPolygonF_new6()
 {
-  auto obj = new QPolygonF ( *PQPOLYGON(1) );
+  auto obj = new QPolygonF( *PQPOLYGON(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPOLYGONF_SWAP )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      obj->swap ( *PQPOLYGONF(1) );
+      obj->swap( *PQPOLYGONF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,13 +214,13 @@ HB_FUNC_STATIC( QPOLYGONF_SWAP )
 /*
 void translate(qreal dx, qreal dy)
 */
-void QPolygonF_translate1 ()
+void QPolygonF_translate1()
 {
   auto obj = (QPolygonF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -229,13 +229,13 @@ void QPolygonF_translate1 ()
 /*
 void translate(const QPointF &offset)
 */
-void QPolygonF_translate2 ()
+void QPolygonF_translate2()
 {
   auto obj = (QPolygonF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->translate ( *PQPOINTF(1) );
+    obj->translate( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -263,28 +263,28 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 /*
 QPolygonF translated(qreal dx, qreal dy) const
 */
-void QPolygonF_translated1 ()
+void QPolygonF_translated1()
 {
   auto obj = (QPolygonF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygonF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    Qt5xHb::createReturnClass ( ptr, "QPOLYGONF", true );
+    auto ptr = new QPolygonF( obj->translated( PQREAL(1), PQREAL(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
 
 /*
 QPolygonF translated(const QPointF &offset) const
 */
-void QPolygonF_translated2 ()
+void QPolygonF_translated2()
 {
   auto obj = (QPolygonF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QPolygonF( obj->translated ( *PQPOINTF(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QPOLYGONF", true );
+    auto ptr = new QPolygonF( obj->translated( *PQPOINTF(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -320,8 +320,8 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPolygon( obj->toPolygon () );
-      Qt5xHb::createReturnClass ( ptr, "QPOLYGON", true );
+      auto ptr = new QPolygon( obj->toPolygon() );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isClosed () );
+      RBOOL( obj->isClosed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,8 +369,8 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->containsPoint ( *PQPOINTF(1), (Qt::FillRule) hb_parni(2) ) );
+      RBOOL( obj->containsPoint( *PQPOINTF(1), (Qt::FillRule) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,8 +418,8 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      auto ptr = new QPolygonF( obj->united ( *PQPOLYGONF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QPOLYGONF", true );
+      auto ptr = new QPolygonF( obj->united( *PQPOLYGONF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,8 +443,8 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      auto ptr = new QPolygonF( obj->intersected ( *PQPOLYGONF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QPOLYGONF", true );
+      auto ptr = new QPolygonF( obj->intersected( *PQPOLYGONF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,8 +468,8 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
     if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      auto ptr = new QPolygonF( obj->subtracted ( *PQPOLYGONF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QPOLYGONF", true );
+      auto ptr = new QPolygonF( obj->subtracted( *PQPOLYGONF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

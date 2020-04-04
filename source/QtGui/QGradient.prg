@@ -38,7 +38,7 @@ CLASS QGradient
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGradient
+PROCEDURE destroyObject() CLASS QGradient
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->coordinateMode () );
+      RENUM( obj->coordinateMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
     if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setColorAt ( PQREAL(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setColorAt( PQREAL(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCoordinateMode ( (QGradient::CoordinateMode) hb_parni(1) );
+      obj->setCoordinateMode( (QGradient::CoordinateMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSpread ( (QGradient::Spread) hb_parni(1) );
+      obj->setSpread( (QGradient::Spread) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->spread () );
+      RENUM( obj->spread() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QGRADIENT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -28,7 +28,7 @@ CLASS QPaintEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPaintEvent
+PROCEDURE destroyObject() CLASS QPaintEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QPaintEvent ( const QRegion & paintRegion )
 */
-void QPaintEvent_new1 ()
+void QPaintEvent_new1()
 {
-  auto obj = new QPaintEvent ( *PQREGION(1) );
+  auto obj = new QPaintEvent( *PQREGION(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QPaintEvent ( const QRect & paintRect )
 */
-void QPaintEvent_new2 ()
+void QPaintEvent_new2()
 {
-  auto obj = new QPaintEvent ( *PQRECT(1) );
+  auto obj = new QPaintEvent( *PQRECT(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRect * ptr = &obj->rect ();
-      Qt5xHb::createReturnClass ( ptr, "QRECT", false );
+      const QRect * ptr = &obj->rect();
+      Qt5xHb::createReturnClass( ptr, "QRECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,8 +143,8 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegion * ptr = &obj->region ();
-      Qt5xHb::createReturnClass ( ptr, "QREGION", false );
+      const QRegion * ptr = &obj->region();
+      Qt5xHb::createReturnClass( ptr, "QREGION", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

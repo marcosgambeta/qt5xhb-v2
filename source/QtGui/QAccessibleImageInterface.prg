@@ -35,7 +35,7 @@ CLASS QAccessibleImageInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleImageInterface
+PROCEDURE destroyObject() CLASS QAccessibleImageInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->imageDescription () );
+      RQSTRING( obj->imageDescription() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->imageSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->imageSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -120,7 +120,7 @@ CLASS QColor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QColor
+PROCEDURE destroyObject() CLASS QColor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -148,18 +148,18 @@ RETURN
 /*
 QColor ()
 */
-void QColor_new1 ()
+void QColor_new1()
 {
-  auto obj = new QColor ();
+  auto obj = new QColor();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QColor ( int r, int g, int b, int a = 255 )
 */
-void QColor_new2 ()
+void QColor_new2()
 {
-  auto obj = new QColor ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+  auto obj = new QColor( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -168,7 +168,7 @@ QColor ( QRgb color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
-  auto obj = new QColor ( PQRGB(1) );
+  auto obj = new QColor( PQRGB(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -177,7 +177,7 @@ QColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
-  auto obj = new QColor ( PQSTRING(1) );
+  auto obj = new QColor( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -186,16 +186,16 @@ QColor ( const char * name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
-  auto obj = new QColor ( PCONSTCHAR(1) );
+  auto obj = new QColor( PCONSTCHAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QColor ( const QColor & color )
 */
-void QColor_new6 ()
+void QColor_new6()
 {
-  auto obj = new QColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  auto obj = new QColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -204,7 +204,7 @@ QColor ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
-  auto obj = new QColor ( (Qt::GlobalColor) hb_parni(1) );
+  auto obj = new QColor( (Qt::GlobalColor) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->alpha () );
+      RINT( obj->alpha() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QCOLOR_ALPHAF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->alphaF () );
+      RQREAL( obj->alphaF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QCOLOR_BLACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->black () );
+      RINT( obj->black() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QCOLOR_BLACKF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->blackF () );
+      RQREAL( obj->blackF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QCOLOR_BLUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->blue () );
+      RINT( obj->blue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->blueF () );
+      RQREAL( obj->blueF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,8 +419,8 @@ HB_FUNC_STATIC( QCOLOR_CONVERTTO )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QColor( obj->convertTo ( (QColor::Spec) hb_parni(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->convertTo( (QColor::Spec) hb_parni(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QCOLOR_CYAN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->cyan () );
+      RINT( obj->cyan() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->cyanF () );
+      RQREAL( obj->cyanF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,8 +492,8 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      auto ptr = new QColor( obj->darker ( OPINT(1,200) ) );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->darker( OPINT(1,200) ) );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
       int par3;
       int par4;
       int par5;
-      obj->getCmyk ( &par1, &par2, &par3, &par4, &par5 );
+      obj->getCmyk( &par1, &par2, &par3, &par4, &par5 );
       hb_storni( par1, 1 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
       qreal par3;
       qreal par4;
       qreal par5;
-      obj->getCmykF ( &par1, &par2, &par3, &par4, &par5 );
+      obj->getCmykF( &par1, &par2, &par3, &par4, &par5 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSL )
       int par2;
       int par3;
       int par4;
-      obj->getHsl ( &par1, &par2, &par3, &par4 );
+      obj->getHsl( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSLF )
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getHslF ( &par1, &par2, &par3, &par4 );
+      obj->getHslF( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSV )
       int par2;
       int par3;
       int par4;
-      obj->getHsv ( &par1, &par2, &par3, &par4 );
+      obj->getHsv( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSVF )
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getHsvF ( &par1, &par2, &par3, &par4 );
+      obj->getHsvF( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QCOLOR_GETRGB )
       int par2;
       int par3;
       int par4;
-      obj->getRgb ( &par1, &par2, &par3, &par4 );
+      obj->getRgb( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QCOLOR_GETRGBF )
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getRgbF ( &par1, &par2, &par3, &par4 );
+      obj->getRgbF( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QCOLOR_GREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->green () );
+      RINT( obj->green() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QCOLOR_GREENF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->greenF () );
+      RQREAL( obj->greenF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hslHue () );
+      RINT( obj->hslHue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QCOLOR_HSLHUEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hslHueF () );
+      RQREAL( obj->hslHueF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hslSaturation () );
+      RINT( obj->hslSaturation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QCOLOR_HSLSATURATIONF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hslSaturationF () );
+      RQREAL( obj->hslSaturationF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hsvHue () );
+      RINT( obj->hsvHue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QCOLOR_HSVHUEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hsvHueF () );
+      RQREAL( obj->hsvHueF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hsvSaturation () );
+      RINT( obj->hsvSaturation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1009,7 +1009,7 @@ HB_FUNC_STATIC( QCOLOR_HSVSATURATIONF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hsvSaturationF () );
+      RQREAL( obj->hsvSaturationF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QCOLOR_HUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hue () );
+      RINT( obj->hue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QCOLOR_HUEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->hueF () );
+      RQREAL( obj->hueF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1105,8 +1105,8 @@ HB_FUNC_STATIC( QCOLOR_LIGHTER )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      auto ptr = new QColor( obj->lighter ( OPINT(1,150) ) );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->lighter( OPINT(1,150) ) );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lightness () );
+      RINT( obj->lightness() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QCOLOR_LIGHTNESSF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->lightnessF () );
+      RQREAL( obj->lightnessF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->magenta () );
+      RINT( obj->magenta() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC( QCOLOR_MAGENTAF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->magentaF () );
+      RQREAL( obj->magentaF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QCOLOR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QCOLOR_RED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->red () );
+      RINT( obj->red() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QCOLOR_REDF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->redF () );
+      RQREAL( obj->redF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC( QCOLOR_RGB )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQRGB( obj->rgb () );
+      RQRGB( obj->rgb() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC( QCOLOR_RGBA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQRGB( obj->rgba () );
+      RQRGB( obj->rgba() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->saturation () );
+      RINT( obj->saturation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->saturationF () );
+      RQREAL( obj->saturationF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlpha ( PINT(1) );
+      obj->setAlpha( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHAF )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlphaF ( PQREAL(1) );
+      obj->setAlphaF( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlue ( PINT(1) );
+      obj->setBlue( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUEF )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlueF ( PQREAL(1) );
+      obj->setBlueF( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
     if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
     {
 #endif
-      obj->setCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) );
+      obj->setCmyk( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYKF )
     if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
     {
 #endif
-      obj->setCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) );
+      obj->setCmykF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setGreen ( PINT(1) );
+      obj->setGreen( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREENF )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setGreenF ( PQREAL(1) );
+      obj->setGreenF( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->setHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+      obj->setHsl( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSLF )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->setHslF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setHslF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->setHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+      obj->setHsv( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1680,7 +1680,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->setHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setHsvF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setNamedColor ( PQSTRING(1) );
+      obj->setNamedColor( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1732,7 +1732,7 @@ HB_FUNC_STATIC( QCOLOR_SETRED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRed ( PINT(1) );
+      obj->setRed( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRedF ( PQREAL(1) );
+      obj->setRedF( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1774,13 +1774,13 @@ HB_FUNC_STATIC( QCOLOR_SETREDF )
 /*
 void setRgb ( int r, int g, int b, int a = 255 )
 */
-void QColor_setRgb1 ()
+void QColor_setRgb1()
 {
   auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+    obj->setRgb( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1789,13 +1789,13 @@ void QColor_setRgb1 ()
 /*
 void setRgb ( QRgb rgb )
 */
-void QColor_setRgb2 ()
+void QColor_setRgb2()
 {
   auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setRgb ( PQRGB(1) );
+    obj->setRgb( PQRGB(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1833,7 +1833,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGBF )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->setRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
+      obj->setRgbF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1859,7 +1859,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGBA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRgba ( PQRGB(1) );
+      obj->setRgba( PQRGB(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1885,7 +1885,7 @@ HB_FUNC_STATIC( QCOLOR_SPEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->spec () );
+      RENUM( obj->spec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1909,8 +1909,8 @@ HB_FUNC_STATIC( QCOLOR_TOCMYK )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->toCmyk () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->toCmyk() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1934,8 +1934,8 @@ HB_FUNC_STATIC( QCOLOR_TOHSL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->toHsl () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->toHsl() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1959,8 +1959,8 @@ HB_FUNC_STATIC( QCOLOR_TOHSV )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->toHsv () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->toHsv() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1984,8 +1984,8 @@ HB_FUNC_STATIC( QCOLOR_TORGB )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->toRgb () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->toRgb() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2009,7 +2009,7 @@ HB_FUNC_STATIC( QCOLOR_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->value () );
+      RINT( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2033,7 +2033,7 @@ HB_FUNC_STATIC( QCOLOR_VALUEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->valueF () );
+      RQREAL( obj->valueF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2057,7 +2057,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->yellow () );
+      RINT( obj->yellow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2081,7 +2081,7 @@ HB_FUNC_STATIC( QCOLOR_YELLOWF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->yellowF () );
+      RQREAL( obj->yellowF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2101,7 +2101,7 @@ HB_FUNC_STATIC( QCOLOR_COLORNAMES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QColor::colorNames () );
+    RQSTRINGLIST( QColor::colorNames() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2120,8 +2120,8 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
   if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromCmyk ( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromCmyk( PINT(1), PINT(2), PINT(3), PINT(4), OPINT(5,255) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2140,8 +2140,8 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
   if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromCmykF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromCmykF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,1.0) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2160,8 +2160,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromHsl ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromHsl( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2180,8 +2180,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromHslF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromHslF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2200,8 +2200,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromHsv ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromHsv( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2220,8 +2220,8 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromHsvF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromHsvF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2234,21 +2234,21 @@ HB_FUNC_STATIC( QCOLOR_FROMHSVF )
 /*
 static QColor fromRgb ( QRgb rgb )
 */
-void QColor_fromRgb1 ()
+void QColor_fromRgb1()
 {
 
-  auto ptr = new QColor( QColor::fromRgb ( PQRGB(1) ) );
-  Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+  auto ptr = new QColor( QColor::fromRgb( PQRGB(1) ) );
+  Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
 /*
 static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
-void QColor_fromRgb2 ()
+void QColor_fromRgb2()
 {
 
-  auto ptr = new QColor( QColor::fromRgb ( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
-  Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+  auto ptr = new QColor( QColor::fromRgb( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
+  Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 }
 
 //[1]QColor fromRgb ( QRgb rgb )
@@ -2279,8 +2279,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
   if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromRgbF ( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromRgbF( PQREAL(1), PQREAL(2), PQREAL(3), OPQREAL(4,1.0) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2299,8 +2299,8 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    auto ptr = new QColor( QColor::fromRgba ( PQRGB(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+    auto ptr = new QColor( QColor::fromRgba( PQRGB(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2319,7 +2319,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RBOOL( QColor::isValidColor ( PQSTRING(1) ) );
+    RBOOL( QColor::isValidColor( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2465,9 +2465,9 @@ HB_FUNC( QRGBA )
 }
 
 /*
-QVariant toVariant ()
+QVariant toVariant()
 */
-void QColor_toVariant1 ()
+void QColor_toVariant1()
 {
   auto obj = (QColor *) Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -2475,23 +2475,23 @@ void QColor_toVariant1 ()
   {
     QVariant * variant = new QVariant();
     variant->setValue<QColor>( *obj );
-    Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass( variant, "QVARIANT", true );
   }
 }
 
 /*
-static QVariant toVariant ( const QColor & )
+static QVariant toVariant( const QColor & )
 */
-void QColor_toVariant2 ()
+void QColor_toVariant2()
 {
   QColor * color = (QColor *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QColor>( *color );
-  Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
-//[1]QVariant toVariant ()
-//[2]static QVariant toVariant ( const QColor & )
+//[1]QVariant toVariant()
+//[2]static QVariant toVariant( const QColor & )
 
 HB_FUNC_STATIC( QCOLOR_TOVARIANT )
 {
@@ -2510,7 +2510,7 @@ HB_FUNC_STATIC( QCOLOR_TOVARIANT )
 }
 
 /*
-static QColor fromVariant ( const QVariant & )
+static QColor fromVariant( const QVariant & )
 */
 HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
 {
@@ -2518,7 +2518,7 @@ HB_FUNC_STATIC( QCOLOR_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QColor * color = new QColor( variant->value<QColor>() );
-    Qt5xHb::createReturnClass ( color, "QCOLOR", true );
+    Qt5xHb::createReturnClass( color, "QCOLOR", true );
   }
   else
   {

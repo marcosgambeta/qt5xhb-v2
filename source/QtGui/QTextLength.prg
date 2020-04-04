@@ -36,7 +36,7 @@ CLASS QTextLength
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextLength
+PROCEDURE destroyObject() CLASS QTextLength
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,18 +62,18 @@ RETURN
 /*
 QTextLength()
 */
-void QTextLength_new1 ()
+void QTextLength_new1()
 {
-  auto obj = new QTextLength ();
+  auto obj = new QTextLength();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTextLength(Type type, qreal value)
 */
-void QTextLength_new2 ()
+void QTextLength_new2()
 {
-  auto obj = new QTextLength ( (QTextLength::Type) hb_parni(1), PQREAL(2) );
+  auto obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->value ( PQREAL(1) ) );
+      RQREAL( obj->value( PQREAL(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->rawValue () );
+      RQREAL( obj->rawValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

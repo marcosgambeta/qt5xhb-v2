@@ -29,7 +29,7 @@ CLASS QRegularExpressionValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegularExpressionValidator
+PROCEDURE destroyObject() CLASS QRegularExpressionValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QRegularExpressionValidator(QObject *parent = nullptr)
 */
-void QRegularExpressionValidator_new1 ()
+void QRegularExpressionValidator_new1()
 {
-  auto obj = new QRegularExpressionValidator ( OPQOBJECT(1,nullptr) );
+  auto obj = new QRegularExpressionValidator( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
 */
-void QRegularExpressionValidator_new2 ()
+void QRegularExpressionValidator_new2()
 {
-  auto obj = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegularExpression( obj->regularExpression () );
-      Qt5xHb::createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+      auto ptr = new QRegularExpression( obj->regularExpression() );
+      Qt5xHb::createReturnClass( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
     if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
     {
 #endif
-      obj->setRegularExpression ( *PQREGULAREXPRESSION(1) );
+      obj->setRegularExpression( *PQREGULAREXPRESSION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QREGULAREXPRESSIONVALIDATOR" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QREGULAREXPRESSIONVALIDATOR" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGULAREXPRESSION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

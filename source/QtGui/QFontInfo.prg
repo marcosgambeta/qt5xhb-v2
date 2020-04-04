@@ -46,7 +46,7 @@ CLASS QFontInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontInfo
+PROCEDURE destroyObject() CLASS QFontInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,18 +72,18 @@ RETURN
 /*
 QFontInfo ( const QFont & font )
 */
-void QFontInfo_new1 ()
+void QFontInfo_new1()
 {
-  auto obj = new QFontInfo ( *PQFONT(1) );
+  auto obj = new QFontInfo( *PQFONT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QFontInfo ( const QFontInfo & fi )
 */
-void QFontInfo_new2 ()
+void QFontInfo_new2()
 {
-  auto obj = new QFontInfo ( *PQFONTINFO(1) );
+  auto obj = new QFontInfo( *PQFONTINFO(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->bold () );
+      RBOOL( obj->bold() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->exactMatch () );
+      RBOOL( obj->exactMatch() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->family () );
+      RQSTRING( obj->family() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fixedPitch () );
+      RBOOL( obj->fixedPitch() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->italic () );
+      RBOOL( obj->italic() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->pixelSize () );
+      RINT( obj->pixelSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->pointSize () );
+      RINT( obj->pointSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->pointSizeF () );
+      RQREAL( obj->pointSizeF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->rawMode () );
+      RBOOL( obj->rawMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->style () );
+      RENUM( obj->style() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->styleHint () );
+      RENUM( obj->styleHint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->styleName () );
+      RQSTRING( obj->styleName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QFONTINFO_WEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->weight () );
+      RINT( obj->weight() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

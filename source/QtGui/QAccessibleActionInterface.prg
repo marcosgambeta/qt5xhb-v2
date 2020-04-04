@@ -43,7 +43,7 @@ CLASS QAccessibleActionInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleActionInterface
+PROCEDURE destroyObject() CLASS QAccessibleActionInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->actionNames () );
+      RQSTRINGLIST( obj->actionNames() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->localizedActionName ( PQSTRING(1) ) );
+      RQSTRING( obj->localizedActionName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->localizedActionDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->localizedActionDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->doAction ( PQSTRING(1) );
+      obj->doAction( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->keyBindingsForAction ( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->keyBindingsForAction( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::pressAction () );
+    RQSTRING( QAccessibleActionInterface::pressAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::increaseAction () );
+    RQSTRING( QAccessibleActionInterface::increaseAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::decreaseAction () );
+    RQSTRING( QAccessibleActionInterface::decreaseAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::showMenuAction () );
+    RQSTRING( QAccessibleActionInterface::showMenuAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::setFocusAction () );
+    RQSTRING( QAccessibleActionInterface::setFocusAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QAccessibleActionInterface::toggleAction () );
+    RQSTRING( QAccessibleActionInterface::toggleAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

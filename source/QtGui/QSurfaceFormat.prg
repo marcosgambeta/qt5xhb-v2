@@ -62,7 +62,7 @@ CLASS QSurfaceFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSurfaceFormat
+PROCEDURE destroyObject() CLASS QSurfaceFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,27 +88,27 @@ RETURN
 /*
 QSurfaceFormat()
 */
-void QSurfaceFormat_new1 ()
+void QSurfaceFormat_new1()
 {
-  auto obj = new QSurfaceFormat ();
+  auto obj = new QSurfaceFormat();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QSurfaceFormat(FormatOptions options)
 */
-void QSurfaceFormat_new2 ()
+void QSurfaceFormat_new2()
 {
-  auto obj = new QSurfaceFormat ( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+  auto obj = new QSurfaceFormat( (QSurfaceFormat::FormatOptions) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QSurfaceFormat(const QSurfaceFormat &other)
 */
-void QSurfaceFormat_new3 ()
+void QSurfaceFormat_new3()
 {
-  auto obj = new QSurfaceFormat ( *PQSURFACEFORMAT(1) );
+  auto obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDepthBufferSize ( PINT(1) );
+      obj->setDepthBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->depthBufferSize () );
+      RINT( obj->depthBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStencilBufferSize ( PINT(1) );
+      obj->setStencilBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->stencilBufferSize () );
+      RINT( obj->stencilBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRedBufferSize ( PINT(1) );
+      obj->setRedBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->redBufferSize () );
+      RINT( obj->redBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setGreenBufferSize ( PINT(1) );
+      obj->setGreenBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->greenBufferSize () );
+      RINT( obj->greenBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlueBufferSize ( PINT(1) );
+      obj->setBlueBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->blueBufferSize () );
+      RINT( obj->blueBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlphaBufferSize ( PINT(1) );
+      obj->setAlphaBufferSize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->alphaBufferSize () );
+      RINT( obj->alphaBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSamples ( PINT(1) );
+      obj->setSamples( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->samples () );
+      RINT( obj->samples() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSwapBehavior ( (QSurfaceFormat::SwapBehavior) hb_parni(1) );
+      obj->setSwapBehavior( (QSurfaceFormat::SwapBehavior) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->swapBehavior () );
+      RENUM( obj->swapBehavior() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasAlpha () );
+      RBOOL( obj->hasAlpha() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setProfile ( (QSurfaceFormat::OpenGLContextProfile) hb_parni(1) );
+      obj->setProfile( (QSurfaceFormat::OpenGLContextProfile) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->profile () );
+      RENUM( obj->profile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRenderableType ( (QSurfaceFormat::RenderableType) hb_parni(1) );
+      obj->setRenderableType( (QSurfaceFormat::RenderableType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->renderableType () );
+      RENUM( obj->renderableType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMajorVersion ( PINT(1) );
+      obj->setMajorVersion( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->majorVersion () );
+      RINT( obj->majorVersion() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinorVersion ( PINT(1) );
+      obj->setMinorVersion( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MINORVERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minorVersion () );
+      RINT( obj->minorVersion() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->stereo () );
+      RBOOL( obj->stereo() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setStereo ( PBOOL(1) );
+      obj->setStereo( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOption ( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+      obj->setOption( (QSurfaceFormat::FormatOptions) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption ( (QSurfaceFormat::FormatOptions) hb_parni(1) ) );
+      RBOOL( obj->testOption( (QSurfaceFormat::FormatOptions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

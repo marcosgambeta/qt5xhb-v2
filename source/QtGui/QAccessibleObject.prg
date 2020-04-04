@@ -30,7 +30,7 @@ CLASS QAccessibleObject INHERIT QAccessibleInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleObject
+PROCEDURE destroyObject() CLASS QAccessibleObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->rect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->rect() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setText ( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
+      obj->setText( (QAccessible::Text) hb_parni(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,8 +166,8 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->childAt ( PINT(1), PINT(2) );
-      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->childAt( PINT(1), PINT(2) );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

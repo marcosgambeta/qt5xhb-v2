@@ -26,7 +26,7 @@ CLASS QAccessibleTextCursorEvent INHERIT QAccessibleEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTextCursorEvent
+PROCEDURE destroyObject() CLASS QAccessibleTextCursorEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    auto obj = new QAccessibleTextCursorEvent ( PQOBJECT(1), PINT(2) );
+    auto obj = new QAccessibleTextCursorEvent( PQOBJECT(1), PINT(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCursorPosition ( PINT(1) );
+      obj->setCursorPosition( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_CURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->cursorPosition () );
+      RINT( obj->cursorPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

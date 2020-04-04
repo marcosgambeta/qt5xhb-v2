@@ -44,7 +44,7 @@ CLASS QPixmapCache
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPixmapCache
+PROCEDURE destroyObject() CLASS QPixmapCache
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QPixmapCache::cacheLimit () );
+    RINT( QPixmapCache::cacheLimit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QPixmapCache::setCacheLimit ( PINT(1) );
+    QPixmapCache::setCacheLimit( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
-    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", false );
+    QPixmap * ptr = QPixmapCache::find( PQSTRING(1) );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
   {
 #endif
-    RBOOL( QPixmapCache::find ( PQSTRING(1), *PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::find( PQSTRING(1), *PQPIXMAP(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
   {
 #endif
-    RBOOL( QPixmapCache::find ( PQSTRING(1), PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::find( PQSTRING(1), PQPIXMAP(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
   {
 #endif
-    RBOOL( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
+    RBOOL( QPixmapCache::insert( PQSTRING(1), *PQPIXMAP(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QPixmapCache::remove ( PQSTRING(1) );
+    QPixmapCache::remove( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
   if( ISNUMPAR(0) )
   {
 #endif
-    QPixmapCache::clear ();
+    QPixmapCache::clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

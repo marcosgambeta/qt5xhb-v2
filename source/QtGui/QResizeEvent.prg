@@ -27,7 +27,7 @@ CLASS QResizeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QResizeEvent
+PROCEDURE destroyObject() CLASS QResizeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
-    auto obj = new QResizeEvent ( *PQSIZE(1), *PQSIZE(2) );
+    auto obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSize * ptr = &obj->size ();
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", false );
+      const QSize * ptr = &obj->size();
+      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QSize * ptr = &obj->oldSize ();
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", false );
+      const QSize * ptr = &obj->oldSize();
+      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

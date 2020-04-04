@@ -25,7 +25,7 @@ CLASS QToolBarChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QToolBarChangeEvent
+PROCEDURE destroyObject() CLASS QToolBarChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISLOG(1) )
   {
-    auto obj = new QToolBarChangeEvent ( PBOOL(1) );
+    auto obj = new QToolBarChangeEvent( PBOOL(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->toggle () );
+      RBOOL( obj->toggle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -28,7 +28,7 @@ CLASS QScrollEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScrollEvent
+PROCEDURE destroyObject() CLASS QScrollEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISNUM(3) )
   {
-    auto obj = new QScrollEvent ( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
+    auto obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QSCROLLEVENT_CONTENTPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->contentPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->contentPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,8 +122,8 @@ HB_FUNC_STATIC( QSCROLLEVENT_OVERSHOOTDISTANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->overshootDistance () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->overshootDistance() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSCROLLEVENT_SCROLLSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->scrollState () );
+      RENUM( obj->scrollState() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

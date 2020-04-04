@@ -24,7 +24,7 @@ CLASS QShowEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QShowEvent
+PROCEDURE destroyObject() CLASS QShowEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QShowEvent ();
+    auto obj = new QShowEvent();
     Qt5xHb::returnNewObject( obj, false );
   }
   else

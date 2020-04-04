@@ -45,7 +45,7 @@ CLASS QTextDocumentWriter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextDocumentWriter
+PROCEDURE destroyObject() CLASS QTextDocumentWriter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,27 +73,27 @@ RETURN
 /*
 QTextDocumentWriter()
 */
-void QTextDocumentWriter_new1 ()
+void QTextDocumentWriter_new1()
 {
-  auto obj = new QTextDocumentWriter ();
+  auto obj = new QTextDocumentWriter();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QTextDocumentWriter(QIODevice *device, const QByteArray &format)
 */
-void QTextDocumentWriter_new2 ()
+void QTextDocumentWriter_new2()
 {
-  auto obj = new QTextDocumentWriter ( PQIODEVICE(1), *PQBYTEARRAY(2) );
+  auto obj = new QTextDocumentWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
 */
-void QTextDocumentWriter_new3 ()
+void QTextDocumentWriter_new3()
 {
-  auto obj = new QTextDocumentWriter ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setFormat ( *PQBYTEARRAY(1) );
+      obj->setFormat( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice ( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,8 +228,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->device();
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,26 +293,26 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 /*
 bool write(const QTextDocument *document)
 */
-void QTextDocumentWriter_write1 ()
+void QTextDocumentWriter_write1()
 {
   auto obj = (QTextDocumentWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->write ( PQTEXTDOCUMENT(1) ) );
+    RBOOL( obj->write( PQTEXTDOCUMENT(1) ) );
   }
 }
 
 /*
 bool write(const QTextDocumentFragment &fragment)
 */
-void QTextDocumentWriter_write2 ()
+void QTextDocumentWriter_write2()
 {
   auto obj = (QTextDocumentWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->write ( *PQTEXTDOCUMENTFRAGMENT(1) ) );
+    RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
     if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
     {
 #endif
-      obj->setCodec ( PQTEXTCODEC(1) );
+      obj->setCodec( PQTEXTCODEC(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,8 +374,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCodec * ptr = obj->codec ();
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCODEC", false );
+      QTextCodec * ptr = obj->codec();
+      Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -54,7 +54,7 @@ CLASS QIcon
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIcon
+PROCEDURE destroyObject() CLASS QIcon
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,36 +82,36 @@ RETURN
 /*
 QIcon ()
 */
-void QIcon_new1 ()
+void QIcon_new1()
 {
-  auto obj = new QIcon ();
+  auto obj = new QIcon();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QIcon ( const QPixmap & pixmap )
 */
-void QIcon_new2 ()
+void QIcon_new2()
 {
-  auto obj = new QIcon ( *PQPIXMAP(1) );
+  auto obj = new QIcon( *PQPIXMAP(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QIcon ( const QIcon & other )
 */
-void QIcon_new3 ()
+void QIcon_new3()
 {
-  auto obj = new QIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+  auto obj = new QIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QIcon ( const QString & fileName )
 */
-void QIcon_new4 ()
+void QIcon_new4()
 {
-  auto obj = new QIcon ( PQSTRING(1) );
+  auto obj = new QIcon( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
     if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      auto ptr = new QSize( obj->actualSize ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->actualSize( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
     if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->addFile ( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
+      obj->addFile( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
     if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->addPixmap ( *PQPIXMAP(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) );
+      obj->addPixmap( *PQPIXMAP(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes ( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
+      QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->cacheKey () );
+      RQINT64( obj->cacheKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QICON_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,13 +367,13 @@ HB_FUNC_STATIC( QICON_NAME )
 /*
 void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-void QIcon_paint1 ()
+void QIcon_paint1()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->paint ( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
+    obj->paint( PQPAINTER(1), *PQRECT(2), ISNIL(3)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(3), ISNIL(4)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(4), ISNIL(5)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -382,13 +382,13 @@ void QIcon_paint1 ()
 /*
 void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 */
-void QIcon_paint2 ()
+void QIcon_paint2()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->paint ( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
+    obj->paint( PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) Qt::AlignCenter : (Qt::Alignment) hb_parni(6), ISNIL(7)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(7), ISNIL(8)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(8) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -416,42 +416,42 @@ HB_FUNC_STATIC( QICON_PAINT )
 /*
 QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 */
-void QIcon_pixmap1 ()
+void QIcon_pixmap1()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QPixmap( obj->pixmap ( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
 /*
 QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
 */
-void QIcon_pixmap2 ()
+void QIcon_pixmap2()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QPixmap( obj->pixmap ( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
-    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap( PINT(1), PINT(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) ) );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
 /*
 QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
 */
-void QIcon_pixmap3 ()
+void QIcon_pixmap3()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QPixmap( obj->pixmap ( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
-    Qt5xHb::createReturnClass ( ptr, "QPIXMAP", true );
+    auto ptr = new QPixmap( obj->pixmap( PINT(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
 
@@ -488,8 +488,8 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
   {
 #endif
-    auto ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) Qt5xHb::itemGetPtr(2) ) );
-    Qt5xHb::createReturnClass ( ptr, "QICON", true );
+    auto ptr = new QIcon( QIcon::fromTheme( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) Qt5xHb::itemGetPtr(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
+    RBOOL( QIcon::hasThemeIcon( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QIcon::setThemeName ( PQSTRING(1) );
+    QIcon::setThemeName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
   if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-    QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
+    QIcon::setThemeSearchPaths( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QICON_THEMENAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QIcon::themeName () );
+    RQSTRING( QIcon::themeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QIcon::themeSearchPaths () );
+    RQSTRINGLIST( QIcon::themeSearchPaths() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QIcon::fallbackThemeName () );
+    RQSTRING( QIcon::fallbackThemeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QIcon::setFallbackThemeName ( PQSTRING(1) );
+    QIcon::setFallbackThemeName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -643,9 +643,9 @@ HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
 }
 
 /*
-QVariant toVariant ()
+QVariant toVariant()
 */
-void QIcon_toVariant1 ()
+void QIcon_toVariant1()
 {
   auto obj = (QIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -653,23 +653,23 @@ void QIcon_toVariant1 ()
   {
     QVariant * variant = new QVariant();
     variant->setValue<QIcon>( *obj );
-    Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass( variant, "QVARIANT", true );
   }
 }
 
 /*
-static QVariant toVariant ( const QIcon & )
+static QVariant toVariant( const QIcon & )
 */
-void QIcon_toVariant2 ()
+void QIcon_toVariant2()
 {
   QIcon * icon = (QIcon *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QIcon>( *icon );
-  Qt5xHb::createReturnClass ( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
-//[1]QVariant toVariant ()
-//[2]static QVariant toVariant ( const QIcon & )
+//[1]QVariant toVariant()
+//[2]static QVariant toVariant( const QIcon & )
 
 HB_FUNC_STATIC( QICON_TOVARIANT )
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QICON_TOVARIANT )
 }
 
 /*
-static QIcon fromVariant ( const QVariant & )
+static QIcon fromVariant( const QVariant & )
 */
 HB_FUNC_STATIC( QICON_FROMVARIANT )
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QICON_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QIcon * icon = new QIcon( variant->value<QIcon>() );
-    Qt5xHb::createReturnClass ( icon, "QICON", true );
+    Qt5xHb::createReturnClass( icon, "QICON", true );
   }
   else
   {

@@ -29,7 +29,7 @@ CLASS QInputMethodEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputMethodEvent
+PROCEDURE destroyObject() CLASS QInputMethodEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,9 +55,9 @@ RETURN
 /*
 QInputMethodEvent ()
 */
-void QInputMethodEvent_new1 ()
+void QInputMethodEvent_new1()
 {
-  auto obj = new QInputMethodEvent ();
+  auto obj = new QInputMethodEvent();
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -68,9 +68,9 @@ QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attrib
 /*
 QInputMethodEvent ( const QInputMethodEvent & other )
 */
-void QInputMethodEvent_new3 ()
+void QInputMethodEvent_new3()
 {
-  auto obj = new QInputMethodEvent ( *PQINPUTMETHODEVENT(1) );
+  auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->commitString () );
+      RQSTRING( obj->commitString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->preeditString () );
+      RQSTRING( obj->preeditString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->replacementLength () );
+      RINT( obj->replacementLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->replacementStart () );
+      RINT( obj->replacementStart() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->setCommitString ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+      obj->setCommitString( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

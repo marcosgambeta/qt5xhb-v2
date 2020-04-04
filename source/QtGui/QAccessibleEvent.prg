@@ -40,7 +40,7 @@ CLASS QAccessibleEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleEvent
+PROCEDURE destroyObject() CLASS QAccessibleEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    auto obj = new QAccessibleEvent ( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
+    auto obj = new QAccessibleEvent( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setChild ( PINT(1) );
+      obj->setChild( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->child () );
+      RINT( obj->child() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,8 +208,8 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->accessibleInterface ();
-      Qt5xHb::createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->accessibleInterface();
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

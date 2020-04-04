@@ -27,7 +27,7 @@ CLASS QActionEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QActionEvent
+PROCEDURE destroyObject() CLASS QActionEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISQACTION(2) && (ISQACTION(3)||ISNIL(3)) )
   {
-    auto obj = new QActionEvent ( PINT(1), PQACTION(2), OPQACTION(3,nullptr) );
+    auto obj = new QActionEvent( PINT(1), PQACTION(2), OPQACTION(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->action ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->action();
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->before ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->before();
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

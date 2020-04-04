@@ -30,7 +30,7 @@ CLASS QTouchEvent INHERIT QInputEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTouchEvent
+PROCEDURE destroyObject() CLASS QTouchEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QWINDOW" );
+      QWindow * ptr = obj->window();
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->target ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->target();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->touchPointStates () );
+      RENUM( obj->touchPointStates() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,8 +160,8 @@ HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTouchDevice * ptr = obj->device ();
-      Qt5xHb::createReturnClass ( ptr, "QTOUCHDEVICE", false );
+      QTouchDevice * ptr = obj->device();
+      Qt5xHb::createReturnClass( ptr, "QTOUCHDEVICE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ CLASS QIconEnginePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIconEnginePlugin
+PROCEDURE destroyObject() CLASS QIconEnginePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
 #endif
-      QIconEngine * ptr = obj->create ( OPQSTRING(1,QString()) );
-      Qt5xHb::createReturnClass ( ptr, "QICONENGINE", false );
+      QIconEngine * ptr = obj->create( OPQSTRING(1,QString()) );
+      Qt5xHb::createReturnClass( ptr, "QICONENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

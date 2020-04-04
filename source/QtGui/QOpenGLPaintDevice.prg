@@ -40,7 +40,7 @@ CLASS QOpenGLPaintDevice INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLPaintDevice
+PROCEDURE destroyObject() CLASS QOpenGLPaintDevice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,27 +66,27 @@ RETURN
 /*
 QOpenGLPaintDevice()
 */
-void QOpenGLPaintDevice_new1 ()
+void QOpenGLPaintDevice_new1()
 {
-  auto obj = new QOpenGLPaintDevice ();
+  auto obj = new QOpenGLPaintDevice();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QOpenGLPaintDevice(const QSize &size)
 */
-void QOpenGLPaintDevice_new2 ()
+void QOpenGLPaintDevice_new2()
 {
-  auto obj = new QOpenGLPaintDevice ( *PQSIZE(1) );
+  auto obj = new QOpenGLPaintDevice( *PQSIZE(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QOpenGLPaintDevice(int width, int height)
 */
-void QOpenGLPaintDevice_new3 ()
+void QOpenGLPaintDevice_new3()
 {
-  auto obj = new QOpenGLPaintDevice ( PINT(1), PINT(2) );
+  auto obj = new QOpenGLPaintDevice( PINT(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->devType () );
+      RINT( obj->devType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine ();
-      Qt5xHb::createReturnClass ( ptr, "QPAINTENGINE", false );
+      QPaintEngine * ptr = obj->paintEngine();
+      Qt5xHb::createReturnClass( ptr, "QPAINTENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,8 +193,8 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->context ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+      QOpenGLContext * ptr = obj->context();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,8 +218,8 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->size () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->size() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setSize ( *PQSIZE(1) );
+      obj->setSize( *PQSIZE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDevicePixelRatio ( PQREAL(1) );
+      obj->setDevicePixelRatio( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->dotsPerMeterX () );
+      RQREAL( obj->dotsPerMeterX() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->dotsPerMeterY () );
+      RQREAL( obj->dotsPerMeterY() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDotsPerMeterX ( PQREAL(1) );
+      obj->setDotsPerMeterX( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDotsPerMeterY ( PQREAL(1) );
+      obj->setDotsPerMeterY( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETPAINTFLIPPED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setPaintFlipped ( PBOOL(1) );
+      obj->setPaintFlipped( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTFLIPPED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->paintFlipped () );
+      RBOOL( obj->paintFlipped() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_ENSUREACTIVETARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->ensureActiveTarget ();
+      obj->ensureActiveTarget();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

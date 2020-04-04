@@ -28,7 +28,7 @@ CLASS QTextObject INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextObject
+PROCEDURE destroyObject() CLASS QTextObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextFormat( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTFORMAT", true );
+      auto ptr = new QTextFormat( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->formatIndex () );
+      RINT( obj->formatIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      QTextDocument * ptr = obj->document();
+      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->objectIndex () );
+      RINT( obj->objectIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
