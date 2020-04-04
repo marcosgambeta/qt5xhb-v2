@@ -67,7 +67,7 @@ CLASS QWebEnginePage INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEnginePage
+PROCEDURE destroyObject() CLASS QWebEnginePage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QWebEnginePage ( OPQOBJECT(1,nullptr) );
+    auto obj = new QWebEnginePage( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineHistory * ptr = obj->history ();
-      Qt5xHb::createReturnClass ( ptr, "QWEBENGINEHISTORY", false );
+      QWebEngineHistory * ptr = obj->history();
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINEHISTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,8 +178,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->view ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->view();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETVIEW )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setView ( PQWIDGET(1) );
+      obj->setView( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HASSELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasSelection () );
+      RBOOL( obj->hasSelection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SELECTEDTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->selectedText () );
+      RQSTRING( obj->selectedText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,8 +285,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QAction * ptr = obj->action ( (QWebEnginePage::WebAction) hb_parni(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->action( (QWebEnginePage::WebAction) hb_parni(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->triggerAction ( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
+      obj->triggerAction( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,8 +370,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
+      QMenu * ptr = obj->createStandardContextMenu();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
     if( ISNUMPAR(3) && ISQURL(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      obj->setFeaturePermission ( *PQURL(1), (QWebEnginePage::Feature) hb_parni(2), (QWebEnginePage::PermissionPolicy) hb_parni(3) );
+      obj->setFeaturePermission( *PQURL(1), (QWebEnginePage::Feature) hb_parni(2), (QWebEnginePage::PermissionPolicy) hb_parni(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->load ( *PQURL(1) );
+      obj->load( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQURL(2)||ISNIL(2)) )
     {
 #endif
-      obj->setHtml ( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setHtml( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
     if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) )
     {
 #endif
-      obj->setContent ( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
+      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,8 +543,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUrl ( *PQURL(1) );
+      obj->setUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,8 +598,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_REQUESTEDURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->requestedUrl () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->requestedUrl() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,8 +625,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ICONURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->iconUrl () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->iconUrl() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->zoomFactor () );
+      RQREAL( obj->zoomFactor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZoomFactor ( PQREAL(1) );
+      obj->setZoomFactor( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -695,14 +695,14 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 /*
 void runJavaScript(const QString& scriptSource)
 */
-void QWebEnginePage_runJavaScript1 ()
+void QWebEnginePage_runJavaScript1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = (QWebEnginePage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->runJavaScript ( PQSTRING(1) );
+    obj->runJavaScript( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -742,8 +742,8 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebEngineSettings * ptr = obj->settings ();
-      Qt5xHb::createReturnClass ( ptr, "QWEBENGINESETTINGS", false );
+      QWebEngineSettings * ptr = obj->settings();
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINESETTINGS", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLOADFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONLINKHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONSELECTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONGEOMETRYCHANGEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONWINDOWCLOSEREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONFEATUREPERMISSIONREQUESTCANCELED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1441,7 +1441,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONPROXYAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) arg2, "QAUTHENTICATOR" );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -1511,7 +1511,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONTITLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1577,7 +1577,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1643,7 +1643,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ONICONURLCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINEPAGE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINEPAGE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

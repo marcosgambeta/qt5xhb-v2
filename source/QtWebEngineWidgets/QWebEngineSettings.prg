@@ -43,7 +43,7 @@ CLASS QWebEngineSettings
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineSettings
+PROCEDURE destroyObject() CLASS QWebEngineSettings
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWebEngineSettings * ptr = QWebEngineSettings::globalSettings ();
-    Qt5xHb::createReturnClass ( ptr, "QWEBENGINESETTINGS", false );
+    QWebEngineSettings * ptr = QWebEngineSettings::globalSettings();
+    Qt5xHb::createReturnClass( ptr, "QWEBENGINESETTINGS", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTFAMILY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->fontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) ) );
+      RQSTRING( obj->fontFamily( (QWebEngineSettings::FontFamily) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTFAMILY )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1), PQSTRING(2) );
+      obj->setFontFamily( (QWebEngineSettings::FontFamily) hb_parni(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTFAMILY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resetFontFamily ( (QWebEngineSettings::FontFamily) hb_parni(1) );
+      obj->resetFontFamily( (QWebEngineSettings::FontFamily) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_FONTSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->fontSize ( (QWebEngineSettings::FontSize) hb_parni(1) ) );
+      RINT( obj->fontSize( (QWebEngineSettings::FontSize) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETFONTSIZE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setFontSize ( (QWebEngineSettings::FontSize) hb_parni(1), PINT(2) );
+      obj->setFontSize( (QWebEngineSettings::FontSize) hb_parni(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETFONTSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resetFontSize ( (QWebEngineSettings::FontSize) hb_parni(1) );
+      obj->resetFontSize( (QWebEngineSettings::FontSize) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETATTRIBUTE )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1), PBOOL(2) );
+      obj->setAttribute( (QWebEngineSettings::WebAttribute) hb_parni(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_TESTATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
+      RBOOL( obj->testAttribute( (QWebEngineSettings::WebAttribute) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_RESETATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resetAttribute ( (QWebEngineSettings::WebAttribute) hb_parni(1) );
+      obj->resetAttribute( (QWebEngineSettings::WebAttribute) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_DEFAULTTEXTENCODING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultTextEncoding () );
+      RQSTRING( obj->defaultTextEncoding() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QWEBENGINESETTINGS_SETDEFAULTTEXTENCODING )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDefaultTextEncoding ( PQSTRING(1) );
+      obj->setDefaultTextEncoding( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

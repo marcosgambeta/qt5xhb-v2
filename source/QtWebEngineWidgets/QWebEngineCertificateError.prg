@@ -38,7 +38,7 @@ CLASS QWebEngineCertificateError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineCertificateError
+PROCEDURE destroyObject() CLASS QWebEngineCertificateError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(4) && ISNUM(1) && ISQURL(2) && ISLOG(3) && ISCHAR(4) )
   {
-    auto obj = new QWebEngineCertificateError ( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
+    auto obj = new QWebEngineCertificateError( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,8 +142,8 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isOverridable () );
+      RBOOL( obj->isOverridable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorDescription () );
+      RQSTRING( obj->errorDescription() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
