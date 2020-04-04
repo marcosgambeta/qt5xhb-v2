@@ -26,7 +26,7 @@ CLASS QWebChannelAbstractTransport INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebChannelAbstractTransport
+PROCEDURE destroyObject() CLASS QWebChannelAbstractTransport
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
     if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
     {
 #endif
-      obj->sendMessage ( *PQJSONOBJECT(1) );
+      obj->sendMessage( *PQJSONOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_ONMESSAGERECEIVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBCHANNELABSTRACTTRANSPORT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBCHANNELABSTRACTTRANSPORT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QJSONOBJECT" );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QWEBCHANNELABSTRACTTRANSPORT" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
