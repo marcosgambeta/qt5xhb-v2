@@ -29,7 +29,7 @@ CLASS QSGGeometryNode INHERIT QSGBasicGeometryNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGGeometryNode
+PROCEDURE destroyObject() CLASS QSGGeometryNode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QSGGeometryNode ();
+    auto obj = new QSGGeometryNode();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterial * ptr = obj->material ();
-      Qt5xHb::createReturnClass ( ptr, "QSGMATERIAL", false );
+      QSGMaterial * ptr = obj->material();
+      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterial * ptr = obj->opaqueMaterial ();
-      Qt5xHb::createReturnClass ( ptr, "QSGMATERIAL", false );
+      QSGMaterial * ptr = obj->opaqueMaterial();
+      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
     if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
     {
 #endif
-      obj->setMaterial ( PQSGMATERIAL(1) );
+      obj->setMaterial( PQSGMATERIAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
     if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
     {
 #endif
-      obj->setOpaqueMaterial ( PQSGMATERIAL(1) );
+      obj->setOpaqueMaterial( PQSGMATERIAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

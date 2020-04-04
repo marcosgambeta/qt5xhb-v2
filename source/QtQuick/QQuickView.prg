@@ -40,7 +40,7 @@ CLASS QQuickView INHERIT QQuickWindow
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQuickView
+PROCEDURE destroyObject() CLASS QQuickView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,27 +71,27 @@ RETURN
 /*
 QQuickView(QWindow * parent = nullptr)
 */
-void QQuickView_new1 ()
+void QQuickView_new1()
 {
-  auto obj = new QQuickView ( OPQWINDOW(1,nullptr) );
+  auto obj = new QQuickView( OPQWINDOW(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QQuickView(QQmlEngine * engine, QWindow * parent)
 */
-void QQuickView_new2 ()
+void QQuickView_new2()
 {
-  auto obj = new QQuickView ( PQQMLENGINE(1), PQWINDOW(2) );
+  auto obj = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QQuickView(const QUrl & source, QWindow * parent = nullptr)
 */
-void QQuickView_new3 ()
+void QQuickView_new3()
 {
-  auto obj = new QQuickView ( *PQURL(1), OPQWINDOW(2,nullptr) );
+  auto obj = new QQuickView( *PQURL(1), OPQWINDOW(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -149,8 +149,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      QQmlEngine * ptr = obj->engine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,8 +174,8 @@ HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->initialSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->initialSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->resizeMode () );
+      RENUM( obj->resizeMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,8 +223,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->rootContext ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+      QQmlContext * ptr = obj->rootContext();
+      Qt5xHb::createReturnQObjectClass( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,8 +248,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->rootObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QQUICKITEM" );
+      QQuickItem * ptr = obj->rootObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QQUICKITEM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setResizeMode ( (QQuickView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode( (QQuickView::ResizeMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,8 +299,8 @@ HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->source () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->source() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QQUICKVIEW_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSource ( *PQURL(1) );
+      obj->setSource( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QQUICKVIEW" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QQUICKVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

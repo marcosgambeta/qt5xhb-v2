@@ -29,7 +29,7 @@ CLASS QSGClipNode INHERIT QSGBasicGeometryNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGClipNode
+PROCEDURE destroyObject() CLASS QSGClipNode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QSGClipNode ();
+    auto obj = new QSGClipNode();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QSGCLIPNODE_CLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->clipRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->clipRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRectangular () );
+      RBOOL( obj->isRectangular() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      obj->setClipRect ( *PQRECTF(1) );
+      obj->setClipRect( *PQRECTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETISRECTANGULAR )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setIsRectangular ( PBOOL(1) );
+      obj->setIsRectangular( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

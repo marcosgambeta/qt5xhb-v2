@@ -26,7 +26,7 @@ CLASS QSGBasicGeometryNode INHERIT QSGNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGBasicGeometryNode
+PROCEDURE destroyObject() CLASS QSGBasicGeometryNode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGGeometry * ptr = obj->geometry ();
-      Qt5xHb::createReturnClass ( ptr, "QSGGEOMETRY", false );
+      QSGGeometry * ptr = obj->geometry();
+      Qt5xHb::createReturnClass( ptr, "QSGGEOMETRY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQSGGEOMETRY(1) )
     {
 #endif
-      obj->setGeometry ( PQSGGEOMETRY(1) );
+      obj->setGeometry( PQSGGEOMETRY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
