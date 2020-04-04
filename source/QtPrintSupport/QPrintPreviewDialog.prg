@@ -31,7 +31,7 @@ CLASS QPrintPreviewDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrintPreviewDialog
+PROCEDURE destroyObject() CLASS QPrintPreviewDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,18 +59,18 @@ RETURN
 /*
 explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
-void QPrintPreviewDialog_new1 ()
+void QPrintPreviewDialog_new1()
 {
-  auto obj = new QPrintPreviewDialog ( PQPRINTER(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  auto obj = new QPrintPreviewDialog( PQPRINTER(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 explicit QPrintPreviewDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
-void QPrintPreviewDialog_new2 ()
+void QPrintPreviewDialog_new2()
 {
-  auto obj = new QPrintPreviewDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  auto obj = new QPrintPreviewDialog( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,8 +149,8 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPrinter * ptr = obj->printer ();
-      Qt5xHb::createReturnClass ( ptr, "QPRINTER", false );
+      QPrinter * ptr = obj->printer();
+      Qt5xHb::createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->done ( PINT(1) );
+      obj->done( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_ONPAINTREQUESTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPRINTPREVIEWDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPRINTPREVIEWDIALOG" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QPRINTER" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
