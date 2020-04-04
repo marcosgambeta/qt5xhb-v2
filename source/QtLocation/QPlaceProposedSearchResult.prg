@@ -27,7 +27,7 @@ CLASS QPlaceProposedSearchResult INHERIT QPlaceSearchResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceProposedSearchResult
+PROCEDURE destroyObject() CLASS QPlaceProposedSearchResult
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(0) )
   {
-    auto obj = new QPlaceProposedSearchResult ();
+    auto obj = new QPlaceProposedSearchResult();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SEARCHREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPlaceSearchRequest( obj->searchRequest () );
-      Qt5xHb::createReturnClass ( ptr, "QPLACESEARCHREQUEST", true );
+      auto ptr = new QPlaceSearchRequest( obj->searchRequest() );
+      Qt5xHb::createReturnClass( ptr, "QPLACESEARCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACEPROPOSEDSEARCHRESULT_SETSEARCHREQUEST )
     if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
     {
 #endif
-      obj->setSearchRequest ( *PQPLACESEARCHREQUEST(1) );
+      obj->setSearchRequest( *PQPLACESEARCHREQUEST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

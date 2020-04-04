@@ -40,7 +40,7 @@ CLASS QPlaceRatings
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceRatings
+PROCEDURE destroyObject() CLASS QPlaceRatings
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,10 +70,10 @@ RETURN
 /*
 QPlaceRatings()
 */
-void QPlaceRatings_new1 ()
+void QPlaceRatings_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceRatings ();
+  auto obj = new QPlaceRatings();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -81,10 +81,10 @@ void QPlaceRatings_new1 ()
 /*
 QPlaceRatings(const QPlaceRatings &other)
 */
-void QPlaceRatings_new2 ()
+void QPlaceRatings_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceRatings ( *PQPLACERATINGS(1) );
+  auto obj = new QPlaceRatings( *PQPLACERATINGS(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->average () );
+      RQREAL( obj->average() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETAVERAGE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAverage ( PQREAL(1) );
+      obj->setAverage( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPLACERATINGS_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCount ( PINT(1) );
+      obj->setCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->maximum () );
+      RQREAL( obj->maximum() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QPLACERATINGS_SETMAXIMUM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximum ( PQREAL(1) );
+      obj->setMaximum( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QPLACERATINGS_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

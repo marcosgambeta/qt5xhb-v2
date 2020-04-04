@@ -30,7 +30,7 @@ CLASS QPlaceEditorial INHERIT QPlaceContent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceEditorial
+PROCEDURE destroyObject() CLASS QPlaceEditorial
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,10 +60,10 @@ RETURN
 /*
 QPlaceEditorial()
 */
-void QPlaceEditorial_new1 ()
+void QPlaceEditorial_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceEditorial ();
+  auto obj = new QPlaceEditorial();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -71,10 +71,10 @@ void QPlaceEditorial_new1 ()
 /*
 QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 */
-void QPlaceEditorial_new2 ()
+void QPlaceEditorial_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceEditorial ( *PQPLACECONTENT(1) );
+  auto obj = new QPlaceEditorial( *PQPLACECONTENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->language () );
+      RQSTRING( obj->language() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLanguage ( PQSTRING(1) );
+      obj->setLanguage( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

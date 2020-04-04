@@ -38,7 +38,7 @@ CLASS QPlaceContactDetail
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceContactDetail
+PROCEDURE destroyObject() CLASS QPlaceContactDetail
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,10 +68,10 @@ RETURN
 /*
 QPlaceContactDetail()
 */
-void QPlaceContactDetail_new1 ()
+void QPlaceContactDetail_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceContactDetail ();
+  auto obj = new QPlaceContactDetail();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -79,10 +79,10 @@ void QPlaceContactDetail_new1 ()
 /*
 QPlaceContactDetail(const QPlaceContactDetail &other)
 */
-void QPlaceContactDetail_new2 ()
+void QPlaceContactDetail_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceContactDetail ( *PQPLACECONTACTDETAIL(1) );
+  auto obj = new QPlaceContactDetail( *PQPLACECONTACTDETAIL(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->value () );
+      RQSTRING( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setValue ( PQSTRING(1) );
+      obj->setValue( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

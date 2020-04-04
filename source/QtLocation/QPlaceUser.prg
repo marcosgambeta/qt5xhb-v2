@@ -37,7 +37,7 @@ CLASS QPlaceUser
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceUser
+PROCEDURE destroyObject() CLASS QPlaceUser
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QPlaceUser()
 */
-void QPlaceUser_new1 ()
+void QPlaceUser_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceUser ();
+  auto obj = new QPlaceUser();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QPlaceUser_new1 ()
 /*
 QPlaceUser(const QPlaceUser &other)
 */
-void QPlaceUser_new2 ()
+void QPlaceUser_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  auto obj = new QPlaceUser ( *PQPLACEUSER(1) );
+  auto obj = new QPlaceUser( *PQPLACEUSER(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->userId () );
+      RQSTRING( obj->userId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setUserId ( PQSTRING(1) );
+      obj->setUserId( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPLACEUSER_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

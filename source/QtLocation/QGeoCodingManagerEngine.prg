@@ -34,7 +34,7 @@ CLASS QGeoCodingManagerEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoCodingManagerEngine
+PROCEDURE destroyObject() CLASS QGeoCodingManagerEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->managerName () );
+      RQSTRING( obj->managerName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERVERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->managerVersion () );
+      RINT( obj->managerVersion() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,15 +137,15 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERVERSION )
 /*
 virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
 */
-void QGeoCodingManagerEngine_geocode1 ()
+void QGeoCodingManagerEngine_geocode1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
-    Qt5xHb::createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -153,15 +153,15 @@ void QGeoCodingManagerEngine_geocode1 ()
 /*
 virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
 */
-void QGeoCodingManagerEngine_geocode2 ()
+void QGeoCodingManagerEngine_geocode2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   auto obj = (QGeoCodingManagerEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
-    Qt5xHb::createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -199,8 +199,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
     if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOSHAPE(2) )
     {
 #endif
-      QGeoCodeReply * ptr = obj->reverseGeocode ( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+      QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), *PQGEOSHAPE(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_SETLOCALE )
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
 #endif
-      obj->setLocale ( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,8 +254,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLocale( obj->locale () );
-      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
+      auto ptr = new QLocale( obj->locale() );
+      Qt5xHb::createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGERENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGEOCODINGMANAGERENGINE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGEOCODINGMANAGERENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGEOCODINGMANAGERENGINE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QGEOCODEREPLY" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );

@@ -27,7 +27,7 @@ CLASS QPlaceDetailsReply INHERIT QPlaceReply
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceDetailsReply
+PROCEDURE destroyObject() CLASS QPlaceDetailsReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QPlaceDetailsReply ( OPQOBJECT(1,nullptr) );
+    auto obj = new QPlaceDetailsReply( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,8 +134,8 @@ HB_FUNC_STATIC( QPLACEDETAILSREPLY_PLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPlace( obj->place () );
-      Qt5xHb::createReturnClass ( ptr, "QPLACE", true );
+      auto ptr = new QPlace( obj->place() );
+      Qt5xHb::createReturnClass( ptr, "QPLACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
