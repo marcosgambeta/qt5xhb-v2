@@ -30,7 +30,7 @@ CLASS QWebInspector INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebInspector
+PROCEDURE destroyObject() CLASS QWebInspector
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    auto obj = new QWebInspector ( OPQWIDGET(1,nullptr) );
+    auto obj = new QWebInspector( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,8 +102,8 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebPage * ptr = obj->page ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QWEBPAGE" );
+      QWebPage * ptr = obj->page();
+      Qt5xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
     if( ISNUMPAR(1) && ISQWEBPAGE(1) )
     {
 #endif
-      obj->setPage ( PQWEBPAGE(1) );
+      obj->setPage( PQWEBPAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
