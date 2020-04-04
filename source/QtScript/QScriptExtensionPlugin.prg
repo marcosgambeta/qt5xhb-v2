@@ -27,7 +27,7 @@ CLASS QScriptExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptExtensionPlugin
+PROCEDURE destroyObject() CLASS QScriptExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
     {
 #endif
-      auto ptr = new QScriptValue( obj->setupPackage ( PQSTRING(1), PQSCRIPTENGINE(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      auto ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
     {
 #endif
-      obj->initialize ( PQSTRING(1), PQSCRIPTENGINE(2) );
+      obj->initialize( PQSTRING(1), PQSCRIPTENGINE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

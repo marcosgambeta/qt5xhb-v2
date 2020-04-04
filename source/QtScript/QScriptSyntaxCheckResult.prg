@@ -37,7 +37,7 @@ CLASS QScriptSyntaxCheckResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptSyntaxCheckResult
+PROCEDURE destroyObject() CLASS QScriptSyntaxCheckResult
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1) )
   {
-    auto obj = new QScriptSyntaxCheckResult ( *PQSCRIPTSYNTAXCHECKRESULT(1) );
+    auto obj = new QScriptSyntaxCheckResult( *PQSCRIPTSYNTAXCHECKRESULT(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->errorColumnNumber () );
+      RINT( obj->errorColumnNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->errorLineNumber () );
+      RINT( obj->errorLineNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorMessage () );
+      RQSTRING( obj->errorMessage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

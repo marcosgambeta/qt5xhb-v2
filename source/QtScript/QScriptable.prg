@@ -40,7 +40,7 @@ CLASS QScriptable
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptable
+PROCEDURE destroyObject() CLASS QScriptable
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QScriptValue( obj->argument ( PINT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      auto ptr = new QScriptValue( obj->argument( PINT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENTCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->argumentCount () );
+      RINT( obj->argumentCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptContext * ptr = obj->context ();
-      Qt5xHb::createReturnClass ( ptr, "QSCRIPTCONTEXT", false );
+      QScriptContext * ptr = obj->context();
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTCONTEXT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScriptEngine * ptr = obj->engine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSCRIPTENGINE" );
+      QScriptEngine * ptr = obj->engine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSCRIPTENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,8 +195,8 @@ HB_FUNC_STATIC( QSCRIPTABLE_THISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QScriptValue( obj->thisObject () );
-      Qt5xHb::createReturnClass ( ptr, "QSCRIPTVALUE", true );
+      auto ptr = new QScriptValue( obj->thisObject() );
+      Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
