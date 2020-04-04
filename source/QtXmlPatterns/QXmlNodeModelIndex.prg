@@ -39,7 +39,7 @@ CLASS QXmlNodeModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNodeModelIndex
+PROCEDURE destroyObject() CLASS QXmlNodeModelIndex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QXmlNodeModelIndex ()
 */
-void QXmlNodeModelIndex_new1 ()
+void QXmlNodeModelIndex_new1()
 {
-  auto obj = new QXmlNodeModelIndex ();
+  auto obj = new QXmlNodeModelIndex();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
-void QXmlNodeModelIndex_new2 ()
+void QXmlNodeModelIndex_new2()
 {
-  auto obj = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
+  auto obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->additionalData () );
+      RQINT64( obj->additionalData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->data () );
+      RQINT64( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer () );
+      hb_retptr( (void *) obj->internalPointer() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,8 +225,8 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractXmlNodeModel * ptr = obj->model ();
-      Qt5xHb::createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL", false );
+      const QAbstractXmlNodeModel * ptr = obj->model();
+      Qt5xHb::createReturnClass( ptr, "QABSTRACTXMLNODEMODEL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

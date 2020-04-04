@@ -33,7 +33,7 @@ CLASS QXmlNamePool
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNamePool
+PROCEDURE destroyObject() CLASS QXmlNamePool
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,18 +59,18 @@ RETURN
 /*
 QXmlNamePool ()
 */
-void QXmlNamePool_new1 ()
+void QXmlNamePool_new1()
 {
-  auto obj = new QXmlNamePool ();
+  auto obj = new QXmlNamePool();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlNamePool ( const QXmlNamePool & other )
 */
-void QXmlNamePool_new2 ()
+void QXmlNamePool_new2()
 {
-  auto obj = new QXmlNamePool ( *PQXMLNAMEPOOL(1) );
+  auto obj = new QXmlNamePool( *PQXMLNAMEPOOL(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
