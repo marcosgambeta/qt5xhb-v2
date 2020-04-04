@@ -38,7 +38,7 @@ CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionComboBox
+PROCEDURE destroyObject() CLASS QStyleOptionComboBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QStyleOptionComboBox()
 */
-void QStyleOptionComboBox_new1 ()
+void QStyleOptionComboBox_new1()
 {
-  auto obj = new QStyleOptionComboBox ();
+  auto obj = new QStyleOptionComboBox();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionComboBox(const QStyleOptionComboBox &other)
 */
-void QStyleOptionComboBox_new2 ()
+void QStyleOptionComboBox_new2()
 {
-  auto obj = new QStyleOptionComboBox ( *PQSTYLEOPTIONCOMBOBOX(1) );
+  auto obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_EDITABLE )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->editable  );
+      RBOOL( obj->editable );
     }
     else
     {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETEDITABLE )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->editable = PBOOL(1);
+      obj->editable= PBOOL(1);
     }
     else
     {
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_POPUPRECT )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QRect( obj->popupRect  );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->popupRect );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
     }
     else
     {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
-      obj->popupRect = *PQRECT(1);
+      obj->popupRect= *PQRECT(1);
     }
     else
     {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_FRAME )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->frame  );
+      RBOOL( obj->frame );
     }
     else
     {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETFRAME )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->frame = PBOOL(1);
+      obj->frame= PBOOL(1);
     }
     else
     {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTTEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->currentText  );
+      RQSTRING( obj->currentText );
     }
     else
     {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->currentText = PQSTRING(1);
+      obj->currentText= PQSTRING(1);
     }
     else
     {
@@ -267,8 +267,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTICON )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QIcon( obj->currentIcon  );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->currentIcon );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETCURRENTICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->currentIcon = *PQICON(1);
+      obj->currentIcon= *PQICON(1);
     }
     else
     {
@@ -306,8 +306,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QSize( obj->iconSize  );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->iconSize );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_SETICONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->iconSize = *PQSIZE(1);
+      obj->iconSize= *PQSIZE(1);
     }
     else
     {

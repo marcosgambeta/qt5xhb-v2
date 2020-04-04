@@ -29,7 +29,7 @@ CLASS QWidgetAction INHERIT QAction
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWidgetAction
+PROCEDURE destroyObject() CLASS QWidgetAction
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    auto obj = new QWidgetAction ( PQOBJECT(1) );
+    auto obj = new QWidgetAction( PQOBJECT(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -101,8 +101,8 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->defaultWidget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->defaultWidget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->releaseWidget ( PQWIDGET(1) );
+      obj->releaseWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QWidget * ptr = obj->requestWidget ( PQWIDGET(1) );
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setDefaultWidget ( PQWIDGET(1) );
+      obj->setDefaultWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

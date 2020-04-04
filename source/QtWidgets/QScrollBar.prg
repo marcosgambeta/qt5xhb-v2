@@ -27,7 +27,7 @@ CLASS QScrollBar INHERIT QAbstractSlider
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScrollBar
+PROCEDURE destroyObject() CLASS QScrollBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QScrollBar ( QWidget * parent = nullptr )
 */
-void QScrollBar_new1 ()
+void QScrollBar_new1()
 {
-  auto obj = new QScrollBar ( OPQWIDGET(1,nullptr) );
+  auto obj = new QScrollBar( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
-void QScrollBar_new2 ()
+void QScrollBar_new2()
 {
-  auto obj = new QScrollBar ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QScrollBar( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,8 +144,8 @@ HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

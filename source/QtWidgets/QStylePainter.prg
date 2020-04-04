@@ -31,7 +31,7 @@ CLASS QStylePainter INHERIT QPainter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStylePainter
+PROCEDURE destroyObject() CLASS QStylePainter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,27 +57,27 @@ RETURN
 /*
 QStylePainter()
 */
-void QStylePainter_new1 ()
+void QStylePainter_new1()
 {
-  auto obj = new QStylePainter ();
+  auto obj = new QStylePainter();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 explicit QStylePainter(QWidget *w)
 */
-void QStylePainter_new2 ()
+void QStylePainter_new2()
 {
-  auto obj = new QStylePainter ( PQWIDGET(1) );
+  auto obj = new QStylePainter( PQWIDGET(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QStylePainter(QPaintDevice *pd, QWidget *w)
 */
-void QStylePainter_new3 ()
+void QStylePainter_new3()
 {
-  auto obj = new QStylePainter ( PQPAINTDEVICE(1), PQWIDGET(2) );
+  auto obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -108,26 +108,26 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 /*
 bool begin(QWidget *w)
 */
-void QStylePainter_begin1 ()
+void QStylePainter_begin1()
 {
   auto obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->begin ( PQWIDGET(1) ) );
+    RBOOL( obj->begin( PQWIDGET(1) ) );
   }
 }
 
 /*
 bool begin(QPaintDevice *pd, QWidget *w)
 */
-void QStylePainter_begin2 ()
+void QStylePainter_begin2()
 {
   auto obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->begin ( PQPAINTDEVICE(1), PQWIDGET(2) ) );
+    RBOOL( obj->begin( PQPAINTDEVICE(1), PQWIDGET(2) ) );
   }
 }
 
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTION(2) )
     {
 #endif
-      obj->drawPrimitive ( (QStyle::PrimitiveElement) hb_parni(1), *PQSTYLEOPTION(2) );
+      obj->drawPrimitive( (QStyle::PrimitiveElement) hb_parni(1), *PQSTYLEOPTION(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTION(2) )
     {
 #endif
-      obj->drawControl ( (QStyle::ControlElement) hb_parni(1), *PQSTYLEOPTION(2) );
+      obj->drawControl( (QStyle::ControlElement) hb_parni(1), *PQSTYLEOPTION(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) )
     {
 #endif
-      obj->drawComplexControl ( (QStyle::ComplexControl) hb_parni(1), *PQSTYLEOPTIONCOMPLEX(2) );
+      obj->drawComplexControl( (QStyle::ComplexControl) hb_parni(1), *PQSTYLEOPTIONCOMPLEX(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
     if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && ISOPTNUM(6) )
     {
 #endif
-      obj->drawItemText ( *PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), ISNIL(6)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(6) );
+      obj->drawItemText( *PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), ISNIL(6)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(6) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
     if( ISNUMPAR(3) && ISQRECT(1) && ISNUM(2) && ISQPIXMAP(3) )
     {
 #endif
-      obj->drawItemPixmap ( *PQRECT(1), PINT(2), *PQPIXMAP(3) );
+      obj->drawItemPixmap( *PQRECT(1), PINT(2), *PQPIXMAP(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,8 +293,8 @@ HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStyle * ptr = obj->style ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSTYLE" );
+      QStyle * ptr = obj->style();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

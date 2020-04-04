@@ -38,7 +38,7 @@ CLASS QFontDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontDialog
+PROCEDURE destroyObject() CLASS QFontDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 explicit QFontDialog ( QWidget * parent = nullptr )
 */
-void QFontDialog_new1 ()
+void QFontDialog_new1()
 {
-  auto obj = new QFontDialog ( OPQWIDGET(1,nullptr) );
+  auto obj = new QFontDialog( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 explicit QFontDialog ( const QFont & initial, QWidget * parent = nullptr )
 */
-void QFontDialog_new2 ()
+void QFontDialog_new2()
 {
-  auto obj = new QFontDialog ( *PQFONT(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QFontDialog( *PQFONT(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QFONTDIALOG_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->currentFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->currentFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setCurrentFont ( *PQFONT(1) );
+      obj->setCurrentFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->options () );
+      RENUM( obj->options() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOptions ( (QFontDialog::FontDialogOptions) hb_parni(1) );
+      obj->setOptions( (QFontDialog::FontDialogOptions) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,8 +258,8 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->selectedFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->selectedFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setOption ( (QFontDialog::FontDialogOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( (QFontDialog::FontDialogOption) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption ( (QFontDialog::FontDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( (QFontDialog::FontDialogOption) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,24 +349,24 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 /*
 static QFont getFont(bool *ok, QWidget *parent = nullptr)
 */
-void QFontDialog_getFont1 ()
+void QFontDialog_getFont1()
 {
 
   bool par1;
-  auto ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,nullptr) ) );
-  Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+  auto ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET(2,nullptr) ) );
+  Qt5xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 
 /*
 static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, const QString &title = QString(), FontDialogOptions options = 0)
 */
-void QFontDialog_getFont2 ()
+void QFontDialog_getFont2()
 {
 
   bool par1;
-  auto ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), OPQWIDGET(3,nullptr), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
-  Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+  auto ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET(3,nullptr), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
+  Qt5xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONCURRENTFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFONTDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QFONTDIALOG" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QFONTDIALOG_ONFONTSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFONTDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QFONTDIALOG" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

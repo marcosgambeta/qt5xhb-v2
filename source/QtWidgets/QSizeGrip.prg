@@ -27,7 +27,7 @@ CLASS QSizeGrip INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSizeGrip
+PROCEDURE destroyObject() CLASS QSizeGrip
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    auto obj = new QSizeGrip ( PQWIDGET(1) );
+    auto obj = new QSizeGrip( PQWIDGET(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

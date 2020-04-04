@@ -39,7 +39,7 @@ CLASS QGroupBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGroupBox
+PROCEDURE destroyObject() CLASS QGroupBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,18 +66,18 @@ RETURN
 /*
 QGroupBox ( QWidget * parent = nullptr )
 */
-void QGroupBox_new1 ()
+void QGroupBox_new1()
 {
-  auto obj = new QGroupBox ( OPQWIDGET(1,nullptr) );
+  auto obj = new QGroupBox( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QGroupBox ( const QString & title, QWidget * parent = nullptr )
 */
-void QGroupBox_new2 ()
+void QGroupBox_new2()
 {
-  auto obj = new QGroupBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QGROUPBOX_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCheckable () );
+      RBOOL( obj->isCheckable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isChecked () );
+      RBOOL( obj->isChecked() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlat () );
+      RBOOL( obj->isFlat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( PINT(1) );
+      obj->setAlignment( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCheckable ( PBOOL(1) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFlat ( PBOOL(1) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,8 +356,8 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setChecked ( PBOOL(1) );
+      obj->setChecked( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGROUPBOX" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGROUPBOX" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGROUPBOX" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGROUPBOX" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

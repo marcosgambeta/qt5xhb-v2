@@ -35,7 +35,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsObject
+PROCEDURE destroyObject() CLASS QGraphicsObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->grabGesture ( (Qt::GestureType) hb_parni(1), ISNIL(2)? (Qt::GestureFlags) Qt::GestureFlags() : (Qt::GestureFlags) hb_parni(2) );
+      obj->grabGesture( (Qt::GestureType) hb_parni(1), ISNIL(2)? (Qt::GestureFlags) Qt::GestureFlags() : (Qt::GestureFlags) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->ungrabGesture ( (Qt::GestureType) hb_parni(1) );
+      obj->ungrabGesture( (Qt::GestureType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONOPACITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONPARENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONROTATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONSCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_ONZCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOBJECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

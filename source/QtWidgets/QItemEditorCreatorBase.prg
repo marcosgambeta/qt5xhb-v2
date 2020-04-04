@@ -36,7 +36,7 @@ CLASS QItemEditorCreatorBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemEditorCreatorBase
+PROCEDURE destroyObject() CLASS QItemEditorCreatorBase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QWidget * ptr = obj->createWidget ( PQWIDGET(1) );
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->createWidget( PQWIDGET(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_VALUEPROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->valuePropertyName () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->valuePropertyName() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

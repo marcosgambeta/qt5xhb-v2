@@ -31,7 +31,7 @@ CLASS QPanGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPanGesture
+PROCEDURE destroyObject() CLASS QPanGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->acceleration () );
+      RQREAL( obj->acceleration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->delta () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->delta() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->lastOffset () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->lastOffset() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,8 +158,8 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->offset () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->offset() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAcceleration ( PQREAL(1) );
+      obj->setAcceleration( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setLastOffset ( *PQPOINTF(1) );
+      obj->setLastOffset( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setOffset ( *PQPOINTF(1) );
+      obj->setOffset( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

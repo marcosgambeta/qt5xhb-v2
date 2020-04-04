@@ -27,7 +27,7 @@ CLASS QFocusFrame INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFocusFrame
+PROCEDURE destroyObject() CLASS QFocusFrame
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    auto obj = new QFocusFrame ( OPQWIDGET(1,nullptr) );
+    auto obj = new QFocusFrame( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QFOCUSFRAME_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget ( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

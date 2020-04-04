@@ -40,7 +40,7 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsScale
+PROCEDURE destroyObject() CLASS QGraphicsScale
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsScale ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGraphicsScale( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVector3D( obj->origin () );
-      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
+      auto ptr = new QVector3D( obj->origin() );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setOrigin ( *PQVECTOR3D(1) );
+      obj->setOrigin( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setXScale ( PQREAL(1) );
+      obj->setXScale( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setYScale ( PQREAL(1) );
+      obj->setYScale( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZScale ( PQREAL(1) );
+      obj->setZScale( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->xScale () );
+      RQREAL( obj->xScale() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->yScale () );
+      RQREAL( obj->yScale() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->zScale () );
+      RQREAL( obj->zScale() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
     {
 #endif
-      obj->applyTo ( PQMATRIX4X4(1) );
+      obj->applyTo( PQMATRIX4X4(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSSCALE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSSCALE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

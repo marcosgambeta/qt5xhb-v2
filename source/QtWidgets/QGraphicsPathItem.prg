@@ -35,7 +35,7 @@ CLASS QGraphicsPathItem INHERIT QAbstractGraphicsShapeItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsPathItem
+PROCEDURE destroyObject() CLASS QGraphicsPathItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,18 +61,18 @@ RETURN
 /*
 QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
 */
-void QGraphicsPathItem_new1 ()
+void QGraphicsPathItem_new1()
 {
-  auto obj = new QGraphicsPathItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QGraphicsPathItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
 */
-void QGraphicsPathItem_new2 ()
+void QGraphicsPathItem_new2()
 {
-  auto obj = new QGraphicsPathItem ( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QGraphicsPathItem( *PQPAINTERPATH(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPainterPath( obj->path () );
-      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->path() );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      obj->setPath ( *PQPAINTERPATH(1) );
+      obj->setPath( *PQPAINTERPATH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy ( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,8 +249,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPainterPath( obj->opaqueArea () );
-      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->opaqueArea() );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,8 +300,8 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPainterPath( obj->shape () );
-      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->shape() );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

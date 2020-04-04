@@ -35,7 +35,7 @@ CLASS QUndoView INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoView
+PROCEDURE destroyObject() CLASS QUndoView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,27 +65,27 @@ RETURN
 /*
 QUndoView ( QWidget * parent = nullptr )
 */
-void QUndoView_new1 ()
+void QUndoView_new1()
 {
-  auto obj = new QUndoView ( OPQWIDGET(1,nullptr) );
+  auto obj = new QUndoView( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
 */
-void QUndoView_new2 ()
+void QUndoView_new2()
 {
-  auto obj = new QUndoView ( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QUndoView( PQUNDOSTACK(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
 */
-void QUndoView_new3 ()
+void QUndoView_new3()
 {
-  auto obj = new QUndoView ( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QIcon( obj->cleanIcon () );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->cleanIcon() );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->emptyLabel () );
+      RQSTRING( obj->emptyLabel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,8 +194,8 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoGroup * ptr = obj->group ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QUNDOGROUP" );
+      QUndoGroup * ptr = obj->group();
+      Qt5xHb::createReturnQObjectClass( ptr, "QUNDOGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setCleanIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setCleanIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setEmptyLabel ( PQSTRING(1) );
+      obj->setEmptyLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,8 +271,8 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoStack * ptr = obj->stack ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QUNDOSTACK" );
+      QUndoStack * ptr = obj->stack();
+      Qt5xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
     if( ISNUMPAR(1) && ISQUNDOGROUP(1) )
     {
 #endif
-      obj->setGroup ( PQUNDOGROUP(1) );
+      obj->setGroup( PQUNDOGROUP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
     if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
     {
 #endif
-      obj->setStack ( PQUNDOSTACK(1) );
+      obj->setStack( PQUNDOSTACK(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

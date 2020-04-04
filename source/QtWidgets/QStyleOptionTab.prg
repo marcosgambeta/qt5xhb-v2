@@ -49,7 +49,7 @@ CLASS QStyleOptionTab INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionTab
+PROCEDURE destroyObject() CLASS QStyleOptionTab
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 QStyleOptionTab()
 */
-void QStyleOptionTab_new1 ()
+void QStyleOptionTab_new1()
 {
-  auto obj = new QStyleOptionTab ();
+  auto obj = new QStyleOptionTab();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionTab(const QStyleOptionTab &other)
 */
-void QStyleOptionTab_new2 ()
+void QStyleOptionTab_new2()
 {
-  auto obj = new QStyleOptionTab ( *PQSTYLEOPTIONTAB(1) );
+  auto obj = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->shape  );
+      RENUM( obj->shape );
     }
     else
     {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->shape = (QTabBar::Shape) hb_parni(1);
+      obj->shape= (QTabBar::Shape) hb_parni(1);
     }
     else
     {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -201,8 +201,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QIcon( obj->icon  );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->icon );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->row  );
+      RINT( obj->row );
     }
     else
     {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETROW )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->row = PINT(1);
+      obj->row= PINT(1);
     }
     else
     {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->position  );
+      RENUM( obj->position );
     }
     else
     {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->position = (QStyleOptionTab::TabPosition) hb_parni(1);
+      obj->position= (QStyleOptionTab::TabPosition) hb_parni(1);
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->selectedPosition  );
+      RENUM( obj->selectedPosition );
     }
     else
     {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->selectedPosition = (QStyleOptionTab::SelectedPosition) hb_parni(1);
+      obj->selectedPosition= (QStyleOptionTab::SelectedPosition) hb_parni(1);
     }
     else
     {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->cornerWidgets  );
+      RENUM( obj->cornerWidgets );
     }
     else
     {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->cornerWidgets = (QStyleOptionTab::CornerWidgets) hb_parni(1);
+      obj->cornerWidgets= (QStyleOptionTab::CornerWidgets) hb_parni(1);
     }
     else
     {
@@ -392,8 +392,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QSize( obj->iconSize  );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->iconSize );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->iconSize = *PQSIZE(1);
+      obj->iconSize= *PQSIZE(1);
     }
     else
     {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_DOCUMENTMODE )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->documentMode  );
+      RBOOL( obj->documentMode );
     }
     else
     {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETDOCUMENTMODE )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->documentMode = PBOOL(1);
+      obj->documentMode= PBOOL(1);
     }
     else
     {
@@ -469,8 +469,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_LEFTBUTTONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QSize( obj->leftButtonSize  );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->leftButtonSize );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETLEFTBUTTONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->leftButtonSize = *PQSIZE(1);
+      obj->leftButtonSize= *PQSIZE(1);
     }
     else
     {
@@ -508,8 +508,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_RIGHTBUTTONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QSize( obj->rightButtonSize  );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->rightButtonSize );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETRIGHTBUTTONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->rightButtonSize = *PQSIZE(1);
+      obj->rightButtonSize= *PQSIZE(1);
     }
     else
     {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionTab::TabFeatures) hb_parni(1);
+      obj->features= (QStyleOptionTab::TabFeatures) hb_parni(1);
     }
     else
     {

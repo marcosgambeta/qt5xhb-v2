@@ -33,7 +33,7 @@ CLASS QTreeWidgetItemIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTreeWidgetItemIterator
+PROCEDURE destroyObject() CLASS QTreeWidgetItemIterator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,27 +59,27 @@ RETURN
 /*
 QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 */
-void QTreeWidgetItemIterator_new1 ()
+void QTreeWidgetItemIterator_new1()
 {
-  auto obj = new QTreeWidgetItemIterator ( *PQTREEWIDGETITEMITERATOR(1) );
+  auto obj = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 */
-void QTreeWidgetItemIterator_new2 ()
+void QTreeWidgetItemIterator_new2()
 {
-  auto obj = new QTreeWidgetItemIterator ( PQTREEWIDGET(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
+  auto obj = new QTreeWidgetItemIterator( PQTREEWIDGET(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 */
-void QTreeWidgetItemIterator_new3 ()
+void QTreeWidgetItemIterator_new3()
 {
-  auto obj = new QTreeWidgetItemIterator ( PQTREEWIDGETITEM(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
+  auto obj = new QTreeWidgetItemIterator( PQTREEWIDGETITEM(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 

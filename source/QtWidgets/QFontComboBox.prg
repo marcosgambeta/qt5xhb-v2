@@ -35,7 +35,7 @@ CLASS QFontComboBox INHERIT QComboBox
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFontComboBox
+PROCEDURE destroyObject() CLASS QFontComboBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    auto obj = new QFontComboBox ( OPQWIDGET(1,nullptr) );
+    auto obj = new QFontComboBox( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->currentFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->currentFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fontFilters () );
+      RENUM( obj->fontFilters() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFontFilters ( (QFontComboBox::FontFilters) hb_parni(1) );
+      obj->setFontFilters( (QFontComboBox::FontFilters) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWritingSystem ( (QFontDatabase::WritingSystem) hb_parni(1) );
+      obj->setWritingSystem( (QFontDatabase::WritingSystem) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->writingSystem () );
+      RENUM( obj->writingSystem() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,8 +232,8 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setCurrentFont ( *PQFONT(1) );
+      obj->setCurrentFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QFONTCOMBOBOX" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QFONTCOMBOBOX" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -29,7 +29,7 @@ CLASS QStyleOptionSpinBox INHERIT QStyleOptionComplex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionSpinBox
+PROCEDURE destroyObject() CLASS QStyleOptionSpinBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QStyleOptionSpinBox()
 */
-void QStyleOptionSpinBox_new1 ()
+void QStyleOptionSpinBox_new1()
 {
-  auto obj = new QStyleOptionSpinBox ();
+  auto obj = new QStyleOptionSpinBox();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
 */
-void QStyleOptionSpinBox_new2 ()
+void QStyleOptionSpinBox_new2()
 {
-  auto obj = new QStyleOptionSpinBox ( *PQSTYLEOPTIONSPINBOX(1) );
+  auto obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->buttonSymbols  );
+      RENUM( obj->buttonSymbols );
     }
     else
     {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->buttonSymbols = (QAbstractSpinBox::ButtonSymbols) hb_parni(1);
+      obj->buttonSymbols= (QAbstractSpinBox::ButtonSymbols) hb_parni(1);
     }
     else
     {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->stepEnabled  );
+      RENUM( obj->stepEnabled );
     }
     else
     {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->stepEnabled = (QAbstractSpinBox::StepEnabled) hb_parni(1);
+      obj->stepEnabled= (QAbstractSpinBox::StepEnabled) hb_parni(1);
     }
     else
     {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->frame  );
+      RBOOL( obj->frame );
     }
     else
     {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->frame = PBOOL(1);
+      obj->frame= PBOOL(1);
     }
     else
     {

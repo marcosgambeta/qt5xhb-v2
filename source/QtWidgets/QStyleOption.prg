@@ -55,7 +55,7 @@ CLASS QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOption
+PROCEDURE destroyObject() CLASS QStyleOption
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,18 +81,18 @@ RETURN
 /*
 QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
 */
-void QStyleOption_new1 ()
+void QStyleOption_new1()
 {
-  auto obj = new QStyleOption ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
+  auto obj = new QStyleOption( OPINT(1,QStyleOption::Version), OPINT(2,QStyleOption::SO_Default) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOption(const QStyleOption &other)
 */
-void QStyleOption_new2 ()
+void QStyleOption_new2()
 {
-  auto obj = new QStyleOption ( *PQSTYLEOPTION(1) );
+  auto obj = new QStyleOption( *PQSTYLEOPTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->init ( PQWIDGET(1) );
+      obj->init( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->initFrom ( PQWIDGET(1) );
+      obj->initFrom( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->version  );
+      RINT( obj->version );
     }
     else
     {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->version = PINT(1);
+      obj->version= PINT(1);
     }
     else
     {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->type  );
+      RINT( obj->type );
     }
     else
     {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->type = PINT(1);
+      obj->type= PINT(1);
     }
     else
     {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STATE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->state  );
+      RENUM( obj->state );
     }
     else
     {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->state = (QStyle::State) hb_parni(1);
+      obj->state= (QStyle::State) hb_parni(1);
     }
     else
     {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->direction  );
+      RENUM( obj->direction );
     }
     else
     {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->direction = (Qt::LayoutDirection) hb_parni(1);
+      obj->direction= (Qt::LayoutDirection) hb_parni(1);
     }
     else
     {
@@ -350,8 +350,8 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QRect( obj->rect  );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->rect );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
     }
     else
     {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
   {
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
-      obj->rect = *PQRECT(1);
+      obj->rect= *PQRECT(1);
     }
     else
     {
@@ -389,8 +389,8 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QFontMetrics( obj->fontMetrics  );
-      Qt5xHb::createReturnClass ( ptr, "QFONTMETRICS", true );
+      auto ptr = new QFontMetrics( obj->fontMetrics );
+      Qt5xHb::createReturnClass( ptr, "QFONTMETRICS", true );
     }
     else
     {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
   {
     if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
     {
-      obj->fontMetrics = *PQFONTMETRICS(1);
+      obj->fontMetrics= *PQFONTMETRICS(1);
     }
     else
     {
@@ -428,8 +428,8 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QPalette( obj->palette  );
-      Qt5xHb::createReturnClass ( ptr, "QPALETTE", true );
+      auto ptr = new QPalette( obj->palette );
+      Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
     }
     else
     {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
   {
     if( ISNUMPAR(1) && ISQPALETTE(1) )
     {
-      obj->palette = *PQPALETTE(1);
+      obj->palette= *PQPALETTE(1);
     }
     else
     {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
     if( ISNUMPAR(0) )
     {
       QObject * ptr = obj->styleObject;
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
     }
     else
     {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_SETSTYLEOBJECT )
   {
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
-      obj->styleObject = PQOBJECT(1);
+      obj->styleObject= PQOBJECT(1);
     }
     else
     {

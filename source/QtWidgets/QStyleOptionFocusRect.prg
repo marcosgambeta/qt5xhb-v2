@@ -26,7 +26,7 @@ CLASS QStyleOptionFocusRect INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionFocusRect
+PROCEDURE destroyObject() CLASS QStyleOptionFocusRect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QStyleOptionFocusRect()
 */
-void QStyleOptionFocusRect_new1 ()
+void QStyleOptionFocusRect_new1()
 {
-  auto obj = new QStyleOptionFocusRect ();
+  auto obj = new QStyleOptionFocusRect();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
 */
-void QStyleOptionFocusRect_new2 ()
+void QStyleOptionFocusRect_new2()
 {
-  auto obj = new QStyleOptionFocusRect ( *PQSTYLEOPTIONFOCUSRECT(1) );
+  auto obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -102,8 +102,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QColor( obj->backgroundColor  );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->backgroundColor );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
     }
     else
     {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
   {
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
-      obj->backgroundColor = *PQCOLOR(1);
+      obj->backgroundColor= *PQCOLOR(1);
     }
     else
     {

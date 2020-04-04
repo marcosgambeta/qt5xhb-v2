@@ -31,7 +31,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsEffect
+PROCEDURE destroyObject() CLASS QGraphicsEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->update ();
+      obj->update();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ONENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSEFFECT" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

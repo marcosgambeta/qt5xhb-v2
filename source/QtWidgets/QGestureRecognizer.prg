@@ -38,7 +38,7 @@ CLASS QGestureRecognizer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGestureRecognizer
+PROCEDURE destroyObject() CLASS QGestureRecognizer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QGesture * ptr = obj->create ( PQOBJECT(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QGESTURE" );
+      QGesture * ptr = obj->create( PQOBJECT(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGESTURE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
     if( ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3) )
     {
 #endif
-      RENUM( obj->recognize ( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
+      RENUM( obj->recognize( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
     if( ISNUMPAR(1) && ISQGESTURE(1) )
     {
 #endif
-      obj->reset ( PQGESTURE(1) );
+      obj->reset( PQGESTURE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
   if( ISNUMPAR(1) && ISQGESTURERECOGNIZER(1) )
   {
 #endif
-    RENUM( QGestureRecognizer::registerRecognizer ( PQGESTURERECOGNIZER(1) ) );
+    RENUM( QGestureRecognizer::registerRecognizer( PQGESTURERECOGNIZER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QGestureRecognizer::unregisterRecognizer ( (Qt::GestureType) hb_parni(1) );
+    QGestureRecognizer::unregisterRecognizer( (Qt::GestureType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

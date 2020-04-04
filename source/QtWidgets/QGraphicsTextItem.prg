@@ -61,7 +61,7 @@ CLASS QGraphicsTextItem INHERIT QGraphicsObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsTextItem
+PROCEDURE destroyObject() CLASS QGraphicsTextItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,18 +91,18 @@ RETURN
 /*
 QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
 */
-void QGraphicsTextItem_new1 ()
+void QGraphicsTextItem_new1()
 {
-  auto obj = new QGraphicsTextItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QGraphicsTextItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 */
-void QGraphicsTextItem_new2 ()
+void QGraphicsTextItem_new2()
 {
-  auto obj = new QGraphicsTextItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->adjustSize ();
+      obj->adjustSize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->defaultTextColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->defaultTextColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      QTextDocument * ptr = obj->document();
+      Qt5xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->font () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->openExternalLinks () );
+      RBOOL( obj->openExternalLinks() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setDefaultTextColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setDefaultTextColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
     if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
     {
 #endif
-      obj->setDocument ( PQTEXTDOCUMENT(1) );
+      obj->setDocument( PQTEXTDOCUMENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setHtml ( PQSTRING(1) );
+      obj->setHtml( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setOpenExternalLinks ( PBOOL(1) );
+      obj->setOpenExternalLinks( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPlainText ( PQSTRING(1) );
+      obj->setPlainText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setTabChangesFocus ( PBOOL(1) );
+      obj->setTabChangesFocus( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
     if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
     {
 #endif
-      obj->setTextCursor ( *PQTEXTCURSOR(1) );
+      obj->setTextCursor( *PQTEXTCURSOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) hb_parni(1) );
+      obj->setTextInteractionFlags( (Qt::TextInteractionFlags) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextWidth ( PQREAL(1) );
+      obj->setTextWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->tabChangesFocus () );
+      RBOOL( obj->tabChangesFocus() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,8 +564,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QTextCursor( obj->textCursor () );
-      Qt5xHb::createReturnClass ( ptr, "QTEXTCURSOR", true );
+      auto ptr = new QTextCursor( obj->textCursor() );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->textInteractionFlags () );
+      RENUM( obj->textInteractionFlags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->textWidth () );
+      RQREAL( obj->textWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toHtml () );
+      RQSTRING( obj->toHtml() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toPlainText () );
+      RQSTRING( obj->toPlainText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -685,8 +685,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy ( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -758,8 +758,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPainterPath( obj->opaqueArea () );
-      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->opaqueArea() );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
     if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,8 +809,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPainterPath( obj->shape () );
-      Qt5xHb::createReturnClass ( ptr, "QPAINTERPATH", true );
+      auto ptr = new QPainterPath( obj->shape() );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSTEXTITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSTEXTITEM" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSTEXTITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSTEXTITEM" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

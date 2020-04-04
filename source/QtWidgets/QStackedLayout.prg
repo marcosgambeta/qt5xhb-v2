@@ -37,7 +37,7 @@ CLASS QStackedLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStackedLayout
+PROCEDURE destroyObject() CLASS QStackedLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,27 +64,27 @@ RETURN
 /*
 QStackedLayout ()
 */
-void QStackedLayout_new1 ()
+void QStackedLayout_new1()
 {
-  auto obj = new QStackedLayout ();
+  auto obj = new QStackedLayout();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QStackedLayout ( QWidget * parent )
 */
-void QStackedLayout_new2 ()
+void QStackedLayout_new2()
 {
-  auto obj = new QStackedLayout ( PQWIDGET(1) );
+  auto obj = new QStackedLayout( PQWIDGET(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QStackedLayout ( QLayout * parentLayout )
 */
-void QStackedLayout_new3 ()
+void QStackedLayout_new3()
 {
-  auto obj = new QStackedLayout ( PQLAYOUT(1) );
+  auto obj = new QStackedLayout( PQLAYOUT(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->addWidget ( PQWIDGET(1) ) );
+      RINT( obj->addWidget( PQWIDGET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentIndex () );
+      RINT( obj->currentIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,8 +192,8 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->currentWidget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->currentWidget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
+      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStackingMode ( (QStackedLayout::StackingMode) hb_parni(1) );
+      obj->setStackingMode( (QStackedLayout::StackingMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->stackingMode () );
+      RENUM( obj->stackingMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,8 +291,8 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget ( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( PINT(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex ( PINT(1) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setCurrentWidget ( PQWIDGET(1) );
+      obj->setCurrentWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONCURRENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSTACKEDLAYOUT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSTACKEDLAYOUT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ONWIDGETREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSTACKEDLAYOUT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSTACKEDLAYOUT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

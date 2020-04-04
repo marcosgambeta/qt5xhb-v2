@@ -27,7 +27,7 @@ CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneHelpEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneHelpEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->scenePos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->scenePos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->screenPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->screenPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

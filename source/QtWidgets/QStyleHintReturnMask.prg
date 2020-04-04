@@ -24,7 +24,7 @@ CLASS QStyleHintReturnMask INHERIT QStyleHintReturn
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleHintReturnMask
+PROCEDURE destroyObject() CLASS QStyleHintReturnMask
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QStyleHintReturnMask ();
+    auto obj = new QStyleHintReturnMask();
     Qt5xHb::returnNewObject( obj, false );
   }
   else

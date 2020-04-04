@@ -48,7 +48,7 @@ CLASS QDialog INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDialog
+PROCEDURE destroyObject() CLASS QDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QDialog ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QDialog( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSizeGripEnabled () );
+      RBOOL( obj->isSizeGripEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSizeGripEnabled ( PBOOL(1) );
+      obj->setSizeGripEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->result () );
+      RINT( obj->result() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setModal ( PBOOL(1) );
+      obj->setModal( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setResult ( PINT(1) );
+      obj->setResult( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,8 +246,8 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,8 +297,8 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->accept ();
+      obj->accept();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->done ( PINT(1) );
+      obj->done( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->exec () );
+      RINT( obj->exec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->open ();
+      obj->open();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reject ();
+      obj->reject();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,8 +500,8 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->extension ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->extension();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setExtension ( PQWIDGET(1) );
+      obj->setExtension( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->showExtension ( PBOOL(1) );
+      obj->showExtension( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDIALOG" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDIALOG" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDIALOG" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDIALOG" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

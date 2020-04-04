@@ -32,7 +32,7 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsOpacityEffect
+PROCEDURE destroyObject() CLASS QGraphicsOpacityEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsOpacityEffect ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGraphicsOpacityEffect( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->opacity () );
+      RQREAL( obj->opacity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->opacityMask () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->opacityMask() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOpacity ( PQREAL(1) );
+      obj->setOpacity( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setOpacityMask ( *PQBRUSH(1) );
+      obj->setOpacityMask( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSOPACITYEFFECT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBRUSH" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

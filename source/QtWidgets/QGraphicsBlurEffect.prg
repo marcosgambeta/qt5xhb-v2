@@ -33,7 +33,7 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsBlurEffect
+PROCEDURE destroyObject() CLASS QGraphicsBlurEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsBlurEffect ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGraphicsBlurEffect( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->blurHints () );
+      RENUM( obj->blurHints() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->blurRadius () );
+      RQREAL( obj->blurRadius() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,8 +150,8 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlurHints ( (QGraphicsBlurEffect::BlurHints) hb_parni(1) );
+      obj->setBlurHints( (QGraphicsBlurEffect::BlurHints) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlurRadius ( PQREAL(1) );
+      obj->setBlurRadius( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSBLUREFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

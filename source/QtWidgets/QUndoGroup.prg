@@ -48,7 +48,7 @@ CLASS QUndoGroup INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUndoGroup
+PROCEDURE destroyObject() CLASS QUndoGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QUndoGroup ( OPQOBJECT(1,nullptr) );
+    auto obj = new QUndoGroup( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUndoStack * ptr = obj->activeStack ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QUNDOSTACK" );
+      QUndoStack * ptr = obj->activeStack();
+      Qt5xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
     if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
     {
 #endif
-      obj->addStack ( PQUNDOSTACK(1) );
+      obj->addStack( PQUNDOSTACK(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canRedo () );
+      RBOOL( obj->canRedo() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canUndo () );
+      RBOOL( obj->canUndo() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
     if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
     {
 #endif
-      QAction * ptr = obj->createRedoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
     if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
     {
 #endif
-      QAction * ptr = obj->createUndoAction ( PQOBJECT(1), OPQSTRING(2,QString()) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isClean () );
+      RBOOL( obj->isClean() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->redoText () );
+      RQSTRING( obj->redoText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
     if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
     {
 #endif
-      obj->removeStack ( PQUNDOSTACK(1) );
+      obj->removeStack( PQUNDOSTACK(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QUndoStack *> list = obj->stacks ();
+      QList<QUndoStack *> list = obj->stacks();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->undoText () );
+      RQSTRING( obj->undoText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->redo ();
+      obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
     if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
     {
 #endif
-      obj->setActiveStack ( PQUNDOSTACK(1) );
+      obj->setActiveStack( PQUNDOSTACK(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->undo ();
+      obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QUNDOSTACK" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QUNDOGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QUNDOGROUP" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

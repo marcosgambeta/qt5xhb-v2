@@ -38,7 +38,7 @@ CLASS QWidgetItem INHERIT QLayoutItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWidgetItem
+PROCEDURE destroyObject() CLASS QWidgetItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    auto obj = new QWidgetItem ( PQWIDGET(1) );
+    auto obj = new QWidgetItem( PQWIDGET(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWIDGETITEM_CONTROLTYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->controlTypes () );
+      RENUM( obj->controlTypes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->expandingDirections () );
+      RENUM( obj->expandingDirections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,8 +155,8 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->geometry () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->geometry() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasHeightForWidth () );
+      RBOOL( obj->hasHeightForWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,8 +252,8 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->maximumSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->maximumSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,8 +277,8 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry ( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,8 +328,8 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,8 +353,8 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

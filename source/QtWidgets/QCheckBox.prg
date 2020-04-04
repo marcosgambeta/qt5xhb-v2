@@ -33,7 +33,7 @@ CLASS QCheckBox INHERIT QAbstractButton
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCheckBox
+PROCEDURE destroyObject() CLASS QCheckBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,18 +60,18 @@ RETURN
 /*
 explicit QCheckBox ( QWidget * parent = nullptr )
 */
-void QCheckBox_new1 ()
+void QCheckBox_new1()
 {
-  auto obj = new QCheckBox ( OPQWIDGET(1,nullptr) );
+  auto obj = new QCheckBox( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 */
-void QCheckBox_new2 ()
+void QCheckBox_new2()
 {
-  auto obj = new QCheckBox ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -100,8 +100,8 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->checkState () );
+      RENUM( obj->checkState() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isTristate () );
+      RBOOL( obj->isTristate() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCheckState ( (Qt::CheckState) hb_parni(1) );
+      obj->setCheckState( (Qt::CheckState) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setTristate ( OPBOOL(1,true) );
+      obj->setTristate( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,8 +226,8 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,8 +251,8 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCHECKBOX_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCHECKBOX" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCHECKBOX" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

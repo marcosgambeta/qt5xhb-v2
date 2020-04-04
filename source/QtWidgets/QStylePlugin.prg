@@ -25,7 +25,7 @@ CLASS QStylePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStylePlugin
+PROCEDURE destroyObject() CLASS QStylePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QSTYLEPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QStyle * ptr = obj->create ( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSTYLE" );
+      QStyle * ptr = obj->create( PQSTRING(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

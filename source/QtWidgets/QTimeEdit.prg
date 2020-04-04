@@ -24,7 +24,7 @@ CLASS QTimeEdit INHERIT QDateTimeEdit
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTimeEdit
+PROCEDURE destroyObject() CLASS QTimeEdit
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,18 +51,18 @@ RETURN
 /*
 QTimeEdit ( QWidget * parent = nullptr )
 */
-void QTimeEdit_new1 ()
+void QTimeEdit_new1()
 {
-  auto obj = new QTimeEdit ( OPQWIDGET(1,nullptr) );
+  auto obj = new QTimeEdit( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 */
-void QTimeEdit_new2 ()
+void QTimeEdit_new2()
 {
-  auto obj = new QTimeEdit ( *PQTIME(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QTIMEEDIT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();

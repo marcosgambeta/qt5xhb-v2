@@ -28,7 +28,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTapAndHoldGesture
+PROCEDURE destroyObject() CLASS QTapAndHoldGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->position () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->position() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setPosition ( *PQPOINTF(1) );
+      obj->setPosition( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QTapAndHoldGesture::setTimeout ( PINT(1) );
+    QTapAndHoldGesture::setTimeout( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QTapAndHoldGesture::timeout () );
+    RINT( QTapAndHoldGesture::timeout() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

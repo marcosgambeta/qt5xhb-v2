@@ -28,7 +28,7 @@ CLASS QRubberBand INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRubberBand
+PROCEDURE destroyObject() CLASS QRubberBand
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    auto obj = new QRubberBand ( (QRubberBand::Shape) hb_parni(1), OPQWIDGET(2,nullptr) );
+    auto obj = new QRubberBand( (QRubberBand::Shape) hb_parni(1), OPQWIDGET(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -90,13 +90,13 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 /*
 void move ( int x, int y )
 */
-void QRubberBand_move1 ()
+void QRubberBand_move1()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->move ( PINT(1), PINT(2) );
+    obj->move( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -105,13 +105,13 @@ void QRubberBand_move1 ()
 /*
 void move ( const QPoint & p )
 */
-void QRubberBand_move2 ()
+void QRubberBand_move2()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->move ( *PQPOINT(1) );
+    obj->move( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,13 +139,13 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 /*
 void resize ( int width, int height )
 */
-void QRubberBand_resize1 ()
+void QRubberBand_resize1()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->resize ( PINT(1), PINT(2) );
+    obj->resize( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -154,13 +154,13 @@ void QRubberBand_resize1 ()
 /*
 void resize ( const QSize & size )
 */
-void QRubberBand_resize2 ()
+void QRubberBand_resize2()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->resize ( *PQSIZE(1) );
+    obj->resize( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -188,13 +188,13 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 /*
 void setGeometry ( const QRect & rect )
 */
-void QRubberBand_setGeometry1 ()
+void QRubberBand_setGeometry1()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setGeometry ( *PQRECT(1) );
+    obj->setGeometry( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,13 +203,13 @@ void QRubberBand_setGeometry1 ()
 /*
 void setGeometry ( int x, int y, int width, int height )
 */
-void QRubberBand_setGeometry2 ()
+void QRubberBand_setGeometry2()
 {
   auto obj = (QRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shape () );
+      RENUM( obj->shape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

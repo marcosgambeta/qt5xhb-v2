@@ -29,7 +29,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemDelegate
+PROCEDURE destroyObject() CLASS QItemDelegate
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QItemDelegate ( OPQOBJECT(1,nullptr) );
+    auto obj = new QItemDelegate( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasClipping () );
+      RBOOL( obj->hasClipping() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemEditorFactory * ptr = obj->itemEditorFactory ();
-      Qt5xHb::createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+      QItemEditorFactory * ptr = obj->itemEditorFactory();
+      Qt5xHb::createReturnClass( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setClipping ( PBOOL(1) );
+      obj->setClipping( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
     if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
     {
 #endif
-      obj->setItemEditorFactory ( PQITEMEDITORFACTORY(1) );
+      obj->setItemEditorFactory( PQITEMEDITORFACTORY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

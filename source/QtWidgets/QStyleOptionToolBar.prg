@@ -35,7 +35,7 @@ CLASS QStyleOptionToolBar INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionToolBar
+PROCEDURE destroyObject() CLASS QStyleOptionToolBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,18 +61,18 @@ RETURN
 /*
 QStyleOptionToolBar()
 */
-void QStyleOptionToolBar_new1 ()
+void QStyleOptionToolBar_new1()
 {
-  auto obj = new QStyleOptionToolBar ();
+  auto obj = new QStyleOptionToolBar();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionToolBar(const QStyleOptionToolBar &other)
 */
-void QStyleOptionToolBar_new2 ()
+void QStyleOptionToolBar_new2()
 {
-  auto obj = new QStyleOptionToolBar ( *PQSTYLEOPTIONTOOLBAR(1) );
+  auto obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONOFLINE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->positionOfLine  );
+      RENUM( obj->positionOfLine );
     }
     else
     {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->positionOfLine = (QStyleOptionToolBar::ToolBarPosition) hb_parni(1);
+      obj->positionOfLine= (QStyleOptionToolBar::ToolBarPosition) hb_parni(1);
     }
     else
     {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->positionWithinLine  );
+      RENUM( obj->positionWithinLine );
     }
     else
     {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->positionWithinLine = (QStyleOptionToolBar::ToolBarPosition) hb_parni(1);
+      obj->positionWithinLine= (QStyleOptionToolBar::ToolBarPosition) hb_parni(1);
     }
     else
     {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_TOOLBARAREA )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->toolBarArea  );
+      RENUM( obj->toolBarArea );
     }
     else
     {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->toolBarArea = (Qt::ToolBarArea) hb_parni(1);
+      obj->toolBarArea= (Qt::ToolBarArea) hb_parni(1);
     }
     else
     {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionToolBar::ToolBarFeatures) hb_parni(1);
+      obj->features= (QStyleOptionToolBar::ToolBarFeatures) hb_parni(1);
     }
     else
     {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_LINEWIDTH )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->lineWidth  );
+      RINT( obj->lineWidth );
     }
     else
     {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETLINEWIDTH )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->lineWidth = PINT(1);
+      obj->lineWidth= PINT(1);
     }
     else
     {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->midLineWidth  );
+      RINT( obj->midLineWidth );
     }
     else
     {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->midLineWidth = PINT(1);
+      obj->midLineWidth= PINT(1);
     }
     else
     {

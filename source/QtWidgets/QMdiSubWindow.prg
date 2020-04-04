@@ -47,7 +47,7 @@ CLASS QMdiSubWindow INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMdiSubWindow
+PROCEDURE destroyObject() CLASS QMdiSubWindow
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QMdiSubWindow ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QMdiSubWindow( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isShaded () );
+      RBOOL( obj->isShaded() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->keyboardPageStep () );
+      RINT( obj->keyboardPageStep() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->keyboardSingleStep () );
+      RINT( obj->keyboardSingleStep() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,8 +194,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMdiArea * ptr = obj->mdiArea ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QMDIAREA" );
+      QMdiArea * ptr = obj->mdiArea();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDIAREA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setKeyboardPageStep ( PINT(1) );
+      obj->setKeyboardPageStep( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setKeyboardSingleStep ( PINT(1) );
+      obj->setKeyboardSingleStep( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setOption ( (QMdiSubWindow::SubWindowOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( (QMdiSubWindow::SubWindowOption) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
     if( ISNUMPAR(1) && ISQMENU(1) )
     {
 #endif
-      obj->setSystemMenu ( PQMENU(1) );
+      obj->setSystemMenu( PQMENU(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget ( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,8 +349,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->systemMenu ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
+      QMenu * ptr = obj->systemMenu();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption ( (QMdiSubWindow::SubWindowOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( (QMdiSubWindow::SubWindowOption) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,8 +398,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,8 +423,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,8 +448,8 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->showShaded ();
+      obj->showShaded();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->showSystemMenu ();
+      obj->showSystemMenu();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONABOUTTOACTIVATE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMDISUBWINDOW" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ONWINDOWSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMDISUBWINDOW" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMDISUBWINDOW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

@@ -62,7 +62,7 @@ CLASS QStyleOptionViewItem INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionViewItem
+PROCEDURE destroyObject() CLASS QStyleOptionViewItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,18 +88,18 @@ RETURN
 /*
 QStyleOptionViewItem()
 */
-void QStyleOptionViewItem_new1 ()
+void QStyleOptionViewItem_new1()
 {
-  auto obj = new QStyleOptionViewItem ();
+  auto obj = new QStyleOptionViewItem();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionViewItem(const QStyleOptionViewItem &other)
 */
-void QStyleOptionViewItem_new2 ()
+void QStyleOptionViewItem_new2()
 {
-  auto obj = new QStyleOptionViewItem ( *PQSTYLEOPTIONVIEWITEM(1) );
+  auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->displayAlignment  );
+      RENUM( obj->displayAlignment );
     }
     else
     {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->displayAlignment = (Qt::Alignment) hb_parni(1);
+      obj->displayAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->decorationAlignment  );
+      RENUM( obj->decorationAlignment );
     }
     else
     {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->decorationAlignment = (Qt::Alignment) hb_parni(1);
+      obj->decorationAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->textElideMode  );
+      RENUM( obj->textElideMode );
     }
     else
     {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->textElideMode = (Qt::TextElideMode) hb_parni(1);
+      obj->textElideMode= (Qt::TextElideMode) hb_parni(1);
     }
     else
     {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->decorationPosition  );
+      RENUM( obj->decorationPosition );
     }
     else
     {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->decorationPosition = (QStyleOptionViewItem::Position) hb_parni(1);
+      obj->decorationPosition= (QStyleOptionViewItem::Position) hb_parni(1);
     }
     else
     {
@@ -290,8 +290,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QSize( obj->decorationSize  );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->decorationSize );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->decorationSize = *PQSIZE(1);
+      obj->decorationSize= *PQSIZE(1);
     }
     else
     {
@@ -329,8 +329,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QFont( obj->font  );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
     }
     else
     {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFONT )
   {
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
-      obj->font = *PQFONT(1);
+      obj->font= *PQFONT(1);
     }
     else
     {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->showDecorationSelected  );
+      RBOOL( obj->showDecorationSelected );
     }
     else
     {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->showDecorationSelected = PBOOL(1);
+      obj->showDecorationSelected= PBOOL(1);
     }
     else
     {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionViewItem::ViewItemFeatures) hb_parni(1);
+      obj->features= (QStyleOptionViewItem::ViewItemFeatures) hb_parni(1);
     }
     else
     {
@@ -444,8 +444,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_LOCALE )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QLocale( obj->locale  );
-      Qt5xHb::createReturnClass ( ptr, "QLOCALE", true );
+      auto ptr = new QLocale( obj->locale );
+      Qt5xHb::createReturnClass( ptr, "QLOCALE", true );
     }
     else
     {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETLOCALE )
   {
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
-      obj->locale = *PQLOCALE(1);
+      obj->locale= *PQLOCALE(1);
     }
     else
     {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_WIDGET )
     if( ISNUMPAR(0) )
     {
       const QWidget * ptr = obj->widget;
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
     }
     else
     {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETWIDGET )
   {
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
-      obj->widget = PQWIDGET(1);
+      obj->widget= PQWIDGET(1);
     }
     else
     {
@@ -522,8 +522,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_INDEX )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QModelIndex( obj->index  );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->index );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
     }
     else
     {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETINDEX )
   {
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
-      obj->index = *PQMODELINDEX(1);
+      obj->index= *PQMODELINDEX(1);
     }
     else
     {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_CHECKSTATE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->checkState  );
+      RENUM( obj->checkState );
     }
     else
     {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETCHECKSTATE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->checkState = (Qt::CheckState) hb_parni(1);
+      obj->checkState= (Qt::CheckState) hb_parni(1);
     }
     else
     {
@@ -599,8 +599,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QIcon( obj->icon  );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->icon );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_VIEWITEMPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->viewItemPosition  );
+      RENUM( obj->viewItemPosition );
     }
     else
     {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->viewItemPosition = (QStyleOptionViewItem::ViewItemPosition) hb_parni(1);
+      obj->viewItemPosition= (QStyleOptionViewItem::ViewItemPosition) hb_parni(1);
     }
     else
     {
@@ -714,8 +714,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_BACKGROUNDBRUSH )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QBrush( obj->backgroundBrush  );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->backgroundBrush );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
     }
     else
     {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETBACKGROUNDBRUSH )
   {
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
-      obj->backgroundBrush = *PQBRUSH(1);
+      obj->backgroundBrush= *PQBRUSH(1);
     }
     else
     {

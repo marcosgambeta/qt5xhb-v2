@@ -35,7 +35,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSpacerItem
+PROCEDURE destroyObject() CLASS QSpacerItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
   if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
-    auto obj = new QSpacerItem ( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
+    auto obj = new QSpacerItem( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
     if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->changeSize ( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
+      obj->changeSize( PINT(1), PINT(2), ISNIL(3)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(3), ISNIL(4)? (QSizePolicy::Policy) QSizePolicy::Minimum : (QSizePolicy::Policy) hb_parni(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->expandingDirections () );
+      RENUM( obj->expandingDirections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->geometry () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->geometry() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,8 +203,8 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->maximumSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->maximumSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,8 +228,8 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->minimumSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->minimumSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry ( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,8 +279,8 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,8 +304,8 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSpacerItem * ptr = obj->spacerItem ();
-      Qt5xHb::createReturnClass ( ptr, "QSPACERITEM", false );
+      QSpacerItem * ptr = obj->spacerItem();
+      Qt5xHb::createReturnClass( ptr, "QSPACERITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -90,7 +90,7 @@ CLASS QAction INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAction
+PROCEDURE destroyObject() CLASS QAction
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -119,27 +119,27 @@ RETURN
 /*
 QAction ( QObject * parent = nullptr )
 */
-void QAction_new1 ()
+void QAction_new1()
 {
-  auto obj = new QAction ( OPQOBJECT(1,nullptr) );
+  auto obj = new QAction( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QAction ( const QString & text, QObject * parent = nullptr )
 */
-void QAction_new2 ()
+void QAction_new2()
 {
-  auto obj = new QAction ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QAction( PQSTRING(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
 */
-void QAction_new3 ()
+void QAction_new3()
 {
-  auto obj = new QAction ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -173,8 +173,8 @@ HB_FUNC_STATIC( QACTION_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -199,8 +199,8 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QActionGroup * ptr = obj->actionGroup ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QACTIONGROUP" );
+      QActionGroup * ptr = obj->actionGroup();
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTIONGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->activate ( (QAction::ActionEvent) hb_parni(1) );
+      obj->activate( (QAction::ActionEvent) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
+      QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWidget *> list = obj->associatedWidgets ();
+      QList<QWidget *> list = obj->associatedWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoRepeat () );
+      RBOOL( obj->autoRepeat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,8 +370,8 @@ HB_FUNC_STATIC( QACTION_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVariant( obj->data () );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->data() );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,8 +395,8 @@ HB_FUNC_STATIC( QACTION_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->font () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,8 +420,8 @@ HB_FUNC_STATIC( QACTION_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QIcon( obj->icon () );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->icon() );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->iconText () );
+      RQSTRING( obj->iconText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCheckable () );
+      RBOOL( obj->isCheckable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isChecked () );
+      RBOOL( obj->isChecked() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isIconVisibleInMenu () );
+      RBOOL( obj->isIconVisibleInMenu() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSeparator () );
+      RBOOL( obj->isSeparator() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,8 +613,8 @@ HB_FUNC_STATIC( QACTION_MENU )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMenu * ptr = obj->menu ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QMENU" );
+      QMenu * ptr = obj->menu();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->menuRole () );
+      RENUM( obj->menuRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,8 +662,8 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->parentWidget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->parentWidget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->priority () );
+      RENUM( obj->priority() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
     if( ISNUMPAR(1) && ISQACTIONGROUP(1) )
     {
 #endif
-      obj->setActionGroup ( PQACTIONGROUP(1) );
+      obj->setActionGroup( PQACTIONGROUP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoRepeat ( PBOOL(1) );
+      obj->setAutoRepeat( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCheckable ( PBOOL(1) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QACTION_SETDATA )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setData ( *PQVARIANT(1) );
+      obj->setData( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QACTION_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setIconText ( PQSTRING(1) );
+      obj->setIconText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setIconVisibleInMenu ( PBOOL(1) );
+      obj->setIconVisibleInMenu( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QACTION_SETMENU )
     if( ISNUMPAR(1) && ISQMENU(1) )
     {
 #endif
-      obj->setMenu ( PQMENU(1) );
+      obj->setMenu( PQMENU(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMenuRole ( (QAction::MenuRole) hb_parni(1) );
+      obj->setMenuRole( (QAction::MenuRole) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPriority ( (QAction::Priority) hb_parni(1) );
+      obj->setPriority( (QAction::Priority) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSeparator ( PBOOL(1) );
+      obj->setSeparator( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUT )
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
     {
 #endif
-      obj->setShortcut ( *PQKEYSEQUENCE(1) );
+      obj->setShortcut( *PQKEYSEQUENCE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setShortcutContext ( (Qt::ShortcutContext) hb_parni(1) );
+      obj->setShortcutContext( (Qt::ShortcutContext) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 /*
 void setShortcuts ( const QList<QKeySequence> & shortcuts )
 */
-void QAction_setShortcuts1 ()
+void QAction_setShortcuts1()
 {
   auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
@@ -1078,7 +1078,7 @@ void QAction_setShortcuts1 ()
     {
       par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->setShortcuts ( par1 );
+    obj->setShortcuts( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1087,13 +1087,13 @@ void QAction_setShortcuts1 ()
 /*
 void setShortcuts ( QKeySequence::StandardKey key )
 */
-void QAction_setShortcuts2 ()
+void QAction_setShortcuts2()
 {
   auto obj = (QAction *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
+    obj->setShortcuts( (QKeySequence::StandardKey) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setStatusTip ( PQSTRING(1) );
+      obj->setStatusTip( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setToolTip ( PQSTRING(1) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setWhatsThis ( PQSTRING(1) );
+      obj->setWhatsThis( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1235,8 +1235,8 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QKeySequence( obj->shortcut () );
-      Qt5xHb::createReturnClass ( ptr, "QKEYSEQUENCE", true );
+      auto ptr = new QKeySequence( obj->shortcut() );
+      Qt5xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shortcutContext () );
+      RENUM( obj->shortcutContext() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QKeySequence> list = obj->shortcuts ();
+      QList<QKeySequence> list = obj->shortcuts();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence ( list[i] ) );
+          hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->showStatusText ( OPQWIDGET(1,nullptr) ) );
+      RBOOL( obj->showStatusText( OPQWIDGET(1,nullptr) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->statusTip () );
+      RQSTRING( obj->statusTip() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toolTip () );
+      RQSTRING( obj->toolTip() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->whatsThis () );
+      RQSTRING( obj->whatsThis() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QACTION_HOVER )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->hover ();
+      obj->hover();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1482,7 +1482,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setChecked ( PBOOL(1) );
+      obj->setChecked( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDisabled ( PBOOL(1) );
+      obj->setDisabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->toggle ();
+      obj->toggle();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1612,7 +1612,7 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->trigger ();
+      obj->trigger();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC( QACTION_ONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QACTION_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QACTION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC( QACTION_ONTOGGLED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QACTION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QACTION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

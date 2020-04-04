@@ -39,7 +39,7 @@ CLASS QWhatsThis
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWhatsThis
+PROCEDURE destroyObject() CLASS QWhatsThis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
 #endif
-    QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,nullptr) );
-    Qt5xHb::createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = QWhatsThis::createAction( OPQOBJECT(1,nullptr) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWhatsThis::enterWhatsThisMode ();
+    QWhatsThis::enterWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWhatsThis::hideText ();
+    QWhatsThis::hideText();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QWhatsThis::inWhatsThisMode () );
+    RBOOL( QWhatsThis::inWhatsThisMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWhatsThis::leaveWhatsThisMode ();
+    QWhatsThis::leaveWhatsThisMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
   if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
 #endif
-    QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
+    QWhatsThis::showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

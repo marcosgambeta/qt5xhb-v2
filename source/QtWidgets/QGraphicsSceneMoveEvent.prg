@@ -27,7 +27,7 @@ CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneMoveEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneMoveEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QGraphicsSceneMoveEvent ();
+    auto obj = new QGraphicsSceneMoveEvent();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->newPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->newPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->oldPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->oldPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

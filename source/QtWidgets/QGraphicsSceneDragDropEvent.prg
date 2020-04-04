@@ -39,7 +39,7 @@ CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneDragDropEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneDragDropEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->acceptProposedAction ();
+      obj->acceptProposedAction();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttons () );
+      RENUM( obj->buttons() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->dropAction () );
+      RENUM( obj->dropAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMimeData * ptr = obj->mimeData ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QMIMEDATA" );
+      const QMimeData * ptr = obj->mimeData();
+      Qt5xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,8 +217,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->pos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->pos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->possibleActions () );
+      RENUM( obj->possibleActions() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->proposedAction () );
+      RENUM( obj->proposedAction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,8 +290,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->scenePos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->scenePos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,8 +315,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->screenPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->screenPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDropAction ( (Qt::DropAction) hb_parni(1) );
+      obj->setDropAction( (Qt::DropAction) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,8 +366,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->source ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->source();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

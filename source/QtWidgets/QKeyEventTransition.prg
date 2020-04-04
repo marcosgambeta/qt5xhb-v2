@@ -28,7 +28,7 @@ CLASS QKeyEventTransition INHERIT QEventTransition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QKeyEventTransition
+PROCEDURE destroyObject() CLASS QKeyEventTransition
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QKeyEventTransition ( QState * sourceState = nullptr )
 */
-void QKeyEventTransition_new1 ()
+void QKeyEventTransition_new1()
 {
-  auto obj = new QKeyEventTransition ( OPQSTATE(1,nullptr) );
+  auto obj = new QKeyEventTransition( OPQSTATE(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = nullptr )
 */
-void QKeyEventTransition_new2 ()
+void QKeyEventTransition_new2()
 {
-  auto obj = new QKeyEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
+  auto obj = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->key () );
+      RINT( obj->key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifierMask () );
+      RENUM( obj->modifierMask() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setKey ( PINT(1) );
+      obj->setKey( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setModifierMask ( (Qt::KeyboardModifiers) hb_parni(1) );
+      obj->setModifierMask( (Qt::KeyboardModifiers) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

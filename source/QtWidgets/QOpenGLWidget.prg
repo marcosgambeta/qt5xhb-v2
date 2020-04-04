@@ -40,7 +40,7 @@ CLASS QOpenGLWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLWidget
+PROCEDURE destroyObject() CLASS QOpenGLWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 #ifndef QT_NO_OPENGL
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QOpenGLWidget ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QOpenGLWidget( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSurfaceFormat( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      auto ptr = new QSurfaceFormat( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_SETFORMAT )
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
     {
 #endif
-      obj->setFormat ( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_MAKECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->makeCurrent ();
+      obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DONECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->doneCurrent ();
+      obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,8 +275,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->context ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+      QOpenGLContext * ptr = obj->context();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DEFAULTFRAMEBUFFEROBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->defaultFramebufferObject () );
+      RGLUINT( obj->defaultFramebufferObject() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,8 +332,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_GRABFRAMEBUFFER )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QImage( obj->grabFramebuffer () );
-      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
+      auto ptr = new QImage( obj->grabFramebuffer() );
+      Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTOCOMPOSE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONFRAMESWAPPED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONABOUTTORESIZE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QOPENGLWIDGET_ONRESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QOPENGLWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QOPENGLWIDGET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

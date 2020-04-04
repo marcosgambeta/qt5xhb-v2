@@ -31,7 +31,7 @@ CLASS QKeySequenceEdit INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QKeySequenceEdit
+PROCEDURE destroyObject() CLASS QKeySequenceEdit
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,10 +62,10 @@ RETURN
 /*
 QKeySequenceEdit(QWidget *parent = nullptr)
 */
-void QKeySequenceEdit_new1 ()
+void QKeySequenceEdit_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit ( OPQWIDGET(1,nullptr) );
+  auto obj = new QKeySequenceEdit( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -73,10 +73,10 @@ void QKeySequenceEdit_new1 ()
 /*
 QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = nullptr)
 */
-void QKeySequenceEdit_new2 ()
+void QKeySequenceEdit_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QKeySequence( obj->keySequence () );
-      Qt5xHb::createReturnClass ( ptr, "QKEYSEQUENCE", true );
+      auto ptr = new QKeySequence( obj->keySequence() );
+      Qt5xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
     {
 #endif
-      obj->setKeySequence ( *PQKEYSEQUENCE(1) );
+      obj->setKeySequence( *PQKEYSEQUENCE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QKEYSEQUENCEEDIT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONKEYSEQUENCECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QKEYSEQUENCEEDIT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QKEYSEQUENCEEDIT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QKEYSEQUENCE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -32,7 +32,7 @@ CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneWheelEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneWheelEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttons () );
+      RENUM( obj->buttons() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->delta () );
+      RINT( obj->delta() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->pos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->pos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->scenePos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->scenePos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->screenPos () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->screenPos() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

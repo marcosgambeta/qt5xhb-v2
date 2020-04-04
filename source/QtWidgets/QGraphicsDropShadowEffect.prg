@@ -42,7 +42,7 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsDropShadowEffect
+PROCEDURE destroyObject() CLASS QGraphicsDropShadowEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsDropShadowEffect ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGraphicsDropShadowEffect( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->blurRadius () );
+      RQREAL( obj->blurRadius() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,8 +135,8 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->color () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->color() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,8 +160,8 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->offset () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->offset() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->xOffset () );
+      RQREAL( obj->xOffset() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->yOffset () );
+      RQREAL( obj->yOffset() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,8 +233,8 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRectFor ( *PQRECTF(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBlurRadius ( PQREAL(1) );
+      obj->setBlurRadius( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,13 +300,13 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 /*
 void setOffset ( const QPointF & ofs )
 */
-void QGraphicsDropShadowEffect_setOffset1 ()
+void QGraphicsDropShadowEffect_setOffset1()
 {
   auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setOffset ( *PQPOINTF(1) );
+    obj->setOffset( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -315,13 +315,13 @@ void QGraphicsDropShadowEffect_setOffset1 ()
 /*
 void setOffset ( qreal dx, qreal dy )
 */
-void QGraphicsDropShadowEffect_setOffset2 ()
+void QGraphicsDropShadowEffect_setOffset2()
 {
   auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setOffset ( PQREAL(1), PQREAL(2) );
+    obj->setOffset( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -330,13 +330,13 @@ void QGraphicsDropShadowEffect_setOffset2 ()
 /*
 void setOffset ( qreal d )
 */
-void QGraphicsDropShadowEffect_setOffset3 ()
+void QGraphicsDropShadowEffect_setOffset3()
 {
   auto obj = (QGraphicsDropShadowEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setOffset ( PQREAL(1) );
+    obj->setOffset( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setXOffset ( PQREAL(1) );
+      obj->setXOffset( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setYOffset ( PQREAL(1) );
+      obj->setYOffset( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSDROPSHADOWEFFECT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

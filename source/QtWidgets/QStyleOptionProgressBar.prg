@@ -41,7 +41,7 @@ CLASS QStyleOptionProgressBar INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionProgressBar
+PROCEDURE destroyObject() CLASS QStyleOptionProgressBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,18 +67,18 @@ RETURN
 /*
 QStyleOptionProgressBar()
 */
-void QStyleOptionProgressBar_new1 ()
+void QStyleOptionProgressBar_new1()
 {
-  auto obj = new QStyleOptionProgressBar ();
+  auto obj = new QStyleOptionProgressBar();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
 */
-void QStyleOptionProgressBar_new2 ()
+void QStyleOptionProgressBar_new2()
 {
-  auto obj = new QStyleOptionProgressBar ( *PQSTYLEOPTIONPROGRESSBAR(1) );
+  auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MINIMUM )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->minimum  );
+      RINT( obj->minimum );
     }
     else
     {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMINIMUM )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->minimum = PINT(1);
+      obj->minimum= PINT(1);
     }
     else
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MAXIMUM )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->maximum  );
+      RINT( obj->maximum );
     }
     else
     {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->maximum = PINT(1);
+      obj->maximum= PINT(1);
     }
     else
     {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_PROGRESS )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->progress  );
+      RINT( obj->progress );
     }
     else
     {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETPROGRESS )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->progress = PINT(1);
+      obj->progress= PINT(1);
     }
     else
     {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->textAlignment  );
+      RENUM( obj->textAlignment );
     }
     else
     {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->textAlignment = (Qt::Alignment) hb_parni(1);
+      obj->textAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->textVisible  );
+      RBOOL( obj->textVisible );
     }
     else
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->textVisible = PBOOL(1);
+      obj->textVisible= PBOOL(1);
     }
     else
     {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_ORIENTATION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->orientation  );
+      RENUM( obj->orientation );
     }
     else
     {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETORIENTATION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->orientation = (Qt::Orientation) hb_parni(1);
+      obj->orientation= (Qt::Orientation) hb_parni(1);
     }
     else
     {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_INVERTEDAPPEARANCE )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->invertedAppearance  );
+      RBOOL( obj->invertedAppearance );
     }
     else
     {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETINVERTEDAPPEARANCE )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->invertedAppearance = PBOOL(1);
+      obj->invertedAppearance= PBOOL(1);
     }
     else
     {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_BOTTOMTOTOP )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->bottomToTop  );
+      RBOOL( obj->bottomToTop );
     }
     else
     {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETBOTTOMTOTOP )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->bottomToTop = PBOOL(1);
+      obj->bottomToTop= PBOOL(1);
     }
     else
     {

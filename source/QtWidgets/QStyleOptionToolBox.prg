@@ -32,7 +32,7 @@ CLASS QStyleOptionToolBox INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionToolBox
+PROCEDURE destroyObject() CLASS QStyleOptionToolBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QStyleOptionToolBox()
 */
-void QStyleOptionToolBox_new1 ()
+void QStyleOptionToolBox_new1()
 {
-  auto obj = new QStyleOptionToolBox ();
+  auto obj = new QStyleOptionToolBox();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStyleOptionToolBox(const QStyleOptionToolBox &other)
 */
-void QStyleOptionToolBox_new2 ()
+void QStyleOptionToolBox_new2()
 {
-  auto obj = new QStyleOptionToolBox ( *PQSTYLEOPTIONTOOLBOX(1) );
+  auto obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -146,8 +146,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      auto ptr = new QIcon( obj->icon  );
-      Qt5xHb::createReturnClass ( ptr, "QICON", true );
+      auto ptr = new QIcon( obj->icon );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->position  );
+      RENUM( obj->position );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->position = (QStyleOptionToolBox::TabPosition) hb_parni(1);
+      obj->position= (QStyleOptionToolBox::TabPosition) hb_parni(1);
     }
     else
     {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->selectedPosition  );
+      RENUM( obj->selectedPosition );
     }
     else
     {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->selectedPosition = (QStyleOptionToolBox::SelectedPosition) hb_parni(1);
+      obj->selectedPosition= (QStyleOptionToolBox::SelectedPosition) hb_parni(1);
     }
     else
     {

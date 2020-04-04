@@ -38,7 +38,7 @@ CLASS QStackedWidget INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStackedWidget
+PROCEDURE destroyObject() CLASS QStackedWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    auto obj = new QStackedWidget ( OPQWIDGET(1,nullptr) );
+    auto obj = new QStackedWidget( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->addWidget ( PQWIDGET(1) ) );
+      RINT( obj->addWidget( PQWIDGET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentIndex () );
+      RINT( obj->currentIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,8 +182,8 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->currentWidget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->currentWidget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf ( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      RINT( obj->insertWidget ( PINT(1), PQWIDGET(2) ) );
+      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeWidget ( PQWIDGET(1) );
+      obj->removeWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,8 +281,8 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget ( PINT(1) );
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( PINT(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex ( PINT(1) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setCurrentWidget ( PQWIDGET(1) );
+      obj->setCurrentWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ONCURRENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSTACKEDWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSTACKEDWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_ONWIDGETREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSTACKEDWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSTACKEDWIDGET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

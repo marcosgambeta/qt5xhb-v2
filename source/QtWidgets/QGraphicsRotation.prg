@@ -36,7 +36,7 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsRotation
+PROCEDURE destroyObject() CLASS QGraphicsRotation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsRotation ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGraphicsRotation( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->angle () );
+      RQREAL( obj->angle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVector3D( obj->axis () );
-      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
+      auto ptr = new QVector3D( obj->axis() );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVector3D( obj->origin () );
-      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
+      auto ptr = new QVector3D( obj->origin() );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAngle ( PQREAL(1) );
+      obj->setAngle( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,13 +195,13 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 /*
 void setAxis ( const QVector3D & axis )
 */
-void QGraphicsRotation_setAxis1 ()
+void QGraphicsRotation_setAxis1()
 {
   auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setAxis ( *PQVECTOR3D(1) );
+    obj->setAxis( *PQVECTOR3D(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -210,13 +210,13 @@ void QGraphicsRotation_setAxis1 ()
 /*
 void setAxis ( Qt::Axis axis )
 */
-void QGraphicsRotation_setAxis2 ()
+void QGraphicsRotation_setAxis2()
 {
   auto obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setAxis ( (Qt::Axis) hb_parni(1) );
+    obj->setAxis( (Qt::Axis) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setOrigin ( *PQVECTOR3D(1) );
+      obj->setOrigin( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
     {
 #endif
-      obj->applyTo ( PQMATRIX4X4(1) );
+      obj->applyTo( PQMATRIX4X4(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSROTATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSROTATION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
