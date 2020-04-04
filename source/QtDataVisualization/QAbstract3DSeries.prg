@@ -76,7 +76,7 @@ CLASS QAbstract3DSeries INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstract3DSeries
+PROCEDURE destroyObject() CLASS QAbstract3DSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->itemLabelFormat () );
+      RQSTRING( obj->itemLabelFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setItemLabelFormat ( PQSTRING(1) );
+      obj->setItemLabelFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->mesh () );
+      RENUM( obj->mesh() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMesh ( (QAbstract3DSeries::Mesh) hb_parni(1) );
+      obj->setMesh( (QAbstract3DSeries::Mesh) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMeshSmooth () );
+      RBOOL( obj->isMeshSmooth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMeshSmooth ( PBOOL(1) );
+      obj->setMeshSmooth( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,8 +387,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QQuaternion( obj->meshRotation () );
-      Qt5xHb::createReturnClass ( ptr, "QQUATERNION", true );
+      auto ptr = new QQuaternion( obj->meshRotation() );
+      Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
     if( ISNUMPAR(1) && ISQQUATERNION(1) )
     {
 #endif
-      obj->setMeshRotation ( *PQQUATERNION(1) );
+      obj->setMeshRotation( *PQQUATERNION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->userDefinedMesh () );
+      RQSTRING( obj->userDefinedMesh() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setUserDefinedMesh ( PQSTRING(1) );
+      obj->setUserDefinedMesh( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->colorStyle () );
+      RENUM( obj->colorStyle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColorStyle ( (Q3DTheme::ColorStyle) hb_parni(1) );
+      obj->setColorStyle( (Q3DTheme::ColorStyle) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,8 +550,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->baseColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->baseColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBaseColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBaseColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,8 +605,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLinearGradient( obj->baseGradient () );
-      Qt5xHb::createReturnClass ( ptr, "QLINEARGRADIENT", true );
+      auto ptr = new QLinearGradient( obj->baseGradient() );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
     if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
     {
 #endif
-      obj->setBaseGradient ( *PQLINEARGRADIENT(1) );
+      obj->setBaseGradient( *PQLINEARGRADIENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,8 +660,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->singleHighlightColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->singleHighlightColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setSingleHighlightColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setSingleHighlightColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -715,8 +715,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLinearGradient( obj->singleHighlightGradient () );
-      Qt5xHb::createReturnClass ( ptr, "QLINEARGRADIENT", true );
+      auto ptr = new QLinearGradient( obj->singleHighlightGradient() );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
     if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
     {
 #endif
-      obj->setSingleHighlightGradient ( *PQLINEARGRADIENT(1) );
+      obj->setSingleHighlightGradient( *PQLINEARGRADIENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -770,8 +770,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->multiHighlightColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->multiHighlightColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setMultiHighlightColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setMultiHighlightColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,8 +825,8 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLinearGradient( obj->multiHighlightGradient () );
-      Qt5xHb::createReturnClass ( ptr, "QLINEARGRADIENT", true );
+      auto ptr = new QLinearGradient( obj->multiHighlightGradient() );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
     if( ISNUMPAR(1) && ISQLINEARGRADIENT(1) )
     {
 #endif
-      obj->setMultiHighlightGradient ( *PQLINEARGRADIENT(1) );
+      obj->setMultiHighlightGradient( *PQLINEARGRADIENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->itemLabel () );
+      RQSTRING( obj->itemLabel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isItemLabelVisible () );
+      RBOOL( obj->isItemLabelVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setItemLabelVisible ( PBOOL(1) );
+      obj->setItemLabelVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
     if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISNUM(2) )
     {
 #endif
-      obj->setMeshAxisAndAngle ( *PQVECTOR3D(1), PFLOAT(2) );
+      obj->setMeshAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1516,7 +1516,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QQUATERNION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1582,7 +1582,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1648,7 +1648,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1780,7 +1780,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1846,7 +1846,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1912,7 +1912,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1978,7 +1978,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2044,7 +2044,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

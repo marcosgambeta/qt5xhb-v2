@@ -48,7 +48,7 @@ CLASS QCustom3DLabel INHERIT QCustom3DItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCustom3DLabel
+PROCEDURE destroyObject() CLASS QCustom3DLabel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,10 +80,10 @@ using namespace QtDataVisualization;
 /*
 explicit QCustom3DLabel(QObject *parent = nullptr)
 */
-void QCustom3DLabel_new1 ()
+void QCustom3DLabel_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DLabel ( OPQOBJECT(1,nullptr) );
+  auto obj = new QCustom3DLabel( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -91,10 +91,10 @@ void QCustom3DLabel_new1 ()
 /*
 explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
 */
-void QCustom3DLabel_new2 ()
+void QCustom3DLabel_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QCustom3DLabel ( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
+  auto obj = new QCustom3DLabel( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,8 +208,8 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->font () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,8 +263,8 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->textColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->textColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setTextColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setTextColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,8 +318,8 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->backgroundColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->backgroundColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBackgroundColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBackgroundColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBorderEnabled () );
+      RBOOL( obj->isBorderEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setBorderEnabled ( PBOOL(1) );
+      obj->setBorderEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBackgroundEnabled () );
+      RBOOL( obj->isBackgroundEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setBackgroundEnabled ( PBOOL(1) );
+      obj->setBackgroundEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFacingCamera () );
+      RBOOL( obj->isFacingCamera() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFacingCamera ( PBOOL(1) );
+      obj->setFacingCamera( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBACKGROUNDENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONBORDERENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFACINGCAMERACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ONTEXTCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCUSTOM3DLABEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DLABEL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

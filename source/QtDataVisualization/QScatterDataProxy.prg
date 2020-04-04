@@ -41,7 +41,7 @@ CLASS QScatterDataProxy INHERIT QAbstractDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScatterDataProxy
+PROCEDURE destroyObject() CLASS QScatterDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QScatterDataProxy ( OPQOBJECT(1,nullptr) );
+    auto obj = new QScatterDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -105,8 +105,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->itemCount () );
+      RINT( obj->itemCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,8 +159,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScatter3DSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSCATTER3DSERIES" );
+      QScatter3DSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSCATTER3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      const QScatterDataItem * ptr = obj->itemAt ( PINT(1) );
-      Qt5xHb::createReturnClass ( ptr, "QSCATTERDATAITEM", false );
+      const QScatterDataItem * ptr = obj->itemAt( PINT(1) );
+      Qt5xHb::createReturnClass( ptr, "QSCATTERDATAITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
-      obj->setItem ( PINT(1), *PQSCATTERDATAITEM(2) );
+      obj->setItem( PINT(1), *PQSCATTERDATAITEM(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
     if( ISNUMPAR(1) && ISQSCATTERDATAITEM(1) )
     {
 #endif
-      RINT( obj->addItem ( *PQSCATTERDATAITEM(1) ) );
+      RINT( obj->addItem( *PQSCATTERDATAITEM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
-      obj->insertItem ( PINT(1), *PQSCATTERDATAITEM(2) );
+      obj->insertItem( PINT(1), *PQSCATTERDATAITEM(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->removeItems ( PINT(1), PINT(2) );
+      obj->removeItems( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

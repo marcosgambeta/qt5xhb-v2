@@ -37,7 +37,7 @@ CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DInputHandler
+PROCEDURE destroyObject() CLASS Q3DInputHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new Q3DInputHandler ( OPQOBJECT(1,nullptr) );
+    auto obj = new Q3DInputHandler( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRotationEnabled () );
+      RBOOL( obj->isRotationEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setRotationEnabled ( PBOOL(1) );
+      obj->setRotationEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isZoomEnabled () );
+      RBOOL( obj->isZoomEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setZoomEnabled ( PBOOL(1) );
+      obj->setZoomEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSelectionEnabled () );
+      RBOOL( obj->isSelectionEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSelectionEnabled ( PBOOL(1) );
+      obj->setSelectionEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isZoomAtTargetEnabled () );
+      RBOOL( obj->isZoomAtTargetEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setZoomAtTargetEnabled ( PBOOL(1) );
+      obj->setZoomAtTargetEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONROTATIONENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONSELECTIONENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMATTARGETENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ONZOOMENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

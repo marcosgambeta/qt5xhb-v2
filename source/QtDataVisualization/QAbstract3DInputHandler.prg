@@ -35,7 +35,7 @@ CLASS QAbstract3DInputHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstract3DInputHandler
+PROCEDURE destroyObject() CLASS QAbstract3DInputHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->inputView () );
+      RENUM( obj->inputView() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInputView ( (QAbstract3DInputHandler::InputView) hb_parni(1) );
+      obj->setInputView( (QAbstract3DInputHandler::InputView) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->inputPosition () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->inputPosition() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      obj->setInputPosition ( *PQPOINT(1) );
+      obj->setInputPosition( *PQPOINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,8 +216,8 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DScene * ptr = obj->scene ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DSCENE" );
+      Q3DScene * ptr = obj->scene();
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
     if( ISNUMPAR(1) && ISQ3DSCENE(1) )
     {
 #endif
-      obj->setScene ( PQ3DSCENE(1) );
+      obj->setScene( PQ3DSCENE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONINPUTVIEWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_ONSCENECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DINPUTHANDLER" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "Q3DSCENE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

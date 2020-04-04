@@ -42,7 +42,7 @@ CLASS QSurfaceDataItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSurfaceDataItem
+PROCEDURE destroyObject() CLASS QSurfaceDataItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,10 +74,10 @@ using namespace QtDataVisualization;
 /*
 QSurfaceDataItem()
 */
-void QSurfaceDataItem_new1 ()
+void QSurfaceDataItem_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem ();
+  auto obj = new QSurfaceDataItem();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -85,10 +85,10 @@ void QSurfaceDataItem_new1 ()
 /*
 QSurfaceDataItem(const QVector3D &position)
 */
-void QSurfaceDataItem_new2 ()
+void QSurfaceDataItem_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem ( *PQVECTOR3D(1) );
+  auto obj = new QSurfaceDataItem( *PQVECTOR3D(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -96,10 +96,10 @@ void QSurfaceDataItem_new2 ()
 /*
 QSurfaceDataItem(const QSurfaceDataItem &other)
 */
-void QSurfaceDataItem_new3 ()
+void QSurfaceDataItem_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QSurfaceDataItem ( *PQSURFACEDATAITEM(1) );
+  auto obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setPosition ( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,8 +192,8 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVector3D( obj->position () );
-      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
+      auto ptr = new QVector3D( obj->position() );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PFLOAT(1) );
+      obj->setX( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PFLOAT(1) );
+      obj->setY( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETZ )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZ ( PFLOAT(1) );
+      obj->setZ( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->x () );
+      RFLOAT( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->y () );
+      RFLOAT( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->z () );
+      RFLOAT( obj->z() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -32,7 +32,7 @@ CLASS Q3DObject INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DObject
+PROCEDURE destroyObject() CLASS Q3DObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new Q3DObject ( OPQOBJECT(1,nullptr) );
+    auto obj = new Q3DObject( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -120,8 +120,8 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DScene * ptr = obj->parentScene ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DSCENE" );
+      Q3DScene * ptr = obj->parentScene();
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,8 +147,8 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVector3D( obj->position () );
-      Qt5xHb::createReturnClass ( ptr, "QVECTOR3D", true );
+      auto ptr = new QVector3D( obj->position() );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setPosition ( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
     if( ISNUMPAR(1) && ISQ3DOBJECT(1) )
     {
 #endif
-      obj->copyValuesFrom ( *PQ3DOBJECT(1) );
+      obj->copyValuesFrom( *PQ3DOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( Q3DOBJECT_ONPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DOBJECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DOBJECT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVECTOR3D" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

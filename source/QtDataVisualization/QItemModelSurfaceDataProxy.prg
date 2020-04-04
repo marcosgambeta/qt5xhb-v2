@@ -96,7 +96,7 @@ CLASS QItemModelSurfaceDataProxy INHERIT QSurfaceDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemModelSurfaceDataProxy
+PROCEDURE destroyObject() CLASS QItemModelSurfaceDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -128,10 +128,10 @@ using namespace QtDataVisualization;
 /*
 explicit QItemModelSurfaceDataProxy(QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new1 ()
+void QItemModelSurfaceDataProxy_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -139,10 +139,10 @@ void QItemModelSurfaceDataProxy_new1 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new2 ()
+void QItemModelSurfaceDataProxy_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -150,10 +150,10 @@ void QItemModelSurfaceDataProxy_new2 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &yPosRole, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new3 ()
+void QItemModelSurfaceDataProxy_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -161,10 +161,10 @@ void QItemModelSurfaceDataProxy_new3 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new4 ()
+void QItemModelSurfaceDataProxy_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -172,10 +172,10 @@ void QItemModelSurfaceDataProxy_new4 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new5 ()
+void QItemModelSurfaceDataProxy_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), OPQOBJECT(7,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -183,10 +183,10 @@ void QItemModelSurfaceDataProxy_new5 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &yPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new6 ()
+void QItemModelSurfaceDataProxy_new6()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -194,10 +194,10 @@ void QItemModelSurfaceDataProxy_new6 ()
 /*
 explicit QItemModelSurfaceDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 */
-void QItemModelSurfaceDataProxy_new7 ()
+void QItemModelSurfaceDataProxy_new7()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QItemModelSurfaceDataProxy ( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,nullptr) );
+  auto obj = new QItemModelSurfaceDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRING(6), PQSTRINGLIST(7), PQSTRINGLIST(8), OPQOBJECT(9,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -282,8 +282,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ITEMMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->itemModel ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->itemModel();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETITEMMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setItemModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setItemModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->rowRole () );
+      RQSTRING( obj->rowRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setRowRole ( PQSTRING(1) );
+      obj->setRowRole( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->columnRole () );
+      RQSTRING( obj->columnRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setColumnRole ( PQSTRING(1) );
+      obj->setColumnRole( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->xPosRole () );
+      RQSTRING( obj->xPosRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setXPosRole ( PQSTRING(1) );
+      obj->setXPosRole( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->yPosRole () );
+      RQSTRING( obj->yPosRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setYPosRole ( PQSTRING(1) );
+      obj->setYPosRole( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->zPosRole () );
+      RQSTRING( obj->zPosRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setZPosRole ( PQSTRING(1) );
+      obj->setZPosRole( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->rowCategories () );
+      RQSTRINGLIST( obj->rowCategories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWCATEGORIES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setRowCategories ( PQSTRINGLIST(1) );
+      obj->setRowCategories( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->columnCategories () );
+      RQSTRINGLIST( obj->columnCategories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNCATEGORIES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setColumnCategories ( PQSTRINGLIST(1) );
+      obj->setColumnCategories( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_USEMODELCATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->useModelCategories () );
+      RBOOL( obj->useModelCategories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETUSEMODELCATEGORIES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setUseModelCategories ( PBOOL(1) );
+      obj->setUseModelCategories( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOROWCATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoRowCategories () );
+      RBOOL( obj->autoRowCategories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOROWCATEGORIES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoRowCategories ( PBOOL(1) );
+      obj->setAutoRowCategories( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_AUTOCOLUMNCATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoColumnCategories () );
+      RBOOL( obj->autoColumnCategories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETAUTOCOLUMNCATEGORIES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoColumnCategories ( PBOOL(1) );
+      obj->setAutoColumnCategories( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,8 +877,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegExp( obj->rowRolePattern () );
-      Qt5xHb::createReturnClass ( ptr, "QREGEXP", true );
+      auto ptr = new QRegExp( obj->rowRolePattern() );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEPATTERN )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setRowRolePattern ( *PQREGEXP(1) );
+      obj->setRowRolePattern( *PQREGEXP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -932,8 +932,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegExp( obj->columnRolePattern () );
-      Qt5xHb::createReturnClass ( ptr, "QREGEXP", true );
+      auto ptr = new QRegExp( obj->columnRolePattern() );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -959,7 +959,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEPATTERN )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setColumnRolePattern ( *PQREGEXP(1) );
+      obj->setColumnRolePattern( *PQREGEXP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -987,8 +987,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegExp( obj->xPosRolePattern () );
-      Qt5xHb::createReturnClass ( ptr, "QREGEXP", true );
+      auto ptr = new QRegExp( obj->xPosRolePattern() );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEPATTERN )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setXPosRolePattern ( *PQREGEXP(1) );
+      obj->setXPosRolePattern( *PQREGEXP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1042,8 +1042,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegExp( obj->yPosRolePattern () );
-      Qt5xHb::createReturnClass ( ptr, "QREGEXP", true );
+      auto ptr = new QRegExp( obj->yPosRolePattern() );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEPATTERN )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setYPosRolePattern ( *PQREGEXP(1) );
+      obj->setYPosRolePattern( *PQREGEXP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1097,8 +1097,8 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEPATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRegExp( obj->zPosRolePattern () );
-      Qt5xHb::createReturnClass ( ptr, "QREGEXP", true );
+      auto ptr = new QRegExp( obj->zPosRolePattern() );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEPATTERN )
     if( ISNUMPAR(1) && ISQREGEXP(1) )
     {
 #endif
-      obj->setZPosRolePattern ( *PQREGEXP(1) );
+      obj->setZPosRolePattern( *PQREGEXP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWROLEREPLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->rowRoleReplace () );
+      RQSTRING( obj->rowRoleReplace() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETROWROLEREPLACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setRowRoleReplace ( PQSTRING(1) );
+      obj->setRowRoleReplace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1206,7 +1206,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNROLEREPLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->columnRoleReplace () );
+      RQSTRING( obj->columnRoleReplace() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETCOLUMNROLEREPLACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setColumnRoleReplace ( PQSTRING(1) );
+      obj->setColumnRoleReplace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_XPOSROLEREPLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->xPosRoleReplace () );
+      RQSTRING( obj->xPosRoleReplace() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETXPOSROLEREPLACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setXPosRoleReplace ( PQSTRING(1) );
+      obj->setXPosRoleReplace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_YPOSROLEREPLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->yPosRoleReplace () );
+      RQSTRING( obj->yPosRoleReplace() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1340,7 +1340,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETYPOSROLEREPLACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setYPosRoleReplace ( PQSTRING(1) );
+      obj->setYPosRoleReplace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ZPOSROLEREPLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->zPosRoleReplace () );
+      RQSTRING( obj->zPosRoleReplace() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETZPOSROLEREPLACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setZPosRoleReplace ( PQSTRING(1) );
+      obj->setZPosRoleReplace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_MULTIMATCHBEHAVIOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->multiMatchBehavior () );
+      RENUM( obj->multiMatchBehavior() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_SETMULTIMATCHBEHAVIOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMultiMatchBehavior ( (QItemModelSurfaceDataProxy::MultiMatchBehavior) hb_parni(1) );
+      obj->setMultiMatchBehavior( (QItemModelSurfaceDataProxy::MultiMatchBehavior) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_REMAP )
     if( ISNUMPAR(7) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) && ISCHAR(5) && ISARRAY(6) && ISARRAY(7) )
     {
 #endif
-      obj->remap ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7) );
+      obj->remap( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ROWCATEGORYINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RINT( obj->rowCategoryIndex ( PQSTRING(1) ) );
+      RINT( obj->rowCategoryIndex( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_COLUMNCATEGORYINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RINT( obj->columnCategoryIndex ( PQSTRING(1) ) );
+      RINT( obj->columnCategoryIndex( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1634,7 +1634,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1700,7 +1700,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1764,7 +1764,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1830,7 +1830,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1896,7 +1896,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1962,7 +1962,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONITEMMODELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2028,7 +2028,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2094,7 +2094,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2158,7 +2158,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2224,7 +2224,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEPATTERNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2290,7 +2290,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONROWROLEREPLACECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2356,7 +2356,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2422,7 +2422,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2488,7 +2488,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2554,7 +2554,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONXPOSROLEREPLACECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2620,7 +2620,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2686,7 +2686,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2752,7 +2752,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONYPOSROLEREPLACECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2818,7 +2818,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2884,7 +2884,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2950,7 +2950,7 @@ HB_FUNC_STATIC( QITEMMODELSURFACEDATAPROXY_ONZPOSROLEREPLACECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -61,7 +61,7 @@ CLASS Q3DScene INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DScene
+PROCEDURE destroyObject() CLASS Q3DScene
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( Q3DSCENE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new Q3DScene ( OPQOBJECT(1,nullptr) );
+    auto obj = new Q3DScene( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( Q3DSCENE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -147,8 +147,8 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->viewport () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->viewport() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,8 +174,8 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->primarySubViewport () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->primarySubViewport() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setPrimarySubViewport ( *PQRECT(1) );
+      obj->setPrimarySubViewport( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->secondarySubViewport () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->secondarySubViewport() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setSecondarySubViewport ( *PQRECT(1) );
+      obj->setSecondarySubViewport( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,8 +284,8 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->selectionQueryPosition () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->selectionQueryPosition() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      obj->setSelectionQueryPosition ( *PQPOINT(1) );
+      obj->setSelectionQueryPosition( *PQPOINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSecondarySubviewOnTop () );
+      RBOOL( obj->isSecondarySubviewOnTop() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSecondarySubviewOnTop ( PBOOL(1) );
+      obj->setSecondarySubviewOnTop( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSlicingActive () );
+      RBOOL( obj->isSlicingActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSlicingActive ( PBOOL(1) );
+      obj->setSlicingActive( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,8 +447,8 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DCamera * ptr = obj->activeCamera ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DCAMERA" );
+      Q3DCamera * ptr = obj->activeCamera();
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DCAMERA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
     if( ISNUMPAR(1) && ISQ3DCAMERA(1) )
     {
 #endif
-      obj->setActiveCamera ( PQ3DCAMERA(1) );
+      obj->setActiveCamera( PQ3DCAMERA(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,8 +502,8 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      Q3DLight * ptr = obj->activeLight ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "Q3DLIGHT" );
+      Q3DLight * ptr = obj->activeLight();
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DLIGHT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
     if( ISNUMPAR(1) && ISQ3DLIGHT(1) )
     {
 #endif
-      obj->setActiveLight ( PQ3DLIGHT(1) );
+      obj->setActiveLight( PQ3DLIGHT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->devicePixelRatio () );
+      RFLOAT( obj->devicePixelRatio() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDevicePixelRatio ( PFLOAT(1) );
+      obj->setDevicePixelRatio( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,8 +611,8 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->graphPositionQuery () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->graphPositionQuery() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      obj->setGraphPositionQuery ( *PQPOINT(1) );
+      obj->setGraphPositionQuery( *PQPOINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RBOOL( obj->isPointInPrimarySubView ( *PQPOINT(1) ) );
+      RBOOL( obj->isPointInPrimarySubView( *PQPOINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RBOOL( obj->isPointInSecondarySubView ( *PQPOINT(1) ) );
+      RBOOL( obj->isPointInSecondarySubView( *PQPOINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,8 +714,8 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
   if( ISNUMPAR(0) )
   {
 #endif
-    auto ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
-    Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+    auto ptr = new QPoint( Q3DScene::invalidSelectionPoint() );
+    Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVECAMERACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "Q3DCAMERA" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONACTIVELIGHTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "Q3DLIGHT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONDEVICEPIXELRATIOCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONGRAPHPOSITIONQUERYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONPRIMARYSUBVIEWPORTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWONTOPCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSECONDARYSUBVIEWPORTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSELECTIONQUERYPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONSLICINGACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( Q3DSCENE_ONVIEWPORTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSCENE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSCENE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QRECT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -45,7 +45,7 @@ CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHeightMapSurfaceDataProxy
+PROCEDURE destroyObject() CLASS QHeightMapSurfaceDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,10 +77,10 @@ using namespace QtDataVisualization;
 /*
 explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
 */
-void QHeightMapSurfaceDataProxy_new1 ()
+void QHeightMapSurfaceDataProxy_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
+  auto obj = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -88,10 +88,10 @@ void QHeightMapSurfaceDataProxy_new1 ()
 /*
 explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
 */
-void QHeightMapSurfaceDataProxy_new2 ()
+void QHeightMapSurfaceDataProxy_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -99,10 +99,10 @@ void QHeightMapSurfaceDataProxy_new2 ()
 /*
 explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
 */
-void QHeightMapSurfaceDataProxy_new3 ()
+void QHeightMapSurfaceDataProxy_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -171,8 +171,8 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QImage( obj->heightMap () );
-      Qt5xHb::createReturnClass ( ptr, "QIMAGE", true );
+      auto ptr = new QImage( obj->heightMap() );
+      Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      obj->setHeightMap ( *PQIMAGE(1) );
+      obj->setHeightMap( *PQIMAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->heightMapFile () );
+      RQSTRING( obj->heightMapFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setHeightMapFile ( PQSTRING(1) );
+      obj->setHeightMapFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->minXValue () );
+      RFLOAT( obj->minXValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinXValue ( PFLOAT(1) );
+      obj->setMinXValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->maxXValue () );
+      RFLOAT( obj->maxXValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxXValue ( PFLOAT(1) );
+      obj->setMaxXValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->minZValue () );
+      RFLOAT( obj->minZValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinZValue ( PFLOAT(1) );
+      obj->setMinZValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->maxZValue () );
+      RFLOAT( obj->maxZValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxZValue ( PFLOAT(1) );
+      obj->setMaxZValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->setValueRanges ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+      obj->setValueRanges( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QIMAGE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -47,7 +47,7 @@ CLASS Q3DSurface INHERIT QAbstract3DGraph
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DSurface
+PROCEDURE destroyObject() CLASS Q3DSurface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( Q3DSURFACE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
-    auto obj = new Q3DSurface ( ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
+    auto obj = new Q3DSurface( ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisX ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+      QValue3DAxis * ptr = obj->axisX();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->setAxisX ( PQVALUE3DAXIS(1) );
+      obj->setAxisX( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,8 +185,8 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisY ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+      QValue3DAxis * ptr = obj->axisY();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->setAxisY ( PQVALUE3DAXIS(1) );
+      obj->setAxisY( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,8 +240,8 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->axisZ ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+      QValue3DAxis * ptr = obj->axisZ();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->setAxisZ ( PQVALUE3DAXIS(1) );
+      obj->setAxisZ( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,8 +295,8 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface3DSeries * ptr = obj->selectedSeries ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSURFACE3DSERIES" );
+      QSurface3DSeries * ptr = obj->selectedSeries();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSURFACE3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->flipHorizontalGrid () );
+      RBOOL( obj->flipHorizontalGrid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFlipHorizontalGrid ( PBOOL(1) );
+      obj->setFlipHorizontalGrid( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
     {
 #endif
-      obj->addSeries ( PQSURFACE3DSERIES(1) );
+      obj->addSeries( PQSURFACE3DSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
     {
 #endif
-      obj->removeSeries ( PQSURFACE3DSERIES(1) );
+      obj->removeSeries( PQSURFACE3DSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSurface3DSeries *> list = obj->seriesList ();
+      QList<QSurface3DSeries *> list = obj->seriesList();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSURFACE3DSERIES" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->addAxis ( PQVALUE3DAXIS(1) );
+      obj->addAxis( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->releaseAxis ( PQVALUE3DAXIS(1) );
+      obj->releaseAxis( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QValue3DAxis *> list = obj->axes ();
+      QList<QValue3DAxis *> list = obj->axes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVALUE3DAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONAXISZCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONFLIPHORIZONTALGRIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ONSELECTEDSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -66,7 +66,7 @@ CLASS Q3DBars INHERIT QAbstract3DGraph
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DBars
+PROCEDURE destroyObject() CLASS Q3DBars
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( Q3DBARS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
   {
-    auto obj = new Q3DBars ( ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
+    auto obj = new Q3DBars( ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMultiSeriesUniform () );
+      RBOOL( obj->isMultiSeriesUniform() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMultiSeriesUniform ( PBOOL(1) );
+      obj->setMultiSeriesUniform( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->barThickness () );
+      RFLOAT( obj->barThickness() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBarThickness ( PFLOAT(1) );
+      obj->setBarThickness( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,8 +257,8 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSizeF( obj->barSpacing () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
+      auto ptr = new QSizeF( obj->barSpacing() );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      obj->setBarSpacing ( *PQSIZEF(1) );
+      obj->setBarSpacing( *PQSIZEF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBarSpacingRelative () );
+      RBOOL( obj->isBarSpacingRelative() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setBarSpacingRelative ( PBOOL(1) );
+      obj->setBarSpacingRelative( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,8 +366,8 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCategory3DAxis * ptr = obj->rowAxis ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QCATEGORY3DAXIS" );
+      QCategory3DAxis * ptr = obj->rowAxis();
+      Qt5xHb::createReturnQObjectClass( ptr, "QCATEGORY3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
     {
 #endif
-      obj->setRowAxis ( PQCATEGORY3DAXIS(1) );
+      obj->setRowAxis( PQCATEGORY3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,8 +421,8 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCategory3DAxis * ptr = obj->columnAxis ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QCATEGORY3DAXIS" );
+      QCategory3DAxis * ptr = obj->columnAxis();
+      Qt5xHb::createReturnQObjectClass( ptr, "QCATEGORY3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
     if( ISNUMPAR(1) && ISQCATEGORY3DAXIS(1) )
     {
 #endif
-      obj->setColumnAxis ( PQCATEGORY3DAXIS(1) );
+      obj->setColumnAxis( PQCATEGORY3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,8 +476,8 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QValue3DAxis * ptr = obj->valueAxis ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+      QValue3DAxis * ptr = obj->valueAxis();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVALUE3DAXIS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
 #endif
-      obj->setValueAxis ( PQVALUE3DAXIS(1) );
+      obj->setValueAxis( PQVALUE3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,8 +531,8 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBar3DSeries * ptr = obj->primarySeries ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QBAR3DSERIES" );
+      QBar3DSeries * ptr = obj->primarySeries();
+      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
     {
 #endif
-      obj->setPrimarySeries ( PQBAR3DSERIES(1) );
+      obj->setPrimarySeries( PQBAR3DSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,8 +586,8 @@ HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBar3DSeries * ptr = obj->selectedSeries ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QBAR3DSERIES" );
+      QBar3DSeries * ptr = obj->selectedSeries();
+      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->floorLevel () );
+      RFLOAT( obj->floorLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFloorLevel ( PFLOAT(1) );
+      obj->setFloorLevel( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
     {
 #endif
-      obj->addSeries ( PQBAR3DSERIES(1) );
+      obj->addSeries( PQBAR3DSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
     if( ISNUMPAR(1) && ISQBAR3DSERIES(1) )
     {
 #endif
-      obj->removeSeries ( PQBAR3DSERIES(1) );
+      obj->removeSeries( PQBAR3DSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
     if( ISNUMPAR(2) && ISNUM(1) && ISQBAR3DSERIES(2) )
     {
 #endif
-      obj->insertSeries ( PINT(1), PQBAR3DSERIES(2) );
+      obj->insertSeries( PINT(1), PQBAR3DSERIES(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBar3DSeries *> list = obj->seriesList ();
+      QList<QBar3DSeries *> list = obj->seriesList();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBAR3DSERIES" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
     {
 #endif
-      obj->addAxis ( PQABSTRACT3DAXIS(1) );
+      obj->addAxis( PQABSTRACT3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
     if( ISNUMPAR(1) && ISQABSTRACT3DAXIS(1) )
     {
 #endif
-      obj->releaseAxis ( PQABSTRACT3DAXIS(1) );
+      obj->releaseAxis( PQABSTRACT3DAXIS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( Q3DBARS_AXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAbstract3DAxis *> list = obj->axes ();
+      QList<QAbstract3DAxis *> list = obj->axes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACT3DAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( Q3DBARS_ONMULTISERIESUNIFORMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARTHICKNESSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSIZEF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( Q3DBARS_ONBARSPACINGRELATIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( Q3DBARS_ONROWAXISCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC( Q3DBARS_ONCOLUMNAXISCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCATEGORY3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( Q3DBARS_ONVALUEAXISCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QVALUE3DAXIS" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC( Q3DBARS_ONPRIMARYSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC( Q3DBARS_ONSELECTEDSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBAR3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1513,7 +1513,7 @@ HB_FUNC_STATIC( Q3DBARS_ONFLOORLEVELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "Q3DBARS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "Q3DBARS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

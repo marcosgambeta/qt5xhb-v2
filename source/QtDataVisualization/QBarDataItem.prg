@@ -37,7 +37,7 @@ CLASS QBarDataItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBarDataItem
+PROCEDURE destroyObject() CLASS QBarDataItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,10 +69,10 @@ using namespace QtDataVisualization;
 /*
 QBarDataItem()
 */
-void QBarDataItem_new1 ()
+void QBarDataItem_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem ();
+  auto obj = new QBarDataItem();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -80,10 +80,10 @@ void QBarDataItem_new1 ()
 /*
 QBarDataItem(float value)
 */
-void QBarDataItem_new2 ()
+void QBarDataItem_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem ( PFLOAT(1) );
+  auto obj = new QBarDataItem( PFLOAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -91,10 +91,10 @@ void QBarDataItem_new2 ()
 /*
 QBarDataItem(float value, float angle)
 */
-void QBarDataItem_new3 ()
+void QBarDataItem_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem ( PFLOAT(1), PFLOAT(2) );
+  auto obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -102,10 +102,10 @@ void QBarDataItem_new3 ()
 /*
 QBarDataItem(const QBarDataItem &other)
 */
-void QBarDataItem_new4 ()
+void QBarDataItem_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBarDataItem ( *PQBARDATAITEM(1) );
+  auto obj = new QBarDataItem( *PQBARDATAITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValue ( PFLOAT(1) );
+      obj->setValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->value () );
+      RFLOAT( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRotation ( PFLOAT(1) );
+      obj->setRotation( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->rotation () );
+      RFLOAT( obj->rotation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

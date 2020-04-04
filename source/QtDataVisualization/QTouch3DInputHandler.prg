@@ -25,7 +25,7 @@ CLASS QTouch3DInputHandler INHERIT Q3DInputHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTouch3DInputHandler
+PROCEDURE destroyObject() CLASS QTouch3DInputHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QTouch3DInputHandler ( OPQOBJECT(1,nullptr) );
+    auto obj = new QTouch3DInputHandler( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
     if( ISNUMPAR(1) && ISQTOUCHEVENT(1) )
     {
 #endif
-      obj->touchEvent ( PQTOUCHEVENT(1) );
+      obj->touchEvent( PQTOUCHEVENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

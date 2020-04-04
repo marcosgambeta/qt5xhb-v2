@@ -34,7 +34,7 @@ CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLogValue3DAxisFormatter
+PROCEDURE destroyObject() CLASS QLogValue3DAxisFormatter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QLogValue3DAxisFormatter ( OPQOBJECT(1,nullptr) );
+    auto obj = new QLogValue3DAxisFormatter( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->base () );
+      RQREAL( obj->base() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBase ( PQREAL(1) );
+      obj->setBase( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoSubGrid () );
+      RBOOL( obj->autoSubGrid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoSubGrid ( PBOOL(1) );
+      obj->setAutoSubGrid( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->showEdgeLabels () );
+      RBOOL( obj->showEdgeLabels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setShowEdgeLabels ( PBOOL(1) );
+      obj->setShowEdgeLabels( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONBASECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONSHOWEDGELABELSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUE3DAXISFORMATTER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

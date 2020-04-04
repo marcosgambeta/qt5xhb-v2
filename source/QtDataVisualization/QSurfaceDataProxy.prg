@@ -42,7 +42,7 @@ CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSurfaceDataProxy
+PROCEDURE destroyObject() CLASS QSurfaceDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QSurfaceDataProxy ( OPQOBJECT(1,nullptr) );
+    auto obj = new QSurfaceDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowCount () );
+      RINT( obj->rowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,8 +186,8 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface3DSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSURFACE3DSERIES" );
+      QSurface3DSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSURFACE3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,15 +206,15 @@ const QSurfaceDataArray *array() const
 /*
 const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 */
-void QSurfaceDataProxy_itemAt1 ()
+void QSurfaceDataProxy_itemAt1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-    Qt5xHb::createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+    Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
 }
@@ -222,15 +222,15 @@ void QSurfaceDataProxy_itemAt1 ()
 /*
 const QSurfaceDataItem *itemAt(const QPoint &position) const
 */
-void QSurfaceDataProxy_itemAt2 ()
+void QSurfaceDataProxy_itemAt2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
-    Qt5xHb::createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+    Qt5xHb::createReturnClass( ptr, "QSURFACEDATAITEM", false );
   }
 #endif
 }
@@ -269,14 +269,14 @@ void setRows(int rowIndex, const QSurfaceDataArray &rows)
 /*
 void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
 */
-void QSurfaceDataProxy_setItem1 ()
+void QSurfaceDataProxy_setItem1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
+    obj->setItem( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -286,14 +286,14 @@ void QSurfaceDataProxy_setItem1 ()
 /*
 void setItem(const QPoint &position, const QSurfaceDataItem &item)
 */
-void QSurfaceDataProxy_setItem2 ()
+void QSurfaceDataProxy_setItem2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
+    obj->setItem( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->removeRows ( PINT(1), PINT(2) );
+      obj->removeRows( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONARRAYRESET )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONCOLUMNCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSINSERTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONROWSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ONSERIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSURFACE3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

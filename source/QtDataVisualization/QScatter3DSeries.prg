@@ -36,7 +36,7 @@ CLASS QScatter3DSeries INHERIT QAbstract3DSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScatter3DSeries
+PROCEDURE destroyObject() CLASS QScatter3DSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,10 +69,10 @@ using namespace QtDataVisualization;
 /*
 explicit QScatter3DSeries(QObject *parent = nullptr)
 */
-void QScatter3DSeries_new1 ()
+void QScatter3DSeries_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QScatter3DSeries ( OPQOBJECT(1,nullptr) );
+  auto obj = new QScatter3DSeries( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -80,10 +80,10 @@ void QScatter3DSeries_new1 ()
 /*
 explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
 */
-void QScatter3DSeries_new2 ()
+void QScatter3DSeries_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QScatter3DSeries( PQSCATTERDATAPROXY(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -149,8 +149,8 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScatterDataProxy * ptr = obj->dataProxy ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSCATTERDATAPROXY" );
+      QScatterDataProxy * ptr = obj->dataProxy();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSCATTERDATAPROXY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
     if( ISNUMPAR(1) && ISQSCATTERDATAPROXY(1) )
     {
 #endif
-      obj->setDataProxy ( PQSCATTERDATAPROXY(1) );
+      obj->setDataProxy( PQSCATTERDATAPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedItem () );
+      RINT( obj->selectedItem() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSelectedItem ( PINT(1) );
+      obj->setSelectedItem( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->itemSize () );
+      RFLOAT( obj->itemSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setItemSize ( PFLOAT(1) );
+      obj->setItemSize( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QScatter3DSeries::invalidSelectionIndex () );
+    RINT( QScatter3DSeries::invalidSelectionIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTER3DSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSCATTERDATAPROXY" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONITEMSIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTER3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ONSELECTEDITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSCATTER3DSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTER3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
