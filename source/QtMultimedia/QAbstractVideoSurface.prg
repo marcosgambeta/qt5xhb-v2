@@ -39,7 +39,7 @@ CLASS QAbstractVideoSurface INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractVideoSurface
+PROCEDURE destroyObject() CLASS QAbstractVideoSurface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NATIVERESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->nativeResolution () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->nativeResolution() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      RBOOL( obj->isFormatSupported ( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL( obj->isFormatSupported( *PQVIDEOSURFACEFORMAT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,8 +201,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      auto ptr = new QVideoSurfaceFormat( obj->nearestFormat ( *PQVIDEOSURFACEFORMAT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+      auto ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
     if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
     {
 #endif
-      RBOOL( obj->present ( *PQVIDEOFRAME(1) ) );
+      RBOOL( obj->present( *PQVIDEOFRAME(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      RBOOL( obj->start ( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL( obj->start( *PQVIDEOSURFACEFORMAT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,8 +300,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVideoSurfaceFormat( obj->surfaceFormat () );
-      Qt5xHb::createReturnClass ( ptr, "QVIDEOSURFACEFORMAT", true );
+      auto ptr = new QVideoSurfaceFormat( obj->surfaceFormat() );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVIDEOSURFACEFORMAT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONNATIVERESOLUTIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTVIDEOSURFACE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSIZE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

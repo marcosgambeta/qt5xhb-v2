@@ -26,7 +26,7 @@ CLASS QMediaAudioProbeControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaAudioProbeControl
+PROCEDURE destroyObject() CLASS QMediaAudioProbeControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONAUDIOBUFFERPROBED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QAUDIOBUFFER" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_ONFLUSH )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIAAUDIOPROBECONTROL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

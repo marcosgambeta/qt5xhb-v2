@@ -32,7 +32,7 @@ CLASS QAudioRecorder INHERIT QMediaRecorder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioRecorder
+PROCEDURE destroyObject() CLASS QAudioRecorder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QAudioRecorder ( OPQOBJECT(1,nullptr) );
+    auto obj = new QAudioRecorder( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->audioInput () );
+      RQSTRING( obj->audioInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setAudioInput ( PQSTRING(1) );
+      obj->setAudioInput( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->audioInputDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->audioInputDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->audioInputs () );
+      RQSTRINGLIST( obj->audioInputs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultAudioInput () );
+      RQSTRING( obj->defaultAudioInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIORECORDER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIORECORDER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_ONAVAILABLEAUDIOINPUTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIORECORDER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIORECORDER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

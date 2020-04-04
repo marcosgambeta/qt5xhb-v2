@@ -28,7 +28,7 @@ CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaNetworkAccessControl
+PROCEDURE destroyObject() CLASS QMediaNetworkAccessControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QNetworkConfiguration( obj->currentConfiguration () );
-      Qt5xHb::createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+      auto ptr = new QNetworkConfiguration( obj->currentConfiguration() );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
       {
         par1 << *(QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setConfigurations ( par1 );
+      obj->setConfigurations( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIANETWORKACCESSCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIANETWORKACCESSCONTROL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCONFIGURATION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

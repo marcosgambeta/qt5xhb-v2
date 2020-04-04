@@ -42,7 +42,7 @@ CLASS QAudioBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioBuffer
+PROCEDURE destroyObject() CLASS QAudioBuffer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,9 +68,9 @@ RETURN
 /*
 QAudioBuffer()
 */
-void QAudioBuffer_new1 ()
+void QAudioBuffer_new1()
 {
-  auto obj = new QAudioBuffer ();
+  auto obj = new QAudioBuffer();
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -81,27 +81,27 @@ QAudioBuffer(QAbstractAudioBuffer *provider)
 /*
 QAudioBuffer(const QAudioBuffer & other)
 */
-void QAudioBuffer_new2 ()
+void QAudioBuffer_new2()
 {
-  auto obj = new QAudioBuffer ( *PQAUDIOBUFFER(1) );
+  auto obj = new QAudioBuffer( *PQAUDIOBUFFER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
 */
-void QAudioBuffer_new3 ()
+void QAudioBuffer_new3()
 {
-  auto obj = new QAudioBuffer ( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+  auto obj = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 */
-void QAudioBuffer_new4 ()
+void QAudioBuffer_new4()
 {
-  auto obj = new QAudioBuffer ( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+  auto obj = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->byteCount () );
+      RINT( obj->byteCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->data () );
+      hb_retptr( (void *) obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->duration () );
+      RQINT64( obj->duration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QAudioFormat( obj->format () );
-      Qt5xHb::createReturnClass ( ptr, "QAUDIOFORMAT", true );
+      auto ptr = new QAudioFormat( obj->format() );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->frameCount () );
+      RINT( obj->frameCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->sampleCount () );
+      RINT( obj->sampleCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->startTime () );
+      RQINT64( obj->startTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

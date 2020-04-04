@@ -32,7 +32,7 @@ CLASS QMediaStreamsControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaStreamsControl
+PROCEDURE destroyObject() CLASS QMediaStreamsControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isActive ( PINT(1) ) );
+      RBOOL( obj->isActive( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      auto ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->metaData( PINT(1), PQSTRING(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setActive ( PINT(1), PBOOL(2) );
+      obj->setActive( PINT(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->streamCount () );
+      RINT( obj->streamCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->streamType ( PINT(1) ) );
+      RENUM( obj->streamType( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONSTREAMSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIASTREAMSCONTROL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

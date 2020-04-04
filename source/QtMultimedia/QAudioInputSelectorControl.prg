@@ -31,7 +31,7 @@ CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioInputSelectorControl
+PROCEDURE destroyObject() CLASS QAudioInputSelectorControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->activeInput () );
+      RQSTRING( obj->activeInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QString> list = obj->availableInputs ();
+      QList<QString> list = obj->availableInputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultInput () );
+      RQSTRING( obj->defaultInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->inputDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->inputDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setActiveInput ( PQSTRING(1) );
+      obj->setActiveInput( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIOINPUTSELECTORCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIOINPUTSELECTORCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONAVAILABLEINPUTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIOINPUTSELECTORCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIOINPUTSELECTORCONTROL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

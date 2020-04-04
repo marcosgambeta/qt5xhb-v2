@@ -52,7 +52,7 @@ CLASS QSoundEffect INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSoundEffect
+PROCEDURE destroyObject() CLASS QSoundEffect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QSoundEffect ( OPQOBJECT(1,nullptr) );
+    auto obj = new QSoundEffect( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -124,8 +124,8 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->source () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->source() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSource ( *PQURL(1) );
+      obj->setSource( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loopCount () );
+      RINT( obj->loopCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLoopCount ( PINT(1) );
+      obj->setLoopCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPSREMAINING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loopsRemaining () );
+      RINT( obj->loopsRemaining() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->volume () );
+      RQREAL( obj->volume() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVolume ( PQREAL(1) );
+      obj->setVolume( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMuted () );
+      RBOOL( obj->isMuted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMuted ( PBOOL(1) );
+      obj->setMuted( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPlaying () );
+      RBOOL( obj->isPlaying() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->category () );
+      RQSTRING( obj->category() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCategory ( PQSTRING(1) );
+      obj->setCategory( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISLOADED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoaded () );
+      RBOOL( obj->isLoaded() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_PLAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->play ();
+      obj->play();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QSoundEffect::supportedMimeTypes () );
+    RQSTRINGLIST( QSoundEffect::supportedMimeTypes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSOURCECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOOPSREMAININGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONVOLUMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONMUTEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONLOADEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONPLAYINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONSTATUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ONCATEGORYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSOUNDEFFECT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSOUNDEFFECT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

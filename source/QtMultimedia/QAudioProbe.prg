@@ -29,7 +29,7 @@ CLASS QAudioProbe INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioProbe
+PROCEDURE destroyObject() CLASS QAudioProbe
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QAudioProbe ( OPQOBJECT(1,nullptr) );
+    auto obj = new QAudioProbe( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,26 +115,26 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 /*
 bool setSource(QMediaObject * source)
 */
-void QAudioProbe_setSource1 ()
+void QAudioProbe_setSource1()
 {
   auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
   }
 }
 
 /*
 bool setSource(QMediaRecorder * source)
 */
-void QAudioProbe_setSource2 ()
+void QAudioProbe_setSource2()
 {
   auto obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIOPROBE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIOPROBE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QAUDIOBUFFER" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ONFLUSH )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAUDIOPROBE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAUDIOPROBE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

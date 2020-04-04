@@ -23,7 +23,7 @@ CLASS QMediaControl INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaControl
+PROCEDURE destroyObject() CLASS QMediaControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QMEDIACONTROL_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();

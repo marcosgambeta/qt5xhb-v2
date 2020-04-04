@@ -37,7 +37,7 @@ CLASS QCameraFocusZone
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraFocusZone
+PROCEDURE destroyObject() CLASS QCameraFocusZone
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
   if( ISNUMPAR(1) && ISQCAMERAFOCUSZONE(1) )
   {
-    auto obj = new QCameraFocusZone ( *PQCAMERAFOCUSZONE(1) );
+    auto obj = new QCameraFocusZone( *PQCAMERAFOCUSZONE(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->area () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->area() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

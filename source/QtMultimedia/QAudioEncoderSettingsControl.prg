@@ -29,7 +29,7 @@ CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioEncoderSettingsControl
+PROCEDURE destroyObject() CLASS QAudioEncoderSettingsControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_AUDIOSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QAudioEncoderSettings( obj->audioSettings () );
-      Qt5xHb::createReturnClass ( ptr, "QAUDIOENCODERSETTINGS", true );
+      auto ptr = new QAudioEncoderSettings( obj->audioSettings() );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_CODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->codecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->codecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SETAUDIOSETTINGS )
     if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
     {
 #endif
-      obj->setAudioSettings ( *PQAUDIOENCODERSETTINGS(1) );
+      obj->setAudioSettings( *PQAUDIOENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDAUDIOCODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedAudioCodecs () );
+      RQSTRINGLIST( obj->supportedAudioCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_SUPPORTEDSAMPLERATES )
     {
 #endif
       bool par2;
-      QList<int> list = obj->supportedSampleRates ( *PQAUDIOENCODERSETTINGS(1), &par2 );
+      QList<int> list = obj->supportedSampleRates( *PQAUDIOENCODERSETTINGS(1), &par2 );
       Qt5xHb::convert_qlist_int_to_array ( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

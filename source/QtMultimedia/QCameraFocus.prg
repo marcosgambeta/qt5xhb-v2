@@ -45,7 +45,7 @@ CLASS QCameraFocus INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraFocus
+PROCEDURE destroyObject() CLASS QCameraFocus
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->focusMode () );
+      RENUM( obj->focusMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFocusMode ( (QCameraFocus::FocusModes) hb_parni(1) );
+      obj->setFocusMode( (QCameraFocus::FocusModes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->focusPointMode () );
+      RENUM( obj->focusPointMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFocusPointMode ( (QCameraFocus::FocusPointMode) hb_parni(1) );
+      obj->setFocusPointMode( (QCameraFocus::FocusPointMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->customFocusPoint () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->customFocusPoint() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setCustomFocusPoint ( *PQPOINTF(1) );
+      obj->setCustomFocusPoint( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCameraFocusZoneList list = obj->focusZones ();
+      QCameraFocusZoneList list = obj->focusZones();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAFOCUSZONE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->opticalZoom () );
+      RQREAL( obj->opticalZoom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->digitalZoom () );
+      RQREAL( obj->digitalZoom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAvailable () );
+      RBOOL( obj->isAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isFocusModeSupported ( (QCameraFocus::FocusModes) hb_parni(1) ) );
+      RBOOL( obj->isFocusModeSupported( (QCameraFocus::FocusModes) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isFocusPointModeSupported ( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
+      RBOOL( obj->isFocusPointModeSupported( (QCameraFocus::FocusPointMode) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->maximumDigitalZoom () );
+      RQREAL( obj->maximumDigitalZoom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->maximumOpticalZoom () );
+      RQREAL( obj->maximumOpticalZoom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->zoomTo ( PQREAL(1), PQREAL(2) );
+      obj->zoomTo( PQREAL(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERAFOCUS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONFOCUSZONESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERAFOCUS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERAFOCUS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERAFOCUS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERAFOCUS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

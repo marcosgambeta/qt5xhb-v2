@@ -29,7 +29,7 @@ CLASS QVideoProbe INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoProbe
+PROCEDURE destroyObject() CLASS QVideoProbe
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QVideoProbe ( OPQOBJECT(1,nullptr) );
+    auto obj = new QVideoProbe( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,26 +115,26 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 /*
 bool setSource(QMediaObject * source)
 */
-void QVideoProbe_setSource1 ()
+void QVideoProbe_setSource1()
 {
   auto obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
   }
 }
 
 /*
 bool setSource(QMediaRecorder * source)
 */
-void QVideoProbe_setSource2 ()
+void QVideoProbe_setSource2()
 {
   auto obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
   }
 }
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOPROBE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ONVIDEOFRAMEPROBED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOPROBE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOPROBE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVIDEOFRAME" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

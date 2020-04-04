@@ -27,7 +27,7 @@ CLASS QCameraViewfinderSettingsControl2 INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraViewfinderSettingsControl2
+PROCEDURE destroyObject() CLASS QCameraViewfinderSettingsControl2
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings ();
+      QList<QCameraViewfinderSettings> list = obj->supportedViewfinderSettings();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAVIEWFINDERSETTINGS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QCameraViewfinderSettings *) new QCameraViewfinderSettings ( list[i] ) );
+          hb_itemPutPtr( pItem, (QCameraViewfinderSettings *) new QCameraViewfinderSettings( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -148,8 +148,8 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QCameraViewfinderSettings( obj->viewfinderSettings () );
-      Qt5xHb::createReturnClass ( ptr, "QCAMERAVIEWFINDERSETTINGS", true );
+      auto ptr = new QCameraViewfinderSettings( obj->viewfinderSettings() );
+      Qt5xHb::createReturnClass( ptr, "QCAMERAVIEWFINDERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
     if( ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1) )
     {
 #endif
-      obj->setViewfinderSettings ( *PQCAMERAVIEWFINDERSETTINGS(1) );
+      obj->setViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

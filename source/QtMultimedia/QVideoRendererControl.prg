@@ -26,7 +26,7 @@ CLASS QVideoRendererControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoRendererControl
+PROCEDURE destroyObject() CLASS QVideoRendererControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
     if( ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1) )
     {
 #endif
-      obj->setSurface ( PQABSTRACTVIDEOSURFACE(1) );
+      obj->setSurface( PQABSTRACTVIDEOSURFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SURFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractVideoSurface * ptr = obj->surface ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTVIDEOSURFACE" );
+      QAbstractVideoSurface * ptr = obj->surface();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTVIDEOSURFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

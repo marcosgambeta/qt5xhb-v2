@@ -33,7 +33,7 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaGaplessPlaybackControl
+PROCEDURE destroyObject() CLASS QMediaGaplessPlaybackControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->crossfadeTime () );
+      RQREAL( obj->crossfadeTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCrossfadeSupported () );
+      RBOOL( obj->isCrossfadeSupported() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QMediaContent( obj->nextMedia () );
-      Qt5xHb::createReturnClass ( ptr, "QMEDIACONTENT", true );
+      auto ptr = new QMediaContent( obj->nextMedia() );
+      Qt5xHb::createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCrossfadeTime ( PQREAL(1) );
+      obj->setCrossfadeTime( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
     if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
     {
 #endif
-      obj->setNextMedia ( *PQMEDIACONTENT(1) );
+      obj->setNextMedia( *PQMEDIACONTENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONCROSSFADETIMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONNEXTMEDIACHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMEDIAGAPLESSPLAYBACKCONTROL" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QMEDIACONTENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

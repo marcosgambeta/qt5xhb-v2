@@ -47,7 +47,7 @@ CLASS QMediaServiceProviderHint
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaServiceProviderHint
+PROCEDURE destroyObject() CLASS QMediaServiceProviderHint
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ QMediaServiceProviderHint()
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 {
-  auto obj = new QMediaServiceProviderHint ();
+  auto obj = new QMediaServiceProviderHint();
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -84,7 +84,7 @@ QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
-  auto obj = new QMediaServiceProviderHint ( PQSTRING(1), PQSTRINGLIST(2) );
+  auto obj = new QMediaServiceProviderHint( PQSTRING(1), PQSTRINGLIST(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -93,7 +93,7 @@ QMediaServiceProviderHint(const QByteArray &device)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
-  auto obj = new QMediaServiceProviderHint ( *PQBYTEARRAY(1) );
+  auto obj = new QMediaServiceProviderHint( *PQBYTEARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -102,7 +102,7 @@ QMediaServiceProviderHint(QCamera::Position position)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
-  auto obj = new QMediaServiceProviderHint ( (QCamera::Position) hb_parni(1) );
+  auto obj = new QMediaServiceProviderHint( (QCamera::Position) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -111,7 +111,7 @@ QMediaServiceProviderHint(Features features)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
-  auto obj = new QMediaServiceProviderHint ( (QMediaServiceProviderHint::Features) hb_parni(1) );
+  auto obj = new QMediaServiceProviderHint( (QMediaServiceProviderHint::Features) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -120,7 +120,7 @@ QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
 {
-  auto obj = new QMediaServiceProviderHint ( *PQMEDIASERVICEPROVIDERHINT(1) );
+  auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_MIMETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->mimeType () );
+      RQSTRING( obj->mimeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->codecs () );
+      RQSTRINGLIST( obj->codecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,8 +288,8 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->device () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->device() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->features () );
+      RENUM( obj->features() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_CAMERAPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->cameraPosition () );
+      RENUM( obj->cameraPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

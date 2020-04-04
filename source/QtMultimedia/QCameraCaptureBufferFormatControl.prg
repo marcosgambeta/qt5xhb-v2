@@ -28,7 +28,7 @@ CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraCaptureBufferFormatControl
+PROCEDURE destroyObject() CLASS QCameraCaptureBufferFormatControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->bufferFormat () );
+      RENUM( obj->bufferFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBufferFormat ( (QVideoFrame::PixelFormat) hb_parni(1) );
+      obj->setBufferFormat( (QVideoFrame::PixelFormat) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SUPPORTEDBUFFERFORMATS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
+      QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_ONBUFFERFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

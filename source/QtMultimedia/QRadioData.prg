@@ -44,7 +44,7 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRadioData
+PROCEDURE destroyObject() CLASS QRadioData
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QRADIODATA_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    auto obj = new QRadioData ( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QRadioData( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QRADIODATA_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->stationId () );
+      RQSTRING( obj->stationId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->programType () );
+      RENUM( obj->programType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->programTypeName () );
+      RQSTRING( obj->programTypeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->stationName () );
+      RQSTRING( obj->stationName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QRADIODATA_RADIOTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->radioText () );
+      RQSTRING( obj->radioText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAlternativeFrequenciesEnabled () );
+      RBOOL( obj->isAlternativeFrequenciesEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
+      obj->setAlternativeFrequenciesEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->availability () );
+      RENUM( obj->availability() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,8 +313,8 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QRADIODATA_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QRADIODATA_ONPROGRAMTYPENAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QRADIODATA_ONSTATIONNAMECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QRADIODATA_ONRADIOTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QRADIODATA_ONALTERNATIVEFREQUENCIESENABLEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QRADIODATA_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QRADIODATA" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QRADIODATA" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
