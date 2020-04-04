@@ -36,7 +36,7 @@ CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardSelectionListModel
+PROCEDURE destroyObject() CLASS QVirtualKeyboardSelectionListModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE )
     if( ISNUMPAR(2) && ISQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) && ISNUM(2) )
     {
 #endif
-      obj->setDataSource ( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1), (QVirtualKeyboardSelectionListModel::Type) hb_parni(2) );
+      obj->setDataSource( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1), (QVirtualKeyboardSelectionListModel::Type) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardAbstractInputMethod * ptr = obj->dataSource ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+      QVirtualKeyboardAbstractInputMethod * ptr = obj->dataSource();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT )
     if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount ( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,8 +200,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA )
     if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
     {
 #endif
-      auto ptr = new QVariant( obj->data ( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->selectItem ( PINT(1) );
+      obj->selectItem( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->removeItem ( PINT(1) );
+      obj->removeItem( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONACTIVEITEMCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONITEMSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

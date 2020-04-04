@@ -47,7 +47,7 @@ CLASS QVirtualKeyboardTrace INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardTrace
+PROCEDURE destroyObject() CLASS QVirtualKeyboardTrace
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QVirtualKeyboardTrace ( OPQOBJECT(1,nullptr) );
+    auto obj = new QVirtualKeyboardTrace( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->traceId () );
+      RINT( obj->traceId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTraceId ( PINT(1) );
+      obj->setTraceId( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->channels () );
+      RQSTRINGLIST( obj->channels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setChannels ( PQSTRINGLIST(1) );
+      obj->setChannels( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->length () );
+      RINT( obj->length() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinal () );
+      RBOOL( obj->isFinal() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFinal ( PBOOL(1) );
+      obj->setFinal( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCanceled () );
+      RBOOL( obj->isCanceled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCanceled ( PBOOL(1) );
+      obj->setCanceled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->opacity () );
+      RQREAL( obj->opacity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOpacity ( PQREAL(1) );
+      obj->setOpacity( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
     if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      QVariantList list = obj->points ( OPINT(1,0), OPINT(2,-1) );
+      QVariantList list = obj->points( OPINT(1,0), OPINT(2,-1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RINT( obj->addPoint ( *PQPOINTF(1) ) );
+      RINT( obj->addPoint( *PQPOINTF(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
     if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISQVARIANT(3) )
     {
 #endif
-      obj->setChannelData ( PQSTRING(1), PINT(2), *PQVARIANT(3) );
+      obj->setChannelData( PQSTRING(1), PINT(2), *PQVARIANT(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      QVariantList list = obj->channelData ( PQSTRING(1), OPINT(2,0), OPINT(3,-1) );
+      QVariantList list = obj->channelData( PQSTRING(1), OPINT(2,0), OPINT(3,-1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCHANNELSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONLENGTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONFINALCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONCANCELEDCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONOPACITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDTRACE" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

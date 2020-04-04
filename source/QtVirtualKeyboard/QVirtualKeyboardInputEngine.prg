@@ -54,7 +54,7 @@ CLASS QVirtualKeyboardInputEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardInputEngine
+PROCEDURE destroyObject() CLASS QVirtualKeyboardInputEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ACTIVEKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->activeKey () );
+      RENUM( obj->activeKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PREVIOUSKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->previousKey () );
+      RENUM( obj->previousKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,8 +169,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+      QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMETHOD )
     if( ISNUMPAR(1) && ISQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) )
     {
 #endif
-      obj->setInputMethod ( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) );
+      obj->setInputMethod( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->inputModes ();
+      QList<int> list = obj->inputModes();
       Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInputMode ( (QVirtualKeyboardInputEngine::InputMode) hb_parni(1) );
+      obj->setInputMode( (QVirtualKeyboardInputEngine::InputMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->patternRecognitionModes ();
+      QList<int> list = obj->patternRecognitionModes();
       Qt5xHb::convert_qlist_int_to_array ( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -300,8 +300,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+      QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTVISIBLEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->wordCandidateListVisibleHint () );
+      RBOOL( obj->wordCandidateListVisibleHint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYPRESS )
     if( ISNUMPAR(4) && ISNUM(1) && ISCHAR(2) && ISNUM(3) && ISLOG(4) )
     {
 #endif
-      RBOOL( obj->virtualKeyPress ( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3), PBOOL(4) ) );
+      RBOOL( obj->virtualKeyPress( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3), PBOOL(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCANCEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->virtualKeyCancel ();
+      obj->virtualKeyCancel();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
     if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISNUM(3) )
     {
 #endif
-      RBOOL( obj->virtualKeyRelease ( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
+      RBOOL( obj->virtualKeyRelease( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
     if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISNUM(3) )
     {
 #endif
-      RBOOL( obj->virtualKeyClick ( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
+      RBOOL( obj->virtualKeyClick( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,8 +451,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputContext * ptr = obj->inputContext ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+      QVirtualKeyboardInputContext * ptr = obj->inputContext();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_TRACEEND )
     if( ISNUMPAR(1) && ISQVIRTUALKEYBOARDTRACE(1) )
     {
 #endif
-      RBOOL( obj->traceEnd ( PQVIRTUALKEYBOARDTRACE(1) ) );
+      RBOOL( obj->traceEnd( PQVIRTUALKEYBOARDTRACE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->clickPreeditText ( PINT(1) ) );
+      RBOOL( obj->clickPreeditText( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutNI( NULL, (int) arg3 );
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONACTIVEKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPREVIOUSKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODRESET )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMETHODUPDATE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONINPUTMODECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONPATTERNRECOGNITIONMODESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTMODELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONWORDCANDIDATELISTVISIBLEHINTCHANGE
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTENGINE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

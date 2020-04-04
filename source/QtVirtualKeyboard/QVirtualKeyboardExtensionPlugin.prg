@@ -24,7 +24,7 @@ CLASS QVirtualKeyboardExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardExtensionPlugin
+PROCEDURE destroyObject() CLASS QVirtualKeyboardExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->registerTypes ( PCONSTCHAR(1) );
+      obj->registerTypes( PCONSTCHAR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

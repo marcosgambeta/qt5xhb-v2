@@ -65,7 +65,7 @@ CLASS QVirtualKeyboardInputContext INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardInputContext
+PROCEDURE destroyObject() CLASS QVirtualKeyboardInputContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QVirtualKeyboardInputContext ( OPQOBJECT(1,nullptr) );
+    auto obj = new QVirtualKeyboardInputContext( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isShiftActive () );
+      RBOOL( obj->isShiftActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCapsLockActive () );
+      RBOOL( obj->isCapsLockActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isUppercase () );
+      RBOOL( obj->isUppercase() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->anchorPosition () );
+      RINT( obj->anchorPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->cursorPosition () );
+      RINT( obj->cursorPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->inputMethodHints () );
+      RENUM( obj->inputMethodHints() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->preeditText () );
+      RQSTRING( obj->preeditText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->surroundingText () );
+      RQSTRING( obj->surroundingText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->selectedText () );
+      RQSTRING( obj->selectedText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,8 +362,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->anchorRectangle () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->anchorRectangle() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,8 +387,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->cursorRectangle () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->cursorRectangle() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAnimating () );
+      RBOOL( obj->isAnimating() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAnimating ( PBOOL(1) );
+      obj->setAnimating( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->locale () );
+      RQSTRING( obj->locale() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,8 +486,8 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVirtualKeyboardInputEngine * ptr = obj->inputEngine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QVIRTUALKEYBOARDINPUTENGINE" );
+      QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSelectionControlVisible () );
+      RBOOL( obj->isSelectionControlVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->anchorRectIntersectsClipRect () );
+      RBOOL( obj->anchorRectIntersectsClipRect() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->cursorRectIntersectsClipRect () );
+      RBOOL( obj->cursorRectIntersectsClipRect() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->sendKeyClick ( PINT(1), PQSTRING(2), OPINT(3,0) );
+      obj->sendKeyClick( PINT(1), PQSTRING(2), OPINT(3,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,13 +607,13 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
 /*
 Q_INVOKABLE void commit()
 */
-void QVirtualKeyboardInputContext_commit1 ()
+void QVirtualKeyboardInputContext_commit1()
 {
   auto obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->commit ();
+    obj->commit();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -622,13 +622,13 @@ void QVirtualKeyboardInputContext_commit1 ()
 /*
 Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
 */
-void QVirtualKeyboardInputContext_commit2 ()
+void QVirtualKeyboardInputContext_commit2()
 {
   auto obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->commit ( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+    obj->commit( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
     {
 #endif
-      obj->setSelectionOnFocusObject ( *PQPOINTF(1), *PQPOINTF(2) );
+      obj->setSelectionOnFocusObject( *PQPOINTF(1), *PQPOINTF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONINPUTMETHODHINTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSURROUNDINGTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTEDTEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSHIFTACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCAPSLOCKACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONUPPERCASECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANIMATINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONLOCALECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONSELECTIONCONTROLVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1570,7 +1570,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONANCHORRECTINTERSECTSCLIPRECTCHANG
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1630,7 +1630,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONCURSORRECTINTERSECTSCLIPRECTCHANG
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIRTUALKEYBOARDINPUTCONTEXT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
