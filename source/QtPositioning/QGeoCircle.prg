@@ -31,7 +31,7 @@ CLASS QGeoCircle INHERIT QGeoShape
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoCircle
+PROCEDURE destroyObject() CLASS QGeoCircle
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,10 +61,10 @@ RETURN
 /*
 QGeoCircle()
 */
-void QGeoCircle_new1 ()
+void QGeoCircle_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoCircle ();
+  auto obj = new QGeoCircle();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -72,10 +72,10 @@ void QGeoCircle_new1 ()
 /*
 QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 */
-void QGeoCircle_new2 ()
+void QGeoCircle_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoCircle ( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
+  auto obj = new QGeoCircle( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -83,10 +83,10 @@ void QGeoCircle_new2 ()
 /*
 QGeoCircle(const QGeoCircle &other)
 */
-void QGeoCircle_new3 ()
+void QGeoCircle_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoCircle ( *PQGEOCIRCLE(1) );
+  auto obj = new QGeoCircle( *PQGEOCIRCLE(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -94,10 +94,10 @@ void QGeoCircle_new3 ()
 /*
 QGeoCircle(const QGeoShape &other)
 */
-void QGeoCircle_new4 ()
+void QGeoCircle_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoCircle ( *PQGEOSHAPE(1) );
+  auto obj = new QGeoCircle( *PQGEOSHAPE(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_SETCENTER )
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
     {
 #endif
-      obj->setCenter ( *PQGEOCOORDINATE(1) );
+      obj->setCenter( *PQGEOCOORDINATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,8 +192,8 @@ HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QGeoCoordinate( obj->center () );
-      Qt5xHb::createReturnClass ( ptr, "QGEOCOORDINATE", true );
+      auto ptr = new QGeoCoordinate( obj->center() );
+      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_SETRADIUS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRadius ( PQREAL(1) );
+      obj->setRadius( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_RADIUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->radius () );
+      RQREAL( obj->radius() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->translate ( PDOUBLE(1), PDOUBLE(2) );
+      obj->translate( PDOUBLE(1), PDOUBLE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,8 +301,8 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      auto ptr = new QGeoCircle( obj->translated ( PDOUBLE(1), PDOUBLE(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QGEOCIRCLE", true );
+      auto ptr = new QGeoCircle( obj->translated( PDOUBLE(1), PDOUBLE(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QGEOCIRCLE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

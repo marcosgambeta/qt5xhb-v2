@@ -37,7 +37,7 @@ CLASS QGeoShape
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoShape
+PROCEDURE destroyObject() CLASS QGeoShape
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QGeoShape()
 */
-void QGeoShape_new1 ()
+void QGeoShape_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoShape ();
+  auto obj = new QGeoShape();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QGeoShape_new1 ()
 /*
 QGeoShape(const QGeoShape &other)
 */
-void QGeoShape_new2 ()
+void QGeoShape_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoShape ( *PQGEOSHAPE(1) );
+  auto obj = new QGeoShape( *PQGEOSHAPE(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGEOSHAPE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
+      RBOOL( obj->contains( *PQGEOCOORDINATE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

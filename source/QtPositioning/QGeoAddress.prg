@@ -54,7 +54,7 @@ CLASS QGeoAddress
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoAddress
+PROCEDURE destroyObject() CLASS QGeoAddress
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,10 +86,10 @@ RETURN
 /*
 QGeoAddress()
 */
-void QGeoAddress_new1 ()
+void QGeoAddress_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoAddress ();
+  auto obj = new QGeoAddress();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -97,10 +97,10 @@ void QGeoAddress_new1 ()
 /*
 QGeoAddress(const QGeoAddress &other)
 */
-void QGeoAddress_new2 ()
+void QGeoAddress_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QGeoAddress ( *PQGEOADDRESS(1) );
+  auto obj = new QGeoAddress( *PQGEOADDRESS(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGEOADDRESS_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->country () );
+      RQSTRING( obj->country() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCountry ( PQSTRING(1) );
+      obj->setCountry( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->countryCode () );
+      RQSTRING( obj->countryCode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCountryCode ( PQSTRING(1) );
+      obj->setCountryCode( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->state () );
+      RQSTRING( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setState ( PQSTRING(1) );
+      obj->setState( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->county () );
+      RQSTRING( obj->county() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCounty ( PQSTRING(1) );
+      obj->setCounty( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->city () );
+      RQSTRING( obj->city() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCity ( PQSTRING(1) );
+      obj->setCity( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->district () );
+      RQSTRING( obj->district() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDistrict ( PQSTRING(1) );
+      obj->setDistrict( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->postalCode () );
+      RQSTRING( obj->postalCode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPostalCode ( PQSTRING(1) );
+      obj->setPostalCode( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STREET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->street () );
+      RQSTRING( obj->street() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setStreet ( PQSTRING(1) );
+      obj->setStreet( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QGEOADDRESS_ISTEXTGENERATED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isTextGenerated () );
+      RBOOL( obj->isTextGenerated() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
