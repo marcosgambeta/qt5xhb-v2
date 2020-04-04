@@ -46,7 +46,7 @@ CLASS QModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModelIndex
+PROCEDURE destroyObject() CLASS QModelIndex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,18 +72,18 @@ RETURN
 /*
 QModelIndex ()
 */
-void QModelIndex_new1 ()
+void QModelIndex_new1()
 {
-  auto obj = new QModelIndex ();
+  auto obj = new QModelIndex();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QModelIndex ( const QModelIndex & other )
 */
-void QModelIndex_new2 ()
+void QModelIndex_new2()
 {
-  auto obj = new QModelIndex ( *PQMODELINDEX(1) );
+  auto obj = new QModelIndex( *PQMODELINDEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->child ( PINT(1), PINT(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->column () );
+      RINT( obj->column() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,8 +185,8 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      auto ptr = new QVariant( obj->data ( OPINT(1,Qt::DisplayRole) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMODELINDEX_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINTPTR( obj->internalId () );
+      RQUINTPTR( obj->internalId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer () );
+      hb_retptr( (void *) obj->internalPointer() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,8 +306,8 @@ HB_FUNC_STATIC( QMODELINDEX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractItemModel * ptr = obj->model ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      const QAbstractItemModel * ptr = obj->model();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,8 +331,8 @@ HB_FUNC_STATIC( QMODELINDEX_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->parent () );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->parent() );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->row () );
+      RINT( obj->row() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,8 +380,8 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->sibling ( PINT(1), PINT(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

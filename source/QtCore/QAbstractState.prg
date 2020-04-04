@@ -30,7 +30,7 @@ CLASS QAbstractState INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractState
+PROCEDURE destroyObject() CLASS QAbstractState
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStateMachine * ptr = obj->machine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
+      QStateMachine * ptr = obj->machine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTATEMACHINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QState * ptr = obj->parentState ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSTATE" );
+      QState * ptr = obj->parentState();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTSTATE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTSTATE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTSTATE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

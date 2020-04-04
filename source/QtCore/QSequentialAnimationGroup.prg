@@ -32,7 +32,7 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSequentialAnimationGroup
+PROCEDURE destroyObject() CLASS QSequentialAnimationGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QSequentialAnimationGroup ( OPQOBJECT(1,nullptr) );
+    auto obj = new QSequentialAnimationGroup( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPauseAnimation * ptr = obj->addPause ( PINT(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QPAUSEANIMATION" );
+      QPauseAnimation * ptr = obj->addPause( PINT(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractAnimation * ptr = obj->currentAnimation ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTANIMATION" );
+      QAbstractAnimation * ptr = obj->currentAnimation();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,8 +153,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QPauseAnimation * ptr = obj->insertPause ( PINT(1), PINT(2) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QPAUSEANIMATION" );
+      QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->duration () );
+      RINT( obj->duration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSEQUENTIALANIMATIONGROUP" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSEQUENTIALANIMATIONGROUP" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QABSTRACTANIMATION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

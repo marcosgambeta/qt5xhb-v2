@@ -49,7 +49,7 @@ CLASS QJsonValueRef
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QJsonValueRef
+PROCEDURE destroyObject() CLASS QJsonValueRef
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,18 +78,18 @@ RETURN
 /*
 QJsonValueRef(QJsonArray *array, int idx)
 */
-void QJsonValueRef_new1 ()
+void QJsonValueRef_new1()
 {
-  auto obj = new QJsonValueRef ( PQJSONARRAY(1), PINT(2) );
+  auto obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QJsonValueRef(QJsonObject *object, int idx)
 */
-void QJsonValueRef_new2 ()
+void QJsonValueRef_new2()
 {
-  auto obj = new QJsonValueRef ( PQJSONOBJECT(1), PINT(2) );
+  auto obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBool () );
+      RBOOL( obj->isBool() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISDOUBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDouble () );
+      RBOOL( obj->isDouble() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isString () );
+      RBOOL( obj->isString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isArray () );
+      RBOOL( obj->isArray() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isObject () );
+      RBOOL( obj->isObject() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_ISUNDEFINED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isUndefined () );
+      RBOOL( obj->isUndefined() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->toBool () );
+      RBOOL( obj->toBool() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->toInt () );
+      RINT( obj->toInt() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TODOUBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RDOUBLE( obj->toDouble () );
+      RDOUBLE( obj->toDouble() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,8 +430,8 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QJsonArray( obj->toArray () );
-      Qt5xHb::createReturnClass ( ptr, "QJSONARRAY", true );
+      auto ptr = new QJsonArray( obj->toArray() );
+      Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,8 +455,8 @@ HB_FUNC_STATIC( QJSONVALUEREF_TOOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QJsonObject( obj->toObject () );
-      Qt5xHb::createReturnClass ( ptr, "QJSONOBJECT", true );
+      auto ptr = new QJsonObject( obj->toObject() );
+      Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

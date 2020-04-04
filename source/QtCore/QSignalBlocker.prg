@@ -35,7 +35,7 @@ CLASS QSignalBlocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSignalBlocker
+PROCEDURE destroyObject() CLASS QSignalBlocker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    auto obj = new QSignalBlocker ( PQOBJECT(1) );
+    auto obj = new QSignalBlocker( PQOBJECT(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_REBLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reblock ();
+      obj->reblock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_UNBLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unblock ();
+      obj->unblock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

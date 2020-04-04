@@ -53,7 +53,7 @@ CLASS QMetaMethod
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaMethod
+PROCEDURE destroyObject() CLASS QMetaMethod
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QMetaMethod ();
+    auto obj = new QMetaMethod();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->typeName () );
+      hb_retc( (const char *) obj->typeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->parameterTypes ();
+      QList<QByteArray> list = obj->parameterTypes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->parameterNames ();
+      QList<QByteArray> list = obj->parameterNames();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->tag () );
+      hb_retc( (const char *) obj->tag() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->access () );
+      RENUM( obj->access() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->methodType () );
+      RENUM( obj->methodType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ATTRIBUTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->attributes () );
+      RINT( obj->attributes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->methodIndex () );
+      RINT( obj->methodIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->revision () );
+      RINT( obj->revision() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,8 +394,8 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject ();
-      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->enclosingMetaObject();
+      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,8 +445,8 @@ HB_FUNC_STATIC( QMETAMETHOD_METHODSIGNATURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->methodSignature () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->methodSignature() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,8 +470,8 @@ HB_FUNC_STATIC( QMETAMETHOD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->name () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->name() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QMETAMETHOD_RETURNTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->returnType () );
+      RINT( obj->returnType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->parameterCount () );
+      RINT( obj->parameterCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->parameterType ( PINT(1) ) );
+      RINT( obj->parameterType( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
     {
 #endif
       int par1;
-      obj->getParameterTypes ( &par1 );
+      obj->getParameterTypes( &par1 );
       hb_storni( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

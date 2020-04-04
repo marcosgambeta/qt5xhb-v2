@@ -40,7 +40,7 @@ CLASS QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEvent
+PROCEDURE destroyObject() CLASS QEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    auto obj = new QEvent ( (QEvent::Type) hb_parni(1) );
+    auto obj = new QEvent( (QEvent::Type) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->accept ();
+      obj->accept();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->ignore ();
+      obj->ignore();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAccepted () );
+      RBOOL( obj->isAccepted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAccepted ( PBOOL(1) );
+      obj->setAccepted( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->spontaneous () );
+      RBOOL( obj->spontaneous() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
 #endif
-    RINT( QEvent::registerEventType ( OPINT(1,-1) ) );
+    RINT( QEvent::registerEventType( OPINT(1,-1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

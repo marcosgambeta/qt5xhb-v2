@@ -37,7 +37,7 @@ CLASS QReadLocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QReadLocker
+PROCEDURE destroyObject() CLASS QReadLocker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QREADLOCKER_NEW )
 {
   if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
   {
-    auto obj = new QReadLocker ( PQREADWRITELOCK(1) );
+    auto obj = new QReadLocker( PQREADWRITELOCK(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unlock ();
+      obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QREADLOCKER_RELOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->relock ();
+      obj->relock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,8 +158,8 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      QReadWriteLock * ptr = obj->readWriteLock ();
-      Qt5xHb::createReturnClass ( ptr, "QREADWRITELOCK", false );
+      QReadWriteLock * ptr = obj->readWriteLock();
+      Qt5xHb::createReturnClass( ptr, "QREADWRITELOCK", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

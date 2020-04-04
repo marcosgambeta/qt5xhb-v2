@@ -37,7 +37,7 @@ CLASS QByteArrayMatcher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QByteArrayMatcher
+PROCEDURE destroyObject() CLASS QByteArrayMatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,36 +63,36 @@ RETURN
 /*
 QByteArrayMatcher ()
 */
-void QByteArrayMatcher_new1 ()
+void QByteArrayMatcher_new1()
 {
-  auto obj = new QByteArrayMatcher ();
+  auto obj = new QByteArrayMatcher();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QByteArrayMatcher ( const QByteArray & pattern )
 */
-void QByteArrayMatcher_new2 ()
+void QByteArrayMatcher_new2()
 {
-  auto obj = new QByteArrayMatcher ( *PQBYTEARRAY(1) );
+  auto obj = new QByteArrayMatcher( *PQBYTEARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QByteArrayMatcher ( const char * pattern, int length )
 */
-void QByteArrayMatcher_new3 ()
+void QByteArrayMatcher_new3()
 {
-  auto obj = new QByteArrayMatcher ( PCONSTCHAR(1), PINT(2) );
+  auto obj = new QByteArrayMatcher( PCONSTCHAR(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QByteArrayMatcher ( const QByteArrayMatcher & other )
 */
-void QByteArrayMatcher_new4 ()
+void QByteArrayMatcher_new4()
 {
-  auto obj = new QByteArrayMatcher ( *PQBYTEARRAYMATCHER(1) );
+  auto obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -145,26 +145,26 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 /*
 int indexIn ( const QByteArray & ba, int from = 0 ) const
 */
-void QByteArrayMatcher_indexIn1 ()
+void QByteArrayMatcher_indexIn1()
 {
   auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->indexIn ( *PQBYTEARRAY(1), OPINT(2,0) ) );
+    RINT( obj->indexIn( *PQBYTEARRAY(1), OPINT(2,0) ) );
   }
 }
 
 /*
 int indexIn ( const char * str, int len, int from = 0 ) const
 */
-void QByteArrayMatcher_indexIn2 ()
+void QByteArrayMatcher_indexIn2()
 {
   auto obj = (QByteArrayMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->indexIn ( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 
@@ -200,8 +200,8 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->pattern () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->pattern() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setPattern ( *PQBYTEARRAY(1) );
+      obj->setPattern( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

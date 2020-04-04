@@ -26,7 +26,7 @@ CLASS QWinEventNotifier INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinEventNotifier
+PROCEDURE destroyObject() CLASS QWinEventNotifier
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,10 +53,10 @@ RETURN
 /*
 explicit QWinEventNotifier(QObject *parent = nullptr)
 */
-void QWinEventNotifier_new1 ()
+void QWinEventNotifier_new1()
 {
 #ifdef Q_OS_WIN
-  auto obj = new QWinEventNotifier ( OPQOBJECT(1,nullptr) );
+  auto obj = new QWinEventNotifier( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

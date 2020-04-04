@@ -37,7 +37,7 @@ CLASS QXmlStreamNotationDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNotationDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamNotationDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QXmlStreamNotationDeclaration()
 */
-void QXmlStreamNotationDeclaration_new1 ()
+void QXmlStreamNotationDeclaration_new1()
 {
-  auto obj = new QXmlStreamNotationDeclaration ();
+  auto obj = new QXmlStreamNotationDeclaration();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
-void QXmlStreamNotationDeclaration_new2 ()
+void QXmlStreamNotationDeclaration_new2()
 {
-  auto obj = new QXmlStreamNotationDeclaration ();
+  auto obj = new QXmlStreamNotationDeclaration();
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->name () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->name() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->publicId () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->publicId() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->systemId () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->systemId() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

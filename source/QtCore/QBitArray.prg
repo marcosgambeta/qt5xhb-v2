@@ -46,7 +46,7 @@ CLASS QBitArray
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBitArray
+PROCEDURE destroyObject() CLASS QBitArray
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,27 +72,27 @@ RETURN
 /*
 QBitArray ()
 */
-void QBitArray_new1 ()
+void QBitArray_new1()
 {
-  auto obj = new QBitArray ();
+  auto obj = new QBitArray();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QBitArray ( int size, bool value = false )
 */
-void QBitArray_new2 ()
+void QBitArray_new2()
 {
-  auto obj = new QBitArray ( PINT(1), OPBOOL(2,false) );
+  auto obj = new QBitArray( PINT(1), OPBOOL(2,false) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QBitArray ( const QBitArray & other )
 */
-void QBitArray_new3 ()
+void QBitArray_new3()
 {
-  auto obj = new QBitArray ( *PQBITARRAY(1) );
+  auto obj = new QBitArray( *PQBITARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->at ( PINT(1) ) );
+      RBOOL( obj->at( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->clearBit ( PINT(1) );
+      obj->clearBit( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,26 +216,26 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 /*
 int count () const
 */
-void QBitArray_count1 ()
+void QBitArray_count1()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->count () );
+    RINT( obj->count() );
   }
 }
 
 /*
 int count ( bool on ) const
 */
-void QBitArray_count2 ()
+void QBitArray_count2()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->count ( PBOOL(1) ) );
+    RINT( obj->count( PBOOL(1) ) );
   }
 }
 
@@ -261,26 +261,26 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 /*
 bool fill ( bool value, int size = -1 )
 */
-void QBitArray_fill1 ()
+void QBitArray_fill1()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->fill ( PBOOL(1), OPINT(2,-1) ) );
+    RBOOL( obj->fill( PBOOL(1), OPINT(2,-1) ) );
   }
 }
 
 /*
 void fill ( bool value, int begin, int end )
 */
-void QBitArray_fill2 ()
+void QBitArray_fill2()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->fill ( PBOOL(1), PINT(2), PINT(3) );
+    obj->fill( PBOOL(1), PINT(2), PINT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resize ( PINT(1) );
+      obj->resize( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,13 +382,13 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
 /*
 void setBit ( int i )
 */
-void QBitArray_setBit1 ()
+void QBitArray_setBit1()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setBit ( PINT(1) );
+    obj->setBit( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -397,13 +397,13 @@ void QBitArray_setBit1 ()
 /*
 void setBit ( int i, bool value )
 */
-void QBitArray_setBit2 ()
+void QBitArray_setBit2()
 {
   auto obj = (QBitArray *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setBit ( PINT(1), PBOOL(2) );
+    obj->setBit( PINT(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testBit ( PINT(1) ) );
+      RBOOL( obj->testBit( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->toggleBit ( PINT(1) ) );
+      RBOOL( obj->toggleBit( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->truncate ( PINT(1) );
+      obj->truncate( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -24,7 +24,7 @@ CLASS QFinalState INHERIT QAbstractState
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFinalState
+PROCEDURE destroyObject() CLASS QFinalState
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
   {
-    auto obj = new QFinalState ( OPQSTATE(1,nullptr) );
+    auto obj = new QFinalState( OPQSTATE(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

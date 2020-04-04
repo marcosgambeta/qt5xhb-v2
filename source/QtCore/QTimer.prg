@@ -35,7 +35,7 @@ CLASS QTimer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTimer
+PROCEDURE destroyObject() CLASS QTimer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QTimer ( OPQOBJECT(1,nullptr) );
+    auto obj = new QTimer( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QTIMER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->interval () );
+      RINT( obj->interval() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSingleShot () );
+      RBOOL( obj->isSingleShot() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInterval ( PINT(1) );
+      obj->setInterval( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSingleShot ( PBOOL(1) );
+      obj->setSingleShot( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->timerId () );
+      RINT( obj->timerId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,13 +245,13 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
 /*
 void start ( int msec )
 */
-void QTimer_start1 ()
+void QTimer_start1()
 {
   auto obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->start ( PINT(1) );
+    obj->start( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -260,13 +260,13 @@ void QTimer_start1 ()
 /*
 void start ()
 */
-void QTimer_start2 ()
+void QTimer_start2()
 {
   auto obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->start ();
+    obj->start();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QTIMER_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QTIMER_SINGLESHOT )
   if( ISNUMPAR(3) && ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
 #endif
-    QTimer::singleShot ( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
+    QTimer::singleShot( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTIMER_ONTIMEOUT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTIMER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QTIMER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

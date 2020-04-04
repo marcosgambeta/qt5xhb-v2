@@ -43,7 +43,7 @@ CLASS QUuid
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUuid
+PROCEDURE destroyObject() CLASS QUuid
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,18 +69,18 @@ RETURN
 /*
 QUuid()
 */
-void QUuid_new1 ()
+void QUuid_new1()
 {
-  auto obj = new QUuid ();
+  auto obj = new QUuid();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QUuid(const QByteArray & text)
 */
-void QUuid_new2 ()
+void QUuid_new2()
 {
-  auto obj = new QUuid ( *PQBYTEARRAY(1) );
+  auto obj = new QUuid( *PQBYTEARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QUUID_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,8 +162,8 @@ HB_FUNC_STATIC( QUUID_TOBYTEARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->toByteArray () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->toByteArray() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,8 +187,8 @@ HB_FUNC_STATIC( QUUID_TORFC4122 )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->toRfc4122 () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->toRfc4122() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QUUID_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QUUID_VARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->variant () );
+      RENUM( obj->variant() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->version () );
+      RENUM( obj->version() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,21 +274,21 @@ HB_FUNC_STATIC( QUUID_VERSION )
 /*
 static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 */
-void QUuid_createUuidV31 ()
+void QUuid_createUuidV31()
 {
 
-  auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-  Qt5xHb::createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV3( *PQUUID(1), *PQBYTEARRAY(2) ) );
+  Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
 
 /*
 static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
 */
-void QUuid_createUuidV32 ()
+void QUuid_createUuidV32()
 {
 
-  auto ptr = new QUuid( QUuid::createUuidV3 ( *PQUUID(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV3( *PQUUID(1), PQSTRING(2) ) );
+  Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
 
 //[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
@@ -313,21 +313,21 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 /*
 static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
 */
-void QUuid_createUuidV51 ()
+void QUuid_createUuidV51()
 {
 
-  auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), *PQBYTEARRAY(2) ) );
-  Qt5xHb::createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV5( *PQUUID(1), *PQBYTEARRAY(2) ) );
+  Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
 
 /*
 static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
 */
-void QUuid_createUuidV52 ()
+void QUuid_createUuidV52()
 {
 
-  auto ptr = new QUuid( QUuid::createUuidV5 ( *PQUUID(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass ( ptr, "QUUID", true );
+  auto ptr = new QUuid( QUuid::createUuidV5( *PQUUID(1), PQSTRING(2) ) );
+  Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
 
 //[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
@@ -358,8 +358,8 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    auto ptr = new QUuid( QUuid::fromRfc4122 ( *PQBYTEARRAY(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QUUID", true );
+    auto ptr = new QUuid( QUuid::fromRfc4122( *PQBYTEARRAY(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -40,7 +40,7 @@ CLASS QLockFile
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLockFile
+PROCEDURE destroyObject() CLASS QLockFile
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    auto obj = new QLockFile ( PQSTRING(1) );
+    auto obj = new QLockFile( PQSTRING(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->lock () );
+      RBOOL( obj->lock() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->tryLock ( OPINT(1,0) ) );
+      RBOOL( obj->tryLock( OPINT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unlock ();
+      obj->unlock();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStaleLockTime ( PINT(1) );
+      obj->setStaleLockTime( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QLOCKFILE_STALELOCKTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->staleLockTime () );
+      RINT( obj->staleLockTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLocked () );
+      RBOOL( obj->isLocked() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLOCKFILE_REMOVESTALELOCKFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->removeStaleLockFile () );
+      RBOOL( obj->removeStaleLockFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

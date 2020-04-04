@@ -39,7 +39,7 @@ CLASS QXmlStreamEntityDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamEntityDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamEntityDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QXmlStreamEntityDeclaration()
 */
-void QXmlStreamEntityDeclaration_new1 ()
+void QXmlStreamEntityDeclaration_new1()
 {
-  auto obj = new QXmlStreamEntityDeclaration ();
+  auto obj = new QXmlStreamEntityDeclaration();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
-void QXmlStreamEntityDeclaration_new2 ()
+void QXmlStreamEntityDeclaration_new2()
 {
-  auto obj = new QXmlStreamEntityDeclaration ( *PQXMLSTREAMENTITYDECLARATION(1) );
+  auto obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->name () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->name() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->notationName () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->notationName() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->publicId () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->publicId() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,8 +204,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->systemId () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->systemId() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->value () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->value() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

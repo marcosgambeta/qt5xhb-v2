@@ -59,7 +59,7 @@ CLASS QJsonValue
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QJsonValue
+PROCEDURE destroyObject() CLASS QJsonValue
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ QJsonValue(Type type = Null)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
-  auto obj = new QJsonValue ( ISNIL(1)? (QJsonValue::Type) QJsonValue::Null : (QJsonValue::Type) hb_parni(1) );
+  auto obj = new QJsonValue( ISNIL(1)? (QJsonValue::Type) QJsonValue::Null : (QJsonValue::Type) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -100,7 +100,7 @@ QJsonValue(bool b)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 {
-  auto obj = new QJsonValue ( PBOOL(1) );
+  auto obj = new QJsonValue( PBOOL(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -109,7 +109,7 @@ QJsonValue(double n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
-  auto obj = new QJsonValue ( PDOUBLE(1) );
+  auto obj = new QJsonValue( PDOUBLE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -118,7 +118,7 @@ QJsonValue(const QString & s)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
-  auto obj = new QJsonValue ( PQSTRING(1) );
+  auto obj = new QJsonValue( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -131,7 +131,7 @@ QJsonValue(const QJsonArray & a)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 {
-  auto obj = new QJsonValue ( *PQJSONARRAY(1) );
+  auto obj = new QJsonValue( *PQJSONARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -140,7 +140,7 @@ QJsonValue(const QJsonObject & o)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 {
-  auto obj = new QJsonValue ( *PQJSONOBJECT(1) );
+  auto obj = new QJsonValue( *PQJSONOBJECT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -149,7 +149,7 @@ QJsonValue(const QJsonValue & other)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 {
-  auto obj = new QJsonValue ( *PQJSONVALUE(1) );
+  auto obj = new QJsonValue( *PQJSONVALUE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -158,7 +158,7 @@ QJsonValue(int n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 {
-  auto obj = new QJsonValue ( PINT(1) );
+  auto obj = new QJsonValue( PINT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isArray () );
+      RBOOL( obj->isArray() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBool () );
+      RBOOL( obj->isBool() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISDOUBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDouble () );
+      RBOOL( obj->isDouble() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isObject () );
+      RBOOL( obj->isObject() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isString () );
+      RBOOL( obj->isString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isUndefined () );
+      RBOOL( obj->isUndefined() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,28 +397,28 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
 /*
 QJsonArray toArray(const QJsonArray & defaultValue) const
 */
-void QJsonValue_toArray1 ()
+void QJsonValue_toArray1()
 {
   auto obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QJsonArray( obj->toArray ( *PQJSONARRAY(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QJSONARRAY", true );
+    auto ptr = new QJsonArray( obj->toArray( *PQJSONARRAY(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
   }
 }
 
 /*
 QJsonArray toArray() const
 */
-void QJsonValue_toArray2 ()
+void QJsonValue_toArray2()
 {
   auto obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QJsonArray( obj->toArray () );
-    Qt5xHb::createReturnClass ( ptr, "QJSONARRAY", true );
+    auto ptr = new QJsonArray( obj->toArray() );
+    Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
   }
 }
 
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      RBOOL( obj->toBool ( OPBOOL(1,false) ) );
+      RBOOL( obj->toBool( OPBOOL(1,false) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RDOUBLE( obj->toDouble ( OPDOUBLE(1,0) ) );
+      RDOUBLE( obj->toDouble( OPDOUBLE(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,28 +492,28 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
 /*
 QJsonObject toObject(const QJsonObject & defaultValue) const
 */
-void QJsonValue_toObject1 ()
+void QJsonValue_toObject1()
 {
   auto obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QJsonObject( obj->toObject ( *PQJSONOBJECT(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QJSONOBJECT", true );
+    auto ptr = new QJsonObject( obj->toObject( *PQJSONOBJECT(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
   }
 }
 
 /*
 QJsonObject toObject() const
 */
-void QJsonValue_toObject2 ()
+void QJsonValue_toObject2()
 {
   auto obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QJsonObject( obj->toObject () );
-    Qt5xHb::createReturnClass ( ptr, "QJSONOBJECT", true );
+    auto ptr = new QJsonObject( obj->toObject() );
+    Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
   }
 }
 
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
 #endif
-      RQSTRING( obj->toString ( OPQSTRING(1,QString()) ) );
+      RQSTRING( obj->toString( OPQSTRING(1,QString()) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,8 +573,8 @@ HB_FUNC_STATIC( QJSONVALUE_TOVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QVariant( obj->toVariant () );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->toVariant() );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QJSONVALUE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,8 +618,8 @@ HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
 #endif
-    auto ptr = new QJsonValue( QJsonValue::fromVariant ( *PQVARIANT(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QJSONVALUE", true );
+    auto ptr = new QJsonValue( QJsonValue::fromVariant( *PQVARIANT(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

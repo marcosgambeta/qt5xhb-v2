@@ -37,7 +37,7 @@ CLASS QMetaClassInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaClassInfo
+PROCEDURE destroyObject() CLASS QMetaClassInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QMetaClassInfo ();
+    auto obj = new QMetaClassInfo();
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->name () );
+      hb_retc( (const char *) obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->value () );
+      hb_retc( (const char *) obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject ();
-      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->enclosingMetaObject();
+      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

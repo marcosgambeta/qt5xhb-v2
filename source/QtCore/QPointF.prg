@@ -41,7 +41,7 @@ CLASS QPointF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPointF
+PROCEDURE destroyObject() CLASS QPointF
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,27 +67,27 @@ RETURN
 /*
 QPointF()
 */
-void QPointF_new1 ()
+void QPointF_new1()
 {
-  auto obj = new QPointF ();
+  auto obj = new QPointF();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPointF(const QPoint & point)
 */
-void QPointF_new2 ()
+void QPointF_new2()
 {
-  auto obj = new QPointF ( *PQPOINT(1) );
+  auto obj = new QPointF( *PQPOINT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QPointF(qreal xpos, qreal ypos)
 */
-void QPointF_new3 ()
+void QPointF_new3()
 {
-  auto obj = new QPointF ( PQREAL(1), PQREAL(2) );
+  auto obj = new QPointF( PQREAL(1), PQREAL(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPOINTF_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->manhattanLength () );
+      RQREAL( obj->manhattanLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PQREAL(1) );
+      obj->setX( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QPOINTF_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PQREAL(1) );
+      obj->setY( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,8 +245,8 @@ HB_FUNC_STATIC( QPOINTF_TOPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPoint( obj->toPoint () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINT", true );
+      auto ptr = new QPoint( obj->toPoint() );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPOINTF_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x () );
+      RQREAL( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QPOINTF_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y () );
+      RQREAL( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -36,7 +36,7 @@ CLASS QXmlStreamNamespaceDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNamespaceDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamNamespaceDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,27 +62,27 @@ RETURN
 /*
 QXmlStreamNamespaceDeclaration()
 */
-void QXmlStreamNamespaceDeclaration_new1 ()
+void QXmlStreamNamespaceDeclaration_new1()
 {
-  auto obj = new QXmlStreamNamespaceDeclaration ();
+  auto obj = new QXmlStreamNamespaceDeclaration();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
 */
-void QXmlStreamNamespaceDeclaration_new2 ()
+void QXmlStreamNamespaceDeclaration_new2()
 {
-  auto obj = new QXmlStreamNamespaceDeclaration ( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
+  auto obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 */
-void QXmlStreamNamespaceDeclaration_new3 ()
+void QXmlStreamNamespaceDeclaration_new3()
 {
-  auto obj = new QXmlStreamNamespaceDeclaration ( PQSTRING(1), PQSTRING(2) );
+  auto obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NAMESPACEURI )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->namespaceUri () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->namespaceUri() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,8 +165,8 @@ HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_PREFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QStringRef( obj->prefix () );
-      Qt5xHb::createReturnClass ( ptr, "QSTRINGREF", true );
+      auto ptr = new QStringRef( obj->prefix() );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

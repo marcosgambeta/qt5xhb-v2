@@ -38,7 +38,7 @@ CLASS QLibraryInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLibraryInfo
+PROCEDURE destroyObject() CLASS QLibraryInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEE )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QLibraryInfo::licensee () );
+    RQSTRING( QLibraryInfo::licensee() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_LICENSEDPRODUCTS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QLibraryInfo::licensedProducts () );
+    RQSTRING( QLibraryInfo::licensedProducts() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QLIBRARYINFO_BUILDDATE )
   if( ISNUMPAR(0) )
   {
 #endif
-    auto ptr = new QDate( QLibraryInfo::buildDate () );
-    Qt5xHb::createReturnClass ( ptr, "QDATE", true );
+    auto ptr = new QDate( QLibraryInfo::buildDate() );
+    Qt5xHb::createReturnClass( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QLibraryInfo::isDebugBuild () );
+    RBOOL( QLibraryInfo::isDebugBuild() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QLibraryInfo::location ( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
+    RQSTRING( QLibraryInfo::location( (QLibraryInfo::LibraryLocation) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

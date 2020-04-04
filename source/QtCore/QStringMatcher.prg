@@ -38,7 +38,7 @@ CLASS QStringMatcher
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStringMatcher
+PROCEDURE destroyObject() CLASS QStringMatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,36 +64,36 @@ RETURN
 /*
 QStringMatcher()
 */
-void QStringMatcher_new1 ()
+void QStringMatcher_new1()
 {
-  auto obj = new QStringMatcher ();
+  auto obj = new QStringMatcher();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-void QStringMatcher_new2 ()
+void QStringMatcher_new2()
 {
-  auto obj = new QStringMatcher ( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) );
+  auto obj = new QStringMatcher( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
 */
-void QStringMatcher_new3 ()
+void QStringMatcher_new3()
 {
-  auto obj = new QStringMatcher ( PQCHAR(1), PINT(2), ISNIL(3)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(3) );
+  auto obj = new QStringMatcher( PQCHAR(1), PINT(2), ISNIL(3)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QStringMatcher(const QStringMatcher &other)
 */
-void QStringMatcher_new4 ()
+void QStringMatcher_new4()
 {
-  auto obj = new QStringMatcher ( *PQSTRINGMATCHER(1) );
+  auto obj = new QStringMatcher( *PQSTRINGMATCHER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPattern ( PQSTRING(1) );
+      obj->setPattern( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
+      obj->setCaseSensitivity( (Qt::CaseSensitivity) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,26 +198,26 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 /*
 int indexIn(const QString &str, int from = 0) const
 */
-void QStringMatcher_indexIn1 ()
+void QStringMatcher_indexIn1()
 {
   auto obj = (QStringMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
+    RINT( obj->indexIn( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 
 /*
 int indexIn(const QChar *str, int length, int from = 0) const
 */
-void QStringMatcher_indexIn2 ()
+void QStringMatcher_indexIn2()
 {
   auto obj = (QStringMatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RINT( obj->indexIn ( PQCHAR(1), PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn( PQCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->pattern () );
+      RQSTRING( obj->pattern() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->caseSensitivity () );
+      RENUM( obj->caseSensitivity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

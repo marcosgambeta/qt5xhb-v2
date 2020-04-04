@@ -53,7 +53,7 @@ CLASS QRegExp
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegExp
+PROCEDURE destroyObject() CLASS QRegExp
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,27 +81,27 @@ RETURN
 /*
 QRegExp ()
 */
-void QRegExp_new1 ()
+void QRegExp_new1()
 {
-  auto obj = new QRegExp ();
+  auto obj = new QRegExp();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
 */
-void QRegExp_new2 ()
+void QRegExp_new2()
 {
-  auto obj = new QRegExp ( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
+  auto obj = new QRegExp( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QRegExp ( const QRegExp & rx )
 */
-void QRegExp_new3 ()
+void QRegExp_new3()
 {
-  auto obj = new QRegExp ( *PQREGEXP(1) );
+  auto obj = new QRegExp( *PQREGEXP(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RQSTRING( obj->cap ( OPINT(1,0) ) );
+      RQSTRING( obj->cap( OPINT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->captureCount () );
+      RINT( obj->captureCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->capturedTexts () );
+      RQSTRINGLIST( obj->capturedTexts() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->caseSensitivity () );
+      RENUM( obj->caseSensitivity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->exactMatch ( PQSTRING(1) ) );
+      RBOOL( obj->exactMatch( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+      RINT( obj->indexIn( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMinimal () );
+      RBOOL( obj->isMinimal() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      RINT( obj->lastIndexIn ( PQSTRING(1), OPINT(2,-1), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
+      RINT( obj->lastIndexIn( PQSTRING(1), OPINT(2,-1), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->matchedLength () );
+      RINT( obj->matchedLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->pattern () );
+      RQSTRING( obj->pattern() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->patternSyntax () );
+      RENUM( obj->patternSyntax() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RINT( obj->pos ( OPINT(1,0) ) );
+      RINT( obj->pos( OPINT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCaseSensitivity ( (Qt::CaseSensitivity) hb_parni(1) );
+      obj->setCaseSensitivity( (Qt::CaseSensitivity) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMinimal ( PBOOL(1) );
+      obj->setMinimal( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPattern ( PQSTRING(1) );
+      obj->setPattern( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPatternSyntax ( (QRegExp::PatternSyntax) hb_parni(1) );
+      obj->setPatternSyntax( (QRegExp::PatternSyntax) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RQSTRING( QRegExp::escape ( PQSTRING(1) ) );
+    RQSTRING( QRegExp::escape( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -44,7 +44,7 @@ CLASS QMarginsF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMarginsF
+PROCEDURE destroyObject() CLASS QMarginsF
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,10 +74,10 @@ RETURN
 /*
 QMarginsF()
 */
-void QMarginsF_new1 ()
+void QMarginsF_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF ();
+  auto obj = new QMarginsF();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -85,10 +85,10 @@ void QMarginsF_new1 ()
 /*
 QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
 */
-void QMarginsF_new2 ()
+void QMarginsF_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  auto obj = new QMarginsF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -96,10 +96,10 @@ void QMarginsF_new2 ()
 /*
 QMarginsF(const QMargins &margins)
 */
-void QMarginsF_new3 ()
+void QMarginsF_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  auto obj = new QMarginsF ( *PQMARGINS(1) );
+  auto obj = new QMarginsF( *PQMARGINS(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMARGINSF_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QMARGINSF_LEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->left () );
+      RQREAL( obj->left() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QMARGINSF_TOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->top () );
+      RQREAL( obj->top() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMARGINSF_RIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->right () );
+      RQREAL( obj->right() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->bottom () );
+      RQREAL( obj->bottom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLeft ( PQREAL(1) );
+      obj->setLeft( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTop ( PQREAL(1) );
+      obj->setTop( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRight ( PQREAL(1) );
+      obj->setRight( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBottom ( PQREAL(1) );
+      obj->setBottom( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,8 +403,8 @@ HB_FUNC_STATIC( QMARGINSF_TOMARGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QMargins( obj->toMargins () );
-      Qt5xHb::createReturnClass ( ptr, "QMARGINS", true );
+      auto ptr = new QMargins( obj->toMargins() );
+      Qt5xHb::createReturnClass( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

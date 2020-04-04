@@ -40,7 +40,7 @@ CLASS QDirIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDirIterator
+PROCEDURE destroyObject() CLASS QDirIterator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,36 +66,36 @@ RETURN
 /*
 QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
-void QDirIterator_new1 ()
+void QDirIterator_new1()
 {
-  auto obj = new QDirIterator ( *PQDIR(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
+  auto obj = new QDirIterator( *PQDIR(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
-void QDirIterator_new2 ()
+void QDirIterator_new2()
 {
-  auto obj = new QDirIterator ( PQSTRING(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
+  auto obj = new QDirIterator( PQSTRING(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
 */
-void QDirIterator_new3 ()
+void QDirIterator_new3()
 {
-  auto obj = new QDirIterator ( PQSTRING(1), (QDir::Filters) hb_parni(2), ISNIL(3)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(3) );
+  auto obj = new QDirIterator( PQSTRING(1), (QDir::Filters) hb_parni(2), ISNIL(3)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
 */
-void QDirIterator_new4 ()
+void QDirIterator_new4()
 {
-  auto obj = new QDirIterator ( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(3), ISNIL(4)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(4) );
+  auto obj = new QDirIterator( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(3), ISNIL(4)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(4) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -160,8 +160,8 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFileInfo( obj->fileInfo () );
-      Qt5xHb::createReturnClass ( ptr, "QFILEINFO", true );
+      auto ptr = new QFileInfo( obj->fileInfo() );
+      Qt5xHb::createReturnClass( ptr, "QFILEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->filePath () );
+      RQSTRING( obj->filePath() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasNext () );
+      RBOOL( obj->hasNext() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->next () );
+      RQSTRING( obj->next() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDIRITERATOR_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->path () );
+      RQSTRING( obj->path() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

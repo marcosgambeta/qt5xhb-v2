@@ -35,7 +35,7 @@ CLASS QTextDecoder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextDecoder
+PROCEDURE destroyObject() CLASS QTextDecoder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,18 +61,18 @@ RETURN
 /*
 QTextDecoder(const QTextCodec * codec)
 */
-void QTextDecoder_new1 ()
+void QTextDecoder_new1()
 {
-  auto obj = new QTextDecoder ( PQTEXTCODEC(1) );
+  auto obj = new QTextDecoder( PQTEXTCODEC(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-void QTextDecoder_new2 ()
+void QTextDecoder_new2()
 {
-  auto obj = new QTextDecoder ( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
+  auto obj = new QTextDecoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -115,13 +115,13 @@ HB_FUNC_STATIC( QTEXTDECODER_DELETE )
 /*
 QString toUnicode(const char * chars, int len)
 */
-void QTextDecoder_toUnicode1 ()
+void QTextDecoder_toUnicode1()
 {
   auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RQSTRING( obj->toUnicode ( PCONSTCHAR(1), PINT(2) ) );
+    RQSTRING( obj->toUnicode( PCONSTCHAR(1), PINT(2) ) );
   }
 }
 
@@ -132,13 +132,13 @@ void toUnicode(QString * target, const char * chars, int len)
 /*
 QString toUnicode(const QByteArray & ba)
 */
-void QTextDecoder_toUnicode3 ()
+void QTextDecoder_toUnicode3()
 {
   auto obj = (QTextDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toUnicode( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTEXTDECODER_HASFAILURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasFailure () );
+      RBOOL( obj->hasFailure() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

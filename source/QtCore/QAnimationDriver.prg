@@ -34,7 +34,7 @@ CLASS QAnimationDriver INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAnimationDriver
+PROCEDURE destroyObject() CLASS QAnimationDriver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QAnimationDriver ( OPQOBJECT(1,nullptr) );
+    auto obj = new QAnimationDriver( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ADVANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->advance ();
+      obj->advance();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_INSTALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->install ();
+      obj->install();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_UNINSTALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->uninstall ();
+      obj->uninstall();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ISRUNNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRunning () );
+      RBOOL( obj->isRunning() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->elapsed () );
+      RQINT64( obj->elapsed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_SETSTARTTIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStartTime ( PQINT64(1) );
+      obj->setStartTime( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->startTime () );
+      RQINT64( obj->startTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QANIMATIONDRIVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QANIMATIONDRIVER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTOPPED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QANIMATIONDRIVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QANIMATIONDRIVER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

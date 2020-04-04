@@ -61,7 +61,7 @@ CLASS QLineF
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLineF
+PROCEDURE destroyObject() CLASS QLineF
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -87,36 +87,36 @@ RETURN
 /*
 QLineF()
 */
-void QLineF_new1 ()
+void QLineF_new1()
 {
-  auto obj = new QLineF ();
+  auto obj = new QLineF();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QLineF(const QPointF & p1, const QPointF & p2)
 */
-void QLineF_new2 ()
+void QLineF_new2()
 {
-  auto obj = new QLineF ( *PQPOINTF(1), *PQPOINTF(2) );
+  auto obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
-void QLineF_new3 ()
+void QLineF_new3()
 {
-  auto obj = new QLineF ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  auto obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QLineF(const QLine & line)
 */
-void QLineF_new4 ()
+void QLineF_new4()
 {
-  auto obj = new QLineF ( *PQLINE(1) );
+  auto obj = new QLineF( *PQLINE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QLINEF_P1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->p1 () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->p1() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,8 +204,8 @@ HB_FUNC_STATIC( QLINEF_P2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->p2 () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->p2() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QLINEF_X1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x1 () );
+      RQREAL( obj->x1() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QLINEF_X2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x2 () );
+      RQREAL( obj->x2() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QLINEF_Y1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y1 () );
+      RQREAL( obj->y1() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QLINEF_Y2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y2 () );
+      RQREAL( obj->y2() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QLINEF_ANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->angle () );
+      RQREAL( obj->angle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
     if( ISNUMPAR(1) && ISQLINEF(1) )
     {
 #endif
-      RQREAL( obj->angleTo ( *PQLINEF(1) ) );
+      RQREAL( obj->angleTo( *PQLINEF(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QLINEF_DX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->dx () );
+      RQREAL( obj->dx() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QLINEF_DY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->dy () );
+      RQREAL( obj->dy() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QLINEF_INTERSECT )
     if( ISNUMPAR(2) && ISQLINEF(1) && ISQPOINTF(2) )
     {
 #endif
-      RENUM( obj->intersect ( *PQLINEF(1), PQPOINTF(2) ) );
+      RENUM( obj->intersect( *PQLINEF(1), PQPOINTF(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QLINEF_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLINEF_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->length () );
+      RQREAL( obj->length() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,8 +493,8 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLineF( obj->normalVector () );
-      Qt5xHb::createReturnClass ( ptr, "QLINEF", true );
+      auto ptr = new QLineF( obj->normalVector() );
+      Qt5xHb::createReturnClass( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,8 +518,8 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QPointF( obj->pointAt ( PQREAL(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->pointAt( PQREAL(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QLINEF_SETP1 )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setP1 ( *PQPOINTF(1) );
+      obj->setP1( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QLINEF_SETP2 )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setP2 ( *PQPOINTF(1) );
+      obj->setP2( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QLINEF_SETANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAngle ( PQREAL(1) );
+      obj->setAngle( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QLINEF_SETLENGTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLength ( PQREAL(1) );
+      obj->setLength( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QLINEF_SETLINE )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->setLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QLINEF_SETPOINTS )
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
     {
 #endif
-      obj->setPoints ( *PQPOINTF(1), *PQPOINTF(2) );
+      obj->setPoints( *PQPOINTF(1), *PQPOINTF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,8 +699,8 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLine( obj->toLine () );
-      Qt5xHb::createReturnClass ( ptr, "QLINE", true );
+      auto ptr = new QLine( obj->toLine() );
+      Qt5xHb::createReturnClass( ptr, "QLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,13 +714,13 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
 /*
 void translate(const QPointF & offset)
 */
-void QLineF_translate1 ()
+void QLineF_translate1()
 {
   auto obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->translate ( *PQPOINTF(1) );
+    obj->translate( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -729,13 +729,13 @@ void QLineF_translate1 ()
 /*
 void translate(qreal dx, qreal dy)
 */
-void QLineF_translate2 ()
+void QLineF_translate2()
 {
   auto obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -763,28 +763,28 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 /*
 QLineF translated(const QPointF & offset) const
 */
-void QLineF_translated1 ()
+void QLineF_translated1()
 {
   auto obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
-    Qt5xHb::createReturnClass ( ptr, "QLINEF", true );
+    auto ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
+    Qt5xHb::createReturnClass( ptr, "QLINEF", true );
   }
 }
 
 /*
 QLineF translated(qreal dx, qreal dy) const
 */
-void QLineF_translated2 ()
+void QLineF_translated2()
 {
   auto obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    auto ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-    Qt5xHb::createReturnClass ( ptr, "QLINEF", true );
+    auto ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QLINEF", true );
   }
 }
 
@@ -820,8 +820,8 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QLineF( obj->unitVector () );
-      Qt5xHb::createReturnClass ( ptr, "QLINEF", true );
+      auto ptr = new QLineF( obj->unitVector() );
+      Qt5xHb::createReturnClass( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -841,8 +841,8 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
 #endif
-    auto ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
-    Qt5xHb::createReturnClass ( ptr, "QLINEF", true );
+    auto ptr = new QLineF( QLineF::fromPolar( PQREAL(1), PQREAL(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

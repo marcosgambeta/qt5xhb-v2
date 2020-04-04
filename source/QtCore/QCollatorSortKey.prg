@@ -35,7 +35,7 @@ CLASS QCollatorSortKey
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCollatorSortKey
+PROCEDURE destroyObject() CLASS QCollatorSortKey
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 {
   if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
   {
-    auto obj = new QCollatorSortKey ( *PQCOLLATORSORTKEY(1) );
+    auto obj = new QCollatorSortKey( *PQCOLLATORSORTKEY(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
     if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
     {
 #endif
-      obj->swap ( *PQCOLLATORSORTKEY(1) );
+      obj->swap( *PQCOLLATORSORTKEY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
     if( ISNUMPAR(1) && ISQCOLLATORSORTKEY(1) )
     {
 #endif
-      RINT( obj->compare ( *PQCOLLATORSORTKEY(1) ) );
+      RINT( obj->compare( *PQCOLLATORSORTKEY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
