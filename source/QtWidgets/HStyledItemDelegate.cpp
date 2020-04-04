@@ -41,7 +41,7 @@ HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, 
   updateEditorGeometryBlock = nullptr;
 }
 
-HStyledItemDelegate::~HStyledItemDelegate ()
+HStyledItemDelegate::~HStyledItemDelegate()
 {
   if( paintBlock != nullptr )
   {
@@ -267,7 +267,7 @@ void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOpti
   }
 }
 
-void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
+void HStyledItemDelegate::setPaintCB( PHB_ITEM block )
 {
   if( paintBlock != nullptr )
   {
@@ -279,7 +279,7 @@ void HStyledItemDelegate::setPaintCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setSizeHintCB ( PHB_ITEM block )
+void HStyledItemDelegate::setSizeHintCB( PHB_ITEM block )
 {
   if( sizeHintBlock != nullptr )
   {
@@ -291,7 +291,7 @@ void HStyledItemDelegate::setSizeHintCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
+void HStyledItemDelegate::setDisplayTextCB( PHB_ITEM block )
 {
   if( displayTextBlock != nullptr )
   {
@@ -303,7 +303,7 @@ void HStyledItemDelegate::setDisplayTextCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setCreateEditorCB ( PHB_ITEM block )
+void HStyledItemDelegate::setCreateEditorCB( PHB_ITEM block )
 {
   if( createEditorBlock != nullptr )
   {
@@ -315,7 +315,7 @@ void HStyledItemDelegate::setCreateEditorCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setEditorDataCB ( PHB_ITEM block )
+void HStyledItemDelegate::setEditorDataCB( PHB_ITEM block )
 {
   if( setEditorDataBlock != nullptr )
   {
@@ -327,7 +327,7 @@ void HStyledItemDelegate::setEditorDataCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
+void HStyledItemDelegate::setModelDataCB( PHB_ITEM block )
 {
   if( setModelDataBlock != nullptr )
   {
@@ -339,7 +339,7 @@ void HStyledItemDelegate::setModelDataCB ( PHB_ITEM block )
   }
 }
 
-void HStyledItemDelegate::setUpdateEditorGeometryCB ( PHB_ITEM block )
+void HStyledItemDelegate::setUpdateEditorGeometryCB( PHB_ITEM block )
 {
   if( updateEditorGeometryBlock != nullptr )
   {
