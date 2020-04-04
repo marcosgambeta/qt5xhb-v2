@@ -39,7 +39,7 @@ CLASS QAbstractFormBuilder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractFormBuilder
+PROCEDURE destroyObject() CLASS QAbstractFormBuilder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QAbstractFormBuilder ();
+    auto obj = new QAbstractFormBuilder();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQWIDGET(2)||ISNIL(2)) )
     {
 #endif
-      QWidget * ptr = obj->load ( PQIODEVICE(1), OPQWIDGET(2,nullptr) );
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,nullptr) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQWIDGET(2) )
     {
 #endif
-      obj->save ( PQIODEVICE(1), PQWIDGET(2) );
+      obj->save( PQIODEVICE(1), PQWIDGET(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
     if( ISNUMPAR(1) && ISQDIR(1) )
     {
 #endif
-      obj->setWorkingDirectory ( *PQDIR(1) );
+      obj->setWorkingDirectory( *PQDIR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,8 +185,8 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDir( obj->workingDirectory () );
-      Qt5xHb::createReturnClass ( ptr, "QDIR", true );
+      auto ptr = new QDir( obj->workingDirectory() );
+      Qt5xHb::createReturnClass( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

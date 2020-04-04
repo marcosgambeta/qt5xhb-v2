@@ -34,7 +34,7 @@ CLASS QDesignerPropertyEditorInterface INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerPropertyEditorInterface
+PROCEDURE destroyObject() CLASS QDesignerPropertyEditorInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      QDesignerFormEditorInterface * ptr = obj->core();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentPropertyName () );
+      RQSTRING( obj->currentPropertyName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadOnly () );
+      RBOOL( obj->isReadOnly() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,8 +166,8 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setObject ( PQOBJECT(1) );
+      obj->setObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && ISOPTLOG(3) )
     {
 #endif
-      obj->setPropertyValue ( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
+      obj->setPropertyValue( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setReadOnly ( PBOOL(1) );
+      obj->setReadOnly( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDESIGNERPROPERTYEDITORINTERFACE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QVARIANT" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
