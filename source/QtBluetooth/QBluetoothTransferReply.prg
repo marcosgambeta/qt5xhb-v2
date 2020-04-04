@@ -35,7 +35,7 @@ CLASS QBluetoothTransferReply INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferReply
+PROCEDURE destroyObject() CLASS QBluetoothTransferReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISRUNNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRunning () );
+      RBOOL( obj->isRunning() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,8 +150,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothTransferManager * ptr = obj->manager ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QBLUETOOTHTRANSFERMANAGER" );
+      QBluetoothTransferManager * ptr = obj->manager();
+      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBluetoothTransferRequest( obj->request () );
-      Qt5xHb::createReturnClass ( ptr, "QBLUETOOTHTRANSFERREQUEST", true );
+      auto ptr = new QBluetoothTransferRequest( obj->request() );
+      Qt5xHb::createReturnClass( ptr, "QBLUETOOTHTRANSFERREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->abort ();
+      obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ONTRANSFERPROGRESS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHTRANSFERREPLY" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNLL( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

@@ -28,7 +28,7 @@ CLASS QBluetoothTransferManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferManager
+PROCEDURE destroyObject() CLASS QBluetoothTransferManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QBluetoothTransferManager ( OPQOBJECT(1,nullptr) );
+    auto obj = new QBluetoothTransferManager( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
     if( ISNUMPAR(2) && ISQBLUETOOTHTRANSFERREQUEST(1) && ISQIODEVICE(2) )
     {
 #endif
-      QBluetoothTransferReply * ptr = obj->put ( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
+      QBluetoothTransferReply * ptr = obj->put( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHTRANSFERMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHTRANSFERMANAGER" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QBLUETOOTHTRANSFERREPLY" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

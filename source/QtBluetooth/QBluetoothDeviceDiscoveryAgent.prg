@@ -39,7 +39,7 @@ CLASS QBluetoothDeviceDiscoveryAgent INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothDeviceDiscoveryAgent
+PROCEDURE destroyObject() CLASS QBluetoothDeviceDiscoveryAgent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,10 +69,10 @@ RETURN
 /*
 QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
 */
-void QBluetoothDeviceDiscoveryAgent_new1 ()
+void QBluetoothDeviceDiscoveryAgent_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothDeviceDiscoveryAgent ( OPQOBJECT(1,nullptr) );
+  auto obj = new QBluetoothDeviceDiscoveryAgent( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -80,10 +80,10 @@ void QBluetoothDeviceDiscoveryAgent_new1 ()
 /*
 QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
 */
-void QBluetoothDeviceDiscoveryAgent_new2 ()
+void QBluetoothDeviceDiscoveryAgent_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothDeviceDiscoveryAgent ( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QBluetoothDeviceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->inquiryType () );
+      RENUM( obj->inquiryType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInquiryType ( (QBluetoothDeviceDiscoveryAgent::InquiryType) hb_parni(1) );
+      obj->setInquiryType( (QBluetoothDeviceDiscoveryAgent::InquiryType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBluetoothDeviceInfo> list = obj->discoveredDevices ();
+      QList<QBluetoothDeviceInfo> list = obj->discoveredDevices();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHDEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_DISCOVEREDDEVICES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QBluetoothDeviceInfo *) new QBluetoothDeviceInfo ( list[i] ) );
+          hb_itemPutPtr( pItem, (QBluetoothDeviceInfo *) new QBluetoothDeviceInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->start ();
+      obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEDISCOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBLUETOOTHDEVICEINFO" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONCANCELED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ONDEVICEUPDATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBLUETOOTHDEVICEINFO" );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

@@ -38,7 +38,7 @@ CLASS QBluetoothTransferRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferRequest
+PROCEDURE destroyObject() CLASS QBluetoothTransferRequest
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,10 +68,10 @@ RETURN
 /*
 QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
 */
-void QBluetoothTransferRequest_new1 ()
+void QBluetoothTransferRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothTransferRequest ( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QBluetoothTransferRequest( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -79,10 +79,10 @@ void QBluetoothTransferRequest_new1 ()
 /*
 QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 */
-void QBluetoothTransferRequest_new2 ()
+void QBluetoothTransferRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothTransferRequest ( *PQBLUETOOTHTRANSFERREQUEST(1) );
+  auto obj = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ATTRIBUTE )
     if( ISBETWEEN(1,2) && ISNUM(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->attribute ( (QBluetoothTransferRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->attribute( (QBluetoothTransferRequest::Attribute) hb_parni(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_SETATTRIBUTE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setAttribute ( (QBluetoothTransferRequest::Attribute) hb_parni(1), *PQVARIANT(2) );
+      obj->setAttribute( (QBluetoothTransferRequest::Attribute) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,8 +194,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBluetoothAddress( obj->address () );
-      Qt5xHb::createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
+      auto ptr = new QBluetoothAddress( obj->address() );
+      Qt5xHb::createReturnClass( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

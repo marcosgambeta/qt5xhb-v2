@@ -37,7 +37,7 @@ CLASS QBluetoothAddress
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothAddress
+PROCEDURE destroyObject() CLASS QBluetoothAddress
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QBluetoothAddress()
 */
-void QBluetoothAddress_new1 ()
+void QBluetoothAddress_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothAddress ();
+  auto obj = new QBluetoothAddress();
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QBluetoothAddress_new1 ()
 /*
 QBluetoothAddress(quint64 address)
 */
-void QBluetoothAddress_new2 ()
+void QBluetoothAddress_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothAddress ( PQUINT64(1) );
+  auto obj = new QBluetoothAddress( PQUINT64(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -89,10 +89,10 @@ void QBluetoothAddress_new2 ()
 /*
 QBluetoothAddress(const QString &address)
 */
-void QBluetoothAddress_new3 ()
+void QBluetoothAddress_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothAddress ( PQSTRING(1) );
+  auto obj = new QBluetoothAddress( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -100,10 +100,10 @@ void QBluetoothAddress_new3 ()
 /*
 QBluetoothAddress(const QBluetoothAddress &other)
 */
-void QBluetoothAddress_new4 ()
+void QBluetoothAddress_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = new QBluetoothAddress ( *PQBLUETOOTHADDRESS(1) );
+  auto obj = new QBluetoothAddress( *PQBLUETOOTHADDRESS(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOUINT64 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT64( obj->toUInt64 () );
+      RQUINT64( obj->toUInt64() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
