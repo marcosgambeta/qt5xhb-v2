@@ -45,7 +45,7 @@ CLASS QDeclarativeExpression INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeExpression
+PROCEDURE destroyObject() CLASS QDeclarativeExpression
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,18 +74,18 @@ RETURN
 /*
 QDeclarativeExpression ()
 */
-void QDeclarativeExpression_new1 ()
+void QDeclarativeExpression_new1()
 {
-  auto obj = new QDeclarativeExpression ();
+  auto obj = new QDeclarativeExpression();
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 */
-void QDeclarativeExpression_new2 ()
+void QDeclarativeExpression_new2()
 {
-  auto obj = new QDeclarativeExpression ( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearError ();
+      obj->clearError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->context ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      QDeclarativeContext * ptr = obj->context();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,8 +189,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeEngine * ptr = obj->engine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
+      QDeclarativeEngine * ptr = obj->engine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,8 +214,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDeclarativeError( obj->error () );
-      Qt5xHb::createReturnClass ( ptr, "QDECLARATIVEERROR", true );
+      auto ptr = new QDeclarativeError( obj->error() );
+      Qt5xHb::createReturnClass( ptr, "QDECLARATIVEERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,8 +240,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
     {
 #endif
       bool par1;
-      auto ptr = new QVariant( obj->evaluate ( &par1 ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->evaluate( &par1 ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->expression () );
+      RQSTRING( obj->expression() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasError () );
+      RBOOL( obj->hasError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineNumber () );
+      RINT( obj->lineNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->notifyOnValueChanged () );
+      RBOOL( obj->notifyOnValueChanged() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,8 +362,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->scopeObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->scopeObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setExpression ( PQSTRING(1) );
+      obj->setExpression( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setNotifyOnValueChanged ( PBOOL(1) );
+      obj->setNotifyOnValueChanged( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
     {
 #endif
-      obj->setSourceLocation ( PQSTRING(1), PINT(2) );
+      obj->setSourceLocation( PQSTRING(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceFile () );
+      RQSTRING( obj->sourceFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVEEXPRESSION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDECLARATIVEEXPRESSION" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

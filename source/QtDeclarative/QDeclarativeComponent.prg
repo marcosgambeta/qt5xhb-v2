@@ -45,7 +45,7 @@ CLASS QDeclarativeComponent INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeComponent
+PROCEDURE destroyObject() CLASS QDeclarativeComponent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,27 +73,27 @@ RETURN
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
-void QDeclarativeComponent_new1 ()
+void QDeclarativeComponent_new1()
 {
-  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
 */
-void QDeclarativeComponent_new2 ()
+void QDeclarativeComponent_new2()
 {
-  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
 */
-void QDeclarativeComponent_new3 ()
+void QDeclarativeComponent_new3()
 {
-  auto obj = new QDeclarativeComponent ( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
     {
 #endif
-      QObject * ptr = obj->beginCreate ( PQDECLARATIVECONTEXT(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->completeCreate ();
+      obj->completeCreate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,8 +202,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     if( ISBETWEEN(0,1) && (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
     {
 #endif
-      QObject * ptr = obj->create ( OPQDECLARATIVECONTEXT(1,nullptr) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->create( OPQDECLARATIVECONTEXT(1,nullptr) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,8 +227,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->creationContext ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      QDeclarativeContext * ptr = obj->creationContext();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDeclarativeError> list = obj->errors ();
+      QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isError () );
+      RBOOL( obj->isError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoading () );
+      RBOOL( obj->isLoading() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReady () );
+      RBOOL( obj->isReady() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->loadUrl ( *PQURL(1) );
+      obj->loadUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->progress () );
+      RQREAL( obj->progress() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
     {
 #endif
-      obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
+      obj->setData( *PQBYTEARRAY(1), *PQURL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,8 +500,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDECLARATIVECOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVECOMPONENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDECLARATIVECOMPONENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

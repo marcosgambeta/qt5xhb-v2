@@ -40,7 +40,7 @@ CLASS QDeclarativeScriptString
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeScriptString
+PROCEDURE destroyObject() CLASS QDeclarativeScriptString
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QDeclarativeScriptString ()
 */
-void QDeclarativeScriptString_new1 ()
+void QDeclarativeScriptString_new1()
 {
-  auto obj = new QDeclarativeScriptString ();
+  auto obj = new QDeclarativeScriptString();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 */
-void QDeclarativeScriptString_new2 ()
+void QDeclarativeScriptString_new2()
 {
-  auto obj = new QDeclarativeScriptString ( *PQDECLARATIVESCRIPTSTRING(1) );
+  auto obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->context ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      QDeclarativeContext * ptr = obj->context();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->scopeObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->scopeObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->script () );
+      RQSTRING( obj->script() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
     if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
     {
 #endif
-      obj->setContext ( PQDECLARATIVECONTEXT(1) );
+      obj->setContext( PQDECLARATIVECONTEXT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setScopeObject ( PQOBJECT(1) );
+      obj->setScopeObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setScript ( PQSTRING(1) );
+      obj->setScript( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -43,7 +43,7 @@ CLASS QDeclarativeView INHERIT QGraphicsView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeView
+PROCEDURE destroyObject() CLASS QDeclarativeView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,18 +74,18 @@ RETURN
 /*
 QDeclarativeView ( QWidget * parent = nullptr )
 */
-void QDeclarativeView_new1 ()
+void QDeclarativeView_new1()
 {
-  auto obj = new QDeclarativeView ( OPQWIDGET(1,nullptr) );
+  auto obj = new QDeclarativeView( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 */
-void QDeclarativeView_new2 ()
+void QDeclarativeView_new2()
 {
-  auto obj = new QDeclarativeView ( *PQURL(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QDeclarativeView( *PQURL(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeEngine * ptr = obj->engine ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
+      QDeclarativeEngine * ptr = obj->engine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDeclarativeError> list = obj->errors ();
+      QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError ( list[i] ) );
+          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -215,8 +215,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->initialSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->initialSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->resizeMode () );
+      RENUM( obj->resizeMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,8 +264,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDeclarativeContext * ptr = obj->rootContext ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+      QDeclarativeContext * ptr = obj->rootContext();
+      Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,8 +289,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGraphicsObject * ptr = obj->rootObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QGRAPHICSOBJECT" );
+      QGraphicsObject * ptr = obj->rootObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode( (QDeclarativeView::ResizeMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSource ( *PQURL(1) );
+      obj->setSource( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,8 +366,8 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->source () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->source() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDECLARATIVEVIEW" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSIZE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDECLARATIVEVIEW" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDECLARATIVEVIEW" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
