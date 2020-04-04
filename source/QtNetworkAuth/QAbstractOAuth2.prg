@@ -44,7 +44,7 @@ CLASS QAbstractOAuth2 INHERIT QAbstractOAuth
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractOAuth2
+PROCEDURE destroyObject() CLASS QAbstractOAuth2
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->scope () );
+      RQSTRING( obj->scope() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setScope ( PQSTRING(1) );
+      obj->setScope( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->userAgent () );
+      RQSTRING( obj->userAgent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setUserAgent ( PQSTRING(1) );
+      obj->setUserAgent( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->clientIdentifierSharedKey () );
+      RQSTRING( obj->clientIdentifierSharedKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setClientIdentifierSharedKey ( PQSTRING(1) );
+      obj->setClientIdentifierSharedKey( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->state () );
+      RQSTRING( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setState ( PQSTRING(1) );
+      obj->setState( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,8 +335,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDateTime( obj->expirationAt () );
-      Qt5xHb::createReturnClass ( ptr, "QDATETIME", true );
+      auto ptr = new QDateTime( obj->expirationAt() );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->responseType () );
+      RQSTRING( obj->responseType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->refreshToken () );
+      RQSTRING( obj->refreshToken() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setRefreshToken ( PQSTRING(1) );
+      obj->setRefreshToken( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONCLIENTIDENTIFIERSHAREDKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = Signals4_return_object( (void *) &arg3, "QURL" );
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONEXPIRATIONATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDATETIME" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONRESPONSETYPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSCOPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_ONUSERAGENTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTOAUTH2" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTOAUTH2" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
