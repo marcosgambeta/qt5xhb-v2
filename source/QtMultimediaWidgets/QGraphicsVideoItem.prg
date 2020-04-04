@@ -40,7 +40,7 @@ CLASS QGraphicsVideoItem INHERIT QGraphicsObject,QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsVideoItem
+PROCEDURE destroyObject() CLASS QGraphicsVideoItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    auto obj = new QGraphicsVideoItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    auto obj = new QGraphicsVideoItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ASPECTRATIOMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->aspectRatioMode () );
+      RENUM( obj->aspectRatioMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAspectRatioMode ( (Qt::AspectRatioMode) hb_parni(1) );
+      obj->setAspectRatioMode( (Qt::AspectRatioMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,8 +187,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPointF( obj->offset () );
-      Qt5xHb::createReturnClass ( ptr, "QPOINTF", true );
+      auto ptr = new QPointF( obj->offset() );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setOffset ( *PQPOINTF(1) );
+      obj->setOffset( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,8 +238,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSizeF( obj->size () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
+      auto ptr = new QSizeF( obj->size() );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      obj->setSize ( *PQSIZEF(1) );
+      obj->setSize( *PQSIZEF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,8 +289,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NATIVESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSizeF( obj->nativeSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZEF", true );
+      auto ptr = new QSizeF( obj->nativeSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,8 +314,8 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ONNATIVESIZECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGRAPHICSVIDEOITEM" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGRAPHICSVIDEOITEM" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSIZEF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

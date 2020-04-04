@@ -43,7 +43,7 @@ CLASS QVideoWidgetControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoWidgetControl
+PROCEDURE destroyObject() CLASS QVideoWidgetControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_VIDEOWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->videoWidget ();
-      Qt5xHb::createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->videoWidget();
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ASPECTRATIOMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->aspectRatioMode () );
+      RENUM( obj->aspectRatioMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETASPECTRATIOMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAspectRatioMode ( (Qt::AspectRatioMode) hb_parni(1) );
+      obj->setAspectRatioMode( (Qt::AspectRatioMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ISFULLSCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFullScreen () );
+      RBOOL( obj->isFullScreen() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETFULLSCREEN )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFullScreen ( PBOOL(1) );
+      obj->setFullScreen( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_BRIGHTNESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->brightness () );
+      RINT( obj->brightness() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETBRIGHTNESS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBrightness ( PINT(1) );
+      obj->setBrightness( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_CONTRAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->contrast () );
+      RINT( obj->contrast() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETCONTRAST )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setContrast ( PINT(1) );
+      obj->setContrast( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_HUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->hue () );
+      RINT( obj->hue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETHUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHue ( PINT(1) );
+      obj->setHue( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SATURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->saturation () );
+      RINT( obj->saturation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_SETSATURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSaturation ( PINT(1) );
+      obj->setSaturation( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONFULLSCREENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONBRIGHTNESSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONCONTRASTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONHUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QVIDEOWIDGETCONTROL_ONSATURATIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVIDEOWIDGETCONTROL" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
