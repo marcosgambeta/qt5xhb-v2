@@ -25,7 +25,7 @@ CLASS QDomDocumentFragment INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomDocumentFragment
+PROCEDURE destroyObject() CLASS QDomDocumentFragment
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -51,18 +51,18 @@ RETURN
 /*
 QDomDocumentFragment ()
 */
-void QDomDocumentFragment_new1 ()
+void QDomDocumentFragment_new1()
 {
-  auto obj = new QDomDocumentFragment ();
+  auto obj = new QDomDocumentFragment();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
-void QDomDocumentFragment_new2 ()
+void QDomDocumentFragment_new2()
 {
-  auto obj = new QDomDocumentFragment ( *PQDOMDOCUMENTFRAGMENT(1) );
+  auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -40,7 +40,7 @@ CLASS QXmlLexicalHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlLexicalHandler
+PROCEDURE destroyObject() CLASS QXmlLexicalHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->comment ( PQSTRING(1) ) );
+      RBOOL( obj->comment( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->endCDATA () );
+      RBOOL( obj->endCDATA() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->endDTD () );
+      RBOOL( obj->endDTD() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->endEntity ( PQSTRING(1) ) );
+      RBOOL( obj->endEntity( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->startCDATA () );
+      RBOOL( obj->startCDATA() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->startDTD ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->startDTD( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->startEntity ( PQSTRING(1) ) );
+      RBOOL( obj->startEntity( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

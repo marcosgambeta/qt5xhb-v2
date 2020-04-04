@@ -35,7 +35,7 @@ CLASS QXmlDTDHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlDTDHandler
+PROCEDURE destroyObject() CLASS QXmlDTDHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->notationDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl ( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

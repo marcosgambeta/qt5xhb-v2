@@ -32,7 +32,7 @@ CLASS QDomDocumentType INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomDocumentType
+PROCEDURE destroyObject() CLASS QDomDocumentType
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QDomDocumentType ()
 */
-void QDomDocumentType_new1 ()
+void QDomDocumentType_new1()
 {
-  auto obj = new QDomDocumentType ();
+  auto obj = new QDomDocumentType();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomDocumentType ( const QDomDocumentType & n )
 */
-void QDomDocumentType_new2 ()
+void QDomDocumentType_new2()
 {
-  auto obj = new QDomDocumentType ( *PQDOMDOCUMENTTYPE(1) );
+  auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -122,8 +122,8 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDomNamedNodeMap( obj->entities () );
-      Qt5xHb::createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+      auto ptr = new QDomNamedNodeMap( obj->entities() );
+      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->internalSubset () );
+      RQSTRING( obj->internalSubset() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,8 +219,8 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDomNamedNodeMap( obj->notations () );
-      Qt5xHb::createReturnClass ( ptr, "QDOMNAMEDNODEMAP", true );
+      auto ptr = new QDomNamedNodeMap( obj->notations() );
+      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->publicId () );
+      RQSTRING( obj->publicId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->systemId () );
+      RQSTRING( obj->systemId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

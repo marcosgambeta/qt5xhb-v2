@@ -26,7 +26,7 @@ CLASS QDomText INHERIT QDomCharacterData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomText
+PROCEDURE destroyObject() CLASS QDomText
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QDomText ()
 */
-void QDomText_new1 ()
+void QDomText_new1()
 {
-  auto obj = new QDomText ();
+  auto obj = new QDomText();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomText ( const QDomText & x )
 */
-void QDomText_new2 ()
+void QDomText_new2()
 {
-  auto obj = new QDomText ( *PQDOMTEXT(1) );
+  auto obj = new QDomText( *PQDOMTEXT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QDomText( obj->splitText ( PINT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QDOMTEXT", true );
+      auto ptr = new QDomText( obj->splitText( PINT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QDOMTEXT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

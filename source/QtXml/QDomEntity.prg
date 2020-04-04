@@ -28,7 +28,7 @@ CLASS QDomEntity INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomEntity
+PROCEDURE destroyObject() CLASS QDomEntity
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QDomEntity ()
 */
-void QDomEntity_new1 ()
+void QDomEntity_new1()
 {
-  auto obj = new QDomEntity ();
+  auto obj = new QDomEntity();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomEntity ( const QDomEntity & x )
 */
-void QDomEntity_new2 ()
+void QDomEntity_new2()
 {
-  auto obj = new QDomEntity ( *PQDOMENTITY(1) );
+  auto obj = new QDomEntity( *PQDOMENTITY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->notationName () );
+      RQSTRING( obj->notationName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->publicId () );
+      RQSTRING( obj->publicId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->systemId () );
+      RQSTRING( obj->systemId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

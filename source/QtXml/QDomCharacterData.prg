@@ -33,7 +33,7 @@ CLASS QDomCharacterData INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomCharacterData
+PROCEDURE destroyObject() CLASS QDomCharacterData
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,18 +59,18 @@ RETURN
 /*
 QDomCharacterData ()
 */
-void QDomCharacterData_new1 ()
+void QDomCharacterData_new1()
 {
-  auto obj = new QDomCharacterData ();
+  auto obj = new QDomCharacterData();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomCharacterData ( const QDomCharacterData & x )
 */
-void QDomCharacterData_new2 ()
+void QDomCharacterData_new2()
 {
-  auto obj = new QDomCharacterData ( *PQDOMCHARACTERDATA(1) );
+  auto obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->appendData ( PQSTRING(1) );
+      obj->appendData( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->data () );
+      RQSTRING( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->deleteData ( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2) );
+      obj->deleteData( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->insertData ( PUNSIGNEDLONG(1), PQSTRING(2) );
+      obj->insertData( PUNSIGNEDLONG(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->length () );
+      RUINT( obj->length() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
     {
 #endif
-      obj->replaceData ( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2), PQSTRING(3) );
+      obj->replaceData( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2), PQSTRING(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setData ( PQSTRING(1) );
+      obj->setData( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RQSTRING( obj->substringData ( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2) ) );
+      RQSTRING( obj->substringData( PUNSIGNEDLONG(1), PUNSIGNEDLONG(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -38,7 +38,7 @@ CLASS QXmlParseException
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlParseException
+PROCEDURE destroyObject() CLASS QXmlParseException
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
-void QXmlParseException_new1 ()
+void QXmlParseException_new1()
 {
-  auto obj = new QXmlParseException ( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+  auto obj = new QXmlParseException( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlParseException ( const QXmlParseException & other )
 */
-void QXmlParseException_new2 ()
+void QXmlParseException_new2()
 {
-  auto obj = new QXmlParseException ( *PQXMLPARSEEXCEPTION(1) );
+  auto obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnNumber () );
+      RINT( obj->columnNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineNumber () );
+      RINT( obj->lineNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->message () );
+      RQSTRING( obj->message() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->publicId () );
+      RQSTRING( obj->publicId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->systemId () );
+      RQSTRING( obj->systemId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

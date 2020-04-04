@@ -40,7 +40,7 @@ CLASS QDomNodeList
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNodeList
+PROCEDURE destroyObject() CLASS QDomNodeList
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,18 +66,18 @@ RETURN
 /*
 QDomNodeList ()
 */
-void QDomNodeList_new1 ()
+void QDomNodeList_new1()
 {
-  auto obj = new QDomNodeList ();
+  auto obj = new QDomNodeList();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QDomNodeList ( const QDomNodeList & n )
 */
-void QDomNodeList_new2 ()
+void QDomNodeList_new2()
 {
-  auto obj = new QDomNodeList ( *PQDOMNODELIST(1) );
+  auto obj = new QDomNodeList( *PQDOMNODELIST(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QDomNode( obj->at ( PINT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
+      auto ptr = new QDomNode( obj->at( PINT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,8 +203,8 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      auto ptr = new QDomNode( obj->item ( PINT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QDOMNODE", true );
+      auto ptr = new QDomNode( obj->item( PINT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->length () );
+      RUINT( obj->length() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDOMNODELIST_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->size () );
+      RINT( obj->size() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

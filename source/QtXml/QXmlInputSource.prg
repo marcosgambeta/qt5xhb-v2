@@ -39,7 +39,7 @@ CLASS QXmlInputSource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlInputSource
+PROCEDURE destroyObject() CLASS QXmlInputSource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QXmlInputSource ()
 */
-void QXmlInputSource_new1 ()
+void QXmlInputSource_new1()
 {
-  auto obj = new QXmlInputSource ();
+  auto obj = new QXmlInputSource();
   Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
 QXmlInputSource ( QIODevice * dev )
 */
-void QXmlInputSource_new2 ()
+void QXmlInputSource_new2()
 {
-  auto obj = new QXmlInputSource ( PQIODEVICE(1) );
+  auto obj = new QXmlInputSource( PQIODEVICE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->data () );
+      RQSTRING( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->fetchData ();
+      obj->fetchData();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QChar( obj->next () );
-      Qt5xHb::createReturnClass ( ptr, "QCHAR", true );
+      auto ptr = new QChar( obj->next() );
+      Qt5xHb::createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,13 +220,13 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 /*
 virtual void setData ( const QString & dat )
 */
-void QXmlInputSource_setData1 ()
+void QXmlInputSource_setData1()
 {
   auto obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setData ( PQSTRING(1) );
+    obj->setData( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -235,13 +235,13 @@ void QXmlInputSource_setData1 ()
 /*
 virtual void setData ( const QByteArray & dat )
 */
-void QXmlInputSource_setData2 ()
+void QXmlInputSource_setData2()
 {
   auto obj = (QXmlInputSource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setData ( *PQBYTEARRAY(1) );
+    obj->setData( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
