@@ -553,18 +553,18 @@ void QMenu_exec2()
 /*
 static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
 */
-void QMenu_exec3 ()
+void QMenu_exec3()
 {
+
   QList<QAction *> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
   int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
+  for( auto i1 = 0; i1 < nLen1; i1++ )
   {
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), OPQACTION(3,0), OPQWIDGET(4,0) );
-  Qt5xHb::createReturnClass ( ptr, "QACTION" );
+  QAction * ptr = QMenu::exec( par1, *PQPOINT(2), OPQACTION(3,nullptr), OPQWIDGET(4,nullptr) );
+  Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 }
 
 //[1]QAction * exec ()
