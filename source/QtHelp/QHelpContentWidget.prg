@@ -27,7 +27,7 @@ CLASS QHelpContentWidget INHERIT QTreeView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpContentWidget
+PROCEDURE destroyObject() CLASS QHelpContentWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->indexOf ( *PQURL(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->indexOf( *PQURL(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPCONTENTWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPCONTENTWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

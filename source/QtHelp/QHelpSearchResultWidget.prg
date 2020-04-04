@@ -27,7 +27,7 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchResultWidget
+PROCEDURE destroyObject() CLASS QHelpSearchResultWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      auto ptr = new QUrl( obj->linkAt ( *PQPOINT(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->linkAt( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPSEARCHRESULTWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPSEARCHRESULTWIDGET" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QURL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

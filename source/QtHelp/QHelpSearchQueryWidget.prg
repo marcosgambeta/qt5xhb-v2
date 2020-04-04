@@ -28,7 +28,7 @@ CLASS QHelpSearchQueryWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchQueryWidget
+PROCEDURE destroyObject() CLASS QHelpSearchQueryWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    auto obj = new QHelpSearchQueryWidget ( OPQWIDGET(1,nullptr) );
+    auto obj = new QHelpSearchQueryWidget( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QHelpSearchQuery> list = obj->query ();
+      QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery ( list[i] ) );
+          hb_itemPutPtr( pItem, (QHelpSearchQuery *) new QHelpSearchQuery( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPSEARCHQUERYWIDGET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPSEARCHQUERYWIDGET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

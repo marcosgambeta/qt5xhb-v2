@@ -56,7 +56,7 @@ CLASS QHelpEngineCore INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpEngineCore
+PROCEDURE destroyObject() CLASS QHelpEngineCore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    auto obj = new QHelpEngineCore ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QHelpEngineCore( PQSTRING(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
     if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
     {
 #endif
-      RBOOL( obj->addCustomFilter ( PQSTRING(1), PQSTRINGLIST(2) ) );
+      RBOOL( obj->addCustomFilter( PQSTRING(1), PQSTRINGLIST(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoSaveFilter () );
+      RBOOL( obj->autoSaveFilter() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->collectionFile () );
+      RQSTRING( obj->collectionFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->copyCollectionFile ( PQSTRING(1) ) );
+      RBOOL( obj->copyCollectionFile( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentFilter () );
+      RQSTRING( obj->currentFilter() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->customFilters () );
+      RQSTRINGLIST( obj->customFilters() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,8 +274,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      auto ptr = new QVariant( obj->customValue ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
-      Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+      auto ptr = new QVariant( obj->customValue( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->documentationFileName ( PQSTRING(1) ) );
+      RQSTRING( obj->documentationFileName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->error () );
+      RQSTRING( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,8 +347,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QByteArray( obj->fileData ( *PQURL(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->fileData( *PQURL(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,26 +362,26 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 /*
 QStringList filterAttributes () const
 */
-void QHelpEngineCore_filterAttributes1 ()
+void QHelpEngineCore_filterAttributes1()
 {
   auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RQSTRINGLIST( obj->filterAttributes () );
+    RQSTRINGLIST( obj->filterAttributes() );
   }
 }
 
 /*
 QStringList filterAttributes ( const QString & filterName ) const
 */
-void QHelpEngineCore_filterAttributes2 ()
+void QHelpEngineCore_filterAttributes2()
 {
   auto obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RQSTRINGLIST( obj->filterAttributes ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
   }
 }
 
@@ -417,8 +417,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      auto ptr = new QUrl( obj->findFile ( *PQURL(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->findFile( *PQURL(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->registerDocumentation ( PQSTRING(1) ) );
+      RBOOL( obj->registerDocumentation( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->registeredDocumentations () );
+      RQSTRINGLIST( obj->registeredDocumentations() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomFilter ( PQSTRING(1) ) );
+      RBOOL( obj->removeCustomFilter( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomValue ( PQSTRING(1) ) );
+      RBOOL( obj->removeCustomValue( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoSaveFilter ( PBOOL(1) );
+      obj->setAutoSaveFilter( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCollectionFile ( PQSTRING(1) );
+      obj->setCollectionFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCurrentFilter ( PQSTRING(1) );
+      obj->setCurrentFilter( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      RBOOL( obj->setCustomValue ( PQSTRING(1), *PQVARIANT(2) ) );
+      RBOOL( obj->setCustomValue( PQSTRING(1), *PQVARIANT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->setupData () );
+      RBOOL( obj->setupData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->unregisterDocumentation ( PQSTRING(1) ) );
+      RBOOL( obj->unregisterDocumentation( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -684,8 +684,8 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
 #endif
-    auto ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
-    Qt5xHb::createReturnClass ( ptr, "QVARIANT", true );
+    auto ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING(1), PQSTRING(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
+    RQSTRING( QHelpEngineCore::namespaceName( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPENGINECORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPENGINECORE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

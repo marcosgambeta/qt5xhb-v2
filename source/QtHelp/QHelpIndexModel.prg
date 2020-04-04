@@ -29,7 +29,7 @@ CLASS QHelpIndexModel INHERIT QStringListModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpIndexModel
+PROCEDURE destroyObject() CLASS QHelpIndexModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->createIndex ( PQSTRING(1) );
+      obj->createIndex( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      auto ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-      Qt5xHb::createReturnClass ( ptr, "QMODELINDEX", true );
+      auto ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCreatingIndex () );
+      RBOOL( obj->isCreatingIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPINDEXMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPINDEXMODEL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHELPINDEXMODEL" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHELPINDEXMODEL" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
