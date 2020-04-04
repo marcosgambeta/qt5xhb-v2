@@ -26,7 +26,7 @@ CLASS QAxSelect INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxSelect
+PROCEDURE destroyObject() CLASS QAxSelect
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QAXSELECT_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QAxSelect ( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QAxSelect( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QAXSELECT_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAXSELECT_CLSID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->clsid () );
+      RQSTRING( obj->clsid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAXSELECT_SANDBOXINGLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->sandboxingLevel () );
+      RENUM( obj->sandboxingLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

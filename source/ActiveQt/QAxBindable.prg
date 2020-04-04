@@ -38,7 +38,7 @@ CLASS QAxBindable
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxBindable
+PROCEDURE destroyObject() CLASS QAxBindable
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QAxBindable ();
+    auto obj = new QAxBindable();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAxAggregated * ptr = obj->createAggregate ();
-      Qt5xHb::createReturnClass ( ptr, "QAXAGGREGATED", false );
+      QAxAggregated * ptr = obj->createAggregate();
+      Qt5xHb::createReturnClass( ptr, "QAXAGGREGATED", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
+      RBOOL( obj->readData( PQIODEVICE(1), PQSTRING(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
     if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
 #endif
-      obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
+      obj->reportError( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      RBOOL( obj->writeData ( PQIODEVICE(1) ) );
+      RBOOL( obj->writeData( PQIODEVICE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
