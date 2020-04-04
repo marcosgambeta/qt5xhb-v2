@@ -38,7 +38,7 @@ CLASS QSensorManager
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorManager
+PROCEDURE destroyObject() CLASS QSensorManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
   if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISQSENSORBACKENDFACTORY(3) )
   {
 #endif
-    QSensorManager::registerBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), PQSENSORBACKENDFACTORY(3) );
+    QSensorManager::registerBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2), PQSENSORBACKENDFACTORY(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
   if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
   {
 #endif
-    QSensorManager::unregisterBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    QSensorManager::unregisterBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
   if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
   {
 #endif
-    RBOOL( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+    RBOOL( QSensorManager::isBackendRegistered( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -163,8 +163,8 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
   if( ISNUMPAR(1) && ISQSENSOR(1) )
   {
 #endif
-    QSensorBackend * ptr = QSensorManager::createBackend ( PQSENSOR(1) );
-    Qt5xHb::createReturnQObjectClass ( ptr, "QSENSORBACKEND" );
+    QSensorBackend * ptr = QSensorManager::createBackend( PQSENSOR(1) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSENSORBACKEND" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
   if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
   {
 #endif
-    QSensorManager::setDefaultBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    QSensorManager::setDefaultBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

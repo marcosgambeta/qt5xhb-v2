@@ -32,7 +32,7 @@ CLASS QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorFilter
+PROCEDURE destroyObject() CLASS QSensorFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSENSORFILTER_FILTER )
     if( ISNUMPAR(1) && ISQSENSORREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQSENSORREADING(1) ) );
+      RBOOL( obj->filter( PQSENSORREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

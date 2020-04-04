@@ -30,7 +30,7 @@ CLASS QTapSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTapSensor
+PROCEDURE destroyObject() CLASS QTapSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QTapSensor ( OPQOBJECT(1,nullptr) );
+    auto obj = new QTapSensor( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTapReading * ptr = obj->reading ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QTAPREADING" );
+      QTapReading * ptr = obj->reading();
+      Qt5xHb::createReturnQObjectClass( ptr, "QTAPREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->returnDoubleTapEvents () );
+      RBOOL( obj->returnDoubleTapEvents() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setReturnDoubleTapEvents ( PBOOL(1) );
+      obj->setReturnDoubleTapEvents( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QTAPSENSOR_ONRETURNDOUBLETAPEVENTSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QTAPSENSOR" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QTAPSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

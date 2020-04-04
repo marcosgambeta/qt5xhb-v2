@@ -31,7 +31,7 @@ CLASS QSensorGestureRecognizer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorGestureRecognizer
+PROCEDURE destroyObject() CLASS QSensorGestureRecognizer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->id () );
+      RQSTRING( obj->id() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STARTBACKEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startBackend ();
+      obj->startBackend();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STOPBACKEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stopBackend ();
+      obj->stopBackend();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_CREATEBACKEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->createBackend ();
+      obj->createBackend();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->gestureSignals () );
+      RQSTRINGLIST( obj->gestureSignals() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ONDETECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSENSORGESTURERECOGNIZER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSENSORGESTURERECOGNIZER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

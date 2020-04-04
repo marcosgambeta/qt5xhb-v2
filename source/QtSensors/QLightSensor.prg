@@ -30,7 +30,7 @@ CLASS QLightSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLightSensor
+PROCEDURE destroyObject() CLASS QLightSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QLightSensor ( OPQOBJECT(1,nullptr) );
+    auto obj = new QLightSensor( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLightReading * ptr = obj->reading ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QLIGHTREADING" );
+      QLightReading * ptr = obj->reading();
+      Qt5xHb::createReturnQObjectClass( ptr, "QLIGHTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->fieldOfView () );
+      RQREAL( obj->fieldOfView() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFieldOfView ( PQREAL(1) );
+      obj->setFieldOfView( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_ONFIELDOFVIEWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLIGHTSENSOR" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLIGHTSENSOR" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

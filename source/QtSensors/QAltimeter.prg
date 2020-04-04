@@ -26,7 +26,7 @@ CLASS QAltimeter INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAltimeter
+PROCEDURE destroyObject() CLASS QAltimeter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QALTIMETER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QAltimeter ( OPQOBJECT(1,nullptr) );
+    auto obj = new QAltimeter( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QALTIMETER_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAltimeterReading * ptr = obj->reading ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QALTIMETERREADING" );
+      QAltimeterReading * ptr = obj->reading();
+      Qt5xHb::createReturnQObjectClass( ptr, "QALTIMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

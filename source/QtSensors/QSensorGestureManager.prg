@@ -31,7 +31,7 @@ CLASS QSensorGestureManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorGestureManager
+PROCEDURE destroyObject() CLASS QSensorGestureManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QSensorGestureManager ( OPQOBJECT(1,nullptr) );
+    auto obj = new QSensorGestureManager( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
     if( ISNUMPAR(1) && ISQSENSORGESTURERECOGNIZER(1) )
     {
 #endif
-      RBOOL( obj->registerSensorGestureRecognizer ( PQSENSORGESTURERECOGNIZER(1) ) );
+      RBOOL( obj->registerSensorGestureRecognizer( PQSENSORGESTURERECOGNIZER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->gestureIds () );
+      RQSTRINGLIST( obj->gestureIds() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->recognizerSignals ( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->recognizerSignals( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,8 +183,8 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( PQSTRING(1) );
-    Qt5xHb::createReturnQObjectClass ( ptr, "QSENSORGESTURERECOGNIZER" );
+    QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer( PQSTRING(1) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSENSORGESTURERECOGNIZER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QSENSORGESTUREMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSENSORGESTUREMANAGER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

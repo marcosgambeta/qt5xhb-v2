@@ -30,7 +30,7 @@ CLASS QMagnetometer INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMagnetometer
+PROCEDURE destroyObject() CLASS QMagnetometer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QMagnetometer ( OPQOBJECT(1,nullptr) );
+    auto obj = new QMagnetometer( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMagnetometerReading * ptr = obj->reading ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QMAGNETOMETERREADING" );
+      QMagnetometerReading * ptr = obj->reading();
+      Qt5xHb::createReturnQObjectClass( ptr, "QMAGNETOMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->returnGeoValues () );
+      RBOOL( obj->returnGeoValues() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setReturnGeoValues ( PBOOL(1) );
+      obj->setReturnGeoValues( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_ONRETURNGEOVALUESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMAGNETOMETER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMAGNETOMETER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

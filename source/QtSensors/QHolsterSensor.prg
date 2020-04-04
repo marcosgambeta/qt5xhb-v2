@@ -26,7 +26,7 @@ CLASS QHolsterSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHolsterSensor
+PROCEDURE destroyObject() CLASS QHolsterSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QHolsterSensor ( OPQOBJECT(1,nullptr) );
+    auto obj = new QHolsterSensor( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHolsterReading * ptr = obj->reading ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QHOLSTERREADING" );
+      QHolsterReading * ptr = obj->reading();
+      Qt5xHb::createReturnQObjectClass( ptr, "QHOLSTERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
