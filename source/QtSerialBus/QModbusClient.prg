@@ -25,7 +25,7 @@ CLASS QModbusClient INHERIT QModbusDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusClient
+PROCEDURE destroyObject() CLASS QModbusClient
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_ONTIMEOUTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMODBUSCLIENT" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMODBUSCLIENT" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

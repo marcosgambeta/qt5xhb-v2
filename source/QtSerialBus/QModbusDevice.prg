@@ -26,7 +26,7 @@ CLASS QModbusDevice INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusDevice
+PROCEDURE destroyObject() CLASS QModbusDevice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ONSTATECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QMODBUSDEVICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QMODBUSDEVICE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

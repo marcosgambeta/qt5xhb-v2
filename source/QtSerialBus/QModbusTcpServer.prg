@@ -24,7 +24,7 @@ CLASS QModbusTcpServer INHERIT QModbusServer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusTcpServer
+PROCEDURE destroyObject() CLASS QModbusTcpServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMODBUSTCPSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QModbusTcpServer ( OPQOBJECT(1,nullptr) );
+    auto obj = new QModbusTcpServer( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
