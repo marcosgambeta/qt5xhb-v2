@@ -37,7 +37,7 @@ CLASS QDBusServiceWatcher INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusServiceWatcher
+PROCEDURE destroyObject() CLASS QDBusServiceWatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 explicit QDBusServiceWatcher(QObject *parent = nullptr)
 */
-void QDBusServiceWatcher_new1 ()
+void QDBusServiceWatcher_new1()
 {
-  auto obj = new QDBusServiceWatcher ( OPQOBJECT(1,nullptr) );
+  auto obj = new QDBusServiceWatcher( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
 */
-void QDBusServiceWatcher_new2 ()
+void QDBusServiceWatcher_new2()
 {
-  auto obj = new QDBusServiceWatcher ( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,nullptr) );
+  auto obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHEDSERVICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->watchedServices () );
+      RQSTRINGLIST( obj->watchedServices() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHEDSERVICES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setWatchedServices ( PQSTRINGLIST(1) );
+      obj->setWatchedServices( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addWatchedService ( PQSTRING(1) );
+      obj->addWatchedService( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeWatchedService ( PQSTRING(1) ) );
+      RBOOL( obj->removeWatchedService( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->watchMode () );
+      RENUM( obj->watchMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWatchMode ( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
+      obj->setWatchMode( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,8 +279,8 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDBusConnection( obj->connection () );
-      Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
+      auto ptr = new QDBusConnection( obj->connection() );
+      Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
     if( ISNUMPAR(1) && ISQDBUSCONNECTION(1) )
     {
 #endif
-      obj->setConnection ( *PQDBUSCONNECTION(1) );
+      obj->setConnection( *PQDBUSCONNECTION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSSERVICEWATCHER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSSERVICEWATCHER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEUNREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSSERVICEWATCHER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSSERVICEWATCHER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEOWNERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSSERVICEWATCHER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSSERVICEWATCHER" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );

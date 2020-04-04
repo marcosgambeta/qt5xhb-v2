@@ -26,7 +26,7 @@ CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusConnectionInterface
+PROCEDURE destroyObject() CLASS QDBusConnectionInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEUNREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEOWNERCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONCALLWITHCALLBACKFAILED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSCONNECTIONINTERFACE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDBUSERROR" );
             PHB_ITEM pArg2 = Signals4_return_object( (void *) &arg2, "QDBUSMESSAGE" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

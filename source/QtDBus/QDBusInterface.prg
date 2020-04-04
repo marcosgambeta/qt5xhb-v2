@@ -27,7 +27,7 @@ CLASS QDBusInterface INHERIT QDBusAbstractInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusInterface
+PROCEDURE destroyObject() CLASS QDBusInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
   if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
   {
-    auto obj = new QDBusInterface ( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,nullptr) );
+    auto obj = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,8 +96,8 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject ();
-      Qt5xHb::createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->metaObject();
+      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      hb_retptr( (void *) obj->qt_metacast ( PCONSTCHAR(1) ) );
+      hb_retptr( (void *) obj->qt_metacast( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

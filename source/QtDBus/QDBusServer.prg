@@ -30,7 +30,7 @@ CLASS QDBusServer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusServer
+PROCEDURE destroyObject() CLASS QDBusServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QDBusServer(const QString &address, QObject *parent = nullptr)
 */
-void QDBusServer_new1 ()
+void QDBusServer_new1()
 {
-  auto obj = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  auto obj = new QDBusServer( PQSTRING(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QDBusServer(QObject *parent = nullptr)
 */
-void QDBusServer_new2 ()
+void QDBusServer_new2()
 {
-  auto obj = new QDBusServer ( OPQOBJECT(1,nullptr) );
+  auto obj = new QDBusServer( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isConnected () );
+      RBOOL( obj->isConnected() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,8 +135,8 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDBusError( obj->lastError () );
-      Qt5xHb::createReturnClass ( ptr, "QDBUSERROR", true );
+      auto ptr = new QDBusError( obj->lastError() );
+      Qt5xHb::createReturnClass( ptr, "QDBUSERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->address () );
+      RQSTRING( obj->address() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QDBUSSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QDBUSSERVER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QDBUSCONNECTION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -41,7 +41,7 @@ CLASS QDBusContext
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusContext
+PROCEDURE destroyObject() CLASS QDBusContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QDBusContext ();
+    auto obj = new QDBusContext();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CALLEDFROMDBUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->calledFromDBus () );
+      RBOOL( obj->calledFromDBus() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QDBusConnection( obj->connection () );
-      Qt5xHb::createReturnClass ( ptr, "QDBUSCONNECTION", true );
+      auto ptr = new QDBusConnection( obj->connection() );
+      Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QDBusMessage * ptr = &obj->message ();
-      Qt5xHb::createReturnClass ( ptr, "QDBUSMESSAGE", false );
+      const QDBusMessage * ptr = &obj->message();
+      Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDelayedReply () );
+      RBOOL( obj->isDelayedReply() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDelayedReply ( PBOOL(1) );
+      obj->setDelayedReply( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,13 +226,13 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 /*
 void sendErrorReply(const QString &name, const QString &msg = QString()) const
 */
-void QDBusContext_sendErrorReply1 ()
+void QDBusContext_sendErrorReply1()
 {
   auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->sendErrorReply ( PQSTRING(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply( PQSTRING(1), OPQSTRING(2,QString()) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -241,13 +241,13 @@ void QDBusContext_sendErrorReply1 ()
 /*
 void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
 */
-void QDBusContext_sendErrorReply2 ()
+void QDBusContext_sendErrorReply2()
 {
   auto obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->sendErrorReply ( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
