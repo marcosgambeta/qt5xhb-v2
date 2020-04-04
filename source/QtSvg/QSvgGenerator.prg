@@ -43,7 +43,7 @@ CLASS QSvgGenerator INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSvgGenerator
+PROCEDURE destroyObject() CLASS QSvgGenerator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    auto obj = new QSvgGenerator ();
+    auto obj = new QSvgGenerator();
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,8 +160,8 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->outputDevice ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->outputDevice();
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->resolution () );
+      RINT( obj->resolution() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setOutputDevice ( PQIODEVICE(1) );
+      obj->setOutputDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setResolution ( PINT(1) );
+      obj->setResolution( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setSize ( *PQSIZE(1) );
+      obj->setSize( *PQSIZE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,13 +355,13 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 /*
 void setViewBox ( const QRect & viewBox )
 */
-void QSvgGenerator_setViewBox1 ()
+void QSvgGenerator_setViewBox1()
 {
   auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setViewBox ( *PQRECT(1) );
+    obj->setViewBox( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,13 +370,13 @@ void QSvgGenerator_setViewBox1 ()
 /*
 void setViewBox ( const QRectF & viewBox )
 */
-void QSvgGenerator_setViewBox2 ()
+void QSvgGenerator_setViewBox2()
 {
   auto obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setViewBox ( *PQRECTF(1) );
+    obj->setViewBox( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -414,8 +414,8 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->size () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->size() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,8 +463,8 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRect( obj->viewBox () );
-      Qt5xHb::createReturnClass ( ptr, "QRECT", true );
+      auto ptr = new QRect( obj->viewBox() );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,8 +488,8 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->viewBoxF () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->viewBoxF() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

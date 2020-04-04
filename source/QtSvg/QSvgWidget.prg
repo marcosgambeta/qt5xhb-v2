@@ -29,7 +29,7 @@ CLASS QSvgWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSvgWidget
+PROCEDURE destroyObject() CLASS QSvgWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QSvgWidget ( QWidget * parent = nullptr )
 */
-void QSvgWidget_new1 ()
+void QSvgWidget_new1()
 {
-  auto obj = new QSvgWidget ( OPQWIDGET(1,nullptr) );
+  auto obj = new QSvgWidget( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 */
-void QSvgWidget_new2 ()
+void QSvgWidget_new2()
 {
-  auto obj = new QSvgWidget ( PQSTRING(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSvgRenderer * ptr = obj->renderer ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSVGRENDERER" );
+      QSvgRenderer * ptr = obj->renderer();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSVGRENDERER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,8 +146,8 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->sizeHint () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->sizeHint() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,13 +161,13 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 /*
 void load ( const QString & file )
 */
-void QSvgWidget_load1 ()
+void QSvgWidget_load1()
 {
   auto obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->load ( PQSTRING(1) );
+    obj->load( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -176,13 +176,13 @@ void QSvgWidget_load1 ()
 /*
 void load ( const QByteArray & contents )
 */
-void QSvgWidget_load2 ()
+void QSvgWidget_load2()
 {
   auto obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->load ( *PQBYTEARRAY(1) );
+    obj->load( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

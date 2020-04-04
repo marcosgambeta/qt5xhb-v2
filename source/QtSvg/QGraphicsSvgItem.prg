@@ -36,7 +36,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSvgItem
+PROCEDURE destroyObject() CLASS QGraphicsSvgItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QGraphicsSvgItem ( QGraphicsItem * parent = nullptr )
 */
-void QGraphicsSvgItem_new1 ()
+void QGraphicsSvgItem_new1()
 {
-  auto obj = new QGraphicsSvgItem ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QGraphicsSvgItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
 QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = nullptr )
 */
-void QGraphicsSvgItem_new2 ()
+void QGraphicsSvgItem_new2()
 {
-  auto obj = new QGraphicsSvgItem ( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QGraphicsSvgItem( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->elementId () );
+      RQSTRING( obj->elementId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSize( obj->maximumCacheSize () );
-      Qt5xHb::createReturnClass ( ptr, "QSIZE", true );
+      auto ptr = new QSize( obj->maximumCacheSize() );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSvgRenderer * ptr = obj->renderer ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QSVGRENDERER" );
+      QSvgRenderer * ptr = obj->renderer();
+      Qt5xHb::createReturnQObjectClass( ptr, "QSVGRENDERER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setElementId ( PQSTRING(1) );
+      obj->setElementId( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setMaximumCacheSize ( *PQSIZE(1) );
+      obj->setMaximumCacheSize( *PQSIZE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
     if( ISNUMPAR(1) && ISQSVGRENDERER(1) )
     {
 #endif
-      obj->setSharedRenderer ( PQSVGRENDERER(1) );
+      obj->setSharedRenderer( PQSVGRENDERER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,8 +280,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QRectF( obj->boundingRect () );
-      Qt5xHb::createReturnClass ( ptr, "QRECTF", true );
+      auto ptr = new QRectF( obj->boundingRect() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->type () );
+      RINT( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
