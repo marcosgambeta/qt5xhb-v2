@@ -48,7 +48,7 @@ CLASS QWebEngineHttpRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineHttpRequest
+PROCEDURE destroyObject() CLASS QWebEngineHttpRequest
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpReq
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
 {
-  auto obj = new QWebEngineHttpRequest ( ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
+  auto obj = new QWebEngineHttpRequest( ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -85,7 +85,7 @@ QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW2 )
 {
-  auto obj = new QWebEngineHttpRequest ( *PQWEBENGINEHTTPREQUEST(1) );
+  auto obj = new QWebEngineHttpRequest( *PQWEBENGINEHTTPREQUEST(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SWAP )
     if( ISNUMPAR(1) && ISQWEBENGINEHTTPREQUEST(1) )
     {
 #endif
-      obj->swap ( *PQWEBENGINEHTTPREQUEST(1) );
+      obj->swap( *PQWEBENGINEHTTPREQUEST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_METHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->method () );
+      RENUM( obj->method() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETMETHOD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMethod ( (QWebEngineHttpRequest::Method) hb_parni(1) );
+      obj->setMethod( (QWebEngineHttpRequest::Method) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,8 +209,8 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->url () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->url() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUrl ( *PQURL(1) );
+      obj->setUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,8 +260,8 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_POSTDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->postData () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->postData() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETPOSTDATA )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setPostData ( *PQBYTEARRAY(1) );
+      obj->setPostData( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HASHEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->hasHeader ( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->hasHeader( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<QByteArray> list = obj->headers ();
+      QVector<QByteArray> list = obj->headers();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -387,8 +387,8 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_HEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      auto ptr = new QByteArray( obj->header ( *PQBYTEARRAY(1) ) );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->header( *PQBYTEARRAY(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETHEADER )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      obj->setHeader ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+      obj->setHeader( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_UNSETHEADER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->unsetHeader ( *PQBYTEARRAY(1) );
+      obj->unsetHeader( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

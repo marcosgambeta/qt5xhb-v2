@@ -30,7 +30,7 @@ CLASS QWebEngineUrlRequestJob INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineUrlRequestJob
+PROCEDURE destroyObject() CLASS QWebEngineUrlRequestJob
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QUrl( obj->requestUrl () );
-      Qt5xHb::createReturnClass ( ptr, "QURL", true );
+      auto ptr = new QUrl( obj->requestUrl() );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REQUESTMETHOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QByteArray( obj->requestMethod () );
-      Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY", true );
+      auto ptr = new QByteArray( obj->requestMethod() );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REPLY )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQIODEVICE(2) )
     {
 #endif
-      obj->reply ( *PQBYTEARRAY(1), PQIODEVICE(2) );
+      obj->reply( *PQBYTEARRAY(1), PQIODEVICE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_FAIL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->fail ( (QWebEngineUrlRequestJob::Error) hb_parni(1) );
+      obj->fail( (QWebEngineUrlRequestJob::Error) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTJOB_REDIRECT )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->redirect ( *PQURL(1) );
+      obj->redirect( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

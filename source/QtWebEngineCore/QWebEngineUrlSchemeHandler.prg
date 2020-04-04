@@ -25,7 +25,7 @@ CLASS QWebEngineUrlSchemeHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineUrlSchemeHandler
+PROCEDURE destroyObject() CLASS QWebEngineUrlSchemeHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QWebEngineUrlSchemeHandler ( OPQOBJECT(1,nullptr) );
+    auto obj = new QWebEngineUrlSchemeHandler( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED )
     if( ISNUMPAR(1) && ISQWEBENGINEURLREQUESTJOB(1) )
     {
 #endif
-      obj->requestStarted ( PQWEBENGINEURLREQUESTJOB(1) );
+      obj->requestStarted( PQWEBENGINEURLREQUESTJOB(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

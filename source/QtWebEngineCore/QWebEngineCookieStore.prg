@@ -31,7 +31,7 @@ CLASS QWebEngineCookieStore INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebEngineCookieStore
+PROCEDURE destroyObject() CLASS QWebEngineCookieStore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,8 +68,8 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
     if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||ISNIL(2)) )
     {
 #endif
-      obj->setCookie ( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setCookie( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
     if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||ISNIL(2)) )
     {
 #endif
-      obj->deleteCookie ( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->deleteCookie( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETESESSIONCOOKIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->deleteSessionCookies ();
+      obj->deleteSessionCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETEALLCOOKIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->deleteAllCookies ();
+      obj->deleteAllCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->loadAllCookies ();
+      obj->loadAllCookies();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCOOKIE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBENGINECOOKIESTORE" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QNETWORKCOOKIE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
