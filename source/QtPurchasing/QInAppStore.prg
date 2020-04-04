@@ -33,7 +33,7 @@ CLASS QInAppStore INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInAppStore
+PROCEDURE destroyObject() CLASS QInAppStore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QInAppStore ( OPQOBJECT(1,nullptr) );
+    auto obj = new QInAppStore( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->restorePurchases ();
+      obj->restorePurchases();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->registerProduct ( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
+      obj->registerProduct( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,8 +159,8 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QInAppProduct * ptr = obj->registeredProduct ( PQSTRING(1) );
-      Qt5xHb::createReturnQObjectClass ( ptr, "QINAPPPRODUCT" );
+      QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->setPlatformProperty ( PQSTRING(1), PQSTRING(2) );
+      obj->setPlatformProperty( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QINAPPSTORE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QINAPPPRODUCT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTUNKNOWN )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QINAPPSTORE" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QINAPPSTORE_ONTRANSACTIONREADY )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QINAPPSTORE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QINAPPSTORE" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QINAPPTRANSACTION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
