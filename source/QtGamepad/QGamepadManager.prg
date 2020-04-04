@@ -40,7 +40,7 @@ CLASS QGamepadManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGamepadManager
+PROCEDURE destroyObject() CLASS QGamepadManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QGamepadManager * ptr = QGamepadManager::instance ();
-    Qt5xHb::createReturnQObjectClass ( ptr, "QGAMEPADMANAGER" );
+    QGamepadManager * ptr = QGamepadManager::instance();
+    Qt5xHb::createReturnQObjectClass( ptr, "QGAMEPADMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isGamepadConnected ( PINT(1) ) );
+      RBOOL( obj->isGamepadConnected( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isConfigurationNeeded ( PINT(1) ) );
+      RBOOL( obj->isConfigurationNeeded( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->configureButton ( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL( obj->configureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->configureAxis ( PINT(1), (QGamepadManager::GamepadAxis) hb_parni(2) ) );
+      RBOOL( obj->configureAxis( PINT(1), (QGamepadManager::GamepadAxis) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->setCancelConfigureButton ( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL( obj->setCancelConfigureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resetConfiguration ( PINT(1) );
+      obj->resetConfiguration( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSettingsFile ( PQSTRING(1) );
+      obj->setSettingsFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONNECTEDGAMEPADSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADDISCONNECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADAXISEVENT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONPRESSEVENT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             PHB_ITEM pArg3 = hb_itemPutND( NULL, arg3 );
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONGAMEPADBUTTONRELEASEEVENT )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONBUTTONCONFIGURED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ONCONFIGURATIONCANCELED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADMANAGER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADMANAGER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

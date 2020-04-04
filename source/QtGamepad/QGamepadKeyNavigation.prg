@@ -82,7 +82,7 @@ CLASS QGamepadKeyNavigation INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGamepadKeyNavigation
+PROCEDURE destroyObject() CLASS QGamepadKeyNavigation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QGamepadKeyNavigation ( OPQOBJECT(1,nullptr) );
+    auto obj = new QGamepadKeyNavigation( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->active () );
+      RBOOL( obj->active() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETACTIVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setActive ( PBOOL(1) );
+      obj->setActive( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,8 +197,8 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_GAMEPAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGamepad * ptr = obj->gamepad ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QGAMEPAD" );
+      QGamepad * ptr = obj->gamepad();
+      Qt5xHb::createReturnQObjectClass( ptr, "QGAMEPAD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETGAMEPAD )
     if( ISNUMPAR(1) && ISQGAMEPAD(1) )
     {
 #endif
-      obj->setGamepad ( PQGAMEPAD(1) );
+      obj->setGamepad( PQGAMEPAD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_UPKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->upKey () );
+      RENUM( obj->upKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETUPKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setUpKey ( (Qt::Key) hb_parni(1) );
+      obj->setUpKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_DOWNKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->downKey () );
+      RENUM( obj->downKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETDOWNKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDownKey ( (Qt::Key) hb_parni(1) );
+      obj->setDownKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_LEFTKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->leftKey () );
+      RENUM( obj->leftKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETLEFTKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLeftKey ( (Qt::Key) hb_parni(1) );
+      obj->setLeftKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_RIGHTKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->rightKey () );
+      RENUM( obj->rightKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETRIGHTKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRightKey ( (Qt::Key) hb_parni(1) );
+      obj->setRightKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONAKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonAKey () );
+      RENUM( obj->buttonAKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONAKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonAKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonAKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONBKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonBKey () );
+      RENUM( obj->buttonBKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONBKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonBKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonBKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONXKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonXKey () );
+      RENUM( obj->buttonXKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONXKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonXKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonXKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONYKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonYKey () );
+      RENUM( obj->buttonYKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONYKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonYKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonYKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSELECTKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonSelectKey () );
+      RENUM( obj->buttonSelectKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSELECTKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonSelectKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonSelectKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSTARTKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonStartKey () );
+      RENUM( obj->buttonStartKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSTARTKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonStartKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonStartKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONGUIDEKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonGuideKey () );
+      RENUM( obj->buttonGuideKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONGUIDEKEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonGuideKey ( (Qt::Key) hb_parni(1) );
+      obj->setButtonGuideKey( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL1KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonL1Key () );
+      RENUM( obj->buttonL1Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL1KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonL1Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonL1Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR1KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonR1Key () );
+      RENUM( obj->buttonR1Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR1KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonR1Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonR1Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL2KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonL2Key () );
+      RENUM( obj->buttonL2Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL2KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonL2Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonL2Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR2KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonR2Key () );
+      RENUM( obj->buttonR2Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1034,7 +1034,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR2KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonR2Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonR2Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL3KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonL3Key () );
+      RENUM( obj->buttonL3Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL3KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonL3Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonL3Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR3KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->buttonR3Key () );
+      RENUM( obj->buttonR3Key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR3KEY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setButtonR3Key ( (Qt::Key) hb_parni(1) );
+      obj->setButtonR3Key( (Qt::Key) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONACTIVECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1248,7 +1248,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONGAMEPADCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QGAMEPAD" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONUPKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONDOWNKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONLEFTKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONRIGHTKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONAKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONBKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONXKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONYKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSELECTKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1908,7 +1908,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONSTARTKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1974,7 +1974,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONGUIDEKEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2040,7 +2040,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL1KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2106,7 +2106,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR1KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2172,7 +2172,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL2KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2238,7 +2238,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR2KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2304,7 +2304,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONL3KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2370,7 +2370,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ONBUTTONR3KEYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QGAMEPADKEYNAVIGATION" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
