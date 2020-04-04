@@ -34,7 +34,7 @@ CLASS QWinThumbnailToolBar INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinThumbnailToolBar
+PROCEDURE destroyObject() CLASS QWinThumbnailToolBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QWinThumbnailToolBar ( OPQOBJECT(1,nullptr) );
+    auto obj = new QWinThumbnailToolBar( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QWINDOW" );
+      QWindow * ptr = obj->window();
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
     if( ISNUMPAR(1) && ISQWINDOW(1) )
     {
 #endif
-      obj->setWindow ( PQWINDOW(1) );
+      obj->setWindow( PQWINDOW(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
     if( ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1) )
     {
 #endif
-      obj->addButton ( PQWINTHUMBNAILTOOLBUTTON(1) );
+      obj->addButton( PQWINTHUMBNAILTOOLBUTTON(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
     if( ISNUMPAR(1) && ISQWINTHUMBNAILTOOLBUTTON(1) )
     {
 #endif
-      obj->removeButton ( PQWINTHUMBNAILTOOLBUTTON(1) );
+      obj->removeButton( PQWINTHUMBNAILTOOLBUTTON(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
       {
         par1 << (QWinThumbnailToolButton *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setButtons ( par1 );
+      obj->setButtons( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_BUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWinThumbnailToolButton *> list = obj->buttons ();
+      QList<QWinThumbnailToolButton *> list = obj->buttons();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWINTHUMBNAILTOOLBUTTON" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

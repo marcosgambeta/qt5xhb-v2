@@ -24,7 +24,7 @@ CLASS QWinEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinEvent
+PROCEDURE destroyObject() CLASS QWinEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    auto obj = new QWinEvent ( PINT(1) );
+    auto obj = new QWinEvent( PINT(1) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

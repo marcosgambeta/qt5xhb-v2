@@ -26,7 +26,7 @@ CLASS QWinColorizationChangeEvent INHERIT QWinEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinColorizationChangeEvent
+PROCEDURE destroyObject() CLASS QWinColorizationChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
   {
-    auto obj = new QWinColorizationChangeEvent ( PQRGB(1), PBOOL(2) );
+    auto obj = new QWinColorizationChangeEvent( PQRGB(1), PBOOL(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQRGB( obj->color () );
+      RQRGB( obj->color() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_OPAQUEBLEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->opaqueBlend () );
+      RBOOL( obj->opaqueBlend() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
