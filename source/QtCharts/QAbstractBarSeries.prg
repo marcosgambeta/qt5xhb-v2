@@ -54,7 +54,7 @@ CLASS QAbstractBarSeries INHERIT QAbstractSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractBarSeries
+PROCEDURE destroyObject() CLASS QAbstractBarSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -100,8 +100,8 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->barWidth () );
+      RQREAL( obj->barWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBarWidth ( PQREAL(1) );
+      obj->setBarWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ISLABELSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLabelsVisible () );
+      RBOOL( obj->isLabelsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setLabelsVisible ( OPBOOL(1,true) );
+      obj->setLabelsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->labelsFormat () );
+      RQSTRING( obj->labelsFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabelsFormat ( PQSTRING(1) );
+      obj->setLabelsFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->labelsAngle () );
+      RQREAL( obj->labelsAngle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelsAngle ( PQREAL(1) );
+      obj->setLabelsAngle( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->labelsPosition () );
+      RENUM( obj->labelsPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelsPosition ( (QAbstractBarSeries::LabelsPosition) hb_parni(1) );
+      obj->setLabelsPosition( (QAbstractBarSeries::LabelsPosition) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,14 +413,14 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 /*
 bool append(QBarSet *set)
 */
-void QAbstractBarSeries_append1 ()
+void QAbstractBarSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->append ( PQBARSET(1) ) );
+    RBOOL( obj->append( PQBARSET(1) ) );
   }
 #endif
 }
@@ -428,7 +428,7 @@ void QAbstractBarSeries_append1 ()
 /*
 bool append(QList<QBarSet *> sets)
 */
-void QAbstractBarSeries_append2 ()
+void QAbstractBarSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QAbstractBarSeries *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -442,7 +442,7 @@ void QAbstractBarSeries_append2 ()
     {
       par1 << (QBarSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->append ( par1 ) );
+    RBOOL( obj->append( par1 ) );
   }
 #endif
 }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
     if( ISNUMPAR(1) && ISQBARSET(1) )
     {
 #endif
-      RBOOL( obj->remove ( PQBARSET(1) ) );
+      RBOOL( obj->remove( PQBARSET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
     if( ISNUMPAR(1) && ISQBARSET(1) )
     {
 #endif
-      RBOOL( obj->take ( PQBARSET(1) ) );
+      RBOOL( obj->take( PQBARSET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
     if( ISNUMPAR(2) && ISNUM(1) && ISQBARSET(2) )
     {
 #endif
-      RBOOL( obj->insert ( PINT(1), PQBARSET(2) ) );
+      RBOOL( obj->insert( PINT(1), PQBARSET(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARSETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QBarSet *> list = obj->barSets ();
+      QList<QBarSet *> list = obj->barSets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             PHB_ITEM pArg3 = Signals4_return_qobject( (QObject *) arg3, "QBARSET" );
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSPOSITIONCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONLABELSVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1424,7 +1424,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTBARSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTBARSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QBARSET" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

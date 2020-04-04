@@ -46,7 +46,7 @@ CLASS QVCandlestickModelMapper INHERIT QCandlestickModelMapper
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVCandlestickModelMapper
+PROCEDURE destroyObject() CLASS QVCandlestickModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QVCandlestickModelMapper ( OPQOBJECT(1,nullptr) );
+    auto obj = new QVCandlestickModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_TIMESTAMPROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->timestampRow () );
+      RINT( obj->timestampRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETTIMESTAMPROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTimestampRow ( PINT(1) );
+      obj->setTimestampRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_OPENROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->openRow () );
+      RINT( obj->openRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETOPENROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOpenRow ( PINT(1) );
+      obj->setOpenRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_HIGHROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->highRow () );
+      RINT( obj->highRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETHIGHROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHighRow ( PINT(1) );
+      obj->setHighRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LOWROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lowRow () );
+      RINT( obj->lowRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLOWROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLowRow ( PINT(1) );
+      obj->setLowRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_CLOSEROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->closeRow () );
+      RINT( obj->closeRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETCLOSEROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCloseRow ( PINT(1) );
+      obj->setCloseRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_FIRSTSETCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstSetColumn () );
+      RINT( obj->firstSetColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETFIRSTSETCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstSetColumn ( PINT(1) );
+      obj->setFirstSetColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LASTSETCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lastSetColumn () );
+      RINT( obj->lastSetColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLASTSETCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLastSetColumn ( PINT(1) );
+      obj->setLastSetColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONCLOSEROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONFIRSTSETCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONHIGHROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLASTSETCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONLOWROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONOPENROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_ONTIMESTAMPROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

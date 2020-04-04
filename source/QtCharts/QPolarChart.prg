@@ -26,7 +26,7 @@ CLASS QPolarChart INHERIT QChart
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPolarChart
+PROCEDURE destroyObject() CLASS QPolarChart
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    auto obj = new QPolarChart ( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QPolarChart( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
     if( ISNUMPAR(2) && ISQABSTRACTAXIS(1) && ISNUM(2) )
     {
 #endif
-      obj->addAxis ( PQABSTRACTAXIS(1), (QPolarChart::PolarOrientation) hb_parni(2) );
+      obj->addAxis( PQABSTRACTAXIS(1), (QPolarChart::PolarOrientation) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
   if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
   {
 #endif
-    RENUM( QPolarChart::axisPolarOrientation ( PQABSTRACTAXIS(1) ) );
+    RENUM( QPolarChart::axisPolarOrientation( PQABSTRACTAXIS(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

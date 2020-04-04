@@ -44,7 +44,7 @@ CLASS QHPieModelMapper INHERIT QPieModelMapper
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHPieModelMapper
+PROCEDURE destroyObject() CLASS QHPieModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QHPieModelMapper ( OPQOBJECT(1,nullptr) );
+    auto obj = new QHPieModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPieSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QPIESERIES" );
+      QPieSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QPIESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETSERIES )
     if( ISNUMPAR(1) && ISQPIESERIES(1) )
     {
 #endif
-      obj->setSeries ( PQPIESERIES(1) );
+      obj->setSeries( PQPIESERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,8 +163,8 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_VALUESROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->valuesRow () );
+      RINT( obj->valuesRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETVALUESROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValuesRow ( PINT(1) );
+      obj->setValuesRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_LABELSROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->labelsRow () );
+      RINT( obj->labelsRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETLABELSROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelsRow ( PINT(1) );
+      obj->setLabelsRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_FIRSTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstColumn () );
+      RINT( obj->firstColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETFIRSTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstColumn ( PINT(1) );
+      obj->setFirstColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETCOLUMNCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumnCount ( PINT(1) );
+      obj->setColumnCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONFIRSTCOLUMNCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONLABELSROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONMODELREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONSERIESREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_ONVALUESROWCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QHPIEMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QHPIEMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

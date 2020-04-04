@@ -111,7 +111,7 @@ CLASS QAbstractAxis INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractAxis
+PROCEDURE destroyObject() CLASS QAbstractAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -155,8 +155,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setVisible ( OPBOOL(1,true) );
+      obj->setVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISLINEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLineVisible () );
+      RBOOL( obj->isLineVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setLineVisible ( OPBOOL(1,true) );
+      obj->setLineVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,8 +291,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->linePen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->linePen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setLinePen ( *PQPEN(1) );
+      obj->setLinePen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,8 +346,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPENCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->linePenColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->linePenColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPENCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setLinePenColor ( *PQCOLOR(1) );
+      obj->setLinePenColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISGRIDLINEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isGridLineVisible () );
+      RBOOL( obj->isGridLineVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setGridLineVisible ( OPBOOL(1,true) );
+      obj->setGridLineVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,8 +455,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->gridLinePen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->gridLinePen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setGridLinePen ( *PQPEN(1) );
+      obj->setGridLinePen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMinorGridLineVisible () );
+      RBOOL( obj->isMinorGridLineVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setMinorGridLineVisible ( OPBOOL(1,true) );
+      obj->setMinorGridLineVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,8 +564,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINEPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->minorGridLinePen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->minorGridLinePen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setMinorGridLinePen ( *PQPEN(1) );
+      obj->setMinorGridLinePen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,8 +619,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->gridLineColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->gridLineColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setGridLineColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setGridLineColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,8 +674,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINECOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->minorGridLineColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->minorGridLineColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setMinorGridLineColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setMinorGridLineColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->labelsVisible () );
+      RBOOL( obj->labelsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setLabelsVisible ( OPBOOL(1,true) );
+      obj->setLabelsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -783,8 +783,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->labelsBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->labelsBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelsBrush ( *PQBRUSH(1) );
+      obj->setLabelsBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,8 +838,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->labelsFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->labelsFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setLabelsFont ( *PQFONT(1) );
+      obj->setLabelsFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->labelsAngle () );
+      RINT( obj->labelsAngle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -919,7 +919,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelsAngle ( PINT(1) );
+      obj->setLabelsAngle( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -947,8 +947,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->labelsColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->labelsColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setLabelsColor ( *PQCOLOR(1) );
+      obj->setLabelsColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISTITLEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isTitleVisible () );
+      RBOOL( obj->isTitleVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setTitleVisible ( OPBOOL(1,true) );
+      obj->setTitleVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1056,8 +1056,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->titleBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->titleBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setTitleBrush ( *PQBRUSH(1) );
+      obj->setTitleBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1111,8 +1111,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->titleFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->titleFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setTitleFont ( *PQFONT(1) );
+      obj->setTitleFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLETEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->titleText () );
+      RQSTRING( obj->titleText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLETEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitleText ( PQSTRING(1) );
+      obj->setTitleText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->shadesVisible () );
+      RBOOL( obj->shadesVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setShadesVisible ( OPBOOL(1,true) );
+      obj->setShadesVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1274,8 +1274,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->shadesPen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->shadesPen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setShadesPen ( *PQPEN(1) );
+      obj->setShadesPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1329,8 +1329,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->shadesBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->shadesBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setShadesBrush ( *PQBRUSH(1) );
+      obj->setShadesBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1384,8 +1384,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->shadesColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->shadesColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setShadesColor ( *PQCOLOR(1) );
+      obj->setShadesColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1439,8 +1439,8 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->shadesBorderColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->shadesBorderColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBORDERCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setShadesBorderColor ( *PQCOLOR(1) );
+      obj->setShadesBorderColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1546,7 +1546,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISREVERSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReverse () );
+      RBOOL( obj->isReverse() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETREVERSE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setReverse ( OPBOOL(1,true) );
+      obj->setReverse( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1600,7 +1600,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1626,7 +1626,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->show ();
+      obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_HIDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->hide ();
+      obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMIN )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setMin ( *PQVARIANT(1) );
+      obj->setMin( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMAX )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setMax ( *PQVARIANT(1) );
+      obj->setMax( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETRANGE )
     if( ISNUMPAR(2) && ISQVARIANT(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setRange ( *PQVARIANT(1), *PQVARIANT(2) );
+      obj->setRange( *PQVARIANT(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1778,7 +1778,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1844,7 +1844,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINECOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1910,7 +1910,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDLINEPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPEN" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1976,7 +1976,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONGRIDVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2042,7 +2042,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2108,7 +2108,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBRUSH" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2174,7 +2174,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2240,7 +2240,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2306,7 +2306,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLABELSVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2372,7 +2372,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPEN" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2438,7 +2438,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONLINEVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2504,7 +2504,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINECOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2570,7 +2570,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDLINEPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPEN" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2636,7 +2636,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONMINORGRIDVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2702,7 +2702,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONREVERSECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2768,7 +2768,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBORDERCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2834,7 +2834,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBRUSH" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2900,7 +2900,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2966,7 +2966,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPEN" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3032,7 +3032,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONSHADESVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3098,7 +3098,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QBRUSH" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3164,7 +3164,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3230,7 +3230,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLETEXTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3296,7 +3296,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONTITLEVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -3362,7 +3362,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ONVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QABSTRACTAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACTAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

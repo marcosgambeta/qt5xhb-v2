@@ -83,7 +83,7 @@ CLASS QPieSlice INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPieSlice
+PROCEDURE destroyObject() CLASS QPieSlice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -118,10 +118,10 @@ using namespace QtCharts;
 /*
 explicit QPieSlice(QObject *parent = nullptr)
 */
-void QPieSlice_new1 ()
+void QPieSlice_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QPieSlice ( OPQOBJECT(1,nullptr) );
+  auto obj = new QPieSlice( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -129,10 +129,10 @@ void QPieSlice_new1 ()
 /*
 QPieSlice(QString label, qreal value, QObject *parent = nullptr)
 */
-void QPieSlice_new2 ()
+void QPieSlice_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QPieSlice ( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
+  auto obj = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -166,8 +166,8 @@ HB_FUNC_STATIC( QPIESLICE_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPIESLICE_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPIESLICE_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->value () );
+      RQREAL( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPIESLICE_SETVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValue ( PQREAL(1) );
+      obj->setValue( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPIESLICE_ISLABELVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLabelVisible () );
+      RBOOL( obj->isLabelVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setLabelVisible ( OPBOOL(1,true) );
+      obj->setLabelVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->labelPosition () );
+      RENUM( obj->labelPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelPosition ( (QPieSlice::LabelPosition) hb_parni(1) );
+      obj->setLabelPosition( (QPieSlice::LabelPosition) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QPIESLICE_ISEXPLODED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isExploded () );
+      RBOOL( obj->isExploded() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPIESLICE_SETEXPLODED )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setExploded ( OPBOOL(1,true) );
+      obj->setExploded( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,8 +464,8 @@ HB_FUNC_STATIC( QPIESLICE_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QPIESLICE_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,8 +519,8 @@ HB_FUNC_STATIC( QPIESLICE_BORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->borderColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->borderColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QPIESLICE_SETBORDERCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setBorderColor ( *PQCOLOR(1) );
+      obj->setBorderColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QPIESLICE_BORDERWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->borderWidth () );
+      RINT( obj->borderWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QPIESLICE_SETBORDERWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBorderWidth ( PINT(1) );
+      obj->setBorderWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,8 +628,8 @@ HB_FUNC_STATIC( QPIESLICE_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QPIESLICE_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -683,8 +683,8 @@ HB_FUNC_STATIC( QPIESLICE_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->color () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->color() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QPIESLICE_SETCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setColor ( *PQCOLOR(1) );
+      obj->setColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,8 +738,8 @@ HB_FUNC_STATIC( QPIESLICE_LABELBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->labelBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->labelBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelBrush ( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -793,8 +793,8 @@ HB_FUNC_STATIC( QPIESLICE_LABELCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->labelColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->labelColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setLabelColor ( *PQCOLOR(1) );
+      obj->setLabelColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -848,8 +848,8 @@ HB_FUNC_STATIC( QPIESLICE_LABELFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->labelFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->labelFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setLabelFont ( *PQFONT(1) );
+      obj->setLabelFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELARMLENGTHFACTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->labelArmLengthFactor () );
+      RQREAL( obj->labelArmLengthFactor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELARMLENGTHFACTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelArmLengthFactor ( PQREAL(1) );
+      obj->setLabelArmLengthFactor( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QPIESLICE_EXPLODEDISTANCEFACTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->explodeDistanceFactor () );
+      RQREAL( obj->explodeDistanceFactor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QPIESLICE_SETEXPLODEDISTANCEFACTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setExplodeDistanceFactor ( PQREAL(1) );
+      obj->setExplodeDistanceFactor( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QPIESLICE_PERCENTAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->percentage () );
+      RQREAL( obj->percentage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QPIESLICE_STARTANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->startAngle () );
+      RQREAL( obj->startAngle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QPIESLICE_ANGLESPAN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->angleSpan () );
+      RQREAL( obj->angleSpan() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1089,8 +1089,8 @@ HB_FUNC_STATIC( QPIESLICE_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPieSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QPIESERIES" );
+      QPieSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QPIESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QPIESLICE_ONANGLESPANCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBORDERWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QPIESLICE_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC( QPIESLICE_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QPIESLICE_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QPIESLICE_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1834,7 +1834,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1898,7 +1898,7 @@ HB_FUNC_STATIC( QPIESLICE_ONLABELVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1962,7 +1962,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2026,7 +2026,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPERCENTAGECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2090,7 +2090,7 @@ HB_FUNC_STATIC( QPIESLICE_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2154,7 +2154,7 @@ HB_FUNC_STATIC( QPIESLICE_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2218,7 +2218,7 @@ HB_FUNC_STATIC( QPIESLICE_ONSTARTANGLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2282,7 +2282,7 @@ HB_FUNC_STATIC( QPIESLICE_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QPIESLICE" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QPIESLICE" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

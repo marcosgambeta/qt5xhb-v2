@@ -45,7 +45,7 @@ CLASS QBarCategoryAxis INHERIT QAbstractAxis
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBarCategoryAxis
+PROCEDURE destroyObject() CLASS QBarCategoryAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QBarCategoryAxis ( OPQOBJECT(1,nullptr) );
+    auto obj = new QBarCategoryAxis( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->categories () );
+      RQSTRINGLIST( obj->categories() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETCATEGORIES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setCategories ( PQSTRINGLIST(1) );
+      obj->setCategories( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->min () );
+      RQSTRING( obj->min() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMIN )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setMin ( PQSTRING(1) );
+      obj->setMin( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MAX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->max () );
+      RQSTRING( obj->max() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setMax ( PQSTRING(1) );
+      obj->setMax( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,14 +335,14 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 /*
 void append(const QStringList &categories)
 */
-void QBarCategoryAxis_append1 ()
+void QBarCategoryAxis_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->append ( PQSTRINGLIST(1) );
+    obj->append( PQSTRINGLIST(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -352,14 +352,14 @@ void QBarCategoryAxis_append1 ()
 /*
 void append(const QString &category)
 */
-void QBarCategoryAxis_append2 ()
+void QBarCategoryAxis_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->append ( PQSTRING(1) );
+    obj->append( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->remove ( PQSTRING(1) );
+      obj->remove( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->insert ( PINT(1), PQSTRING(2) );
+      obj->insert( PINT(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REPLACE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->replace ( PQSTRING(1), PQSTRING(2) );
+      obj->replace( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->at ( PINT(1) ) );
+      RQSTRING( obj->at( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->setRange ( PQSTRING(1), PQSTRING(2) );
+      obj->setRange( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCATEGORIESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBARCATEGORYAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBARCATEGORYAXIS" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBARCATEGORYAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBARCATEGORYAXIS" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMAXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBARCATEGORYAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBARCATEGORYAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONMINCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBARCATEGORYAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBARCATEGORYAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_ONRANGECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBARCATEGORYAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBARCATEGORYAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );

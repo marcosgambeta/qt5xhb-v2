@@ -45,7 +45,7 @@ CLASS QLogValueAxis INHERIT QAbstractAxis
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLogValueAxis
+PROCEDURE destroyObject() CLASS QLogValueAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QLogValueAxis ( OPQOBJECT(1,nullptr) );
+    auto obj = new QLogValueAxis( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->min () );
+      RQREAL( obj->min() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMin ( PQREAL(1) );
+      obj->setMin( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->max () );
+      RQREAL( obj->max() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMax ( PQREAL(1) );
+      obj->setMax( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->labelFormat () );
+      RQSTRING( obj->labelFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabelFormat ( PQSTRING(1) );
+      obj->setLabelFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->base () );
+      RQREAL( obj->base() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBase ( PQREAL(1) );
+      obj->setBase( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->tickCount () );
+      RINT( obj->tickCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minorTickCount () );
+      RINT( obj->minorTickCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinorTickCount ( PINT(1) );
+      obj->setMinorTickCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRange ( PQREAL(1), PQREAL(2) );
+      obj->setRange( PQREAL(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONBASECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONLABELFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMAXCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONMINORTICKCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONRANGECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutND( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_ONTICKCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLOGVALUEAXIS" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLOGVALUEAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

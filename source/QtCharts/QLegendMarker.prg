@@ -53,7 +53,7 @@ CLASS QLegendMarker INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLegendMarker
+PROCEDURE destroyObject() CLASS QLegendMarker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->labelBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->labelBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelBrush ( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,8 +236,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->font () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,8 +291,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,8 +346,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shape () );
+      RENUM( obj->shape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setShape ( (QLegend::MarkerShape) hb_parni(1) );
+      obj->setShape( (QLegend::MarkerShape) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,8 +535,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTSERIES" );
+      QAbstractSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -832,7 +832,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONLABELCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONSHAPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ONVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGENDMARKER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGENDMARKER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

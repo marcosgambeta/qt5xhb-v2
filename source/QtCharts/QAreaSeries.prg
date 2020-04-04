@@ -68,7 +68,7 @@ CLASS QAreaSeries INHERIT QAbstractSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAreaSeries
+PROCEDURE destroyObject() CLASS QAreaSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -103,10 +103,10 @@ using namespace QtCharts;
 /*
 explicit QAreaSeries(QObject *parent = nullptr)
 */
-void QAreaSeries_new1 ()
+void QAreaSeries_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QAreaSeries ( OPQOBJECT(1,nullptr) );
+  auto obj = new QAreaSeries( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -114,10 +114,10 @@ void QAreaSeries_new1 ()
 /*
 explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
 */
-void QAreaSeries_new2 ()
+void QAreaSeries_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QAreaSeries ( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
+  auto obj = new QAreaSeries( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineSeries * ptr = obj->upperSeries ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QLINESERIES" );
+      QLineSeries * ptr = obj->upperSeries();
+      Qt5xHb::createReturnQObjectClass( ptr, "QLINESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineSeries * ptr = obj->lowerSeries ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QLINESERIES" );
+      QLineSeries * ptr = obj->lowerSeries();
+      Qt5xHb::createReturnQObjectClass( ptr, "QLINESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,8 +233,8 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->color () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->color() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,8 +288,8 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->borderColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->borderColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBorderColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBorderColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->pointLabelsFormat () );
+      RQSTRING( obj->pointLabelsFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPointLabelsFormat ( PQSTRING(1) );
+      obj->setPointLabelsFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointLabelsVisible () );
+      RBOOL( obj->pointLabelsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointLabelsVisible ( OPBOOL(1,true) );
+      obj->setPointLabelsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,8 +451,8 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->pointLabelsFont () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->pointLabelsFont() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setPointLabelsFont ( *PQFONT(1) );
+      obj->setPointLabelsFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,8 +506,8 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->pointLabelsColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->pointLabelsColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setPointLabelsColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setPointLabelsColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointLabelsClipping () );
+      RBOOL( obj->pointLabelsClipping() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointLabelsClipping ( OPBOOL(1,true) );
+      obj->setPointLabelsClipping( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QAREASERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
     if( ISNUMPAR(1) && ISQLINESERIES(1) )
     {
 #endif
-      obj->setUpperSeries ( PQLINESERIES(1) );
+      obj->setUpperSeries( PQLINESERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
     if( ISNUMPAR(1) && ISQLINESERIES(1) )
     {
 #endif
-      obj->setLowerSeries ( PQLINESERIES(1) );
+      obj->setLowerSeries( PQLINESERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -725,8 +725,8 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -780,8 +780,8 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointsVisible ( OPBOOL(1,true) );
+      obj->setPointsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointsVisible () );
+      RBOOL( obj->pointsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QAREASERIES_ONBORDERCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QAREASERIES_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QAREASERIES_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QAREASERIES_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QAREASERIES_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             PHB_ITEM pArg2 = hb_itemPutL( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCLIPPINGCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSFORMATCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPOINTLABELSVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1535,7 +1535,7 @@ HB_FUNC_STATIC( QAREASERIES_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1601,7 +1601,7 @@ HB_FUNC_STATIC( QAREASERIES_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QPOINTF" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC( QAREASERIES_ONSELECTED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QAREASERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QAREASERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

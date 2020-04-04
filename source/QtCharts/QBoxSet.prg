@@ -48,7 +48,7 @@ CLASS QBoxSet INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBoxSet
+PROCEDURE destroyObject() CLASS QBoxSet
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,10 +81,10 @@ using namespace QtCharts;
 /*
 explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
 */
-void QBoxSet_new1 ()
+void QBoxSet_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBoxSet ( OPQSTRING(1,QString()), OPQOBJECT(2,nullptr) );
+  auto obj = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -92,10 +92,10 @@ void QBoxSet_new1 ()
 /*
 explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
 */
-void QBoxSet_new2 ()
+void QBoxSet_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QBoxSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,nullptr) );
+  auto obj = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QBOXSET_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -157,8 +157,8 @@ HB_FUNC_STATIC( QBOXSET_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QBOXSET_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,8 +212,8 @@ HB_FUNC_STATIC( QBOXSET_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,14 +256,14 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 /*
 void append(const qreal value)
 */
-void QBoxSet_append1 ()
+void QBoxSet_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->append ( PQREAL(1) );
+    obj->append( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -273,7 +273,7 @@ void QBoxSet_append1 ()
 /*
 void append(const QList<qreal> &values)
 */
-void QBoxSet_append2 ()
+void QBoxSet_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   auto obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -289,7 +289,7 @@ void QBoxSet_append2 ()
       temp1 = hb_arrayGetND(aList1, i1+1);
       par1 << temp1;
     }
-    obj->append ( par1 );
+    obj->append( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QBOXSET_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QBOXSET_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QBOXSET_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QBOXSET_SETVALUE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setValue ( PINT(1), PQREAL(2) );
+      obj->setValue( PINT(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QBOXSET_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->at ( PINT(1) ) );
+      RQREAL( obj->at( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QBOXSET_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QBOXSET_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLEARED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QBOXSET_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QBOXSET_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QBOXSET_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QBOXSET_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QBOXSET_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QBOXSET_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QBOXSET_ONVALUESCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QBOXSET" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QBOXSET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }

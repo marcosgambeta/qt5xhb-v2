@@ -28,7 +28,7 @@ CLASS QChartView INHERIT QGraphicsView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QChartView
+PROCEDURE destroyObject() CLASS QChartView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,10 +60,10 @@ using namespace QtCharts;
 /*
 explicit QChartView(QWidget *parent = nullptr)
 */
-void QChartView_new1 ()
+void QChartView_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QChartView ( OPQWIDGET(1,nullptr) );
+  auto obj = new QChartView( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -71,10 +71,10 @@ void QChartView_new1 ()
 /*
 explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 */
-void QChartView_new2 ()
+void QChartView_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  auto obj = new QChartView ( PQCHART(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QChartView( PQCHART(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->rubberBand () );
+      RENUM( obj->rubberBand() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChart * ptr = obj->chart ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QCHART" );
+      QChart * ptr = obj->chart();
+      Qt5xHb::createReturnQObjectClass( ptr, "QCHART" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
     if( ISNUMPAR(1) && ISQCHART(1) )
     {
 #endif
-      obj->setChart ( PQCHART(1) );
+      obj->setChart( PQCHART(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

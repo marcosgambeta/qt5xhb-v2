@@ -25,7 +25,7 @@ CLASS QStackedBarSeries INHERIT QAbstractBarSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStackedBarSeries
+PROCEDURE destroyObject() CLASS QStackedBarSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTACKEDBARSERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QStackedBarSeries ( OPQOBJECT(1,nullptr) );
+    auto obj = new QStackedBarSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTACKEDBARSERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

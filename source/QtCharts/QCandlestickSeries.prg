@@ -75,7 +75,7 @@ CLASS QCandlestickSeries INHERIT QAbstractSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCandlestickSeries
+PROCEDURE destroyObject() CLASS QCandlestickSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    auto obj = new QCandlestickSeries ( OPQOBJECT(1,nullptr) );
+    auto obj = new QCandlestickSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->maximumColumnWidth () );
+      RQREAL( obj->maximumColumnWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximumColumnWidth ( PQREAL(1) );
+      obj->setMaximumColumnWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->minimumColumnWidth () );
+      RQREAL( obj->minimumColumnWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinimumColumnWidth ( PQREAL(1) );
+      obj->setMinimumColumnWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->bodyWidth () );
+      RQREAL( obj->bodyWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBodyWidth ( PQREAL(1) );
+      obj->setBodyWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->bodyOutlineVisible () );
+      RBOOL( obj->bodyOutlineVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setBodyOutlineVisible ( PBOOL(1) );
+      obj->setBodyOutlineVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->capsWidth () );
+      RQREAL( obj->capsWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCapsWidth ( PQREAL(1) );
+      obj->setCapsWidth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->capsVisible () );
+      RBOOL( obj->capsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCapsVisible ( PBOOL(1) );
+      obj->setCapsVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,8 +517,8 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->increasingColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->increasingColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIncreasingColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setIncreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,8 +572,8 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->decreasingColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->decreasingColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setDecreasingColor ( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setDecreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,8 +627,8 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,8 +682,8 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 /*
 bool append(QCandlestickSet *set)
 */
-void QCandlestickSeries_append1 ()
+void QCandlestickSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -740,7 +740,7 @@ void QCandlestickSeries_append1 ()
     {
       par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->append ( par1 ) );
+    RBOOL( obj->append( par1 ) );
   }
 #endif
 }
@@ -748,7 +748,7 @@ void QCandlestickSeries_append1 ()
 /*
 bool append(const QList<QCandlestickSet *> &sets)
 */
-void QCandlestickSeries_append2 ()
+void QCandlestickSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -762,7 +762,7 @@ void QCandlestickSeries_append2 ()
     {
       par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->append ( par1 ) );
+    RBOOL( obj->append( par1 ) );
   }
 #endif
 }
@@ -789,14 +789,14 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 /*
 bool remove(QCandlestickSet *set)
 */
-void QCandlestickSeries_remove1 ()
+void QCandlestickSeries_remove1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    RBOOL( obj->remove ( PQCANDLESTICKSET(1) ) );
+    RBOOL( obj->remove( PQCANDLESTICKSET(1) ) );
   }
 #endif
 }
@@ -804,7 +804,7 @@ void QCandlestickSeries_remove1 ()
 /*
 bool remove(const QList<QCandlestickSet *> &sets)
 */
-void QCandlestickSeries_remove2 ()
+void QCandlestickSeries_remove2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   auto obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -818,7 +818,7 @@ void QCandlestickSeries_remove2 ()
     {
       par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->remove ( par1 ) );
+    RBOOL( obj->remove( par1 ) );
   }
 #endif
 }
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
     if( ISNUMPAR(2) && ISNUM(1) && ISQCANDLESTICKSET(2) )
     {
 #endif
-      RBOOL( obj->insert ( PINT(1), PQCANDLESTICKSET(2) ) );
+      RBOOL( obj->insert( PINT(1), PQCANDLESTICKSET(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
     if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
     {
 #endif
-      RBOOL( obj->take ( PQCANDLESTICKSET(1) ) );
+      RBOOL( obj->take( PQCANDLESTICKSET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QCandlestickSet *> list = obj->sets ();
+      QList<QCandlestickSet *> list = obj->sets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYOUTLINEVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBODYWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONBRUSHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSADDED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCANDLESTICKSETSREMOVED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSVISIBILITYCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCAPSWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1586,7 +1586,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONCOUNTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDECREASINGCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONDOUBLECLICKED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1780,7 +1780,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONHOVERED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             PHB_ITEM pArg2 = Signals4_return_qobject( (QObject *) arg2, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -1848,7 +1848,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONINCREASINGCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1912,7 +1912,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMAXIMUMCOLUMNWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1976,7 +1976,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONMINIMUMCOLUMNWIDTHCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2040,7 +2040,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPENCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -2104,7 +2104,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONPRESSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2170,7 +2170,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_ONRELEASED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKSERIES" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKSERIES" );
             PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QCANDLESTICKSET" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

@@ -66,7 +66,7 @@ CLASS QLegend INHERIT QGraphicsWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLegend
+PROCEDURE destroyObject() CLASS QLegend
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -110,8 +110,8 @@ HB_FUNC_STATIC( QLEGEND_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals4_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QLEGEND_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QLEGEND_ISBACKGROUNDVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBackgroundVisible () );
+      RBOOL( obj->isBackgroundVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setBackgroundVisible ( OPBOOL(1,true) );
+      obj->setBackgroundVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,8 +218,8 @@ HB_FUNC_STATIC( QLEGEND_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->color () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->color() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QLEGEND_SETCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setColor ( *PQCOLOR(1) );
+      obj->setColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,8 +273,8 @@ HB_FUNC_STATIC( QLEGEND_BORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->borderColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->borderColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QLEGEND_SETBORDERCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setBorderColor ( *PQCOLOR(1) );
+      obj->setBorderColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,8 +328,8 @@ HB_FUNC_STATIC( QLEGEND_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QFont( obj->font () );
-      Qt5xHb::createReturnClass ( ptr, "QFONT", true );
+      auto ptr = new QFont( obj->font() );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QLEGEND_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,8 +383,8 @@ HB_FUNC_STATIC( QLEGEND_LABELCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QColor( obj->labelColor () );
-      Qt5xHb::createReturnClass ( ptr, "QCOLOR", true );
+      auto ptr = new QColor( obj->labelColor() );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setLabelColor ( *PQCOLOR(1) );
+      obj->setLabelColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QLEGEND_REVERSEMARKERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->reverseMarkers () );
+      RBOOL( obj->reverseMarkers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setReverseMarkers ( OPBOOL(1,true) );
+      obj->setReverseMarkers( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QLEGEND_SHOWTOOLTIPS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->showToolTips () );
+      RBOOL( obj->showToolTips() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setShowToolTips ( PBOOL(1) );
+      obj->setShowToolTips( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERSHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->markerShape () );
+      RENUM( obj->markerShape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMarkerShape ( (QLegend::MarkerShape) hb_parni(1) );
+      obj->setMarkerShape( (QLegend::MarkerShape) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QLEGEND_PAINT )
     if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      obj->paint ( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QLEGEND_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,8 +656,8 @@ HB_FUNC_STATIC( QLEGEND_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->brush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->brush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QLEGEND_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,8 +711,8 @@ HB_FUNC_STATIC( QLEGEND_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QPen( obj->pen () );
-      Qt5xHb::createReturnClass ( ptr, "QPEN", true );
+      auto ptr = new QPen( obj->pen() );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QLEGEND_SETLABELBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelBrush ( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,8 +766,8 @@ HB_FUNC_STATIC( QLEGEND_LABELBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QBrush( obj->labelBrush () );
-      Qt5xHb::createReturnClass ( ptr, "QBRUSH", true );
+      auto ptr = new QBrush( obj->labelBrush() );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QLEGEND_DETACHFROMCHART )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->detachFromChart ();
+      obj->detachFromChart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QLEGEND_ATTACHTOCHART )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->attachToChart ();
+      obj->attachToChart();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -877,7 +877,7 @@ HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAttachedToChart () );
+      RBOOL( obj->isAttachedToChart() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
     if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
     {
 #endif
-      QList<QLegendMarker *> list = obj->markers ( OPQABSTRACTSERIES(1,nullptr) );
+      QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES(1,nullptr) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLEGENDMARKER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QLEGEND_ONBACKGROUNDVISIBLECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QLEGEND_ONBORDERCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QLEGEND_ONCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1171,7 +1171,7 @@ HB_FUNC_STATIC( QLEGEND_ONFONTCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QFONT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QLEGEND_ONLABELCOLORCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QLEGEND_ONMARKERSHAPECHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QLEGEND_ONREVERSEMARKERSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1435,7 +1435,7 @@ HB_FUNC_STATIC( QLEGEND_ONSHOWTOOLTIPSCHANGED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QLEGEND" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QLEGEND" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );

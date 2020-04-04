@@ -32,7 +32,7 @@ CLASS QCandlestickModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCandlestickModelMapper
+PROCEDURE destroyObject() CLASS QCandlestickModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCandlestickSeries * ptr = obj->series ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QCANDLESTICKSERIES" );
+      QCandlestickSeries * ptr = obj->series();
+      Qt5xHb::createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
     if( ISNUMPAR(1) && ISQCANDLESTICKSERIES(1) )
     {
 #endif
-      obj->setSeries ( PQCANDLESTICKSERIES(1) );
+      obj->setSeries( PQCANDLESTICKSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONSERIESREPLACED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QCANDLESTICKMODELMAPPER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCANDLESTICKMODELMAPPER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
