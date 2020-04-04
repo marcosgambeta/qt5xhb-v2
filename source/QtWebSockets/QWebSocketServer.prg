@@ -59,7 +59,7 @@ CLASS QWebSocketServer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebSocketServer
+PROCEDURE destroyObject() CLASS QWebSocketServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    auto obj = new QWebSocketServer ( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,nullptr) );
+    auto obj = new QWebSocketServer( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_LISTEN )
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      RBOOL( obj->listen ( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
+      RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ISLISTENING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isListening () );
+      RBOOL( obj->isListening() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maxPendingConnections () );
+      RINT( obj->maxPendingConnections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETMAXPENDINGCONNECTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxPendingConnections ( PINT(1) );
+      obj->setMaxPendingConnections( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->serverPort () );
+      RQUINT16( obj->serverPort() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,8 +301,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QHostAddress( obj->serverAddress () );
-      Qt5xHb::createReturnClass ( ptr, "QHOSTADDRESS", true );
+      auto ptr = new QHostAddress( obj->serverAddress() );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SECUREMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->secureMode () );
+      RENUM( obj->secureMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SOCKETDESCRIPTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->socketDescriptor () );
+      RINT( obj->socketDescriptor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setSocketDescriptor ( PINT(1) ) );
+      RBOOL( obj->setSocketDescriptor( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_HASPENDINGCONNECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasPendingConnections () );
+      RBOOL( obj->hasPendingConnections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,8 +432,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWebSocket * ptr = obj->nextPendingConnection ();
-      Qt5xHb::createReturnQObjectClass ( ptr, "QWEBSOCKET" );
+      QWebSocket * ptr = obj->nextPendingConnection();
+      Qt5xHb::createReturnQObjectClass( ptr, "QWEBSOCKET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PAUSEACCEPTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pauseAccepting ();
+      obj->pauseAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_RESUMEACCEPTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resumeAccepting ();
+      obj->resumeAccepting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->serverName () );
+      RQSTRING( obj->serverName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSERVERNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setServerName ( PQSTRING(1) );
+      obj->setServerName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,8 +621,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QNetworkProxy( obj->proxy () );
-      Qt5xHb::createReturnClass ( ptr, "QNETWORKPROXY", true );
+      auto ptr = new QNetworkProxy( obj->proxy() );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
     {
 #endif
-      obj->setProxy ( *PQNETWORKPROXY(1) );
+      obj->setProxy( *PQNETWORKPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSSLCONFIGURATION )
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
     {
 #endif
-      obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
+      obj->setSslConfiguration( *PQSSLCONFIGURATION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,8 +704,8 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SSLCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      auto ptr = new QSslConfiguration( obj->sslConfiguration () );
-      Qt5xHb::createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+      auto ptr = new QSslConfiguration( obj->sslConfiguration() );
+      Qt5xHb::createReturnClass( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SUPPORTEDVERSIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QWebSocketProtocol::Version> list = obj->supportedVersions ();
+      QList<QWebSocketProtocol::Version> list = obj->supportedVersions();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONACCEPTERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSERVERERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONORIGINAUTHENTICATIONREQUIRED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) arg1, "QWEBSOCKETCORSAUTHENTICATOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONNEWCONNECTION )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONPEERVERIFYERROR )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QSSLERROR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONSSLERRORS )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_ONCLOSED )
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject ( (QObject *) sender, "QWEBSOCKETSERVER" );
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QWEBSOCKETSERVER" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
