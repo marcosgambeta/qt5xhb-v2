@@ -29,7 +29,7 @@ HCodeBlockValidator::~HCodeBlockValidator ()
   }
 }
 
-QValidator::State HCodeBlockValidator::validate ( QString & input, int & pos ) const
+QValidator::State HCodeBlockValidator::validate( QString & input, int & pos ) const
 {
   /*
     executa o codeblock de validação

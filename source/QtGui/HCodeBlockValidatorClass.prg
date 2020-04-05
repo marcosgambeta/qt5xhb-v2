@@ -19,7 +19,7 @@ CLASS HCodeBlockValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS HCodeBlockValidator
+PROCEDURE destroyObject() CLASS HCodeBlockValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -33,28 +33,20 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 
-void HCodeBlockValidator_new1 ()
+void HCodeBlockValidator_new1()
 {
-  HCodeBlockValidator * o = nullptr;
-  o = new HCodeBlockValidator ( OPQOBJECT(1,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL, (HCodeBlockValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  auto obj = new HCodeBlockValidator( OPQOBJECT(1,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
-void HCodeBlockValidator_new2 ()
+void HCodeBlockValidator_new2()
 {
-  HCodeBlockValidator * o = nullptr;
-  PHB_ITEM block = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
-  o = new HCodeBlockValidator ( block, OPQOBJECT(2,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  auto obj = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 }
+
+//[1]explicit HCodeBlockValidator( QObject *parent = nullptr );
+//[2]HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr );
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
@@ -74,7 +66,7 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 {
-  HCodeBlockValidator * obj = (HCodeBlockValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HCodeBlockValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -89,10 +81,16 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+QValidator::State validate( QString & input, int & pos ) const
+*/
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_VALIDATE )
 {
 }
 
+/*
+void fixup( QString & input ) const
+*/
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_FIXUP )
 {
 }
