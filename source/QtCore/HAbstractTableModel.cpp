@@ -11,7 +11,7 @@
 /*
   método construtor
 */
-HAbstractTableModel::HAbstractTableModel (QObject * parent) : QAbstractTableModel (parent)
+HAbstractTableModel::HAbstractTableModel(QObject * parent) : QAbstractTableModel (parent)
 {
   // linhas e colunas
   rowCountCB = nullptr;
@@ -50,7 +50,7 @@ HAbstractTableModel::HAbstractTableModel (QObject * parent) : QAbstractTableMode
 /*
   método destruidor
 */
-HAbstractTableModel::~HAbstractTableModel ()
+HAbstractTableModel::~HAbstractTableModel()
 {
   // linhas e colunas
   if( rowCountCB != nullptr )
@@ -189,7 +189,7 @@ HAbstractTableModel::~HAbstractTableModel ()
 /*
   define o codeblock para o número de linhas
 */
-void HAbstractTableModel::setRowCountCB ( PHB_ITEM block )
+void HAbstractTableModel::setRowCountCB( PHB_ITEM block )
 {
   if( rowCountCB != nullptr )
   {
@@ -204,7 +204,7 @@ void HAbstractTableModel::setRowCountCB ( PHB_ITEM block )
 /*
   define o codeblock para o número de colunas
 */
-void HAbstractTableModel::setColumnCountCB ( PHB_ITEM block )
+void HAbstractTableModel::setColumnCountCB( PHB_ITEM block )
 {
   if( colCountCB != nullptr )
   {
@@ -219,7 +219,7 @@ void HAbstractTableModel::setColumnCountCB ( PHB_ITEM block )
 /*
   define o codeblock para o conteúdo da célula
 */
-void HAbstractTableModel::setDisplayRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setDisplayRoleCB( PHB_ITEM block )
 {
   if( getFieldCB != nullptr )
   {
@@ -234,7 +234,7 @@ void HAbstractTableModel::setDisplayRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a decoração da célula
 */
-void HAbstractTableModel::setDecorationRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setDecorationRoleCB( PHB_ITEM block )
 {
   if( getFieldDecorationCB != nullptr )
   {
@@ -249,7 +249,7 @@ void HAbstractTableModel::setDecorationRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a edição da célula
 */
-void HAbstractTableModel::setEditRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setEditRoleCB( PHB_ITEM block )
 {
   if( getFieldEditCB != nullptr )
   {
@@ -264,7 +264,7 @@ void HAbstractTableModel::setEditRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o tooltip da célula
 */
-void HAbstractTableModel::setToolTipRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setToolTipRoleCB( PHB_ITEM block )
 {
   if( getFieldToolTipCB != nullptr )
   {
@@ -279,7 +279,7 @@ void HAbstractTableModel::setToolTipRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o statustip da célula
 */
-void HAbstractTableModel::setStatusTipRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setStatusTipRoleCB( PHB_ITEM block )
 {
   if( getFieldStatusTipCB != nullptr )
   {
@@ -294,7 +294,7 @@ void HAbstractTableModel::setStatusTipRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o whatsthis da célula
 */
-void HAbstractTableModel::setWhatsThisRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setWhatsThisRoleCB( PHB_ITEM block )
 {
   if( getFieldWhatsThisCB != nullptr )
   {
@@ -309,7 +309,7 @@ void HAbstractTableModel::setWhatsThisRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o sizehint da célula
 */
-void HAbstractTableModel::setSizeHintRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setSizeHintRoleCB( PHB_ITEM block )
 {
   if( getFieldSizeHintCB != nullptr )
   {
@@ -324,7 +324,7 @@ void HAbstractTableModel::setSizeHintRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a fonte da célula
 */
-void HAbstractTableModel::setFontRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setFontRoleCB( PHB_ITEM block )
 {
   if( getFieldFontCB != nullptr )
   {
@@ -339,7 +339,7 @@ void HAbstractTableModel::setFontRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o alinhamento do conteúdo da célula
 */
-void HAbstractTableModel::setTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getFieldAlignCB != nullptr )
   {
@@ -354,7 +354,7 @@ void HAbstractTableModel::setTextAlignmentRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o background da célula
 */
-void HAbstractTableModel::setBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setBackgroundRoleCB( PHB_ITEM block )
 {
   if( getFieldBGColorCB != nullptr )
   {
@@ -369,7 +369,7 @@ void HAbstractTableModel::setBackgroundRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o foreground da célula
 */
-void HAbstractTableModel::setForegroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setForegroundRoleCB( PHB_ITEM block )
 {
   if( getFieldFGColorCB != nullptr )
   {
@@ -384,7 +384,7 @@ void HAbstractTableModel::setForegroundRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o conteúdo do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 {
   if( getHHCB != nullptr )
   {
@@ -399,7 +399,7 @@ void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a decoração do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
 {
   if( getHHDecorationCB != nullptr )
   {
@@ -414,7 +414,7 @@ void HAbstractTableModel::setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a fonte do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 {
   if( getHHFontCB != nullptr )
   {
@@ -429,7 +429,7 @@ void HAbstractTableModel::setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o alinhamento do conteúdo do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getHHAlignCB != nullptr )
   {
@@ -444,7 +444,7 @@ void HAbstractTableModel::setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM bloc
 /*
   define o codeblock para o background do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
   if( getHHBGColorCB != nullptr )
   {
@@ -459,7 +459,7 @@ void HAbstractTableModel::setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o foreground do cabeçalho horizontal
 */
-void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 {
   if( getHHFGColorCB != nullptr )
   {
@@ -474,7 +474,7 @@ void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o conteúdo do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 {
   if( getVHCB != nullptr )
   {
@@ -489,7 +489,7 @@ void HAbstractTableModel::setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a decoração do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
 {
   if( getVHDecorationCB != nullptr )
   {
@@ -504,7 +504,7 @@ void HAbstractTableModel::setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para a fonte do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderFontRoleCB( PHB_ITEM block )
 {
   if( getVHFontCB != nullptr )
   {
@@ -519,7 +519,7 @@ void HAbstractTableModel::setVerticalHeaderFontRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o alinhamento do conteúdo do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
   if( getVHAlignCB != nullptr )
   {
@@ -534,7 +534,7 @@ void HAbstractTableModel::setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block 
 /*
   define o codeblock para o background do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
   if( getVHBGColorCB != nullptr )
   {
@@ -549,7 +549,7 @@ void HAbstractTableModel::setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
 /*
   define o codeblock para o foreground do cabeçalho vertical
 */
-void HAbstractTableModel::setVerticalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractTableModel::setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
 {
   if( getVHFGColorCB != nullptr )
   {
