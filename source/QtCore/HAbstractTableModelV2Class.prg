@@ -30,7 +30,7 @@ CLASS HAbstractTableModelV2 INHERIT QAbstractTableModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS HAbstractTableModelV2
+PROCEDURE destroyObject() CLASS HAbstractTableModelV2
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -44,20 +44,21 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 
+/*
+HAbstractTableModelV2( QObject * parent = nullptr )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
 {
-  HAbstractTableModelV2 * o = nullptr;
-  o = new HAbstractTableModelV2 ( OPQOBJECT(1,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HAbstractTableModelV2 *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  auto obj = new HAbstractTableModelV2( OPQOBJECT(1,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+virtual ~HAbstractTableModelV2()
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_DELETE )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -72,85 +73,207 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setRowCountCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setRowCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setColumnCountCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setColumnCountCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setColumnCountCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setDataCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setDataCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setHeaderDataCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setHeaderDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setFlagsCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setFlagsCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setSetDataCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->setSetDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setSetDataCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
+*/
+
+/*
+int columnCount( const QModelIndex & parent = QModelIndex() ) const
+*/
+
+/*
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
+*/
+
+/*
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+*/
+
+/*
+Qt::ItemFlags flags( const QModelIndex &index ) const
+*/
+
+/*
+bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
+*/
+
+/*
+void reloadData()
+*/
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_RELOADDATA )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (HAbstractTableModelV2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-    obj->reloadData();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->reloadData();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
