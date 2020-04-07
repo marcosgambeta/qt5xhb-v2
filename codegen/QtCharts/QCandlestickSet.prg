@@ -38,8 +38,10 @@ $internalConstructor=|new1|qreal=0.0,QObject *=nullptr
 $prototype=explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
 $internalConstructor=|new2|qreal,qreal,qreal,qreal,qreal=0.0,QObject *=nullptr
 
-//[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
-//[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
+/*
+[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
+[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {

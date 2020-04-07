@@ -38,8 +38,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QPieSlice(QString label, qreal value, QObject *parent = nullptr)
 $internalConstructor=|new2|QString,qreal,QObject *=nullptr
 
-//[1]explicit QPieSlice(QObject *parent = nullptr)
-//[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+/*
+[1]explicit QPieSlice(QObject *parent = nullptr)
+[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {

@@ -118,9 +118,11 @@ $internalMethod=|void|append,append2|const QPointF &
 $prototype=void append(const QList<QPointF> &points)
 $internalMethod=|void|append,append3|const QList<QPointF> &
 
-//[1]void append(qreal x, qreal y)
-//[2]void append(const QPointF &point)
-//[3]void append(const QList<QPointF> &points)
+/*
+[1]void append(qreal x, qreal y)
+[2]void append(const QPointF &point)
+[3]void append(const QList<QPointF> &points)
+*/
 
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
@@ -161,12 +163,14 @@ $internalMethod=|void|replace,replace5|QList<QPointF>
 $prototype=void replace(QVector<QPointF> points)
 $internalMethod=|void|replace,replace6|QVector<QPointF>
 
-//[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-//[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
-//[3]void replace(int index, qreal newX, qreal newY)
-//[4]void replace(int index, const QPointF &newPoint)
-//[5]void replace(QList<QPointF> points)
-//[6]void replace(QVector<QPointF> points)
+/*
+[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
+[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
+[3]void replace(int index, qreal newX, qreal newY)
+[4]void replace(int index, const QPointF &newPoint)
+[5]void replace(QList<QPointF> points)
+[6]void replace(QVector<QPointF> points)
+*/
 
 %% TODO: conflict between [5] and [6]
 
@@ -212,9 +216,11 @@ $internalMethod=|void|remove,remove2|const QPointF &
 $prototype=void remove(int index)
 $internalMethod=|void|remove,remove3|int
 
-//[1]void remove(qreal x, qreal y)
-//[2]void remove(const QPointF &point)
-//[3]void remove(int index)
+/*
+[1]void remove(qreal x, qreal y)
+[2]void remove(const QPointF &point)
+[3]void remove(int index)
+*/
 
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {

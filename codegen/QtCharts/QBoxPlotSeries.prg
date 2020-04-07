@@ -93,8 +93,10 @@ $internalMethod=|bool|append,append1|QBoxSet *
 $prototype=bool append(QList<QBoxSet *> boxes)
 $internalMethod=|bool|append,append2|QList<QBoxSet *>
 
-//[1]bool append(QBoxSet *box)
-//[2]bool append(QList<QBoxSet *> boxes)
+/*
+[1]bool append(QBoxSet *box)
+[2]bool append(QList<QBoxSet *> boxes)
+*/
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 {

@@ -34,8 +34,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=explicit QChartView(QChart *chart, QWidget *parent = nullptr)
 $internalConstructor=|new2|QChart *,QWidget *=nullptr
 
-//[1]explicit QChartView(QWidget *parent = nullptr)
-//[2]explicit QChartView(QChart *chart, QWidget *parent = nullptr)
+/*
+[1]explicit QChartView(QWidget *parent = nullptr)
+[2]explicit QChartView(QChart *chart, QWidget *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCHARTVIEW_NEW )
 {

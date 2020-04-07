@@ -88,8 +88,10 @@ $internalMethod=|void|append,append1|const QStringList &
 $prototype=void append(const QString &category)
 $internalMethod=|void|append,append2|const QString &
 
-//[1]void append(const QStringList &categories)
-//[2]void append(const QString &category)
+/*
+[1]void append(const QStringList &categories)
+[2]void append(const QString &category)
+*/
 
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {

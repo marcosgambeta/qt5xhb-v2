@@ -38,8 +38,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
 $internalConstructor=|new2|QLineSeries *,QLineSeries *=nullptr
 
-//[1]explicit QAreaSeries(QObject *parent = nullptr)
-//[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
+/*
+[1]explicit QAreaSeries(QObject *parent = nullptr)
+[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
+*/
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
