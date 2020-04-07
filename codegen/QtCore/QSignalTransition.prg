@@ -31,8 +31,10 @@ $internalConstructor=|new1|QState *=nullptr
 $prototype=QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
 $internalConstructor=|new2|const QObject *,const char *,QState *=nullptr
 
-//[1]QSignalTransition(QState *sourceState = nullptr)
-//[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
+/*
+[1]QSignalTransition(QState *sourceState = nullptr)
+[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
+*/
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {

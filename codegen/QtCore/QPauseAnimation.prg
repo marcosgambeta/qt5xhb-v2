@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QPauseAnimation ( int msecs, QObject * parent = nullptr )
 $internalConstructor=|new2|int,QObject *=nullptr
 
-//[1]QPauseAnimation ( QObject * parent = nullptr )
-//[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
+/*
+[1]QPauseAnimation ( QObject * parent = nullptr )
+[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {

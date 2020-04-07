@@ -37,8 +37,10 @@ $prototype=explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 %%     inline QSignalBlocker &operator=(QSignalBlocker &&other) Q_DECL_NOTHROW;
 %% #endif
 
-//[1]explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
-//[2]explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
+/*
+[1]explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
+[2]explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
+*/
 
 $prototype=~QSignalBlocker()
 $deleteMethod

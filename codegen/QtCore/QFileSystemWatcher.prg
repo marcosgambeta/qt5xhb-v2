@@ -35,8 +35,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
 $internalConstructor=|new2|const QStringList &,QObject *=nullptr
 
-//[1]QFileSystemWatcher(QObject * parent = nullptr)
-//[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
+/*
+[1]QFileSystemWatcher(QObject * parent = nullptr)
+[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {

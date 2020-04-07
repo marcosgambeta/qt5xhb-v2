@@ -61,8 +61,10 @@ $internalMethod=|void|process,process1|const QStringList &
 $prototype=void process(const QCoreApplication &app)
 $internalMethod=|void|process,process2|const QCoreApplication &
 
-//[1]void process(const QStringList &arguments)
-//[2]void process(const QCoreApplication &app)
+/*
+[1]void process(const QStringList &arguments)
+[2]void process(const QCoreApplication &app)
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 {
@@ -93,8 +95,10 @@ $internalMethod=|bool|isSet,isSet1|const QString &
 $prototype=bool isSet(const QCommandLineOption &option) const
 $internalMethod=|bool|isSet,isSet2|const QCommandLineOption &
 
-//[1]bool isSet(const QString &name) const
-//[2]bool isSet(const QCommandLineOption &option) const
+/*
+[1]bool isSet(const QString &name) const
+[2]bool isSet(const QCommandLineOption &option) const
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 {
@@ -119,8 +123,10 @@ $internalMethod=|QString|value,value1|const QString &
 $prototype=QString value(const QCommandLineOption &option) const
 $internalMethod=|QString|value,value2|const QCommandLineOption &
 
-//[1]QString value(const QString &name) const
-//[2]QString value(const QCommandLineOption &option) const
+/*
+[1]QString value(const QString &name) const
+[2]QString value(const QCommandLineOption &option) const
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 {
@@ -145,8 +151,10 @@ $internalMethod=|QStringList|values,values1|const QString &
 $prototype=QStringList values(const QCommandLineOption &option) const
 $internalMethod=|QStringList|values,values2|const QCommandLineOption &
 
-//[1]QStringList values(const QString &name) const
-//[2]QStringList values(const QCommandLineOption &option) const
+/*
+[1]QStringList values(const QString &name) const
+[2]QStringList values(const QCommandLineOption &option) const
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 {

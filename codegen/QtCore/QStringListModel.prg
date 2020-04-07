@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QStringListModel(const QStringList & strings, QObject * parent = nullptr)
 $internalConstructor=|new2|const QStringList &,QObject *=nullptr
 
-//[1]QStringListModel(QObject * parent = nullptr)
-//[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+/*
+[1]QStringListModel(QObject * parent = nullptr)
+[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {

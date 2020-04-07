@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=nullptr|#ifdef Q_OS_WIN
 $prototype=explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 %% TODO: $internalConstructor=|new2|HANDLE,QObject *=nullptr|#ifdef Q_OS_WIN
 
-//[1]explicit QWinEventNotifier(QObject *parent = nullptr)
-//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+/*
+[1]explicit QWinEventNotifier(QObject *parent = nullptr)
+[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {

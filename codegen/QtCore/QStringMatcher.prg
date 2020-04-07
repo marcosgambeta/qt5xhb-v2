@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QChar *,int,Qt::CaseSensitivity=Qt::CaseSensiti
 $prototype=QStringMatcher(const QStringMatcher &other)
 $internalConstructor=|new4|const QStringMatcher &
 
-//QStringMatcher()
-//QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-//QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-//QStringMatcher(const QStringMatcher &other)
+/*
+[1]QStringMatcher()
+[2]QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+[3]QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+[4]QStringMatcher(const QStringMatcher &other)
+*/
 
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 {
@@ -80,8 +82,10 @@ $internalMethod=|int|indexIn,indexIn1|const QString &,int=0
 $prototype=int indexIn(const QChar *str, int length, int from = 0) const
 $internalMethod=|int|indexIn,indexIn2|const QChar *,int,int=0
 
-//[1]int indexIn(const QString &str, int from = 0) const
-//[2]int indexIn(const QChar *str, int length, int from = 0) const
+/*
+[1]int indexIn(const QString &str, int from = 0) const
+[2]int indexIn(const QChar *str, int length, int from = 0) const
+*/
 
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {

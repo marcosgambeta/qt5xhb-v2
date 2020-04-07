@@ -33,8 +33,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
 $internalConstructor=|new2|QState::ChildMode,QObject *=nullptr
 
-//[1]QStateMachine(QObject *parent = nullptr)
-//[2]QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
+/*
+[1]QStateMachine(QObject *parent = nullptr)
+[2]QStateMachine(QState::ChildMode childMode, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {

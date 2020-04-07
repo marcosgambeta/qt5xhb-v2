@@ -38,10 +38,12 @@ $internalConstructor=|new3|const QDir &
 $prototype=QStorageInfo(const QStorageInfo &other)
 $internalConstructor=|new4|const QStorageInfo &
 
-//[1]QStorageInfo()
-//[2]explicit QStorageInfo(const QString &path)
-//[3]explicit QStorageInfo(const QDir &dir)
-//[4]QStorageInfo(const QStorageInfo &other)
+/*
+[1]QStorageInfo()
+[2]explicit QStorageInfo(const QString &path)
+[3]explicit QStorageInfo(const QDir &dir)
+[4]QStorageInfo(const QStorageInfo &other)
+*/
 
 HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 {

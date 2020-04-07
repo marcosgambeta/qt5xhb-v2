@@ -35,9 +35,11 @@ $internalConstructor=|new2|qreal,qreal,qreal,qreal
 $prototype=QMarginsF(const QMargins &margins)
 $internalConstructor=|new3|const QMargins &
 
-//[1]QMarginsF()
-//[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
-//[3]QMarginsF(const QMargins &margins)
+/*
+[1]QMarginsF()
+[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
+[3]QMarginsF(const QMargins &margins)
+*/
 
 HB_FUNC_STATIC( QMARGINSF_NEW )
 {
