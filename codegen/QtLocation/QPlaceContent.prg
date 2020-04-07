@@ -35,8 +35,10 @@ $internalConstructor=|new1|
 $prototype=QPlaceContent(const QPlaceContent &other)
 $internalConstructor=|new2|const QPlaceContent &
 
-//[1]QPlaceContent()
-//[2]QPlaceContent(const QPlaceContent &other)
+/*
+[1]QPlaceContent()
+[2]QPlaceContent(const QPlaceContent &other)
+*/
 
 HB_FUNC_STATIC( QPLACECONTENT_NEW )
 {

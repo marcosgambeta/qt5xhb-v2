@@ -32,8 +32,10 @@ $internalConstructor=|new1|
 $prototype=QPlaceContactDetail(const QPlaceContactDetail &other)
 $internalConstructor=|new2|const QPlaceContactDetail &
 
-//[1]QPlaceContactDetail()
-//[2]QPlaceContactDetail(const QPlaceContactDetail &other)
+/*
+[1]QPlaceContactDetail()
+[2]QPlaceContactDetail(const QPlaceContactDetail &other)
+*/
 
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 {

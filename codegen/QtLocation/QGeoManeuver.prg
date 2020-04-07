@@ -34,8 +34,10 @@ $internalConstructor=|new1|
 $prototype=QGeoManeuver(const QGeoManeuver &other)
 $internalConstructor=|new2|const QGeoManeuver &
 
-//[1]QGeoManeuver()
-//[2]QGeoManeuver(const QGeoManeuver &other)
+/*
+[1]QGeoManeuver()
+[2]QGeoManeuver(const QGeoManeuver &other)
+*/
 
 HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 {

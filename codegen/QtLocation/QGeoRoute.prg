@@ -35,8 +35,10 @@ $internalConstructor=|new1|
 $prototype=QGeoRoute(const QGeoRoute &other)
 $internalConstructor=|new2|const QGeoRoute &
 
-//[1]QGeoRoute()
-//[2]QGeoRoute(const QGeoRoute &other)
+/*
+[1]QGeoRoute()
+[2]QGeoRoute(const QGeoRoute &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTE_NEW )
 {

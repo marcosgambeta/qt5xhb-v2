@@ -32,8 +32,10 @@ $internalConstructor=|new1|
 $prototype=QPlaceAttribute(const QPlaceAttribute &other)
 $internalConstructor=|new2|const QPlaceAttribute &
 
-//[1]QPlaceAttribute()
-//[2]QPlaceAttribute(const QPlaceAttribute &other)
+/*
+[1]QPlaceAttribute()
+[2]QPlaceAttribute(const QPlaceAttribute &other)
+*/
 
 HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
 {
