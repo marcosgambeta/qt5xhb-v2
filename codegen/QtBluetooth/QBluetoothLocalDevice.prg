@@ -34,8 +34,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
 $internalConstructor=|new2|const QBluetoothAddress &,QObject *=nullptr
 
-//[1]QBluetoothLocalDevice(QObject *parent = nullptr)
-//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
+/*
+[1]QBluetoothLocalDevice(QObject *parent = nullptr)
+[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {

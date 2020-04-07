@@ -43,10 +43,12 @@ $internalConstructor=5,5,0|new3|const QBluetoothUuid &,const QString &,quint32
 $prototype=QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
 $internalConstructor=|new4|const QBluetoothDeviceInfo &
 
-//[1]QBluetoothDeviceInfo()
-//[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-//[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
-//[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+/*
+[1]QBluetoothDeviceInfo()
+[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
+[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
@@ -113,8 +115,10 @@ $internalMethod=|void|setServiceUuids,setServiceUuids1|const QList<QBluetoothUui
 $prototype=void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
 $internalMethod=5,13,0|void|setServiceUuids,setServiceUuids2|const QVector<QBluetoothUuid> &
 
-//[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
-//[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+/*
+[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
+[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
 {

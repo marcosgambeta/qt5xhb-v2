@@ -38,10 +38,12 @@ $internalConstructor=|new3|const QString &
 $prototype=QBluetoothAddress(const QBluetoothAddress &other)
 $internalConstructor=|new4|const QBluetoothAddress &
 
-//[1]QBluetoothAddress()
-//[2]QBluetoothAddress(quint64 address)
-//[3]QBluetoothAddress(const QString &address)
-//[4]QBluetoothAddress(const QBluetoothAddress &other)
+/*
+[1]QBluetoothAddress()
+[2]QBluetoothAddress(quint64 address)
+[3]QBluetoothAddress(const QString &address)
+[4]QBluetoothAddress(const QBluetoothAddress &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
 {

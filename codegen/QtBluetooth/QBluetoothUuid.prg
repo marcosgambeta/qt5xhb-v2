@@ -54,15 +54,17 @@ $internalConstructor=|new8|const QBluetoothUuid &
 $prototype=QBluetoothUuid(const QUuid &uuid)
 $internalConstructor=|new9|const QUuid &
 
-//[1]QBluetoothUuid()
-//[2]QBluetoothUuid(ProtocolUuid uuid)
-//[3]QBluetoothUuid(ServiceClassUuid uuid)
-//[4]QBluetoothUuid(quint16 uuid)
-//[5]QBluetoothUuid(quint32 uuid)
-//[6]QBluetoothUuid(quint128 uuid)
-//[7]QBluetoothUuid(const QString &uuid)
-//[8]QBluetoothUuid(const QBluetoothUuid &uuid)
-//[9]QBluetoothUuid(const QUuid &uuid)
+/*
+[1]QBluetoothUuid()
+[2]QBluetoothUuid(ProtocolUuid uuid)
+[3]QBluetoothUuid(ServiceClassUuid uuid)
+[4]QBluetoothUuid(quint16 uuid)
+[5]QBluetoothUuid(quint32 uuid)
+[6]QBluetoothUuid(quint128 uuid)
+[7]QBluetoothUuid(const QString &uuid)
+[8]QBluetoothUuid(const QBluetoothUuid &uuid)
+[9]QBluetoothUuid(const QUuid &uuid)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 {

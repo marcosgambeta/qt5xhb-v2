@@ -32,8 +32,10 @@ $internalConstructor=|new1|const QBluetoothAddress &=QBluetoothAddress()
 $prototype=QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 $internalConstructor=|new2|const QBluetoothTransferRequest &
 
-//[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
-//[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
+/*
+[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
+[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 {
