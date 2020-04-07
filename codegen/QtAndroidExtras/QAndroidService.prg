@@ -29,15 +29,15 @@ $destructor
 $includes
 
 $prototype=QAndroidService(int &argc, char **argv)
+%% TODO: code generator
 HB_FUNC_STATIC( QANDROIDSERVICE_NEW )
 {
   int argc;
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QAndroidService * o = NULL;
-  o = new QAndroidService( argc, argv );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QAndroidService( argc, argv );
+  Qt5xHb::returnNewObject( obj, false );
 }
 $addMethod=new
 
