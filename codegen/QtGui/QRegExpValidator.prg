@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
 $internalConstructor=|new2|const QRegExp &,QObject *=nullptr
 
-//[1]QRegExpValidator ( QObject * parent = nullptr )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
+/*
+[1]QRegExpValidator ( QObject * parent = nullptr )
+[2]QRegExpValidator ( const QRegExp & rx, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {

@@ -87,9 +87,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QGuiApplication * o = NULL;
-  o = new QGuiApplication( argc, argv );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QGuiApplication( argc, argv );
+  Qt5xHb::returnNewObject( obj, false );
 }
 $addMethod=new
 

@@ -43,13 +43,15 @@ $internalConstructor=|new5|const QString &,const char *=nullptr,Qt::ImageConvers
 $prototype=QPixmap ( const QPixmap & pixmap )
 $internalConstructor=|new7|const QPixmap &
 
-//[1]QPixmap()
-//[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
-//[3]QPixmap(int w, int h)
-//[4]QPixmap(const QSize &)
-//[5]QPixmap(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
-//[7]QPixmap(const QPixmap &)
+/*
+[1]QPixmap()
+[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
+[3]QPixmap(int w, int h)
+[4]QPixmap(const QSize &)
+[5]QPixmap(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
+[7]QPixmap(const QPixmap &)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_NEW )
 {
@@ -57,10 +59,10 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
   {
     QPixmap_new1();
   }
-  //else if( ISNUMPAR(1) && ISQPLATFORMPIXMAP(1) )
-  //{
-  //  QPixmap_new2();
-  //}
+%%  //else if( ISNUMPAR(1) && ISQPLATFORMPIXMAP(1) )
+%%  //{
+%%  //  QPixmap_new2();
+%%  //}
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     QPixmap_new3();
@@ -118,9 +120,11 @@ $internalMethod=|void|fill,fill2|const QPaintDevice *,const QPoint &
 $prototype=void fill(const QPaintDevice *device, int xofs, int yofs)
 $internalMethod=|void|fill,fill3|const QPaintDevice *,int,int
 
-//[1]void fill(const QColor &fillColor = Qt::white)
-//[2]void fill(const QPaintDevice *device, const QPoint &ofs)
-//[3]void fill(const QPaintDevice *device, int xofs, int yofs)
+/*
+[1]void fill(const QColor &fillColor = Qt::white)
+[2]void fill(const QPaintDevice *device, const QPoint &ofs)
+[3]void fill(const QPaintDevice *device, int xofs, int yofs)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_FILL )
 {
@@ -173,8 +177,10 @@ $internalMethod=|QPixmap|scaled,scaled1|int,int,Qt::AspectRatioMode=Qt::IgnoreAs
 $prototype=QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
 $internalMethod=|QPixmap|scaled,scaled2|const QSize &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
-//[2]QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+/*
+[1]QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+[2]QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCALED )
 {
@@ -205,8 +211,10 @@ $internalMethod=|QPixmap|transformed,transformed1|const QMatrix &,Qt::Transforma
 $prototype=QPixmap transformed(const QTransform &, Qt::TransformationMode mode = Qt::FastTransformation) const
 $internalMethod=|QPixmap|transformed,transformed2|const QTransform &,Qt::TransformationMode=Qt::FastTransformation
 
-//[1]QPixmap transformed(const QMatrix &, Qt::TransformationMode mode = Qt::FastTransformation) const
-//[2]QPixmap transformed(const QTransform &, Qt::TransformationMode mode = Qt::FastTransformation) const
+/*
+[1]QPixmap transformed(const QMatrix &, Qt::TransformationMode mode = Qt::FastTransformation) const
+[2]QPixmap transformed(const QTransform &, Qt::TransformationMode mode = Qt::FastTransformation) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 {
@@ -237,8 +245,10 @@ $internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *
 $prototype=bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 $internalMethod=|bool|loadFromData,loadFromData2|const QByteArray &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
 
-//[1]bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[2]bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+/*
+[1]bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+[2]bool loadFromData(const QByteArray &data, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
@@ -263,8 +273,10 @@ $internalMethod=|bool|save,save1|const QString &,const char *=nullptr,int=-1
 $prototype=bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
 $internalMethod=|bool|save,save2|QIODevice *,const char *=nullptr,int=-1
 
-//[1]bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
-//[2]bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
+/*
+[1]bool save(const QString& fileName, const char* format = nullptr, int quality = -1) const
+[2]bool save(QIODevice* device, const char* format = nullptr, int quality = -1) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
@@ -292,8 +304,10 @@ $internalMethod=|QPixmap|copy,copy1|int,int,int,int
 $prototype=QPixmap copy(const QRect &rect = QRect()) const
 $internalMethod=|QPixmap|copy,copy2|const QRect &=QRect()
 
-//[1]QPixmap copy(int x, int y, int width, int height) const
-//[2]QPixmap copy(const QRect &rect = QRect()) const
+/*
+[1]QPixmap copy(int x, int y, int width, int height) const
+[2]QPixmap copy(const QRect &rect = QRect()) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_COPY )
 {
@@ -318,8 +332,10 @@ $internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=nullptr
 $prototype=void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
 $internalMethod=|void|scroll,scroll2|int,int,const QRect &,QRegion *=nullptr
 
-//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
-//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
+/*
+[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = nullptr)
+[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = nullptr)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCROLL )
 {
@@ -365,8 +381,10 @@ $internalStaticMethod=|QPixmap|grabWidget,grabWidget1|QObject *,const QRect &
 $prototype=static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
 $internalStaticMethod=|QPixmap|grabWidget,grabWidget2|QObject *,int=0,int=0,int=-1,int=-1
 
-//[1]static QPixmap grabWidget(QObject *widget, const QRect &rect)
-//[2]static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
+/*
+[1]static QPixmap grabWidget(QObject *widget, const QRect &rect)
+[2]static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 {
@@ -391,8 +409,10 @@ $internalStaticMethod=|QMatrix|trueMatrix,trueMatrix1|const QMatrix &,int,int
 $prototype=static QTransform trueMatrix(const QTransform &m, int w, int h)
 $internalStaticMethod=|QTransform|trueMatrix,trueMatrix2|const QTransform &,int,int
 
-//[1]static QMatrix trueMatrix(const QMatrix &m, int w, int h)
-//[2]static QTransform trueMatrix(const QTransform &m, int w, int h)
+/*
+[1]static QMatrix trueMatrix(const QMatrix &m, int w, int h)
+[2]static QTransform trueMatrix(const QTransform &m, int w, int h)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
 {

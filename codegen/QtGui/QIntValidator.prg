@@ -33,8 +33,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
 $internalConstructor=|new2|int,int,QObject *=nullptr
 
-//[1]QIntValidator(QObject * parent = nullptr)
-//[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
+/*
+[1]QIntValidator(QObject * parent = nullptr)
+[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {

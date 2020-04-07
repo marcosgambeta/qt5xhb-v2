@@ -31,8 +31,10 @@ $internalConstructor=|new1|int=-1
 $prototype=QPicture ( const QPicture & pic )
 $internalConstructor=|new2|const QPicture &
 
-//[1]QPicture ( int formatVersion = -1 )
-//[2]QPicture ( const QPicture & pic )
+/*
+[1]QPicture ( int formatVersion = -1 )
+[2]QPicture ( const QPicture & pic )
+*/
 
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
@@ -67,8 +69,10 @@ $internalMethod=|bool|load,load1|const QString &,const char *=nullptr
 $prototype=bool load ( QIODevice * dev, const char * format = nullptr )
 $internalMethod=|bool|load,load2|QIODevice *,const char *=nullptr
 
-//[1]bool load ( const QString & fileName, const char * format = nullptr )
-//[2]bool load ( QIODevice * dev, const char * format = nullptr )
+/*
+[1]bool load ( const QString & fileName, const char * format = nullptr )
+[2]bool load ( QIODevice * dev, const char * format = nullptr )
+*/
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
@@ -96,8 +100,10 @@ $internalMethod=|bool|save,save1|const QString &,const char *=nullptr
 $prototype=bool save ( QIODevice * dev, const char * format = nullptr )
 $internalMethod=|bool|save,save2|QIODevice *,const char *=nullptr
 
-//[1]bool save ( const QString & fileName, const char * format = nullptr )
-//[2]bool save ( QIODevice * dev, const char * format = nullptr )
+/*
+[1]bool save ( const QString & fileName, const char * format = nullptr )
+[2]bool save ( QIODevice * dev, const char * format = nullptr )
+*/
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {

@@ -33,8 +33,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
 $internalConstructor=|new2|const QRegularExpression &,QObject *=nullptr
 
-//[1]QRegularExpressionValidator(QObject *parent = nullptr)
-//[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
+/*
+[1]QRegularExpressionValidator(QObject *parent = nullptr)
+[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
