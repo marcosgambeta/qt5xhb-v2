@@ -41,9 +41,11 @@ $internalConstructor=|new3|const QString &,QObject *=nullptr
 
 $prototype=explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
 
-//[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
-//[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
-//[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
+/*
+[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
+[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
+[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {

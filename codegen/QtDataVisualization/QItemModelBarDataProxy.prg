@@ -51,13 +51,15 @@ $internalConstructor=|new6|QAbstractItemModel *,const QString &,const QString &,
 $prototype=explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
 $internalConstructor=|new7|QAbstractItemModel *,const QString &,const QString &,const QString &,const QString &,const QStringList &,const QStringList &,QObject *=nullptr
 
-//[1]explicit QItemModelBarDataProxy(QObject *parent = nullptr)
-//[2]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
-//[3]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &valueRole, QObject *parent = nullptr)
-//[4]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, QObject *parent = nullptr)
-//[5]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, QObject *parent = nullptr)
-//[6]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
-//[7]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
+/*
+[1]explicit QItemModelBarDataProxy(QObject *parent = nullptr)
+[2]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
+[3]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &valueRole, QObject *parent = nullptr)
+[4]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, QObject *parent = nullptr)
+[5]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, QObject *parent = nullptr)
+[6]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
+[7]explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_NEW )
 {

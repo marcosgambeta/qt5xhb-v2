@@ -96,8 +96,10 @@ $internalMethod=|const QBarDataItem *|itemAt,itemAt1|int,int
 $prototype=const QBarDataItem *itemAt(const QPoint &position) const
 $internalMethod=|const QBarDataItem *|itemAt,itemAt2|const QPoint &
 
-//[1]const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
-//[2]const QBarDataItem *itemAt(const QPoint &position) const
+/*
+[1]const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
+[2]const QBarDataItem *itemAt(const QPoint &position) const
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
@@ -125,9 +127,11 @@ $prototype=void resetArray(QBarDataArray *newArray)
 $prototype=void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
 %% $method=|void|resetArray,resetArray3|QBarDataArray *,const QStringList &,const QStringList &
 
-//[1]void resetArray()
-//[2]void resetArray(QBarDataArray *newArray)
-//[3]void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
+/*
+[1]void resetArray()
+[2]void resetArray(QBarDataArray *newArray)
+[3]void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
 {
@@ -156,8 +160,10 @@ $prototype=void setRow(int rowIndex, QBarDataRow *row)
 $prototype=void setRow(int rowIndex, QBarDataRow *row, const QString &label)
 %% $method=|void|setRow,setRow2|int,QBarDataRow *,const QString &
 
-//[1]void setRow(int rowIndex, QBarDataRow *row)
-//[2]void setRow(int rowIndex, QBarDataRow *row, const QString &label)
+/*
+[1]void setRow(int rowIndex, QBarDataRow *row)
+[2]void setRow(int rowIndex, QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
 {
@@ -182,8 +188,10 @@ $prototype=void setRows(int rowIndex, const QBarDataArray &rows)
 $prototype=void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
 %% $method=|void|setRows,setRows2|int,const QBarDataArray &,const QStringList &
 
-//[1]void setRows(int rowIndex, const QBarDataArray &rows)
-//[2]void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]void setRows(int rowIndex, const QBarDataArray &rows)
+[2]void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 {
@@ -208,8 +216,10 @@ $internalMethod=|void|setItem,setItem1|int,int,const QBarDataItem &
 $prototype=void setItem(const QPoint &position, const QBarDataItem &item)
 $internalMethod=|void|setItem,setItem2|const QPoint &,const QBarDataItem &
 
-//[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
-//[2]void setItem(const QPoint &position, const QBarDataItem &item)
+/*
+[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
+[2]void setItem(const QPoint &position, const QBarDataItem &item)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
@@ -234,8 +244,10 @@ $prototype=int addRow(QBarDataRow *row)
 $prototype=int addRow(QBarDataRow *row, const QString &label)
 %% $method=|int|addRow,addRow2|QBarDataRow *,const QString &
 
-//[1]int addRow(QBarDataRow *row)
-//[2]int addRow(QBarDataRow *row, const QString &label)
+/*
+[1]int addRow(QBarDataRow *row)
+[2]int addRow(QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
 {
@@ -260,8 +272,10 @@ $prototype=int addRows(const QBarDataArray &rows)
 $prototype=int addRows(const QBarDataArray &rows, const QStringList &labels)
 %% $method=|int|addRows,addRows2|const QBarDataArray &,const QStringList &
 
-//[1]int addRows(const QBarDataArray &rows)
-//[2]int addRows(const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]int addRows(const QBarDataArray &rows)
+[2]int addRows(const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
 {
@@ -286,8 +300,10 @@ $prototype=void insertRow(int rowIndex, QBarDataRow *row)
 $prototype=void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
 %% $method=|void|insertRow,insertRow2|int,QBarDataRow *,const QString &
 
-//[1]void insertRow(int rowIndex, QBarDataRow *row)
-//[2]void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
+/*
+[1]void insertRow(int rowIndex, QBarDataRow *row)
+[2]void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
 {
@@ -312,8 +328,10 @@ $prototype=void insertRows(int rowIndex, const QBarDataArray &rows)
 $prototype=void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
 %% $method=|void|insertRows,insertRows2|int,const QBarDataArray &,const QStringList &
 
-//[1]void insertRows(int rowIndex, const QBarDataArray &rows)
-//[2]void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]void insertRows(int rowIndex, const QBarDataArray &rows)
+[2]void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 {

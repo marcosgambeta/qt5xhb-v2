@@ -42,10 +42,12 @@ $internalConstructor=|new3|QAbstractItemModel *,const QString &,const QString &,
 $prototype=explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = nullptr)
 $internalConstructor=|new4|QAbstractItemModel *,const QString &,const QString &,const QString &,const QString &,QObject *=nullptr
 
-//[1]explicit QItemModelScatterDataProxy(QObject *parent = nullptr)
-//[2]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
-//[3]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
-//[4]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = nullptr)
+/*
+[1]explicit QItemModelScatterDataProxy(QObject *parent = nullptr)
+[2]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = nullptr)
+[3]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = nullptr)
+[4]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
 {
