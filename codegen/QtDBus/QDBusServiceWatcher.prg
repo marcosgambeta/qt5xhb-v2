@@ -35,8 +35,10 @@ $internalConstructor=|new1|QObject *=nullptr
 $prototype=QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
 $internalConstructor=|new2|const QString &,const QDBusConnection &,QDBusServiceWatcher::WatchMode=QDBusServiceWatcher::WatchForOwnerChange,QObject *=nullptr
 
-//[1]explicit QDBusServiceWatcher(QObject *parent = nullptr)
-//[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
+/*
+[1]explicit QDBusServiceWatcher(QObject *parent = nullptr)
+[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
+*/
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {

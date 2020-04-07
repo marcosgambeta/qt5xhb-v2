@@ -41,11 +41,13 @@ $internalConstructor=|new4|QDBusError::ErrorType,const QString &
 $prototype=QDBusError(const QDBusError &other)
 $internalConstructor=|new5|const QDBusError &
 
-//[1]QDBusError()
-//[2]QDBusError(const DBusError *error)
-//[3]QDBusError(const QDBusMessage& msg)
-//[4]QDBusError(ErrorType error, const QString &message)
-//[5]QDBusError(const QDBusError &other)
+/*
+[1]QDBusError()
+[2]QDBusError(const DBusError *error)
+[3]QDBusError(const QDBusMessage& msg)
+[4]QDBusError(ErrorType error, const QString &message)
+[5]QDBusError(const QDBusError &other)
+*/
 
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {

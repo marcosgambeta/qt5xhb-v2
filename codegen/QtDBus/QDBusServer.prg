@@ -35,8 +35,10 @@ $internalConstructor=|new1|const QString &,QObject *=nullptr
 $prototype=QDBusServer(QObject *parent = nullptr)
 $internalConstructor=|new2|QObject *=nullptr
 
-//[1]QDBusServer(const QString &address, QObject *parent = nullptr)
-//[2]QDBusServer(QObject *parent = nullptr)
+/*
+[1]QDBusServer(const QString &address, QObject *parent = nullptr)
+[2]QDBusServer(QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
