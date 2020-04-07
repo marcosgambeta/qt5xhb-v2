@@ -36,8 +36,10 @@ $internalConstructor=|new1|
 $prototype=QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 $internalConstructor=|new2|QDeclarativeContext *,QObject *,const QString &,QObject *=nullptr
 
-//[1]QDeclarativeExpression ()
-//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+/*
+[1]QDeclarativeExpression ()
+[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {

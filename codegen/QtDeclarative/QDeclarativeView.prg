@@ -38,8 +38,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QUrl &,QWidget *=nullptr
 
-//[1]QDeclarativeView ( QWidget * parent = nullptr )
-//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
+/*
+[1]QDeclarativeView ( QWidget * parent = nullptr )
+[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {

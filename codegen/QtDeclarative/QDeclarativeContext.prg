@@ -33,8 +33,10 @@ $internalConstructor=|new1|QDeclarativeEngine *,QObject *=nullptr
 $prototype=QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
 $internalConstructor=|new2|QDeclarativeContext *,QObject *=nullptr
 
-//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
-//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
+/*
+[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
@@ -87,8 +89,10 @@ $internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QOb
 $prototype=void setContextProperty ( const QString & name, const QVariant & value )
 $internalMethod=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
-//[1]void setContextProperty ( const QString & name, QObject * value )
-//[2]void setContextProperty ( const QString & name, const QVariant & value )
+/*
+[1]void setContextProperty ( const QString & name, QObject * value )
+[2]void setContextProperty ( const QString & name, const QVariant & value )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
