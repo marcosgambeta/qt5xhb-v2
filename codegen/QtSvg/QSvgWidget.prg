@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QSvgWidget ( const QString & file, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]QSvgWidget ( QWidget * parent = nullptr )
-//[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+/*
+[1]QSvgWidget ( QWidget * parent = nullptr )
+[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
@@ -66,8 +68,10 @@ $internalMethod=|void|load,load1|const QString &
 $prototype=void load ( const QByteArray & contents )
 $internalMethod=|void|load,load2|const QByteArray &
 
-//[1]void load ( const QString & file )
-//[2]void load ( const QByteArray & contents )
+/*
+[1]void load ( const QString & file )
+[2]void load ( const QByteArray & contents )
+*/
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
