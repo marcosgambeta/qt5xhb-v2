@@ -115,8 +115,10 @@ $prototype=void runJavaScript(const QString& scriptSource, const QWebEngineCallb
 %% TODO: implementar
 %% $internalMethod=|void|runJavaScript,runJavaScript2|const QString &,const QWebEngineCallback<const QVariant &> &
 
-//[1]void runJavaScript(const QString& scriptSource)
-//[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
+/*
+[1]void runJavaScript(const QString& scriptSource)
+[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
+*/
 
 HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 {
