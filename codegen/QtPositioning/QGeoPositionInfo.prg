@@ -35,9 +35,11 @@ $internalConstructor=|new2|const QGeoCoordinate &,const QDateTime &
 $prototype=QGeoPositionInfo(const QGeoPositionInfo &other)
 $internalConstructor=|new3|const QGeoPositionInfo &
 
-//[1]QGeoPositionInfo()
-//[2]QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
-//[3]QGeoPositionInfo(const QGeoPositionInfo &other)
+/*
+[1]QGeoPositionInfo()
+[2]QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
+[3]QGeoPositionInfo(const QGeoPositionInfo &other)
+*/
 
 HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 {

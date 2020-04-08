@@ -34,8 +34,10 @@ $internalConstructor=|new1|const QString &=QString()
 $prototype=QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
 $internalConstructor=|new2|const QGeoAreaMonitorInfo &
 
-//[1]QGeoAreaMonitorInfo(const QString &name = QString())
-//[2]QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
+/*
+[1]QGeoAreaMonitorInfo(const QString &name = QString())
+[2]QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
+*/
 
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {

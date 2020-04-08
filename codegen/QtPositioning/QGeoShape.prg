@@ -32,8 +32,10 @@ $internalConstructor=|new1|
 $prototype=QGeoShape(const QGeoShape &other)
 $internalConstructor=|new2|const QGeoShape &
 
-//[1]QGeoShape()
-//[2]QGeoShape(const QGeoShape &other)
+/*
+[1]QGeoShape()
+[2]QGeoShape(const QGeoShape &other)
+*/
 
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {

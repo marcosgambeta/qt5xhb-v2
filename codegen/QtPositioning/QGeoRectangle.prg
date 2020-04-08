@@ -41,11 +41,13 @@ $internalConstructor=|new4|const QGeoRectangle &
 $prototype=QGeoRectangle(const QGeoShape &other)
 $internalConstructor=|new5|const QGeoShape &
 
-//[1]QGeoRectangle()
-//[2]QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
-//[3]QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
-//[4]QGeoRectangle(const QGeoRectangle &other)
-//[5]QGeoRectangle(const QGeoShape &other)
+/*
+[1]QGeoRectangle()
+[2]QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
+[3]QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
+[4]QGeoRectangle(const QGeoRectangle &other)
+[5]QGeoRectangle(const QGeoShape &other)
+*/
 
 HB_FUNC_STATIC( QGEORECTANGLE_NEW )
 {
@@ -125,8 +127,10 @@ $internalMethod=|bool|contains,contains1|const QGeoCoordinate &
 $prototype=bool contains(const QGeoRectangle &rectangle) const
 $internalMethod=|bool|contains,contains2|const QGeoRectangle &
 
-//[1]bool contains(const QGeoCoordinate &coordinate) const
-//[2]bool contains(const QGeoRectangle &rectangle) const
+/*
+[1]bool contains(const QGeoCoordinate &coordinate) const
+[2]bool contains(const QGeoRectangle &rectangle) const
+*/
 
 HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 {

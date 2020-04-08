@@ -36,8 +36,10 @@ $internalConstructor=|new1|
 $prototype=QGeoLocation(const QGeoLocation &other)
 $internalConstructor=|new2|const QGeoLocation &
 
-//[1]QGeoLocation()
-//[2]QGeoLocation(const QGeoLocation &other)
+/*
+[1]QGeoLocation()
+[2]QGeoLocation(const QGeoLocation &other)
+*/
 
 HB_FUNC_STATIC( QGEOLOCATION_NEW )
 {

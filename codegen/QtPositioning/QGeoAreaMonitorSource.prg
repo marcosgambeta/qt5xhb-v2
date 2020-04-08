@@ -60,8 +60,10 @@ $internalVirtualMethod=|QList<QGeoAreaMonitorInfo>|activeMonitors,activeMonitors
 $prototype=virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
 $internalVirtualMethod=|QList<QGeoAreaMonitorInfo>|activeMonitors,activeMonitors2|const QGeoShape &
 
-//[1]virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
-//[2]virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
+/*
+[1]virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
+[2]virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
+*/
 
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 {
