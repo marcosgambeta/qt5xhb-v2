@@ -35,8 +35,10 @@ $internalConstructor=|new1|QPrinter *,QWidget *=nullptr
 $prototype=QPrintDialog ( QWidget * parent = nullptr )
 $internalConstructor=|new2|QWidget *=nullptr
 
-//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
-//[2]QPrintDialog ( QWidget * parent = nullptr )
+/*
+[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+[2]QPrintDialog ( QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
