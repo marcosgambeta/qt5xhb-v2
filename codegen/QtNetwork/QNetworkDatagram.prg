@@ -41,9 +41,11 @@ $internalConstructor=|new3|const QNetworkDatagram &
 
 $prototype=explicit QNetworkDatagram(QNetworkDatagramPrivate &dd) [private]
 
-//[1]QNetworkDatagram()
-//[2]QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
-//[3]QNetworkDatagram(const QNetworkDatagram &other)
+/*
+[1]QNetworkDatagram()
+[2]QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
+[3]QNetworkDatagram(const QNetworkDatagram &other)
+*/
 
 HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
 {
