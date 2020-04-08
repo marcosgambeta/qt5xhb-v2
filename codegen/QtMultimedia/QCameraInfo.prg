@@ -35,9 +35,11 @@ $internalConstructor=|new2|const QCamera &
 $prototype=QCameraInfo(const QCameraInfo& other)
 $internalConstructor=|new3|const QCameraInfo &
 
-//[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
-//[2]explicit QCameraInfo(const QCamera &camera)
-//[3]QCameraInfo(const QCameraInfo& other)
+/*
+[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
+[2]explicit QCameraInfo(const QCamera &camera)
+[3]QCameraInfo(const QCameraInfo& other)
+*/
 
 HB_FUNC_STATIC( QCAMERAINFO_NEW )
 {

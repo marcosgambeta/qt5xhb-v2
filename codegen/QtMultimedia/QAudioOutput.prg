@@ -33,8 +33,10 @@ $internalConstructor=|new1|const QAudioFormat &=QAudioFormat(),QObject *=nullptr
 $prototype=explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
 $internalConstructor=|new2|const QAudioDeviceInfo &,const QAudioFormat &=QAudioFormat(),QObject *=nullptr
 
-//[1]explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
-//[2]explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+/*
+[1]explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+[2]explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
@@ -106,8 +108,10 @@ $internalMethod=|void|start,start1|QIODevice *
 $prototype=QIODevice * start()
 $internalMethod=|QIODevice *|start,start2|
 
-//[1]void start(QIODevice * device)
-//[2]QIODevice * start()
+/*
+[1]void start(QIODevice * device)
+[2]QIODevice * start()
+*/
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 {
