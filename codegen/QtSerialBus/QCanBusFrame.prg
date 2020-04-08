@@ -51,8 +51,10 @@ $internalConstructor=|new1|QCanBusFrame::FrameType=QCanBusFrame::DataFrame
 $prototype=explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
 $internalConstructor=|new2|quint32,const QByteArray &
 
-//[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
-//[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
+/*
+[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
+[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
+*/
 
 HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
