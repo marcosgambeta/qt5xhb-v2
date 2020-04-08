@@ -126,8 +126,10 @@ $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 $prototype=void ignoreSslErrors()
 $internalMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
-//[1]void ignoreSslErrors(const QList<QSslError> &errors)
-//[2]void ignoreSslErrors()
+/*
+[1]void ignoreSslErrors(const QList<QSslError> &errors)
+[2]void ignoreSslErrors()
+*/
 
 HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
 {
