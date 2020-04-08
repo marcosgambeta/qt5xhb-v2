@@ -44,11 +44,13 @@ $internalConstructor=|new4|QQmlEngine *,const QUrl &,QObject *=nullptr
 $prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
 $internalConstructor=|new5|QQmlEngine *,const QUrl &,QQmlComponent::CompilationMode,QObject *=nullptr
 
-//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
-//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
-//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
-//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
-//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
+/*
+[1]QQmlComponent(QQmlEngine * engine, QObject * parent = nullptr)
+[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = nullptr)
+[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = nullptr)
+[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = nullptr)
+[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
@@ -92,8 +94,10 @@ $internalVirtualMethod=|QObject *|create,create1|QQmlContext *=nullptr
 $prototype=void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
 $internalMethod=|void|create,create2|QQmlIncubator &,QQmlContext *=nullptr,QQmlContext *=nullptr
 
-//[1]virtual QObject * create(QQmlContext * context = nullptr)
-//[2]void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
+/*
+[1]virtual QObject * create(QQmlContext * context = nullptr)
+[2]void create(QQmlIncubator & incubator, QQmlContext * context = nullptr, QQmlContext * forContext = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {
@@ -142,8 +146,10 @@ $internalMethod=|void|loadUrl,loadUrl1|const QUrl &
 $prototype=void loadUrl(const QUrl & url, CompilationMode mode)
 $internalMethod=|void|loadUrl,loadUrl2|const QUrl &,QQmlComponent::CompilationMode
 
-//[1]void loadUrl(const QUrl & url)
-//[2]void loadUrl(const QUrl & url, CompilationMode mode)
+/*
+[1]void loadUrl(const QUrl & url)
+[2]void loadUrl(const QUrl & url, CompilationMode mode)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 {

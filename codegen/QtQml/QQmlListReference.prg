@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
 $internalConstructor=|new2|QObject *,const char *,QQmlEngine *=nullptr
 
-//[1]QQmlListReference()
-//[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
+/*
+[1]QQmlListReference()
+[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {

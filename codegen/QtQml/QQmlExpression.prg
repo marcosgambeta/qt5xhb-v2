@@ -39,9 +39,11 @@ $internalConstructor=|new2|QQmlContext *,QObject *,const QString &,QObject *=nul
 $prototype=QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
 $internalConstructor=|new3|const QQmlScriptString &,QQmlContext *=nullptr,QObject *=nullptr,QObject *=nullptr
 
-//[1]QQmlExpression()
-//[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
-//[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
+/*
+[1]QQmlExpression()
+[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
+[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 {

@@ -33,8 +33,10 @@ $internalConstructor=|new1|QQmlEngine *,QObject *=nullptr
 $prototype=QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
 $internalConstructor=|new2|QQmlContext *,QObject *=nullptr
 
-//[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
-//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
+/*
+[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
+[2]QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
@@ -90,8 +92,10 @@ $internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QOb
 $prototype=void setContextProperty(const QString & name, const QVariant & value)
 $internalMethod=|void|setContextProperty,setContextProperty2|const QString &,const QVariant &
 
-//[1]void setContextProperty(const QString & name, QObject * value)
-//[2]void setContextProperty(const QString & name, const QVariant & value)
+/*
+[1]void setContextProperty(const QString & name, QObject * value)
+[2]void setContextProperty(const QString & name, const QVariant & value)
+*/
 
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {
