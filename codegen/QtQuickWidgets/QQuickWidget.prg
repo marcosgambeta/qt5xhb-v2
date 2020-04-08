@@ -42,9 +42,11 @@ $internalConstructor=|new2|QQmlEngine *,QWidget *
 $prototype=QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
 $internalConstructor=|new3|const QUrl &,QWidget *=nullptr
 
-//[1]explicit QQuickWidget(QWidget *parent = nullptr)
-//[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
-//[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
+/*
+[1]explicit QQuickWidget(QWidget *parent = nullptr)
+[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
+[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
