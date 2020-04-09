@@ -26,8 +26,8 @@ $destructor
 $includes
 
 #include <QtCore/QItemSelection>
-#include <QtCore/QSize>
 #include <QtCore/QMimeData>
+#include <QtCore/QSize>
 
 $prototype=explicit QSortFilterProxyModel(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

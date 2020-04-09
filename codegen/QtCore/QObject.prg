@@ -202,10 +202,10 @@ $destructor
 
 $includes
 
-#include <QtWidgets/QWidget>
-#include <QtCore/QVariant>
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
+#include <QtCore/QVariant>
+#include <QtWidgets/QWidget>
 
 /*
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );

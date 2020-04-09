@@ -25,38 +25,38 @@ $destructor
 
 $includes
 
-#include <QtCore/QDataStream>
-#include <QtCore/QByteArray>
 #include <QtCore/QBitArray>
-#include <QtCore/QString>
-#include <QtCore/QLatin1String>
-#include <QtCore/QStringList>
+#include <QtCore/QByteArray>
 #include <QtCore/QChar>
+#include <QtCore/QDataStream>
 #include <QtCore/QDate>
-#include <QtCore/QTime>
 #include <QtCore/QDateTime>
-#include <QtCore/QList>
-#include <QtCore/QMap>
-#include <QtCore/QHash>
-#include <QtCore/QSize>
-#include <QtCore/QSizeF>
-#include <QtCore/QPoint>
-#include <QtCore/QPointF>
-#include <QtCore/QLine>
-#include <QtCore/QLineF>
-#include <QtCore/QRect>
-#include <QtCore/QRectF>
-#include <QtCore/QLocale>
-#include <QtCore/QRegExp>
-#include <QtCore/QRegularExpression>
-#include <QtCore/QUrl>
 #include <QtCore/QEasingCurve>
-#include <QtCore/QUuid>
-#include <QtCore/QModelIndex>
-#include <QtCore/QJsonValue>
-#include <QtCore/QJsonObject>
+#include <QtCore/QHash>
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonDocument>
+#include <QtCore/QJsonObject>
+#include <QtCore/QJsonValue>
+#include <QtCore/QLatin1String>
+#include <QtCore/QLine>
+#include <QtCore/QLineF>
+#include <QtCore/QList>
+#include <QtCore/QLocale>
+#include <QtCore/QMap>
+#include <QtCore/QModelIndex>
+#include <QtCore/QPoint>
+#include <QtCore/QPointF>
+#include <QtCore/QRect>
+#include <QtCore/QRectF>
+#include <QtCore/QRegExp>
+#include <QtCore/QRegularExpression>
+#include <QtCore/QSize>
+#include <QtCore/QSizeF>
+#include <QtCore/QString>
+#include <QtCore/QStringList>
+#include <QtCore/QTime>
+#include <QtCore/QUrl>
+#include <QtCore/QUuid>
 
 $prototype=QVariant()
 $internalConstructor=|new1|
