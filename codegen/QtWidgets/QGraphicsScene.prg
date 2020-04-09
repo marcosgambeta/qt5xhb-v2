@@ -38,8 +38,8 @@ $includes
 
 #include <QtCore/QVariant>
 #include <QtGui/QPalette>
-#include <QtWidgets/QGraphicsWidget>
 #include <QtWidgets/QGraphicsProxyWidget>
+#include <QtWidgets/QGraphicsWidget>
 #include <QtWidgets/QStyle>
 
 $prototype=QGraphicsScene ( QObject * parent = nullptr )

@@ -29,9 +29,9 @@ $includes
 
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
-#include <QtWidgets/QCompleter>
 #include <QtGui/QValidator>
 #include <QtWidgets/QAction>
+#include <QtWidgets/QCompleter>
 #include <QtWidgets/QMenu>
 
 $prototype=explicit QLineEdit ( QWidget * parent = nullptr )

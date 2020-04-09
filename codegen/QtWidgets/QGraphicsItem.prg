@@ -27,8 +27,8 @@ $includes
 
 #include <QtGui/QCursor>
 #include <QtWidgets/QGraphicsEffect>
-#include <QtWidgets/QGraphicsWidget>
 #include <QtWidgets/QGraphicsScene>
+#include <QtWidgets/QGraphicsWidget>
 
 $deleteMethod
 

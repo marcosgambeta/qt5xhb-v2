@@ -29,14 +29,14 @@ $destructor
 
 $includes
 
-#include <QtGui/QIcon>
-#include <QtCore/QVariant>
 #include <QtCore/QLocale>
+#include <QtCore/QVariant>
+#include <QtGui/QIcon>
+#include <QtGui/QWindow>
 #include <QtWidgets/QGraphicsEffect>
 #include <QtWidgets/QGraphicsProxyWidget>
 #include <QtWidgets/QLayout>
 #include <QtWidgets/QStyle>
-#include <QtGui/QWindow>
 
 $prototype=explicit QWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0

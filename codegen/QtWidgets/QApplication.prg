@@ -27,15 +27,15 @@ $destructor
 
 $includes
 
-#include <QtGui/QFont>
 #include <QtCore/QLocale>
-#include <QtGui/QIcon>
-#include <QtGui/QSessionManager>
-#include <QtGui/QFontMetrics>
-#include <QtGui/QPalette>
 #include <QtGui/QClipboard>
-#include <QtWidgets/QStyle>
+#include <QtGui/QFont>
+#include <QtGui/QFontMetrics>
+#include <QtGui/QIcon>
+#include <QtGui/QPalette>
+#include <QtGui/QSessionManager>
 #include <QtWidgets/QDesktopWidget>
+#include <QtWidgets/QStyle>
 
 %% TODO: implementar construtores
 
