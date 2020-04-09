@@ -56,18 +56,17 @@ $destructor
 
 $includes
 
-#include <QtNetwork/QNetworkConfiguration>
-#include <QtNetwork/QNetworkProxy>
-#include <QtNetwork/QSslError>
 #include <QtCore/QList>
 #include <QtNetwork/QAbstractNetworkCache>
-#include <QtNetwork/QNetworkCookieJar>
-#include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QAuthenticator>
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #include <QtNetwork/QHstsPolicy>
 #endif
+#include <QtNetwork/QNetworkConfiguration>
+#include <QtNetwork/QNetworkCookieJar>
+#include <QtNetwork/QNetworkProxy>
+#include <QtNetwork/QNetworkReply>
+#include <QtNetwork/QSslError>
 
 $prototype=explicit QNetworkAccessManager(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

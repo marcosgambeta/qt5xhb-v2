@@ -29,8 +29,8 @@ $destructor
 
 $includes
 
-#include <QtNetwork/QSslKey>
 #include <QtNetwork/QSslCipher>
+#include <QtNetwork/QSslKey>
 
 $prototype=QSslConfiguration()
 $internalConstructor=|new1|

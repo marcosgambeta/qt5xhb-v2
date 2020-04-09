@@ -47,9 +47,9 @@ $destructor
 
 $includes
 
-#include <QtNetwork/QSslKey>
 #include <QtNetwork/QSslCipher>
 #include <QtNetwork/QSslConfiguration>
+#include <QtNetwork/QSslKey>
 #include <QtNetwork/QSslPreSharedKeyAuthenticator>
 
 $prototype=explicit QSslSocket(QObject *parent = nullptr)

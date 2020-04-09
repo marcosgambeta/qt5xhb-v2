@@ -35,10 +35,10 @@ $destructor
 
 $includes
 
-#include <QNetworkInterface>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtNetwork/QNetworkDatagram>
 #endif
+#include <QtNetwork/QNetworkInterface>
 
 $prototype=explicit QUdpSocket(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
