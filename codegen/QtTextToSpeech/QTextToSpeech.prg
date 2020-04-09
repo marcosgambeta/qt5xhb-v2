@@ -28,8 +28,8 @@ $destructor
 
 $includes
 
-#include <QtCore/QVector>
 #include <QtCore/QLocale>
+#include <QtCore/QVector>
 #include <QtTextToSpeech/QVoice>
 
 $prototype=explicit QTextToSpeech(QObject *parent = nullptr)
