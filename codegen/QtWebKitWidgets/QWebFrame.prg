@@ -28,8 +28,8 @@ $destructor
 $includes
 
 #include <QtWebKit/QWebElement>
-#include <QtWebKitWidgets/QWebPage>
 #include <QtWebKit/QWebSecurityOrigin>
+#include <QtWebKitWidgets/QWebPage>
 
 $prototype=QWebFrame(QWebPage *parentPage) PRIVATE
 

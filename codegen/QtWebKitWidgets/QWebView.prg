@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QtWidgets/QAction>
 #include <QtCore/QUrl>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QWidget>
 
 $prototype=explicit QWebView ( QWidget * parent = nullptr )

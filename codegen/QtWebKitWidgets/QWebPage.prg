@@ -27,13 +27,13 @@ $destructor
 
 $includes
 
-#include <QtWidgets/QAction>
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtWidgets/QUndoStack>
 #include <QtCore/QVariant>
-#include <QtWebKitWidgets/QWebFrame>
+#include <QtNetwork/QNetworkAccessManager>
 #include <QtWebKit/QWebPluginFactory>
+#include <QtWebKitWidgets/QWebFrame>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
+#include <QtWidgets/QUndoStack>
 
 $prototype=explicit QWebPage ( QObject * parent = nullptr )
 $constructor=|new|QObject *=nullptr
