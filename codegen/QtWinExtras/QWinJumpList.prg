@@ -55,8 +55,10 @@ $internalMethod=|void|addCategory,addCategory1|QWinJumpListCategory *
 $prototype=QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
 %% TODO: $internalMethod=|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
 
-//[1]void addCategory(QWinJumpListCategory *category)
-//[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
+/*
+[1]void addCategory(QWinJumpListCategory *category)
+[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
+*/
 
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 {

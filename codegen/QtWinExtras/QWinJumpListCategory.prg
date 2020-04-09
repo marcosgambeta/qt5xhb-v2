@@ -67,8 +67,10 @@ $internalMethod=|QWinJumpListItem *|addLink,addLink1|const QString &,const QStri
 $prototype=QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
 $internalMethod=|QWinJumpListItem *|addLink,addLink2|const QIcon &,const QString &,const QString &,const QStringList &=QStringList()
 
-//[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
-//[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+/*
+[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+*/
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {

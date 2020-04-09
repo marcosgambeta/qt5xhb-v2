@@ -86,8 +86,10 @@ $internalStaticMethod=|void|extendFrameIntoClientArea,extendFrameIntoClientArea1
 $prototype=static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 $internalStaticMethod=|void|extendFrameIntoClientArea,extendFrameIntoClientArea2|QWindow *,const QMargins &
 
-//[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-//[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
+/*
+[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
+[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
+*/
 
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 {
@@ -115,8 +117,10 @@ $internalStaticMethod=|void|enableBlurBehindWindow,enableBlurBehindWindow1|QWind
 $prototype=static void enableBlurBehindWindow(QWindow *window)
 $internalStaticMethod=|void|enableBlurBehindWindow,enableBlurBehindWindow2|QWindow *
 
-//[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-//[2]void enableBlurBehindWindow(QWindow *window)
+/*
+[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
+[2]void enableBlurBehindWindow(QWindow *window)
+*/
 
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 {
