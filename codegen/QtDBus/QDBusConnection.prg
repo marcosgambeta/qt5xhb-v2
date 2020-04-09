@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
+#include <QtDBus/QDBusConnectionInterface>
 #include <QtDBus/QDBusError>
 #include <QtDBus/QDBusMessage>
 #include <QtDBus/QDBusPendingCall>
-#include <QtDBus/QDBusConnectionInterface>
 
 $prototype=QDBusConnection(const QString &name)
 $internalConstructor=|new1|const QString &
