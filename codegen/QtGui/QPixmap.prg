@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QtGui/QBitmap>
 #include <QtCore/QVariant>
+#include <QtGui/QBitmap>
 
 $prototype=QPixmap ()
 $internalConstructor=|new1|

@@ -26,8 +26,8 @@ $destructor
 
 $includes
 
-#include <QtCore/QSize>
 #include <QtCore/QRectF>
+#include <QtCore/QSize>
 
 $prototype=QPageSize()
 $internalConstructor=|new1|

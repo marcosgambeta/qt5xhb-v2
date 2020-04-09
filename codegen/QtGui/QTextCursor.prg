@@ -25,11 +25,11 @@ $destructor
 
 $includes
 
-#include <QtGui/QTextDocumentFragment>
 #include <QtGui/QTextBlock>
+#include <QtGui/QTextDocument>
+#include <QtGui/QTextDocumentFragment>
 #include <QtGui/QTextList>
 #include <QtGui/QTextTable>
-#include <QtGui/QTextDocument>
 
 $prototype=QTextCursor()
 $internalConstructor=|new1|

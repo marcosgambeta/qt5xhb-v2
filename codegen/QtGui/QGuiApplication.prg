@@ -73,12 +73,12 @@ $destructor
 
 $includes
 
+#include <QtGui/QClipboard>
 #include <QtGui/QFont>
 #include <QtGui/QPalette>
-#include <QtGui/QClipboard>
-#include <QtGui/QWindow>
 #include <QtGui/QScreen>
 #include <QtGui/QStyleHints>
+#include <QtGui/QWindow>
 
 $prototype=QGuiApplication(int & argc, char ** argv)
 HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
