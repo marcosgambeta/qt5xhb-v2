@@ -29,10 +29,10 @@ $destructor
 
 $includes
 
+using namespace QtDataVisualization;
+
 #include <QtDataVisualization/QAbstract3DAxis>
 #include <QtDataVisualization/QCustom3DItem>
-
-using namespace QtDataVisualization;
 
 $prototype=explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = nullptr) [protected]
 

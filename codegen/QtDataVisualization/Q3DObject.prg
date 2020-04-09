@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtDataVisualization/Q3DScene>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/Q3DScene>
 
 $prototype=explicit Q3DObject(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

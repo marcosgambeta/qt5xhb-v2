@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtDataVisualization/QBar3DSeries>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/QBar3DSeries>
 
 $prototype=explicit QBarDataProxy(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

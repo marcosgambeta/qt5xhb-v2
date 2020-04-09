@@ -34,9 +34,9 @@ $destructor
 
 $includes
 
-#include <QtDataVisualization/QScatter3DSeries>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/QScatter3DSeries>
 
 $prototype=explicit QScatterDataProxy(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
