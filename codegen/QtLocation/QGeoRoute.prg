@@ -26,8 +26,8 @@ $destructor
 
 $includes
 
-#include <QtPositioning/QGeoRectangle>
 #include <QtLocation/QGeoRouteSegment>
+#include <QtPositioning/QGeoRectangle>
 
 $prototype=QGeoRoute()
 $internalConstructor=|new1|
