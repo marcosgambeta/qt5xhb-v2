@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtQml/QQmlError>
-#include <QtQml/QQmlEngine>
 #include <QtQml/QQmlContext>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlError>
 #include <QtQuick/QQuickItem>
 
 $prototype=explicit QQuickWidget(QWidget *parent = nullptr)
