@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QtDeclarative/QDeclarativeError>
-#include <QtDeclarative/QDeclarativeEngine>
 #include <QtDeclarative/QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeError>
 #include <QtWidgets/QGraphicsObject>
 
 $prototype=QDeclarativeView ( QWidget * parent = nullptr )
