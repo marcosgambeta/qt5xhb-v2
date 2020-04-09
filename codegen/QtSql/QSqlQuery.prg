@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
+#include <QtCore/QVariant>
 #include <QtSql/QSqlDriver>
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlRecord>
-#include <QtCore/QVariant>
 
 $prototype=explicit QSqlQuery ( QSqlResult * result )
 $internalConstructor=|new1|QSqlResult *

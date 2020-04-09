@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
+#include <QtCore/QVariant>
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlIndex>
 #include <QtSql/QSqlRecord>
-#include <QtCore/QVariant>
 
 $deleteMethod
 
