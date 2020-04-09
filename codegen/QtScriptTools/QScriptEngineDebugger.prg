@@ -28,9 +28,9 @@ $destructor
 $includes
 
 #include <QtWidgets/QAction>
+#include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QMainWindow>
 
 $prototype=QScriptEngineDebugger(QObject * parent = nullptr)
 $constructor=|new|QObject *=nullptr
