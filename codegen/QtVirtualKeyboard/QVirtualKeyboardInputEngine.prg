@@ -28,8 +28,8 @@ $destructor
 $includes
 
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
-#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 #include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
+#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 
 $prototype=explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr) [private]
 %% $constructor=|new|QVirtualKeyboardInputContext *=nullptr
