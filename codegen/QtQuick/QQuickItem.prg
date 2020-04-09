@@ -26,8 +26,8 @@ $destructor
 $includes
 
 #include <QtGui/QCursor>
-#include <QtQuick/QSGTextureProvider>
 #include <QtQuick/QQuickWindow>
+#include <QtQuick/QSGTextureProvider>
 
 $prototype=QQuickItem(QQuickItem * parent = nullptr)
 $constructor=|new|QQuickItem *=nullptr

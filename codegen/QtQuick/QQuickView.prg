@@ -28,8 +28,8 @@ $destructor
 $includes
 
 #include <QtCore/QList>
-#include <QtQml/QQmlEngine>
 #include <QtQml/QQmlContext>
+#include <QtQml/QQmlEngine>
 #include <QtQuick/QQuickItem>
 
 $prototype=QQuickView(QWindow * parent = nullptr)
