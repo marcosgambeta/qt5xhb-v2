@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtCharts/QPieSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QPieSeries>
 
 $prototype=explicit QPieSlice(QObject *parent = nullptr)
 $internalConstructor=|new1|QObject *=nullptr

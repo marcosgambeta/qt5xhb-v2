@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtCore/QDateTime>
-
 using namespace QtCharts;
+
+#include <QtCore/QDateTime>
 
 $prototype=explicit QDateTimeAxis(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

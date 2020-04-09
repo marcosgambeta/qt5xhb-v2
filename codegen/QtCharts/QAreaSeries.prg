@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtCharts/QLineSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QLineSeries>
 
 $prototype=explicit QAreaSeries(QObject *parent = nullptr)
 $internalConstructor=|new1|QObject *=nullptr

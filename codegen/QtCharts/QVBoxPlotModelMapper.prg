@@ -28,10 +28,10 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 #include <QtCharts/QBoxPlotSeries>
 #include <QtCore/QAbstractItemModel>
-
-using namespace QtCharts;
 
 $prototype=explicit QVBoxPlotModelMapper(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

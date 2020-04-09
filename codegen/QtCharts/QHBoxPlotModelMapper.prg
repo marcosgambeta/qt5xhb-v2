@@ -28,12 +28,12 @@ $destructor
 
 $includes
 
-#include <QtCharts/QBoxPlotSeries>
-#include <QtCore/QAbstractItemModel>
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
+
+#include <QtCharts/QBoxPlotSeries>
+#include <QtCore/QAbstractItemModel>
 
 $prototype=explicit QHBoxPlotModelMapper(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr

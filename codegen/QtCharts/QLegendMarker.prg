@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtCharts/QAbstractSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QAbstractSeries>
 
 $prototype=explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
 

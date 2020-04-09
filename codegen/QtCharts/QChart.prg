@@ -28,10 +28,10 @@ $destructor
 
 $includes
 
+using namespace QtCharts;
+
 #include <QtCore/QEasingCurve>
 #include <QtCore/QLocale>
-
-using namespace QtCharts;
 
 $prototype=explicit QChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
 $constructor=|new|QGraphicsItem *=nullptr,Qt::WindowFlags=Qt::WindowFlags()

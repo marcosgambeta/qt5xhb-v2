@@ -26,10 +26,10 @@ $destructor
 
 $includes
 
-#include <QtCore/QAbstractItemModel>
-#include <QtCharts/QXYSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QXYSeries>
+#include <QtCore/QAbstractItemModel>
 
 $prototype=explicit QXYModelMapper(QObject *parent = nullptr) [protected]
 %% $constructor=|new|QObject *=nullptr

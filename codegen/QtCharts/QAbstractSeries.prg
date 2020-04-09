@@ -28,9 +28,9 @@ $destructor
 
 $includes
 
-#include <QtCharts/QChart>
-
 using namespace QtCharts;
+
+#include <QtCharts/QChart>
 
 $prototype=QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected]
 

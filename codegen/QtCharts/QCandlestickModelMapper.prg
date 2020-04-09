@@ -28,13 +28,14 @@ $destructor
 
 $includes
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+using namespace QtCharts;
+#endif
+
+%% TODO: add module
 #include <QAbstractItemModel>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtCharts/QCandlestickSeries>
-#endif
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-using namespace QtCharts;
 #endif
 
 $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
