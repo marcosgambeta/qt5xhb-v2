@@ -36,8 +36,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]QPlainTextEdit ( QWidget * parent = nullptr )
-//[2]QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
+/*
+[1]QPlainTextEdit ( QWidget * parent = nullptr )
+[2]QPlainTextEdit ( const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
@@ -87,8 +89,10 @@ $internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
 $prototype=QRect cursorRect () const
 $internalMethod=|QRect|cursorRect,cursorRect2|
 
-//[1]QRect cursorRect ( const QTextCursor & cursor ) const
-//[2]QRect cursorRect () const
+/*
+[1]QRect cursorRect ( const QTextCursor & cursor ) const
+[2]QRect cursorRect () const
+*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|QGraphicsLayoutItem *=nullptr
 $prototype=QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
 $internalConstructor=|new2|Qt::Orientation,QGraphicsLayoutItem *=nullptr
 
-//[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
-//[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
+/*
+[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
+[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {

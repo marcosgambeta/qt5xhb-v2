@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QCheckBox ( QWidget * parent = nullptr )
-//[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
+/*
+[1]explicit QCheckBox ( QWidget * parent = nullptr )
+[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {

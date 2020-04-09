@@ -31,8 +31,10 @@ $internalConstructor=|new1|QUndoCommand *=nullptr
 $prototype=QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
 $internalConstructor=|new2|const QString &,QUndoCommand *=nullptr
 
-//[1]QUndoCommand(QUndoCommand * parent = nullptr)
-//[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+/*
+[1]QUndoCommand(QUndoCommand * parent = nullptr)
+[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {

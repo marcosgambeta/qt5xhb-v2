@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QDateEdit ( const QDate & date, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QDate &,QWidget *=nullptr
 
-//[1]QDateEdit ( QWidget * parent = nullptr )
-//[2]QDateEdit ( const QDate & date, QWidget * parent = nullptr )
+/*
+[1]QDateEdit ( QWidget * parent = nullptr )
+[2]QDateEdit ( const QDate & date, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {

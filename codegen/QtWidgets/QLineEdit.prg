@@ -40,8 +40,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QLineEdit ( QWidget * parent = nullptr )
-//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
+/*
+[1]explicit QLineEdit ( QWidget * parent = nullptr )
+[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -199,8 +201,10 @@ $internalMethod=|void|setTextMargins,setTextMargins1|int,int,int,int
 $prototype=void setTextMargins ( const QMargins & margins )
 $internalMethod=|void|setTextMargins,setTextMargins2|const QMargins &
 
-//[1]void setTextMargins ( int left, int top, int right, int bottom )
-//[2]void setTextMargins ( const QMargins & margins )
+/*
+[1]void setTextMargins ( int left, int top, int right, int bottom )
+[2]void setTextMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
@@ -276,8 +280,10 @@ $internalMethod=|void|addAction,addAction1|QAction *,QLineEdit::ActionPosition
 $prototype=QAction * addAction(const QIcon &icon, ActionPosition position)
 $internalMethod=|QAction *|addAction,addAction2|const QIcon &,QLineEdit::ActionPosition
 
-//[1]void addAction(QAction *action, ActionPosition position)
-//[2]QAction *addAction(const QIcon &icon, ActionPosition position)
+/*
+[1]void addAction(QAction *action, ActionPosition position)
+[2]QAction *addAction(const QIcon &icon, ActionPosition position)
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 {

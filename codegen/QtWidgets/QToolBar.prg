@@ -36,8 +36,10 @@ $internalConstructor=|new1|const QString &,QWidget *=nullptr
 $prototype=QToolBar ( QWidget * parent = nullptr )
 $internalConstructor=|new2|QWidget *=nullptr
 
-//[1]QToolBar ( const QString & title, QWidget * parent = nullptr )
-//[2]QToolBar ( QWidget * parent = nullptr )
+/*
+[1]QToolBar ( const QString & title, QWidget * parent = nullptr )
+[2]QToolBar ( QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
@@ -63,8 +65,10 @@ $internalMethod=|QAction *|actionAt,actionAt1|int,int
 $prototype=QAction * actionAt ( const QPoint & p ) const
 $internalMethod=|QAction *|actionAt,actionAt2|const QPoint &
 
-//[1]QAction * actionAt ( int x, int y ) const
-//[2]QAction * actionAt ( const QPoint & p ) const
+/*
+[1]QAction * actionAt ( int x, int y ) const
+[2]QAction * actionAt ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
@@ -98,11 +102,13 @@ $internalMethod=|QAction *|addAction,addAction4|const QString &,const QObject *,
 $prototype=QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 $internalMethod=|QAction *|addAction,addAction5|const QIcon &,const QString &,const QObject *,const char *
 
-//[1]void addAction ( QAction * action )
-//[2]QAction * addAction ( const QString & text )
-//[3]QAction * addAction ( const QIcon & icon, const QString & text )
-//[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-//[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+/*
+[1]void addAction ( QAction * action )
+[2]QAction * addAction ( const QString & text )
+[3]QAction * addAction ( const QIcon & icon, const QString & text )
+[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {

@@ -43,8 +43,10 @@ $prototype=QMap<QDate, QTextCharFormat> dateTextFormat () const
 $prototype=QTextCharFormat dateTextFormat ( const QDate & date ) const
 $method=|QTextCharFormat|dateTextFormat,dateTextFormat2|const QDate &
 
-//[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
-//[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
+/*
+[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
+[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
+*/
 
 HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {

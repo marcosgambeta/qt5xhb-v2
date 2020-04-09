@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QColor &,QWidget *=nullptr
 
-//[1]explicit QColorDialog ( QWidget * parent = nullptr )
-//[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
+/*
+[1]explicit QColorDialog ( QWidget * parent = nullptr )
+[2]explicit QColorDialog ( const QColor & initial, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -66,8 +68,10 @@ $internalMethod=|void|open,open1||#ifdef Q_NO_USING_KEYWORD
 $prototype=void open ( QObject * receiver, const char * member )
 $internalMethod=|void|open,open2|QObject *,const char *
 
-//[1]void open ()
-//[2]void open ( QObject * receiver, const char * member )
+/*
+[1]void open ()
+[2]void open ( QObject * receiver, const char * member )
+*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
@@ -117,26 +121,28 @@ $prototype=static QColor getColor(const QColor &initial = Qt::white, QWidget *pa
 $staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=nullptr,const QString &=QString(),QColorDialog::ColorDialogOptions=0
 
 %% TODO: conferir metodo e remover codigo morto
-//
-////[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-////[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = nullptr )
-//
-//HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
-//{
-//  if( ISBETWEEN(3,4) && (ISQCOLOR(1)||ISCHAR(1)) && ISQWIDGET(2) && ISCHAR(3) && ISOPTNUM(4) )
-//  {
-//    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR1 );
-//  }
-//  else if( ISBETWEEN(0,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTQWIDGET(2) )
-//  {
-//    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR2 );
-//  }
-//  else
-//  {
-//    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-//  }
-//}
-//?>
+
+%% /*
+%% [1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
+%% [2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = nullptr )
+%% */
+
+%% //HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
+%% //{
+%% //  if( ISBETWEEN(3,4) && (ISQCOLOR(1)||ISCHAR(1)) && ISQWIDGET(2) && ISCHAR(3) && ISOPTNUM(4) )
+%% //  {
+%% //    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR1 );
+%% //  }
+%% //  else if( ISBETWEEN(0,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTQWIDGET(2) )
+%% //  {
+%% //    HB_FUNC_EXEC( QCOLORDIALOG_GETCOLOR2 );
+%% //  }
+%% //  else
+%% //  {
+%% //    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%% //  }
+%% //}
+%% //?>
 
 $prototype=static QColor standardColor(int index)
 $staticMethod=|QColor|standardColor|int

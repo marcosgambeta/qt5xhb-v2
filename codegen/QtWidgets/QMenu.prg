@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=explicit QMenu ( const QString & title, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]explicit QMenu ( QWidget * parent = nullptr )
-//[2]explicit QMenu ( const QString & title, QWidget * parent = nullptr )
+/*
+[1]explicit QMenu ( QWidget * parent = nullptr )
+[2]explicit QMenu ( const QString & title, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -81,11 +83,13 @@ $internalMethod=|QAction *|addAction,addAction4|const QIcon &,const QString &,co
 $prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction5|QAction *
 
-//[1]QAction * addAction ( const QString & text )
-//[2]QAction * addAction ( const QIcon & icon, const QString & text )
-//[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-//[5]void addAction ( QAction * action )
+/*
+[1]QAction * addAction ( const QString & text )
+[2]QAction * addAction ( const QIcon & icon, const QString & text )
+[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+[5]void addAction ( QAction * action )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDACTION )
 {
@@ -125,9 +129,11 @@ $internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 $prototype=QMenu * addMenu ( const QIcon & icon, const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
-//[1]QAction * addMenu ( QMenu * menu )
-//[2]QMenu * addMenu ( const QString & title )
-//[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+/*
+[1]QAction * addMenu ( QMenu * menu )
+[2]QMenu * addMenu ( const QString & title )
+[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+*/
 
 HB_FUNC_STATIC( QMENU_ADDMENU )
 {
@@ -171,9 +177,11 @@ $internalMethod=|QAction *|exec,exec2|const QPoint &,QAction *=nullptr
 $prototype=static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
 $internalStaticMethod=|QAction *|exec,exec3|QList<QAction *>,const QPoint &,QAction *=nullptr,QWidget *=nullptr
 
-//[1]QAction * exec ()
-//[2]QAction * exec ( const QPoint & pos, QAction * at = 0 )
-//[3]static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
+/*
+[1]QAction * exec ()
+[2]QAction * exec ( const QPoint & pos, QAction * at = 0 )
+[3]static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
+*/
 
 HB_FUNC_STATIC( QMENU_EXEC )
 {
@@ -253,8 +261,10 @@ $internalMethod=5,1,0|QAction *|addSection,addSection1|const QString &
 $prototype=QAction *addSection(const QIcon &icon, const QString &text)
 $internalMethod=5,1,0|QAction *|addSection,addSection2|const QIcon &,const QString &
 
-//[1]QAction *addSection(const QString &text)
-//[2]QAction *addSection(const QIcon &icon, const QString &text)
+/*
+[1]QAction *addSection(const QString &text)
+[2]QAction *addSection(const QIcon &icon, const QString &text)
+*/
 
 HB_FUNC_STATIC( QMENU_ADDSECTION )
 {
@@ -281,8 +291,10 @@ $internalMethod=5,1,0|QAction *|insertSection,insertSection1|QAction *,const QSt
 $prototype=QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
 $internalMethod=5,1,0|QAction *|insertSection,insertSection2|QAction *,const QIcon &,const QString &
 
-//[1]QAction *insertSection(QAction *before, const QString &text)
-//[2]QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
+/*
+[1]QAction *insertSection(QAction *before, const QString &text)
+[2]QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
+*/
 
 HB_FUNC_STATIC( QMENU_INSERTSECTION )
 {

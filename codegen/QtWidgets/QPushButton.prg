@@ -39,11 +39,13 @@ $internalConstructor=|new3|const QIcon &,const QString &,QWidget *=nullptr
 $prototype=QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
 $internalConstructor=|new4|const QPixmap &,const QString &,QWidget *=nullptr
 
-//[1]explicit QPushButton ( QWidget * parent = nullptr )
-//[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
+/*
+[1]explicit QPushButton ( QWidget * parent = nullptr )
+[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
+[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
 %% metodo extra para permitir o uso da classe QPixmap
-//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
+[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

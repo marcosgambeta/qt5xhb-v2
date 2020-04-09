@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QGroupBox ( const QString & title, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QString &,QWidget *=nullptr
 
-//[1]QGroupBox ( QWidget * parent = nullptr )
-//[2]QGroupBox ( const QString & title, QWidget * parent = nullptr )
+/*
+[1]QGroupBox ( QWidget * parent = nullptr )
+[2]QGroupBox ( const QString & title, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {

@@ -39,9 +39,11 @@ $internalConstructor=|new2|QAbstractItemModel *,QObject *=nullptr
 $prototype=QCompleter ( const QStringList & list, QObject * parent = nullptr )
 $internalConstructor=|new3|const QStringList &,QObject *=nullptr|#ifndef QT_NO_STRINGLISTMODEL
 
-//[1]QCompleter ( QObject * parent = nullptr )
-//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
-//[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
+/*
+[1]QCompleter ( QObject * parent = nullptr )
+[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
+[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {

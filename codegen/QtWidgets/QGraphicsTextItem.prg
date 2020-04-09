@@ -37,8 +37,10 @@ $internalConstructor=|new1|QGraphicsItem *=nullptr
 $prototype=QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 $internalConstructor=|new2|const QString &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {

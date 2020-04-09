@@ -90,9 +90,11 @@ $internalMethod=|void|setAlignment,setAlignment2|Qt::Alignment
 $prototype=bool setAlignment ( QLayout * l, Qt::Alignment alignment )
 $internalMethod=|bool|setAlignment,setAlignment3|QLayout *,Qt::Alignment
 
-//[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
-//[2]void setAlignment ( Qt::Alignment alignment )
-//[3]bool setAlignment ( QLayout * l, Qt::Alignment alignment )
+/*
+[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
+[2]void setAlignment ( Qt::Alignment alignment )
+[3]bool setAlignment ( QLayout * l, Qt::Alignment alignment )
+*/
 
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
@@ -121,8 +123,10 @@ $internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 $prototype=void setContentsMargins ( const QMargins & margins )
 $internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
-//[1]void setContentsMargins ( int left, int top, int right, int bottom )
-//[2]void setContentsMargins ( const QMargins & margins )
+/*
+[1]void setContentsMargins ( int left, int top, int right, int bottom )
+[2]void setContentsMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {

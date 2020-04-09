@@ -38,12 +38,15 @@ $includes
 #include <QtWidgets/QDesktopWidget>
 
 %% TODO: implementar construtores
-//QApplication ( int & argc, char ** argv )
-//QApplication ( int & argc, char ** argv, bool GUIenabled )
-//QApplication ( int & argc, char ** argv, Type type )
-//QApplication ( Display * display, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-//QApplication ( Display * display, int & argc, char ** argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-//QApplication ( QApplication::QS60MainApplicationFactory factory, int & argc, char ** argv )
+
+/*
+QApplication ( int & argc, char ** argv )
+QApplication ( int & argc, char ** argv, bool GUIenabled )
+QApplication ( int & argc, char ** argv, Type type )
+QApplication ( Display * display, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
+QApplication ( Display * display, int & argc, char ** argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
+QApplication ( QApplication::QS60MainApplicationFactory factory, int & argc, char ** argv )
+*/
 
 $prototype=QApplication ( int & argc, char ** argv )
 HB_FUNC_STATIC( QAPPLICATION_NEW )
@@ -52,9 +55,8 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QApplication * o = nullptr;
-  o = new QApplication( argc, argv );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QApplication( argc, argv );
+  Qt5xHb::returnNewObject( obj, false );
 }
 $addMethod=new
 
@@ -138,9 +140,11 @@ $internalStaticMethod=|QFont|font,font2|const QWidget *
 $prototype=static QFont font ( const char * className )
 $internalStaticMethod=|QFont|font,font3|const char *
 
-//[1]QFont font ()
-//[2]QFont font ( const QWidget * widget )
-//[3]QFont font ( const char * className )
+/*
+[1]QFont font ()
+[2]QFont font ( const QWidget * widget )
+[3]QFont font ( const char * className )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
@@ -202,9 +206,11 @@ $internalStaticMethod=|QPalette|palette,palette2|const QWidget *
 $prototype=static QPalette palette ( const char * className )
 $internalStaticMethod=|QPalette|palette,palette3|const char *
 
-//[1]QPalette palette ()
-//[2]QPalette palette ( const QWidget * widget )
-//[3]QPalette palette ( const char * className )
+/*
+[1]QPalette palette ()
+[2]QPalette palette ( const QWidget * widget )
+[3]QPalette palette ( const char * className )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
@@ -287,8 +293,10 @@ $internalStaticMethod=|void|setStyle,setStyle1|QStyle *
 $prototype=static QStyle * setStyle ( const QString & style )
 $internalStaticMethod=|QStyle *|setStyle,setStyle2|const QString &
 
-//[1]void setStyle ( QStyle * style )
-//[2]QStyle * setStyle ( const QString & style )
+/*
+[1]void setStyle ( QStyle * style )
+[2]QStyle * setStyle ( const QString & style )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
@@ -328,8 +336,10 @@ $internalStaticMethod=|QWidget *|topLevelAt,topLevelAt1|const QPoint &
 $prototype=static QWidget * topLevelAt ( int x, int y )
 $internalStaticMethod=|QWidget *|topLevelAt,topLevelAt2|int,int
 
-//[1]QWidget * topLevelAt ( const QPoint & point )
-//[2]QWidget * topLevelAt ( int x, int y )
+/*
+[1]QWidget * topLevelAt ( const QPoint & point )
+[2]QWidget * topLevelAt ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
@@ -360,8 +370,10 @@ $internalStaticMethod=|QWidget *|widgetAt,widgetAt1|const QPoint &
 $prototype=static QWidget * widgetAt ( int x, int y )
 $internalStaticMethod=|QWidget *|widgetAt,widgetAt2|int,int
 
-//[1]QWidget * widgetAt ( const QPoint & point )
-//[2]QWidget * widgetAt ( int x, int y )
+/*
+[1]QWidget * widgetAt ( const QPoint & point )
+[2]QWidget * widgetAt ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {

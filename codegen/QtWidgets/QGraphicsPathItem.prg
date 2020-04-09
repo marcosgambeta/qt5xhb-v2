@@ -31,8 +31,10 @@ $internalConstructor=|new1|QGraphicsItem *=nullptr
 $prototype=QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
 $internalConstructor=|new2|const QPainterPath &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {

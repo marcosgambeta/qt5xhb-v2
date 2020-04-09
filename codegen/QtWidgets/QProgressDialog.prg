@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr,Qt::WindowFlags=0
 $prototype=QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|const QString &,const QString &,int,int,QWidget *=nullptr,Qt::WindowFlags=0
 
-//[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
-//[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+/*
+[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {

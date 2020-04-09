@@ -38,9 +38,11 @@ $internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 $prototype=QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
 $internalConstructor=|new3|QDialogButtonBox::StandardButtons,Qt::Orientation=Qt::Horizontal,QWidget *=nullptr
 
-//[1]QDialogButtonBox ( QWidget * parent = nullptr )
-//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
-//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+/*
+[1]QDialogButtonBox ( QWidget * parent = nullptr )
+[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
@@ -73,9 +75,11 @@ $internalMethod=|QPushButton *|addButton,addButton2|const QString &,QDialogButto
 $prototype=QPushButton * addButton ( StandardButton button )
 $internalMethod=|QPushButton *|addButton,addButton3|QDialogButtonBox::StandardButton
 
-//[1]void addButton ( QAbstractButton * button, ButtonRole role )
-//[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-//[3]QPushButton * addButton ( StandardButton button )
+/*
+[1]void addButton ( QAbstractButton * button, ButtonRole role )
+[2]QPushButton * addButton ( const QString & text, ButtonRole role )
+[3]QPushButton * addButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {

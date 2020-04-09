@@ -31,8 +31,10 @@ $internalConstructor=|new1|QGraphicsItem *=nullptr
 $prototype=QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
 $internalConstructor=|new2|const QPolygonF &,QGraphicsItem *=nullptr
 
-//[1]QGraphicsPolygonItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsPolygonItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {

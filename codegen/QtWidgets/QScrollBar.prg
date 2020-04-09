@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-//[1]QScrollBar ( QWidget * parent = nullptr )
-//[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+/*
+[1]QScrollBar ( QWidget * parent = nullptr )
+[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {

@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=nullptr
 
-//[1]QSplitter ( QWidget * parent = nullptr )
-//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
+/*
+[1]QSplitter ( QWidget * parent = nullptr )
+[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {

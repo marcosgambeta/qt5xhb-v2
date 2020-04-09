@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *=nullptr
 $prototype=QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
 $internalConstructor=|new2|const QTime &,QWidget *=nullptr
 
-//[1]QTimeEdit ( QWidget * parent = nullptr )
-//[2]QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
+/*
+[1]QTimeEdit ( QWidget * parent = nullptr )
+[2]QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {
