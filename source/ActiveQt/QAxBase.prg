@@ -73,8 +73,8 @@ RETURN
 #include <ActiveQt/QAxBase>
 #endif
 
-#include <QtCore/QStringList>
 #include <ActiveQt/QAxObject>
+#include <QtCore/QStringList>
 
 HB_FUNC_STATIC( QAXBASE_DELETE )
 {
@@ -274,8 +274,10 @@ void QAxBase_dynamicCall2()
   }
 }
 
-//[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+/*
+[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+*/
 
 HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
 {
@@ -393,8 +395,10 @@ void QAxBase_querySubObject2()
   }
 }
 
-//[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+/*
+[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+*/
 
 HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 {
