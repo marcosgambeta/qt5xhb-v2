@@ -129,10 +129,12 @@ void QBluetoothDeviceInfo_new4()
 #endif
 }
 
-//[1]QBluetoothDeviceInfo()
-//[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-//[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
-//[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+/*
+[1]QBluetoothDeviceInfo()
+[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
+[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
@@ -492,8 +494,10 @@ void QBluetoothDeviceInfo_setServiceUuids2()
 #endif
 }
 
-//[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
-//[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+/*
+[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
+[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
 {

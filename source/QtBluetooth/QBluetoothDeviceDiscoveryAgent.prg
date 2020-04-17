@@ -88,8 +88,10 @@ void QBluetoothDeviceDiscoveryAgent_new2()
 #endif
 }
 
-//[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
-//[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
+/*
+[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = nullptr)
+[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 {

@@ -91,8 +91,10 @@ void QBluetoothLocalDevice_new2()
 #endif
 }
 
-//[1]QBluetoothLocalDevice(QObject *parent = nullptr)
-//[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
+/*
+[1]QBluetoothLocalDevice(QObject *parent = nullptr)
+[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {
