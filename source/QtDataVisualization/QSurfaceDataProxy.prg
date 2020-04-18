@@ -70,9 +70,9 @@ RETURN
 #endif
 #endif
 
-#include <QtDataVisualization/QSurface3DSeries>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/QSurface3DSeries>
 
 /*
 explicit QSurfaceDataProxy(QObject *parent = nullptr)
@@ -235,8 +235,10 @@ void QSurfaceDataProxy_itemAt2()
 #endif
 }
 
-//[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
-//[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
+/*
+[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
+[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
@@ -300,8 +302,10 @@ void QSurfaceDataProxy_setItem2()
 #endif
 }
 
-//[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
-//[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
+/*
+[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
+[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {

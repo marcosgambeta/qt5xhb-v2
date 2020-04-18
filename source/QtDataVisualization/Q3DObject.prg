@@ -60,9 +60,9 @@ RETURN
 #endif
 #endif
 
-#include <QtDataVisualization/Q3DScene>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/Q3DScene>
 
 /*
 explicit Q3DObject(QObject *parent = nullptr)

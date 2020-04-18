@@ -118,10 +118,12 @@ void QScatterDataItem_new4()
 #endif
 }
 
-//[1]QScatterDataItem()
-//[2]QScatterDataItem(const QVector3D &position)
-//[3]QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
-//[4]QScatterDataItem(const QScatterDataItem &other)
+/*
+[1]QScatterDataItem()
+[2]QScatterDataItem(const QVector3D &position)
+[3]QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
+[4]QScatterDataItem(const QScatterDataItem &other)
+*/
 
 HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
 {

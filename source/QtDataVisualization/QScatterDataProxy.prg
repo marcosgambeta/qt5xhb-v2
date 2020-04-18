@@ -69,9 +69,9 @@ RETURN
 #endif
 #endif
 
-#include <QtDataVisualization/QScatter3DSeries>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/QScatter3DSeries>
 
 /*
 explicit QScatterDataProxy(QObject *parent = nullptr)

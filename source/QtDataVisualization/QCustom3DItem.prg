@@ -112,8 +112,10 @@ void QCustom3DItem_new2()
 QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QCustom3DItem(QObject *parent = nullptr)
-//[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
+/*
+[1]explicit QCustom3DItem(QObject *parent = nullptr)
+[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {

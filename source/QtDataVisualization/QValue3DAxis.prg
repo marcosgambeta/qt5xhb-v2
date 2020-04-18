@@ -31,6 +31,12 @@ CLASS QValue3DAxis INHERIT QAbstract3DAxis
    METHOD reversed
    METHOD setReversed
 
+   METHOD onFormatterChanged
+   METHOD onLabelFormatChanged
+   METHOD onReversedChanged
+   METHOD onSegmentCountChanged
+   METHOD onSubSegmentCountChanged
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -381,21 +387,331 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 /*
 void formatterChanged( QValue3DAxisFormatter * formatter )
 */
+HB_FUNC_STATIC( QVALUE3DAXIS_ONFORMATTERCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("formatterChanged(QValue3DAxisFormatter*)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValue3DAxis::formatterChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QValue3DAxisFormatter * arg1) {
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVALUE3DAXIS" );
+            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QVALUE3DAXISFORMATTER" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals4_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals4_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 /*
 void labelFormatChanged( const QString & format )
 */
+HB_FUNC_STATIC( QVALUE3DAXIS_ONLABELFORMATCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("labelFormatChanged(QString)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValue3DAxis::labelFormatChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (const QString & arg1) {
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVALUE3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals4_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals4_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 /*
 void reversedChanged( bool enable )
 */
+HB_FUNC_STATIC( QVALUE3DAXIS_ONREVERSEDCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("reversedChanged(bool)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValue3DAxis::reversedChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (bool arg1) {
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVALUE3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals4_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals4_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 /*
 void segmentCountChanged( int count )
 */
+HB_FUNC_STATIC( QVALUE3DAXIS_ONSEGMENTCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("segmentCountChanged(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValue3DAxis::segmentCountChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVALUE3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals4_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals4_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 /*
 void subSegmentCountChanged( int count )
 */
+HB_FUNC_STATIC( QVALUE3DAXIS_ONSUBSEGMENTCOUNTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto sender = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("subSegmentCountChanged(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QValue3DAxis::subSegmentCountChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QVALUE3DAXIS" );
+            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Signals4_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Signals4_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 #pragma ENDDUMP

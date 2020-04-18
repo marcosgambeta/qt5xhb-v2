@@ -81,9 +81,9 @@ RETURN
 #endif
 #endif
 
-#include <QtDataVisualization/QBar3DSeries>
-
 using namespace QtDataVisualization;
+
+#include <QtDataVisualization/QBar3DSeries>
 
 /*
 explicit QBarDataProxy(QObject *parent = nullptr)
@@ -332,8 +332,10 @@ void QBarDataProxy_itemAt2()
 #endif
 }
 
-//[1]const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
-//[2]const QBarDataItem *itemAt(const QPoint &position) const
+/*
+[1]const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
+[2]const QBarDataItem *itemAt(const QPoint &position) const
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
@@ -363,9 +365,11 @@ void resetArray(QBarDataArray *newArray)
 void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
 */
 
-//[1]void resetArray()
-//[2]void resetArray(QBarDataArray *newArray)
-//[3]void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
+/*
+[1]void resetArray()
+[2]void resetArray(QBarDataArray *newArray)
+[3]void resetArray(QBarDataArray *newArray, const QStringList &rowLabels, const QStringList &columnLabels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
 {
@@ -379,8 +383,10 @@ void setRow(int rowIndex, QBarDataRow *row)
 void setRow(int rowIndex, QBarDataRow *row, const QString &label)
 */
 
-//[1]void setRow(int rowIndex, QBarDataRow *row)
-//[2]void setRow(int rowIndex, QBarDataRow *row, const QString &label)
+/*
+[1]void setRow(int rowIndex, QBarDataRow *row)
+[2]void setRow(int rowIndex, QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
 {
@@ -394,8 +400,10 @@ void setRows(int rowIndex, const QBarDataArray &rows)
 void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
 */
 
-//[1]void setRows(int rowIndex, const QBarDataArray &rows)
-//[2]void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]void setRows(int rowIndex, const QBarDataArray &rows)
+[2]void setRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 {
@@ -435,8 +443,10 @@ void QBarDataProxy_setItem2()
 #endif
 }
 
-//[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
-//[2]void setItem(const QPoint &position, const QBarDataItem &item)
+/*
+[1]void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
+[2]void setItem(const QPoint &position, const QBarDataItem &item)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
@@ -462,8 +472,10 @@ int addRow(QBarDataRow *row)
 int addRow(QBarDataRow *row, const QString &label)
 */
 
-//[1]int addRow(QBarDataRow *row)
-//[2]int addRow(QBarDataRow *row, const QString &label)
+/*
+[1]int addRow(QBarDataRow *row)
+[2]int addRow(QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
 {
@@ -477,8 +489,10 @@ int addRows(const QBarDataArray &rows)
 int addRows(const QBarDataArray &rows, const QStringList &labels)
 */
 
-//[1]int addRows(const QBarDataArray &rows)
-//[2]int addRows(const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]int addRows(const QBarDataArray &rows)
+[2]int addRows(const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
 {
@@ -492,8 +506,10 @@ void insertRow(int rowIndex, QBarDataRow *row)
 void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
 */
 
-//[1]void insertRow(int rowIndex, QBarDataRow *row)
-//[2]void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
+/*
+[1]void insertRow(int rowIndex, QBarDataRow *row)
+[2]void insertRow(int rowIndex, QBarDataRow *row, const QString &label)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
 {
@@ -507,8 +523,10 @@ void insertRows(int rowIndex, const QBarDataArray &rows)
 void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
 */
 
-//[1]void insertRows(int rowIndex, const QBarDataArray &rows)
-//[2]void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+/*
+[1]void insertRows(int rowIndex, const QBarDataArray &rows)
+[2]void insertRows(int rowIndex, const QBarDataArray &rows, const QStringList &labels)
+*/
 
 HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 {

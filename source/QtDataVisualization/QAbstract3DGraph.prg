@@ -131,10 +131,10 @@ RETURN
 #endif
 #endif
 
+using namespace QtDataVisualization;
+
 #include <QtDataVisualization/QAbstract3DAxis>
 #include <QtDataVisualization/QCustom3DItem>
-
-using namespace QtDataVisualization;
 
 /*
 explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = nullptr) [protected]

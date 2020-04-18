@@ -104,9 +104,11 @@ void QSurfaceDataItem_new3()
 #endif
 }
 
-//[1]QSurfaceDataItem()
-//[2]QSurfaceDataItem(const QVector3D &position)
-//[3]QSurfaceDataItem(const QSurfaceDataItem &other)
+/*
+[1]QSurfaceDataItem()
+[2]QSurfaceDataItem(const QVector3D &position)
+[3]QSurfaceDataItem(const QSurfaceDataItem &other)
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 {

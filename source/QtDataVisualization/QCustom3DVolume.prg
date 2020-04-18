@@ -126,15 +126,17 @@ void QCustom3DVolume_new1()
 explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
 */
 
-//[1]explicit QCustom3DVolume(QObject *parent = nullptr)
-//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
+/*
+[1]explicit QCustom3DVolume(QObject *parent = nullptr)
+[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCustom3DVolume_new1();
-  }  
+  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -1113,8 +1115,10 @@ void QCustom3DVolume_setSubTextureData2()
 #endif
 }
 
-//[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
-//[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+/*
+[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {

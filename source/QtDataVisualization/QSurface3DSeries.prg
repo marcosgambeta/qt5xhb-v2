@@ -105,8 +105,10 @@ void QSurface3DSeries_new2()
 explicit QSurface3DSeries(QSurface3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QSurface3DSeries(QObject *parent = nullptr)
-//[2]explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullptr)
+/*
+[1]explicit QSurface3DSeries(QObject *parent = nullptr)
+[2]explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
 {

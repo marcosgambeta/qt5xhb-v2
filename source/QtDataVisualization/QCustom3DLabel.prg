@@ -99,8 +99,10 @@ void QCustom3DLabel_new2()
 #endif
 }
 
-//[1]explicit QCustom3DLabel(QObject *parent = nullptr)
-//[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
+/*
+[1]explicit QCustom3DLabel(QObject *parent = nullptr)
+[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {

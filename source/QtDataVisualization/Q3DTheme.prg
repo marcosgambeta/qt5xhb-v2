@@ -150,9 +150,11 @@ void Q3DTheme_new2()
 explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit Q3DTheme(QObject *parent = nullptr)
-//[2]explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
-//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
+/*
+[1]explicit Q3DTheme(QObject *parent = nullptr)
+[2]explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
+[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
+*/
 
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {

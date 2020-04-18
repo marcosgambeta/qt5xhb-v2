@@ -92,8 +92,10 @@ void QScatter3DSeries_new2()
 explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
 */
 
-//[1]explicit QScatter3DSeries(QObject *parent = nullptr)
-//[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
+/*
+[1]explicit QScatter3DSeries(QObject *parent = nullptr)
+[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {
