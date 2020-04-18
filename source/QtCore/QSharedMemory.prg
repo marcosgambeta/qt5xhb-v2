@@ -80,8 +80,10 @@ void QSharedMemory_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QSharedMemory(QObject *parent = nullptr)
-//[2]QSharedMemory(const QString &key, QObject *parent = nullptr)
+/*
+[1]QSharedMemory(QObject *parent = nullptr)
+[2]QSharedMemory(const QString &key, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {

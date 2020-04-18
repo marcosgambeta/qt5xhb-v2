@@ -83,8 +83,10 @@ void QMargins_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QMargins()
-//[2]QMargins(int left, int top, int right, int bottom)
+/*
+[1]QMargins()
+[2]QMargins(int left, int top, int right, int bottom)
+*/
 
 HB_FUNC_STATIC( QMARGINS_NEW )
 {

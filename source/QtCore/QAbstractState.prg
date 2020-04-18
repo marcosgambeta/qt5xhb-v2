@@ -54,8 +54,8 @@ RETURN
 #include <QtCore/QAbstractState>
 #endif
 
-#include <QtCore/QStateMachine>
 #include <QtCore/QState>
+#include <QtCore/QStateMachine>
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {

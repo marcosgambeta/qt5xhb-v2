@@ -87,8 +87,10 @@ void QModelIndex_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QModelIndex ()
-//[2]QModelIndex ( const QModelIndex & other )
+/*
+[1]QModelIndex ()
+[2]QModelIndex ( const QModelIndex & other )
+*/
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {

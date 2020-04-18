@@ -93,10 +93,12 @@ void QDebug_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDebug(QIODevice *device)
-//[2]QDebug(QString *string)
-//[3]QDebug(QtMsgType t)
-//[4]QDebug(const QDebug &o)
+/*
+[1]QDebug(QIODevice *device)
+[2]QDebug(QString *string)
+[3]QDebug(QtMsgType t)
+[4]QDebug(const QDebug &o)
+*/
 
 HB_FUNC_STATIC( QDEBUG_NEW )
 {

@@ -68,8 +68,10 @@ void QPauseAnimation_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QPauseAnimation ( QObject * parent = nullptr )
-//[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
+/*
+[1]QPauseAnimation ( QObject * parent = nullptr )
+[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {

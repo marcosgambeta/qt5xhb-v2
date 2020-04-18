@@ -127,11 +127,13 @@ void QSettings_new5()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-//[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-//[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
-//[4]QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
-//[5]QSettings ( QObject * parent = nullptr )
+/*
+[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = nullptr )
+[4]QSettings ( const QString & fileName, Format format, QObject * parent = nullptr )
+[5]QSettings ( QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
@@ -754,6 +756,11 @@ void QSettings_setIniCodec2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
+
+/*
+[1]void setIniCodec ( QTextCodec * codec )
+[2]void setIniCodec ( const char * codecName )
+*/
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {

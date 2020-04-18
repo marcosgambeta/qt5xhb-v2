@@ -65,8 +65,10 @@ void QWinEventNotifier_new1()
 explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 */
 
-//[1]explicit QWinEventNotifier(QObject *parent = nullptr)
-//[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+/*
+[1]explicit QWinEventNotifier(QObject *parent = nullptr)
+[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {

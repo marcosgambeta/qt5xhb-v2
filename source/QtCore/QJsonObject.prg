@@ -87,8 +87,10 @@ void QJsonObject_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QJsonObject()
-//[2]QJsonObject(const QJsonObject & other)
+/*
+[1]QJsonObject()
+[2]QJsonObject(const QJsonObject & other)
+*/
 
 HB_FUNC_STATIC( QJSONOBJECT_NEW )
 {

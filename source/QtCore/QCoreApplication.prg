@@ -90,15 +90,14 @@ RETURN
 /*
 QCoreApplication ( int & argc, char ** argv )
 */
-HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtores e checagem de parametros
+HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
 {
   int argc;
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QCoreApplication * o = NULL;
-  o = new QCoreApplication( argc, argv );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QCoreApplication( argc, argv );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
@@ -524,8 +523,10 @@ void QCoreApplication_postEvent2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void postEvent ( QObject * receiver, QEvent * event )
-//[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
+/*
+[1]void postEvent ( QObject * receiver, QEvent * event )
+[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
@@ -565,8 +566,10 @@ void QCoreApplication_processEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-//[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+/*
+[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
@@ -627,8 +630,10 @@ void QCoreApplication_removePostedEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void removePostedEvents ( QObject * receiver )
-//[2]void removePostedEvents ( QObject * receiver, int eventType )
+/*
+[1]void removePostedEvents ( QObject * receiver )
+[2]void removePostedEvents ( QObject * receiver, int eventType )
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
@@ -708,8 +713,10 @@ void QCoreApplication_sendPostedEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void sendPostedEvents ( QObject * receiver, int event_type )
-//[2]void sendPostedEvents ()
+/*
+[1]void sendPostedEvents ( QObject * receiver, int event_type )
+[2]void sendPostedEvents ()
+*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {

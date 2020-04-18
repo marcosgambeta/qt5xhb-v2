@@ -77,8 +77,10 @@ void QTextEncoder_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QTextEncoder(const QTextCodec * codec)
-//[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+/*
+[1]QTextEncoder(const QTextCodec * codec)
+[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+*/
 
 HB_FUNC_STATIC( QTEXTENCODER_NEW )
 {
@@ -141,8 +143,10 @@ void QTextEncoder_fromUnicode2()
   }
 }
 
-//[1]QByteArray fromUnicode(const QString & str)
-//[2]QByteArray fromUnicode(const QChar * uc, int len)
+/*
+[1]QByteArray fromUnicode(const QString & str)
+[2]QByteArray fromUnicode(const QChar * uc, int len)
+*/
 
 HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 {

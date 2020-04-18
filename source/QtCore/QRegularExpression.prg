@@ -99,9 +99,11 @@ void QRegularExpression_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QRegularExpression()
-//[2]QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
-//[3]QRegularExpression(const QRegularExpression & re)
+/*
+[1]QRegularExpression()
+[2]QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
+[3]QRegularExpression(const QRegularExpression & re)
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 {

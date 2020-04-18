@@ -93,8 +93,10 @@ void QJsonValueRef_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QJsonValueRef(QJsonArray *array, int idx)
-//[2]QJsonValueRef(QJsonObject *object, int idx)
+/*
+[1]QJsonValueRef(QJsonArray *array, int idx)
+[2]QJsonValueRef(QJsonObject *object, int idx)
+*/
 
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {

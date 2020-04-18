@@ -80,8 +80,10 @@ void QItemSelection_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QItemSelection()
-//[2]QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+/*
+[1]QItemSelection()
+[2]QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+*/
 
 HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {

@@ -77,8 +77,10 @@ void QStringListModel_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QStringListModel(QObject * parent = nullptr)
-//[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+/*
+[1]QStringListModel(QObject * parent = nullptr)
+[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {

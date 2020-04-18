@@ -62,9 +62,9 @@ RETURN
 #include <QtCore/QAbstractTransition>
 #endif
 
-#include <QtCore/QStateMachine>
-#include <QtCore/QState>
 #include <QtCore/QAbstractState>
+#include <QtCore/QState>
+#include <QtCore/QStateMachine>
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {

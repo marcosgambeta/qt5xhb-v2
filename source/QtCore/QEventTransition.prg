@@ -70,8 +70,10 @@ void QEventTransition_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QEventTransition(QState * sourceState = nullptr)
-//[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nullptr)
+/*
+[1]QEventTransition(QState * sourceState = nullptr)
+[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = nullptr)
+*/
 
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {

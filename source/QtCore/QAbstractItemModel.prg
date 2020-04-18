@@ -101,8 +101,8 @@ RETURN
 #include <QtCore/QAbstractItemModel>
 #endif
 
-#include <QtCore/QStringList>
 #include <QtCore/QSize>
+#include <QtCore/QStringList>
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 {

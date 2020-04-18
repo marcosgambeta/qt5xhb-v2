@@ -91,8 +91,10 @@ void QMimeType_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QMimeType()
-//[2]QMimeType(const QMimeType &other)
+/*
+[1]QMimeType()
+[2]QMimeType(const QMimeType &other)
+*/
 
 HB_FUNC_STATIC( QMIMETYPE_NEW )
 {

@@ -80,8 +80,10 @@ void QXmlStreamEntityDeclaration_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QXmlStreamEntityDeclaration()
-//[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+/*
+[1]QXmlStreamEntityDeclaration()
+[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {

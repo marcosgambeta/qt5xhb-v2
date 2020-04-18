@@ -96,9 +96,11 @@ void QBitArray_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QBitArray ()
-//[2]QBitArray ( int size, bool value = false )
-//[3]QBitArray ( const QBitArray & other )
+/*
+[1]QBitArray ()
+[2]QBitArray ( int size, bool value = false )
+[3]QBitArray ( const QBitArray & other )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_NEW )
 {
@@ -239,8 +241,10 @@ void QBitArray_count2()
   }
 }
 
-//[1]int count () const
-//[2]int count ( bool on ) const
+/*
+[1]int count () const
+[2]int count ( bool on ) const
+*/
 
 HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
@@ -286,8 +290,10 @@ void QBitArray_fill2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]bool fill ( bool value, int size = -1 )
-//[2]void fill ( bool value, int begin, int end )
+/*
+[1]bool fill ( bool value, int size = -1 )
+[2]void fill ( bool value, int begin, int end )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_FILL )
 {
@@ -409,8 +415,10 @@ void QBitArray_setBit2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setBit ( int i )
-//[2]void setBit ( int i, bool value )
+/*
+[1]void setBit ( int i )
+[2]void setBit ( int i, bool value )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {

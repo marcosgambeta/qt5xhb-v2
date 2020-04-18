@@ -267,10 +267,10 @@ RETURN
 #include <QtCore/QObject>
 #endif
 
-#include <QtWidgets/QWidget>
-#include <QtCore/QVariant>
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
+#include <QtCore/QVariant>
+#include <QtWidgets/QWidget>
 
 /*
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
@@ -681,9 +681,11 @@ void QObject_findChildren3()
 #endif
 }
 
-//[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-//[2]QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-//[3]QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
+/*
+[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
+[2]QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
+[3]QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
+*/
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
