@@ -84,8 +84,10 @@ void QDeclarativeListReference_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDeclarativeListReference ()
-//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
+/*
+[1]QDeclarativeListReference ()
+[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {

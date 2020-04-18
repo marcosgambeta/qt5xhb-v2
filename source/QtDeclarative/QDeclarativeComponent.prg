@@ -97,9 +97,11 @@ void QDeclarativeComponent_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
-//[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
-//[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
+/*
+[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
+[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {

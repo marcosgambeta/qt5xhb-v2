@@ -84,8 +84,10 @@ void QDeclarativeError_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDeclarativeError ()
-//[2]QDeclarativeError ( const QDeclarativeError & other )
+/*
+[1]QDeclarativeError ()
+[2]QDeclarativeError ( const QDeclarativeError & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {

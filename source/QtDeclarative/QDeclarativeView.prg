@@ -66,9 +66,9 @@ RETURN
 #include <QtDeclarative/QDeclarativeView>
 #endif
 
-#include <QtDeclarative/QDeclarativeError>
-#include <QtDeclarative/QDeclarativeEngine>
 #include <QtDeclarative/QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeError>
 #include <QtWidgets/QGraphicsObject>
 
 /*
@@ -89,8 +89,10 @@ void QDeclarativeView_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDeclarativeView ( QWidget * parent = nullptr )
-//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
+/*
+[1]QDeclarativeView ( QWidget * parent = nullptr )
+[2]QDeclarativeView ( const QUrl & source, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {

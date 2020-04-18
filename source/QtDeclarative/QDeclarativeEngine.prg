@@ -81,8 +81,8 @@ RETURN
 #endif
 
 #include <QtCore/QStringList>
-#include <QtNetwork/QNetworkAccessManager>
 #include <QtDeclarative/QDeclarativeContext>
+#include <QtNetwork/QNetworkAccessManager>
 
 /*
 QDeclarativeEngine ( QObject * parent = nullptr )

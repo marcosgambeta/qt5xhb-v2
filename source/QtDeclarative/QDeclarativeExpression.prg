@@ -89,8 +89,10 @@ void QDeclarativeExpression_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDeclarativeExpression ()
-//[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+/*
+[1]QDeclarativeExpression ()
+[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {
