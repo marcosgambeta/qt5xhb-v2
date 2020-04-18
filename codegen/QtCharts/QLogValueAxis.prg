@@ -109,8 +109,6 @@ $method=|void|setRange|qreal,qreal
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void baseChanged( qreal base )
 $signalMethod=|void|baseChanged|qreal
 

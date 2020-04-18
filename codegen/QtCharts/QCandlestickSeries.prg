@@ -228,10 +228,6 @@ $method=|QAbstractSeries::SeriesType|type|
 %% SIGNALS
 %%
 
-%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-%% using namespace QtCharts;
-%% #endif
-
 $prototype=void bodyOutlineVisibilityChanged()
 $signalMethod=|void|bodyOutlineVisibilityChanged|
 

@@ -325,8 +325,6 @@ $method=|void|setRange|const QVariant &,const QVariant &
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void colorChanged( QColor color )
 $signalMethod=|void|colorChanged|QColor
 

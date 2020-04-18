@@ -280,8 +280,6 @@ $method=|QBrush|brush|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void clicked( const QPointF & point )
 $signalMethod=|void|clicked|const QPointF &
 

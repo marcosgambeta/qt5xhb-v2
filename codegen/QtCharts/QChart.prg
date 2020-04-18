@@ -307,8 +307,6 @@ $method=|QPointF|mapToPosition|const QPointF &,QAbstractSeries *=nullptr
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void plotAreaChanged( const QRectF & plotArea )
 $signalMethod=|void|plotAreaChanged|const QRectF &
 

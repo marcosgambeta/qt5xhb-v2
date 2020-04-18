@@ -105,8 +105,6 @@ $slotMethod=|void|applyNiceNumbers|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void labelFormatChanged( const QString & format )
 $signalMethod=|void|labelFormatChanged|const QString &
 

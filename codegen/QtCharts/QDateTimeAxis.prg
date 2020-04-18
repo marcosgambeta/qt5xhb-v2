@@ -94,8 +94,6 @@ $method=|void|setRange|QDateTime,QDateTime
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void formatChanged( QString format )
 $signalMethod=|void|formatChanged|QString
 

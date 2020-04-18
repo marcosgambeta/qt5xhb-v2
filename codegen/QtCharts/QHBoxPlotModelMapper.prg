@@ -108,10 +108,6 @@ $method=|void|setColumnCount|int
 %% SIGNALS
 %%
 
-%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-%% using namespace QtCharts;
-%% #endif
-
 $prototype=void columnCountChanged()
 $signalMethod=|void|columnCountChanged|
 

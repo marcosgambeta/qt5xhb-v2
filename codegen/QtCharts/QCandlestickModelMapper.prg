@@ -32,11 +32,10 @@ $includes
 using namespace QtCharts;
 #endif
 
-%% TODO: add module
-#include <QAbstractItemModel>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #include <QtCharts/QCandlestickSeries>
 #endif
+#include <QtCore/QAbstractItemModel>
 
 $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
 %% $constructor=|new|QObject *=nullptr
@@ -101,10 +100,6 @@ $prototype=int lastSetSection() const [protected]
 %%
 %% SIGNALS
 %%
-
-%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-%% using namespace QtCharts;
-%% #endif
 
 $prototype=void modelReplaced()
 $signalMethod=|void|modelReplaced|

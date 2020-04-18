@@ -110,8 +110,6 @@ $method=|void|hide|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void nameChanged()
 $signalMethod=|void|nameChanged|
 

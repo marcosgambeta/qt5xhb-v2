@@ -95,8 +95,6 @@ $method=|qreal|endValue|const QString &
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void categoriesChanged()
 $signalMethod=|void|categoriesChanged|
 

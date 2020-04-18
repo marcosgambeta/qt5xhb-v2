@@ -145,8 +145,6 @@ $method=|void|clear|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void barsetsAdded( QList<QBarSet*> sets )
 $signalMethod=|void|barsetsAdded|QList<QBarSet*>
 

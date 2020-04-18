@@ -118,10 +118,6 @@ $method=|Qt::Orientation|orientation|
 %% SIGNALS
 %%
 
-%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-%% using namespace QtCharts;
-%% #endif
-
 $prototype=void closeColumnChanged()
 $signalMethod=|void|closeColumnChanged|
 

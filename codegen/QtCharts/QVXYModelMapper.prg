@@ -106,8 +106,6 @@ $method=|void|setRowCount|int
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void firstRowChanged()
 $signalMethod=|void|firstRowChanged|
 

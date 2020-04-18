@@ -170,8 +170,6 @@ $prototype=void showEvent(QShowEvent *event) [protected]
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void backgroundVisibleChanged( bool visible )
 $signalMethod=|void|backgroundVisibleChanged|bool
 

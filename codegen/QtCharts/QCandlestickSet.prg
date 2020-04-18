@@ -136,10 +136,6 @@ $method=|void|setPen|const QPen &
 %% SIGNALS
 %%
 
-%% #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-%% using namespace QtCharts;
-%% #endif
-
 $prototype=void brushChanged()
 $signalMethod=|void|brushChanged|
 

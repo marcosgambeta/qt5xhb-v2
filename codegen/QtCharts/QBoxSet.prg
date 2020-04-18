@@ -134,8 +134,6 @@ $method=|int|count|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void brushChanged()
 $signalMethod=|void|brushChanged|
 

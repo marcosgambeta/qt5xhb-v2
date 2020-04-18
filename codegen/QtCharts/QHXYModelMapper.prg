@@ -106,8 +106,6 @@ $method=|void|setColumnCount|int
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void columnCountChanged()
 $signalMethod=|void|columnCountChanged|
 

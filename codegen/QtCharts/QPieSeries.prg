@@ -181,8 +181,6 @@ $method=|void|setLabelsPosition|QPieSlice::LabelPosition
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void added( QList<QPieSlice*> slices )
 $signalMethod=|void|added|QList<QPieSlice*>
 

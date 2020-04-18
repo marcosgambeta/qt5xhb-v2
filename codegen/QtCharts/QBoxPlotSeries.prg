@@ -137,8 +137,6 @@ $method=|QAbstractSeries::SeriesType|type|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void boxOutlineVisibilityChanged()
 $signalMethod=|void|boxOutlineVisibilityChanged|
 

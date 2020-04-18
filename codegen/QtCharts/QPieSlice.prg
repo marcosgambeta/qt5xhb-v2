@@ -244,8 +244,6 @@ $method=|QPieSeries *|series|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void angleSpanChanged()
 $signalMethod=|void|angleSpanChanged|
 

@@ -170,8 +170,6 @@ $method=|qreal|sum|
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void borderColorChanged( QColor color )
 $signalMethod=|void|borderColorChanged|QColor
 

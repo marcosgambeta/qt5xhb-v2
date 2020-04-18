@@ -132,8 +132,6 @@ $method=|void|setRange|const QString &,const QString &
 %% SIGNALS
 %%
 
-%% using namespace QtCharts;
-
 $prototype=void categoriesChanged()
 $signalMethod=|void|categoriesChanged|
 
