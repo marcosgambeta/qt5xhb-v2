@@ -58,8 +58,8 @@ RETURN
 #include <QtDesigner/QDesignerPropertyEditorInterface>
 #endif
 
-#include <QtDesigner/QDesignerFormEditorInterface>
 #include <QtCore/QVariant>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {

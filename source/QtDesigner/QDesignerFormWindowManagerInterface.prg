@@ -80,8 +80,8 @@ RETURN
 #include <QtDesigner/QDesignerFormWindowManagerInterface>
 #endif
 
-#include <QtWidgets/QAction>
 #include <QtDesigner/QDesignerFormEditorInterface>
+#include <QtWidgets/QAction>
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
 {
