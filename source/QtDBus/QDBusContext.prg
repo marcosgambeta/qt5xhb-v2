@@ -253,8 +253,10 @@ void QDBusContext_sendErrorReply2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
-//[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+/*
+[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
+[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+*/
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {

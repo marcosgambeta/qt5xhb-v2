@@ -73,8 +73,10 @@ void QDBusServer_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDBusServer(const QString &address, QObject *parent = nullptr)
-//[2]QDBusServer(QObject *parent = nullptr)
+/*
+[1]QDBusServer(const QString &address, QObject *parent = nullptr)
+[2]QDBusServer(QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {

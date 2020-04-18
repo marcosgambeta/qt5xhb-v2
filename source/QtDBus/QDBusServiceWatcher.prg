@@ -80,8 +80,10 @@ void QDBusServiceWatcher_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QDBusServiceWatcher(QObject *parent = nullptr)
-//[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
+/*
+[1]explicit QDBusServiceWatcher(QObject *parent = nullptr)
+[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = nullptr)
+*/
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
