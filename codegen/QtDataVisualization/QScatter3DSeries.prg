@@ -103,8 +103,6 @@ $staticMethod=|int|invalidSelectionIndex|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void dataProxyChanged( QScatterDataProxy * proxy )
 $signalMethod=|void|dataProxyChanged|QScatterDataProxy *
 

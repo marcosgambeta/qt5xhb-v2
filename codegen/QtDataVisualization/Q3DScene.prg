@@ -150,8 +150,6 @@ $staticMethod=|QPoint|invalidSelectionPoint|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void activeCameraChanged( Q3DCamera * camera )
 $signalMethod=|void|activeCameraChanged|Q3DCamera *
 

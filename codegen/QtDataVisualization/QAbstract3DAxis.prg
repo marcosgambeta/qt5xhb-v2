@@ -140,8 +140,6 @@ $method=|void|setRange|float,float
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void titleChanged( const QString & newTitle )
 $signalMethod=|void|titleChanged|const QString &
 

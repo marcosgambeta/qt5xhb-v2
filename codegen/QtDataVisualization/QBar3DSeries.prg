@@ -101,8 +101,6 @@ $staticMethod=|QPoint|invalidSelectionPosition|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void dataProxyChanged( QBarDataProxy * proxy )
 $signalMethod=|void|dataProxyChanged|QBarDataProxy *
 

@@ -159,8 +159,6 @@ $method=|void|removeRows|int,int
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void arrayReset()
 $signalMethod=|void|arrayReset|
 

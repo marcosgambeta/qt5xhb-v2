@@ -54,8 +54,6 @@ $method=|void|setLabels|const QStringList &
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void labelsChanged()
 $signalMethod=|void|labelsChanged|
 

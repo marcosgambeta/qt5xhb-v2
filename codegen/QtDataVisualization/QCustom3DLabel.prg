@@ -138,8 +138,6 @@ $method=|void|setFacingCamera|bool
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void backgroundColorChanged( const QColor & color )
 $signalMethod=|void|backgroundColorChanged|const QColor &
 

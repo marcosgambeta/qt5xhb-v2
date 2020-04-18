@@ -18,11 +18,7 @@ $beginClassFrom=QAbstract3DAxis
 
 $addMethods
 
-%%   METHOD onFormatterChanged
-%%   METHOD onLabelFormatChanged
-%%   METHOD onReversedChanged
-%%   METHOD onSegmentCountChanged
-%%   METHOD onSubSegmentCountChanged
+$addSignals
 
 $endClass
 
@@ -91,28 +87,22 @@ $prototype=void setReversed(bool enable)
 $method=|void|setReversed|bool
 
 %%
-%%
-%%
-
-%%
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void formatterChanged( QValue3DAxisFormatter * formatter )
-%% TODO: $signalMethod=|void|formatterChanged|QValue3DAxisFormatter *
+$signalMethod=|void|formatterChanged|QValue3DAxisFormatter *
 
 $prototype=void labelFormatChanged( const QString & format )
-%% TODO: $signalMethod=|void|labelFormatChanged|const QString &
+$signalMethod=|void|labelFormatChanged|const QString &
 
 $prototype=void reversedChanged( bool enable )
-%% TODO: $signalMethod=|void|reversedChanged|bool
+$signalMethod=|void|reversedChanged|bool
 
 $prototype=void segmentCountChanged( int count )
-%% TODO: $signalMethod=|void|segmentCountChanged|int
+$signalMethod=|void|segmentCountChanged|int
 
 $prototype=void subSegmentCountChanged( int count )
-%% TODO: $signalMethod=|void|subSegmentCountChanged|int
+$signalMethod=|void|subSegmentCountChanged|int
 
 #pragma ENDDUMP

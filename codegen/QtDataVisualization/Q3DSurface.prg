@@ -109,8 +109,6 @@ $method=|QList<QValue3DAxis *>|axes|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void axisXChanged( QValue3DAxis * axis )
 $signalMethod=|void|axisXChanged|QValue3DAxis *
 

@@ -307,8 +307,6 @@ $method=|int|columnCategoryIndex|const QString &
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void autoColumnCategoriesChanged( bool enable )
 $signalMethod=|void|autoColumnCategoriesChanged|bool
 

@@ -166,8 +166,6 @@ $method=|void|setTextureImage|const QImage &
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void meshFileChanged( const QString & meshFile )
 $signalMethod=|void|meshFileChanged|const QString &
 

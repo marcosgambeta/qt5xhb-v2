@@ -305,8 +305,6 @@ $prototype=void wheelEvent(QWheelEvent *event) [protected]
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler )
 $signalMethod=|void|activeInputHandlerChanged|QAbstract3DInputHandler *
 

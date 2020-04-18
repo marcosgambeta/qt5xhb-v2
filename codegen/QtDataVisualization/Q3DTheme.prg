@@ -291,8 +291,6 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void ambientLightStrengthChanged( float strength )
 $signalMethod=|void|ambientLightStrengthChanged|float
 

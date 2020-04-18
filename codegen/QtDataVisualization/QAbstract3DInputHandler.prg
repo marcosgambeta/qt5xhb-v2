@@ -95,8 +95,6 @@ $prototype=QPoint previousInputPos() const [protected]
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void inputViewChanged( QAbstract3DInputHandler::InputView view )
 $signalMethod=|void|inputViewChanged|QAbstract3DInputHandler::InputView
 

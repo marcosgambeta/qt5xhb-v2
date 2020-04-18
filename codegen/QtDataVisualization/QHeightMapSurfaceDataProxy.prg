@@ -141,8 +141,6 @@ $method=|void|setValueRanges|float,float,float,float
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void heightMapChanged( const QImage & image )
 $signalMethod=|void|heightMapChanged|const QImage &
 

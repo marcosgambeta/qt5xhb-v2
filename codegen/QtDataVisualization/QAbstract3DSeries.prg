@@ -210,8 +210,6 @@ $method=|void|setMeshAxisAndAngle|const QVector3D &,float
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void baseColorChanged( const QColor & color )
 $signalMethod=|void|baseColorChanged|const QColor &
 

@@ -70,8 +70,6 @@ $prototype=bool isDirty() const [protected]
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void positionChanged( const QVector3D & position )
 $signalMethod=|void|positionChanged|const QVector3D &
 

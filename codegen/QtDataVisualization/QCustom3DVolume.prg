@@ -289,8 +289,6 @@ $method=|QImage|renderSlice|Qt::Axis,int
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void alphaMultiplierChanged( float mult )
 $signalMethod=|void|alphaMultiplierChanged|float
 

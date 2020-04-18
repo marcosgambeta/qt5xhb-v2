@@ -40,8 +40,4 @@ $deleteMethod
 $prototype=DataType type() const
 $method=|QAbstractDataProxy::DataType|type|
 
-%%
-%%
-%%
-
 #pragma ENDDUMP

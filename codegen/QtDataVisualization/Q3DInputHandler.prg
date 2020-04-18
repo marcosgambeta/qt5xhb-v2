@@ -100,8 +100,6 @@ $prototype=virtual void wheelEvent(QWheelEvent *event)
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void rotationEnabledChanged( bool enable )
 $signalMethod=|void|rotationEnabledChanged|bool
 

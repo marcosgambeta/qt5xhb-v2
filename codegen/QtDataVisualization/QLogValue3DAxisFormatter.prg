@@ -86,8 +86,6 @@ $prototype=virtual void populateCopy(QValue3DAxisFormatter &copy) const [protect
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void autoSubGridChanged( bool enabled )
 $signalMethod=|void|autoSubGridChanged|bool
 

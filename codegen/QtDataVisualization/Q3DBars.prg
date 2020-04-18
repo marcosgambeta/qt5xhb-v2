@@ -162,8 +162,6 @@ $method=|QList<QAbstract3DAxis *>|axes|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void multiSeriesUniformChanged( bool uniform )
 $signalMethod=|void|multiSeriesUniformChanged|bool
 

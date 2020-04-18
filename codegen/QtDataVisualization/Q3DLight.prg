@@ -54,8 +54,6 @@ $method=5,9,0|bool|isAutoPosition|
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void autoPositionChanged( bool autoPosition )
 $signalMethod=5,9,0|void|autoPositionChanged|bool
 

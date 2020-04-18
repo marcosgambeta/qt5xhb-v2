@@ -140,8 +140,6 @@ $method=|void|setCameraPosition|float,float,float=100.0f
 %% SIGNALS
 %%
 
-%% using namespace QtDataVisualization;
-
 $prototype=void cameraPresetChanged( Q3DCamera::CameraPreset preset )
 $signalMethod=|void|cameraPresetChanged|Q3DCamera::CameraPreset
 
