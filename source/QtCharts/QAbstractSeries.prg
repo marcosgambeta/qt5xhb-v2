@@ -73,9 +73,9 @@ RETURN
 #endif
 #endif
 
-#include <QtCharts/QChart>
-
 using namespace QtCharts;
+
+#include <QtCharts/QChart>
 
 /*
 QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected]

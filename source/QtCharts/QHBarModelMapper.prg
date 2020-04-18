@@ -71,10 +71,10 @@ RETURN
 #endif
 #endif
 
+using namespace QtCharts;
+
 #include <QtCharts/QAbstractBarSeries>
 #include <QtCore/QAbstractItemModel>
-
-using namespace QtCharts;
 
 /*
 explicit QHBarModelMapper(QObject *parent = nullptr)

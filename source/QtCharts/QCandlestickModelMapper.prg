@@ -59,14 +59,14 @@ RETURN
 #endif
 #endif
 
-#include <QAbstractItemModel>
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QtCharts/QCandlestickSeries>
-#endif
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;
 #endif
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#include <QtCharts/QCandlestickSeries>
+#endif
+#include <QtCore/QAbstractItemModel>
 
 /*
 explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)

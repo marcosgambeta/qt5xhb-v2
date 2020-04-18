@@ -48,10 +48,10 @@ RETURN
 #endif
 #endif
 
-#include <QtCore/QAbstractItemModel>
-#include <QtCharts/QXYSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QXYSeries>
+#include <QtCore/QAbstractItemModel>
 
 /*
 explicit QXYModelMapper(QObject *parent = nullptr) [protected]

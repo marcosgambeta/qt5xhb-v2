@@ -68,9 +68,9 @@ RETURN
 #endif
 #endif
 
-#include <QtCore/QDateTime>
-
 using namespace QtCharts;
+
+#include <QtCore/QDateTime>
 
 /*
 explicit QDateTimeAxis(QObject *parent = nullptr)

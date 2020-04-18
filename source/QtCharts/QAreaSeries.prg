@@ -96,9 +96,9 @@ RETURN
 #endif
 #endif
 
-#include <QtCharts/QLineSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QLineSeries>
 
 /*
 explicit QAreaSeries(QObject *parent = nullptr)
@@ -122,8 +122,10 @@ void QAreaSeries_new2()
 #endif
 }
 
-//[1]explicit QAreaSeries(QObject *parent = nullptr)
-//[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
+/*
+[1]explicit QAreaSeries(QObject *parent = nullptr)
+[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
+*/
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {

@@ -71,10 +71,10 @@ RETURN
 #endif
 #endif
 
+using namespace QtCharts;
+
 #include <QtCharts/QXYSeries>
 #include <QtCore/QAbstractItemModel>
-
-using namespace QtCharts;
 
 /*
 explicit QHXYModelMapper(QObject *parent = nullptr)

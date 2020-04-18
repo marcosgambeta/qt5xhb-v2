@@ -81,9 +81,9 @@ RETURN
 #endif
 #endif
 
-#include <QtCharts/QAbstractSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QAbstractSeries>
 
 /*
 explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]

@@ -111,9 +111,9 @@ RETURN
 #endif
 #endif
 
-#include <QtCharts/QPieSeries>
-
 using namespace QtCharts;
+
+#include <QtCharts/QPieSeries>
 
 /*
 explicit QPieSlice(QObject *parent = nullptr)
@@ -137,8 +137,10 @@ void QPieSlice_new2()
 #endif
 }
 
-//[1]explicit QPieSlice(QObject *parent = nullptr)
-//[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+/*
+[1]explicit QPieSlice(QObject *parent = nullptr)
+[2]QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {

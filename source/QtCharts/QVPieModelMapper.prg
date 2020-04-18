@@ -71,10 +71,10 @@ RETURN
 #endif
 #endif
 
+using namespace QtCharts;
+
 #include <QtCharts/QPieSeries>
 #include <QtCore/QAbstractItemModel>
-
-using namespace QtCharts;
 
 /*
 explicit QVPieModelMapper(QObject *parent = nullptr)
