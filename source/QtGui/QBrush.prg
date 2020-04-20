@@ -170,16 +170,18 @@ void QBrush_new10()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[ 1]QBrush ()
-//[ 2]QBrush ( Qt::BrushStyle style )
-//[ 3]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
-//[ 4]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
-//[ 5]QBrush ( const QColor & color, const QPixmap & pixmap )
-//[ 6]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
-//[ 7]QBrush ( const QPixmap & pixmap )
-//[ 8]QBrush ( const QImage & image )
-//[ 9]QBrush ( const QBrush & other )
-//[10]QBrush ( const QGradient & gradient )
+/*
+[ 1]QBrush ()
+[ 2]QBrush ( Qt::BrushStyle style )
+[ 3]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
+[ 4]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
+[ 5]QBrush ( const QColor & color, const QPixmap & pixmap )
+[ 6]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
+[ 7]QBrush ( const QPixmap & pixmap )
+[ 8]QBrush ( const QImage & image )
+[ 9]QBrush ( const QBrush & other )
+[10]QBrush ( const QGradient & gradient )
+*/
 
 HB_FUNC_STATIC( QBRUSH_NEW )
 {
@@ -219,7 +221,6 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new9();
   }
-  // Classe QGradient e derivadas (TODO: revisar e remover(?) comparacoes
   else if( ISNUMPAR(1) && ISQGRADIENT(1) )
   {
     QBrush_new10();
@@ -236,7 +237,6 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new10();
   }
-  //
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
@@ -389,8 +389,10 @@ void QBrush_setColor2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setColor ( const QColor & color )
-//[2]void setColor ( Qt::GlobalColor color )
+/*
+[1]void setColor ( const QColor & color )
+[2]void setColor ( Qt::GlobalColor color )
+*/
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {

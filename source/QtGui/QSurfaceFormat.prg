@@ -112,9 +112,11 @@ void QSurfaceFormat_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QSurfaceFormat()
-//[2]QSurfaceFormat(FormatOptions options)
-//[3]QSurfaceFormat(const QSurfaceFormat &other)
+/*
+[1]QSurfaceFormat()
+[2]QSurfaceFormat(FormatOptions options)
+[3]QSurfaceFormat(const QSurfaceFormat &other)
+*/
 
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {

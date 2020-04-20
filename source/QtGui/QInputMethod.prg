@@ -71,9 +71,9 @@ RETURN
 #include <QtGui/QInputMethod>
 #endif
 
+#include <QtCore/QLocale>
 #include <QtCore/QRectF>
 #include <QtGui/QTransform>
-#include <QtCore/QLocale>
 
 /*
 QRectF cursorRectangle() const

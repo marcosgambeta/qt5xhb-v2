@@ -138,10 +138,10 @@ RETURN
 #include <QtGui/QTextDocument>
 #endif
 
-#include <QtGui/QTextOption>
-#include <QtGui/QTextCursor>
-#include <QtGui/QTextBlock>
 #include <QtGui/QAbstractTextDocumentLayout>
+#include <QtGui/QTextBlock>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextOption>
 
 /*
 QTextDocument(QObject *parent = nullptr)
@@ -161,8 +161,10 @@ void QTextDocument_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QTextDocument(QObject *parent = nullptr)
-//[2]QTextDocument(const QString &text, QObject *parent = nullptr)
+/*
+[1]QTextDocument(QObject *parent = nullptr)
+[2]QTextDocument(const QString &text, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -726,10 +728,12 @@ void QTextDocument_find4()
   }
 }
 
-//[1]QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
-//[2]QTextCursor find(const QString &subString, const QTextCursor &from, FindFlags options = 0) const
-//[3]QTextCursor find(const QRegExp &expr, int from = 0, FindFlags options = 0) const
-//[4]QTextCursor find(const QRegExp &expr, const QTextCursor &from, FindFlags options = 0) const
+/*
+[1]QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
+[2]QTextCursor find(const QString &subString, const QTextCursor &from, FindFlags options = 0) const
+[3]QTextCursor find(const QRegExp &expr, int from = 0, FindFlags options = 0) const
+[4]QTextCursor find(const QRegExp &expr, const QTextCursor &from, FindFlags options = 0) const
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
@@ -1913,8 +1917,10 @@ void QTextDocument_undo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void undo(QTextCursor *cursor)
-//[2]void undo()
+/*
+[1]void undo(QTextCursor *cursor)
+[2]void undo()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {
@@ -1962,8 +1968,10 @@ void QTextDocument_redo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void redo(QTextCursor *cursor)
-//[2]void redo()
+/*
+[1]void redo(QTextCursor *cursor)
+[2]void redo()
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {

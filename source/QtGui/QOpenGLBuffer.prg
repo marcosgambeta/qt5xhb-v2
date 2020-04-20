@@ -89,9 +89,11 @@ void QOpenGLBuffer_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QOpenGLBuffer()
-//[2]QOpenGLBuffer(QOpenGLBuffer::Type type)
-//[3]QOpenGLBuffer(const QOpenGLBuffer & other)
+/*
+[1]QOpenGLBuffer()
+[2]QOpenGLBuffer(QOpenGLBuffer::Type type)
+[3]QOpenGLBuffer(const QOpenGLBuffer & other)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
 {
@@ -160,8 +162,10 @@ void QOpenGLBuffer_allocate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void allocate(const void * data, int count)
-//[2]void allocate(int count)
+/*
+[1]void allocate(const void * data, int count)
+[2]void allocate(int count)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
@@ -375,8 +379,10 @@ void QOpenGLBuffer_release2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void release()
-//[2]void release(QOpenGLBuffer::Type type)
+/*
+[1]void release()
+[2]void release(QOpenGLBuffer::Type type)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 {

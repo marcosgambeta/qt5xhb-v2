@@ -125,10 +125,12 @@ void QMatrix_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QMatrix(Qt::Initialization)
-//[2]QMatrix()
-//[3]QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
-//[4]QMatrix(const QMatrix &matrix)
+/*
+[1]QMatrix(Qt::Initialization)
+[2]QMatrix()
+[3]QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
+[4]QMatrix(const QMatrix &matrix)
+*/
 
 HB_FUNC_STATIC( QMATRIX_NEW )
 {
@@ -513,16 +515,18 @@ void QMatrix_map10()
   }
 }
 
-//[1]void map(int x, int y, int *tx, int *ty) const
-//[2]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
-//[3]QPoint map(const QPoint &p) const
-//[4]QPointF map(const QPointF&p) const
-//[5]QLine map(const QLine &l) const
-//[6]QLineF map(const QLineF &l) const
-//[7]QPolygon map(const QPolygon &a) const
-//[8]QPolygonF map(const QPolygonF &a) const
-//[9]QRegion map(const QRegion &r) const
-//[10]QPainterPath map(const QPainterPath &p) const
+/*
+[1]void map(int x, int y, int *tx, int *ty) const
+[2]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+[3]QPoint map(const QPoint &p) const
+[4]QPointF map(const QPointF&p) const
+[5]QLine map(const QLine &l) const
+[6]QLineF map(const QLineF &l) const
+[7]QPolygon map(const QPolygon &a) const
+[8]QPolygonF map(const QPolygonF &a) const
+[9]QRegion map(const QRegion &r) const
+[10]QPainterPath map(const QPainterPath &p) const
+*/
 
 HB_FUNC_STATIC( QMATRIX_MAP )
 {
@@ -600,8 +604,10 @@ void QMatrix_mapRect2()
   }
 }
 
-//[1]QRect mapRect(const QRect &) const
-//[2]QRectF mapRect(const QRectF &) const
+/*
+[1]QRect mapRect(const QRect &) const
+[2]QRectF mapRect(const QRectF &) const
+*/
 
 HB_FUNC_STATIC( QMATRIX_MAPRECT )
 {

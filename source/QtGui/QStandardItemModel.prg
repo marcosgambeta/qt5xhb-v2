@@ -124,8 +124,10 @@ void QStandardItemModel_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QStandardItemModel(QObject *parent = nullptr)
-//[2]QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
+/*
+[1]QStandardItemModel(QObject *parent = nullptr)
+[2]QStandardItemModel(int rows, int columns, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {
@@ -232,8 +234,10 @@ void QStandardItemModel_appendRow2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void appendRow(const QList<QStandardItem*> &items)
-//[2]void appendRow(QStandardItem *item)
+/*
+[1]void appendRow(const QList<QStandardItem*> &items)
+[2]void appendRow(QStandardItem *item)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 {
@@ -410,8 +414,10 @@ void QStandardItemModel_insertColumn2()
   }
 }
 
-//[1]void insertColumn(int column, const QList<QStandardItem*> &items)
-//[2]bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
+/*
+[1]void insertColumn(int column, const QList<QStandardItem*> &items)
+[2]bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
 {
@@ -479,9 +485,11 @@ void QStandardItemModel_insertRow3()
   }
 }
 
-//[1]void insertRow(int row, const QList<QStandardItem*> &items)
-//[2]void insertRow(int row, QStandardItem *item)
-//[3]bool insertRow(int row, const QModelIndex &parent = QModelIndex())
+/*
+[1]void insertRow(int row, const QList<QStandardItem*> &items)
+[2]void insertRow(int row, QStandardItem *item)
+[3]bool insertRow(int row, const QModelIndex &parent = QModelIndex())
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
 {
@@ -656,8 +664,10 @@ void QStandardItemModel_parent2()
   }
 }
 
-//[1]QModelIndex parent(const QModelIndex &child) const
-//[2]QObject *parent() const
+/*
+[1]QModelIndex parent(const QModelIndex &child) const
+[2]QObject *parent() const
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 {
@@ -1070,8 +1080,10 @@ void QStandardItemModel_setItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setItem(int row, int column, QStandardItem *item)
-//[2]void setItem(int row, QStandardItem *item)
+/*
+[1]void setItem(int row, int column, QStandardItem *item)
+[2]void setItem(int row, QStandardItem *item)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 {

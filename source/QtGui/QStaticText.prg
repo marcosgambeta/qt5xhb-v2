@@ -98,9 +98,11 @@ void QStaticText_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QStaticText()
-//[2]QStaticText(const QString &text)
-//[3]QStaticText(const QStaticText &other)
+/*
+[1]QStaticText()
+[2]QStaticText(const QString &text)
+[3]QStaticText(const QStaticText &other)
+*/
 
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {

@@ -144,12 +144,14 @@ void QPalette_new6()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QPalette ()
-//[2]QPalette ( const QColor & button )
-//[3]QPalette ( Qt::GlobalColor button )
-//[4]QPalette ( const QColor & button, const QColor & window )
-//[5]QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-//[6]QPalette ( const QPalette & p )
+/*
+[1]QPalette ()
+[2]QPalette ( const QColor & button )
+[3]QPalette ( Qt::GlobalColor button )
+[4]QPalette ( const QColor & button, const QColor & window )
+[5]QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+[6]QPalette ( const QPalette & p )
+*/
 
 HB_FUNC_STATIC( QPALETTE_NEW )
 {
@@ -303,8 +305,10 @@ void QPalette_brush2()
   }
 }
 
-//[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
-//[2]const QBrush & brush ( ColorRole role ) const
+/*
+[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
+[2]const QBrush & brush ( ColorRole role ) const
+*/
 
 HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
@@ -424,8 +428,10 @@ void QPalette_color2()
   }
 }
 
-//[1]const QColor & color ( ColorGroup group, ColorRole role ) const
-//[2]const QColor & color ( ColorRole role ) const
+/*
+[1]const QColor & color ( ColorGroup group, ColorRole role ) const
+[2]const QColor & color ( ColorRole role ) const
+*/
 
 HB_FUNC_STATIC( QPALETTE_COLOR )
 {
@@ -794,8 +800,10 @@ void QPalette_setBrush2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setBrush ( ColorRole role, const QBrush & brush )
-//[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
+/*
+[1]void setBrush ( ColorRole role, const QBrush & brush )
+[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
+*/
 
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
@@ -843,8 +851,10 @@ void QPalette_setColor2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
-//[2]void setColor ( ColorRole role, const QColor & color )
+/*
+[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
+[2]void setColor ( ColorRole role, const QColor & color )
+*/
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {

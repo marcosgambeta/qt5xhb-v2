@@ -70,8 +70,10 @@ void QRegularExpressionValidator_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QRegularExpressionValidator(QObject *parent = nullptr)
-//[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
+/*
+[1]QRegularExpressionValidator(QObject *parent = nullptr)
+[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {

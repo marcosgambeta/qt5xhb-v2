@@ -116,9 +116,11 @@ void QTextBlock_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QTextBlock(QTextDocumentPrivate *priv, int b)
-//[2]QTextBlock()
-//[3]QTextBlock(const QTextBlock &o)
+/*
+[1]QTextBlock(QTextDocumentPrivate *priv, int b)
+[2]QTextBlock()
+[3]QTextBlock(const QTextBlock &o)
+*/
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {

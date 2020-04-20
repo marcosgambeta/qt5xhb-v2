@@ -114,8 +114,8 @@ RETURN
 #endif
 
 #include <QtCore/QStringList>
-#include <QtGui/QColor>
 #include <QtCore/QVariant>
+#include <QtGui/QColor>
 
 /*
 QImage ()
@@ -211,17 +211,19 @@ void QImage_new11()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[01]QImage ()
-//[02]QImage ( const QSize & size, Format format )
-//[03]QImage ( int width, int height, Format format )
-//[04]QImage ( uchar * data, int width, int height, Format format )
-//[05]QImage ( const uchar * data, int width, int height, Format format )
-//[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
-//[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
-//[08]QImage ( const char * const[] xpm )
-//[09]QImage ( const QString & fileName, const char * format = nullptr )
-//[10]QImage ( const char * fileName, const char * format = nullptr )
-//[11]QImage ( const QImage & image )
+/*
+[01]QImage ()
+[02]QImage ( const QSize & size, Format format )
+[03]QImage ( int width, int height, Format format )
+[04]QImage ( uchar * data, int width, int height, Format format )
+[05]QImage ( const uchar * data, int width, int height, Format format )
+[06]QImage ( uchar * data, int width, int height, int bytesPerLine, Format format )
+[07]QImage ( const uchar * data, int width, int height, int bytesPerLine, Format format )
+[08]QImage ( const char * const[] xpm )
+[09]QImage ( const QString & fileName, const char * format = nullptr )
+[10]QImage ( const char * fileName, const char * format = nullptr )
+[11]QImage ( const QImage & image )
+*/
 
 HB_FUNC_STATIC( QIMAGE_NEW )
 {
@@ -505,8 +507,10 @@ void QImage_convertToFormat2()
   }
 }
 
-//[1]QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-//[2]QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+/*
+[1]QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+[2]QImage convertToFormat ( Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 {
@@ -552,8 +556,10 @@ void QImage_copy2()
   }
 }
 
-//[1]QImage copy ( const QRect & rectangle = QRect() ) const
-//[2]QImage copy ( int x, int y, int width, int height ) const
+/*
+[1]QImage copy ( const QRect & rectangle = QRect() ) const
+[2]QImage copy ( int x, int y, int width, int height ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_COPY )
 {
@@ -763,9 +769,11 @@ void QImage_fill3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void fill ( uint pixelValue )
-//[2]void fill ( Qt::GlobalColor color )
-//[3]void fill ( const QColor & color )
+/*
+[1]void fill ( uint pixelValue )
+[2]void fill ( Qt::GlobalColor color )
+[3]void fill ( const QColor & color )
+*/
 
 HB_FUNC_STATIC( QIMAGE_FILL )
 {
@@ -959,8 +967,10 @@ void QImage_load2()
   }
 }
 
-//[1]bool load ( const QString & fileName, const char * format = nullptr )
-//[2]bool load ( QIODevice * device, const char * format )
+/*
+[1]bool load ( const QString & fileName, const char * format = nullptr )
+[2]bool load ( QIODevice * device, const char * format )
+*/
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
 {
@@ -1004,8 +1014,10 @@ void QImage_loadFromData2()
   }
 }
 
-//[1]bool loadFromData(const uchar *data, int len, const char *format = nullptr)
-//[2]bool loadFromData(const QByteArray &data, const char *format = nullptr)
+/*
+[1]bool loadFromData(const uchar *data, int len, const char *format = nullptr)
+[2]bool loadFromData(const QByteArray &data, const char *format = nullptr)
+*/
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
@@ -1099,8 +1111,10 @@ void QImage_pixel2()
   }
 }
 
-//[1]QRgb pixel ( const QPoint & position ) const
-//[2]QRgb pixel ( int x, int y ) const
+/*
+[1]QRgb pixel ( const QPoint & position ) const
+[2]QRgb pixel ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_PIXEL )
 {
@@ -1144,8 +1158,10 @@ void QImage_pixelIndex2()
   }
 }
 
-//[1]int pixelIndex ( const QPoint & position ) const
-//[2]int pixelIndex ( int x, int y ) const
+/*
+[1]int pixelIndex ( const QPoint & position ) const
+[2]int pixelIndex ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 {
@@ -1239,8 +1255,10 @@ void QImage_save2()
   }
 }
 
-//[1]bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
-//[2]bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
+/*
+[1]bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
+[2]bool save ( QIODevice * device, const char * format = nullptr, int quality = -1 ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
@@ -1286,8 +1304,10 @@ void QImage_scaled2()
   }
 }
 
-//[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
-//[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+/*
+[1]QImage scaled ( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+[2]QImage scaled ( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_SCALED )
 {
@@ -1363,8 +1383,10 @@ uchar * scanLine(int i)
 const uchar * scanLine(int i) const
 */
 
-//[1]uchar * scanLine(int i)
-//[2]const uchar * scanLine(int i) const
+/*
+[1]uchar * scanLine(int i)
+[2]const uchar * scanLine(int i) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_SCANLINE )
 {
@@ -1530,8 +1552,10 @@ void QImage_setPixel2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPixel ( const QPoint & position, uint index_or_rgb )
-//[2]void setPixel ( int x, int y, uint index_or_rgb )
+/*
+[1]void setPixel ( const QPoint & position, uint index_or_rgb )
+[2]void setPixel ( int x, int y, uint index_or_rgb )
+*/
 
 HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 {
@@ -1702,8 +1726,10 @@ void QImage_transformed2()
   }
 }
 
-//[1]QImage transformed(const QMatrix &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
-//[2]QImage transformed(const QTransform &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
+/*
+[1]QImage transformed(const QMatrix &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
+[2]QImage transformed(const QTransform &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
@@ -1747,8 +1773,10 @@ void QImage_valid2()
   }
 }
 
-//[1]bool valid ( const QPoint & pos ) const
-//[2]bool valid ( int x, int y ) const
+/*
+[1]bool valid ( const QPoint & pos ) const
+[2]bool valid ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_VALID )
 {
@@ -1810,8 +1838,10 @@ void QImage_fromData2()
   Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 }
 
-//[1]static QImage fromData(const uchar *data, int size, const char *format = nullptr)
-//[2]static QImage fromData(const QByteArray &data, const char *format = nullptr)
+/*
+[1]static QImage fromData(const uchar *data, int size, const char *format = nullptr)
+[2]static QImage fromData(const QByteArray &data, const char *format = nullptr)
+*/
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
@@ -1849,8 +1879,10 @@ void QImage_trueMatrix2()
   Qt5xHb::createReturnClass( ptr, "QTRANSFORM", true );
 }
 
-//[1]QMatrix trueMatrix(const QMatrix &matrix, int width, int height)
-//[2]QTransform trueMatrix(const QTransform &matrix, int width, int height)
+/*
+[1]QMatrix trueMatrix(const QMatrix &matrix, int width, int height)
+[2]QTransform trueMatrix(const QTransform &matrix, int width, int height)
+*/
 
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {
@@ -1900,8 +1932,10 @@ void QImage_pixelColor2()
 #endif
 }
 
-//[1]QColor QImage::pixelColor(const QPoint &position) const
-//[2]QColor QImage::pixelColor(int x, int y) const
+/*
+[1]QColor QImage::pixelColor(const QPoint &position) const
+[2]QColor QImage::pixelColor(int x, int y) const
+*/
 
 HB_FUNC_STATIC( QIMAGE_PIXELCOLOR )
 {
@@ -1979,8 +2013,10 @@ void QImage_setPixelColor2()
 #endif
 }
 
-//[1]void QImage::setPixelColor(const QPoint &position, const QColor &color)
-//[2]void QImage::setPixelColor(int x, int y, const QColor &color)
+/*
+[1]void QImage::setPixelColor(const QPoint &position, const QColor &color)
+[2]void QImage::setPixelColor(int x, int y, const QColor &color)
+*/
 
 HB_FUNC_STATIC( QIMAGE_SETPIXELCOLOR )
 {

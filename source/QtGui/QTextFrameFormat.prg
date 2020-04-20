@@ -664,8 +664,10 @@ void QTextFrameFormat_setWidth2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setWidth(qreal width)
-//[2]void setWidth(const QTextLength &length)
+/*
+[1]void setWidth(qreal width)
+[2]void setWidth(const QTextLength &length)
+*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
@@ -738,8 +740,10 @@ void QTextFrameFormat_setHeight2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setHeight(qreal height)
-//[2]void setHeight(const QTextLength &height)
+/*
+[1]void setHeight(qreal height)
+[2]void setHeight(const QTextLength &height)
+*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {

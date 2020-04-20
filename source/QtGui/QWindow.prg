@@ -204,8 +204,10 @@ void QWindow_new2()
 QWindow(QWindowPrivate &dd, QWindow *parent) [protected]
 */
 
-//[1]explicit QWindow(QScreen *screen = nullptr)
-//[2]explicit QWindow(QWindow *parent)
+/*
+[1]explicit QWindow(QScreen *screen = nullptr)
+[2]explicit QWindow(QWindow *parent)
+*/
 
 HB_FUNC_STATIC( QWINDOW_NEW )
 {
@@ -1459,8 +1461,10 @@ void QWindow_parent2()
   }
 }
 
-//[1]QWindow *parent(AncestorMode mode) const
-//[2]QWindow * parent() const
+/*
+[1]QWindow *parent(AncestorMode mode) const
+[2]QWindow * parent() const
+*/
 
 HB_FUNC_STATIC( QWINDOW_PARENT )
 {
@@ -1533,8 +1537,10 @@ void QWindow_resize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void resize(const QSize & newSize)
-//[2]void resize(int w, int h)
+/*
+[1]void resize(const QSize & newSize)
+[2]void resize(int w, int h)
+*/
 
 HB_FUNC_STATIC( QWINDOW_RESIZE )
 {
@@ -1687,8 +1693,10 @@ void QWindow_setGeometry2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setGeometry(int posx, int posy, int w, int h)
-//[2]void setGeometry(const QRect & rect)
+/*
+[1]void setGeometry(int posx, int posy, int w, int h)
+[2]void setGeometry(const QRect & rect)
+*/
 
 HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 {
@@ -2399,8 +2407,10 @@ void QWindow_setPosition2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPosition(const QPoint & pt)
-//[2]void setPosition(int posx, int posy)
+/*
+[1]void setPosition(const QPoint & pt)
+[2]void setPosition(int posx, int posy)
+*/
 
 HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 {

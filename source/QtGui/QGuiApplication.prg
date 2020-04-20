@@ -143,12 +143,12 @@ RETURN
 #include <QtGui/QGuiApplication>
 #endif
 
+#include <QtGui/QClipboard>
 #include <QtGui/QFont>
 #include <QtGui/QPalette>
-#include <QtGui/QClipboard>
-#include <QtGui/QWindow>
 #include <QtGui/QScreen>
 #include <QtGui/QStyleHints>
+#include <QtGui/QWindow>
 
 /*
 QGuiApplication(int & argc, char ** argv)
@@ -159,9 +159,8 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QGuiApplication * o = NULL;
-  o = new QGuiApplication( argc, argv );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QGuiApplication( argc, argv );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )

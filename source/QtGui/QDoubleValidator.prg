@@ -75,8 +75,10 @@ void QDoubleValidator_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDoubleValidator ( QObject * parent = nullptr )
-//[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
+/*
+[1]QDoubleValidator ( QObject * parent = nullptr )
+[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {

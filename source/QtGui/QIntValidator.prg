@@ -77,8 +77,10 @@ void QIntValidator_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QIntValidator(QObject * parent = nullptr)
-//[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
+/*
+[1]QIntValidator(QObject * parent = nullptr)
+[2]QIntValidator(int minimum, int maximum, QObject * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
