@@ -81,6 +81,7 @@ $includes
 #include <QtGui/QWindow>
 
 $prototype=QGuiApplication(int & argc, char ** argv)
+%% TODO: code generator
 HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 {
   int argc;
