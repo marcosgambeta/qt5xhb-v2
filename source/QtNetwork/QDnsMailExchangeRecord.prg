@@ -79,8 +79,10 @@ void QDnsMailExchangeRecord_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDnsMailExchangeRecord()
-//[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+/*
+[1]QDnsMailExchangeRecord()
+[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+*/
 
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 {

@@ -71,8 +71,10 @@ void QHttpMultiPart_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QHttpMultiPart(QObject *parent = nullptr)
-//[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
+/*
+[1]explicit QHttpMultiPart(QObject *parent = nullptr)
+[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {

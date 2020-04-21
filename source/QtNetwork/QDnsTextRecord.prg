@@ -79,8 +79,10 @@ void QDnsTextRecord_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDnsTextRecord()
-//[2]QDnsTextRecord(const QDnsTextRecord & other)
+/*
+[1]QDnsTextRecord()
+[2]QDnsTextRecord(const QDnsTextRecord & other)
+*/
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {

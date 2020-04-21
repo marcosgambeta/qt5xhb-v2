@@ -81,8 +81,10 @@ void QSslCertificateExtension_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QSslCertificateExtension()
-//[2]QSslCertificateExtension(const QSslCertificateExtension &other)
+/*
+[1]QSslCertificateExtension()
+[2]QSslCertificateExtension(const QSslCertificateExtension &other)
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {

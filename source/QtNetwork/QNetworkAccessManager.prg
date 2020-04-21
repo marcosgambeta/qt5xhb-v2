@@ -96,18 +96,17 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #endif
 
-#include <QtNetwork/QNetworkConfiguration>
-#include <QtNetwork/QNetworkProxy>
-#include <QtNetwork/QSslError>
 #include <QtCore/QList>
 #include <QtNetwork/QAbstractNetworkCache>
-#include <QtNetwork/QNetworkCookieJar>
-#include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QAuthenticator>
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 #include <QtNetwork/QHstsPolicy>
 #endif
+#include <QtNetwork/QNetworkConfiguration>
+#include <QtNetwork/QNetworkCookieJar>
+#include <QtNetwork/QNetworkProxy>
+#include <QtNetwork/QNetworkReply>
+#include <QtNetwork/QSslError>
 
 /*
 explicit QNetworkAccessManager(QObject *parent = nullptr)
@@ -770,9 +769,11 @@ void QNetworkAccessManager_post3()
   }
 }
 
-//[1]QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
-//[2]QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
-//[3]QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
+[2]QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
+[3]QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -836,9 +837,11 @@ void QNetworkAccessManager_put3()
   }
 }
 
-//[1]QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
-//[2]QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
-//[3]QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
+[2]QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
+[3]QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
@@ -931,9 +934,11 @@ void QNetworkAccessManager_sendCustomRequest3()
 #endif
 }
 
-//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
-//[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
-//[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
+[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
+[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {

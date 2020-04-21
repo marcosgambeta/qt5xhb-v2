@@ -79,8 +79,10 @@ void QHttpPart_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QHttpPart ()
-//[2]QHttpPart ( const QHttpPart & other )
+/*
+[1]QHttpPart ()
+[2]QHttpPart ( const QHttpPart & other )
+*/
 
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {

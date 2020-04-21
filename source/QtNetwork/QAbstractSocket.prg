@@ -92,9 +92,9 @@ RETURN
 #include <QtNetwork/QAbstractSocket>
 #endif
 
+#include <QtNetwork/QAuthenticator>
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QNetworkProxy>
-#include <QtNetwork/QAuthenticator>
 
 /*
 QAbstractSocket ( SocketType socketType, QObject * parent )
@@ -238,8 +238,10 @@ void QAbstractSocket_bind2()
   }
 }
 
-//[1]bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform)
-//[2]bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
+/*
+[1]bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform)
+[2]bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
+*/
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
 {
@@ -287,8 +289,10 @@ void QAbstractSocket_connectToHost2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
-//[2]virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
+/*
+[1]virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+[2]virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
+*/
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
 {

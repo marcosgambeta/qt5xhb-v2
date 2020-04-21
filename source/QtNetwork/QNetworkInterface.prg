@@ -90,8 +90,10 @@ void QNetworkInterface_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QNetworkInterface ()
-//[2]QNetworkInterface ( const QNetworkInterface & other )
+/*
+[1]QNetworkInterface ()
+[2]QNetworkInterface ( const QNetworkInterface & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {

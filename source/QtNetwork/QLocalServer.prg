@@ -278,8 +278,10 @@ void QLocalServer_listen2()
   }
 }
 
-//[1]bool listen(const QString &name)
-//[2]bool listen(qintptr socketDescriptor)
+/*
+[1]bool listen(const QString &name)
+[2]bool listen(qintptr socketDescriptor)
+*/
 
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {

@@ -88,8 +88,10 @@ void QNetworkCacheMetaData_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QNetworkCacheMetaData ()
-//[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+/*
+[1]QNetworkCacheMetaData ()
+[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {

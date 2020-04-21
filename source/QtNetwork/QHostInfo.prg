@@ -91,8 +91,10 @@ void QHostInfo_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]explicit QHostInfo(int lookupId = -1)
-//[2]QHostInfo ( const QHostInfo & other )
+/*
+[1]explicit QHostInfo(int lookupId = -1)
+[2]QHostInfo ( const QHostInfo & other )
+*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {

@@ -88,8 +88,10 @@ void QNetworkConfiguration_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QNetworkConfiguration ()
-//[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+/*
+[1]QNetworkConfiguration ()
+[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {

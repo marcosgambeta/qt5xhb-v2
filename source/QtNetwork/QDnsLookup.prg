@@ -107,9 +107,11 @@ void QDnsLookup_new3()
 #endif
 }
 
-//[1]explicit QDnsLookup(QObject *parent = nullptr)
-//[2]QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
-//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
+/*
+[1]explicit QDnsLookup(QObject *parent = nullptr)
+[2]QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
+[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {
