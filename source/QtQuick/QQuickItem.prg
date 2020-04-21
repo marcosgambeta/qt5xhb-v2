@@ -139,8 +139,8 @@ RETURN
 #endif
 
 #include <QtGui/QCursor>
-#include <QtQuick/QSGTextureProvider>
 #include <QtQuick/QQuickWindow>
+#include <QtQuick/QSGTextureProvider>
 
 /*
 QQuickItem(QQuickItem * parent = nullptr)

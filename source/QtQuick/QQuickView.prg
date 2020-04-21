@@ -64,8 +64,8 @@ RETURN
 #endif
 
 #include <QtCore/QList>
-#include <QtQml/QQmlEngine>
 #include <QtQml/QQmlContext>
+#include <QtQml/QQmlEngine>
 #include <QtQuick/QQuickItem>
 
 /*
@@ -95,9 +95,11 @@ void QQuickView_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QQuickView(QWindow * parent = nullptr)
-//[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-//[3]QQuickView(const QUrl & source, QWindow * parent = nullptr)
+/*
+[1]QQuickView(QWindow * parent = nullptr)
+[2]QQuickView(QQmlEngine * engine, QWindow * parent)
+[3]QQuickView(const QUrl & source, QWindow * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
