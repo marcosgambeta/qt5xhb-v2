@@ -69,8 +69,10 @@ void QDomProcessingInstruction_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDomProcessingInstruction ()
-//[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
+/*
+[1]QDomProcessingInstruction ()
+[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
+*/
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {

@@ -73,8 +73,10 @@ void QDomDocumentType_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDomDocumentType ()
-//[2]QDomDocumentType ( const QDomDocumentType & n )
+/*
+[1]QDomDocumentType ()
+[2]QDomDocumentType ( const QDomDocumentType & n )
+*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {

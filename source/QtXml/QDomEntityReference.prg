@@ -66,8 +66,10 @@ void QDomEntityReference_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDomEntityReference ()
-//[2]QDomEntityReference ( const QDomEntityReference & x )
+/*
+[1]QDomEntityReference ()
+[2]QDomEntityReference ( const QDomEntityReference & x )
+*/
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {

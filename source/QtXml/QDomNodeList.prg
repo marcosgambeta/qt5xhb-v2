@@ -81,8 +81,10 @@ void QDomNodeList_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDomNodeList ()
-//[2]QDomNodeList ( const QDomNodeList & n )
+/*
+[1]QDomNodeList ()
+[2]QDomNodeList ( const QDomNodeList & n )
+*/
 
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {

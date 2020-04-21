@@ -74,8 +74,10 @@ void QDomCharacterData_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QDomCharacterData ()
-//[2]QDomCharacterData ( const QDomCharacterData & x )
+/*
+[1]QDomCharacterData ()
+[2]QDomCharacterData ( const QDomCharacterData & x )
+*/
 
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {
