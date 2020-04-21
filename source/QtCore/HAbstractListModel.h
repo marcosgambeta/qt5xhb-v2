@@ -10,12 +10,12 @@
 #define HABSTRACTLISTMODEL_H
 
 #include <QtCore/QAbstractListModel>
+#include <QtCore/QSize>
+#include <QtGui/QBrush>
+#include <QtGui/QColor>
+#include <QtGui/QFont>
 #include <QtGui/QIcon>
 #include <QtGui/QPixmap>
-#include <QtGui/QFont>
-#include <QtGui/QColor>
-#include <QtGui/QBrush>
-#include <QtCore/QSize>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -33,7 +33,7 @@ public:
    linhas
   */
 
-  PHB_ITEM rowCountCB;
+  PHB_ITEM m_rowCountCB;
   void setRowCountCB( PHB_ITEM block );
 
   /*
@@ -41,47 +41,47 @@ public:
   */
 
   // Qt::DisplayRole
-  PHB_ITEM getFieldCB;
+  PHB_ITEM m_getFieldCB;
   void setDisplayRoleCB( PHB_ITEM block );
 
   // Qt::DecorationRole
-  PHB_ITEM getFieldDecorationCB;
+  PHB_ITEM m_getFieldDecorationCB;
   void setDecorationRoleCB( PHB_ITEM block );
 
   // Qt::EditRole
-  PHB_ITEM getFieldEditCB;
+  PHB_ITEM m_getFieldEditCB;
   void setEditRoleCB( PHB_ITEM block );
 
   // Qt::ToolTipRole
-  PHB_ITEM getFieldToolTipCB;
+  PHB_ITEM m_getFieldToolTipCB;
   void setToolTipRoleCB( PHB_ITEM block );
 
   // Qt::StatusTipRole
-  PHB_ITEM getFieldStatusTipCB;
+  PHB_ITEM m_getFieldStatusTipCB;
   void setStatusTipRoleCB( PHB_ITEM block );
 
   // Qt::WhatsThisRole
-  PHB_ITEM getFieldWhatsThisCB;
+  PHB_ITEM m_getFieldWhatsThisCB;
   void setWhatsThisRoleCB( PHB_ITEM block );
 
   // Qt::SizeHintRole
-  PHB_ITEM getFieldSizeHintCB;
+  PHB_ITEM m_getFieldSizeHintCB;
   void setSizeHintRoleCB( PHB_ITEM block );
 
   // Qt::FontRole
-  PHB_ITEM getFieldFontCB;
+  PHB_ITEM m_getFieldFontCB;
   void setFontRoleCB( PHB_ITEM block );
 
   // Qt::TextAlignmentRole
-  PHB_ITEM getFieldAlignCB;
+  PHB_ITEM m_getFieldAlignCB;
   void setTextAlignmentRoleCB( PHB_ITEM block );
 
   // Qt::BackgroundRole / Qt::BackgroundColorRole
-  PHB_ITEM getFieldBGColorCB;
+  PHB_ITEM m_getFieldBGColorCB;
   void setBackgroundRoleCB( PHB_ITEM block );
 
   // Qt::ForegroundRole / Qt::TextColorRole
-  PHB_ITEM getFieldFGColorCB;
+  PHB_ITEM m_getFieldFGColorCB;
   void setForegroundRoleCB( PHB_ITEM block );
 
   // Qt::CheckStateRole
@@ -95,11 +95,11 @@ public:
   */
 
   // Qt::DisplayRole
-  PHB_ITEM getHHCB;
+  PHB_ITEM m_getHHCB;
   void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block );
 
   // Qt::DecorationRole
-  PHB_ITEM getHHDecorationCB;
+  PHB_ITEM m_getHHDecorationCB;
   void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block );
 
   // Qt::EditRole
@@ -113,19 +113,19 @@ public:
   // Qt::SizeHintRole
 
   // Qt::FontRole
-  PHB_ITEM getHHFontCB;
+  PHB_ITEM m_getHHFontCB;
   void setHorizontalHeaderFontRoleCB( PHB_ITEM block );
 
   // Qt::TextAlignmentRole
-  PHB_ITEM getHHAlignCB;
+  PHB_ITEM m_getHHAlignCB;
   void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block );
 
   // Qt::BackgroundRole / Qt::BackgroundColorRole
-  PHB_ITEM getHHBGColorCB;
+  PHB_ITEM m_getHHBGColorCB;
   void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block );
 
   // Qt::ForegroundRole
-  PHB_ITEM getHHFGColorCB;
+  PHB_ITEM m_getHHFGColorCB;
   void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block );
 
   // Qt::CheckStateRole
@@ -139,11 +139,11 @@ public:
   */
 
   // Qt::DisplayRole
-  PHB_ITEM getVHCB;
+  PHB_ITEM m_getVHCB;
   void setVerticalHeaderDisplayRoleCB( PHB_ITEM block );
 
   // Qt::DecorationRole
-  PHB_ITEM getVHDecorationCB;
+  PHB_ITEM m_getVHDecorationCB;
   void setVerticalHeaderDecorationRoleCB( PHB_ITEM block );
 
   // Qt::EditRole
@@ -157,19 +157,19 @@ public:
   // Qt::SizeHintRole
 
   // Qt::FontRole
-  PHB_ITEM getVHFontCB;
+  PHB_ITEM m_getVHFontCB;
   void setVerticalHeaderFontRoleCB( PHB_ITEM block );
 
   // Qt::TextAlignmentRole
-  PHB_ITEM getVHAlignCB;
+  PHB_ITEM m_getVHAlignCB;
   void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block );
 
   // Qt::BackgroundRole / Qt::BackgroundColorRole
-  PHB_ITEM getVHBGColorCB;
+  PHB_ITEM m_getVHBGColorCB;
   void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );
 
   // Qt::ForegroundRole
-  PHB_ITEM getVHFGColorCB;
+  PHB_ITEM m_getVHFGColorCB;
   void setVerticalHeaderForegroundRoleCB( PHB_ITEM block );
 
   // Qt::CheckStateRole
