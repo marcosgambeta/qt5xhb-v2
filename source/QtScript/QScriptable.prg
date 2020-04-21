@@ -63,8 +63,8 @@ RETURN
 #include <QtScript/QScriptable>
 #endif
 
-#include <QtScript/QScriptValue>
 #include <QtScript/QScriptEngine>
+#include <QtScript/QScriptValue>
 
 HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 {
