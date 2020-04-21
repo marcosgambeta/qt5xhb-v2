@@ -84,6 +84,12 @@ explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [p
 */
 
 /*
+[1]explicit QAbstractOAuth2(QObject *parent = nullptr)
+[2]explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
+[3]explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [protected]
+*/
+
+/*
 ~QAbstractOAuth2()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
