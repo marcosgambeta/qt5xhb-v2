@@ -80,8 +80,10 @@ void QPlaceImage_new2()
 #endif
 }
 
-//[1]QPlaceImage()
-//[2]QPlaceImage(const QPlaceContent &other)
+/*
+[1]QPlaceImage()
+[2]QPlaceImage(const QPlaceContent &other)
+*/
 
 HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 {

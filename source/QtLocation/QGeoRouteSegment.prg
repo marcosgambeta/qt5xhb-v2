@@ -99,8 +99,10 @@ void QGeoRouteSegment_new2()
 #endif
 }
 
-//[1]QGeoRouteSegment()
-//[2]QGeoRouteSegment(const QGeoRouteSegment &other)
+/*
+[1]QGeoRouteSegment()
+[2]QGeoRouteSegment(const QGeoRouteSegment &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 {

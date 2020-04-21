@@ -95,8 +95,8 @@ void QGeoRouteRequest_new1 ()
   {
     par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QGeoRouteRequest * o = new QGeoRouteRequest ( par1 );
-  Qt5xHb::returnNewObject( o, true );
+  auto obj = new QGeoRouteRequest( par1 );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -122,9 +122,11 @@ void QGeoRouteRequest_new3()
 #endif
 }
 
-//[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
-//[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
-//[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+/*
+[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
+[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
+[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 {

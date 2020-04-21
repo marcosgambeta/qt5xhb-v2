@@ -81,8 +81,8 @@ RETURN
 #endif
 #endif
 
-#include <QtPositioning/QGeoShape>
 #include <QtCore/QVariant>
+#include <QtPositioning/QGeoShape>
 
 /*
 QPlaceSearchRequest()
@@ -106,8 +106,10 @@ void QPlaceSearchRequest_new2()
 #endif
 }
 
-//[1]QPlaceSearchRequest()
-//[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+/*
+[1]QPlaceSearchRequest()
+[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 {

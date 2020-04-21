@@ -80,8 +80,8 @@ RETURN
 #endif
 #endif
 
-#include <QtPositioning/QGeoRectangle>
 #include <QtLocation/QGeoRouteSegment>
+#include <QtPositioning/QGeoRectangle>
 
 /*
 QGeoRoute()
@@ -105,8 +105,10 @@ void QGeoRoute_new2()
 #endif
 }
 
-//[1]QGeoRoute()
-//[2]QGeoRoute(const QGeoRoute &other)
+/*
+[1]QGeoRoute()
+[2]QGeoRoute(const QGeoRoute &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTE_NEW )
 {
