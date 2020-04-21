@@ -72,8 +72,10 @@ void QSvgWidget_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QSvgWidget ( QWidget * parent = nullptr )
-//[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+/*
+[1]QSvgWidget ( QWidget * parent = nullptr )
+[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
@@ -188,8 +190,10 @@ void QSvgWidget_load2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void load ( const QString & file )
-//[2]void load ( const QByteArray & contents )
+/*
+[1]void load ( const QString & file )
+[2]void load ( const QByteArray & contents )
+*/
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
