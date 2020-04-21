@@ -135,9 +135,11 @@ void QSerialPort_new3()
 #endif
 }
 
-//[1]QSerialPort(QObject *parent = nullptr)
-//[2]QSerialPort(const QString &name, QObject *parent = nullptr)
-//[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
+/*
+[1]QSerialPort(QObject *parent = nullptr)
+[2]QSerialPort(const QString &name, QObject *parent = nullptr)
+[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
