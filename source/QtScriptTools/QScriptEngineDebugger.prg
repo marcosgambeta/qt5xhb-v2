@@ -66,9 +66,9 @@ RETURN
 #endif
 
 #include <QtWidgets/QAction>
+#include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QMainWindow>
 
 /*
 QScriptEngineDebugger(QObject * parent = nullptr)
