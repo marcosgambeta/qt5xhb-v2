@@ -129,8 +129,10 @@ void QGLFunctions_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QGLFunctions()
-//[2]QGLFunctions(const QGLContext * context)
+/*
+[1]QGLFunctions()
+[2]QGLFunctions(const QGLContext * context)
+*/
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {

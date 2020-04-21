@@ -137,9 +137,11 @@ void QGLFormat_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGLFormat ()
-//[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
-//[3]QGLFormat ( const QGLFormat & other )
+/*
+[1]QGLFormat ()
+[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
+[3]QGLFormat ( const QGLFormat & other )
+*/
 
 HB_FUNC_STATIC( QGLFORMAT_NEW )
 {

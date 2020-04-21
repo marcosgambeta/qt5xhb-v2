@@ -82,8 +82,10 @@ void QGLColormap_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGLColormap ()
-//[2]QGLColormap ( const QGLColormap & map )
+/*
+[1]QGLColormap ()
+[2]QGLColormap ( const QGLColormap & map )
+*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
@@ -273,8 +275,10 @@ void QGLColormap_setEntry2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setEntry ( int idx, QRgb color )
-//[2]void setEntry ( int idx, const QColor & color )
+/*
+[1]void setEntry ( int idx, QRgb color )
+[2]void setEntry ( int idx, const QColor & color )
+*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
