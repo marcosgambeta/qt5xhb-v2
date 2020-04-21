@@ -1,4 +1,3 @@
-
 /*
 
   Qt5xHb/C++11 - Bindings libraries for Harbour/xHarbour and Qt Framework 5

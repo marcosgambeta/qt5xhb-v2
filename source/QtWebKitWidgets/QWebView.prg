@@ -98,8 +98,8 @@ RETURN
 #include <QtWebKitWidgets/QWebView>
 #endif
 
-#include <QtWidgets/QAction>
 #include <QtCore/QUrl>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QWidget>
 
 /*
@@ -563,8 +563,10 @@ void QWebView_load2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void load ( const QUrl & url )
-//[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+/*
+[1]void load ( const QUrl & url )
+[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QWEBVIEW_LOAD )
 {
