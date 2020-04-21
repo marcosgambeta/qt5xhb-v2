@@ -79,8 +79,8 @@ RETURN
 #endif
 
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
-#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 #include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
+#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 
 /*
 explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr) [private]

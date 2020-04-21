@@ -634,8 +634,10 @@ void QVirtualKeyboardInputContext_commit2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]Q_INVOKABLE void commit()
-//[2]Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+/*
+[1]Q_INVOKABLE void commit()
+[2]Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+*/
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
