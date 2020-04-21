@@ -101,8 +101,10 @@ void QSqlField_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
-//[2]QSqlField ( const QSqlField & other )
+/*
+[1]explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+[2]QSqlField ( const QSqlField & other )
+*/
 
 HB_FUNC_STATIC( QSQLFIELD_NEW )
 {

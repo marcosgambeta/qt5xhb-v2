@@ -80,10 +80,10 @@ RETURN
 #include <QtSql/QSqlDriver>
 #endif
 
+#include <QtCore/QVariant>
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlIndex>
 #include <QtSql/QSqlRecord>
-#include <QtCore/QVariant>
 
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {

@@ -100,12 +100,12 @@ RETURN
 #include <QtSql/QSqlDatabase>
 #endif
 
+#include <QtCore/QStringList>
 #include <QtSql/QSqlDriver>
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlIndex>
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlRecord>
-#include <QtCore/QStringList>
 
 /*
 QSqlDatabase ()
@@ -125,8 +125,10 @@ void QSqlDatabase_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QSqlDatabase ()
-//[2]QSqlDatabase ( const QSqlDatabase & other )
+/*
+[1]QSqlDatabase ()
+[2]QSqlDatabase ( const QSqlDatabase & other )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
@@ -632,8 +634,10 @@ void QSqlDatabase_open2()
   }
 }
 
-//[1]bool open ()
-//[2]bool open ( const QString & user, const QString & password )
+/*
+[1]bool open ()
+[2]bool open ( const QString & user, const QString & password )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
@@ -944,8 +948,10 @@ void QSqlDatabase_addDatabase2 ()
   Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
-//[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-//[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+/*
+[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
+[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
