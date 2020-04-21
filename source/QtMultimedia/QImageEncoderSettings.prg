@@ -85,8 +85,10 @@ void QImageEncoderSettings_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QImageEncoderSettings()
-//[2]QImageEncoderSettings(const QImageEncoderSettings& other)
+/*
+[1]QImageEncoderSettings()
+[2]QImageEncoderSettings(const QImageEncoderSettings& other)
+*/
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 {
@@ -253,8 +255,10 @@ void QImageEncoderSettings_setResolution2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setResolution(const QSize &)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize &)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 {

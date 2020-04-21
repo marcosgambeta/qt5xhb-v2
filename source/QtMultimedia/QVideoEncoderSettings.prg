@@ -91,8 +91,10 @@ void QVideoEncoderSettings_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QVideoEncoderSettings()
-//[2]QVideoEncoderSettings(const QVideoEncoderSettings & other)
+/*
+[1]QVideoEncoderSettings()
+[2]QVideoEncoderSettings(const QVideoEncoderSettings & other)
+*/
 
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 {
@@ -518,8 +520,10 @@ void QVideoEncoderSettings_setResolution2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setResolution(const QSize & resolution)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize & resolution)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION )
 {

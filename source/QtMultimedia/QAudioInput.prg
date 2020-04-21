@@ -88,8 +88,10 @@ void QAudioInput_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
-//[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+/*
+[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
@@ -453,8 +455,10 @@ void QAudioInput_start2()
   }
 }
 
-//[1]void start ( QIODevice * device )
-//[2]QIODevice * start ()
+/*
+[1]void start ( QIODevice * device )
+[2]QIODevice * start ()
+*/
 
 HB_FUNC_STATIC( QAUDIOINPUT_START )
 {

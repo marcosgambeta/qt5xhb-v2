@@ -119,10 +119,12 @@ void QMediaResource_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QMediaResource()
-//[2]QMediaResource(const QUrl & url, const QString & mimeType = QString())
-//[3]QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
-//[4]QMediaResource(const QMediaResource & other)
+/*
+[1]QMediaResource()
+[2]QMediaResource(const QUrl & url, const QString & mimeType = QString())
+[3]QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
+[4]QMediaResource(const QMediaResource & other)
+*/
 
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 {
@@ -570,8 +572,10 @@ void QMediaResource_setResolution2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setResolution(const QSize & resolution)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize & resolution)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 {
