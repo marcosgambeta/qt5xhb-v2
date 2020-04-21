@@ -210,8 +210,10 @@ void QScroller_setSnapPositionsX2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSnapPositionsX(const QList<qreal> & positions)
-//[2]void setSnapPositionsX(qreal first, qreal interval)
+/*
+[1]void setSnapPositionsX(const QList<qreal> & positions)
+[2]void setSnapPositionsX(qreal first, qreal interval)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 {
@@ -268,8 +270,10 @@ void QScroller_setSnapPositionsY2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSnapPositionsY(const QList<qreal> & positions)
-//[2]void setSnapPositionsY(qreal first, qreal interval)
+/*
+[1]void setSnapPositionsY(const QList<qreal> & positions)
+[2]void setSnapPositionsY(qreal first, qreal interval)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 {
@@ -417,8 +421,10 @@ void QScroller_ensureVisible2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
-//[2]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
+/*
+[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
+[2]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 {
@@ -492,8 +498,10 @@ void QScroller_scrollTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void scrollTo(const QPointF & pos)
-//[2]void scrollTo(const QPointF & pos, int scrollTime)
+/*
+[1]void scrollTo(const QPointF & pos)
+[2]void scrollTo(const QPointF & pos, int scrollTime)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 {
@@ -657,8 +665,10 @@ void QScroller_scroller2()
   Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
 }
 
-//[1]static QScroller * scroller(QObject * target)
-//[2]static const QScroller * scroller(const QObject * target)
+/*
+[1]static QScroller * scroller(QObject * target)
+[2]static const QScroller * scroller(const QObject * target)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {

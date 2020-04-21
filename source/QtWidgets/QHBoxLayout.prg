@@ -65,8 +65,10 @@ void QHBoxLayout_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QHBoxLayout ()
-//[2]QHBoxLayout ( QWidget * parent )
+/*
+[1]QHBoxLayout ()
+[2]QHBoxLayout ( QWidget * parent )
+*/
 
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 {

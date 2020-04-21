@@ -69,8 +69,10 @@ void QStyleOptionComplex_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
-//[2]QStyleOptionComplex(const QStyleOptionComplex &other)
+/*
+[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
+[2]QStyleOptionComplex(const QStyleOptionComplex &other)
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {

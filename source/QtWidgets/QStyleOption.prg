@@ -96,8 +96,10 @@ void QStyleOption_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
-//[2]QStyleOption(const QStyleOption &other)
+/*
+[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
+[2]QStyleOption(const QStyleOption &other)
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {

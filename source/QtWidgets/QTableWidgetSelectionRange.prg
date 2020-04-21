@@ -89,9 +89,11 @@ void QTableWidgetSelectionRange_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QTableWidgetSelectionRange()
-//[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
-//[3]QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
+/*
+[1]QTableWidgetSelectionRange()
+[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
+[3]QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {

@@ -79,8 +79,10 @@ void QScrollerProperties_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QScrollerProperties()
-//[2]QScrollerProperties(const QScrollerProperties & sp)
+/*
+[1]QScrollerProperties()
+[2]QScrollerProperties(const QScrollerProperties & sp)
+*/
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {

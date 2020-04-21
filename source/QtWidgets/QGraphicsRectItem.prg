@@ -85,9 +85,11 @@ void QGraphicsRectItem_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGraphicsRectItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
-//[3]QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsRectItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = nullptr )
+[3]QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 {
@@ -181,8 +183,10 @@ void QGraphicsRectItem_setRect2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setRect ( const QRectF & rect )
-//[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
+/*
+[1]void setRect ( const QRectF & rect )
+[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
 {

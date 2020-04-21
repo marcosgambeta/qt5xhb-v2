@@ -79,9 +79,11 @@ void QCommandLinkButton_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QCommandLinkButton ( QWidget * parent = nullptr )
-//[2]QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
-//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
+/*
+[1]QCommandLinkButton ( QWidget * parent = nullptr )
+[2]QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
+[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {

@@ -74,8 +74,10 @@ void QSlider_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QSlider ( QWidget * parent = nullptr )
-//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
+/*
+[1]QSlider ( QWidget * parent = nullptr )
+[2]QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {

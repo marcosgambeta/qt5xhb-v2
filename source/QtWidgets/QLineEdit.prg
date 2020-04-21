@@ -130,9 +130,9 @@ RETURN
 
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
-#include <QtWidgets/QCompleter>
 #include <QtGui/QValidator>
 #include <QtWidgets/QAction>
+#include <QtWidgets/QCompleter>
 #include <QtWidgets/QMenu>
 
 /*
@@ -153,8 +153,10 @@ void QLineEdit_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QLineEdit ( QWidget * parent = nullptr )
-//[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
+/*
+[1]explicit QLineEdit ( QWidget * parent = nullptr )
+[2]explicit QLineEdit ( const QString & contents, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -1334,8 +1336,10 @@ void QLineEdit_setTextMargins2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setTextMargins ( int left, int top, int right, int bottom )
-//[2]void setTextMargins ( const QMargins & margins )
+/*
+[1]void setTextMargins ( int left, int top, int right, int bottom )
+[2]void setTextMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
@@ -1814,8 +1818,10 @@ void QLineEdit_addAction2()
   }
 }
 
-//[1]void addAction(QAction *action, ActionPosition position)
-//[2]QAction *addAction(const QIcon &icon, ActionPosition position)
+/*
+[1]void addAction(QAction *action, ActionPosition position)
+[2]QAction *addAction(const QIcon &icon, ActionPosition position)
+*/
 
 HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 {

@@ -72,8 +72,8 @@ RETURN
 #include <QtWidgets/QUndoGroup>
 #endif
 
-#include <QtWidgets/QUndoStack>
 #include <QtWidgets/QAction>
+#include <QtWidgets/QUndoStack>
 
 /*
 QUndoGroup(QObject * parent = nullptr)

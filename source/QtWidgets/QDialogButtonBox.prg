@@ -95,9 +95,11 @@ void QDialogButtonBox_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDialogButtonBox ( QWidget * parent = nullptr )
-//[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
-//[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+/*
+[1]QDialogButtonBox ( QWidget * parent = nullptr )
+[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
@@ -181,9 +183,11 @@ void QDialogButtonBox_addButton3()
   }
 }
 
-//[1]void addButton ( QAbstractButton * button, ButtonRole role )
-//[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-//[3]QPushButton * addButton ( StandardButton button )
+/*
+[1]void addButton ( QAbstractButton * button, ButtonRole role )
+[2]QPushButton * addButton ( const QString & text, ButtonRole role )
+[3]QPushButton * addButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {

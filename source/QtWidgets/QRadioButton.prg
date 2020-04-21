@@ -69,8 +69,10 @@ void QRadioButton_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QRadioButton ( QWidget * parent = nullptr )
-//[2]explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
+/*
+[1]explicit QRadioButton ( QWidget * parent = nullptr )
+[2]explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

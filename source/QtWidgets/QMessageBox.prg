@@ -97,9 +97,9 @@ RETURN
 #include <QtWidgets/QMessageBox>
 #endif
 
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QAbstractButton>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QPushButton>
 
 /*
 explicit QMessageBox ( QWidget * parent = nullptr )
@@ -119,8 +119,10 @@ void QMessageBox_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QMessageBox ( QWidget * parent = nullptr )
-//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+/*
+[1]explicit QMessageBox ( QWidget * parent = nullptr )
+[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
@@ -200,9 +202,11 @@ void QMessageBox_addButton3()
   }
 }
 
-//[1]void addButton ( QAbstractButton * button, ButtonRole role )
-//[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-//[3]QPushButton * addButton ( StandardButton button )
+/*
+[1]void addButton ( QAbstractButton * button, ButtonRole role )
+[2]QPushButton * addButton ( const QString & text, ButtonRole role )
+[3]QPushButton * addButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
@@ -683,8 +687,10 @@ void QMessageBox_setDefaultButton2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setDefaultButton ( QPushButton * button )
-//[2]void setDefaultButton ( StandardButton button )
+/*
+[1]void setDefaultButton ( QPushButton * button )
+[2]void setDefaultButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 {
@@ -732,8 +738,10 @@ void QMessageBox_setEscapeButton2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setEscapeButton ( QAbstractButton * button )
-//[2]void setEscapeButton ( StandardButton button )
+/*
+[1]void setEscapeButton ( QAbstractButton * button )
+[2]void setEscapeButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 {

@@ -71,9 +71,9 @@ RETURN
 #include <QtWidgets/QGraphicsItemAnimation>
 #endif
 
-#include <QtGui/QMatrix>
 #include <QtCore/QPointF>
 #include <QtCore/QTimeLine>
+#include <QtGui/QMatrix>
 
 /*
 QGraphicsItemAnimation ( QObject * parent = nullptr )

@@ -95,8 +95,10 @@ void QSplitter_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QSplitter ( QWidget * parent = nullptr )
-//[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
+/*
+[1]QSplitter ( QWidget * parent = nullptr )
+[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {

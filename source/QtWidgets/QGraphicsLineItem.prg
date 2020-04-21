@@ -91,9 +91,11 @@ void QGraphicsLineItem_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
-//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsLineItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = nullptr )
+[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -212,8 +214,10 @@ void QGraphicsLineItem_setLine2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setLine ( const QLineF & line )
-//[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+/*
+[1]void setLine ( const QLineF & line )
+[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {

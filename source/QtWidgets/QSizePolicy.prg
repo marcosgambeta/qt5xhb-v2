@@ -90,8 +90,10 @@ void QSizePolicy_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QSizePolicy()
-//[2]QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
+/*
+[1]QSizePolicy()
+[2]QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
+*/
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {

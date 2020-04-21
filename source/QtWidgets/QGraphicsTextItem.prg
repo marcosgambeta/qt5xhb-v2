@@ -106,8 +106,10 @@ void QGraphicsTextItem_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {

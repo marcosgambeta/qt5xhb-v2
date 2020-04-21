@@ -143,9 +143,11 @@ void QAction_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QAction ( QObject * parent = nullptr )
-//[2]QAction ( const QString & text, QObject * parent = nullptr )
-//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
+/*
+[1]QAction ( QObject * parent = nullptr )
+[2]QAction ( const QString & text, QObject * parent = nullptr )
+[3]QAction ( const QIcon & icon, const QString & text, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
@@ -1099,8 +1101,10 @@ void QAction_setShortcuts2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
-//[2]void setShortcuts ( QKeySequence::StandardKey key )
+/*
+[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
+[2]void setShortcuts ( QKeySequence::StandardKey key )
+*/
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {

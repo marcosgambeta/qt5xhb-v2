@@ -99,10 +99,12 @@ void QPushButton_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QPushButton ( QWidget * parent = nullptr )
-//[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
-//[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
-//[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
+/*
+[1]explicit QPushButton ( QWidget * parent = nullptr )
+[2]explicit QPushButton ( const QString & text, QWidget * parent = nullptr )
+[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = nullptr )
+[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

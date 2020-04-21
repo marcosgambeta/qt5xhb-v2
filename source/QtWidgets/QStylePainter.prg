@@ -81,9 +81,11 @@ void QStylePainter_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QStylePainter()
-//[2]explicit QStylePainter(QWidget *w)
-//[3]QStylePainter(QPaintDevice *pd, QWidget *w)
+/*
+[1]QStylePainter()
+[2]explicit QStylePainter(QWidget *w)
+[3]QStylePainter(QPaintDevice *pd, QWidget *w)
+*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 {
@@ -131,8 +133,10 @@ void QStylePainter_begin2()
   }
 }
 
-//[1]bool begin(QWidget *w)
-//[2]bool begin(QPaintDevice *pd, QWidget *w)
+/*
+[1]bool begin(QWidget *w)
+[2]bool begin(QPaintDevice *pd, QWidget *w)
+*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 {

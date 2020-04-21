@@ -66,8 +66,10 @@ void QDateEdit_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QDateEdit ( QWidget * parent = nullptr )
-//[2]QDateEdit ( const QDate & date, QWidget * parent = nullptr )
+/*
+[1]QDateEdit ( QWidget * parent = nullptr )
+[2]QDateEdit ( const QDate & date, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {

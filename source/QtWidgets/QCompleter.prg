@@ -122,9 +122,11 @@ void QCompleter_new3()
 #endif
 }
 
-//[1]QCompleter ( QObject * parent = nullptr )
-//[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
-//[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
+/*
+[1]QCompleter ( QObject * parent = nullptr )
+[2]QCompleter ( QAbstractItemModel * model, QObject * parent = nullptr )
+[3]QCompleter ( const QStringList & list, QObject * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {

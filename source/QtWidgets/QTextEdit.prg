@@ -166,8 +166,10 @@ void QTextEdit_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QTextEdit ( QWidget * parent = nullptr )
-//[2]QTextEdit ( const QString & text, QWidget * parent = nullptr )
+/*
+[1]QTextEdit ( QWidget * parent = nullptr )
+[2]QTextEdit ( const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
@@ -352,8 +354,10 @@ void QTextEdit_createStandardContextMenu2()
   }
 }
 
-//[1]QMenu * createStandardContextMenu ()
-//[2]QMenu * createStandardContextMenu ( const QPoint & position )
+/*
+[1]QMenu * createStandardContextMenu ()
+[2]QMenu * createStandardContextMenu ( const QPoint & position )
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
@@ -474,8 +478,10 @@ void QTextEdit_cursorRect2()
   }
 }
 
-//[1]QRect cursorRect ( const QTextCursor & cursor ) const
-//[2]QRect cursorRect () const
+/*
+[1]QRect cursorRect ( const QTextCursor & cursor ) const
+[2]QRect cursorRect () const
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {

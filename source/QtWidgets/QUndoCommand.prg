@@ -83,8 +83,10 @@ void QUndoCommand_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QUndoCommand(QUndoCommand * parent = nullptr)
-//[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+/*
+[1]QUndoCommand(QUndoCommand * parent = nullptr)
+[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {

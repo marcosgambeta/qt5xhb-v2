@@ -76,8 +76,10 @@ void QGraphicsPathItem_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
-//[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
+/*
+[1]QGraphicsPathItem ( QGraphicsItem * parent = nullptr )
+[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {

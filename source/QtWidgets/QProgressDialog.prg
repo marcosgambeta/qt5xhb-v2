@@ -93,8 +93,10 @@ void QProgressDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
-//[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+/*
+[1]explicit QProgressDialog ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {

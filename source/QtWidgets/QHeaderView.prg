@@ -593,9 +593,11 @@ void QHeaderView_logicalIndexAt3()
   }
 }
 
-//[1]int logicalIndexAt ( int position ) const
-//[2]int logicalIndexAt ( int x, int y ) const
-//[3]int logicalIndexAt ( const QPoint & pos ) const
+/*
+[1]int logicalIndexAt ( int position ) const
+[2]int logicalIndexAt ( int x, int y ) const
+[3]int logicalIndexAt ( const QPoint & pos ) const
+*/
 
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
@@ -1621,8 +1623,10 @@ void QHeaderView_setSectionResizeMode2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSectionResizeMode(ResizeMode mode)
-//[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)
+/*
+[1]void setSectionResizeMode(ResizeMode mode)
+[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)
+*/
 
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 {

@@ -69,8 +69,10 @@ void QScrollBar_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QScrollBar ( QWidget * parent = nullptr )
-//[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+/*
+[1]QScrollBar ( QWidget * parent = nullptr )
+[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {

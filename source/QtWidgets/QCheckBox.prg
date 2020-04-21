@@ -75,8 +75,10 @@ void QCheckBox_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit QCheckBox ( QWidget * parent = nullptr )
-//[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
+/*
+[1]explicit QCheckBox ( QWidget * parent = nullptr )
+[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
