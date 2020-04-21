@@ -78,8 +78,8 @@ RETURN
 #endif
 #endif
 
-#include <QtCore/QVector>
 #include <QtCore/QLocale>
+#include <QtCore/QVector>
 #include <QtTextToSpeech/QVoice>
 
 /*
@@ -104,8 +104,10 @@ void QTextToSpeech_new2()
 #endif
 }
 
-//[1]explicit QTextToSpeech(QObject *parent = nullptr)
-//[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
+/*
+[1]explicit QTextToSpeech(QObject *parent = nullptr)
+[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 {

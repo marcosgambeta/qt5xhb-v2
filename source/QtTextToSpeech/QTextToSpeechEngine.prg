@@ -72,8 +72,8 @@ RETURN
 #endif
 #endif
 
-#include <QtCore/QVector>
 #include <QtCore/QLocale>
+#include <QtCore/QVector>
 #include <QtTextToSpeech/QVoice>
 
 /*
