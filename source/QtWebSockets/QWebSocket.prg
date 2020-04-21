@@ -106,8 +106,8 @@ RETURN
 #endif
 #endif
 
-#include <QtWebSockets/QMaskGenerator>
 #include <QtNetwork/QAuthenticator>
+#include <QtWebSockets/QMaskGenerator>
 
 /*
 explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = nullptr)
@@ -934,8 +934,10 @@ void QWebSocket_ignoreSslErrors2()
 #endif
 }
 
-//[1]void ignoreSslErrors(const QList<QSslError> &errors)
-//[2]void ignoreSslErrors()
+/*
+[1]void ignoreSslErrors(const QList<QSslError> &errors)
+[2]void ignoreSslErrors()
+*/
 
 HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
 {
