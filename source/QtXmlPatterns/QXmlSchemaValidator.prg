@@ -71,10 +71,10 @@ RETURN
 #include <QtXmlPatterns/QXmlSchemaValidator>
 #endif
 
-#include <QtXmlPatterns/QXmlSchema>
-#include <QtXmlPatterns/QAbstractMessageHandler>
 #include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractMessageHandler>
 #include <QtXmlPatterns/QAbstractUriResolver>
+#include <QtXmlPatterns/QXmlSchema>
 
 /*
 QXmlSchemaValidator ()
@@ -94,8 +94,10 @@ void QXmlSchemaValidator_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QXmlSchemaValidator ()
-//[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+/*
+[1]QXmlSchemaValidator ()
+[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
@@ -398,9 +400,11 @@ void QXmlSchemaValidator_validate3()
   }
 }
 
-//[1]bool validate ( const QUrl & source ) const
-//[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-//[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+/*
+[1]bool validate ( const QUrl & source ) const
+[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {

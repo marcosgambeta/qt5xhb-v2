@@ -63,8 +63,8 @@ RETURN
 #include <QtXmlPatterns/QAbstractXmlNodeModel>
 #endif
 
-#include <QtCore/QVariant>
 #include <QtCore/QUrl>
+#include <QtCore/QVariant>
 #include <QtCore/QVector>
 #include <QtXmlPatterns/QSourceLocation>
 

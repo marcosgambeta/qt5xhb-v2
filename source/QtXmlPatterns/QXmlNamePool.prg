@@ -74,8 +74,10 @@ void QXmlNamePool_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QXmlNamePool ()
-//[2]QXmlNamePool ( const QXmlNamePool & other )
+/*
+[1]QXmlNamePool ()
+[2]QXmlNamePool ( const QXmlNamePool & other )
+*/
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {
