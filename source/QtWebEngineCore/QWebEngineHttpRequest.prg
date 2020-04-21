@@ -89,8 +89,10 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW2 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpRequest::Method &method = QWebEngineHttpRequest::Get)
-//[2]QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
+/*
+[1]explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpRequest::Method &method = QWebEngineHttpRequest::Get)
+[2]QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
+*/
 
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
 {
