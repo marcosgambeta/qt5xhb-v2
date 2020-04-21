@@ -66,8 +66,8 @@ RETURN
 #include <QtUiTools/QUiLoader>
 #endif
 
-#include <QtCore/QStringList>
 #include <QtCore/QDir>
+#include <QtCore/QStringList>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QActionGroup>
 #include <QtWidgets/QLayout>
