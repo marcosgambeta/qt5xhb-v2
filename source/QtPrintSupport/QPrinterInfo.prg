@@ -108,9 +108,11 @@ void QPrinterInfo_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QPrinterInfo ()
-//[2]QPrinterInfo ( const QPrinterInfo & src )
-//[3]explicit QPrinterInfo ( const QPrinter & printer )
+/*
+[1]QPrinterInfo ()
+[2]QPrinterInfo ( const QPrinterInfo & src )
+[3]explicit QPrinterInfo ( const QPrinter & printer )
+*/
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {

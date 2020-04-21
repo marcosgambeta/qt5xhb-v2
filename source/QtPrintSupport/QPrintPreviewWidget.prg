@@ -91,8 +91,10 @@ void QPrintPreviewWidget_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-//[2]QPrintPreviewWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+/*
+[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+[2]QPrintPreviewWidget ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+*/
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {

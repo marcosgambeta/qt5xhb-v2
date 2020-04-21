@@ -79,8 +79,10 @@ void QPrintDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
-//[2]QPrintDialog ( QWidget * parent = nullptr )
+/*
+[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+[2]QPrintDialog ( QWidget * parent = nullptr )
+*/
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {

@@ -71,8 +71,10 @@ void QPageSetupDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
-//[2]QPageSetupDialog(QWidget *parent = nullptr)
+/*
+[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
+[2]QPageSetupDialog(QWidget *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
