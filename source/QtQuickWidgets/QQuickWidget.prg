@@ -75,9 +75,9 @@ RETURN
 #endif
 #endif
 
-#include <QtQml/QQmlError>
-#include <QtQml/QQmlEngine>
 #include <QtQml/QQmlContext>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlError>
 #include <QtQuick/QQuickItem>
 
 /*
@@ -113,9 +113,11 @@ void QQuickWidget_new3()
 #endif
 }
 
-//[1]explicit QQuickWidget(QWidget *parent = nullptr)
-//[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
-//[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
+/*
+[1]explicit QQuickWidget(QWidget *parent = nullptr)
+[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
+[3]QQuickWidget(const QUrl &source, QWidget *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
