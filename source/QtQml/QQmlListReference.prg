@@ -87,8 +87,10 @@ void QQmlListReference_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]QQmlListReference()
-//[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
+/*
+[1]QQmlListReference()
+[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {

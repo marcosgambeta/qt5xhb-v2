@@ -90,9 +90,11 @@ void QQmlApplicationEngine_new3()
 #endif
 }
 
-//[1]QQmlApplicationEngine(QObject *parent=nullptr)
-//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
-//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
+/*
+[1]QQmlApplicationEngine(QObject *parent=nullptr)
+[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
+[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
+*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
@@ -217,8 +219,10 @@ void QQmlApplicationEngine_load2()
 #endif
 }
 
-//[1]void load(const QUrl &url)
-//[2]void load(const QString &filePath)
+/*
+[1]void load(const QUrl &url)
+[2]void load(const QString &filePath)
+*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {

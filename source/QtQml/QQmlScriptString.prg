@@ -80,8 +80,10 @@ void QQmlScriptString_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QQmlScriptString()
-//[2]QQmlScriptString(const QQmlScriptString & other)
+/*
+[1]QQmlScriptString()
+[2]QQmlScriptString(const QQmlScriptString & other)
+*/
 
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
