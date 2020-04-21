@@ -10,13 +10,13 @@
 #define HABSTRACTTABLEMODEL_H
 
 #include <QtCore/QAbstractTableModel>
+#include <QtCore/QDate>
+#include <QtCore/QSize>
+#include <QtGui/QBrush>
+#include <QtGui/QColor>
+#include <QtGui/QFont>
 #include <QtGui/QIcon>
 #include <QtGui/QPixmap>
-#include <QtGui/QFont>
-#include <QtGui/QColor>
-#include <QtGui/QBrush>
-#include <QtCore/QSize>
-#include <QtCore/QDate>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
@@ -30,34 +30,34 @@ public:
   HAbstractTableModel( QObject * parent = nullptr );
   virtual ~HAbstractTableModel();
 
-  PHB_ITEM rowCountCB;
-  PHB_ITEM colCountCB;
+  PHB_ITEM m_rowCountCB;
+  PHB_ITEM m_colCountCB;
 
-  PHB_ITEM getFieldCB;
-  PHB_ITEM getFieldDecorationCB;
-  PHB_ITEM getFieldEditCB;
-  PHB_ITEM getFieldToolTipCB;
-  PHB_ITEM getFieldStatusTipCB;
-  PHB_ITEM getFieldWhatsThisCB;
-  PHB_ITEM getFieldSizeHintCB;
-  PHB_ITEM getFieldFontCB;
-  PHB_ITEM getFieldAlignCB;
-  PHB_ITEM getFieldBGColorCB;
-  PHB_ITEM getFieldFGColorCB;
+  PHB_ITEM m_getFieldCB;
+  PHB_ITEM m_getFieldDecorationCB;
+  PHB_ITEM m_getFieldEditCB;
+  PHB_ITEM m_getFieldToolTipCB;
+  PHB_ITEM m_getFieldStatusTipCB;
+  PHB_ITEM m_getFieldWhatsThisCB;
+  PHB_ITEM m_getFieldSizeHintCB;
+  PHB_ITEM m_getFieldFontCB;
+  PHB_ITEM m_getFieldAlignCB;
+  PHB_ITEM m_getFieldBGColorCB;
+  PHB_ITEM m_getFieldFGColorCB;
 
-  PHB_ITEM getHHCB;
-  PHB_ITEM getHHDecorationCB;
-  PHB_ITEM getHHFontCB;
-  PHB_ITEM getHHAlignCB;
-  PHB_ITEM getHHBGColorCB;
-  PHB_ITEM getHHFGColorCB;
+  PHB_ITEM m_getHHCB;
+  PHB_ITEM m_getHHDecorationCB;
+  PHB_ITEM m_getHHFontCB;
+  PHB_ITEM m_getHHAlignCB;
+  PHB_ITEM m_getHHBGColorCB;
+  PHB_ITEM m_getHHFGColorCB;
 
-  PHB_ITEM getVHCB;
-  PHB_ITEM getVHDecorationCB;
-  PHB_ITEM getVHFontCB;
-  PHB_ITEM getVHAlignCB;
-  PHB_ITEM getVHBGColorCB;
-  PHB_ITEM getVHFGColorCB;
+  PHB_ITEM m_getVHCB;
+  PHB_ITEM m_getVHDecorationCB;
+  PHB_ITEM m_getVHFontCB;
+  PHB_ITEM m_getVHAlignCB;
+  PHB_ITEM m_getVHBGColorCB;
+  PHB_ITEM m_getVHFGColorCB;
 
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
