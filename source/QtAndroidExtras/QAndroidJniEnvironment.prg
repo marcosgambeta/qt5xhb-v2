@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QAndroidJniEnvironment();
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
