@@ -40,16 +40,21 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #include <QtGui/QRegularExpressionValidator>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
 #include "qt5xhb_signals4.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #include <QtGui/QRegularExpressionValidator>
+#endif
 #endif
 
 /*
@@ -57,8 +62,10 @@ QRegularExpressionValidator(QObject *parent = nullptr)
 */
 void QRegularExpressionValidator_new1()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QRegularExpressionValidator( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
+#endif
 }
 
 /*
@@ -66,8 +73,10 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = null
 */
 void QRegularExpressionValidator_new2()
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
+#endif
 }
 
 /*
@@ -93,10 +102,13 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -106,6 +118,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -113,6 +126,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -131,6 +145,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     }
 #endif
   }
+#endif
 }
 
 /*
@@ -138,6 +153,7 @@ void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -157,6 +173,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -164,6 +181,7 @@ void regularExpressionChanged( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   auto sender = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( sender != nullptr )
@@ -219,6 +237,9 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
   {
     hb_retl( false );
   }
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP
