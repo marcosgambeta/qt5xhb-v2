@@ -23,12 +23,12 @@ public:
   HAbstractTableModelV2( QObject * parent = nullptr );
   virtual ~HAbstractTableModelV2();
 
-  PHB_ITEM rowCountBlock;
-  PHB_ITEM columnCountBlock;
-  PHB_ITEM dataBlock;
-  PHB_ITEM headerDataBlock;
-  PHB_ITEM flagsBlock;
-  PHB_ITEM setDataBlock;
+  PHB_ITEM m_rowCountBlock;
+  PHB_ITEM m_columnCountBlock;
+  PHB_ITEM m_dataBlock;
+  PHB_ITEM m_headerDataBlock;
+  PHB_ITEM m_flagsBlock;
+  PHB_ITEM m_setDataBlock;
 
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
