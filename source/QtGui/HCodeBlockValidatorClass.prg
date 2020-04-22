@@ -32,6 +32,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals4.h"
 
 void HCodeBlockValidator_new1()
 {
@@ -45,8 +47,10 @@ void HCodeBlockValidator_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit HCodeBlockValidator( QObject *parent = nullptr );
-//[2]HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr );
+/*
+[1]explicit HCodeBlockValidator( QObject *parent = nullptr )
+[2]HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr )
+*/
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
@@ -70,6 +74,8 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 
   if( obj != nullptr )
   {
+    Events_disconnect_all_events( obj, true );
+    Signals4_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
