@@ -399,6 +399,7 @@ QDomNotation                                         |object         |QtXml
 QDomProcessingInstruction                            |object         |QtXml
 QDomText                                             |object         |QtXml
 QDoubleSpinBox                                       |QWidget        |QtWidgets
+QDoubleValidator                                     |QObject        |QtGui
 QDoubleValidator::Notation                           |enum           |QtGui
 QDragEnterEvent                                      |QEvent         |QtGui
 QDragLeaveEvent                                      |QEvent         |QtGui
@@ -647,6 +648,7 @@ QInputMethod                                         |QObject        |QtGui
 QInputMethod::Action                                 |enum           |QtGui
 QInputMethodEvent                                    |QEvent         |QtGui
 QInputMethodQueryEvent                               |QEvent         |QtGui
+QIntValidator                                        |QObject        |QtGui
 QIODevice                                            |QObject        |QtCore
 QIODevice::OpenMode                                  |enum           |QtCore
 QIRProximityReading                                  |QObject        |QtSensors
@@ -1049,6 +1051,7 @@ QRectF                                               |object         |QtCore
 QRegExp                                              |object         |QtCore
 QRegExp::CaretMode                                   |enum           |QtCore
 QRegExp::PatternSyntax                               |enum           |QtCore
+QRegExpValidator                                     |QObject        |QtGui
 QRegion                                              |object         |QtGui
 QRegion::RegionType                                  |enum           |QtGui
 QRegularExpression                                   |object         |QtCore
@@ -1057,6 +1060,7 @@ QRegularExpression::MatchType                        |enum           |QtCore
 QRegularExpression::PatternOptions                   |enum           |QtCore
 QRegularExpressionMatch                              |object         |QtCore
 QRegularExpressionMatchIterator                      |object         |QtCore
+QRegularExpressionValidator                          |QObject        |QtGui
 QResizeEvent                                         |QEvent         |QtGui
 QResource                                            |object         |QtCore
 QRotationReading                                     |QObject        |QtSensors
