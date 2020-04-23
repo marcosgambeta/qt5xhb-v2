@@ -33,13 +33,13 @@ public:
   void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
   void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
 
-  PHB_ITEM paintBlock;
-  PHB_ITEM sizeHintBlock;
-  PHB_ITEM displayTextBlock;
-  PHB_ITEM createEditorBlock;
-  PHB_ITEM setEditorDataBlock;
-  PHB_ITEM setModelDataBlock;
-  PHB_ITEM updateEditorGeometryBlock;
+  PHB_ITEM m_paintBlock;
+  PHB_ITEM m_sizeHintBlock;
+  PHB_ITEM m_displayTextBlock;
+  PHB_ITEM m_createEditorBlock;
+  PHB_ITEM m_setEditorDataBlock;
+  PHB_ITEM m_setModelDataBlock;
+  PHB_ITEM m_updateEditorGeometryBlock;
 
   void setPaintCB( PHB_ITEM block );
   void setSizeHintCB( PHB_ITEM block );

@@ -8,93 +8,93 @@
 
 #include "HStyledItemDelegate.h"
 
-HStyledItemDelegate::HStyledItemDelegate(QObject *parent) : QStyledItemDelegate(parent)
+HStyledItemDelegate::HStyledItemDelegate( QObject *parent ) : QStyledItemDelegate( parent )
 {
-  paintBlock = nullptr;
-  sizeHintBlock = nullptr;
-  displayTextBlock = nullptr;
-  createEditorBlock = nullptr;
-  setEditorDataBlock = nullptr;
-  setModelDataBlock = nullptr;
-  updateEditorGeometryBlock = nullptr;
+  m_paintBlock = nullptr;
+  m_sizeHintBlock = nullptr;
+  m_displayTextBlock = nullptr;
+  m_createEditorBlock = nullptr;
+  m_setEditorDataBlock = nullptr;
+  m_setModelDataBlock = nullptr;
+  m_updateEditorGeometryBlock = nullptr;
 }
 
-HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, QObject *parent) : QStyledItemDelegate(parent)
+HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, QObject *parent ) : QStyledItemDelegate( parent )
 {
-  paintBlock = hb_itemNew( paintCB );
-  sizeHintBlock = nullptr;
-  displayTextBlock = nullptr;
-  createEditorBlock = nullptr;
-  setEditorDataBlock = nullptr;
-  setModelDataBlock = nullptr;
-  updateEditorGeometryBlock = nullptr;
+  m_paintBlock = hb_itemNew( paintCB );
+  m_sizeHintBlock = nullptr;
+  m_displayTextBlock = nullptr;
+  m_createEditorBlock = nullptr;
+  m_setEditorDataBlock = nullptr;
+  m_setModelDataBlock = nullptr;
+  m_updateEditorGeometryBlock = nullptr;
 }
 
-HStyledItemDelegate::HStyledItemDelegate(PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent) : QStyledItemDelegate(parent)
+HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent ) : QStyledItemDelegate( parent )
 {
-  paintBlock = hb_itemNew( paintCB );
-  sizeHintBlock = hb_itemNew( sizeHintCB );
-  displayTextBlock = nullptr;
-  createEditorBlock = nullptr;
-  setEditorDataBlock = nullptr;
-  setModelDataBlock = nullptr;
-  updateEditorGeometryBlock = nullptr;
+  m_paintBlock = hb_itemNew( paintCB );
+  m_sizeHintBlock = hb_itemNew( sizeHintCB );
+  m_displayTextBlock = nullptr;
+  m_createEditorBlock = nullptr;
+  m_setEditorDataBlock = nullptr;
+  m_setModelDataBlock = nullptr;
+  m_updateEditorGeometryBlock = nullptr;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate()
 {
-  if( paintBlock != nullptr )
+  if( m_paintBlock != nullptr )
   {
-    hb_itemRelease( paintBlock );
-    paintBlock = nullptr;
+    hb_itemRelease( m_paintBlock );
+    m_paintBlock = nullptr;
   }
 
-  if( sizeHintBlock != nullptr )
+  if( m_sizeHintBlock != nullptr )
   {
-    hb_itemRelease( sizeHintBlock );
-    sizeHintBlock = nullptr;
+    hb_itemRelease( m_sizeHintBlock );
+    m_sizeHintBlock = nullptr;
   }
 
-  if( displayTextBlock != nullptr )
+  if( m_displayTextBlock != nullptr )
   {
-    hb_itemRelease( displayTextBlock );
-    displayTextBlock = nullptr;
+    hb_itemRelease( m_displayTextBlock );
+    m_displayTextBlock = nullptr;
   }
 
-  if( createEditorBlock != nullptr )
+  if( m_createEditorBlock != nullptr )
   {
-    hb_itemRelease( createEditorBlock );
-    createEditorBlock = nullptr;
+    hb_itemRelease( m_createEditorBlock );
+    m_createEditorBlock = nullptr;
   }
 
-  if( setEditorDataBlock != nullptr )
+  if( m_setEditorDataBlock != nullptr )
   {
-    hb_itemRelease( setEditorDataBlock );
-    setEditorDataBlock = nullptr;
+    hb_itemRelease( m_setEditorDataBlock );
+    m_setEditorDataBlock = nullptr;
   }
 
-  if( setModelDataBlock != nullptr )
+  if( m_setModelDataBlock != nullptr )
   {
-    hb_itemRelease( setModelDataBlock );
-    setEditorDataBlock = nullptr;
+    hb_itemRelease( m_setModelDataBlock );
+    m_setEditorDataBlock = nullptr;
   }
 
-  if( updateEditorGeometryBlock != nullptr )
+  if( m_updateEditorGeometryBlock != nullptr )
   {
-    hb_itemRelease( updateEditorGeometryBlock );
-    updateEditorGeometryBlock = nullptr;
+    hb_itemRelease( m_updateEditorGeometryBlock );
+    m_updateEditorGeometryBlock = nullptr;
   }
 }
 
-void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void HStyledItemDelegate::paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
-  if( paintBlock != nullptr )
+  if( m_paintBlock != nullptr )
   {
     PHB_ITEM pPainter = hb_itemPutPtr( NULL, (QPainter *) painter );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( paintBlock, 3, pPainter, pOption, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_paintBlock, 3, pPainter, pOption, pIndex );
 
     hb_itemRelease( pPainter );
     hb_itemRelease( pOption );
@@ -103,25 +103,25 @@ void HStyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
   }
   else
   {
-    QStyledItemDelegate::paint(painter, option, index);
+    QStyledItemDelegate::paint( painter, option, index );
   }
 }
 
-void HStyledItemDelegate::defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void HStyledItemDelegate::defaultPaint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
-  QStyledItemDelegate::paint(painter, option, index);
+  QStyledItemDelegate::paint( painter, option, index );
 }
 
-QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
+QSize HStyledItemDelegate::sizeHint( const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
   QSize size;
 
-  if( sizeHintBlock != nullptr )
+  if( m_sizeHintBlock != nullptr )
   {
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( sizeHintBlock, 2, pOption, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_sizeHintBlock, 2, pOption, pIndex );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QSIZE" ) )
     {
@@ -129,7 +129,7 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     }
     else
     {
-      size = QStyledItemDelegate::sizeHint(option, index);
+      size = QStyledItemDelegate::sizeHint( option, index );
     }
 
     hb_itemRelease( pOption );
@@ -138,22 +138,22 @@ QSize HStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
   }
   else
   {
-    size = QStyledItemDelegate::sizeHint(option, index);
+    size = QStyledItemDelegate::sizeHint( option, index );
   }
 
   return size;
 }
 
-QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &locale) const
+QString HStyledItemDelegate::displayText( const QVariant &value, const QLocale &locale ) const
 {
   QString data = value.toString();
 
-  if( displayTextBlock != nullptr )
+  if( m_displayTextBlock != nullptr )
   {
     PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
     PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( displayTextBlock, 2, pValue, pLocale );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_displayTextBlock, 2, pValue, pLocale );
 
     if( hb_itemType( pRet ) & HB_IT_STRING )
     {
@@ -172,17 +172,17 @@ QString HStyledItemDelegate::displayText(const QVariant &value, const QLocale &l
   return data;
 }
 
-QWidget * HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget * HStyledItemDelegate::createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
   QWidget * widget = nullptr;
 
-  if( createEditorBlock != nullptr )
+  if( m_createEditorBlock != nullptr )
   {
     PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( createEditorBlock, 3, pParent, pOption, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_createEditorBlock, 3, pParent, pOption, pIndex );
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QWIDGET" ) )
     {
@@ -200,20 +200,20 @@ QWidget * HStyledItemDelegate::createEditor(QWidget *parent, const QStyleOptionV
   }
   else
   {
-    widget = QStyledItemDelegate::createEditor(parent, option, index);
+    widget = QStyledItemDelegate::createEditor( parent, option, index );
   }
 
   return widget;
 }
 
-void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
+void HStyledItemDelegate::setEditorData( QWidget *editor, const QModelIndex &index ) const
 {
-  if( setEditorDataBlock != nullptr )
+  if( m_setEditorDataBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( setEditorDataBlock, 2, pEditor, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_setEditorDataBlock, 2, pEditor, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pIndex );
@@ -221,19 +221,19 @@ void HStyledItemDelegate::setEditorData(QWidget *editor, const QModelIndex &inde
   }
   else
   {
-    QStyledItemDelegate::setEditorData(editor, index);
+    QStyledItemDelegate::setEditorData( editor, index );
   }
 }
 
-void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const
 {
-  if( setModelDataBlock != nullptr )
+  if( m_setModelDataBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( setModelDataBlock, 3, pEditor, pModel, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_setModelDataBlock, 3, pEditor, pModel, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pModel );
@@ -242,19 +242,19 @@ void HStyledItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
   }
   else
   {
-    QStyledItemDelegate::setModelData(editor, model, index);
+    QStyledItemDelegate::setModelData( editor, model, index );
   }
 }
 
-void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
-  if( updateEditorGeometryBlock != nullptr )
+  if( m_updateEditorGeometryBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pOption );
@@ -263,90 +263,90 @@ void HStyledItemDelegate::updateEditorGeometry(QWidget *editor, const QStyleOpti
   }
   else
   {
-    QStyledItemDelegate::updateEditorGeometry(editor, option, index);
+    QStyledItemDelegate::updateEditorGeometry( editor, option, index );
   }
 }
 
 void HStyledItemDelegate::setPaintCB( PHB_ITEM block )
 {
-  if( paintBlock != nullptr )
+  if( m_paintBlock != nullptr )
   {
-    hb_itemRelease( paintBlock );
+    hb_itemRelease( m_paintBlock );
   }
   if( block != nullptr )
   {
-    paintBlock = hb_itemNew( block );
+    m_paintBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setSizeHintCB( PHB_ITEM block )
 {
-  if( sizeHintBlock != nullptr )
+  if( m_sizeHintBlock != nullptr )
   {
-    hb_itemRelease( sizeHintBlock );
+    hb_itemRelease( m_sizeHintBlock );
   }
   if( block != nullptr )
   {
-    sizeHintBlock = hb_itemNew( block );
+    m_sizeHintBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setDisplayTextCB( PHB_ITEM block )
 {
-  if( displayTextBlock != nullptr )
+  if( m_displayTextBlock != nullptr )
   {
-    hb_itemRelease( displayTextBlock );
+    hb_itemRelease( m_displayTextBlock );
   }
   if( block != nullptr )
   {
-    displayTextBlock = hb_itemNew( block );
+    m_displayTextBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setCreateEditorCB( PHB_ITEM block )
 {
-  if( createEditorBlock != nullptr )
+  if( m_createEditorBlock != nullptr )
   {
-    hb_itemRelease( createEditorBlock );
+    hb_itemRelease( m_createEditorBlock );
   }
   if( block != nullptr )
   {
-    createEditorBlock = hb_itemNew( block );
+    m_createEditorBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setEditorDataCB( PHB_ITEM block )
 {
-  if( setEditorDataBlock != nullptr )
+  if( m_setEditorDataBlock != nullptr )
   {
-    hb_itemRelease( setEditorDataBlock );
+    hb_itemRelease( m_setEditorDataBlock );
   }
   if( block != nullptr )
   {
-    setEditorDataBlock = hb_itemNew( block );
+    m_setEditorDataBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setModelDataCB( PHB_ITEM block )
 {
-  if( setModelDataBlock != nullptr )
+  if( m_setModelDataBlock != nullptr )
   {
-    hb_itemRelease( setModelDataBlock );
+    hb_itemRelease( m_setModelDataBlock );
   }
   if( block != nullptr )
   {
-    setModelDataBlock = hb_itemNew( block );
+    m_setModelDataBlock = hb_itemNew( block );
   }
 }
 
 void HStyledItemDelegate::setUpdateEditorGeometryCB( PHB_ITEM block )
 {
-  if( updateEditorGeometryBlock != nullptr )
+  if( m_updateEditorGeometryBlock != nullptr )
   {
-    hb_itemRelease( updateEditorGeometryBlock );
+    hb_itemRelease( m_updateEditorGeometryBlock );
   }
   if( block != nullptr )
   {
-    updateEditorGeometryBlock = hb_itemNew( block );
+    m_updateEditorGeometryBlock = hb_itemNew( block );
   }
 }

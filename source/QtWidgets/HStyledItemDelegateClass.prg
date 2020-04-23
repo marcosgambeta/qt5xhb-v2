@@ -63,9 +63,11 @@ void HStyledItemDelegate_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-//[1]explicit HStyledItemDelegate(QObject *parent = nullptr)
-//[2]HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr)
-//[3]HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = nullptr)
+/*
+[1]explicit HStyledItemDelegate(QObject *parent = nullptr)
+[2]HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr)
+[3]HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
