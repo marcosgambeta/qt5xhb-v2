@@ -67,7 +67,7 @@ QTemporaryDir()
 void QTemporaryDir_new1()
 {
   auto obj = new QTemporaryDir();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QTemporaryDir(const QString & templateName)
 void QTemporaryDir_new2()
 {
   auto obj = new QTemporaryDir( PQSTRING(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

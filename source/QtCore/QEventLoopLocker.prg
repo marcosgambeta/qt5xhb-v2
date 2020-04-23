@@ -62,7 +62,7 @@ QEventLoopLocker()
 void QEventLoopLocker_new1()
 {
   auto obj = new QEventLoopLocker();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QEventLoopLocker(QEventLoop * loop)
 void QEventLoopLocker_new2()
 {
   auto obj = new QEventLoopLocker( PQEVENTLOOP(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QEventLoopLocker(QThread * thread)
 void QEventLoopLocker_new3()
 {
   auto obj = new QEventLoopLocker( PQTHREAD(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
