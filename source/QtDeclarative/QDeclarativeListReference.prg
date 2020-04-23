@@ -72,7 +72,7 @@ QDeclarativeListReference ()
 void QDeclarativeListReference_new1()
 {
   auto obj = new QDeclarativeListReference();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QDeclarativeListReference ( QObject * object, const char * property, QDeclarativ
 void QDeclarativeListReference_new2()
 {
   auto obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
