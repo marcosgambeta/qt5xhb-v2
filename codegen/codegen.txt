@@ -1365,7 +1365,6 @@ QStackedLayout                                       |QObject        |QtWidgets
 QStackedLayout::StackingMode                         |enum           |QtWidgets
 QStackedWidget                                       |QWidget        |QtWidgets
 QStandardItem                                        |item           |QtGui
-QStandardItem                                        |object         |QtGui
 QStandardItemModel                                   |QObject        |QtGui
 QStandardPaths                                       |object         |QtCore
 QStandardPaths::LocateOptions                        |enum           |QtCore
