@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISCHAR(3) )
   {
     auto obj = new QAccessibleTextRemoveEvent( PQOBJECT(1), PINT(2), PQSTRING(3) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

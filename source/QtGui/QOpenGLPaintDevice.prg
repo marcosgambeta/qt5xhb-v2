@@ -69,7 +69,7 @@ QOpenGLPaintDevice()
 void QOpenGLPaintDevice_new1()
 {
   auto obj = new QOpenGLPaintDevice();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QOpenGLPaintDevice(const QSize &size)
 void QOpenGLPaintDevice_new2()
 {
   auto obj = new QOpenGLPaintDevice( *PQSIZE(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QOpenGLPaintDevice(int width, int height)
 void QOpenGLPaintDevice_new3()
 {
   auto obj = new QOpenGLPaintDevice( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

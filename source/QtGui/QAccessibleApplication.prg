@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QAccessibleApplication();
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

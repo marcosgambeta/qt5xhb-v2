@@ -81,7 +81,7 @@ QTextInlineObject()
 void QTextInlineObject_new2()
 {
   auto obj = new QTextInlineObject();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
