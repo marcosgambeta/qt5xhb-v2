@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QDBusContext();
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
