@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
   if( ISNUMPAR(0) )
   {
     auto obj = new QSvgGenerator();
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
