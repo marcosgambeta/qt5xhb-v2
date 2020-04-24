@@ -106,7 +106,9 @@ QAbstractVideoSurface                                |QObject        |QtMultimed
 QAbstractVideoSurface::Error                         |enum           |QtMultimedia
 QAbstractXmlNodeModel                                |object         |QtXmlPatterns
 QAbstractXmlReceiver                                 |object         |QtXmlPatterns
+QAccelerometer                                       |QObject        |QtSensors
 QAccelerometer::AccelerationMode                     |enum           |QtSensors
+QAccelerometerFilter                                 |object         |QtSensors
 QAccelerometerReading                                |QObject        |QtSensors
 QAccessible                                          |QObject        |QtGui
 QAccessible::Event                                   |enum           |QtGui
@@ -142,10 +144,16 @@ QAction::MenuRole                                    |enum           |QtWidgets
 QAction::Priority                                    |enum           |QtWidgets
 QActionEvent                                         |QEvent         |QtGui
 QActionGroup                                         |QObject        |QtWidgets
+QAltimeter                                           |QObject        |QtSensors
+QAltimeterFilter                                     |object         |QtSensors
 QAltimeterReading                                    |QObject        |QtSensors
+QAmbientLightFilter                                  |object         |QtSensors
 QAmbientLightReading                                 |QObject        |QtSensors
 QAmbientLightReading::LightLevel                     |enum           |QtSensors
+QAmbientLightSensor                                  |QObject        |QtSensors
+QAmbientTemperatureFilter                            |object         |QtSensors
 QAmbientTemperatureReading                           |QObject        |QtSensors
+QAmbientTemperatureSensor                            |QObject        |QtSensors
 QAndroidActivityResultReceiver                       |object         |QtAndroidExtras
 QAndroidBinder                                       |object         |QtAndroidExtras
 QAndroidBinder::CallType                             |enum           |QtAndroidExtras
@@ -325,6 +333,8 @@ QCanBusDevice::CanBusDeviceState                     |enum           |QtSerialBu
 QCanBusDevice::CanBusError                           |enum           |QtSerialBus
 QCanBusDevice::Directions                            |enum           |QtSerialBus
 QCanBusDeviceInfo                                    |object         |QtSerialBus
+QCanBusFactory                                       |object         |QtSerialBus
+QCanBusFactoryV2                                     |object         |QtSerialBus
 QCanBusFrame                                         |object         |QtSerialBus
 QCanBusFrame::FrameErrors                            |enum           |QtSerialBus
 QCanBusFrame::FrameType                              |enum           |QtSerialBus
@@ -372,6 +382,8 @@ QCommandLineParser                                   |object         |QtCore
 QCommandLineParser::SingleDashWordOptionMode         |enum           |QtCore
 QCommandLinkButton                                   |QWidget        |QtWidgets
 QCommonStyle                                         |QObject        |QtWidgets
+QCompass                                             |QObject        |QtSensors
+QCompassFilter                                       |object         |QtSensors
 QCompassReading                                      |QObject        |QtSensors
 QCompleter                                           |QObject        |QtWidgets
 QCompleter::CompletionMode                           |enum           |QtWidgets
@@ -712,6 +724,7 @@ QGraphicsScene::SceneLayers                          |enum           |QtWidgets
 QGraphicsSceneContextMenuEvent::Reason               |enum           |QtWidgets
 QGraphicsSceneEvent                                  |QEvent         |QtWidgets
 QGraphicsSimpleTextItem                              |object         |QtWidgets
+QGraphicsSvgItem                                     |QObject        |QtSvg
 QGraphicsTextItem                                    |object         |QtWidgets
 QGraphicsVideoItem                                   |QObject        |QtMultimediaWidgets
 QGraphicsView                                        |QWidget        |QtWidgets
@@ -721,10 +734,13 @@ QGraphicsView::OptimizationFlag                      |enum           |QtWidgets
 QGraphicsView::OptimizationFlags                     |enum           |QtWidgets
 QGraphicsView::ViewportAnchor                        |enum           |QtWidgets
 QGraphicsView::ViewportUpdateMode                    |enum           |QtWidgets
+QGraphicsWebView                                     |QObject        |QtWebKitWidgets
 QGraphicsWidget                                      |QObject        |QtWidgets
 QGridLayout                                          |QObject        |QtWidgets
 QGroupBox                                            |QWidget        |QtWidgets
 QGuiApplication                                      |QObject        |QtGui
+QGyroscope                                           |QObject        |QtSensors
+QGyroscopeFilter                                     |object         |QtSensors
 QGyroscopeReading                                    |QObject        |QtSensors
 QHBarModelMapper                                     |QObject        |QtCharts
 QHBoxPlotModelMapper                                 |QObject        |QtCharts
@@ -748,7 +764,9 @@ QHelpSearchResultWidget                              |QWidget        |QtHelp
 QHideEvent                                           |QEvent         |QtGui
 QHistoryState                                        |QObject        |QtCore
 QHistoryState::HistoryType                           |enum           |QtCore
+QHolsterFilter                                       |object         |QtSensors
 QHolsterReading                                      |QObject        |QtSensors
+QHolsterSensor                                       |QObject        |QtSensors
 QHorizontalBarSeries                                 |QObject        |QtCharts
 QHorizontalPercentBarSeries                          |QObject        |QtCharts
 QHorizontalStackedBarSeries                          |QObject        |QtCharts
@@ -803,7 +821,9 @@ QInputMethodQueryEvent                               |QEvent         |QtGui
 QIntValidator                                        |QObject        |QtGui
 QIODevice                                            |QObject        |QtCore
 QIODevice::OpenMode                                  |enum           |QtCore
+QIRProximityFilter                                   |object         |QtSensors
 QIRProximityReading                                  |QObject        |QtSensors
+QIRProximitySensor                                   |QObject        |QtSensors
 QItemDelegate                                        |QObject        |QtWidgets
 QItemEditorCreatorBase                               |object         |QtWidgets
 QItemEditorFactory                                   |object         |QtWidgets
@@ -851,7 +871,9 @@ QLibrary                                             |QObject        |QtCore
 QLibrary::LoadHints                                  |enum           |QtCore
 QLibraryInfo                                         |object         |QtCore
 QLibraryInfo::LibraryLocation                        |enum           |QtCore
+QLightFilter                                         |object         |QtSensors
 QLightReading                                        |QObject        |QtSensors
+QLightSensor                                         |QObject        |QtSensors
 QLine                                                |object         |QtCore
 QLinearGradient                                      |object         |QtGui
 QLineEdit                                            |QWidget        |QtWidgets
@@ -893,6 +915,8 @@ QLogValueAxis                                        |QObject        |QtCharts
 QMacCocoaViewContainer                               |QWidget        |QtWidgets
 QMacNativeWidget                                     |QWidget        |QtWidgets
 QMacPasteboardMime                                   |object         |QtMacExtras
+QMagnetometer                                        |QObject        |QtSensors
+QMagnetometerFilter                                  |object         |QtSensors
 QMagnetometerReading                                 |QObject        |QtSensors
 QMainWindow                                          |QWidget        |QtWidgets
 QMainWindow::DockOptions                             |enum           |QtWidgets
@@ -969,9 +993,17 @@ QMimeData                                            |QObject        |QtCore
 QMimeDatabase                                        |object         |QtCore
 QMimeDatabase::MatchMode                             |enum           |QtCore
 QMimeType                                            |object         |QtCore
+QModbusClient                                        |QObject        |QtSerialBus
 QModbusDataUnit::RegisterType                        |enum
+QModbusDevice                                        |QObject        |QtSerialBus
 QModbusDevice::Error                                 |enum           |QtSerialBus
 QModbusDevice::State                                 |enum           |QtSerialBus
+QModbusReply                                         |QObject        |QtSerialBus
+QModbusRtuSerialMaster                               |QObject        |QtSerialBus
+QModbusRtuSerialSlave                                |QObject        |QtSerialBus
+QModbusServer                                        |QObject        |QtSerialBus
+QModbusTcpClient                                     |QObject        |QtSerialBus
+QModbusTcpServer                                     |QObject        |QtSerialBus
 QModelIndex                                          |object         |QtCore
 QMouseEvent                                          |QEvent         |QtGui
 QMoveEvent                                           |QEvent         |QtGui
@@ -1072,8 +1104,10 @@ QOpenGLTimeMonitor                                   |QObject        |QtGui
 QOpenGLTimerQuery                                    |QObject        |QtGui
 QOpenGLVertexArrayObject                             |QObject        |QtGui
 QOpenGLWidget                                        |QWidget        |QtWidgets
+QOrientationFilter                                   |object         |QtSensors
 QOrientationReading                                  |QObject        |QtSensors
 QOrientationReading::Orientation                     |enum           |QtSensors
+QOrientationSensor                                   |QObject        |QtSensors
 QPagedPaintDevice                                    |object         |QtGui
 QPagedPaintDevice::PageSize                          |enum           |QtGui
 QPagedPaintDevice::PdfVersion                        |enum           |QtGui
@@ -1162,7 +1196,9 @@ QPolarChart                                          |QObject        |QtCharts
 QPolarChart::PolarOrientation                        |enum           |QtCharts
 QPolygon                                             |object         |QtGui
 QPolygonF                                            |object         |QtGui
+QPressureFilter                                      |object         |QtSensors
 QPressureReading                                     |QObject        |QtSensors
+QPressureSensor                                      |QObject        |QtSensors
 QPrintDialog                                         |QWidget        |QtPrintSupport
 QPrintDialog::PrintDialogOption                      |enum           |QtPrintSupport
 QPrintDialog::PrintDialogOptions                     |enum           |QtPrintSupport
@@ -1198,7 +1234,9 @@ QProgressBar                                         |QWidget        |QtWidgets
 QProgressBar::Direction                              |enum           |QtWidgets
 QProgressDialog                                      |QWidget        |QtWidgets
 QPropertyAnimation                                   |QObject        |QtCore
+QProximityFilter                                     |object         |QtSensors
 QProximityReading                                    |QObject        |QtSensors
+QProximitySensor                                     |QObject        |QtSensors
 QProxyStyle                                          |QObject        |QtWidgets
 QPushButton                                          |QWidget        |QtWidgets
 QQmlApplicationEngine                                |QObject        |QtQml
@@ -1228,6 +1266,7 @@ QQmlProperty::Type                                   |enum           |QtQml
 QQmlPropertyMap                                      |QObject        |QtQml
 QQmlPropertyValueSource                              |object         |QtQml
 QQmlScriptString                                     |object         |QtQml
+QQmlWebChannel                                       |QObject        |QtWebChannel
 QQuaternion                                          |object         |QtGui
 QQuickImageProvider                                  |object         |QtQuick
 QQuickItem                                           |QObject        |QtQuick
@@ -1245,6 +1284,7 @@ QQuickView::Status                                   |enum           |QtQuick
 QQuickWebEngineProfile                               |QObject        |QtWebEngine
 QQuickWebEngineProfile::HttpCacheType                |enum           |QtWebEngine
 QQuickWebEngineProfile::PersistentCookiesPolicy      |enum           |QtWebEngine
+QQuickWebEngineScript                                |QObject        |QtWebEngine
 QQuickWebEngineScript::InjectionPoint                |enum           |QtWebEngine
 QQuickWebEngineScript::ScriptWorldId                 |enum           |QtWebEngine
 QQuickWidget                                         |QWidget        |QtQuickWidgets
@@ -1288,7 +1328,9 @@ QRegularExpressionMatchIterator                      |object         |QtCore
 QRegularExpressionValidator                          |QObject        |QtGui
 QResizeEvent                                         |QEvent         |QtGui
 QResource                                            |object         |QtCore
+QRotationFilter                                      |object         |QtSensors
 QRotationReading                                     |QObject        |QtSensors
+QRotationSensor                                      |QObject        |QtSensors
 QRubberBand                                          |QWidget        |QtWidgets
 QRubberBand::Shape                                   |enum           |QtWidgets
 QRunnable                                            |object
@@ -1349,8 +1391,14 @@ QSensor::AxesOrientationMode                         |enum           |QtSensors
 QSensor::Feature                                     |enum           |QtSensors
 QSensorBackend                                       |QObject        |QtSensors
 QSensorBackendFactory                                |object         |QtSensors
+QSensorChangesInterface                              |interface      |QtSensors
 QSensorFilter                                        |object         |QtSensors
+QSensorGesture                                       |QObject        |QtSensors
+QSensorGestureManager                                |QObject        |QtSensors
+QSensorGesturePluginInterface                        |interface      |QtSensors
 QSensorGestureRecognizer                             |QObject        |QtSensors
+QSensorManager                                       |object         |QtSensors
+QSensorPluginInterface                               |interface      |QtSensors
 QSensorReading                                       |QObject        |QtSensors
 QSequentialAnimationGroup                            |QObject        |QtCore
 QSerialPort                                          |QObject        |QtSerialPort
@@ -1565,7 +1613,9 @@ QSurfaceFormat::FormatOptions                        |enum           |QtGui
 QSurfaceFormat::OpenGLContextProfile                 |enum           |QtGui
 QSurfaceFormat::RenderableType                       |enum           |QtGui
 QSurfaceFormat::SwapBehavior                         |enum           |QtGui
+QSvgGenerator                                        |object         |QtSvg
 QSvgRenderer                                         |QObject        |QtSvg
+QSvgWidget                                           |QWidget        |QtSvg
 QSwipeGesture::SwipeDirection                        |enum           |QtWidgets
 QSyntaxHighlighter                                   |QObject        |QtGui
 QSysInfo                                             |object         |QtCore
@@ -1669,8 +1719,10 @@ QTabWidget::TabShape                                 |enum           |QtWidgets
 QtAndroid                                            |object         |QtAndroidExtras
 QtAndroid::BindFlags                                 |enum
 QtAndroid::PermissionResult                          |enum
+QTapFilter                                           |object         |QtSensors
 QTapReading                                          |QObject        |QtSensors
 QTapReading::TapDirection                            |enum           |QtSensors
+QTapSensor                                           |QObject        |QtSensors
 QTcpServer                                           |QObject        |QtNetwork
 QTcpSocket                                           |QObject
 QTemporaryDir                                        |object         |QtCore
@@ -1741,12 +1793,16 @@ QTextTable                                           |QObject        |QtGui
 QTextTableCell                                       |object         |QtGui
 QTextTableCellFormat                                 |object         |QtGui
 QTextTableFormat                                     |object         |QtGui
+QTextToSpeech                                        |QObject        |QtTextToSpeech
 QTextToSpeech::State                                 |enum           |QtTextToSpeech
 QTextToSpeechEngine                                  |QObject        |QtTextToSpeech
+QTextToSpeechPlugin                                  |object         |QtTextToSpeech
 QThread                                              |QObject        |QtCore
 QThread::Priority                                    |enum           |QtCore
 QThreadPool                                          |QObject        |QtCore
+QTiltFilter                                          |object         |QtSensors
 QTiltReading                                         |QObject        |QtSensors
+QTiltSensor                                          |QObject        |QtSensors
 QTime                                                |object         |QtCore
 QTimeEdit                                            |QWidget        |QtWidgets
 QTimeLine                                            |QObject        |QtCore
@@ -1780,9 +1836,11 @@ QTreeWidgetItem                                      |item           |QtWidgets
 QTreeWidgetItem::ChildIndicatorPolicy                |enum           |QtWidgets
 QTreeWidgetItemIterator                              |object         |QtWidgets
 QTreeWidgetItemIterator::IteratorFlags               |enum           |QtWidgets
+QtWebEngine                                          |object         |QtWebEngine
 QtWin::HBitmapFormat                                 |enum           |QtWinExtras
 QtWin::WindowFlip3DPolicy                            |enum           |QtWinExtras
 QUdpSocket                                           |QObject        |QtNetwork
+QUiLoader                                            |QObject        |QtUiTools
 QUndoCommand                                         |item           |QtWidgets
 QUndoGroup                                           |QObject        |QtWidgets
 QUndoStack                                           |QObject        |QtWidgets
@@ -1827,6 +1885,7 @@ QVideoWidget                                         |QWidget        |QtMultimed
 QVideoWidgetControl                                  |QObject        |QtMultimediaWidgets
 QVideoWindowControl                                  |QObject        |QtMultimedia
 QVirtualKeyboardAbstractInputMethod                  |QObject        |QtVirtualKeyboard
+QVirtualKeyboardExtensionPlugin                      |QObject        |QtVirtualKeyboard
 QVirtualKeyboardInputContext                         |QObject        |QtVirtualKeyboard
 QVirtualKeyboardInputEngine                          |QObject        |QtVirtualKeyboard
 QVirtualKeyboardInputEngine::InputMode               |enum           |QtVirtualKeyboard
@@ -1842,11 +1901,13 @@ QVoice::Gender                                       |enum           |QtTextToSp
 QVPieModelMapper                                     |QObject        |QtCharts
 QVulkanInstance                                      |object
 QVXYModelMapper                                      |QObject        |QtCharts
+QWebChannel                                          |QObject        |QtWebChannel
 QWebChannelAbstractTransport                         |QObject        |QtWebChannel
 QWebDatabase                                         |object         |QtWebKit
 QWebElement                                          |object         |QtWebKit
 QWebElement::StyleResolveStrategy                    |enum           |QtWebKit
 QWebElementCollection                                |object         |QtWebKit
+QWebEngineCertificateError                           |object         |QtWebEngineWidgets
 QWebEngineCertificateError::Error                    |enum           |QtWebEngineWidgets
 QWebEngineCookieStore                                |QObject        |QtWebEngineCore
 QWebEngineHistory                                    |object         |QtWebEngineWidgets
@@ -1869,6 +1930,7 @@ QWebEngineUrlRequestInterceptor                      |QObject        |QtWebEngin
 QWebEngineUrlRequestJob                              |QObject        |QtWebEngineCore
 QWebEngineUrlRequestJob::Error                       |enum           |QtWebEngineCore
 QWebEngineUrlSchemeHandler                           |QObject        |QtWebEngineCore
+QWebEngineView                                       |QWidget        |QtWebEngineWidgets
 QWebFrame                                            |QObject        |QtWebKitWidgets
 QWebFrame::RenderLayer                               |enum           |QtWebKitWidgets
 QWebFrame::RenderLayers                              |enum           |QtWebKitWidgets
@@ -1877,6 +1939,7 @@ QWebHistory                                          |object         |QtWebKit
 QWebHistoryInterface                                 |QObject        |QtWebKit
 QWebHistoryItem                                      |object         |QtWebKit
 QWebHitTestResult                                    |object         |QtWebKitWidgets
+QWebInspector                                        |QWidget        |QtWebKitWidgets
 QWebPage                                             |QObject        |QtWebKitWidgets
 QWebPage::Extension                                  |enum           |QtWebKitWidgets
 QWebPage::ExtensionOption                            |object         |QtWebKitWidgets
@@ -1898,7 +1961,9 @@ QWebSocket                                           |QObject        |QtWebSocke
 QWebSocketCorsAuthenticator                          |object         |QtWebSockets
 QWebSocketProtocol::CloseCode                        |enum           |QtWebSockets
 QWebSocketProtocol::Version                          |enum           |QtWebSockets
+QWebSocketServer                                     |QObject        |QtWebSockets
 QWebSocketServer::SslMode                            |enum           |QtWebSockets
+QWebView                                             |QWidget        |QtWebKitWidgets
 QWhatsThisClickedEvent                               |QEvent         |QtGui
 QWheelEvent                                          |QEvent         |QtGui
 QWidget                                              |QWidget        |QtWidgets
