@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
     auto obj = new QQuickImageProvider( (QQmlImageProviderBase::ImageType) hb_parni(1), ISNIL(2)? (QQmlImageProviderBase::Flags) 0 : (QQmlImageProviderBase::Flags) hb_parni(2) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
