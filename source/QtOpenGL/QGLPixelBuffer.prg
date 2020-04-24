@@ -72,7 +72,7 @@ QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defau
 void QGLPixelBuffer_new1()
 {
   auto obj = new QGLPixelBuffer( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::de
 void QGLPixelBuffer_new2()
 {
   auto obj = new QGLPixelBuffer( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(3), OPQGLWIDGET(4,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

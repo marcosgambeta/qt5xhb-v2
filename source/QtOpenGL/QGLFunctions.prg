@@ -117,7 +117,7 @@ QGLFunctions()
 void QGLFunctions_new1()
 {
   auto obj = new QGLFunctions();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -126,7 +126,7 @@ QGLFunctions(const QGLContext * context)
 void QGLFunctions_new2()
 {
   auto obj = new QGLFunctions( PQGLCONTEXT(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
