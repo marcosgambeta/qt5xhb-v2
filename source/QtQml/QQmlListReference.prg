@@ -75,7 +75,7 @@ QQmlListReference()
 void QQmlListReference_new1()
 {
   auto obj = new QQmlListReference();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QQmlListReference(QObject * object, const char * property, QQmlEngine * engine =
 void QQmlListReference_new2()
 {
   auto obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

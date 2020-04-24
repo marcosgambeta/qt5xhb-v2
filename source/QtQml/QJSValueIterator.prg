@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
   if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
     auto obj = new QJSValueIterator( *PQJSVALUE(1) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
