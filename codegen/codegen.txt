@@ -993,7 +993,7 @@ QNetworkConfiguration::BearerType                    |enum           |QtNetwork
 QNetworkConfiguration::Purpose                       |enum           |QtNetwork
 QNetworkConfiguration::StateFlags                    |enum           |QtNetwork
 QNetworkConfiguration::Type                          |enum           |QtNetwork
-QNetworkConfigurationManager                         |object         |QtNetwork
+QNetworkConfigurationManager                         |QObject        |QtNetwork
 QNetworkConfigurationManager::Capabilities           |enum           |QtNetwork
 QNetworkCookie                                       |object         |QtNetwork
 QNetworkCookie::RawForm                              |enum           |QtNetwork
