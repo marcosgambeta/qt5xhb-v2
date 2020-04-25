@@ -60,7 +60,7 @@ QStylePainter()
 void QStylePainter_new1()
 {
   auto obj = new QStylePainter();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,7 +69,7 @@ explicit QStylePainter(QWidget *w)
 void QStylePainter_new2()
 {
   auto obj = new QStylePainter( PQWIDGET(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QStylePainter(QPaintDevice *pd, QWidget *w)
 void QStylePainter_new3()
 {
   auto obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

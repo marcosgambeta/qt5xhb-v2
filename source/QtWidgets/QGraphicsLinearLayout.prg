@@ -76,7 +76,7 @@ QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = nullptr )
 void QGraphicsLinearLayout_new1()
 {
   auto obj = new QGraphicsLinearLayout( ISNIL(1)? nullptr : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * paren
 void QGraphicsLinearLayout_new2()
 {
   auto obj = new QGraphicsLinearLayout( (Qt::Orientation) hb_parni(1), ISNIL(2)? nullptr : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

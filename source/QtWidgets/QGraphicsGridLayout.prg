@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
     auto obj = new QGraphicsGridLayout( ISNIL(1)? nullptr : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

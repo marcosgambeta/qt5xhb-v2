@@ -62,7 +62,7 @@ QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 void QTileRules_new1()
 {
   auto obj = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,7 +71,7 @@ QTileRules(Qt::TileRule rule = Qt::StretchTile)
 void QTileRules_new2()
 {
   auto obj = new QTileRules( ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
