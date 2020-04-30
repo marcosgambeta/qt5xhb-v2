@@ -35,12 +35,18 @@ RETURN
 #include "qt5xhb_events.h"
 #include "qt5xhb_signals4.h"
 
+/*
+explicit HCodeBlockValidator( QObject *parent = nullptr )
+*/
 void HCodeBlockValidator_new1()
 {
   auto obj = new HCodeBlockValidator( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = nullptr )
+*/
 void HCodeBlockValidator_new2()
 {
   auto obj = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
