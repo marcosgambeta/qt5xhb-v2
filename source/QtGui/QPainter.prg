@@ -145,6 +145,8 @@ RETURN
 
 #pragma BEGINDUMP
 
+#include <QtGui/QPainterPath>
+
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
