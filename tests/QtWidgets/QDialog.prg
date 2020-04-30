@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -39,7 +39,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION ShowDialog ()
+STATIC FUNCTION ShowDialog()
 
    LOCAL oDialog := QDialog():new()
 

@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -45,7 +45,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (oWidget,nValue)
+STATIC FUNCTION test(oWidget,nValue)
 
    qout("slider moved")
    qout(oWidget:classname())

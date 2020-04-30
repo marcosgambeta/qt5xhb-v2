@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oMainWindow
@@ -90,7 +90,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION aviso (oParent,cText)
+STATIC FUNCTION aviso(oParent,cText)
 
    LOCAL oMessageBox
 

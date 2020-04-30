@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -49,7 +49,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION buttonClicked (oButton)
+STATIC FUNCTION buttonClicked(oButton)
 
    IF oButton:objectName() == "button1"
       ? "button 1 clicked"
