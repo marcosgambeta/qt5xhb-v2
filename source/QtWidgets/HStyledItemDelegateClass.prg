@@ -45,18 +45,27 @@ RETURN
 #include "qt5xhb_events.h"
 #include "qt5xhb_signals4.h"
 
+/*
+explicit HStyledItemDelegate(QObject *parent = nullptr)
+*/
 void HStyledItemDelegate_new1()
 {
   auto obj = new HStyledItemDelegate( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = nullptr)
+*/
 void HStyledItemDelegate_new2()
 {
   auto obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = nullptr)
+*/
 void HStyledItemDelegate_new3()
 {
   auto obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,nullptr) );
