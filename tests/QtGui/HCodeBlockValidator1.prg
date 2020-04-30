@@ -19,7 +19,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -42,7 +42,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION dialogo (oParent)
+STATIC FUNCTION dialogo(oParent)
 
    LOCAL oDialog
    LOCAL oCBValidator1
@@ -108,7 +108,7 @@ STATIC FUNCTION dialogo (oParent)
 
 RETURN NIL
 
-STATIC FUNCTION RemoveAcentos (cTexto)
+STATIC FUNCTION RemoveAcentos(cTexto)
 
    // acento agudo
    cTexto := strtran(cTexto,"á","a")
