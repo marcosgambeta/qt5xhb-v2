@@ -23,7 +23,7 @@ REQUEST QAbstractAxis
 REQUEST QLegend
 REQUEST QBarSet
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow

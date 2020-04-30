@@ -20,7 +20,7 @@ REQUEST HB_GT_WIN
 
 REQUEST QAbstractAxis
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
