@@ -25,6 +25,8 @@ $destructor
 
 $includes
 
+#include <QtGui/QPainterPath>
+
 $prototype=QTransform(Qt::Initialization)
 $internalConstructor=|new1|Qt::Initialization
 

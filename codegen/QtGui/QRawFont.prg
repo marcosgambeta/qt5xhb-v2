@@ -26,6 +26,7 @@ $destructor
 $includes
 
 #include <QtGui/QImage>
+#include <QtGui/QPainterPath>
 
 $prototype=QRawFont()
 $internalConstructor=|new1|

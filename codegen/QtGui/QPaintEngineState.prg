@@ -25,6 +25,8 @@ $destructor
 
 $includes
 
+#include <QtGui/QPainterPath>
+
 $deleteMethod
 
 $prototype=QBrush backgroundBrush () const

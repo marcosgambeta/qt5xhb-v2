@@ -23,6 +23,8 @@ $destructor
 
 #pragma BEGINDUMP
 
+#include <QtGui/QPainterPath>
+
 $includes
 
 $prototype=QPainter ()
