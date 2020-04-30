@@ -26,6 +26,7 @@ $destructor
 $includes
 
 #include <QtCore/QVariant>
+#include <QtGui/QPainterPath>
 
 $prototype=QGraphicsView ( QWidget * parent = nullptr )
 $internalConstructor=|new1|QWidget *=nullptr
