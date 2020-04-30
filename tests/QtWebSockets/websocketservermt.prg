@@ -17,7 +17,7 @@
 
 //STATIC s_mutex := hb_mutexCreate()
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWebSocketServer

@@ -16,7 +16,7 @@
 
 #define TOTAL_DE_SOCKETS 100
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
