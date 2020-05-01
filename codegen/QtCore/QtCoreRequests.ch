@@ -36,6 +36,7 @@ REQUEST QCollator
 REQUEST QCollatorSortKey
 REQUEST QCommandLineOption
 REQUEST QCommandLineParser
+REQUEST QConcatenateTablesProxyModel             // Qt 5.13
 REQUEST QCoreApplication
 REQUEST QCryptographicHash
 REQUEST QDataStream
