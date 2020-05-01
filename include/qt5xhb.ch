@@ -66,6 +66,7 @@
 #include "QByteArray.ch"
 
 // C
+#include "QCalendar.ch"
 #include "QCalendarWidget.ch"
 #include "QCamera.ch"
 #include "QCameraControl.ch"

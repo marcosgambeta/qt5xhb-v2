@@ -33,6 +33,7 @@ REQUEST QBuffer
 REQUEST QByteArray
 REQUEST QByteArrayMatcher
 REQUEST QCache
+REQUEST QCalendar                                // Qt 5.14
 REQUEST QChar
 REQUEST QChildEvent
 REQUEST QCollator
@@ -118,7 +119,7 @@ REQUEST QSemaphore
 REQUEST QSequentialAnimationGroup
 REQUEST QSettings
 REQUEST QSharedMemory
-REQUEST QSignalBlocker                 // Qt 5.3.0
+REQUEST QSignalBlocker                           // Qt 5.3.0
 REQUEST QSignalMapper
 REQUEST QSignalTransition
 REQUEST QSize
@@ -128,7 +129,7 @@ REQUEST QSortFilterProxyModel
 REQUEST QStandardPaths
 REQUEST QState
 REQUEST QStateMachine
-REQUEST QStorageInfo                   // Qt 5.4.0
+REQUEST QStorageInfo                             // Qt 5.4.0
 REQUEST QStringListModel
 REQUEST QStringMatcher
 REQUEST QSysInfo
