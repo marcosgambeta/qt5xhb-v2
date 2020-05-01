@@ -277,6 +277,7 @@ QByteArray                                           |object         |QtCore
 QByteArrayMatcher                                    |object         |QtCore
 QCache                                               |object         |QtCore
 QCalendar                                            |object         |QtCore
+QCalendar::System                                    |enum           |QtCore
 QCalendarWidget                                      |QWidget        |QtWidgets
 QCalendarWidget::HorizontalHeaderFormat              |enum           |QtWidgets
 QCalendarWidget::SelectionMode                       |enum           |QtWidgets
