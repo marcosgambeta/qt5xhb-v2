@@ -73,10 +73,9 @@ RETURN 100
 METHOD columnCount() CLASS myModel
 RETURN 10
 
-METHOD data(pIndex, nRole) CLASS myModel
+METHOD data(oIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
 

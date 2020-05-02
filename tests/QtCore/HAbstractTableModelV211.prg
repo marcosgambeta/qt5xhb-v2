@@ -108,10 +108,9 @@ RETURN len(aEstados)
 METHOD columnCount() CLASS myModel
 RETURN 2 // coluna 1=imagem coluna 2=nome
 
-METHOD data(pIndex, nRole) CLASS myModel
+METHOD data(oIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
 

@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -136,10 +136,9 @@ RETURN reccount()
 METHOD columnCount() CLASS myModel
 RETURN fcount()
 
-METHOD data(pIndex, nRole) CLASS myModel
+METHOD data(oIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
 
@@ -169,20 +168,17 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
 RETURN oVariant
 
-METHOD flags(pIndex) CLASS myModel
+METHOD flags(oIndex) CLASS myModel
 
    LOCAL nFlags := Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
 
 RETURN nFlags
 
-METHOD setData(pIndex, pVariant, nRole) CLASS myModel
+METHOD setData(oIndex, oVariant, nRole) CLASS myModel
 
    LOCAL lSuccess := .F.
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
-   LOCAL oVariant := QVariant():newFrom(pVariant)
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
    LOCAL cValue := ""
