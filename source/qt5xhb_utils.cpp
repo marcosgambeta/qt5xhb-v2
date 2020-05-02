@@ -649,4 +649,72 @@ void convert_qvariantlist_to_array ( const QVariantList list )
   hb_itemReturnRelease(pArray);
 }
 
+/*
+  cria um objeto da classe QModelIndex, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQModelIndexObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = nullptr;
+
+  if( pDynSym == nullptr )
+  {
+    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym != nullptr )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QVariant, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQVariantObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = nullptr;
+
+  if( pDynSym == nullptr )
+  {
+    pDynSym = hb_dynsymFindName( "QVARIANT" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
 }
