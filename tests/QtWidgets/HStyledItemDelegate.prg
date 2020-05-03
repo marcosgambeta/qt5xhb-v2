@@ -150,21 +150,19 @@ METHOD displayText(pVariant, pLocale) CLASS TextDelegate
 
 RETURN QVariant():newFrom(pVariant):toString()
 
-METHOD createEditor(pParent, pOption, pIndex) CLASS TextDelegate
+METHOD createEditor(pParent, pOption, oIndex) CLASS TextDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
    LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
 
    oEditor := QLineEdit():new(oParent)
 
 RETURN oEditor
 
-METHOD setEditorData(pEditor, pIndex) CLASS TextDelegate
+METHOD setEditorData(pEditor, oIndex) CLASS TextDelegate
 
    LOCAL oEditor := QLineEdit():newFrom(pEditor)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL cValue
 
    cValue := oIndex:model():data(oIndex, Qt_EditRole):toString()
@@ -173,11 +171,10 @@ METHOD setEditorData(pEditor, pIndex) CLASS TextDelegate
 
 RETURN NIL
 
-METHOD setModelData(pEditor, pModel, pIndex) CLASS TextDelegate
+METHOD setModelData(pEditor, pModel, oIndex) CLASS TextDelegate
 
    LOCAL oEditor := QLineEdit():newFrom(pEditor)
    LOCAL oModel := QSqlTableModel():newFrom(pModel)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL cValue
 
    cValue := oEditor:text()
@@ -211,11 +208,10 @@ METHOD new(...) CLASS ValueDelegate
 
 RETURN self
 
-METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
+METHOD paint(pPainter, pOption, oIndex) CLASS ValueDelegate
 
    LOCAL oPainter := QPainter():newFrom(pPainter)
    LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
 
    // checa se o estado da celula = selecionado e preenche o fundo de acordo
@@ -244,11 +240,10 @@ METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD createEditor(pParent, pOption, pIndex) CLASS ValueDelegate
+METHOD createEditor(pParent, pOption, oIndex) CLASS ValueDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
    LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
 
    oEditor := QDoubleSpinBox():new(oParent)
@@ -258,10 +253,9 @@ METHOD createEditor(pParent, pOption, pIndex) CLASS ValueDelegate
 
 RETURN oEditor
 
-METHOD setEditorData(pEditor, pIndex) CLASS ValueDelegate
+METHOD setEditorData(pEditor, oIndex) CLASS ValueDelegate
 
    LOCAL oEditor := QDoubleSpinBox():newFrom(pEditor)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
 
    nValue := oIndex:model():data( oIndex, Qt_EditRole ):toReal()
@@ -270,11 +264,10 @@ METHOD setEditorData(pEditor, pIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD setModelData(pEditor, pModel, pIndex) CLASS ValueDelegate
+METHOD setModelData(pEditor, pModel, oIndex) CLASS ValueDelegate
 
    LOCAL oEditor := QDoubleSpinBox():newFrom(pEditor)
    LOCAL oModel := QSqlTableModel():newFrom(pModel)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
 
    nValue := oEditor:value()
