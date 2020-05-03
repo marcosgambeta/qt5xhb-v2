@@ -92,7 +92,8 @@ void HStyledItemDelegate::paint( QPainter *painter, const QStyleOptionViewItem &
   {
     PHB_ITEM pPainter = hb_itemPutPtr( NULL, (QPainter *) painter );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_paintBlock, 3, pPainter, pOption, pIndex );
 
@@ -119,7 +120,8 @@ QSize HStyledItemDelegate::sizeHint( const QStyleOptionViewItem &option, const Q
   if( m_sizeHintBlock != nullptr )
   {
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_sizeHintBlock, 2, pOption, pIndex );
 
@@ -150,7 +152,8 @@ QString HStyledItemDelegate::displayText( const QVariant &value, const QLocale &
 
   if( m_displayTextBlock != nullptr )
   {
-    PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    PHB_ITEM pValue = Qt5xHb::returnQVariantObject( (void *) &value );
     PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_displayTextBlock, 2, pValue, pLocale );
@@ -180,7 +183,8 @@ QWidget * HStyledItemDelegate::createEditor( QWidget *parent, const QStyleOption
   {
     PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_createEditorBlock, 3, pParent, pOption, pIndex );
 
@@ -211,7 +215,8 @@ void HStyledItemDelegate::setEditorData( QWidget *editor, const QModelIndex &ind
   if( m_setEditorDataBlock != nullptr )
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_setEditorDataBlock, 2, pEditor, pIndex );
 
@@ -231,7 +236,8 @@ void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *mod
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_setModelDataBlock, 3, pEditor, pModel, pIndex );
 
@@ -252,7 +258,8 @@ void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
   {
     PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
-    PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
 
