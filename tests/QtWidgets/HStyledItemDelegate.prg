@@ -168,9 +168,8 @@ METHOD setEditorData(oEditor, oIndex) CLASS TextDelegate
 
 RETURN NIL
 
-METHOD setModelData(oEditor, pModel, oIndex) CLASS TextDelegate
+METHOD setModelData(oEditor, oModel, oIndex) CLASS TextDelegate
 
-   LOCAL oModel := QSqlTableModel():newFrom(pModel)
    LOCAL cValue
 
    cValue := oEditor:text()
@@ -255,9 +254,8 @@ METHOD setEditorData(oEditor, oIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD setModelData(oEditor, pModel, oIndex) CLASS ValueDelegate
+METHOD setModelData(oEditor, oModel, oIndex) CLASS ValueDelegate
 
-   LOCAL oModel := QSqlTableModel():newFrom(pModel)
    LOCAL nValue
 
    nValue := oEditor:value()
