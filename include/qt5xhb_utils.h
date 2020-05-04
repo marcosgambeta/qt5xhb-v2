@@ -61,4 +61,5 @@ namespace Qt5xHb
   PHB_ITEM returnQPainterObject( void * ptr );
   PHB_ITEM returnQStyleOptionViewItemObject( void * ptr );
   PHB_ITEM returnQLocaleObject( void * ptr );
+  PHB_ITEM returnQWidgetObject( QWidget * ptr );
 }

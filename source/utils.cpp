@@ -819,4 +819,43 @@ PHB_ITEM returnQLocaleObject( void * ptr )
   return pObject;
 }
 
+/*
+  cria um objeto da classe QWidget ou derivada, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQWidgetObject( QWidget * ptr )
+{
+  PHB_DYNS pDynSym = nullptr;
+
+  if( ptr != nullptr )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+
+  if( pDynSym == nullptr )
+  {
+    pDynSym = hb_dynsymFindName( "QWIDGET" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym != nullptr )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
 }
