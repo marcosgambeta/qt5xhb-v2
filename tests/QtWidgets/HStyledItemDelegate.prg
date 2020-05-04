@@ -155,6 +155,7 @@ METHOD createEditor(oParent, oOption, oIndex) CLASS TextDelegate
    LOCAL oEditor
 
    oEditor := QLineEdit():new(oParent)
+   oEditor:onDestroyed( {||qout("oEditor (QLineEdit): destroyed")} )
 
 RETURN oEditor
 
@@ -241,6 +242,7 @@ METHOD createEditor(oParent, oOption, oIndex) CLASS ValueDelegate
    oEditor:setSingleStep(0.01)
    oEditor:setMinimum(-99999999.99)
    oEditor:setMaximum(999999999.99)
+   oEditor:onDestroyed( {||qout("oEditor (QDoubleSpinBox): destroyed")} )
 
 RETURN oEditor
 
