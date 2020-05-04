@@ -157,7 +157,8 @@ QString HStyledItemDelegate::displayText( const QVariant &value, const QLocale &
   {
     // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
     PHB_ITEM pValue = Qt5xHb::returnQVariantObject( (void *) &value );
-    PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+    // PHB_ITEM pLocale = hb_itemPutPtr( NULL, (QLocale *) &locale );
+    PHB_ITEM pLocale = Qt5xHb::returnQLocaleObject( (void *) &locale );
 
     PHB_ITEM pRet = hb_vmEvalBlockV( m_displayTextBlock, 2, pValue, pLocale );
 
