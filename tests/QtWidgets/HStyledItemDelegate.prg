@@ -146,14 +146,13 @@ METHOD new(...) CLASS TextDelegate
 
 RETURN self
 
-METHOD displayText(pVariant, pLocale) CLASS TextDelegate
+METHOD displayText(oVariant, pLocale) CLASS TextDelegate
 
-RETURN QVariant():newFrom(pVariant):toString()
+RETURN oVariant:toString()
 
-METHOD createEditor(pParent, pOption, oIndex) CLASS TextDelegate
+METHOD createEditor(pParent, oOption, oIndex) CLASS TextDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
-   LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
    LOCAL oEditor
 
    oEditor := QLineEdit():new(oParent)
@@ -208,10 +207,8 @@ METHOD new(...) CLASS ValueDelegate
 
 RETURN self
 
-METHOD paint(pPainter, pOption, oIndex) CLASS ValueDelegate
+METHOD paint(oPainter, oOption, oIndex) CLASS ValueDelegate
 
-   LOCAL oPainter := QPainter():newFrom(pPainter)
-   LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
    LOCAL nValue
 
    // checa se o estado da celula = selecionado e preenche o fundo de acordo
@@ -240,10 +237,9 @@ METHOD paint(pPainter, pOption, oIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD createEditor(pParent, pOption, oIndex) CLASS ValueDelegate
+METHOD createEditor(pParent, oOption, oIndex) CLASS ValueDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
-   LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
    LOCAL oEditor
 
    oEditor := QDoubleSpinBox():new(oParent)
