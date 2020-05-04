@@ -146,7 +146,7 @@ METHOD new(...) CLASS TextDelegate
 
 RETURN self
 
-METHOD displayText(oVariant, pLocale) CLASS TextDelegate
+METHOD displayText(oVariant, oLocale) CLASS TextDelegate
 
 RETURN oVariant:toString()
 
