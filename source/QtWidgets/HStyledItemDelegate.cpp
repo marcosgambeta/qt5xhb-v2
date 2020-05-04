@@ -185,7 +185,8 @@ QWidget * HStyledItemDelegate::createEditor( QWidget *parent, const QStyleOption
 
   if( m_createEditorBlock != nullptr )
   {
-    PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
+    // PHB_ITEM pParent = hb_itemPutPtr( NULL, (QWidget *) parent );
+    PHB_ITEM pParent = Qt5xHb::returnQWidgetObject( parent );
     // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
     // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
@@ -219,7 +220,8 @@ void HStyledItemDelegate::setEditorData( QWidget *editor, const QModelIndex &ind
 {
   if( m_setEditorDataBlock != nullptr )
   {
-    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
     // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
@@ -239,7 +241,8 @@ void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *mod
 {
   if( m_setModelDataBlock != nullptr )
   {
-    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
     PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
     // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
@@ -261,7 +264,8 @@ void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
 {
   if( m_updateEditorGeometryBlock != nullptr )
   {
-    PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
+    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
     // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
     // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
