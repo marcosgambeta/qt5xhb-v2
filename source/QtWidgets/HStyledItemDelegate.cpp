@@ -17,6 +17,7 @@ HStyledItemDelegate::HStyledItemDelegate( QObject *parent ) : QStyledItemDelegat
   m_setEditorDataBlock = nullptr;
   m_setModelDataBlock = nullptr;
   m_updateEditorGeometryBlock = nullptr;
+  m_destroyEditorBlock = nullptr;
 }
 
 HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, QObject *parent ) : QStyledItemDelegate( parent )
@@ -28,6 +29,7 @@ HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, QObject *parent ) : 
   m_setEditorDataBlock = nullptr;
   m_setModelDataBlock = nullptr;
   m_updateEditorGeometryBlock = nullptr;
+  m_destroyEditorBlock = nullptr;
 }
 
 HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, PHB_ITEM sizeHintCB, QObject *parent ) : QStyledItemDelegate( parent )
@@ -39,6 +41,7 @@ HStyledItemDelegate::HStyledItemDelegate( PHB_ITEM paintCB, PHB_ITEM sizeHintCB,
   m_setEditorDataBlock = nullptr;
   m_setModelDataBlock = nullptr;
   m_updateEditorGeometryBlock = nullptr;
+  m_destroyEditorBlock = nullptr;
 }
 
 HStyledItemDelegate::~HStyledItemDelegate()
@@ -83,6 +86,12 @@ HStyledItemDelegate::~HStyledItemDelegate()
   {
     hb_itemRelease( m_updateEditorGeometryBlock );
     m_updateEditorGeometryBlock = nullptr;
+  }
+
+  if( m_destroyEditorBlock != nullptr )
+  {
+    hb_itemRelease( m_destroyEditorBlock );
+    m_destroyEditorBlock = nullptr;
   }
 }
 
@@ -285,6 +294,25 @@ void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
   }
 }
 
+void HStyledItemDelegate::destroyEditor( QWidget *editor, const QModelIndex &index ) const
+{
+  if( m_destroyEditorBlock != nullptr )
+  {
+    PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
+    PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
+
+    PHB_ITEM pRet = hb_vmEvalBlockV( m_destroyEditorBlock, 2, pEditor, pIndex );
+
+    hb_itemRelease( pEditor );
+    hb_itemRelease( pIndex );
+    hb_itemRelease( pRet );
+  }
+  else
+  {
+    QStyledItemDelegate::destroyEditor( editor, index );
+  }
+}
+
 void HStyledItemDelegate::setPaintCB( PHB_ITEM block )
 {
   if( m_paintBlock != nullptr )
@@ -366,5 +394,17 @@ void HStyledItemDelegate::setUpdateEditorGeometryCB( PHB_ITEM block )
   if( block != nullptr )
   {
     m_updateEditorGeometryBlock = hb_itemNew( block );
+  }
+}
+
+void HStyledItemDelegate::setDestroyEditorCB( PHB_ITEM block )
+{
+  if( m_destroyEditorBlock != nullptr )
+  {
+    hb_itemRelease( m_destroyEditorBlock );
+  }
+  if( block != nullptr )
+  {
+    m_destroyEditorBlock = hb_itemNew( block );
   }
 }

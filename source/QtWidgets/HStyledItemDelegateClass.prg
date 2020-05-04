@@ -31,6 +31,7 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
    METHOD setEditorDataCB
    METHOD setModelDataCB
    METHOD setUpdateEditorGeometryCB
+   METHOD setDestroyEditorCB
 
    DESTRUCTOR destroyObject
 
@@ -334,6 +335,32 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
     {
 #endif
       obj->setUpdateEditorGeometryCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setDestroyEditorCB ( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDESTROYEDITORCB )
+{
+  auto obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setDestroyEditorCB( PBLOCKORSYMBOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

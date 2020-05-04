@@ -32,6 +32,7 @@ public:
   void setEditorData( QWidget *editor, const QModelIndex &index ) const;
   void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
   void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
+  void destroyEditor( QWidget *editor, const QModelIndex &index ) const;
 
 private:
   PHB_ITEM m_paintBlock;
@@ -41,6 +42,7 @@ private:
   PHB_ITEM m_setEditorDataBlock;
   PHB_ITEM m_setModelDataBlock;
   PHB_ITEM m_updateEditorGeometryBlock;
+  PHB_ITEM m_destroyEditorBlock;
 
 public:
   void setPaintCB( PHB_ITEM block );
@@ -50,6 +52,7 @@ public:
   void setEditorDataCB( PHB_ITEM block );
   void setModelDataCB( PHB_ITEM block );
   void setUpdateEditorGeometryCB( PHB_ITEM block );
+  void setDestroyEditorCB( PHB_ITEM block );
 };
 
 #endif /* HSTYLEDITEMDELEGATE_H */
