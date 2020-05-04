@@ -243,7 +243,8 @@ void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *mod
   {
     // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
+    // PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
+    PHB_ITEM pModel = Qt5xHb::returnQObjectObject( model );
     // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
