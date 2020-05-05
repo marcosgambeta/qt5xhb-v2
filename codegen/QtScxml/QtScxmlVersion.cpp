@@ -9,11 +9,11 @@ $module=QtScxml
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QtScxmlVersion>
+#include <QtScxml/QtScxmlVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QtScxmlVersion>
+#include <QtScxml/QtScxmlVersion>
 #endif
 #endif
 

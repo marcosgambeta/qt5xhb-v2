@@ -10,11 +10,11 @@ $namespace=Qt3DExtras
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-#include <Qt3DExtrasVersion>
+#include <Qt3DExtras/Qt3DExtrasVersion>
 #endif
 #endif
 
@@ -24,7 +24,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-#include <Qt3DExtrasVersion>
+#include <Qt3DExtras/Qt3DExtrasVersion>
 #endif
 #endif
 
