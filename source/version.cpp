@@ -6,8 +6,7 @@
 
 */
 
-//#include <QtCore/QtGlobal>
-#include <QtGlobal>
+#include <QtCore/QtGlobal>
 
 #include "hbapi.h"
 
@@ -18,7 +17,7 @@ HB_FUNC( QT5XHB_VERSION )
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "02/05/2020 10:38:00" );
+  hb_retc( (const char *) "06/05/2020 19:55:00" );
 }
 
 HB_FUNC( QT5XHB_ISCPP11 )
@@ -37,7 +36,7 @@ HB_FUNC( QT4XHB_VERSION )
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "02/05/2020 10:38:00" );
+  hb_retc( (const char *) "06/05/2020 19:55:00" );
 }
 
 /*
