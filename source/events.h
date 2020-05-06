@@ -9,12 +9,12 @@
 #ifndef EVENTS_H
 #define EVENTS_H
 
-#include <QObject>
-#include <QEvent>
-#include <QVector>
-#include <QList>
-#include <QCoreApplication>
-#include <QMetaEnum>
+#include <QtCore/QObject>
+#include <QtCore/QEvent>
+#include <QtCore/QVector>
+#include <QtCore/QList>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QMetaEnum>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -47,4 +47,4 @@ class Events: public QObject
 
 };
 
-#endif
+#endif /* EVENTS_H */
