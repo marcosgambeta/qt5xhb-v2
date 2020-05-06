@@ -9,14 +9,14 @@
 #ifndef SIGNALS4_H
 #define SIGNALS4_H
 
-#include <QObject>
-#include <QMetaObject>
-#include <QMetaMethod>
-#include <QVector>
-#include <QList>
-#include <QCoreApplication>
-#include <QString>
-#include <QMutex>
+#include <QtCore/QObject>
+#include <QtCore/QMetaObject>
+#include <QtCore/QMetaMethod>
+#include <QtCore/QVector>
+#include <QtCore/QList>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
+#include <QtCore/QMutex>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -57,4 +57,4 @@ class Signals4: public QObject
   QMutex * mutex;
 };
 
-#endif
+#endif /* SIGNALS4_H */
