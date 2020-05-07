@@ -9,6 +9,7 @@ $module=QtHelp
 
 $header
 
+REQUEST QCompressedHelpInfo
 REQUEST QHelpContentItem
 REQUEST QHelpContentModel
 REQUEST QHelpContentWidget

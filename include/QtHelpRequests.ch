@@ -13,6 +13,7 @@
 #ifndef QTHELPREQUESTS_CH
 #define QTHELPREQUESTS_CH
 
+REQUEST QCompressedHelpInfo
 REQUEST QHelpContentItem
 REQUEST QHelpContentModel
 REQUEST QHelpContentWidget
