@@ -155,6 +155,7 @@ REQUEST QUrlQuery
 REQUEST QUuid
 REQUEST QVariant
 REQUEST QVariantAnimation
+REQUEST QVersionNumber                           // Qt 5.6.0
 REQUEST QWinEventNotifier
 REQUEST QWriteLocker
 REQUEST QXmlStreamAttribute
