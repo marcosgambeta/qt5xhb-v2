@@ -1132,6 +1132,8 @@ QOpenGLTimeMonitor                                   |QObject        |QtGui
 QOpenGLTimerQuery                                    |QObject        |QtGui
 QOpenGLVertexArrayObject                             |QObject        |QtGui
 QOpenGLWidget                                        |QWidget        |QtWidgets
+QOperatingSystemVersion                              |object         |QtCore
+QOperatingSystemVersion::OSType                      |enum           |QtCore
 QOrientationFilter                                   |object         |QtSensors
 QOrientationReading                                  |QObject        |QtSensors
 QOrientationReading::Orientation                     |enum           |QtSensors
@@ -1912,7 +1914,7 @@ QVCandlestickModelMapper                             |QObject        |QtCharts
 QVector2D                                            |object         |QtGui
 QVector3D                                            |object         |QtGui
 QVector4D                                            |object         |QtGui
-QVersionNumber                                       |object         |QtCore 
+QVersionNumber                                       |object         |QtCore
 QVideoDeviceSelectorControl                          |QObject        |QtMultimedia
 QVideoEncoderSettings                                |object         |QtMultimedia
 QVideoEncoderSettingsControl                         |QObject        |QtMultimedia

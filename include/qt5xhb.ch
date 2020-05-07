@@ -268,6 +268,7 @@
 #include "QOpenGLFramebufferObject.ch"
 #include "QOpenGLShader.ch"
 #include "QOpenGLTexture.ch"
+#include "QOperatingSystemVersion.ch"
 #include "QOrientationReading.ch"
 
 // P

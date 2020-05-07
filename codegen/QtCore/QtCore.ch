@@ -42,6 +42,7 @@ $header
 #include "QMetaMethod.ch"
 #include "QMetaType.ch"
 #include "QMimeDatabase.ch"
+#include "QOperatingSystemVersion.ch"
 #include "QProcess.ch"
 #include "QReadWriteLock.ch"
 #include "QRegExp.ch"

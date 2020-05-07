@@ -93,6 +93,7 @@ REQUEST QMimeType
 REQUEST QModelIndex
 REQUEST QObject
 REQUEST QObjectCleanupHandler
+REQUEST QOperatingSystemVersion                  // Qt 5.9.0
 REQUEST QParallelAnimationGroup
 REQUEST QPauseAnimation
 REQUEST QPersistentModelIndex
