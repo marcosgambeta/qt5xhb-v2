@@ -460,4 +460,33 @@ HB_FUNC_STATIC( QFILE_READLINK )
 }
 $addMethod=readLink
 
+$prototype=bool moveToTrash()
+$internalMethod=5,15,0|bool|moveToTrash,moveToTrash1|
+
+$prototype=static bool moveToTrash(const QString &fileName, QString *pathInTrash = nullptr)
+%% TODO: QString *pathInTrash = nullptr
+$internalStaticMethod=5,15,0|bool|moveToTrash,moveToTrash2|const QString &,QString *=nullptr
+
+/*
+[1]bool moveToTrash()
+[2]static bool moveToTrash(const QString &fileName, QString *pathInTrash = nullptr)
+*/
+
+HB_FUNC_STATIC( QFILE_MOVETOTRASH )
+{
+  if( ISNUMPAR(0) )
+  {
+    QFile_moveToTrash1();
+  }
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQCHAR(2)||ISNIL(2)) )
+  {
+    QFile_moveToTrash2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+$addMethod=moveToTrash
+
 #pragma ENDDUMP

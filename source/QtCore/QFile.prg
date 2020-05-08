@@ -46,6 +46,7 @@ CLASS QFile INHERIT QFileDevice
    METHOD decodeName
    METHOD encodeName
    METHOD readLink
+   METHOD moveToTrash
 
    DESTRUCTOR destroyObject
 
@@ -179,7 +180,6 @@ static bool copy ( const QString & fileName, const QString & newName )
 */
 void QFile_copy2()
 {
-
   RBOOL( QFile::copy( PQSTRING(1), PQSTRING(2) ) );
 }
 
@@ -246,7 +246,6 @@ static bool exists ( const QString & fileName )
 */
 void QFile_exists2()
 {
-
   RBOOL( QFile::exists( PQSTRING(1) ) );
 }
 
@@ -361,7 +360,6 @@ static bool link ( const QString & fileName, const QString & linkName )
 */
 void QFile_link2()
 {
-
   RBOOL( QFile::link( PQSTRING(1), PQSTRING(2) ) );
 }
 
@@ -473,7 +471,6 @@ static Permissions permissions ( const QString & fileName )
 */
 void QFile_permissions2()
 {
-
   RENUM( QFile::permissions( PQSTRING(1) ) );
 }
 
@@ -516,7 +513,6 @@ static bool remove ( const QString & fileName )
 */
 void QFile_remove2()
 {
-
   RBOOL( QFile::remove( PQSTRING(1) ) );
 }
 
@@ -559,7 +555,6 @@ static bool rename ( const QString & oldName, const QString & newName )
 */
 void QFile_rename2()
 {
-
   RBOOL( QFile::rename( PQSTRING(1), PQSTRING(2) ) );
 }
 
@@ -602,7 +597,6 @@ static bool resize ( const QString & fileName, qint64 sz )
 */
 void QFile_resize2()
 {
-
   RBOOL( QFile::resize( PQSTRING(1), PQINT64(2) ) );
 }
 
@@ -671,7 +665,6 @@ static bool setPermissions ( const QString & fileName, Permissions permissions )
 */
 void QFile_setPermissions2()
 {
-
   RBOOL( QFile::setPermissions( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
 }
 
@@ -714,7 +707,6 @@ static QString symLinkTarget ( const QString & fileName )
 */
 void QFile_symLinkTarget2()
 {
-
   RQSTRING( QFile::symLinkTarget( PQSTRING(1) ) );
 }
 
@@ -940,7 +932,6 @@ static QString decodeName ( const QByteArray & localFileName )
 */
 void QFile_decodeName1()
 {
-
   RQSTRING( QFile::decodeName( *PQBYTEARRAY(1) ) );
 }
 
@@ -949,7 +940,6 @@ static QString decodeName ( const char * localFileName )
 */
 void QFile_decodeName2()
 {
-
   RQSTRING( QFile::decodeName( PCONSTCHAR(1) ) );
 }
 
@@ -1012,7 +1002,6 @@ static QString readLink(const QString &fileName)
 */
 void QFile_readLink2()
 {
-
   RQSTRING( QFile::readLink( PQSTRING(1) ) );
 }
 
@@ -1030,6 +1019,52 @@ HB_FUNC_STATIC( QFILE_READLINK )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QFile_readLink2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+bool moveToTrash()
+*/
+void QFile_moveToTrash1()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto obj = (QFile *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+    RBOOL( obj->moveToTrash() );
+  }
+#endif
+}
+
+/*
+static bool moveToTrash(const QString &fileName, QString *pathInTrash = nullptr)
+*/
+void QFile_moveToTrash2()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  RBOOL( QFile::moveToTrash( PQSTRING(1), nullptr ) );
+#endif
+}
+
+/*
+[1]bool moveToTrash()
+[2]static bool moveToTrash(const QString &fileName, QString *pathInTrash = nullptr)
+*/
+
+HB_FUNC_STATIC( QFILE_MOVETOTRASH )
+{
+  if( ISNUMPAR(0) )
+  {
+    QFile_moveToTrash1();
+  }
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQCHAR(2)||ISNIL(2)) )
+  {
+    QFile_moveToTrash2();
   }
   else
   {
