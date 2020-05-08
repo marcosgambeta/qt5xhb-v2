@@ -13,6 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QDATETIME
 #endif
 
 CLASS QFileDevice INHERIT QIODevice
@@ -32,6 +33,8 @@ CLASS QFileDevice INHERIT QIODevice
    METHOD pos
    METHOD seek
    METHOD size
+   METHOD fileTime
+   METHOD setFileTime
 
    DESTRUCTOR destroyObject
 
@@ -60,6 +63,8 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QtCore/QFileDevice>
 #endif
+
+#include <QtCore/QDateTime>
 
 HB_FUNC_STATIC( QFILEDEVICE_DELETE )
 {
@@ -418,6 +423,59 @@ HB_FUNC_STATIC( QFILEDEVICE_SIZE )
     }
 #endif
   }
+}
+
+/*
+QDateTime fileTime(QFileDevice::FileTime time) const
+*/
+HB_FUNC_STATIC( QFILEDEVICE_FILETIME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QFileDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      auto ptr = new QDateTime( obj->fileTime( (QFileDevice::FileTime) hb_parni(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+bool setFileTime(const QDateTime &newDate, QFileDevice::FileTime fileTime)
+*/
+HB_FUNC_STATIC( QFILEDEVICE_SETFILETIME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QFileDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISQDATETIME(1) && ISNUM(2) )
+    {
+#endif
+      RBOOL( obj->setFileTime( *PQDATETIME(1), (QFileDevice::FileTime) hb_parni(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
 }
 
 #pragma ENDDUMP

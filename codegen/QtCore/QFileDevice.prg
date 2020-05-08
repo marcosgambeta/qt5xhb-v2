@@ -25,6 +25,8 @@ $destructor
 
 $includes
 
+#include <QtCore/QDateTime>
+
 $deleteMethod
 
 $prototype=FileError error() const
@@ -68,5 +70,11 @@ $virtualMethod=|bool|seek|qint64
 
 $prototype=virtual qint64 size() const
 $virtualMethod=|qint64|size|
+
+$prototype=QDateTime fileTime(QFileDevice::FileTime time) const
+$method=5,10,0|QDateTime|fileTime|QFileDevice::FileTime
+
+$prototype=bool setFileTime(const QDateTime &newDate, QFileDevice::FileTime fileTime)
+$method=5,10,0|bool|setFileTime|const QDateTime &,QFileDevice::FileTime
 
 #pragma ENDDUMP

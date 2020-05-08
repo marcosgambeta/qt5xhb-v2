@@ -40,9 +40,18 @@ flags QFileDevice::FileHandleFlags
 #define QFileDevice_DontCloseHandle                                  0
 
 /*
+enum QFileDevice::FileTime
+*/
+#define QFileDevice_FileAccessTime                                   0
+#define QFileDevice_FileBirthTime                                    1
+#define QFileDevice_FileMetadataChangeTime                           2
+#define QFileDevice_FileModificationTime                             3
+
+/*
 enum QFileDevice::MemoryMapFlags
 */
 #define QFileDevice_NoOptions                                        0
+#define QFileDevice_MapPrivateOption                                 0x0001
 
 /*
 enum QFileDevice::Permission
