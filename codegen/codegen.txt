@@ -561,11 +561,13 @@ QExtensionFactory                                    |QObject        |QtDesigner
 QExtensionManager                                    |QObject        |QtDesigner
 QFile                                                |QObject        |QtCore
 QFile::FileHandleFlags                               |enum           |QtCore
+QFile::FileTime                                      |enum           |QtCore
 QFile::MemoryMapFlags                                |enum           |QtCore
 QFile::OpenMode                                      |enum           |QtCore
 QFile::Permissions                                   |enum           |QtCore
 QFileDevice                                          |QObject        |QtCore
 QFileDevice::FileError                               |enum           |QtCore
+QFileDevice::FileTime                                |enum           |QtCore
 QFileDevice::Permissions                             |enum           |QtCore
 QFileDialog                                          |QWidget        |QtWidgets
 QFileDialog::AcceptMode                              |enum           |QtWidgets
