@@ -31,6 +31,9 @@ CLASS QThreadPool INHERIT QObject
    METHOD waitForDone
    METHOD clear
    METHOD globalInstance
+   METHOD tryTake
+   METHOD stackSize
+   METHOD setStackSize
 
    DESTRUCTOR destroyObject
 
@@ -122,6 +125,10 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
 }
 
 /*
+void QThreadPool::start(std::function<void ()> functionToRun, int priority = 0)
+*/
+
+/*
 bool tryStart(QRunnable *runnable)
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
@@ -144,6 +151,10 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 #endif
   }
 }
+
+/*
+bool QThreadPool::tryStart(std::function<void ()> functionToRun)
+*/
 
 /*
 int expiryTimeout() const
@@ -350,6 +361,7 @@ void clear()
 */
 HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   auto obj = (QThreadPool *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
@@ -369,6 +381,7 @@ HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 /*
@@ -388,6 +401,86 @@ HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
+}
+
+/*
+bool tryTake(QRunnable *runnable)
+*/
+HB_FUNC_STATIC( QTHREADPOOL_TRYTAKE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  auto obj = (QThreadPool *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISQRUNNABLE(1) )
+    {
+#endif
+      RBOOL( obj->tryTake( PQRUNNABLE(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+uint stackSize() const
+*/
+HB_FUNC_STATIC( QTHREADPOOL_STACKSIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QThreadPool *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RUINT( obj->stackSize() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+void setStackSize(uint stackSize)
+*/
+HB_FUNC_STATIC( QTHREADPOOL_SETSTACKSIZE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QThreadPool *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      obj->setStackSize( PUINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 

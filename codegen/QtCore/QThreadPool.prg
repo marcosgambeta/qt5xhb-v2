@@ -33,8 +33,14 @@ $deleteMethod
 $prototype=void start(QRunnable *runnable, int priority = 0)
 $method=|void|start|QRunnable *,int=0
 
+$prototype=void QThreadPool::start(std::function<void ()> functionToRun, int priority = 0)
+%% TODO: Qt 5.15
+
 $prototype=bool tryStart(QRunnable *runnable)
 $method=|bool|tryStart|QRunnable *
+
+$prototype=bool QThreadPool::tryStart(std::function<void ()> functionToRun)
+%% TODO: Qt 5.15
 
 $prototype=int expiryTimeout() const
 $method=|int|expiryTimeout|
@@ -61,9 +67,18 @@ $prototype=bool waitForDone(int msecs = -1)
 $method=|bool|waitForDone|int=-1
 
 $prototype=void clear()
-$method=|void|clear|
+$method=5,2,0|void|clear|
 
 $prototype=static QThreadPool *globalInstance()
 $staticMethod=|QThreadPool *|globalInstance|
+
+$prototype=bool tryTake(QRunnable *runnable)
+$method=5,9,0|bool|tryTake|QRunnable *
+
+$prototype=uint stackSize() const
+$method=5,10,0|uint|stackSize|
+
+$prototype=void setStackSize(uint stackSize)
+$method=5,10,0|void|setStackSize|uint
 
 #pragma ENDDUMP
