@@ -112,6 +112,7 @@ REQUEST QRegularExpression
 REQUEST QRegularExpressionMatch
 REQUEST QRegularExpressionMatchIterator
 REQUEST QResource
+REQUEST QRunnable
 REQUEST QSaveFile
 REQUEST QSemaphore
 REQUEST QSequentialAnimationGroup

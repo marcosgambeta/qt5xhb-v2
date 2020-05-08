@@ -1368,7 +1368,7 @@ QRotationReading                                     |QObject        |QtSensors
 QRotationSensor                                      |QObject        |QtSensors
 QRubberBand                                          |QWidget        |QtWidgets
 QRubberBand::Shape                                   |enum           |QtWidgets
-QRunnable                                            |object
+QRunnable                                            |object         |QtCore
 QSaveFile                                            |QObject        |QtCore
 QScatter3DSeries                                     |QObject        |QtDataVisualization
 QScatterDataItem                                     |object         |QtDataVisualization
