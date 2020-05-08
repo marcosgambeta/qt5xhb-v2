@@ -118,7 +118,34 @@ $prototype=QDir dir() const
 $method=|QDir|dir|
 
 $prototype=bool exists() const
-$method=|bool|exists|
+$internalMethod=|bool|exists,exists1|
+
+$prototype=static bool exists(const QString &file)
+$internalStaticMethod=5,2,0|bool|exists,exists2|const QString &
+
+/*
+[1]bool exists() const
+[2]static bool exists(const QString &file)
+*/
+
+HB_FUNC_STATIC( QFILEINFO_EXISTS )
+{
+  if( ISNUMPAR(0) )
+  {
+    QFileInfo_exists1();
+  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QFileInfo_exists2();
+  }
+#endif
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+$addMethod=exists
 
 $prototype=QString fileName() const
 $method=|QString|fileName|
@@ -245,6 +272,19 @@ $method=|void|swap|QFileInfo &
 
 $prototype=QString symLinkTarget() const
 $method=|QString|symLinkTarget|
+
+$prototype=QDateTime birthTime() const
+$method=5,10,0|QDateTime|birthTime|
+
+$prototype=QDateTime fileTime(QFile::FileTime time) const
+%% TODO: QFile::FileTime -> QFileDevice::FileTime
+$method=5,10,0|QDateTime|fileTime|QFile::FileTime
+
+$prototype=QDateTime metadataChangeTime() const
+$method=5,10,0|QDateTime|metadataChangeTime|
+
+$prototype=bool isJunction() const
+$method=5,15,0|bool|isJunction|
 
 $extraMethods
 

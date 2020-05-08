@@ -68,6 +68,10 @@ CLASS QFileInfo
    METHOD suffix
    METHOD swap
    METHOD symLinkTarget
+   METHOD birthTime
+   METHOD fileTime
+   METHOD metadataChangeTime
+   METHOD isJunction
 
    METHOD newFrom
    METHOD newFromObject
@@ -497,24 +501,46 @@ HB_FUNC_STATIC( QFILEINFO_DIR )
 /*
 bool exists() const
 */
-HB_FUNC_STATIC( QFILEINFO_EXISTS )
+void QFileInfo_exists1()
 {
   auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
-    {
+    RBOOL( obj->exists() );
+  }
+}
+
+/*
+static bool exists(const QString &file)
+*/
+void QFileInfo_exists2()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  RBOOL( QFileInfo::exists( PQSTRING(1) ) );
 #endif
-      RBOOL( obj->exists() );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+}
+
+/*
+[1]bool exists() const
+[2]static bool exists(const QString &file)
+*/
+
+HB_FUNC_STATIC( QFILEINFO_EXISTS )
+{
+  if( ISNUMPAR(0) )
+  {
+    QFileInfo_exists1();
+  }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  else if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QFileInfo_exists2();
+  }
 #endif
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -1315,6 +1341,113 @@ HB_FUNC_STATIC( QFILEINFO_SYMLINKTARGET )
     }
 #endif
   }
+}
+
+/*
+QDateTime birthTime() const
+*/
+HB_FUNC_STATIC( QFILEINFO_BIRTHTIME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      auto ptr = new QDateTime( obj->birthTime() );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+QDateTime fileTime(QFile::FileTime time) const
+*/
+HB_FUNC_STATIC( QFILEINFO_FILETIME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      auto ptr = new QDateTime( obj->fileTime( (QFile::FileTime) hb_parni(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+QDateTime metadataChangeTime() const
+*/
+HB_FUNC_STATIC( QFILEINFO_METADATACHANGETIME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      auto ptr = new QDateTime( obj->metadataChangeTime() );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+bool isJunction() const
+*/
+HB_FUNC_STATIC( QFILEINFO_ISJUNCTION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto obj = (QFileInfo *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isJunction() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QFILEINFO_NEWFROM )
