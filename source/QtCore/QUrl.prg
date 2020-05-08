@@ -1099,7 +1099,6 @@ static QUrl fromEncoded ( const QByteArray & input )
 */
 void QUrl_fromEncoded1()
 {
-
   auto ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1) ) );
   Qt5xHb::createReturnClass( ptr, "QURL", true );
 }
@@ -1109,7 +1108,6 @@ static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 */
 void QUrl_fromEncoded2()
 {
-
   auto ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY(1), (QUrl::ParsingMode) hb_parni(2) ) );
   Qt5xHb::createReturnClass( ptr, "QURL", true );
 }

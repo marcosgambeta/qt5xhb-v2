@@ -506,7 +506,6 @@ static void postEvent ( QObject * receiver, QEvent * event )
 */
 void QCoreApplication_postEvent1()
 {
-
   QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -517,7 +516,6 @@ static void postEvent ( QObject * receiver, QEvent * event, int priority )
 */
 void QCoreApplication_postEvent2()
 {
-
   QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2), PINT(3) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -549,7 +547,6 @@ static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::A
 */
 void QCoreApplication_processEvents1()
 {
-
   QCoreApplication::processEvents( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -560,7 +557,6 @@ static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
 void QCoreApplication_processEvents2()
 {
-
   QCoreApplication::processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -613,7 +609,6 @@ static void removePostedEvents ( QObject * receiver )
 */
 void QCoreApplication_removePostedEvents1()
 {
-
   QCoreApplication::removePostedEvents( PQOBJECT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -624,7 +619,6 @@ static void removePostedEvents ( QObject * receiver, int eventType )
 */
 void QCoreApplication_removePostedEvents2()
 {
-
   QCoreApplication::removePostedEvents( PQOBJECT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -696,7 +690,6 @@ static void sendPostedEvents ( QObject * receiver, int event_type )
 */
 void QCoreApplication_sendPostedEvents1()
 {
-
   QCoreApplication::sendPostedEvents( PQOBJECT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -707,7 +700,6 @@ static void sendPostedEvents ()
 */
 void QCoreApplication_sendPostedEvents2()
 {
-
   QCoreApplication::sendPostedEvents();
 
   hb_itemReturn( hb_stackSelfItem() );

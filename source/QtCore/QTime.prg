@@ -269,7 +269,6 @@ static bool isValid(int h, int m, int s, int ms = 0)
 */
 void QTime_isValid2()
 {
-
   RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
@@ -560,7 +559,6 @@ static QTime fromString(const QString & string, Qt::DateFormat format = Qt::Text
 */
 void QTime_fromString1()
 {
-
   auto ptr = new QTime( QTime::fromString( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
   Qt5xHb::createReturnClass( ptr, "QTIME", true );
 }
@@ -570,7 +568,6 @@ static QTime fromString(const QString & string, const QString & format)
 */
 void QTime_fromString2()
 {
-
   auto ptr = new QTime( QTime::fromString( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QTIME", true );
 }

@@ -355,7 +355,6 @@ static QTextCodec* codecForName(const QByteArray &name)
 */
 void QTextCodec_codecForName1()
 {
-
   QTextCodec * ptr = QTextCodec::codecForName( *PQBYTEARRAY(1) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
@@ -365,7 +364,6 @@ static QTextCodec* codecForName(const char *name)
 */
 void QTextCodec_codecForName2()
 {
-
   QTextCodec * ptr = QTextCodec::codecForName( PCONSTCHAR(1) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
@@ -524,7 +522,6 @@ static QTextCodec *codecForHtml(const QByteArray &ba)
 */
 void QTextCodec_codecForHtml1()
 {
-
   QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
@@ -534,7 +531,6 @@ static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
 void QTextCodec_codecForHtml2()
 {
-
   QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
@@ -565,7 +561,6 @@ static QTextCodec *codecForUtfText(const QByteArray &ba)
 */
 void QTextCodec_codecForUtfText1()
 {
-
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
@@ -575,7 +570,6 @@ static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCode
 */
 void QTextCodec_codecForUtfText2()
 {
-
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }

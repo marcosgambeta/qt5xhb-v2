@@ -1362,7 +1362,6 @@ static bool match(const QString & filter, const QString & fileName)
 */
 void QDir_match1()
 {
-
   RBOOL( QDir::match( PQSTRING(1), PQSTRING(2) ) );
 }
 
@@ -1371,7 +1370,6 @@ static bool match(const QStringList & filters, const QString & fileName)
 */
 void QDir_match2()
 {
-
   RBOOL( QDir::match( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
 

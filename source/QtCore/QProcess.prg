@@ -1123,7 +1123,6 @@ static int execute ( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1()
 {
-
   RINT( QProcess::execute( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
@@ -1132,7 +1131,6 @@ static int execute ( const QString & command )
 */
 void QProcess_execute2()
 {
-
   RINT( QProcess::execute( PQSTRING(1) ) );
 }
 
@@ -1162,7 +1160,6 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached1()
 {
-
   RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3) ) );
 }
 
@@ -1171,7 +1168,6 @@ static bool startDetached ( const QString & program, const QStringList & argumen
 */
 void QProcess_startDetached2()
 {
-
   RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2) ) );
 }
 
@@ -1180,7 +1176,6 @@ static bool startDetached ( const QString & program )
 */
 void QProcess_startDetached3()
 {
-
   RBOOL( QProcess::startDetached( PQSTRING(1) ) );
 }
 

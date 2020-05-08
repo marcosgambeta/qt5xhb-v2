@@ -803,7 +803,6 @@ static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 void QTimeZone_windowsIdToDefaultIanaId1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
@@ -815,7 +814,6 @@ static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::
 void QTimeZone_windowsIdToDefaultIanaId2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   auto ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
@@ -848,7 +846,6 @@ static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
 void QTimeZone_windowsIdToIanaIds1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
   PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -887,7 +884,6 @@ static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale:
 void QTimeZone_windowsIdToIanaIds2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
   PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
   PHB_ITEM pArray = hb_itemArrayNew(0);

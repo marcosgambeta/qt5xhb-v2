@@ -875,7 +875,6 @@ static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt
 */
 void QDateTime_fromString1()
 {
-
   auto ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 }
@@ -885,7 +884,6 @@ static QDateTime fromString ( const QString & string, const QString & format )
 */
 void QDateTime_fromString2()
 {
-
   auto ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 }
