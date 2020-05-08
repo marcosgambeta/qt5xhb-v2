@@ -237,7 +237,6 @@ static void hideSplashScreen()
 void QtAndroid_hideSplashScreen1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-
   QtAndroid::hideSplashScreen();
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -250,7 +249,6 @@ static void hideSplashScreen(int duration)
 void QtAndroid_hideSplashScreen2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-
   QtAndroid::hideSplashScreen( PINT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
