@@ -66,6 +66,8 @@ RETURN
 #endif
 #endif
 
+#include <QtCore/QVersionNumber>
+
 /*
 QCompressedHelpInfo()
 */

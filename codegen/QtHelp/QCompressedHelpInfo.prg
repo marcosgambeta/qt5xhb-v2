@@ -26,6 +26,8 @@ $destructor
 
 $includes
 
+#include <QtCore/QVersionNumber>
+
 $prototype=QCompressedHelpInfo()
 $internalConstructor=|new1|
 
