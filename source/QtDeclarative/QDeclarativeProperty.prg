@@ -704,7 +704,6 @@ static QVariant read ( QObject * object, const QString & name )
 */
 void QDeclarativeProperty_read2()
 {
-
   auto ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 }
@@ -714,7 +713,6 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeConte
 */
 void QDeclarativeProperty_read3()
 {
-
   auto ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) ) );
   Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 }
@@ -724,7 +722,6 @@ static QVariant read ( QObject * object, const QString & name, QDeclarativeEngin
 */
 void QDeclarativeProperty_read4()
 {
-
   auto ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
   Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 }
@@ -778,7 +775,6 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write2()
 {
-
   RBOOL( QDeclarativeProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3) ) );
 }
 
@@ -787,7 +783,6 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write3()
 {
-
   RBOOL( QDeclarativeProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4) ) );
 }
 
@@ -796,7 +791,6 @@ static bool write ( QObject * object, const QString & name, const QVariant & val
 */
 void QDeclarativeProperty_write4()
 {
-
   RBOOL( QDeclarativeProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
 
