@@ -495,7 +495,6 @@ static void extendFrameIntoClientArea(QWindow *window, int left, int top, int ri
 void QtWin_extendFrameIntoClientArea1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QtWin::extendFrameIntoClientArea( PQWINDOW(1), PINT(2), PINT(3), PINT(4), PINT(5) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -508,7 +507,6 @@ static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
 void QtWin_extendFrameIntoClientArea2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QtWin::extendFrameIntoClientArea( PQWINDOW(1), *PQMARGINS(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -565,7 +563,6 @@ static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 void QtWin_enableBlurBehindWindow1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QtWin::enableBlurBehindWindow( PQWINDOW(1), *PQREGION(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -578,7 +575,6 @@ static void enableBlurBehindWindow(QWindow *window)
 void QtWin_enableBlurBehindWindow2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   QtWin::enableBlurBehindWindow( PQWINDOW(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
