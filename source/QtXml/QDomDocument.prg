@@ -625,7 +625,7 @@ void QDomDocument_setContent1()
   {
     int par4;
     int par5;
-    RBOOL( obj->setContent( *PQBYTEARRAY(1), PBOOL(2), NULL, &par4, &par5 ) );
+    RBOOL( obj->setContent( *PQBYTEARRAY(1), PBOOL(2), nullptr, &par4, &par5 ) );
     hb_storni( par4, 4 );
     hb_storni( par5, 5 );
   }
@@ -642,7 +642,7 @@ void QDomDocument_setContent2()
   {
     int par4;
     int par5;
-    RBOOL( obj->setContent( PQSTRING(1), PBOOL(2), NULL, &par4, &par5 ) );
+    RBOOL( obj->setContent( PQSTRING(1), PBOOL(2), nullptr, &par4, &par5 ) );
     hb_storni( par4, 4 );
     hb_storni( par5, 5 );
   }
@@ -659,7 +659,7 @@ void QDomDocument_setContent3()
   {
     int par4;
     int par5;
-    RBOOL( obj->setContent( PQIODEVICE(1), PBOOL(2), NULL, &par4, &par5 ) );
+    RBOOL( obj->setContent( PQIODEVICE(1), PBOOL(2), nullptr, &par4, &par5 ) );
     hb_storni( par4, 4 );
     hb_storni( par5, 5 );
   }
@@ -676,7 +676,7 @@ void QDomDocument_setContent4()
   {
     int par4;
     int par5;
-    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PBOOL(2), NULL, &par4, &par5 ) );
+    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PBOOL(2), nullptr, &par4, &par5 ) );
     hb_storni( par4, 4 );
     hb_storni( par5, 5 );
   }
@@ -693,7 +693,7 @@ void QDomDocument_setContent5()
   {
     int par3;
     int par4;
-    RBOOL( obj->setContent( PQSTRING(1), NULL, &par3, &par4 ) );
+    RBOOL( obj->setContent( PQSTRING(1), nullptr, &par3, &par4 ) );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }
@@ -710,7 +710,7 @@ void QDomDocument_setContent6()
   {
     int par3;
     int par4;
-    RBOOL( obj->setContent( *PQBYTEARRAY(1), NULL, &par3, &par4 ) );
+    RBOOL( obj->setContent( *PQBYTEARRAY(1), nullptr, &par3, &par4 ) );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }
@@ -727,7 +727,7 @@ void QDomDocument_setContent7()
   {
     int par3;
     int par4;
-    RBOOL( obj->setContent( PQIODEVICE(1), NULL, &par3, &par4 ) );
+    RBOOL( obj->setContent( PQIODEVICE(1), nullptr, &par3, &par4 ) );
     hb_storni( par3, 3 );
     hb_storni( par4, 4 );
   }
@@ -744,7 +744,7 @@ void QDomDocument_setContent8()
   {
     int par4;
     int par5;
-    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PQXMLREADER(2), NULL, &par4, &par5 ) );
+    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PQXMLREADER(2), nullptr, &par4, &par5 ) );
     hb_storni( par4, 4 );
     hb_storni( par5, 5 );
   }
