@@ -107,6 +107,7 @@
 #include "QDBusError.ch"
 #include "QDBusMessage.ch"
 #include "QDBusServiceWatcher.ch"
+#include "QDebug.ch"
 #include "QDeclarativeComponent.ch"
 #include "QDeclarativeEngine.ch"
 #include "QDeclarativeImageProvider.ch"

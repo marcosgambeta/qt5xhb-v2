@@ -89,6 +89,49 @@ $method=|bool|autoInsertSpaces|
 $prototype=void setAutoInsertSpaces(bool b)
 $method=|void|setAutoInsertSpaces|bool
 
+$prototype=QDebug &maybeQuote(char c = '"')
+%% TODO: Qt 5.4
+
+$prototype=QDebug &noquote()
+$method=5,4,0|QDebug &|noquote|
+
+$prototype=QDebug &quote()
+$method=5,4,0|QDebug &|quote|
+
+$prototype=QDebug &resetFormat()
+$method=5,4,0|QDebug &|resetFormat|
+
+$prototype=void setVerbosity(int verbosityLevel)
+$method=5,6,0|void|setVerbosity|int
+
+$prototype=int verbosity() const
+$internalMethod=5,6,0|int|verbosity,verbosity1|
+
+$prototype=QDebug &QDebug::verbosity(int verbosityLevel)
+$internalMethod=5,13,0|QDebug &|verbosity,verbosity2|int
+
+/*
+[1]int verbosity() const
+[2]QDebug &verbosity(int verbosityLevel)
+*/
+
+HB_FUNC_STATIC( QDEBUG_VERBOSITY )
+{
+  if( ISNUMPAR(0) )
+  {
+    QDebug_verbosity1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QDebug_verbosity2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+$addMethod=verbosity
+
 $extraMethods
 
 #pragma ENDDUMP

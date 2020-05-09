@@ -28,6 +28,11 @@ CLASS QDebug
    METHOD maybeSpace
    METHOD autoInsertSpaces
    METHOD setAutoInsertSpaces
+   METHOD noquote
+   METHOD quote
+   METHOD resetFormat
+   METHOD setVerbosity
+   METHOD verbosity
 
    METHOD newFrom
    METHOD newFromObject
@@ -286,6 +291,171 @@ HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QDebug &maybeQuote(char c = '"')
+*/
+
+/*
+QDebug &noquote()
+*/
+HB_FUNC_STATIC( QDEBUG_NOQUOTE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QDebug * ptr = &obj->noquote();
+      Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+QDebug &quote()
+*/
+HB_FUNC_STATIC( QDEBUG_QUOTE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QDebug * ptr = &obj->quote();
+      Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+QDebug &resetFormat()
+*/
+HB_FUNC_STATIC( QDEBUG_RESETFORMAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QDebug * ptr = &obj->resetFormat();
+      Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+void setVerbosity(int verbosityLevel)
+*/
+HB_FUNC_STATIC( QDEBUG_SETVERBOSITY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      obj->setVerbosity( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+int verbosity() const
+*/
+void QDebug_verbosity1()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+    RINT( obj->verbosity() );
+  }
+#endif
+}
+
+/*
+QDebug &QDebug::verbosity(int verbosityLevel)
+*/
+void QDebug_verbosity2()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
+  auto obj = (QDebug *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+    QDebug * ptr = &obj->verbosity( PINT(1) );
+    Qt5xHb::createReturnClass( ptr, "QDEBUG", false );
+  }
+#endif
+}
+
+/*
+[1]int verbosity() const
+[2]QDebug &verbosity(int verbosityLevel)
+*/
+
+HB_FUNC_STATIC( QDEBUG_VERBOSITY )
+{
+  if( ISNUMPAR(0) )
+  {
+    QDebug_verbosity1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QDebug_verbosity2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QDEBUG_NEWFROM )

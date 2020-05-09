@@ -24,6 +24,7 @@
 #include "QCryptographicHash.ch"
 #include "QDataStream.ch"
 #include "QDate.ch"
+#include "QDebug.ch"
 #include "QDir.ch"
 #include "QDirIterator.ch"
 #include "QEasingCurve.ch"
