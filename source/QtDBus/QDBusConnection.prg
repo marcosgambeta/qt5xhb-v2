@@ -650,7 +650,6 @@ static QDBusConnection connectToBus(BusType type, const QString &name)
 */
 void QDBusConnection_connectToBus1()
 {
-
   auto ptr = new QDBusConnection( QDBusConnection::connectToBus( (QDBusConnection::BusType) hb_parni(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 }
@@ -660,7 +659,6 @@ static QDBusConnection connectToBus(const QString &address, const QString &name)
 */
 void QDBusConnection_connectToBus2()
 {
-
   auto ptr = new QDBusConnection( QDBusConnection::connectToBus( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 }

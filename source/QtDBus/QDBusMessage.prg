@@ -656,7 +656,6 @@ static QDBusMessage createError(const QString &name, const QString &msg)
 */
 void QDBusMessage_createError1()
 {
-
   auto ptr = new QDBusMessage( QDBusMessage::createError( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 }
@@ -666,7 +665,6 @@ static inline QDBusMessage createError(const QDBusError &err)
 */
 void QDBusMessage_createError2()
 {
-
   auto ptr = new QDBusMessage( QDBusMessage::createError( *PQDBUSERROR(1) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 }
@@ -676,7 +674,6 @@ static inline QDBusMessage createError(QDBusError::ErrorType type, const QString
 */
 void QDBusMessage_createError3()
 {
-
   auto ptr = new QDBusMessage( QDBusMessage::createError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 }
