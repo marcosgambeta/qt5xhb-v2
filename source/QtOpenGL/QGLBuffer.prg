@@ -382,7 +382,6 @@ static void release ( QGLBuffer::Type type )
 */
 void QGLBuffer_release2()
 {
-
   QGLBuffer::release( (QGLBuffer::Type) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
