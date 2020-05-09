@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), NULL );
+      QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), nullptr );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), NULL );
+      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), nullptr );
       Qt5xHb::createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
