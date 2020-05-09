@@ -353,7 +353,6 @@ static QFont getFont(bool *ok, QWidget *parent = nullptr)
 */
 void QFontDialog_getFont1()
 {
-
   bool par1;
   auto ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET(2,nullptr) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
@@ -365,7 +364,6 @@ static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = nullptr, 
 */
 void QFontDialog_getFont2()
 {
-
   bool par1;
   auto ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET(3,nullptr), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );

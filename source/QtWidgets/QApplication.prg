@@ -701,7 +701,6 @@ static QFont font ()
 */
 void QApplication_font1()
 {
-
   auto ptr = new QFont( QApplication::font() );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
@@ -711,7 +710,6 @@ static QFont font ( const QWidget * widget )
 */
 void QApplication_font2()
 {
-
   auto ptr = new QFont( QApplication::font( PQWIDGET(1) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
@@ -721,7 +719,6 @@ static QFont font ( const char * className )
 */
 void QApplication_font3()
 {
-
   auto ptr = new QFont( QApplication::font( PCONSTCHAR(1) ) );
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
@@ -950,7 +947,6 @@ static QPalette palette ()
 */
 void QApplication_palette1()
 {
-
   auto ptr = new QPalette( QApplication::palette() );
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
@@ -960,7 +956,6 @@ static QPalette palette ( const QWidget * widget )
 */
 void QApplication_palette2()
 {
-
   auto ptr = new QPalette( QApplication::palette( PQWIDGET(1) ) );
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
@@ -970,7 +965,6 @@ static QPalette palette ( const char * className )
 */
 void QApplication_palette3()
 {
-
   auto ptr = new QPalette( QApplication::palette( PCONSTCHAR(1) ) );
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
@@ -1380,7 +1374,6 @@ static void setStyle ( QStyle * style )
 */
 void QApplication_setStyle1()
 {
-
   QApplication::setStyle( PQSTYLE(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1391,7 +1384,6 @@ static QStyle * setStyle ( const QString & style )
 */
 void QApplication_setStyle2()
 {
-
   QStyle * ptr = QApplication::setStyle( PQSTRING(1) );
   Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 }
@@ -1522,7 +1514,6 @@ static QWidget * topLevelAt ( const QPoint & point )
 */
 void QApplication_topLevelAt1()
 {
-
   QWidget * ptr = QApplication::topLevelAt( *PQPOINT(1) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
@@ -1532,7 +1523,6 @@ static QWidget * topLevelAt ( int x, int y )
 */
 void QApplication_topLevelAt2()
 {
-
   QWidget * ptr = QApplication::topLevelAt( PINT(1), PINT(2) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
@@ -1625,7 +1615,6 @@ static QWidget * widgetAt ( const QPoint & point )
 */
 void QApplication_widgetAt1()
 {
-
   QWidget * ptr = QApplication::widgetAt( *PQPOINT(1) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
@@ -1635,7 +1624,6 @@ static QWidget * widgetAt ( int x, int y )
 */
 void QApplication_widgetAt2()
 {
-
   QWidget * ptr = QApplication::widgetAt( PINT(1), PINT(2) );
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }

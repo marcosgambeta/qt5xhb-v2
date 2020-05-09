@@ -561,7 +561,6 @@ static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, 
 */
 void QMenu_exec3()
 {
-
   QList<QAction *> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
   int nLen1 = hb_arrayLen(aList1);

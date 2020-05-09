@@ -650,7 +650,6 @@ static QScroller * scroller(QObject * target)
 */
 void QScroller_scroller1()
 {
-
   QScroller * ptr = QScroller::scroller( PQOBJECT(1) );
   Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
 }
@@ -660,7 +659,6 @@ static const QScroller * scroller(const QObject * target)
 */
 void QScroller_scroller2()
 {
-
   const QScroller * ptr = QScroller::scroller( PQOBJECT(1) );
   Qt5xHb::createReturnQObjectClass( ptr, "QSCROLLER" );
 }
