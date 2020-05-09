@@ -1714,7 +1714,6 @@ static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat f
 */
 void QSslSocket_addDefaultCaCertificates1()
 {
-
   RBOOL( QSslSocket::addDefaultCaCertificates( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) ) );
 }
 
@@ -1723,7 +1722,6 @@ static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
 */
 void QSslSocket_addDefaultCaCertificates2()
 {
-
   QList<QSslCertificate> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
   int nLen1 = hb_arrayLen(aList1);
