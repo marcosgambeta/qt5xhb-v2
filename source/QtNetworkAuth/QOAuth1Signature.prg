@@ -566,7 +566,6 @@ static QByteArray plainText(const QString &clientSharedSecret, const QString &to
 void QOAuth1Signature_plainText2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-
   auto ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
