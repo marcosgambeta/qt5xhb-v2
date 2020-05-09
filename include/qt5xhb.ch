@@ -89,6 +89,7 @@
 #include "QColor.ch"
 #include "QColorDialog.ch"
 #include "QColormap.ch"
+#include "QColorSpace.ch"
 #include "QComboBox.ch"
 #include "QCommandLineParser.ch"
 #include "QCompleter.ch"

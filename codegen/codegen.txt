@@ -375,6 +375,10 @@ QColorDialog::ColorDialogOption                      |enum           |QtWidgets
 QColorDialog::ColorDialogOptions                     |enum           |QtWidgets
 QColormap                                            |object         |QtWidgets
 QColormap::Mode                                      |enum           |QtWidgets
+QColorSpace                                          |object         |QtGui
+QColorSpace::NamedColorSpace                         |enum           |QtGui
+QColorSpace::Primaries                               |enum           |QtGui
+QColorSpace::TransferFunction                        |enum           |QtGui
 QColumnView                                          |QWidget        |QtWidgets
 QColumnView::ScrollHint                              |enum           |QtWidgets
 QComboBox                                            |QWidget        |QtWidgets

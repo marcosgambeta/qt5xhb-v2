@@ -14,6 +14,7 @@ $header
 #include "QAccessibleTableModelChangeEvent.ch"
 #include "QClipboard.ch"
 #include "QColor.ch"
+#include "QColorSpace.ch"
 #include "QContextMenuEvent.ch"
 #include "QDesktopServices.ch"
 #include "QDoubleValidator.ch"

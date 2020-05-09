@@ -42,6 +42,7 @@ REQUEST QBrush
 REQUEST QClipboard
 REQUEST QCloseEvent
 REQUEST QColor
+REQUEST QColorSpace
 REQUEST QConicalGradient
 REQUEST QContextMenuEvent
 REQUEST QCursor
