@@ -373,7 +373,6 @@ static void release(QOpenGLBuffer::Type type)
 */
 void QOpenGLBuffer_release2()
 {
-
   QOpenGLBuffer::release( (QOpenGLBuffer::Type) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );

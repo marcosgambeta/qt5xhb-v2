@@ -242,7 +242,6 @@ static QTextDocumentFragment fromHtml(const QString &html)
 */
 void QTextDocumentFragment_fromHtml1()
 {
-
   auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1) ) );
   Qt5xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
@@ -252,7 +251,6 @@ static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *
 */
 void QTextDocumentFragment_fromHtml2()
 {
-
   auto ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
   Qt5xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }

@@ -667,7 +667,6 @@ static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 */
 void QQuaternion_fromAxisAndAngle1()
 {
-
   auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) ) );
   Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
 }
@@ -677,7 +676,6 @@ static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 */
 void QQuaternion_fromAxisAndAngle2()
 {
-
   auto ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
   Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
 }

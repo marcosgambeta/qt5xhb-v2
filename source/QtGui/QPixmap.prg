@@ -1246,7 +1246,6 @@ static QPixmap grabWidget(QObject *widget, const QRect &rect)
 */
 void QPixmap_grabWidget1()
 {
-
   auto ptr = new QPixmap( QPixmap::grabWidget( PQOBJECT(1), *PQRECT(2) ) );
   Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 }
@@ -1256,7 +1255,6 @@ static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
 */
 void QPixmap_grabWidget2()
 {
-
   auto ptr = new QPixmap( QPixmap::grabWidget( PQOBJECT(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
   Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 }
@@ -1287,7 +1285,6 @@ static QMatrix trueMatrix(const QMatrix &m, int w, int h)
 */
 void QPixmap_trueMatrix1()
 {
-
   auto ptr = new QMatrix( QPixmap::trueMatrix( *PQMATRIX(1), PINT(2), PINT(3) ) );
   Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
 }
@@ -1297,7 +1294,6 @@ static QTransform trueMatrix(const QTransform &m, int w, int h)
 */
 void QPixmap_trueMatrix2()
 {
-
   auto ptr = new QTransform( QPixmap::trueMatrix( *PQTRANSFORM(1), PINT(2), PINT(3) ) );
   Qt5xHb::createReturnClass( ptr, "QTRANSFORM", true );
 }

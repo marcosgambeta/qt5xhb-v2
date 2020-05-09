@@ -657,7 +657,6 @@ static QByteArray pictureFormat(const QString &fileName)
 */
 void QPictureIO_pictureFormat1()
 {
-
   auto ptr = new QByteArray( QPictureIO::pictureFormat( PQSTRING(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
@@ -667,7 +666,6 @@ static QByteArray pictureFormat(QIODevice *)
 */
 void QPictureIO_pictureFormat2()
 {
-
   auto ptr = new QByteArray( QPictureIO::pictureFormat( PQIODEVICE(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }

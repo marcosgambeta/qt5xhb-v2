@@ -1107,7 +1107,6 @@ static QByteArray imageFormat ( const QString & fileName )
 */
 void QImageReader_imageFormat2()
 {
-
   auto ptr = new QByteArray( QImageReader::imageFormat( PQSTRING(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
@@ -1117,7 +1116,6 @@ static QByteArray imageFormat ( QIODevice * device )
 */
 void QImageReader_imageFormat3()
 {
-
   auto ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }

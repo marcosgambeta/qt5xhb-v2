@@ -1823,7 +1823,6 @@ static QImage fromData ( const uchar * data, int size, const char * format = nul
 */
 void QImage_fromData1()
 {
-
   auto ptr = new QImage( QImage::fromData( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3,nullptr) ) );
   Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 }
@@ -1833,7 +1832,6 @@ static QImage fromData ( const QByteArray & data, const char * format = nullptr 
 */
 void QImage_fromData2()
 {
-
   auto ptr = new QImage( QImage::fromData( *PQBYTEARRAY(1), OPCONSTCHAR(2,nullptr) ) );
   Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 }
@@ -1864,7 +1862,6 @@ static QMatrix trueMatrix ( const QMatrix & matrix, int width, int height )
 */
 void QImage_trueMatrix1()
 {
-
   auto ptr = new QMatrix( QImage::trueMatrix( *PQMATRIX(1), PINT(2), PINT(3) ) );
   Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
 }
@@ -1874,7 +1871,6 @@ static QTransform trueMatrix ( const QTransform & matrix, int width, int height 
 */
 void QImage_trueMatrix2()
 {
-
   auto ptr = new QTransform( QImage::trueMatrix( *PQTRANSFORM(1), PINT(2), PINT(3) ) );
   Qt5xHb::createReturnClass( ptr, "QTRANSFORM", true );
 }

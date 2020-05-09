@@ -2239,7 +2239,6 @@ static QColor fromRgb ( QRgb rgb )
 */
 void QColor_fromRgb1()
 {
-
   auto ptr = new QColor( QColor::fromRgb( PQRGB(1) ) );
   Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 }
@@ -2249,7 +2248,6 @@ static QColor fromRgb ( int r, int g, int b, int a = 255 )
 */
 void QColor_fromRgb2()
 {
-
   auto ptr = new QColor( QColor::fromRgb( PINT(1), PINT(2), PINT(3), OPINT(4,255) ) );
   Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 }

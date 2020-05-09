@@ -722,7 +722,6 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 */
 void QVector3D_normal1()
 {
-
   auto ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 }
@@ -732,7 +731,6 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3
 */
 void QVector3D_normal2()
 {
-
   auto ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 }

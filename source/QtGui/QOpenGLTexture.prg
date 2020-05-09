@@ -2019,7 +2019,6 @@ static GLuint boundTextureId(BindingTarget target)
 void QOpenGLTexture_boundTextureId1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   RGLUINT( QOpenGLTexture::boundTextureId( (QOpenGLTexture::BindingTarget) hb_parni(1) ) );
 #endif
 }
@@ -2030,7 +2029,6 @@ static GLuint boundTextureId(uint unit, BindingTarget target)
 void QOpenGLTexture_boundTextureId2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
   RGLUINT( QOpenGLTexture::boundTextureId( PUINT(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
 #endif
 }

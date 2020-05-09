@@ -344,7 +344,6 @@ static void setPos ( int x, int y )
 */
 void QCursor_setPos1()
 {
-
   QCursor::setPos( PINT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -355,7 +354,6 @@ static void setPos ( const QPoint & p )
 */
 void QCursor_setPos2()
 {
-
   QCursor::setPos( *PQPOINT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
