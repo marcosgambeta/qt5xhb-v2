@@ -14,7 +14,7 @@
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QtWebEngine/QtWebEngineCoreVersion>
+#include <QtWebEngineCore/QtWebEngineCoreVersion>
 #endif
 #endif
 
@@ -24,7 +24,7 @@
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QtWebEngine/QtWebEngineCoreVersion>
+#include <QtWebEngineCore/QtWebEngineCoreVersion>
 #endif
 #endif
 
