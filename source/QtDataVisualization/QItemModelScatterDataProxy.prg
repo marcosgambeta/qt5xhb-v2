@@ -87,7 +87,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals4.h"
+#include "qt5xhb_signals5.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals4_disconnect_all_signals( obj, true );
+    Signals5_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -946,19 +946,19 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::itemModelChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QAbstractItemModel * arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -977,9 +977,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONITEMMODELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1012,18 +1012,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::rotationRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1043,9 +1043,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1078,19 +1078,19 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::rotationRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1109,9 +1109,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1144,18 +1144,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::rotationRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1175,9 +1175,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONROTATIONROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1210,18 +1210,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::xPosRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1241,9 +1241,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1276,19 +1276,19 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::xPosRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1307,9 +1307,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1342,18 +1342,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::xPosRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1373,9 +1373,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONXPOSROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1408,18 +1408,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::yPosRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1439,9 +1439,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1474,19 +1474,19 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::yPosRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1505,9 +1505,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1540,18 +1540,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::yPosRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1571,9 +1571,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONYPOSROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1606,18 +1606,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::zPosRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1626,7 +1626,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1637,9 +1637,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1672,19 +1672,19 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::zPosRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1692,7 +1692,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1703,9 +1703,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1738,18 +1738,18 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelScatterDataProxy::zPosRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QITEMMODELSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1769,9 +1769,9 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ONZPOSROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

@@ -61,7 +61,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals4.h"
+#include "qt5xhb_signals5.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals4_disconnect_all_signals( obj, true );
+    Signals5_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -344,25 +344,25 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::arrayReset, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -373,9 +373,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -408,18 +408,18 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemCountChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -439,9 +439,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMCOUNTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -474,18 +474,18 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsAdded, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -507,9 +507,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSADDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -542,18 +542,18 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -575,9 +575,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -610,18 +610,18 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsInserted, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -643,9 +643,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSINSERTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -678,18 +678,18 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::itemsRemoved, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1, int arg2) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -711,9 +711,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONITEMSREMOVED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -746,19 +746,19 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QScatterDataProxy::seriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QScatter3DSeries * arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
-            PHB_ITEM pArg1 = Signals4_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QSCATTERDATAPROXY" );
+            PHB_ITEM pArg1 = Signals5_return_qobject( (QObject *) arg1, "QSCATTER3DSERIES" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -777,9 +777,9 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ONSERIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

@@ -96,7 +96,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals4.h"
+#include "qt5xhb_signals5.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals4_disconnect_all_signals( obj, true );
+    Signals5_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -1046,19 +1046,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::baseColorChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1077,9 +1077,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASECOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1112,19 +1112,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::baseGradientChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1143,9 +1143,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONBASEGRADIENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1178,18 +1178,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::colorStyleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (Q3DTheme::ColorStyle arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1209,9 +1209,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONCOLORSTYLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1244,18 +1244,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1275,9 +1275,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1310,18 +1310,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelFormatChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1341,9 +1341,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1376,18 +1376,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::itemLabelVisibilityChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1396,7 +1396,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1407,9 +1407,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONITEMLABELVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1442,18 +1442,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstract3DSeries::Mesh arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1462,7 +1462,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1473,9 +1473,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1508,19 +1508,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshRotationChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QQuaternion & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QQUATERNION" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QQUATERNION" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1539,9 +1539,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1574,18 +1574,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::meshSmoothChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1594,7 +1594,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1605,9 +1605,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMESHSMOOTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1640,19 +1640,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::multiHighlightColorChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1660,7 +1660,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1671,9 +1671,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1706,19 +1706,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::multiHighlightGradientChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1726,7 +1726,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1737,9 +1737,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONMULTIHIGHLIGHTGRADIENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1772,18 +1772,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::nameChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1792,7 +1792,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1803,9 +1803,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONNAMECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1838,19 +1838,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::singleHighlightColorChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1858,7 +1858,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1869,9 +1869,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTCOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1904,19 +1904,19 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::singleHighlightGradientChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QLinearGradient & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QLINEARGRADIENT" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QLINEARGRADIENT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1924,7 +1924,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1935,9 +1935,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONSINGLEHIGHLIGHTGRADIENTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1970,18 +1970,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::userDefinedMeshChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1990,7 +1990,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2001,9 +2001,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONUSERDEFINEDMESHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2036,18 +2036,18 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DSeries::visibilityChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2056,7 +2056,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2067,9 +2067,9 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ONVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

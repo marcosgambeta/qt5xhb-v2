@@ -102,7 +102,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals4.h"
+#include "qt5xhb_signals5.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals4_disconnect_all_signals( obj, true );
+    Signals5_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -1235,18 +1235,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::alphaMultiplierChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1266,9 +1266,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONALPHAMULTIPLIERCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1301,25 +1301,25 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::colorTableChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1330,9 +1330,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONCOLORTABLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1365,18 +1365,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::drawSliceFramesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1396,9 +1396,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICEFRAMESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1431,18 +1431,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::drawSlicesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1462,9 +1462,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONDRAWSLICESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1497,18 +1497,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::preserveOpacityChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1517,7 +1517,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1528,9 +1528,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONPRESERVEOPACITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1563,19 +1563,19 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceFrameColorChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QColor & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QCOLOR" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QCOLOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1594,9 +1594,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMECOLORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1629,19 +1629,19 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceFrameGapsChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVECTOR3D" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QVECTOR3D" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1649,7 +1649,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1660,9 +1660,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEGAPSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1695,19 +1695,19 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceFrameThicknessesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVECTOR3D" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QVECTOR3D" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1715,7 +1715,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1726,9 +1726,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMETHICKNESSESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1761,19 +1761,19 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceFrameWidthsChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QVector3D & arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
-            PHB_ITEM pArg1 = Signals4_return_object( (void *) &arg1, "QVECTOR3D" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QVECTOR3D" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1781,7 +1781,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1792,9 +1792,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEFRAMEWIDTHSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1827,18 +1827,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceIndexXChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1847,7 +1847,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1858,9 +1858,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1893,18 +1893,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceIndexYChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1913,7 +1913,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1924,9 +1924,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1959,18 +1959,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::sliceIndexZChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1979,7 +1979,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1990,9 +1990,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONSLICEINDEXZCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2025,18 +2025,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::textureDepthChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2045,7 +2045,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2056,9 +2056,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREDEPTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2091,18 +2091,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::textureFormatChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QImage::Format arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2111,7 +2111,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2122,9 +2122,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREFORMATCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2157,18 +2157,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::textureHeightChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2188,9 +2188,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREHEIGHTCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2223,18 +2223,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::textureWidthChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (int arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2243,7 +2243,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2254,9 +2254,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONTEXTUREWIDTHCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2289,18 +2289,18 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals4_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCustom3DVolume::useHighDefShaderChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals4_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals4_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
+            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QCUSTOM3DVOLUME" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2309,7 +2309,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
 
         });
 
-        Signals4_store_connection( indexOfCodeBlock, connection );
+        Signals5_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2320,9 +2320,9 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ONUSEHIGHDEFSHADERCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals4_disconnection( sender, indexOfSignal );
+      Signals5_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals4_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
