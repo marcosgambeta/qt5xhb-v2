@@ -53,7 +53,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals4.h"
+#include "qt5xhb_signals5.h"
 
 #ifdef __XHARBOUR__
 #include <QtOpenGL/QGLShader>
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals4_disconnect_all_signals( obj, true );
+    Signals5_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
