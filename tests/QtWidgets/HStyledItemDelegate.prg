@@ -207,6 +207,8 @@ RETURN self
 METHOD paint(oPainter, oOption, oIndex) CLASS ValueDelegate
 
    LOCAL nValue
+   LOCAL cValue
+   LOCAL oPen
 
    // checa se o estado da celula = selecionado e preenche o fundo de acordo
    IF hb_bitand( oOption:state(), QStyle_State_Selected ) != 0
