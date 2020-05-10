@@ -24,6 +24,9 @@ PROCEDURE Main()
    LOCAL oLineEdit2
    LOCAL oLabel3
    LOCAL oLineEdit3
+   LOCAL o1
+   LOCAL o2
+   LOCAL o3
 
    oApp := QApplication():new()
 
