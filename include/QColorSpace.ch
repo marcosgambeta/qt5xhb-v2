@@ -26,18 +26,12 @@ enum QColorSpace::NamedColorSpace
 enum class QColorSpace::Primaries
 */
 #define QColorSpace_Custom                                           0
-#define QColorSpace_SRgb                                             1
-#define QColorSpace_AdobeRgb                                         2
 #define QColorSpace_DciP3D65                                         3
-#define QColorSpace_ProPhotoRgb                                      4
 
 /*
 enum class QColorSpace::TransferFunction
 */
-#define QColorSpace_Custom                                           0
 #define QColorSpace_Linear                                           1
 #define QColorSpace_Gamma                                            2
-#define QColorSpace_SRgb                                             3
-#define QColorSpace_ProPhotoRgb                                      4
 
 #endif /* QCOLORSPACE_CH */
