@@ -408,3 +408,36 @@ PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname )
 
   return pObject;
 }
+
+#include "hbvm.h"
+#include "hbinit.h"
+
+static void qt5xhb_events_init( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  if( s_events == nullptr )
+  {
+    //s_events = new Events(QCoreApplication::instance());
+    s_events = new Events();
+  }
+}
+
+static void qt5xhb_events_exit( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  delete s_events;
+}
+
+HB_CALL_ON_STARTUP_BEGIN( _qt5xhb_events_init_ )
+  hb_vmAtInit( qt5xhb_events_init, nullptr );
+  hb_vmAtExit( qt5xhb_events_exit, nullptr );
+HB_CALL_ON_STARTUP_END( _qt5xhb_events_init_ )
+
+#if defined( HB_PRAGMA_STARTUP )
+  #pragma startup _qt5xhb_events_init_
+#elif defined( HB_DATASEG_STARTUP )
+  #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_events_init_ )
+  #include "hbiniseg.h"
+#endif
