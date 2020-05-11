@@ -42,12 +42,6 @@ int Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
 {
   int i;
 
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   // verifica se já está na lista
   int found = -1;
   const int listsize = s_signals->list1.size();
@@ -114,12 +108,6 @@ bool Signals5_disconnect_signal ( QObject * object, int signal )
 {
   int i;
 
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   bool ret = false;
   const int listsize = s_signals->list1.size();
 
@@ -157,12 +145,6 @@ bool Signals5_disconnect_signal ( QObject * object, int signal )
 
 bool Signals5_is_signal_connected ( QObject * object, int signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   // valor de retorno
   bool found = false;
   const int listsize = s_signals->list1.size();
@@ -187,12 +169,6 @@ bool Signals5_is_signal_connected ( QObject * object, int signal )
 
 PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   int i;
   int found = -1;
   const int listsize = s_signals->list1.size();
@@ -225,12 +201,6 @@ PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal )
 //PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal, int indexOfCodeBlock )
 PHB_ITEM Signals5_return_codeblock ( int indexOfCodeBlock )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   //int i;
   //int found = -1;
 
@@ -363,12 +333,6 @@ void Signals5_disconnect_all_signals (QObject * obj, bool children)
 */
 bool Signals5_connection ( QObject * object, int signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5( QCoreApplication::instance() );
-  //}
-
   bool ret = false;
 
   s_signals->mutex->lock();
@@ -414,12 +378,6 @@ bool Signals5_connection ( QObject * object, int signal )
 
 bool Signals5_connection ( QObject * object, int signal, int & indexOfCodeBlock )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5( QCoreApplication::instance() );
-  //}
-
   bool ret = false;
 
   s_signals->mutex->lock();
@@ -468,12 +426,6 @@ bool Signals5_connection ( QObject * object, int signal, int & indexOfCodeBlock 
 */
 bool Signals5_disconnection ( QObject * object, int signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5( QCoreApplication::instance() );
-  //}
-
   bool ret = false;
 
   s_signals->mutex->lock();
@@ -613,12 +565,6 @@ PHB_ITEM Signals5_return_qobject ( QObject * ptr, const char * classname )
 
 bool Signals5_store_connection ( QObject * object, int signal, QMetaObject::Connection connection )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   // valor de retorno
   bool stored = false;
 
@@ -640,12 +586,6 @@ bool Signals5_store_connection ( QObject * object, int signal, QMetaObject::Conn
 
 bool Signals5_store_connection ( int index, QMetaObject::Connection connection )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   // valor de retorno
   //bool stored = false;
 
@@ -668,12 +608,6 @@ bool Signals5_store_connection ( int index, QMetaObject::Connection connection )
 
 QMetaObject::Connection Signals5_get_connection ( QObject * object, int signal )
 {
-  // cria objeto da classe Signals, caso não tenha sido criado
-  //if( s_signals == nullptr )
-  //{
-  //  s_signals = new Signals5(QCoreApplication::instance());
-  //}
-
   // valor de retorno
   QMetaObject::Connection connection;
 
