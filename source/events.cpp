@@ -13,7 +13,7 @@ static Events *s_events = nullptr;
 /*
   constructor
 */
-Events::Events(QObject *parent) : QObject(parent)
+Events::Events( QObject *parent ) : QObject( parent )
 {
 }
 
@@ -22,22 +22,23 @@ Events::Events(QObject *parent) : QObject(parent)
 */
 Events::~Events()
 {
-  Events_release_codeblocks ();
+  Events_release_codeblocks();
 }
 
 /*
   filtro de eventos
 */
-bool Events::eventFilter(QObject *obj, QEvent *event)
+bool Events::eventFilter( QObject *obj, QEvent *event )
 {
   QEvent::Type eventtype = event->type();
 
   int found = -1;
   const int listsize = list1.size();
 
-  for (int i = 0; i < listsize; ++i)
+  for( int i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) list1.at(i) == (QObject *) obj ) && ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) )
+    if( ( (QObject *) list1.at(i) == (QObject *) obj ) &&
+        ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) )
         {
           found = i;
           break;
@@ -77,19 +78,13 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
   usuário
 */
 
-bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
+bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 {
   int i;
   // parâmetros da função
   //QObject * object = (QObject *) hb_parptr(1);
   //int type = hb_parni(2);
   //PHB_ITEM codeblock = hb_itemNew( hb_param( 3, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
-  // cria objeto da classe Events, caso não tenha sido criado
-  if( s_events == nullptr )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
 
   // instala eventfilter, se não houver nenhum evento
   if( s_events->list1.contains( object ) == false )
@@ -101,9 +96,10 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
   int found = -1;
   const int listsize = s_events->list1.size();
 
-  for (i = 0; i < listsize; ++i)
+  for( i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) && ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) )
+    if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) &&
+        ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) )
     {
       found = i;
       hb_itemRelease( codeblock );
@@ -151,24 +147,18 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
   usuário
 */
 
-bool Events_disconnect_event ( QObject * object, int type )
+bool Events_disconnect_event( QObject * object, int type )
 {
   int i;
   // parâmetros da função
   //QObject * object = (QObject *) hb_parptr(1);
   //int type = hb_parni(2);
-  // cria objeto da classe Events, caso não tenha sido criado
-
-  if( s_events == nullptr )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
 
   bool ret = false;
   const int listsize = s_events->list1.size();
 
   // remove evento da lista de eventos
-  for (i = 0; i < listsize; ++i)
+  for( i = 0; i < listsize; ++i )
   {
     if( (QObject *) s_events->list1.at(i) == (QObject *) object )
     {
@@ -198,7 +188,7 @@ bool Events_disconnect_event ( QObject * object, int type )
   Libera todos os codeblocks relacionados com eventos
 */
 
-void Events_release_codeblocks ()
+void Events_release_codeblocks()
 {
   if( s_events != nullptr )
   {
@@ -208,7 +198,7 @@ void Events_release_codeblocks ()
     {
       if( s_events->list1.at(i) != nullptr )
       {
-        hb_itemRelease((PHB_ITEM) s_events->list3.at(i) );
+        hb_itemRelease( (PHB_ITEM) s_events->list3.at(i) );
         s_events->list1[i] = nullptr;
         s_events->list2[i] = QEvent::None;
         s_events->list3[i] = nullptr;
@@ -222,7 +212,7 @@ void Events_release_codeblocks ()
   incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
 */
 
-void Events_disconnect_all_events (QObject * obj, bool children)
+void Events_disconnect_all_events( QObject * obj, bool children )
 {
   if( s_events != nullptr )
   {
@@ -296,14 +286,14 @@ void Events_disconnect_all_events (QObject * obj, bool children)
 
 HB_FUNC( QTXHB_EVENTS_SIZE )
 {
+  int size = 0;
+
   if( s_events != nullptr )
   {
-    hb_retni( s_events->list1.size() );
+    size = s_events->list1.size();
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( size );
 }
 
 /*
@@ -314,10 +304,10 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 {
+  int count = 0;
+
   if( s_events != nullptr )
   {
-    // inicializa contador
-    int count = 0;
     const int listsize = s_events->list1.size();
     // percorre toda a lista de eventos
     for( auto i = 0; i < listsize; ++i )
@@ -327,15 +317,12 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
         ++count;
       }
     }
-    hb_retni( count );
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( count );
 }
 
-PHB_ITEM Events_return_object ( QEvent * ptr, const char * classname )
+PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
 {
 
   static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
@@ -374,7 +361,7 @@ PHB_ITEM Events_return_object ( QEvent * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname )
+PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
