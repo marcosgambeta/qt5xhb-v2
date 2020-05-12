@@ -460,7 +460,7 @@ bool Signals5_disconnection ( QObject * object, int signal )
   ser removida ou sofrer modificações futuramente.
 */
 
-HB_FUNC( QTXHB_SIGNALS5_SIZE )
+HB_FUNC( QTXHB_SIGNALS_SIZE )
 {
   if( s_signals != nullptr )
   {
@@ -478,7 +478,7 @@ HB_FUNC( QTXHB_SIGNALS5_SIZE )
   ser removida ou sofrer modificações futuramente.
 */
 
-HB_FUNC( QTXHB_SIGNALS5_SIZE_ACTIVE )
+HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
 {
   if( s_signals != nullptr )
   {
