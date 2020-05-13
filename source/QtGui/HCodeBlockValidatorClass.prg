@@ -33,7 +33,7 @@ RETURN
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
 #include "qt5xhb_events.h"
-#include "qt5xhb_signals5.h"
+#include "qt5xhb_signals.h"
 
 /*
 explicit HCodeBlockValidator( QObject *parent = nullptr )
