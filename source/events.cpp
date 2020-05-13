@@ -286,7 +286,7 @@ void Events_disconnect_all_events( QObject * obj, bool children )
 
 HB_FUNC( QTXHB_EVENTS_SIZE )
 {
-  int size = 0;
+  auto size = 0;
 
   if( s_events != nullptr )
   {
@@ -304,7 +304,7 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
 HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 {
-  int count = 0;
+  auto count = 0;
 
   if( s_events != nullptr )
   {
