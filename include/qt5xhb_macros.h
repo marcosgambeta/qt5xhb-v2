@@ -10,6 +10,7 @@
 #define QT5XHB_MACROS_H
 
 #include "qt5xhb_macros_activeqt.h"
+#include "qt5xhb_macros_qtandroidextras.h"
 #include "qt5xhb_macros_qtbluetooth.h"
 #include "qt5xhb_macros_qtcharts.h"
 #include "qt5xhb_macros_qtcore.h"
