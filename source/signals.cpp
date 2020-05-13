@@ -13,7 +13,7 @@ static Signals5 *s_signals = nullptr;
 /*
   constructor
 */
-Signals5::Signals5(QObject *parent) : QObject(parent)
+Signals5::Signals5( QObject *parent ) : QObject( parent )
 {
   mutex = new QMutex();
 }
@@ -23,7 +23,7 @@ Signals5::Signals5(QObject *parent) : QObject(parent)
 */
 Signals5::~Signals5()
 {
-  Signals5_release_codeblocks ();
+  Signals5_release_codeblocks();
   delete mutex;
 }
 
@@ -37,8 +37,8 @@ Signals5::~Signals5()
   usuário
 */
 
-//bool Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
-int Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
+//bool Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
+int Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
 {
   int i;
 
@@ -46,9 +46,10 @@ int Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
   int found = -1;
   const int listsize = s_signals->list1.size();
 
-  for (i = 0; i < listsize; ++i)
+  for( i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) )
     {
       found = i;
       //hb_itemRelease( codeblock );
@@ -104,7 +105,7 @@ int Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock )
   usuário
 */
 
-bool Signals5_disconnect_signal ( QObject * object, int signal )
+bool Signals5_disconnect_signal( QObject * object, int signal )
 {
   int i;
 
@@ -112,7 +113,7 @@ bool Signals5_disconnect_signal ( QObject * object, int signal )
   const int listsize = s_signals->list1.size();
 
   // remove sinal da lista de sinais
-  for (i = 0; i < listsize; ++i)
+  for( i = 0; i < listsize; ++i )
   {
     if( (QObject *) s_signals->list1.at(i) == (QObject *) object )
     {
@@ -143,7 +144,7 @@ bool Signals5_disconnect_signal ( QObject * object, int signal )
   usuário
 */
 
-bool Signals5_is_signal_connected ( QObject * object, int signal )
+bool Signals5_is_signal_connected( QObject * object, int signal )
 {
   // valor de retorno
   bool found = false;
@@ -151,9 +152,10 @@ bool Signals5_is_signal_connected ( QObject * object, int signal )
 
   // verifica se já está na lista
   //int i;
-  for (int i = 0; i < listsize; ++i)
+  for( int i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) )
     {
       found = true;
       break;
@@ -167,14 +169,14 @@ bool Signals5_is_signal_connected ( QObject * object, int signal )
   Retorna o codeblock de um determinado objeto e sinal
 */
 
-PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal )
+PHB_ITEM Signals5_return_codeblock( QObject * object, int signal )
 {
   int i;
   int found = -1;
   const int listsize = s_signals->list1.size();
 
   // localiza sinal na lista de sinais
-  for (i = 0; i < listsize; ++i)
+  for( i = 0; i < listsize; ++i )
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
@@ -198,8 +200,8 @@ PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal )
   Retorna o codeblock atraves do indice
 */
 
-//PHB_ITEM Signals5_return_codeblock ( QObject * object, int signal, int indexOfCodeBlock )
-PHB_ITEM Signals5_return_codeblock ( int indexOfCodeBlock )
+//PHB_ITEM Signals5_return_codeblock( QObject * object, int signal, int indexOfCodeBlock )
+PHB_ITEM Signals5_return_codeblock( int indexOfCodeBlock )
 {
   //int i;
   //int found = -1;
@@ -232,13 +234,13 @@ PHB_ITEM Signals5_return_codeblock ( int indexOfCodeBlock )
   Libera todos os codeblocks relacionados com sinais
 */
 
-void Signals5_release_codeblocks ()
+void Signals5_release_codeblocks()
 {
   if( s_signals != nullptr )
   {
     const int listsize = s_signals->list1.size();
 
-    for (int i = 0; i < listsize; ++i)
+    for( int i = 0; i < listsize; ++i )
     {
       if( s_signals->list1.at(i) != nullptr )
       {
@@ -261,7 +263,7 @@ void Signals5_release_codeblocks ()
   a destruição de um objeto ocorre apenas uma vez.
 */
 
-void Signals5_disconnect_all_signals (QObject * obj, bool children)
+void Signals5_disconnect_all_signals( QObject * obj, bool children )
 {
   if( s_signals != nullptr )
   {
@@ -270,7 +272,7 @@ void Signals5_disconnect_all_signals (QObject * obj, bool children)
       const int listsize = s_signals->list1.size();
 
       // percorre toda a lista de sinais
-      for (int i = 0; i < listsize; ++i)
+      for( int i = 0; i < listsize; ++i )
       {
         // elimina sinais ativos (true) ligados ao objeto (obj)
 //         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
@@ -300,12 +302,12 @@ void Signals5_disconnect_all_signals (QObject * obj, bool children)
       const int listsize = list.size();
 
       // percorre toda a lista de objetos
-      for (int i = 0; i < listsize; ++i)
+      for( int i = 0; i < listsize; ++i )
       {
         const int listsize2 = s_signals->list1.size();
 
         // percorre toda a lista de sinais
-        for (int ii = 0; ii < listsize2; ++ii)
+        for( int ii = 0; ii < listsize2; ++ii )
         {
           // elimina sinais ativos (true) ligados ao objeto list.at(i)
 //           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
@@ -331,7 +333,7 @@ void Signals5_disconnect_all_signals (QObject * obj, bool children)
 /*
   conecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
-bool Signals5_connection ( QObject * object, int signal )
+bool Signals5_connection( QObject * object, int signal )
 {
   bool ret = false;
 
@@ -376,7 +378,7 @@ bool Signals5_connection ( QObject * object, int signal )
   return ret;
 }
 
-bool Signals5_connection ( QObject * object, int signal, int & indexOfCodeBlock )
+bool Signals5_connection( QObject * object, int signal, int & indexOfCodeBlock )
 {
   bool ret = false;
 
@@ -424,7 +426,7 @@ bool Signals5_connection ( QObject * object, int signal, int & indexOfCodeBlock 
 /*
   desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
-bool Signals5_disconnection ( QObject * object, int signal )
+bool Signals5_disconnection( QObject * object, int signal )
 {
   bool ret = false;
 
@@ -499,7 +501,7 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
   hb_retni( count );
 }
 
-PHB_ITEM Signals5_return_object ( void * ptr, const char * classname )
+PHB_ITEM Signals5_return_object( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
@@ -524,7 +526,7 @@ PHB_ITEM Signals5_return_object ( void * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Signals5_return_qobject ( QObject * ptr, const char * classname )
+PHB_ITEM Signals5_return_qobject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
@@ -559,7 +561,7 @@ PHB_ITEM Signals5_return_qobject ( QObject * ptr, const char * classname )
   return pObject;
 }
 
-bool Signals5_store_connection ( QObject * object, int signal, QMetaObject::Connection connection )
+bool Signals5_store_connection( QObject * object, int signal, QMetaObject::Connection connection )
 {
   // valor de retorno
   bool stored = false;
@@ -567,9 +569,10 @@ bool Signals5_store_connection ( QObject * object, int signal, QMetaObject::Conn
   const int listsize = s_signals->list1.size();
 
   // armazena handle da conexão
-  for (int i = 0; i < listsize; ++i)
+  for( int i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
+        ( s_signals->list2.at(i) == signal ) )
     {
       s_signals->list4[i] = connection;
       stored = true;
@@ -580,7 +583,7 @@ bool Signals5_store_connection ( QObject * object, int signal, QMetaObject::Conn
   return stored;
 }
 
-bool Signals5_store_connection ( int index, QMetaObject::Connection connection )
+bool Signals5_store_connection( int index, QMetaObject::Connection connection )
 {
   // valor de retorno
   //bool stored = false;
@@ -602,7 +605,7 @@ bool Signals5_store_connection ( int index, QMetaObject::Connection connection )
   return true;
 }
 
-QMetaObject::Connection Signals5_get_connection ( QObject * object, int signal )
+QMetaObject::Connection Signals5_get_connection( QObject * object, int signal )
 {
   // valor de retorno
   QMetaObject::Connection connection;
@@ -610,7 +613,7 @@ QMetaObject::Connection Signals5_get_connection ( QObject * object, int signal )
   const int listsize = s_signals->list1.size();
 
   // busca handle da conexão
-  for (int i = 0; i < listsize; ++i)
+  for( int i = 0; i < listsize; ++i )
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
