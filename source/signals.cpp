@@ -462,14 +462,14 @@ bool Signals5_disconnection ( QObject * object, int signal )
 
 HB_FUNC( QTXHB_SIGNALS_SIZE )
 {
+  auto size = 0;
+
   if( s_signals != nullptr )
   {
-    hb_retni( s_signals->list1.size() );
+    size = s_signals->list1.size();
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( size );
 }
 
 /*
@@ -480,27 +480,23 @@ HB_FUNC( QTXHB_SIGNALS_SIZE )
 
 HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
 {
+  auto count = 0;
+
   if( s_signals != nullptr )
   {
-    // inicializa contador
-    int count = 0;
-
     const int listsize = s_signals->list1.size();
 
     // percorre toda a lista de sinais
-    for (int i = 0; i < listsize; ++i)
+    for( auto i = 0; i < listsize; ++i )
     {
       if( s_signals->list1.at(i) != nullptr )
       {
         ++count;
       }
     }
-    hb_retni( count );
   }
-  else
-  {
-    hb_retni( 0 );
-  }
+
+  hb_retni( count );
 }
 
 PHB_ITEM Signals5_return_object ( void * ptr, const char * classname )
