@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTREEVIEW_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals5_disconnect_all_signals( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -1603,19 +1603,19 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeView::collapsed, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QTREEVIEW" );
-            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QTREEVIEW" );
+            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1623,7 +1623,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1634,9 +1634,9 @@ HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1665,19 +1665,19 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QTreeView::expanded, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QModelIndex & arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QTREEVIEW" );
-            PHB_ITEM pArg1 = Signals5_return_object( (void *) &arg1, "QMODELINDEX" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QTREEVIEW" );
+            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QMODELINDEX" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1685,7 +1685,7 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1696,9 +1696,9 @@ HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
