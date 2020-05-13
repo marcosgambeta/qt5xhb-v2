@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
   if( obj != nullptr )
   {
     Events_disconnect_all_events( obj, true );
-    Signals5_disconnect_all_signals( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -638,18 +638,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -669,9 +669,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -704,25 +704,25 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::labelsChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -733,9 +733,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELSCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -768,18 +768,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::orientationChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QAbstract3DAxis::AxisOrientation arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -799,9 +799,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONORIENTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -834,18 +834,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::minChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -865,9 +865,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMINCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -900,18 +900,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::maxChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -931,9 +931,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONMAXCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -966,18 +966,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::rangeChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1, float arg2) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             PHB_ITEM pArg2 = hb_itemPutND( NULL, arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -999,9 +999,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONRANGECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1034,18 +1034,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::autoAdjustRangeChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1065,9 +1065,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1100,18 +1100,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::labelAutoRotationChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1131,9 +1131,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONLABELAUTOROTATIONCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1166,18 +1166,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleVisibilityChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1197,9 +1197,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEVISIBILITYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1232,18 +1232,18 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals5_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstract3DAxis::titleFixedChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals5_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals5_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
+            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QABSTRACT3DAXIS" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
 
         });
 
-        Signals5_store_connection( indexOfCodeBlock, connection );
+        Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1263,9 +1263,9 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ONTITLEFIXEDCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals5_disconnection( sender, indexOfSignal );
+      Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals5_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
