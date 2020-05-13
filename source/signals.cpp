@@ -8,12 +8,12 @@
 
 #include "signals.h"
 
-static Signals5 *s_signals = nullptr;
+static Signals *s_signals = nullptr;
 
 /*
   constructor
 */
-Signals5::Signals5( QObject *parent ) : QObject( parent )
+Signals::Signals( QObject *parent ) : QObject( parent )
 {
   mutex = new QMutex();
 }
@@ -21,9 +21,9 @@ Signals5::Signals5( QObject *parent ) : QObject( parent )
 /*
   destructor
 */
-Signals5::~Signals5()
+Signals::~Signals()
 {
-  Signals5_release_codeblocks();
+  Signals_release_codeblocks();
   delete mutex;
 }
 
@@ -37,8 +37,8 @@ Signals5::~Signals5()
   usuário
 */
 
-//bool Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
-int Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
+//bool Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
+int Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
 {
   int i;
 
@@ -105,7 +105,7 @@ int Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
   usuário
 */
 
-bool Signals5_disconnect_signal( QObject * object, int signal )
+bool Signals_disconnect_signal( QObject * object, int signal )
 {
   int i;
 
@@ -144,7 +144,7 @@ bool Signals5_disconnect_signal( QObject * object, int signal )
   usuário
 */
 
-bool Signals5_is_signal_connected( QObject * object, int signal )
+bool Signals_is_signal_connected( QObject * object, int signal )
 {
   // valor de retorno
   bool found = false;
@@ -169,7 +169,7 @@ bool Signals5_is_signal_connected( QObject * object, int signal )
   Retorna o codeblock de um determinado objeto e sinal
 */
 
-PHB_ITEM Signals5_return_codeblock( QObject * object, int signal )
+PHB_ITEM Signals_return_codeblock( QObject * object, int signal )
 {
   int i;
   int found = -1;
@@ -200,8 +200,8 @@ PHB_ITEM Signals5_return_codeblock( QObject * object, int signal )
   Retorna o codeblock atraves do indice
 */
 
-//PHB_ITEM Signals5_return_codeblock( QObject * object, int signal, int indexOfCodeBlock )
-PHB_ITEM Signals5_return_codeblock( int indexOfCodeBlock )
+//PHB_ITEM Signals_return_codeblock( QObject * object, int signal, int indexOfCodeBlock )
+PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
 {
   //int i;
   //int found = -1;
@@ -234,7 +234,7 @@ PHB_ITEM Signals5_return_codeblock( int indexOfCodeBlock )
   Libera todos os codeblocks relacionados com sinais
 */
 
-void Signals5_release_codeblocks()
+void Signals_release_codeblocks()
 {
   if( s_signals != nullptr )
   {
@@ -263,7 +263,7 @@ void Signals5_release_codeblocks()
   a destruição de um objeto ocorre apenas uma vez.
 */
 
-void Signals5_disconnect_all_signals( QObject * obj, bool children )
+void Signals_disconnect_all_signals( QObject * obj, bool children )
 {
   if( s_signals != nullptr )
   {
@@ -333,7 +333,7 @@ void Signals5_disconnect_all_signals( QObject * obj, bool children )
 /*
   conecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
-bool Signals5_connection( QObject * object, int signal )
+bool Signals_connection( QObject * object, int signal )
 {
   bool ret = false;
 
@@ -343,7 +343,7 @@ bool Signals5_connection( QObject * object, int signal )
   //{
     //QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    bool connected = Signals5_is_signal_connected( object, signal );
+    bool connected = Signals_is_signal_connected( object, signal );
 
     if( !connected )
     {
@@ -360,7 +360,7 @@ bool Signals5_connection( QObject * object, int signal )
         if( ret )
         {
 */
-          Signals5_connect_signal( object, signal, codeblock ); // se conectado, adiciona
+          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
           ret = true;
 /*
         }
@@ -378,7 +378,7 @@ bool Signals5_connection( QObject * object, int signal )
   return ret;
 }
 
-bool Signals5_connection( QObject * object, int signal, int & indexOfCodeBlock )
+bool Signals_connection( QObject * object, int signal, int & indexOfCodeBlock )
 {
   bool ret = false;
 
@@ -388,7 +388,7 @@ bool Signals5_connection( QObject * object, int signal, int & indexOfCodeBlock )
   //{
     //QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
-    bool connected = Signals5_is_signal_connected( object, signal );
+    bool connected = Signals_is_signal_connected( object, signal );
 
     if( !connected )
     {
@@ -405,7 +405,7 @@ bool Signals5_connection( QObject * object, int signal, int & indexOfCodeBlock )
         if( ret )
         {
 */
-          indexOfCodeBlock = Signals5_connect_signal( object, signal, codeblock ); // se conectado, adiciona
+          indexOfCodeBlock = Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
           ret = true;
 /*
         }
@@ -426,7 +426,7 @@ bool Signals5_connection( QObject * object, int signal, int & indexOfCodeBlock )
 /*
   desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 */
-bool Signals5_disconnection( QObject * object, int signal )
+bool Signals_disconnection( QObject * object, int signal )
 {
   bool ret = false;
 
@@ -444,7 +444,7 @@ bool Signals5_disconnection( QObject * object, int signal )
     if( ret )
     {
 */
-      Signals5_disconnect_signal( object, signal ); // se desconectado, remove
+      Signals_disconnect_signal( object, signal ); // se desconectado, remove
       ret = true;
 /*
     }
@@ -501,7 +501,7 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
   hb_retni( count );
 }
 
-PHB_ITEM Signals5_return_object( void * ptr, const char * classname )
+PHB_ITEM Signals_return_object( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
@@ -526,7 +526,7 @@ PHB_ITEM Signals5_return_object( void * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Signals5_return_qobject( QObject * ptr, const char * classname )
+PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
@@ -561,7 +561,7 @@ PHB_ITEM Signals5_return_qobject( QObject * ptr, const char * classname )
   return pObject;
 }
 
-bool Signals5_store_connection( QObject * object, int signal, QMetaObject::Connection connection )
+bool Signals_store_connection( QObject * object, int signal, QMetaObject::Connection connection )
 {
   // valor de retorno
   bool stored = false;
@@ -583,7 +583,7 @@ bool Signals5_store_connection( QObject * object, int signal, QMetaObject::Conne
   return stored;
 }
 
-bool Signals5_store_connection( int index, QMetaObject::Connection connection )
+bool Signals_store_connection( int index, QMetaObject::Connection connection )
 {
   // valor de retorno
   //bool stored = false;
@@ -605,7 +605,7 @@ bool Signals5_store_connection( int index, QMetaObject::Connection connection )
   return true;
 }
 
-QMetaObject::Connection Signals5_get_connection( QObject * object, int signal )
+QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
 {
   // valor de retorno
   QMetaObject::Connection connection;
@@ -634,8 +634,8 @@ static void qt5xhb_signals_init( void * cargo )
 
   if( s_signals == nullptr )
   {
-    //s_signals = new Signals5(QCoreApplication::instance());
-    s_signals = new Signals5();
+    //s_signals = new Signals(QCoreApplication::instance());
+    s_signals = new Signals();
   }
 }
 

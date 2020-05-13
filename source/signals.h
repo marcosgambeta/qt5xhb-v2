@@ -6,8 +6,8 @@
 
 */
 
-#ifndef SIGNALS5_H
-#define SIGNALS5_H
+#ifndef SIGNALS_H
+#define SIGNALS_H
 
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
@@ -27,29 +27,29 @@
 #include "hbapicls.h"
 #endif
 
-//bool Signals5_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock );
-int Signals5_connect_signal( QObject * object, int signal, PHB_ITEM codeblock );
-bool Signals5_disconnect_signal( QObject * object, int signal );
-bool Signals5_is_signal_connected( QObject * object, int signal );
-PHB_ITEM Signals5_return_codeblock( QObject * object, int signal );
-//PHB_ITEM Signals5_return_codeblock( QObject * object, int signal, int indexOfCodeBlock );
-PHB_ITEM Signals5_return_codeblock( int indexOfCodeBlock );
-void Signals5_release_codeblocks();
-void Signals5_disconnect_all_signals( QObject * obj, bool children );
-bool Signals5_connection( QObject * s, int signal );
-bool Signals5_connection( QObject * s, int signal, int & indexOfCodeBlock );
-bool Signals5_disconnection( QObject * s, int signal );
-PHB_ITEM Signals5_return_object( void * ptr, const char * classname );
-PHB_ITEM Signals5_return_qobject( QObject * ptr, const char * classname );
-//bool Signals5_store_connection( QObject * s, int signal, QMetaObject::Connection connection );
-bool Signals5_store_connection( int index, QMetaObject::Connection connection );
-QMetaObject::Connection Signals5_get_connection( QObject * s, int signal );
+//bool Signals_connect_signal ( QObject * object, int signal, PHB_ITEM codeblock );
+int Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock );
+bool Signals_disconnect_signal( QObject * object, int signal );
+bool Signals_is_signal_connected( QObject * object, int signal );
+PHB_ITEM Signals_return_codeblock( QObject * object, int signal );
+//PHB_ITEM Signals_return_codeblock( QObject * object, int signal, int indexOfCodeBlock );
+PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock );
+void Signals_release_codeblocks();
+void Signals_disconnect_all_signals( QObject * obj, bool children );
+bool Signals_connection( QObject * s, int signal );
+bool Signals_connection( QObject * s, int signal, int & indexOfCodeBlock );
+bool Signals_disconnection( QObject * s, int signal );
+PHB_ITEM Signals_return_object( void * ptr, const char * classname );
+PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
+//bool Signals_store_connection( QObject * s, int signal, QMetaObject::Connection connection );
+bool Signals_store_connection( int index, QMetaObject::Connection connection );
+QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
 
-class Signals5: public QObject
+class Signals: public QObject
 {
   public:
-  Signals5( QObject *parent = nullptr );
-  ~Signals5();
+  Signals( QObject *parent = nullptr );
+  ~Signals();
   QVector<QObject*> list1;                // armazena ponteiro do objeto
   QVector<int> list2;                     // armazena indice do sinal
   QVector<PHB_ITEM> list3;                // armazena codeblock
@@ -57,4 +57,4 @@ class Signals5: public QObject
   QMutex * mutex;
 };
 
-#endif /* SIGNALS5_H */
+#endif /* SIGNALS_H */
