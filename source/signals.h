@@ -41,7 +41,6 @@ bool Signals_connection( QObject * s, int signal, int & indexOfCodeBlock );
 bool Signals_disconnection( QObject * s, int signal );
 PHB_ITEM Signals_return_object( void * ptr, const char * classname );
 PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
-//bool Signals_store_connection( QObject * s, int signal, QMetaObject::Connection connection );
 bool Signals_store_connection( int index, QMetaObject::Connection connection );
 QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
 

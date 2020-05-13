@@ -152,7 +152,7 @@ bool Signals_is_signal_connected( QObject * object, int signal )
 
   // verifica se já está na lista
   //int i;
-  for( int i = 0; i < listsize; ++i )
+  for( auto i = 0; i < listsize; ++i )
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
         ( s_signals->list2.at(i) == signal ) )
@@ -231,7 +231,8 @@ PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
 }
 
 /*
-  Libera todos os codeblocks relacionados com sinais
+  Libera todos os codeblocks relacionados com sinais.
+  Executado apenas 1 vez, na destruição do objeto s_signals.
 */
 
 void Signals_release_codeblocks()
@@ -240,7 +241,7 @@ void Signals_release_codeblocks()
   {
     const int listsize = s_signals->list1.size();
 
-    for( int i = 0; i < listsize; ++i )
+    for( auto i = 0; i < listsize; ++i )
     {
       if( s_signals->list1.at(i) != nullptr )
       {
@@ -272,7 +273,7 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
       const int listsize = s_signals->list1.size();
 
       // percorre toda a lista de sinais
-      for( int i = 0; i < listsize; ++i )
+      for( auto i = 0; i < listsize; ++i )
       {
         // elimina sinais ativos (true) ligados ao objeto (obj)
 //         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
@@ -302,12 +303,12 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
       const int listsize = list.size();
 
       // percorre toda a lista de objetos
-      for( int i = 0; i < listsize; ++i )
+      for( auto i = 0; i < listsize; ++i )
       {
         const int listsize2 = s_signals->list1.size();
 
         // percorre toda a lista de sinais
-        for( int ii = 0; ii < listsize2; ++ii )
+        for( auto ii = 0; ii < listsize2; ++ii )
         {
           // elimina sinais ativos (true) ligados ao objeto list.at(i)
 //           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
@@ -561,47 +562,9 @@ PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
   return pObject;
 }
 
-bool Signals_store_connection( QObject * object, int signal, QMetaObject::Connection connection )
-{
-  // valor de retorno
-  bool stored = false;
-
-  const int listsize = s_signals->list1.size();
-
-  // armazena handle da conexão
-  for( int i = 0; i < listsize; ++i )
-  {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
-        ( s_signals->list2.at(i) == signal ) )
-    {
-      s_signals->list4[i] = connection;
-      stored = true;
-      break;
-    }
-  }
-
-  return stored;
-}
-
 bool Signals_store_connection( int index, QMetaObject::Connection connection )
 {
-  // valor de retorno
-  //bool stored = false;
-
-  // armazena handle da conexão
-  //for (int i = 0; i < s_signals->list1.size(); ++i)
-  //{
-  //  if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
-  //  {
-  //    s_signals->list5[i] = connection;
-  //    stored = true;
-  //    break;
-  //  }
-  //}
-
   s_signals->list4[index] = connection;
-
-  //return stored;
   return true;
 }
 
@@ -613,7 +576,7 @@ QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
   const int listsize = s_signals->list1.size();
 
   // busca handle da conexão
-  for( int i = 0; i < listsize; ++i )
+  for( auto i = 0; i < listsize; ++i )
   {
     if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
@@ -634,7 +597,6 @@ static void qt5xhb_signals_init( void * cargo )
 
   if( s_signals == nullptr )
   {
-    //s_signals = new Signals(QCoreApplication::instance());
     s_signals = new Signals();
   }
 }
