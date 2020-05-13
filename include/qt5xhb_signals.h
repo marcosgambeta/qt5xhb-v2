@@ -41,20 +41,7 @@ bool Signals_connection( QObject * s, int signal, int & indexOfCodeBlock );
 bool Signals_disconnection( QObject * s, int signal );
 PHB_ITEM Signals_return_object( void * ptr, const char * classname );
 PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
-//bool Signals_store_connection( QObject * s, int signal, QMetaObject::Connection connection );
 bool Signals_store_connection( int index, QMetaObject::Connection connection );
 QMetaObject::Connection Signals_get_connection( QObject * s, int signal );
-
-class Signals: public QObject
-{
-  public:
-  Signals( QObject *parent = nullptr );
-  ~Signals();
-  QVector<QObject*> list1;                // armazena ponteiro do objeto
-  QVector<int> list2;                     // armazena indice do sinal
-  QVector<PHB_ITEM> list3;                // armazena codeblock
-  QVector<QMetaObject::Connection> list4; // handle da conexão
-  QMutex * mutex;
-};
 
 #endif /* SIGNALS_H */
