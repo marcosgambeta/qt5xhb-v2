@@ -166,68 +166,12 @@ bool Signals_is_signal_connected( QObject * object, int signal )
 }
 
 /*
-  Retorna o codeblock de um determinado objeto e sinal
+  Retorna um codeblock atraves do indice do codeblock no vetor
 */
 
-PHB_ITEM Signals_return_codeblock( QObject * object, int signal )
-{
-  int i;
-  int found = -1;
-  const int listsize = s_signals->list1.size();
-
-  // localiza sinal na lista de sinais
-  for( i = 0; i < listsize; ++i )
-  {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
-    {
-      found = i;
-      break;
-    }
-  }
-
-  // retorna o resultado da operação
-  if( found != -1 )
-  {
-    return (PHB_ITEM) s_signals->list3.at(found);
-  }
-  else
-  {
-    return nullptr;
-  }
-}
-
-/*
-  Retorna o codeblock atraves do indice
-*/
-
-//PHB_ITEM Signals_return_codeblock( QObject * object, int signal, int indexOfCodeBlock )
 PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
 {
-  //int i;
-  //int found = -1;
-
-  // localiza sinal na lista de sinais
-  //for (i = 0; i < s_signals->list1.size(); ++i)
-  //{
-  //  if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
-  //      ( s_signals->list2.at(i) == signal ) &&
-  //      ( (bool) s_signals->list4.at(i) == true ) )
-  //  {
-  //    found = i;
-  //    break;
-  //  }
-  //}
-
-  // retorna o resultado da operação
-  //if( found != -1 )
-  //{
-    //return (PHB_ITEM) s_signals->list3.at(found);
-    return (PHB_ITEM) s_signals->list3.at(indexOfCodeBlock);
-  //}
-  //else
-  //{
-  //  return nullptr;
-  //}
+  return s_signals->list3.at(indexOfCodeBlock);
 }
 
 /*

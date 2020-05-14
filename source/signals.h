@@ -31,8 +31,6 @@
 int Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock );
 bool Signals_disconnect_signal( QObject * object, int signal );
 bool Signals_is_signal_connected( QObject * object, int signal );
-PHB_ITEM Signals_return_codeblock( QObject * object, int signal );
-//PHB_ITEM Signals_return_codeblock( QObject * object, int signal, int indexOfCodeBlock );
 PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock );
 void Signals_release_codeblocks();
 void Signals_disconnect_all_signals( QObject * obj, bool children );
