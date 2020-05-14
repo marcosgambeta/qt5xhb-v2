@@ -22,7 +22,21 @@ Events::Events( QObject *parent ) : QObject( parent )
 */
 Events::~Events()
 {
-  Events_release_codeblocks();
+  const int listsize = m_list1.size();
+  for( auto i = 0; i < listsize; ++i )
+  {
+    if( m_list1.at(i) != nullptr )
+    {
+      hb_itemRelease( m_list3.at(i) );
+      m_list1[i] = nullptr;
+      m_list2[i] = QEvent::None;
+      m_list3[i] = nullptr;
+    }
+  }
+
+  m_list1.clear();
+  m_list2.clear();
+  m_list3.clear();
 }
 
 /*
@@ -32,32 +46,29 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
 {
   QEvent::Type eventtype = event->type();
 
-  int found = -1;
-  const int listsize = list1.size();
+  auto index = -1;
 
-  for( int i = 0; i < listsize; ++i )
+  const int listsize = m_list1.size();
+  for( auto i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) list1.at(i) == (QObject *) obj ) &&
-        ( (QEvent::Type) list2.at(i) == (QEvent::Type) eventtype ) )
-        {
-          found = i;
-          break;
-        }
+    if( ( m_list1.at(i) == obj ) && ( m_list2.at(i) == eventtype ) )
+    {
+      index = i;
+      break;
+    }
   }
 
   // se não encontrado na lista, propaga o evento
-  if( found == -1 )
+  if( index == -1 )
   {
     return false;
   }
 
   // executa bloco de código/função
-  //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
   PHB_ITEM pObject = Events_return_qobject( (QObject *) obj, "QOBJECT" );
-  //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
   PHB_ITEM pEvent = Events_return_object( (QEvent *) event, "QEVENT" );
 
-  bool ret = hb_itemGetL( hb_vmEvalBlockV( (PHB_ITEM) list3.at(found), 2, pObject, pEvent ) );
+  bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3.at(index), 2, pObject, pEvent ) );
 
   hb_itemRelease( pObject );
   hb_itemRelease( pEvent );
@@ -65,146 +76,102 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   // retorna resultado
   // .t.: interrompe processamento do evento
   // .f.: continua processamento do evento
-  return ret;
+  return result;
 }
 
 /*
   Conecta um determinado evento com um objeto
-  Parâmetro 1: ponteiro para o objeto
+  Parâmetro 1: objeto
   Parâmetro 2: id do evento
   Parâmetro 3: codeblock
-  Retorna .t. se a conexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
+  Retorna true se a conexão foi bem sucedida ou false se falhou
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
 bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 {
-  int i;
-  // parâmetros da função
-  //QObject * object = (QObject *) hb_parptr(1);
-  //int type = hb_parni(2);
-  //PHB_ITEM codeblock = hb_itemNew( hb_param( 3, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
   // instala eventfilter, se não houver nenhum evento
-  if( s_events->list1.contains( object ) == false )
+  if( s_events->m_list1.contains( object ) == false )
   {
     object->installEventFilter(s_events);
   }
 
   // verifica se já está na lista
-  int found = -1;
-  const int listsize = s_events->list1.size();
+  auto found = false;
 
-  for( i = 0; i < listsize; ++i )
+  const int listsize = s_events->m_list1.size();
+  for( auto i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_events->list1.at(i) == (QObject *) object ) &&
-        ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) )
+    if( ( s_events->m_list1.at(i) == object ) && ( s_events->m_list2.at(i) == (QEvent::Type) type ) )
     {
-      found = i;
+      found = true;
       hb_itemRelease( codeblock );
       break;
     }
   }
 
-  bool ret = false;
+  bool result = false;
 
   // se nao encontrado na lista, adiciona
-  if( found == -1 )
+  if( !found )
   {
     // procura por posição livre
-    i = s_events->list1.indexOf( nullptr );
+    auto index = s_events->m_list1.indexOf( nullptr );
 
-    if( i == -1 ) // nao encontrou posicao livre
+    if( index == -1 ) // nao encontrou posicao livre
     {
       // adiciona evento na lista de eventos
-      s_events->list1 << object;
-      s_events->list2 << (QEvent::Type) type;
-      s_events->list3 << codeblock;
+      s_events->m_list1 << object;
+      s_events->m_list2 << (QEvent::Type) type;
+      s_events->m_list3 << codeblock;
     }
     else // encontrou posicao livre
     {
       // coloca na posição livre
-      s_events->list1[i] = object;
-      s_events->list2[i] = (QEvent::Type) type;
-      s_events->list3[i] = codeblock;
+      s_events->m_list1[index] = object;
+      s_events->m_list2[index] = (QEvent::Type) type;
+      s_events->m_list3[index] = codeblock;
     }
 
-    ret = true;
+    result = true;
   }
 
-  // retorna o resultado da operação
-  //hb_retl( ret );
-  return ret;
+  return result;
 }
 
 /*
   Desconecta um determinado evento
-  Parâmetro 1: ponteiro para o objeto
+  Parâmetro 1: objeto
   Parâmetro 2: id do evento
-  Retorna .t. se a desconexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
+  Retorna true se a desconexão foi bem sucedida ou false se falhou
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
 bool Events_disconnect_event( QObject * object, int type )
 {
-  int i;
-  // parâmetros da função
-  //QObject * object = (QObject *) hb_parptr(1);
-  //int type = hb_parni(2);
-
-  bool ret = false;
-  const int listsize = s_events->list1.size();
+  auto result = false;
 
   // remove evento da lista de eventos
-  for( i = 0; i < listsize; ++i )
+  const int listsize = s_events->m_list1.size();
+  for( auto i = 0; i < listsize; ++i )
   {
-    if( (QObject *) s_events->list1.at(i) == (QObject *) object )
+    if( ( s_events->m_list1.at(i) == object ) && ( s_events->m_list2.at(i) == (QEvent::Type) type ) )
     {
-      if( ( (QEvent::Type) s_events->list2.at(i) == (QEvent::Type) type ) )
-      {
-        hb_itemRelease( (PHB_ITEM) s_events->list3.at(i) );
-        s_events->list1[i] = nullptr;
-        s_events->list2[i] = (QEvent::Type) 0;
-        s_events->list3[i] = nullptr;
-        ret = true;
-      }
+      hb_itemRelease( s_events->m_list3.at(i) );
+      s_events->m_list1[i] = nullptr;
+      s_events->m_list2[i] = QEvent::None;
+      s_events->m_list3[i] = nullptr;
+      result = true;
     }
   }
 
   // desinstala eventfilter, se não houver mais nenhum evento
-  if( s_events->list1.contains( object ) == false )
+  if( s_events->m_list1.contains( object ) == false )
   {
     object->removeEventFilter(s_events);
   }
 
-  // retorna o resultado da operação
-  //hb_retl( ret );
-  return ret;
-}
-
-/*
-  Libera todos os codeblocks relacionados com eventos
-*/
-
-void Events_release_codeblocks()
-{
-  if( s_events != nullptr )
-  {
-    const int listsize = s_events->list1.size();
-
-    for( auto i = 0; i < listsize; ++i )
-    {
-      if( s_events->list1.at(i) != nullptr )
-      {
-        hb_itemRelease( (PHB_ITEM) s_events->list3.at(i) );
-        s_events->list1[i] = nullptr;
-        s_events->list2[i] = QEvent::None;
-        s_events->list3[i] = nullptr;
-      }
-    }
-  }
+  return result;
 }
 
 /*
@@ -218,23 +185,22 @@ void Events_disconnect_all_events( QObject * obj, bool children )
   {
     if( !children )
     {
-      const int listsize = s_events->list1.size();
-
       // percorre toda a lista de eventos
+      const int listsize = s_events->m_list1.size();
       for( auto i = 0; i < listsize; ++i )
       {
-        // elimina eventos ativos (true) ligados ao objeto (obj)
-        if( ( (QObject *) s_events->list1.at(i) == (QObject *) obj ) )
+        // elimina eventos ligados ao objeto 'obj'
+        if( s_events->m_list1.at(i) == obj )
         {
-          hb_itemRelease( (PHB_ITEM) s_events->list3.at(i) );
-          s_events->list1[i] = nullptr;
-          s_events->list2[i] = QEvent::None;
-          s_events->list3[i] = nullptr;
+          hb_itemRelease( s_events->m_list3.at(i) );
+          s_events->m_list1[i] = nullptr;
+          s_events->m_list2[i] = QEvent::None;
+          s_events->m_list3[i] = nullptr;
         }
       }
 
       // desinstala eventfilter do objeto 'obj'
-      if( s_events->list1.contains( obj ) == false )
+      if( s_events->m_list1.contains( obj ) == false )
       {
         obj->removeEventFilter(s_events);
       }
@@ -242,36 +208,35 @@ void Events_disconnect_all_events( QObject * obj, bool children )
     else
     {
       // obtém a lista de filhos, netos, bisnetos, etc...
-      QList<QObject *> list = obj->findChildren<QObject *>();
+      auto objectList = obj->findChildren<QObject *>();
 
       // adiciona o pai na lista
-      list << obj;
-
-      const int listsize = list.size();
+      objectList << obj;
 
       // percorre toda a lista de objetos
+      const int listsize = objectList.size();
       for( auto i = 0; i < listsize; ++i )
       {
-        const int listsize2 = s_events->list1.size();
-        const QObject * obj2 = (QObject *) list.at(i);
+        QObject * currentObject = objectList.at(i);
 
         // percorre toda a lista de eventos
+        const int listsize2 = s_events->m_list1.size();
         for( auto ii = 0; ii < listsize2; ++ii )
         {
-          // elimina eventos ativos (true) ligados ao objeto list.at(i)
-          if( ( (QObject *) s_events->list1.at(ii) == (QObject *) obj2 ) )
+          // elimina eventos ativos ligados ao objeto 'objectList.at(i)'
+          if( s_events->m_list1.at(ii) == currentObject )
           {
-            hb_itemRelease( (PHB_ITEM) s_events->list3.at(ii) );
-            s_events->list1[ii] = nullptr;
-            s_events->list2[ii] = QEvent::None;
-            s_events->list3[ii] = nullptr;
+            hb_itemRelease( s_events->m_list3.at(ii) );
+            s_events->m_list1[ii] = nullptr;
+            s_events->m_list2[ii] = QEvent::None;
+            s_events->m_list3[ii] = nullptr;
           }
         }
 
-        // desinstala eventfilter do objeto 'list.at(i)'
-        if( s_events->list1.contains( list.at(i) ) == false )
+        // desinstala eventfilter do objeto 'objectList.at(i)'
+        if( s_events->m_list1.contains( currentObject ) == false )
         {
-          list.at(i)->removeEventFilter(s_events);
+          currentObject->removeEventFilter(s_events);
         }
       }
     }
@@ -290,7 +255,7 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
   if( s_events != nullptr )
   {
-    size = s_events->list1.size();
+    size = s_events->m_list1.size();
   }
 
   hb_retni( size );
@@ -308,11 +273,11 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 
   if( s_events != nullptr )
   {
-    const int listsize = s_events->list1.size();
     // percorre toda a lista de eventos
+    const int listsize = s_events->m_list1.size();
     for( auto i = 0; i < listsize; ++i )
     {
-      if( s_events->list1.at(i) != nullptr )
+      if( s_events->m_list1.at(i) != nullptr )
       {
         ++count;
       }
@@ -321,6 +286,10 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
 
   hb_retni( count );
 }
+
+/*
+  retorna um objeto Harbour da classe QEvent ou derivada
+*/
 
 PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
 {
@@ -360,6 +329,10 @@ PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
 
   return pObject;
 }
+
+/*
+  retorna um objeto Harbour da classe QObject ou derivada
+*/
 
 PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
 {
@@ -405,7 +378,6 @@ static void qt5xhb_events_init( void * cargo )
 
   if( s_events == nullptr )
   {
-    //s_events = new Events(QCoreApplication::instance());
     s_events = new Events();
   }
 }
