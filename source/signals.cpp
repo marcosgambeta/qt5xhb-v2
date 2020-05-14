@@ -29,144 +29,119 @@ Signals::~Signals()
 
 /*
   Conecta um determinado sinal com um objeto
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
+  Parâmetro 1: objeto
+  Parâmetro 2: indice do sinal
   Parâmetro 3: codeblock
-  Retorna .t. se a conexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
+  Retorna o indice usado no vetor
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-//bool Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
-int Signals_connect_signal( QObject * object, int signal, PHB_ITEM codeblock )
+int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
 {
-  int i;
+  auto result = -1;
 
-  // verifica se já está na lista
-  int found = -1;
+  auto found = false;
+
   const int listsize = s_signals->list1.size();
-
-  for( i = 0; i < listsize; ++i )
-  {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
-        ( s_signals->list2.at(i) == signal ) )
-    {
-      found = i;
-      //hb_itemRelease( codeblock );
-      break;
-    }
-  }
-
-  //bool ret = false;
-  int ret = -1;
-
-  // se nao encontrado na lista, adiciona
-  if( found == -1 )
-  {
-    // procura por posição livre
-    i = s_signals->list1.indexOf( nullptr );
-
-    if( i == -1 ) // nao encontrou posicao livre
-    {
-      // adiciona sinal na lista de sinais
-
-      s_signals->list1 << object;
-      s_signals->list2 << signal;
-      s_signals->list3 << codeblock;
-      QMetaObject::Connection connection;
-      s_signals->list4 << connection;
-      ret = s_signals->list1.size() - 1;
-    }
-    else // encontrou posicao livre
-    {
-      // coloca na posição livre
-      s_signals->list1[i] = object;
-      s_signals->list2[i] = signal;
-      s_signals->list3[i] = codeblock;
-      QMetaObject::Connection connection;
-      s_signals->list4[i] = connection;
-      ret = i;
-    }
-
-    //ret = true;
-  }
-
-  // retorna o resultado da operação
-  //hb_retl( ret );
-  return ret;
-}
-
-/*
-  Desconecta um determinado sinal
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-  Retorna .t. se a desconexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
-*/
-
-bool Signals_disconnect_signal( QObject * object, int signal )
-{
-  int i;
-
-  bool ret = false;
-  const int listsize = s_signals->list1.size();
-
-  // remove sinal da lista de sinais
-  for( i = 0; i < listsize; ++i )
-  {
-    if( (QObject *) s_signals->list1.at(i) == (QObject *) object )
-    {
-      if( ( s_signals->list2.at(i) == signal ) )
-      {
-        hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
-        s_signals->list1[i] = nullptr;
-        s_signals->list2[i] = -1;
-        s_signals->list3[i] = nullptr;
-        QMetaObject::Connection connection;
-        s_signals->list4[i] = connection;
-        ret = true;
-      }
-    }
-  }
-
-  // retorna o resultado da operação
-  //hb_retl( ret );
-  return ret;
-}
-
-/*
-  Verifica se um determinado sinal do objeto especificado está conectado
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-  Retorna .t. se existe uma conexão ativa ou .f. caso não exista
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
-*/
-
-bool Signals_is_signal_connected( QObject * object, int signal )
-{
-  // valor de retorno
-  bool found = false;
-  const int listsize = s_signals->list1.size();
-
-  // verifica se já está na lista
-  //int i;
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) &&
-        ( s_signals->list2.at(i) == signal ) )
+    if( ( s_signals->list1.at(i) == object ) && ( s_signals->list2.at(i) == indexOfSignal ) )
     {
       found = true;
       break;
     }
   }
 
-  return found;
+  // se nao encontrado na lista, adiciona
+  if( !found )
+  {
+    // procura por posição livre
+    auto index = s_signals->list1.indexOf( nullptr );
+
+    if( index == -1 ) // nao encontrou posicao livre
+    {
+      // adiciona sinal na lista de sinais
+      s_signals->list1 << object;
+      s_signals->list2 << indexOfSignal;
+      s_signals->list3 << codeblock;
+      QMetaObject::Connection connection;
+      s_signals->list4 << connection;
+      result = s_signals->list1.size() - 1;
+    }
+    else // encontrou posicao livre
+    {
+      // coloca na posição livre
+      s_signals->list1[index] = object;
+      s_signals->list2[index] = indexOfSignal;
+      s_signals->list3[index] = codeblock;
+      QMetaObject::Connection connection;
+      s_signals->list4[index] = connection;
+      result = index;
+    }
+  }
+
+  return result;
+}
+
+/*
+  Desconecta um determinado sinal
+  Parâmetro 1: objeto
+  Parâmetro 2: indice do sinal
+  Retorna true se a desconexão foi bem sucedida ou false se falhou
+  Função de uso interno, não deve ser usada nas aplicações do usuário
+*/
+
+bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
+{
+  auto result = false;
+
+  const int listsize = s_signals->list1.size();
+  for( auto i = 0; i < listsize; ++i )
+  {
+    if( ( s_signals->list1.at(i) == object ) && ( s_signals->list2.at(i) == indexOfSignal ) )
+    {
+      hb_itemRelease( s_signals->list3.at(i) );
+      s_signals->list1[i] = nullptr;
+      s_signals->list2[i] = -1;
+      s_signals->list3[i] = nullptr;
+      QMetaObject::Connection connection;
+      s_signals->list4[i] = connection;
+      result = true;
+    }
+  }
+
+  return result;
+}
+
+/*
+  Verifica se um determinado sinal do objeto especificado está conectado
+  Parâmetro 1: objeto
+  Parâmetro 2: indice do sinal
+  Retorna true se existe uma conexão ativa ou false caso não exista
+  Função de uso interno, não deve ser usada nas aplicações do usuário
+*/
+
+bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
+{
+  auto result = false;
+
+  const int listsize = s_signals->list1.size();
+  for( auto i = 0; i < listsize; ++i )
+  {
+    if( ( s_signals->list1.at(i) == object ) && ( s_signals->list2.at(i) == indexOfSignal ) )
+    {
+      result = true;
+      break;
+    }
+  }
+
+  return result;
 }
 
 /*
   Retorna um codeblock atraves do indice do codeblock no vetor
+  Parâmetro: indice do codeblock
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
 PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
@@ -184,12 +159,11 @@ void Signals_release_codeblocks()
   if( s_signals != nullptr )
   {
     const int listsize = s_signals->list1.size();
-
     for( auto i = 0; i < listsize; ++i )
     {
       if( s_signals->list1.at(i) != nullptr )
       {
-        hb_itemRelease((PHB_ITEM) s_signals->list3.at(i) );
+        hb_itemRelease( s_signals->list3.at(i) );
         s_signals->list1[i] = nullptr;
         s_signals->list2[i] = -1;
         s_signals->list3[i] = nullptr;
@@ -210,24 +184,23 @@ void Signals_release_codeblocks()
 
 void Signals_disconnect_all_signals( QObject * obj, bool children )
 {
+  auto indexOfSignal = 0;
+
   if( s_signals != nullptr )
   {
     if( !children )
     {
-      const int listsize = s_signals->list1.size();
+      indexOfSignal = obj->metaObject()->indexOfSignal("destroyed(QObject*)");
 
       // percorre toda a lista de sinais
+      const int listsize = s_signals->list1.size();
       for( auto i = 0; i < listsize; ++i )
       {
-        // elimina sinais ativos (true) ligados ao objeto (obj)
-//         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
-//             ( s_signals->list2.at(i) != "destroyed(QObject*)" ) &&
-//             ( (bool) s_signals->list4.at(i) == true ) )
-        if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
-            ( s_signals->list2.at(i) != obj->metaObject()->indexOfSignal("destroyed(QObject*)") ) )
+        // elimina sinais ativos ligados ao objeto 'obj'
+        if( ( s_signals->list1.at(i) == obj ) && ( s_signals->list2.at(i) != indexOfSignal ) )
         {
           QObject::disconnect( s_signals->list4[i] );
-          hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
+          hb_itemRelease( s_signals->list3.at(i) );
           s_signals->list1[i] = nullptr;
           s_signals->list2[i] = -1;
           s_signals->list3[i] = nullptr;
@@ -239,30 +212,26 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
     else
     {
       // obtém a lista de filhos, netos, bisnetos, etc...
-      QList<QObject *> list = obj->findChildren<QObject *>();
+      auto objectList = obj->findChildren<QObject *>();
 
       // adiciona o pai na lista
-      list << obj;
-
-      const int listsize = list.size();
+      objectList << obj;
 
       // percorre toda a lista de objetos
+      const int listsize = objectList.size();
       for( auto i = 0; i < listsize; ++i )
       {
-        const int listsize2 = s_signals->list1.size();
+        indexOfSignal = objectList.at(i)->metaObject()->indexOfSignal("destroyed(QObject*)");
 
         // percorre toda a lista de sinais
+        const int listsize2 = s_signals->list1.size();
         for( auto ii = 0; ii < listsize2; ++ii )
         {
-          // elimina sinais ativos (true) ligados ao objeto list.at(i)
-//           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
-//               ( s_signals->list2.at(ii) != "destroyed(QObject*)" ) &&
-//               ( (bool) s_signals->list4.at(ii) == true ) )
-          if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
-              ( s_signals->list2.at(ii) != list.at(i)->metaObject()->indexOfSignal("destroyed(QObject*)") ) )
+          // elimina sinais ativos ligados ao objeto 'list.at(i)'
+          if( ( s_signals->list1.at(ii) == objectList.at(i) ) && ( s_signals->list2.at(ii) != indexOfSignal ) )
           {
             QObject::disconnect( s_signals->list4[ii] );
-            hb_itemRelease( (PHB_ITEM) s_signals->list3.at(ii) );
+            hb_itemRelease( s_signals->list3.at(ii) );
             s_signals->list1[ii] = nullptr;
             s_signals->list2[ii] = -1;
             s_signals->list3[ii] = nullptr;
@@ -276,129 +245,48 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
 }
 
 /*
-  conecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
+  conecta sinais e retorna resultado (true/false)
 */
-bool Signals_connection( QObject * object, int signal )
+
+bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
 {
-  bool ret = false;
+  auto result = false;
 
   s_signals->mutex->lock();
 
-  //if( hb_pcount() == 1 )
-  //{
-    //QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  if( !Signals_is_signal_connected( object, indexOfSignal ) )
+  {
+    PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
-    bool connected = Signals_is_signal_connected( object, signal );
-
-    if( !connected )
+    if( codeblock != nullptr )
     {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
-      if( codeblock )
-      {
-/*
-        ret = object->connect( object,
-                               object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                               s,
-                               s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
-                             );
-        if( ret )
-        {
-*/
-          Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          ret = true;
-/*
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-        }
-*/
-      }
+      indexOfCodeBlock = Signals_connect_signal( object, indexOfSignal, codeblock );
+      result = true;
     }
-  //}
+  }
 
   s_signals->mutex->unlock();
 
-  return ret;
-}
-
-bool Signals_connection( QObject * object, int signal, int & indexOfCodeBlock )
-{
-  bool ret = false;
-
-  s_signals->mutex->lock();
-
-  //if( hb_pcount() == 1 )
-  //{
-    //QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-    bool connected = Signals_is_signal_connected( object, signal );
-
-    if( !connected )
-    {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
-      if( codeblock )
-      {
-/*
-        ret = object->connect( object,
-                               object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                               s,
-                               s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
-                             );
-        if( ret )
-        {
-*/
-          indexOfCodeBlock = Signals_connect_signal( object, signal, codeblock ); // se conectado, adiciona
-          ret = true;
-/*
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
-        }
-*/
-      }
-    }
-  //}
-
-  s_signals->mutex->unlock();
-
-  return ret;
+  return result;
 }
 
 /*
-  desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
+  desconecta sinais e retorna resultado (true/false)
 */
-bool Signals_disconnection( QObject * object, int signal )
+
+bool Signals_disconnection( QObject * object, int indexOfSignal )
 {
-  bool ret = false;
+  auto result = false;
 
   s_signals->mutex->lock();
 
-  //if( hb_pcount() == 0 )
-  //{
-    //QObject* object = (QObject*) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-/*
-    ret = object->disconnect( object,
-                              object->metaObject()->method(object->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                              s,
-                              s->metaObject()->method(s->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
-                            );
-    if( ret )
-    {
-*/
-      Signals_disconnect_signal( object, signal ); // se desconectado, remove
-      ret = true;
-/*
-    }
-*/
-  //}
+  Signals_disconnect_signal( object, indexOfSignal );
+
+  result = true;
 
   s_signals->mutex->unlock();
 
-  return ret;
+  return result;
 }
 
 /*
@@ -431,9 +319,8 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
 
   if( s_signals != nullptr )
   {
-    const int listsize = s_signals->list1.size();
-
     // percorre toda a lista de sinais
+    const int listsize = s_signals->list1.size();
     for( auto i = 0; i < listsize; ++i )
     {
       if( s_signals->list1.at(i) != nullptr )
