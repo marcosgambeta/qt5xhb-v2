@@ -31,7 +31,7 @@ STATIC oMainWindow
   um objeto da classe MainWindow e inicia o loop de eventos
 */
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    oApp := QApplication():new()
 
@@ -79,14 +79,14 @@ CLASS MainWindow INHERIT QMainWindow
    DATA oToolBar
    DATA oStatusBar
 
-   METHOD new
-   METHOD defineProperties
-   METHOD createMenuBar
-   METHOD createToolBar
-   METHOD createStatusBar
-   METHOD defineEvents
-   METHOD closeMainWindow
-   METHOD showMessage
+   METHOD new()
+   METHOD defineProperties()
+   METHOD createMenuBar()
+   METHOD createToolBar()
+   METHOD createStatusBar()
+   METHOD defineEvents()
+   METHOD closeMainWindow( oSender, oCloseEvent )
+   METHOD showMessage( cText )
 
 END CLASS
 
@@ -95,7 +95,7 @@ END CLASS
  e configura a janela principal
 */
 
-METHOD new () CLASS MainWindow
+METHOD new() CLASS MainWindow
 
    #ifdef __XHARBOUR__
    super:new()
@@ -116,7 +116,7 @@ RETURN self
   'title' e 'size' da janela principal
 */
 
-METHOD defineProperties () CLASS MainWindow
+METHOD defineProperties() CLASS MainWindow
 
    ::setWindowTitle("Exemplo de criação da janela principal")
    ::resize(800,600)
@@ -128,7 +128,7 @@ RETURN self
   e configura a ação que cada item do menu irá executar
 */
 
-METHOD createMenuBar () CLASS MainWindow
+METHOD createMenuBar() CLASS MainWindow
 
    ::oMenuBar := ::menuBar()
 
@@ -136,51 +136,51 @@ METHOD createMenuBar () CLASS MainWindow
 
    ::oActionNew := ::oMenu1:AddAction(QIcon():new("images\new.png"),"&Novo")
    ::oActionNew:setStatusTip("Executa a opção NOVO")
-   ::oActionNew:onTriggered( {|w,l|::showMessage("Arquivo/Novo")} )
+   ::oActionNew:onTriggered({||::showMessage("Arquivo/Novo")} )
 
    ::oActionOpen := ::oMenu1:AddAction(QIcon():new("images\open.png"),"&Abrir")
    ::oActionOpen:setStatusTip("Executa a opção ABRIR")
-   ::oActionOpen:onTriggered({|w,l|::showMessage("Arquivo/Abrir")})
+   ::oActionOpen:onTriggered({||::showMessage("Arquivo/Abrir")})
 
    ::oActionSave := ::oMenu1:AddAction(QIcon():new("images\save.png"),"&Salvar")
    ::oActionSave:setStatusTip("Executa a opção SALVAR")
-   ::oActionSave:onTriggered({|w,l|::showMessage("Arquivo/Salvar")})
+   ::oActionSave:onTriggered({||::showMessage("Arquivo/Salvar")})
 
    ::oMenu2 := ::oMenuBar:AddMenu("&Editar")
 
    ::oActionCut := ::oMenu2:AddAction(QIcon():New("images\cut.png"),"&Recortar")
    ::oActionCut:setStatusTip("Executa a opção RECORTAR")
-   ::oActionCut:onTriggered({|w,l|::showMessage("Editar/Recortar")})
+   ::oActionCut:onTriggered({||::showMessage("Editar/Recortar")})
 
    ::oActionCopy := ::oMenu2:AddAction(QIcon():new("images\copy.png"),"&Copiar")
    ::oActionCopy:setStatusTip("Executa a opção COPIAR")
-   ::oActionCopy:onTriggered( {|w,l|::showMessage("Editar/Copiar")})
+   ::oActionCopy:onTriggered({||::showMessage("Editar/Copiar")})
 
    ::oActionPaste := ::oMenu2:AddAction(QIcon():New("images\paste.png"),"C&olar")
    ::oActionPaste:setStatusTip("Executa a opção COLAR")
-   ::oActionPaste:onTriggered({|w,l|::showMessage("Editar/Colar")})
+   ::oActionPaste:onTriggered({||::showMessage("Editar/Colar")})
 
    ::oMenu3 := ::oMenuBar:AddMenu("&Sobre")
 
    ::oActionAbout := ::oMenu3:AddAction("&Exemplo")
    ::oActionAbout:setStatusTip("Exibe informações sobre este exemplo")
-   ::oActionAbout:onTriggered({|w,l|::showMessage("Este exemplo demonstra a criação da janela principal de uma aplicação")})
+   ::oActionAbout:onTriggered({||::showMessage("Este exemplo demonstra a criação da janela principal de uma aplicação")})
 
    ::oActionAboutxH := ::oMenu3:AddAction("&[x]Harbour")
    ::oActionAboutxH:setStatusTip("Exibe a versão do Harbour/xHarbour")
-   ::oActionAboutxH:onTriggered({|w,l|::showMessage(version())})
+   ::oActionAboutxH:onTriggered({||::showMessage(version())})
 
    ::oActionAboutCC := ::oMenu3:AddAction("&C/C++ Compiler")
    ::oActionAboutCC:setStatusTip("Exibe informações sobre o compilador C/C++")
-   ::oActionAboutCC:onTriggered({|w,l|::showMessage(hb_compiler())})
+   ::oActionAboutCC:onTriggered({||::showMessage(hb_compiler())})
 
    ::oActionAboutQt := ::oMenu3:AddAction("&Qt Framework")
    ::oActionAboutQt:setStatusTip("Exibe informações sobre o Qt Framework")
-   ::oActionAboutQt:onTriggered( {|w,l|oApp:aboutQt()})
+   ::oActionAboutQt:onTriggered({||oApp:aboutQt()})
 
    ::oActionAboutQt5xHb := ::oMenu3:AddAction("&Qt5xHb")
    ::oActionAboutQt5xHb:setStatusTip("Exibe a versão do Qt5xHb")
-   ::oActionAboutQt5xHb:onTriggered( {|w,l|::showMessage(qt5xhb_version())})
+   ::oActionAboutQt5xHb:onTriggered({||::showMessage(qt5xhb_version())})
 
 RETURN self
 
@@ -189,7 +189,7 @@ RETURN self
   e configura a ação que cada botão irá executar
 */
 
-METHOD createToolBar () CLASS MainWindow
+METHOD createToolBar() CLASS MainWindow
 
    ::oToolBar := ::addToolBar("")
 
@@ -209,7 +209,7 @@ RETURN self
   o método 'createStatusBar' cria a barra de status
 */
 
-METHOD createStatusBar () CLASS MainWindow
+METHOD createStatusBar() CLASS MainWindow
 
    ::oStatusBar := ::statusBar()
 
@@ -219,7 +219,7 @@ RETURN self
  o método 'defineEvent' define os eventos que serão processados
 */
 
-METHOD defineEvents () CLASS MainWindow
+METHOD defineEvents() CLASS MainWindow
 
    ::onCloseEvent({|oSender,oEvent|::CloseMainWindow(oSender,oEvent)})
 
@@ -230,7 +230,7 @@ RETURN self
  realmente sair do programa
 */
 
-METHOD closeMainWindow (oSender,oCloseEvent) CLASS MainWindow
+METHOD closeMainWindow( oSender, oCloseEvent ) CLASS MainWindow
 
    LOCAL oMB
    LOCAL nRet
@@ -261,7 +261,7 @@ RETURN .T.
   usando a classe QMessageBox
 */
 
-METHOD showMessage (cText) CLASS MainWindow
+METHOD showMessage( cText ) CLASS MainWindow
 
    LOCAL oMB
 
