@@ -15,6 +15,9 @@ static Events *s_events = nullptr;
 */
 Events::Events( QObject *parent ) : QObject( parent )
 {
+  m_list1 = new QVector<QObject*>( 1000, nullptr );          // armazenamento dos objetos
+  m_list2 = new QVector<QEvent::Type>( 1000, QEvent::None ); // armazenamento dos tipos de evento
+  m_list3 = new QVector<PHB_ITEM>( 1000, nullptr );          // armazenamento dos codeblock's
 }
 
 /*
@@ -22,21 +25,18 @@ Events::Events( QObject *parent ) : QObject( parent )
 */
 Events::~Events()
 {
-  const int listsize = m_list1.size();
+  const int listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( m_list1.at(i) != nullptr )
+    if( m_list1->at(i) != nullptr )
     {
-      hb_itemRelease( m_list3.at(i) );
-      m_list1[i] = nullptr;
-      m_list2[i] = QEvent::None;
-      m_list3[i] = nullptr;
+      hb_itemRelease( m_list3->at(i) );
     }
   }
 
-  m_list1.clear();
-  m_list2.clear();
-  m_list3.clear();
+  delete m_list1;
+  delete m_list2;
+  delete m_list3;
 }
 
 /*
@@ -48,10 +48,11 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
 
   auto index = -1;
 
-  const int listsize = m_list1.size();
+  // obtem o indice do evento
+  const int listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( m_list1.at(i) == obj ) && ( m_list2.at(i) == eventtype ) )
+    if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) == eventtype ) )
     {
       index = i;
       break;
@@ -68,14 +69,14 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   PHB_ITEM pObject = Events_return_qobject( (QObject *) obj, "QOBJECT" );
   PHB_ITEM pEvent = Events_return_object( (QEvent *) event, "QEVENT" );
 
-  bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3.at(index), 2, pObject, pEvent ) );
+  bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
 
   hb_itemRelease( pObject );
   hb_itemRelease( pEvent );
 
   // retorna resultado
-  // .t.: interrompe processamento do evento
-  // .f.: continua processamento do evento
+  // true/.t.: interrompe processamento do evento
+  // false/.f.: continua processamento do evento
   return result;
 }
 
@@ -90,47 +91,46 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
 
 bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 {
-  // instala eventfilter, se não houver nenhum evento
-  if( s_events->m_list1.contains( object ) == false )
+  auto result = false;
+  auto found = false;
+
+  // instala eventfilter, se não houver nenhum evento ligado ao objeto
+  if( s_events->m_list1->contains( object ) == false )
   {
     object->installEventFilter(s_events);
   }
 
   // verifica se já está na lista
-  auto found = false;
-
-  const int listsize = s_events->m_list1.size();
+  const int listsize = s_events->m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_events->m_list1.at(i) == object ) && ( s_events->m_list2.at(i) == (QEvent::Type) type ) )
+    if( ( s_events->m_list1->at(i) == object ) && ( s_events->m_list2->at(i) == (QEvent::Type) type ) )
     {
       found = true;
-      hb_itemRelease( codeblock );
+      hb_itemRelease( codeblock ); // libera codeblock, pois nao sera utilizado
       break;
     }
   }
-
-  bool result = false;
 
   // se nao encontrado na lista, adiciona
   if( !found )
   {
     // procura por posição livre
-    auto index = s_events->m_list1.indexOf( nullptr );
+    auto index = s_events->m_list1->indexOf( nullptr );
 
     if( index == -1 ) // nao encontrou posicao livre
     {
       // adiciona evento na lista de eventos
-      s_events->m_list1 << object;
-      s_events->m_list2 << (QEvent::Type) type;
-      s_events->m_list3 << codeblock;
+      s_events->m_list1->append( object );
+      s_events->m_list2->append( (QEvent::Type) type );
+      s_events->m_list3->append( codeblock );
     }
     else // encontrou posicao livre
     {
       // coloca na posição livre
-      s_events->m_list1[index] = object;
-      s_events->m_list2[index] = (QEvent::Type) type;
-      s_events->m_list3[index] = codeblock;
+      s_events->m_list1->replace( index, object );
+      s_events->m_list2->replace( index, (QEvent::Type) type );
+      s_events->m_list3->replace( index, codeblock );
     }
 
     result = true;
@@ -152,21 +152,21 @@ bool Events_disconnect_event( QObject * object, int type )
   auto result = false;
 
   // remove evento da lista de eventos
-  const int listsize = s_events->m_list1.size();
+  const int listsize = s_events->m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_events->m_list1.at(i) == object ) && ( s_events->m_list2.at(i) == (QEvent::Type) type ) )
+    if( ( s_events->m_list1->at(i) == object ) && ( s_events->m_list2->at(i) == (QEvent::Type) type ) )
     {
-      hb_itemRelease( s_events->m_list3.at(i) );
-      s_events->m_list1[i] = nullptr;
-      s_events->m_list2[i] = QEvent::None;
-      s_events->m_list3[i] = nullptr;
+      hb_itemRelease( s_events->m_list3->at(i) );
+      s_events->m_list1->replace( i, nullptr );
+      s_events->m_list2->replace( i, QEvent::None );
+      s_events->m_list3->replace( i, nullptr );
       result = true;
     }
   }
 
   // desinstala eventfilter, se não houver mais nenhum evento
-  if( s_events->m_list1.contains( object ) == false )
+  if( s_events->m_list1->contains( object ) == false )
   {
     object->removeEventFilter(s_events);
   }
@@ -186,21 +186,21 @@ void Events_disconnect_all_events( QObject * obj, bool children )
     if( !children )
     {
       // percorre toda a lista de eventos
-      const int listsize = s_events->m_list1.size();
+      const int listsize = s_events->m_list1->size();
       for( auto i = 0; i < listsize; ++i )
       {
         // elimina eventos ligados ao objeto 'obj'
-        if( s_events->m_list1.at(i) == obj )
+        if( s_events->m_list1->at(i) == obj )
         {
-          hb_itemRelease( s_events->m_list3.at(i) );
-          s_events->m_list1[i] = nullptr;
-          s_events->m_list2[i] = QEvent::None;
-          s_events->m_list3[i] = nullptr;
+          hb_itemRelease( s_events->m_list3->at(i) );
+          s_events->m_list1->replace( i, nullptr );
+          s_events->m_list2->replace( i, QEvent::None );
+          s_events->m_list3->replace( i, nullptr );
         }
       }
 
       // desinstala eventfilter do objeto 'obj'
-      if( s_events->m_list1.contains( obj ) == false )
+      if( s_events->m_list1->contains( obj ) == false )
       {
         obj->removeEventFilter(s_events);
       }
@@ -220,21 +220,21 @@ void Events_disconnect_all_events( QObject * obj, bool children )
         QObject * currentObject = objectList.at(i);
 
         // percorre toda a lista de eventos
-        const int listsize2 = s_events->m_list1.size();
+        const int listsize2 = s_events->m_list1->size();
         for( auto ii = 0; ii < listsize2; ++ii )
         {
           // elimina eventos ativos ligados ao objeto 'objectList.at(i)'
-          if( s_events->m_list1.at(ii) == currentObject )
+          if( s_events->m_list1->at(ii) == currentObject )
           {
-            hb_itemRelease( s_events->m_list3.at(ii) );
-            s_events->m_list1[ii] = nullptr;
-            s_events->m_list2[ii] = QEvent::None;
-            s_events->m_list3[ii] = nullptr;
+            hb_itemRelease( s_events->m_list3->at(ii) );
+            s_events->m_list1->replace( ii, nullptr );
+            s_events->m_list2->replace( ii, QEvent::None );
+            s_events->m_list3->replace( ii, nullptr );
           }
         }
 
         // desinstala eventfilter do objeto 'objectList.at(i)'
-        if( s_events->m_list1.contains( currentObject ) == false )
+        if( s_events->m_list1->contains( currentObject ) == false )
         {
           currentObject->removeEventFilter(s_events);
         }
@@ -255,7 +255,7 @@ HB_FUNC( QTXHB_EVENTS_SIZE )
 
   if( s_events != nullptr )
   {
-    size = s_events->m_list1.size();
+    size = s_events->m_list1->size();
   }
 
   hb_retni( size );
@@ -274,10 +274,10 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE )
   if( s_events != nullptr )
   {
     // percorre toda a lista de eventos
-    const int listsize = s_events->m_list1.size();
+    const int listsize = s_events->m_list1->size();
     for( auto i = 0; i < listsize; ++i )
     {
-      if( s_events->m_list1.at(i) != nullptr )
+      if( s_events->m_list1->at(i) != nullptr )
       {
         ++count;
       }
