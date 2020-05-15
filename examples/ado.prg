@@ -26,7 +26,7 @@
 // Requer a biblioteca hbwin na compilação:
 // hbmk2 ado ..\qt5xhb.hbc hbwin.hbc
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -44,7 +44,9 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Exemplo de uso do ADO com Qt"):resize(800,600)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Exemplo de uso do ADO com Qt")
+   oWindow:resize(800,600)
 
    // cria e configura o modelo
    oModel := AdoTableModel():new()
@@ -54,7 +56,10 @@ PROCEDURE Main ()
    oModel:setHorizontalHeaderDisplayRoleCB({|nCol|oRecordset:Fields(nCol):name}) // títulos das colunas (usa o nome do campo)
 
    // cria o visualizador e associa ao modelo
-   oView := QTableView():new(oWindow):move(10,10):resize(800-20,600-20):setModel(oModel)
+   oView := QTableView():new(oWindow)
+   oView:move(10,10)
+   oView:resize(800-20,600-20)
+   oView:setModel(oModel)
 
    oWindow:show()
 
@@ -79,7 +84,7 @@ RETURN
   registros.
 */
 
-STATIC FUNCTION CriarBancoDeDados ()
+STATIC FUNCTION CriarBancoDeDados()
 
    LOCAL oCatalog
    LOCAL oTable
