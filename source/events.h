@@ -51,6 +51,8 @@ class Events: public QObject
   void disconnectAllEvents( QObject * obj, bool children );
   int size();
   int active();
+  PHB_ITEM returnObject( QEvent * ptr, const char * classname );
+  PHB_ITEM returnQObject( QObject * ptr, const char * classname );
 };
 
 #endif /* EVENTS_H */

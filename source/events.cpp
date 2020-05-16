@@ -42,7 +42,7 @@ Events::~Events()
 /*
   filtro de eventos
 */
-bool Events::eventFilter( QObject *obj, QEvent *event )
+bool Events::eventFilter( QObject *object, QEvent *event )
 {
   QEvent::Type eventtype = event->type();
 
@@ -52,7 +52,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   const int listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) == eventtype ) )
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == eventtype ) )
     {
       index = i;
       break;
@@ -66,8 +66,8 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   }
 
   // executa bloco de código/função
-  PHB_ITEM pObject = Events_return_qobject( (QObject *) obj, "QOBJECT" );
-  PHB_ITEM pEvent = Events_return_object( (QEvent *) event, "QEVENT" );
+  PHB_ITEM pObject = returnQObject( object, "QOBJECT" );
+  PHB_ITEM pEvent = returnObject( event, "QEVENT" );
 
   bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
 
@@ -312,13 +312,14 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
   retorna um objeto Harbour da classe QEvent ou derivada
 */
 
-PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
+//PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
+PHB_ITEM Events::returnObject( QEvent * ptr, const char * classname )
 {
   static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
 
   QString eventname = QEvent::staticMetaObject.enumerator(eventEnumIndex).valueToKey(ptr->type());
 
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = NULL;
 
   QString name = "q" + eventname + "event";
 
@@ -354,7 +355,8 @@ PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
   retorna um objeto Harbour da classe QObject ou derivada
 */
 
-PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
+//PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
+PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
