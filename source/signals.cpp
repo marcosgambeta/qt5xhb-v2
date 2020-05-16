@@ -15,10 +15,11 @@ static Signals *s_signals = nullptr;
 */
 Signals::Signals( QObject *parent ) : QObject( parent )
 {
-  m_list1 = new QVector<QObject*>();                // armazena ponteiro do objeto
-  m_list2 = new QVector<int>();                     // armazena indice do sinal
-  m_list3 = new QVector<PHB_ITEM>();                // armazena codeblock
-  m_list4 = new QVector<QMetaObject::Connection>(); // handle da conexão
+  m_list1 = new QVector<QObject*>( 1000, nullptr );       // armazena ponteiro do objeto
+  m_list2 = new QVector<int>( 1000, -1 );                 // armazena indice do sinal
+  m_list3 = new QVector<PHB_ITEM>( 1000, nullptr );       // armazena codeblock
+  QMetaObject::Connection connection;
+  m_list4 = new QVector<QMetaObject::Connection>( 1000, connection ); // handle da conexão
   m_mutex = new QMutex();
 }
 
@@ -213,14 +214,14 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
       for( auto i = 0; i < listsize; ++i )
       {
         QObject * currentObject = objectList.at(i);
-        indexOfSignalDestroyed = currentObject->metaObject()->indexOfSignal("destroyed(QObject*)");
+        indexOfSignal = currentObject->metaObject()->indexOfSignal("destroyed(QObject*)");
 
         // percorre toda a lista de sinais
         const int listsize2 = s_signals->m_list1->size();
         for( auto ii = 0; ii < listsize2; ++ii )
         {
           // elimina sinais ativos ligados ao objeto 'list.at(i)'
-          if( ( s_signals->m_list1->at(ii) == currentObject ) && ( s_signals->m_list2->at(ii) != indexOfSignalDestroyed ) )
+          if( ( s_signals->m_list1->at(ii) == currentObject ) && ( s_signals->m_list2->at(ii) != indexOfSignal ) )
           {
             QObject::disconnect( s_signals->m_list4->at(ii) );
             hb_itemRelease( s_signals->m_list3->at(ii) );
