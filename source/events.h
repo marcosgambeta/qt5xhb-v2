@@ -36,12 +36,21 @@ class Events: public QObject
   public:
   Events( QObject *parent = nullptr );
   ~Events();
+
+  private:
   QVector<QObject*> * m_list1;     // armazenamento dos objetos
   QVector<QEvent::Type> * m_list2; // armazenamento dos tipos de evento
   QVector<PHB_ITEM> * m_list3;     // armazenamento dos codeblock's
 
   protected:
   bool eventFilter( QObject *obj, QEvent *event );
+
+  public:
+  bool connectEvent( QObject * object, int type, PHB_ITEM codeblock );
+  bool disconnectEvent( QObject * object, int type );
+  void disconnectAllEvents( QObject * obj, bool children );
+  int size();
+  int active();
 };
 
 #endif /* EVENTS_H */
