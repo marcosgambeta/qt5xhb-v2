@@ -13,6 +13,7 @@ static Events *s_events = nullptr;
 /*
   constructor
 */
+
 Events::Events( QObject *parent ) : QObject( parent )
 {
   m_list1 = new QVector<QObject*>( 1000, nullptr );          // armazenamento dos objetos
@@ -111,6 +112,7 @@ Events::Events( QObject *parent ) : QObject( parent )
 /*
   destructor
 */
+
 Events::~Events()
 {
   const int listsize = m_list1->size();
@@ -132,6 +134,7 @@ Events::~Events()
 /*
   filtro de eventos
 */
+
 bool Events::eventFilter( QObject *object, QEvent *event )
 {
   QEvent::Type eventtype = event->type();
@@ -157,7 +160,7 @@ bool Events::eventFilter( QObject *object, QEvent *event )
 
   // executa bloco de código/função
   PHB_ITEM pObject = returnQObject( object, "QOBJECT" );
-  PHB_ITEM pEvent = returnObject( event, "QEVENT" );
+  PHB_ITEM pEvent = returnQEvent( event, "QEVENT" );
 
   bool result = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(index), 2, pObject, pEvent ) );
 
@@ -179,7 +182,6 @@ bool Events::eventFilter( QObject *object, QEvent *event )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-//bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
 bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
 {
   auto result = false;
@@ -247,7 +249,6 @@ bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-//bool Events_disconnect_event( QObject * object, int type )
 bool Events::disconnectEvent( QObject * object, int type )
 {
   auto result = false;
@@ -285,7 +286,6 @@ bool Events_disconnect_event( QObject * object, int type )
   incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
 */
 
-//void Events_disconnect_all_events( QObject * obj, bool children )
 void Events::disconnectAllEvents( QObject * obj, bool children )
 {
   if( !children )
@@ -406,19 +406,8 @@ HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
   retorna um objeto Harbour da classe QEvent ou derivada
 */
 
-//PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
-PHB_ITEM Events::returnObject( QEvent * ptr, const char * classname )
+PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
 {
-  //static int eventEnumIndex = QEvent::staticMetaObject.indexOfEnumerator("Type");
-
-  //QString eventname = QEvent::staticMetaObject.enumerator(eventEnumIndex).valueToKey(ptr->type());
-
-  //PHB_DYNS pDynSym = NULL;
-
-  //QString name = "q" + eventname + "event";
-
-  //pDynSym = hb_dynsymFindName( (const char *) name.toUpper().toLatin1().data() );
-
   QString eventname = m_events->value( ptr->type(), "QEvent" );
 
   PHB_DYNS pDynSym;
@@ -455,7 +444,6 @@ PHB_ITEM Events::returnObject( QEvent * ptr, const char * classname )
   retorna um objeto Harbour da classe QObject ou derivada
 */
 
-//PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
 PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
