@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 
   if( obj != nullptr )
   {
-    Events_disconnect_all_events( obj, true );
+    Qt5xHb::Events_disconnect_all_events( obj, true );
     Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
