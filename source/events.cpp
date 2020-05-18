@@ -236,10 +236,6 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   return result;
 }
 
-bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
-{
-  return s_events->connectEvent( object, type, codeblock );
-}
 
 /*
   Desconecta um determinado evento
@@ -276,10 +272,6 @@ bool Events::disconnectEvent( QObject * object, int type )
   return result;
 }
 
-bool Events_disconnect_event( QObject * object, int type )
-{
-  return s_events->disconnectEvent( object, type );
-}
 
 /*
   Libera todos os codeblocks relacionados com eventos do objeto 'obj',
@@ -347,10 +339,6 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
   }
 }
 
-void Events_disconnect_all_events( QObject * obj, bool children )
-{
-  s_events->disconnectAllEvents( obj, children );
-}
 
 /*
   Retorna o tamanho da lista de eventos.
@@ -477,6 +465,39 @@ PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
   }
 
   return pObject;
+}
+
+namespace Qt5xHb
+{
+  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+  {
+    return s_events->connectEvent( object, type, codeblock );
+  }
+
+  bool Events_disconnect_event( QObject * object, int type )
+  {
+    return s_events->disconnectEvent( object, type );
+  }
+
+  void Events_disconnect_all_events( QObject * obj, bool children )
+  {
+    s_events->disconnectAllEvents( obj, children );
+  }
+}
+
+bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+{
+  return s_events->connectEvent( object, type, codeblock );
+}
+
+bool Events_disconnect_event( QObject * object, int type )
+{
+  return s_events->disconnectEvent( object, type );
+}
+
+void Events_disconnect_all_events( QObject * obj, bool children )
+{
+  s_events->disconnectAllEvents( obj, children );
 }
 
 #include "hbvm.h"
