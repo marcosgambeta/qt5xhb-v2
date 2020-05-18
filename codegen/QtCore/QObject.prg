@@ -207,13 +207,8 @@ $includes
 #include <QtCore/QVariant>
 #include <QtWidgets/QWidget>
 
-/*
-bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
-bool Events_disconnect_event ( QObject * object, int type );
-void Events_disconnect_all_events ( QObject * object, bool children );
-*/
-void _qtxhb_processOnEventMethod (QEvent::Type event);
-void _qtxhb_processOnEventMethod2 (QEvent::Type event);
+void _qtxhb_processOnEventMethod( QEvent::Type event );
+void _qtxhb_processOnEventMethod2( QEvent::Type event );
 
 $prototype=Q_INVOKABLE explicit QObject ( QObject * parent = nullptr )
 $constructor=|new|QObject *=nullptr
@@ -347,13 +342,13 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
   {
     if( hb_pcount() == 0 )
     {
-      Events_disconnect_all_events (obj, false);
-      Signals5_disconnect_all_signals (obj, false);
+      Qt5xHb::Events_disconnect_all_events( obj, false );
+      Signals_disconnect_all_signals( obj, false );
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, PBOOL(1) );
-      Signals5_disconnect_all_signals (obj, PBOOL(1) );
+      Qt5xHb::Events_disconnect_all_events( obj, PBOOL(1) );
+      Signals_disconnect_all_signals( obj, PBOOL(1) );
     }
     else
     {
@@ -372,11 +367,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
   {
     if( hb_pcount() == 0 )
     {
-      Events_disconnect_all_events (obj, false);
+      Qt5xHb::Events_disconnect_all_events( obj, false );
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Events_disconnect_all_events (obj, PBOOL(1) );
+      Qt5xHb::Events_disconnect_all_events( obj, PBOOL(1) );
     }
     else
     {
@@ -395,11 +390,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   {
     if( hb_pcount() == 0 )
     {
-      Signals5_disconnect_all_signals (obj, false);
+      Signals_disconnect_all_signals( obj, false );
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals5_disconnect_all_signals (obj, PBOOL(1) );
+      Signals_disconnect_all_signals( obj, PBOOL(1) );
     }
     else
     {
@@ -414,17 +409,17 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 %% eventos
 %%
 
-void _qtxhb_processOnEventMethod (QEvent::Type event)
+void _qtxhb_processOnEventMethod( QEvent::Type event )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( hb_pcount() == 1 )
   {
     PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+
     if( item )
     {
-      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Events_connect_event( obj, event, item ) );
+      hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
     }
     else
     {
@@ -433,8 +428,7 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
   }
   else if( hb_pcount() == 0 )
   {
-    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Events_disconnect_event( obj, event ) );
+    hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
   }
   else
   {
@@ -442,17 +436,17 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
   }
 }
 
-void _qtxhb_processOnEventMethod2 (QEvent::Type event)
+void _qtxhb_processOnEventMethod2( QEvent::Type event )
 {
   QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( hb_pcount() == 2 )
   {
     PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+
     if( item )
     {
-      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Events_connect_event( obj, event, item ) );
+      hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
     }
     else
     {
@@ -461,8 +455,7 @@ void _qtxhb_processOnEventMethod2 (QEvent::Type event)
   }
   else if( hb_pcount() == 1 )
   {
-    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Events_disconnect_event( obj, event ) );
+    hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
   }
   else
   {
