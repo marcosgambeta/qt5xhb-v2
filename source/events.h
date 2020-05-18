@@ -15,6 +15,7 @@
 #include <QtCore/QList>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QMetaEnum>
+#include <QtCore/QMutex>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -41,6 +42,8 @@ class Events: public QObject
   QVector<QObject*> * m_list1;     // armazenamento dos objetos
   QVector<QEvent::Type> * m_list2; // armazenamento dos tipos de evento
   QVector<PHB_ITEM> * m_list3;     // armazenamento dos codeblock's
+  QMutex * m_mutex;
+  QHash<QEvent::Type, QString> * m_events;
 
   protected:
   bool eventFilter( QObject *obj, QEvent *event );
