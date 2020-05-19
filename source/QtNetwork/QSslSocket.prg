@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DELETE )
   if( obj != nullptr )
   {
     Qt5xHb::Events_disconnect_all_events( obj, true );
-    Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -2280,25 +2280,25 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encrypted, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2309,9 +2309,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2340,18 +2340,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::encryptedBytesWritten, 
                                                               [sender, indexOfCodeBlock]
                                                               (qint64 arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2360,7 +2360,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2371,9 +2371,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2402,18 +2402,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::modeChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QSslSocket::SslMode arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2422,7 +2422,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2433,9 +2433,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2464,19 +2464,19 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::peerVerifyError, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QSslError & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QSSLERROR" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QSSLERROR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2484,7 +2484,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2495,9 +2495,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2527,19 +2527,19 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QSslSocket::preSharedKeyAuthenticationRequired, 
                                                               [sender, indexOfCodeBlock]
                                                               (QSslPreSharedKeyAuthenticator * arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) arg1, "QSSLPRESHAREDKEYAUTHENTICATOR" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2547,7 +2547,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2558,9 +2558,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2592,18 +2592,18 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               QOverload<const QList<QSslError> &>::of(&QSslSocket::sslErrors), 
                                                               [sender, indexOfCodeBlock]
                                                               (const QList<QSslError> & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSSLSOCKET" );
             PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
             PHB_ITEM pArg1 = hb_itemArrayNew(0);
             if( pDynSym )
@@ -2634,7 +2634,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2645,9 +2645,9 @@ HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
