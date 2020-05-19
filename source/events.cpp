@@ -107,15 +107,12 @@ Events::Events( QObject *parent ) : QObject( parent )
 }
 
 /*
-*/
-
-/*
   destructor
 */
 
 Events::~Events()
 {
-  const int listsize = m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
     if( m_list1->at(i) != nullptr )
@@ -142,7 +139,7 @@ bool Events::eventFilter( QObject *object, QEvent *event )
   auto index = -1;
 
   // obtem o indice do evento
-  const int listsize = m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
     if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == eventtype ) )
@@ -196,7 +193,7 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   m_mutex->lock();
 
   // verifica se já está na lista
-  const int listsize = m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
     if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == (QEvent::Type) type ) )
@@ -250,7 +247,7 @@ bool Events::disconnectEvent( QObject * object, int type )
   auto result = false;
 
   // remove evento da lista de eventos
-  const int listsize = m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
     if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == (QEvent::Type) type ) )
@@ -283,7 +280,7 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
   if( !children )
   {
     // percorre toda a lista de eventos
-    const int listsize = m_list1->size();
+    const auto listsize = m_list1->size();
     for( auto i = 0; i < listsize; ++i )
     {
       // elimina eventos ligados ao objeto 'obj'
@@ -311,13 +308,13 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
     objectList << obj;
 
     // percorre toda a lista de objetos
-    const int listsize = objectList.size();
+    const auto listsize = objectList.size();
     for( auto i = 0; i < listsize; ++i )
     {
       QObject * currentObject = objectList.at(i);
 
       // percorre toda a lista de eventos
-      const int listsize2 = m_list1->size();
+      const auto listsize2 = m_list1->size();
       for( auto ii = 0; ii < listsize2; ++ii )
       {
         // elimina eventos ativos ligados ao objeto 'objectList.at(i)'
@@ -351,11 +348,6 @@ int Events::size()
   return m_list1->size();
 }
 
-HB_FUNC( QTXHB_EVENTS_SIZE )
-{
-  hb_retni( s_events->size() );
-}
-
 /*
   Retorna o número de eventos ativos na lista de eventos.
   Atenção: está função não faz parte da API pública, podendo
@@ -379,24 +371,13 @@ int Events::active()
   return count;
 }
 
-HB_FUNC( QTXHB_EVENTS_ACTIVE )
-{
-  hb_retni( s_events->active() );
-}
-
-
-HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
-{
-  hb_retni( s_events->active() );
-}
-
 /*
   retorna um objeto Harbour da classe QEvent ou derivada
 */
 
-PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
+PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
 {
-  QString eventname = m_events->value( ptr->type(), "QEvent" );
+  QString eventname = m_events->value( event->type(), "QEvent" );
 
   PHB_DYNS pDynSym;
 
@@ -416,7 +397,7 @@ PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (QEvent *) ptr );
+    hb_itemPutPtr( pItem, (QEvent *) event );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -432,13 +413,13 @@ PHB_ITEM Events::returnQEvent( QEvent * ptr, const char * classname )
   retorna um objeto Harbour da classe QObject ou derivada
 */
 
-PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
+PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
-  if( ptr )
+  if( object )
   {
-    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+    pDynSym = hb_dynsymFindName( (const char *) object->metaObject()->className() );
   }
 
   if( !pDynSym )
@@ -455,7 +436,7 @@ PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_itemPutPtr( pItem, (void *) object );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -483,6 +464,22 @@ namespace Qt5xHb
   {
     s_events->disconnectAllEvents( obj, children );
   }
+}
+
+HB_FUNC( QTXHB_EVENTS_SIZE )
+{
+  hb_retni( s_events->size() );
+}
+
+HB_FUNC( QTXHB_EVENTS_ACTIVE )
+{
+  hb_retni( s_events->active() );
+}
+
+
+HB_FUNC( QTXHB_EVENTS_SIZE_ACTIVE ) // deprecated
+{
+  hb_retni( s_events->active() );
 }
 
 #include "hbvm.h"
