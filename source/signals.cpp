@@ -99,11 +99,6 @@ int Signals::connectSignal( QObject * object, int indexOfSignal, PHB_ITEM codebl
   return result;
 }
 
-int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
-{
-  return s_signals->connectSignal( object, indexOfSignal, codeblock );
-}
-
 /*
   Desconecta um determinado sinal
   Parâmetro 1: objeto
@@ -134,11 +129,6 @@ bool Signals::disconnectSignal( QObject * object, int indexOfSignal )
   return result;
 }
 
-bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
-{
-  return s_signals->disconnectSignal( object, indexOfSignal );
-}
-
 /*
   Verifica se um determinado sinal do objeto especificado está conectado
   Parâmetro 1: objeto
@@ -164,11 +154,6 @@ bool Signals::isSignalConnected( QObject * object, int indexOfSignal )
   return result;
 }
 
-bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
-{
-  return s_signals->isSignalConnected( object, indexOfSignal );
-}
-
 /*
   Retorna um codeblock atraves do indice do codeblock no vetor
   Parâmetro: indice do codeblock
@@ -178,11 +163,6 @@ bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
 PHB_ITEM Signals::returnCodeblock( int indexOfCodeBlock )
 {
   return m_list3->at( indexOfCodeBlock );
-}
-
-PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
-{
-  return s_signals->returnCodeblock( indexOfCodeBlock );
 }
 
 /*
@@ -253,11 +233,6 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
   }
 }
 
-void Signals_disconnect_all_signals( QObject * obj, bool children )
-{
-  s_signals->disconnectAllSignals( obj, children );
-}
-
 /*
   conecta sinais e retorna resultado (true/false)
 */
@@ -284,11 +259,6 @@ bool Signals::connection( QObject * object, int indexOfSignal, int & indexOfCode
   return result;
 }
 
-bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
-{
-  return s_signals->connection( object, indexOfSignal, indexOfCodeBlock );
-}
-
 /*
   desconecta sinais e retorna resultado (true/false)
 */
@@ -306,11 +276,6 @@ bool Signals::disconnection( QObject * object, int indexOfSignal )
   m_mutex->unlock();
 
   return result;
-}
-
-bool Signals_disconnection( QObject * object, int indexOfSignal )
-{
-  return s_signals->disconnection( object, indexOfSignal );
 }
 
 PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
@@ -336,11 +301,6 @@ PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
   }
 
   return pObject;
-}
-
-PHB_ITEM Signals_return_object( void * ptr, const char * classname )
-{
-  return s_signals->returnObject( ptr, classname );
 }
 
 PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
@@ -378,21 +338,11 @@ PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
-{
-  return s_signals->returnQObject( ptr, classname );
-}
-
 bool Signals::storeConnection( int index, QMetaObject::Connection connection )
 {
   m_list4->replace( index, connection );
 
   return true;
-}
-
-bool Signals_store_connection( int index, QMetaObject::Connection connection )
-{
-  return s_signals->storeConnection( index, connection );
 }
 
 QMetaObject::Connection Signals::getConnection( QObject * object, int signal )
@@ -412,11 +362,6 @@ QMetaObject::Connection Signals::getConnection( QObject * object, int signal )
   }
 
   return connection;
-}
-
-QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
-{
-  return s_signals->getConnection( object, signal );
 }
 
 int Signals::size()
@@ -439,6 +384,119 @@ int Signals::active()
   }
 
   return count;
+}
+
+namespace Qt5xHb
+{
+  int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
+  {
+    return s_signals->connectSignal( object, indexOfSignal, codeblock );
+  }
+
+  bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
+  {
+    return s_signals->disconnectSignal( object, indexOfSignal );
+  }
+
+  bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
+  {
+    return s_signals->isSignalConnected( object, indexOfSignal );
+  }
+
+  PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
+  {
+    return s_signals->returnCodeblock( indexOfCodeBlock );
+  }
+
+  void Signals_disconnect_all_signals( QObject * obj, bool children )
+  {
+    s_signals->disconnectAllSignals( obj, children );
+  }
+
+  bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
+  {
+    return s_signals->connection( object, indexOfSignal, indexOfCodeBlock );
+  }
+
+  bool Signals_disconnection( QObject * object, int indexOfSignal )
+  {
+    return s_signals->disconnection( object, indexOfSignal );
+  }
+
+  PHB_ITEM Signals_return_object( void * ptr, const char * classname )
+  {
+    return s_signals->returnObject( ptr, classname );
+  }
+
+  PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
+  {
+    return s_signals->returnQObject( ptr, classname );
+  }
+
+  bool Signals_store_connection( int index, QMetaObject::Connection connection )
+  {
+    return s_signals->storeConnection( index, connection );
+  }
+
+  QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
+  {
+    return s_signals->getConnection( object, signal );
+  }
+}
+
+int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
+{
+  return s_signals->connectSignal( object, indexOfSignal, codeblock );
+}
+
+bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
+{
+  return s_signals->disconnectSignal( object, indexOfSignal );
+}
+
+bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
+{
+  return s_signals->isSignalConnected( object, indexOfSignal );
+}
+
+PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
+{
+  return s_signals->returnCodeblock( indexOfCodeBlock );
+}
+
+void Signals_disconnect_all_signals( QObject * obj, bool children )
+{
+  s_signals->disconnectAllSignals( obj, children );
+}
+
+bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
+{
+  return s_signals->connection( object, indexOfSignal, indexOfCodeBlock );
+}
+
+bool Signals_disconnection( QObject * object, int indexOfSignal )
+{
+  return s_signals->disconnection( object, indexOfSignal );
+}
+
+PHB_ITEM Signals_return_object( void * ptr, const char * classname )
+{
+  return s_signals->returnObject( ptr, classname );
+}
+
+PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
+{
+  return s_signals->returnQObject( ptr, classname );
+}
+
+bool Signals_store_connection( int index, QMetaObject::Connection connection )
+{
+  return s_signals->storeConnection( index, connection );
+}
+
+QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
+{
+  return s_signals->getConnection( object, signal );
 }
 
 /*

@@ -60,12 +60,14 @@ class Signals: public QObject
   Signals( QObject *parent = nullptr );
   ~Signals();
 
+  private:
   QVector<QObject*> * m_list1;                // armazena ponteiro do objeto
   QVector<int> * m_list2;                     // armazena indice do sinal
   QVector<PHB_ITEM> * m_list3;                // armazena codeblock
   QVector<QMetaObject::Connection> * m_list4; // handle da conexão
   QMutex * m_mutex;
 
+  public:
   int connectSignal( QObject * object, int signal, PHB_ITEM codeblock );
   bool disconnectSignal( QObject * object, int signal );
   bool isSignalConnected( QObject * object, int signal );
