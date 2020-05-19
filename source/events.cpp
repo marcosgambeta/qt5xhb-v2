@@ -485,21 +485,6 @@ namespace Qt5xHb
   }
 }
 
-bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
-{
-  return s_events->connectEvent( object, type, codeblock );
-}
-
-bool Events_disconnect_event( QObject * object, int type )
-{
-  return s_events->disconnectEvent( object, type );
-}
-
-void Events_disconnect_all_events( QObject * obj, bool children )
-{
-  s_events->disconnectAllEvents( obj, children );
-}
-
 #include "hbvm.h"
 #include "hbinit.h"
 
