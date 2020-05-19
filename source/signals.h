@@ -65,6 +65,20 @@ class Signals: public QObject
   QVector<PHB_ITEM> * m_list3;                // armazena codeblock
   QVector<QMetaObject::Connection> * m_list4; // handle da conexão
   QMutex * m_mutex;
+
+  int connectSignal( QObject * object, int signal, PHB_ITEM codeblock );
+  bool disconnectSignal( QObject * object, int signal );
+  bool isSignalConnected( QObject * object, int signal );
+  PHB_ITEM returnCodeblock( int indexOfCodeBlock );
+  void disconnectAllSignals( QObject * obj, bool children );
+  bool connection( QObject * s, int signal, int & indexOfCodeBlock );
+  bool disconnection( QObject * s, int signal );
+  PHB_ITEM returnObject( void * ptr, const char * classname );
+  PHB_ITEM returnQObject( QObject * ptr, const char * classname );
+  bool storeConnection( int index, QMetaObject::Connection connection );
+  QMetaObject::Connection getConnection( QObject * s, int signal );
+  int size();
+  int active();
 };
 
 #endif /* SIGNALS_H */

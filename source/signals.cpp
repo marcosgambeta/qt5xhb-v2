@@ -53,15 +53,15 @@ Signals::~Signals()
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
+int Signals::connectSignal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
 {
   auto result = -1;
   auto found = false;
 
-  const auto listsize = s_signals->m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == indexOfSignal ) )
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == indexOfSignal ) )
     {
       found = true;
       break;
@@ -72,31 +72,36 @@ int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codebl
   if( !found )
   {
     // procura por posição livre
-    auto index = s_signals->m_list1->indexOf( nullptr );
+    auto index = m_list1->indexOf( nullptr );
 
     if( index == -1 ) // nao encontrou posicao livre
     {
       // adiciona sinal na lista de sinais
-      s_signals->m_list1->append( object );
-      s_signals->m_list2->append( indexOfSignal );
-      s_signals->m_list3->append( codeblock );
+      m_list1->append( object );
+      m_list2->append( indexOfSignal );
+      m_list3->append( codeblock );
       QMetaObject::Connection connection;
-      s_signals->m_list4->append( connection );
-      result = s_signals->m_list1->size() - 1;
+      m_list4->append( connection );
+      result = m_list1->size() - 1;
     }
     else // encontrou posicao livre
     {
       // coloca na posição livre
-      s_signals->m_list1->replace( index, object );
-      s_signals->m_list2->replace( index, indexOfSignal );
-      s_signals->m_list3->replace( index, codeblock );
+      m_list1->replace( index, object );
+      m_list2->replace( index, indexOfSignal );
+      m_list3->replace( index, codeblock );
       QMetaObject::Connection connection;
-      s_signals->m_list4->replace( index, connection );
+      m_list4->replace( index, connection );
       result = index;
     }
   }
 
   return result;
+}
+
+int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
+{
+  return s_signals->connectSignal( object, indexOfSignal, codeblock );
 }
 
 /*
@@ -107,26 +112,31 @@ int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codebl
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
+bool Signals::disconnectSignal( QObject * object, int indexOfSignal )
 {
   auto result = false;
 
-  const auto listsize = s_signals->m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == indexOfSignal ) )
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == indexOfSignal ) )
     {
-      hb_itemRelease( s_signals->m_list3->at(i) );
-      s_signals->m_list1->replace( i, nullptr );
-      s_signals->m_list2->replace( i, -1 );
-      s_signals->m_list3->replace( i, nullptr );
+      hb_itemRelease( m_list3->at(i) );
+      m_list1->replace( i, nullptr );
+      m_list2->replace( i, -1 );
+      m_list3->replace( i, nullptr );
       QMetaObject::Connection connection;
-      s_signals->m_list4->replace( i, connection );
+      m_list4->replace( i, connection );
       result = true;
     }
   }
 
   return result;
+}
+
+bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
+{
+  return s_signals->disconnectSignal( object, indexOfSignal );
 }
 
 /*
@@ -137,14 +147,14 @@ bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
+bool Signals::isSignalConnected( QObject * object, int indexOfSignal )
 {
   auto result = false;
 
-  const auto listsize = s_signals->m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == indexOfSignal ) )
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == indexOfSignal ) )
     {
       result = true;
       break;
@@ -154,15 +164,25 @@ bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
   return result;
 }
 
+bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
+{
+  return s_signals->isSignalConnected( object, indexOfSignal );
+}
+
 /*
   Retorna um codeblock atraves do indice do codeblock no vetor
   Parâmetro: indice do codeblock
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
+PHB_ITEM Signals::returnCodeblock( int indexOfCodeBlock )
+{
+  return m_list3->at( indexOfCodeBlock );
+}
+
 PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
 {
-  return s_signals->m_list3->at( indexOfCodeBlock );
+  return s_signals->returnCodeblock( indexOfCodeBlock );
 }
 
 /*
@@ -173,179 +193,127 @@ PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
   a destruição de um objeto ocorre apenas uma vez.
 */
 
-void Signals_disconnect_all_signals( QObject * obj, bool children )
+void Signals::disconnectAllSignals( QObject * obj, bool children )
 {
   auto indexOfSignal = 0;
 
-  if( s_signals != nullptr )
+  if( !children )
   {
-    if( !children )
-    {
-      indexOfSignal = obj->metaObject()->indexOfSignal("destroyed(QObject*)");
+    indexOfSignal = obj->metaObject()->indexOfSignal("destroyed(QObject*)");
 
-      // percorre toda a lista de sinais
-      const auto listsize = s_signals->m_list1->size();
-      for( auto i = 0; i < listsize; ++i )
+    // percorre toda a lista de sinais
+    const auto listsize = m_list1->size();
+    for( auto i = 0; i < listsize; ++i )
+    {
+      // elimina sinais ativos ligados ao objeto 'obj'
+      if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) != indexOfSignal ) )
       {
-        // elimina sinais ativos ligados ao objeto 'obj'
-        if( ( s_signals->m_list1->at(i) == obj ) && ( s_signals->m_list2->at(i) != indexOfSignal ) )
-        {
-          QObject::disconnect( s_signals->m_list4->at(i) );
-          hb_itemRelease( s_signals->m_list3->at(i) );
-          s_signals->m_list1->replace( i, nullptr );
-          s_signals->m_list2->replace( i, -1);
-          s_signals->m_list3->replace( i, nullptr );
-          QMetaObject::Connection connection;
-          s_signals->m_list4->replace( i, connection );
-        }
+        QObject::disconnect( m_list4->at(i) );
+        hb_itemRelease( m_list3->at(i) );
+        m_list1->replace( i, nullptr );
+        m_list2->replace( i, -1);
+        m_list3->replace( i, nullptr );
+        QMetaObject::Connection connection;
+        m_list4->replace( i, connection );
       }
     }
-    else
+  }
+  else
+  {
+    // obtém a lista de filhos, netos, bisnetos, etc...
+    auto objectList = obj->findChildren<QObject *>();
+
+    // adiciona o pai na lista
+    objectList << obj;
+
+    // percorre toda a lista de objetos
+    const auto listsize = objectList.size();
+    for( auto i = 0; i < listsize; ++i )
     {
-      // obtém a lista de filhos, netos, bisnetos, etc...
-      auto objectList = obj->findChildren<QObject *>();
+      QObject * currentObject = objectList.at(i);
+      indexOfSignal = currentObject->metaObject()->indexOfSignal("destroyed(QObject*)");
 
-      // adiciona o pai na lista
-      objectList << obj;
-
-      // percorre toda a lista de objetos
-      const auto listsize = objectList.size();
-      for( auto i = 0; i < listsize; ++i )
+      // percorre toda a lista de sinais
+      const auto listsize2 = m_list1->size();
+      for( auto ii = 0; ii < listsize2; ++ii )
       {
-        QObject * currentObject = objectList.at(i);
-        indexOfSignal = currentObject->metaObject()->indexOfSignal("destroyed(QObject*)");
-
-        // percorre toda a lista de sinais
-        const auto listsize2 = s_signals->m_list1->size();
-        for( auto ii = 0; ii < listsize2; ++ii )
+        // elimina sinais ativos ligados ao objeto 'list.at(i)'
+        if( ( m_list1->at(ii) == currentObject ) && ( m_list2->at(ii) != indexOfSignal ) )
         {
-          // elimina sinais ativos ligados ao objeto 'list.at(i)'
-          if( ( s_signals->m_list1->at(ii) == currentObject ) && ( s_signals->m_list2->at(ii) != indexOfSignal ) )
-          {
-            QObject::disconnect( s_signals->m_list4->at(ii) );
-            hb_itemRelease( s_signals->m_list3->at(ii) );
-            s_signals->m_list1->replace( ii, nullptr );
-            s_signals->m_list2->replace( ii, -1 );
-            s_signals->m_list3->replace( ii, nullptr );
-            QMetaObject::Connection connection;
-            s_signals->m_list4->replace( ii, connection );
-          }
+          QObject::disconnect( m_list4->at(ii) );
+          hb_itemRelease( m_list3->at(ii) );
+          m_list1->replace( ii, nullptr );
+          m_list2->replace( ii, -1 );
+          m_list3->replace( ii, nullptr );
+          QMetaObject::Connection connection;
+          m_list4->replace( ii, connection );
         }
       }
     }
   }
+}
+
+void Signals_disconnect_all_signals( QObject * obj, bool children )
+{
+  s_signals->disconnectAllSignals( obj, children );
 }
 
 /*
   conecta sinais e retorna resultado (true/false)
 */
 
-bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
+bool Signals::connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
 {
   auto result = false;
 
-  s_signals->m_mutex->lock();
+  m_mutex->lock();
 
-  if( !Signals_is_signal_connected( object, indexOfSignal ) )
+  if( !isSignalConnected( object, indexOfSignal ) )
   {
     PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
     if( codeblock != nullptr )
     {
-      indexOfCodeBlock = Signals_connect_signal( object, indexOfSignal, codeblock );
+      indexOfCodeBlock = connectSignal( object, indexOfSignal, codeblock );
       result = true;
     }
   }
 
-  s_signals->m_mutex->unlock();
+  m_mutex->unlock();
 
   return result;
+}
+
+bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
+{
+  return s_signals->connection( object, indexOfSignal, indexOfCodeBlock );
 }
 
 /*
   desconecta sinais e retorna resultado (true/false)
 */
 
-bool Signals_disconnection( QObject * object, int indexOfSignal )
+bool Signals::disconnection( QObject * object, int indexOfSignal )
 {
   auto result = false;
 
-  s_signals->m_mutex->lock();
+  m_mutex->lock();
 
-  Signals_disconnect_signal( object, indexOfSignal );
+  disconnectSignal( object, indexOfSignal );
 
   result = true;
 
-  s_signals->m_mutex->unlock();
+  m_mutex->unlock();
 
   return result;
 }
 
-/*
-  Retorna o tamanho da lista de sinais.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
-
-HB_FUNC( QTXHB_SIGNALS_SIZE )
+bool Signals_disconnection( QObject * object, int indexOfSignal )
 {
-  auto size = 0;
-
-  if( s_signals != nullptr )
-  {
-    size = s_signals->m_list1->size();
-  }
-
-  hb_retni( size );
+  return s_signals->disconnection( object, indexOfSignal );
 }
 
-/*
-  Retorna o número de sinais ativos na lista de sinais.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
-
-HB_FUNC( QTXHB_SIGNALS_ACTIVE )
-{
-  auto count = 0;
-
-  if( s_signals != nullptr )
-  {
-    // percorre toda a lista de sinais
-    const int listsize = s_signals->m_list1->size();
-    for( auto i = 0; i < listsize; ++i )
-    {
-      if( s_signals->m_list1->at(i) != nullptr )
-      {
-        ++count;
-      }
-    }
-  }
-
-  hb_retni( count );
-}
-
-HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE ) // deprecated
-{
-  auto count = 0;
-
-  if( s_signals != nullptr )
-  {
-    // percorre toda a lista de sinais
-    const int listsize = s_signals->m_list1->size();
-    for( auto i = 0; i < listsize; ++i )
-    {
-      if( s_signals->m_list1->at(i) != nullptr )
-      {
-        ++count;
-      }
-    }
-  }
-
-  hb_retni( count );
-}
-
-PHB_ITEM Signals_return_object( void * ptr, const char * classname )
+PHB_ITEM Signals::returnObject( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
@@ -370,7 +338,12 @@ PHB_ITEM Signals_return_object( void * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
+PHB_ITEM Signals_return_object( void * ptr, const char * classname )
+{
+  return s_signals->returnObject( ptr, classname );
+}
+
+PHB_ITEM Signals::returnQObject( QObject * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = NULL;
 
@@ -405,30 +378,94 @@ PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
   return pObject;
 }
 
-bool Signals_store_connection( int index, QMetaObject::Connection connection )
+PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
 {
-  s_signals->m_list4->replace( index, connection );
+  return s_signals->returnQObject( ptr, classname );
+}
+
+bool Signals::storeConnection( int index, QMetaObject::Connection connection )
+{
+  m_list4->replace( index, connection );
 
   return true;
 }
 
-QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
+bool Signals_store_connection( int index, QMetaObject::Connection connection )
+{
+  return s_signals->storeConnection( index, connection );
+}
+
+QMetaObject::Connection Signals::getConnection( QObject * object, int signal )
 {
   // valor de retorno
   QMetaObject::Connection connection;
 
   // busca handle da conexão
-  const auto listsize = s_signals->m_list1->size();
+  const auto listsize = m_list1->size();
   for( auto i = 0; i < listsize; ++i )
   {
-    if( ( s_signals->m_list1->at(i) == object ) && ( s_signals->m_list2->at(i) == signal ) )
+    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == signal ) )
     {
-      connection = s_signals->m_list4->at(i);
+      connection = m_list4->at(i);
       break;
     }
   }
 
   return connection;
+}
+
+QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
+{
+  return s_signals->getConnection( object, signal );
+}
+
+int Signals::size()
+{
+  return m_list1->size();
+}
+
+int Signals::active()
+{
+  auto count = 0;
+
+  // percorre toda a lista de sinais
+  const auto listsize = m_list1->size();
+  for( auto i = 0; i < listsize; ++i )
+  {
+    if( m_list1->at(i) != nullptr )
+    {
+      ++count;
+    }
+  }
+
+  return count;
+}
+
+/*
+  Retorna o tamanho da lista de sinais.
+  Atenção: está função não faz parte da API pública, podendo
+  ser removida ou sofrer modificações futuramente.
+*/
+
+HB_FUNC( QTXHB_SIGNALS_SIZE )
+{
+  hb_retni( s_signals->size() );
+}
+
+/*
+  Retorna o número de sinais ativos na lista de sinais.
+  Atenção: está função não faz parte da API pública, podendo
+  ser removida ou sofrer modificações futuramente.
+*/
+
+HB_FUNC( QTXHB_SIGNALS_ACTIVE )
+{
+  hb_retni( s_signals->active() );
+}
+
+HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE ) // deprecated
+{
+  hb_retni( s_signals->active() );
 }
 
 #include "hbvm.h"
