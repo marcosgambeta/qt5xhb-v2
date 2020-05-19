@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DELETE )
   if( obj != nullptr )
   {
     Qt5xHb::Events_disconnect_all_events( obj, true );
-    Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -335,19 +335,19 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::dataProxyChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QBarDataProxy * arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
-            PHB_ITEM pArg1 = Signals_return_qobject( (QObject *) arg1, "QBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QBARDATAPROXY" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -366,9 +366,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONDATAPROXYCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -401,19 +401,19 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::selectedBarChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QPoint & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QPOINT" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPOINT" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -432,9 +432,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONSELECTEDBARCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -467,18 +467,18 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QBar3DSeries::meshAngleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBAR3DSERIES" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -498,9 +498,9 @@ HB_FUNC_STATIC( QBAR3DSERIES_ONMESHANGLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

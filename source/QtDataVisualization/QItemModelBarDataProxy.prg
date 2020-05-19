@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
   if( obj != nullptr )
   {
     Qt5xHb::Events_disconnect_all_events( obj, true );
-    Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -1390,18 +1390,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::autoColumnCategoriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1410,7 +1410,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1421,9 +1421,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOCOLUMNCATEGORIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1456,18 +1456,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::autoRowCategoriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1476,7 +1476,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1487,9 +1487,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONAUTOROWCATEGORIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1522,25 +1522,25 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnCategoriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1551,9 +1551,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNCATEGORIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1586,18 +1586,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1606,7 +1606,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1617,9 +1617,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1652,19 +1652,19 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1672,7 +1672,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1683,9 +1683,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1718,18 +1718,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::columnRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1738,7 +1738,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1749,9 +1749,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONCOLUMNROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1784,19 +1784,19 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::itemModelChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QAbstractItemModel * arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTITEMMODEL" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1804,7 +1804,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1815,9 +1815,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONITEMMODELCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1850,18 +1850,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::multiMatchBehaviorChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (QItemModelBarDataProxy::MultiMatchBehavior arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1870,7 +1870,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1881,9 +1881,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONMULTIMATCHBEHAVIORCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1916,18 +1916,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -1936,7 +1936,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -1947,9 +1947,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -1982,19 +1982,19 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2002,7 +2002,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2013,9 +2013,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2048,18 +2048,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rotationRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2068,7 +2068,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2079,9 +2079,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROTATIONROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2114,25 +2114,25 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowCategoriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             hb_vmEvalBlockV( cb, 1, pSender );
             hb_itemRelease( pSender );
           }
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2143,9 +2143,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWCATEGORIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2178,18 +2178,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2198,7 +2198,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2209,9 +2209,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2244,19 +2244,19 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2264,7 +2264,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2275,9 +2275,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2310,18 +2310,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::rowRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2330,7 +2330,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2341,9 +2341,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONROWROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2376,18 +2376,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::useModelCategoriesChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (bool arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2396,7 +2396,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2407,9 +2407,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONUSEMODELCATEGORIESCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2442,18 +2442,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRoleChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2462,7 +2462,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2473,9 +2473,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2508,19 +2508,19 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRolePatternChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QRegExp & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QREGEXP" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QREGEXP" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2528,7 +2528,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2539,9 +2539,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEPATTERNCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -2574,18 +2574,18 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QItemModelBarDataProxy::valueRoleReplaceChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QITEMMODELBARDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -2594,7 +2594,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -2605,9 +2605,9 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ONVALUEROLEREPLACECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }

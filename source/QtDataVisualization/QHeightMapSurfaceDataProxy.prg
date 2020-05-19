@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_DELETE )
   if( obj != nullptr )
   {
     Qt5xHb::Events_disconnect_all_events( obj, true );
-    Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -530,19 +530,19 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::heightMapChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QImage & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
-            PHB_ITEM pArg1 = Signals_return_object( (void *) &arg1, "QIMAGE" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QIMAGE" );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -561,9 +561,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -596,18 +596,18 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::heightMapFileChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (const QString & arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg1) );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -627,9 +627,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPFILECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -662,18 +662,18 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::minXValueChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -693,9 +693,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINXVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -728,18 +728,18 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::maxXValueChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -759,9 +759,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXXVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -794,18 +794,18 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::minZValueChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -825,9 +825,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMINZVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
@@ -860,18 +860,18 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 
     if( hb_pcount() == 1 )
     {
-      if( Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QHeightMapSurfaceDataProxy::maxZValueChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               (float arg1) {
-          PHB_ITEM cb = Signals_return_codeblock( indexOfCodeBlock );
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
           {
-            PHB_ITEM pSender = Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QHEIGHTMAPSURFACEDATAPROXY" );
             PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
 
         });
 
-        Signals_store_connection( indexOfCodeBlock, connection );
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
 
         hb_retl( true );
       }
@@ -891,9 +891,9 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONMAXZVALUECHANGED )
     }
     else if( hb_pcount() == 0 )
     {
-      Signals_disconnection( sender, indexOfSignal );
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
 
-      QObject::disconnect( Signals_get_connection( sender, indexOfSignal ) );
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
 
       hb_retl( true );
     }
