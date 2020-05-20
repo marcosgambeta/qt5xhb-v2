@@ -444,61 +444,6 @@ namespace Qt5xHb
   }
 }
 
-int Signals_connect_signal( QObject * object, int indexOfSignal, PHB_ITEM codeblock )
-{
-  return s_signals->connectSignal( object, indexOfSignal, codeblock );
-}
-
-bool Signals_disconnect_signal( QObject * object, int indexOfSignal )
-{
-  return s_signals->disconnectSignal( object, indexOfSignal );
-}
-
-bool Signals_is_signal_connected( QObject * object, int indexOfSignal )
-{
-  return s_signals->isSignalConnected( object, indexOfSignal );
-}
-
-PHB_ITEM Signals_return_codeblock( int indexOfCodeBlock )
-{
-  return s_signals->returnCodeblock( indexOfCodeBlock );
-}
-
-void Signals_disconnect_all_signals( QObject * obj, bool children )
-{
-  s_signals->disconnectAllSignals( obj, children );
-}
-
-bool Signals_connection( QObject * object, int indexOfSignal, int & indexOfCodeBlock )
-{
-  return s_signals->connection( object, indexOfSignal, indexOfCodeBlock );
-}
-
-bool Signals_disconnection( QObject * object, int indexOfSignal )
-{
-  return s_signals->disconnection( object, indexOfSignal );
-}
-
-PHB_ITEM Signals_return_object( void * ptr, const char * classname )
-{
-  return s_signals->returnObject( ptr, classname );
-}
-
-PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
-{
-  return s_signals->returnQObject( ptr, classname );
-}
-
-bool Signals_store_connection( int index, QMetaObject::Connection connection )
-{
-  return s_signals->storeConnection( index, connection );
-}
-
-QMetaObject::Connection Signals_get_connection( QObject * object, int signal )
-{
-  return s_signals->getConnection( object, signal );
-}
-
 /*
   Retorna o tamanho da lista de sinais.
   Atenção: está função não faz parte da API pública, podendo
