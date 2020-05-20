@@ -57,7 +57,7 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtDesigner/QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 #endif
 
 #include "qt5xhb_common.h"
