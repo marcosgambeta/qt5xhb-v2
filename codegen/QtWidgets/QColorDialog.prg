@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=open
@@ -139,7 +139,7 @@ $staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=nullptr,const 
 %% //  }
 %% //  else
 %% //  {
-%% //    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%% //    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %% //  }
 %% //}
 %% //?>
