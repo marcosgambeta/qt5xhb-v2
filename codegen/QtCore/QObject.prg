@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=findChildren
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
 
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
 
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
 
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
     else if( ISNUMPAR(1) && ISCHAR(1) )
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
     else if( ISNUMPAR(2) && ISNUM(1) )
@@ -1352,7 +1352,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
 }
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
     else if( ISNUMPAR(1) && ISNUM(1) )
@@ -1390,7 +1390,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
 }
