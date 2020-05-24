@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=itemAt
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_RESETARRAY )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=resetArray
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROW )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=setRow
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=setRows
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=setItem
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ADDROW )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=addRow
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ADDROWS )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=addRows
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROW )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=insertRow
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=insertRows
