@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=new
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=call
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 $addMethod=construct
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=property
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=propertyFlags
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
 %%  }
 %%  else
 %%  {
-%%    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+%%    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
 $addMethod=setProperty
