@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -512,13 +512,13 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
           hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
           hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          PHB_ITEM pDestroy = hb_itemNew( nullptr );
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
@@ -528,14 +528,14 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REVERT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -959,8 +959,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1025,10 +1025,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX" );
-            PHB_ITEM pArg5 = hb_itemPutNI( NULL, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
             hb_vmEvalBlockV( cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1095,8 +1095,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1161,8 +1161,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1227,10 +1227,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX" );
-            PHB_ITEM pArg5 = hb_itemPutNI( NULL, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
             hb_vmEvalBlockV( cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1297,8 +1297,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1426,9 +1426,9 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1733,8 +1733,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1799,10 +1799,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX" );
-            PHB_ITEM pArg5 = hb_itemPutNI( NULL, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
             hb_vmEvalBlockV( cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1869,8 +1869,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1935,8 +1935,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2001,10 +2001,10 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             PHB_ITEM pArg4 = Qt5xHb::Signals_return_object( (void *) &arg4, "QMODELINDEX" );
-            PHB_ITEM pArg5 = hb_itemPutNI( NULL, arg5 );
+            PHB_ITEM pArg5 = hb_itemPutNI( nullptr, arg5 );
             hb_vmEvalBlockV( cb, 6, pSender, pArg1, pArg2, pArg3, pArg4, pArg5 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -2071,8 +2071,8 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QABSTRACTITEMMODEL" );
             PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QMODELINDEX" );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, arg3 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
