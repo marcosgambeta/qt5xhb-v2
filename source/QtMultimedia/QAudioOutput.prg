@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BUFFERSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_BYTESFREE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_CATEGORY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ELAPSEDUSECS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NOTIFYINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PERIODSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_PROCESSEDUSECS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_STOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_VOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QAUDIOOUTPUT" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

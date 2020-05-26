@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QRADIOTUNER_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QRADIOTUNER_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QRADIOTUNER_BAND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETBAND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETFREQUENCY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSTEREO )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STEREOMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETSTEREOMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SIGNALSTRENGTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QRADIOTUNER_VOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETVOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISMUTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SETMUTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISSEARCHING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISANTENNACONNECTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QRADIOTUNER_RADIODATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QRADIOTUNER_AVAILABILITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ISBANDSUPPORTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QRADIOTUNER_FREQUENCYSTEP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ERRORSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHFORWARD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHBACKWARD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QRADIOTUNER_SEARCHALLSTATIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QRADIOTUNER_CANCELSEARCH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QRADIOTUNER_START )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QRADIOTUNER_STOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONBANDCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONFREQUENCYCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTEREOSTATUSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSEARCHINGCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1139,7 +1139,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSIGNALSTRENGTHCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONVOLUMECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONMUTEDCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1325,8 +1325,8 @@ HB_FUNC_STATIC( QRADIOTUNER_ONSTATIONFOUND )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1389,7 +1389,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONANTENNACONNECTEDCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1451,7 +1451,7 @@ HB_FUNC_STATIC( QRADIOTUNER_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QRADIOTUNER" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

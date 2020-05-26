@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_AVAILABLEPLAYBACKRANGES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_BUFFERSTATUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DURATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISAUDIOAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISMUTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISSEEKABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ISVIDEOAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIASTATUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_MEDIASTREAM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_PAUSE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_PLAY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_PLAYBACKRATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_POSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMEDIA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMUTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPLAYBACKRATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPOSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETVOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_STOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_VOLUME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONAUDIOAVAILABLECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONBUFFERSTATUSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONDURATIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -934,8 +934,8 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMEDIASTATUSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONMUTEDCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPLAYBACKRATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1246,7 +1246,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONPOSITIONCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNLL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNLL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1308,7 +1308,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSEEKABLECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONSTATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVIDEOAVAILABLECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_ONVOLUMECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QMEDIAPLAYERCONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

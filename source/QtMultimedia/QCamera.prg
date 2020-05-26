@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCAMERA_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QCAMERA_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCAMERA_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCAMERA_STATUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QCAMERA_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QCAMERA_ERRORSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCAMERA_EXPOSURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QCAMERA_FOCUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDLOCKS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QCAMERA_LOAD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QCAMERA_START )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QCAMERA_STOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOAD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABILITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QCAMERA_VIEWFINDERSETTINGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDERSETTINGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -904,13 +904,13 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
           hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
           hb_itemPutPtr( pItem, (QCameraViewfinderSettings *) new QCameraViewfinderSettings( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          PHB_ITEM pDestroy = hb_itemNew( nullptr );
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
@@ -920,14 +920,14 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCAMERAVIEWFINDERSETTINGS", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QCAMERAVIEWFINDERSETTINGS", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -958,13 +958,13 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
           hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
           hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          PHB_ITEM pDestroy = hb_itemNew( nullptr );
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
@@ -974,14 +974,14 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( nullptr, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -1045,13 +1045,13 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
         hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
+        PHB_ITEM pObject = hb_itemNew( nullptr );
         hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
+        PHB_ITEM pItem = hb_itemNew( nullptr );
         hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        PHB_ITEM pDestroy = hb_itemNew( nullptr );
         hb_itemPutL( pDestroy, true );
         hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
         hb_itemRelease( pDestroy );
@@ -1061,14 +1061,14 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
 }
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
 }
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QCAMERA_ONCAPTUREMODECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC( QCAMERA_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1302,8 +1302,8 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED1 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1366,9 +1366,9 @@ HB_FUNC_STATIC( QCAMERA_ONLOCKSTATUSCHANGED2 )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, (int) arg2 );
-            PHB_ITEM pArg3 = hb_itemPutNI( NULL, (int) arg3 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, (int) arg2 );
+            PHB_ITEM pArg3 = hb_itemPutNI( nullptr, (int) arg3 );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -1554,7 +1554,7 @@ HB_FUNC_STATIC( QCAMERA_ONSTATUSCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERA" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

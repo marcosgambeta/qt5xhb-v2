@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DRIVEMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -236,9 +236,9 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONERROR )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutNI( NULL, arg2 );
-            PHB_ITEM pArg3 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg3) );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutNI( nullptr, arg2 );
+            PHB_ITEM pArg3 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg3) );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEAVAILABLE )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QVIDEOFRAME" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGECAPTURED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             PHB_ITEM pArg2 = Qt5xHb::Signals_return_object( (void *) &arg2, "QIMAGE" );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEEXPOSED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -492,8 +492,8 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGEMETADATAAVAILABLE )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             PHB_ITEM pArg3 = Qt5xHb::Signals_return_object( (void *) &arg3, "QVARIANT" );
             hb_vmEvalBlockV( cb, 4, pSender, pArg1, pArg2, pArg3 );
             hb_itemRelease( pSender );
@@ -558,8 +558,8 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONIMAGESAVED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, arg1 );
-            PHB_ITEM pArg2 = hb_itemPutC( NULL, QSTRINGTOSTRING(arg2) );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg2) );
             hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ONREADYFORCAPTURECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAIMAGECAPTURECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutL( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutL( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

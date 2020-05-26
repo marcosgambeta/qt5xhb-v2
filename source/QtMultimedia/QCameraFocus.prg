@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -251,13 +251,13 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
           hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
           hb_itemPutPtr( pItem, (QCameraFocusZone *) new QCameraFocusZone( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          PHB_ITEM pDestroy = hb_itemNew( nullptr );
           hb_itemPutL( pDestroy, true );
           hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
           hb_itemRelease( pDestroy );
@@ -267,14 +267,14 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSZONES )
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCAMERAFOCUSZONE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QCAMERAFOCUSZONE", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_OPTICALZOOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_DIGITALZOOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMDIGITALZOOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONDIGITALZOOMCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
-            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMDIGITALZOOMCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
-            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONMAXIMUMOPTICALZOOMCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
-            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ONOPTICALZOOMCHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCAMERAFOCUS" );
-            PHB_ITEM pArg1 = hb_itemPutND( NULL, arg1 );
+            PHB_ITEM pArg1 = hb_itemPutND( nullptr, arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );

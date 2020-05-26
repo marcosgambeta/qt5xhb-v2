@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
   }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( auto i = 0; i < list.count(); i++ )
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        PHB_ITEM pItem = hb_itemPutNI( nullptr, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
         hb_itemRelease(pItem);
       }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
 #endif
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
           if( cb != nullptr )
           {
             PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QAUDIOROLECONTROL" );
-            PHB_ITEM pArg1 = hb_itemPutNI( NULL, (int) arg1 );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
             hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
             hb_itemRelease( pSender );
             hb_itemRelease( pArg1 );
