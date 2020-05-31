@@ -379,31 +379,31 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
 {
   QString eventname = m_events->value( event->type(), "QEvent" );
 
-  PHB_DYNS pDynSym;
+  PHB_DYNS pDynSym = nullptr;
 
   pDynSym = hb_dynsymFindName( (const char *) eventname.toUpper().toLatin1().data() );
 
-  if( !pDynSym )
+  if( pDynSym == nullptr )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew( nullptr );
 
-  if( pDynSym )
+  if( pDynSym != nullptr )
   {
     hb_vmPushDynSym( pDynSym );
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
+    PHB_ITEM pItem = hb_itemNew( nullptr );
     hb_itemPutPtr( pItem, (QEvent *) event );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 
   return pObject;
@@ -415,34 +415,34 @@ PHB_ITEM Events::returnQEvent( QEvent * event, const char * classname )
 
 PHB_ITEM Events::returnQObject( QObject * object, const char * classname )
 {
-  PHB_DYNS pDynSym = NULL;
+  PHB_DYNS pDynSym = nullptr;
 
-  if( object )
+  if( object != nullptr )
   {
     pDynSym = hb_dynsymFindName( (const char *) object->metaObject()->className() );
   }
 
-  if( !pDynSym )
+  if( pDynSym == nullptr )
   {
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew( nullptr );
 
-  if( pDynSym )
+  if( pDynSym != nullptr )
   {
     hb_vmPushDynSym( pDynSym );
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
+    PHB_ITEM pItem = hb_itemNew( nullptr );
     hb_itemPutPtr( pItem, (void *) object );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, classname, HB_ERR_ARGS_BASEPARAMS );
   }
 
   return pObject;
