@@ -336,7 +336,7 @@ $staticMethod=|QString|tr|const char *,const char *=nullptr,int=-1
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
 
 void _qtxhb_processOnEventMethod( QEvent::Type event )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( hb_pcount() == 1 )
   {
@@ -438,7 +438,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
 
 void _qtxhb_processOnEventMethod2( QEvent::Type event )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( hb_pcount() == 2 )
   {
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
 
 HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
-  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 {
-  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj != nullptr )
   {
