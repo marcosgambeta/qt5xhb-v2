@@ -273,7 +273,6 @@ RETURN
 #include <QtWidgets/QWidget>
 
 void _qtxhb_processOnEventMethod( QEvent::Type event );
-void _qtxhb_processOnEventMethod2( QEvent::Type event );
 
 /*
 Q_INVOKABLE explicit QObject ( QObject * parent = nullptr )
@@ -1250,7 +1249,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
 {
   auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( hb_pcount() == 1 )
+  if( hb_pcount() == 1 && hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) )
   {
     PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
@@ -1269,34 +1268,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
   }
   else
   {
-    hb_retl(0);
-  }
-}
-
-void _qtxhb_processOnEventMethod2( QEvent::Type event )
-{
-  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( hb_pcount() == 2 )
-  {
-    PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
-    if( item )
-    {
-      hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
-    }
-    else
-    {
-      hb_retl(0);
-    }
-  }
-  else if( hb_pcount() == 1 )
-  {
-    hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
-  }
-  else
-  {
-    hb_retl(0);
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
@@ -2135,7 +2107,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) )
+    if( ISNUMPAR(2) && ISCHAR(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -2144,7 +2116,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -2166,7 +2138,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -2177,15 +2149,26 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    else if( ISNUMPAR(2) && ISNUM(1) )
+    else if( ISNUMPAR(2) && ISNUM(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+
+      if( item )
+      {
+        hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else if( ISNUMPAR(1) && ISNUM(1) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
     }
     else
     {
@@ -2209,7 +2192,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -2223,7 +2206,8 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
     else if( ISNUMPAR(1) && ISNUM(1) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
     }
     else
     {

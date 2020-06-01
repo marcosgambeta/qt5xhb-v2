@@ -208,7 +208,7 @@ $includes
 #include <QtWidgets/QWidget>
 
 void _qtxhb_processOnEventMethod( QEvent::Type event );
-void _qtxhb_processOnEventMethod2( QEvent::Type event );
+%% void _qtxhb_processOnEventMethod2( QEvent::Type event );
 
 $prototype=Q_INVOKABLE explicit QObject ( QObject * parent = nullptr )
 $constructor=|new|QObject *=nullptr
@@ -413,7 +413,7 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
 {
   auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( hb_pcount() == 1 )
+  if( hb_pcount() == 1 && hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) )
   {
     PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
@@ -432,216 +432,108 @@ void _qtxhb_processOnEventMethod( QEvent::Type event )
   }
   else
   {
-    hb_retl(0);
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 
-void _qtxhb_processOnEventMethod2( QEvent::Type event )
-{
-  auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+%% void _qtxhb_processOnEventMethod2( QEvent::Type event )
+%% {
+%%   auto obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
+%%
+%%   if( hb_pcount() == 2 && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
+%%   {
+%%     PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+%%
+%%     if( item )
+%%     {
+%%       hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
+%%     }
+%%     else
+%%     {
+%%       hb_retl(0);
+%%     }
+%%   }
+%%   else if( hb_pcount() == 1 )
+%%   {
+%%     hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
+%%   }
+%%   else
+%%   {
+%%     hb_retl(0);
+%%   }
+%% }
 
-  if( hb_pcount() == 2 )
-  {
-    PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+$eventMethod=AcceptDropsChange
 
-    if( item )
-    {
-      hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
-    }
-    else
-    {
-      hb_retl(0);
-    }
-  }
-  else if( hb_pcount() == 1 )
-  {
-    hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
-  }
-  else
-  {
-    hb_retl(0);
-  }
-}
+$eventMethod=ActionAdded
 
-HB_FUNC_STATIC( QOBJECT_ONACCEPTDROPSCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::AcceptDropsChange );
-}
+$eventMethod=ActionChanged
 
-HB_FUNC_STATIC( QOBJECT_ONACTIONADDEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ActionAdded );
-}
+$eventMethod=ActionRemoved
 
-HB_FUNC_STATIC( QOBJECT_ONACTIONCHANGEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ActionChanged );
-}
+$eventMethod=ActivateControl
 
-HB_FUNC_STATIC( QOBJECT_ONACTIONREMOVEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ActionRemoved );
-}
+$eventMethod=ActivationChange
 
-HB_FUNC_STATIC( QOBJECT_ONACTIVATECONTROLEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ActivateControl );
-}
+$eventMethod=ApplicationActivate
 
-HB_FUNC_STATIC( QOBJECT_ONACTIVATIONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ActivationChange );
-}
+$eventMethod=ApplicationActivated
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationActivate );
-}
+$eventMethod=ApplicationDeactivate
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationActivated );
-}
+$eventMethod=ApplicationDeactivated
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONDEACTIVATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationDeactivate );
-}
+$eventMethod=ApplicationFontChange
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONDEACTIVATEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationDeactivated );
-}
+$eventMethod=ApplicationLayoutDirectionChange
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONFONTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationFontChange );
-}
+$eventMethod=ApplicationPaletteChange
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONLAYOUTDIRECTIONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationLayoutDirectionChange );
-}
+$eventMethod=ApplicationWindowIconChange
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONPALETTECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationPaletteChange );
-}
+$eventMethod=ChildAdded
 
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONWINDOWICONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ApplicationWindowIconChange );
-}
+$eventMethod=ChildPolished
 
-HB_FUNC_STATIC( QOBJECT_ONCHILDADDEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ChildAdded );
-}
+$eventMethod=ChildRemoved
 
-HB_FUNC_STATIC( QOBJECT_ONCHILDPOLISHEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ChildPolished );
-}
+$eventMethod=Clipboard
 
-HB_FUNC_STATIC( QOBJECT_ONCHILDREMOVEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ChildRemoved );
-}
+$eventMethod=Close
 
-HB_FUNC_STATIC( QOBJECT_ONCLIPBOARDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Clipboard );
-}
+$eventMethod=CloseSoftwareInputPanel
 
-HB_FUNC_STATIC( QOBJECT_ONCLOSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Close );
-}
+$eventMethod=ContentsRectChange
 
-HB_FUNC_STATIC( QOBJECT_ONCLOSESOFTWAREINPUTPANELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::CloseSoftwareInputPanel );
-}
+$eventMethod=ContextMenu
 
-HB_FUNC_STATIC( QOBJECT_ONCONTENTSRECTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ContentsRectChange );
-}
+$eventMethod=Create
 
-HB_FUNC_STATIC( QOBJECT_ONCONTEXTMENUEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ContextMenu );
-}
+$eventMethod=CursorChange
 
-HB_FUNC_STATIC( QOBJECT_ONCREATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Create );
-}
+$eventMethod=DeactivateControl
 
-HB_FUNC_STATIC( QOBJECT_ONCURSORCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::CursorChange );
-}
+$eventMethod=DeferredDelete
 
-HB_FUNC_STATIC( QOBJECT_ONDEACTIVATECONTROLEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DeactivateControl );
-}
+$eventMethod=Destroy
 
-HB_FUNC_STATIC( QOBJECT_ONDEFERREDDELETEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DeferredDelete );
-}
+$eventMethod=DragEnter
 
-HB_FUNC_STATIC( QOBJECT_ONDESTROYEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Destroy );
-}
+$eventMethod=DragLeave
 
-HB_FUNC_STATIC( QOBJECT_ONDRAGENTEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DragEnter );
-}
+$eventMethod=DragMove
 
-HB_FUNC_STATIC( QOBJECT_ONDRAGLEAVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DragLeave );
-}
+$eventMethod=DragResponse
 
-HB_FUNC_STATIC( QOBJECT_ONDRAGMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DragMove );
-}
+$eventMethod=Drop
 
-HB_FUNC_STATIC( QOBJECT_ONDRAGRESPONSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DragResponse );
-}
+$eventMethod=DynamicPropertyChange
 
-HB_FUNC_STATIC( QOBJECT_ONDROPEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Drop );
-}
+$eventMethod=EmbeddingControl
 
-HB_FUNC_STATIC( QOBJECT_ONDYNAMICPROPERTYCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::DynamicPropertyChange );
-}
+$eventMethod=EnabledChange
 
-HB_FUNC_STATIC( QOBJECT_ONEMBEDDINGCONTROLEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::EmbeddingControl );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONENABLEDCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::EnabledChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONENTEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Enter );
-}
+$eventMethod=Enter
 
 HB_FUNC_STATIC( QOBJECT_ONENTEREDITFOCUSEVENT )
 {
@@ -650,230 +542,95 @@ HB_FUNC_STATIC( QOBJECT_ONENTEREDITFOCUSEVENT )
 #endif
 }
 
-HB_FUNC_STATIC( QOBJECT_ONENTERWHATSTHISMODEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::EnterWhatsThisMode );
-}
+$eventMethod=EnterWhatsThisMode
 
-HB_FUNC_STATIC( QOBJECT_ONEXPOSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Expose );
-}
+$eventMethod=Expose
 
-HB_FUNC_STATIC( QOBJECT_ONFILEOPENEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FileOpen );
-}
+$eventMethod=FileOpen
 
-HB_FUNC_STATIC( QOBJECT_ONFOCUSABOUTTOCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FocusAboutToChange );
-}
+$eventMethod=FocusAboutToChange
 
-HB_FUNC_STATIC( QOBJECT_ONFOCUSINEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FocusIn );
-}
+$eventMethod=FocusIn
 
-HB_FUNC_STATIC( QOBJECT_ONFOCUSOUTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FocusOut );
-}
+$eventMethod=FocusOut
 
-HB_FUNC_STATIC( QOBJECT_ONFONTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FontChange );
-}
+$eventMethod=FontChange
 
-HB_FUNC_STATIC( QOBJECT_ONFUTURECALLOUTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::FutureCallOut );
-}
+$eventMethod=FutureCallOut
 
-HB_FUNC_STATIC( QOBJECT_ONGESTUREEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Gesture );
-}
+$eventMethod=Gesture
 
-HB_FUNC_STATIC( QOBJECT_ONGESTUREOVERRIDEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GestureOverride );
-}
+$eventMethod=GestureOverride
 
-HB_FUNC_STATIC( QOBJECT_ONGRABKEYBOARDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GrabKeyboard );
-}
+$eventMethod=GrabKeyboard
 
-HB_FUNC_STATIC( QOBJECT_ONGRABMOUSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GrabMouse );
-}
+$eventMethod=GrabMouse
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENECONTEXTMENUEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneContextMenu );
-}
+$eventMethod=GraphicsSceneContextMenu
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGENTEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragEnter );
-}
+$eventMethod=GraphicsSceneDragEnter
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGLEAVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragLeave );
-}
+$eventMethod=GraphicsSceneDragLeave
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragMove );
-}
+$eventMethod=GraphicsSceneDragMove
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDROPEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDrop );
-}
+$eventMethod=GraphicsSceneDrop
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHELPEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHelp );
-}
+$eventMethod=GraphicsSceneHelp
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERENTEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverEnter );
-}
+$eventMethod=GraphicsSceneHoverEnter
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERLEAVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverLeave );
-}
+$eventMethod=GraphicsSceneHoverLeave
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverMove );
-}
+$eventMethod=GraphicsSceneHoverMove
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEDOUBLECLICKEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseDoubleClick );
-}
+$eventMethod=GraphicsSceneMouseDoubleClick
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseMove );
-}
+$eventMethod=GraphicsSceneMouseMove
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEPRESSEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMousePress );
-}
+$eventMethod=GraphicsSceneMousePress
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSERELEASEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseRelease );
-}
+$eventMethod=GraphicsSceneMouseRelease
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMove );
-}
+$eventMethod=GraphicsSceneMove
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENERESIZEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneResize );
-}
+$eventMethod=GraphicsSceneResize
 
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEWHEELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneWheel );
-}
+$eventMethod=GraphicsSceneWheel
 
-HB_FUNC_STATIC( QOBJECT_ONHELPREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::HelpRequest );
-}
+$eventMethod=HelpRequest
 
-HB_FUNC_STATIC( QOBJECT_ONHIDEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Hide );
-}
+$eventMethod=Hide
 
-HB_FUNC_STATIC( QOBJECT_ONHIDETOPARENTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::HideToParent );
-}
+$eventMethod=HideToParent
 
-HB_FUNC_STATIC( QOBJECT_ONHOVERENTEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::HoverEnter );
-}
+$eventMethod=HoverEnter
 
-HB_FUNC_STATIC( QOBJECT_ONHOVERLEAVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::HoverLeave );
-}
+$eventMethod=HoverLeave
 
-HB_FUNC_STATIC( QOBJECT_ONHOVERMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::HoverMove );
-}
+$eventMethod=HoverMove
 
-HB_FUNC_STATIC( QOBJECT_ONICONDRAGEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::IconDrag );
-}
+$eventMethod=IconDrag
 
-HB_FUNC_STATIC( QOBJECT_ONICONTEXTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::IconTextChange );
-}
+$eventMethod=IconTextChange
 
-HB_FUNC_STATIC( QOBJECT_ONINPUTMETHODEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::InputMethod );
-}
+$eventMethod=InputMethod
 
-HB_FUNC_STATIC( QOBJECT_ONINPUTMETHODQUERYEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::InputMethodQuery );
-}
+$eventMethod=InputMethodQuery
 
-HB_FUNC_STATIC( QOBJECT_ONKEYBOARDLAYOUTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::KeyboardLayoutChange );
-}
+$eventMethod=KeyboardLayoutChange
 
-HB_FUNC_STATIC( QOBJECT_ONKEYPRESSEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::KeyPress );
-}
+$eventMethod=KeyPress
 
-HB_FUNC_STATIC( QOBJECT_ONKEYRELEASEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::KeyRelease );
-}
+$eventMethod=KeyRelease
 
-HB_FUNC_STATIC( QOBJECT_ONLANGUAGECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::LanguageChange );
-}
+$eventMethod=LanguageChange
 
-HB_FUNC_STATIC( QOBJECT_ONLAYOUTDIRECTIONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::LayoutDirectionChange );
-}
+$eventMethod=LayoutDirectionChange
 
-HB_FUNC_STATIC( QOBJECT_ONLAYOUTREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::LayoutRequest );
-}
+$eventMethod=LayoutRequest
 
-HB_FUNC_STATIC( QOBJECT_ONLEAVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Leave );
-}
+$eventMethod=Leave
 
 HB_FUNC_STATIC( QOBJECT_ONLEAVEEDITFOCUSEVENT )
 {
@@ -882,415 +639,169 @@ HB_FUNC_STATIC( QOBJECT_ONLEAVEEDITFOCUSEVENT )
 #endif
 }
 
-HB_FUNC_STATIC( QOBJECT_ONLEAVEWHATSTHISMODEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::LeaveWhatsThisMode );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONLOCALECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::LocaleChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMACGLCLEARDRAWABLEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MacGLClearDrawable );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMACGLWINDOWCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MacGLWindowChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMACSIZECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MacSizeChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMETACALLEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MetaCall );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMODIFIEDCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ModifiedChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONDBLCLICKEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonDblClick );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONPRESSEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonPress );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONRELEASEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonRelease );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOUSEMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MouseMove );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOUSETRACKINGCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::MouseTrackingChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Move );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNATIVEGESTUREEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NativeGesture );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNETWORKREPLYUPDATEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NetworkReplyUpdated );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONDBLCLICKEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonDblClick );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONPRESSEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonPress );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONRELEASEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonRelease );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseMove );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONNONEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::None );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONOKREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::OkRequest );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONORIENTATIONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::OrientationChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPAINTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Paint );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPALETTECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::PaletteChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPARENTABOUTTOCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ParentAboutToChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPARENTCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ParentChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPLATFORMPANELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::PlatformPanel );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPOLISHEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Polish );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONPOLISHREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::PolishRequest );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONQUERYWHATSTHISEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::QueryWhatsThis );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONQUITEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Quit );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONREQUESTSOFTWAREINPUTPANELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::RequestSoftwareInputPanel );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONRESIZEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Resize );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSCROLLEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Scroll );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSCROLLPREPAREEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ScrollPrepare );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSHORTCUTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Shortcut );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSHORTCUTOVERRIDEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ShortcutOverride );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSHOWEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Show );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSHOWTOPARENTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ShowToParent );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSHOWWINDOWREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ShowWindowRequest );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSOCKACTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::SockAct );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSOCKCLOSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::SockClose );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSPEECHEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Speech );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINESIGNALEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::StateMachineSignal );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINEWRAPPEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::StateMachineWrapped );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTATUSTIPEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::StatusTip );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTYLEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Style );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTYLEANIMATIONUPDATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::StyleAnimationUpdate );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONSTYLECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::StyleChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTABLETENTERPROXIMITYEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TabletEnterProximity );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTABLETLEAVEPROXIMITYEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TabletLeaveProximity );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTABLETMOVEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TabletMove );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTABLETPRESSEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TabletPress );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTABLETRELEASEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TabletRelease );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTHEMECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ThemeChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTHREADCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ThreadChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTIMEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Timer );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOOLBARCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ToolBarChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOOLTIPEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ToolTip );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOOLTIPCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ToolTipChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOUCHBEGINEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TouchBegin );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOUCHCANCELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TouchCancel );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOUCHENDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TouchEnd );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONTOUCHUPDATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::TouchUpdate );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONUNGRABKEYBOARDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::UngrabKeyboard );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONUNGRABMOUSEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::UngrabMouse );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONUPDATELATEREVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::UpdateLater );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONUPDATEREQUESTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::UpdateRequest );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWHATSTHISEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WhatsThis );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWHATSTHISCLICKEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WhatsThisClicked );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWHEELEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::Wheel );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWACTIVATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowActivate );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWBLOCKEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowBlocked );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWDEACTIVATEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowDeactivate );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWICONCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowIconChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWSTATECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowStateChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWTITLECHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowTitleChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINDOWUNBLOCKEDEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WindowUnblocked );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINEVENTACTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WinEventAct );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONWINIDCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::WinIdChange );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONZEROTIMEREVENTEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ZeroTimerEvent );
-}
-
-HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
-{
-  _qtxhb_processOnEventMethod( QEvent::ZOrderChange );
-}
+$eventMethod=LeaveWhatsThisMode
+
+$eventMethod=LocaleChange
+
+$eventMethod=MacGLClearDrawable
+
+$eventMethod=MacGLWindowChange
+
+$eventMethod=MacSizeChange
+
+$eventMethod=MetaCall
+
+$eventMethod=ModifiedChange
+
+$eventMethod=MouseButtonDblClick
+
+$eventMethod=MouseButtonPress
+
+$eventMethod=MouseButtonRelease
+
+$eventMethod=MouseMove
+
+$eventMethod=MouseTrackingChange
+
+$eventMethod=Move
+
+$eventMethod=NativeGesture
+
+$eventMethod=NetworkReplyUpdated
+
+$eventMethod=NonClientAreaMouseButtonDblClick
+
+$eventMethod=NonClientAreaMouseButtonPress
+
+$eventMethod=NonClientAreaMouseButtonRelease
+
+$eventMethod=NonClientAreaMouseMove
+
+$eventMethod=None
+
+$eventMethod=OkRequest
+
+$eventMethod=OrientationChange
+
+$eventMethod=Paint
+
+$eventMethod=PaletteChange
+
+$eventMethod=ParentAboutToChange
+
+$eventMethod=ParentChange
+
+$eventMethod=PlatformPanel
+
+$eventMethod=Polish
+
+$eventMethod=PolishRequest
+
+$eventMethod=QueryWhatsThis
+
+$eventMethod=Quit
+
+$eventMethod=RequestSoftwareInputPanel
+
+$eventMethod=Resize
+
+$eventMethod=Scroll
+
+$eventMethod=ScrollPrepare
+
+$eventMethod=Shortcut
+
+$eventMethod=ShortcutOverride
+
+$eventMethod=Show
+
+$eventMethod=ShowToParent
+
+$eventMethod=ShowWindowRequest
+
+$eventMethod=SockAct
+
+$eventMethod=SockClose
+
+$eventMethod=Speech
+
+$eventMethod=StateMachineSignal
+
+$eventMethod=StateMachineWrapped
+
+$eventMethod=StatusTip
+
+$eventMethod=Style
+
+$eventMethod=StyleAnimationUpdate
+
+$eventMethod=StyleChange
+
+$eventMethod=TabletEnterProximity
+
+$eventMethod=TabletLeaveProximity
+
+$eventMethod=TabletMove
+
+$eventMethod=TabletPress
+
+$eventMethod=TabletRelease
+
+$eventMethod=ThemeChange
+
+$eventMethod=ThreadChange
+
+$eventMethod=Timer
+
+$eventMethod=ToolBarChange
+
+$eventMethod=ToolTip
+
+$eventMethod=ToolTipChange
+
+$eventMethod=TouchBegin
+
+$eventMethod=TouchCancel
+
+$eventMethod=TouchEnd
+
+$eventMethod=TouchUpdate
+
+$eventMethod=UngrabKeyboard
+
+$eventMethod=UngrabMouse
+
+$eventMethod=UpdateLater
+
+$eventMethod=UpdateRequest
+
+$eventMethod=WhatsThis
+
+$eventMethod=WhatsThisClicked
+
+$eventMethod=Wheel
+
+$eventMethod=WindowActivate
+
+$eventMethod=WindowBlocked
+
+$eventMethod=WindowDeactivate
+
+$eventMethod=WindowIconChange
+
+$eventMethod=WindowStateChange
+
+$eventMethod=WindowTitleChange
+
+$eventMethod=WindowUnblocked
+
+$eventMethod=WinEventAct
+
+$eventMethod=WinIdChange
+
+$eventMethod=ZeroTimerEvent
+
+$eventMethod=ZOrderChange
 
 HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
@@ -1298,7 +809,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) )
+    if( ISNUMPAR(2) && ISCHAR(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -1307,7 +818,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -1329,7 +840,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -1340,15 +851,28 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    else if( ISNUMPAR(2) && ISNUM(1) )
+    else if( ISNUMPAR(2) && ISNUM(1) && hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+%%       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+
+      if( item )
+      {
+        hb_retl( Qt5xHb::Events_connect_event( obj, event, item ) );
+      }
+      else
+      {
+        hb_retl( false );
+      }
     }
     else if( ISNUMPAR(1) && ISNUM(1) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+%%       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
     }
     else
     {
@@ -1372,7 +896,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 
       PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
 
-      if( pDynSym )
+      if( pDynSym != nullptr )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPush( hb_stackSelfItem() );
@@ -1386,7 +910,9 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
     else if( ISNUMPAR(1) && ISNUM(1) )
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+%%       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+
+      hb_retl( Qt5xHb::Events_disconnect_event( obj, event ) );
     }
     else
     {
