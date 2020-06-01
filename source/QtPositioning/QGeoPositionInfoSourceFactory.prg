@@ -56,7 +56,6 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
-#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
@@ -79,7 +78,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
     {
 #endif
       QGeoPositionInfoSource * ptr = obj->positionInfoSource( PQOBJECT(1) );
-      Qt5xHb::createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOPOSITIONINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +105,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
     {
 #endif
       QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource( PQOBJECT(1) );
-      Qt5xHb::createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOSATELLITEINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

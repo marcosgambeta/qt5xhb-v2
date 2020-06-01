@@ -58,6 +58,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
 #include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
@@ -75,6 +76,8 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_DELETE )
 
   if( obj != nullptr )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -314,7 +317,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
   {
 #endif
     QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource( PQOBJECT(1) );
-    Qt5xHb::createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOSATELLITEINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -336,7 +339,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
   {
 #endif
     QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
-    Qt5xHb::createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOSATELLITEINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

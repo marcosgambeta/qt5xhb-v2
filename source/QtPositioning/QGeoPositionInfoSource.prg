@@ -62,6 +62,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
 #include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
@@ -79,6 +80,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_DELETE )
 
   if( obj != nullptr )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();
@@ -425,7 +428,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
   {
 #endif
     QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createDefaultSource( PQOBJECT(1) );
-    Qt5xHb::createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOPOSITIONINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -447,7 +450,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
   {
 #endif
     QGeoPositionInfoSource * ptr = QGeoPositionInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
-    Qt5xHb::createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
+    Qt5xHb::createReturnQObjectClass( ptr, "QGEOPOSITIONINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

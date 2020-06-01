@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
     {
 #endif
       QGeoPositionInfoSource * ptr = obj->positionInfoSource();
-      Qt5xHb::createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOPOSITIONINFOSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
