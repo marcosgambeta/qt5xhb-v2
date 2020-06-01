@@ -102,7 +102,7 @@ QAbstractUriResolver                                 |QObject        |QtXmlPatte
 QAbstractVideoBuffer                                 |object         |QtMultimedia
 QAbstractVideoBuffer::HandleType                     |enum           |QtMultimedia
 QAbstractVideoBuffer::MapMode                        |enum           |QtMultimedia
-QAbstractVideoFilter                                 |object         |QtMultimedia
+QAbstractVideoFilter                                 |QObject        |QtMultimedia
 QAbstractVideoSurface                                |QObject        |QtMultimedia
 QAbstractVideoSurface::Error                         |enum           |QtMultimedia
 QAbstractXmlNodeModel                                |object         |QtXmlPatterns
@@ -640,7 +640,7 @@ QGeoManeuver                                         |object         |QtLocation
 QGeoManeuver::InstructionDirection                   |enum           |QtLocation
 QGeoPositionInfo                                     |object         |QtPositioning
 QGeoPositionInfo::Attribute                          |enum           |QtPositioning
-QGeoPositionInfoSource                               |object         |QtPositioning
+QGeoPositionInfoSource                               |QObject        |QtPositioning
 QGeoPositionInfoSource::Error                        |enum           |QtPositioning
 QGeoPositionInfoSource::PositioningMethods           |enum           |QtPositioning
 QGeoPositionInfoSourceFactory                        |object         |QtPositioning
@@ -666,7 +666,7 @@ QGeoRoutingManagerEngine                             |QObject        |QtLocation
 QGeoSatelliteInfo                                    |object         |QtPositioning
 QGeoSatelliteInfo::Attribute                         |enum           |QtPositioning
 QGeoSatelliteInfo::SatelliteSystem                   |enum           |QtPositioning
-QGeoSatelliteInfoSource                              |object         |QtPositioning
+QGeoSatelliteInfoSource                              |QObject        |QtPositioning
 QGeoSatelliteInfoSource::Error                       |enum           |QtPositioning
 QGeoServiceProvider                                  |QObject        |QtLocation
 QGeoServiceProvider::Error                           |enum           |QtLocation
@@ -755,7 +755,7 @@ QGraphicsSceneResizeEvent                            |QEvent         |QtWidgets
 QGraphicsSceneWheelEvent                             |QEvent         |QtWidgets
 QGraphicsSimpleTextItem                              |object         |QtWidgets
 QGraphicsSvgItem                                     |QObject        |QtSvg
-QGraphicsTextItem                                    |object         |QtWidgets
+QGraphicsTextItem                                    |QObject        |QtWidgets
 QGraphicsTransform                                   |QObject        |QtWidgets
 QGraphicsVideoItem                                   |QObject        |QtMultimediaWidgets
 QGraphicsView                                        |QWidget        |QtWidgets
