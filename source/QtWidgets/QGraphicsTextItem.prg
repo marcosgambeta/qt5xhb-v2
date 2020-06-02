@@ -78,6 +78,7 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
 #include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
@@ -94,7 +95,7 @@ QGraphicsTextItem ( QGraphicsItem * parent = nullptr )
 void QGraphicsTextItem_new1()
 {
   auto obj = new QGraphicsTextItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -103,7 +104,7 @@ QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = nullptr )
 void QGraphicsTextItem_new2()
 {
   auto obj = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -133,6 +134,8 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 
   if( obj != nullptr )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = nullptr;
     PHB_ITEM self = hb_stackSelfItem();

@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
     {
 #endif
       QGraphicsTextItem * ptr = obj->addText( PQSTRING(1), ISNIL(2)? QFont() : *(QFont *) Qt5xHb::itemGetPtr(2) );
-      Qt5xHb::createReturnClass( ptr, "QGRAPHICSTEXTITEM", false );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSTEXTITEM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
