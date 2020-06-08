@@ -71,17 +71,13 @@ HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=quint64 toUInt64() const
-$method=|quint64|toUInt64|
+$prototypeV2=quint64 toUInt64() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $extraMethods
 

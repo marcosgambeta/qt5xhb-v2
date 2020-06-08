@@ -57,14 +57,11 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 
 $deleteMethod
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=Error error() const
-$method=|QBluetoothDeviceDiscoveryAgent::Error|error|
+$prototypeV2=QBluetoothDeviceDiscoveryAgent::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QList<QBluetoothServiceInfo> discoveredServices() const
 $method=|QList<QBluetoothServiceInfo>|discoveredServices|
@@ -103,17 +100,14 @@ $method=|QList<QBluetoothUuid>|uuidFilter|
 $prototype=bool setRemoteAddress(const QBluetoothAddress &address)
 $method=|bool|setRemoteAddress|const QBluetoothAddress &
 
-$prototype=QBluetoothAddress remoteAddress() const
-$method=|QBluetoothAddress|remoteAddress|
+$prototypeV2=QBluetoothAddress remoteAddress() const
 
 $prototype=void start(DiscoveryMode mode = MinimalDiscovery)
 $method=|void|start|QBluetoothServiceDiscoveryAgent::DiscoveryMode=QBluetoothServiceDiscoveryAgent::MinimalDiscovery
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 %%
 %% SIGNALS

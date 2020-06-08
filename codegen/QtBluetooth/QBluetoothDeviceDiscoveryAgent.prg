@@ -57,29 +57,23 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 
 $deleteMethod
 
-$prototype=QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
-$method=|QBluetoothDeviceDiscoveryAgent::InquiryType|inquiryType|
+$prototypeV2=QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
 
 $prototype=void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
 $method=|void|setInquiryType|QBluetoothDeviceDiscoveryAgent::InquiryType
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=Error error() const
-$method=|QBluetoothDeviceDiscoveryAgent::Error|error|
+$prototypeV2=QBluetoothDeviceDiscoveryAgent::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QList<QBluetoothDeviceInfo> discoveredDevices() const
 $method=|QList<QBluetoothDeviceInfo>|discoveredDevices|
 
-$prototype=void start()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 %%
 %% SIGNALS

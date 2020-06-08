@@ -61,8 +61,7 @@ $method=|QVariant|attribute|QBluetoothTransferRequest::Attribute,const QVariant 
 $prototype=void setAttribute(Attribute code, const QVariant &value)
 $method=|void|setAttribute|QBluetoothTransferRequest::Attribute,const QVariant &
 
-$prototype=QBluetoothAddress address() const
-$method=|QBluetoothAddress|address|
+$prototypeV2=QBluetoothAddress address() const
 
 $extraMethods
 

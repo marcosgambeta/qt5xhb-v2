@@ -55,14 +55,12 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 
 $deleteMethod
 
-$prototype=QBluetoothAddress address() const
-$method=|QBluetoothAddress|address|
+$prototypeV2=QBluetoothAddress address() const
 
 $prototype=void setAddress(const QBluetoothAddress &address)
 $method=|void|setAddress|const QBluetoothAddress &
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &

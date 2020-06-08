@@ -112,8 +112,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 
 $deleteMethod
 
-$prototype=int minimumSize() const
-$method=|int|minimumSize|
+$prototypeV2=int minimumSize() const
 
 $prototype=quint16 toUInt16(bool *ok = nullptr) const
 %% TODO: revisar e implementar parametro opcional

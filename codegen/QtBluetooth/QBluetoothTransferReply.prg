@@ -30,26 +30,19 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool isFinished() const = 0
-$virtualMethod=|bool|isFinished|
+$prototypeV2=virtual bool isFinished() const = 0
 
-$prototype=virtual bool isRunning() const = 0
-$virtualMethod=|bool|isRunning|
+$prototypeV2=virtual bool isRunning() const = 0
 
-$prototype=QBluetoothTransferManager *manager() const
-$method=|QBluetoothTransferManager *|manager|
+$prototypeV2=QBluetoothTransferManager * manager() const
 
-$prototype=virtual TransferError error() const = 0
-$virtualMethod=|QBluetoothTransferReply::TransferError|error|
+$prototypeV2=virtual QBluetoothTransferReply::TransferError error() const = 0
 
-$prototype=virtual QString errorString() const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
-$prototype=QBluetoothTransferRequest request() const
-$method=|QBluetoothTransferRequest|request|
+$prototypeV2=QBluetoothTransferRequest request() const
 
-$prototype=void abort()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 %%
 %% SIGNALS

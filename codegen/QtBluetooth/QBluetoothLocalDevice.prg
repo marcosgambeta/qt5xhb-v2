@@ -57,8 +57,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void requestPairing(const QBluetoothAddress &address, Pairing pairing)
 $method=|void|requestPairing|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
@@ -69,17 +68,13 @@ $method=|QBluetoothLocalDevice::Pairing|pairingStatus|const QBluetoothAddress &
 $prototype=void setHostMode(QBluetoothLocalDevice::HostMode mode)
 $method=|void|setHostMode|QBluetoothLocalDevice::HostMode
 
-$prototype=HostMode hostMode() const
-$method=|QBluetoothLocalDevice::HostMode|hostMode|
+$prototypeV2=QBluetoothLocalDevice::HostMode hostMode() const
 
-$prototype=void powerOn()
-$method=|void|powerOn|
+$prototypeV2=void powerOn()
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QBluetoothAddress address() const
-$method=|QBluetoothAddress|address|
+$prototypeV2=QBluetoothAddress address() const
 
 $prototype=void pairingConfirmation(bool confirmation)
 $method=|void|pairingConfirmation|bool

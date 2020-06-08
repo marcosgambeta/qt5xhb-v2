@@ -78,32 +78,24 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isCached() const
-$method=|bool|isCached|
+$prototypeV2=bool isCached() const
 
 $prototype=void setCached(bool cached)
 $method=|void|setCached|bool
 
-$prototype=QBluetoothAddress address() const
-$method=|QBluetoothAddress|address|
+$prototypeV2=QBluetoothAddress address() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=ServiceClasses serviceClasses() const
-$method=|QBluetoothDeviceInfo::ServiceClasses|serviceClasses|
+$prototypeV2=QBluetoothDeviceInfo::ServiceClasses serviceClasses() const
 
-$prototype=MajorDeviceClass majorDeviceClass() const
-$method=|QBluetoothDeviceInfo::MajorDeviceClass|majorDeviceClass|
+$prototypeV2=QBluetoothDeviceInfo::MajorDeviceClass majorDeviceClass() const
 
-$prototype=quint8 minorDeviceClass() const
-$method=|quint8|minorDeviceClass|
+$prototypeV2=quint8 minorDeviceClass() const
 
-$prototype=qint16 rssi() const
-$method=|qint16|rssi|
+$prototypeV2=qint16 rssi() const
 
 $prototype=void setRssi(qint16 signal)
 $method=|void|setRssi|qint16
@@ -140,8 +132,7 @@ $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = n
 %% TODO: implementar
 %% $method=|QList<QBluetoothUuid>|serviceUuids|QBluetoothDeviceInfo::DataCompleteness *=nullptr
 
-$prototype=DataCompleteness serviceUuidsCompleteness() const
-$method=|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|
+$prototypeV2=QBluetoothDeviceInfo::DataCompleteness serviceUuidsCompleteness() const
 
 $prototype=QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
 $method=5,4,0|QBluetoothDeviceInfo::CoreConfigurations|coreConfigurations|
