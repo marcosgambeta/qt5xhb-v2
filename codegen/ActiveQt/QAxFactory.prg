@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QUuid appID () const
-$virtualMethod=|QUuid|appID|
+$prototypeV2=virtual QUuid appID() const
 
 $prototype=virtual QUuid classID ( const QString & key ) const
 $virtualMethod=|QUuid|classID|const QString &
@@ -42,8 +41,7 @@ $virtualMethod=|QUuid|eventsID|const QString &
 $prototype=virtual QString exposeToSuperClass ( const QString & key ) const
 $virtualMethod=|QString|exposeToSuperClass|const QString &
 
-$prototype=virtual QStringList featureList () const = 0
-$virtualMethod=|QStringList|featureList|
+$prototypeV2=virtual QStringList featureList() const = 0
 
 $prototype=virtual bool hasStockEvents ( const QString & key ) const
 $virtualMethod=|bool|hasStockEvents|const QString &
@@ -51,8 +49,7 @@ $virtualMethod=|bool|hasStockEvents|const QString &
 $prototype=virtual QUuid interfaceID ( const QString & key ) const
 $virtualMethod=|QUuid|interfaceID|const QString &
 
-$prototype=virtual bool isService () const
-$virtualMethod=|bool|isService|
+$prototypeV2=virtual bool isService() const
 
 $prototype=virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 $virtualMethod=|const QMetaObject *|metaObject|const QString &
@@ -63,8 +60,7 @@ $virtualMethod=|void|registerClass|const QString &,QSettings *
 $prototype=virtual bool stayTopLevel ( const QString & key ) const
 $virtualMethod=|bool|stayTopLevel|const QString &
 
-$prototype=virtual QUuid typeLibID () const
-$virtualMethod=|QUuid|typeLibID|
+$prototypeV2=virtual QUuid typeLibID() const
 
 $prototype=virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 $virtualMethod=|void|unregisterClass|const QString &,QSettings *
@@ -72,22 +68,18 @@ $virtualMethod=|void|unregisterClass|const QString &,QSettings *
 $prototype=virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
 $virtualMethod=|bool|validateLicenseKey|const QString &,const QString &
 
-$prototype=static bool isServer ()
-$staticMethod=|bool|isServer|
+$prototypeV2=static bool isServer()
 
 $prototype=static bool registerActiveObject ( QObject * object )
 $staticMethod=|bool|registerActiveObject|QObject *
 
-$prototype=static QString serverDirPath ()
-$staticMethod=|QString|serverDirPath|
+$prototypeV2=static QString serverDirPath()
 
-$prototype=static QString serverFilePath ()
-$staticMethod=|QString|serverFilePath|
+$prototypeV2=static QString serverFilePath()
 
 $prototype=static bool startServer ( ServerType type = MultipleInstances )
 $staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances
 
-$prototype=static bool stopServer ()
-$staticMethod=|bool|stopServer|
+$prototypeV2=static bool stopServer()
 
 #pragma ENDDUMP

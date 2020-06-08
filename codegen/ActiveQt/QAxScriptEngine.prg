@@ -33,19 +33,15 @@ $deleteMethod
 $prototype=void addItem ( const QString & name )
 $method=|void|addItem|const QString &
 
-$prototype=bool hasIntrospection () const
-$method=|bool|hasIntrospection|
+$prototypeV2=bool hasIntrospection() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString scriptLanguage () const
-$method=|QString|scriptLanguage|
+$prototypeV2=QString scriptLanguage() const
 
 $prototype=void setState ( State st )
 $method=|void|setState|QAxScriptEngine::State
 
-$prototype=State state () const
-$method=|QAxScriptEngine::State|state|
+$prototypeV2=QAxScriptEngine::State state() const
 
 #pragma ENDDUMP

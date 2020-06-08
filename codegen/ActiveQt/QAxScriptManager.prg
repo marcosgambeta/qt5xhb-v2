@@ -122,13 +122,11 @@ $addMethod=load
 $prototype=QAxScript * script ( const QString & name ) const
 $method=|QAxScript *|script|const QString &
 
-$prototype=QStringList scriptNames() const
-$method=|QStringList|scriptNames|
+$prototypeV2=QStringList scriptNames() const
 
 $prototype=static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
 $staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
 
-$prototype=static QString scriptFileFilter ()
-$staticMethod=|QString|scriptFileFilter|
+$prototypeV2=static QString scriptFileFilter()
 
 #pragma ENDDUMP

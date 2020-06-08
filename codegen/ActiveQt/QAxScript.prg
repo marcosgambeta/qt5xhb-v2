@@ -68,14 +68,11 @@ $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 $prototype=bool load ( const QString & code, const QString & language = QString() )
 $method=|bool|load|const QString &,const QString &=QString()
 
-$prototype=QString scriptCode () const
-$method=|QString|scriptCode|
+$prototypeV2=QString scriptCode() const
 
-$prototype=QAxScriptEngine * scriptEngine () const
-$method=|QAxScriptEngine *|scriptEngine|
+$prototypeV2=QAxScriptEngine * scriptEngine() const
 
-$prototype=QString scriptName () const
-$method=|QString|scriptName|
+$prototypeV2=QString scriptName() const
 
 %%
 %% SIGNALS

@@ -33,8 +33,7 @@ $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=Qt::WindowFlags()
 $prototype=~QAxSelect() override
 $deleteMethod
 
-$prototype=QString clsid() const
-$method=|QString|clsid|
+$prototypeV2=QString clsid() const
 
 $prototype=SandboxingLevel sandboxingLevel() const
 $method=5,13,0|QAxSelect::SandboxingLevel|sandboxingLevel|

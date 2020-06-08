@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=virtual QAxAggregated * createAggregate ()
-$virtualMethod=|QAxAggregated *|createAggregate|
+$prototypeV2=virtual QAxAggregated * createAggregate()
 
 $prototype=virtual bool readData ( QIODevice * source, const QString & format )
 $virtualMethod=|bool|readData|QIODevice *,const QString &

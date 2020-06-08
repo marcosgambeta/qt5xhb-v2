@@ -67,40 +67,31 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
 
 $deleteMethod
 
-$prototype=virtual QAxAggregated * createAggregate ()
-$virtualMethod=|QAxAggregated *|createAggregate|
+$prototypeV2=virtual QAxAggregated * createAggregate()
 
 $prototype=bool doVerb ( const QString & verb )
 $method=|bool|doVerb|const QString &
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 // QAxBase methods - begin
 
 // métodos da classe QAxBase, adicionados aqui, para
 // resolver problemas na utilização dos métodos
 
-$prototype=QVariant asVariant () const
-$method=|QVariant|asVariant|
+$prototypeV2=QVariant asVariant() const
 
-$prototype=QString control () const
-$method=|QString|control|
+$prototypeV2=QString control() const
 
-$prototype=void disableClassInfo ()
-$method=|void|disableClassInfo|
+$prototypeV2=void disableClassInfo()
 
-$prototype=void disableEventSink ()
-$method=|void|disableEventSink|
+$prototypeV2=void disableEventSink()
 
-$prototype=void disableMetaObject ()
-$method=|void|disableMetaObject|
+$prototypeV2=void disableMetaObject()
 
 $prototype=QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|dynamicCall,dynamicCall1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
@@ -130,11 +121,9 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
 }
 $addMethod=dynamicCall
 
-$prototype=QString generateDocumentation ()
-$method=|QString|generateDocumentation|
+$prototypeV2=QString generateDocumentation()
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=virtual bool propertyWritable ( const char * prop ) const
 $virtualMethod=|bool|propertyWritable|const char *
@@ -173,8 +162,7 @@ $method=|bool|setControl|const QString &
 $prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
 $virtualMethod=|void|setPropertyWritable|const char *,bool
 
-$prototype=QStringList verbs () const
-$method=|QStringList|verbs|
+$prototypeV2=QStringList verbs() const
 
 // QAxBase methods - end
 
