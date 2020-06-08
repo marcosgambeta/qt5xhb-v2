@@ -62,7 +62,6 @@ $virtualMethod=|bool|onTransact|int,const QAndroidParcel &,const QAndroidParcel 
 $prototype=bool transact(int code, const QAndroidParcel &data, QAndroidParcel *reply = nullptr, CallType flags = CallType::Normal) const
 $method=|bool|transact|int,const QAndroidParcel &,QAndroidParcel *=nullptr,QAndroidBinder::CallType=CallType::Normal
 
-$prototype=QAndroidJniObject handle() const
-$method=|QAndroidJniObject|handle|
+$prototypeV2=QAndroidJniObject handle() const
 
 #pragma ENDDUMP

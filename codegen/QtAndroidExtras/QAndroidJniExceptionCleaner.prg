@@ -34,8 +34,7 @@ $constructor=|new|QAndroidJniExceptionCleaner::OutputMode=QAndroidJniExceptionCl
 $prototype=~QAndroidJniExceptionCleaner()
 $deleteMethod
 
-$prototype=void clean()
-$method=|void|clean|
+$prototypeV2=void clean()
 
 $extraMethods
 

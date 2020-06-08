@@ -32,8 +32,7 @@ $constructor=|new|
 $prototype=~QAndroidJniEnvironment()
 $deleteMethod
 
-$prototype=static JavaVM *javaVM()
-$staticMethod=|JavaVM *|javaVM|
+$prototypeV2=static JavaVM * javaVM()
 
 $prototype=jclass findClass(const char *className)
 %% TODO: implementar

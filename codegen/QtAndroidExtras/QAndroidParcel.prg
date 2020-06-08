@@ -70,20 +70,15 @@ $method=|void|writeBinder|const QAndroidBinder &
 $prototype=void writeFileDescriptor(int fd) const
 $method=|void|writeFileDescriptor|int
 
-$prototype=QByteArray readData() const
-$method=|QByteArray|readData|
+$prototypeV2=QByteArray readData() const
 
-$prototype=QVariant readVariant() const
-$method=|QVariant|readVariant|
+$prototypeV2=QVariant readVariant() const
 
-$prototype=QAndroidBinder readBinder() const
-$method=|QAndroidBinder|readBinder|
+$prototypeV2=QAndroidBinder readBinder() const
 
-$prototype=int readFileDescriptor() const
-$method=|int|readFileDescriptor|
+$prototypeV2=int readFileDescriptor() const
 
-$prototype=QAndroidJniObject handle() const
-$method=|QAndroidJniObject|handle|
+$prototypeV2=QAndroidJniObject handle() const
 
 $extraMethods
 

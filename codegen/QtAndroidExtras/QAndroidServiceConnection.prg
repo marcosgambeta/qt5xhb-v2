@@ -64,8 +64,7 @@ $prototype=virtual void onServiceConnected(const QString &name, const QAndroidBi
 $prototype=virtual void onServiceDisconnected(const QString &name) = 0
 %% TODO: implementar
 
-$prototype=QAndroidJniObject handle() const
-$method=|QAndroidJniObject|handle|
+$prototypeV2=QAndroidJniObject handle() const
 
 $extraMethods
 

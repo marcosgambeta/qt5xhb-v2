@@ -118,11 +118,9 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 }
 $addMethod=getObjectField
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=T object() const
 

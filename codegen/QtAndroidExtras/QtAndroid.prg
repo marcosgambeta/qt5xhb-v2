@@ -26,11 +26,9 @@ $destructor
 
 $includes
 
-$prototype=static QAndroidJniObject androidActivity()
-$staticMethod=|QAndroidJniObject|androidActivity|
+$prototypeV2=static QAndroidJniObject androidActivity()
 
-$prototype=static int androidSdkVersion()
-$staticMethod=|int|androidSdkVersion|
+$prototypeV2=static int androidSdkVersion()
 
 $prototype=static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
 $staticMethod=|void|startIntentSender|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr

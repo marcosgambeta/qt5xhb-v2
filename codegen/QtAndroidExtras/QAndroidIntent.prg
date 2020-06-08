@@ -84,7 +84,6 @@ $method=|void|putExtra|const QString &,const QVariant &
 $prototype=QVariant extraVariant(const QString &key)
 $method=|QVariant|extraVariant|const QString &
 
-$prototype=QAndroidJniObject handle() const
-$method=|QAndroidJniObject|handle|
+$prototypeV2=QAndroidJniObject handle() const
 
 #pragma ENDDUMP
