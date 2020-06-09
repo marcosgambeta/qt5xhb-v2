@@ -34,7 +34,6 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QBarSeries()
 $deleteMethod
 
-$prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$prototypeV2=QAbstractSeries::SeriesType type() const
 
 #pragma ENDDUMP

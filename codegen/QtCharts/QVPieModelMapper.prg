@@ -42,8 +42,7 @@ $constructor=|new|QObject *=nullptr
 %% Q_PROPERTY(QPieSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
-$prototype=QPieSeries *series() const
-$method=|QPieSeries *|series|
+$prototypeV2=QPieSeries * series() const
 
 $prototype=void setSeries(QPieSeries *series)
 $method=|void|setSeries|QPieSeries *
@@ -52,8 +51,7 @@ $method=|void|setSeries|QPieSeries *
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
-$prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
 $prototype=void setModel(QAbstractItemModel *model)
 $method=|void|setModel|QAbstractItemModel *
@@ -62,8 +60,7 @@ $method=|void|setModel|QAbstractItemModel *
 %% Q_PROPERTY(int valuesColumn READ valuesColumn WRITE setValuesColumn NOTIFY valuesColumnChanged)
 %%
 
-$prototype=int valuesColumn() const
-$method=|int|valuesColumn|
+$prototypeV2=int valuesColumn() const
 
 $prototype=void setValuesColumn(int valuesColumn)
 $method=|void|setValuesColumn|int
@@ -72,8 +69,7 @@ $method=|void|setValuesColumn|int
 %% Q_PROPERTY(int labelsColumn READ labelsColumn WRITE setLabelsColumn NOTIFY labelsColumnChanged)
 %%
 
-$prototype=int labelsColumn() const
-$method=|int|labelsColumn|
+$prototypeV2=int labelsColumn() const
 
 $prototype=void setLabelsColumn(int labelsColumn)
 $method=|void|setLabelsColumn|int
@@ -82,8 +78,7 @@ $method=|void|setLabelsColumn|int
 %% Q_PROPERTY(int firstRow READ firstRow WRITE setFirstRow NOTIFY firstRowChanged)
 %%
 
-$prototype=int firstRow() const
-$method=|int|firstRow|
+$prototypeV2=int firstRow() const
 
 $prototype=void setFirstRow(int firstRow)
 $method=|void|setFirstRow|int
@@ -92,8 +87,7 @@ $method=|void|setFirstRow|int
 %% Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
 %%
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=void setRowCount(int rowCount)
 $method=|void|setRowCount|int

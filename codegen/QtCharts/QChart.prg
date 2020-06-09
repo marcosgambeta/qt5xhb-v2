@@ -45,8 +45,7 @@ $deleteMethod
 %% Q_PROPERTY(QChart::ChartTheme theme READ theme WRITE setTheme)
 %%
 
-$prototype=QChart::ChartTheme theme() const
-$method=|QChart::ChartTheme|theme|
+$prototypeV2=QChart::ChartTheme theme() const
 
 $prototype=void setTheme(QChart::ChartTheme theme)
 $method=|void|setTheme|QChart::ChartTheme
@@ -55,15 +54,13 @@ $method=|void|setTheme|QChart::ChartTheme
 %% Q_PROPERTY(QString title READ title WRITE setTitle)
 %%
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 %%
 %% Q_PROPERTY(bool backgroundVisible READ isBackgroundVisible WRITE setBackgroundVisible)
 %%
 
-$prototype=bool isBackgroundVisible() const
-$method=|bool|isBackgroundVisible|
+$prototypeV2=bool isBackgroundVisible() const
 
 $prototype=void setBackgroundVisible(bool visible = true)
 $method=|void|setBackgroundVisible|bool=true
@@ -72,8 +69,7 @@ $method=|void|setBackgroundVisible|bool=true
 %% Q_PROPERTY(bool dropShadowEnabled READ isDropShadowEnabled WRITE setDropShadowEnabled)
 %%
 
-$prototype=bool isDropShadowEnabled() const
-$method=|bool|isDropShadowEnabled|
+$prototypeV2=bool isDropShadowEnabled() const
 
 $prototype=void setDropShadowEnabled(bool enabled = true)
 $method=|void|setDropShadowEnabled|bool=true
@@ -82,8 +78,7 @@ $method=|void|setDropShadowEnabled|bool=true
 %% Q_PROPERTY(qreal backgroundRoundness READ backgroundRoundness WRITE setBackgroundRoundness)
 %%
 
-$prototype=qreal backgroundRoundness() const
-$method=|qreal|backgroundRoundness|
+$prototypeV2=qreal backgroundRoundness() const
 
 $prototype=void setBackgroundRoundness(qreal diameter)
 $method=|void|setBackgroundRoundness|qreal
@@ -92,8 +87,7 @@ $method=|void|setBackgroundRoundness|qreal
 %% Q_PROPERTY(QChart::AnimationOptions animationOptions READ animationOptions WRITE setAnimationOptions)
 %%
 
-$prototype=AnimationOptions animationOptions() const
-$method=|QChart::AnimationOptions|animationOptions|
+$prototypeV2=QChart::AnimationOptions animationOptions() const
 
 $prototype=void setAnimationOptions(AnimationOptions options)
 $method=|void|setAnimationOptions|QChart::AnimationOptions
@@ -102,8 +96,7 @@ $method=|void|setAnimationOptions|QChart::AnimationOptions
 %% Q_PROPERTY(int animationDuration READ animationDuration WRITE setAnimationDuration)
 %%
 
-$prototype=int animationDuration() const
-$method=|int|animationDuration|
+$prototypeV2=int animationDuration() const
 
 $prototype=void setAnimationDuration(int msecs)
 $method=|void|setAnimationDuration|int
@@ -112,8 +105,7 @@ $method=|void|setAnimationDuration|int
 %% Q_PROPERTY(QEasingCurve animationEasingCurve READ animationEasingCurve WRITE setAnimationEasingCurve)
 %%
 
-$prototype=QEasingCurve animationEasingCurve() const
-$method=|QEasingCurve|animationEasingCurve|
+$prototypeV2=QEasingCurve animationEasingCurve() const
 
 $prototype=void setAnimationEasingCurve(const QEasingCurve &curve)
 $method=|void|setAnimationEasingCurve|const QEasingCurve &
@@ -122,8 +114,7 @@ $method=|void|setAnimationEasingCurve|const QEasingCurve &
 %% Q_PROPERTY(QMargins margins READ margins WRITE setMargins)
 %%
 
-$prototype=QMargins margins() const
-$method=|QMargins|margins|
+$prototypeV2=QMargins margins() const
 
 $prototype=void setMargins(const QMargins &margins)
 $method=|void|setMargins|const QMargins &
@@ -132,15 +123,13 @@ $method=|void|setMargins|const QMargins &
 %% Q_PROPERTY(QRectF plotArea READ plotArea NOTIFY plotAreaChanged)
 %%
 
-$prototype=QRectF plotArea() const
-$method=|QRectF|plotArea|
+$prototypeV2=QRectF plotArea() const
 
 %%
 %% Q_PROPERTY(bool plotAreaBackgroundVisible READ isPlotAreaBackgroundVisible WRITE setPlotAreaBackgroundVisible)
 %%
 
-$prototype=bool isPlotAreaBackgroundVisible() const
-$method=|bool|isPlotAreaBackgroundVisible|
+$prototypeV2=bool isPlotAreaBackgroundVisible() const
 
 $prototype=void setPlotAreaBackgroundVisible(bool visible = true)
 $method=|void|setPlotAreaBackgroundVisible|bool=true
@@ -149,8 +138,7 @@ $method=|void|setPlotAreaBackgroundVisible|bool=true
 %% Q_PROPERTY(bool localizeNumbers READ localizeNumbers WRITE setLocalizeNumbers)
 %%
 
-$prototype=bool localizeNumbers() const
-$method=|bool|localizeNumbers|
+$prototypeV2=bool localizeNumbers() const
 
 $prototype=void setLocalizeNumbers(bool localize)
 $method=|void|setLocalizeNumbers|bool
@@ -159,8 +147,7 @@ $method=|void|setLocalizeNumbers|bool
 %% Q_PROPERTY(QLocale locale READ locale WRITE setLocale)
 %%
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
@@ -169,8 +156,7 @@ $method=|void|setLocale|const QLocale &
 %% Q_PROPERTY(QChart::ChartType chartType READ chartType)
 %%
 
-$prototype=ChartType chartType() const
-$method=|QChart::ChartType|chartType|
+$prototypeV2=QChart::ChartType chartType() const
 
 %%
 %%
@@ -182,8 +168,7 @@ $method=|void|addSeries|QAbstractSeries *
 $prototype=void removeSeries(QAbstractSeries *series)
 $method=|void|removeSeries|QAbstractSeries *
 
-$prototype=void removeAllSeries()
-$method=|void|removeAllSeries|
+$prototypeV2=void removeAllSeries()
 
 $prototype=QList<QAbstractSeries *> series() const
 $method=|QList<QAbstractSeries *>|series|
@@ -209,8 +194,7 @@ $method=|void|removeAxis|QAbstractAxis *
 $prototype=QList<QAbstractAxis*> axes(Qt::Orientations orientation = Qt::Horizontal|Qt::Vertical, QAbstractSeries *series = nullptr) const
 $method=|QList<QAbstractAxis *>|axes|Qt::Orientations=Qt::Horizontal OR Qt::Vertical,QAbstractSeries *=nullptr
 
-$prototype=void createDefaultAxes()
-$method=|void|createDefaultAxes|
+$prototypeV2=void createDefaultAxes()
 
 $prototype=void setTitle(const QString &title)
 $method=|void|setTitle|const QString &
@@ -218,26 +202,22 @@ $method=|void|setTitle|const QString &
 $prototype=void setTitleFont(const QFont &font)
 $method=|void|setTitleFont|const QFont &
 
-$prototype=QFont titleFont() const
-$method=|QFont|titleFont|
+$prototypeV2=QFont titleFont() const
 
 $prototype=void setTitleBrush(const QBrush &brush)
 $method=|void|setTitleBrush|const QBrush &
 
-$prototype=QBrush titleBrush() const
-$method=|QBrush|titleBrush|
+$prototypeV2=QBrush titleBrush() const
 
 $prototype=void setBackgroundBrush(const QBrush &brush)
 $method=|void|setBackgroundBrush|const QBrush &
 
-$prototype=QBrush backgroundBrush() const
-$method=|QBrush|backgroundBrush|
+$prototypeV2=QBrush backgroundBrush() const
 
 $prototype=void setBackgroundPen(const QPen &pen)
 $method=|void|setBackgroundPen|const QPen &
 
-$prototype=QPen backgroundPen() const
-$method=|QPen|backgroundPen|
+$prototypeV2=QPen backgroundPen() const
 
 $prototype=void zoomIn()
 $internalMethod=|void|zoomIn,zoomIn1|
@@ -267,35 +247,29 @@ HB_FUNC_STATIC( QCHART_ZOOMIN )
 }
 $addMethod=zoomIn
 
-$prototype=void zoomOut()
-$method=|void|zoomOut|
+$prototypeV2=void zoomOut()
 
 $prototype=void zoom(qreal factor)
 $method=|void|zoom|qreal
 
-$prototype=void zoomReset()
-$method=|void|zoomReset|
+$prototypeV2=void zoomReset()
 
-$prototype=bool isZoomed()
-$method=|bool|isZoomed|
+$prototypeV2=bool isZoomed()
 
 $prototype=void scroll(qreal dx, qreal dy)
 $method=|void|scroll|qreal,qreal
 
-$prototype=QLegend *legend() const
-$method=|QLegend *|legend|
+$prototypeV2=QLegend * legend() const
 
 $prototype=void setPlotAreaBackgroundBrush(const QBrush &brush)
 $method=|void|setPlotAreaBackgroundBrush|const QBrush &
 
-$prototype=QBrush plotAreaBackgroundBrush() const
-$method=|QBrush|plotAreaBackgroundBrush|
+$prototypeV2=QBrush plotAreaBackgroundBrush() const
 
 $prototype=void setPlotAreaBackgroundPen(const QPen &pen)
 $method=|void|setPlotAreaBackgroundPen|const QPen &
 
-$prototype=QPen plotAreaBackgroundPen() const
-$method=|QPen|plotAreaBackgroundPen|
+$prototypeV2=QPen plotAreaBackgroundPen() const
 
 $prototype=QPointF mapToValue(const QPointF &position, QAbstractSeries *series = nullptr)
 $method=|QPointF|mapToValue|const QPointF &,QAbstractSeries *=nullptr

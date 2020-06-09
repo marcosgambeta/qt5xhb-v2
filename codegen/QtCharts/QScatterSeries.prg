@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor color() const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
 $prototype=void setColor(const QColor &color)
 $method=|void|setColor|const QColor &
@@ -50,8 +49,7 @@ $method=|void|setColor|const QColor &
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
-$prototype=QColor borderColor() const
-$method=|QColor|borderColor|
+$prototypeV2=QColor borderColor() const
 
 $prototype=void setBorderColor(const QColor &color)
 $method=|void|setBorderColor|const QColor &
@@ -60,8 +58,7 @@ $method=|void|setBorderColor|const QColor &
 %% Q_PROPERTY(MarkerShape markerShape READ markerShape WRITE setMarkerShape NOTIFY markerShapeChanged)
 %%
 
-$prototype=MarkerShape markerShape() const
-$method=|QScatterSeries::MarkerShape|markerShape|
+$prototypeV2=QScatterSeries::MarkerShape markerShape() const
 
 $prototype=void setMarkerShape(MarkerShape shape)
 $method=|void|setMarkerShape|QScatterSeries::MarkerShape
@@ -70,8 +67,7 @@ $method=|void|setMarkerShape|QScatterSeries::MarkerShape
 %% Q_PROPERTY(qreal markerSize READ markerSize WRITE setMarkerSize NOTIFY markerSizeChanged)
 %%
 
-$prototype=qreal markerSize() const
-$method=|qreal|markerSize|
+$prototypeV2=qreal markerSize() const
 
 $prototype=void setMarkerSize(qreal size)
 $method=|void|setMarkerSize|qreal
@@ -80,8 +76,7 @@ $method=|void|setMarkerSize|qreal
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -90,8 +85,7 @@ $method=|void|setBrush|const QBrush &
 %%
 %%
 
-$prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$prototypeV2=QAbstractSeries::SeriesType type() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &

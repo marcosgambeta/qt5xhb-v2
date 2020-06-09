@@ -41,8 +41,7 @@ $constructor=|new|QObject *=nullptr
 %% Q_PROPERTY(int timestampColumn READ timestampColumn WRITE setTimestampColumn NOTIFY timestampColumnChanged)
 %%
 
-$prototype=int timestampColumn() const
-$method=|int|timestampColumn|
+$prototypeV2=int timestampColumn() const
 
 $prototype=void setTimestampColumn(int timestampColumn)
 $method=|void|setTimestampColumn|int
@@ -51,8 +50,7 @@ $method=|void|setTimestampColumn|int
 %% Q_PROPERTY(int openColumn READ openColumn WRITE setOpenColumn NOTIFY openColumnChanged)
 %%
 
-$prototype=int openColumn() const
-$method=|int|openColumn|
+$prototypeV2=int openColumn() const
 
 $prototype=void setOpenColumn(int openColumn)
 $method=|void|setOpenColumn|int
@@ -61,8 +59,7 @@ $method=|void|setOpenColumn|int
 %% Q_PROPERTY(int highColumn READ highColumn WRITE setHighColumn NOTIFY highColumnChanged)
 %%
 
-$prototype=int highColumn() const
-$method=|int|highColumn|
+$prototypeV2=int highColumn() const
 
 $prototype=void setHighColumn(int highColumn)
 $method=|void|setHighColumn|int
@@ -71,8 +68,7 @@ $method=|void|setHighColumn|int
 %% Q_PROPERTY(int lowColumn READ lowColumn WRITE setLowColumn NOTIFY lowColumnChanged)
 %%
 
-$prototype=int lowColumn() const
-$method=|int|lowColumn|
+$prototypeV2=int lowColumn() const
 
 $prototype=void setLowColumn(int lowColumn)
 $method=|void|setLowColumn|int
@@ -81,8 +77,7 @@ $method=|void|setLowColumn|int
 %% Q_PROPERTY(int closeColumn READ closeColumn WRITE setCloseColumn NOTIFY closeColumnChanged)
 %%
 
-$prototype=int closeColumn() const
-$method=|int|closeColumn|
+$prototypeV2=int closeColumn() const
 
 $prototype=void setCloseColumn(int closeColumn)
 $method=|void|setCloseColumn|int
@@ -91,8 +86,7 @@ $method=|void|setCloseColumn|int
 %% Q_PROPERTY(int firstSetRow READ firstSetRow WRITE setFirstSetRow NOTIFY firstSetRowChanged)
 %%
 
-$prototype=int firstSetRow() const
-$method=|int|firstSetRow|
+$prototypeV2=int firstSetRow() const
 
 $prototype=void setFirstSetRow(int firstSetRow)
 $method=|void|setFirstSetRow|int
@@ -101,8 +95,7 @@ $method=|void|setFirstSetRow|int
 %% Q_PROPERTY(int lastSetRow READ lastSetRow WRITE setLastSetRow NOTIFY lastSetRowChanged)
 %%
 
-$prototype=int lastSetRow() const
-$method=|int|lastSetRow|
+$prototypeV2=int lastSetRow() const
 
 $prototype=void setLastSetRow(int lastSetRow)
 $method=|void|setLastSetRow|int
@@ -111,8 +104,7 @@ $method=|void|setLastSetRow|int
 %%
 %%
 
-$prototype=Qt::Orientation orientation() const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 %%
 %% SIGNALS

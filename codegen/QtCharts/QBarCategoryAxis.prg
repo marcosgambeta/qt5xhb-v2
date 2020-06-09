@@ -42,8 +42,7 @@ $deleteMethod
 %% Q_PROPERTY(QStringList categories READ categories WRITE setCategories NOTIFY categoriesChanged)
 %%
 
-$prototype=QStringList categories()
-$method=|QStringList|categories|
+$prototypeV2=QStringList categories()
 
 $prototype=void setCategories(const QStringList &categories)
 $method=|void|setCategories|const QStringList &
@@ -52,15 +51,13 @@ $method=|void|setCategories|const QStringList &
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% Q_PROPERTY(QString min READ min WRITE setMin NOTIFY minChanged)
 %%
 
-$prototype=QString min() const
-$method=|QString|min|
+$prototypeV2=QString min() const
 
 $prototype=void setMin(const QString &minCategory)
 $method=|void|setMin|const QString &
@@ -69,8 +66,7 @@ $method=|void|setMin|const QString &
 %% Q_PROPERTY(QString max READ max WRITE setMax NOTIFY maxChanged)
 %%
 
-$prototype=QString max() const
-$method=|QString|max|
+$prototypeV2=QString max() const
 
 $prototype=void setMax(const QString &maxCategory)
 $method=|void|setMax|const QString &
@@ -79,8 +75,7 @@ $method=|void|setMax|const QString &
 %%
 %%
 
-$prototype=AxisType type() const
-$method=|QAbstractAxis::AxisType|type|
+$prototypeV2=QAbstractAxis::AxisType type() const
 
 $prototype=void append(const QStringList &categories)
 $internalMethod=|void|append,append1|const QStringList &
@@ -119,8 +114,7 @@ $method=|void|insert|int,const QString &
 $prototype=void replace(const QString &oldCategory, const QString &newCategory)
 $method=|void|replace|const QString &,const QString &
 
-$prototype=Q_INVOKABLE void clear()
-$method=|void|clear|
+$prototypeV2=Q_INVOKABLE void clear()
 
 $prototype=QString at(int index) const
 $method=|QString|at|int

@@ -36,13 +36,10 @@ $prototype=QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = nullpt
 $prototype=virtual ~QPieLegendMarker()
 $deleteMethod
 
-$prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QPieSeries* series()
-$virtualMethod=|QPieSeries *|series|
+$prototypeV2=virtual QPieSeries * series()
 
-$prototype=QPieSlice* slice()
-$method=|QPieSlice *|slice|
+$prototypeV2=QPieSlice * slice()
 
 #pragma ENDDUMP

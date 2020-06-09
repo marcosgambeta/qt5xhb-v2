@@ -41,15 +41,13 @@ $deleteMethod
 %% Q_PROPERTY(SeriesType type READ type)
 %%
 
-$prototype=virtual SeriesType type() const = 0
-$virtualMethod=|QAbstractSeries::SeriesType|type|
+$prototypeV2=virtual QAbstractSeries::SeriesType type() const = 0
 
 %%
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
@@ -58,8 +56,7 @@ $method=|void|setName|const QString &
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible = true)
 $method=|void|setVisible|bool=true
@@ -68,8 +65,7 @@ $method=|void|setVisible|bool=true
 %% Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity NOTIFY opacityChanged)
 %%
 
-$prototype=qreal opacity() const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=void setOpacity(qreal opacity)
 $method=|void|setOpacity|qreal
@@ -78,8 +74,7 @@ $method=|void|setOpacity|qreal
 %% Q_PROPERTY(bool useOpenGL READ useOpenGL WRITE setUseOpenGL NOTIFY useOpenGLChanged)
 %%
 
-$prototype=bool useOpenGL() const
-$method=|bool|useOpenGL|
+$prototypeV2=bool useOpenGL() const
 
 $prototype=void setUseOpenGL(bool enable = true)
 $method=|void|setUseOpenGL|bool=true
@@ -88,8 +83,7 @@ $method=|void|setUseOpenGL|bool=true
 %%
 %%
 
-$prototype=QChart *chart() const
-$method=|QChart *|chart|
+$prototypeV2=QChart * chart() const
 
 $prototype=bool attachAxis(QAbstractAxis *axis)
 $method=|bool|attachAxis|QAbstractAxis *
@@ -100,11 +94,9 @@ $method=|bool|detachAxis|QAbstractAxis *
 $prototype=QList<QAbstractAxis*> attachedAxes()
 $method=|QList<QAbstractAxis *>|attachedAxes|
 
-$prototype=void show()
-$method=|void|show|
+$prototypeV2=void show()
 
-$prototype=void hide()
-$method=|void|hide|
+$prototypeV2=void hide()
 
 %%
 %% SIGNALS

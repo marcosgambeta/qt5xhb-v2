@@ -36,10 +36,8 @@ $constructor=|new|QCandlestickSeries *,QLegend *,QObject *=nullptr
 $prototype=virtual ~QCandlestickLegendMarker()
 $deleteMethod
 
-$prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QCandlestickSeries* series()
-$virtualMethod=|QCandlestickSeries *|series|
+$prototypeV2=virtual QCandlestickSeries * series()
 
 #pragma ENDDUMP

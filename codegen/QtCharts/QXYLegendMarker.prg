@@ -36,10 +36,8 @@ $prototype=QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = nullptr)
 $prototype=virtual ~QXYLegendMarker()
 $deleteMethod=
 
-$prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QXYSeries* series()
-$virtualMethod=|QXYSeries *|series|
+$prototypeV2=virtual QXYSeries * series()
 
 #pragma ENDDUMP

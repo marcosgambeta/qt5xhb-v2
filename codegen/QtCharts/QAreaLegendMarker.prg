@@ -36,10 +36,8 @@ $prototype=QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = null
 $prototype=virtual ~QAreaLegendMarker()
 $deleteMethod
 
-$prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QAreaSeries* series()
-$virtualMethod=|QAreaSeries *|series|
+$prototypeV2=virtual QAreaSeries * series()
 
 #pragma ENDDUMP

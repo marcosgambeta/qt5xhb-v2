@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible = true)
 $method=|void|setVisible|bool=true
@@ -49,8 +48,7 @@ $method=|void|setVisible|bool=true
 %% Q_PROPERTY(bool lineVisible READ isLineVisible WRITE setLineVisible NOTIFY lineVisibleChanged)
 %%
 
-$prototype=bool isLineVisible() const
-$method=|bool|isLineVisible|
+$prototypeV2=bool isLineVisible() const
 
 $prototype=void setLineVisible(bool visible = true)
 $method=|void|setLineVisible|bool=true
@@ -59,8 +57,7 @@ $method=|void|setLineVisible|bool=true
 %% Q_PROPERTY(QPen linePen READ linePen WRITE setLinePen NOTIFY linePenChanged)
 %%
 
-$prototype=QPen linePen() const
-$method=|QPen|linePen|
+$prototypeV2=QPen linePen() const
 
 $prototype=void setLinePen(const QPen &pen)
 $method=|void|setLinePen|const QPen &
@@ -69,8 +66,7 @@ $method=|void|setLinePen|const QPen &
 %% Q_PROPERTY(QColor color READ linePenColor WRITE setLinePenColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor linePenColor() const
-$method=|QColor|linePenColor|
+$prototypeV2=QColor linePenColor() const
 
 $prototype=void setLinePenColor(QColor color)
 $method=|void|setLinePenColor|QColor
@@ -79,8 +75,7 @@ $method=|void|setLinePenColor|QColor
 %% Q_PROPERTY(bool gridVisible READ isGridLineVisible WRITE setGridLineVisible NOTIFY gridVisibleChanged)
 %%
 
-$prototype=bool isGridLineVisible() const
-$method=|bool|isGridLineVisible|
+$prototypeV2=bool isGridLineVisible() const
 
 $prototype=void setGridLineVisible(bool visible = true)
 $method=|void|setGridLineVisible|bool=true
@@ -89,8 +84,7 @@ $method=|void|setGridLineVisible|bool=true
 %% Q_PROPERTY(QPen gridLinePen READ gridLinePen WRITE setGridLinePen NOTIFY gridLinePenChanged)
 %%
 
-$prototype=QPen gridLinePen() const
-$method=|QPen|gridLinePen|
+$prototypeV2=QPen gridLinePen() const
 
 $prototype=void setGridLinePen(const QPen &pen)
 $method=|void|setGridLinePen|const QPen &
@@ -99,8 +93,7 @@ $method=|void|setGridLinePen|const QPen &
 %% Q_PROPERTY(bool minorGridVisible READ isMinorGridLineVisible WRITE setMinorGridLineVisible NOTIFY minorGridVisibleChanged)
 %%
 
-$prototype=bool isMinorGridLineVisible() const
-$method=|bool|isMinorGridLineVisible|
+$prototypeV2=bool isMinorGridLineVisible() const
 
 $prototype=void setMinorGridLineVisible(bool visible = true)
 $method=|void|setMinorGridLineVisible|bool=true
@@ -109,8 +102,7 @@ $method=|void|setMinorGridLineVisible|bool=true
 %% Q_PROPERTY(QPen minorGridLinePen READ minorGridLinePen WRITE setMinorGridLinePen NOTIFY minorGridLinePenChanged)
 %%
 
-$prototype=QPen minorGridLinePen() const
-$method=|QPen|minorGridLinePen|
+$prototypeV2=QPen minorGridLinePen() const
 
 $prototype=void setMinorGridLinePen(const QPen &pen)
 $method=|void|setMinorGridLinePen|const QPen &
@@ -119,8 +111,7 @@ $method=|void|setMinorGridLinePen|const QPen &
 %% Q_PROPERTY(QColor gridLineColor READ gridLineColor WRITE setGridLineColor NOTIFY gridLineColorChanged)
 %%
 
-$prototype=QColor gridLineColor()
-$method=|QColor|gridLineColor|
+$prototypeV2=QColor gridLineColor()
 
 $prototype=void setGridLineColor(const QColor &color)
 $method=|void|setGridLineColor|const QColor &
@@ -129,8 +120,7 @@ $method=|void|setGridLineColor|const QColor &
 %% Q_PROPERTY(QColor minorGridLineColor READ minorGridLineColor WRITE setMinorGridLineColor NOTIFY minorGridLineColorChanged)
 %%
 
-$prototype=QColor minorGridLineColor()
-$method=|QColor|minorGridLineColor|
+$prototypeV2=QColor minorGridLineColor()
 
 $prototype=void setMinorGridLineColor(const QColor &color)
 $method=|void|setMinorGridLineColor|const QColor &
@@ -139,8 +129,7 @@ $method=|void|setMinorGridLineColor|const QColor &
 %% Q_PROPERTY(bool labelsVisible READ labelsVisible WRITE setLabelsVisible NOTIFY labelsVisibleChanged)
 %%
 
-$prototype=bool labelsVisible() const
-$method=|bool|labelsVisible|
+$prototypeV2=bool labelsVisible() const
 
 $prototype=void setLabelsVisible(bool visible = true)
 $method=|void|setLabelsVisible|bool=true
@@ -149,8 +138,7 @@ $method=|void|setLabelsVisible|bool=true
 %% Q_PROPERTY(QBrush labelsBrush READ labelsBrush WRITE setLabelsBrush NOTIFY labelsBrushChanged)
 %%
 
-$prototype=QBrush labelsBrush() const
-$method=|QBrush|labelsBrush|
+$prototypeV2=QBrush labelsBrush() const
 
 $prototype=void setLabelsBrush(const QBrush &brush)
 $method=|void|setLabelsBrush|const QBrush &
@@ -159,8 +147,7 @@ $method=|void|setLabelsBrush|const QBrush &
 %% Q_PROPERTY(QFont labelsFont READ labelsFont WRITE setLabelsFont NOTIFY labelsFontChanged)
 %%
 
-$prototype=QFont labelsFont() const
-$method=|QFont|labelsFont|
+$prototypeV2=QFont labelsFont() const
 
 $prototype=void setLabelsFont(const QFont &font)
 $method=|void|setLabelsFont|const QFont &
@@ -169,8 +156,7 @@ $method=|void|setLabelsFont|const QFont &
 %% Q_PROPERTY(int labelsAngle READ labelsAngle WRITE setLabelsAngle NOTIFY labelsAngleChanged)
 %%
 
-$prototype=int labelsAngle() const
-$method=|int|labelsAngle|
+$prototypeV2=int labelsAngle() const
 
 $prototype=void setLabelsAngle(int angle)
 $method=|void|setLabelsAngle|int
@@ -179,8 +165,7 @@ $method=|void|setLabelsAngle|int
 %% Q_PROPERTY(QColor labelsColor READ labelsColor WRITE setLabelsColor NOTIFY labelsColorChanged)
 %%
 
-$prototype=QColor labelsColor() const
-$method=|QColor|labelsColor|
+$prototypeV2=QColor labelsColor() const
 
 $prototype=void setLabelsColor(QColor color)
 $method=|void|setLabelsColor|QColor
@@ -189,8 +174,7 @@ $method=|void|setLabelsColor|QColor
 %% Q_PROPERTY(bool titleVisible READ isTitleVisible WRITE setTitleVisible NOTIFY titleVisibleChanged)
 %%
 
-$prototype=bool isTitleVisible() const
-$method=|bool|isTitleVisible|
+$prototypeV2=bool isTitleVisible() const
 
 $prototype=void setTitleVisible(bool visible = true)
 $method=|void|setTitleVisible|bool=true
@@ -199,8 +183,7 @@ $method=|void|setTitleVisible|bool=true
 %% Q_PROPERTY(QBrush titleBrush READ titleBrush WRITE setTitleBrush NOTIFY titleBrushChanged)
 %%
 
-$prototype=QBrush titleBrush() const
-$method=|QBrush|titleBrush|
+$prototypeV2=QBrush titleBrush() const
 
 $prototype=void setTitleBrush(const QBrush &brush)
 $method=|void|setTitleBrush|const QBrush &
@@ -209,8 +192,7 @@ $method=|void|setTitleBrush|const QBrush &
 %% Q_PROPERTY(QFont titleFont READ titleFont WRITE setTitleFont NOTIFY titleFontChanged)
 %%
 
-$prototype=QFont titleFont() const
-$method=|QFont|titleFont|
+$prototypeV2=QFont titleFont() const
 
 $prototype=void setTitleFont(const QFont &font)
 $method=|void|setTitleFont|const QFont &
@@ -219,8 +201,7 @@ $method=|void|setTitleFont|const QFont &
 %% Q_PROPERTY(QString titleText READ titleText WRITE setTitleText NOTIFY titleTextChanged)
 %%
 
-$prototype=QString titleText() const
-$method=|QString|titleText|
+$prototypeV2=QString titleText() const
 
 $prototype=void setTitleText(const QString &title)
 $method=|void|setTitleText|const QString &
@@ -229,8 +210,7 @@ $method=|void|setTitleText|const QString &
 %% Q_PROPERTY(bool shadesVisible READ shadesVisible WRITE setShadesVisible NOTIFY shadesVisibleChanged)
 %%
 
-$prototype=bool shadesVisible() const
-$method=|bool|shadesVisible|
+$prototypeV2=bool shadesVisible() const
 
 $prototype=void setShadesVisible(bool visible = true)
 $method=|void|setShadesVisible|bool=true
@@ -239,8 +219,7 @@ $method=|void|setShadesVisible|bool=true
 %% Q_PROPERTY(QPen shadesPen READ shadesPen WRITE setShadesPen NOTIFY shadesPenChanged)
 %%
 
-$prototype=QPen shadesPen() const
-$method=|QPen|shadesPen|
+$prototypeV2=QPen shadesPen() const
 
 $prototype=void setShadesPen(const QPen &pen)
 $method=|void|setShadesPen|const QPen &
@@ -249,8 +228,7 @@ $method=|void|setShadesPen|const QPen &
 %% Q_PROPERTY(QBrush shadesBrush READ shadesBrush WRITE setShadesBrush NOTIFY shadesBrushChanged)
 %%
 
-$prototype=QBrush shadesBrush() const
-$method=|QBrush|shadesBrush|
+$prototypeV2=QBrush shadesBrush() const
 
 $prototype=void setShadesBrush(const QBrush &brush)
 $method=|void|setShadesBrush|const QBrush &
@@ -259,8 +237,7 @@ $method=|void|setShadesBrush|const QBrush &
 %% Q_PROPERTY(QColor shadesColor READ shadesColor WRITE setShadesColor NOTIFY shadesColorChanged)
 %%
 
-$prototype=QColor shadesColor() const
-$method=|QColor|shadesColor|
+$prototypeV2=QColor shadesColor() const
 
 $prototype=void setShadesColor(QColor color)
 $method=|void|setShadesColor|QColor
@@ -269,8 +246,7 @@ $method=|void|setShadesColor|QColor
 %% Q_PROPERTY(QColor shadesBorderColor READ shadesBorderColor WRITE setShadesBorderColor NOTIFY shadesBorderColorChanged)
 %%
 
-$prototype=QColor shadesBorderColor() const
-$method=|QColor|shadesBorderColor|
+$prototypeV2=QColor shadesBorderColor() const
 
 $prototype=void setShadesBorderColor(QColor color)
 $method=|void|setShadesBorderColor|QColor
@@ -279,22 +255,19 @@ $method=|void|setShadesBorderColor|QColor
 %% Q_PROPERTY(Qt::Orientation orientation READ orientation)
 %%
 
-$prototype=Qt::Orientation orientation() const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 %%
 %% Q_PROPERTY(Qt::Alignment alignment READ alignment)
 %%
 
-$prototype=Qt::Alignment alignment() const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 %%
 %% Q_PROPERTY(bool reverse READ isReverse WRITE setReverse NOTIFY reverseChanged)
 %%
 
-$prototype=bool isReverse() const
-$method=|bool|isReverse|
+$prototypeV2=bool isReverse() const
 
 $prototype=void setReverse(bool reverse = true)
 $method=|void|setReverse|bool=true
@@ -303,14 +276,11 @@ $method=|void|setReverse|bool=true
 %%
 %%
 
-$prototype=virtual AxisType type() const = 0
-$virtualMethod=|QAbstractAxis::AxisType|type|
+$prototypeV2=virtual QAbstractAxis::AxisType type() const = 0
 
-$prototype=void show()
-$method=|void|show|
+$prototypeV2=void show()
 
-$prototype=void hide()
-$method=|void|hide|
+$prototypeV2=void hide()
 
 $prototype=void setMin(const QVariant &min)
 $method=|void|setMin|const QVariant &

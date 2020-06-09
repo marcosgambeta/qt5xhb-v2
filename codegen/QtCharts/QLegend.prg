@@ -39,15 +39,13 @@ $deleteMethod
 %% Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment)
 %%
 
-$prototype=Qt::Alignment alignment() const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 %%
 %% Q_PROPERTY(bool backgroundVisible READ isBackgroundVisible WRITE setBackgroundVisible NOTIFY backgroundVisibleChanged)
 %%
 
-$prototype=bool isBackgroundVisible() const
-$method=|bool|isBackgroundVisible|
+$prototypeV2=bool isBackgroundVisible() const
 
 $prototype=void setBackgroundVisible(bool visible = true)
 $method=|void|setBackgroundVisible|bool=true
@@ -56,8 +54,7 @@ $method=|void|setBackgroundVisible|bool=true
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor color()
-$method=|QColor|color|
+$prototypeV2=QColor color()
 
 $prototype=void setColor(QColor color)
 $method=|void|setColor|QColor
@@ -66,8 +63,7 @@ $method=|void|setColor|QColor
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
-$prototype=QColor borderColor()
-$method=|QColor|borderColor|
+$prototypeV2=QColor borderColor()
 
 $prototype=void setBorderColor(QColor color)
 $method=|void|setBorderColor|QColor
@@ -76,8 +72,7 @@ $method=|void|setBorderColor|QColor
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
@@ -86,8 +81,7 @@ $method=|void|setFont|const QFont &
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
-$prototype=QColor labelColor() const
-$method=|QColor|labelColor|
+$prototypeV2=QColor labelColor() const
 
 $prototype=void setLabelColor(QColor color)
 $method=|void|setLabelColor|QColor
@@ -96,8 +90,7 @@ $method=|void|setLabelColor|QColor
 %% Q_PROPERTY(bool reverseMarkers READ reverseMarkers WRITE setReverseMarkers NOTIFY reverseMarkersChanged)
 %%
 
-$prototype=bool reverseMarkers()
-$method=|bool|reverseMarkers|
+$prototypeV2=bool reverseMarkers()
 
 $prototype=void setReverseMarkers(bool reverseMarkers = true)
 $method=|void|setReverseMarkers|bool=true
@@ -106,8 +99,7 @@ $method=|void|setReverseMarkers|bool=true
 %% Q_PROPERTY(bool showToolTips READ showToolTips WRITE setShowToolTips NOTIFY showToolTipsChanged)
 %%
 
-$prototype=bool showToolTips() const
-$method=|bool|showToolTips|
+$prototypeV2=bool showToolTips() const
 
 $prototype=void setShowToolTips(bool show)
 $method=|void|setShowToolTips|bool
@@ -132,32 +124,26 @@ $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullpt
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setLabelBrush(const QBrush &brush)
 $method=|void|setLabelBrush|const QBrush &
 
-$prototype=QBrush labelBrush() const
-$method=|QBrush|labelBrush|
+$prototypeV2=QBrush labelBrush() const
 
 $prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-$prototype=void detachFromChart()
-$method=|void|detachFromChart|
+$prototypeV2=void detachFromChart()
 
-$prototype=void attachToChart()
-$method=|void|attachToChart|
+$prototypeV2=void attachToChart()
 
-$prototype=bool isAttachedToChart()
-$method=|bool|isAttachedToChart|
+$prototypeV2=bool isAttachedToChart()
 
 $prototype=QList <QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
 $method=|QList<QLegendMarker *>|markers|QAbstractSeries *=nullptr

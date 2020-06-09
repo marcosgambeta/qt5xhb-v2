@@ -40,15 +40,13 @@ $deleteMethod
 %% Q_PROPERTY(int count READ count NOTIFY countChanged REVISION 1)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% Q_PROPERTY(bool boxOutlineVisible READ boxOutlineVisible WRITE setBoxOutlineVisible NOTIFY boxOutlineVisibilityChanged)
 %%
 
-$prototype=bool boxOutlineVisible()
-$method=|bool|boxOutlineVisible|
+$prototypeV2=bool boxOutlineVisible()
 
 $prototype=void setBoxOutlineVisible(bool visible)
 $method=|void|setBoxOutlineVisible|bool
@@ -57,8 +55,7 @@ $method=|void|setBoxOutlineVisible|bool
 %% Q_PROPERTY(qreal boxWidth READ boxWidth WRITE setBoxWidth NOTIFY boxWidthChanged)
 %%
 
-$prototype=qreal boxWidth()
-$method=|qreal|boxWidth|
+$prototypeV2=qreal boxWidth()
 
 $prototype=void setBoxWidth(qreal width)
 $method=|void|setBoxWidth|qreal
@@ -67,8 +64,7 @@ $method=|void|setBoxWidth|qreal
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -77,8 +73,7 @@ $method=|void|setBrush|const QBrush &
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
@@ -127,11 +122,9 @@ $method=|bool|insert|int,QBoxSet *
 $prototype=QList<QBoxSet *> boxSets() const
 $method=|QList<QBoxSet *>|boxSets|
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$prototypeV2=QAbstractSeries::SeriesType type() const
 
 %%
 %% SIGNALS

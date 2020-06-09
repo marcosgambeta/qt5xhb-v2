@@ -42,8 +42,7 @@ $constructor=|new|QObject *=nullptr
 %% Q_PROPERTY(QAbstractBarSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
-$prototype=QAbstractBarSeries *series() const
-$method=|QAbstractBarSeries *|series|
+$prototypeV2=QAbstractBarSeries * series() const
 
 $prototype=void setSeries(QAbstractBarSeries *series)
 $method=|void|setSeries|QAbstractBarSeries *
@@ -52,8 +51,7 @@ $method=|void|setSeries|QAbstractBarSeries *
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
-$prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
 $prototype=void setModel(QAbstractItemModel *model)
 $method=|void|setModel|QAbstractItemModel *
@@ -62,8 +60,7 @@ $method=|void|setModel|QAbstractItemModel *
 %% Q_PROPERTY(int firstBarSetRow READ firstBarSetRow WRITE setFirstBarSetRow NOTIFY firstBarSetRowChanged)
 %%
 
-$prototype=int firstBarSetRow() const
-$method=|int|firstBarSetRow|
+$prototypeV2=int firstBarSetRow() const
 
 $prototype=void setFirstBarSetRow(int firstBarSetRow)
 $method=|void|setFirstBarSetRow|int
@@ -72,8 +69,7 @@ $method=|void|setFirstBarSetRow|int
 %% Q_PROPERTY(int lastBarSetRow READ lastBarSetRow WRITE setLastBarSetRow NOTIFY lastBarSetRowChanged)
 %%
 
-$prototype=int lastBarSetRow() const
-$method=|int|lastBarSetRow|
+$prototypeV2=int lastBarSetRow() const
 
 $prototype=void setLastBarSetRow(int lastBarSetRow)
 $method=|void|setLastBarSetRow|int
@@ -82,8 +78,7 @@ $method=|void|setLastBarSetRow|int
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
 %%
 
-$prototype=int firstColumn() const
-$method=|int|firstColumn|
+$prototypeV2=int firstColumn() const
 
 $prototype=void setFirstColumn(int firstColumn)
 $method=|void|setFirstColumn|int
@@ -92,8 +87,7 @@ $method=|void|setFirstColumn|int
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 %%
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=void setColumnCount(int columnCount)
 $method=|void|setColumnCount|int

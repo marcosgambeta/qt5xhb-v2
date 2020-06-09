@@ -52,22 +52,19 @@ $method=|void|setStartValue|qreal
 %% Q_PROPERTY(QStringList categoriesLabels READ categoriesLabels)
 %%
 
-$prototype=QStringList categoriesLabels()
-$method=|QStringList|categoriesLabels|
+$prototypeV2=QStringList categoriesLabels()
 
 %%
 %% Q_PROPERTY(int count READ count)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% Q_PROPERTY(AxisLabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
 %%
 
-$prototype=QCategoryAxis::AxisLabelsPosition labelsPosition() const
-$method=|QCategoryAxis::AxisLabelsPosition|labelsPosition|
+$prototypeV2=QCategoryAxis::AxisLabelsPosition labelsPosition() const
 
 $prototype=void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
 $method=|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
@@ -76,8 +73,7 @@ $method=|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
 %%
 %%
 
-$prototype=AxisType type() const
-$method=|QAbstractAxis::AxisType|type|
+$prototypeV2=QAbstractAxis::AxisType type() const
 
 $prototype=void append(const QString &label, qreal categoryEndValue)
 $method=|void|append|const QString &,qreal

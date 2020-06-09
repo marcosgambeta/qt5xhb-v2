@@ -36,13 +36,10 @@ $prototype=QBarLegendMarker(QBarLegendMarkerPrivate &d, QObject *parent = nullpt
 $prototype=virtual ~QBarLegendMarker()
 $deleteMethod=
 
-$prototype=virtual LegendMarkerType type()
-$virtualMethod=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QAbstractBarSeries* series()
-$virtualMethod=|QAbstractBarSeries *|series|
+$prototypeV2=virtual QAbstractBarSeries * series()
 
-$prototype=QBarSet* barset()
-$method=|QBarSet *|barset|
+$prototypeV2=QBarSet * barset()
 
 #pragma ENDDUMP

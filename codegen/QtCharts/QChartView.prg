@@ -62,11 +62,9 @@ $prototype=void setRubberBand(const RubberBands &rubberBands)
 %% TODO: const QChartView::RubberBands &
 %% $method=|void|setRubberBand|const QChartView::RubberBands &
 
-$prototype=RubberBands rubberBand() const
-$method=|QChartView::RubberBands|rubberBand|
+$prototypeV2=QChartView::RubberBands rubberBand() const
 
-$prototype=QChart *chart() const
-$method=|QChart *|chart|
+$prototypeV2=QChart * chart() const
 
 $prototype=void setChart(QChart *chart)
 $method=|void|setChart|QChart *

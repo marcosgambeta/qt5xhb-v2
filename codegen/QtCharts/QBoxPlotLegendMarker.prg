@@ -36,10 +36,8 @@ $prototype=QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent 
 $prototype=virtual ~QBoxPlotLegendMarker()
 $deleteMethod
 
-$prototype=virtual LegendMarkerType type()
-$method=|QLegendMarker::LegendMarkerType|type|
+$prototypeV2=virtual QLegendMarker::LegendMarkerType type()
 
-$prototype=virtual QBoxPlotSeries* series()
-$method=|QBoxPlotSeries *|series|
+$prototypeV2=virtual QBoxPlotSeries * series()
 
 #pragma ENDDUMP

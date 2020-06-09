@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
 %%
 
-$prototype=QString label() const
-$method=|QString|label|
+$prototypeV2=QString label() const
 
 $prototype=void setLabel(const QString label)
 $method=|void|setLabel|const QString &
@@ -50,8 +49,7 @@ $method=|void|setLabel|const QString &
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
@@ -60,8 +58,7 @@ $method=|void|setPen|const QPen &
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -70,8 +67,7 @@ $method=|void|setBrush|const QBrush &
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
 %%
 
-$prototype=QBrush labelBrush() const
-$method=|QBrush|labelBrush|
+$prototypeV2=QBrush labelBrush() const
 
 $prototype=void setLabelBrush(const QBrush &brush)
 $method=|void|setLabelBrush|const QBrush &
@@ -80,8 +76,7 @@ $method=|void|setLabelBrush|const QBrush &
 %% Q_PROPERTY(QFont labelFont READ labelFont WRITE setLabelFont NOTIFY labelFontChanged)
 %%
 
-$prototype=QFont labelFont() const
-$method=|QFont|labelFont|
+$prototypeV2=QFont labelFont() const
 
 $prototype=void setLabelFont(const QFont &font)
 $method=|void|setLabelFont|const QFont &
@@ -90,8 +85,7 @@ $method=|void|setLabelFont|const QFont &
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor color()
-$method=|QColor|color|
+$prototypeV2=QColor color()
 
 $prototype=void setColor(QColor color)
 $method=|void|setColor|QColor
@@ -100,8 +94,7 @@ $method=|void|setColor|QColor
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
-$prototype=QColor borderColor()
-$method=|QColor|borderColor|
+$prototypeV2=QColor borderColor()
 
 $prototype=void setBorderColor(QColor color)
 $method=|void|setBorderColor|QColor
@@ -110,8 +103,7 @@ $method=|void|setBorderColor|QColor
 %% Q_PROPERTY(QColor labelColor READ labelColor WRITE setLabelColor NOTIFY labelColorChanged)
 %%
 
-$prototype=QColor labelColor()
-$method=|QColor|labelColor|
+$prototypeV2=QColor labelColor()
 
 $prototype=void setLabelColor(QColor color)
 $method=|void|setLabelColor|QColor
@@ -160,11 +152,9 @@ $method=|void|replace|const int,const qreal
 $prototype=qreal at(const int index) const
 $method=|qreal|at|const int
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=qreal sum() const
-$method=|qreal|sum|
+$prototypeV2=qreal sum() const
 
 %%
 %% SIGNALS

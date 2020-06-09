@@ -46,15 +46,13 @@ $deleteMethod
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% Q_PROPERTY(qreal maximumColumnWidth READ maximumColumnWidth WRITE setMaximumColumnWidth NOTIFY maximumColumnWidthChanged)
 %%
 
-$prototype=qreal maximumColumnWidth() const
-$method=|qreal|maximumColumnWidth|
+$prototypeV2=qreal maximumColumnWidth() const
 
 $prototype=void setMaximumColumnWidth(qreal maximumColumnWidth)
 $method=|void|setMaximumColumnWidth|qreal
@@ -63,8 +61,7 @@ $method=|void|setMaximumColumnWidth|qreal
 %% Q_PROPERTY(qreal minimumColumnWidth READ minimumColumnWidth WRITE setMinimumColumnWidth NOTIFY minimumColumnWidthChanged)
 %%
 
-$prototype=qreal minimumColumnWidth() const
-$method=|qreal|minimumColumnWidth|
+$prototypeV2=qreal minimumColumnWidth() const
 
 $prototype=void setMinimumColumnWidth(qreal minimumColumnWidth)
 $method=|void|setMinimumColumnWidth|qreal
@@ -73,8 +70,7 @@ $method=|void|setMinimumColumnWidth|qreal
 %% Q_PROPERTY(qreal bodyWidth READ bodyWidth WRITE setBodyWidth NOTIFY bodyWidthChanged)
 %%
 
-$prototype=qreal bodyWidth() const
-$method=|qreal|bodyWidth|
+$prototypeV2=qreal bodyWidth() const
 
 $prototype=void setBodyWidth(qreal bodyWidth)
 $method=|void|setBodyWidth|qreal
@@ -83,8 +79,7 @@ $method=|void|setBodyWidth|qreal
 %% Q_PROPERTY(bool bodyOutlineVisible READ bodyOutlineVisible WRITE setBodyOutlineVisible NOTIFY bodyOutlineVisibilityChanged)
 %%
 
-$prototype=bool bodyOutlineVisible() const
-$method=|bool|bodyOutlineVisible|
+$prototypeV2=bool bodyOutlineVisible() const
 
 $prototype=void setBodyOutlineVisible(bool bodyOutlineVisible)
 $method=|void|setBodyOutlineVisible|bool
@@ -93,8 +88,7 @@ $method=|void|setBodyOutlineVisible|bool
 %% Q_PROPERTY(qreal capsWidth READ capsWidth WRITE setCapsWidth NOTIFY capsWidthChanged)
 %%
 
-$prototype=qreal capsWidth() const
-$method=|qreal|capsWidth|
+$prototypeV2=qreal capsWidth() const
 
 $prototype=void setCapsWidth(qreal capsWidth)
 $method=|void|setCapsWidth|qreal
@@ -103,8 +97,7 @@ $method=|void|setCapsWidth|qreal
 %% Q_PROPERTY(bool capsVisible READ capsVisible WRITE setCapsVisible NOTIFY capsVisibilityChanged)
 %%
 
-$prototype=bool capsVisible() const
-$method=|bool|capsVisible|
+$prototypeV2=bool capsVisible() const
 
 $prototype=void setCapsVisible(bool capsVisible)
 $method=|void|setCapsVisible|bool
@@ -113,8 +106,7 @@ $method=|void|setCapsVisible|bool
 %% Q_PROPERTY(QColor increasingColor READ increasingColor WRITE setIncreasingColor NOTIFY increasingColorChanged)
 %%
 
-$prototype=QColor increasingColor() const
-$method=|QColor|increasingColor|
+$prototypeV2=QColor increasingColor() const
 
 $prototype=void setIncreasingColor(const QColor &increasingColor)
 $method=|void|setIncreasingColor|const QColor &
@@ -123,8 +115,7 @@ $method=|void|setIncreasingColor|const QColor &
 %% Q_PROPERTY(QColor decreasingColor READ decreasingColor WRITE setDecreasingColor NOTIFY decreasingColorChanged)
 %%
 
-$prototype=QColor decreasingColor() const
-$method=|QColor|decreasingColor|
+$prototypeV2=QColor decreasingColor() const
 
 $prototype=void setDecreasingColor(const QColor &decreasingColor)
 $method=|void|setDecreasingColor|const QColor &
@@ -133,8 +124,7 @@ $method=|void|setDecreasingColor|const QColor &
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -143,8 +133,7 @@ $method=|void|setBrush|const QBrush &
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
@@ -215,14 +204,12 @@ $method=|bool|insert|int,QCandlestickSet *
 $prototype=bool take(QCandlestickSet *set)
 $method=|bool|take|QCandlestickSet *
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QList<QCandlestickSet *> sets() const
 $method=|QList<QCandlestickSet *>|sets|
 
-$prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$prototypeV2=QAbstractSeries::SeriesType type() const
 
 %%
 %% SIGNALS

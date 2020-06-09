@@ -46,8 +46,7 @@ $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
-$prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
 $prototype=void setModel(QAbstractItemModel *model)
 $method=|void|setModel|QAbstractItemModel *
@@ -56,8 +55,7 @@ $method=|void|setModel|QAbstractItemModel *
 %% Q_PROPERTY(QCandlestickSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
-$prototype=QCandlestickSeries *series() const
-$method=|QCandlestickSeries *|series|
+$prototypeV2=QCandlestickSeries * series() const
 
 $prototype=void setSeries(QCandlestickSeries *series)
 $method=|void|setSeries|QCandlestickSeries *
@@ -66,8 +64,7 @@ $method=|void|setSeries|QCandlestickSeries *
 %%
 %%
 
-$prototype=virtual Qt::Orientation orientation() const = 0
-$virtualMethod=|Qt::Orientation|orientation|
+$prototypeV2=virtual Qt::Orientation orientation() const = 0
 
 $prototype=void setTimestamp(int timestamp) [protected]
 

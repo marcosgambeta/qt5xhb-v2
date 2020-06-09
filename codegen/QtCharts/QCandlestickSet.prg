@@ -66,8 +66,7 @@ $deleteMethod
 %% Q_PROPERTY(qreal timestamp READ timestamp WRITE setTimestamp NOTIFY timestampChanged)
 %%
 
-$prototype=qreal timestamp() const
-$method=|qreal|timestamp|
+$prototypeV2=qreal timestamp() const
 
 $prototype=void setTimestamp(qreal timestamp)
 $method=|void|setTimestamp|qreal
@@ -76,8 +75,7 @@ $method=|void|setTimestamp|qreal
 %% Q_PROPERTY(qreal open READ open WRITE setOpen NOTIFY openChanged)
 %%
 
-$prototype=qreal open() const
-$method=|qreal|open|
+$prototypeV2=qreal open() const
 
 $prototype=void setOpen(qreal open)
 $method=|void|setOpen|qreal
@@ -86,8 +84,7 @@ $method=|void|setOpen|qreal
 %% Q_PROPERTY(qreal high READ high WRITE setHigh NOTIFY highChanged)
 %%
 
-$prototype=qreal high() const
-$method=|qreal|high|
+$prototypeV2=qreal high() const
 
 $prototype=void setHigh(qreal high)
 $method=|void|setHigh|qreal
@@ -96,8 +93,7 @@ $method=|void|setHigh|qreal
 %% Q_PROPERTY(qreal low READ low WRITE setLow NOTIFY lowChanged)
 %%
 
-$prototype=qreal low() const
-$method=|qreal|low|
+$prototypeV2=qreal low() const
 
 $prototype=void setLow(qreal low)
 $method=|void|setLow|qreal
@@ -106,8 +102,7 @@ $method=|void|setLow|qreal
 %% Q_PROPERTY(qreal close READ close WRITE setClose NOTIFY closeChanged)
 %%
 
-$prototype=qreal close() const
-$method=|qreal|close|
+$prototypeV2=qreal close() const
 
 $prototype=void setClose(qreal close)
 $method=|void|setClose|qreal
@@ -116,8 +111,7 @@ $method=|void|setClose|qreal
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -126,8 +120,7 @@ $method=|void|setBrush|const QBrush &
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &

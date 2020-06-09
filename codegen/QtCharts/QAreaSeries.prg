@@ -66,22 +66,19 @@ $deleteMethod
 %% Q_PROPERTY(QLineSeries *upperSeries READ upperSeries)
 %%
 
-$prototype=QLineSeries *upperSeries() const
-$method=|QLineSeries *|upperSeries|
+$prototypeV2=QLineSeries * upperSeries() const
 
 %%
 %% Q_PROPERTY(QLineSeries *lowerSeries READ lowerSeries)
 %%
 
-$prototype=QLineSeries *lowerSeries() const
-$method=|QLineSeries *|lowerSeries|
+$prototypeV2=QLineSeries * lowerSeries() const
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor color() const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
 $prototype=void setColor(const QColor &color)
 $method=|void|setColor|const QColor &
@@ -90,8 +87,7 @@ $method=|void|setColor|const QColor &
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
 %%
 
-$prototype=QColor borderColor() const
-$method=|QColor|borderColor|
+$prototypeV2=QColor borderColor() const
 
 $prototype=void setBorderColor(const QColor &color)
 $method=|void|setBorderColor|const QColor &
@@ -100,8 +96,7 @@ $method=|void|setBorderColor|const QColor &
 %% Q_PROPERTY(QString pointLabelsFormat READ pointLabelsFormat WRITE setPointLabelsFormat NOTIFY pointLabelsFormatChanged)
 %%
 
-$prototype=QString pointLabelsFormat() const
-$method=|QString|pointLabelsFormat|
+$prototypeV2=QString pointLabelsFormat() const
 
 $prototype=void setPointLabelsFormat(const QString &format)
 $method=|void|setPointLabelsFormat|const QString &
@@ -110,8 +105,7 @@ $method=|void|setPointLabelsFormat|const QString &
 %% Q_PROPERTY(bool pointLabelsVisible READ pointLabelsVisible WRITE setPointLabelsVisible NOTIFY pointLabelsVisibilityChanged)
 %%
 
-$prototype=bool pointLabelsVisible() const
-$method=|bool|pointLabelsVisible|
+$prototypeV2=bool pointLabelsVisible() const
 
 $prototype=void setPointLabelsVisible(bool visible = true)
 $method=|void|setPointLabelsVisible|bool=true
@@ -120,8 +114,7 @@ $method=|void|setPointLabelsVisible|bool=true
 %% Q_PROPERTY(QFont pointLabelsFont READ pointLabelsFont WRITE setPointLabelsFont NOTIFY pointLabelsFontChanged)
 %%
 
-$prototype=QFont pointLabelsFont() const
-$method=|QFont|pointLabelsFont|
+$prototypeV2=QFont pointLabelsFont() const
 
 $prototype=void setPointLabelsFont(const QFont &font)
 $method=|void|setPointLabelsFont|const QFont &
@@ -130,8 +123,7 @@ $method=|void|setPointLabelsFont|const QFont &
 %% Q_PROPERTY(QColor pointLabelsColor READ pointLabelsColor WRITE setPointLabelsColor NOTIFY pointLabelsColorChanged)
 %%
 
-$prototype=QColor pointLabelsColor() const
-$method=|QColor|pointLabelsColor|
+$prototypeV2=QColor pointLabelsColor() const
 
 $prototype=void setPointLabelsColor(const QColor &color)
 $method=|void|setPointLabelsColor|const QColor &
@@ -140,8 +132,7 @@ $method=|void|setPointLabelsColor|const QColor &
 %% Q_PROPERTY(bool pointLabelsClipping READ pointLabelsClipping WRITE setPointLabelsClipping NOTIFY pointLabelsClippingChanged)
 %%
 
-$prototype=bool pointLabelsClipping() const
-$method=|bool|pointLabelsClipping|
+$prototypeV2=bool pointLabelsClipping() const
 
 $prototype=void setPointLabelsClipping(bool enabled = true)
 $method=|void|setPointLabelsClipping|bool=true
@@ -150,8 +141,7 @@ $method=|void|setPointLabelsClipping|bool=true
 %%
 %%
 
-$prototype=QAbstractSeries::SeriesType type() const
-$method=|QAbstractSeries::SeriesType|type|
+$prototypeV2=QAbstractSeries::SeriesType type() const
 
 $prototype=void setUpperSeries(QLineSeries *series)
 $method=|void|setUpperSeries|QLineSeries *
@@ -162,20 +152,17 @@ $method=|void|setLowerSeries|QLineSeries *
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setPointsVisible(bool visible = true)
 $method=|void|setPointsVisible|bool=true
 
-$prototype=bool pointsVisible() const
-$method=|bool|pointsVisible|
+$prototypeV2=bool pointsVisible() const
 
 %%
 %% SIGNALS

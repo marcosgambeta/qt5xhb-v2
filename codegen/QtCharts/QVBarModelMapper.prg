@@ -42,8 +42,7 @@ $constructor=|new|QObject *=nullptr
 %% Q_PROPERTY(QAbstractBarSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
 %%
 
-$prototype=QAbstractBarSeries *series() const
-$method=|QAbstractBarSeries *|series|
+$prototypeV2=QAbstractBarSeries * series() const
 
 $prototype=void setSeries(QAbstractBarSeries *series)
 $method=|void|setSeries|QAbstractBarSeries *
@@ -52,8 +51,7 @@ $method=|void|setSeries|QAbstractBarSeries *
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
 %%
 
-$prototype=QAbstractItemModel *model() const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
 $prototype=void setModel(QAbstractItemModel *model)
 $method=|void|setModel|QAbstractItemModel *
@@ -62,8 +60,7 @@ $method=|void|setModel|QAbstractItemModel *
 %% Q_PROPERTY(int firstBarSetColumn READ firstBarSetColumn WRITE setFirstBarSetColumn NOTIFY firstBarSetColumnChanged)
 %%
 
-$prototype=int firstBarSetColumn() const
-$method=|int|firstBarSetColumn|
+$prototypeV2=int firstBarSetColumn() const
 
 $prototype=void setFirstBarSetColumn(int firstBarSetColumn)
 $method=|void|setFirstBarSetColumn|int
@@ -72,8 +69,7 @@ $method=|void|setFirstBarSetColumn|int
 %% Q_PROPERTY(int lastBarSetColumn READ lastBarSetColumn WRITE setLastBarSetColumn NOTIFY lastBarSetColumnChanged)
 %%
 
-$prototype=int lastBarSetColumn() const
-$method=|int|lastBarSetColumn|
+$prototypeV2=int lastBarSetColumn() const
 
 $prototype=void setLastBarSetColumn(int lastBarSetColumn)
 $method=|void|setLastBarSetColumn|int
@@ -82,8 +78,7 @@ $method=|void|setLastBarSetColumn|int
 %% Q_PROPERTY(int firstRow READ firstRow WRITE setFirstRow NOTIFY firstRowChanged)
 %%
 
-$prototype=int firstRow() const
-$method=|int|firstRow|
+$prototypeV2=int firstRow() const
 
 $prototype=void setFirstRow(int firstRow)
 $method=|void|setFirstRow|int
@@ -92,8 +87,7 @@ $method=|void|setFirstRow|int
 %% Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
 %%
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=void setRowCount(int rowCount)
 $method=|void|setRowCount|int

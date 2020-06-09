@@ -41,8 +41,7 @@ $deleteMethod
 %% Q_PROPERTY(qreal barWidth READ barWidth WRITE setBarWidth)
 %%
 
-$prototype=qreal barWidth() const
-$method=|qreal|barWidth|
+$prototypeV2=qreal barWidth() const
 
 $prototype=void setBarWidth(qreal width)
 $method=|void|setBarWidth|qreal
@@ -51,15 +50,13 @@ $method=|void|setBarWidth|qreal
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% Q_PROPERTY(bool labelsVisible READ isLabelsVisible WRITE setLabelsVisible NOTIFY labelsVisibleChanged)
 %%
 
-$prototype=bool isLabelsVisible() const
-$method=|bool|isLabelsVisible|
+$prototypeV2=bool isLabelsVisible() const
 
 $prototype=void setLabelsVisible(bool visible = true)
 $method=|void|setLabelsVisible|bool=true
@@ -68,8 +65,7 @@ $method=|void|setLabelsVisible|bool=true
 %% Q_PROPERTY(QString labelsFormat READ labelsFormat WRITE setLabelsFormat NOTIFY labelsFormatChanged)
 %%
 
-$prototype=QString labelsFormat() const
-$method=|QString|labelsFormat|
+$prototypeV2=QString labelsFormat() const
 
 $prototype=void setLabelsFormat(const QString &format)
 $method=|void|setLabelsFormat|const QString &
@@ -78,8 +74,7 @@ $method=|void|setLabelsFormat|const QString &
 %% Q_PROPERTY(qreal labelsAngle READ labelsAngle WRITE setLabelsAngle NOTIFY labelsAngleChanged)
 %%
 
-$prototype=qreal labelsAngle() const
-$method=|qreal|labelsAngle|
+$prototypeV2=qreal labelsAngle() const
 
 $prototype=void setLabelsAngle(qreal angle)
 $method=|void|setLabelsAngle|qreal
@@ -88,8 +83,7 @@ $method=|void|setLabelsAngle|qreal
 %% Q_PROPERTY(LabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
 %%
 
-$prototype=QAbstractBarSeries::LabelsPosition labelsPosition() const
-$method=|QAbstractBarSeries::LabelsPosition|labelsPosition|
+$prototypeV2=QAbstractBarSeries::LabelsPosition labelsPosition() const
 
 $prototype=void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
 $method=|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
@@ -138,8 +132,7 @@ $method=|bool|insert|int,QBarSet *
 $prototype=QList<QBarSet *> barSets() const
 $method=|QList<QBarSet *>|barSets|
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 %%
 %% SIGNALS

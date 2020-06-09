@@ -64,8 +64,7 @@ $deleteMethod
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
 %%
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen(const QPen &pen)
 $method=|void|setPen|const QPen &
@@ -74,8 +73,7 @@ $method=|void|setPen|const QPen &
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
 %%
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush(const QBrush &brush)
 $method=|void|setBrush|const QBrush &
@@ -112,14 +110,12 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
 }
 $addMethod=append
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void setLabel(const QString label)
 $method=|void|setLabel|const QString &
 
-$prototype=QString label() const
-$method=|QString|label|
+$prototypeV2=QString label() const
 
 $prototype=void setValue(const int index, const qreal value)
 $method=|void|setValue|const int,const qreal
@@ -127,8 +123,7 @@ $method=|void|setValue|const int,const qreal
 $prototype=qreal at(const int index) const
 $method=|qreal|at|const int
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %% SIGNALS
