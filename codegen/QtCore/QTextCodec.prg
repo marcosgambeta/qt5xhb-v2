@@ -109,14 +109,12 @@ $method=|QTextDecoder *|makeDecoder|QTextCodec::ConversionFlags=QTextCodec::Defa
 $prototype=QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
 $method=|QTextEncoder *|makeEncoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
 
-$prototype=virtual QByteArray name() const = 0
-$virtualMethod=|QByteArray|name|
+$prototypeV2=virtual QByteArray name() const = 0
 
 $prototype=virtual QList<QByteArray> aliases() const
 $virtualMethod=|QList<QByteArray>|aliases|
 
-$prototype=virtual int mibEnum() const = 0
-$virtualMethod=|int|mibEnum|
+$prototypeV2=virtual int mibEnum() const = 0
 
 $prototype=static QTextCodec* codecForName(const QByteArray &name)
 $internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray &
@@ -155,8 +153,7 @@ $staticMethod=|QList<QByteArray>|availableCodecs|
 $prototype=static QList<int> availableMibs()
 $staticMethod=|QList<int>|availableMibs|
 
-$prototype=static QTextCodec* codecForLocale()
-$staticMethod=|QTextCodec *|codecForLocale|
+$prototypeV2=static QTextCodec * codecForLocale()
 
 $prototype=static void setCodecForLocale(QTextCodec *c)
 $staticMethod=|void|setCodecForLocale|QTextCodec *

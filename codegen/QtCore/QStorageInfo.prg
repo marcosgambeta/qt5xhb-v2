@@ -77,50 +77,36 @@ $method=|void|swap|QStorageInfo &
 $prototype=void setPath(const QString &path)
 $method=|void|setPath|const QString &
 
-$prototype=QString rootPath() const
-$method=|QString|rootPath|
+$prototypeV2=QString rootPath() const
 
-$prototype=QByteArray device() const
-$method=|QByteArray|device|
+$prototypeV2=QByteArray device() const
 
-$prototype=QByteArray fileSystemType() const
-$method=|QByteArray|fileSystemType|
+$prototypeV2=QByteArray fileSystemType() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString displayName() const
-$method=|QString|displayName|
+$prototypeV2=QString displayName() const
 
-$prototype=qint64 bytesTotal() const
-$method=|qint64|bytesTotal|
+$prototypeV2=qint64 bytesTotal() const
 
-$prototype=qint64 bytesFree() const
-$method=|qint64|bytesFree|
+$prototypeV2=qint64 bytesFree() const
 
-$prototype=qint64 bytesAvailable() const
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const
 
-$prototype=bool isRoot() const
-$method=|bool|isRoot|
+$prototypeV2=bool isRoot() const
 
-$prototype=bool isReadOnly() const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isReady() const
-$method=|bool|isReady|
+$prototypeV2=bool isReady() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=void refresh()
-$method=|void|refresh|
+$prototypeV2=void refresh()
 
 $prototype=static QList<QStorageInfo> mountedVolumes()
 $staticMethod=|QList<QStorageInfo>|mountedVolumes|
 
-$prototype=static QStorageInfo root()
-$staticMethod=|QStorageInfo|root|
+$prototypeV2=static QStorageInfo root()
 
 $extraMethods
 

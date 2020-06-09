@@ -37,23 +37,19 @@ $method=|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOpti
 $prototype=bool addOption(const QCommandLineOption &commandLineOption)
 $method=|bool|addOption|const QCommandLineOption &
 
-$prototype=QCommandLineOption addVersionOption()
-$method=|QCommandLineOption|addVersionOption|
+$prototypeV2=QCommandLineOption addVersionOption()
 
-$prototype=QCommandLineOption addHelpOption()
-$method=|QCommandLineOption|addHelpOption|
+$prototypeV2=QCommandLineOption addHelpOption()
 
 $prototype=void setApplicationDescription(const QString &description)
 $method=|void|setApplicationDescription|const QString &
 
-$prototype=QString applicationDescription() const
-$method=|QString|applicationDescription|
+$prototypeV2=QString applicationDescription() const
 
 $prototype=void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
 $method=|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
 
-$prototype=void clearPositionalArguments()
-$method=|void|clearPositionalArguments|
+$prototypeV2=void clearPositionalArguments()
 
 $prototype=void process(const QStringList &arguments)
 $internalMethod=|void|process,process1|const QStringList &
@@ -86,8 +82,7 @@ $addMethod=process
 $prototype=bool parse(const QStringList &arguments)
 $method=|bool|parse|const QStringList &
 
-$prototype=QString errorText() const
-$method=|QString|errorText|
+$prototypeV2=QString errorText() const
 
 $prototype=bool isSet(const QString &name) const
 $internalMethod=|bool|isSet,isSet1|const QString &
@@ -173,20 +168,16 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 }
 $addMethod=values
 
-$prototype=QStringList positionalArguments() const
-$method=|QStringList|positionalArguments|
+$prototypeV2=QStringList positionalArguments() const
 
-$prototype=QStringList optionNames() const
-$method=|QStringList|optionNames|
+$prototypeV2=QStringList optionNames() const
 
-$prototype=QStringList unknownOptionNames() const
-$method=|QStringList|unknownOptionNames|
+$prototypeV2=QStringList unknownOptionNames() const
 
 $prototype=Q_NORETURN void showHelp(int exitCode = 0)
 $method=|void|showHelp|int=0
 
-$prototype=QString helpText() const
-$method=|QString|helpText|
+$prototypeV2=QString helpText() const
 
 $extraMethods
 

@@ -30,16 +30,12 @@ $constructor=|new|QEvent::Type,QObject *
 
 $deleteMethod
 
-$prototype=bool added() const
-$method=|bool|added|
+$prototypeV2=bool added() const
 
-$prototype=QObject * child() const
-$method=|QObject *|child|
+$prototypeV2=QObject * child() const
 
-$prototype=bool polished() const
-$method=|bool|polished|
+$prototypeV2=bool polished() const
 
-$prototype=bool removed() const
-$method=|bool|removed|
+$prototypeV2=bool removed() const
 
 #pragma ENDDUMP

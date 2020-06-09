@@ -60,13 +60,11 @@ HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 }
 $addMethod=select
 
-$prototype=QStringList extraSelectors() const
-$method=|QStringList|extraSelectors|
+$prototypeV2=QStringList extraSelectors() const
 
 $prototype=void setExtraSelectors(const QStringList &list)
 $method=|void|setExtraSelectors|const QStringList &
 
-$prototype=QStringList allSelectors() const
-$method=|QStringList|allSelectors|
+$prototypeV2=QStringList allSelectors() const
 
 #pragma ENDDUMP

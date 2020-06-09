@@ -64,11 +64,9 @@ $method=|bool|addPath|const QString &
 $prototype=QStringList addPaths(const QStringList & paths)
 $method=|QStringList|addPaths|const QStringList &
 
-$prototype=QStringList directories() const
-$method=|QStringList|directories|
+$prototypeV2=QStringList directories() const
 
-$prototype=QStringList files() const
-$method=|QStringList|files|
+$prototypeV2=QStringList files() const
 
 $prototype=bool removePath(const QString & path)
 $method=|bool|removePath|const QString &

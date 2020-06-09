@@ -30,8 +30,7 @@ $constructor=|new|QCryptographicHash::Algorithm,const QByteArray &=QByteArray()
 
 $deleteMethod
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setKey(const QByteArray &key)
 $method=|void|setKey|const QByteArray &
@@ -72,8 +71,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 }
 $addMethod=addData
 
-$prototype=QByteArray result() const
-$method=|QByteArray|result|
+$prototypeV2=QByteArray result() const
 
 $prototype=static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptographicHash::Algorithm method)
 $staticMethod=|QByteArray|hash|const QByteArray &,const QByteArray &,QCryptographicHash::Algorithm

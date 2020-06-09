@@ -62,20 +62,15 @@ HB_FUNC_STATIC( QSIZEF_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=qreal height() const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=void setWidth(qreal w)
 $method=|void|setWidth|qreal
@@ -83,11 +78,9 @@ $method=|void|setWidth|qreal
 $prototype=void setHeight(qreal h)
 $method=|void|setHeight|qreal
 
-$prototype=void transpose()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
-$prototype=QSizeF transposed() const
-$method=|QSizeF|transposed|
+$prototypeV2=QSizeF transposed() const
 
 $prototype=void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
 $internalMethod=|void|scale,scale1|qreal,qreal,Qt::AspectRatioMode
@@ -151,8 +144,7 @@ $method=|QSizeF|expandedTo|const QSizeF &
 $prototype=QSizeF boundedTo(const QSizeF &) const
 $method=|QSizeF|boundedTo|const QSizeF &
 
-$prototype=QSize toSize() const
-$method=|QSize|toSize|
+$prototypeV2=QSize toSize() const
 
 $extraMethods
 

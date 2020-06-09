@@ -70,23 +70,17 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 
 $deleteMethod
 
-$prototype=int top() const
-$method=|int|top|
+$prototypeV2=int top() const
 
-$prototype=int left() const
-$method=|int|left|
+$prototypeV2=int left() const
 
-$prototype=int bottom() const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
-$prototype=int right() const
-$method=|int|right|
+$prototypeV2=int right() const
 
-$prototype=int width() const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int height() const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=const QPersistentModelIndex &topLeft() const
 $method=|const QPersistentModelIndex &|topLeft|
@@ -94,8 +88,7 @@ $method=|const QPersistentModelIndex &|topLeft|
 $prototype=const QPersistentModelIndex &bottomRight() const
 $method=|const QPersistentModelIndex &|bottomRight|
 
-$prototype=QModelIndex parent() const
-$method=|QModelIndex|parent|
+$prototypeV2=QModelIndex parent() const
 
 $prototype=const QAbstractItemModel *model() const
 $method=|const QAbstractItemModel *|model|
@@ -134,14 +127,11 @@ $method=|bool|intersects|const QItemSelectionRange &
 $prototype=QItemSelectionRange intersected(const QItemSelectionRange &other) const
 $method=|QItemSelectionRange|intersected|const QItemSelectionRange &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=QModelIndexList indexes() const
-$method=|QModelIndexList|indexes|
+$prototypeV2=QModelIndexList indexes() const
 
 $extraMethods
 

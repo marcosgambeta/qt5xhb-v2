@@ -54,20 +54,15 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=int left() const
-$method=|int|left|
+$prototypeV2=int left() const
 
-$prototype=int top() const
-$method=|int|top|
+$prototypeV2=int top() const
 
-$prototype=int right() const
-$method=|int|right|
+$prototypeV2=int right() const
 
-$prototype=int bottom() const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
 $prototype=void setLeft(int left)
 $method=|void|setLeft|int

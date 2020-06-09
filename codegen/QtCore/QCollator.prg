@@ -61,11 +61,9 @@ $method=|void|swap|QCollator &
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
-$prototype=Qt::CaseSensitivity caseSensitivity() const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototype=void setCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
@@ -73,14 +71,12 @@ $method=|void|setCaseSensitivity|Qt::CaseSensitivity
 $prototype=void setNumericMode(bool on)
 $method=|void|setNumericMode|bool
 
-$prototype=bool numericMode() const
-$method=|bool|numericMode|
+$prototypeV2=bool numericMode() const
 
 $prototype=void setIgnorePunctuation(bool on)
 $method=|void|setIgnorePunctuation|bool
 
-$prototype=bool ignorePunctuation() const
-$method=|bool|ignorePunctuation|
+$prototypeV2=bool ignorePunctuation() const
 
 $prototype=QCollatorSortKey sortKey(const QString &string) const
 $method=|QCollatorSortKey|sortKey|const QString &

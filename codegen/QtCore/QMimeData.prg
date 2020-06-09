@@ -33,41 +33,31 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QVariant colorData () const
-$method=|QVariant|colorData|
+$prototypeV2=QVariant colorData() const
 
 $prototype=QByteArray data ( const QString & mimeType ) const
 $method=|QByteArray|data|const QString &
 
-$prototype=virtual QStringList formats () const
-$virtualMethod=|QStringList|formats|
+$prototypeV2=virtual QStringList formats() const
 
-$prototype=bool hasColor () const
-$method=|bool|hasColor|
+$prototypeV2=bool hasColor() const
 
 $prototype=virtual bool hasFormat ( const QString & mimeType ) const
 $virtualMethod=|bool|hasFormat|const QString &
 
-$prototype=bool hasHtml () const
-$method=|bool|hasHtml|
+$prototypeV2=bool hasHtml() const
 
-$prototype=bool hasImage () const
-$method=|bool|hasImage|
+$prototypeV2=bool hasImage() const
 
-$prototype=bool hasText () const
-$method=|bool|hasText|
+$prototypeV2=bool hasText() const
 
-$prototype=bool hasUrls () const
-$method=|bool|hasUrls|
+$prototypeV2=bool hasUrls() const
 
-$prototype=QString html () const
-$method=|QString|html|
+$prototypeV2=QString html() const
 
-$prototype=QVariant imageData () const
-$method=|QVariant|imageData|
+$prototypeV2=QVariant imageData() const
 
 $prototype=void removeFormat ( const QString & mimeType )
 $method=|void|removeFormat|const QString &
@@ -90,8 +80,7 @@ $method=|void|setText|const QString &
 $prototype=void setUrls ( const QList<QUrl> & urls )
 $method=|void|setUrls|const QList<QUrl> &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=QList<QUrl> urls () const
 $method=|QList<QUrl>|urls|

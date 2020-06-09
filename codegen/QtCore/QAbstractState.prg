@@ -32,11 +32,9 @@ $includes
 
 $deleteMethod
 
-$prototype=QStateMachine * machine () const
-$method=|QStateMachine *|machine|
+$prototypeV2=QStateMachine * machine() const
 
-$prototype=QState * parentState () const
-$method=|QState *|parentState|
+$prototypeV2=QState * parentState() const
 
 %%
 %% SIGNALS

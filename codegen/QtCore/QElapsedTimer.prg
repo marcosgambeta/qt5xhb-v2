@@ -30,41 +30,32 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qint64 elapsed() const
-$method=|qint64|elapsed|
+$prototypeV2=qint64 elapsed() const
 
 $prototype=bool hasExpired(qint64 timeout) const
 $method=|bool|hasExpired|qint64
 
-$prototype=void invalidate()
-$method=|void|invalidate|
+$prototypeV2=void invalidate()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=qint64 msecsSinceReference() const
-$method=|qint64|msecsSinceReference|
+$prototypeV2=qint64 msecsSinceReference() const
 
 $prototype=qint64 msecsTo(const QElapsedTimer & other) const
 $method=|qint64|msecsTo|const QElapsedTimer &
 
-$prototype=qint64 nsecsElapsed() const
-$method=|qint64|nsecsElapsed|
+$prototypeV2=qint64 nsecsElapsed() const
 
-$prototype=qint64 restart()
-$method=|qint64|restart|
+$prototypeV2=qint64 restart()
 
 $prototype=qint64 secsTo(const QElapsedTimer & other) const
 $method=|qint64|secsTo|const QElapsedTimer &
 
-$prototype=void start()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=static ClockType clockType()
-$staticMethod=|QElapsedTimer::ClockType|clockType|
+$prototypeV2=static QElapsedTimer::ClockType clockType()
 
-$prototype=static bool isMonotonic()
-$staticMethod=|bool|isMonotonic|
+$prototypeV2=static bool isMonotonic()
 
 $extraMethods
 

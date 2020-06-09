@@ -62,29 +62,23 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 
 $deleteMethod
 
-$prototype=int captureCount() const
-$method=|int|captureCount|
+$prototypeV2=int captureCount() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QRegularExpressionMatchIterator globalMatch(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
 $method=|QRegularExpressionMatchIterator|globalMatch|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QRegularExpressionMatch match(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
 $method=|QRegularExpressionMatch|match|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
 
-$prototype=QString pattern() const
-$method=|QString|pattern|
+$prototypeV2=QString pattern() const
 
-$prototype=int patternErrorOffset() const
-$method=|int|patternErrorOffset|
+$prototypeV2=int patternErrorOffset() const
 
-$prototype=PatternOptions patternOptions() const
-$method=|QRegularExpression::PatternOptions|patternOptions|
+$prototypeV2=QRegularExpression::PatternOptions patternOptions() const
 
 $prototype=void setPattern(const QString & pattern)
 $method=|void|setPattern|const QString &

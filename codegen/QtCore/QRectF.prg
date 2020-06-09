@@ -84,17 +84,13 @@ $method=|void|adjust|qreal,qreal,qreal,qreal
 $prototype=QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 $method=|QRectF|adjusted|qreal,qreal,qreal,qreal
 
-$prototype=qreal bottom () const
-$method=|qreal|bottom|
+$prototypeV2=qreal bottom() const
 
-$prototype=QPointF bottomLeft () const
-$method=|QPointF|bottomLeft|
+$prototypeV2=QPointF bottomLeft() const
 
-$prototype=QPointF bottomRight () const
-$method=|QPointF|bottomRight|
+$prototypeV2=QPointF bottomRight() const
 
-$prototype=QPointF center () const
-$method=|QPointF|center|
+$prototypeV2=QPointF center() const
 
 $prototype=bool contains ( const QPointF & point ) const
 $internalMethod=|bool|contains,contains1|const QPointF &
@@ -138,8 +134,7 @@ $method=|void|getCoords|qreal *,qreal *,qreal *,qreal *
 $prototype=void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
 $method=|void|getRect|qreal *,qreal *,qreal *,qreal *
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=QRectF intersected ( const QRectF & rectangle ) const
 $method=|QRectF|intersected|const QRectF &
@@ -147,17 +142,13 @@ $method=|QRectF|intersected|const QRectF &
 $prototype=bool intersects ( const QRectF & rectangle ) const
 $method=|bool|intersects|const QRectF &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=qreal left () const
-$method=|qreal|left|
+$prototypeV2=qreal left() const
 
 $prototype=void moveBottom ( qreal y )
 $method=|void|moveBottom|qreal
@@ -214,11 +205,9 @@ $method=|void|moveTopLeft|const QPointF &
 $prototype=void moveTopRight ( const QPointF & position )
 $method=|void|moveTopRight|const QPointF &
 
-$prototype=QRectF normalized () const
-$method=|QRectF|normalized|
+$prototypeV2=QRectF normalized() const
 
-$prototype=qreal right () const
-$method=|qreal|right|
+$prototypeV2=qreal right() const
 
 $prototype=void setBottom ( qreal y )
 $method=|void|setBottom|qreal
@@ -265,23 +254,17 @@ $method=|void|setX|qreal
 $prototype=void setY ( qreal y )
 $method=|void|setY|qreal
 
-$prototype=QSizeF size () const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
-$prototype=QRect toAlignedRect () const
-$method=|QRect|toAlignedRect|
+$prototypeV2=QRect toAlignedRect() const
 
-$prototype=QRect toRect () const
-$method=|QRect|toRect|
+$prototypeV2=QRect toRect() const
 
-$prototype=qreal top () const
-$method=|qreal|top|
+$prototypeV2=qreal top() const
 
-$prototype=QPointF topLeft () const
-$method=|QPointF|topLeft|
+$prototypeV2=QPointF topLeft() const
 
-$prototype=QPointF topRight () const
-$method=|QPointF|topRight|
+$prototypeV2=QPointF topRight() const
 
 $prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate1|qreal,qreal
@@ -342,14 +325,11 @@ $addMethod=translated
 $prototype=QRectF united ( const QRectF & rectangle ) const
 $method=|QRectF|united|const QRectF &
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=qreal x () const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y () const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
 $extraMethods
 

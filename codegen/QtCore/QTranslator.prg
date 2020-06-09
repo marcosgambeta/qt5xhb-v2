@@ -30,8 +30,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=virtual bool isEmpty() const
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const
 
 $prototype=bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
 $internalMethod=|bool|load,load1|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString()

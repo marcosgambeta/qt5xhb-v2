@@ -60,8 +60,7 @@ $method=|void|select|const QModelIndex &,const QModelIndex &
 $prototype=bool contains(const QModelIndex &index) const
 $method=|bool|contains|const QModelIndex &
 
-$prototype=QModelIndexList indexes() const
-$method=|QModelIndexList|indexes|
+$prototypeV2=QModelIndexList indexes() const
 
 $prototype=void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
 $method=|void|merge|const QItemSelection &,QItemSelectionModel::SelectionFlags

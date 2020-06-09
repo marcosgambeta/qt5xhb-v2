@@ -64,8 +64,7 @@ $addMethod=tryAcquire
 $prototype=void release(int n = 1)
 $method=|void|release|int=1
 
-$prototype=int available() const
-$method=|int|available|
+$prototypeV2=int available() const
 
 $extraMethods
 

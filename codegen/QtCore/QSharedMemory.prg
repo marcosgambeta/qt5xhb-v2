@@ -57,43 +57,33 @@ $deleteMethod
 $prototype=void setKey(const QString &key)
 $method=|void|setKey|const QString &
 
-$prototype=QString key() const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
 $prototype=void setNativeKey(const QString &key)
 $method=|void|setNativeKey|const QString &
 
-$prototype=QString nativeKey() const
-$method=|QString|nativeKey|
+$prototypeV2=QString nativeKey() const
 
 $prototype=bool create(int size, AccessMode mode = ReadWrite)
 $method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-$prototype=int size() const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=bool attach(AccessMode mode = ReadWrite)
 $method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite
 
-$prototype=bool isAttached() const
-$method=|bool|isAttached|
+$prototypeV2=bool isAttached() const
 
-$prototype=bool detach()
-$method=|bool|detach|
+$prototypeV2=bool detach()
 
-$prototype=void *data()
-$method=|void *|data|
+$prototypeV2=void * data()
 
-$prototype=bool lock()
-$method=|bool|lock|
+$prototypeV2=bool lock()
 
-$prototype=bool unlock()
-$method=|bool|unlock|
+$prototypeV2=bool unlock()
 
-$prototype=SharedMemoryError error() const
-$method=|QSharedMemory::SharedMemoryError|error|
+$prototypeV2=QSharedMemory::SharedMemoryError error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 #pragma ENDDUMP

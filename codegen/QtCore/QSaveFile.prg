@@ -65,8 +65,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
 
 $deleteMethod
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=void setFileName(const QString &name)
 $method=|void|setFileName|const QString &
@@ -74,16 +73,13 @@ $method=|void|setFileName|const QString &
 $prototype=bool open(OpenMode flags)
 $method=|bool|open|QIODevice::OpenMode
 
-$prototype=bool commit()
-$method=|bool|commit|
+$prototypeV2=bool commit()
 
-$prototype=void cancelWriting()
-$method=|void|cancelWriting|
+$prototypeV2=void cancelWriting()
 
 $prototype=void setDirectWriteFallback(bool enabled)
 $method=|void|setDirectWriteFallback|bool
 
-$prototype=bool directWriteFallback() const
-$method=|bool|directWriteFallback|
+$prototypeV2=bool directWriteFallback() const
 
 #pragma ENDDUMP

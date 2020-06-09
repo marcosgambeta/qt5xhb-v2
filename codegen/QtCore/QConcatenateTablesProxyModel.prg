@@ -79,8 +79,7 @@ $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 $prototype=int columnCount(const QModelIndex &parent = QModelIndex()) const override
 $method=|int|columnCount|const QModelIndex &=QModelIndex()
 
-$prototype=QStringList mimeTypes() const override
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const override
 
 $prototype=QMimeData *mimeData(const QModelIndexList &indexes) const override
 $method=|QMimeData *|mimeData|const QModelIndexList &

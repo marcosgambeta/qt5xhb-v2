@@ -65,8 +65,7 @@ $deleteMethod
 $prototype=bool at ( int i ) const
 $method=|bool|at|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void clearBit ( int i )
 $method=|void|clearBit|int
@@ -127,11 +126,9 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 }
 $addMethod=fill
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void resize ( int size )
 $method=|void|resize|int
@@ -164,8 +161,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 }
 $addMethod=setBit
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=bool testBit ( int i ) const
 $method=|bool|testBit|int

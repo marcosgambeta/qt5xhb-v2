@@ -70,38 +70,28 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=BoundaryType type() const
-$method=|QTextBoundaryFinder::BoundaryType|type|
+$prototypeV2=QTextBoundaryFinder::BoundaryType type() const
 
-$prototype=QString string() const
-$method=|QString|string|
+$prototypeV2=QString string() const
 
-$prototype=void toStart()
-$method=|void|toStart|
+$prototypeV2=void toStart()
 
-$prototype=void toEnd()
-$method=|void|toEnd|
+$prototypeV2=void toEnd()
 
-$prototype=int position() const
-$method=|int|position|
+$prototypeV2=int position() const
 
 $prototype=void setPosition(int position)
 $method=|void|setPosition|int
 
-$prototype=int toNextBoundary()
-$method=|int|toNextBoundary|
+$prototypeV2=int toNextBoundary()
 
-$prototype=int toPreviousBoundary()
-$method=|int|toPreviousBoundary|
+$prototypeV2=int toPreviousBoundary()
 
-$prototype=bool isAtBoundary() const
-$method=|bool|isAtBoundary|
+$prototypeV2=bool isAtBoundary() const
 
-$prototype=BoundaryReasons boundaryReasons() const
-$method=|QTextBoundaryFinder::BoundaryReasons|boundaryReasons|
+$prototypeV2=QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 
 $extraMethods
 

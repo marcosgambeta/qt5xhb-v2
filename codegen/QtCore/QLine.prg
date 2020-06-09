@@ -62,32 +62,23 @@ HB_FUNC_STATIC( QLINE_NEW )
 
 $deleteMethod
 
-$prototype=QPoint p1() const
-$method=|QPoint|p1|
+$prototypeV2=QPoint p1() const
 
-$prototype=QPoint p2() const
-$method=|QPoint|p2|
+$prototypeV2=QPoint p2() const
 
-$prototype=int x1() const
-$method=|int|x1|
+$prototypeV2=int x1() const
 
-$prototype=int x2() const
-$method=|int|x2|
+$prototypeV2=int x2() const
 
-$prototype=int y1() const
-$method=|int|y1|
+$prototypeV2=int y1() const
 
-$prototype=int y2() const
-$method=|int|y2|
+$prototypeV2=int y2() const
 
-$prototype=int dx() const
-$method=|int|dx|
+$prototypeV2=int dx() const
 
-$prototype=int dy() const
-$method=|int|dy|
+$prototypeV2=int dy() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void setP1(const QPoint & p1)
 $method=|void|setP1|const QPoint &

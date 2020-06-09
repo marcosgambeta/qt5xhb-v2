@@ -109,26 +109,19 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool isArray() const
-$method=|bool|isArray|
+$prototypeV2=bool isArray() const
 
-$prototype=bool isBool() const
-$method=|bool|isBool|
+$prototypeV2=bool isBool() const
 
-$prototype=bool isDouble() const
-$method=|bool|isDouble|
+$prototypeV2=bool isDouble() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isObject() const
-$method=|bool|isObject|
+$prototypeV2=bool isObject() const
 
-$prototype=bool isString() const
-$method=|bool|isString|
+$prototypeV2=bool isString() const
 
-$prototype=bool isUndefined() const
-$method=|bool|isUndefined|
+$prototypeV2=bool isUndefined() const
 
 $prototype=QJsonArray toArray(const QJsonArray & defaultValue) const
 $internalMethod=|QJsonArray|toArray,toArray1|const QJsonArray &
@@ -195,11 +188,9 @@ $addMethod=toObject
 $prototype=QString toString(const QString & defaultValue = QString()) const
 $method=|QString|toString|const QString &=QString()
 
-$prototype=QVariant toVariant() const
-$method=|QVariant|toVariant|
+$prototypeV2=QVariant toVariant() const
 
-$prototype=Type type() const
-$method=|QJsonValue::Type|type|
+$prototypeV2=QJsonValue::Type type() const
 
 $prototype=static QJsonValue fromVariant(const QVariant & variant)
 $staticMethod=|QJsonValue|fromVariant|const QVariant &

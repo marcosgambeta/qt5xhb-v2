@@ -35,38 +35,28 @@ $deleteMethod
 $prototype=void closeReadChannel ( ProcessChannel channel )
 $method=|void|closeReadChannel|QProcess::ProcessChannel
 
-$prototype=void closeWriteChannel ()
-$method=|void|closeWriteChannel|
+$prototypeV2=void closeWriteChannel()
 
-$prototype=QStringList environment () const
-$method=|QStringList|environment|
+$prototypeV2=QStringList environment() const
 
-$prototype=QProcess::ProcessError error () const
-$method=|QProcess::ProcessError|error|
+$prototypeV2=QProcess::ProcessError error() const
 
-$prototype=int exitCode () const
-$method=|int|exitCode|
+$prototypeV2=int exitCode() const
 
-$prototype=QProcess::ExitStatus exitStatus () const
-$method=|QProcess::ExitStatus|exitStatus|
+$prototypeV2=QProcess::ExitStatus exitStatus() const
 
 $prototype=QString nativeArguments () const
 $method=|QString|nativeArguments||#if defined(Q_OS_WIN)
 
-$prototype=ProcessChannelMode processChannelMode () const
-$method=|QProcess::ProcessChannelMode|processChannelMode|
+$prototypeV2=QProcess::ProcessChannelMode processChannelMode() const
 
-$prototype=QProcessEnvironment processEnvironment () const
-$method=|QProcessEnvironment|processEnvironment|
+$prototypeV2=QProcessEnvironment processEnvironment() const
 
-$prototype=QByteArray readAllStandardError ()
-$method=|QByteArray|readAllStandardError|
+$prototypeV2=QByteArray readAllStandardError()
 
-$prototype=QByteArray readAllStandardOutput ()
-$method=|QByteArray|readAllStandardOutput|
+$prototypeV2=QByteArray readAllStandardOutput()
 
-$prototype=ProcessChannel readChannel () const
-$method=|QProcess::ProcessChannel|readChannel|
+$prototype=QProcess::ProcessChannel readChannel() const
 
 $prototype=void setEnvironment ( const QStringList & environment )
 $method=|void|setEnvironment|const QStringList &
@@ -134,8 +124,7 @@ HB_FUNC_STATIC( QPROCESS_START )
 }
 $addMethod=start
 
-$prototype=QProcess::ProcessState state () const
-$method=|QProcess::ProcessState|state|
+$prototypeV2=QProcess::ProcessState state() const
 
 $prototype=bool waitForFinished ( int msecs = 30000 )
 $method=|bool|waitForFinished|int=30000
@@ -143,26 +132,19 @@ $method=|bool|waitForFinished|int=30000
 $prototype=bool waitForStarted ( int msecs = 30000 )
 $method=|bool|waitForStarted|int=30000
 
-$prototype=QString workingDirectory () const
-$method=|QString|workingDirectory|
+$prototypeV2=QString workingDirectory() const
 
-$prototype=bool atEnd () const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
-$prototype=qint64 bytesAvailable () const
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const
 
-$prototype=qint64 bytesToWrite () const
-$method=|qint64|bytesToWrite|
+$prototypeV2=qint64 bytesToWrite() const
 
-$prototype=bool canReadLine () const
-$method=|bool|canReadLine|
+$prototypeV2=bool canReadLine() const
 
-$prototype=void close ()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=bool isSequential () const
-$method=|bool|isSequential|
+$prototypeV2=bool isSequential() const
 
 $prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
 $virtualMethod=|bool|waitForBytesWritten|int=30000
@@ -170,11 +152,9 @@ $virtualMethod=|bool|waitForBytesWritten|int=30000
 $prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
 $virtualMethod=|bool|waitForReadyRead|int=30000
 
-$prototype=void kill ()
-$method=|void|kill|
+$prototypeV2=void kill()
 
-$prototype=void terminate ()
-$method=|void|terminate|
+$prototypeV2=void terminate()
 
 $prototype=static int execute ( const QString & program, const QStringList & arguments )
 $internalStaticMethod=|int|execute,execute1|const QString &,const QStringList &
@@ -245,26 +225,22 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 }
 $addMethod=startDetached
 
-$prototype=static QStringList systemEnvironment ()
-$staticMethod=|QStringList|systemEnvironment|
+$prototypeV2=static QStringList systemEnvironment()
 
 $prototype=bool open(OpenMode mode = ReadWrite) Q_DECL_OVERRIDE
 $method=|bool|open|QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=QString program() const
-$method=|QString|program|
+$prototypeV2=QString program() const
 
 $prototype=void setProgram(const QString &program)
 $method=5,1,0|void|setProgram|const QString &
 
-$prototype=QStringList arguments() const
-$method=|QStringList|arguments|
+$prototypeV2=QStringList arguments() const
 
 $prototype=void setArguments(const QStringList & arguments)
 $method=5,1,0|void|setArguments|const QStringList &
 
-$prototype=ProcessChannelMode readChannelMode() const
-$method=|QProcess::ProcessChannelMode|readChannelMode|
+$prototypeV2=QProcess::ProcessChannelMode readChannelMode() const
 
 $prototype=void setReadChannelMode(ProcessChannelMode mode)
 $method=|void|setReadChannelMode|QProcess::ProcessChannelMode

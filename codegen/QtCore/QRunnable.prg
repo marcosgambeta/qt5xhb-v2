@@ -31,11 +31,9 @@ $prototype=QRunnable()
 $prototype=virtual ~QRunnable()
 $deleteMethod
 
-$prototype=virtual void run() = 0
-$virtualMethod=|void|run|
+$prototypeV2=virtual void run() = 0
 
-$prototype=bool autoDelete() const
-$method=|bool|autoDelete|
+$prototypeV2=bool autoDelete() const
 
 $prototype=void setAutoDelete(bool _autoDelete)
 $method=|void|setAutoDelete|bool

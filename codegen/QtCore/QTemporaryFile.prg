@@ -70,14 +70,11 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 $deleteMethod
 
-$prototype=bool autoRemove() const
-$method=|bool|autoRemove|
+$prototypeV2=bool autoRemove() const
 
-$prototype=QString fileTemplate() const
-$method=|QString|fileTemplate|
+$prototypeV2=QString fileTemplate() const
 
-$prototype=bool open()
-$method=|bool|open|
+$prototypeV2=bool open()
 
 $prototype=void setAutoRemove(bool b)
 $method=|void|setAutoRemove|bool
@@ -85,8 +82,7 @@ $method=|void|setAutoRemove|bool
 $prototype=void setFileTemplate(const QString & name)
 $method=|void|setFileTemplate|const QString &
 
-$prototype=virtual QString fileName() const
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const
 
 $prototype=static QTemporaryFile * createNativeFile(QFile & file)
 $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile &

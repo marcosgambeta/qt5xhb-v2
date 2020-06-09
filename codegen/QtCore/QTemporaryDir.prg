@@ -54,17 +54,13 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 
 $deleteMethod
 
-$prototype=bool autoRemove() const
-$method=|bool|autoRemove|
+$prototypeV2=bool autoRemove() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
-$prototype=bool remove()
-$method=|bool|remove|
+$prototypeV2=bool remove()
 
 $prototype=void setAutoRemove(bool b)
 $method=|void|setAutoRemove|bool

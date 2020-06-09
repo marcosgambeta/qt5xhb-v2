@@ -36,20 +36,16 @@ $method=|bool|isEnabled|QtMsgType
 $prototype=void setEnabled(QtMsgType type, bool enable)
 $method=|void|setEnabled|QtMsgType,bool
 
-$prototype=bool isDebugEnabled() const
-$method=|bool|isDebugEnabled|
+$prototypeV2=bool isDebugEnabled() const
 
-$prototype=bool isWarningEnabled() const
-$method=|bool|isWarningEnabled|
+$prototypeV2=bool isWarningEnabled() const
 
-$prototype=bool isCriticalEnabled() const
-$method=|bool|isCriticalEnabled|
+$prototypeV2=bool isCriticalEnabled() const
 
 $prototype=const char *categoryName() const
 $method=|const char *|categoryName|
 
-$prototype=static QLoggingCategory *defaultCategory()
-$staticMethod=|QLoggingCategory *|defaultCategory|
+$prototypeV2=static QLoggingCategory * defaultCategory()
 
 $prototype=static void setFilterRules(const QString &rules)
 $staticMethod=|void|setFilterRules|const QString &

@@ -32,14 +32,11 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=int interval () const
-$method=|int|interval|
+$prototypeV2=int interval() const
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isSingleShot () const
-$method=|bool|isSingleShot|
+$prototypeV2=bool isSingleShot() const
 
 $prototype=void setInterval ( int msec )
 $method=|void|setInterval|int
@@ -47,8 +44,7 @@ $method=|void|setInterval|int
 $prototype=void setSingleShot ( bool singleShot )
 $method=|void|setSingleShot|bool
 
-$prototype=int timerId () const
-$method=|int|timerId|
+$prototypeV2=int timerId () const
 
 $prototype=void start ( int msec )
 $internalMethod=|void|start,start1|int
@@ -78,8 +74,7 @@ HB_FUNC_STATIC( QTIMER_START )
 }
 $addMethod=start
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
 $staticMethod=|void|singleShot|int,QObject *,const char *

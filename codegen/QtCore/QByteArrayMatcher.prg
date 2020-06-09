@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 }
 $addMethod=indexIn
 
-$prototype=QByteArray pattern () const
-$method=|QByteArray|pattern|
+$prototypeV2=QByteArray pattern() const
 
 $prototype=void setPattern ( const QByteArray & pattern )
 $method=|void|setPattern|const QByteArray &

@@ -33,11 +33,9 @@ $deleteMethod
 $prototype=const char *name() const
 $method=|const char *|name|
 
-$prototype=bool isFlag() const
-$method=|bool|isFlag|
+$prototypeV2=bool isFlag() const
 
-$prototype=int keyCount() const
-$method=|int|keyCount|
+$prototypeV2=int keyCount() const
 
 $prototype=const char *key(int index) const
 $method=|const char *|key|int
@@ -65,8 +63,7 @@ $method=|QByteArray|valueToKeys|int
 $prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=const char *QMetaEnum::enumName() const
 $method=5,12,0|const char *|enumName|

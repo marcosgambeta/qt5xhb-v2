@@ -30,14 +30,11 @@ $constructor=|new|qintptr,QSocketNotifier::Type,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=qintptr socket() const
-$method=|qintptr|socket|
+$prototypeV2=qintptr socket() const
 
-$prototype=Type type() const
-$method=|QSocketNotifier::Type|type|
+$prototypeV2=QSocketNotifier::Type type() const
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=void setEnabled(bool)
 $method=|void|setEnabled|bool

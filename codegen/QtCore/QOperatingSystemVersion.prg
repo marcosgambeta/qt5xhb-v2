@@ -31,32 +31,24 @@ $constructor=|new|QOperatingSystemVersion::OSType,int,int=-1,int=-1
 
 $deleteMethod
 
-$prototype=static QOperatingSystemVersion current()
-$staticMethod=|QOperatingSystemVersion|current|
+$prototypeV2=static QOperatingSystemVersion current()
 
-$prototype=static Q_DECL_CONSTEXPR OSType currentType()
-$staticMethod=|QOperatingSystemVersion::OSType|currentType|
+$prototypeV2=static Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType currentType()
 
-$prototype=Q_DECL_CONSTEXPR int majorVersion() const
-$method=|int|majorVersion|
+$prototypeV2=Q_DECL_CONSTEXPR int majorVersion() const
 
-$prototype=Q_DECL_CONSTEXPR int minorVersion() const
-$method=|int|minorVersion|
+$prototypeV2=Q_DECL_CONSTEXPR int minorVersion() const
 
-$prototype=Q_DECL_CONSTEXPR int microVersion() const
-$method=|int|microVersion|
+$prototypeV2=Q_DECL_CONSTEXPR int microVersion() const
 
-$prototype=Q_DECL_CONSTEXPR int segmentCount() const
-$method=|int|segmentCount|
+$prototypeV2=Q_DECL_CONSTEXPR int segmentCount() const
 
 $prototype=bool isAnyOfType(std::initializer_list<OSType> types) const
 %% TODO: $method=|bool|isAnyOfType|std::initializer_list<OSType>
 
-$prototype=Q_DECL_CONSTEXPR OSType type() const
-$method=|QOperatingSystemVersion::OSType|type|
+$prototypeV2=Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType type() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=static int compare(const QOperatingSystemVersion &v1, const QOperatingSystemVersion &v2) [private]
 

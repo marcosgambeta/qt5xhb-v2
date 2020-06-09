@@ -170,29 +170,21 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART )
 }
 $addMethod=capturedStart
 
-$prototype=QStringList capturedTexts() const
-$method=|QStringList|capturedTexts|
+$prototypeV2=QStringList capturedTexts() const
 
-$prototype=bool hasMatch() const
-$method=|bool|hasMatch|
+$prototypeV2=bool hasMatch() const
 
-$prototype=bool hasPartialMatch() const
-$method=|bool|hasPartialMatch|
+$prototypeV2=bool hasPartialMatch() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int lastCapturedIndex() const
-$method=|int|lastCapturedIndex|
+$prototypeV2=int lastCapturedIndex() const
 
-$prototype=QRegularExpression::MatchOptions matchOptions() const
-$method=|QRegularExpression::MatchOptions|matchOptions|
+$prototypeV2=QRegularExpression::MatchOptions matchOptions() const
 
-$prototype=QRegularExpression::MatchType matchType() const
-$method=|QRegularExpression::MatchType|matchType|
+$prototypeV2=QRegularExpression::MatchType matchType() const
 
-$prototype=QRegularExpression regularExpression() const
-$method=|QRegularExpression|regularExpression|
+$prototypeV2=QRegularExpression regularExpression() const
 
 $prototype=void swap(QRegularExpressionMatch & other)
 $method=|void|swap|QRegularExpressionMatch &

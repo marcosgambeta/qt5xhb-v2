@@ -42,20 +42,15 @@ $method=|QList<QByteArray>|parameterNames|
 $prototype=const char *tag() const
 $method=|const char *|tag|
 
-$prototype=Access access() const
-$method=|QMetaMethod::Access|access|
+$prototypeV2=QMetaMethod::Access access() const
 
-$prototype=MethodType methodType() const
-$method=|QMetaMethod::MethodType|methodType|
+$prototypeV2=QMetaMethod::MethodType methodType() const
 
-$prototype=int attributes() const
-$method=|int|attributes|
+$prototypeV2=int attributes() const
 
-$prototype=int methodIndex() const
-$method=|int|methodIndex|
+$prototypeV2=int methodIndex() const
 
-$prototype=int revision() const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=const QMetaObject *enclosingMetaObject() const
 $method=|const QMetaObject *|enclosingMetaObject|
@@ -106,17 +101,13 @@ HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
 }
 $addMethod=invoke
 
-$prototype=QByteArray methodSignature() const
-$method=|QByteArray|methodSignature|
+$prototypeV2=QByteArray methodSignature() const
 
-$prototype=QByteArray name() const
-$method=|QByteArray|name|
+$prototypeV2=QByteArray name() const
 
-$prototype=int returnType() const
-$method=|int|returnType|
+$prototypeV2=int returnType() const
 
-$prototype=int parameterCount() const
-$method=|int|parameterCount|
+$prototypeV2=int parameterCount() const
 
 $prototype=int parameterType(int index) const
 $method=|int|parameterType|int
@@ -124,8 +115,7 @@ $method=|int|parameterType|int
 $prototype=void getParameterTypes(int *types) const
 $method=|void|getParameterTypes|int *
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $extraMethods
 

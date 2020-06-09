@@ -39,8 +39,7 @@ $method=|void|addAnimation|QAbstractAnimation *
 $prototype=QList<QAbstractAnimation *> animations () const
 $method=|QList<QAbstractAnimation *>|animations|
 
-$prototype=QStateMachine * machine () const
-$method=|QStateMachine *|machine|
+$prototypeV2=QStateMachine * machine() const
 
 $prototype=void removeAnimation ( QAbstractAnimation * animation )
 $method=|void|removeAnimation|QAbstractAnimation *
@@ -51,11 +50,9 @@ $method=|void|setTargetState|QAbstractState *
 $prototype=void setTargetStates ( const QList<QAbstractState *> & targets )
 $method=|void|setTargetStates|const QList<QAbstractState *> &
 
-$prototype=QState * sourceState () const
-$method=|QState *|sourceState|
+$prototypeV2=QState * sourceState() const
 
-$prototype=QAbstractState * targetState () const
-$method=|QAbstractState *|targetState|
+$prototypeV2=QAbstractState * targetState() const
 
 $prototype=QList<QAbstractState *> targetStates () const
 $method=|QList<QAbstractState *>|targetStates|

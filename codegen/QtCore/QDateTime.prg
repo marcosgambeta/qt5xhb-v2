@@ -85,17 +85,14 @@ $method=|QDateTime|addSecs|int
 $prototype=QDateTime addYears ( int nyears ) const
 $method=|QDateTime|addYears|int
 
-$prototype=QDate date () const
-$method=|QDate|date|
+$prototypeV2=QDate date() const
 
 $prototype=int daysTo ( const QDateTime & other ) const
 $method=|int|daysTo|const QDateTime &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=qint64 msecsTo ( const QDateTime & other ) const
 $method=|qint64|msecsTo|const QDateTime &
@@ -118,17 +115,13 @@ $method=|void|setTimeSpec|Qt::TimeSpec
 $prototype=void setTime_t ( uint seconds )
 $method=|void|setTime_t|uint
 
-$prototype=QTime time () const
-$method=|QTime|time|
+$prototypeV2=QTime time() const
 
-$prototype=Qt::TimeSpec timeSpec () const
-$method=|Qt::TimeSpec|timeSpec|
+$prototypeV2=Qt::TimeSpec timeSpec() const
 
-$prototype=QDateTime toLocalTime () const
-$method=|QDateTime|toLocalTime|
+$prototypeV2=QDateTime toLocalTime() const
 
-$prototype=qint64 toMSecsSinceEpoch () const
-$method=|qint64|toMSecsSinceEpoch|
+$prototypeV2=qint64 toMSecsSinceEpoch() const
 
 $prototype=QString toString ( const QString & format ) const
 $internalMethod=|QString|toString,toString1|const QString &
@@ -161,20 +154,15 @@ $addMethod=toString
 $prototype=QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
 $method=|QDateTime|toTimeSpec|Qt::TimeSpec
 
-$prototype=uint toTime_t () const
-$method=|uint|toTime_t|
+$prototypeV2=uint toTime_t() const
 
-$prototype=QDateTime toUTC () const
-$method=|QDateTime|toUTC|
+$prototypeV2=QDateTime toUTC() const
 
-$prototype=static QDateTime currentDateTime ()
-$staticMethod=|QDateTime|currentDateTime|
+$prototypeV2=static QDateTime currentDateTime()
 
-$prototype=static QDateTime currentDateTimeUtc ()
-$staticMethod=|QDateTime|currentDateTimeUtc|
+$prototypeV2=static QDateTime currentDateTimeUtc()
 
-$prototype=static qint64 currentMSecsSinceEpoch ()
-$staticMethod=|qint64|currentMSecsSinceEpoch|
+$prototypeV2=static qint64 currentMSecsSinceEpoch()
 
 $prototype=static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
 $staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64

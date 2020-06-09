@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=int manhattanLength() const
-$method=|int|manhattanLength|
+$prototypeV2=int manhattanLength() const
 
 $prototype=void setX(int x)
 $method=|void|setX|int
@@ -66,11 +64,9 @@ $method=|void|setX|int
 $prototype=void setY(int y)
 $method=|void|setY|int
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
 $extraMethods
 

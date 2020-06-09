@@ -97,14 +97,11 @@ $addMethod=addTransition
 $prototype=void assignProperty ( QObject * object, const char * name, const QVariant & value )
 $method=|void|assignProperty|QObject *,const char *,const QVariant &
 
-$prototype=ChildMode childMode () const
-$method=|QState::ChildMode|childMode|
+$prototypeV2=QState::ChildMode childMode() const
 
-$prototype=QAbstractState * errorState () const
-$method=|QAbstractState *|errorState|
+$prototypeV2=QAbstractState * errorState() const
 
-$prototype=QAbstractState * initialState () const
-$method=|QAbstractState *|initialState|
+$prototypeV2=QAbstractState * initialState() const
 
 $prototype=void removeTransition ( QAbstractTransition * transition )
 $method=|void|removeTransition|QAbstractTransition *

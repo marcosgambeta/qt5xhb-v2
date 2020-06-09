@@ -70,41 +70,33 @@ HB_FUNC_STATIC( QDATASTREAM_NEW )
 
 $deleteMethod
 
-$prototype=QIODevice *device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototype=void setDevice(QIODevice *)
 $method=|void|setDevice|QIODevice *
 
-$prototype=void unsetDevice()
-$method=|void|unsetDevice|
+$prototypeV2=void unsetDevice()
 
-$prototype=bool atEnd() const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
-$prototype=Status status() const
-$method=|QDataStream::Status|status|
+$prototypeV2=QDataStream::Status status() const
 
 $prototype=void setStatus(Status status)
 $method=|void|setStatus|QDataStream::Status
 
-$prototype=void resetStatus()
-$method=|void|resetStatus|
+$prototypeV2=void resetStatus()
 
-$prototype=FloatingPointPrecision floatingPointPrecision() const
-$method=|QDataStream::FloatingPointPrecision|floatingPointPrecision|
+$prototypeV2=QDataStream::FloatingPointPrecision floatingPointPrecision() const
 
 $prototype=void setFloatingPointPrecision(FloatingPointPrecision precision)
 $method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
 
-$prototype=ByteOrder byteOrder() const
-$method=|QDataStream::ByteOrder|byteOrder|
+$prototypeV2=QDataStream::ByteOrder byteOrder() const
 
 $prototype=void setByteOrder(ByteOrder)
 $method=|void|setByteOrder|QDataStream::ByteOrder
 
-$prototype=int version() const
-$method=|int|version|
+$prototypeV2=int version() const
 
 $prototype=void setVersion(int)
 $method=|void|setVersion|int

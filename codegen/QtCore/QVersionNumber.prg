@@ -79,38 +79,30 @@ HB_FUNC( QVERSIONNUMBER_NEW )
 
 $deleteMethod
 
-$prototype=bool isNormalized() const
-$method=|bool|isNormalized|
+$prototypeV2=bool isNormalized() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool isPrefixOf(const QVersionNumber &other) const
 $method=|bool|isPrefixOf|const QVersionNumber &
 
-$prototype=int majorVersion() const
-$method=|int|majorVersion|
+$prototypeV2=int majorVersion() const
 
-$prototype=int microVersion() const
-$method=|int|microVersion|
+$prototypeV2=int microVersion() const
 
-$prototype=int minorVersion() const
-$method=|int|minorVersion|
+$prototypeV2=int minorVersion() const
 
-$prototype=QVersionNumber normalized() const
-$method=|QVersionNumber|normalized|
+$prototypeV2=QVersionNumber normalized() const
 
 $prototype=int segmentAt(int index) const
 $method=|int|segmentAt|int
 
-$prototype=int segmentCount() const
-$method=|int|segmentCount|
+$prototypeV2=int segmentCount() const
 
 $prototype=QVector<int> segments() const
 $method=|QVector<int>|segments|
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
 $staticMethod=|QVersionNumber|commonPrefix|const QVersionNumber &,const QVersionNumber &

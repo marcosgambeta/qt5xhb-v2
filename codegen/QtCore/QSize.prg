@@ -60,17 +60,13 @@ $method=|QSize|boundedTo|const QSize &
 $prototype=QSize expandedTo ( const QSize & otherSize ) const
 $method=|QSize|expandedTo|const QSize &
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void scale ( int width, int height, Qt::AspectRatioMode mode )
 $internalMethod=|void|scale,scale1|int,int,Qt::AspectRatioMode
@@ -106,11 +102,9 @@ $method=|void|setHeight|int
 $prototype=void setWidth ( int width )
 $method=|void|setWidth|int
 
-$prototype=void transpose ()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $extraMethods
 

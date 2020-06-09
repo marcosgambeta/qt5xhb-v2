@@ -74,23 +74,17 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 
 $deleteMethod
 
-$prototype=QJsonArray array() const
-$method=|QJsonArray|array|
+$prototypeV2=QJsonArray array() const
 
-$prototype=bool isArray() const
-$method=|bool|isArray|
+$prototypeV2=bool isArray() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isObject() const
-$method=|bool|isObject|
+$prototypeV2=bool isObject() const
 
-$prototype=QJsonObject object() const
-$method=|QJsonObject|object|
+$prototypeV2=QJsonObject object() const
 
 $prototype=const char * rawData(int * size) const
 $method=|const char *|rawData|int *
@@ -101,14 +95,11 @@ $method=|void|setArray|const QJsonArray &
 $prototype=void setObject(const QJsonObject & object)
 $method=|void|setObject|const QJsonObject &
 
-$prototype=QByteArray toBinaryData() const
-$method=|QByteArray|toBinaryData|
+$prototypeV2=QByteArray toBinaryData() const
 
-$prototype=QByteArray toJson() const
-$method=|QByteArray|toJson|
+$prototypeV2=QByteArray toJson() const
 
-$prototype=QVariant toVariant() const
-$method=|QVariant|toVariant|
+$prototypeV2=QVariant toVariant() const
 
 $prototype=static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
 $staticMethod=|QJsonDocument|fromBinaryData|const QByteArray &,QJsonDocument::DataValidation=QJsonDocument::Validate

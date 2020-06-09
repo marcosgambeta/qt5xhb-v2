@@ -32,17 +32,14 @@ $deleteMethod
 $prototype=bool filterNativeEvent(const QByteArray & eventType, void * message, long * result)
 $method=|bool|filterNativeEvent|const QByteArray &,void *,long *
 
-$prototype=virtual void flush () = 0
-$virtualMethod=|void|flush|
+$prototypeV2=virtual void flush() = 0
 
-$prototype=virtual bool hasPendingEvents () = 0
-$virtualMethod=|bool|hasPendingEvents|
+$prototypeV2=virtual bool hasPendingEvents() = 0
 
 $prototype=void installNativeEventFilter(QAbstractNativeEventFilter * filterObj)
 $method=|void|installNativeEventFilter|QAbstractNativeEventFilter *
 
-$prototype=virtual void interrupt () = 0
-$virtualMethod=|void|interrupt|
+$prototypeV2=virtual void interrupt() = 0
 
 $prototype=virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
 $virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
@@ -99,17 +96,14 @@ $virtualMethod=|bool|unregisterTimer|int
 $prototype=virtual bool unregisterTimers ( QObject * object ) = 0
 $virtualMethod=|bool|unregisterTimers|QObject *
 
-$prototype=virtual void wakeUp () = 0
-$virtualMethod=|void|wakeUp|
+$prototypeV2=virtual void wakeUp() = 0
 
 $prototype=static QAbstractEventDispatcher * instance ( QThread * thread = nullptr )
 $staticMethod=|QAbstractEventDispatcher *|instance|QThread *=nullptr
 
-$prototype=virtual void startingUp()
-$virtualMethod=|void|startingUp|
+$prototypeV2=virtual void startingUp()
 
-$prototype=virtual void closingDown()
-$virtualMethod=|void|closingDown|
+$prototypeV2=virtual void closingDown()
 
 %%
 %% SIGNALS

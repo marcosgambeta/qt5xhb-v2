@@ -46,8 +46,7 @@ $staticMethod=|QString|findExecutable|const QString &,const QStringList &=QStrin
 $prototype=static void setTestModeEnabled(bool testMode)
 $staticMethod=|void|setTestModeEnabled|bool
 
-$prototype=static bool isTestModeEnabled()
-$staticMethod=|bool|isTestModeEnabled|
+$prototypeV2=static bool isTestModeEnabled()
 
 $extraMethods
 

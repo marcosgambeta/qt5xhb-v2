@@ -63,20 +63,15 @@ HB_FUNC_STATIC( QMARGINSF_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=qreal left() const
-$method=|qreal|left|
+$prototypeV2=qreal left() const
 
-$prototype=qreal top() const
-$method=|qreal|top|
+$prototypeV2=qreal top() const
 
-$prototype=qreal right() const
-$method=|qreal|right|
+$prototypeV2=qreal right() const
 
-$prototype=qreal bottom() const
-$method=|qreal|bottom|
+$prototypeV2=qreal bottom() const
 
 $prototype=void setLeft(qreal left)
 $method=|void|setLeft|qreal
@@ -90,8 +85,7 @@ $method=|void|setRight|qreal
 $prototype=void setBottom(qreal bottom)
 $method=|void|setBottom|qreal
 
-$prototype=QMargins toMargins() const
-$method=|QMargins|toMargins|
+$prototypeV2=QMargins toMargins() const
 
 $extraMethods
 

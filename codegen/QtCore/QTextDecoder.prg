@@ -85,8 +85,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 }
 $addMethod=toUnicode
 
-$prototype=bool hasFailure() const
-$method=|bool|hasFailure|
+$prototypeV2=bool hasFailure() const
 
 $extraMethods
 

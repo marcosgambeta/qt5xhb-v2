@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=uint measurementSystem()
-$method=|uint|measurementSystem|
+$prototypeV2=uint measurementSystem()
 
 $prototype=QVariant timeFormat(QLocale::FormatType)
 $method=|QVariant|timeFormat|QLocale::FormatType
@@ -39,25 +38,18 @@ $method=|QVariant|timeFormat|QLocale::FormatType
 $prototype=QVariant dateTimeFormat(QLocale::FormatType)
 $method=|QVariant|dateTimeFormat|QLocale::FormatType
 
-$prototype=QLocale languageLocale()
-$method=|QLocale|languageLocale|
+$prototypeV2=QLocale languageLocale()
 
-$prototype=QLocale regionLocale()
-$method=|QLocale|regionLocale|
+$prototypeV2=QLocale regionLocale()
 
-$prototype=void installSocketNotifiers()
-$method=|void|installSocketNotifiers|
+$prototypeV2=void installSocketNotifiers()
 
-$prototype=void readLanguageLocale()
-$method=|void|readLanguageLocale|
+$prototypeV2=void readLanguageLocale()
 
-$prototype=void readRegionLocale()
-$method=|void|readRegionLocale|
+$prototypeV2=void readRegionLocale()
 
-$prototype=void readMeasurementSystem()
-$method=|void|readMeasurementSystem|
+$prototypeV2=void readMeasurementSystem()
 
-$prototype=void readHourFormat()
-$method=|void|readHourFormat|
+$prototypeV2=void readHourFormat()
 
 #pragma ENDDUMP

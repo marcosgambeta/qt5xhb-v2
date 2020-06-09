@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 
 $deleteMethod
 
-$prototype=QAbstractState *defaultState() const
-$method=|QAbstractState *|defaultState|
+$prototypeV2=QAbstractState * defaultState() const
 
 $prototype=void setDefaultState(QAbstractState *state)
 $method=|void|setDefaultState|QAbstractState *
 
-$prototype=HistoryType historyType() const
-$method=|QHistoryState::HistoryType|historyType|
+$prototypeV2=QHistoryState::HistoryType historyType() const
 
 $prototype=void setHistoryType(HistoryType type)
 $method=|void|setHistoryType|QHistoryState::HistoryType

@@ -71,20 +71,15 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 
 $deleteMethod
 
-$prototype=bool autoFormatting() const
-$method=|bool|autoFormatting|
+$prototypeV2=bool autoFormatting() const
 
-$prototype=int autoFormattingIndent() const
-$method=|int|autoFormattingIndent|
+$prototypeV2=int autoFormattingIndent() const
 
-$prototype=QTextCodec * codec() const
-$method=|QTextCodec *|codec|
+$prototypeV2=QTextCodec * codec() const
 
-$prototype=QIODevice * device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=bool hasError() const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
 $prototype=void setAutoFormatting(bool enable)
 $method=|void|setAutoFormatting|bool
@@ -208,11 +203,9 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 }
 $addMethod=writeEmptyElement
 
-$prototype=void writeEndDocument()
-$method=|void|writeEndDocument|
+$prototypeV2=void writeEndDocument()
 
-$prototype=void writeEndElement()
-$method=|void|writeEndElement|
+$prototypeV2=void writeEndElement()
 
 $prototype=void writeEntityReference(const QString & name)
 $method=|void|writeEntityReference|const QString &

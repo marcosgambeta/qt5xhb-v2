@@ -80,8 +80,7 @@ $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 $prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 $virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags( Qt::MatchStartsWith OR Qt::MatchWrap )
 
-$prototype=virtual QStringList mimeTypes () const
-$virtualMethod=|QStringList|mimeTypes|
+$prototypeV2=virtual QStringList mimeTypes() const
 
 $prototype=virtual QModelIndex parent ( const QModelIndex & index ) const = 0
 $virtualMethod=|QModelIndex|parent|const QModelIndex &
@@ -116,17 +115,13 @@ $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 $prototype=virtual QSize span ( const QModelIndex & index ) const
 $virtualMethod=|QSize|span|const QModelIndex &
 
-$prototype=Qt::DropActions supportedDragActions () const
-$method=|Qt::DropActions|supportedDragActions|
+$prototypeV2=Qt::DropActions supportedDragActions() const
 
-$prototype=virtual Qt::DropActions supportedDropActions () const
-$virtualMethod=|Qt::DropActions|supportedDropActions|
+$prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
-$prototype=virtual void revert ()
-$virtualMethod=|void|revert|
+$prototypeV2=virtual void revert()
 
-$prototype=virtual bool submit ()
-$virtualMethod=|bool|submit|
+$prototypeV2=virtual bool submit()
 
 %%
 %% SIGNALS

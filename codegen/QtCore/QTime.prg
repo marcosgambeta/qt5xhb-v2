@@ -60,14 +60,11 @@ $method=|QTime|addMSecs|int
 $prototype=QTime addSecs(int s) const
 $method=|QTime|addSecs|int
 
-$prototype=int elapsed() const
-$method=|int|elapsed|
+$prototypeV2=int elapsed() const
 
-$prototype=int hour() const
-$method=|int|hour|
+$prototypeV2=int hour() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool isValid() const
 $internalMethod=|bool|isValid,isValid1|
@@ -97,20 +94,16 @@ HB_FUNC_STATIC( QTIME_ISVALID )
 }
 $addMethod=isValid
 
-$prototype=int minute() const
-$method=|int|minute|
+$prototypeV2=int minute() const
 
-$prototype=int msec() const
-$method=|int|msec|
+$prototypeV2=int msec() const
 
 $prototype=int msecsTo(const QTime & t) const
 $method=|int|msecsTo|const QTime &
 
-$prototype=int restart()
-$method=|int|restart|
+$prototypeV2=int restart()
 
-$prototype=int second() const
-$method=|int|second|
+$prototypeV2=int second() const
 
 $prototype=int secsTo(const QTime & t) const
 $method=|int|secsTo|const QTime &
@@ -118,8 +111,7 @@ $method=|int|secsTo|const QTime &
 $prototype=bool setHMS(int h, int m, int s, int ms = 0)
 $method=|bool|setHMS|int,int,int,int=0
 
-$prototype=void start()
-$method=|void|start|
+$prototypeV2=void start()
 
 $prototype=QString toString(const QString & format) const
 $internalMethod=|QString|toString,toString1|const QString &
@@ -149,8 +141,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 }
 $addMethod=toString
 
-$prototype=static QTime currentTime()
-$staticMethod=|QTime|currentTime|
+$prototypeV2=static QTime currentTime()
 
 $prototype=static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
 $internalStaticMethod=|QTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate

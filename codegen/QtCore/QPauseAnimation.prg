@@ -57,7 +57,6 @@ $deleteMethod
 $prototype=void setDuration ( int msecs )
 $method=|void|setDuration|int
 
-$prototype=virtual int duration () const
-$virtualMethod=|int|duration|
+$prototypeV2=virtual int duration() const
 
 #pragma ENDDUMP

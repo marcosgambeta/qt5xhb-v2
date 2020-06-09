@@ -62,14 +62,11 @@ $method=|void|addCubicBezierSegment|const QPointF &,const QPointF &,const QPoint
 $prototype=void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
 $method=|void|addTCBSegment|const QPointF &,qreal,qreal,qreal
 
-$prototype=qreal amplitude() const
-$method=|qreal|amplitude|
+$prototypeV2=qreal amplitude() const
 
-$prototype=qreal overshoot() const
-$method=|qreal|overshoot|
+$prototypeV2=qreal overshoot() const
 
-$prototype=qreal period() const
-$method=|qreal|period|
+$prototypeV2=qreal period() const
 
 $prototype=void setAmplitude(qreal amplitude)
 $method=|void|setAmplitude|qreal
@@ -89,8 +86,7 @@ $method=|void|swap|QEasingCurve &
 $prototype=QVector<QPointF> toCubicSpline() const
 $method=|QVector<QPointF>|toCubicSpline|
 
-$prototype=Type type() const
-$method=|QEasingCurve::Type|type|
+$prototypeV2=QEasingCurve::Type type() const
 
 $prototype=qreal valueForProgress(qreal progress) const
 $method=|qreal|valueForProgress|qreal

@@ -104,11 +104,9 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 }
 $addMethod=indexIn
 
-$prototype=QString pattern() const
-$method=|QString|pattern|
+$prototypeV2=QString pattern() const
 
-$prototype=Qt::CaseSensitivity caseSensitivity() const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $extraMethods
 

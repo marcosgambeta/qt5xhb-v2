@@ -70,20 +70,16 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
 
 $deleteMethod
 
-$prototype=bool load()
-$method=|bool|load|
+$prototypeV2=bool load()
 
-$prototype=bool unload()
-$method=|bool|unload|
+$prototypeV2=bool unload()
 
-$prototype=bool isLoaded() const
-$method=|bool|isLoaded|
+$prototypeV2=bool isLoaded() const
 
 $prototype=void setFileName(const QString &fileName)
 $method=|void|setFileName|const QString &
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=void setFileNameAndVersion(const QString &fileName, int verNum)
 $internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion1|const QString &,int
@@ -113,8 +109,7 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 }
 $addMethod=setFileNameAndVersion
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=void setLoadHints(LoadHints hints)
 $method=|void|setLoadHints|QLibrary::LoadHints

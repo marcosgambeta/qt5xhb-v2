@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(QRegExp filterRegExp READ filterRegExp WRITE setFilterRegExp)
 %%
 
-$prototype=QRegExp filterRegExp() const
-$method=|QRegExp|filterRegExp|
+$prototypeV2=QRegExp filterRegExp() const
 
 $prototype=void setFilterRegExp(const QRegExp &regExp) [slot]
 $internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
@@ -110,8 +109,7 @@ $addMethod=setFilterRegularExpression
 %% Q_PROPERTY(int filterKeyColumn READ filterKeyColumn WRITE setFilterKeyColumn)
 %%
 
-$prototype=int filterKeyColumn() const
-$method=|int|filterKeyColumn|
+$prototypeV2=int filterKeyColumn() const
 
 $prototype=void setFilterKeyColumn(int column)
 $method=|void|setFilterKeyColumn|int
@@ -120,8 +118,7 @@ $method=|void|setFilterKeyColumn|int
 %% Q_PROPERTY(bool dynamicSortFilter READ dynamicSortFilter WRITE setDynamicSortFilter)
 %%
 
-$prototype=bool dynamicSortFilter() const
-$method=|bool|dynamicSortFilter|
+$prototypeV2=bool dynamicSortFilter() const
 
 $prototype=void setDynamicSortFilter(bool enable)
 $method=|void|setDynamicSortFilter|bool
@@ -130,8 +127,7 @@ $method=|void|setDynamicSortFilter|bool
 %% Q_PROPERTY(Qt::CaseSensitivity filterCaseSensitivity READ filterCaseSensitivity WRITE setFilterCaseSensitivity)
 %%
 
-$prototype=Qt::CaseSensitivity filterCaseSensitivity() const
-$method=|Qt::CaseSensitivity|filterCaseSensitivity|
+$prototypeV2=Qt::CaseSensitivity filterCaseSensitivity() const
 
 $prototype=void setFilterCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setFilterCaseSensitivity|Qt::CaseSensitivity
@@ -140,8 +136,7 @@ $method=|void|setFilterCaseSensitivity|Qt::CaseSensitivity
 %% Q_PROPERTY(Qt::CaseSensitivity sortCaseSensitivity READ sortCaseSensitivity WRITE setSortCaseSensitivity)
 %%
 
-$prototype=Qt::CaseSensitivity sortCaseSensitivity() const
-$method=|Qt::CaseSensitivity|sortCaseSensitivity|
+$prototypeV2=Qt::CaseSensitivity sortCaseSensitivity() const
 
 $prototype=void setSortCaseSensitivity(Qt::CaseSensitivity cs)
 $method=|void|setSortCaseSensitivity|Qt::CaseSensitivity
@@ -150,8 +145,7 @@ $method=|void|setSortCaseSensitivity|Qt::CaseSensitivity
 %% Q_PROPERTY(bool isSortLocaleAware READ isSortLocaleAware WRITE setSortLocaleAware)
 %%
 
-$prototype=bool isSortLocaleAware() const
-$method=|bool|isSortLocaleAware|
+$prototypeV2=bool isSortLocaleAware() const
 
 $prototype=void setSortLocaleAware(bool on)
 $method=|void|setSortLocaleAware|bool
@@ -160,8 +154,7 @@ $method=|void|setSortLocaleAware|bool
 %% Q_PROPERTY(int sortRole READ sortRole WRITE setSortRole)
 %%
 
-$prototype=int sortRole() const
-$method=|int|sortRole|
+$prototypeV2=int sortRole() const
 
 $prototype=void setSortRole(int role)
 $method=|void|setSortRole|int
@@ -170,8 +163,7 @@ $method=|void|setSortRole|int
 %% Q_PROPERTY(int filterRole READ filterRole WRITE setFilterRole)
 %%
 
-$prototype=int filterRole() const
-$method=|int|filterRole|
+$prototypeV2=int filterRole() const
 
 $prototype=void setFilterRole(int role)
 $method=|void|setFilterRole|int
@@ -205,11 +197,9 @@ $method=|QItemSelection|mapSelectionToSource|const QItemSelection &
 $prototype=QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 $method=|QItemSelection|mapSelectionFromSource|const QItemSelection &
 
-$prototype=int sortColumn() const
-$method=|int|sortColumn|
+$prototypeV2=int sortColumn() const
 
-$prototype=Qt::SortOrder sortOrder() const
-$method=|Qt::SortOrder|sortOrder|
+$prototypeV2=Qt::SortOrder sortOrder() const
 
 $prototype=void setFilterWildcard(const QString &pattern) [slot]
 $method=|void|setFilterWildcard|const QString &
@@ -217,11 +207,9 @@ $method=|void|setFilterWildcard|const QString &
 $prototype=void setFilterFixedString(const QString &pattern) [slot]
 $method=|void|setFilterFixedString|const QString &
 
-$prototype=void clear() [slot]
-$method=|void|clear|
+$prototypeV2=void clear() [slot]
 
-$prototype=void invalidate() [slot]
-$method=|void|invalidate|
+$prototypeV2=void invalidate() [slot]
 
 $prototype=QObject *parent() const
 $internalMethod=|QObject *|parent,parent1|
@@ -317,11 +305,9 @@ $method=|QSize|span|const QModelIndex &
 $prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QStringList mimeTypes() const
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const
 
-$prototype=Qt::DropActions supportedDropActions() const
-$method=|Qt::DropActions|supportedDropActions|
+$prototypeV2=Qt::DropActions supportedDropActions() const
 
 $prototype=virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const [protected]
 

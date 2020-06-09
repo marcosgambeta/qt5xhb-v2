@@ -98,8 +98,7 @@ HB_FUNC_STATIC( QFILE_COPY )
 }
 $addMethod=copy
 
-$prototype=FileError error () const
-$method=|QFileDevice::FileError|error|
+$prototypeV2=QFileDevice::FileError error() const
 
 $prototype=bool exists () const
 $internalMethod=|bool|exists,exists1|
@@ -129,14 +128,11 @@ HB_FUNC_STATIC( QFILE_EXISTS )
 }
 $addMethod=exists
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=bool flush ()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
-$prototype=int handle () const
-$method=|int|handle|
+$prototypeV2=int handle() const
 
 $prototype=bool link ( const QString & linkName )
 $internalMethod=|bool|link,link1|const QString &
@@ -380,26 +376,20 @@ $addMethod=symLinkTarget
 $prototype=bool unmap ( uchar * address )
 $method=|bool|unmap|uchar *
 
-$prototype=void unsetError ()
-$method=|void|unsetError|
+$prototypeV2=void unsetError()
 
-$prototype=virtual bool atEnd () const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual void close ()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
-$prototype=virtual bool isSequential () const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
-$prototype=virtual qint64 pos () const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64
 
-$prototype=qint64 size () const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
 $prototype=static QString decodeName ( const QByteArray & localFileName )
 $internalStaticMethod=|QString|decodeName,decodeName1|const QByteArray &

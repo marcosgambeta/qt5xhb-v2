@@ -45,11 +45,9 @@ $prototype=explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 $prototype=~QSignalBlocker()
 $deleteMethod
 
-$prototype=void reblock() Q_DECL_NOTHROW
-$method=|void|reblock|
+$prototypeV2=void reblock() Q_DECL_NOTHROW
 
-$prototype=void unblock() Q_DECL_NOTHROW
-$method=|void|unblock|
+$prototypeV2=void unblock() Q_DECL_NOTHROW
 
 $extraMethods
 

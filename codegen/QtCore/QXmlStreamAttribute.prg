@@ -68,23 +68,17 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 
 $deleteMethod
 
-$prototype=bool isDefault() const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=QStringRef name() const
-$method=|QStringRef|name|
+$prototypeV2=QStringRef name() const
 
-$prototype=QStringRef namespaceUri() const
-$method=|QStringRef|namespaceUri|
+$prototypeV2=QStringRef namespaceUri() const
 
-$prototype=QStringRef prefix() const
-$method=|QStringRef|prefix|
+$prototypeV2=QStringRef prefix() const
 
-$prototype=QStringRef qualifiedName() const
-$method=|QStringRef|qualifiedName|
+$prototypeV2=QStringRef qualifiedName() const
 
-$prototype=QStringRef value() const
-$method=|QStringRef|value|
+$prototypeV2=QStringRef value() const
 
 $extraMethods
 

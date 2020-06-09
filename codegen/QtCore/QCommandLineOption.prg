@@ -65,20 +65,17 @@ $deleteMethod
 $prototype=void swap(QCommandLineOption &other)
 $method=|void|swap|QCommandLineOption &
 
-$prototype=QStringList names() const
-$method=|QStringList|names|
+$prototypeV2=QStringList names() const
 
 $prototype=void setValueName(const QString &name)
 $method=|void|setValueName|const QString &
 
-$prototype=QString valueName() const
-$method=|QString|valueName|
+$prototypeV2=QString valueName() const
 
 $prototype=void setDescription(const QString &description)
 $method=|void|setDescription|const QString &
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 $prototype=void setDefaultValue(const QString &defaultValue)
 $method=|void|setDefaultValue|const QString &
@@ -86,8 +83,7 @@ $method=|void|setDefaultValue|const QString &
 $prototype=void setDefaultValues(const QStringList &defaultValues)
 $method=|void|setDefaultValues|const QStringList &
 
-$prototype=QStringList defaultValues() const
-$method=|QStringList|defaultValues|
+$prototypeV2=QStringList defaultValues() const
 
 $extraMethods
 

@@ -62,20 +62,15 @@ $method=|void|addState|QAbstractState *
 $prototype=void removeState(QAbstractState *state)
 $method=|void|removeState|QAbstractState *
 
-$prototype=Error error() const
-$method=|QStateMachine::Error|error|
+$prototypeV2=QStateMachine::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=void clearError()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=bool isAnimated() const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
 $prototype=void setAnimated(bool enabled)
 $method=|void|setAnimated|bool
@@ -107,11 +102,9 @@ $method=|bool|cancelDelayedEvent|int
 $prototype=bool eventFilter(QObject *watched, QEvent *event)
 $method=|bool|eventFilter|QObject *,QEvent *
 
-$prototype=void start()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 %%
 %% SIGNALS

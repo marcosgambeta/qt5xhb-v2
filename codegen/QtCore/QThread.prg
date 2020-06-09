@@ -34,20 +34,16 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QAbstractEventDispatcher * eventDispatcher() const
-$method=|QAbstractEventDispatcher *|eventDispatcher|
+$prototypeV2=QAbstractEventDispatcher * eventDispatcher() const
 
 $prototype=void exit(int returnCode = 0)
 $method=|void|exit|int=0
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=Priority priority() const
-$method=|QThread::Priority|priority|
+$prototypeV2=QThread::Priority priority() const
 
 $prototype=void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
 $method=|void|setEventDispatcher|QAbstractEventDispatcher *
@@ -58,26 +54,21 @@ $method=|void|setPriority|QThread::Priority
 $prototype=void setStackSize(uint stackSize)
 $method=|void|setStackSize|uint
 
-$prototype=uint stackSize() const
-$method=|uint|stackSize|
+$prototypeV2=uint stackSize() const
 
 $prototype=virtual bool event(QEvent * event)
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=void quit()
-$method=|void|quit|
+$prototypeV2=void quit()
 
 $prototype=void start(Priority priority = InheritPriority)
 $method=|void|start|QThread::Priority=QThread::InheritPriority
 
-$prototype=void terminate()
-$method=|void|terminate|
+$prototypeV2=void terminate()
 
-$prototype=static QThread * currentThread()
-$staticMethod=|QThread *|currentThread|
+$prototypeV2=static QThread * currentThread()
 
-$prototype=static int idealThreadCount()
-$staticMethod=|int|idealThreadCount|
+$prototypeV2=static int idealThreadCount()
 
 $prototype=static void msleep(unsigned long msecs)
 $staticMethod=|void|msleep|unsigned long
@@ -88,8 +79,7 @@ $staticMethod=|void|sleep|unsigned long
 $prototype=static void usleep(unsigned long usecs)
 $staticMethod=|void|usleep|unsigned long
 
-$prototype=static void yieldCurrentThread()
-$staticMethod=|void|yieldCurrentThread|
+$prototypeV2=static void yieldCurrentThread()
 
 %%
 %% SIGNALS

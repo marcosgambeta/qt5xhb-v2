@@ -42,26 +42,21 @@ $method=|bool|tryStart|QRunnable *
 $prototype=bool QThreadPool::tryStart(std::function<void ()> functionToRun)
 %% TODO: Qt 5.15
 
-$prototype=int expiryTimeout() const
-$method=|int|expiryTimeout|
+$prototypeV2=int expiryTimeout() const
 
 $prototype=void setExpiryTimeout(int expiryTimeout)
 $method=|void|setExpiryTimeout|int
 
-$prototype=int maxThreadCount() const
-$method=|int|maxThreadCount|
+$prototypeV2=int maxThreadCount() const
 
 $prototype=void setMaxThreadCount(int maxThreadCount)
 $method=|void|setMaxThreadCount|int
 
-$prototype=int activeThreadCount() const
-$method=|int|activeThreadCount|
+$prototypeV2=int activeThreadCount() const
 
-$prototype=void reserveThread()
-$method=|void|reserveThread|
+$prototypeV2=void reserveThread()
 
-$prototype=void releaseThread()
-$method=|void|releaseThread|
+$prototypeV2=void releaseThread()
 
 $prototype=bool waitForDone(int msecs = -1)
 $method=|bool|waitForDone|int=-1
@@ -69,8 +64,7 @@ $method=|bool|waitForDone|int=-1
 $prototype=void clear()
 $method=5,2,0|void|clear|
 
-$prototype=static QThreadPool *globalInstance()
-$staticMethod=|QThreadPool *|globalInstance|
+$prototypeV2=static QThreadPool * globalInstance()
 
 $prototype=bool tryTake(QRunnable *runnable)
 $method=5,9,0|bool|tryTake|QRunnable *

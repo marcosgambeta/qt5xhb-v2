@@ -81,14 +81,11 @@ HB_FUNC_STATIC( QLOCALE_NEW )
 
 $deleteMethod
 
-$prototype=QString amText () const
-$method=|QString|amText|
+$prototypeV2=QString amText() const
 
-$prototype=QString bcp47Name () const
-$method=|QString|bcp47Name|
+$prototypeV2=QString bcp47Name() const
 
-$prototype=Country country () const
-$method=|QLocale::Country|country|
+$prototypeV2=QLocale::Country country() const
 
 $prototype=QString createSeparatedList ( const QStringList & list ) const
 $method=|QString|createSeparatedList|const QStringList &
@@ -105,50 +102,36 @@ $method=|QString|dateTimeFormat|QLocale::FormatType=QLocale::LongFormat
 $prototype=QString dayName ( int day, FormatType type = LongFormat ) const
 $method=|QString|dayName|int,QLocale::FormatType=QLocale::LongFormat
 
-$prototype=QChar decimalPoint () const
-$method=|QChar|decimalPoint|
+$prototypeV2=QChar decimalPoint() const
 
-$prototype=QChar exponential () const
-$method=|QChar|exponential|
+$prototypeV2=QChar exponential() const
 
-$prototype=Qt::DayOfWeek firstDayOfWeek () const
-$method=|Qt::DayOfWeek|firstDayOfWeek|
+$prototypeV2=Qt::DayOfWeek firstDayOfWeek() const
 
-$prototype=QChar groupSeparator () const
-$method=|QChar|groupSeparator|
+$prototypeV2=QChar groupSeparator() const
 
-$prototype=Language language () const
-$method=|QLocale::Language|language|
+$prototypeV2=QLocale::Language language() const
 
-$prototype=MeasurementSystem measurementSystem () const
-$method=|QLocale::MeasurementSystem|measurementSystem|
+$prototypeV2=QLocale::MeasurementSystem measurementSystem() const
 
 $prototype=QString monthName ( int month, FormatType type = LongFormat ) const
 $method=|QString|monthName|int,QLocale::FormatType=QLocale::LongFormat
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString nativeCountryName () const
-$method=|QString|nativeCountryName|
+$prototypeV2=QString nativeCountryName() const
 
-$prototype=QString nativeLanguageName () const
-$method=|QString|nativeLanguageName|
+$prototypeV2=QString nativeLanguageName() const
 
-$prototype=QChar negativeSign () const
-$method=|QChar|negativeSign|
+$prototypeV2=QChar negativeSign() const
 
-$prototype=NumberOptions numberOptions () const
-$method=|QLocale::NumberOptions|numberOptions|
+$prototypeV2=QLocale::NumberOptions numberOptions() const
 
-$prototype=QChar percent () const
-$method=|QChar|percent|
+$prototypeV2=QChar percent() const
 
-$prototype=QString pmText () const
-$method=|QString|pmText|
+$prototypeV2=QString pmText() const
 
-$prototype=QChar positiveSign () const
-$method=|QChar|positiveSign|
+$prototypeV2=QChar positiveSign() const
 
 $prototype=QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
 $method=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyle=QLocale::StandardQuotation
@@ -169,8 +152,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 }
 $addMethod=quoteString
 
-$prototype=Script script () const
-$method=|QLocale::Script|script|
+$prototypeV2=QLocale::Script script() const
 
 $prototype=void setNumberOptions ( NumberOptions options )
 $method=|void|setNumberOptions|QLocale::NumberOptions
@@ -181,8 +163,7 @@ $method=|QString|standaloneDayName|int,QLocale::FormatType=QLocale::LongFormat
 $prototype=QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
 $method=|QString|standaloneMonthName|int,QLocale::FormatType=QLocale::LongFormat
 
-$prototype=Qt::LayoutDirection textDirection () const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototype=QString timeFormat ( FormatType format = LongFormat ) const
 $method=|QString|timeFormat|QLocale::FormatType=QLocale::LongFormat
@@ -425,17 +406,14 @@ $addMethod=toTime
 $prototype=QString toUpper ( const QString & str ) const
 $method=|QString|toUpper|const QString &
 
-$prototype=QStringList uiLanguages () const
-$method=|QStringList|uiLanguages|
+$prototypeV2=QStringList uiLanguages() const
 
 $prototype=QList<Qt::DayOfWeek> weekdays () const
 $method=|QList<Qt::DayOfWeek>|weekdays|
 
-$prototype=QChar zeroDigit () const
-$method=|QChar|zeroDigit|
+$prototypeV2=QChar zeroDigit() const
 
-$prototype=static QLocale c ()
-$staticMethod=|QLocale|c|
+$prototypeV2=static QLocale c()
 
 $prototype=static QString countryToString ( Country country )
 $staticMethod=|QString|countryToString|QLocale::Country
@@ -452,8 +430,7 @@ $staticMethod=|QString|scriptToString|QLocale::Script
 $prototype=static void setDefault ( const QLocale & locale )
 $staticMethod=|void|setDefault|const QLocale &
 
-$prototype=static QLocale system ()
-$staticMethod=|QLocale|system|
+$prototypeV2=static QLocale system()
 
 $extraMethods
 

@@ -59,47 +59,34 @@ $deleteMethod
 $prototype=void swap(QMimeType &other)
 $method=|void|swap|QMimeType &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isDefault() const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString comment() const
-$method=|QString|comment|
+$prototypeV2=QString comment() const
 
-$prototype=QString genericIconName() const
-$method=|QString|genericIconName|
+$prototypeV2=QString genericIconName() const
 
-$prototype=QString iconName() const
-$method=|QString|iconName|
+$prototypeV2=QString iconName() const
 
-$prototype=QStringList globPatterns() const
-$method=|QStringList|globPatterns|
+$prototypeV2=QStringList globPatterns() const
 
-$prototype=QStringList parentMimeTypes() const
-$method=|QStringList|parentMimeTypes|
+$prototypeV2=QStringList parentMimeTypes() const
 
-$prototype=QStringList allAncestors() const
-$method=|QStringList|allAncestors|
+$prototypeV2=QStringList allAncestors() const
 
-$prototype=QStringList aliases() const
-$method=|QStringList|aliases|
+$prototypeV2=QStringList aliases() const
 
-$prototype=QStringList suffixes() const
-$method=|QStringList|suffixes|
+$prototypeV2=QStringList suffixes() const
 
-$prototype=QString preferredSuffix() const
-$method=|QString|preferredSuffix|
+$prototypeV2=QString preferredSuffix() const
 
 $prototype=bool inherits(const QString &mimeTypeName) const
 $method=|bool|inherits|const QString &
 
-$prototype=QString filterString() const
-$method=|QString|filterString|
+$prototypeV2=QString filterString() const
 
 $extraMethods
 

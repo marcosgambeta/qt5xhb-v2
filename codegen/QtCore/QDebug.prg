@@ -83,8 +83,7 @@ $method=|QDebug &|nospace|
 $prototype=QDebug &maybeSpace()
 $method=|QDebug &|maybeSpace|
 
-$prototype=bool autoInsertSpaces() const
-$method=|bool|autoInsertSpaces|
+$prototypeV2=bool autoInsertSpaces() const
 
 $prototype=void setAutoInsertSpaces(bool b)
 $method=|void|setAutoInsertSpaces|bool

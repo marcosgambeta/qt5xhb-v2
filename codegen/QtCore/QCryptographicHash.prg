@@ -30,8 +30,7 @@ $constructor=|new|QCryptographicHash::Algorithm
 
 $deleteMethod
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void addData(const char *data, int length)
 $internalMethod=|void|addData,addData1|const char *,int
@@ -69,8 +68,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 }
 $addMethod=addData
 
-$prototype=QByteArray result() const
-$method=|QByteArray|result|
+$prototypeV2=QByteArray result() const
 
 $prototype=static QByteArray hash(const QByteArray &data, Algorithm method)
 $staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm

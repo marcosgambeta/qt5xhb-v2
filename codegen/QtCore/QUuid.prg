@@ -58,23 +58,17 @@ HB_FUNC_STATIC( QUUID_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QByteArray toByteArray() const
-$method=|QByteArray|toByteArray|
+$prototypeV2=QByteArray toByteArray() const
 
-$prototype=QByteArray toRfc4122() const
-$method=|QByteArray|toRfc4122|
+$prototypeV2=QByteArray toRfc4122() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=QUuid::Variant variant() const
-$method=|QUuid::Variant|variant|
+$prototypeV2=QUuid::Variant variant() const
 
-$prototype=QUuid::Version version() const
-$method=|QUuid::Version|version|
+$prototypeV2=QUuid::Version version() const
 
 $prototype=static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
 $internalStaticMethod=|QUuid|createUuidV3,createUuidV31|const QUuid &,const QByteArray &

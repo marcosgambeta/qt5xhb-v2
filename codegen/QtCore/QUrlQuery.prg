@@ -78,14 +78,12 @@ $method=|void|addQueryItem|const QString &,const QString &
 $prototype=QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QStringList|allQueryItemValues|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool hasQueryItem(const QString & key) const
 $method=|bool|hasQueryItem|const QString &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|query|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
@@ -93,11 +91,9 @@ $method=|QString|query|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 $prototype=QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|queryItemValue|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-$prototype=QChar queryPairDelimiter() const
-$method=|QChar|queryPairDelimiter|
+$prototypeV2=QChar queryPairDelimiter() const
 
-$prototype=QChar queryValueDelimiter() const
-$method=|QChar|queryValueDelimiter|
+$prototypeV2=QChar queryValueDelimiter() const
 
 $prototype=void removeAllQueryItems(const QString & key)
 $method=|void|removeAllQueryItems|const QString &
@@ -114,11 +110,9 @@ $method=|void|swap|QUrlQuery &
 $prototype=QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
 $method=|QString|toString|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
 
-$prototype=static QChar defaultQueryPairDelimiter()
-$staticMethod=|QChar|defaultQueryPairDelimiter|
+$prototypeV2=static QChar defaultQueryPairDelimiter()
 
-$prototype=static QChar defaultQueryValueDelimiter()
-$staticMethod=|QChar|defaultQueryValueDelimiter|
+$prototypeV2=static QChar defaultQueryValueDelimiter()
 
 $extraMethods
 

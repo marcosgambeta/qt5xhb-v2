@@ -62,11 +62,9 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=qreal manhattanLength() const
-$method=|qreal|manhattanLength|
+$prototypeV2=qreal manhattanLength() const
 
 $prototype=void setX(qreal x)
 $method=|void|setX|qreal
@@ -74,14 +72,11 @@ $method=|void|setX|qreal
 $prototype=void setY(qreal y)
 $method=|void|setY|qreal
 
-$prototype=QPoint toPoint() const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
 $extraMethods
 

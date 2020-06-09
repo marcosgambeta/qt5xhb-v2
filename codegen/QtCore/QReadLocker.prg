@@ -30,14 +30,11 @@ $constructor=|new|QReadWriteLock *
 
 $deleteMethod
 
-$prototype=void unlock()
-$method=|void|unlock|
+$prototypeV2=void unlock()
 
-$prototype=void relock()
-$method=|void|relock|
+$prototypeV2=void relock()
 
-$prototype=QReadWriteLock *readWriteLock() const
-$method=|QReadWriteLock *|readWriteLock|
+$prototypeV2=QReadWriteLock * readWriteLock() const
 
 $extraMethods
 

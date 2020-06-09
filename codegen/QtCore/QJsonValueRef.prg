@@ -57,47 +57,33 @@ HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 
 $deleteMethod
 
-$prototype=QJsonValue::Type type() const
-$method=|QJsonValue::Type|type|
+$prototypeV2=QJsonValue::Type type() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isBool() const
-$method=|bool|isBool|
+$prototypeV2=bool isBool() const
 
-$prototype=bool isDouble() const
-$method=|bool|isDouble|
+$prototypeV2=bool isDouble() const
 
-$prototype=bool isString() const
-$method=|bool|isString|
+$prototypeV2=bool isString() const
 
-$prototype=bool isArray() const
-$method=|bool|isArray|
+$prototypeV2=bool isArray() const
 
-$prototype=bool isObject() const
-$method=|bool|isObject|
+$prototypeV2=bool isObject() const
 
-$prototype=bool isUndefined() const
-$method=|bool|isUndefined|
+$prototypeV2=bool isUndefined() const
 
-$prototype=bool toBool() const
-$method=|bool|toBool|
+$prototypeV2=bool toBool() const
 
-$prototype=int toInt() const
-$method=|int|toInt|
+$prototypeV2=int toInt() const
 
-$prototype=double toDouble() const
-$method=|double|toDouble|
+$prototypeV2=double toDouble() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=QJsonArray toArray() const
-$method=|QJsonArray|toArray|
+$prototypeV2=QJsonArray toArray() const
 
-$prototype=QJsonObject toObject() const
-$method=|QJsonObject|toObject|
+$prototypeV2=QJsonObject toObject() const
 
 $extraMethods
 

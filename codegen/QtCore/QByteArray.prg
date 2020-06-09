@@ -154,14 +154,12 @@ $addMethod=append
 $prototype=char at ( int i ) const
 $method=|char|at|int
 
-$prototype=int capacity () const
-$method=|int|capacity|
+$prototypeV2=int capacity() const
 
 $prototype=void chop ( int n )
 $method=|void|chop|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=const char * constData () const
 $method=|const char *|constData|
@@ -397,11 +395,9 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 }
 $addMethod=insert
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
 $method=|int|lastIndexOf,lastIndexOf1|const QByteArray &,int=-1
@@ -455,8 +451,7 @@ $method=|QByteArray|left|int
 $prototype=QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
 $method=|QByteArray|leftJustified|int,char=' ',bool=false
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=QByteArray mid ( int pos, int len = -1 ) const
 $method=|QByteArray|mid|int,int=-1
@@ -778,17 +773,14 @@ $addMethod=setNum
 $prototype=QByteArray & setRawData ( const char * data, uint size )
 $method=|QByteArray &|setRawData|const char *,uint
 
-$prototype=QByteArray simplified () const
-$method=|QByteArray|simplified|
+$prototypeV2=QByteArray simplified() const
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QList<QByteArray> split ( char sep ) const
 $method=|QList<QByteArray>|split|char
 
-$prototype=void squeeze ()
-$method=|void|squeeze|
+$prototypeV2=void squeeze()
 
 $prototype=bool startsWith ( const QByteArray & ba ) const
 $internalMethod=|bool|startsWith,startsWith1|const QByteArray &
@@ -828,8 +820,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 }
 $addMethod=startsWith
 
-$prototype=QByteArray toBase64 () const
-$method=|QByteArray|toBase64|
+$prototypeV2=QByteArray toBase64() const
 
 $prototype=double toDouble ( bool * ok = nullptr ) const
 $method=|double|toDouble|bool *=nullptr
@@ -838,8 +829,7 @@ $prototype=float toFloat ( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
 $method=|float|toFloat|bool *=nullptr
 
-$prototype=QByteArray toHex () const
-$method=|QByteArray|toHex|
+$prototypeV2=QByteArray toHex() const
 
 $prototype=int toInt ( bool * ok = nullptr, int base = 10 ) const
 %% TODO: implementar parametro opcional
@@ -853,8 +843,7 @@ $prototype=qlonglong toLongLong ( bool * ok = nullptr, int base = 10 ) const
 %% TODO: implementar parametro opcional
 $method=|qlonglong|toLongLong|bool *=nullptr,int=10
 
-$prototype=QByteArray toLower () const
-$method=|QByteArray|toLower|
+$prototypeV2=QByteArray toLower() const
 
 $prototype=QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 $method=|QByteArray|toPercentEncoding|const QByteArray &=QByteArray(),const QByteArray &=QByteArray(),char='%'
@@ -874,11 +863,9 @@ $method=|qulonglong|toULongLong|bool *=nullptr,int=10
 $prototype=ushort toUShort ( bool * ok = nullptr, int base = 10 ) const
 $method=|ushort|toUShort|bool *=nullptr,int=10
 
-$prototype=QByteArray toUpper () const
-$method=|QByteArray|toUpper|
+$prototypeV2=QByteArray toUpper() const
 
-$prototype=QByteArray trimmed () const
-$method=|QByteArray|trimmed|
+$prototypeV2=QByteArray trimmed() const
 
 $prototype=void truncate ( int pos )
 $method=|void|truncate|int

@@ -81,41 +81,29 @@ HB_FUNC_STATIC( QFILEINFO_NEW )
 
 $deleteMethod
 
-$prototype=QDir absoluteDir() const
-$method=|QDir|absoluteDir|
+$prototypeV2=QDir absoluteDir() const
 
-$prototype=QString absoluteFilePath() const
-$method=|QString|absoluteFilePath|
+$prototypeV2=QString absoluteFilePath() const
 
-$prototype=QString absolutePath() const
-$method=|QString|absolutePath|
+$prototypeV2=QString absolutePath() const
 
-$prototype=QString baseName() const
-$method=|QString|baseName|
+$prototypeV2=QString baseName() const
 
-$prototype=QString bundleName() const
-$method=|QString|bundleName|
+$prototypeV2=QString bundleName() const
 
-$prototype=bool caching() const
-$method=|bool|caching|
+$prototypeV2=bool caching() const
 
-$prototype=QString canonicalFilePath() const
-$method=|QString|canonicalFilePath|
+$prototypeV2=QString canonicalFilePath() const
 
-$prototype=QString canonicalPath() const
-$method=|QString|canonicalPath|
+$prototypeV2=QString canonicalPath() const
 
-$prototype=QString completeBaseName() const
-$method=|QString|completeBaseName|
+$prototypeV2=QString completeBaseName() const
 
-$prototype=QString completeSuffix() const
-$method=|QString|completeSuffix|
+$prototypeV2=QString completeSuffix() const
 
-$prototype=QDateTime created() const
-$method=|QDateTime|created|
+$prototypeV2=QDateTime created() const
 
-$prototype=QDir dir() const
-$method=|QDir|dir|
+$prototypeV2=QDir dir() const
 
 $prototype=bool exists() const
 $internalMethod=|bool|exists,exists1|
@@ -147,80 +135,56 @@ HB_FUNC_STATIC( QFILEINFO_EXISTS )
 }
 $addMethod=exists
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QString filePath() const
-$method=|QString|filePath|
+$prototypeV2=QString filePath() const
 
-$prototype=QString group() const
-$method=|QString|group|
+$prototypeV2=QString group() const
 
-$prototype=uint groupId() const
-$method=|uint|groupId|
+$prototypeV2=uint groupId() const
 
-$prototype=bool isAbsolute() const
-$method=|bool|isAbsolute|
+$prototypeV2=bool isAbsolute() const
 
-$prototype=bool isBundle() const
-$method=|bool|isBundle|
+$prototypeV2=bool isBundle() const
 
-$prototype=bool isDir() const
-$method=|bool|isDir|
+$prototypeV2=bool isDir() const
 
-$prototype=bool isExecutable() const
-$method=|bool|isExecutable|
+$prototypeV2=bool isExecutable() const
 
-$prototype=bool isFile() const
-$method=|bool|isFile|
+$prototypeV2=bool isFile() const
 
-$prototype=bool isHidden() const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isNativePath() const
-$method=|bool|isNativePath|
+$prototypeV2=bool isNativePath() const
 
-$prototype=bool isReadable() const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isRelative() const
-$method=|bool|isRelative|
+$prototypeV2=bool isRelative() const
 
-$prototype=bool isRoot() const
-$method=|bool|isRoot|
+$prototypeV2=bool isRoot() const
 
-$prototype=bool isSymLink() const
-$method=|bool|isSymLink|
+$prototypeV2=bool isSymLink() const
 
-$prototype=bool isWritable() const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
-$prototype=QDateTime lastModified() const
-$method=|QDateTime|lastModified|
+$prototypeV2=QDateTime lastModified() const
 
-$prototype=QDateTime lastRead() const
-$method=|QDateTime|lastRead|
+$prototypeV2=QDateTime lastRead() const
 
-$prototype=bool makeAbsolute()
-$method=|bool|makeAbsolute|
+$prototypeV2=bool makeAbsolute()
 
-$prototype=QString owner() const
-$method=|QString|owner|
+$prototypeV2=QString owner() const
 
-$prototype=uint ownerId() const
-$method=|uint|ownerId|
+$prototypeV2=uint ownerId() const
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=bool permission(QFile::Permissions permissions) const
 $method=|bool|permission|QFile::Permissions
 
-$prototype=QFile::Permissions permissions() const
-$method=|QFile::Permissions|permissions|
+$prototypeV2=QFile::Permissions permissions() const
 
-$prototype=void refresh()
-$method=|void|refresh|
+$prototypeV2=void refresh()
 
 $prototype=void setCaching(bool enable)
 $method=|void|setCaching|bool
@@ -261,17 +225,14 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
 }
 $addMethod=setFile
 
-$prototype=qint64 size() const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
-$prototype=QString suffix() const
-$method=|QString|suffix|
+$prototypeV2=QString suffix() const
 
 $prototype=void swap(QFileInfo & other)
 $method=|void|swap|QFileInfo &
 
-$prototype=QString symLinkTarget() const
-$method=|QString|symLinkTarget|
+$prototypeV2=QString symLinkTarget() const
 
 $prototype=QDateTime birthTime() const
 $method=5,10,0|QDateTime|birthTime|

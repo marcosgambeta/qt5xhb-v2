@@ -76,17 +76,13 @@ $method=|void|adjust|int,int,int,int
 $prototype=QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
 $method=|QRect|adjusted|int,int,int,int
 
-$prototype=int bottom () const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
-$prototype=QPoint bottomLeft () const
-$method=|QPoint|bottomLeft|
+$prototypeV2=QPoint bottomLeft() const
 
-$prototype=QPoint bottomRight () const
-$method=|QPoint|bottomRight|
+$prototypeV2=QPoint bottomRight() const
 
-$prototype=QPoint center () const
-$method=|QPoint|center|
+$prototypeV2=QPoint center() const
 
 $prototype=bool contains ( const QPoint & point, bool proper = false ) const
 $internalMethod=|bool|contains,contains1|const QPoint &,bool=false
@@ -138,8 +134,7 @@ $method=|void|getCoords|int *,int *,int *,int *
 $prototype=void getRect ( int * x, int * y, int * width, int * height ) const
 $method=|void|getRect|int *,int *,int *,int *
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=QRect intersected ( const QRect & rectangle ) const
 $method=|QRect|intersected|const QRect &
@@ -147,17 +142,13 @@ $method=|QRect|intersected|const QRect &
 $prototype=bool intersects ( const QRect & rectangle ) const
 $method=|bool|intersects|const QRect &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int left () const
-$method=|int|left|
+$prototypeV2=int left() const
 
 $prototype=void moveBottom ( int y )
 $method=|void|moveBottom|int
@@ -214,11 +205,9 @@ $method=|void|moveTopLeft|const QPoint &
 $prototype=void moveTopRight ( const QPoint & position )
 $method=|void|moveTopRight|const QPoint &
 
-$prototype=QRect normalized () const
-$method=|QRect|normalized|
+$prototypeV2=QRect normalized() const
 
-$prototype=int right () const
-$method=|int|right|
+$prototypeV2=int right() const
 
 $prototype=void setBottom ( int y )
 $method=|void|setBottom|int
@@ -265,17 +254,13 @@ $method=|void|setX|int
 $prototype=void setY ( int y )
 $method=|void|setY|int
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=int top () const
-$method=|int|top|
+$prototypeV2=int top() const
 
-$prototype=QPoint topLeft () const
-$method=|QPoint|topLeft|
+$prototypeV2=QPoint topLeft() const
 
-$prototype=QPoint topRight () const
-$method=|QPoint|topRight|
+$prototypeV2=QPoint topRight() const
 
 $prototype=void translate ( int dx, int dy )
 $internalMethod=|void|translate,translate1|int,int
@@ -336,14 +321,11 @@ $addMethod=translated
 $prototype=QRect united ( const QRect & rectangle ) const
 $method=|QRect|united|const QRect &
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int x () const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y () const
-$method=|int|y|
+$prototypeV2=int y() const
 
 $extraMethods
 

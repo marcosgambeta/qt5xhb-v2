@@ -29,14 +29,11 @@ $includes
 
 $deleteMethod
 
-$prototype=QVariant currentValue () const
-$method=|QVariant|currentValue|
+$prototypeV2=QVariant currentValue() const
 
-$prototype=QEasingCurve easingCurve () const
-$method=|QEasingCurve|easingCurve|
+$prototypeV2=QEasingCurve easingCurve() const
 
-$prototype=QVariant endValue () const
-$method=|QVariant|endValue|
+$prototypeV2=QVariant endValue() const
 
 $prototype=QVariant keyValueAt ( qreal step ) const
 $method=|QVariant|keyValueAt|qreal
@@ -56,8 +53,7 @@ $method=|void|setKeyValueAt|qreal,const QVariant &
 $prototype=void setStartValue ( const QVariant & value )
 $method=|void|setStartValue|const QVariant &
 
-$prototype=QVariant startValue () const
-$method=|QVariant|startValue|
+$prototypeV2=QVariant startValue() const
 
 %%
 %% SIGNALS

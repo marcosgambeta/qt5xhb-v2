@@ -66,29 +66,22 @@ $method=|QJsonValue|at|int
 $prototype=bool contains(const QJsonValue & value) const
 $method=|bool|contains|const QJsonValue &
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool empty() const
-$method=|bool|empty|
+$prototypeV2=bool empty() const
 
-$prototype=QJsonValue first() const
-$method=|QJsonValue|first|
+$prototypeV2=QJsonValue first() const
 
 $prototype=void insert(int i, const QJsonValue & value)
 $method=|void|insert|int,const QJsonValue &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=QJsonValue last() const
-$method=|QJsonValue|last|
+$prototypeV2=QJsonValue last() const
 
-$prototype=void pop_back()
-$method=|void|pop_back|
+$prototypeV2=void pop_back()
 
-$prototype=void pop_front()
-$method=|void|pop_front|
+$prototypeV2=void pop_front()
 
 $prototype=void prepend(const QJsonValue & value)
 $method=|void|prepend|const QJsonValue &
@@ -102,23 +95,19 @@ $method=|void|push_front|const QJsonValue &
 $prototype=void removeAt(int i)
 $method=|void|removeAt|int
 
-$prototype=void removeFirst()
-$method=|void|removeFirst|
+$prototypeV2=void removeFirst()
 
-$prototype=void removeLast()
-$method=|void|removeLast|
+$prototypeV2=void removeLast()
 
 $prototype=void replace(int i, const QJsonValue & value)
 $method=|void|replace|int,const QJsonValue &
 
-$prototype=int size() const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QJsonValue takeAt(int i)
 $method=|QJsonValue|takeAt|int
 
-$prototype=QVariantList toVariantList() const
-$method=|QVariantList|toVariantList|
+$prototypeV2=QVariantList toVariantList() const
 
 $prototype=static QJsonArray fromStringList(const QStringList & list)
 $staticMethod=|QJsonArray|fromStringList|const QStringList &

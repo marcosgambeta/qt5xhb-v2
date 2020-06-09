@@ -63,20 +63,15 @@ $method=|QDate|addMonths|int
 $prototype=QDate addYears ( int nyears ) const
 $method=|QDate|addYears|int
 
-$prototype=int day () const
-$method=|int|day|
+$prototypeV2=int day() const
 
-$prototype=int dayOfWeek () const
-$method=|int|dayOfWeek|
+$prototypeV2=int dayOfWeek() const
 
-$prototype=int dayOfYear () const
-$method=|int|dayOfYear|
+$prototypeV2=int dayOfYear() const
 
-$prototype=int daysInMonth () const
-$method=|int|daysInMonth|
+$prototypeV2=int daysInMonth() const
 
-$prototype=int daysInYear () const
-$method=|int|daysInYear|
+$prototypeV2=int daysInYear() const
 
 $prototype=int daysTo ( const QDate & d ) const
 $method=|int|daysTo|const QDate &
@@ -84,17 +79,14 @@ $method=|int|daysTo|const QDate &
 $prototype=void getDate ( int * year, int * month, int * day )
 $method=|void|getDate|int *,int *,int *
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=int month () const
-$method=|int|month|
+$prototypeV2=int month() const
 
 $prototype=bool setDate ( int year, int month, int day )
 $method=|bool|setDate|int,int,int
 
-$prototype=int toJulianDay () const
-$method=|int|toJulianDay|
+$prototypeV2=int toJulianDay() const
 
 $prototype=QString toString ( const QString & format ) const
 $internalMethod=|QString|toString,toString1|const QString &
@@ -128,11 +120,9 @@ $prototype=int weekNumber ( int * yearNumber = nullptr ) const
 %% TODO: implementar parametro opcional
 $method=|int|weekNumber|int *=nullptr
 
-$prototype=int year () const
-$method=|int|year|
+$prototypeV2=int year() const
 
-$prototype=static QDate currentDate ()
-$staticMethod=|QDate|currentDate|
+$prototypeV2=static QDate currentDate()
 
 $prototype=static QDate fromJulianDay ( int jd )
 $staticMethod=|QDate|fromJulianDay|int

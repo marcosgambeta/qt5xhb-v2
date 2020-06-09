@@ -31,30 +31,25 @@ $constructor=|new|const QString &
 
 $deleteMethod
 
-$prototype=bool lock()
-$method=|bool|lock|
+$prototypeV2=bool lock()
 
 $prototype=bool tryLock(int timeout = 0)
 $method=|bool|tryLock|int=0
 
-$prototype=void unlock()
-$method=|void|unlock|
+$prototypeV2=void unlock()
 
 $prototype=void setStaleLockTime(int)
 $method=|void|setStaleLockTime|int
 
-$prototype=int staleLockTime() const
-$method=|int|staleLockTime|
+$prototypeV2=int staleLockTime() const
 
-$prototype=bool isLocked() const
-$method=|bool|isLocked|
+$prototypeV2=bool isLocked() const
 
 $prototype=bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
 %% TODO: revisar implementacao do metodo e corrigir(?)
 %% $method=|bool|getLockInfo|qint64 *,QString *,QString *
 
-$prototype=bool removeStaleLockFile()
-$method=|bool|removeStaleLockFile|
+$prototypeV2=bool removeStaleLockFile()
 
 $extraMethods
 

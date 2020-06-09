@@ -32,32 +32,24 @@ $constructor=|new|int=1000,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=int currentFrame () const
-$method=|int|currentFrame|
+$prototypeV2=int currentFrame() const
 
-$prototype=int currentTime () const
-$method=|int|currentTime|
+$prototypeV2=int currentTime() const
 
-$prototype=qreal currentValue () const
-$method=|qreal|currentValue|
+$prototypeV2=qreal currentValue() const
 
-$prototype=CurveShape curveShape () const
-$method=|QTimeLine::CurveShape|curveShape|
+$prototypeV2=QTimeLine::CurveShape curveShape() const
 
-$prototype=Direction direction () const
-$method=|QTimeLine::Direction|direction|
+$prototypeV2=QTimeLine::Direction direction() const
 
-$prototype=int duration () const
-$method=|int|duration|
+$prototypeV2=int duration() const
 
-$prototype=int endFrame () const
-$method=|int|endFrame|
+$prototypeV2=int endFrame() const
 
 $prototype=int frameForTime ( int msec ) const
 $method=|int|frameForTime|int
 
-$prototype=int loopCount () const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
 $prototype=void setCurveShape ( CurveShape shape )
 $method=|void|setCurveShape|QTimeLine::CurveShape
@@ -86,20 +78,16 @@ $method=|void|setStartFrame|int
 $prototype=void setUpdateInterval ( int interval )
 $method=|void|setUpdateInterval|int
 
-$prototype=int startFrame () const
-$method=|int|startFrame|
+$prototypeV2=int startFrame() const
 
-$prototype=State state () const
-$method=|QTimeLine::State|state|
+$prototypeV2=QTimeLine::State state() const
 
-$prototype=int updateInterval () const
-$method=|int|updateInterval|
+$prototypeV2=int updateInterval() const
 
 $prototype=virtual qreal valueForTime ( int msec ) const
 $virtualMethod=|qreal|valueForTime|int
 
-$prototype=void resume ()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setCurrentTime ( int msec )
 $method=|void|setCurrentTime|int
@@ -107,14 +95,11 @@ $method=|void|setCurrentTime|int
 $prototype=void setPaused ( bool paused )
 $method=|void|setPaused|bool
 
-$prototype=void start ()
-$method=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void toggleDirection ()
-$method=|void|toggleDirection|
+$prototypeV2=void toggleDirection()
 
 %%
 %% SIGNALS

@@ -30,26 +30,19 @@ $constructor=|new|const QRegularExpressionMatchIterator &
 
 $deleteMethod
 
-$prototype=bool hasNext() const
-$method=|bool|hasNext|
+$prototypeV2=bool hasNext() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QRegularExpression::MatchOptions matchOptions() const
-$method=|QRegularExpression::MatchOptions|matchOptions|
+$prototypeV2=QRegularExpression::MatchOptions matchOptions() const
 
-$prototype=QRegularExpression::MatchType matchType() const
-$method=|QRegularExpression::MatchType|matchType|
+$prototypeV2=QRegularExpression::MatchType matchType() const
 
-$prototype=QRegularExpressionMatch next()
-$method=|QRegularExpressionMatch|next|
+$prototypeV2=QRegularExpressionMatch next()
 
-$prototype=QRegularExpressionMatch peekNext() const
-$method=|QRegularExpressionMatch|peekNext|
+$prototypeV2=QRegularExpressionMatch peekNext() const
 
-$prototype=QRegularExpression regularExpression() const
-$method=|QRegularExpression|regularExpression|
+$prototypeV2=QRegularExpression regularExpression() const
 
 $prototype=void swap(QRegularExpressionMatchIterator & other)
 $method=|void|swap|QRegularExpressionMatchIterator &

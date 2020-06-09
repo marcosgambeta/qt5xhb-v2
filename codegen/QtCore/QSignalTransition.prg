@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 $deleteMethod
 
-$prototype=QObject *senderObject() const
-$method=|QObject *|senderObject|
+$prototypeV2=QObject * senderObject() const
 
 $prototype=void setSenderObject(const QObject *sender)
 $method=|void|setSenderObject|const QObject *
 
-$prototype=QByteArray signal() const
-$method=|QByteArray|signal|
+$prototypeV2=QByteArray signal() const
 
 $prototype=void setSignal(const QByteArray &signal)
 $method=|void|setSignal|const QByteArray &

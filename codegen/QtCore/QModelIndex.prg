@@ -57,32 +57,25 @@ $deleteMethod
 $prototype=QModelIndex child(int row, int column) const
 $method=|QModelIndex|child|int,int
 
-$prototype=int column() const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=QVariant data(int role = Qt::DisplayRole) const
 $method=|QVariant|data|int=Qt::DisplayRole
 
-$prototype=Qt::ItemFlags flags() const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=quintptr internalId() const
-$method=|quintptr|internalId|
+$prototypeV2=quintptr internalId() const
 
-$prototype=void * internalPointer() const
-$method=|void *|internalPointer|
+$prototypeV2=void * internalPointer() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=const QAbstractItemModel * model() const
 $method=|const QAbstractItemModel *|model|
 
-$prototype=QModelIndex parent() const
-$method=|QModelIndex|parent|
+$prototypeV2=QModelIndex parent() const
 
-$prototype=int row() const
-$method=|int|row|
+$prototypeV2=int row() const
 
 $prototype=QModelIndex sibling(int row, int column) const
 $method=|QModelIndex|sibling|int,int

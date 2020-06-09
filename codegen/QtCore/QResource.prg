@@ -30,24 +30,19 @@ $constructor=|new|const QString &=QString(),const QLocale &=QLocale()
 
 $deleteMethod
 
-$prototype=QString absoluteFilePath () const
-$method=|QString|absoluteFilePath|
+$prototypeV2=QString absoluteFilePath() const
 
 $prototype=const uchar * data () const
 %% TODO: implementar 'const uchar *'
 $method=|const char *|data|
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=bool isCompressed () const
-$method=|bool|isCompressed|
+$prototypeV2=bool isCompressed() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QLocale locale () const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setFileName ( const QString & file )
 $method=|void|setFileName|const QString &
@@ -55,8 +50,7 @@ $method=|void|setFileName|const QString &
 $prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &
 
-$prototype=qint64 size () const
-$method=|qint64|size|
+$prototypeV2=qint64 size() const
 
 $prototype=static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
 $staticMethod=|bool|registerResource|const QString &,const QString &=QString()

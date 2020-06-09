@@ -33,20 +33,16 @@ $deleteMethod
 $prototype=void setKey(const QString &key, int initialValue = 0, AccessMode mode = Open)
 $method=|void|setKey|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
 
-$prototype=QString key() const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
-$prototype=bool acquire()
-$method=|bool|acquire|
+$prototypeV2=bool acquire()
 
 $prototype=bool release(int n = 1)
 $method=|bool|release|int=1
 
-$prototype=SystemSemaphoreError error() const
-$method=|QSystemSemaphore::SystemSemaphoreError|error|
+$prototypeV2=QSystemSemaphore::SystemSemaphoreError error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $extraMethods
 

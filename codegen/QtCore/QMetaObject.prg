@@ -36,11 +36,9 @@ $deleteMethod
 $prototype=QMetaClassInfo classInfo ( int index ) const
 $method=|QMetaClassInfo|classInfo|int
 
-$prototype=int classInfoCount () const
-$method=|int|classInfoCount|
+$prototypeV2=int classInfoCount() const
 
-$prototype=int classInfoOffset () const
-$method=|int|classInfoOffset|
+$prototypeV2=int classInfoOffset() const
 
 $prototype=const char * className () const
 $method=|const char *|className|
@@ -48,17 +46,14 @@ $method=|const char *|className|
 $prototype=QMetaMethod constructor ( int index ) const
 $method=|QMetaMethod|constructor|int
 
-$prototype=int constructorCount () const
-$method=|int|constructorCount|
+$prototypeV2=int constructorCount() const
 
 $prototype=QMetaEnum enumerator ( int index ) const
 $method=|QMetaEnum|enumerator|int
 
-$prototype=int enumeratorCount () const
-$method=|int|enumeratorCount|
+$prototypeV2=int enumeratorCount() const
 
-$prototype=int enumeratorOffset () const
-$method=|int|enumeratorOffset|
+$prototypeV2=int enumeratorOffset() const
 
 $prototype=int indexOfClassInfo ( const char * name ) const
 $method=|int|indexOfClassInfo|const char *
@@ -84,11 +79,9 @@ $method=|int|indexOfSlot|const char *
 $prototype=QMetaMethod method ( int index ) const
 $method=|QMetaMethod|method|int
 
-$prototype=int methodCount () const
-$method=|int|methodCount|
+$prototypeV2=int methodCount() const
 
-$prototype=int methodOffset () const
-$method=|int|methodOffset|
+$prototypeV2=int methodOffset() const
 
 $prototype=QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() ) const
 %% TODO: implementar
@@ -97,17 +90,14 @@ $prototype=QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 )
 $prototype=QMetaProperty property ( int index ) const
 $method=|QMetaProperty|property|int
 
-$prototype=int propertyCount () const
-$method=|int|propertyCount|
+$prototypeV2=int propertyCount() const
 
-$prototype=int propertyOffset () const
-$method=|int|propertyOffset|
+$prototypeV2=int propertyOffset() const
 
 $prototype=const QMetaObject * superClass () const
 $method=|const QMetaObject *|superClass|
 
-$prototype=QMetaProperty userProperty () const
-$method=|QMetaProperty|userProperty|
+$prototypeV2=QMetaProperty userProperty() const
 
 $prototype=static bool checkConnectArgs ( const char * signal, const char * method )
 $staticMethod=|bool|checkConnectArgs|const char *,const char *

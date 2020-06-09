@@ -32,26 +32,20 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=virtual void advance()
-$virtualMethod=|void|advance|
+$prototypeV2=virtual void advance()
 
-$prototype=void install()
-$method=|void|install|
+$prototypeV2=void install()
 
-$prototype=void uninstall()
-$method=|void|uninstall|
+$prototypeV2=void uninstall()
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=virtual qint64 elapsed() const
-$virtualMethod=|qint64|elapsed|
+$prototypeV2=virtual qint64 elapsed() const
 
 $prototype=void setStartTime(qint64 startTime)
 $method=|void|setStartTime|qint64
 
-$prototype=qint64 startTime() const
-$method=|qint64|startTime|
+$prototypeV2=qint64 startTime() const
 
 %%
 %% SIGNALS

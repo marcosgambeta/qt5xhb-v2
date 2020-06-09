@@ -70,47 +70,35 @@ HB_FUNC_STATIC( QLINEF_NEW )
 
 $deleteMethod
 
-$prototype=QPointF p1() const
-$method=|QPointF|p1|
+$prototypeV2=QPointF p1() const
 
-$prototype=QPointF p2() const
-$method=|QPointF|p2|
+$prototypeV2=QPointF p2() const
 
-$prototype=qreal x1() const
-$method=|qreal|x1|
+$prototypeV2=qreal x1() const
 
-$prototype=qreal x2() const
-$method=|qreal|x2|
+$prototypeV2=qreal x2() const
 
-$prototype=qreal y1() const
-$method=|qreal|y1|
+$prototypeV2=qreal y1() const
 
-$prototype=qreal y2() const
-$method=|qreal|y2|
+$prototypeV2=qreal y2() const
 
-$prototype=qreal angle() const
-$method=|qreal|angle|
+$prototypeV2=qreal angle() const
 
 $prototype=qreal angleTo(const QLineF & line) const
 $method=|qreal|angleTo|const QLineF &
 
-$prototype=qreal dx() const
-$method=|qreal|dx|
+$prototypeV2=qreal dx() const
 
-$prototype=qreal dy() const
-$method=|qreal|dy|
+$prototypeV2=qreal dy() const
 
 $prototype=IntersectType intersect(const QLineF & line, QPointF * intersectionPoint) const
 $method=|QLineF::IntersectType|intersect|const QLineF &,QPointF *
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=qreal length() const
-$method=|qreal|length|
+$prototypeV2=qreal length() const
 
-$prototype=QLineF normalVector() const
-$method=|QLineF|normalVector|
+$prototypeV2=QLineF normalVector() const
 
 $prototype=QPointF pointAt(qreal t) const
 $method=|QPointF|pointAt|qreal
@@ -133,8 +121,7 @@ $method=|void|setLine|qreal,qreal,qreal,qreal
 $prototype=void setPoints(const QPointF & p1, const QPointF & p2)
 $method=|void|setPoints|const QPointF &,const QPointF &
 
-$prototype=QLine toLine() const
-$method=|QLine|toLine|
+$prototypeV2=QLine toLine() const
 
 $prototype=void translate(const QPointF & offset)
 $internalMethod=|void|translate,translate1|const QPointF &
@@ -192,8 +179,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QLineF unitVector() const
-$method=|QLineF|unitVector|
+$prototypeV2=QLineF unitVector() const
 
 $prototype=static QLineF fromPolar(qreal length, qreal angle)
 $staticMethod=|QLineF|fromPolar|qreal,qreal

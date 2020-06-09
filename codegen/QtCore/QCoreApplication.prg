@@ -47,59 +47,44 @@ $deleteMethod
 $prototype=virtual bool notify ( QObject * receiver, QEvent * event )
 $virtualMethod=|bool|notify|QObject *,QEvent *
 
-$prototype=void quit ()
-$method=|void|quit|
+$prototypeV2=void quit()
 
 $prototype=static void addLibraryPath ( const QString & path )
 $staticMethod=|void|addLibraryPath|const QString &
 
-$prototype=static QString applicationDirPath ()
-$staticMethod=|QString|applicationDirPath|
+$prototypeV2=static QString applicationDirPath()
 
-$prototype=static QString applicationFilePath ()
-$staticMethod=|QString|applicationFilePath|
+$prototypeV2=static QString applicationFilePath()
 
-$prototype=static QString applicationName ()
-$staticMethod=|QString|applicationName|
+$prototypeV2=static QString applicationName()
 
-$prototype=static qint64 applicationPid ()
-$staticMethod=|qint64|applicationPid|
+$prototypeV2=static qint64 applicationPid()
 
-$prototype=static QString applicationVersion ()
-$staticMethod=|QString|applicationVersion|
+$prototypeV2=static QString applicationVersion()
 
-$prototype=static QStringList arguments ()
-$staticMethod=|QStringList|arguments|
+$prototypeV2=static QStringList arguments()
 
-$prototype=static bool closingDown ()
-$staticMethod=|bool|closingDown|
+$prototypeV2=static bool closingDown()
 
-$prototype=static int exec ()
-$staticMethod=|int|exec|
+$prototypeV2=static int exec()
 
 $prototype=static void exit ( int returnCode = 0 )
 $staticMethod=|void|exit|int=0
 
-$prototype=static void flush ()
-$staticMethod=|void|flush|
+$prototypeV2=static void flush()
 
-$prototype=static bool hasPendingEvents ()
-$staticMethod=|bool|hasPendingEvents|
+$prototypeV2=static bool hasPendingEvents()
 
 $prototype=static void installTranslator ( QTranslator * translationFile )
 $staticMethod=|void|installTranslator|QTranslator *
 
-$prototype=static QCoreApplication * instance ()
-$staticMethod=|QCoreApplication *|instance|
+$prototypeV2=static QCoreApplication * instance()
 
-$prototype=static QStringList libraryPaths ()
-$staticMethod=|QStringList|libraryPaths|
+$prototypeV2=static QStringList libraryPaths()
 
-$prototype=static QString organizationDomain ()
-$staticMethod=|QString|organizationDomain|
+$prototypeV2=static QString organizationDomain()
 
-$prototype=static QString organizationName ()
-$staticMethod=|QString|organizationName|
+$prototypeV2=static QString organizationName()
 
 $prototype=static void postEvent ( QObject * receiver, QEvent * event )
 $internalStaticMethod=|void|postEvent,postEvent1|QObject *,QEvent *
@@ -240,8 +225,7 @@ $staticMethod=|void|setOrganizationDomain|const QString &
 $prototype=static void setOrganizationName ( const QString & orgName )
 $staticMethod=|void|setOrganizationName|const QString &
 
-$prototype=static bool startingUp ()
-$staticMethod=|bool|startingUp|
+$prototypeV2=static bool startingUp()
 
 $prototype=static bool testAttribute ( Qt::ApplicationAttribute attribute )
 $staticMethod=|bool|testAttribute|Qt::ApplicationAttribute

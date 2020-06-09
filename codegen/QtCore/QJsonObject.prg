@@ -59,26 +59,20 @@ $deleteMethod
 $prototype=bool contains(const QString & key) const
 $method=|bool|contains|const QString &
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool empty() const
-$method=|bool|empty|
+$prototypeV2=bool empty() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=QStringList keys() const
-$method=|QStringList|keys|
+$prototypeV2=QStringList keys() const
 
-$prototype=int length() const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=void remove(const QString & key)
 $method=|void|remove|const QString &
 
-$prototype=int size() const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QJsonValue take(const QString & key)
 $method=|QJsonValue|take|const QString &

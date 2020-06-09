@@ -223,11 +223,9 @@ $prototype=const QObjectList & children () const
 %% $method=|const QObjectList &|children|
 $method=|QObjectList|children|
 
-$prototype=void dumpObjectInfo ()
-$method=|void|dumpObjectInfo|
+$prototypeV2=void dumpObjectInfo()
 
-$prototype=void dumpObjectTree ()
-$method=|void|dumpObjectTree|
+$prototypeV2=void dumpObjectTree()
 
 $prototype=QList<QByteArray> dynamicPropertyNames () const
 $method=|QList<QByteArray>|dynamicPropertyNames||#ifndef QT_NO_PROPERTIES
@@ -283,11 +281,9 @@ $method=|bool|inherits|const char *
 $prototype=void installEventFilter ( QObject * filterObj )
 $method=|void|installEventFilter|QObject *
 
-$prototype=bool isWidgetType () const
-$method=|bool|isWidgetType|
+$prototypeV2=bool isWidgetType() const
 
-$prototype=bool isWindowType() const
-$method=|bool|isWindowType|
+$prototypeV2=bool isWindowType() const
 
 $prototype=void killTimer ( int id )
 $method=|void|killTimer|int
@@ -298,14 +294,12 @@ $virtualMethod=|const QMetaObject *|metaObject|
 $prototype=void moveToThread ( QThread * targetThread )
 $method=|void|moveToThread|QThread *
 
-$prototype=QString objectName () const
-$method=|QString|objectName|
+$prototypeV2=QString objectName() const
 
 $prototype=void setObjectName ( const QString & name )
 $method=|void|setObjectName|const QString &
 
-$prototype=QObject * parent () const
-$method=|QObject *|parent|
+$prototypeV2=QObject * parent() const
 
 $prototype=void setParent ( QObject * parent )
 $method=|void|setParent|QObject *
@@ -319,17 +313,14 @@ $method=|bool|setProperty|const char *,const QVariant &|#ifndef QT_NO_PROPERTIES
 $prototype=void removeEventFilter ( QObject * obj )
 $method=|void|removeEventFilter|QObject *
 
-$prototype=bool signalsBlocked () const
-$method=|bool|signalsBlocked|
+$prototypeV2=bool signalsBlocked() const
 
 $prototype=int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
 $method=|int|startTimer|int,Qt::TimerType=Qt::CoarseTimer
 
-$prototype=QThread * thread () const
-$method=|QThread *|thread|
+$prototypeV2=QThread * thread() const
 
-$prototype=void deleteLater ()
-$method=|void|deleteLater|
+$prototypeV2=void deleteLater()
 
 $prototype=static QString tr ( const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
 $staticMethod=|QString|tr|const char *,const char *=nullptr,int=-1

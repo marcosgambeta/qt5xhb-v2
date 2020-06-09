@@ -29,20 +29,15 @@ $includes
 
 $deleteMethod
 
-$prototype=FileError error() const
-$method=|QFileDevice::FileError|error|
+$prototypeV2=QFileDevice::FileError error() const
 
-$prototype=virtual QString fileName() const
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
-$prototype=int handle() const
-$method=|int|handle|
+$prototypeV2=int handle() const
 
-$prototype=virtual Permissions permissions() const
-$virtualMethod=|QFileDevice::Permissions|permissions|
+$prototypeV2=virtual QFileDevice::Permissions permissions() const
 
 $prototype=virtual bool resize(qint64 sz)
 $virtualMethod=|bool|resize|qint64
@@ -50,26 +45,20 @@ $virtualMethod=|bool|resize|qint64
 $prototype=virtual bool setPermissions(Permissions permissions)
 $virtualMethod=|bool|setPermissions|QFileDevice::Permissions
 
-$prototype=void unsetError()
-$method=|void|unsetError|
+$prototypeV2=void unsetError()
 
-$prototype=virtual bool atEnd() const
-$virtualMethod=|bool|atEnd|
+$prototypeV2=virtual bool atEnd() const
 
-$prototype=virtual void close()
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close()
 
-$prototype=virtual bool isSequential() const
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const
 
-$prototype=virtual qint64 pos() const
-$virtualMethod=|qint64|pos|
+$prototypeV2=virtual qint64 pos() const
 
 $prototype=virtual bool seek(qint64 pos)
 $virtualMethod=|bool|seek|qint64
 
-$prototype=virtual qint64 size() const
-$virtualMethod=|qint64|size|
+$prototypeV2=virtual qint64 size() const
 
 $prototype=QDateTime fileTime(QFileDevice::FileTime time) const
 $method=5,10,0|QDateTime|fileTime|QFileDevice::FileTime

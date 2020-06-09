@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 
 $deleteMethod
 
-$prototype=QByteArray propertyName () const
-$method=|QByteArray|propertyName|
+$prototypeV2=QByteArray propertyName() const
 
 $prototype=void setPropertyName ( const QByteArray & propertyName )
 $method=|void|setPropertyName|const QByteArray &
@@ -63,7 +62,6 @@ $method=|void|setPropertyName|const QByteArray &
 $prototype=void setTargetObject ( QObject * target )
 $method=|void|setTargetObject|QObject *
 
-$prototype=QObject * targetObject () const
-$method=|QObject *|targetObject|
+$prototypeV2=QObject * targetObject() const
 
 #pragma ENDDUMP

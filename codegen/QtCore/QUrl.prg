@@ -72,47 +72,34 @@ HB_FUNC_STATIC( QURL_NEW )
 
 $deleteMethod
 
-$prototype=QString authority () const
-$method=|QString|authority|
+$prototypeV2=QString authority() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fragment () const
-$method=|QString|fragment|
+$prototypeV2=QString fragment() const
 
-$prototype=bool hasFragment () const
-$method=|bool|hasFragment|
+$prototypeV2=bool hasFragment() const
 
-$prototype=bool hasQuery () const
-$method=|bool|hasQuery|
+$prototypeV2=bool hasQuery() const
 
-$prototype=QString host () const
-$method=|QString|host|
+$prototypeV2=QString host() const
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isLocalFile () const
-$method=|bool|isLocalFile|
+$prototypeV2=bool isLocalFile() const
 
 $prototype=bool isParentOf ( const QUrl & childUrl ) const
 $method=|bool|isParentOf|const QUrl &
 
-$prototype=bool isRelative () const
-$method=|bool|isRelative|
+$prototypeV2=bool isRelative() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=int port () const
 $internalMethod=|int|port,port1|
@@ -145,8 +132,7 @@ $addMethod=port
 $prototype=QUrl resolved ( const QUrl & relative ) const
 $method=|QUrl|resolved|const QUrl &
 
-$prototype=QString scheme () const
-$method=|QString|scheme|
+$prototypeV2=QString scheme() const
 
 $prototype=void setAuthority ( const QString & authority )
 $method=|void|setAuthority|const QString &
@@ -209,20 +195,16 @@ $method=|void|swap|QUrl &
 $prototype=QByteArray toEncoded ( FormattingOptions options = None ) const
 $method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
 
-$prototype=QString toLocalFile () const
-$method=|QString|toLocalFile|
+$prototypeV2=QString toLocalFile() const
 
 $prototype=QString toString ( FormattingOptions options = None ) const
 $method=|QString|toString|QUrl::FormattingOptions=QUrl::None
 
-$prototype=QString topLevelDomain () const
-$method=|QString|topLevelDomain|
+$prototypeV2=QString topLevelDomain() const
 
-$prototype=QString userInfo () const
-$method=|QString|userInfo|
+$prototypeV2=QString userInfo() const
 
-$prototype=QString userName () const
-$method=|QString|userName|
+$prototypeV2=QString userName() const
 
 $prototype=static QString fromAce ( const QByteArray & domain )
 $staticMethod=|QString|fromAce|const QByteArray &

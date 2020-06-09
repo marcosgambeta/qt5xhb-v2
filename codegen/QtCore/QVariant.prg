@@ -440,11 +440,9 @@ $deleteMethod
 $prototype=void swap(QVariant &other)
 $method=|void|swap|QVariant &
 
-$prototype=Type type() const
-$method=|QVariant::Type|type|
+$prototypeV2=QVariant::Type type() const
 
-$prototype=int userType() const
-$method=|int|userType|
+$prototypeV2=int userType() const
 
 $prototype=const char *typeName() const
 $method=|const char *|typeName|
@@ -455,20 +453,15 @@ $method=|bool|canConvert|int
 $prototype=bool convert(int targetTypeId)
 $method=|bool|convert|int
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void detach()
-$method=|void|detach|
+$prototypeV2=void detach()
 
-$prototype=bool isDetached() const
-$method=|bool|isDetached|
+$prototypeV2=bool isDetached() const
 
 $prototype=int toInt(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
@@ -486,8 +479,7 @@ $prototype=qulonglong toULongLong(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
 $method=|qulonglong|toULongLong|bool *=nullptr
 
-$prototype=bool toBool() const
-$method=|bool|toBool|
+$prototypeV2=bool toBool() const
 
 $prototype=double toDouble(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
@@ -501,29 +493,21 @@ $prototype=qreal toReal(bool *ok = nullptr) const
 %% TODO: implementar parametro opcional
 $method=|qreal|toReal|bool *=nullptr
 
-$prototype=QByteArray toByteArray() const
-$method=|QByteArray|toByteArray|
+$prototypeV2=QByteArray toByteArray() const
 
-$prototype=QBitArray toBitArray() const
-$method=|QBitArray|toBitArray|
+$prototypeV2=QBitArray toBitArray() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=QStringList toStringList() const
-$method=|QStringList|toStringList|
+$prototypeV2=QStringList toStringList() const
 
-$prototype=QChar toChar() const
-$method=|QChar|toChar|
+$prototypeV2=QChar toChar() const
 
-$prototype=QDate toDate() const
-$method=|QDate|toDate|
+$prototypeV2=QDate toDate() const
 
-$prototype=QTime toTime() const
-$method=|QTime|toTime|
+$prototypeV2=QTime toTime() const
 
-$prototype=QDateTime toDateTime() const
-$method=|QDateTime|toDateTime|
+$prototypeV2=QDateTime toDateTime() const
 
 $prototype=QList<QVariant> toList() const
 $method=|QList<QVariant>|toList|
@@ -552,8 +536,7 @@ $method=|QLine|toLine||#ifndef QT_NO_GEOM_VARIANT
 $prototype=QLineF toLineF() const
 $method=|QLineF|toLineF||#ifndef QT_NO_GEOM_VARIANT
 
-$prototype=QLocale toLocale() const
-$method=|QLocale|toLocale|
+$prototypeV2=QLocale toLocale() const
 
 $prototype=QRegExp toRegExp() const
 $method=|QRegExp|toRegExp||#ifndef QT_NO_REGEXP
@@ -561,29 +544,21 @@ $method=|QRegExp|toRegExp||#ifndef QT_NO_REGEXP
 $prototype=QRegularExpression toRegularExpression() const
 $method=|QRegularExpression|toRegularExpression||#ifndef QT_NO_REGULAREXPRESSION
 
-$prototype=QUrl toUrl() const
-$method=|QUrl|toUrl|
+$prototypeV2=QUrl toUrl() const
 
-$prototype=QEasingCurve toEasingCurve() const
-$method=|QEasingCurve|toEasingCurve|
+$prototypeV2=QEasingCurve toEasingCurve() const
 
-$prototype=QUuid toUuid() const
-$method=|QUuid|toUuid|
+$prototypeV2=QUuid toUuid() const
 
-$prototype=QModelIndex toModelIndex() const
-$method=|QModelIndex|toModelIndex|
+$prototypeV2=QModelIndex toModelIndex() const
 
-$prototype=QJsonValue toJsonValue() const
-$method=|QJsonValue|toJsonValue|
+$prototypeV2=QJsonValue toJsonValue() const
 
-$prototype=QJsonObject toJsonObject() const
-$method=|QJsonObject|toJsonObject|
+$prototypeV2=QJsonObject toJsonObject() const
 
-$prototype=QJsonArray toJsonArray() const
-$method=|QJsonArray|toJsonArray|
+$prototypeV2=QJsonArray toJsonArray() const
 
-$prototype=QJsonDocument toJsonDocument() const
-$method=|QJsonDocument|toJsonDocument|
+$prototypeV2=QJsonDocument toJsonDocument() const
 
 $prototype=void load(QDataStream &ds)
 $method=|void|load|QDataStream &|#ifndef QT_NO_DATASTREAM
@@ -591,8 +566,7 @@ $method=|void|load|QDataStream &|#ifndef QT_NO_DATASTREAM
 $prototype=void save(QDataStream &ds) const
 $method=|void|save|QDataStream &|#ifndef QT_NO_DATASTREAM
 
-$prototype=void *data()
-$method=|void *|data|
+$prototypeV2=void * data()
 
 $prototype=static const char *typeToName(int typeId)
 $staticMethod=|const char *|typeToName|int

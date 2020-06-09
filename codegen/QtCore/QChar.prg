@@ -95,101 +95,69 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=Category category () const
-$method=|QChar::Category|category|
+$prototypeV2=QChar::Category category() const
 
-$prototype=uchar cell () const
-$method=|uchar|cell|
+$prototypeV2=uchar cell() const
 
-$prototype=unsigned char combiningClass () const
-$method=|unsigned char|combiningClass|
+$prototypeV2=unsigned char combiningClass() const
 
-$prototype=Decomposition decompositionTag () const
-$method=|QChar::Decomposition|decompositionTag|
+$prototypeV2=QChar::Decomposition decompositionTag() const
 
-$prototype=int digitValue () const
-$method=|int|digitValue|
+$prototypeV2=int digitValue() const
 
-$prototype=Direction direction () const
-$method=|QChar::Direction|direction|
+$prototypeV2=QChar::Direction direction() const
 
-$prototype=bool hasMirrored () const
-$method=|bool|hasMirrored|
+$prototypeV2=bool hasMirrored() const
 
-$prototype=bool isDigit () const
-$method=|bool|isDigit|
+$prototypeV2=bool isDigit() const
 
-$prototype=bool isHighSurrogate () const
-$method=|bool|isHighSurrogate|
+$prototypeV2=bool isHighSurrogate() const
 
-$prototype=bool isLetter () const
-$method=|bool|isLetter|
+$prototypeV2=bool isLetter() const
 
-$prototype=bool isLetterOrNumber () const
-$method=|bool|isLetterOrNumber|
+$prototypeV2=bool isLetterOrNumber() const
 
-$prototype=bool isLowSurrogate () const
-$method=|bool|isLowSurrogate|
+$prototypeV2=bool isLowSurrogate() const
 
-$prototype=bool isLower () const
-$method=|bool|isLower|
+$prototypeV2=bool isLower() const
 
-$prototype=bool isMark () const
-$method=|bool|isMark|
+$prototypeV2=bool isMark() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isNumber () const
-$method=|bool|isNumber|
+$prototypeV2=bool isNumber() const
 
-$prototype=bool isPrint () const
-$method=|bool|isPrint|
+$prototypeV2=bool isPrint() const
 
-$prototype=bool isPunct () const
-$method=|bool|isPunct|
+$prototypeV2=bool isPunct() const
 
-$prototype=bool isSpace () const
-$method=|bool|isSpace|
+$prototypeV2=bool isSpace() const
 
-$prototype=bool isSymbol () const
-$method=|bool|isSymbol|
+$prototypeV2=bool isSymbol() const
 
-$prototype=bool isTitleCase () const
-$method=|bool|isTitleCase|
+$prototypeV2=bool isTitleCase() const
 
-$prototype=bool isUpper () const
-$method=|bool|isUpper|
+$prototypeV2=bool isUpper() const
 
-$prototype=Joining joining () const
-$method=|QChar::Joining|joining|
+$prototypeV2=QChar::Joining joining() const
 
-$prototype=QChar mirroredChar () const
-$method=|QChar|mirroredChar|
+$prototypeV2=QChar mirroredChar() const
 
-$prototype=uchar row () const
-$method=|uchar|row|
+$prototypeV2=uchar row() const
 
-$prototype=QChar toCaseFolded () const
-$method=|QChar|toCaseFolded|
+$prototypeV2=QChar toCaseFolded() const
 
-$prototype=char toLatin1 () const
-$method=|char|toLatin1|
+$prototypeV2=char toLatin1() const
 
-$prototype=QChar toLower () const
-$method=|QChar|toLower|
+$prototypeV2=QChar toLower() const
 
-$prototype=QChar toTitleCase () const
-$method=|QChar|toTitleCase|
+$prototypeV2=QChar toTitleCase() const
 
-$prototype=QChar toUpper () const
-$method=|QChar|toUpper|
+$prototypeV2=QChar toUpper() const
 
-$prototype=ushort unicode () const
-$method=|ushort|unicode|
+$prototypeV2=ushort unicode() const
 
-$prototype=UnicodeVersion unicodeVersion () const
-$method=|QChar::UnicodeVersion|unicodeVersion|
+$prototypeV2=QChar::UnicodeVersion unicodeVersion() const
 
 %% TODO: implementar metódos estáticos
 

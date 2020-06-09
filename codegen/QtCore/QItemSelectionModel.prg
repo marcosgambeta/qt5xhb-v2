@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 
 $deleteMethod
 
-$prototype=QModelIndex currentIndex() const
-$method=|QModelIndex|currentIndex|
+$prototypeV2=QModelIndex currentIndex() const
 
 $prototype=bool isSelected(const QModelIndex &index) const
 $method=|bool|isSelected|const QModelIndex &
@@ -74,11 +73,9 @@ $method=|bool|rowIntersectsSelection|int,const QModelIndex &
 $prototype=bool columnIntersectsSelection(int column, const QModelIndex &parent) const
 $method=|bool|columnIntersectsSelection|int,const QModelIndex &
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
-$prototype=QModelIndexList selectedIndexes() const
-$method=|QModelIndexList|selectedIndexes|
+$prototypeV2=QModelIndexList selectedIndexes() const
 
 $prototype=QModelIndexList selectedRows(int column = 0) const
 $method=|QModelIndexList|selectedRows|int=0
@@ -123,17 +120,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 }
 $addMethod=select
 
-$prototype=virtual void clear()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=virtual void reset()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
-$prototype=void clearSelection()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
-$prototype=virtual void clearCurrentIndex()
-$virtualMethod=|void|clearCurrentIndex|
+$prototypeV2=virtual void clearCurrentIndex()
 
 %%
 %% SIGNALS

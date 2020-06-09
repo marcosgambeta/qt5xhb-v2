@@ -72,23 +72,17 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
 
 $deleteMethod
 
-$prototype=QFileInfo fileInfo () const
-$method=|QFileInfo|fileInfo|
+$prototypeV2=QFileInfo fileInfo() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QString filePath () const
-$method=|QString|filePath|
+$prototypeV2=QString filePath() const
 
-$prototype=bool hasNext () const
-$method=|bool|hasNext|
+$prototypeV2=bool hasNext() const
 
-$prototype=QString next ()
-$method=|QString|next|
+$prototypeV2=QString next()
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $extraMethods
 

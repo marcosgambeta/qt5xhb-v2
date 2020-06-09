@@ -73,8 +73,7 @@ HB_FUNC_STATIC( QCALENDAR_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=int daysInMonth(int month, int year = Unspecified) const
 %% TODO: $method=|int|daysInMonth|int,int=Unspecified
@@ -91,35 +90,25 @@ $method=|bool|isDateValid|int,int,int
 $prototype=bool isLeapYear(int year) const
 $method=|bool|isLeapYear|int
 
-$prototype=bool isGregorian() const
-$method=|bool|isGregorian|
+$prototypeV2=bool isGregorian() const
 
-$prototype=bool isLunar() const
-$method=|bool|isLunar|
+$prototypeV2=bool isLunar() const
 
-$prototype=bool isLuniSolar() const
-$method=|bool|isLuniSolar|
+$prototypeV2=bool isLuniSolar() const
 
-$prototype=bool isSolar() const
-$method=|bool|isSolar|
+$prototypeV2=bool isSolar() const
 
-$prototype=bool isProleptic() const
-$method=|bool|isProleptic|
+$prototypeV2=bool isProleptic() const
 
-$prototype=bool hasYearZero() const
-$method=|bool|hasYearZero|
+$prototypeV2=bool hasYearZero() const
 
-$prototype=int maximumDaysInMonth() const
-$method=|int|maximumDaysInMonth|
+$prototypeV2=int maximumDaysInMonth() const
 
-$prototype=int minimumDaysInMonth() const
-$method=|int|minimumDaysInMonth|
+$prototypeV2=int minimumDaysInMonth() const
 
-$prototype=int maximumMonthsInYear() const
-$method=|int|maximumMonthsInYear|
+$prototypeV2=int maximumMonthsInYear() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=QDate dateFromParts(int year, int month, int day) const
 $method=|QDate|dateFromParts|int,int,int
@@ -148,8 +137,7 @@ $method=|QString|standaloneWeekDayName|const QLocale &,int,QLocale::FormatType=Q
 $prototype=QString dateTimeToString(QStringView format, const QDateTime &datetime, const QDate &dateOnly, const QTime &timeOnly, const QLocale &locale) const
 %% TODO: $method=|QString|dateTimeToString|QStringView,const QDateTime &,const QDate &,const QTime &,const QLocale &
 
-$prototype=static QStringList availableCalendars()
-$staticMethod=|QStringList|availableCalendars|
+$prototypeV2=static QStringList availableCalendars()
 
 $extraMethods
 

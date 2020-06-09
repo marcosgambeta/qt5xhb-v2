@@ -30,7 +30,6 @@ $constructor=|new|int
 
 $deleteMethod
 
-$prototype=int timerId() const
-$method=|int|timerId|
+$prototypeV2=int timerId() const
 
 #pragma ENDDUMP

@@ -82,17 +82,13 @@ $deleteMethod
 $prototype=void swap(QTimeZone &other)
 $method=|void|swap|QTimeZone &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QByteArray id() const
-$method=|QByteArray|id|
+$prototypeV2=QByteArray id() const
 
-$prototype=QLocale::Country country() const
-$method=|QLocale::Country|country|
+$prototypeV2=QLocale::Country country() const
 
-$prototype=QString comment() const
-$method=|QString|comment|
+$prototypeV2=QString comment() const
 
 $prototype=QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
 $internalMethod=|QString|displayName,displayName1|const QDateTime &,QTimeZone::NameType=QTimeZone::DefaultName,const QLocale &=QLocale()
@@ -134,17 +130,14 @@ $method=|int|standardTimeOffset|const QDateTime &
 $prototype=int daylightTimeOffset(const QDateTime &atDateTime) const
 $method=|int|daylightTimeOffset|const QDateTime &
 
-$prototype=bool hasDaylightTime() const
-$method=|bool|hasDaylightTime|
+$prototypeV2=bool hasDaylightTime() const
 
 $prototype=bool isDaylightTime(const QDateTime &atDateTime) const
 $method=|bool|isDaylightTime|const QDateTime &
 
-$prototype=bool hasTransitions() const
-$method=|bool|hasTransitions|
+$prototypeV2=bool hasTransitions() const
 
-$prototype=static QByteArray systemTimeZoneId()
-$staticMethod=|QByteArray|systemTimeZoneId|
+$prototypeV2=static QByteArray systemTimeZoneId()
 
 $prototype=static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
 $staticMethod=|bool|isTimeZoneIdAvailable|const QByteArray &

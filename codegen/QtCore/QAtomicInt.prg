@@ -52,8 +52,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 $deleteMethod
 
-$prototype=bool deref ()
-$method=|bool|deref|
+$prototypeV2=bool deref()
 
 $prototype=int fetchAndAddAcquire ( int valueToAdd )
 $method=|int|fetchAndAddAcquire|int
@@ -79,8 +78,7 @@ $method=|int|fetchAndStoreRelaxed|int
 $prototype=int fetchAndStoreRelease ( int newValue )
 $method=|int|fetchAndStoreRelease|int
 
-$prototype=bool ref ()
-$method=|bool|ref|
+$prototypeV2=bool ref()
 
 $prototype=bool testAndSetAcquire ( int expectedValue, int newValue )
 $method=|bool|testAndSetAcquire|int,int
@@ -94,29 +92,21 @@ $method=|bool|testAndSetRelaxed|int,int
 $prototype=bool testAndSetRelease ( int expectedValue, int newValue )
 $method=|bool|testAndSetRelease|int,int
 
-$prototype=static bool isFetchAndAddNative ()
-$staticMethod=|bool|isFetchAndAddNative|
+$prototypeV2=static bool isFetchAndAddNative()
 
-$prototype=static bool isFetchAndAddWaitFree ()
-$staticMethod=|bool|isFetchAndAddWaitFree|
+$prototypeV2=static bool isFetchAndAddWaitFree()
 
-$prototype=static bool isFetchAndStoreNative ()
-$staticMethod=|bool|isFetchAndStoreNative|
+$prototypeV2=static bool isFetchAndStoreNative()
 
-$prototype=static bool isFetchAndStoreWaitFree ()
-$staticMethod=|bool|isFetchAndStoreWaitFree|
+$prototypeV2=static bool isFetchAndStoreWaitFree()
 
-$prototype=static bool isReferenceCountingNative ()
-$staticMethod=|bool|isReferenceCountingNative|
+$prototypeV2=static bool isReferenceCountingNative()
 
-$prototype=static bool isReferenceCountingWaitFree ()
-$staticMethod=|bool|isReferenceCountingWaitFree|
+$prototypeV2=static bool isReferenceCountingWaitFree()
 
-$prototype=static bool isTestAndSetNative ()
-$staticMethod=|bool|isTestAndSetNative|
+$prototypeV2=static bool isTestAndSetNative()
 
-$prototype=static bool isTestAndSetWaitFree ()
-$staticMethod=|bool|isTestAndSetWaitFree|
+$prototypeV2=static bool isTestAndSetWaitFree()
 
 $extraMethods
 

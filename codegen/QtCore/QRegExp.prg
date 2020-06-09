@@ -67,17 +67,13 @@ $deleteMethod
 $prototype=QString cap ( int nth = 0 ) const
 $method=|QString|cap|int=0
 
-$prototype=int captureCount () const
-$method=|int|captureCount|
+$prototypeV2=int captureCount() const
 
-$prototype=QStringList capturedTexts () const
-$method=|QStringList|capturedTexts|
+$prototypeV2=QStringList capturedTexts() const
 
-$prototype=Qt::CaseSensitivity caseSensitivity () const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=bool exactMatch ( const QString & str ) const
 $method=|bool|exactMatch|const QString &
@@ -85,26 +81,20 @@ $method=|bool|exactMatch|const QString &
 $prototype=int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 $method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isMinimal () const
-$method=|bool|isMinimal|
+$prototypeV2=bool isMinimal() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
 $method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
 
-$prototype=int matchedLength () const
-$method=|int|matchedLength|
+$prototypeV2=int matchedLength() const
 
-$prototype=QString pattern () const
-$method=|QString|pattern|
+$prototypeV2=QString pattern() const
 
-$prototype=PatternSyntax patternSyntax () const
-$method=|QRegExp::PatternSyntax|patternSyntax|
+$prototypeV2=QRegExp::PatternSyntax patternSyntax() const
 
 $prototype=int pos ( int nth = 0 ) const
 $method=|int|pos|int=0

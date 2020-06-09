@@ -54,23 +54,17 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 $deleteMethod
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QObject * instance ()
-$method=|QObject *|instance|
+$prototypeV2=QObject * instance()
 
-$prototype=bool isLoaded () const
-$method=|bool|isLoaded|
+$prototypeV2=bool isLoaded() const
 
-$prototype=bool load ()
-$method=|bool|load|
+$prototypeV2=bool load()
 
-$prototype=QLibrary::LoadHints loadHints () const
-$method=|QLibrary::LoadHints|loadHints|
+$prototypeV2=QLibrary::LoadHints loadHints() const
 
 $prototype=void setFileName ( const QString & fileName )
 $method=|void|setFileName|const QString &
@@ -78,10 +72,8 @@ $method=|void|setFileName|const QString &
 $prototype=void setLoadHints ( QLibrary::LoadHints loadHints )
 $method=|void|setLoadHints|QLibrary::LoadHints
 
-$prototype=bool unload ()
-$method=|bool|unload|
+$prototypeV2=bool unload()
 
-$prototype=QObjectList staticInstances ()
-$method=|QObjectList|staticInstances|
+$prototypeV2=QObjectList staticInstances()
 
 #pragma ENDDUMP
