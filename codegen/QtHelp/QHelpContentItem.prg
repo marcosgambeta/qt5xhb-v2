@@ -32,23 +32,18 @@ $deleteMethod
 $prototype=QHelpContentItem * child ( int row ) const
 $method=|QHelpContentItem *|child|int
 
-$prototype=int childCount () const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
 $prototype=int childPosition ( QHelpContentItem * child ) const
 $method=|int|childPosition|QHelpContentItem *
 
-$prototype=QHelpContentItem * parent () const
-$method=|QHelpContentItem *|parent|
+$prototypeV2=QHelpContentItem * parent() const
 
-$prototype=int row () const
-$method=|int|row|
+$prototypeV2=int row() const
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

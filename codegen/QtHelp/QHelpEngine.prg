@@ -34,19 +34,14 @@ $constructor=|new|const QString &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QHelpContentModel * contentModel () const
-$method=|QHelpContentModel *|contentModel|
+$prototypeV2=QHelpContentModel * contentModel() const
 
-$prototype=QHelpContentWidget * contentWidget ()
-$method=|QHelpContentWidget *|contentWidget|
+$prototypeV2=QHelpContentWidget * contentWidget()
 
-$prototype=QHelpIndexModel * indexModel () const
-$method=|QHelpIndexModel *|indexModel|
+$prototypeV2=QHelpIndexModel * indexModel() const
 
-$prototype=QHelpIndexWidget * indexWidget ()
-$method=|QHelpIndexWidget *|indexWidget|
+$prototypeV2=QHelpIndexWidget * indexWidget()
 
-$prototype=QHelpSearchEngine * searchEngine ()
-$method=|QHelpSearchEngine *|searchEngine|
+$prototypeV2=QHelpSearchEngine * searchEngine()
 
 #pragma ENDDUMP

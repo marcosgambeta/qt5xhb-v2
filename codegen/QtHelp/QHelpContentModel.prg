@@ -35,8 +35,7 @@ $method=|QHelpContentItem *|contentItemAt|const QModelIndex &
 $prototype=void createContents ( const QString & customFilterName )
 $method=|void|createContents|const QString &
 
-$prototype=bool isCreatingContents () const
-$method=|bool|isCreatingContents|
+$prototypeV2=bool isCreatingContents() const
 
 $prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()

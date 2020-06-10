@@ -37,20 +37,16 @@ $deleteMethod
 $prototype=bool addCustomFilter ( const QString & filterName, const QStringList & attributes )
 $method=|bool|addCustomFilter|const QString &,const QStringList &
 
-$prototype=bool autoSaveFilter () const
-$method=|bool|autoSaveFilter|
+$prototypeV2=bool autoSaveFilter() const
 
-$prototype=QString collectionFile () const
-$method=|QString|collectionFile|
+$prototypeV2=QString collectionFile() const
 
 $prototype=bool copyCollectionFile ( const QString & fileName )
 $method=|bool|copyCollectionFile|const QString &
 
-$prototype=QString currentFilter () const
-$method=|QString|currentFilter|
+$prototypeV2=QString currentFilter() const
 
-$prototype=QStringList customFilters () const
-$method=|QStringList|customFilters|
+$prototypeV2=QStringList customFilters() const
 
 $prototype=QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
 $method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
@@ -58,8 +54,7 @@ $method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
 $prototype=QString documentationFileName ( const QString & namespaceName )
 $method=|QString|documentationFileName|const QString &
 
-$prototype=QString error () const
-$method=|QString|error|
+$prototypeV2=QString error() const
 
 $prototype=QByteArray fileData ( const QUrl & url ) const
 $method=|QByteArray|fileData|const QUrl &
@@ -98,8 +93,7 @@ $method=|QUrl|findFile|const QUrl &
 $prototype=bool registerDocumentation ( const QString & documentationFileName )
 $method=|bool|registerDocumentation|const QString &
 
-$prototype=QStringList registeredDocumentations () const
-$method=|QStringList|registeredDocumentations|
+$prototypeV2=QStringList registeredDocumentations() const
 
 $prototype=bool removeCustomFilter ( const QString & filterName )
 $method=|bool|removeCustomFilter|const QString &
@@ -119,8 +113,7 @@ $method=|void|setCurrentFilter|const QString &
 $prototype=bool setCustomValue ( const QString & key, const QVariant & value )
 $method=|bool|setCustomValue|const QString &,const QVariant &
 
-$prototype=bool setupData ()
-$method=|bool|setupData|
+$prototypeV2=bool setupData()
 
 $prototype=bool unregisterDocumentation ( const QString & namespaceName )
 $method=|bool|unregisterDocumentation|const QString &

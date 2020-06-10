@@ -33,8 +33,7 @@ $method=|void|createIndex|const QString &
 $prototype=QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
 $method=|QModelIndex|filter|const QString &,const QString &=QString()
 
-$prototype=bool isCreatingIndex () const
-$method=|bool|isCreatingIndex|
+$prototypeV2=bool isCreatingIndex() const
 
 %%
 %% SIGNALS

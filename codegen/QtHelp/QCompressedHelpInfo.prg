@@ -64,14 +64,11 @@ $deleteMethod
 $prototype=void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
 $method=|void|swap|QCompressedHelpInfo &
 
-$prototype=QString namespaceName() const
-$method=|QString|namespaceName|
+$prototypeV2=QString namespaceName() const
 
-$prototype=QString component() const
-$method=|QString|component|
+$prototypeV2=QString component() const
 
-$prototype=QVersionNumber version() const
-$method=|QVersionNumber|version|
+$prototypeV2=QVersionNumber version() const
 
 $prototype=static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
 $staticMethod=|QCompressedHelpInfo|fromCompressedHelpFile|const QString &
