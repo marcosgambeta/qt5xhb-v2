@@ -45,8 +45,7 @@ $prototype=const QList<int> connectedGamepads() const
 %%
 %%
 
-$prototype=static QGamepadManager* instance()
-$staticMethod=|QGamepadManager *|instance|
+$prototypeV2=static QGamepadManager * instance()
 
 $prototype=bool isGamepadConnected(int deviceId) const
 $method=|bool|isGamepadConnected|int

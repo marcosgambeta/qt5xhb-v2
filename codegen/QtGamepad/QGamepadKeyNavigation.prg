@@ -39,8 +39,7 @@ $constructor=|new|QObject *=nullptr
 %% Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
 %%
 
-$prototype=bool active() const
-$method=|bool|active|
+$prototypeV2=bool active() const
 
 $prototype=void setActive(bool isActive) (slot)
 $slotMethod=|void|setActive|bool
@@ -49,8 +48,7 @@ $slotMethod=|void|setActive|bool
 %% Q_PROPERTY(QGamepad *gamepad READ gamepad WRITE setGamepad NOTIFY gamepadChanged)
 %%
 
-$prototype=QGamepad *gamepad() const
-$method=|QGamepad *|gamepad|
+$prototypeV2=QGamepad *gamepad() const
 
 $prototype=void setGamepad(QGamepad *gamepad) (slot)
 $slotMethod=|void|setGamepad|QGamepad *
@@ -59,8 +57,7 @@ $slotMethod=|void|setGamepad|QGamepad *
 %% Q_PROPERTY(Qt::Key upKey READ upKey WRITE setUpKey NOTIFY upKeyChanged)
 %%
 
-$prototype=Qt::Key upKey() const
-$method=|Qt::Key|upKey|
+$prototypeV2=Qt::Key upKey() const
 
 $prototype=void setUpKey(Qt::Key key) (slot)
 $slotMethod=|void|setUpKey|Qt::Key
@@ -69,8 +66,7 @@ $slotMethod=|void|setUpKey|Qt::Key
 %% Q_PROPERTY(Qt::Key downKey READ downKey WRITE setDownKey NOTIFY downKeyChanged)
 %%
 
-$prototype=Qt::Key downKey() const
-$method=|Qt::Key|downKey|
+$prototypeV2=Qt::Key downKey() const
 
 $prototype=void setDownKey(Qt::Key key) (slot)
 $slotMethod=|void|setDownKey|Qt::Key
@@ -79,8 +75,7 @@ $slotMethod=|void|setDownKey|Qt::Key
 %% Q_PROPERTY(Qt::Key leftKey READ leftKey WRITE setLeftKey NOTIFY leftKeyChanged)
 %%
 
-$prototype=Qt::Key leftKey() const
-$method=|Qt::Key|leftKey|
+$prototypeV2=Qt::Key leftKey() const
 
 $prototype=void setLeftKey(Qt::Key key) (slot)
 $slotMethod=|void|setLeftKey|Qt::Key
@@ -89,8 +84,7 @@ $slotMethod=|void|setLeftKey|Qt::Key
 %% Q_PROPERTY(Qt::Key rightKey READ rightKey WRITE setRightKey NOTIFY rightKeyChanged)
 %%
 
-$prototype=Qt::Key rightKey() const
-$method=|Qt::Key|rightKey|
+$prototypeV2=Qt::Key rightKey() const
 
 $prototype=void setRightKey(Qt::Key key) (slot)
 $slotMethod=|void|setRightKey|Qt::Key
@@ -99,8 +93,7 @@ $slotMethod=|void|setRightKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonAKey READ buttonAKey WRITE setButtonAKey NOTIFY buttonAKeyChanged)
 %%
 
-$prototype=Qt::Key buttonAKey() const
-$method=|Qt::Key|buttonAKey|
+$prototypeV2=Qt::Key buttonAKey() const
 
 $prototype=void setButtonAKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonAKey|Qt::Key
@@ -109,8 +102,7 @@ $slotMethod=|void|setButtonAKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonBKey READ buttonBKey WRITE setButtonBKey NOTIFY buttonBKeyChanged)
 %%
 
-$prototype=Qt::Key buttonBKey() const
-$method=|Qt::Key|buttonBKey|
+$prototypeV2=Qt::Key buttonBKey() const
 
 $prototype=void setButtonBKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonBKey|Qt::Key
@@ -119,8 +111,7 @@ $slotMethod=|void|setButtonBKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonXKey READ buttonXKey WRITE setButtonXKey NOTIFY buttonXKeyChanged)
 %%
 
-$prototype=Qt::Key buttonXKey() const
-$method=|Qt::Key|buttonXKey|
+$prototypeV2=Qt::Key buttonXKey() const
 
 $prototype=void setButtonXKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonXKey|Qt::Key
@@ -129,8 +120,7 @@ $slotMethod=|void|setButtonXKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonYKey READ buttonYKey WRITE setButtonYKey NOTIFY buttonYKeyChanged)
 %%
 
-$prototype=Qt::Key buttonYKey() const
-$method=|Qt::Key|buttonYKey|
+$prototypeV2=Qt::Key buttonYKey() const
 
 $prototype=void setButtonYKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonYKey|Qt::Key
@@ -139,8 +129,7 @@ $slotMethod=|void|setButtonYKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonSelectKey READ buttonSelectKey WRITE setButtonSelectKey NOTIFY buttonSelectKeyChanged)
 %%
 
-$prototype=Qt::Key buttonSelectKey() const
-$method=|Qt::Key|buttonSelectKey|
+$prototypeV2=Qt::Key buttonSelectKey() const
 
 $prototype=void setButtonSelectKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonSelectKey|Qt::Key
@@ -149,8 +138,7 @@ $slotMethod=|void|setButtonSelectKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonStartKey READ buttonStartKey WRITE setButtonStartKey NOTIFY buttonStartKeyChanged)
 %%
 
-$prototype=Qt::Key buttonStartKey() const
-$method=|Qt::Key|buttonStartKey|
+$prototypeV2=Qt::Key buttonStartKey() const
 
 $prototype=void setButtonStartKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonStartKey|Qt::Key
@@ -159,8 +147,7 @@ $slotMethod=|void|setButtonStartKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonGuideKey READ buttonGuideKey WRITE setButtonGuideKey NOTIFY buttonGuideKeyChanged)
 %%
 
-$prototype=Qt::Key buttonGuideKey() const
-$method=|Qt::Key|buttonGuideKey|
+$prototypeV2=Qt::Key buttonGuideKey() const
 
 $prototype=void setButtonGuideKey(Qt::Key key) (slot)
 $slotMethod=|void|setButtonGuideKey|Qt::Key
@@ -169,8 +156,7 @@ $slotMethod=|void|setButtonGuideKey|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonL1Key READ buttonL1Key WRITE setButtonL1Key NOTIFY buttonL1KeyChanged)
 %%
 
-$prototype=Qt::Key buttonL1Key() const
-$method=|Qt::Key|buttonL1Key|
+$prototypeV2=Qt::Key buttonL1Key() const
 
 $prototype=void setButtonL1Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonL1Key|Qt::Key
@@ -179,8 +165,7 @@ $slotMethod=|void|setButtonL1Key|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonR1Key READ buttonR1Key WRITE setButtonR1Key NOTIFY buttonR1KeyChanged)
 %%
 
-$prototype=Qt::Key buttonR1Key() const
-$method=|Qt::Key|buttonR1Key|
+$prototypeV2=Qt::Key buttonR1Key() const
 
 $prototype=void setButtonR1Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonR1Key|Qt::Key
@@ -189,8 +174,7 @@ $slotMethod=|void|setButtonR1Key|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonL2Key READ buttonL2Key WRITE setButtonL2Key NOTIFY buttonL2KeyChanged)
 %%
 
-$prototype=Qt::Key buttonL2Key() const
-$method=|Qt::Key|buttonL2Key|
+$prototypeV2=Qt::Key buttonL2Key() const
 
 $prototype=void setButtonL2Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonL2Key|Qt::Key
@@ -199,8 +183,7 @@ $slotMethod=|void|setButtonL2Key|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonR2Key READ buttonR2Key WRITE setButtonR2Key NOTIFY buttonR2KeyChanged)
 %%
 
-$prototype=Qt::Key buttonR2Key() const
-$method=|Qt::Key|buttonR2Key|
+$prototypeV2=Qt::Key buttonR2Key() const
 
 $prototype=void setButtonR2Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonR2Key|Qt::Key
@@ -209,8 +192,7 @@ $slotMethod=|void|setButtonR2Key|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonL3Key READ buttonL3Key WRITE setButtonL3Key NOTIFY buttonL3KeyChanged)
 %%
 
-$prototype=Qt::Key buttonL3Key() const
-$method=|Qt::Key|buttonL3Key|
+$prototypeV2=Qt::Key buttonL3Key() const
 
 $prototype=void setButtonL3Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonL3Key|Qt::Key
@@ -219,8 +201,7 @@ $slotMethod=|void|setButtonL3Key|Qt::Key
 %% Q_PROPERTY(Qt::Key buttonR3Key READ buttonR3Key WRITE setButtonR3Key NOTIFY buttonR3KeyChanged)
 %%
 
-$prototype=Qt::Key buttonR3Key() const
-$method=|Qt::Key|buttonR3Key|
+$prototypeV2=Qt::Key buttonR3Key() const
 
 $prototype=void setButtonR3Key(Qt::Key key) (slot)
 $slotMethod=|void|setButtonR3Key|Qt::Key

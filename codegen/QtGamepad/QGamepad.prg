@@ -38,8 +38,7 @@ $deleteMethod
 %% Q_PROPERTY(int deviceId READ deviceId WRITE setDeviceId NOTIFY deviceIdChanged)
 %%
 
-$prototype=int deviceId() const
-$method=|int|deviceId|
+$prototypeV2=int deviceId() const
 
 $prototype=void setDeviceId(int number) (slot)
 $slotMethod=|void|setDeviceId|int
@@ -48,169 +47,145 @@ $slotMethod=|void|setDeviceId|int
 %% Q_PROPERTY(bool connected READ isConnected NOTIFY connectedChanged)
 %%
 
-$prototype=bool isConnected() const
-$method=|bool|isConnected|
+$prototypeV2=bool isConnected() const
 
 %%
 %% Q_PROPERTY(QString name READ name NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 %%
 %% Q_PROPERTY(double axisLeftX READ axisLeftX NOTIFY axisLeftXChanged)
 %%
 
-$prototype=double axisLeftX() const
-$method=|double|axisLeftX|
+$prototypeV2=double axisLeftX() const
 
 %%
 %% Q_PROPERTY(double axisLeftY READ axisLeftY NOTIFY axisLeftYChanged)
 %%
 
-$prototype=double axisLeftY() const
-$method=|double|axisLeftY|
+$prototypeV2=double axisLeftY() const
 
 %%
 %% Q_PROPERTY(double axisRightX READ axisRightX NOTIFY axisRightXChanged)
 %%
 
-$prototype=double axisRightX() const
-$method=|double|axisRightX|
+$prototypeV2=double axisRightX() const
 
 %%
 %% Q_PROPERTY(double axisRightY READ axisRightY NOTIFY axisRightYChanged)
 %%
 
-$prototype=double axisRightY() const
-$method=|double|axisRightY|
+$prototypeV2=double axisRightY() const
 
 %%
 %% Q_PROPERTY(bool buttonA READ buttonA NOTIFY buttonAChanged)
 %%
 
-$prototype=bool buttonA() const
-$method=|bool|buttonA|
+$prototypeV2=bool buttonA() const
 
 %%
 %% Q_PROPERTY(bool buttonB READ buttonB NOTIFY buttonBChanged)
 %%
 
-$prototype=bool buttonB() const
-$method=|bool|buttonB|
+$prototypeV2=bool buttonB() const
 
 %%
 %% Q_PROPERTY(bool buttonX READ buttonX NOTIFY buttonXChanged)
 %%
 
-$prototype=bool buttonX() const
-$method=|bool|buttonX|
+$prototypeV2=bool buttonX() const
 
 %%
 %% Q_PROPERTY(bool buttonY READ buttonY NOTIFY buttonYChanged)
 %%
 
-$prototype=bool buttonY() const
-$method=|bool|buttonY|
+$prototypeV2=bool buttonY() const
 
 %%
 %% Q_PROPERTY(bool buttonL1 READ buttonL1 NOTIFY buttonL1Changed)
 %%
 
-$prototype=bool buttonL1() const
-$method=|bool|buttonL1|
+$prototypeV2=bool buttonL1() const
 
 %%
 %% Q_PROPERTY(bool buttonR1 READ buttonR1 NOTIFY buttonR1Changed)
 %%
 
-$prototype=bool buttonR1() const
-$method=|bool|buttonR1|
+$prototypeV2=bool buttonR1() const
 
 %%
 %% Q_PROPERTY(double buttonL2 READ buttonL2 NOTIFY buttonL2Changed)
 %%
 
-$prototype=double buttonL2() const
-$method=|double|buttonL2|
+$prototypeV2=double buttonL2() const
 
 %%
 %% Q_PROPERTY(double buttonR2 READ buttonR2 NOTIFY buttonR2Changed)
 %%
 
-$prototype=double buttonR2() const
-$method=|double|buttonR2|
+$prototypeV2=double buttonR2() const
 
 %%
 %% Q_PROPERTY(bool buttonSelect READ buttonSelect NOTIFY buttonSelectChanged)
 %%
 
-$prototype=bool buttonSelect() const
-$method=|bool|buttonSelect|
+$prototypeV2=bool buttonSelect() const
 
 %%
 %% Q_PROPERTY(bool buttonStart READ buttonStart NOTIFY buttonStartChanged)
 %%
 
-$prototype=bool buttonStart() const
-$method=|bool|buttonStart|
+$prototypeV2=bool buttonStart() const
 
 %%
 %% Q_PROPERTY(bool buttonL3 READ buttonL3 NOTIFY buttonL3Changed)
 %%
 
-$prototype=bool buttonL3() const
-$method=|bool|buttonL3|
+$prototypeV2=bool buttonL3() const
 
 %%
 %% Q_PROPERTY(bool buttonR3 READ buttonR3 NOTIFY buttonR3Changed)
 %%
 
-$prototype=bool buttonR3() const
-$method=|bool|buttonR3|
+$prototypeV2=bool buttonR3() const
 
 %%
 %% Q_PROPERTY(bool buttonUp READ buttonUp NOTIFY buttonUpChanged)
 %%
 
-$prototype=bool buttonUp() const
-$method=|bool|buttonUp|
+$prototypeV2=bool buttonUp() const
 
 %%
 %% Q_PROPERTY(bool buttonDown READ buttonDown NOTIFY buttonDownChanged)
 %%
 
-$prototype=bool buttonDown() const
-$method=|bool|buttonDown|
+$prototypeV2=bool buttonDown() const
 
 %%
 %% Q_PROPERTY(bool buttonLeft READ buttonLeft NOTIFY buttonLeftChanged)
 %%
 
-$prototype=bool buttonLeft() const
-$method=|bool|buttonLeft|
+$prototypeV2=bool buttonLeft() const
 
 %%
 %% Q_PROPERTY(bool buttonRight READ buttonRight NOTIFY buttonRightChanged)
 %%
 
-$prototype=bool buttonRight() const
-$method=|bool|buttonRight|
+$prototypeV2=bool buttonRight() const
 
 %%
 %% Q_PROPERTY(bool buttonCenter READ buttonCenter NOTIFY buttonCenterChanged)
 %%
 
-$prototype=bool buttonCenter() const
-$method=|bool|buttonCenter|
+$prototypeV2=bool buttonCenter() const
 
 %%
 %% Q_PROPERTY(bool buttonGuide READ buttonGuide NOTIFY buttonGuideChanged)
 %%
 
-$prototype=bool buttonGuide() const
-$method=|bool|buttonGuide|
+$prototypeV2=bool buttonGuide() const
 
 %%
 %%
