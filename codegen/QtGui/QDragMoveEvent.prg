@@ -58,8 +58,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 }
 $addMethod=accept
 
-$prototype=QRect answerRect () const
-$method=|QRect|answerRect|
+$prototypeV2=QRect answerRect() const
 
 $prototype=void ignore ( const QRect & rectangle )
 $internalMethod=|void|ignore,ignore1|const QRect &

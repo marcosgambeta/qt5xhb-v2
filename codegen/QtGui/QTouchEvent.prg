@@ -30,16 +30,12 @@ $includes
 
 $deleteMethod
 
-$prototype=QWindow *window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow * window() const
 
-$prototype=QObject *target() const
-$method=|QObject *|target|
+$prototypeV2=QObject * target() const
 
-$prototype=Qt::TouchPointStates touchPointStates() const
-$method=|Qt::TouchPointStates|touchPointStates|
+$prototypeV2=Qt::TouchPointStates touchPointStates() const
 
-$prototype=QTouchDevice *device() const
-$method=|QTouchDevice *|device|
+$prototypeV2=QTouchDevice * device() const
 
 #pragma ENDDUMP

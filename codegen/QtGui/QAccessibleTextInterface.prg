@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual void selection(int selectionIndex, int *startOffset, int *endOffset) const = 0
 $virtualMethod=|void|selection|int,int *,int *
 
-$prototype=virtual int selectionCount() const = 0
-$virtualMethod=|int|selectionCount|
+$prototypeV2=virtual int selectionCount() const = 0
 
 $prototype=virtual void addSelection(int startOffset, int endOffset) = 0
 $virtualMethod=|void|addSelection|int,int
@@ -42,8 +41,7 @@ $virtualMethod=|void|removeSelection|int
 $prototype=virtual void setSelection(int selectionIndex, int startOffset, int endOffset) = 0
 $virtualMethod=|void|setSelection|int,int,int
 
-$prototype=virtual int cursorPosition() const = 0
-$virtualMethod=|int|cursorPosition|
+$prototypeV2=virtual int cursorPosition() const = 0
 
 $prototype=virtual void setCursorPosition(int position) = 0
 $virtualMethod=|void|setCursorPosition|int
@@ -51,8 +49,7 @@ $virtualMethod=|void|setCursorPosition|int
 $prototype=virtual QString text(int startOffset, int endOffset) const = 0
 $virtualMethod=|QString|text|int,int
 
-$prototype=virtual int characterCount() const = 0
-$virtualMethod=|int|characterCount|
+$prototypeV2=virtual int characterCount() const = 0
 
 $prototype=virtual QRect characterRect(int offset) const = 0
 $virtualMethod=|QRect|characterRect|int

@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 }
 $addMethod=appendRow
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QList<QStandardItem*> findItems(const QString &text,Qt::MatchFlags flags = Qt::MatchExactly,int column = 0) const
 $method=|QList<QStandardItem *>|findItems|const QString &,Qt::MatchFlags=Qt::MatchExactly,int=0
@@ -165,8 +164,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
 }
 $addMethod=insertRow
 
-$prototype=QStandardItem *invisibleRootItem() const
-$method=|QStandardItem *|invisibleRootItem|
+$prototypeV2=QStandardItem * invisibleRootItem() const
 
 $prototype=QStandardItem *item(int row, int column = 0) const
 $method=|QStandardItem *|item|int,int=0
@@ -247,8 +245,7 @@ $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 $prototype=Qt::ItemFlags flags(const QModelIndex &index) const
 $method=|Qt::ItemFlags|flags|const QModelIndex &
 
-$prototype=Qt::DropActions supportedDropActions() const
-$method=|Qt::DropActions|supportedDropActions|
+$prototypeV2=Qt::DropActions supportedDropActions() const
 
 $prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
@@ -320,14 +317,12 @@ $method=|QStandardItem *|takeVerticalHeaderItem|int
 $prototype=void setItemPrototype(const QStandardItem *item)
 $method=|void|setItemPrototype|const QStandardItem *
 
-$prototype=int sortRole() const
-$method=|int|sortRole|
+$prototypeV2=int sortRole() const
 
 $prototype=void setSortRole(int role)
 $method=|void|setSortRole|int
 
-$prototype=QStringList mimeTypes() const
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const
 
 $prototype=QMimeData *mimeData(const QModelIndexList &indexes) const
 $method=|QMimeData *|mimeData|const QModelIndexList &

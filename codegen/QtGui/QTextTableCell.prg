@@ -59,38 +59,27 @@ $deleteMethod
 $prototype=void setFormat(const QTextCharFormat &format)
 $method=|void|setFormat|const QTextCharFormat &
 
-$prototype=QTextCharFormat format() const
-$method=|QTextCharFormat|format|
+$prototypeV2=QTextCharFormat format() const
 
-$prototype=int row() const
-$method=|int|row|
+$prototypeV2=int row() const
 
-$prototype=int column() const
-$method=|int|column|
+$prototypeV2=int column() const
 
-$prototype=int rowSpan() const
-$method=|int|rowSpan|
+$prototypeV2=int rowSpan() const
 
-$prototype=int columnSpan() const
-$method=|int|columnSpan|
+$prototypeV2=int columnSpan() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QTextCursor firstCursorPosition() const
-$method=|QTextCursor|firstCursorPosition|
+$prototypeV2=QTextCursor firstCursorPosition() const
 
-$prototype=QTextCursor lastCursorPosition() const
-$method=|QTextCursor|lastCursorPosition|
+$prototypeV2=QTextCursor lastCursorPosition() const
 
-$prototype=int firstPosition() const
-$method=|int|firstPosition|
+$prototypeV2=int firstPosition() const
 
-$prototype=int lastPosition() const
-$method=|int|lastPosition|
+$prototypeV2=int lastPosition() const
 
-$prototype=int tableCellFormatIndex() const
-$method=|int|tableCellFormatIndex|
+$prototypeV2=int tableCellFormatIndex() const
 
 $extraMethods
 

@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 $deleteMethod
 
-$prototype=Type type() const
-$method=|QTextLength::Type|type|
+$prototypeV2=QTextLength::Type type() const
 
 $prototype=qreal value(qreal maximumLength) const
 $method=|qreal|value|qreal
 
-$prototype=qreal rawValue() const
-$method=|qreal|rawValue|
+$prototypeV2=qreal rawValue() const
 
 $extraMethods
 

@@ -105,20 +105,15 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=float x() const
-$method=|float|x|
+$prototypeV2=float x() const
 
-$prototype=float y() const
-$method=|float|y|
+$prototypeV2=float y() const
 
-$prototype=float z() const
-$method=|float|z|
+$prototypeV2=float z() const
 
-$prototype=float w() const
-$method=|float|w|
+$prototypeV2=float w() const
 
 $prototype=void setX(float x)
 $method=|void|setX|float
@@ -132,35 +127,25 @@ $method=|void|setZ|float
 $prototype=void setW(float w)
 $method=|void|setW|float
 
-$prototype=float length() const
-$method=|float|length|
+$prototypeV2=float length() const
 
-$prototype=float lengthSquared() const
-$method=|float|lengthSquared|
+$prototypeV2=float lengthSquared() const
 
-$prototype=QVector4D normalized() const
-$method=|QVector4D|normalized|
+$prototypeV2=QVector4D normalized() const
 
-$prototype=void normalize()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
-$prototype=QVector2D toVector2D() const
-$method=|QVector2D|toVector2D|
+$prototypeV2=QVector2D toVector2D() const
 
-$prototype=QVector2D toVector2DAffine() const
-$method=|QVector2D|toVector2DAffine|
+$prototypeV2=QVector2D toVector2DAffine() const
 
-$prototype=QVector3D toVector3D() const
-$method=|QVector3D|toVector3D|
+$prototypeV2=QVector3D toVector3D() const
 
-$prototype=QVector3D toVector3DAffine() const
-$method=|QVector3D|toVector3DAffine|
+$prototypeV2=QVector3D toVector3DAffine() const
 
-$prototype=QPoint toPoint() const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=QPointF toPointF() const
-$method=|QPointF|toPointF|
+$prototypeV2=QPointF toPointF() const
 
 $prototype=static float dotProduct(const QVector4D& v1, const QVector4D& v2)
 $staticMethod=|float|dotProduct|const QVector4D &,const QVector4D &

@@ -30,26 +30,22 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setWidth(qreal width)
 $method=|void|setWidth|qreal
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $prototype=void setHeight(qreal height)
 $method=|void|setHeight|qreal
 
-$prototype=qreal height() const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=int QTextImageFormat::quality() const
 $method=5,12,0|int|quality|

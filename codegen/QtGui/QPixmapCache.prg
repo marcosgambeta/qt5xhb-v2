@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=static int cacheLimit()
-$staticMethod=|int|cacheLimit|
+$prototypeV2=static int cacheLimit()
 
 $prototype=static void setCacheLimit(int)
 $staticMethod=|void|setCacheLimit|int
@@ -83,8 +82,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 }
 $addMethod=remove
 
-$prototype=static void clear()
-$staticMethod=|void|clear|
+$prototypeV2=static void clear()
 
 $extraMethods
 

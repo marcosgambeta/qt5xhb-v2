@@ -89,11 +89,9 @@ $deleteMethod
 $prototype=void swap(QRegion &other)
 $method=|void|swap|QRegion &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool contains(const QPoint &p) const
 $internalMethod=|bool|contains,contains1|const QPoint &
@@ -241,11 +239,9 @@ HB_FUNC_STATIC( QREGION_INTERSECTS )
 }
 $addMethod=intersects
 
-$prototype=QRect boundingRect() const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
-$prototype=int rectCount() const
-$method=|int|rectCount|
+$prototypeV2=int rectCount() const
 
 $extraMethods
 

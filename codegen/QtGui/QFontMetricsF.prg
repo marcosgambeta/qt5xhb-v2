@@ -70,11 +70,9 @@ HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 
 $deleteMethod
 
-$prototype=qreal ascent () const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal averageCharWidth () const
-$method=|qreal|averageCharWidth|
+$prototypeV2=qreal averageCharWidth() const
 
 $prototype=QRectF boundingRect ( const QString & text ) const
 $internalMethod=|QRectF|boundingRect,boundingRect1|const QString &
@@ -114,56 +112,44 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 }
 $addMethod=boundingRect
 
-$prototype=qreal descent () const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
 $prototype=QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 $method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=bool inFontUcs4 ( uint ch ) const
 $method=|bool|inFontUcs4|uint
 
-$prototype=qreal leading () const
-$method=|qreal|leading|
+$prototypeV2=qreal leading() const
 
-$prototype=qreal lineSpacing () const
-$method=|qreal|lineSpacing|
+$prototypeV2=qreal lineSpacing() const
 
-$prototype=qreal lineWidth () const
-$method=|qreal|lineWidth|
+$prototypeV2=qreal lineWidth() const
 
-$prototype=qreal maxWidth () const
-$method=|qreal|maxWidth|
+$prototypeV2=qreal maxWidth() const
 
-$prototype=qreal minLeftBearing () const
-$method=|qreal|minLeftBearing|
+$prototypeV2=qreal minLeftBearing() const
 
-$prototype=qreal minRightBearing () const
-$method=|qreal|minRightBearing|
+$prototypeV2=qreal minRightBearing() const
 
-$prototype=qreal overlinePos () const
-$method=|qreal|overlinePos|
+$prototypeV2=qreal overlinePos() const
 
 $prototype=QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 $method=|QSizeF|size|int,const QString &,int=0,int *=nullptr
 
-$prototype=qreal strikeOutPos () const
-$method=|qreal|strikeOutPos|
+$prototypeV2=qreal strikeOutPos() const
 
 $prototype=QRectF tightBoundingRect ( const QString & text ) const
 $method=|QRectF|tightBoundingRect|const QString &
 
-$prototype=qreal underlinePos () const
-$method=|qreal|underlinePos|
+$prototypeV2=qreal underlinePos() const
 
 $prototype=qreal width ( const QString & text ) const
 $method=|qreal|width|const QString &
 
-$prototype=qreal xHeight () const
-$method=|qreal|xHeight|
+$prototypeV2=qreal xHeight() const
 
 $extraMethods
 

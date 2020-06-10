@@ -27,21 +27,17 @@ $includes
 
 $deleteMethod
 
-$prototype=SurfaceClass surfaceClass() const
-$method=|QSurface::SurfaceClass|surfaceClass|
+$prototypeV2=QSurface::SurfaceClass surfaceClass() const
 
-$prototype=virtual QSurfaceFormat format() const = 0
-$virtualMethod=|QSurfaceFormat|format|
+$prototypeV2=virtual QSurfaceFormat format() const = 0
 
 $prototype=virtual QPlatformSurface *surfaceHandle() const = 0
 %% TODO: implementar ?
 %% $virtualMethod=|QPlatformSurface *|surfaceHandle|
 
-$prototype=virtual SurfaceType surfaceType() const = 0
-$virtualMethod=|QSurface::SurfaceType|surfaceType|
+$prototypeV2=virtual QSurface::SurfaceType surfaceType() const = 0
 
-$prototype=virtual QSize size() const = 0
-$virtualMethod=|QSize|size|
+$prototypeV2=virtual QSize size() const = 0
 
 $extraMethods
 

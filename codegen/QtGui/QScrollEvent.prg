@@ -30,13 +30,10 @@ $constructor=|new|const QPointF &,const QPointF &,QScrollEvent::ScrollState
 
 $deleteMethod
 
-$prototype=QPointF contentPos() const
-$method=|QPointF|contentPos|
+$prototypeV2=QPointF contentPos() const
 
-$prototype=QPointF overshootDistance() const
-$method=|QPointF|overshootDistance|
+$prototypeV2=QPointF overshootDistance() const
 
-$prototype=ScrollState scrollState() const
-$method=|QScrollEvent::ScrollState|scrollState|
+$prototypeV2=QScrollEvent::ScrollState scrollState() const
 
 #pragma ENDDUMP

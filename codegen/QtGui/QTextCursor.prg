@@ -105,20 +105,16 @@ $deleteMethod
 $prototype=void swap(QTextCursor &other)
 $method=|void|swap|QTextCursor &
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=void setPosition(int pos, MoveMode mode = MoveAnchor)
 $method=|void|setPosition|int,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
-$prototype=int position() const
-$method=|int|position|
+$prototypeV2=int position() const
 
-$prototype=int positionInBlock() const
-$method=|int|positionInBlock|
+$prototypeV2=int positionInBlock() const
 
-$prototype=int anchor() const
-$method=|int|anchor|
+$prototypeV2=int anchor() const
 
 $prototype=void insertText(const QString &text)
 $internalMethod=|void|insertText,insertText1|const QString &
@@ -151,8 +147,7 @@ $addMethod=insertText
 $prototype=bool movePosition(MoveOperation op, MoveMode = MoveAnchor, int n = 1)
 $method=|bool|movePosition|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor,int=1
 
-$prototype=bool visualNavigation() const
-$method=|bool|visualNavigation|
+$prototypeV2=bool visualNavigation() const
 
 $prototype=void setVisualNavigation(bool b)
 $method=|void|setVisualNavigation|bool
@@ -160,56 +155,42 @@ $method=|void|setVisualNavigation|bool
 $prototype=void setVerticalMovementX(int x)
 $method=|void|setVerticalMovementX|int
 
-$prototype=int verticalMovementX() const
-$method=|int|verticalMovementX|
+$prototypeV2=int verticalMovementX() const
 
 $prototype=void setKeepPositionOnInsert(bool b)
 $method=|void|setKeepPositionOnInsert|bool
 
-$prototype=bool keepPositionOnInsert() const
-$method=|bool|keepPositionOnInsert|
+$prototypeV2=bool keepPositionOnInsert() const
 
-$prototype=void deleteChar()
-$method=|void|deleteChar|
+$prototypeV2=void deleteChar()
 
-$prototype=void deletePreviousChar()
-$method=|void|deletePreviousChar|
+$prototypeV2=void deletePreviousChar()
 
 $prototype=void select(SelectionType selection)
 $method=|void|select|QTextCursor::SelectionType
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
-$prototype=bool hasComplexSelection() const
-$method=|bool|hasComplexSelection|
+$prototypeV2=bool hasComplexSelection() const
 
-$prototype=void removeSelectedText()
-$method=|void|removeSelectedText|
+$prototypeV2=void removeSelectedText()
 
-$prototype=void clearSelection()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
-$prototype=int selectionStart() const
-$method=|int|selectionStart|
+$prototypeV2=int selectionStart() const
 
-$prototype=int selectionEnd() const
-$method=|int|selectionEnd|
+$prototypeV2=int selectionEnd() const
 
-$prototype=QString selectedText() const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
-$prototype=QTextDocumentFragment selection() const
-$method=|QTextDocumentFragment|selection|
+$prototypeV2=QTextDocumentFragment selection() const
 
 $prototype=void selectedTableCells(int *firstRow, int *numRows, int *firstColumn, int *numColumns) const
 $method=|void|selectedTableCells|int *,int *,int *,int *
 
-$prototype=QTextBlock block() const
-$method=|QTextBlock|block|
+$prototypeV2=QTextBlock block() const
 
-$prototype=QTextCharFormat charFormat() const
-$method=|QTextCharFormat|charFormat|
+$prototypeV2=QTextCharFormat charFormat() const
 
 $prototype=void setCharFormat(const QTextCharFormat &format)
 $method=|void|setCharFormat|const QTextCharFormat &
@@ -217,8 +198,7 @@ $method=|void|setCharFormat|const QTextCharFormat &
 $prototype=void mergeCharFormat(const QTextCharFormat &modifier)
 $method=|void|mergeCharFormat|const QTextCharFormat &
 
-$prototype=QTextBlockFormat blockFormat() const
-$method=|QTextBlockFormat|blockFormat|
+$prototypeV2=QTextBlockFormat blockFormat() const
 
 $prototype=void setBlockFormat(const QTextBlockFormat &format)
 $method=|void|setBlockFormat|const QTextBlockFormat &
@@ -226,8 +206,7 @@ $method=|void|setBlockFormat|const QTextBlockFormat &
 $prototype=void mergeBlockFormat(const QTextBlockFormat &modifier)
 $method=|void|mergeBlockFormat|const QTextBlockFormat &
 
-$prototype=QTextCharFormat blockCharFormat() const
-$method=|QTextCharFormat|blockCharFormat|
+$prototypeV2=QTextCharFormat blockCharFormat() const
 
 $prototype=void setBlockCharFormat(const QTextCharFormat &format)
 $method=|void|setBlockCharFormat|const QTextCharFormat &
@@ -235,17 +214,13 @@ $method=|void|setBlockCharFormat|const QTextCharFormat &
 $prototype=void mergeBlockCharFormat(const QTextCharFormat &modifier)
 $method=|void|mergeBlockCharFormat|const QTextCharFormat &
 
-$prototype=bool atBlockStart() const
-$method=|bool|atBlockStart|
+$prototypeV2=bool atBlockStart() const
 
-$prototype=bool atBlockEnd() const
-$method=|bool|atBlockEnd|
+$prototypeV2=bool atBlockEnd() const
 
-$prototype=bool atStart() const
-$method=|bool|atStart|
+$prototypeV2=bool atStart() const
 
-$prototype=bool atEnd() const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
 $prototype=void insertBlock()
 $internalMethod=|void|insertBlock,insertBlock1|
@@ -339,8 +314,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 }
 $addMethod=createList
 
-$prototype=QTextList *currentList() const
-$method=|QTextList *|currentList|
+$prototypeV2=QTextList * currentList() const
 
 $prototype=QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
 $internalMethod=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableFormat &
@@ -370,14 +344,12 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 }
 $addMethod=insertTable
 
-$prototype=QTextTable *currentTable() const
-$method=|QTextTable *|currentTable|
+$prototypeV2=QTextTable * currentTable() const
 
 $prototype=QTextFrame *insertFrame(const QTextFrameFormat &format)
 $method=|QTextFrame *|insertFrame|const QTextFrameFormat &
 
-$prototype=QTextFrame *currentFrame() const
-$method=|QTextFrame *|currentFrame|
+$prototypeV2=QTextFrame * currentFrame() const
 
 $prototype=void insertFragment(const QTextDocumentFragment &fragment)
 $method=|void|insertFragment|const QTextDocumentFragment &
@@ -429,26 +401,20 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 }
 $addMethod=insertImage
 
-$prototype=void beginEditBlock()
-$method=|void|beginEditBlock|
+$prototypeV2=void beginEditBlock()
 
-$prototype=void joinPreviousEditBlock()
-$method=|void|joinPreviousEditBlock|
+$prototypeV2=void joinPreviousEditBlock()
 
-$prototype=void endEditBlock()
-$method=|void|endEditBlock|
+$prototypeV2=void endEditBlock()
 
 $prototype=bool isCopyOf(const QTextCursor &other) const
 $method=|bool|isCopyOf|const QTextCursor &
 
-$prototype=int blockNumber() const
-$method=|int|blockNumber|
+$prototypeV2=int blockNumber() const
 
-$prototype=int columnNumber() const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
-$prototype=QTextDocument *document() const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
 $extraMethods
 

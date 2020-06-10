@@ -33,7 +33,6 @@ $deleteMethod
 $prototype=void setValue(const QVariant & val)
 $method=|void|setValue|const QVariant &
 
-$prototype=QVariant value() const
-$method=|QVariant|value|
+$prototypeV2=QVariant value() const
 
 #pragma ENDDUMP

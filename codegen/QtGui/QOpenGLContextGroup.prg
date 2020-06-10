@@ -30,7 +30,6 @@ $deleteMethod
 $prototype=QList<QOpenGLContext *> shares() const
 $method=|QList<QOpenGLContext *>|shares|
 
-$prototype=static QOpenGLContextGroup *currentContextGroup()
-$staticMethod=|QOpenGLContextGroup *|currentContextGroup|
+$prototypeV2=static QOpenGLContextGroup * currentContextGroup()
 
 #pragma ENDDUMP

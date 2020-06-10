@@ -30,47 +30,34 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QRectF rect() const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=qreal ascent() const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal descent() const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
-$prototype=qreal height() const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
-$prototype=qreal leading() const
-$method=|qreal|leading|
+$prototypeV2=qreal leading() const
 
 $prototype=void setLeadingIncluded(bool included)
 $method=|void|setLeadingIncluded|bool
 
-$prototype=bool leadingIncluded() const
-$method=|bool|leadingIncluded|
+$prototypeV2=bool leadingIncluded() const
 
-$prototype=qreal naturalTextWidth() const
-$method=|qreal|naturalTextWidth|
+$prototypeV2=qreal naturalTextWidth() const
 
-$prototype=qreal horizontalAdvance() const
-$method=|qreal|horizontalAdvance|
+$prototypeV2=qreal horizontalAdvance() const
 
-$prototype=QRectF naturalTextRect() const
-$method=|QRectF|naturalTextRect|
+$prototypeV2=QRectF naturalTextRect() const
 
 $prototype=qreal cursorToX(int *cursorPos, Edge edge = Leading) const
 $internalMethod=|qreal|cursorToX,cursorToX1|int *,QTextLine::Edge=QTextLine::Leading
@@ -138,17 +125,13 @@ $addMethod=setNumColumns
 $prototype=void setPosition(const QPointF &pos)
 $method=|void|setPosition|const QPointF &
 
-$prototype=QPointF position() const
-$method=|QPointF|position|
+$prototypeV2=QPointF position() const
 
-$prototype=int textStart() const
-$method=|int|textStart|
+$prototypeV2=int textStart() const
 
-$prototype=int textLength() const
-$method=|int|textLength|
+$prototypeV2=int textLength() const
 
-$prototype=int lineNumber() const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
 $prototype=void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = nullptr) const
 %% TODO: implementar

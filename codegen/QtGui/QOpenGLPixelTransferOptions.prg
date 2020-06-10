@@ -60,50 +60,42 @@ $method=|void|swap|QOpenGLPixelTransferOptions &
 $prototype=void setAlignment(int alignment)
 $method=|void|setAlignment|int
 
-$prototype=int alignment() const
-$method=|int|alignment|
+$prototypeV2=int alignment() const
 
 $prototype=void setSkipImages(int skipImages)
 $method=|void|setSkipImages|int
 
-$prototype=int skipImages() const
-$method=|int|skipImages|
+$prototypeV2=int skipImages() const
 
 $prototype=void setSkipRows(int skipRows)
 $method=|void|setSkipRows|int
 
-$prototype=int skipRows() const
-$method=|int|skipRows|
+$prototypeV2=int skipRows() const
 
 $prototype=void setSkipPixels(int skipPixels)
 $method=|void|setSkipPixels|int
 
-$prototype=int skipPixels() const
-$method=|int|skipPixels|
+$prototypeV2=int skipPixels() const
 
 $prototype=void setImageHeight(int imageHeight)
 $method=|void|setImageHeight|int
 
-$prototype=int imageHeight() const
-$method=|int|imageHeight|
+$prototypeV2=int imageHeight() const
 
 $prototype=void setRowLength(int rowLength)
 $method=|void|setRowLength|int
 
-$prototype=int rowLength() const
-$method=|int|rowLength|
+$prototypeV2=int rowLength() const
 
 $prototype=void setLeastSignificantByteFirst(bool lsbFirst)
 $method=|void|setLeastSignificantByteFirst|bool
 
-$prototype=bool isLeastSignificantBitFirst() const
-$method=|bool|isLeastSignificantBitFirst|
+$prototypeV2=bool isLeastSignificantBitFirst() const
 
 $prototype=void setSwapBytesEnabled(bool swapBytes)
 $method=|void|setSwapBytesEnabled|bool
 
-$prototype=bool isSwapBytesEnabled() const
-$method=|bool|isSwapBytesEnabled|
+$prototypeV2=bool isSwapBytesEnabled() const
 
 $extraMethods
 

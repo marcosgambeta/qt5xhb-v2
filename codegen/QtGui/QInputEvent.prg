@@ -27,7 +27,6 @@ $includes
 
 $deleteMethod
 
-$prototype=Qt::KeyboardModifiers modifiers () const
-$method=|Qt::KeyboardModifiers|modifiers|
+$prototypeV2=Qt::KeyboardModifiers modifiers() const
 
 #pragma ENDDUMP

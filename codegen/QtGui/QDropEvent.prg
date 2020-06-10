@@ -32,31 +32,24 @@ $constructor=|new|const QPoint &,Qt::DropActions,const QMimeData *,Qt::MouseButt
 
 $deleteMethod
 
-$prototype=void acceptProposedAction ()
-$method=|void|acceptProposedAction|
+$prototypeV2=void acceptProposedAction()
 
-$prototype=Qt::DropAction dropAction () const
-$method=|Qt::DropAction|dropAction|
+$prototypeV2=Qt::DropAction dropAction() const
 
-$prototype=Qt::KeyboardModifiers keyboardModifiers () const
-$method=|Qt::KeyboardModifiers|keyboardModifiers|
+$prototypeV2=Qt::KeyboardModifiers keyboardModifiers() const
 
 $prototype=const QMimeData * mimeData () const
 $method=|const QMimeData *|mimeData|
 
-$prototype=Qt::MouseButtons mouseButtons () const
-$method=|Qt::MouseButtons|mouseButtons|
+$prototypeV2=Qt::MouseButtons mouseButtons() const
 
-$prototype=Qt::DropActions possibleActions () const
-$method=|Qt::DropActions|possibleActions|
+$prototypeV2=Qt::DropActions possibleActions() const
 
-$prototype=Qt::DropAction proposedAction () const
-$method=|Qt::DropAction|proposedAction|
+$prototypeV2=Qt::DropAction proposedAction() const
 
 $prototype=void setDropAction ( Qt::DropAction action )
 $method=|void|setDropAction|Qt::DropAction
 
-$prototype=QObject * source () const
-$method=|QObject *|source|
+$prototypeV2=QObject * source() const
 
 #pragma ENDDUMP

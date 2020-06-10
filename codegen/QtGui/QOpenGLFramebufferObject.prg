@@ -130,53 +130,38 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QOpenGLFramebufferObjectFormat format() const
-$method=|QOpenGLFramebufferObjectFormat|format|
+$prototypeV2=QOpenGLFramebufferObjectFormat format() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isBound() const
-$method=|bool|isBound|
+$prototypeV2=bool isBound() const
 
-$prototype=bool bind()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
-$prototype=bool release()
-$method=|bool|release|
+$prototypeV2=bool release()
 
-$prototype=int width() const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int height() const
-$method=|int|height|
+$prototypeV2=int height() const
 
-$prototype=GLuint texture() const
-$method=|GLuint|texture|
+$prototypeV2=GLuint texture() const
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QImage toImage() const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
-$prototype=Attachment attachment() const
-$method=|QOpenGLFramebufferObject::Attachment|attachment|
+$prototypeV2=QOpenGLFramebufferObject::Attachment attachment() const
 
 $prototype=void setAttachment(Attachment attachment)
 $method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
 
-$prototype=GLuint handle() const
-$method=|GLuint|handle|
+$prototypeV2=GLuint handle() const
 
-$prototype=static bool bindDefault()
-$staticMethod=|bool|bindDefault|
+$prototypeV2=static bool bindDefault()
 
-$prototype=static bool hasOpenGLFramebufferObjects()
-$staticMethod=|bool|hasOpenGLFramebufferObjects|
+$prototypeV2=static bool hasOpenGLFramebufferObjects()
 
-$prototype=static bool hasOpenGLFramebufferBlit()
-$staticMethod=|bool|hasOpenGLFramebufferBlit|
+$prototypeV2=static bool hasOpenGLFramebufferBlit()
 
 $prototype=static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
 $internalStaticMethod=|void|blitFramebuffer,blitFramebuffer1|QOpenGLFramebufferObject *,const QRect &,QOpenGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST

@@ -27,47 +27,33 @@ $includes
 
 $deleteMethod
 
-$prototype=int colorCount () const
-$method=|int|colorCount|
+$prototypeV2=int colorCount() const
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
-$prototype=int heightMM () const
-$method=|int|heightMM|
+$prototypeV2=int heightMM() const
 
-$prototype=int logicalDpiX () const
-$method=|int|logicalDpiX|
+$prototypeV2=int logicalDpiX() const
 
-$prototype=int logicalDpiY () const
-$method=|int|logicalDpiY|
+$prototypeV2=int logicalDpiY() const
 
-$prototype=virtual QPaintEngine * paintEngine () const = 0
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const = 0
 
-$prototype=bool paintingActive () const
-$method=|bool|paintingActive|
+$prototypeV2=bool paintingActive() const
 
-$prototype=int physicalDpiX () const
-$method=|int|physicalDpiX|
+$prototypeV2=int physicalDpiX() const
 
-$prototype=int physicalDpiY () const
-$method=|int|physicalDpiY|
+$prototypeV2=int physicalDpiY() const
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int widthMM () const
-$method=|int|widthMM|
+$prototypeV2=int widthMM() const
 
-$prototype=virtual int devType() const
-$virtualMethod=|int|devType|
+$prototypeV2=virtual int devType() const
 
-$prototype=int devicePixelRatio() const
-$method=|int|devicePixelRatio|
+$prototypeV2=int devicePixelRatio() const
 
 $extraMethods
 

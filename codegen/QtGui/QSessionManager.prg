@@ -25,41 +25,32 @@ $destructor
 
 $includes
 
-$prototype=QString sessionId() const
-$method=|QString|sessionId|
+$prototypeV2=QString sessionId() const
 
-$prototype=QString sessionKey() const
-$method=|QString|sessionKey|
+$prototypeV2=QString sessionKey() const
 
-$prototype=bool allowsInteraction()
-$method=|bool|allowsInteraction|
+$prototypeV2=bool allowsInteraction()
 
-$prototype=bool allowsErrorInteraction()
-$method=|bool|allowsErrorInteraction|
+$prototypeV2=bool allowsErrorInteraction()
 
-$prototype=void release()
-$method=|void|release|
+$prototypeV2=void release()
 
-$prototype=void cancel()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
 $prototype=void setRestartHint(RestartHint)
 $method=|void|setRestartHint|QSessionManager::RestartHint
 
-$prototype=RestartHint restartHint() const
-$method=|QSessionManager::RestartHint|restartHint|
+$prototypeV2=QSessionManager::RestartHint restartHint() const
 
 $prototype=void setRestartCommand(const QStringList&)
 $method=|void|setRestartCommand|const QStringList &
 
-$prototype=QStringList restartCommand() const
-$method=|QStringList|restartCommand|
+$prototypeV2=QStringList restartCommand() const
 
 $prototype=void setDiscardCommand(const QStringList&)
 $method=|void|setDiscardCommand|const QStringList &
 
-$prototype=QStringList discardCommand() const
-$method=|QStringList|discardCommand|
+$prototypeV2=QStringList discardCommand() const
 
 $prototype=void setManagerProperty(const QString& name, const QString& value)
 $internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QString &
@@ -89,10 +80,8 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 }
 $addMethod=setManagerProperty
 
-$prototype=bool isPhase2() const
-$method=|bool|isPhase2|
+$prototypeV2=bool isPhase2() const
 
-$prototype=void requestPhase2()
-$method=|void|requestPhase2|
+$prototypeV2=void requestPhase2()
 
 #pragma ENDDUMP

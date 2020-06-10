@@ -27,29 +27,23 @@ $includes
 
 #include <QtGui/QWindow>
 
-$prototype=virtual bool isValid() const = 0
-$virtualMethod=|bool|isValid|
+$prototypeV2=virtual bool isValid() const = 0
 
-$prototype=virtual QObject *object() const = 0
-$virtualMethod=|QObject *|object|
+$prototypeV2=virtual QObject * object() const = 0
 
-$prototype=virtual QWindow *window() const
-$virtualMethod=|QWindow *|window|
+$prototypeV2=virtual QWindow * window() const
 
-$prototype=virtual QAccessibleInterface *focusChild() const
-$virtualMethod=|QAccessibleInterface *|focusChild|
+$prototypeV2=virtual QAccessibleInterface * focusChild() const
 
 $prototype=virtual QAccessibleInterface *childAt(int x, int y) const = 0
 $virtualMethod=|QAccessibleInterface *|childAt|int,int
 
-$prototype=virtual QAccessibleInterface *parent() const = 0
-$virtualMethod=|QAccessibleInterface *|parent|
+$prototypeV2=virtual QAccessibleInterface * parent() const = 0
 
 $prototype=virtual QAccessibleInterface *child(int index) const = 0
 $virtualMethod=|QAccessibleInterface *|child|int
 
-$prototype=virtual int childCount() const = 0
-$virtualMethod=|int|childCount|
+$prototypeV2=virtual int childCount() const = 0
 
 $prototype=virtual int indexOfChild(const QAccessibleInterface *) const = 0
 $virtualMethod=|int|indexOfChild|const QAccessibleInterface *
@@ -60,38 +54,27 @@ $virtualMethod=|QString|text|QAccessible::Text
 $prototype=virtual void setText(QAccessible::Text t, const QString &text) = 0
 $virtualMethod=|void|setText|QAccessible::Text,const QString &
 
-$prototype=virtual QRect rect() const = 0
-$virtualMethod=|QRect|rect|
+$prototypeV2=virtual QRect rect() const = 0
 
-$prototype=virtual QAccessible::Role role() const = 0
-$virtualMethod=|QAccessible::Role|role|
+$prototypeV2=virtual QAccessible::Role role() const = 0
 
-$prototype=virtual QColor foregroundColor() const
-$virtualMethod=|QColor|foregroundColor|
+$prototypeV2=virtual QColor foregroundColor() const
 
-$prototype=virtual QColor backgroundColor() const
-$virtualMethod=|QColor|backgroundColor|
+$prototypeV2=virtual QColor backgroundColor() const
 
-$prototype=QAccessibleTextInterface *textInterface()
-$method=|QAccessibleTextInterface *|textInterface|
+$prototypeV2=QAccessibleTextInterface * textInterface()
 
-$prototype=QAccessibleEditableTextInterface *editableTextInterface()
-$method=|QAccessibleEditableTextInterface *|editableTextInterface|
+$prototypeV2=QAccessibleEditableTextInterface * editableTextInterface()
 
-$prototype=QAccessibleValueInterface *valueInterface()
-$method=|QAccessibleValueInterface *|valueInterface|
+$prototypeV2=QAccessibleValueInterface * valueInterface()
 
-$prototype=QAccessibleActionInterface *actionInterface()
-$method=|QAccessibleActionInterface *|actionInterface|
+$prototypeV2=QAccessibleActionInterface * actionInterface()
 
-$prototype=QAccessibleImageInterface *imageInterface()
-$method=|QAccessibleImageInterface *|imageInterface|
+$prototypeV2=QAccessibleImageInterface * imageInterface()
 
-$prototype=QAccessibleTableInterface *tableInterface()
-$method=|QAccessibleTableInterface *|tableInterface|
+$prototypeV2=QAccessibleTableInterface * tableInterface()
 
-$prototype=QAccessibleTableCellInterface *tableCellInterface()
-$method=|QAccessibleTableCellInterface *|tableCellInterface|
+$prototypeV2=QAccessibleTableCellInterface * tableCellInterface()
 
 $prototype=void virtual_hook(int id, void *data)
 $method=|void|virtual_hook|int,void *

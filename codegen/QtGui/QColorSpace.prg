@@ -97,14 +97,11 @@ $deleteMethod
 $prototype=void swap(QColorSpace &colorSpace) noexcept
 $method=|void|swap|QColorSpace &
 
-$prototype=Primaries primaries() const noexcept
-$method=|QColorSpace::Primaries|primaries|
+$prototypeV2=QColorSpace::Primaries primaries() const noexcept
 
-$prototype=TransferFunction transferFunction() const noexcept
-$method=|QColorSpace::TransferFunction|transferFunction|
+$prototypeV2=QColorSpace::TransferFunction transferFunction() const noexcept
 
-$prototype=float gamma() const noexcept
-$method=|float|gamma|
+$prototypeV2=float gamma() const noexcept
 
 $prototype=void setTransferFunction(TransferFunction transferFunction, float gamma = 0.0f)
 $method=|void|setTransferFunction|QColorSpace::TransferFunction,float=0.0f
@@ -140,14 +137,12 @@ HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 }
 $addMethod=setPrimaries
 
-$prototype=bool isValid() const noexcept
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const noexcept
 
 $prototype=static QColorSpace fromIccProfile(const QByteArray &iccProfile)
 $staticMethod=|QColorSpace|fromIccProfile|const QByteArray &
 
-$prototype=QByteArray iccProfile() const
-$method=|QByteArray|iccProfile|
+$prototypeV2=QByteArray iccProfile() const
 
 $prototype=QColorTransform transformationToColorSpace(const QColorSpace &colorspace) const
 %% TODO: $method=|QColorTransform|transformationToColorSpace|const QColorSpace &

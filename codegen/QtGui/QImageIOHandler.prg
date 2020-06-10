@@ -30,35 +30,26 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool canRead () const = 0
-$virtualMethod=|bool|canRead|
+$prototypeV2=virtual bool canRead() const = 0
 
-$prototype=virtual int currentImageNumber () const
-$virtualMethod=|int|currentImageNumber|
+$prototypeV2=virtual int currentImageNumber() const
 
-$prototype=virtual QRect currentImageRect () const
-$virtualMethod=|QRect|currentImageRect|
+$prototypeV2=virtual QRect currentImageRect() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
-$prototype=virtual int imageCount () const
-$virtualMethod=|int|imageCount|
+$prototypeV2=virtual int imageCount() const
 
 $prototype=virtual bool jumpToImage ( int imageNumber )
 $virtualMethod=|bool|jumpToImage|int
 
-$prototype=virtual bool jumpToNextImage ()
-$virtualMethod=|bool|jumpToNextImage|
+$prototypeV2=virtual bool jumpToNextImage()
 
-$prototype=virtual int loopCount () const
-$virtualMethod=|int|loopCount|
+$prototypeV2=virtual int loopCount() const
 
-$prototype=virtual int nextImageDelay () const
-$virtualMethod=|int|nextImageDelay|
+$prototypeV2=virtual int nextImageDelay() const
 
 $prototype=virtual QVariant option ( ImageOption option ) const
 $virtualMethod=|QVariant|option|QImageIOHandler::ImageOption

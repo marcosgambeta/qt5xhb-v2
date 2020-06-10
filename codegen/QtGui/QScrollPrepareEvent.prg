@@ -30,17 +30,13 @@ $constructor=|new|const QPointF &
 
 $deleteMethod
 
-$prototype=QPointF startPos() const
-$method=|QPointF|startPos|
+$prototypeV2=QPointF startPos() const
 
-$prototype=QSizeF viewportSize() const
-$method=|QSizeF|viewportSize|
+$prototypeV2=QSizeF viewportSize() const
 
-$prototype=QRectF contentPosRange() const
-$method=|QRectF|contentPosRange|
+$prototypeV2=QRectF contentPosRange() const
 
-$prototype=QPointF contentPos() const
-$method=|QPointF|contentPos|
+$prototypeV2=QPointF contentPos() const
 
 $prototype=void setViewportSize(const QSizeF &size)
 $method=|void|setViewportSize|const QSizeF &

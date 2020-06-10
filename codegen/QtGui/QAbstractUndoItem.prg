@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void undo() = 0
-$virtualMethod=|void|undo|
+$prototypeV2=virtual void undo() = 0
 
-$prototype=virtual void redo() = 0
-$virtualMethod=|void|redo|
+$prototypeV2=virtual void redo() = 0
 
 $extraMethods
 

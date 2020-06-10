@@ -65,80 +65,66 @@ $deleteMethod
 $prototype=void setDepthBufferSize(int size)
 $method=|void|setDepthBufferSize|int
 
-$prototype=int depthBufferSize() const
-$method=|int|depthBufferSize|
+$prototypeV2=int depthBufferSize() const
 
 $prototype=void setStencilBufferSize(int size)
 $method=|void|setStencilBufferSize|int
 
-$prototype=int stencilBufferSize() const
-$method=|int|stencilBufferSize|
+$prototypeV2=int stencilBufferSize() const
 
 $prototype=void setRedBufferSize(int size)
 $method=|void|setRedBufferSize|int
 
-$prototype=int redBufferSize() const
-$method=|int|redBufferSize|
+$prototypeV2=int redBufferSize() const
 
 $prototype=void setGreenBufferSize(int size)
 $method=|void|setGreenBufferSize|int
 
-$prototype=int greenBufferSize() const
-$method=|int|greenBufferSize|
+$prototypeV2=int greenBufferSize() const
 
 $prototype=void setBlueBufferSize(int size)
 $method=|void|setBlueBufferSize|int
 
-$prototype=int blueBufferSize() const
-$method=|int|blueBufferSize|
+$prototypeV2=int blueBufferSize() const
 
 $prototype=void setAlphaBufferSize(int size)
 $method=|void|setAlphaBufferSize|int
 
-$prototype=int alphaBufferSize() const
-$method=|int|alphaBufferSize|
+$prototypeV2=int alphaBufferSize() const
 
 $prototype=void setSamples(int numSamples)
 $method=|void|setSamples|int
 
-$prototype=int samples() const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setSwapBehavior(SwapBehavior behavior)
 $method=|void|setSwapBehavior|QSurfaceFormat::SwapBehavior
 
-$prototype=SwapBehavior swapBehavior() const
-$method=|QSurfaceFormat::SwapBehavior|swapBehavior|
+$prototypeV2=QSurfaceFormat::SwapBehavior swapBehavior() const
 
-$prototype=bool hasAlpha() const
-$method=|bool|hasAlpha|
+$prototypeV2=bool hasAlpha() const
 
 $prototype=void setProfile(OpenGLContextProfile profile)
 $method=|void|setProfile|QSurfaceFormat::OpenGLContextProfile
 
-$prototype=OpenGLContextProfile profile() const
-$method=|QSurfaceFormat::OpenGLContextProfile|profile|
+$prototypeV2=QSurfaceFormat::OpenGLContextProfile profile() const
 
 $prototype=void setRenderableType(RenderableType type)
 $method=|void|setRenderableType|QSurfaceFormat::RenderableType
 
-$prototype=RenderableType renderableType() const
-$method=|QSurfaceFormat::RenderableType|renderableType|
+$prototypeV2=QSurfaceFormat::RenderableType renderableType() const
 
 $prototype=void setMajorVersion(int majorVersion)
 $method=|void|setMajorVersion|int
 
-$prototype=int majorVersion() const
-$method=|int|majorVersion|
+$prototypeV2=int majorVersion() const
 
 $prototype=void setMinorVersion(int minorVersion)
 $method=|void|setMinorVersion|int
 
-$prototype=int minorVersion() const
-$method=|int|minorVersion|
+$prototypeV2=int minorVersion() const
 
-$prototype=bool stereo() const
-$method=|bool|stereo|
+$prototypeV2=bool stereo() const
 
 $prototype=void setStereo(bool enable)
 $method=|void|setStereo|bool

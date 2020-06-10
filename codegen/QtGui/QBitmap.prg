@@ -80,8 +80,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QBitmap transformed ( const QTransform & matrix ) const
 $method=|QBitmap|transformed|const QTransform &

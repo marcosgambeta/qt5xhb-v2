@@ -68,29 +68,24 @@ $method=|void|swap|QStaticText &
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setTextFormat(Qt::TextFormat textFormat)
 $method=|void|setTextFormat|Qt::TextFormat
 
-$prototype=Qt::TextFormat textFormat() const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
 $prototype=void setTextWidth(qreal textWidth)
 $method=|void|setTextWidth|qreal
 
-$prototype=qreal textWidth() const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
 $prototype=void setTextOption(const QTextOption &textOption)
 $method=|void|setTextOption|const QTextOption &
 
-$prototype=QTextOption textOption() const
-$method=|QTextOption|textOption|
+$prototypeV2=QTextOption textOption() const
 
-$prototype=QSizeF size() const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
 $prototype=void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
 $method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
@@ -98,8 +93,7 @@ $method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
 $prototype=void setPerformanceHint(PerformanceHint performanceHint)
 $method=|void|setPerformanceHint|QStaticText::PerformanceHint
 
-$prototype=PerformanceHint performanceHint() const
-$method=|QStaticText::PerformanceHint|performanceHint|
+$prototypeV2=QStaticText::PerformanceHint performanceHint() const
 
 $extraMethods
 

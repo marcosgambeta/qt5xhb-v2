@@ -27,23 +27,17 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal descent() const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
-$prototype=qreal ascent() const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=RenderFlags renderFlags() const
-$method=|QTextItem::RenderFlags|renderFlags|
+$prototypeV2=QTextItem::RenderFlags renderFlags() const
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $extraMethods
 

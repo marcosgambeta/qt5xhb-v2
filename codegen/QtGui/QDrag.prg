@@ -36,8 +36,7 @@ $constructor=|new|QObject *
 
 $deleteMethod
 
-$prototype=Qt::DropAction defaultAction() const
-$method=|Qt::DropAction|defaultAction|
+$prototypeV2=Qt::DropAction defaultAction() const
 
 $prototype=QPixmap dragCursor(Qt::DropAction action) const
 $method=|QPixmap|dragCursor|Qt::DropAction
@@ -70,14 +69,11 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 }
 $addMethod=exec
 
-$prototype=QPoint hotSpot() const
-$method=|QPoint|hotSpot|
+$prototypeV2=QPoint hotSpot() const
 
-$prototype=QMimeData * mimeData() const
-$method=|QMimeData *|mimeData|
+$prototypeV2=QMimeData * mimeData() const
 
-$prototype=QPixmap pixmap() const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
 $prototype=void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
 $method=|void|setDragCursor|const QPixmap &,Qt::DropAction
@@ -91,14 +87,11 @@ $method=|void|setMimeData|QMimeData *
 $prototype=void setPixmap(const QPixmap & pixmap)
 $method=|void|setPixmap|const QPixmap &
 
-$prototype=QObject * source() const
-$method=|QObject *|source|
+$prototypeV2=QObject * source() const
 
-$prototype=Qt::DropActions supportedActions() const
-$method=|Qt::DropActions|supportedActions|
+$prototypeV2=Qt::DropActions supportedActions() const
 
-$prototype=QObject * target() const
-$method=|QObject *|target|
+$prototypeV2=QObject * target() const
 
 %%
 %% SIGNALS

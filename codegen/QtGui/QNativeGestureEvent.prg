@@ -30,11 +30,9 @@ $constructor=|new|Qt::NativeGestureType,const QPointF &,const QPointF &,const QP
 
 $deleteMethod
 
-$prototype=Qt::NativeGestureType gestureType() const
-$method=|Qt::NativeGestureType|gestureType|
+$prototypeV2=Qt::NativeGestureType gestureType() const
 
-$prototype=qreal value() const
-$method=|qreal|value|
+$prototypeV2=qreal value() const
 
 $prototype=const QPoint pos() const
 $method=|const QPoint|pos|

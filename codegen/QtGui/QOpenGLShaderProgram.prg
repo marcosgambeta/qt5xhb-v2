@@ -63,35 +63,26 @@ $addMethod=addShaderFromSourceCode
 $prototype=bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
 $method=|bool|addShaderFromSourceFile|QOpenGLShader::ShaderType,const QString &
 
-$prototype=void removeAllShaders()
-$method=|void|removeAllShaders|
+$prototypeV2=void removeAllShaders()
 
-$prototype=virtual bool link()
-$virtualMethod=|bool|link|
+$prototypeV2=virtual bool link()
 
-$prototype=bool isLinked() const
-$method=|bool|isLinked|
+$prototypeV2=bool isLinked() const
 
-$prototype=QString log() const
-$method=|QString|log|
+$prototypeV2=QString log() const
 
-$prototype=bool bind()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
-$prototype=void release()
-$method=|void|release|
+$prototypeV2=void release()
 
-$prototype=GLuint programId() const
-$method=|GLuint|programId|
+$prototypeV2=GLuint programId() const
 
-$prototype=int maxGeometryOutputVertices() const
-$method=|int|maxGeometryOutputVertices|
+$prototypeV2=int maxGeometryOutputVertices() const
 
 $prototype=void setPatchVertexCount(int count)
 $method=|void|setPatchVertexCount|int
 
-$prototype=int patchVertexCount() const
-$method=|int|patchVertexCount|
+$prototypeV2=int patchVertexCount() const
 
 $prototype=static bool hasOpenGLShaderPrograms(QOpenGLContext *context = nullptr)
 $staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=nullptr

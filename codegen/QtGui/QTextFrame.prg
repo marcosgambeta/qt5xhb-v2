@@ -35,20 +35,15 @@ $deleteMethod
 $prototype=void setFrameFormat(const QTextFrameFormat &format)
 $method=|void|setFrameFormat|const QTextFrameFormat &
 
-$prototype=QTextFrameFormat frameFormat() const
-$method=|QTextFrameFormat|frameFormat|
+$prototypeV2=QTextFrameFormat frameFormat() const
 
-$prototype=QTextCursor firstCursorPosition() const
-$method=|QTextCursor|firstCursorPosition|
+$prototypeV2=QTextCursor firstCursorPosition() const
 
-$prototype=QTextCursor lastCursorPosition() const
-$method=|QTextCursor|lastCursorPosition|
+$prototypeV2=QTextCursor lastCursorPosition() const
 
-$prototype=int firstPosition() const
-$method=|int|firstPosition|
+$prototypeV2=int firstPosition() const
 
-$prototype=int lastPosition() const
-$method=|int|lastPosition|
+$prototypeV2=int lastPosition() const
 
 $prototype=QTextFrameLayoutData *layoutData() const
 %% TODO: implementar ?
@@ -61,7 +56,6 @@ $prototype=void setLayoutData(QTextFrameLayoutData *data)
 $prototype=QList<QTextFrame *> childFrames() const
 $method=|QList<QTextFrame *>|childFrames|
 
-$prototype=QTextFrame *parentFrame() const
-$method=|QTextFrame *|parentFrame|
+$prototypeV2=QTextFrame * parentFrame() const
 
 #pragma ENDDUMP

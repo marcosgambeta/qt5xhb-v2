@@ -30,7 +30,6 @@ $constructor=|new|const QString &
 
 $deleteMethod
 
-$prototype=QString href() const
-$method=|QString|href|
+$prototypeV2=QString href() const
 
 #pragma ENDDUMP

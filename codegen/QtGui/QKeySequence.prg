@@ -90,11 +90,9 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 $deleteMethod
 
-$prototype=uint count () const
-$method=|uint|count|
+$prototypeV2=uint count() const
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=SequenceMatch matches ( const QKeySequence & seq ) const
 $method=|QKeySequence::SequenceMatch|matches|const QKeySequence &

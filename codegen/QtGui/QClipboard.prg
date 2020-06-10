@@ -40,14 +40,11 @@ $method=|QImage|image|QClipboard::Mode=QClipboard::Clipboard
 $prototype=const QMimeData * mimeData ( Mode mode = Clipboard ) const
 $method=|const QMimeData *|mimeData|QClipboard::Mode=QClipboard::Clipboard
 
-$prototype=bool ownsClipboard () const
-$method=|bool|ownsClipboard|
+$prototypeV2=bool ownsClipboard() const
 
-$prototype=bool ownsFindBuffer () const
-$method=|bool|ownsFindBuffer|
+$prototypeV2=bool ownsFindBuffer() const
 
-$prototype=bool ownsSelection () const
-$method=|bool|ownsSelection|
+$prototypeV2=bool ownsSelection() const
 
 $prototype=QPixmap pixmap ( Mode mode = Clipboard ) const
 $method=|QPixmap|pixmap|QClipboard::Mode=QClipboard::Clipboard
@@ -64,11 +61,9 @@ $method=|void|setPixmap|const QPixmap &,QClipboard::Mode=QClipboard::Clipboard
 $prototype=void setText ( const QString & text, Mode mode = Clipboard )
 $method=|void|setText|const QString &,QClipboard::Mode=QClipboard::Clipboard
 
-$prototype=bool supportsFindBuffer () const
-$method=|bool|supportsFindBuffer|
+$prototypeV2=bool supportsFindBuffer() const
 
-$prototype=bool supportsSelection () const
-$method=|bool|supportsSelection|
+$prototypeV2=bool supportsSelection() const
 
 $prototype=QString text ( Mode mode = Clipboard ) const
 $internalMethod=|QString|text,text1|QClipboard::Mode=QClipboard::Clipboard
@@ -117,13 +112,10 @@ $addMethod=text
 $prototype=void changed( QClipboard::Mode mode )
 $signalMethod=|void|changed|QClipboard::Mode
 
-$prototype=void dataChanged()
-$signalMethod=|void|dataChanged|
+$prototypeV2=void dataChanged()
 
-$prototype=void findBufferChanged()
-$signalMethod=|void|findBufferChanged|
+$prototypeV2=void findBufferChanged()
 
-$prototype=void selectionChanged()
-$signalMethod=|void|selectionChanged|
+$prototypeV2=void selectionChanged()
 
 #pragma ENDDUMP

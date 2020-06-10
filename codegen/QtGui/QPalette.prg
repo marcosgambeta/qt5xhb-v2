@@ -129,8 +129,7 @@ $method=|const QBrush &|button|
 $prototype=const QBrush & buttonText () const
 $method=|const QBrush &|buttonText|
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototype=const QColor & color ( ColorGroup group, ColorRole role ) const
 $internalMethod=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::ColorRole
@@ -160,8 +159,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 }
 $addMethod=color
 
-$prototype=ColorGroup currentColorGroup () const
-$method=|QPalette::ColorGroup|currentColorGroup|
+$prototypeV2=QPalette::ColorGroup currentColorGroup() const
 
 $prototype=const QBrush & dark () const
 $method=|const QBrush &|dark|

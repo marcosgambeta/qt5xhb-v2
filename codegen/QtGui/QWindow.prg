@@ -65,8 +65,7 @@ $deleteMethod
 %% Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY windowTitleChanged)
 %%
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle(const QString &) [slot]
 $method=|void|setTitle|const QString &
@@ -75,8 +74,7 @@ $method=|void|setTitle|const QString &
 %% Q_PROPERTY(Qt::WindowModality modality READ modality WRITE setModality NOTIFY modalityChanged)
 %%
 
-$prototype=Qt::WindowModality modality() const
-$method=|Qt::WindowModality|modality|
+$prototypeV2=Qt::WindowModality modality() const
 
 $prototype=void setModality(Qt::WindowModality modality)
 $method=|void|setModality|Qt::WindowModality
@@ -85,8 +83,7 @@ $method=|void|setModality|Qt::WindowModality
 %% Q_PROPERTY(Qt::WindowFlags flags READ flags WRITE setFlags)
 %%
 
-$prototype=Qt::WindowFlags flags() const
-$method=|Qt::WindowFlags|flags|
+$prototypeV2=Qt::WindowFlags flags() const
 
 $prototype=void setFlags(Qt::WindowFlags flags)
 $method=|void|setFlags|Qt::WindowFlags
@@ -95,8 +92,7 @@ $method=|void|setFlags|Qt::WindowFlags
 %% Q_PROPERTY(int x READ x WRITE setX NOTIFY xChanged)
 %%
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
 $prototype=void setX(int arg) [slot]
 $method=|void|setX|int
@@ -105,8 +101,7 @@ $method=|void|setX|int
 %% Q_PROPERTY(int y READ y WRITE setY NOTIFY yChanged)
 %%
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
 $prototype=void setY(int arg) [slot]
 $method=|void|setY|int
@@ -115,8 +110,7 @@ $method=|void|setY|int
 %% Q_PROPERTY(int width READ width WRITE setWidth NOTIFY widthChanged)
 %%
 
-$prototype=int width() const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=void setWidth(int arg) [slot]
 $method=|void|setWidth|int
@@ -125,8 +119,7 @@ $method=|void|setWidth|int
 %% Q_PROPERTY(int height READ height WRITE setHeight NOTIFY heightChanged)
 %%
 
-$prototype=int height() const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=void setHeight(int arg) [slot]
 $method=|void|setHeight|int
@@ -135,8 +128,7 @@ $method=|void|setHeight|int
 %% Q_PROPERTY(int minimumWidth READ minimumWidth WRITE setMinimumWidth NOTIFY minimumWidthChanged)
 %%
 
-$prototype=int minimumWidth() const
-$method=|int|minimumWidth|
+$prototypeV2=int minimumWidth() const
 
 $prototype=void setMinimumWidth(int w) [slot]
 $method=|void|setMinimumWidth|int
@@ -145,8 +137,7 @@ $method=|void|setMinimumWidth|int
 %% Q_PROPERTY(int minimumHeight READ minimumHeight WRITE setMinimumHeight NOTIFY minimumHeightChanged)
 %%
 
-$prototype=int minimumHeight() const
-$method=|int|minimumHeight|
+$prototypeV2=int minimumHeight() const
 
 $prototype=void setMinimumHeight(int h) [slot]
 $method=|void|setMinimumHeight|int
@@ -155,8 +146,7 @@ $method=|void|setMinimumHeight|int
 %% Q_PROPERTY(int maximumWidth READ maximumWidth WRITE setMaximumWidth NOTIFY maximumWidthChanged)
 %%
 
-$prototype=int maximumWidth() const
-$method=|int|maximumWidth|
+$prototypeV2=int maximumWidth() const
 
 $prototype=void setMaximumWidth(int w) [slot]
 $method=|void|setMaximumWidth|int
@@ -165,8 +155,7 @@ $method=|void|setMaximumWidth|int
 %% Q_PROPERTY(int maximumHeight READ maximumHeight WRITE setMaximumHeight NOTIFY maximumHeightChanged)
 %%
 
-$prototype=int maximumHeight() const
-$method=|int|maximumHeight|
+$prototypeV2=int maximumHeight() const
 
 $prototype=void setMaximumHeight(int h) [slot]
 $method=|void|setMaximumHeight|int
@@ -175,8 +164,7 @@ $method=|void|setMaximumHeight|int
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible) [slot]
 $method=|void|setVisible|bool
@@ -202,8 +190,7 @@ $method=5,1,0|void|setVisibility|QWindow::Visibility
 %% Q_PROPERTY(Qt::ScreenOrientation contentOrientation READ contentOrientation WRITE reportContentOrientationChange NOTIFY contentOrientationChanged)
 %%
 
-$prototype=Qt::ScreenOrientation contentOrientation() const
-$method=|Qt::ScreenOrientation|contentOrientation|
+$prototypeV2=Qt::ScreenOrientation contentOrientation() const
 
 $prototype=void reportContentOrientationChange(Qt::ScreenOrientation orientation)
 $method=|void|reportContentOrientationChange|Qt::ScreenOrientation
@@ -222,41 +209,31 @@ $method=5,1,0|void|setOpacity|qreal
 %%
 %%
 
-$prototype=QSize baseSize() const
-$method=|QSize|baseSize|
+$prototypeV2=QSize baseSize() const
 
-$prototype=void create()
-$method=|void|create|
+$prototypeV2=void create()
 
 $prototype=QCursor cursor() const
 $method=|QCursor|cursor||#ifndef QT_NO_CURSOR
 
-$prototype=void destroy()
-$method=|void|destroy|
+$prototypeV2=void destroy()
 
-$prototype=virtual QObject * focusObject() const
-$virtualMethod=|QObject *|focusObject|
+$prototypeV2=virtual QObject * focusObject() const
 
-$prototype=QRect frameGeometry() const
-$method=|QRect|frameGeometry|
+$prototypeV2=QRect frameGeometry() const
 
-$prototype=QMargins frameMargins() const
-$method=|QMargins|frameMargins|
+$prototypeV2=QMargins frameMargins() const
 
-$prototype=QRect geometry() const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
 $prototype=bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) const
 $method=|bool|isAncestorOf|const QWindow *,QWindow::AncestorMode=QWindow::IncludeTransients
 
-$prototype=bool isExposed() const
-$method=|bool|isExposed|
+$prototypeV2=bool isExposed() const
 
-$prototype=bool isModal() const
-$method=|bool|isModal|
+$prototypeV2=bool isModal() const
 
-$prototype=bool isTopLevel() const
-$method=|bool|isTopLevel|
+$prototypeV2=bool isTopLevel() const
 
 $prototype=QPoint mapFromGlobal(const QPoint & pos) const
 $method=|QPoint|mapFromGlobal|const QPoint &
@@ -264,11 +241,9 @@ $method=|QPoint|mapFromGlobal|const QPoint &
 $prototype=QPoint mapToGlobal(const QPoint & pos) const
 $method=|QPoint|mapToGlobal|const QPoint &
 
-$prototype=QSize maximumSize() const
-$method=|QSize|maximumSize|
+$prototypeV2=QSize maximumSize() const
 
-$prototype=QSize minimumSize() const
-$method=|QSize|minimumSize|
+$prototypeV2=QSize minimumSize() const
 
 $prototype=QWindow *parent(AncestorMode mode) const
 $internalMethod=5,9,0|QWindow *|parent,parent1|QWindow::AncestorMode
@@ -298,8 +273,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
 }
 $addMethod=resize
 
-$prototype=QSurfaceFormat requestedFormat() const
-$method=|QSurfaceFormat|requestedFormat|
+$prototypeV2=QSurfaceFormat requestedFormat() const
 
 $prototype=void resize(const QSize & newSize)
 $internalMethod=|void|resize,resize1|const QSize &
@@ -329,8 +303,7 @@ HB_FUNC_STATIC( QWINDOW_RESIZE )
 }
 $addMethod=resize
 
-$prototype=QScreen * screen() const
-$method=|QScreen *|screen|
+$prototypeV2=QScreen * screen() const
 
 $prototype=void setBaseSize(const QSize & size)
 $method=|void|setBaseSize|const QSize &
@@ -396,17 +369,14 @@ $method=|void|setSurfaceType|QSurface::SurfaceType
 $prototype=void setTransientParent(QWindow * parent)
 $method=|void|setTransientParent|QWindow *
 
-$prototype=QSize sizeIncrement() const
-$method=|QSize|sizeIncrement|
+$prototypeV2=QSize sizeIncrement() const
 
-$prototype=QWindow * transientParent() const
-$method=|QWindow *|transientParent|
+$prototypeV2=QWindow * transientParent() const
 
 $prototype=void unsetCursor()
 $method=|void|unsetCursor||#ifndef QT_NO_CURSOR
 
-$prototype=Qt::WindowState windowState() const
-$method=|Qt::WindowState|windowState|
+$prototypeV2=Qt::WindowState windowState() const
 
 $prototype=virtual QSurfaceFormat format() const override
 %% TODO: is virtual ?
@@ -420,35 +390,25 @@ $prototype=virtual SurfaceType surfaceType() const override
 %% TODO: is virtual ?
 $virtualMethod=|QSurface::SurfaceType|surfaceType|
 
-$prototype=bool close() [slot]
-$method=|bool|close|
+$prototypeV2=bool close() [slot]
 
-$prototype=void hide() [slot]
-$method=|void|hide|
+$prototypeV2=void hide() [slot]
 
-$prototype=void lower() [slot]
-$method=|void|lower|
+$prototypeV2=void lower() [slot]
 
-$prototype=void raise() [slot]
-$method=|void|raise|
+$prototypeV2=void raise() [slot]
 
-$prototype=void show() [slot]
-$method=|void|show|
+$prototypeV2=void show() [slot]
 
-$prototype=void showFullScreen() [slot]
-$method=|void|showFullScreen|
+$prototypeV2=void showFullScreen() [slot]
 
-$prototype=void showMaximized() [slot]
-$method=|void|showMaximized|
+$prototypeV2=void showMaximized() [slot]
 
-$prototype=void showMinimized() [slot]
-$method=|void|showMinimized|
+$prototypeV2=void showMinimized() [slot]
 
-$prototype=void showNormal() [slot]
-$method=|void|showNormal|
+$prototypeV2=void showNormal() [slot]
 
-$prototype=QPoint position() const
-$method=|QPoint|position|
+$prototypeV2=QPoint position() const
 
 $prototype=void setPosition(const QPoint & pt)
 $internalMethod=|void|setPosition,setPosition1|const QPoint &
@@ -481,23 +441,19 @@ $addMethod=setPosition
 $prototype=Q_REVISION(3) void requestUpdate() [slot]
 $slotMethod=5,5,0|void|requestUpdate|
 
-$prototype=WId winId() const
-$method=|WId|winId|
+$prototypeV2=WId winId() const
 
 $prototype=void setFlag(Qt::WindowType, bool on = true)
 $method=5,9,0|void|setFlag|Qt::WindowType,bool=true
 
-$prototype=Qt::WindowType type() const
-$method=|Qt::WindowType|type|
+$prototypeV2=Qt::WindowType type() const
 
 $prototype=void setMask(const QRegion &region)
 $method=|void|setMask|const QRegion &
 
-$prototype=QRegion mask() const
-$method=|QRegion|mask|
+$prototypeV2=QRegion mask() const
 
-$prototype=qreal devicePixelRatio() const
-$method=|qreal|devicePixelRatio|
+$prototypeV2=qreal devicePixelRatio() const
 
 $prototype=Qt::WindowStates windowStates() const
 $method=5,10,0|Qt::WindowStates|windowStates|
@@ -508,8 +464,7 @@ $method=|void|setWindowState|Qt::WindowState
 $prototype=void setWindowStates(Qt::WindowStates states)
 $method=5,10,0|void|setWindowStates|Qt::WindowStates
 
-$prototype=QPoint framePosition() const
-$method=|QPoint|framePosition|
+$prototypeV2=QPoint framePosition() const
 
 $prototype=void setFramePosition(const QPoint &point)
 $method=|void|setFramePosition|const QPoint &
@@ -517,20 +472,17 @@ $method=|void|setFramePosition|const QPoint &
 $prototype=void setFilePath(const QString &filePath)
 $method=|void|setFilePath|const QString &
 
-$prototype=QString filePath() const
-$method=|QString|filePath|
+$prototypeV2=QString filePath() const
 
 $prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
 
-$prototype=QIcon icon() const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=QPlatformWindow *handle() const
 %% TODO: $method=|QPlatformWindow *|handle|
 
-$prototype=virtual QAccessibleInterface *accessibleRoot() const
-$virtualMethod=|QAccessibleInterface *|accessibleRoot|
+$prototypeV2=virtual QAccessibleInterface * accessibleRoot() const
 
 $prototype=static QWindow *fromWinId(WId id)
 $staticMethod=|QWindow *|fromWinId|WId

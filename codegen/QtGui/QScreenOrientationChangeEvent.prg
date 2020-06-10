@@ -32,10 +32,8 @@ $constructor=|new|QScreen *,Qt::ScreenOrientation
 
 $deleteMethod
 
-$prototype=QScreen *screen() const
-$method=|QScreen *|screen|
+$prototypeV2=QScreen * screen() const
 
-$prototype=Qt::ScreenOrientation orientation() const
-$method=|Qt::ScreenOrientation|orientation|
+$prototypeV2=Qt::ScreenOrientation orientation() const
 
 #pragma ENDDUMP

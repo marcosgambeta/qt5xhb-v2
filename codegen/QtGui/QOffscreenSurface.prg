@@ -34,32 +34,24 @@ $constructor=|new|QScreen *=nullptr
 
 $deleteMethod
 
-$prototype=QSurface::SurfaceType surfaceType() const
-$method=|QSurface::SurfaceType|surfaceType|
+$prototypeV2=QSurface::SurfaceType surfaceType() const
 
-$prototype=void create()
-$method=|void|create|
+$prototypeV2=void create()
 
-$prototype=void destroy()
-$method=|void|destroy|
+$prototypeV2=void destroy()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setFormat(const QSurfaceFormat &format)
 $method=|void|setFormat|const QSurfaceFormat &
 
-$prototype=QSurfaceFormat format() const
-$method=|QSurfaceFormat|format|
+$prototypeV2=QSurfaceFormat format() const
 
-$prototype=QSurfaceFormat requestedFormat() const
-$method=|QSurfaceFormat|requestedFormat|
+$prototypeV2=QSurfaceFormat requestedFormat() const
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QScreen *screen() const
-$method=|QScreen *|screen|
+$prototypeV2=QScreen * screen() const
 
 $prototype=void setScreen(QScreen *screen)
 $method=|void|setScreen|QScreen *

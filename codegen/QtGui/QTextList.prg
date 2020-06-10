@@ -30,11 +30,9 @@ $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QTextBlock item(int i) const
 $method=|QTextBlock|item|int
@@ -57,7 +55,6 @@ $method=|void|add|const QTextBlock &
 $prototype=void setFormat(const QTextListFormat &format)
 $method=|void|setFormat|const QTextListFormat &
 
-$prototype=QTextListFormat format() const
-$method=|QTextListFormat|format|
+$prototypeV2=QTextListFormat format() const
 
 #pragma ENDDUMP

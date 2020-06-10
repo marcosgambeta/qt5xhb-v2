@@ -124,26 +124,20 @@ HB_FUNC_STATIC( QIMAGE_NEW )
 
 $deleteMethod
 
-$prototype=bool allGray () const
-$method=|bool|allGray|
+$prototypeV2=bool allGray() const
 
-$prototype=int bitPlaneCount () const
-$method=|int|bitPlaneCount|
+$prototypeV2=int bitPlaneCount() const
 
-$prototype=int byteCount () const
-$method=|int|byteCount|
+$prototypeV2=int byteCount() const
 
-$prototype=int bytesPerLine () const
-$method=|int|bytesPerLine|
+$prototypeV2=int bytesPerLine() const
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
 $prototype=QRgb color ( int i ) const
 $method=|QRgb|color|int
 
-$prototype=int colorCount () const
-$method=|int|colorCount|
+$prototypeV2=int colorCount() const
 
 $prototype=QVector<QRgb> colorTable () const
 $method=|QVector<QRgb>|colorTable|
@@ -213,14 +207,11 @@ $method=|QImage|createHeuristicMask|bool=true
 $prototype=QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 $method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
 
-$prototype=int depth () const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
-$prototype=int dotsPerMeterX () const
-$method=|int|dotsPerMeterX|
+$prototypeV2=int dotsPerMeterX() const
 
-$prototype=int dotsPerMeterY () const
-$method=|int|dotsPerMeterY|
+$prototypeV2=int dotsPerMeterY() const
 
 $prototype=void fill ( uint pixelValue )
 $internalMethod=|void|fill,fill1|uint
@@ -259,23 +250,18 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 }
 $addMethod=fill
 
-$prototype=Format format () const
-$method=|QImage::Format|format|
+$prototypeV2=QImage::Format format() const
 
-$prototype=bool hasAlphaChannel () const
-$method=|bool|hasAlphaChannel|
+$prototypeV2=bool hasAlphaChannel() const
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=void invertPixels ( InvertMode mode = InvertRgb )
 $method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
 
-$prototype=bool isGrayscale () const
-$method=|bool|isGrayscale|
+$prototypeV2=bool isGrayscale() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool load ( const QString & fileName, const char * format = nullptr )
 $internalMethod=|bool|load,load1|const QString &,const char *=nullptr
@@ -336,8 +322,7 @@ $addMethod=loadFromData
 $prototype=QImage mirrored ( bool horizontal = false, bool vertical = true ) const
 $method=|QImage|mirrored|bool=false,bool=true
 
-$prototype=QPoint offset () const
-$method=|QPoint|offset|
+$prototypeV2=QPoint offset() const
 
 $prototype=QRgb pixel ( const QPoint & position ) const
 $internalMethod=|QRgb|pixel,pixel1|const QPoint &
@@ -395,11 +380,9 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 }
 $addMethod=pixelIndex
 
-$prototype=QRect rect () const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
-$prototype=QImage rgbSwapped () const
-$method=|QImage|rgbSwapped|
+$prototypeV2=QImage rgbSwapped() const
 
 $prototype=bool save ( const QString & fileName, const char * format = nullptr, int quality = -1 ) const
 $internalMethod=|bool|save,save1|const QString &,const char *=nullptr,int=-1
@@ -525,8 +508,7 @@ $addMethod=setPixel
 $prototype=void setText ( const QString & key, const QString & text )
 $method=|void|setText|const QString &,const QString &
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototype=void swap ( QImage & other )
 $method=|void|swap|QImage &
@@ -534,8 +516,7 @@ $method=|void|swap|QImage &
 $prototype=QString text ( const QString & key = QString() ) const
 $method=|QString|text|const QString &=QString()
 
-$prototype=QStringList textKeys () const
-$method=|QStringList|textKeys|
+$prototypeV2=QStringList textKeys() const
 
 $prototype=QImage transformed ( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
 $internalMethod=|QImage|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
@@ -593,8 +574,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 }
 $addMethod=valid
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
 $prototype=static QImage fromData ( const uchar * data, int size, const char * format = nullptr )
 $internalStaticMethod=|QImage|fromData,fromData1|const uchar *,int,const char *=nullptr

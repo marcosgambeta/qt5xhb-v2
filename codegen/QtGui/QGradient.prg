@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=CoordinateMode coordinateMode () const
-$method=|QGradient::CoordinateMode|coordinateMode|
+$prototypeV2=QGradient::CoordinateMode coordinateMode() const
 
 $prototype=void setColorAt ( qreal position, const QColor & color )
 $method=|void|setColorAt|qreal,const QColor &
@@ -39,11 +38,9 @@ $method=|void|setCoordinateMode|QGradient::CoordinateMode
 $prototype=void setSpread ( Spread method )
 $method=|void|setSpread|QGradient::Spread
 
-$prototype=Spread spread () const
-$method=|QGradient::Spread|spread|
+$prototypeV2=QGradient::Spread spread() const
 
-$prototype=Type type () const
-$method=|QGradient::Type|type|
+$prototypeV2=QGradient::Type type() const
 
 $extraMethods
 

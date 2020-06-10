@@ -85,23 +85,19 @@ $deleteMethod
 $prototype=const QBitmap * bitmap () const
 $method=|const QBitmap *|bitmap|
 
-$prototype=QPoint hotSpot () const
-$method=|QPoint|hotSpot|
+$prototypeV2=QPoint hotSpot() const
 
 $prototype=const QBitmap * mask () const
 $method=|const QBitmap *|mask|
 
-$prototype=QPixmap pixmap () const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
 $prototype=void setShape ( Qt::CursorShape shape )
 $method=|void|setShape|Qt::CursorShape
 
-$prototype=Qt::CursorShape shape () const
-$method=|Qt::CursorShape|shape|
+$prototypeV2=Qt::CursorShape shape() const
 
-$prototype=static QPoint pos ()
-$staticMethod=|QPoint|pos|
+$prototypeV2=static QPoint pos()
 
 $prototype=static void setPos ( int x, int y )
 $internalStaticMethod=|void|setPos,setPos1|int,int

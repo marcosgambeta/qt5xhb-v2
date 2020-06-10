@@ -30,8 +30,7 @@ $constructor=|new|QOpenGLShader::ShaderType,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QOpenGLShader::ShaderType shaderType() const
-$method=|QOpenGLShader::ShaderType|shaderType|
+$prototypeV2=QOpenGLShader::ShaderType shaderType() const
 
 $prototype=bool compileSourceCode(const char *source)
 $method=|bool|compileSourceCode,compileSourceCode1|const char *
@@ -57,17 +56,13 @@ $addMethod=compileSourceCode
 $prototype=bool compileSourceFile(const QString& fileName)
 $method=|bool|compileSourceFile|const QString &
 
-$prototype=QByteArray sourceCode() const
-$method=|QByteArray|sourceCode|
+$prototypeV2=QByteArray sourceCode() const
 
-$prototype=bool isCompiled() const
-$method=|bool|isCompiled|
+$prototypeV2=bool isCompiled() const
 
-$prototype=QString log() const
-$method=|QString|log|
+$prototypeV2=QString log() const
 
-$prototype=GLuint shaderId() const
-$method=|GLuint|shaderId|
+$prototypeV2=GLuint shaderId() const
 
 $prototype=static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = nullptr)
 $staticMethod=|bool|hasOpenGLShaders|QOpenGLShader::ShaderType,QOpenGLContext *=nullptr

@@ -68,11 +68,9 @@ $method=|const QString &|commitString|
 $prototype=const QString & preeditString () const
 $method=|const QString &|preeditString|
 
-$prototype=int replacementLength () const
-$method=|int|replacementLength|
+$prototypeV2=int replacementLength() const
 
-$prototype=int replacementStart () const
-$method=|int|replacementStart|
+$prototypeV2=int replacementStart() const
 
 $prototype=void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 $method=|void|setCommitString|const QString &,int=0,int=0

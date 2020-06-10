@@ -28,7 +28,6 @@ $includes
 $prototype=QApplicationStateChangeEvent(Qt::ApplicationState state)
 $constructor=|new|Qt::ApplicationState
 
-$prototype=Qt::ApplicationState applicationState() const
-$method=|Qt::ApplicationState|applicationState|
+$prototypeV2=Qt::ApplicationState applicationState() const
 
 #pragma ENDDUMP

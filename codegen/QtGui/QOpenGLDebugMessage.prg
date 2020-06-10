@@ -57,20 +57,15 @@ $deleteMethod
 $prototype=void swap(QOpenGLDebugMessage &debugMessage)
 $method=|void|swap|QOpenGLDebugMessage &
 
-$prototype=Source source() const
-$method=|QOpenGLDebugMessage::Source|source|
+$prototypeV2=QOpenGLDebugMessage::Source source() const
 
-$prototype=Type type() const
-$method=|QOpenGLDebugMessage::Type|type|
+$prototypeV2=QOpenGLDebugMessage::Type type() const
 
-$prototype=Severity severity() const
-$method=|QOpenGLDebugMessage::Severity|severity|
+$prototypeV2=QOpenGLDebugMessage::Severity severity() const
 
-$prototype=GLuint id() const
-$method=|GLuint|id|
+$prototypeV2=GLuint id() const
 
-$prototype=QString message() const
-$method=|QString|message|
+$prototypeV2=QString message() const
 
 $prototype=static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
 $staticMethod=|QOpenGLDebugMessage|createApplicationMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType

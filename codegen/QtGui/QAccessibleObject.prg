@@ -25,14 +25,11 @@ $destructor
 
 $includes
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QObject *object() const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
-$prototype=QRect rect() const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
 $prototype=void setText(QAccessible::Text t, const QString &text)
 $method=|void|setText|QAccessible::Text,const QString &

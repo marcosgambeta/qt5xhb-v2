@@ -30,8 +30,7 @@ $constructor=|new|Qt::InputMethodQueries
 
 $deleteMethod
 
-$prototype=Qt::InputMethodQueries queries() const
-$method=|Qt::InputMethodQueries|queries|
+$prototypeV2=Qt::InputMethodQueries queries() const
 
 $prototype=void setValue(Qt::InputMethodQuery query, const QVariant & value)
 $method=|void|setValue|Qt::InputMethodQuery,const QVariant &

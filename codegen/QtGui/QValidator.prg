@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual void fixup ( QString & input ) const
 $virtualMethod=|void|fixup|QString &
 
-$prototype=QLocale locale () const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale () const
 
 $prototype=void setLocale ( const QLocale & locale )
 $method=|void|setLocale|const QLocale &

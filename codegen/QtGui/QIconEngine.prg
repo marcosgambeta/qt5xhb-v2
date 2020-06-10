@@ -39,14 +39,11 @@ $virtualMethod=|void|addPixmap|const QPixmap &,QIcon::Mode,QIcon::State
 $prototype=virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
 $virtualMethod=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-$prototype=virtual QIconEngine * clone() const = 0
-$virtualMethod=|QIconEngine *|clone|
+$prototypeV2=virtual QIconEngine * clone() const = 0
 
-$prototype=virtual QString iconName() const
-$virtualMethod=|QString|iconName|
+$prototypeV2=virtual QString iconName() const
 
-$prototype=virtual QString key() const
-$virtualMethod=|QString|key|
+$prototypeV2=virtual QString key() const
 
 $prototype=virtual void paint(QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state) = 0
 $virtualMethod=|void|paint|QPainter *,const QRect &,QIcon::Mode,QIcon::State

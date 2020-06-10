@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=void setModelChangeType(ModelChangeType changeType)
 $method=|void|setModelChangeType|QAccessibleTableModelChangeEvent::ModelChangeType
 
-$prototype=ModelChangeType modelChangeType() const
-$method=|QAccessibleTableModelChangeEvent::ModelChangeType|modelChangeType|
+$prototypeV2=QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
 
 $prototype=void setFirstRow(int row)
 $method=|void|setFirstRow|int
@@ -48,16 +47,12 @@ $method=|void|setLastRow|int
 $prototype=void setLastColumn(int col)
 $method=|void|setLastColumn|int
 
-$prototype=int firstRow() const
-$method=|int|firstRow|
+$prototypeV2=int firstRow() const
 
-$prototype=int firstColumn() const
-$method=|int|firstColumn|
+$prototypeV2=int firstColumn() const
 
-$prototype=int lastRow() const
-$method=|int|lastRow|
+$prototypeV2=int lastRow() const
 
-$prototype=int lastColumn() const
-$method=|int|lastColumn|
+$prototypeV2=int lastColumn() const
 
 #pragma ENDDUMP

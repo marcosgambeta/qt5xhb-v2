@@ -90,26 +90,19 @@ $deleteMethod
 $prototype=void swap(QPixmap &other)
 $method=|void|swap|QPixmap &
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=int devType() const
-$method=|int|devType|
+$prototypeV2=int devType() const
 
-$prototype=int width() const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int height() const
-$method=|int|height|
+$prototypeV2=int height() const
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QRect rect() const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
-$prototype=int depth() const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
 $prototype=void fill(const QColor &fillColor = Qt::white)
 $internalMethod=|void|fill,fill1|const QColor &=Qt::white
@@ -147,23 +140,19 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
 }
 $addMethod=fill
 
-$prototype=QBitmap mask() const
-$method=|QBitmap|mask|
+$prototypeV2=QBitmap mask() const
 
 $prototype=void setMask(const QBitmap &)
 $method=|void|setMask|const QBitmap &
 
-$prototype=qreal devicePixelRatio() const
-$method=|qreal|devicePixelRatio|
+$prototypeV2=qreal devicePixelRatio() const
 
 $prototype=void setDevicePixelRatio(qreal scaleFactor)
 $method=|void|setDevicePixelRatio|qreal
 
-$prototype=bool hasAlpha() const
-$method=|bool|hasAlpha|
+$prototypeV2=bool hasAlpha() const
 
-$prototype=bool hasAlphaChannel() const
-$method=|bool|hasAlphaChannel|
+$prototypeV2=bool hasAlphaChannel() const
 
 $prototype=QBitmap createHeuristicMask(bool clipTight = true) const
 $method=|QBitmap|createHeuristicMask|bool=true
@@ -233,8 +222,7 @@ HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 }
 $addMethod=transformed
 
-$prototype=QImage toImage() const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
 $prototype=bool load(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 $method=|bool|load|const QString &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
@@ -354,23 +342,17 @@ HB_FUNC_STATIC( QPIXMAP_SCROLL )
 }
 $addMethod=scroll
 
-$prototype=qint64 cacheKey() const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
-$prototype=bool isDetached() const
-$method=|bool|isDetached|
+$prototypeV2=bool isDetached() const
 
-$prototype=void detach()
-$method=|void|detach|
+$prototypeV2=void detach()
 
-$prototype=bool isQBitmap() const
-$method=|bool|isQBitmap|
+$prototypeV2=bool isQBitmap() const
 
-$prototype=QPaintEngine *paintEngine() const
-$method=|QPaintEngine *|paintEngine|
+$prototypeV2=QPaintEngine * paintEngine() const
 
-$prototype=static int defaultDepth()
-$staticMethod=|int|defaultDepth|
+$prototypeV2=static int defaultDepth()
 
 $prototype=static QPixmap grabWindow(WId, int x=0, int y=0, int w=-1, int h=-1)
 $staticMethod=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1

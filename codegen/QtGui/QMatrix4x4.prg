@@ -104,27 +104,22 @@ $method=|void|setRow|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 $prototype=bool isAffine() const
 $method=5,5,0|bool|isAffine|
 
-$prototype=bool isIdentity() const
-$method=|bool|isIdentity|
+$prototypeV2=bool isIdentity() const
 
-$prototype=void setToIdentity()
-$method=|void|setToIdentity|
+$prototypeV2=void setToIdentity()
 
 $prototype=void fill(float value)
 $method=|void|fill|float
 
-$prototype=double determinant() const
-$method=|double|determinant|
+$prototypeV2=double determinant() const
 
 $prototype=QMatrix4x4 inverted(bool *invertible = nullptr) const
 %% TODO: revisar implementacao
 $method=|QMatrix4x4|inverted|bool *=nullptr
 
-$prototype=QMatrix4x4 transposed() const
-$method=|QMatrix4x4|transposed|
+$prototypeV2=QMatrix4x4 transposed() const
 
-$prototype=QMatrix3x3 normalMatrix() const
-$method=|QMatrix3x3|normalMatrix|
+$prototypeV2=QMatrix3x3 normalMatrix() const
 
 $prototype=void scale(const QVector3D& vector)
 $internalMethod=|void|scale,scale1|const QVector3D &|#ifndef QT_NO_VECTOR3D
@@ -317,11 +312,9 @@ HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
 }
 $addMethod=viewport
 
-$prototype=void flipCoordinates()
-$method=|void|flipCoordinates|
+$prototypeV2=void flipCoordinates()
 
-$prototype=QMatrix toAffine() const
-$method=|QMatrix|toAffine|
+$prototypeV2=QMatrix toAffine() const
 
 $prototype=QTransform toTransform() const
 $internalMethod=|QTransform|toTransform,toTransform1|
@@ -426,8 +419,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 }
 $addMethod=mapRect
 
-$prototype=void optimize()
-$method=|void|optimize|
+$prototypeV2=void optimize()
 
 $extraMethods
 

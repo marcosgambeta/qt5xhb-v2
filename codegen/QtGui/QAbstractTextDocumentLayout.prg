@@ -37,11 +37,9 @@ $method=|QString|anchorAt|const QPointF &
 $prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
 $virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=virtual QSizeF documentSize () const = 0
-$virtualMethod=|QSizeF|documentSize|
+$prototypeV2=virtual QSizeF documentSize() const = 0
 
 $prototype=virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
 $virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
@@ -52,11 +50,9 @@ $method=|QTextObjectInterface *|handlerForObject|int
 $prototype=virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 $virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
 
-$prototype=virtual int pageCount () const = 0
-$virtualMethod=|int|pageCount|
+$prototypeV2=virtual int pageCount() const = 0
 
-$prototype=QPaintDevice * paintDevice () const
-$method=|QPaintDevice *|paintDevice|
+$prototypeV2=QPaintDevice * paintDevice() const
 
 $prototype=void registerHandler ( int objectType, QObject * component )
 $method=|void|registerHandler|int,QObject *

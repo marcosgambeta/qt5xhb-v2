@@ -62,17 +62,13 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 
 $deleteMethod
 
-$prototype=int devType() const
-$method=|int|devType|
+$prototypeV2=int devType() const
 
-$prototype=QPaintEngine *paintEngine() const
-$method=|QPaintEngine *|paintEngine|
+$prototypeV2=QPaintEngine * paintEngine() const
 
-$prototype=QOpenGLContext *context() const
-$method=|QOpenGLContext *|context|
+$prototypeV2=QOpenGLContext * context() const
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
 $prototype=void setSize(const QSize &size)
 $method=|void|setSize|const QSize &
@@ -80,11 +76,9 @@ $method=|void|setSize|const QSize &
 $prototype=void setDevicePixelRatio(qreal devicePixelRatio)
 $method=|void|setDevicePixelRatio|qreal
 
-$prototype=qreal dotsPerMeterX() const
-$method=|qreal|dotsPerMeterX|
+$prototypeV2=qreal dotsPerMeterX() const
 
-$prototype=qreal dotsPerMeterY() const
-$method=|qreal|dotsPerMeterY|
+$prototypeV2=qreal dotsPerMeterY() const
 
 $prototype=void setDotsPerMeterX(qreal)
 $method=|void|setDotsPerMeterX|qreal
@@ -95,10 +89,8 @@ $method=|void|setDotsPerMeterY|qreal
 $prototype=void setPaintFlipped(bool flipped)
 $method=|void|setPaintFlipped|bool
 
-$prototype=bool paintFlipped() const
-$method=|bool|paintFlipped|
+$prototypeV2=bool paintFlipped() const
 
-$prototype=virtual void ensureActiveTarget()
-$virtualMethod=|void|ensureActiveTarget|
+$prototypeV2=virtual void ensureActiveTarget()
 
 #pragma ENDDUMP

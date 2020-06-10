@@ -148,8 +148,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QRect boundingRect() const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
 $prototype=void point(int i, int *x, int *y) const
 $internalMethod=|void|point,point1|int,int *,int *

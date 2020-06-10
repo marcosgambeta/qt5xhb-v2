@@ -145,14 +145,11 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QPolygon toPolygon() const
-$method=|QPolygon|toPolygon|
+$prototypeV2=QPolygon toPolygon() const
 
-$prototype=bool isClosed() const
-$method=|bool|isClosed|
+$prototypeV2=bool isClosed() const
 
-$prototype=QRectF boundingRect() const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
 $prototype=bool containsPoint(const QPointF &pt, Qt::FillRule fillRule) const
 $method=|bool|containsPoint|const QPointF &,Qt::FillRule

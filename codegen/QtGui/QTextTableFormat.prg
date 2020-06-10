@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int columns() const
-$method=|int|columns|
+$prototypeV2=int columns() const
 
 $prototype=void setColumns(int columns)
 $method=|void|setColumns|int
@@ -45,17 +43,14 @@ $method=|void|setColumnWidthConstraints|const QVector<QTextLength> &
 $prototype=QVector<QTextLength> columnWidthConstraints() const
 $method=|QVector<QTextLength>|columnWidthConstraints|
 
-$prototype=void clearColumnWidthConstraints()
-$method=|void|clearColumnWidthConstraints|
+$prototypeV2=void clearColumnWidthConstraints()
 
-$prototype=qreal cellSpacing() const
-$method=|qreal|cellSpacing|
+$prototypeV2=qreal cellSpacing() const
 
 $prototype=void setCellSpacing(qreal spacing)
 $method=|void|setCellSpacing|qreal
 
-$prototype=qreal cellPadding() const
-$method=|qreal|cellPadding|
+$prototypeV2=qreal cellPadding() const
 
 $prototype=void setCellPadding(qreal padding)
 $method=|void|setCellPadding|qreal
@@ -63,13 +58,11 @@ $method=|void|setCellPadding|qreal
 $prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-$prototype=Qt::Alignment alignment() const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototype=void setHeaderRowCount(int count)
 $method=|void|setHeaderRowCount|int
 
-$prototype=int headerRowCount() const
-$method=|int|headerRowCount|
+$prototypeV2=int headerRowCount() const
 
 #pragma ENDDUMP

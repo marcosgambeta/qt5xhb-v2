@@ -30,10 +30,8 @@ $constructor=|new|QObject *,int,const QString &
 
 $deleteMethod
 
-$prototype=QString textInserted() const
-$method=|QString|textInserted|
+$prototypeV2=QString textInserted() const
 
-$prototype=int changePosition() const
-$method=|int|changePosition|
+$prototypeV2=int changePosition() const
 
 #pragma ENDDUMP

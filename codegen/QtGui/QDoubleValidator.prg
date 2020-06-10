@@ -54,14 +54,11 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 
 $deleteMethod
 
-$prototype=double bottom () const
-$method=|double|bottom|
+$prototypeV2=double bottom() const
 
-$prototype=int decimals () const
-$method=|int|decimals|
+$prototypeV2=int decimals() const
 
-$prototype=Notation notation () const
-$method=|QDoubleValidator::Notation|notation|
+$prototypeV2=QDoubleValidator::Notation notation() const
 
 $prototype=void setBottom ( double )
 $method=|void|setBottom|double
@@ -78,8 +75,7 @@ $virtualMethod=|void|setRange|double,double,int=0
 $prototype=void setTop ( double )
 $method=|void|setTop|double
 
-$prototype=double top () const
-$method=|double|top|
+$prototypeV2=double top() const
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &

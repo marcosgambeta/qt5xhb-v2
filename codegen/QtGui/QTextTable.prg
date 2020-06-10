@@ -84,11 +84,9 @@ $addMethod=mergeCells
 $prototype=void splitCell(int row, int col, int numRows, int numCols)
 $method=|void|splitCell|int,int,int,int
 
-$prototype=int rows() const
-$method=|int|rows|
+$prototypeV2=int rows() const
 
-$prototype=int columns() const
-$method=|int|columns|
+$prototypeV2=int columns() const
 
 $prototype=QTextTableCell cellAt(int row, int col) const
 $internalMethod=|QTextTableCell|cellAt,cellAt1|int,int
@@ -135,7 +133,6 @@ $method=|QTextCursor|rowEnd|const QTextCursor &
 $prototype=void setFormat(const QTextTableFormat &format)
 $method=|void|setFormat|const QTextTableFormat &
 
-$prototype=QTextTableFormat format() const
-$method=|QTextTableFormat|format|
+$prototypeV2=QTextTableFormat format() const
 
 #pragma ENDDUMP

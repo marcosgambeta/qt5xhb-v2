@@ -57,8 +57,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 $deleteMethod
 
-$prototype=QRegularExpression regularExpression() const
-$method=|QRegularExpression|regularExpression|
+$prototypeV2=QRegularExpression regularExpression() const
 
 $prototype=void setRegularExpression(const QRegularExpression &re)
 $method=|void|setRegularExpression|const QRegularExpression &

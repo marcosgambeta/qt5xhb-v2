@@ -54,44 +54,31 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 
 $deleteMethod
 
-$prototype=bool bold () const
-$method=|bool|bold|
+$prototypeV2=bool bold() const
 
-$prototype=bool exactMatch () const
-$method=|bool|exactMatch|
+$prototypeV2=bool exactMatch() const
 
-$prototype=QString family () const
-$method=|QString|family|
+$prototypeV2=QString family() const
 
-$prototype=bool fixedPitch () const
-$method=|bool|fixedPitch|
+$prototypeV2=bool fixedPitch() const
 
-$prototype=bool italic () const
-$method=|bool|italic|
+$prototypeV2=bool italic() const
 
-$prototype=int pixelSize () const
-$method=|int|pixelSize|
+$prototypeV2=int pixelSize() const
 
-$prototype=int pointSize () const
-$method=|int|pointSize|
+$prototypeV2=int pointSize() const
 
-$prototype=qreal pointSizeF () const
-$method=|qreal|pointSizeF|
+$prototypeV2=qreal pointSizeF() const
 
-$prototype=bool rawMode () const
-$method=|bool|rawMode|
+$prototypeV2=bool rawMode() const
 
-$prototype=QFont::Style style () const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
-$prototype=QFont::StyleHint styleHint () const
-$method=|QFont::StyleHint|styleHint|
+$prototypeV2=QFont::StyleHint styleHint() const
 
-$prototype=QString styleName () const
-$method=|QString|styleName|
+$prototypeV2=QString styleName() const
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $extraMethods
 

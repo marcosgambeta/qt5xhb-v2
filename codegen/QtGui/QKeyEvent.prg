@@ -30,31 +30,23 @@ $constructor=|new|QEvent::Type,int,Qt::KeyboardModifiers,const QString &=QString
 
 $deleteMethod
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool isAutoRepeat () const
-$method=|bool|isAutoRepeat|
+$prototypeV2=bool isAutoRepeat() const
 
-$prototype=int key () const
-$method=|int|key|
+$prototypeV2=int key() const
 
 $prototype=bool matches ( QKeySequence::StandardKey key ) const
 $method=|bool|matches|QKeySequence::StandardKey
 
-$prototype=Qt::KeyboardModifiers modifiers () const
-$method=|Qt::KeyboardModifiers|modifiers|
+$prototypeV2=Qt::KeyboardModifiers modifiers() const
 
-$prototype=quint32 nativeModifiers () const
-$method=|quint32|nativeModifiers|
+$prototypeV2=quint32 nativeModifiers() const
 
-$prototype=quint32 nativeScanCode () const
-$method=|quint32|nativeScanCode|
+$prototypeV2=quint32 nativeScanCode() const
 
-$prototype=quint32 nativeVirtualKey () const
-$method=|quint32|nativeVirtualKey|
+$prototypeV2=quint32 nativeVirtualKey() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 #pragma ENDDUMP

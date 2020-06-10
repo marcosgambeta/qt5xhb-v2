@@ -62,35 +62,25 @@ HB_FUNC_STATIC( QWHEELEVENT_NEW )
 
 $deleteMethod
 
-$prototype=QPoint pixelDelta() const
-$method=|QPoint|pixelDelta|
+$prototypeV2=QPoint pixelDelta() const
 
-$prototype=QPoint angleDelta() const
-$method=|QPoint|angleDelta|
+$prototypeV2=QPoint angleDelta() const
 
-$prototype=int delta() const
-$method=|int|delta|
+$prototypeV2=int delta() const
 
-$prototype=Qt::Orientation orientation() const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
-$prototype=QPoint pos() const
-$method=|QPoint|pos|
+$prototypeV2=QPoint pos() const
 
-$prototype=QPoint globalPos() const
-$method=|QPoint|globalPos|
+$prototypeV2=QPoint globalPos() const
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
-$prototype=int globalX() const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY() const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
 $prototype=const QPointF &posF() const
 $method=|const QPointF &|posF|
@@ -98,7 +88,6 @@ $method=|const QPointF &|posF|
 $prototype=const QPointF &globalPosF() const
 $method=|const QPointF &|globalPosF|
 
-$prototype=Qt::MouseButtons buttons() const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
 #pragma ENDDUMP

@@ -30,14 +30,11 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=DeviceType type() const
-$method=|QTouchDevice::DeviceType|type|
+$prototypeV2=QTouchDevice::DeviceType type() const
 
-$prototype=Capabilities capabilities() const
-$method=|QTouchDevice::Capabilities|capabilities|
+$prototypeV2=QTouchDevice::Capabilities capabilities() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &

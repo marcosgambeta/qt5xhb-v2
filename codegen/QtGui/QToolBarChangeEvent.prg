@@ -30,7 +30,6 @@ $constructor=|new|bool
 
 $deleteMethod
 
-$prototype=bool toggle() const
-$method=|bool|toggle|
+$prototypeV2=bool toggle() const
 
 #pragma ENDDUMP

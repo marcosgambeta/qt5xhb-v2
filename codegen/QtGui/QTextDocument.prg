@@ -64,38 +64,29 @@ $deleteMethod
 $prototype=QTextDocument *clone(QObject *parent = nullptr) const
 $method=|QTextDocument *|clone|QObject *=nullptr
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=virtual void clear()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 $prototype=void setUndoRedoEnabled(bool enable)
 $method=|void|setUndoRedoEnabled|bool
 
-$prototype=bool isUndoRedoEnabled() const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
-$prototype=bool isUndoAvailable() const
-$method=|bool|isUndoAvailable|
+$prototypeV2=bool isUndoAvailable() const
 
-$prototype=bool isRedoAvailable() const
-$method=|bool|isRedoAvailable|
+$prototypeV2=bool isRedoAvailable() const
 
-$prototype=int availableUndoSteps() const
-$method=|int|availableUndoSteps|
+$prototypeV2=int availableUndoSteps() const
 
-$prototype=int availableRedoSteps() const
-$method=|int|availableRedoSteps|
+$prototypeV2=int availableRedoSteps() const
 
-$prototype=int revision() const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=void setDocumentLayout(QAbstractTextDocumentLayout *layout)
 $method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
 
-$prototype=QAbstractTextDocumentLayout *documentLayout() const
-$method=|QAbstractTextDocumentLayout *|documentLayout|
+$prototypeV2=QAbstractTextDocumentLayout * documentLayout() const
 
 $prototype=void setMetaInformation(MetaInformation info, const QString &)
 $method=|void|setMetaInformation|QTextDocument::MetaInformation,const QString &
@@ -109,8 +100,7 @@ $method=|QString|toHtml|const QByteArray &=QByteArray()
 $prototype=void setHtml(const QString &html)
 $method=|void|setHtml|const QString &
 
-$prototype=QString toPlainText() const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=void setPlainText(const QString &text)
 $method=|void|setPlainText|const QString &
@@ -165,8 +155,7 @@ $addMethod=find
 $prototype=QTextFrame *frameAt(int pos) const
 $method=|QTextFrame *|frameAt|int
 
-$prototype=QTextFrame *rootFrame() const
-$method=|QTextFrame *|rootFrame|
+$prototypeV2=QTextFrame * rootFrame() const
 
 $prototype=QTextObject *object(int objectIndex) const
 $method=|QTextObject *|object|int
@@ -183,35 +172,27 @@ $method=|QTextBlock|findBlockByNumber|int
 $prototype=QTextBlock findBlockByLineNumber(int blockNumber) const
 $method=|QTextBlock|findBlockByLineNumber|int
 
-$prototype=QTextBlock begin() const
-$method=|QTextBlock|begin|
+$prototypeV2=QTextBlock begin() const
 
-$prototype=QTextBlock end() const
-$method=|QTextBlock|end|
+$prototypeV2=QTextBlock end() const
 
-$prototype=QTextBlock firstBlock() const
-$method=|QTextBlock|firstBlock|
+$prototypeV2=QTextBlock firstBlock() const
 
-$prototype=QTextBlock lastBlock() const
-$method=|QTextBlock|lastBlock|
+$prototypeV2=QTextBlock lastBlock() const
 
 $prototype=void setPageSize(const QSizeF &size)
 $method=|void|setPageSize|const QSizeF &
 
-$prototype=QSizeF pageSize() const
-$method=|QSizeF|pageSize|
+$prototypeV2=QSizeF pageSize() const
 
 $prototype=void setDefaultFont(const QFont &font)
 $method=|void|setDefaultFont|const QFont &
 
-$prototype=QFont defaultFont() const
-$method=|QFont|defaultFont|
+$prototypeV2=QFont defaultFont() const
 
-$prototype=int pageCount() const
-$method=|int|pageCount|
+$prototypeV2=int pageCount() const
 
-$prototype=bool isModified() const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 $prototype=void print(QPagedPaintDevice *printer) const
 $method=|void|print|QPagedPaintDevice *
@@ -228,8 +209,7 @@ $method=|void|markContentsDirty|int,int
 $prototype=void setUseDesignMetrics(bool b)
 $method=|void|setUseDesignMetrics|bool
 
-$prototype=bool useDesignMetrics() const
-$method=|bool|useDesignMetrics|
+$prototypeV2=bool useDesignMetrics() const
 
 $prototype=void drawContents(QPainter *painter, const QRectF &rect = QRectF())
 $method=|void|drawContents|QPainter *,const QRectF &=QRectF()
@@ -237,62 +217,49 @@ $method=|void|drawContents|QPainter *,const QRectF &=QRectF()
 $prototype=void setTextWidth(qreal width)
 $method=|void|setTextWidth|qreal
 
-$prototype=qreal textWidth() const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
-$prototype=qreal idealWidth() const
-$method=|qreal|idealWidth|
+$prototypeV2=qreal idealWidth() const
 
-$prototype=qreal indentWidth() const
-$method=|qreal|indentWidth|
+$prototypeV2=qreal indentWidth() const
 
 $prototype=void setIndentWidth(qreal width)
 $method=|void|setIndentWidth|qreal
 
-$prototype=qreal documentMargin() const
-$method=|qreal|documentMargin|
+$prototypeV2=qreal documentMargin() const
 
 $prototype=void setDocumentMargin(qreal margin)
 $method=|void|setDocumentMargin|qreal
 
-$prototype=void adjustSize()
-$method=|void|adjustSize|
+$prototypeV2=void adjustSize()
 
-$prototype=QSizeF size() const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
-$prototype=int blockCount() const
-$method=|int|blockCount|
+$prototypeV2=int blockCount() const
 
-$prototype=int lineCount() const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
-$prototype=int characterCount() const
-$method=|int|characterCount|
+$prototypeV2=int characterCount() const
 
 $prototype=void setDefaultStyleSheet(const QString &sheet)
 $method=|void|setDefaultStyleSheet|const QString &
 
-$prototype=QString defaultStyleSheet() const
-$method=|QString|defaultStyleSheet|
+$prototypeV2=QString defaultStyleSheet() const
 
 $prototype=void clearUndoRedoStacks(Stacks historyToClear = UndoAndRedoStacks)
 $method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
 
-$prototype=int maximumBlockCount() const
-$method=|int|maximumBlockCount|
+$prototypeV2=int maximumBlockCount() const
 
 $prototype=void setMaximumBlockCount(int maximum)
 $method=|void|setMaximumBlockCount|int
 
-$prototype=QTextOption defaultTextOption() const
-$method=|QTextOption|defaultTextOption|
+$prototypeV2=QTextOption defaultTextOption() const
 
 $prototype=void setDefaultTextOption(const QTextOption &option)
 $method=|void|setDefaultTextOption|const QTextOption &
 
-$prototype=Qt::CursorMoveStyle defaultCursorMoveStyle() const
-$method=|Qt::CursorMoveStyle|defaultCursorMoveStyle|
+$prototypeV2=Qt::CursorMoveStyle defaultCursorMoveStyle() const
 
 $prototype=void setDefaultCursorMoveStyle(Qt::CursorMoveStyle style)
 $method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle

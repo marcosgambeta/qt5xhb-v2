@@ -73,23 +73,17 @@ HB_FUNC_STATIC( QFONT_NEW )
 
 $deleteMethod
 
-$prototype=bool bold () const
-$method=|bool|bold|
+$prototypeV2=bool bold() const
 
-$prototype=Capitalization capitalization () const
-$method=|QFont::Capitalization|capitalization|
+$prototypeV2=QFont::Capitalization capitalization() const
 
-$prototype=QString defaultFamily () const
-$method=|QString|defaultFamily|
+$prototypeV2=QString defaultFamily() const
 
-$prototype=bool exactMatch () const
-$method=|bool|exactMatch|
+$prototypeV2=bool exactMatch() const
 
-$prototype=QString family () const
-$method=|QString|family|
+$prototypeV2=QString family() const
 
-$prototype=bool fixedPitch () const
-$method=|bool|fixedPitch|
+$prototypeV2=bool fixedPitch() const
 
 $prototype=bool fromString ( const QString & descrip )
 $method=|bool|fromString|const QString &
@@ -97,44 +91,31 @@ $method=|bool|fromString|const QString &
 $prototype=bool isCopyOf ( const QFont & f ) const
 $method=|bool|isCopyOf|const QFont &
 
-$prototype=bool italic () const
-$method=|bool|italic|
+$prototypeV2=bool italic() const
 
-$prototype=bool kerning () const
-$method=|bool|kerning|
+$prototypeV2=bool kerning() const
 
-$prototype=QString key () const
-$method=|QString|key|
+$prototypeV2=QString key() const
 
-$prototype=QString lastResortFamily () const
-$method=|QString|lastResortFamily|
+$prototypeV2=QString lastResortFamily() const
 
-$prototype=QString lastResortFont () const
-$method=|QString|lastResortFont|
+$prototypeV2=QString lastResortFont() const
 
-$prototype=qreal letterSpacing () const
-$method=|qreal|letterSpacing|
+$prototypeV2=qreal letterSpacing() const
 
-$prototype=SpacingType letterSpacingType () const
-$method=|QFont::SpacingType|letterSpacingType|
+$prototypeV2=QFont::SpacingType letterSpacingType() const
 
-$prototype=bool overline () const
-$method=|bool|overline|
+$prototypeV2=bool overline() const
 
-$prototype=int pixelSize () const
-$method=|int|pixelSize|
+$prototypeV2=int pixelSize() const
 
-$prototype=int pointSize () const
-$method=|int|pointSize|
+$prototypeV2=int pointSize() const
 
-$prototype=qreal pointSizeF () const
-$method=|qreal|pointSizeF|
+$prototypeV2=qreal pointSizeF() const
 
-$prototype=bool rawMode () const
-$method=|bool|rawMode|
+$prototypeV2=bool rawMode() const
 
-$prototype=QString rawName () const
-$method=|QString|rawName|
+$prototypeV2=QString rawName() const
 
 $prototype=QFont resolve ( const QFont & other ) const
 $method=|QFont|resolve|const QFont &
@@ -202,32 +183,23 @@ $method=|void|setWeight|int
 $prototype=void setWordSpacing ( qreal spacing )
 $method=|void|setWordSpacing|qreal
 
-$prototype=int stretch () const
-$method=|int|stretch|
+$prototypeV2=int stretch() const
 
-$prototype=bool strikeOut () const
-$method=|bool|strikeOut|
+$prototypeV2=bool strikeOut() const
 
-$prototype=Style style () const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
-$prototype=StyleHint styleHint () const
-$method=|QFont::StyleHint|styleHint|
+$prototypeV2=QFont::StyleHint styleHint() const
 
-$prototype=StyleStrategy styleStrategy () const
-$method=|QFont::StyleStrategy|styleStrategy|
+$prototype=QFont::StyleStrategy styleStrategy() const
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=bool underline () const
-$method=|bool|underline|
+$prototypeV2=bool underline() const
 
-$prototype=int weight () const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
-$prototype=qreal wordSpacing () const
-$method=|qreal|wordSpacing|
+$prototypeV2=qreal wordSpacing() const
 
 $prototype=static void insertSubstitution ( const QString & familyName, const QString & substituteName )
 $staticMethod=|void|insertSubstitution|const QString &,const QString &
@@ -241,8 +213,7 @@ $staticMethod=|QString|substitute|const QString &
 $prototype=static QStringList substitutes ( const QString & familyName )
 $staticMethod=|QStringList|substitutes|const QString &
 
-$prototype=static QStringList substitutions ()
-$staticMethod=|QStringList|substitutions|
+$prototypeV2=static QStringList substitutions()
 
 $variantMethods
 

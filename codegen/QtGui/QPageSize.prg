@@ -88,8 +88,7 @@ $method=|void|swap|QPageSize &
 $prototype=bool isEquivalentTo(const QPageSize &other) const
 $method=|bool|isEquivalentTo|const QPageSize &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString key() const
 $internalMethod=|QString|key,key1|
@@ -362,8 +361,7 @@ $addMethod=sizePixels
 $prototype=QRectF rect(Unit units) const
 $method=|QRectF|rect|QPageSize::Unit
 
-$prototype=QRect rectPoints() const
-$method=|QRect|rectPoints|
+$prototypeV2=QRect rectPoints() const
 
 $prototype=QRect rectPixels(int resolution) const
 $method=|QRect|rectPixels|int

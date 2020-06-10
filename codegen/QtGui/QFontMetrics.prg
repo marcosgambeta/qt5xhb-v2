@@ -62,11 +62,9 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
 
 $deleteMethod
 
-$prototype=int ascent () const
-$method=|int|ascent|
+$prototypeV2=int ascent() const
 
-$prototype=int averageCharWidth () const
-$method=|int|averageCharWidth|
+$prototypeV2=int averageCharWidth() const
 
 $prototype=QRect boundingRect ( QChar ch ) const
 $internalMethod=|QRect|boundingRect,boundingRect1|QChar
@@ -116,51 +114,40 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 }
 $addMethod=boundingRect
 
-$prototype=int descent () const
-$method=|int|descent|
+$prototypeV2=int descent() const
 
 $prototype=QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 $method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
 $prototype=bool inFontUcs4 ( uint character ) const
 $method=|bool|inFontUcs4|uint
 
-$prototype=int leading () const
-$method=|int|leading|
+$prototypeV2=int leading() const
 
-$prototype=int lineSpacing () const
-$method=|int|lineSpacing|
+$prototypeV2=int lineSpacing() const
 
-$prototype=int lineWidth () const
-$method=|int|lineWidth|
+$prototypeV2=int lineWidth() const
 
-$prototype=int maxWidth () const
-$method=|int|maxWidth|
+$prototypeV2=int maxWidth() const
 
-$prototype=int minLeftBearing () const
-$method=|int|minLeftBearing|
+$prototypeV2=int minLeftBearing() const
 
-$prototype=int minRightBearing () const
-$method=|int|minRightBearing|
+$prototypeV2=int minRightBearing() const
 
-$prototype=int overlinePos () const
-$method=|int|overlinePos|
+$prototypeV2=int overlinePos() const
 
 $prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 %% TODO: parametro 4 = array
 $method=|QSize|size|int,const QString &,int=0,int *=nullptr
 
-$prototype=int strikeOutPos () const
-$method=|int|strikeOutPos|
+$prototypeV2=int strikeOutPos() const
 
 $prototype=QRect tightBoundingRect ( const QString & text ) const
 $method=|QRect|tightBoundingRect|const QString &
 
-$prototype=int underlinePos () const
-$method=|int|underlinePos|
+$prototypeV2=int underlinePos() const
 
 $prototype=int width ( const QString & text, int len = -1 ) const
 $internalMethod=|int|width,width1|const QString &,int=-1
@@ -190,8 +177,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 }
 $addMethod=width
 
-$prototype=int xHeight () const
-$method=|int|xHeight|
+$prototypeV2=int xHeight() const
 
 $extraMethods
 

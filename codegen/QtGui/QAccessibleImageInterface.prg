@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QString imageDescription() const = 0
-$virtualMethod=|QString|imageDescription|
+$prototypeV2=virtual QString imageDescription() const = 0
 
-$prototype=virtual QSize imageSize() const = 0
-$virtualMethod=|QSize|imageSize|
+$prototypeV2=virtual QSize imageSize() const = 0
 
 $extraMethods
 

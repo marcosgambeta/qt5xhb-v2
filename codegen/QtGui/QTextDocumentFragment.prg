@@ -70,11 +70,9 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 $deleteMethod
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=QString toPlainText() const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=QString toHtml(const QByteArray &encoding = QByteArray()) const
 $method=|QString|toHtml|const QByteArray &=QByteArray()

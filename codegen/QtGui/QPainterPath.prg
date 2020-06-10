@@ -251,11 +251,9 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
 }
 $addMethod=arcTo
 
-$prototype=QRectF boundingRect () const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
-$prototype=void closeSubpath ()
-$method=|void|closeSubpath|
+$prototypeV2=void closeSubpath()
 
 $prototype=void connectPath ( const QPainterPath & path )
 $method=|void|connectPath|const QPainterPath &
@@ -296,8 +294,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=QRectF controlPointRect () const
-$method=|QRectF|controlPointRect|
+$prototypeV2=QRectF controlPointRect() const
 
 $prototype=void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 $internalMethod=|void|cubicTo,cubicTo1|const QPointF &,const QPointF &,const QPointF &
@@ -327,14 +324,11 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
 }
 $addMethod=cubicTo
 
-$prototype=QPointF currentPosition () const
-$method=|QPointF|currentPosition|
+$prototypeV2=QPointF currentPosition() const
 
-$prototype=int elementCount () const
-$method=|int|elementCount|
+$prototypeV2=int elementCount() const
 
-$prototype=Qt::FillRule fillRule () const
-$method=|Qt::FillRule|fillRule|
+$prototypeV2=Qt::FillRule fillRule() const
 
 $prototype=QPainterPath intersected ( const QPainterPath & p ) const
 $method=|QPainterPath|intersected|const QPainterPath &
@@ -367,11 +361,9 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 }
 $addMethod=intersects
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=qreal length () const
-$method=|qreal|length|
+$prototypeV2=qreal length() const
 
 $prototype=void lineTo ( const QPointF & endPoint )
 $internalMethod=|void|lineTo,lineTo1|const QPointF &
@@ -469,8 +461,7 @@ $method=|void|setElementPositionAt|int,qreal,qreal
 $prototype=void setFillRule ( Qt::FillRule fillRule )
 $method=|void|setFillRule|Qt::FillRule
 
-$prototype=QPainterPath simplified () const
-$method=|QPainterPath|simplified|
+$prototypeV2=QPainterPath simplified() const
 
 $prototype=qreal slopeAtPercent ( qreal t ) const
 $method=|qreal|slopeAtPercent|qreal
@@ -509,8 +500,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 }
 $addMethod=toFillPolygon
 
-$prototype=QPainterPath toReversed () const
-$method=|QPainterPath|toReversed|
+$prototypeV2=QPainterPath toReversed() const
 
 $prototype=void translate ( qreal dx, qreal dy )
 $internalMethod=|void|translate,translate1|qreal,qreal

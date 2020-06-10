@@ -54,20 +54,17 @@ HB_FUNC_STATIC( QPDFWRITER_NEW )
 
 $deleteMethod
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle(const QString & title)
 $method=|void|setTitle|const QString &
 
-$prototype=QString creator() const
-$method=|QString|creator|
+$prototypeV2=QString creator() const
 
 $prototype=void setCreator(const QString & creator)
 $method=|void|setCreator|const QString &
 
-$prototype=bool newPage()
-$method=|bool|newPage|
+$prototypeV2=bool newPage()
 
 $prototype=void setPageSize(PageSize size) (obsolet)
 $internalMethod=|void|setPageSize,setPageSize1|QPagedPaintDevice::PageSize

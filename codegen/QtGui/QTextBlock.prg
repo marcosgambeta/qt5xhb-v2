@@ -67,96 +67,74 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int position() const
-$method=|int|position|
+$prototypeV2=int position() const
 
-$prototype=int length() const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=bool contains(int position) const
 $method=|bool|contains|int
 
-$prototype=QTextLayout *layout() const
-$method=|QTextLayout *|layout|
+$prototypeV2=QTextLayout * layout() const
 
-$prototype=void clearLayout()
-$method=|void|clearLayout|
+$prototypeV2=void clearLayout()
 
-$prototype=QTextBlockFormat blockFormat() const
-$method=|QTextBlockFormat|blockFormat|
+$prototypeV2=QTextBlockFormat blockFormat() const
 
-$prototype=int blockFormatIndex() const
-$method=|int|blockFormatIndex|
+$prototypeV2=int blockFormatIndex() const
 
-$prototype=QTextCharFormat charFormat() const
-$method=|QTextCharFormat|charFormat|
+$prototypeV2=QTextCharFormat charFormat() const
 
-$prototype=int charFormatIndex() const
-$method=|int|charFormatIndex|
+$prototypeV2=int charFormatIndex() const
 
-$prototype=Qt::LayoutDirection textDirection() const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=const QTextDocument *document() const
 $method=|const QTextDocument *|document|
 
-$prototype=QTextList *textList() const
-$method=|QTextList *|textList|
+$prototypeV2=QTextList * textList() const
 
-$prototype=QTextBlockUserData *userData() const
-$method=|QTextBlockUserData *|userData|
+$prototypeV2=QTextBlockUserData * userData() const
 
 $prototype=void setUserData(QTextBlockUserData *data)
 $method=|void|setUserData|QTextBlockUserData *
 
-$prototype=int userState() const
-$method=|int|userState|
+$prototypeV2=int userState() const
 
 $prototype=void setUserState(int state)
 $method=|void|setUserState|int
 
-$prototype=int revision() const
-$method=|int|revision|
+$prototypeV2=int revision() const
 
 $prototype=void setRevision(int rev)
 $method=|void|setRevision|int
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=int blockNumber() const
-$method=|int|blockNumber|
+$prototypeV2=int blockNumber() const
 
-$prototype=int firstLineNumber() const
-$method=|int|firstLineNumber|
+$prototypeV2=int firstLineNumber() const
 
 $prototype=void setLineCount(int count)
 $method=|void|setLineCount|int
 
-$prototype=int lineCount() const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
-$prototype=QTextBlock next() const
-$method=|QTextBlock|next|
+$prototypeV2=QTextBlock next() const
 
-$prototype=QTextBlock previous() const
-$method=|QTextBlock|previous|
+$prototypeV2=QTextBlock previous() const
 
 $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
-$prototype=int fragmentIndex() const
-$method=|int|fragmentIndex|
+$prototypeV2=int fragmentIndex() const
 
 $extraMethods
 

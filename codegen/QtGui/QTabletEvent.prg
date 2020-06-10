@@ -30,8 +30,7 @@ $constructor=|new|QEvent::Type,const QPointF &,const QPointF &,int,int,qreal,int
 
 $deleteMethod
 
-$prototype=TabletDevice device() const
-$method=|QTabletEvent::TabletDevice|device|
+$prototypeV2=QTabletEvent::TabletDevice device() const
 
 $prototype=const QPoint globalPos() const
 $method=|const QPoint|globalPos|
@@ -39,20 +38,15 @@ $method=|const QPoint|globalPos|
 $prototype=const QPointF & globalPosF() const
 $method=|const QPointF &|globalPosF|
 
-$prototype=int globalX() const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY() const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
-$prototype=qreal hiResGlobalX() const
-$method=|qreal|hiResGlobalX|
+$prototypeV2=qreal hiResGlobalX() const
 
-$prototype=qreal hiResGlobalY() const
-$method=|qreal|hiResGlobalY|
+$prototypeV2=qreal hiResGlobalY() const
 
-$prototype=PointerType pointerType() const
-$method=|QTabletEvent::PointerType|pointerType|
+$prototypeV2=QTabletEvent::PointerType pointerType() const
 
 $prototype=const QPoint pos() const
 $method=|const QPoint|pos|
@@ -60,31 +54,22 @@ $method=|const QPoint|pos|
 $prototype=const QPointF & posF() const
 $method=|const QPointF &|posF|
 
-$prototype=qreal pressure() const
-$method=|qreal|pressure|
+$prototypeV2=qreal pressure() const
 
-$prototype=qreal rotation() const
-$method=|qreal|rotation|
+$prototypeV2=qreal rotation() const
 
-$prototype=qreal tangentialPressure() const
-$method=|qreal|tangentialPressure|
+$prototypeV2=qreal tangentialPressure() const
 
-$prototype=qint64 uniqueId() const
-$method=|qint64|uniqueId|
+$prototypeV2=qint64 uniqueId() const
 
-$prototype=int x() const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int xTilt() const
-$method=|int|xTilt|
+$prototypeV2=int xTilt() const
 
-$prototype=int y() const
-$method=|int|y|
+$prototypeV2=int y() const
 
-$prototype=int yTilt() const
-$method=|int|yTilt|
+$prototypeV2=int yTilt() const
 
-$prototype=int z() const
-$method=|int|z|
+$prototypeV2=int z() const
 
 #pragma ENDDUMP

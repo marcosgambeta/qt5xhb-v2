@@ -94,20 +94,15 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 
 $deleteMethod
 
-$prototype=QPointF center() const
-$method=|QPointF|center|
+$prototypeV2=QPointF center() const
 
-$prototype=qreal centerRadius() const
-$method=|qreal|centerRadius|
+$prototypeV2=qreal centerRadius() const
 
-$prototype=QPointF focalPoint() const
-$method=|QPointF|focalPoint|
+$prototypeV2=QPointF focalPoint() const
 
-$prototype=qreal focalRadius() const
-$method=|qreal|focalRadius|
+$prototypeV2=qreal focalRadius() const
 
-$prototype=qreal radius() const
-$method=|qreal|radius|
+$prototypeV2=qreal radius() const
 
 $prototype=void setCenter(const QPointF & center)
 $internalMethod=|void|setCenter,setCenter1|const QPointF &

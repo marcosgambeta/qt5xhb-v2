@@ -30,20 +30,16 @@ $constructor=|new|QObject *,QAccessible::Event
 
 $deleteMethod
 
-$prototype=QAccessible::Event type() const
-$method=|QAccessible::Event|type|
+$prototypeV2=QAccessible::Event type() const
 
-$prototype=QObject *object() const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
 $prototype=void setChild(int chld)
 $method=|void|setChild|int
 
-$prototype=int child() const
-$method=|int|child|
+$prototypeV2=int child() const
 
-$prototype=virtual QAccessibleInterface *accessibleInterface() const
-$virtualMethod=|QAccessibleInterface *|accessibleInterface|
+$prototypeV2=virtual QAccessibleInterface * accessibleInterface() const
 
 $extraMethods
 

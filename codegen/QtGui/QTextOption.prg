@@ -67,32 +67,27 @@ $deleteMethod
 $prototype=void setAlignment(Qt::Alignment alignment)
 $method=|void|setAlignment|Qt::Alignment
 
-$prototype=Qt::Alignment alignment() const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototype=void setTextDirection(Qt::LayoutDirection aDirection)
 $method=|void|setTextDirection|Qt::LayoutDirection
 
-$prototype=Qt::LayoutDirection textDirection() const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototype=void setWrapMode(WrapMode wrap)
 $method=|void|setWrapMode|QTextOption::WrapMode
 
-$prototype=WrapMode wrapMode() const
-$method=|QTextOption::WrapMode|wrapMode|
+$prototypeV2=QTextOption::WrapMode wrapMode() const
 
 $prototype=void setFlags(Flags flags)
 $method=|void|setFlags|QTextOption::Flags
 
-$prototype=Flags flags() const
-$method=|QTextOption::Flags|flags|
+$prototypeV2=QTextOption::Flags flags() const
 
 $prototype=void setTabStop(qreal tabStop)
 $method=|void|setTabStop|qreal
 
-$prototype=qreal tabStop() const
-$method=|qreal|tabStop|
+$prototypeV2=qreal tabStop() const
 
 $prototype=void setTabArray(const QList<qreal> &tabStops)
 $method=|void|setTabArray|const QList<qreal> &
@@ -103,8 +98,7 @@ $method=|QList<qreal>|tabArray|
 $prototype=void setUseDesignMetrics(bool b)
 $method=|void|setUseDesignMetrics|bool
 
-$prototype=bool useDesignMetrics() const
-$method=|bool|useDesignMetrics|
+$prototypeV2=bool useDesignMetrics() const
 
 $extraMethods
 

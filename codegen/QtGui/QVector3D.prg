@@ -97,17 +97,13 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=float x() const
-$method=|float|x|
+$prototypeV2=float x() const
 
-$prototype=float y() const
-$method=|float|y|
+$prototypeV2=float y() const
 
-$prototype=float z() const
-$method=|float|z|
+$prototypeV2=float z() const
 
 $prototype=void setX(float x)
 $method=|void|setX|float
@@ -118,17 +114,13 @@ $method=|void|setY|float
 $prototype=void setZ(float z)
 $method=|void|setZ|float
 
-$prototype=float length() const
-$method=|float|length|
+$prototypeV2=float length() const
 
-$prototype=float lengthSquared() const
-$method=|float|lengthSquared|
+$prototypeV2=float lengthSquared() const
 
-$prototype=QVector3D normalized() const
-$method=|QVector3D|normalized|
+$prototypeV2=QVector3D normalized() const
 
-$prototype=void normalize()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
 $prototype=float distanceToPoint(const QVector3D& point) const
 $method=|float|distanceToPoint|const QVector3D &
@@ -164,17 +156,13 @@ $addMethod=distanceToPlane
 $prototype=float distanceToLine(const QVector3D& point, const QVector3D& direction) const
 $method=|float|distanceToLine|const QVector3D &,const QVector3D &
 
-$prototype=QVector2D toVector2D() const
-$method=|QVector2D|toVector2D|
+$prototypeV2=QVector2D toVector2D() const
 
-$prototype=QVector4D toVector4D() const
-$method=|QVector4D|toVector4D|
+$prototypeV2=QVector4D toVector4D() const
 
-$prototype=QPoint toPoint() const
-$method=|QPoint|toPoint|
+$prototypeV2=QPoint toPoint() const
 
-$prototype=QPointF toPointF() const
-$method=|QPointF|toPointF|
+$prototypeV2=QPointF toPointF() const
 
 $prototype=static float dotProduct(const QVector3D& v1, const QVector3D& v2)
 $staticMethod=|float|dotProduct|const QVector3D &,const QVector3D &

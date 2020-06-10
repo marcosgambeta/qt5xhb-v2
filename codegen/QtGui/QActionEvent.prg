@@ -32,10 +32,8 @@ $constructor=|new|int,QAction *,QAction *=nullptr
 
 $deleteMethod
 
-$prototype=QAction * action () const
-$method=|QAction *|action|
+$prototypeV2=QAction * action() const
 
-$prototype=QAction * before () const
-$method=|QAction *|before|
+$prototypeV2=QAction * before() const
 
 #pragma ENDDUMP

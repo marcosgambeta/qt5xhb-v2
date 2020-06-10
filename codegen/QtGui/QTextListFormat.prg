@@ -30,31 +30,26 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setStyle(Style style)
 $method=|void|setStyle|QTextListFormat::Style
 
-$prototype=Style style() const
-$method=|QTextListFormat::Style|style|
+$prototypeV2=QTextListFormat::Style style() const
 
 $prototype=void setIndent(int indent)
 $method=|void|setIndent|int
 
-$prototype=int indent() const
-$method=|int|indent|
+$prototypeV2=int indent() const
 
 $prototype=void setNumberPrefix(const QString &numberPrefix)
 $method=|void|setNumberPrefix|const QString &
 
-$prototype=QString numberPrefix() const
-$method=|QString|numberPrefix|
+$prototypeV2=QString numberPrefix() const
 
 $prototype=void setNumberSuffix(const QString &numberSuffix)
 $method=|void|setNumberSuffix|const QString &
 
-$prototype=QString numberSuffix() const
-$method=|QString|numberSuffix|
+$prototypeV2=QString numberSuffix() const
 
 #pragma ENDDUMP

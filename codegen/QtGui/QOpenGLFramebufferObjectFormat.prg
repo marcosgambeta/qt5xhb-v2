@@ -57,32 +57,27 @@ $deleteMethod
 $prototype=void setSamples(int samples)
 $method=|void|setSamples|int
 
-$prototype=int samples() const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setMipmap(bool enabled)
 $method=|void|setMipmap|bool
 
-$prototype=bool mipmap() const
-$method=|bool|mipmap|
+$prototypeV2=bool mipmap() const
 
 $prototype=void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
 $method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
 
-$prototype=QOpenGLFramebufferObject::Attachment attachment() const
-$method=|QOpenGLFramebufferObject::Attachment|attachment|
+$prototypeV2=QOpenGLFramebufferObject::Attachment attachment() const
 
 $prototype=void setTextureTarget(GLenum target)
 $method=|void|setTextureTarget|GLenum
 
-$prototype=GLenum textureTarget() const
-$method=|GLenum|textureTarget|
+$prototypeV2=GLenum textureTarget() const
 
 $prototype=void setInternalTextureFormat(GLenum internalTextureFormat)
 $method=|void|setInternalTextureFormat|GLenum
 
-$prototype=GLenum internalTextureFormat() const
-$method=|GLenum|internalTextureFormat|
+$prototypeV2=GLenum internalTextureFormat() const
 
 $extraMethods
 

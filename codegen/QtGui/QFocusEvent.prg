@@ -30,13 +30,10 @@ $constructor=|new|QEvent::Type,Qt::FocusReason=Qt::OtherFocusReason
 
 $deleteMethod
 
-$prototype=bool gotFocus () const
-$method=|bool|gotFocus|
+$prototypeV2=bool gotFocus() const
 
-$prototype=bool lostFocus () const
-$method=|bool|lostFocus|
+$prototypeV2=bool lostFocus() const
 
-$prototype=Qt::FocusReason reason () const
-$method=|Qt::FocusReason|reason|
+$prototypeV2=Qt::FocusReason reason() const
 
 #pragma ENDDUMP

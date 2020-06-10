@@ -31,26 +31,19 @@ $includes
 #include <QtCore/QRectF>
 #include <QtGui/QTransform>
 
-$prototype=QRectF cursorRectangle() const
-$method=|QRectF|cursorRectangle|
+$prototypeV2=QRectF cursorRectangle() const
 
-$prototype=Qt::LayoutDirection inputDirection() const
-$method=|Qt::LayoutDirection|inputDirection|
+$prototypeV2=Qt::LayoutDirection inputDirection() const
 
-$prototype=QTransform inputItemTransform() const
-$method=|QTransform|inputItemTransform|
+$prototypeV2=QTransform inputItemTransform() const
 
-$prototype=bool isAnimating() const
-$method=|bool|isAnimating|
+$prototypeV2=bool isAnimating() const
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
-$prototype=QRectF keyboardRectangle() const
-$method=|QRectF|keyboardRectangle|
+$prototypeV2=QRectF keyboardRectangle() const
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setInputItemTransform(const QTransform & transform)
 $method=|void|setInputItemTransform|const QTransform &
@@ -58,20 +51,16 @@ $method=|void|setInputItemTransform|const QTransform &
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=void commit()
-$method=|void|commit|
+$prototypeV2=void commit()
 
-$prototype=void hide()
-$method=|void|hide|
+$prototypeV2=void hide()
 
 $prototype=void invokeAction(Action a, int cursorPosition)
 $method=|void|invokeAction|QInputMethod::Action,int
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=void show()
-$method=|void|show|
+$prototypeV2=void show()
 
 $prototype=void update(Qt::InputMethodQueries queries)
 $method=|void|update|Qt::InputMethodQueries

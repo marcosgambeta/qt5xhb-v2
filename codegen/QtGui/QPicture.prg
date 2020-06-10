@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 $deleteMethod
 
-$prototype=QRect boundingRect () const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
 $prototype=const char * data () const
 $method=|const char *|data|
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=bool load ( const QString & fileName, const char * format = nullptr )
 $internalMethod=|bool|load,load1|const QString &,const char *=nullptr
@@ -128,8 +126,7 @@ $method=|void|setBoundingRect|const QRect &
 $prototype=virtual void setData ( const char * data, uint size )
 $virtualMethod=|void|setData|const char *,uint
 
-$prototype=uint size () const
-$method=|uint|size|
+$prototypeV2=uint size() const
 
 $prototype=void swap ( QPicture & other )
 $method=|void|swap|QPicture &

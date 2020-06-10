@@ -62,17 +62,13 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 $deleteMethod
 
-$prototype=Qt::MouseButton button () const
-$method=|Qt::MouseButton|button|
+$prototypeV2=Qt::MouseButton button() const
 
-$prototype=Qt::MouseButtons buttons () const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
-$prototype=int globalX () const
-$method=|int|globalX|
+$prototypeV2=int globalX() const
 
-$prototype=int globalY () const
-$method=|int|globalY|
+$prototypeV2=int globalY() const
 
 $prototype=const QPointF & localPos() const
 $method=|const QPointF &|localPos|
@@ -83,10 +79,8 @@ $method=|const QPointF &|screenPos|
 $prototype=const QPointF & windowPos() const
 $method=|const QPointF &|windowPos|
 
-$prototype=int x () const
-$method=|int|x|
+$prototypeV2=int x() const
 
-$prototype=int y () const
-$method=|int|y|
+$prototypeV2=int y() const
 
 #pragma ENDDUMP

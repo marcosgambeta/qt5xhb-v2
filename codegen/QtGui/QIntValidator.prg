@@ -56,14 +56,12 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 $deleteMethod
 
-$prototype=int bottom() const
-$method=|int|bottom|
+$prototypeV2=int bottom() const
 
 $prototype=virtual void fixup(QString & input) const
 $virtualMethod=|void|fixup|QString &
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setBottom(int)
 $method=|void|setBottom|int
@@ -77,8 +75,7 @@ $virtualMethod=|void|setRange|int,int
 $prototype=void setTop(int)
 $method=|void|setTop|int
 
-$prototype=int top() const
-$method=|int|top|
+$prototypeV2=int top() const
 
 $prototype=virtual State validate(QString & input, int & pos) const = 0
 $virtualMethod=|QValidator::State|validate|QString &,int &

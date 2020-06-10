@@ -68,14 +68,11 @@ $method=|void|swap|QTextFormat &
 $prototype=void merge(const QTextFormat &other)
 $method=|void|merge|const QTextFormat &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int type() const
-$method=|int|type|
+$prototypeV2=int type() const
 
-$prototype=int objectIndex() const
-$method=|int|objectIndex|
+$prototypeV2=int objectIndex() const
 
 $prototype=void setObjectIndex(int object)
 $method=|void|setObjectIndex|int
@@ -144,80 +141,59 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 }
 $addMethod=setProperty
 
-$prototype=int propertyCount() const
-$method=|int|propertyCount|
+$prototypeV2=int propertyCount() const
 
 $prototype=void setObjectType(int type)
 $method=|void|setObjectType|int
 
-$prototype=int objectType() const
-$method=|int|objectType|
+$prototypeV2=int objectType() const
 
-$prototype=bool isCharFormat() const
-$method=|bool|isCharFormat|
+$prototypeV2=bool isCharFormat() const
 
-$prototype=bool isBlockFormat() const
-$method=|bool|isBlockFormat|
+$prototypeV2=bool isBlockFormat() const
 
-$prototype=bool isListFormat() const
-$method=|bool|isListFormat|
+$prototypeV2=bool isListFormat() const
 
-$prototype=bool isFrameFormat() const
-$method=|bool|isFrameFormat|
+$prototypeV2=bool isFrameFormat() const
 
-$prototype=bool isImageFormat() const
-$method=|bool|isImageFormat|
+$prototypeV2=bool isImageFormat() const
 
-$prototype=bool isTableFormat() const
-$method=|bool|isTableFormat|
+$prototypeV2=bool isTableFormat() const
 
-$prototype=bool isTableCellFormat() const
-$method=|bool|isTableCellFormat|
+$prototypeV2=bool isTableCellFormat() const
 
-$prototype=QTextBlockFormat toBlockFormat() const
-$method=|QTextBlockFormat|toBlockFormat|
+$prototypeV2=QTextBlockFormat toBlockFormat() const
 
-$prototype=QTextCharFormat toCharFormat() const
-$method=|QTextCharFormat|toCharFormat|
+$prototypeV2=QTextCharFormat toCharFormat() const
 
-$prototype=QTextListFormat toListFormat() const
-$method=|QTextListFormat|toListFormat|
+$prototypeV2=QTextListFormat toListFormat() const
 
-$prototype=QTextTableFormat toTableFormat() const
-$method=|QTextTableFormat|toTableFormat|
+$prototypeV2=QTextTableFormat toTableFormat() const
 
-$prototype=QTextFrameFormat toFrameFormat() const
-$method=|QTextFrameFormat|toFrameFormat|
+$prototypeV2=QTextFrameFormat toFrameFormat() const
 
-$prototype=QTextImageFormat toImageFormat() const
-$method=|QTextImageFormat|toImageFormat|
+$prototypeV2=QTextImageFormat toImageFormat() const
 
-$prototype=QTextTableCellFormat toTableCellFormat() const
-$method=|QTextTableCellFormat|toTableCellFormat|
+$prototypeV2=QTextTableCellFormat toTableCellFormat() const
 
 $prototype=void setLayoutDirection(Qt::LayoutDirection direction)
 $method=|void|setLayoutDirection|Qt::LayoutDirection
 
-$prototype=Qt::LayoutDirection layoutDirection() const
-$method=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=Qt::LayoutDirection layoutDirection() const
 
 $prototype=void setBackground(const QBrush &brush)
 $method=|void|setBackground|const QBrush &
 
-$prototype=QBrush background() const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
-$prototype=void clearBackground()
-$method=|void|clearBackground|
+$prototypeV2=void clearBackground()
 
 $prototype=void setForeground(const QBrush &brush)
 $method=|void|setForeground|const QBrush &
 
-$prototype=QBrush foreground() const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
-$prototype=void clearForeground()
-$method=|void|clearForeground|
+$prototypeV2=void clearForeground()
 
 $extraMethods
 

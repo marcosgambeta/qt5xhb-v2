@@ -30,98 +30,82 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFontFamily(const QString &family)
 $method=|void|setFontFamily|const QString &
 
-$prototype=QString fontFamily() const
-$method=|QString|fontFamily|
+$prototypeV2=QString fontFamily() const
 
 $prototype=void setFontPointSize(qreal size)
 $method=|void|setFontPointSize|qreal
 
-$prototype=qreal fontPointSize() const
-$method=|qreal|fontPointSize|
+$prototypeV2=qreal fontPointSize() const
 
 $prototype=void setFontWeight(int weight)
 $method=|void|setFontWeight|int
 
-$prototype=int fontWeight() const
-$method=|int|fontWeight|
+$prototypeV2=int fontWeight() const
 
 $prototype=void setFontItalic(bool italic)
 $method=|void|setFontItalic|bool
 
-$prototype=bool fontItalic() const
-$method=|bool|fontItalic|
+$prototypeV2=bool fontItalic() const
 
 $prototype=void setFontCapitalization(QFont::Capitalization capitalization)
 $method=|void|setFontCapitalization|QFont::Capitalization
 
-$prototype=QFont::Capitalization fontCapitalization() const
-$method=|QFont::Capitalization|fontCapitalization|
+$prototypeV2=QFont::Capitalization fontCapitalization() const
 
 $prototype=void setFontLetterSpacingType(QFont::SpacingType letterSpacingType)
 $method=|void|setFontLetterSpacingType|QFont::SpacingType
 
-$prototype=QFont::SpacingType fontLetterSpacingType() const
-$method=|QFont::SpacingType|fontLetterSpacingType|
+$prototypeV2=QFont::SpacingType fontLetterSpacingType() const
 
 $prototype=void setFontLetterSpacing(qreal spacing)
 $method=|void|setFontLetterSpacing|qreal
 
-$prototype=qreal fontLetterSpacing() const
-$method=|qreal|fontLetterSpacing|
+$prototypeV2=qreal fontLetterSpacing() const
 
 $prototype=void setFontWordSpacing(qreal spacing)
 $method=|void|setFontWordSpacing|qreal
 
-$prototype=qreal fontWordSpacing() const
-$method=|qreal|fontWordSpacing|
+$prototypeV2=qreal fontWordSpacing() const
 
 $prototype=void setFontUnderline(bool underline)
 $method=|void|setFontUnderline|bool
 
-$prototype=bool fontUnderline() const
-$method=|bool|fontUnderline|
+$prototypeV2=bool fontUnderline() const
 
 $prototype=void setFontOverline(bool overline)
 $method=|void|setFontOverline|bool
 
-$prototype=bool fontOverline() const
-$method=|bool|fontOverline|
+$prototypeV2=bool fontOverline() const
 
 $prototype=void setFontStrikeOut(bool strikeOut)
 $method=|void|setFontStrikeOut|bool
 
-$prototype=bool fontStrikeOut() const
-$method=|bool|fontStrikeOut|
+$prototypeV2=bool fontStrikeOut() const
 
 $prototype=void setUnderlineColor(const QColor &color)
 $method=|void|setUnderlineColor|const QColor &
 
-$prototype=QColor underlineColor() const
-$method=|QColor|underlineColor|
+$prototypeV2=QColor underlineColor() const
 
 $prototype=void setFontFixedPitch(bool fixedPitch)
 $method=|void|setFontFixedPitch|bool
 
-$prototype=bool fontFixedPitch() const
-$method=|bool|fontFixedPitch|
+$prototypeV2=bool fontFixedPitch() const
 
 $prototype=void setFontStretch(int factor)
 $method=|void|setFontStretch|int
 
-$prototype=int fontStretch() const
-$method=|int|fontStretch|
+$prototypeV2=int fontStretch() const
 
 $prototype=void setFontStyleHint(QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault)
 $method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
@@ -129,82 +113,68 @@ $method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::Pref
 $prototype=void setFontStyleStrategy(QFont::StyleStrategy strategy)
 $method=|void|setFontStyleStrategy|QFont::StyleStrategy
 
-$prototype=QFont::StyleHint fontStyleHint() const
-$method=|QFont::StyleHint|fontStyleHint|
+$prototypeV2=QFont::StyleHint fontStyleHint() const
 
-$prototype=QFont::StyleStrategy fontStyleStrategy() const
-$method=|QFont::StyleStrategy|fontStyleStrategy|
+$prototypeV2=QFont::StyleStrategy fontStyleStrategy() const
 
 $prototype=void setFontHintingPreference(QFont::HintingPreference hintingPreference)
 $method=|void|setFontHintingPreference|QFont::HintingPreference
 
-$prototype=QFont::HintingPreference fontHintingPreference() const
-$method=|QFont::HintingPreference|fontHintingPreference|
+$prototypeV2=QFont::HintingPreference fontHintingPreference() const
 
 $prototype=void setFontKerning(bool enable)
 $method=|void|setFontKerning|bool
 
-$prototype=bool fontKerning() const
-$method=|bool|fontKerning|
+$prototypeV2=bool fontKerning() const
 
 $prototype=void setUnderlineStyle(UnderlineStyle style)
 $method=|void|setUnderlineStyle|QTextCharFormat::UnderlineStyle
 
-$prototype=UnderlineStyle underlineStyle() const
-$method=|QTextCharFormat::UnderlineStyle|underlineStyle|
+$prototypeV2=QTextCharFormat::UnderlineStyle underlineStyle() const
 
 $prototype=void setVerticalAlignment(VerticalAlignment alignment)
 $method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
 
-$prototype=VerticalAlignment verticalAlignment() const
-$method=|QTextCharFormat::VerticalAlignment|verticalAlignment|
+$prototypeV2=QTextCharFormat::VerticalAlignment verticalAlignment() const
 
 $prototype=void setTextOutline(const QPen &pen)
 $method=|void|setTextOutline|const QPen &
 
-$prototype=QPen textOutline() const
-$method=|QPen|textOutline|
+$prototypeV2=QPen textOutline() const
 
 $prototype=void setToolTip(const QString &tip)
 $method=|void|setToolTip|const QString &
 
-$prototype=QString toolTip() const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=void setAnchor(bool anchor)
 $method=|void|setAnchor|bool
 
-$prototype=bool isAnchor() const
-$method=|bool|isAnchor|
+$prototypeV2=bool isAnchor() const
 
 $prototype=void setAnchorHref(const QString &value)
 $method=|void|setAnchorHref|const QString &
 
-$prototype=QString anchorHref() const
-$method=|QString|anchorHref|
+$prototypeV2=QString anchorHref() const
 
 $prototype=void setAnchorName(const QString &name)
 $method=|void|setAnchorName|const QString &
 
-$prototype=QString anchorName() const
-$method=|QString|anchorName|
+$prototypeV2=QString anchorName() const
 
 $prototype=void setAnchorNames(const QStringList &names)
 $method=|void|setAnchorNames|const QStringList &
 
-$prototype=QStringList anchorNames() const
-$method=|QStringList|anchorNames|
+$prototypeV2=QStringList anchorNames() const
 
 $prototype=void setTableCellRowSpan(int tableCellRowSpan)
 $method=|void|setTableCellRowSpan|int
 
-$prototype=int tableCellRowSpan() const
-$method=|int|tableCellRowSpan|
+$prototypeV2=int tableCellRowSpan() const
 
 $prototype=void setTableCellColumnSpan(int tableCellColumnSpan)
 $method=|void|setTableCellColumnSpan|int
 
-$prototype=int tableCellColumnSpan() const
-$method=|int|tableCellColumnSpan|
+$prototypeV2=int tableCellColumnSpan() const
 
 #pragma ENDDUMP

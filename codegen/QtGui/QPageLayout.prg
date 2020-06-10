@@ -72,26 +72,21 @@ $method=|void|swap|QPageLayout &
 $prototype=bool isEquivalentTo(const QPageLayout &other) const
 $method=|bool|isEquivalentTo|const QPageLayout &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=Mode mode() const
-$method=|QPageLayout::Mode|mode|
+$prototypeV2=QPageLayout::Mode mode() const
 
 $prototype=void setMode(Mode mode)
 $method=|void|setMode|QPageLayout::Mode
 
-$prototype=QPageSize pageSize() const
-$method=|QPageSize|pageSize|
+$prototypeV2=QPageSize pageSize() const
 
-$prototype=Orientation orientation() const
-$method=|QPageLayout::Orientation|orientation|
+$prototypeV2=QPageLayout::Orientation orientation() const
 
 $prototype=void setOrientation(Orientation orientation)
 $method=|void|setOrientation|QPageLayout::Orientation
 
-$prototype=Unit units() const
-$method=|QPageLayout::Unit|units|
+$prototypeV2=QPageLayout::Unit units() const
 
 $prototype=void setUnits(Unit units)
 $method=|void|setUnits|QPageLayout::Unit
@@ -139,8 +134,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 }
 $addMethod=margins
 
-$prototype=QMargins marginsPoints() const
-$method=|QMargins|marginsPoints|
+$prototypeV2=QMargins marginsPoints() const
 
 $prototype=QMargins marginsPixels(int resolution) const
 $method=|QMargins|marginsPixels|int
@@ -148,11 +142,9 @@ $method=|QMargins|marginsPixels|int
 $prototype=void setMinimumMargins(const QMarginsF &minMargins)
 $method=|void|setMinimumMargins|const QMarginsF &
 
-$prototype=QMarginsF minimumMargins() const
-$method=|QMarginsF|minimumMargins|
+$prototypeV2=QMarginsF minimumMargins() const
 
-$prototype=QMarginsF maximumMargins() const
-$method=|QMarginsF|maximumMargins|
+$prototypeV2=QMarginsF maximumMargins() const
 
 $prototype=QRectF fullRect() const
 $internalMethod=|QRectF|fullRect,fullRect1|
@@ -182,8 +174,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 }
 $addMethod=fullRect
 
-$prototype=QRect fullRectPoints() const
-$method=|QRect|fullRectPoints|
+$prototypeV2=QRect fullRectPoints() const
 
 $prototype=QRect fullRectPixels(int resolution) const
 $method=|QRect|fullRectPixels|int
@@ -216,8 +207,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 }
 $addMethod=paintRect
 
-$prototype=QRect paintRectPoints() const
-$method=|QRect|paintRectPoints|
+$prototypeV2=QRect paintRectPoints() const
 
 $prototype=QRect paintRectPixels(int resolution) const
 $method=|QRect|paintRectPixels|int

@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=void beginPaint(const QRegion & region)
 $method=|void|beginPaint|const QRegion &
 
-$prototype=void endPaint()
-$method=|void|endPaint|
+$prototypeV2=void endPaint()
 
 $prototype=void flush(const QRegion & region, QWindow * win = nullptr, const QPoint & offset = QPoint())
 $method=|void|flush|const QRegion &,QWindow *=nullptr,const QPoint &=QPoint()
@@ -43,11 +42,9 @@ $prototype=QPlatformBackingStore * handle() const
 %% TODO: implementar ?
 %% $method=|QPlatformBackingStore *|handle|
 
-$prototype=bool hasStaticContents() const
-$method=|bool|hasStaticContents|
+$prototypeV2=bool hasStaticContents() const
 
-$prototype=QPaintDevice * paintDevice()
-$method=|QPaintDevice *|paintDevice|
+$prototypeV2=QPaintDevice * paintDevice()
 
 $prototype=void resize(const QSize & size)
 $method=|void|resize|const QSize &
@@ -58,14 +55,11 @@ $method=|bool|scroll|const QRegion &,int,int
 $prototype=void setStaticContents(const QRegion & region)
 $method=|void|setStaticContents|const QRegion &
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QRegion staticContents() const
-$method=|QRegion|staticContents|
+$prototypeV2=QRegion staticContents() const
 
-$prototype=QWindow * window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow * window() const
 
 $extraMethods
 

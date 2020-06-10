@@ -30,22 +30,16 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool create()
-$method=|bool|create|
+$prototypeV2=bool create()
 
-$prototype=void destroy()
-$method=|void|destroy|
+$prototypeV2=void destroy()
 
-$prototype=bool isCreated() const
-$method=|bool|isCreated|
+$prototypeV2=bool isCreated() const
 
-$prototype=GLuint objectId() const
-$method=|GLuint|objectId|
+$prototypeV2=GLuint objectId() const
 
-$prototype=void bind()
-$method=|void|bind|
+$prototypeV2=void bind()
 
-$prototype=void release()
-$method=|void|release|
+$prototypeV2=void release()
 
 #pragma ENDDUMP

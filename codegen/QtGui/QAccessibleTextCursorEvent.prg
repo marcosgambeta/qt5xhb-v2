@@ -33,7 +33,6 @@ $deleteMethod
 $prototype=void setCursorPosition(int position)
 $method=|void|setCursorPosition|int
 
-$prototype=int cursorPosition() const
-$method=|int|cursorPosition|
+$prototypeV2=int cursorPosition() const
 
 #pragma ENDDUMP

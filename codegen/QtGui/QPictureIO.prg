@@ -65,29 +65,23 @@ $deleteMethod
 $prototype=const QPicture &picture() const
 $method=|const QPicture &|picture|
 
-$prototype=int status() const
-$method=|int|status|
+$prototypeV2=int status() const
 
 $prototype=const char *format() const
 $method=|const char *|format|
 
-$prototype=QIODevice *ioDevice() const
-$method=|QIODevice *|ioDevice|
+$prototypeV2=QIODevice * ioDevice() const
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=int quality() const
-$method=|int|quality|
+$prototypeV2=int quality() const
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 $prototype=const char *parameters() const
 $method=|const char *|parameters|
 
-$prototype=float gamma() const
-$method=|float|gamma|
+$prototypeV2=float gamma() const
 
 $prototype=void setPicture(const QPicture &)
 $method=|void|setPicture|const QPicture &
@@ -116,11 +110,9 @@ $method=|void|setParameters|const char *
 $prototype=void setGamma(float)
 $method=|void|setGamma|float
 
-$prototype=bool read()
-$method=|bool|read|
+$prototypeV2=bool read()
 
-$prototype=bool write()
-$method=|bool|write|
+$prototypeV2=bool write()
 
 $prototype=static QByteArray pictureFormat(const QString &fileName)
 $internalStaticMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &

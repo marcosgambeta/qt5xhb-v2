@@ -27,17 +27,13 @@ $includes
 
 #include <QtGui/QTextDocument>
 
-$prototype=QTextFormat format() const
-$method=|QTextFormat|format|
+$prototypeV2=QTextFormat format() const
 
-$prototype=int formatIndex() const
-$method=|int|formatIndex|
+$prototypeV2=int formatIndex() const
 
-$prototype=QTextDocument *document() const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=int objectIndex() const
-$method=|int|objectIndex|
+$prototypeV2=int objectIndex() const
 
 $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?

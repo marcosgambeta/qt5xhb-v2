@@ -56,26 +56,21 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 
 $deleteMethod
 
-$prototype=Qt::PenCapStyle capStyle () const
-$method=|Qt::PenCapStyle|capStyle|
+$prototypeV2=Qt::PenCapStyle capStyle() const
 
 $prototype=QPainterPath createStroke ( const QPainterPath & path ) const
 $method=|QPainterPath|createStroke|const QPainterPath &
 
-$prototype=qreal curveThreshold () const
-$method=|qreal|curveThreshold|
+$prototypeV2=qreal curveThreshold() const
 
-$prototype=qreal dashOffset () const
-$method=|qreal|dashOffset|
+$prototypeV2=qreal dashOffset() const
 
 $prototype=QVector<qreal> dashPattern () const
 $method=|QVector<qreal>|dashPattern|
 
-$prototype=Qt::PenJoinStyle joinStyle () const
-$method=|Qt::PenJoinStyle|joinStyle|
+$prototypeV2=Qt::PenJoinStyle joinStyle() const
 
-$prototype=qreal miterLimit () const
-$method=|qreal|miterLimit|
+$prototypeV2=qreal miterLimit() const
 
 $prototype=void setCapStyle ( Qt::PenCapStyle style )
 $method=|void|setCapStyle|Qt::PenCapStyle
@@ -123,8 +118,7 @@ $method=|void|setMiterLimit|qreal
 $prototype=void setWidth ( qreal width )
 $method=|void|setWidth|qreal
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
 $extraMethods
 

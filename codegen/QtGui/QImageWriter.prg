@@ -62,32 +62,23 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 
 $deleteMethod
 
-$prototype=bool canWrite () const
-$method=|bool|canWrite|
+$prototypeV2=bool canWrite() const
 
-$prototype=int compression () const
-$method=|int|compression|
+$prototypeV2=int compression() const
 
-$prototype=QIODevice * device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
-$prototype=ImageWriterError error () const
-$method=|QImageWriter::ImageWriterError|error|
+$prototypeV2=QImageWriter::ImageWriterError error() const
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
-$prototype=float gamma () const
-$method=|float|gamma|
+$prototypeV2=float gamma() const
 
-$prototype=int quality () const
-$method=|int|quality|
+$prototypeV2=int quality() const
 
 $prototype=void setCompression ( int compression )
 $method=|void|setCompression|int

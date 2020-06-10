@@ -56,26 +56,19 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QRectF rect() const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=qreal ascent() const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal descent() const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
-$prototype=qreal height() const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
-$prototype=Qt::LayoutDirection textDirection() const
-$method=|Qt::LayoutDirection|textDirection|
+$prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototype=void setWidth(qreal w)
 $method=|void|setWidth|qreal
@@ -86,14 +79,11 @@ $method=|void|setAscent|qreal
 $prototype=void setDescent(qreal d)
 $method=|void|setDescent|qreal
 
-$prototype=int textPosition() const
-$method=|int|textPosition|
+$prototypeV2=int textPosition() const
 
-$prototype=int formatIndex() const
-$method=|int|formatIndex|
+$prototypeV2=int formatIndex() const
 
-$prototype=QTextFormat format() const
-$method=|QTextFormat|format|
+$prototypeV2=QTextFormat format() const
 
 $extraMethods
 

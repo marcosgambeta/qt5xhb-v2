@@ -30,68 +30,57 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setPosition(Position f)
 $method=|void|setPosition|QTextFrameFormat::Position
 
-$prototype=Position position() const
-$method=|QTextFrameFormat::Position|position|
+$prototypeV2=QTextFrameFormat::Position position() const
 
 $prototype=void setBorder(qreal border)
 $method=|void|setBorder|qreal
 
-$prototype=qreal border() const
-$method=|qreal|border|
+$prototypeV2=qreal border() const
 
 $prototype=void setBorderBrush(const QBrush &brush)
 $method=|void|setBorderBrush|const QBrush &
 
-$prototype=QBrush borderBrush() const
-$method=|QBrush|borderBrush|
+$prototypeV2=QBrush borderBrush() const
 
 $prototype=void setBorderStyle(BorderStyle style)
 $method=|void|setBorderStyle|QTextFrameFormat::BorderStyle
 
-$prototype=BorderStyle borderStyle() const
-$method=|QTextFrameFormat::BorderStyle|borderStyle|
+$prototypeV2=QTextFrameFormat::BorderStyle borderStyle() const
 
 $prototype=void setMargin(qreal margin)
 $method=|void|setMargin|qreal
 
-$prototype=qreal margin() const
-$method=|qreal|margin|
+$prototypeV2=qreal margin() const
 
 $prototype=void setTopMargin(qreal margin)
 $method=|void|setTopMargin|qreal
 
-$prototype=qreal topMargin() const
-$method=|qreal|topMargin|
+$prototypeV2=qreal topMargin() const
 
 $prototype=void setBottomMargin(qreal margin)
 $method=|void|setBottomMargin|qreal
 
-$prototype=qreal bottomMargin() const
-$method=|qreal|bottomMargin|
+$prototypeV2=qreal bottomMargin() const
 
 $prototype=void setLeftMargin(qreal margin)
 $method=|void|setLeftMargin|qreal
 
-$prototype=qreal leftMargin() const
-$method=|qreal|leftMargin|
+$prototypeV2=qreal leftMargin() const
 
 $prototype=void setRightMargin(qreal margin)
 $method=|void|setRightMargin|qreal
 
-$prototype=qreal rightMargin() const
-$method=|qreal|rightMargin|
+$prototypeV2=qreal rightMargin() const
 
 $prototype=void setPadding(qreal padding)
 $method=|void|setPadding|qreal
 
-$prototype=qreal padding() const
-$method=|qreal|padding|
+$prototypeV2=qreal padding() const
 
 $prototype=void setWidth(qreal width)
 $internalMethod=|void|setWidth,setWidth1|qreal
@@ -121,8 +110,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 }
 $addMethod=setWidth
 
-$prototype=QTextLength width() const
-$method=|QTextLength|width|
+$prototypeV2=QTextLength width() const
 
 $prototype=void setHeight(qreal height)
 $internalMethod=|void|setHeight,setHeight1|qreal
@@ -152,13 +140,11 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 }
 $addMethod=setHeight
 
-$prototype=QTextLength height() const
-$method=|QTextLength|height|
+$prototypeV2=QTextLength height() const
 
 $prototype=void setPageBreakPolicy(PageBreakFlags flags)
 $method=|void|setPageBreakPolicy|QTextFrameFormat::PageBreakFlags
 
-$prototype=PageBreakFlags pageBreakPolicy() const
-$method=|QTextFrameFormat::PageBreakFlags|pageBreakPolicy|
+$prototypeV2=QTextFrameFormat::PageBreakFlags pageBreakPolicy() const
 
 #pragma ENDDUMP

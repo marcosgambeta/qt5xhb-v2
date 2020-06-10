@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QStringList actionNames() const = 0
-$virtualMethod=|QStringList|actionNames|
+$prototypeV2=virtual QStringList actionNames() const = 0
 
 $prototype=virtual QString localizedActionName(const QString &name) const
 $virtualMethod=|QString|localizedActionName|const QString &

@@ -62,11 +62,9 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 
 $deleteMethod
 
-$prototype=qreal angle () const
-$method=|qreal|angle|
+$prototypeV2=qreal angle() const
 
-$prototype=QPointF center () const
-$method=|QPointF|center|
+$prototypeV2=QPointF center() const
 
 $prototype=void setAngle ( qreal angle )
 $method=|void|setAngle|qreal

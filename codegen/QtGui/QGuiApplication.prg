@@ -98,78 +98,56 @@ $deleteMethod
 $prototype=virtual bool notify(QObject * object, QEvent * event)
 $virtualMethod=|bool|notify|QObject *,QEvent *
 
-$prototype=static QWindowList allWindows()
-$staticMethod=|QWindowList|allWindows|
+$prototypeV2=static QWindowList allWindows()
 
-$prototype=static QString applicationDisplayName()
-$staticMethod=|QString|applicationDisplayName|
+$prototypeV2=static QString applicationDisplayName()
 
 $prototype=static void changeOverrideCursor(const QCursor & cursor)
 $staticMethod=|void|changeOverrideCursor|const QCursor &
 
-$prototype=static QClipboard * clipboard()
-$staticMethod=|QClipboard *|clipboard|
+$prototypeV2=static QClipboard * clipboard()
 
-$prototype=static bool desktopSettingsAware()
-$staticMethod=|bool|desktopSettingsAware|
+$prototypeV2=static bool desktopSettingsAware()
 
-$prototype=static int exec()
-$staticMethod=|int|exec|
+$prototypeV2=static int exec()
 
-$prototype=static QObject * focusObject()
-$staticMethod=|QObject *|focusObject|
+$prototypeV2=static QObject * focusObject()
 
-$prototype=static QWindow * focusWindow()
-$staticMethod=|QWindow *|focusWindow|
+$prototypeV2=static QWindow * focusWindow()
 
-$prototype=static QFont font()
-$staticMethod=|QFont|font|
+$prototypeV2=static QFont font()
 
-$prototype=static QInputMethod * inputMethod()
-$staticMethod=|QInputMethod *|inputMethod|
+$prototypeV2=static QInputMethod * inputMethod()
 
-$prototype=static bool isLeftToRight()
-$staticMethod=|bool|isLeftToRight|
+$prototypeV2=static bool isLeftToRight()
 
-$prototype=static bool isRightToLeft()
-$staticMethod=|bool|isRightToLeft|
+$prototypeV2=static bool isRightToLeft()
 
-$prototype=static Qt::KeyboardModifiers keyboardModifiers()
-$staticMethod=|Qt::KeyboardModifiers|keyboardModifiers|
+$prototypeV2=static Qt::KeyboardModifiers keyboardModifiers()
 
-$prototype=static Qt::LayoutDirection layoutDirection()
-$staticMethod=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=static Qt::LayoutDirection layoutDirection()
 
-$prototype=static QWindow * modalWindow()
-$staticMethod=|QWindow *|modalWindow|
+$prototypeV2=static QWindow * modalWindow()
 
-$prototype=static Qt::MouseButtons mouseButtons()
-$staticMethod=|Qt::MouseButtons|mouseButtons|
+$prototypeV2=static Qt::MouseButtons mouseButtons()
 
-$prototype=static QCursor * overrideCursor()
-$staticMethod=|QCursor *|overrideCursor|
+$prototypeV2=static QCursor * overrideCursor()
 
-$prototype=static QPalette palette()
-$staticMethod=|QPalette|palette|
+$prototypeV2=static QPalette palette()
 
-$prototype=static QString platformName()
-$staticMethod=|QString|platformName|
+$prototypeV2=static QString platformName()
 
 $prototype=static QPlatformNativeInterface * platformNativeInterface()
 %% TODO: implementar ?
 %% $staticMethod=|QPlatformNativeInterface *|platformNativeInterface|
 
-$prototype=static QScreen * primaryScreen()
-$staticMethod=|QScreen *|primaryScreen|
+$prototypeV2=static QScreen * primaryScreen()
 
-$prototype=static Qt::KeyboardModifiers queryKeyboardModifiers()
-$staticMethod=|Qt::KeyboardModifiers|queryKeyboardModifiers|
+$prototypeV2=static Qt::KeyboardModifiers queryKeyboardModifiers()
 
-$prototype=static bool quitOnLastWindowClosed()
-$staticMethod=|bool|quitOnLastWindowClosed|
+$prototypeV2=static bool quitOnLastWindowClosed()
 
-$prototype=static void restoreOverrideCursor()
-$staticMethod=|void|restoreOverrideCursor|
+$prototypeV2=static void restoreOverrideCursor()
 
 $prototype=static QList<QScreen *> screens()
 $staticMethod=|QList<QScreen *>|screens|
@@ -195,14 +173,12 @@ $staticMethod=|void|setPalette|const QPalette &
 $prototype=static void setQuitOnLastWindowClosed(bool quit)
 $staticMethod=|void|setQuitOnLastWindowClosed|bool
 
-$prototype=static QStyleHints * styleHints()
-$staticMethod=|QStyleHints *|styleHints|
+$prototypeV2=static QStyleHints * styleHints()
 
 $prototype=static QWindow * topLevelAt(const QPoint & pos)
 $staticMethod=|QWindow *|topLevelAt|const QPoint &
 
-$prototype=static QWindowList topLevelWindows()
-$staticMethod=|QWindowList|topLevelWindows|
+$prototypeV2=static QWindowList topLevelWindows()
 
 %%
 %% SIGNALS

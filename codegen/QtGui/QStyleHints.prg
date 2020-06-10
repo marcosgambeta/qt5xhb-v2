@@ -25,37 +25,26 @@ $destructor
 
 $includes
 
-$prototype=int mouseDoubleClickInterval() const
-$method=|int|mouseDoubleClickInterval|
+$prototypeV2=int mouseDoubleClickInterval() const
 
-$prototype=int startDragDistance() const
-$method=|int|startDragDistance|
+$prototypeV2=int startDragDistance() const
 
-$prototype=int startDragTime() const
-$method=|int|startDragTime|
+$prototypeV2=int startDragTime() const
 
-$prototype=int startDragVelocity() const
-$method=|int|startDragVelocity|
+$prototypeV2=int startDragVelocity() const
 
-$prototype=int keyboardInputInterval() const
-$method=|int|keyboardInputInterval|
+$prototypeV2=int keyboardInputInterval() const
 
-$prototype=int keyboardAutoRepeatRate() const
-$method=|int|keyboardAutoRepeatRate|
+$prototypeV2=int keyboardAutoRepeatRate() const
 
-$prototype=int cursorFlashTime() const
-$method=|int|cursorFlashTime|
+$prototypeV2=int cursorFlashTime() const
 
-$prototype=bool showIsFullScreen() const
-$method=|bool|showIsFullScreen|
+$prototypeV2=bool showIsFullScreen() const
 
-$prototype=int passwordMaskDelay() const
-$method=|int|passwordMaskDelay|
+$prototypeV2=int passwordMaskDelay() const
 
-$prototype=qreal fontSmoothingGamma() const
-$method=|qreal|fontSmoothingGamma|
+$prototypeV2=qreal fontSmoothingGamma() const
 
-$prototype=bool useRtlExtensions() const
-$method=|bool|useRtlExtensions|
+$prototypeV2=bool useRtlExtensions() const
 
 #pragma ENDDUMP

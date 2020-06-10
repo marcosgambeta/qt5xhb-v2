@@ -140,8 +140,7 @@ $method=|const QColor &|color|
 $prototype=const QGradient * gradient () const
 $method=|const QGradient *|gradient|
 
-$prototype=bool isOpaque () const
-$method=|bool|isOpaque|
+$prototypeV2=bool isOpaque() const
 
 $prototype=const QMatrix & matrix () const // TODO: revisar e corrigir(?)
 $method=|const QMatrix &|matrix|
@@ -189,17 +188,13 @@ $method=|void|setTextureImage|const QImage &
 $prototype=void setTransform ( const QTransform & matrix )
 $method=|void|setTransform|const QTransform &
 
-$prototype=Qt::BrushStyle style () const
-$method=|Qt::BrushStyle|style|
+$prototypeV2=Qt::BrushStyle style() const
 
-$prototype=QPixmap texture () const
-$method=|QPixmap|texture|
+$prototypeV2=QPixmap texture() const
 
-$prototype=QImage textureImage () const
-$method=|QImage|textureImage|
+$prototypeV2=QImage textureImage() const
 
-$prototype=QTransform transform () const
-$method=|QTransform|transform|
+$prototypeV2=QTransform transform() const
 
 $variantMethods
 

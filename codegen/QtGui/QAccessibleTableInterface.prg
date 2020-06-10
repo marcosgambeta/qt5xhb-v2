@@ -30,26 +30,20 @@ $deleteMethod
 $prototype=virtual QAccessibleInterface *cellAt (int row, int column) const = 0
 $virtualMethod=|QAccessibleInterface *|cellAt|int,int
 
-$prototype=virtual QAccessibleInterface *caption() const = 0
-$virtualMethod=|QAccessibleInterface *|caption|
+$prototypeV2=virtual QAccessibleInterface * caption() const = 0
 
 $prototype=virtual QString columnDescription(int column) const = 0
 $virtualMethod=|QString|columnDescription|int
 
-$prototype=virtual int columnCount() const = 0
-$virtualMethod=|int|columnCount|
+$prototypeV2=virtual int columnCount() const = 0
 
-$prototype=virtual int rowCount() const = 0
-$virtualMethod=|int|rowCount|
+$prototypeV2=virtual int rowCount() const = 0
 
-$prototype=virtual int selectedCellCount() const = 0
-$virtualMethod=|int|selectedCellCount|
+$prototypeV2=virtual int selectedCellCount() const = 0
 
-$prototype=virtual int selectedColumnCount() const = 0
-$virtualMethod=|int|selectedColumnCount|
+$prototypeV2=virtual int selectedColumnCount() const = 0
 
-$prototype=virtual int selectedRowCount() const = 0
-$virtualMethod=|int|selectedRowCount|
+$prototypeV2=virtual int selectedRowCount() const = 0
 
 $prototype=virtual QString rowDescription(int row) const = 0
 $virtualMethod=|QString|rowDescription|int
@@ -64,8 +58,7 @@ $virtualMethod=|QList<int>|selectedColumns|
 $prototype=virtual QList<int> selectedRows() const = 0
 $virtualMethod=|QList<int>|selectedRows|
 
-$prototype=virtual QAccessibleInterface *summary() const = 0
-$virtualMethod=|QAccessibleInterface *|summary|
+$prototypeV2=virtual QAccessibleInterface * summary() const = 0
 
 $prototype=virtual bool isColumnSelected(int column) const = 0
 $virtualMethod=|bool|isColumnSelected|int

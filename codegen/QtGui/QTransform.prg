@@ -90,65 +90,45 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
 
 $deleteMethod
 
-$prototype=bool isAffine() const
-$method=|bool|isAffine|
+$prototypeV2=bool isAffine() const
 
-$prototype=bool isIdentity() const
-$method=|bool|isIdentity|
+$prototypeV2=bool isIdentity() const
 
-$prototype=bool isInvertible() const
-$method=|bool|isInvertible|
+$prototypeV2=bool isInvertible() const
 
-$prototype=bool isScaling() const
-$method=|bool|isScaling|
+$prototypeV2=bool isScaling() const
 
-$prototype=bool isRotating() const
-$method=|bool|isRotating|
+$prototypeV2=bool isRotating() const
 
-$prototype=bool isTranslating() const
-$method=|bool|isTranslating|
+$prototypeV2=bool isTranslating() const
 
-$prototype=TransformationType type() const
-$method=|QTransform::TransformationType|type|
+$prototypeV2=QTransform::TransformationType type() const
 
-$prototype=qreal determinant() const
-$method=|qreal|determinant|
+$prototypeV2=qreal determinant() const
 
-$prototype=qreal det() const
-$method=|qreal|det|
+$prototypeV2=qreal det() const
 
-$prototype=qreal m11() const
-$method=|qreal|m11|
+$prototypeV2=qreal m11() const
 
-$prototype=qreal m12() const
-$method=|qreal|m12|
+$prototypeV2=qreal m12() const
 
-$prototype=qreal m13() const
-$method=|qreal|m13|
+$prototypeV2=qreal m13() const
 
-$prototype=qreal m21() const
-$method=|qreal|m21|
+$prototypeV2=qreal m21() const
 
-$prototype=qreal m22() const
-$method=|qreal|m22|
+$prototypeV2=qreal m22() const
 
-$prototype=qreal m23() const
-$method=|qreal|m23|
+$prototypeV2=qreal m23() const
 
-$prototype=qreal m31() const
-$method=|qreal|m31|
+$prototypeV2=qreal m31() const
 
-$prototype=qreal m32() const
-$method=|qreal|m32|
+$prototypeV2=qreal m32() const
 
-$prototype=qreal m33() const
-$method=|qreal|m33|
+$prototypeV2=qreal m33() const
 
-$prototype=qreal dx() const
-$method=|qreal|dx|
+$prototypeV2=qreal dx() const
 
-$prototype=qreal dy() const
-$method=|qreal|dy|
+$prototypeV2=qreal dy() const
 
 $prototype=void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
 $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
@@ -156,11 +136,9 @@ $method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
 $prototype=QTransform inverted(bool *invertible = nullptr) const
 $method=|QTransform|inverted|bool *=nullptr
 
-$prototype=QTransform adjoint() const
-$method=|QTransform|adjoint|
+$prototypeV2=QTransform adjoint() const
 
-$prototype=QTransform transposed() const
-$method=|QTransform|transposed|
+$prototypeV2=QTransform transposed() const
 
 $prototype=QTransform &translate(qreal dx, qreal dy)
 $method=|QTransform &|translate|qreal,qreal
@@ -177,8 +155,7 @@ $method=|QTransform &|rotate|qreal,Qt::Axis=Qt::ZAxis
 $prototype=QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
 $method=|QTransform &|rotateRadians|qreal,Qt::Axis=Qt::ZAxis
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=QPoint map(const QPoint &p) const
 $internalMethod=|QPoint|map,map1|const QPoint &

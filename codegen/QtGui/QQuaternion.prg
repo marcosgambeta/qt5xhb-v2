@@ -70,14 +70,11 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
 
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isIdentity() const
-$method=|bool|isIdentity|
+$prototypeV2=bool isIdentity() const
 
-$prototype=QVector3D vector() const
-$method=|QVector3D|vector|
+$prototypeV2=QVector3D vector() const
 
 $prototype=void setVector(const QVector3D& vector)
 $internalMethod=|void|setVector,setVector1|const QVector3D &
@@ -107,17 +104,13 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 }
 $addMethod=setVector
 
-$prototype=float x() const
-$method=|float|x|
+$prototypeV2=float x() const
 
-$prototype=float y() const
-$method=|float|y|
+$prototypeV2=float y() const
 
-$prototype=float z() const
-$method=|float|z|
+$prototypeV2=float z() const
 
-$prototype=float scalar() const
-$method=|float|scalar|
+$prototypeV2=float scalar() const
 
 $prototype=void setX(float x)
 $method=|void|setX|float
@@ -131,26 +124,20 @@ $method=|void|setZ|float
 $prototype=void setScalar(float scalar)
 $method=|void|setScalar|float
 
-$prototype=float length() const
-$method=|float|length|
+$prototypeV2=float length() const
 
-$prototype=float lengthSquared() const
-$method=|float|lengthSquared|
+$prototypeV2=float lengthSquared() const
 
-$prototype=QQuaternion normalized() const
-$method=|QQuaternion|normalized|
+$prototypeV2=QQuaternion normalized() const
 
-$prototype=void normalize()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
-$prototype=QQuaternion conjugate() const
-$method=|QQuaternion|conjugate|
+$prototypeV2=QQuaternion conjugate() const
 
 $prototype=QVector3D rotatedVector(const QVector3D& vector) const
 $method=|QVector3D|rotatedVector|const QVector3D &
 
-$prototype=QVector4D toVector4D() const
-$method=|QVector4D|toVector4D|
+$prototypeV2=QVector4D toVector4D() const
 
 $prototype=static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
 $internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVector3D &,float

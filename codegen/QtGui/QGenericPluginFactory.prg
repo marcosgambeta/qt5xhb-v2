@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=QObject * create ( const QString & key, const QString & specification )
 $method=|QObject *|create|const QString &,const QString &
 
-$prototype=QStringList keys ()
-$method=|QStringList|keys|
+$prototypeV2=QStringList keys()
 
 $extraMethods
 

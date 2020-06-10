@@ -30,7 +30,6 @@ $constructor=|new|const QString &
 
 $deleteMethod
 
-$prototype=QString tip() const
-$method=|QString|tip|
+$prototypeV2=QString tip() const
 
 #pragma ENDDUMP

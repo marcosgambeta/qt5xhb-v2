@@ -76,8 +76,7 @@ $deleteMethod
 $prototype=void setFont(const QFont &f)
 $method=|void|setFont|const QFont &
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setRawFont(const QRawFont &rawFont)
 $method=|void|setRawFont|const QRawFont &
@@ -85,8 +84,7 @@ $method=|void|setRawFont|const QRawFont &
 $prototype=void setText(const QString& string)
 $method=|void|setText|const QString &
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setTextOption(const QTextOption &option)
 $method=|void|setTextOption|const QTextOption &
@@ -97,41 +95,31 @@ $method=|const QTextOption &|textOption|
 $prototype=void setPreeditArea(int position, const QString &text)
 $method=|void|setPreeditArea|int,const QString &
 
-$prototype=int preeditAreaPosition() const
-$method=|int|preeditAreaPosition|
+$prototypeV2=int preeditAreaPosition() const
 
-$prototype=QString preeditAreaText() const
-$method=|QString|preeditAreaText|
+$prototypeV2=QString preeditAreaText() const
 
-$prototype=void clearAdditionalFormats()
-$method=|void|clearAdditionalFormats|
+$prototypeV2=void clearAdditionalFormats()
 
 $prototype=void setCacheEnabled(bool enable)
 $method=|void|setCacheEnabled|bool
 
-$prototype=bool cacheEnabled() const
-$method=|bool|cacheEnabled|
+$prototypeV2=bool cacheEnabled() const
 
 $prototype=void setCursorMoveStyle(Qt::CursorMoveStyle style)
 $method=|void|setCursorMoveStyle|Qt::CursorMoveStyle
 
-$prototype=Qt::CursorMoveStyle cursorMoveStyle() const
-$method=|Qt::CursorMoveStyle|cursorMoveStyle|
+$prototypeV2=Qt::CursorMoveStyle cursorMoveStyle() const
 
-$prototype=void beginLayout()
-$method=|void|beginLayout|
+$prototypeV2=void beginLayout()
 
-$prototype=void endLayout()
-$method=|void|endLayout|
+$prototypeV2=void endLayout()
 
-$prototype=void clearLayout()
-$method=|void|clearLayout|
+$prototypeV2=void clearLayout()
 
-$prototype=QTextLine createLine()
-$method=|QTextLine|createLine|
+$prototypeV2=QTextLine createLine()
 
-$prototype=int lineCount() const
-$method=|int|lineCount|
+$prototypeV2=int lineCount() const
 
 $prototype=QTextLine lineAt(int i) const
 $method=|QTextLine|lineAt|int
@@ -182,20 +170,16 @@ HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 }
 $addMethod=drawCursor
 
-$prototype=QPointF position() const
-$method=|QPointF|position|
+$prototypeV2=QPointF position() const
 
 $prototype=void setPosition(const QPointF &p)
 $method=|void|setPosition|const QPointF &
 
-$prototype=QRectF boundingRect() const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
-$prototype=qreal minimumWidth() const
-$method=|qreal|minimumWidth|
+$prototypeV2=qreal minimumWidth() const
 
-$prototype=qreal maximumWidth() const
-$method=|qreal|maximumWidth|
+$prototypeV2=qreal maximumWidth() const
 
 $prototype=QTextEngine *engine() const
 %% TODO: implementar ?

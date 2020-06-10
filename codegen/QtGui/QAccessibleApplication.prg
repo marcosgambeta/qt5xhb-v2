@@ -30,20 +30,16 @@ $includes
 $prototype=QAccessibleApplication()
 $constructor=|new|
 
-$prototype=QWindow *window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow *window() const
 
-$prototype=int childCount() const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
 $prototype=int indexOfChild(const QAccessibleInterface*) const
 $method=|int|indexOfChild|const QAccessibleInterface *
 
-$prototype=QAccessibleInterface *focusChild() const
-$method=|QAccessibleInterface *|focusChild|
+$prototypeV2=QAccessibleInterface * focusChild() const
 
-$prototype=QAccessibleInterface *parent() const
-$method=|QAccessibleInterface *|parent|
+$prototypeV2=QAccessibleInterface * parent() const
 
 $prototype=QAccessibleInterface *child(int index) const
 $method=|QAccessibleInterface *|child|int
@@ -51,7 +47,6 @@ $method=|QAccessibleInterface *|child|int
 $prototype=QString text(QAccessible::Text t) const
 $method=|QString|text|QAccessible::Text
 
-$prototype=QAccessible::Role role() const
-$method=|QAccessible::Role|role|
+$prototypeV2=QAccessible::Role role() const
 
 #pragma ENDDUMP

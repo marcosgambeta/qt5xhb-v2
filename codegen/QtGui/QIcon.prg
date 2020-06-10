@@ -86,14 +86,11 @@ $method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=Q
 $prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
 $method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
 
-$prototype=qint64 cacheKey () const
-$method=|qint64|cacheKey|
+$prototypeV2=qint64 cacheKey() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
 $internalMethod=|void|paint,paint1|QPainter *,const QRect &,Qt::Alignment=Qt::AlignCenter,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
@@ -171,11 +168,9 @@ $staticMethod=|void|setThemeName|const QString &
 $prototype=static void setThemeSearchPaths ( const QStringList & paths )
 $staticMethod=|void|setThemeSearchPaths|const QStringList &
 
-$prototype=static QString themeName ()
-$staticMethod=|QString|themeName|
+$prototypeV2=static QString themeName()
 
-$prototype=static QStringList themeSearchPaths ()
-$staticMethod=|QStringList|themeSearchPaths|
+$prototypeV2=static QStringList themeSearchPaths()
 
 $prototype=static QString QIcon::fallbackThemeName()
 $staticMethod=5,12,0|QString|fallbackThemeName|

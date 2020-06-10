@@ -73,23 +73,18 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void swap(QRawFont &other)
 $method=|void|swap|QRawFont &
 
-$prototype=QString familyName() const
-$method=|QString|familyName|
+$prototypeV2=QString familyName() const
 
-$prototype=QString styleName() const
-$method=|QString|styleName|
+$prototypeV2=QString styleName() const
 
-$prototype=QFont::Style style() const
-$method=|QFont::Style|style|
+$prototypeV2=QFont::Style style() const
 
-$prototype=int weight() const
-$method=|int|weight|
+$prototypeV2=int weight() const
 
 $prototype=QVector<quint32> glyphIndexesForString(const QString &text) const
 $method=|QVector<quint32>|glyphIndexesForString|const QString &
@@ -139,38 +134,27 @@ $method=|QRectF|boundingRect|quint32
 $prototype=void setPixelSize(qreal pixelSize)
 $method=|void|setPixelSize|qreal
 
-$prototype=qreal pixelSize() const
-$method=|qreal|pixelSize|
+$prototypeV2=qreal pixelSize() const
 
-$prototype=QFont::HintingPreference hintingPreference() const
-$method=|QFont::HintingPreference|hintingPreference|
+$prototypeV2=QFont::HintingPreference hintingPreference() const
 
-$prototype=qreal ascent() const
-$method=|qreal|ascent|
+$prototypeV2=qreal ascent() const
 
-$prototype=qreal descent() const
-$method=|qreal|descent|
+$prototypeV2=qreal descent() const
 
-$prototype=qreal leading() const
-$method=|qreal|leading|
+$prototypeV2=qreal leading() const
 
-$prototype=qreal xHeight() const
-$method=|qreal|xHeight|
+$prototypeV2=qreal xHeight() const
 
-$prototype=qreal averageCharWidth() const
-$method=|qreal|averageCharWidth|
+$prototypeV2=qreal averageCharWidth() const
 
-$prototype=qreal maxCharWidth() const
-$method=|qreal|maxCharWidth|
+$prototypeV2=qreal maxCharWidth() const
 
-$prototype=qreal lineThickness() const
-$method=|qreal|lineThickness|
+$prototypeV2=qreal lineThickness() const
 
-$prototype=qreal underlinePosition() const
-$method=|qreal|underlinePosition|
+$prototypeV2=qreal underlinePosition() const
 
-$prototype=qreal unitsPerEm() const
-$method=|qreal|unitsPerEm|
+$prototypeV2=qreal unitsPerEm() const
 
 $prototype=void loadFromFile(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference)
 $method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference

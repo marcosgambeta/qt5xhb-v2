@@ -33,10 +33,8 @@ $deleteMethod
 $prototype=void setSelection(int start, int end)
 $method=|void|setSelection|int,int
 
-$prototype=int selectionStart() const
-$method=|int|selectionStart|
+$prototypeV2=int selectionStart() const
 
-$prototype=int selectionEnd() const
-$method=|int|selectionEnd|
+$prototypeV2=int selectionEnd() const
 
 #pragma ENDDUMP

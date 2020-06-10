@@ -78,29 +78,21 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 $deleteMethod
 
-$prototype=QBrush brush () const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
-$prototype=Qt::PenCapStyle capStyle () const
-$method=|Qt::PenCapStyle|capStyle|
+$prototypeV2=Qt::PenCapStyle capStyle() const
 
-$prototype=QColor color () const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
-$prototype=qreal dashOffset () const
-$method=|qreal|dashOffset|
+$prototypeV2=qreal dashOffset() const
 
-$prototype=bool isCosmetic () const
-$method=|bool|isCosmetic|
+$prototypeV2=bool isCosmetic() const
 
-$prototype=bool isSolid () const
-$method=|bool|isSolid|
+$prototypeV2=bool isSolid() const
 
-$prototype=Qt::PenJoinStyle joinStyle () const
-$method=|Qt::PenJoinStyle|joinStyle|
+$prototypeV2=Qt::PenJoinStyle joinStyle() const
 
-$prototype=qreal miterLimit () const
-$method=|qreal|miterLimit|
+$prototypeV2=qreal miterLimit() const
 
 $prototype=void setBrush ( const QBrush & brush )
 $method=|void|setBrush|const QBrush &
@@ -135,11 +127,9 @@ $method=|void|setWidthF|qreal
 $prototype=Qt::PenStyle style () const
 $method=|Qt::PenStyle|style|
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=qreal widthF () const
-$method=|qreal|widthF|
+$prototypeV2=qreal widthF() const
 
 $extraMethods
 

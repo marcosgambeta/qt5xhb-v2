@@ -35,71 +35,50 @@ $prototype=QPlatformScreen *handle() const
 %% TODO: implementar ?
 %% $method=|QPlatformScreen *|handle|
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=int depth() const
-$method=|int|depth|
+$prototypeV2=int depth() const
 
-$prototype=QSize size() const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QRect geometry() const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
-$prototype=QSizeF physicalSize() const
-$method=|QSizeF|physicalSize|
+$prototypeV2=QSizeF physicalSize() const
 
-$prototype=qreal physicalDotsPerInchX() const
-$method=|qreal|physicalDotsPerInchX|
+$prototypeV2=qreal physicalDotsPerInchX() const
 
-$prototype=qreal physicalDotsPerInchY() const
-$method=|qreal|physicalDotsPerInchY|
+$prototypeV2=qreal physicalDotsPerInchY() const
 
-$prototype=qreal physicalDotsPerInch() const
-$method=|qreal|physicalDotsPerInch|
+$prototypeV2=qreal physicalDotsPerInch() const
 
-$prototype=qreal logicalDotsPerInchX() const
-$method=|qreal|logicalDotsPerInchX|
+$prototypeV2=qreal logicalDotsPerInchX() const
 
-$prototype=qreal logicalDotsPerInchY() const
-$method=|qreal|logicalDotsPerInchY|
+$prototypeV2=qreal logicalDotsPerInchY() const
 
-$prototype=qreal logicalDotsPerInch() const
-$method=|qreal|logicalDotsPerInch|
+$prototypeV2=qreal logicalDotsPerInch() const
 
-$prototype=qreal devicePixelRatio() const
-$method=|qreal|devicePixelRatio|
+$prototypeV2=qreal devicePixelRatio() const
 
-$prototype=QSize availableSize() const
-$method=|QSize|availableSize|
+$prototypeV2=QSize availableSize() const
 
-$prototype=QRect availableGeometry() const
-$method=|QRect|availableGeometry|
+$prototypeV2=QRect availableGeometry() const
 
 $prototype=QList<QScreen *> virtualSiblings() const // TODO: implementar método
 $method=|QList<QScreen *>|virtualSiblings|
 
-$prototype=QSize virtualSize() const
-$method=|QSize|virtualSize|
+$prototypeV2=QSize virtualSize() const
 
-$prototype=QRect virtualGeometry() const
-$method=|QRect|virtualGeometry|
+$prototypeV2=QRect virtualGeometry() const
 
-$prototype=QSize availableVirtualSize() const
-$method=|QSize|availableVirtualSize|
+$prototypeV2=QSize availableVirtualSize() const
 
-$prototype=QRect availableVirtualGeometry() const
-$method=|QRect|availableVirtualGeometry|
+$prototypeV2=QRect availableVirtualGeometry() const
 
-$prototype=Qt::ScreenOrientation primaryOrientation() const
-$method=|Qt::ScreenOrientation|primaryOrientation|
+$prototypeV2=Qt::ScreenOrientation primaryOrientation() const
 
-$prototype=Qt::ScreenOrientation orientation() const
-$method=|Qt::ScreenOrientation|orientation|
+$prototypeV2=Qt::ScreenOrientation orientation() const
 
-$prototype=Qt::ScreenOrientations orientationUpdateMask() const
-$method=|Qt::ScreenOrientations|orientationUpdateMask|
+$prototypeV2=Qt::ScreenOrientations orientationUpdateMask() const
 
 $prototype=void setOrientationUpdateMask(Qt::ScreenOrientations mask)
 $method=|void|setOrientationUpdateMask|Qt::ScreenOrientations
@@ -122,8 +101,7 @@ $method=|bool|isLandscape|Qt::ScreenOrientation
 $prototype=QPixmap grabWindow(WId window, int x = 0, int y = 0, int w = -1, int h = -1)
 $method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
 
-$prototype=qreal refreshRate() const
-$method=|qreal|refreshRate|
+$prototypeV2=qreal refreshRate() const
 
 %%
 %% SIGNALS

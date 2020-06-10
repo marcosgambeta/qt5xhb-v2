@@ -54,14 +54,11 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=bool overline () const
-$method=|bool|overline|
+$prototypeV2=bool overline() const
 
-$prototype=QRawFont rawFont () const
-$method=|QRawFont|rawFont|
+$prototypeV2=QRawFont rawFont() const
 
 $prototype=void setOverline ( bool overline )
 $method=|void|setOverline|bool
@@ -79,11 +76,9 @@ $method=|void|setStrikeOut|bool
 $prototype=void setUnderline ( bool underline )
 $method=|void|setUnderline|bool
 
-$prototype=bool strikeOut () const
-$method=|bool|strikeOut|
+$prototypeV2=bool strikeOut() const
 
-$prototype=bool underline () const
-$method=|bool|underline|
+$prototypeV2=bool underline() const
 
 $extraMethods
 

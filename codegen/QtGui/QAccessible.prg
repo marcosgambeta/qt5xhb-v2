@@ -31,13 +31,11 @@ $staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
 $prototype=static void updateAccessibility(QAccessibleEvent *event)
 $staticMethod=|void|updateAccessibility|QAccessibleEvent *
 
-$prototype=static bool isActive()
-$staticMethod=|bool|isActive|
+$prototypeV2=static bool isActive()
 
 $prototype=static void setRootObject(QObject *object)
 $staticMethod=|void|setRootObject|QObject *
 
-$prototype=static void cleanup()
-$staticMethod=|void|cleanup|
+$prototypeV2=static void cleanup()
 
 #pragma ENDDUMP

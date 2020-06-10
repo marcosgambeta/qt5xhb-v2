@@ -76,161 +76,132 @@ $virtualMethod=|QVariant|data|int=Qt::UserRole+1
 $prototype=virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 $virtualMethod=|void|setData|const QVariant &,int=Qt::UserRole+1
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-$prototype=QIcon icon() const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
 
-$prototype=QString toolTip() const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=void setToolTip(const QString &toolTip)
 $method=|void|setToolTip|const QString &
 
-$prototype=QString statusTip() const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
 $prototype=void setStatusTip(const QString &statusTip)
 $method=|void|setStatusTip|const QString &
 
-$prototype=QString whatsThis() const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=void setWhatsThis(const QString &whatsThis)
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=void setSizeHint(const QSize &sizeHint)
 $method=|void|setSizeHint|const QSize &
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
 
-$prototype=Qt::Alignment textAlignment() const
-$method=|Qt::Alignment|textAlignment|
+$prototypeV2=Qt::Alignment textAlignment() const
 
 $prototype=void setTextAlignment(Qt::Alignment textAlignment)
 $method=|void|setTextAlignment|Qt::Alignment
 
-$prototype=QBrush background() const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
 $prototype=void setBackground(const QBrush &brush)
 $method=|void|setBackground|const QBrush &
 
-$prototype=QBrush foreground() const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
 $prototype=void setForeground(const QBrush &brush)
 $method=|void|setForeground|const QBrush &
 
-$prototype=Qt::CheckState checkState() const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
 $prototype=void setCheckState(Qt::CheckState checkState)
 $method=|void|setCheckState|Qt::CheckState
 
-$prototype=QString accessibleText() const
-$method=|QString|accessibleText|
+$prototypeV2=QString accessibleText() const
 
 $prototype=void setAccessibleText(const QString &accessibleText)
 $method=|void|setAccessibleText|const QString &
 
-$prototype=QString accessibleDescription() const
-$method=|QString|accessibleDescription|
+$prototypeV2=QString accessibleDescription() const
 
 $prototype=void setAccessibleDescription(const QString &accessibleDescription)
 $method=|void|setAccessibleDescription|const QString &
 
-$prototype=Qt::ItemFlags flags() const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
 $prototype=void setFlags(Qt::ItemFlags flags)
 $method=|void|setFlags|Qt::ItemFlags
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=void setEnabled(bool enabled)
 $method=|void|setEnabled|bool
 
-$prototype=bool isEditable() const
-$method=|bool|isEditable|
+$prototypeV2=bool isEditable() const
 
 $prototype=void setEditable(bool editable)
 $method=|void|setEditable|bool
 
-$prototype=bool isSelectable() const
-$method=|bool|isSelectable|
+$prototypeV2=bool isSelectable() const
 
 $prototype=void setSelectable(bool selectable)
 $method=|void|setSelectable|bool
 
-$prototype=bool isCheckable() const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
 $prototype=void setCheckable(bool checkable)
 $method=|void|setCheckable|bool
 
-$prototype=bool isTristate() const
-$method=|bool|isTristate|
+$prototypeV2=bool isTristate() const
 
 $prototype=void setTristate(bool tristate)
 $method=|void|setTristate|bool
 
-$prototype=bool isDragEnabled() const
-$method=|bool|isDragEnabled|
+$prototypeV2=bool isDragEnabled() const
 
 $prototype=void setDragEnabled(bool dragEnabled)
 $method=|void|setDragEnabled|bool
 
-$prototype=bool isDropEnabled() const
-$method=|bool|isDropEnabled|
+$prototypeV2=bool isDropEnabled() const
 
 $prototype=void setDropEnabled(bool dropEnabled)
 $method=|void|setDropEnabled|bool
 
-$prototype=QStandardItem *parent() const
-$method=|QStandardItem *|parent|
+$prototypeV2=QStandardItem * parent() const
 
-$prototype=int row() const
-$method=|int|row|
+$prototypeV2=int row() const
 
-$prototype=int column() const
-$method=|int|column|
+$prototypeV2=int column() const
 
-$prototype=QModelIndex index() const
-$method=|QModelIndex|index|
+$prototypeV2=QModelIndex index() const
 
-$prototype=QStandardItemModel *model() const
-$method=|QStandardItemModel *|model|
+$prototypeV2=QStandardItemModel * model() const
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=void setRowCount(int rows)
 $method=|void|setRowCount|int
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=void setColumnCount(int columns)
 $method=|void|setColumnCount|int
 
-$prototype=bool hasChildren() const
-$method=|bool|hasChildren|
+$prototypeV2=bool hasChildren() const
 
 $prototype=QStandardItem *child(int row, int column = 0) const
 $method=|QStandardItem *|child|int,int=0
@@ -383,11 +354,9 @@ $method=|QList<QStandardItem *>|takeColumn|int
 $prototype=void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=virtual QStandardItem *clone() const
-$virtualMethod=|QStandardItem *|clone|
+$prototypeV2=virtual QStandardItem * clone() const
 
-$prototype=virtual int type() const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 $prototype=virtual void read(QDataStream &in)
 $virtualMethod=|void|read|QDataStream &

@@ -64,26 +64,20 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int position() const
-$method=|int|position|
+$prototypeV2=int position() const
 
-$prototype=int length() const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=bool contains(int position) const
 $method=|bool|contains|int
 
-$prototype=QTextCharFormat charFormat() const
-$method=|QTextCharFormat|charFormat|
+$prototypeV2=QTextCharFormat charFormat() const
 
-$prototype=int charFormatIndex() const
-$method=|int|charFormatIndex|
+$prototypeV2=int charFormatIndex() const
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 $method=|QList<QGlyphRun>|glyphRuns|int=-1,int=-1

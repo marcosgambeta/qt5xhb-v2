@@ -67,20 +67,17 @@ $deleteMethod
 $prototype=void setFormat (const QByteArray &format)
 $method=|void|setFormat|const QByteArray &
 
-$prototype=QByteArray format () const
-$method=|QByteArray|format|
+$prototypeV2=QByteArray format() const
 
 $prototype=void setDevice (QIODevice *device)
 $method=|void|setDevice|QIODevice *
 
-$prototype=QIODevice *device () const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototype=void setFileName (const QString &fileName)
 $method=|void|setFileName|const QString &
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=bool write(const QTextDocument *document)
 $internalMethod=|bool|write,write1|const QTextDocument *
@@ -113,8 +110,7 @@ $addMethod=write
 $prototype=void setCodec(QTextCodec *codec)
 $method=|void|setCodec|QTextCodec *
 
-$prototype=QTextCodec *codec() const
-$method=|QTextCodec *|codec|
+$prototypeV2=QTextCodec * codec() const
 
 $extraMethods
 
