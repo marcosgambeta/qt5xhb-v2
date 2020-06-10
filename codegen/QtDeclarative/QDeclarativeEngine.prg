@@ -45,38 +45,29 @@ $method=|void|addImportPath|const QString &
 $prototype=void addPluginPath ( const QString & path )
 $method=|void|addPluginPath|const QString &
 
-$prototype=QUrl baseUrl () const
-$method=|QUrl|baseUrl|
+$prototypeV2=QUrl baseUrl() const
 
-$prototype=void clearComponentCache ()
-$method=|void|clearComponentCache|
+$prototypeV2=void clearComponentCache()
 
 $prototype=QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
 $method=|QDeclarativeImageProvider *|imageProvider|const QString &
 
-$prototype=QStringList importPathList () const
-$method=|QStringList|importPathList|
+$prototypeV2=QStringList importPathList() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
-$method=|QDeclarativeNetworkAccessManagerFactory *|networkAccessManagerFactory|
+$prototypeV2=QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 
-$prototype=QString offlineStoragePath () const
-$method=|QString|offlineStoragePath|
+$prototypeV2=QString offlineStoragePath() const
 
-$prototype=bool outputWarningsToStandardError () const
-$method=|bool|outputWarningsToStandardError|
+$prototypeV2=bool outputWarningsToStandardError() const
 
-$prototype=QStringList pluginPathList () const
-$method=|QStringList|pluginPathList|
+$prototypeV2=QStringList pluginPathList() const
 
 $prototype=void removeImageProvider ( const QString & providerId )
 $method=|void|removeImageProvider|const QString &
 
-$prototype=QDeclarativeContext * rootContext () const
-$method=|QDeclarativeContext *|rootContext|
+$prototypeV2=QDeclarativeContext * rootContext() const
 
 $prototype=void setBaseUrl ( const QUrl & url )
 $method=|void|setBaseUrl|const QUrl &

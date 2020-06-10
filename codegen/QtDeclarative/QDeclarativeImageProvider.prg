@@ -30,8 +30,7 @@ $constructor=|new|QDeclarativeImageProvider::ImageType
 
 $deleteMethod
 
-$prototype=ImageType imageType () const
-$method=|QDeclarativeImageProvider::ImageType|imageType|
+$prototypeV2=QDeclarativeImageProvider::ImageType imageType() const
 
 $prototype=virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
 $virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &

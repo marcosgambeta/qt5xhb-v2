@@ -59,35 +59,26 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 
 $deleteMethod
 
-$prototype=void clearError ()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
-$prototype=QDeclarativeContext * context () const
-$method=|QDeclarativeContext *|context|
+$prototypeV2=QDeclarativeContext * context() const
 
-$prototype=QDeclarativeEngine * engine () const
-$method=|QDeclarativeEngine *|engine|
+$prototypeV2=QDeclarativeEngine * engine() const
 
-$prototype=QDeclarativeError error () const
-$method=|QDeclarativeError|error|
+$prototypeV2=QDeclarativeError error() const
 
 $prototype=QVariant evaluate ( bool * valueIsUndefined = nullptr )
 $method=|QVariant|evaluate|bool *=nullptr
 
-$prototype=QString expression () const
-$method=|QString|expression|
+$prototypeV2=QString expression() const
 
-$prototype=bool hasError () const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
-$prototype=bool notifyOnValueChanged () const
-$method=|bool|notifyOnValueChanged|
+$prototypeV2=bool notifyOnValueChanged() const
 
-$prototype=QObject * scopeObject () const
-$method=|QObject *|scopeObject|
+$prototypeV2=QObject * scopeObject() const
 
 $prototype=void setExpression ( const QString & expression )
 $method=|void|setExpression|const QString &
@@ -98,8 +89,7 @@ $method=|void|setNotifyOnValueChanged|bool
 $prototype=void setSourceLocation ( const QString & url, int line )
 $method=|void|setSourceLocation|const QString &,int
 
-$prototype=QString sourceFile () const
-$method=|QString|sourceFile|
+$prototypeV2=QString sourceFile() const
 
 %%
 %% SIGNALS

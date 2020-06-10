@@ -54,14 +54,11 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
   }
 }
 
-$prototype=QDeclarativeContext * context () const
-$method=|QDeclarativeContext *|context|
+$prototypeV2=QDeclarativeContext * context() const
 
-$prototype=QObject * scopeObject () const
-$method=|QObject *|scopeObject|
+$prototypeV2=QObject * scopeObject() const
 
-$prototype=QString script () const
-$method=|QString|script|
+$prototypeV2=QString script() const
 
 $prototype=void setContext ( QDeclarativeContext * context )
 $method=|void|setContext|QDeclarativeContext *

@@ -58,29 +58,21 @@ $method=|bool|append|QObject *
 $prototype=QObject * at ( int index ) const
 $method=|QObject *|at|int
 
-$prototype=bool canAppend () const
-$method=|bool|canAppend|
+$prototypeV2=bool canAppend() const
 
-$prototype=bool canAt () const
-$method=|bool|canAt|
+$prototypeV2=bool canAt() const
 
-$prototype=bool canClear () const
-$method=|bool|canClear|
+$prototypeV2=bool canClear() const
 
-$prototype=bool canCount () const
-$method=|bool|canCount|
+$prototypeV2=bool canCount() const
 
-$prototype=bool clear () const
-$method=|bool|clear|
+$prototypeV2=bool clear() const
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QObject * object () const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
 $extraMethods
 

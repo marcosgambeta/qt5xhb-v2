@@ -30,29 +30,22 @@ $constructor=|new|QDeclarativeItem *=nullptr
 
 $deleteMethod
 
-$prototype=qreal baselineOffset () const
-$method=|qreal|baselineOffset|
+$prototypeV2=qreal baselineOffset() const
 
 $prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
 $method=|QDeclarativeItem *|childAt|qreal,qreal
 
-$prototype=QRectF childrenRect ()
-$method=|QRectF|childrenRect|
+$prototypeV2=QRectF childrenRect()
 
-$prototype=bool clip () const
-$method=|bool|clip|
+$prototypeV2=bool clip() const
 
-$prototype=void forceActiveFocus ()
-$method=|void|forceActiveFocus|
+$prototypeV2=void forceActiveFocus()
 
-$prototype=qreal implicitHeight () const
-$method=|qreal|implicitHeight|
+$prototypeV2=qreal implicitHeight() const
 
-$prototype=qreal implicitWidth () const
-$method=|qreal|implicitWidth|
+$prototypeV2=qreal implicitWidth() const
 
-$prototype=bool keepMouseGrab () const
-$method=|bool|keepMouseGrab|
+$prototypeV2=bool keepMouseGrab() const
 
 $prototype=QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
@@ -60,8 +53,7 @@ $method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
 $prototype=QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
 $method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
 
-$prototype=QDeclarativeItem * parentItem () const
-$method=|QDeclarativeItem *|parentItem|
+$prototypeV2=QDeclarativeItem * parentItem() const
 
 $prototype=void setBaselineOffset ( qreal )
 $method=|void|setBaselineOffset|qreal
@@ -81,10 +73,8 @@ $method=|void|setSmooth|bool
 $prototype=void setTransformOrigin ( TransformOrigin origin )
 $method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
 
-$prototype=bool smooth () const
-$method=|bool|smooth|
+$prototypeV2=bool smooth() const
 
-$prototype=TransformOrigin transformOrigin () const
-$method=|QDeclarativeItem::TransformOrigin|transformOrigin|
+$prototypeV2=QDeclarativeItem::TransformOrigin transformOrigin() const
 
 #pragma ENDDUMP

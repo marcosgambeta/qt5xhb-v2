@@ -52,17 +52,13 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
   }
 }
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
-$prototype=QString description () const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int line () const
-$method=|int|line|
+$prototypeV2=int line() const
 
 $prototype=void setColumn ( int column )
 $method=|void|setColumn|int
@@ -76,11 +72,9 @@ $method=|void|setLine|int
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-$prototype=QString toString () const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $extraMethods
 

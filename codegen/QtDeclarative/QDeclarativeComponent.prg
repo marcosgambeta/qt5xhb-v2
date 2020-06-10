@@ -69,44 +69,35 @@ $deleteMethod
 $prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
 $virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
 
-$prototype=virtual void completeCreate ()
-$virtualMethod=|void|completeCreate|
+$prototypeV2=virtual void completeCreate()
 
 $prototype=virtual QObject * create ( QDeclarativeContext * context = nullptr )
 $virtualMethod=|QObject *|create|QDeclarativeContext *=nullptr
 
-$prototype=QDeclarativeContext * creationContext () const
-$method=|QDeclarativeContext *|creationContext|
+$prototypeV2=QDeclarativeContext * creationContext() const
 
 $prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
 
-$prototype=bool isError () const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isLoading () const
-$method=|bool|isLoading|
+$prototypeV2=bool isLoading() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isReady () const
-$method=|bool|isReady|
+$prototypeV2=bool isReady() const
 
 $prototype=void loadUrl ( const QUrl & url )
 $method=|void|loadUrl|const QUrl &
 
-$prototype=qreal progress () const
-$method=|qreal|progress|
+$prototypeV2=qreal progress() const
 
 $prototype=void setData ( const QByteArray & data, const QUrl & url )
 $method=|void|setData|const QByteArray &,const QUrl &
 
-$prototype=Status status () const
-$method=|QDeclarativeComponent::Status|status|
+$prototypeV2=QDeclarativeComponent::Status status() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 %%
 %% SIGNALS

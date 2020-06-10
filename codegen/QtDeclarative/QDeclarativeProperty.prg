@@ -128,59 +128,42 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 }
 $addMethod=connectNotifySignal
 
-$prototype=bool hasNotifySignal () const
-$method=|bool|hasNotifySignal|
+$prototypeV2=bool hasNotifySignal() const
 
-$prototype=int index () const
-$method=|int|index|
+$prototypeV2=int index() const
 
-$prototype=bool isDesignable () const
-$method=|bool|isDesignable|
+$prototypeV2=bool isDesignable() const
 
-$prototype=bool isProperty () const
-$method=|bool|isProperty|
+$prototypeV2=bool isProperty() const
 
-$prototype=bool isResettable () const
-$method=|bool|isResettable|
+$prototypeV2=bool isResettable() const
 
-$prototype=bool isSignalProperty () const
-$method=|bool|isSignalProperty|
+$prototypeV2=bool isSignalProperty() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
-$prototype=QMetaMethod method () const
-$method=|QMetaMethod|method|
+$prototypeV2=QMetaMethod method() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=bool needsNotifySignal () const
-$method=|bool|needsNotifySignal|
+$prototypeV2=bool needsNotifySignal() const
 
-$prototype=QObject * object () const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
-$prototype=QMetaProperty property () const
-$method=|QMetaProperty|property|
+$prototypeV2=QMetaProperty property() const
 
-$prototype=int propertyType () const
-$method=|int|propertyType|
+$prototypeV2=int propertyType() const
 
-$prototype=PropertyTypeCategory propertyTypeCategory () const
-$method=|QDeclarativeProperty::PropertyTypeCategory|propertyTypeCategory|
+$prototypeV2=QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 
 $prototype=const char * propertyTypeName () const
 $method=|const char *|propertyTypeName|
 
-$prototype=bool reset () const
-$method=|bool|reset|
+$prototypeV2=bool reset() const
 
-$prototype=Type type () const
-$method=|QDeclarativeProperty::Type|type|
+$prototypeV2=QDeclarativeProperty::Type type() const
 
 $prototype=QVariant read () const
 $internalMethod=|QVariant|read,read1|

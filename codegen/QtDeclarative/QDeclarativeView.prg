@@ -61,23 +61,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 $deleteMethod
 
-$prototype=QDeclarativeEngine * engine () const
-$method=|QDeclarativeEngine *|engine|
+$prototypeV2=QDeclarativeEngine * engine() const
 
 $prototype=QList<QDeclarativeError> errors () const
 $method=|QList<QDeclarativeError>|errors|
 
-$prototype=QSize initialSize () const
-$method=|QSize|initialSize|
+$prototypeV2=QSize initialSize() const
 
-$prototype=ResizeMode resizeMode () const
-$method=|QDeclarativeView::ResizeMode|resizeMode|
+$prototypeV2=QDeclarativeView::ResizeMode resizeMode() const
 
-$prototype=QDeclarativeContext * rootContext () const
-$method=|QDeclarativeContext *|rootContext|
+$prototypeV2=QDeclarativeContext * rootContext() const
 
-$prototype=QGraphicsObject * rootObject () const
-$method=|QGraphicsObject *|rootObject|
+$prototypeV2=QGraphicsObject * rootObject() const
 
 $prototype=void setResizeMode ( ResizeMode )
 $method=|void|setResizeMode|QDeclarativeView::ResizeMode
@@ -85,11 +80,9 @@ $method=|void|setResizeMode|QDeclarativeView::ResizeMode
 $prototype=void setSource ( const QUrl & url )
 $method=|void|setSource|const QUrl &
 
-$prototype=QUrl source () const
-$method=|QUrl|source|
+$prototypeV2=QUrl source() const
 
-$prototype=Status status () const
-$method=|QDeclarativeView::Status|status|
+$prototypeV2=QDeclarativeView::Status status() const
 
 %%
 %% SIGNALS
