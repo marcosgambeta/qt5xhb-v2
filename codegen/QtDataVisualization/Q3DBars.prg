@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(bool multiSeriesUniform READ isMultiSeriesUniform WRITE setMultiSeriesUniform NOTIFY multiSeriesUniformChanged)
 %%
 
-$prototype=bool isMultiSeriesUniform() const
-$method=|bool|isMultiSeriesUniform|
+$prototypeV2=bool isMultiSeriesUniform() const
 
 $prototype=void setMultiSeriesUniform(bool uniform)
 $method=|void|setMultiSeriesUniform|bool
@@ -50,8 +49,7 @@ $method=|void|setMultiSeriesUniform|bool
 %% Q_PROPERTY(float barThickness READ barThickness WRITE setBarThickness NOTIFY barThicknessChanged)
 %%
 
-$prototype=float barThickness() const
-$method=|float|barThickness|
+$prototypeV2=float barThickness() const
 
 $prototype=void setBarThickness(float thicknessRatio)
 $method=|void|setBarThickness|float
@@ -60,8 +58,7 @@ $method=|void|setBarThickness|float
 %% Q_PROPERTY(QSizeF barSpacing READ barSpacing WRITE setBarSpacing NOTIFY barSpacingChanged)
 %%
 
-$prototype=QSizeF barSpacing() const
-$method=|QSizeF|barSpacing|
+$prototypeV2=QSizeF barSpacing() const
 
 $prototype=void setBarSpacing(const QSizeF &spacing)
 $method=|void|setBarSpacing|const QSizeF &
@@ -70,8 +67,7 @@ $method=|void|setBarSpacing|const QSizeF &
 %% Q_PROPERTY(bool barSpacingRelative READ isBarSpacingRelative WRITE setBarSpacingRelative NOTIFY barSpacingRelativeChanged)
 %%
 
-$prototype=bool isBarSpacingRelative() const
-$method=|bool|isBarSpacingRelative|
+$prototypeV2=bool isBarSpacingRelative() const
 
 $prototype=void setBarSpacingRelative(bool relative)
 $method=|void|setBarSpacingRelative|bool
@@ -80,8 +76,7 @@ $method=|void|setBarSpacingRelative|bool
 %% Q_PROPERTY(QCategory3DAxis *rowAxis READ rowAxis WRITE setRowAxis NOTIFY rowAxisChanged)
 %%
 
-$prototype=QCategory3DAxis *rowAxis() const
-$method=|QCategory3DAxis *|rowAxis|
+$prototypeV2=QCategory3DAxis * rowAxis() const
 
 $prototype=void setRowAxis(QCategory3DAxis *axis)
 $method=|void|setRowAxis|QCategory3DAxis *
@@ -90,8 +85,7 @@ $method=|void|setRowAxis|QCategory3DAxis *
 %% Q_PROPERTY(QCategory3DAxis *columnAxis READ columnAxis WRITE setColumnAxis NOTIFY columnAxisChanged)
 %%
 
-$prototype=QCategory3DAxis *columnAxis() const
-$method=|QCategory3DAxis *|columnAxis|
+$prototypeV2=QCategory3DAxis * columnAxis() const
 
 $prototype=void setColumnAxis(QCategory3DAxis *axis)
 $method=|void|setColumnAxis|QCategory3DAxis *
@@ -100,8 +94,7 @@ $method=|void|setColumnAxis|QCategory3DAxis *
 %% Q_PROPERTY(QValue3DAxis *valueAxis READ valueAxis WRITE setValueAxis NOTIFY valueAxisChanged)
 %%
 
-$prototype=QValue3DAxis *valueAxis() const
-$method=|QValue3DAxis *|valueAxis|
+$prototypeV2=QValue3DAxis * valueAxis() const
 
 $prototype=void setValueAxis(QValue3DAxis *axis)
 $method=|void|setValueAxis|QValue3DAxis *
@@ -110,8 +103,7 @@ $method=|void|setValueAxis|QValue3DAxis *
 %% Q_PROPERTY(QBar3DSeries *primarySeries READ primarySeries WRITE setPrimarySeries NOTIFY primarySeriesChanged)
 %%
 
-$prototype=QBar3DSeries *primarySeries() const
-$method=|QBar3DSeries *|primarySeries|
+$prototypeV2=QBar3DSeries * primarySeries() const
 
 $prototype=void setPrimarySeries(QBar3DSeries *series)
 $method=|void|setPrimarySeries|QBar3DSeries *
@@ -120,15 +112,13 @@ $method=|void|setPrimarySeries|QBar3DSeries *
 %% Q_PROPERTY(QBar3DSeries *selectedSeries READ selectedSeries NOTIFY selectedSeriesChanged)
 %%
 
-$prototype=QBar3DSeries *selectedSeries() const
-$method=|QBar3DSeries *|selectedSeries|
+$prototypeV2=QBar3DSeries * selectedSeries() const
 
 %%
 %% Q_PROPERTY(float floorLevel READ floorLevel WRITE setFloorLevel NOTIFY floorLevelChanged)
 %%
 
-$prototype=float floorLevel() const
-$method=|float|floorLevel|
+$prototypeV2=float floorLevel() const
 
 $prototype=void setFloorLevel(float level)
 $method=|void|setFloorLevel|float

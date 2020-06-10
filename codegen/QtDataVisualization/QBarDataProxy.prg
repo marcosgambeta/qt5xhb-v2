@@ -44,15 +44,13 @@ $deleteMethod
 %% Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 %%
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 %%
 %% Q_PROPERTY(QStringList rowLabels READ rowLabels WRITE setRowLabels NOTIFY rowLabelsChanged)
 %%
 
-$prototype=QStringList rowLabels() const
-$method=|QStringList|rowLabels|
+$prototypeV2=QStringList rowLabels() const
 
 $prototype=void setRowLabels(const QStringList &labels)
 $method=|void|setRowLabels|const QStringList &
@@ -61,8 +59,7 @@ $method=|void|setRowLabels|const QStringList &
 %% Q_PROPERTY(QStringList columnLabels READ columnLabels WRITE setColumnLabels NOTIFY columnLabelsChanged)
 %%
 
-$prototype=QStringList columnLabels() const
-$method=|QStringList|columnLabels|
+$prototypeV2=QStringList columnLabels() const
 
 $prototype=void setColumnLabels(const QStringList &labels)
 $method=|void|setColumnLabels|const QStringList &
@@ -71,8 +68,7 @@ $method=|void|setColumnLabels|const QStringList &
 %% Q_PROPERTY(QBar3DSeries *series READ series NOTIFY seriesChanged)
 %%
 
-$prototype=QBar3DSeries *series() const
-$method=|QBar3DSeries *|series|
+$prototypeV2=QBar3DSeries * series() const
 
 %%
 %%

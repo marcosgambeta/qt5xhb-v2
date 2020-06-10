@@ -77,14 +77,12 @@ $deleteMethod
 $prototype=void setValue(float val)
 $method=|void|setValue|float
 
-$prototype=float value() const
-$method=|float|value|
+$prototypeV2=float value() const
 
 $prototype=void setRotation(float angle)
 $method=|void|setRotation|float
 
-$prototype=float rotation() const
-$method=|float|rotation|
+$prototypeV2=float rotation() const
 
 $prototype=void createExtraData() [protected]
 

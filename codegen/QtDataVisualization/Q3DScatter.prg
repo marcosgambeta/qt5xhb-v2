@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QValue3DAxis *axisX READ axisX WRITE setAxisX NOTIFY axisXChanged)
 %%
 
-$prototype=QValue3DAxis *axisX() const
-$method=|QValue3DAxis *|axisX|
+$prototypeV2=QValue3DAxis * axisX() const
 
 $prototype=void setAxisX(QValue3DAxis *axis)
 $method=|void|setAxisX|QValue3DAxis *
@@ -50,8 +49,7 @@ $method=|void|setAxisX|QValue3DAxis *
 %% Q_PROPERTY(QValue3DAxis *axisY READ axisY WRITE setAxisY NOTIFY axisYChanged)
 %%
 
-$prototype=QValue3DAxis *axisY() const
-$method=|QValue3DAxis *|axisY|
+$prototypeV2=QValue3DAxis * axisY() const
 
 $prototype=void setAxisY(QValue3DAxis *axis)
 $method=|void|setAxisY|QValue3DAxis *
@@ -60,8 +58,7 @@ $method=|void|setAxisY|QValue3DAxis *
 %% Q_PROPERTY(QValue3DAxis *axisZ READ axisZ WRITE setAxisZ NOTIFY axisZChanged)
 %%
 
-$prototype=QValue3DAxis *axisZ() const
-$method=|QValue3DAxis *|axisZ|
+$prototypeV2=QValue3DAxis * axisZ() const
 
 $prototype=void setAxisZ(QValue3DAxis *axis)
 $method=|void|setAxisZ|QValue3DAxis *
@@ -70,8 +67,7 @@ $method=|void|setAxisZ|QValue3DAxis *
 %% Q_PROPERTY(QScatter3DSeries *selectedSeries READ selectedSeries NOTIFY selectedSeriesChanged)
 %%
 
-$prototype=QScatter3DSeries *selectedSeries() const
-$method=|QScatter3DSeries *|selectedSeries|
+$prototypeV2=QScatter3DSeries * selectedSeries() const
 
 %%
 %%

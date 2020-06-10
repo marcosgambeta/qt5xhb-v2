@@ -51,22 +51,19 @@ $deleteMethod
 %% Q_PROPERTY(int rowCount READ rowCount NOTIFY rowCountChanged)
 %%
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount NOTIFY columnCountChanged)
 %%
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 %%
 %% Q_PROPERTY(QSurface3DSeries *series READ series NOTIFY seriesChanged)
 %%
 
-$prototype=QSurface3DSeries *series() const
-$method=|QSurface3DSeries *|series|
+$prototypeV2=QSurface3DSeries * series() const
 
 %%
 %%

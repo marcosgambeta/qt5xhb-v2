@@ -66,8 +66,7 @@ $deleteMethod
 %% Q_PROPERTY(QScatterDataProxy *dataProxy READ dataProxy WRITE setDataProxy NOTIFY dataProxyChanged)
 %%
 
-$prototype=QScatterDataProxy *dataProxy() const
-$method=|QScatterDataProxy *|dataProxy|
+$prototypeV2=QScatterDataProxy * dataProxy() const
 
 $prototype=void setDataProxy(QScatterDataProxy *proxy)
 $method=|void|setDataProxy|QScatterDataProxy *
@@ -76,8 +75,7 @@ $method=|void|setDataProxy|QScatterDataProxy *
 %% Q_PROPERTY(int selectedItem READ selectedItem WRITE setSelectedItem NOTIFY selectedItemChanged)
 %%
 
-$prototype=int selectedItem() const
-$method=|int|selectedItem|
+$prototypeV2=int selectedItem() const
 
 $prototype=void setSelectedItem(int index)
 $method=|void|setSelectedItem|int
@@ -86,8 +84,7 @@ $method=|void|setSelectedItem|int
 %% Q_PROPERTY(float itemSize READ itemSize WRITE setItemSize NOTIFY itemSizeChanged)
 %%
 
-$prototype=float itemSize() const
-$method=|float|itemSize|
+$prototypeV2=float itemSize() const
 
 $prototype=void setItemSize(float size)
 $method=|void|setItemSize|float
@@ -96,8 +93,7 @@ $method=|void|setItemSize|float
 %%
 %%
 
-$prototype=static int invalidSelectionIndex()
-$staticMethod=|int|invalidSelectionIndex|
+$prototypeV2=static int invalidSelectionIndex()
 
 %%
 %% SIGNALS

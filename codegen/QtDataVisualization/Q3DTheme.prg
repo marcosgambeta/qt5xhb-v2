@@ -67,8 +67,7 @@ $deleteMethod
 %% Q_PROPERTY(Theme type READ type WRITE setType NOTIFY typeChanged)
 %%
 
-$prototype=Theme type() const
-$method=|Q3DTheme::Theme|type|
+$prototypeV2=Q3DTheme::Theme type() const
 
 $prototype=void setType(Theme themeType)
 $method=|void|setType|Q3DTheme::Theme
@@ -87,8 +86,7 @@ $method=|void|setBaseColors|const QList<QColor> &
 %% Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 %%
 
-$prototype=QColor backgroundColor() const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
 $prototype=void setBackgroundColor(const QColor &color)
 $method=|void|setBackgroundColor|const QColor &
@@ -97,8 +95,7 @@ $method=|void|setBackgroundColor|const QColor &
 %% Q_PROPERTY(QColor windowColor READ windowColor WRITE setWindowColor NOTIFY windowColorChanged)
 %%
 
-$prototype=QColor windowColor() const
-$method=|QColor|windowColor|
+$prototypeV2=QColor windowColor() const
 
 $prototype=void setWindowColor(const QColor &color)
 $method=|void|setWindowColor|const QColor &
@@ -107,8 +104,7 @@ $method=|void|setWindowColor|const QColor &
 %% Q_PROPERTY(QColor labelTextColor READ labelTextColor WRITE setLabelTextColor NOTIFY labelTextColorChanged)
 %%
 
-$prototype=QColor labelTextColor() const
-$method=|QColor|labelTextColor|
+$prototypeV2=QColor labelTextColor() const
 
 $prototype=void setLabelTextColor(const QColor &color)
 $method=|void|setLabelTextColor|const QColor &
@@ -117,8 +113,7 @@ $method=|void|setLabelTextColor|const QColor &
 %% Q_PROPERTY(QColor labelBackgroundColor READ labelBackgroundColor WRITE setLabelBackgroundColor NOTIFY labelBackgroundColorChanged)
 %%
 
-$prototype=QColor labelBackgroundColor() const
-$method=|QColor|labelBackgroundColor|
+$prototypeV2=QColor labelBackgroundColor() const
 
 $prototype=void setLabelBackgroundColor(const QColor &color)
 $method=|void|setLabelBackgroundColor|const QColor &
@@ -127,8 +122,7 @@ $method=|void|setLabelBackgroundColor|const QColor &
 %% Q_PROPERTY(QColor gridLineColor READ gridLineColor WRITE setGridLineColor NOTIFY gridLineColorChanged)
 %%
 
-$prototype=QColor gridLineColor() const
-$method=|QColor|gridLineColor|
+$prototypeV2=QColor gridLineColor() const
 
 $prototype=void setGridLineColor(const QColor &color)
 $method=|void|setGridLineColor|const QColor &
@@ -137,8 +131,7 @@ $method=|void|setGridLineColor|const QColor &
 %% Q_PROPERTY(QColor singleHighlightColor READ singleHighlightColor WRITE setSingleHighlightColor NOTIFY singleHighlightColorChanged)
 %%
 
-$prototype=QColor singleHighlightColor() const
-$method=|QColor|singleHighlightColor|
+$prototypeV2=QColor singleHighlightColor() const
 
 $prototype=void setSingleHighlightColor(const QColor &color)
 $method=|void|setSingleHighlightColor|const QColor &
@@ -147,8 +140,7 @@ $method=|void|setSingleHighlightColor|const QColor &
 %% Q_PROPERTY(QColor multiHighlightColor READ multiHighlightColor WRITE setMultiHighlightColor NOTIFY multiHighlightColorChanged)
 %%
 
-$prototype=QColor multiHighlightColor() const
-$method=|QColor|multiHighlightColor|
+$prototypeV2=QColor multiHighlightColor() const
 
 $prototype=void setMultiHighlightColor(const QColor &color)
 $method=|void|setMultiHighlightColor|const QColor &
@@ -157,8 +149,7 @@ $method=|void|setMultiHighlightColor|const QColor &
 %% Q_PROPERTY(QColor lightColor READ lightColor WRITE setLightColor NOTIFY lightColorChanged)
 %%
 
-$prototype=QColor lightColor() const
-$method=|QColor|lightColor|
+$prototypeV2=QColor lightColor() const
 
 $prototype=void setLightColor(const QColor &color)
 $method=|void|setLightColor|const QColor &
@@ -177,8 +168,7 @@ $method=|void|setBaseGradients|const QList<QLinearGradient> &
 %% Q_PROPERTY(QLinearGradient singleHighlightGradient READ singleHighlightGradient WRITE setSingleHighlightGradient NOTIFY singleHighlightGradientChanged)
 %%
 
-$prototype=QLinearGradient singleHighlightGradient() const
-$method=|QLinearGradient|singleHighlightGradient|
+$prototypeV2=QLinearGradient singleHighlightGradient() const
 
 $prototype=void setSingleHighlightGradient(const QLinearGradient &gradient)
 $method=|void|setSingleHighlightGradient|const QLinearGradient &
@@ -187,8 +177,7 @@ $method=|void|setSingleHighlightGradient|const QLinearGradient &
 %% Q_PROPERTY(QLinearGradient multiHighlightGradient READ multiHighlightGradient WRITE setMultiHighlightGradient NOTIFY multiHighlightGradientChanged)
 %%
 
-$prototype=QLinearGradient multiHighlightGradient() const
-$method=|QLinearGradient|multiHighlightGradient|
+$prototypeV2=QLinearGradient multiHighlightGradient() const
 
 $prototype=void setMultiHighlightGradient(const QLinearGradient &gradient)
 $method=|void|setMultiHighlightGradient|const QLinearGradient &
@@ -197,8 +186,7 @@ $method=|void|setMultiHighlightGradient|const QLinearGradient &
 %% Q_PROPERTY(float lightStrength READ lightStrength WRITE setLightStrength NOTIFY lightStrengthChanged)
 %%
 
-$prototype=float lightStrength() const
-$method=|float|lightStrength|
+$prototypeV2=float lightStrength() const
 
 $prototype=void setLightStrength(float strength)
 $method=|void|setLightStrength|float
@@ -207,8 +195,7 @@ $method=|void|setLightStrength|float
 %% Q_PROPERTY(float ambientLightStrength READ ambientLightStrength WRITE setAmbientLightStrength NOTIFY ambientLightStrengthChanged)
 %%
 
-$prototype=float ambientLightStrength() const
-$method=|float|ambientLightStrength|
+$prototypeV2=float ambientLightStrength() const
 
 $prototype=void setAmbientLightStrength(float strength)
 $method=|void|setAmbientLightStrength|float
@@ -217,8 +204,7 @@ $method=|void|setAmbientLightStrength|float
 %% Q_PROPERTY(float highlightLightStrength READ highlightLightStrength WRITE setHighlightLightStrength NOTIFY highlightLightStrengthChanged)
 %%
 
-$prototype=float highlightLightStrength() const
-$method=|float|highlightLightStrength|
+$prototypeV2=float highlightLightStrength() const
 
 $prototype=void setHighlightLightStrength(float strength)
 $method=|void|setHighlightLightStrength|float
@@ -227,8 +213,7 @@ $method=|void|setHighlightLightStrength|float
 %% Q_PROPERTY(bool labelBorderEnabled READ isLabelBorderEnabled WRITE setLabelBorderEnabled NOTIFY labelBorderEnabledChanged)
 %%
 
-$prototype=bool isLabelBorderEnabled() const
-$method=|bool|isLabelBorderEnabled|
+$prototypeV2=bool isLabelBorderEnabled() const
 
 $prototype=void setLabelBorderEnabled(bool enabled)
 $method=|void|setLabelBorderEnabled|bool
@@ -237,8 +222,7 @@ $method=|void|setLabelBorderEnabled|bool
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
@@ -247,8 +231,7 @@ $method=|void|setFont|const QFont &
 %% Q_PROPERTY(bool backgroundEnabled READ isBackgroundEnabled WRITE setBackgroundEnabled NOTIFY backgroundEnabledChanged)
 %%
 
-$prototype=bool isBackgroundEnabled() const
-$method=|bool|isBackgroundEnabled|
+$prototypeV2=bool isBackgroundEnabled() const
 
 $prototype=void setBackgroundEnabled(bool enabled)
 $method=|void|setBackgroundEnabled|bool
@@ -257,8 +240,7 @@ $method=|void|setBackgroundEnabled|bool
 %% Q_PROPERTY(bool gridEnabled READ isGridEnabled WRITE setGridEnabled NOTIFY gridEnabledChanged)
 %%
 
-$prototype=bool isGridEnabled() const
-$method=|bool|isGridEnabled|
+$prototypeV2=bool isGridEnabled() const
 
 $prototype=void setGridEnabled(bool enabled)
 $method=|void|setGridEnabled|bool
@@ -267,8 +249,7 @@ $method=|void|setGridEnabled|bool
 %% Q_PROPERTY(bool labelBackgroundEnabled READ isLabelBackgroundEnabled WRITE setLabelBackgroundEnabled NOTIFY labelBackgroundEnabledChanged)
 %%
 
-$prototype=bool isLabelBackgroundEnabled() const
-$method=|bool|isLabelBackgroundEnabled|
+$prototypeV2=bool isLabelBackgroundEnabled() const
 
 $prototype=void setLabelBackgroundEnabled(bool enabled)
 $method=|void|setLabelBackgroundEnabled|bool
@@ -277,8 +258,7 @@ $method=|void|setLabelBackgroundEnabled|bool
 %% Q_PROPERTY(ColorStyle colorStyle READ colorStyle WRITE setColorStyle NOTIFY colorStyleChanged)
 %%
 
-$prototype=ColorStyle colorStyle() const
-$method=|Q3DTheme::ColorStyle|colorStyle|
+$prototypeV2=Q3DTheme::ColorStyle colorStyle() const
 
 $prototype=void setColorStyle(ColorStyle style)
 $method=|void|setColorStyle|Q3DTheme::ColorStyle

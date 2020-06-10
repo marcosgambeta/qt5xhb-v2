@@ -43,8 +43,7 @@ $deleteMethod
 %% Q_PROPERTY(QAbstract3DInputHandler* activeInputHandler READ activeInputHandler WRITE setActiveInputHandler NOTIFY activeInputHandlerChanged)
 %%
 
-$prototype=QAbstract3DInputHandler *activeInputHandler() const
-$method=|QAbstract3DInputHandler *|activeInputHandler|
+$prototypeV2=QAbstract3DInputHandler * activeInputHandler() const
 
 $prototype=void setActiveInputHandler(QAbstract3DInputHandler *inputHandler)
 $method=|void|setActiveInputHandler|QAbstract3DInputHandler *
@@ -53,8 +52,7 @@ $method=|void|setActiveInputHandler|QAbstract3DInputHandler *
 %% Q_PROPERTY(Q3DTheme* activeTheme READ activeTheme WRITE setActiveTheme NOTIFY activeThemeChanged)
 %%
 
-$prototype=Q3DTheme *activeTheme() const
-$method=|Q3DTheme *|activeTheme|
+$prototypeV2=Q3DTheme * activeTheme() const
 
 $prototype=void setActiveTheme(Q3DTheme *theme)
 $method=|void|setActiveTheme|Q3DTheme *
@@ -63,8 +61,7 @@ $method=|void|setActiveTheme|Q3DTheme *
 %% Q_PROPERTY(SelectionFlags selectionMode READ selectionMode WRITE setSelectionMode NOTIFY selectionModeChanged)
 %%
 
-$prototype=SelectionFlags selectionMode() const
-$method=|QAbstract3DGraph::SelectionFlags|selectionMode|
+$prototypeV2=QAbstract3DGraph::SelectionFlags selectionMode() const
 
 $prototype=void setSelectionMode(SelectionFlags mode)
 $method=|void|setSelectionMode|QAbstract3DGraph::SelectionFlags
@@ -73,8 +70,7 @@ $method=|void|setSelectionMode|QAbstract3DGraph::SelectionFlags
 %% Q_PROPERTY(ShadowQuality shadowQuality READ shadowQuality WRITE setShadowQuality NOTIFY shadowQualityChanged)
 %%
 
-$prototype=ShadowQuality shadowQuality() const
-$method=|QAbstract3DGraph::ShadowQuality|shadowQuality|
+$prototypeV2=QAbstract3DGraph::ShadowQuality shadowQuality() const
 
 $prototype=void setShadowQuality(ShadowQuality quality)
 $method=|void|setShadowQuality|QAbstract3DGraph::ShadowQuality
@@ -83,15 +79,13 @@ $method=|void|setShadowQuality|QAbstract3DGraph::ShadowQuality
 %% Q_PROPERTY(Q3DScene* scene READ scene)
 %%
 
-$prototype=Q3DScene *scene() const
-$method=|Q3DScene *|scene|
+$prototypeV2=Q3DScene * scene() const
 
 %%
 %% Q_PROPERTY(bool measureFps READ measureFps WRITE setMeasureFps NOTIFY measureFpsChanged)
 %%
 
-$prototype=bool measureFps() const
-$method=|bool|measureFps|
+$prototypeV2=bool measureFps() const
 
 $prototype=void setMeasureFps(bool enable)
 $method=|void|setMeasureFps|bool
@@ -100,15 +94,13 @@ $method=|void|setMeasureFps|bool
 %% Q_PROPERTY(qreal currentFps READ currentFps NOTIFY currentFpsChanged)
 %%
 
-$prototype=qreal currentFps() const
-$method=|qreal|currentFps|
+$prototypeV2=qreal currentFps() const
 
 %%
 %% Q_PROPERTY(bool orthoProjection READ isOrthoProjection WRITE setOrthoProjection NOTIFY orthoProjectionChanged)
 %%
 
-$prototype=bool isOrthoProjection() const
-$method=|bool|isOrthoProjection|
+$prototypeV2=bool isOrthoProjection() const
 
 $prototype=void setOrthoProjection(bool enable)
 $method=|void|setOrthoProjection|bool
@@ -117,15 +109,13 @@ $method=|void|setOrthoProjection|bool
 %% Q_PROPERTY(ElementType selectedElement READ selectedElement NOTIFY selectedElementChanged)
 %%
 
-$prototype=ElementType selectedElement() const
-$method=|QAbstract3DGraph::ElementType|selectedElement|
+$prototypeV2=QAbstract3DGraph::ElementType selectedElement() const
 
 %%
 %% Q_PROPERTY(qreal aspectRatio READ aspectRatio WRITE setAspectRatio NOTIFY aspectRatioChanged)
 %%
 
-$prototype=qreal aspectRatio() const
-$method=|qreal|aspectRatio|
+$prototypeV2=qreal aspectRatio() const
 
 $prototype=void setAspectRatio(qreal ratio)
 $method=|void|setAspectRatio|qreal
@@ -134,8 +124,7 @@ $method=|void|setAspectRatio|qreal
 %% Q_PROPERTY(OptimizationHints optimizationHints READ optimizationHints WRITE setOptimizationHints NOTIFY optimizationHintsChanged)
 %%
 
-$prototype=OptimizationHints optimizationHints() const
-$method=|QAbstract3DGraph::OptimizationHints|optimizationHints|
+$prototypeV2=QAbstract3DGraph::OptimizationHints optimizationHints() const
 
 $prototype=void setOptimizationHints(OptimizationHints hints)
 $method=|void|setOptimizationHints|QAbstract3DGraph::OptimizationHints
@@ -144,8 +133,7 @@ $method=|void|setOptimizationHints|QAbstract3DGraph::OptimizationHints
 %% Q_PROPERTY(bool polar READ isPolar WRITE setPolar NOTIFY polarChanged)
 %%
 
-$prototype=bool isPolar() const
-$method=|bool|isPolar|
+$prototypeV2=bool isPolar() const
 
 $prototype=void setPolar(bool enable)
 $method=|void|setPolar|bool
@@ -154,8 +142,7 @@ $method=|void|setPolar|bool
 %% Q_PROPERTY(float radialLabelOffset READ radialLabelOffset WRITE setRadialLabelOffset NOTIFY radialLabelOffsetChanged)
 %%
 
-$prototype=float radialLabelOffset() const
-$method=|float|radialLabelOffset|
+$prototypeV2=float radialLabelOffset() const
 
 $prototype=void setRadialLabelOffset(float offset)
 $method=|void|setRadialLabelOffset|float
@@ -164,8 +151,7 @@ $method=|void|setRadialLabelOffset|float
 %% Q_PROPERTY(qreal horizontalAspectRatio READ horizontalAspectRatio WRITE setHorizontalAspectRatio NOTIFY horizontalAspectRatioChanged)
 %%
 
-$prototype=qreal horizontalAspectRatio() const
-$method=|qreal|horizontalAspectRatio|
+$prototypeV2=qreal horizontalAspectRatio() const
 
 $prototype=void setHorizontalAspectRatio(qreal ratio)
 $method=|void|setHorizontalAspectRatio|qreal
@@ -174,8 +160,7 @@ $method=|void|setHorizontalAspectRatio|qreal
 %% Q_PROPERTY(bool reflection READ isReflection WRITE setReflection NOTIFY reflectionChanged)
 %%
 
-$prototype=bool isReflection() const
-$method=|bool|isReflection|
+$prototypeV2=bool isReflection() const
 
 $prototype=void setReflection(bool enable)
 $method=|void|setReflection|bool
@@ -184,8 +169,7 @@ $method=|void|setReflection|bool
 %% Q_PROPERTY(qreal reflectivity READ reflectivity WRITE setReflectivity NOTIFY reflectivityChanged)
 %%
 
-$prototype=qreal reflectivity() const
-$method=|qreal|reflectivity|
+$prototypeV2=qreal reflectivity() const
 
 $prototype=void setReflectivity(qreal reflectivity)
 $method=|void|setReflectivity|qreal
@@ -194,8 +178,7 @@ $method=|void|setReflectivity|qreal
 %% Q_PROPERTY(QLocale locale READ locale WRITE setLocale NOTIFY localeChanged)
 %%
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
@@ -204,15 +187,13 @@ $method=|void|setLocale|const QLocale &
 %% Q_PROPERTY(QVector3D queriedGraphPosition READ queriedGraphPosition NOTIFY queriedGraphPositionChanged)
 %%
 
-$prototype=QVector3D queriedGraphPosition() const
-$method=|QVector3D|queriedGraphPosition|
+$prototypeV2=QVector3D queriedGraphPosition() const
 
 %%
 %% Q_PROPERTY(qreal margin READ margin WRITE setMargin NOTIFY marginChanged)
 %%
 
-$prototype=qreal margin() const
-$method=|qreal|margin|
+$prototypeV2=qreal margin() const
 
 $prototype=void setMargin(qreal margin)
 $method=|void|setMargin|qreal
@@ -239,17 +220,14 @@ $method=|void|releaseTheme|Q3DTheme *
 $prototype=QList<Q3DTheme *> themes() const
 $method=|QList<Q3DTheme *>|themes|
 
-$prototype=virtual bool shadowsSupported() const
-$virtualMethod=|bool|shadowsSupported|
+$prototypeV2=virtual bool shadowsSupported() const
 
-$prototype=void clearSelection()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
 $prototype=int addCustomItem(QCustom3DItem *item)
 $method=|int|addCustomItem|QCustom3DItem *
 
-$prototype=void removeCustomItems()
-$method=|void|removeCustomItems|
+$prototypeV2=void removeCustomItems()
 
 $prototype=void removeCustomItem(QCustom3DItem *item)
 $method=|void|removeCustomItem|QCustom3DItem *
@@ -263,23 +241,18 @@ $method=|void|releaseCustomItem|QCustom3DItem *
 $prototype=QList<QCustom3DItem *> customItems() const
 $method=|QList<QCustom3DItem *>|customItems|
 
-$prototype=QAbstract3DAxis *selectedAxis() const
-$method=|QAbstract3DAxis *|selectedAxis|
+$prototypeV2=QAbstract3DAxis * selectedAxis() const
 
-$prototype=int selectedLabelIndex() const
-$method=|int|selectedLabelIndex|
+$prototypeV2=int selectedLabelIndex() const
 
-$prototype=int selectedCustomItemIndex() const
-$method=|int|selectedCustomItemIndex|
+$prototypeV2=int selectedCustomItemIndex() const
 
-$prototype=QCustom3DItem *selectedCustomItem() const
-$method=|QCustom3DItem *|selectedCustomItem|
+$prototypeV2=QCustom3DItem * selectedCustomItem() const
 
 $prototype=QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
 $method=|QImage|renderToImage|int=0,const QSize &=QSize()
 
-$prototype=bool hasContext() const
-$method=|bool|hasContext|
+$prototypeV2=bool hasContext() const
 
 $prototype=bool event(QEvent *event) [protected]
 

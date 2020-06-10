@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QStringList labels READ labels WRITE setLabels NOTIFY labelsChanged)
 %%
 
-$prototype=QStringList labels() const
-$method=|QStringList|labels|
+$prototypeV2=QStringList labels() const
 
 $prototype=void setLabels(const QStringList &labels)
 $method=|void|setLabels|const QStringList &

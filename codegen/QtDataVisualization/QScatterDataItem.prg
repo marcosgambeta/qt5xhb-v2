@@ -77,14 +77,12 @@ $deleteMethod
 $prototype=void setPosition(const QVector3D &pos)
 $method=|void|setPosition|const QVector3D &
 
-$prototype=QVector3D position() const
-$method=|QVector3D|position|
+$prototypeV2=QVector3D position() const
 
 $prototype=void setRotation(const QQuaternion &rot)
 $method=|void|setRotation|const QQuaternion &
 
-$prototype=QQuaternion rotation() const
-$method=|QQuaternion|rotation|
+$prototypeV2=QQuaternion rotation() const
 
 $prototype=void setX(float value)
 $method=|void|setX|float
@@ -95,14 +93,11 @@ $method=|void|setY|float
 $prototype=void setZ(float value)
 $method=|void|setZ|float
 
-$prototype=float x() const
-$method=|float|x|
+$prototypeV2=float x() const
 
-$prototype=float y() const
-$method=|float|y|
+$prototypeV2=float y() const
 
-$prototype=float z() const
-$method=|float|z|
+$prototypeV2=float z() const
 
 $prototype=void createExtraData() [protected]
 

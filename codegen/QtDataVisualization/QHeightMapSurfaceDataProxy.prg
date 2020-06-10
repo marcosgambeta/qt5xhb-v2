@@ -74,8 +74,7 @@ $deleteMethod
 %% Q_PROPERTY(QImage heightMap READ heightMap WRITE setHeightMap NOTIFY heightMapChanged)
 %%
 
-$prototype=QImage heightMap() const
-$method=|QImage|heightMap|
+$prototypeV2=QImage heightMap() const
 
 $prototype=void setHeightMap(const QImage &image)
 $method=|void|setHeightMap|const QImage &
@@ -84,8 +83,7 @@ $method=|void|setHeightMap|const QImage &
 %% Q_PROPERTY(QString heightMapFile READ heightMapFile WRITE setHeightMapFile NOTIFY heightMapFileChanged)
 %%
 
-$prototype=QString heightMapFile() const
-$method=|QString|heightMapFile|
+$prototypeV2=QString heightMapFile() const
 
 $prototype=void setHeightMapFile(const QString &filename)
 $method=|void|setHeightMapFile|const QString &
@@ -94,8 +92,7 @@ $method=|void|setHeightMapFile|const QString &
 %% Q_PROPERTY(float minXValue READ minXValue WRITE setMinXValue NOTIFY minXValueChanged)
 %%
 
-$prototype=float minXValue() const
-$method=|float|minXValue|
+$prototypeV2=float minXValue() const
 
 $prototype=void setMinXValue(float min)
 $method=|void|setMinXValue|float
@@ -104,8 +101,7 @@ $method=|void|setMinXValue|float
 %% Q_PROPERTY(float maxXValue READ maxXValue WRITE setMaxXValue NOTIFY maxXValueChanged)
 %%
 
-$prototype=float maxXValue() const
-$method=|float|maxXValue|
+$prototypeV2=float maxXValue() const
 
 $prototype=void setMaxXValue(float max)
 $method=|void|setMaxXValue|float
@@ -114,8 +110,7 @@ $method=|void|setMaxXValue|float
 %% Q_PROPERTY(float minZValue READ minZValue WRITE setMinZValue NOTIFY minZValueChanged)
 %%
 
-$prototype=float minZValue() const
-$method=|float|minZValue|
+$prototypeV2=float minZValue() const
 
 $prototype=void setMinZValue(float min)
 $method=|void|setMinZValue|float
@@ -124,8 +119,7 @@ $method=|void|setMinZValue|float
 %% Q_PROPERTY(float maxZValue READ maxZValue WRITE setMaxZValue NOTIFY maxZValueChanged)
 %%
 
-$prototype=float maxZValue() const
-$method=|float|maxZValue|
+$prototypeV2=float maxZValue() const
 
 $prototype=void setMaxZValue(float max)
 $method=|void|setMaxZValue|float

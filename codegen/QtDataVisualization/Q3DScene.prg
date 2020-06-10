@@ -40,15 +40,13 @@ $deleteMethod
 %% Q_PROPERTY(QRect viewport READ viewport NOTIFY viewportChanged)
 %%
 
-$prototype=QRect viewport() const
-$method=|QRect|viewport|
+$prototypeV2=QRect viewport() const
 
 %%
 %% Q_PROPERTY(QRect primarySubViewport READ primarySubViewport WRITE setPrimarySubViewport NOTIFY primarySubViewportChanged)
 %%
 
-$prototype=QRect primarySubViewport() const
-$method=|QRect|primarySubViewport|
+$prototypeV2=QRect primarySubViewport() const
 
 $prototype=void setPrimarySubViewport(const QRect &primarySubViewport)
 $method=|void|setPrimarySubViewport|const QRect &
@@ -57,8 +55,7 @@ $method=|void|setPrimarySubViewport|const QRect &
 %% Q_PROPERTY(QRect secondarySubViewport READ secondarySubViewport WRITE setSecondarySubViewport NOTIFY secondarySubViewportChanged)
 %%
 
-$prototype=QRect secondarySubViewport() const
-$method=|QRect|secondarySubViewport|
+$prototypeV2=QRect secondarySubViewport() const
 
 $prototype=void setSecondarySubViewport(const QRect &secondarySubViewport)
 $method=|void|setSecondarySubViewport|const QRect &
@@ -67,8 +64,7 @@ $method=|void|setSecondarySubViewport|const QRect &
 %% Q_PROPERTY(QPoint selectionQueryPosition READ selectionQueryPosition WRITE setSelectionQueryPosition NOTIFY selectionQueryPositionChanged)
 %%
 
-$prototype=QPoint selectionQueryPosition() const
-$method=|QPoint|selectionQueryPosition|
+$prototypeV2=QPoint selectionQueryPosition() const
 
 $prototype=void setSelectionQueryPosition(const QPoint &point)
 $method=|void|setSelectionQueryPosition|const QPoint &
@@ -77,8 +73,7 @@ $method=|void|setSelectionQueryPosition|const QPoint &
 %% Q_PROPERTY(bool secondarySubviewOnTop READ isSecondarySubviewOnTop  WRITE setSecondarySubviewOnTop  NOTIFY secondarySubviewOnTopChanged)
 %%
 
-$prototype=bool isSecondarySubviewOnTop() const
-$method=|bool|isSecondarySubviewOnTop|
+$prototypeV2=bool isSecondarySubviewOnTop() const
 
 $prototype=void setSecondarySubviewOnTop(bool isSecondaryOnTop)
 $method=|void|setSecondarySubviewOnTop|bool
@@ -87,8 +82,7 @@ $method=|void|setSecondarySubviewOnTop|bool
 %% Q_PROPERTY(bool slicingActive READ isSlicingActive WRITE setSlicingActive NOTIFY slicingActiveChanged)
 %%
 
-$prototype=bool isSlicingActive() const
-$method=|bool|isSlicingActive|
+$prototypeV2=bool isSlicingActive() const
 
 $prototype=void setSlicingActive(bool isSlicing)
 $method=|void|setSlicingActive|bool
@@ -97,8 +91,7 @@ $method=|void|setSlicingActive|bool
 %% Q_PROPERTY(Q3DCamera* activeCamera READ activeCamera WRITE setActiveCamera NOTIFY activeCameraChanged)
 %%
 
-$prototype=Q3DCamera *activeCamera() const
-$method=|Q3DCamera *|activeCamera|
+$prototypeV2=Q3DCamera * activeCamera() const
 
 $prototype=void setActiveCamera(Q3DCamera *camera)
 $method=|void|setActiveCamera|Q3DCamera *
@@ -107,8 +100,7 @@ $method=|void|setActiveCamera|Q3DCamera *
 %% Q_PROPERTY(Q3DLight* activeLight READ activeLight WRITE setActiveLight NOTIFY activeLightChanged)
 %%
 
-$prototype=Q3DLight *activeLight() const
-$method=|Q3DLight *|activeLight|
+$prototypeV2=Q3DLight * activeLight() const
 
 $prototype=void setActiveLight(Q3DLight *light)
 $method=|void|setActiveLight|Q3DLight *
@@ -117,8 +109,7 @@ $method=|void|setActiveLight|Q3DLight *
 %% Q_PROPERTY(float devicePixelRatio READ devicePixelRatio WRITE setDevicePixelRatio NOTIFY devicePixelRatioChanged)
 %%
 
-$prototype=float devicePixelRatio() const
-$method=|float|devicePixelRatio|
+$prototypeV2=float devicePixelRatio() const
 
 $prototype=void setDevicePixelRatio(float pixelRatio)
 $method=|void|setDevicePixelRatio|float
@@ -127,8 +118,7 @@ $method=|void|setDevicePixelRatio|float
 %% Q_PROPERTY(QPoint graphPositionQuery READ graphPositionQuery WRITE setGraphPositionQuery NOTIFY graphPositionQueryChanged REVISION 1)
 %%
 
-$prototype=QPoint graphPositionQuery() const
-$method=|QPoint|graphPositionQuery|
+$prototypeV2=QPoint graphPositionQuery() const
 
 $prototype=void setGraphPositionQuery(const QPoint &point)
 $method=|void|setGraphPositionQuery|const QPoint &
@@ -143,8 +133,7 @@ $method=|bool|isPointInPrimarySubView|const QPoint &
 $prototype=bool isPointInSecondarySubView(const QPoint &point)
 $method=|bool|isPointInSecondarySubView|const QPoint &
 
-$prototype=static QPoint invalidSelectionPoint()
-$staticMethod=|QPoint|invalidSelectionPoint|
+$prototypeV2=static QPoint invalidSelectionPoint()
 
 %%
 %% SIGNALS

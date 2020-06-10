@@ -104,8 +104,7 @@ $deleteMethod
 %% Q_PROPERTY(QAbstractItemModel* itemModel READ itemModel WRITE setItemModel NOTIFY itemModelChanged)
 %%
 
-$prototype=QAbstractItemModel *itemModel() const
-$method=|QAbstractItemModel *|itemModel|
+$prototypeV2=QAbstractItemModel * itemModel() const
 
 $prototype=void setItemModel(QAbstractItemModel *itemModel)
 $method=|void|setItemModel|QAbstractItemModel *
@@ -114,8 +113,7 @@ $method=|void|setItemModel|QAbstractItemModel *
 %% Q_PROPERTY(QString rowRole READ rowRole WRITE setRowRole NOTIFY rowRoleChanged)
 %%
 
-$prototype=QString rowRole() const
-$method=|QString|rowRole|
+$prototypeV2=QString rowRole() const
 
 $prototype=void setRowRole(const QString &role)
 $method=|void|setRowRole|const QString &
@@ -124,8 +122,7 @@ $method=|void|setRowRole|const QString &
 %% Q_PROPERTY(QString columnRole READ columnRole WRITE setColumnRole NOTIFY columnRoleChanged)
 %%
 
-$prototype=QString columnRole() const
-$method=|QString|columnRole|
+$prototypeV2=QString columnRole() const
 
 $prototype=void setColumnRole(const QString &role)
 $method=|void|setColumnRole|const QString &
@@ -134,8 +131,7 @@ $method=|void|setColumnRole|const QString &
 %% Q_PROPERTY(QString xPosRole READ xPosRole WRITE setXPosRole NOTIFY xPosRoleChanged)
 %%
 
-$prototype=QString xPosRole() const
-$method=|QString|xPosRole|
+$prototypeV2=QString xPosRole() const
 
 $prototype=void setXPosRole(const QString &role)
 $method=|void|setXPosRole|const QString &
@@ -144,8 +140,7 @@ $method=|void|setXPosRole|const QString &
 %% Q_PROPERTY(QString yPosRole READ yPosRole WRITE setYPosRole NOTIFY yPosRoleChanged)
 %%
 
-$prototype=QString yPosRole() const
-$method=|QString|yPosRole|
+$prototypeV2=QString yPosRole() const
 
 $prototype=void setYPosRole(const QString &role)
 $method=|void|setYPosRole|const QString &
@@ -154,8 +149,7 @@ $method=|void|setYPosRole|const QString &
 %% Q_PROPERTY(QString zPosRole READ zPosRole WRITE setZPosRole NOTIFY zPosRoleChanged)
 %%
 
-$prototype=QString zPosRole() const
-$method=|QString|zPosRole|
+$prototypeV2=QString zPosRole() const
 
 $prototype=void setZPosRole(const QString &role)
 $method=|void|setZPosRole|const QString &
@@ -164,8 +158,7 @@ $method=|void|setZPosRole|const QString &
 %% Q_PROPERTY(QStringList rowCategories READ rowCategories WRITE setRowCategories NOTIFY rowCategoriesChanged)
 %%
 
-$prototype=QStringList rowCategories() const
-$method=|QStringList|rowCategories|
+$prototypeV2=QStringList rowCategories() const
 
 $prototype=void setRowCategories(const QStringList &categories)
 $method=|void|setRowCategories|const QStringList &
@@ -174,8 +167,7 @@ $method=|void|setRowCategories|const QStringList &
 %% Q_PROPERTY(QStringList columnCategories READ columnCategories WRITE setColumnCategories NOTIFY columnCategoriesChanged)
 %%
 
-$prototype=QStringList columnCategories() const
-$method=|QStringList|columnCategories|
+$prototypeV2=QStringList columnCategories() const
 
 $prototype=void setColumnCategories(const QStringList &categories)
 $method=|void|setColumnCategories|const QStringList &
@@ -184,8 +176,7 @@ $method=|void|setColumnCategories|const QStringList &
 %% Q_PROPERTY(bool useModelCategories READ useModelCategories WRITE setUseModelCategories NOTIFY useModelCategoriesChanged)
 %%
 
-$prototype=bool useModelCategories() const
-$method=|bool|useModelCategories|
+$prototypeV2=bool useModelCategories() const
 
 $prototype=void setUseModelCategories(bool enable)
 $method=|void|setUseModelCategories|bool
@@ -194,8 +185,7 @@ $method=|void|setUseModelCategories|bool
 %% Q_PROPERTY(bool autoRowCategories READ autoRowCategories WRITE setAutoRowCategories NOTIFY autoRowCategoriesChanged)
 %%
 
-$prototype=bool autoRowCategories() const
-$method=|bool|autoRowCategories|
+$prototypeV2=bool autoRowCategories() const
 
 $prototype=void setAutoRowCategories(bool enable)
 $method=|void|setAutoRowCategories|bool
@@ -204,8 +194,7 @@ $method=|void|setAutoRowCategories|bool
 %% Q_PROPERTY(bool autoColumnCategories READ autoColumnCategories WRITE setAutoColumnCategories NOTIFY autoColumnCategoriesChanged)
 %%
 
-$prototype=bool autoColumnCategories() const
-$method=|bool|autoColumnCategories|
+$prototypeV2=bool autoColumnCategories() const
 
 $prototype=void setAutoColumnCategories(bool enable)
 $method=|void|setAutoColumnCategories|bool
@@ -214,8 +203,7 @@ $method=|void|setAutoColumnCategories|bool
 %% Q_PROPERTY(QRegExp rowRolePattern READ rowRolePattern WRITE setRowRolePattern NOTIFY rowRolePatternChanged REVISION 1)
 %%
 
-$prototype=QRegExp rowRolePattern() const
-$method=|QRegExp|rowRolePattern|
+$prototypeV2=QRegExp rowRolePattern() const
 
 $prototype=void setRowRolePattern(const QRegExp &pattern)
 $method=|void|setRowRolePattern|const QRegExp &
@@ -224,8 +212,7 @@ $method=|void|setRowRolePattern|const QRegExp &
 %% Q_PROPERTY(QRegExp columnRolePattern READ columnRolePattern WRITE setColumnRolePattern NOTIFY columnRolePatternChanged REVISION 1)
 %%
 
-$prototype=QRegExp columnRolePattern() const
-$method=|QRegExp|columnRolePattern|
+$prototypeV2=QRegExp columnRolePattern() const
 
 $prototype=void setColumnRolePattern(const QRegExp &pattern)
 $method=|void|setColumnRolePattern|const QRegExp &
@@ -234,8 +221,7 @@ $method=|void|setColumnRolePattern|const QRegExp &
 %% Q_PROPERTY(QRegExp xPosRolePattern READ xPosRolePattern WRITE setXPosRolePattern NOTIFY xPosRolePatternChanged REVISION 1)
 %%
 
-$prototype=QRegExp xPosRolePattern() const
-$method=|QRegExp|xPosRolePattern|
+$prototypeV2=QRegExp xPosRolePattern() const
 
 $prototype=void setXPosRolePattern(const QRegExp &pattern)
 $method=|void|setXPosRolePattern|const QRegExp &
@@ -244,8 +230,7 @@ $method=|void|setXPosRolePattern|const QRegExp &
 %% Q_PROPERTY(QRegExp yPosRolePattern READ yPosRolePattern WRITE setYPosRolePattern NOTIFY yPosRolePatternChanged REVISION 1)
 %%
 
-$prototype=QRegExp yPosRolePattern() const
-$method=|QRegExp|yPosRolePattern|
+$prototypeV2=QRegExp yPosRolePattern() const
 
 $prototype=void setYPosRolePattern(const QRegExp &pattern)
 $method=|void|setYPosRolePattern|const QRegExp &
@@ -254,8 +239,7 @@ $method=|void|setYPosRolePattern|const QRegExp &
 %% Q_PROPERTY(QRegExp zPosRolePattern READ zPosRolePattern WRITE setZPosRolePattern NOTIFY zPosRolePatternChanged REVISION 1)
 %%
 
-$prototype=QRegExp zPosRolePattern() const
-$method=|QRegExp|zPosRolePattern|
+$prototypeV2=QRegExp zPosRolePattern() const
 
 $prototype=void setZPosRolePattern(const QRegExp &pattern)
 $method=|void|setZPosRolePattern|const QRegExp &
@@ -264,8 +248,7 @@ $method=|void|setZPosRolePattern|const QRegExp &
 %% Q_PROPERTY(QString rowRoleReplace READ rowRoleReplace WRITE setRowRoleReplace NOTIFY rowRoleReplaceChanged REVISION 1)
 %%
 
-$prototype=QString rowRoleReplace() const
-$method=|QString|rowRoleReplace|
+$prototypeV2=QString rowRoleReplace() const
 
 $prototype=void setRowRoleReplace(const QString &replace)
 $method=|void|setRowRoleReplace|const QString &
@@ -274,8 +257,7 @@ $method=|void|setRowRoleReplace|const QString &
 %% Q_PROPERTY(QString columnRoleReplace READ columnRoleReplace WRITE setColumnRoleReplace NOTIFY columnRoleReplaceChanged REVISION 1)
 %%
 
-$prototype=QString columnRoleReplace() const
-$method=|QString|columnRoleReplace|
+$prototypeV2=QString columnRoleReplace() const
 
 $prototype=void setColumnRoleReplace(const QString &replace)
 $method=|void|setColumnRoleReplace|const QString &
@@ -284,8 +266,7 @@ $method=|void|setColumnRoleReplace|const QString &
 %% Q_PROPERTY(QString xPosRoleReplace READ xPosRoleReplace WRITE setXPosRoleReplace NOTIFY xPosRoleReplaceChanged REVISION 1)
 %%
 
-$prototype=QString xPosRoleReplace() const
-$method=|QString|xPosRoleReplace|
+$prototypeV2=QString xPosRoleReplace() const
 
 $prototype=void setXPosRoleReplace(const QString &replace)
 $method=|void|setXPosRoleReplace|const QString &
@@ -294,8 +275,7 @@ $method=|void|setXPosRoleReplace|const QString &
 %% Q_PROPERTY(QString yPosRoleReplace READ yPosRoleReplace WRITE setYPosRoleReplace NOTIFY yPosRoleReplaceChanged REVISION 1)
 %%
 
-$prototype=QString yPosRoleReplace() const
-$method=|QString|yPosRoleReplace|
+$prototypeV2=QString yPosRoleReplace() const
 
 $prototype=void setYPosRoleReplace(const QString &replace)
 $method=|void|setYPosRoleReplace|const QString &
@@ -304,8 +284,7 @@ $method=|void|setYPosRoleReplace|const QString &
 %% Q_PROPERTY(QString zPosRoleReplace READ zPosRoleReplace WRITE setZPosRoleReplace NOTIFY zPosRoleReplaceChanged REVISION 1)
 %%
 
-$prototype=QString zPosRoleReplace() const
-$method=|QString|zPosRoleReplace|
+$prototypeV2=QString zPosRoleReplace() const
 
 $prototype=void setZPosRoleReplace(const QString &replace)
 $method=|void|setZPosRoleReplace|const QString &
@@ -314,8 +293,7 @@ $method=|void|setZPosRoleReplace|const QString &
 %% Q_PROPERTY(MultiMatchBehavior multiMatchBehavior READ multiMatchBehavior WRITE setMultiMatchBehavior NOTIFY multiMatchBehaviorChanged REVISION 1)
 %%
 
-$prototype=MultiMatchBehavior multiMatchBehavior() const
-$method=|QItemModelSurfaceDataProxy::MultiMatchBehavior|multiMatchBehavior|
+$prototypeV2=QItemModelSurfaceDataProxy::MultiMatchBehavior multiMatchBehavior() const
 
 $prototype=void setMultiMatchBehavior(MultiMatchBehavior behavior)
 $method=|void|setMultiMatchBehavior|QItemModelSurfaceDataProxy::MultiMatchBehavior

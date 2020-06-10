@@ -66,8 +66,7 @@ $deleteMethod
 %% Q_PROPERTY(QString meshFile READ meshFile WRITE setMeshFile NOTIFY meshFileChanged)
 %%
 
-$prototype=QString meshFile() const
-$method=|QString|meshFile|
+$prototypeV2=QString meshFile() const
 
 $prototype=void setMeshFile(const QString &meshFile)
 $method=|void|setMeshFile|const QString &
@@ -76,8 +75,7 @@ $method=|void|setMeshFile|const QString &
 %% Q_PROPERTY(QString textureFile READ textureFile WRITE setTextureFile NOTIFY textureFileChanged)
 %%
 
-$prototype=QString textureFile() const
-$method=|QString|textureFile|
+$prototypeV2=QString textureFile() const
 
 $prototype=void setTextureFile(const QString &textureFile)
 $method=|void|setTextureFile|const QString &
@@ -86,8 +84,7 @@ $method=|void|setTextureFile|const QString &
 %% Q_PROPERTY(QVector3D position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=QVector3D position() const
-$method=|QVector3D|position|
+$prototypeV2=QVector3D position() const
 
 $prototype=void setPosition(const QVector3D &position)
 $method=|void|setPosition|const QVector3D &
@@ -96,8 +93,7 @@ $method=|void|setPosition|const QVector3D &
 %% Q_PROPERTY(bool positionAbsolute READ isPositionAbsolute WRITE setPositionAbsolute NOTIFY positionAbsoluteChanged)
 %%
 
-$prototype=bool isPositionAbsolute() const
-$method=|bool|isPositionAbsolute|
+$prototypeV2=bool isPositionAbsolute() const
 
 $prototype=void setPositionAbsolute(bool positionAbsolute)
 $method=|void|setPositionAbsolute|bool
@@ -106,8 +102,7 @@ $method=|void|setPositionAbsolute|bool
 %% Q_PROPERTY(QVector3D scaling READ scaling WRITE setScaling NOTIFY scalingChanged)
 %%
 
-$prototype=QVector3D scaling() const
-$method=|QVector3D|scaling|
+$prototypeV2=QVector3D scaling() const
 
 $prototype=void setScaling(const QVector3D &scaling)
 $method=|void|setScaling|const QVector3D &
@@ -116,8 +111,7 @@ $method=|void|setScaling|const QVector3D &
 %% Q_PROPERTY(QQuaternion rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
 %%
 
-$prototype=QQuaternion rotation()
-$method=|QQuaternion|rotation|
+$prototypeV2=QQuaternion rotation()
 
 $prototype=void setRotation(const QQuaternion &rotation)
 $method=|void|setRotation|const QQuaternion &
@@ -126,8 +120,7 @@ $method=|void|setRotation|const QQuaternion &
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
 %%
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
@@ -136,8 +129,7 @@ $method=|void|setVisible|bool
 %% Q_PROPERTY(bool shadowCasting READ isShadowCasting WRITE setShadowCasting NOTIFY shadowCastingChanged)
 %%
 
-$prototype=bool isShadowCasting() const
-$method=|bool|isShadowCasting|
+$prototypeV2=bool isShadowCasting() const
 
 $prototype=void setShadowCasting(bool enabled)
 $method=|void|setShadowCasting|bool
@@ -146,8 +138,7 @@ $method=|void|setShadowCasting|bool
 %% Q_PROPERTY(bool scalingAbsolute READ isScalingAbsolute WRITE setScalingAbsolute NOTIFY scalingAbsoluteChanged REVISION 1)
 %%
 
-$prototype=bool isScalingAbsolute() const
-$method=|bool|isScalingAbsolute|
+$prototypeV2=bool isScalingAbsolute() const
 
 $prototype=void setScalingAbsolute(bool scalingAbsolute)
 $method=|void|setScalingAbsolute|bool

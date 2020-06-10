@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(InputView inputView READ inputView WRITE setInputView NOTIFY inputViewChanged)
 %%
 
-$prototype=InputView inputView() const
-$method=|QAbstract3DInputHandler::InputView|inputView|
+$prototypeV2=QAbstract3DInputHandler::InputView inputView() const
 
 $prototype=void setInputView(InputView inputView)
 $method=|void|setInputView|QAbstract3DInputHandler::InputView
@@ -49,8 +48,7 @@ $method=|void|setInputView|QAbstract3DInputHandler::InputView
 %% Q_PROPERTY(QPoint inputPosition READ inputPosition WRITE setInputPosition NOTIFY positionChanged)
 %%
 
-$prototype=QPoint inputPosition() const
-$method=|QPoint|inputPosition|
+$prototypeV2=QPoint inputPosition() const
 
 $prototype=void setInputPosition(const QPoint &position)
 $method=|void|setInputPosition|const QPoint &
@@ -59,8 +57,7 @@ $method=|void|setInputPosition|const QPoint &
 %% Q_PROPERTY(Q3DScene *scene READ scene WRITE setScene NOTIFY sceneChanged)
 %%
 
-$prototype=Q3DScene *scene() const
-$method=|Q3DScene *|scene|
+$prototypeV2=Q3DScene * scene() const
 
 $prototype=void setScene(Q3DScene *scene)
 $method=|void|setScene|Q3DScene *

@@ -50,15 +50,13 @@ $deleteMethod
 %% Q_PROPERTY(int itemCount READ itemCount NOTIFY itemCountChanged)
 %%
 
-$prototype=int itemCount() const
-$method=|int|itemCount|
+$prototypeV2=int itemCount() const
 
 %%
 %% Q_PROPERTY(QScatter3DSeries *series READ series NOTIFY seriesChanged)
 %%
 
-$prototype=QScatter3DSeries *series() const
-$method=|QScatter3DSeries *|series|
+$prototypeV2=QScatter3DSeries * series() const
 
 %%
 %%

@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QValue3DAxis *axisX READ axisX WRITE setAxisX NOTIFY axisXChanged)
 %%
 
-$prototype=QValue3DAxis *axisX() const
-$method=|QValue3DAxis *|axisX|
+$prototypeV2=QValue3DAxis * axisX() const
 
 $prototype=void setAxisX(QValue3DAxis *axis)
 $method=|void|setAxisX|QValue3DAxis *
@@ -50,8 +49,7 @@ $method=|void|setAxisX|QValue3DAxis *
 %% Q_PROPERTY(QValue3DAxis *axisY READ axisY WRITE setAxisY NOTIFY axisYChanged)
 %%
 
-$prototype=QValue3DAxis *axisY() const
-$method=|QValue3DAxis *|axisY|
+$prototypeV2=QValue3DAxis * axisY() const
 
 $prototype=void setAxisY(QValue3DAxis *axis)
 $method=|void|setAxisY|QValue3DAxis *
@@ -60,8 +58,7 @@ $method=|void|setAxisY|QValue3DAxis *
 %% Q_PROPERTY(QValue3DAxis *axisZ READ axisZ WRITE setAxisZ NOTIFY axisZChanged)
 %%
 
-$prototype=QValue3DAxis *axisZ() const
-$method=|QValue3DAxis *|axisZ|
+$prototypeV2=QValue3DAxis * axisZ() const
 
 $prototype=void setAxisZ(QValue3DAxis *axis)
 $method=|void|setAxisZ|QValue3DAxis *
@@ -70,15 +67,13 @@ $method=|void|setAxisZ|QValue3DAxis *
 %% Q_PROPERTY(QSurface3DSeries *selectedSeries READ selectedSeries NOTIFY selectedSeriesChanged)
 %%
 
-$prototype=QSurface3DSeries *selectedSeries() const
-$method=|QSurface3DSeries *|selectedSeries|
+$prototypeV2=QSurface3DSeries * selectedSeries() const
 
 %%
 %% Q_PROPERTY(bool flipHorizontalGrid READ flipHorizontalGrid WRITE setFlipHorizontalGrid NOTIFY flipHorizontalGridChanged)
 %%
 
-$prototype=bool flipHorizontalGrid() const
-$method=|bool|flipHorizontalGrid|
+$prototypeV2=bool flipHorizontalGrid() const
 
 $prototype=void setFlipHorizontalGrid(bool flip)
 $method=|void|setFlipHorizontalGrid|bool

@@ -64,8 +64,7 @@ $deleteMethod
 %% Q_PROPERTY(QBarDataProxy *dataProxy READ dataProxy WRITE setDataProxy NOTIFY dataProxyChanged)
 %%
 
-$prototype=QBarDataProxy *dataProxy() const
-$method=|QBarDataProxy *|dataProxy|
+$prototypeV2=QBarDataProxy * dataProxy() const
 
 $prototype=void setDataProxy(QBarDataProxy *proxy)
 $method=|void|setDataProxy|QBarDataProxy *
@@ -74,8 +73,7 @@ $method=|void|setDataProxy|QBarDataProxy *
 %% Q_PROPERTY(QPoint selectedBar READ selectedBar WRITE setSelectedBar NOTIFY selectedBarChanged)
 %%
 
-$prototype=QPoint selectedBar() const;
-$method=|QPoint|selectedBar|
+$prototypeV2=QPoint selectedBar() const
 
 $prototype=void setSelectedBar(const QPoint &position)
 $method=|void|setSelectedBar|const QPoint &
@@ -84,8 +82,7 @@ $method=|void|setSelectedBar|const QPoint &
 %% Q_PROPERTY(float meshAngle READ meshAngle WRITE setMeshAngle NOTIFY meshAngleChanged)
 %%
 
-$prototype=float meshAngle() const
-$method=|float|meshAngle|
+$prototypeV2=float meshAngle() const
 
 $prototype=void setMeshAngle(float angle)
 $method=|void|setMeshAngle|float
@@ -94,8 +91,7 @@ $method=|void|setMeshAngle|float
 %%
 %%
 
-$prototype=static QPoint invalidSelectionPosition()
-$staticMethod=|QPoint|invalidSelectionPosition|
+$prototypeV2=static QPoint invalidSelectionPosition()
 
 %%
 %% SIGNALS

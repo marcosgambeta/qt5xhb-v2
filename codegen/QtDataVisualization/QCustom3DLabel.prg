@@ -64,8 +64,7 @@ $deleteMethod
 %% Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 %%
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
@@ -74,8 +73,7 @@ $method=|void|setText|const QString &
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
-$prototype=QFont font() const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont(const QFont &font)
 $method=|void|setFont|const QFont &
@@ -84,8 +82,7 @@ $method=|void|setFont|const QFont &
 %% Q_PROPERTY(QColor textColor READ textColor WRITE setTextColor NOTIFY textColorChanged)
 %%
 
-$prototype=QColor textColor() const
-$method=|QColor|textColor|
+$prototypeV2=QColor textColor() const
 
 $prototype=void setTextColor(const QColor &color)
 $method=|void|setTextColor|const QColor &
@@ -94,8 +91,7 @@ $method=|void|setTextColor|const QColor &
 %% Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 %%
 
-$prototype=QColor backgroundColor() const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
 $prototype=void setBackgroundColor(const QColor &color)
 $method=|void|setBackgroundColor|const QColor &
@@ -104,8 +100,7 @@ $method=|void|setBackgroundColor|const QColor &
 %% Q_PROPERTY(bool borderEnabled READ isBorderEnabled WRITE setBorderEnabled NOTIFY borderEnabledChanged)
 %%
 
-$prototype=bool isBorderEnabled() const
-$method=|bool|isBorderEnabled|
+$prototypeV2=bool isBorderEnabled() const
 
 $prototype=void setBorderEnabled(bool enabled)
 $method=|void|setBorderEnabled|bool
@@ -114,8 +109,7 @@ $method=|void|setBorderEnabled|bool
 %% Q_PROPERTY(bool backgroundEnabled READ isBackgroundEnabled WRITE setBackgroundEnabled NOTIFY backgroundEnabledChanged)
 %%
 
-$prototype=bool isBackgroundEnabled() const
-$method=|bool|isBackgroundEnabled|
+$prototypeV2=bool isBackgroundEnabled() const
 
 $prototype=void setBackgroundEnabled(bool enabled)
 $method=|void|setBackgroundEnabled|bool
@@ -124,8 +118,7 @@ $method=|void|setBackgroundEnabled|bool
 %% Q_PROPERTY(bool facingCamera READ isFacingCamera WRITE setFacingCamera NOTIFY facingCameraChanged)
 %%
 
-$prototype=bool isFacingCamera() const
-$method=|bool|isFacingCamera|
+$prototypeV2=bool isFacingCamera() const
 
 $prototype=void setFacingCamera(bool enabled)
 $method=|void|setFacingCamera|bool

@@ -39,15 +39,13 @@ $deleteMethod
 %% Q_PROPERTY(SeriesType type READ type CONSTANT)
 %%
 
-$prototype=SeriesType type() const
-$method=|QAbstract3DSeries::SeriesType|type|
+$prototypeV2=QAbstract3DSeries::SeriesType type() const
 
 %%
 %% Q_PROPERTY(QString itemLabelFormat READ itemLabelFormat WRITE setItemLabelFormat NOTIFY itemLabelFormatChanged)
 %%
 
-$prototype=QString itemLabelFormat() const
-$method=|QString|itemLabelFormat|
+$prototypeV2=QString itemLabelFormat() const
 
 $prototype=void setItemLabelFormat(const QString &format)
 $method=|void|setItemLabelFormat|const QString &
@@ -56,8 +54,7 @@ $method=|void|setItemLabelFormat|const QString &
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibilityChanged)
 %%
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
@@ -66,8 +63,7 @@ $method=|void|setVisible|bool
 %% Q_PROPERTY(Mesh mesh READ mesh WRITE setMesh NOTIFY meshChanged)
 %%
 
-$prototype=Mesh mesh() const
-$method=|QAbstract3DSeries::Mesh|mesh|
+$prototypeV2=QAbstract3DSeries::Mesh mesh() const
 
 $prototype=void setMesh(Mesh mesh)
 $method=|void|setMesh|QAbstract3DSeries::Mesh
@@ -76,8 +72,7 @@ $method=|void|setMesh|QAbstract3DSeries::Mesh
 %% Q_PROPERTY(bool meshSmooth READ isMeshSmooth WRITE setMeshSmooth NOTIFY meshSmoothChanged)
 %%
 
-$prototype=bool isMeshSmooth() const
-$method=|bool|isMeshSmooth|
+$prototypeV2=bool isMeshSmooth() const
 
 $prototype=void setMeshSmooth(bool enable)
 $method=|void|setMeshSmooth|bool
@@ -86,8 +81,7 @@ $method=|void|setMeshSmooth|bool
 %% Q_PROPERTY(QQuaternion meshRotation READ meshRotation WRITE setMeshRotation NOTIFY meshRotationChanged)
 %%
 
-$prototype=QQuaternion meshRotation() const
-$method=|QQuaternion|meshRotation|
+$prototypeV2=QQuaternion meshRotation() const
 
 $prototype=void setMeshRotation(const QQuaternion &rotation)
 $method=|void|setMeshRotation|const QQuaternion &
@@ -96,8 +90,7 @@ $method=|void|setMeshRotation|const QQuaternion &
 %% Q_PROPERTY(QString userDefinedMesh READ userDefinedMesh WRITE setUserDefinedMesh NOTIFY userDefinedMeshChanged)
 %%
 
-$prototype=QString userDefinedMesh() const
-$method=|QString|userDefinedMesh|
+$prototypeV2=QString userDefinedMesh() const
 
 $prototype=void setUserDefinedMesh(const QString &fileName)
 $method=|void|setUserDefinedMesh|const QString &
@@ -106,8 +99,7 @@ $method=|void|setUserDefinedMesh|const QString &
 %% Q_PROPERTY(QtDataVisualization::Q3DTheme::ColorStyle colorStyle READ colorStyle WRITE setColorStyle NOTIFY colorStyleChanged)
 %%
 
-$prototype=Q3DTheme::ColorStyle colorStyle() const
-$method=|Q3DTheme::ColorStyle|colorStyle|
+$prototypeV2=Q3DTheme::ColorStyle colorStyle() const
 
 $prototype=void setColorStyle(Q3DTheme::ColorStyle style)
 $method=|void|setColorStyle|Q3DTheme::ColorStyle
@@ -116,8 +108,7 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 %% Q_PROPERTY(QColor baseColor READ baseColor WRITE setBaseColor NOTIFY baseColorChanged)
 %%
 
-$prototype=QColor baseColor() const
-$method=|QColor|baseColor|
+$prototypeV2=QColor baseColor() const
 
 $prototype=void setBaseColor(const QColor &color)
 $method=|void|setBaseColor|const QColor &
@@ -126,8 +117,7 @@ $method=|void|setBaseColor|const QColor &
 %% Q_PROPERTY(QLinearGradient baseGradient READ baseGradient WRITE setBaseGradient NOTIFY baseGradientChanged)
 %%
 
-$prototype=QLinearGradient baseGradient() const
-$method=|QLinearGradient|baseGradient|
+$prototypeV2=QLinearGradient baseGradient() const
 
 $prototype=void setBaseGradient(const QLinearGradient &gradient)
 $method=|void|setBaseGradient|const QLinearGradient &
@@ -136,8 +126,7 @@ $method=|void|setBaseGradient|const QLinearGradient &
 %% Q_PROPERTY(QColor singleHighlightColor READ singleHighlightColor WRITE setSingleHighlightColor NOTIFY singleHighlightColorChanged)
 %%
 
-$prototype=QColor singleHighlightColor() const
-$method=|QColor|singleHighlightColor|
+$prototypeV2=QColor singleHighlightColor() const
 
 $prototype=void setSingleHighlightColor(const QColor &color)
 $method=|void|setSingleHighlightColor|const QColor &
@@ -146,8 +135,7 @@ $method=|void|setSingleHighlightColor|const QColor &
 %% Q_PROPERTY(QLinearGradient singleHighlightGradient READ singleHighlightGradient WRITE setSingleHighlightGradient NOTIFY singleHighlightGradientChanged)
 %%
 
-$prototype=QLinearGradient singleHighlightGradient() const
-$method=|QLinearGradient|singleHighlightGradient|
+$prototypeV2=QLinearGradient singleHighlightGradient() const
 
 $prototype=void setSingleHighlightGradient(const QLinearGradient &gradient)
 $method=|void|setSingleHighlightGradient|const QLinearGradient &
@@ -156,8 +144,7 @@ $method=|void|setSingleHighlightGradient|const QLinearGradient &
 %% Q_PROPERTY(QColor multiHighlightColor READ multiHighlightColor WRITE setMultiHighlightColor NOTIFY multiHighlightColorChanged)
 %%
 
-$prototype=QColor multiHighlightColor() const
-$method=|QColor|multiHighlightColor|
+$prototypeV2=QColor multiHighlightColor() const
 
 $prototype=void setMultiHighlightColor(const QColor &color)
 $method=|void|setMultiHighlightColor|const QColor &
@@ -166,8 +153,7 @@ $method=|void|setMultiHighlightColor|const QColor &
 %% Q_PROPERTY(QLinearGradient multiHighlightGradient READ multiHighlightGradient WRITE setMultiHighlightGradient NOTIFY multiHighlightGradientChanged)
 %%
 
-$prototype=QLinearGradient multiHighlightGradient() const
-$method=|QLinearGradient|multiHighlightGradient|
+$prototypeV2=QLinearGradient multiHighlightGradient() const
 
 $prototype=void setMultiHighlightGradient(const QLinearGradient &gradient)
 $method=|void|setMultiHighlightGradient|const QLinearGradient &
@@ -176,8 +162,7 @@ $method=|void|setMultiHighlightGradient|const QLinearGradient &
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
@@ -186,15 +171,13 @@ $method=|void|setName|const QString &
 %% Q_PROPERTY(QString itemLabel READ itemLabel NOTIFY itemLabelChanged REVISION 1)
 %%
 
-$prototype=QString itemLabel() const
-$method=|QString|itemLabel|
+$prototypeV2=QString itemLabel() const
 
 %%
 %% Q_PROPERTY(bool itemLabelVisible READ isItemLabelVisible WRITE setItemLabelVisible NOTIFY itemLabelVisibilityChanged REVISION 1)
 %%
 
-$prototype=bool isItemLabelVisible() const
-$method=|bool|isItemLabelVisible|
+$prototypeV2=bool isItemLabelVisible() const
 
 $prototype=void setItemLabelVisible(bool visible)
 $method=|void|setItemLabelVisible|bool

@@ -66,8 +66,7 @@ $deleteMethod
 %% Q_PROPERTY(QSurfaceDataProxy *dataProxy READ dataProxy WRITE setDataProxy NOTIFY dataProxyChanged)
 %%
 
-$prototype=QSurfaceDataProxy *dataProxy() const
-$method=|QSurfaceDataProxy *|dataProxy|
+$prototypeV2=QSurfaceDataProxy * dataProxy() const
 
 $prototype=void setDataProxy(QSurfaceDataProxy *proxy)
 $method=|void|setDataProxy|QSurfaceDataProxy *
@@ -76,8 +75,7 @@ $method=|void|setDataProxy|QSurfaceDataProxy *
 %% Q_PROPERTY(QPoint selectedPoint READ selectedPoint WRITE setSelectedPoint NOTIFY selectedPointChanged)
 %%
 
-$prototype=QPoint selectedPoint() const
-$method=|QPoint|selectedPoint|
+$prototypeV2=QPoint selectedPoint() const
 
 $prototype=void setSelectedPoint(const QPoint &position)
 $method=|void|setSelectedPoint|const QPoint &
@@ -86,8 +84,7 @@ $method=|void|setSelectedPoint|const QPoint &
 %% Q_PROPERTY(bool flatShadingEnabled READ isFlatShadingEnabled WRITE setFlatShadingEnabled NOTIFY flatShadingEnabledChanged)
 %%
 
-$prototype=bool isFlatShadingEnabled() const
-$method=|bool|isFlatShadingEnabled|
+$prototypeV2=bool isFlatShadingEnabled() const
 
 $prototype=void setFlatShadingEnabled(bool enabled)
 $method=|void|setFlatShadingEnabled|bool
@@ -96,15 +93,13 @@ $method=|void|setFlatShadingEnabled|bool
 %% Q_PROPERTY(bool flatShadingSupported READ isFlatShadingSupported NOTIFY flatShadingSupportedChanged)
 %%
 
-$prototype=bool isFlatShadingSupported() const
-$method=|bool|isFlatShadingSupported|
+$prototypeV2=bool isFlatShadingSupported() const
 
 %%
 %% Q_PROPERTY(DrawFlags drawMode READ drawMode WRITE setDrawMode NOTIFY drawModeChanged)
 %%
 
-$prototype=QSurface3DSeries::DrawFlags drawMode() const
-$method=|QSurface3DSeries::DrawFlags|drawMode|
+$prototypeV2=QSurface3DSeries::DrawFlags drawMode() const
 
 $prototype=void setDrawMode(DrawFlags mode)
 $method=|void|setDrawMode|QSurface3DSeries::DrawFlags
@@ -113,8 +108,7 @@ $method=|void|setDrawMode|QSurface3DSeries::DrawFlags
 %% Q_PROPERTY(QImage texture READ texture WRITE setTexture NOTIFY textureChanged)
 %%
 
-$prototype=QImage texture() const
-$method=|QImage|texture|
+$prototypeV2=QImage texture() const
 
 $prototype=void setTexture(const QImage &texture)
 $method=|void|setTexture|const QImage &
@@ -123,8 +117,7 @@ $method=|void|setTexture|const QImage &
 %% Q_PROPERTY(QString textureFile READ textureFile WRITE setTextureFile NOTIFY textureFileChanged)
 %%
 
-$prototype=QString textureFile() const
-$method=|QString|textureFile|
+$prototypeV2=QString textureFile() const
 
 $prototype=void setTextureFile(const QString &filename)
 $method=|void|setTextureFile|const QString &
@@ -133,8 +126,7 @@ $method=|void|setTextureFile|const QString &
 %%
 %%
 
-$prototype=static QPoint invalidSelectionPosition()
-$staticMethod=|QPoint|invalidSelectionPosition|
+$prototypeV2=static QPoint invalidSelectionPosition()
 
 %%
 %% SIGNALS

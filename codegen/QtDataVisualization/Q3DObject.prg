@@ -42,15 +42,13 @@ $deleteMethod
 %% Q_PROPERTY(Q3DScene* parentScene READ parentScene)
 %%
 
-$prototype=Q3DScene *parentScene()
-$method=|Q3DScene *|parentScene|
+$prototypeV2=Q3DScene * parentScene()
 
 %%
 %% Q_PROPERTY(QVector3D position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=QVector3D position() const
-$method=|QVector3D|position|
+$prototypeV2=QVector3D position() const
 
 $prototype=void setPosition(const QVector3D &position)
 $method=|void|setPosition|const QVector3D &

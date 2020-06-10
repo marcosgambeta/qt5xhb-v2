@@ -37,7 +37,6 @@ $deleteMethod
 %% Q_PROPERTY(DataType type READ type CONSTANT)
 %%
 
-$prototype=DataType type() const
-$method=|QAbstractDataProxy::DataType|type|
+$prototypeV2=QAbstractDataProxy::DataType type() const
 
 #pragma ENDDUMP
