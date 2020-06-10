@@ -43,11 +43,9 @@ HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 
 $deleteMethod
 
-$prototype=void beginStructure()
-$method=|void|beginStructure|
+$prototypeV2=void beginStructure()
 
-$prototype=void endStructure()
-$method=|void|endStructure|
+$prototypeV2=void endStructure()
 
 $prototype=void beginArray(int elementMetaTypeId)
 $internalMethod=|void|beginArray,beginArray1|int
@@ -66,8 +64,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 }
 $addMethod=beginArray
 
-$prototype=void endArray()
-$method=|void|endArray|
+$prototypeV2=void endArray()
 
 $prototype=void beginMap(int keyMetaTypeId, int valueMetaTypeId)
 $internalMethod=|void|beginMap,beginMap1|int,int
@@ -86,29 +83,22 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 }
 $addMethod=beginMap
 
-$prototype=void endMap()
-$method=|void|endMap|
+$prototypeV2=void endMap()
 
-$prototype=void beginMapEntry()
-$method=|void|beginMapEntry|
+$prototypeV2=void beginMapEntry()
 
-$prototype=void endMapEntry()
-$method=|void|endMapEntry|
+$prototypeV2=void endMapEntry()
 
 $prototype=void appendVariant(const QVariant &v)
 $method=|void|appendVariant|const QVariant &
 
-$prototype=QString currentSignature() const
-$method=|QString|currentSignature|
+$prototypeV2=QString currentSignature() const
 
-$prototype=ElementType currentType() const
-$method=|QDBusArgument::ElementType|currentType|
+$prototypeV2=QDBusArgument::ElementType currentType() const
 
-$prototype=bool atEnd() const
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const
 
-$prototype=QVariant asVariant() const
-$method=|QVariant|asVariant|
+$prototypeV2=QVariant asVariant() const
 
 $extraMethods
 

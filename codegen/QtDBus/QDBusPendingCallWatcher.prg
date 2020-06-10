@@ -32,11 +32,9 @@ $constructor=|new|const QDBusPendingCall &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=void waitForFinished()
-$method=|void|waitForFinished|
+$prototypeV2=void waitForFinished()
 
 %%
 %% SIGNALS

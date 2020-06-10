@@ -79,17 +79,13 @@ HB_FUNC_STATIC( QDBUSERROR_NEW )
 
 $deleteMethod
 
-$prototype=ErrorType type() const
-$method=|QDBusError::ErrorType|type|
+$prototypeV2=QDBusError::ErrorType type() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QString message() const
-$method=|QString|message|
+$prototypeV2=QString message() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=static QString errorString(ErrorType error)
 $staticMethod=|QString|errorString|QDBusError::ErrorType

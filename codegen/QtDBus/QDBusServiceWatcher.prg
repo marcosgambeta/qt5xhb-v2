@@ -58,8 +58,7 @@ HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 
 $deleteMethod
 
-$prototype=QStringList watchedServices() const
-$method=|QStringList|watchedServices|
+$prototypeV2=QStringList watchedServices() const
 
 $prototype=void setWatchedServices(const QStringList &services)
 $method=|void|setWatchedServices|const QStringList &
@@ -70,14 +69,12 @@ $method=|void|addWatchedService|const QString &
 $prototype=bool removeWatchedService(const QString &service)
 $method=|bool|removeWatchedService|const QString &
 
-$prototype=WatchMode watchMode() const
-$method=|QDBusServiceWatcher::WatchMode|watchMode|
+$prototypeV2=QDBusServiceWatcher::WatchMode watchMode() const
 
 $prototype=void setWatchMode(WatchMode mode)
 $method=|void|setWatchMode|QDBusServiceWatcher::WatchMode
 
-$prototype=QDBusConnection connection() const
-$method=|QDBusConnection|connection|
+$prototypeV2=QDBusConnection connection() const
 
 $prototype=void setConnection(const QDBusConnection &connection)
 $method=|void|setConnection|const QDBusConnection &

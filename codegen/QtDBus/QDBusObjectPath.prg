@@ -72,8 +72,7 @@ HB_FUNC( QDBUSOBJECTPATH_NEW )
 
 $deleteMethod
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=void setPath(const QString &path)
 $method=|void|setPath|const QString &

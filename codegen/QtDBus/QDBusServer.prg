@@ -47,14 +47,11 @@ HB_FUNC_STATIC( QDBUSSERVER_NEW )
 
 $deleteMethod
 
-$prototype=bool isConnected() const
-$method=|bool|isConnected|
+$prototypeV2=bool isConnected() const
 
-$prototype=QDBusError lastError() const
-$method=|QDBusError|lastError|
+$prototypeV2=QDBusError lastError() const
 
-$prototype=QString address() const
-$method=|QString|address|
+$prototypeV2=QString address() const
 
 %%
 %% SIGNALS

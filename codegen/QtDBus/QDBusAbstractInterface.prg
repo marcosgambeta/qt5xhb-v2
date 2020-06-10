@@ -29,29 +29,22 @@ $includes
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QDBusConnection connection() const
-$method=|QDBusConnection|connection|
+$prototypeV2=QDBusConnection connection() const
 
-$prototype=QString service() const
-$method=|QString|service|
+$prototypeV2=QString service() const
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
-$prototype=QString interface() const
-$method=|QString|interface|
+$prototypeV2=QString interface() const
 
-$prototype=QDBusError lastError() const
-$method=|QDBusError|lastError|
+$prototypeV2=QDBusError lastError() const
 
 $prototype=void setTimeout(int timeout)
 $method=|void|setTimeout|int
 
-$prototype=int timeout() const
-$method=|int|timeout|
+$prototypeV2=int timeout() const
 
 $prototype=QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
 $internalMethod=|QDBusMessage|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()

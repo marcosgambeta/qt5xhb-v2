@@ -65,11 +65,9 @@ $deleteMethod
 $prototype=void swap(QDBusUnixFileDescriptor &other)
 $method=|void|swap|QDBusUnixFileDescriptor &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int fileDescriptor() const
-$method=|int|fileDescriptor|
+$prototypeV2=int fileDescriptor() const
 
 $prototype=void setFileDescriptor(int fileDescriptor)
 $method=|void|setFileDescriptor|int
@@ -77,11 +75,9 @@ $method=|void|setFileDescriptor|int
 $prototype=void giveFileDescriptor(int fileDescriptor)
 $method=|void|giveFileDescriptor|int
 
-$prototype=int takeFileDescriptor()
-$method=|int|takeFileDescriptor|
+$prototypeV2=int takeFileDescriptor()
 
-$prototype=static bool isSupported()
-$staticMethod=|bool|isSupported|
+$prototypeV2=static bool isSupported()
 
 $extraMethods
 

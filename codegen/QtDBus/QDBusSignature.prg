@@ -73,8 +73,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString signature() const
-$method=|QString|signature|
+$prototypeV2=QString signature() const
 
 $prototype=void setSignature(const QString &signature)
 $method=|void|setSignature|const QString &

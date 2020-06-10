@@ -119,44 +119,33 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 }
 $addMethod=createErrorReply
 
-$prototype=QString service() const
-$method=|QString|service|
+$prototypeV2=QString service() const
 
-$prototype=QString path() const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
-$prototype=QString interface() const
-$method=|QString|interface|
+$prototypeV2=QString interface() const
 
-$prototype=QString member() const
-$method=|QString|member|
+$prototypeV2=QString member() const
 
-$prototype=QString errorName() const
-$method=|QString|errorName|
+$prototypeV2=QString errorName() const
 
-$prototype=QString errorMessage() const
-$method=|QString|errorMessage|
+$prototypeV2=QString errorMessage() const
 
-$prototype=MessageType type() const
-$method=|QDBusMessage::MessageType|type|
+$prototypeV2=QDBusMessage::MessageType type() const
 
-$prototype=QString signature() const
-$method=|QString|signature|
+$prototypeV2=QString signature() const
 
-$prototype=bool isReplyRequired() const
-$method=|bool|isReplyRequired|
+$prototypeV2=bool isReplyRequired() const
 
 $prototype=void setDelayedReply(bool enable) const
 $method=|void|setDelayedReply|bool
 
-$prototype=bool isDelayedReply() const
-$method=|bool|isDelayedReply|
+$prototypeV2=bool isDelayedReply() const
 
 $prototype=void setAutoStartService(bool enable)
 $method=|void|setAutoStartService|bool
 
-$prototype=bool autoStartService() const
-$method=|bool|autoStartService|
+$prototypeV2=bool autoStartService() const
 
 $prototype=void setArguments(const QList<QVariant> &arguments)
 $method=|void|setArguments|const QList<QVariant> &

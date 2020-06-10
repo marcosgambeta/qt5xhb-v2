@@ -48,20 +48,15 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 
 $deleteMethod
 
-$prototype=bool isConnected() const
-$method=|bool|isConnected|
+$prototypeV2=bool isConnected() const
 
-$prototype=QString baseService() const
-$method=|QString|baseService|
+$prototypeV2=QString baseService() const
 
-$prototype=QDBusError lastError() const
-$method=|QDBusError|lastError|
+$prototypeV2=QDBusError lastError() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=ConnectionCapabilities connectionCapabilities() const
-$method=|QDBusConnection::ConnectionCapabilities|connectionCapabilities|
+$prototypeV2=QDBusConnection::ConnectionCapabilities connectionCapabilities() const
 
 $prototype=bool send(const QDBusMessage &message) const
 $method=|bool|send|const QDBusMessage &
@@ -150,11 +145,9 @@ $method=|bool|registerService|const QString &
 $prototype=bool unregisterService(const QString &serviceName)
 $method=|bool|unregisterService|const QString &
 
-$prototype=QDBusConnectionInterface *interface() const
-$method=|QDBusConnectionInterface *|interface|
+$prototypeV2=QDBusConnectionInterface * interface() const
 
-$prototype=void *internalPointer() const
-$method=|void *|internalPointer|
+$prototypeV2=void * internalPointer() const
 
 $prototype=static QDBusConnection connectToBus(BusType type, const QString &name)
 $internalStaticMethod=|QDBusConnection|connectToBus,connectToBus1|QDBusConnection::BusType,const QString &
@@ -182,17 +175,13 @@ $staticMethod=|void|disconnectFromBus|const QString &
 $prototype=static void disconnectFromPeer(const QString &name)
 $staticMethod=|void|disconnectFromPeer|const QString &
 
-$prototype=static QByteArray localMachineId()
-$staticMethod=|QByteArray|localMachineId|
+$prototypeV2=static QByteArray localMachineId()
 
-$prototype=static QDBusConnection sessionBus()
-$staticMethod=|QDBusConnection|sessionBus|
+$prototypeV2=static QDBusConnection sessionBus()
 
-$prototype=static QDBusConnection systemBus()
-$staticMethod=|QDBusConnection|systemBus|
+$prototypeV2=static QDBusConnection systemBus()
 
-$prototype=static QDBusConnection sender()
-$staticMethod=|QDBusConnection|sender|
+$prototypeV2=static QDBusConnection sender()
 
 $extraMethods
 

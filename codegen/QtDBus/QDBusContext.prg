@@ -32,17 +32,14 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=bool calledFromDBus() const
-$method=|bool|calledFromDBus|
+$prototypeV2=bool calledFromDBus() const
 
-$prototype=QDBusConnection connection() const
-$method=|QDBusConnection|connection|
+$prototypeV2=QDBusConnection connection() const
 
 $prototype=const QDBusMessage &message() const
 $method=|const QDBusMessage &|message|
 
-$prototype=bool isDelayedReply() const
-$method=|bool|isDelayedReply|
+$prototypeV2=bool isDelayedReply() const
 
 $prototype=void setDelayedReply(bool enable) const
 $method=|void|setDelayedReply|bool
