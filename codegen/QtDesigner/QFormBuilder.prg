@@ -33,14 +33,12 @@ $deleteMethod
 $prototype=void addPluginPath ( const QString & pluginPath )
 $method=|void|addPluginPath|const QString &
 
-$prototype=void clearPluginPaths ()
-$method=|void|clearPluginPaths|
+$prototypeV2=void clearPluginPaths()
 
 $prototype=QList<QDesignerCustomWidgetInterface *> customWidgets () const
 $method=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
 
-$prototype=QStringList pluginPaths () const
-$method=|QStringList|pluginPaths|
+$prototypeV2=QStringList pluginPaths() const
 
 $prototype=void setPluginPath ( const QStringList & pluginPaths )
 $method=|void|setPluginPath|const QStringList &

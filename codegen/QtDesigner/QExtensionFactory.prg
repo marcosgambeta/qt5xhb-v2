@@ -32,8 +32,7 @@ $constructor=|new|QExtensionManager *=nullptr
 
 $deleteMethod
 
-$prototype=QExtensionManager * extensionManager () const
-$method=|QExtensionManager *|extensionManager|
+$prototypeV2=QExtensionManager * extensionManager() const
 
 $prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
 $virtualMethod=|QObject *|extension|QObject *,const QString &

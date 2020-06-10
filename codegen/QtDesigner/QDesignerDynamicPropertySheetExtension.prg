@@ -33,8 +33,7 @@ $virtualMethod=|int|addDynamicProperty|const QString &,const QVariant &
 $prototype=virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 $virtualMethod=|bool|canAddDynamicProperty|const QString &
 
-$prototype=virtual bool dynamicPropertiesAllowed () const = 0
-$virtualMethod=|bool|dynamicPropertiesAllowed|
+$prototypeV2=virtual bool dynamicPropertiesAllowed() const = 0
 
 $prototype=virtual bool isDynamicProperty ( int index ) const = 0
 $virtualMethod=|bool|isDynamicProperty|int

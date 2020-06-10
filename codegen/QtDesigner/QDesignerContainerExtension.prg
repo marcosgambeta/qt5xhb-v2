@@ -30,11 +30,9 @@ $deleteMethod
 $prototype=virtual void addWidget ( QWidget * page ) = 0
 $virtualMethod=|void|addWidget|QWidget *
 
-$prototype=virtual int count () const = 0
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const = 0
 
-$prototype=virtual int currentIndex () const = 0
-$virtualMethod=|int|currentIndex|
+$prototypeV2=virtual int currentIndex() const = 0
 
 $prototype=virtual void insertWidget ( int index, QWidget * page ) = 0
 $virtualMethod=|void|insertWidget|int,QWidget *

@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual int count () const = 0
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const = 0
 
 $prototype=virtual QString declaredInClass ( int index ) const = 0
 $virtualMethod=|QString|declaredInClass|int

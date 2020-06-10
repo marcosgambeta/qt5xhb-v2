@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QDesignerFormEditorInterface * core () const
-$virtualMethod=|QDesignerFormEditorInterface *|core|
+$prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
 $prototype=virtual void manageAction ( QAction * action ) = 0
 $virtualMethod=|void|manageAction|QAction *

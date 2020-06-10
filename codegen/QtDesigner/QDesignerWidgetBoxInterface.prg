@@ -27,14 +27,11 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QString fileName () const = 0
-$virtualMethod=|QString|fileName|
+$prototypeV2=virtual QString fileName() const = 0
 
-$prototype=virtual bool load () = 0
-$virtualMethod=|bool|load|
+$prototypeV2=virtual bool load() = 0
 
-$prototype=virtual bool save () = 0
-$virtualMethod=|bool|save|
+$prototypeV2=virtual bool save() = 0
 
 $prototype=virtual void setFileName ( const QString & fileName ) = 0
 $virtualMethod=|void|setFileName|const QString &

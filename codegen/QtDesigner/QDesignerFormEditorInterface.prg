@@ -37,20 +37,15 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QDesignerActionEditorInterface * actionEditor () const
-$method=|QDesignerActionEditorInterface *|actionEditor|
+$prototypeV2=QDesignerActionEditorInterface * actionEditor() const
 
-$prototype=QExtensionManager * extensionManager () const
-$method=|QExtensionManager *|extensionManager|
+$prototypeV2=QExtensionManager * extensionManager() const
 
-$prototype=QDesignerFormWindowManagerInterface * formWindowManager () const
-$method=|QDesignerFormWindowManagerInterface *|formWindowManager|
+$prototypeV2=QDesignerFormWindowManagerInterface * formWindowManager() const
 
-$prototype=QDesignerObjectInspectorInterface * objectInspector () const
-$method=|QDesignerObjectInspectorInterface *|objectInspector|
+$prototypeV2=QDesignerObjectInspectorInterface * objectInspector() const
 
-$prototype=QDesignerPropertyEditorInterface * propertyEditor () const
-$method=|QDesignerPropertyEditorInterface *|propertyEditor|
+$prototypeV2=QDesignerPropertyEditorInterface * propertyEditor() const
 
 $prototype=void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
 $method=|void|setActionEditor|QDesignerActionEditorInterface *
@@ -64,10 +59,8 @@ $method=|void|setPropertyEditor|QDesignerPropertyEditorInterface *
 $prototype=void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
 $method=|void|setWidgetBox|QDesignerWidgetBoxInterface *
 
-$prototype=QWidget * topLevel () const
-$method=|QWidget *|topLevel|
+$prototypeV2=QWidget * topLevel() const
 
-$prototype=QDesignerWidgetBoxInterface * widgetBox () const
-$method=|QDesignerWidgetBoxInterface *|widgetBox|
+$prototypeV2=QDesignerWidgetBoxInterface * widgetBox() const
 
 #pragma ENDDUMP
