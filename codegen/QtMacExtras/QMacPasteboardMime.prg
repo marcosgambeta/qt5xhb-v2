@@ -31,8 +31,7 @@ $constructor=|new|char
 
 $deleteMethod
 
-$prototype=virtual QString convertorName() = 0
-$virtualMethod=|QString|convertorName|
+$prototypeV2=virtual QString convertorName() = 0
 
 $prototype=virtual bool canConvert(const QString &mime, QString flav) = 0
 $virtualMethod=|bool|canConvert|const QString &,QString
