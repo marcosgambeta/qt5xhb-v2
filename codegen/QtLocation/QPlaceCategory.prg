@@ -57,32 +57,27 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 
 $deleteMethod
 
-$prototype=QString categoryId() const
-$method=|QString|categoryId|
+$prototypeV2=QString categoryId() const
 
 $prototype=void setCategoryId(const QString &identifier)
 $method=|void|setCategoryId|const QString &
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-$prototype=QLocation::Visibility visibility() const
-$method=|QLocation::Visibility|visibility|
+$prototypeV2=QLocation::Visibility visibility() const
 
 $prototype=void setVisibility(QLocation::Visibility visibility)
 $method=|void|setVisibility|QLocation::Visibility
 
-$prototype=QPlaceIcon icon() const
-$method=|QPlaceIcon|icon|
+$prototypeV2=QPlaceIcon icon() const
 
 $prototype=void setIcon(const QPlaceIcon &icon)
 $method=|void|setIcon|const QPlaceIcon &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

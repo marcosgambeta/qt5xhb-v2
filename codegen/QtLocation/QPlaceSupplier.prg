@@ -55,32 +55,27 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &data)
 $method=|void|setName|const QString &
 
-$prototype=QString supplierId() const
-$method=|QString|supplierId|
+$prototypeV2=QString supplierId() const
 
 $prototype=void setSupplierId(const QString &identifier)
 $method=|void|setSupplierId|const QString &
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &data)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QPlaceIcon icon() const
-$method=|QPlaceIcon|icon|
+$prototypeV2=QPlaceIcon icon() const
 
 $prototype=void setIcon(const QPlaceIcon &icon)
 $method=|void|setIcon|const QPlaceIcon &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

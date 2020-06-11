@@ -32,11 +32,9 @@ $includes
 
 $deleteMethod
 
-$prototype=QString managerName() const
-$method=|QString|managerName|
+$prototypeV2=QString managerName() const
 
-$prototype=int managerVersion() const
-$method=|int|managerVersion|
+$prototypeV2=int managerVersion() const
 
 $prototype=virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
 $internalVirtualMethod=|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const QGeoShape &
@@ -72,8 +70,7 @@ $virtualMethod=|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeo
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 %%
 %% SIGNALS

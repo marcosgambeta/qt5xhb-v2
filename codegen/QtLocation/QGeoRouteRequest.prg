@@ -94,14 +94,12 @@ $method=|QList<QGeoRectangle>|excludeAreas|
 $prototype=void setNumberAlternativeRoutes(int alternatives)
 $method=|void|setNumberAlternativeRoutes|int
 
-$prototype=int numberAlternativeRoutes() const
-$method=|int|numberAlternativeRoutes|
+$prototypeV2=int numberAlternativeRoutes() const
 
 $prototype=void setTravelModes(TravelModes travelModes)
 $method=|void|setTravelModes|QGeoRouteRequest::TravelModes
 
-$prototype=TravelModes travelModes() const
-$method=|QGeoRouteRequest::TravelModes|travelModes|
+$prototypeV2=QGeoRouteRequest::TravelModes travelModes() const
 
 $prototype=void setFeatureWeight(FeatureType featureType, FeatureWeight featureWeight)
 $method=|void|setFeatureWeight|QGeoRouteRequest::FeatureType,QGeoRouteRequest::FeatureWeight
@@ -115,20 +113,17 @@ $method=|QList<QGeoRouteRequest::FeatureType>|featureTypes|
 $prototype=void setRouteOptimization(RouteOptimizations optimization)
 $method=|void|setRouteOptimization|QGeoRouteRequest::RouteOptimizations
 
-$prototype=RouteOptimizations routeOptimization() const
-$method=|QGeoRouteRequest::RouteOptimizations|routeOptimization|
+$prototypeV2=QGeoRouteRequest::RouteOptimizations routeOptimization() const
 
 $prototype=void setSegmentDetail(SegmentDetail segmentDetail)
 $method=|void|setSegmentDetail|QGeoRouteRequest::SegmentDetail
 
-$prototype=SegmentDetail segmentDetail() const
-$method=|QGeoRouteRequest::SegmentDetail|segmentDetail|
+$prototypeV2=QGeoRouteRequest::SegmentDetail segmentDetail() const
 
 $prototype=void setManeuverDetail(ManeuverDetail maneuverDetail)
 $method=|void|setManeuverDetail|QGeoRouteRequest::ManeuverDetail
 
-$prototype=ManeuverDetail maneuverDetail() const
-$method=|QGeoRouteRequest::ManeuverDetail|maneuverDetail|
+$prototypeV2=QGeoRouteRequest::ManeuverDetail maneuverDetail() const
 
 $extraMethods
 

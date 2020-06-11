@@ -57,44 +57,37 @@ HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setPosition(const QGeoCoordinate &position)
 $method=|void|setPosition|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate position() const
-$method=|QGeoCoordinate|position|
+$prototypeV2=QGeoCoordinate position() const
 
 $prototype=void setInstructionText(const QString &instructionText)
 $method=|void|setInstructionText|const QString &
 
-$prototype=QString instructionText() const
-$method=|QString|instructionText|
+$prototypeV2=QString instructionText() const
 
 $prototype=void setDirection(InstructionDirection direction)
 $method=|void|setDirection|QGeoManeuver::InstructionDirection
 
-$prototype=InstructionDirection direction() const
-$method=|QGeoManeuver::InstructionDirection|direction|
+$prototypeV2=QGeoManeuver::InstructionDirection direction() const
 
 $prototype=void setTimeToNextInstruction(int secs)
 $method=|void|setTimeToNextInstruction|int
 
-$prototype=int timeToNextInstruction() const
-$method=|int|timeToNextInstruction|
+$prototypeV2=int timeToNextInstruction() const
 
 $prototype=void setDistanceToNextInstruction(qreal distance)
 $method=|void|setDistanceToNextInstruction|qreal
 
-$prototype=qreal distanceToNextInstruction() const
-$method=|qreal|distanceToNextInstruction|
+$prototypeV2=qreal distanceToNextInstruction() const
 
 $prototype=void setWaypoint(const QGeoCoordinate &coordinate)
 $method=|void|setWaypoint|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate waypoint() const
-$method=|QGeoCoordinate|waypoint|
+$prototypeV2=QGeoCoordinate waypoint() const
 
 $extraMethods
 

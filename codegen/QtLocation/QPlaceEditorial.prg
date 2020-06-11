@@ -55,20 +55,17 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 
 $deleteMethod
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle(const QString &data)
 $method=|void|setTitle|const QString &
 
-$prototype=QString language() const
-$method=|QString|language|
+$prototypeV2=QString language() const
 
 $prototype=void setLanguage(const QString &data)
 $method=|void|setLanguage|const QString &

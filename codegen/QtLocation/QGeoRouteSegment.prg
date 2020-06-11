@@ -58,26 +58,22 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
 $method=|void|setNextRouteSegment|const QGeoRouteSegment &
 
-$prototype=QGeoRouteSegment nextRouteSegment() const
-$method=|QGeoRouteSegment|nextRouteSegment|
+$prototypeV2=QGeoRouteSegment nextRouteSegment() const
 
 $prototype=void setTravelTime(int secs)
 $method=|void|setTravelTime|int
 
-$prototype=int travelTime() const
-$method=|int|travelTime|
+$prototypeV2=int travelTime() const
 
 $prototype=void setDistance(qreal distance)
 $method=|void|setDistance|qreal
 
-$prototype=qreal distance() const
-$method=|qreal|distance|
+$prototypeV2=qreal distance() const
 
 $prototype=void setPath(const QList<QGeoCoordinate> &path)
 $method=|void|setPath|const QList<QGeoCoordinate> &
@@ -88,8 +84,7 @@ $method=|QList<QGeoCoordinate>|path|
 $prototype=void setManeuver(const QGeoManeuver &maneuver)
 $method=|void|setManeuver|const QGeoManeuver &
 
-$prototype=QGeoManeuver maneuver() const
-$method=|QGeoManeuver|maneuver|
+$prototypeV2=QGeoManeuver maneuver() const
 
 $prototype=bool QGeoRouteSegment::isLegLastSegment() const
 $method=5,12,0|bool|isLegLastSegment|

@@ -60,14 +60,12 @@ $deleteMethod
 $prototype=QUrl url(const QSize &size = QSize()) const
 $method=|QUrl|url|const QSize &=QSize()
 
-$prototype=QPlaceManager *manager() const
-$method=|QPlaceManager *|manager|
+$prototypeV2=QPlaceManager * manager() const
 
 $prototype=void setManager(QPlaceManager *manager)
 $method=|void|setManager|QPlaceManager *
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

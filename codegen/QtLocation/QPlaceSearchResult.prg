@@ -57,17 +57,14 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 
 $deleteMethod
 
-$prototype=SearchResultType type() const
-$method=|QPlaceSearchResult::SearchResultType|type|
+$prototypeV2=QPlaceSearchResult::SearchResultType type() const
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle(const QString &title)
 $method=|void|setTitle|const QString &
 
-$prototype=QPlaceIcon icon() const
-$method=|QPlaceIcon|icon|
+$prototypeV2=QPlaceIcon icon() const
 
 $prototype=void setIcon(const QPlaceIcon &icon)
 $method=|void|setIcon|const QPlaceIcon &

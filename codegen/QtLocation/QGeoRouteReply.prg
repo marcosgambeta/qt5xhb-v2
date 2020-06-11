@@ -33,23 +33,18 @@ $constructor=|new|QGeoRouteReply::Error,const QString &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=Error error() const
-$method=|QGeoRouteReply::Error|error|
+$prototypeV2=QGeoRouteReply::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QGeoRouteRequest request() const
-$method=|QGeoRouteRequest|request|
+$prototypeV2=QGeoRouteRequest request() const
 
 $prototype=QList<QGeoRoute> routes() const
 $method=|QList<QGeoRoute>|routes|
 
-$prototype=virtual void abort()
-$virtualMethod=|void|abort|
+$prototypeV2=virtual void abort()
 
 %%
 %% SIGNALS

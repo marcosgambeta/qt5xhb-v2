@@ -31,13 +31,10 @@ $constructor=|new|QPlaceIdReply::OperationType,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QPlaceReply::Type type() const
-$method=|QPlaceReply::Type|type|
+$prototypeV2=QPlaceReply::Type type() const
 
-$prototype=OperationType operationType() const
-$method=|QPlaceIdReply::OperationType|operationType|
+$prototypeV2=QPlaceIdReply::OperationType operationType() const
 
-$prototype=QString id() const
-$method=|QString|id|
+$prototypeV2=QString id() const
 
 #pragma ENDDUMP

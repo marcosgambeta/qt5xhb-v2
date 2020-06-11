@@ -64,8 +64,7 @@ $method=|void|setPlaces|const QList<QPlace> &
 $prototype=void setResults(const QList<QPlaceSearchResult> &results)
 $method=|void|setResults|const QList<QPlaceSearchResult> &
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $extraMethods
 

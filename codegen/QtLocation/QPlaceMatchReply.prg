@@ -31,13 +31,11 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QPlaceReply::Type type() const
-$method=|QPlaceReply::Type|type|
+$prototypeV2=QPlaceReply::Type type() const
 
 $prototype=QList<QPlace> places() const
 $method=|QList<QPlace>|places|
 
-$prototype=QPlaceMatchRequest request() const
-$method=|QPlaceMatchRequest|request|
+$prototypeV2=QPlaceMatchRequest request() const
 
 #pragma ENDDUMP

@@ -55,14 +55,12 @@ HB_FUNC_STATIC( QPLACEUSER_NEW )
 
 $deleteMethod
 
-$prototype=QString userId() const
-$method=|QString|userId|
+$prototypeV2=QString userId() const
 
 $prototype=void setUserId(const QString &identifier)
 $method=|void|setUserId|const QString &
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &

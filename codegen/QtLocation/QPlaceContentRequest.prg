@@ -57,32 +57,27 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 
 $deleteMethod
 
-$prototype=QPlaceContent::Type contentType() const
-$method=|QPlaceContent::Type|contentType|
+$prototypeV2=QPlaceContent::Type contentType() const
 
 $prototype=void setContentType(QPlaceContent::Type type)
 $method=|void|setContentType|QPlaceContent::Type
 
-$prototype=QString placeId() const
-$method=|QString|placeId|
+$prototypeV2=QString placeId() const
 
 $prototype=void setPlaceId(const QString &identifier)
 $method=|void|setPlaceId|const QString &
 
-$prototype=QVariant contentContext() const
-$method=|QVariant|contentContext|
+$prototypeV2=QVariant contentContext() const
 
 $prototype=void setContentContext(const QVariant &context)
 $method=|void|setContentContext|const QVariant &
 
-$prototype=int limit() const
-$method=|int|limit|
+$prototypeV2=int limit() const
 
 $prototype=void setLimit(int limit)
 $method=|void|setLimit|int
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $extraMethods
 

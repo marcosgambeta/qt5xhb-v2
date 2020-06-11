@@ -35,29 +35,22 @@ $constructor=|new|QGeoCodeReply::Error,const QString &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=Error error() const
-$method=|QGeoCodeReply::Error|error|
+$prototypeV2=QGeoCodeReply::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QGeoShape viewport() const
-$method=|QGeoShape|viewport|
+$prototypeV2=QGeoShape viewport() const
 
 $prototype=QList<QGeoLocation> locations() const
 $method=|QList<QGeoLocation>|locations|
 
-$prototype=int limit() const
-$method=|int|limit|
+$prototypeV2=int limit() const
 
-$prototype=int offset() const
-$method=|int|offset|
+$prototypeV2=int offset() const
 
-$prototype=virtual void abort()
-$virtualMethod=|void|abort|
+$prototypeV2=virtual void abort()
 
 %%
 %% SIGNALS

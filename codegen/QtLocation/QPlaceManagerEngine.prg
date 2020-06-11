@@ -32,11 +32,9 @@ $includes
 
 $deleteMethod
 
-$prototype=QString managerName() const
-$method=|QString|managerName|
+$prototypeV2=QString managerName() const
 
-$prototype=int managerVersion() const
-$method=|int|managerVersion|
+$prototypeV2=int managerVersion() const
 
 $prototype=virtual QPlaceDetailsReply *getPlaceDetails(const QString &placeId)
 $virtualMethod=|QPlaceDetailsReply *|getPlaceDetails|const QString &
@@ -62,8 +60,7 @@ $virtualMethod=|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QStrin
 $prototype=virtual QPlaceIdReply *removeCategory(const QString &categoryId)
 $virtualMethod=|QPlaceIdReply *|removeCategory|const QString &
 
-$prototype=virtual QPlaceReply *initializeCategories()
-$virtualMethod=|QPlaceReply *|initializeCategories|
+$prototypeV2=virtual QPlaceReply * initializeCategories()
 
 $prototype=virtual QString parentCategoryId(const QString &categoryId) const
 $virtualMethod=|QString|parentCategoryId|const QString &

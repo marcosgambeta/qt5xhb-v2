@@ -61,44 +61,37 @@ $deleteMethod
 $prototype=void setRouteId(const QString &id)
 $method=|void|setRouteId|const QString &
 
-$prototype=QString routeId() const
-$method=|QString|routeId|
+$prototypeV2=QString routeId() const
 
 $prototype=void setRequest(const QGeoRouteRequest &request)
 $method=|void|setRequest|const QGeoRouteRequest &
 
-$prototype=QGeoRouteRequest request() const
-$method=|QGeoRouteRequest|request|
+$prototypeV2=QGeoRouteRequest request() const
 
 $prototype=void setBounds(const QGeoRectangle &bounds)
 $method=|void|setBounds|const QGeoRectangle &
 
-$prototype=QGeoRectangle bounds() const
-$method=|QGeoRectangle|bounds|
+$prototypeV2=QGeoRectangle bounds() const
 
 $prototype=void setFirstRouteSegment(const QGeoRouteSegment &routeSegment)
 $method=|void|setFirstRouteSegment|const QGeoRouteSegment &
 
-$prototype=QGeoRouteSegment firstRouteSegment() const
-$method=|QGeoRouteSegment|firstRouteSegment|
+$prototypeV2=QGeoRouteSegment firstRouteSegment() const
 
 $prototype=void setTravelTime(int secs)
 $method=|void|setTravelTime|int
 
-$prototype=int travelTime() const
-$method=|int|travelTime|
+$prototypeV2=int travelTime() const
 
 $prototype=void setDistance(qreal distance)
 $method=|void|setDistance|qreal
 
-$prototype=qreal distance() const
-$method=|qreal|distance|
+$prototypeV2=qreal distance() const
 
 $prototype=void setTravelMode(QGeoRouteRequest::TravelMode mode)
 $method=|void|setTravelMode|QGeoRouteRequest::TravelMode
 
-$prototype=QGeoRouteRequest::TravelMode travelMode() const
-$method=|QGeoRouteRequest::TravelMode|travelMode|
+$prototypeV2=QGeoRouteRequest::TravelMode travelMode() const
 
 $prototype=void setPath(const QList<QGeoCoordinate> &path)
 $method=|void|setPath|const QList<QGeoCoordinate> &

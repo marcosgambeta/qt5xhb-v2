@@ -31,20 +31,17 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal distance() const
-$method=|qreal|distance|
+$prototypeV2=qreal distance() const
 
 $prototype=void setDistance(qreal distance)
 $method=|void|setDistance|qreal
 
-$prototype=QPlace place() const
-$method=|QPlace|place|
+$prototypeV2=QPlace place() const
 
 $prototype=void setPlace(const QPlace &place)
 $method=|void|setPlace|const QPlace &
 
-$prototype=bool isSponsored() const
-$method=|bool|isSponsored|
+$prototypeV2=bool isSponsored() const
 
 $prototype=void setSponsored(bool sponsored)
 $method=|void|setSponsored|bool

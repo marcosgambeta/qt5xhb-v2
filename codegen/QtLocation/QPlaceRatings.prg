@@ -55,26 +55,22 @@ HB_FUNC_STATIC( QPLACERATINGS_NEW )
 
 $deleteMethod
 
-$prototype=qreal average() const
-$method=|qreal|average|
+$prototypeV2=qreal average() const
 
 $prototype=void setAverage(qreal average)
 $method=|void|setAverage|qreal
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=void setCount(int count)
 $method=|void|setCount|int
 
-$prototype=qreal maximum() const
-$method=|qreal|maximum|
+$prototypeV2=qreal maximum() const
 
 $prototype=void setMaximum(qreal max)
 $method=|void|setMaximum|qreal
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

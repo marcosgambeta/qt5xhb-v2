@@ -55,20 +55,17 @@ HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 
 $deleteMethod
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QString imageId() const
-$method=|QString|imageId|
+$prototypeV2=QString imageId() const
 
 $prototype=void setImageId(const QString &identifier)
 $method=|void|setImageId|const QString &
 
-$prototype=QString mimeType() const
-$method=|QString|mimeType|
+$prototypeV2=QString mimeType() const
 
 $prototype=void setMimeType(const QString &data)
 $method=|void|setMimeType|const QString &

@@ -58,23 +58,19 @@ HB_FUNC_STATIC( QPLACECONTENT_NEW )
 
 $deleteMethod
 
-$prototype=QPlaceContent::Type type() const
-$method=|QPlaceContent::Type|type|
+$prototypeV2=QPlaceContent::Type type() const
 
-$prototype=QPlaceSupplier supplier() const
-$method=|QPlaceSupplier|supplier|
+$prototypeV2=QPlaceSupplier supplier() const
 
 $prototype=void setSupplier(const QPlaceSupplier &supplier)
 $method=|void|setSupplier|const QPlaceSupplier &
 
-$prototype=QPlaceUser user() const
-$method=|QPlaceUser|user|
+$prototypeV2=QPlaceUser user() const
 
 $prototype=void setUser(const QPlaceUser &user)
 $method=|void|setUser|const QPlaceUser &
 
-$prototype=QString attribution() const
-$method=|QString|attribution|
+$prototypeV2=QString attribution() const
 
 $prototype=void setAttribution(const QString &attribution)
 $method=|void|setAttribution|const QString &

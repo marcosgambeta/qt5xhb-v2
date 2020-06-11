@@ -33,8 +33,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QPlaceSearchRequest searchRequest() const
-$method=|QPlaceSearchRequest|searchRequest|
+$prototypeV2=QPlaceSearchRequest searchRequest() const
 
 $prototype=void setSearchRequest(const QPlaceSearchRequest &request)
 $method=|void|setSearchRequest|const QPlaceSearchRequest &

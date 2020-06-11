@@ -33,19 +33,15 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QPlaceReply::Type type() const
-$method=|QPlaceReply::Type|type|
+$prototypeV2=QPlaceReply::Type type() const
 
 $prototype=QList<QPlaceSearchResult> results() const
 $method=|QList<QPlaceSearchResult>|results|
 
-$prototype=QPlaceSearchRequest request() const
-$method=|QPlaceSearchRequest|request|
+$prototypeV2=QPlaceSearchRequest request() const
 
-$prototype=QPlaceSearchRequest previousPageRequest() const
-$method=|QPlaceSearchRequest|previousPageRequest|
+$prototypeV2=QPlaceSearchRequest previousPageRequest() const
 
-$prototype=QPlaceSearchRequest nextPageRequest() const
-$method=|QPlaceSearchRequest|nextPageRequest|
+$prototypeV2=QPlaceSearchRequest nextPageRequest() const
 
 #pragma ENDDUMP

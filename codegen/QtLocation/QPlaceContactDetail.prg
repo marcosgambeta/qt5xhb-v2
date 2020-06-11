@@ -55,20 +55,17 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 
 $deleteMethod
 
-$prototype=QString label() const
-$method=|QString|label|
+$prototypeV2=QString label() const
 
 $prototype=void setLabel(const QString &label)
 $method=|void|setLabel|const QString &
 
-$prototype=QString value() const
-$method=|QString|value|
+$prototypeV2=QString value() const
 
 $prototype=void setValue(const QString &value)
 $method=|void|setValue|const QString &
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $extraMethods
 

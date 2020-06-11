@@ -31,10 +31,8 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QStringList suggestions() const
-$method=|QStringList|suggestions|
+$prototypeV2=QStringList suggestions() const
 
-$prototype=Type type() const
-$method=|QPlaceReply::Type|type|
+$prototypeV2=QPlaceReply::Type type() const
 
 #pragma ENDDUMP

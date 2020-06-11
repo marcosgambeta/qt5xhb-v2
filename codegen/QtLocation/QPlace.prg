@@ -67,32 +67,27 @@ $method=|void|setCategories|const QList<QPlaceCategory> &
 $prototype=void setCategory(const QPlaceCategory &category)
 $method=|void|setCategory|const QPlaceCategory &
 
-$prototype=QGeoLocation location() const
-$method=|QGeoLocation|location|
+$prototypeV2=QGeoLocation location() const
 
 $prototype=void setLocation(const QGeoLocation &location)
 $method=|void|setLocation|const QGeoLocation &
 
-$prototype=QPlaceRatings ratings() const
-$method=|QPlaceRatings|ratings|
+$prototypeV2=QPlaceRatings ratings() const
 
 $prototype=void setRatings(const QPlaceRatings &ratings)
 $method=|void|setRatings|const QPlaceRatings &
 
-$prototype=QPlaceSupplier supplier() const
-$method=|QPlaceSupplier|supplier|
+$prototypeV2=QPlaceSupplier supplier() const
 
 $prototype=void setSupplier(const QPlaceSupplier &supplier)
 $method=|void|setSupplier|const QPlaceSupplier &
 
-$prototype=QString attribution() const
-$method=|QString|attribution|
+$prototypeV2=QString attribution() const
 
 $prototype=void setAttribution(const QString &attribution)
 $method=|void|setAttribution|const QString &
 
-$prototype=QPlaceIcon icon() const
-$method=|QPlaceIcon|icon|
+$prototypeV2=QPlaceIcon icon() const
 
 $prototype=void setIcon(const QPlaceIcon &icon)
 $method=|void|setIcon|const QPlaceIcon &
@@ -103,38 +98,30 @@ $method=|int|totalContentCount|QPlaceContent::Type
 $prototype=void setTotalContentCount(QPlaceContent::Type type, int total)
 $method=|void|setTotalContentCount|QPlaceContent::Type,int
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-$prototype=QString placeId() const
-$method=|QString|placeId|
+$prototypeV2=QString placeId() const
 
 $prototype=void setPlaceId(const QString &identifier)
 $method=|void|setPlaceId|const QString &
 
-$prototype=QString primaryPhone() const
-$method=|QString|primaryPhone|
+$prototypeV2=QString primaryPhone() const
 
-$prototype=QString primaryFax() const
-$method=|QString|primaryFax|
+$prototypeV2=QString primaryFax() const
 
-$prototype=QString primaryEmail() const
-$method=|QString|primaryEmail|
+$prototypeV2=QString primaryEmail() const
 
-$prototype=QUrl primaryWebsite() const
-$method=|QUrl|primaryWebsite|
+$prototypeV2=QUrl primaryWebsite() const
 
-$prototype=bool detailsFetched() const
-$method=|bool|detailsFetched|
+$prototypeV2=bool detailsFetched() const
 
 $prototype=void setDetailsFetched(bool fetched)
 $method=|void|setDetailsFetched|bool
 
-$prototype=QStringList extendedAttributeTypes() const
-$method=|QStringList|extendedAttributeTypes|
+$prototypeV2=QStringList extendedAttributeTypes() const
 
 $prototype=QPlaceAttribute extendedAttribute(const QString &attributeType) const
 $method=|QPlaceAttribute|extendedAttribute|const QString &
@@ -145,8 +132,7 @@ $method=|void|setExtendedAttribute|const QString &,const QPlaceAttribute &
 $prototype=void removeExtendedAttribute(const QString &attributeType)
 $method=|void|removeExtendedAttribute|const QString &
 
-$prototype=QStringList contactTypes() const
-$method=|QStringList|contactTypes|
+$prototypeV2=QStringList contactTypes() const
 
 $prototype=QList<QPlaceContactDetail> contactDetails(const QString &contactType) const
 $method=|QList<QPlaceContactDetail>|contactDetails|const QString &
@@ -160,14 +146,12 @@ $method=|void|appendContactDetail|const QString &,const QPlaceContactDetail &
 $prototype=void removeContactDetails(const QString &contactType)
 $method=|void|removeContactDetails|const QString &
 
-$prototype=QLocation::Visibility visibility() const
-$method=|QLocation::Visibility|visibility|
+$prototypeV2=QLocation::Visibility visibility() const
 
 $prototype=void setVisibility(QLocation::Visibility visibility)
 $method=|void|setVisibility|QLocation::Visibility
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

@@ -33,20 +33,15 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=virtual Type type() const
-$virtualMethod=|QPlaceReply::Type|type|
+$prototypeV2=virtual QPlaceReply::Type type() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QPlaceReply::Error error() const
-$method=|QPlaceReply::Error|error|
+$prototypeV2=QPlaceReply::Error error() const
 
-$prototype=virtual void abort()
-$virtualMethod=|void|abort|
+$prototypeV2=virtual void abort()
 
 %%
 %% SIGNALS

@@ -58,8 +58,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 
 $deleteMethod
 
-$prototype=QString searchTerm() const
-$method=|QString|searchTerm|
+$prototypeV2=QString searchTerm() const
 
 $prototype=void setSearchTerm(const QString &term)
 $method=|void|setSearchTerm|const QString &
@@ -73,44 +72,37 @@ $method=|void|setCategory|const QPlaceCategory &
 $prototype=void setCategories(const QList<QPlaceCategory> &categories)
 $method=|void|setCategories|const QList<QPlaceCategory> &
 
-$prototype=QGeoShape searchArea() const
-$method=|QGeoShape|searchArea|
+$prototypeV2=QGeoShape searchArea() const
 
 $prototype=void setSearchArea(const QGeoShape &area)
 $method=|void|setSearchArea|const QGeoShape &
 
-$prototype=QString recommendationId() const
-$method=|QString|recommendationId|
+$prototypeV2=QString recommendationId() const
 
 $prototype=void setRecommendationId(const QString &recommendationId)
 $method=|void|setRecommendationId|const QString &
 
-$prototype=QVariant searchContext() const
-$method=|QVariant|searchContext|
+$prototypeV2=QVariant searchContext() const
 
 $prototype=void setSearchContext(const QVariant &context)
 $method=|void|setSearchContext|const QVariant &
 
-$prototype=QLocation::VisibilityScope visibilityScope() const
-$method=|QLocation::VisibilityScope|visibilityScope|
+$prototypeV2=QLocation::VisibilityScope visibilityScope() const
 
 $prototype=void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
 $method=|void|setVisibilityScope|QLocation::VisibilityScope
 
-$prototype=RelevanceHint relevanceHint() const
-$method=|QPlaceSearchRequest::RelevanceHint|relevanceHint|
+$prototypeV2=QPlaceSearchRequest::RelevanceHint relevanceHint() const
 
 $prototype=void setRelevanceHint(RelevanceHint hint)
 $method=|void|setRelevanceHint|QPlaceSearchRequest::RelevanceHint
 
-$prototype=int limit() const
-$method=|int|limit|
+$prototypeV2=int limit() const
 
 $prototype=void setLimit(int limit)
 $method=|void|setLimit|int
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $extraMethods
 

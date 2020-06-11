@@ -32,39 +32,29 @@ $includes
 
 $deleteMethod
 
-$prototype=static QStringList availableServiceProviders()
-$staticMethod=|QStringList|availableServiceProviders|
+$prototypeV2=static QStringList availableServiceProviders()
 
-$prototype=RoutingFeatures routingFeatures() const
-$method=|QGeoServiceProvider::RoutingFeatures|routingFeatures|
+$prototypeV2=QGeoServiceProvider::RoutingFeatures routingFeatures() const
 
-$prototype=GeocodingFeatures geocodingFeatures() const
-$method=|QGeoServiceProvider::GeocodingFeatures|geocodingFeatures|
+$prototypeV2=QGeoServiceProvider::GeocodingFeatures geocodingFeatures() const
 
-$prototype=MappingFeatures mappingFeatures() const
-$method=|QGeoServiceProvider::MappingFeatures|mappingFeatures|
+$prototypeV2=QGeoServiceProvider::MappingFeatures mappingFeatures() const
 
-$prototype=PlacesFeatures placesFeatures() const
-$method=|QGeoServiceProvider::PlacesFeatures|placesFeatures|
+$prototypeV2=QGeoServiceProvider::PlacesFeatures placesFeatures() const
 
-$prototype=QGeoCodingManager *geocodingManager() const
-$method=|QGeoCodingManager *|geocodingManager|
+$prototypeV2=QGeoCodingManager * geocodingManager() const
 
 $prototype=QGeoMappingManager *mappingManager() const
 %% TODO: classe inexistente na documentacao do Qt
 %% $method=|QGeoMappingManager *|mappingManager|
 
-$prototype=QGeoRoutingManager *routingManager() const
-$method=|QGeoRoutingManager *|routingManager|
+$prototypeV2=QGeoRoutingManager * routingManager() const
 
-$prototype=QPlaceManager *placeManager() const
-$method=|QPlaceManager *|placeManager|
+$prototypeV2=QPlaceManager * placeManager() const
 
-$prototype=Error error() const
-$method=|QGeoServiceProvider::Error|error|
+$prototypeV2=QGeoServiceProvider::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=void setLocale(const QLocale &locale)
 $method=|void|setLocale|const QLocale &
