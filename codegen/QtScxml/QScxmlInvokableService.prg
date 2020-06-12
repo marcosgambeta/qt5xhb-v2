@@ -37,29 +37,25 @@ $deleteMethod
 %% Q_PROPERTY(QScxmlStateMachine *parentStateMachine READ parentStateMachine CONSTANT)
 %%
 
-$prototype=QScxmlStateMachine *parentStateMachine() const
-$method=|QScxmlStateMachine *|parentStateMachine|
+$prototypeV2=QScxmlStateMachine * parentStateMachine() const
 
 %%
 %% Q_PROPERTY(QString id READ id CONSTANT)
 %%
 
-$prototype=virtual QString id() const = 0
-$virtualMethod=|QString|id|
+$prototypeV2=virtual QString id() const = 0
 
 %%
 %% Q_PROPERTY(QString name READ name CONSTANT)
 %%
 
-$prototype=virtual QString name() const = 0
-$virtualMethod=|QString|name|
+$prototypeV2=virtual QString name() const = 0
 
 %%
 %%
 %%
 
-$prototype=virtual bool start() = 0
-$virtualMethod=|bool|start|
+$prototypeV2=virtual bool start() = 0
 
 $prototype=virtual void postEvent(QScxmlEvent *event) = 0
 $virtualMethod=|void|postEvent|QScxmlEvent *

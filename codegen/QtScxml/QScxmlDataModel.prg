@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(QScxmlStateMachine *stateMachine READ stateMachine WRITE setStateMachine NOTIFY stateMachineChanged)
 %%
 
-$prototype=QScxmlStateMachine *stateMachine() const
-$method=|QScxmlStateMachine *|stateMachine|
+$prototypeV2=QScxmlStateMachine * stateMachine() const
 
 $prototype=void setStateMachine(QScxmlStateMachine *stateMachine)
 $method=|void|setStateMachine|QScxmlStateMachine *

@@ -38,8 +38,7 @@ $deleteMethod
 %% Q_PROPERTY(bool running READ isRunning WRITE setRunning NOTIFY runningChanged)
 %%
 
-$prototype=bool isRunning() const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
 $prototype=void setRunning(bool running)
 $method=|void|setRunning|bool
@@ -48,15 +47,13 @@ $method=|void|setRunning|bool
 %% Q_PROPERTY(bool initialized READ isInitialized NOTIFY initializedChanged)
 %%
 
-$prototype=bool isInitialized() const
-$method=|bool|isInitialized|
+$prototypeV2=bool isInitialized() const
 
 %%
 %% Q_PROPERTY(QScxmlDataModel *dataModel READ dataModel WRITE setDataModel NOTIFY dataModelChanged)
 %%
 
-$prototype=QScxmlDataModel *dataModel() const
-$method=|QScxmlDataModel *|dataModel|
+$prototypeV2=QScxmlDataModel * dataModel() const
 
 $prototype=void setDataModel(QScxmlDataModel *model)
 $method=|void|setDataModel|QScxmlDataModel *
@@ -80,22 +77,19 @@ $method=|QVector<QScxmlInvokableService *>|invokedServices|
 %% Q_PROPERTY(QString sessionId READ sessionId CONSTANT)
 %%
 
-$prototype=QString sessionId() const
-$method=|QString|sessionId|
+$prototypeV2=QString sessionId() const
 
 %%
 %% Q_PROPERTY(QString name READ name CONSTANT)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 %%
 %% Q_PROPERTY(bool invoked READ isInvoked CONSTANT)
 %%
 
-$prototype=bool isInvoked() const
-$method=|bool|isInvoked|
+$prototypeV2=bool isInvoked() const
 
 %%
 %% Q_PROPERTY(QVector<QScxmlError> parseErrors READ parseErrors CONSTANT)
@@ -116,8 +110,7 @@ $prototype=void setLoader(QScxmlCompiler::Loader *loader)
 %% Q_PROPERTY(QScxmlTableData *tableData READ tableData WRITE setTableData NOTIFY tableDataChanged)
 %%
 
-$prototype=QScxmlTableData *tableData() const
-$method=|QScxmlTableData *|tableData|
+$prototypeV2=QScxmlTableData * tableData() const
 
 $prototype=void setTableData(QScxmlTableData *tableData)
 $method=|void|setTableData|QScxmlTableData *
@@ -160,14 +153,11 @@ $method=|void|cancelDelayedEvent|const QString &
 $prototype=Q_INVOKABLE bool isDispatchableTarget(const QString &target) const
 $method=|bool|isDispatchableTarget|const QString &
 
-$prototype=void start() [slot]
-$method=|void|start|
+$prototypeV2=void start() [slot]
 
-$prototype=void stop() [slot]
-$method=|void|stop|
+$prototypeV2=void stop() [slot]
 
-$prototype=bool init() [slot]
-$method=|bool|init|
+$prototypeV2=bool init() [slot]
 
 $prototype=bool isActive(int stateIndex) const [protected]
 

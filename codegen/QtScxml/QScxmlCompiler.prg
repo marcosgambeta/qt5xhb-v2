@@ -34,8 +34,7 @@ $constructor=|new|QXmlStreamReader *
 $prototype=~QScxmlCompiler()
 $deleteMethod
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 $prototype=void setFileName(const QString &fileName)
 $method=|void|setFileName|const QString &
@@ -44,8 +43,7 @@ $prototype=Loader *loader() const
 
 $prototype=void setLoader(Loader *newLoader)
 
-$prototype=QScxmlStateMachine *compile()
-$method=|QScxmlStateMachine *|compile|
+$prototypeV2=QScxmlStateMachine * compile()
 
 $prototype=QVector<QScxmlError> errors() const
 $method=|QVector<QScxmlError>|errors|

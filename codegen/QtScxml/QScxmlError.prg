@@ -44,43 +44,37 @@ $deleteMethod
 %% Q_PROPERTY(bool valid READ isValid CONSTANT)
 %%
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 %%
 %% Q_PROPERTY(QString fileName READ fileName CONSTANT)
 %%
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
 %%
 %% Q_PROPERTY(int line READ line CONSTANT)
 %%
 
-$prototype=int line() const
-$method=|int|line|
+$prototypeV2=int line() const
 
 %%
 %% Q_PROPERTY(int column READ column CONSTANT)
 %%
 
-$prototype=int column() const
-$method=|int|column|
+$prototypeV2=int column() const
 
 %%
 %% Q_PROPERTY(QString description READ description CONSTANT)
 %%
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 %%
 %%
 %%
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $extraMethods
 

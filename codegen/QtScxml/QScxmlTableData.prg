@@ -46,8 +46,7 @@ $prototype=virtual QScxmlExecutableContent::StringId *dataNames(int *count) cons
 
 $prototype=virtual QScxmlExecutableContent::ContainerId initialSetup() const = 0
 
-$prototype=virtual QString name() const = 0
-$virtualMethod=|QString|name|
+$prototypeV2=virtual QString name() const = 0
 
 $prototype=virtual const qint32 *stateMachineTable() const = 0
 
