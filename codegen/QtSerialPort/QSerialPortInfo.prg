@@ -78,38 +78,27 @@ $deleteMethod
 $prototype=void swap(QSerialPortInfo &other)
 $method=|void|swap|QSerialPortInfo &
 
-$prototype=QString portName() const
-$method=|QString|portName|
+$prototypeV2=QString portName() const
 
-$prototype=QString systemLocation() const
-$method=|QString|systemLocation|
+$prototypeV2=QString systemLocation() const
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=QString manufacturer() const
-$method=|QString|manufacturer|
+$prototypeV2=QString manufacturer() const
 
-$prototype=quint16 vendorIdentifier() const
-$method=|quint16|vendorIdentifier|
+$prototypeV2=quint16 vendorIdentifier() const
 
-$prototype=quint16 productIdentifier() const
-$method=|quint16|productIdentifier|
+$prototypeV2=quint16 productIdentifier() const
 
-$prototype=bool hasVendorIdentifier() const
-$method=|bool|hasVendorIdentifier|
+$prototypeV2=bool hasVendorIdentifier() const
 
-$prototype=bool hasProductIdentifier() const
-$method=|bool|hasProductIdentifier|
+$prototypeV2=bool hasProductIdentifier() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isBusy() const
-$method=|bool|isBusy|
+$prototypeV2=bool isBusy() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=static QList<qint32> standardBaudRates()
 $staticMethod=|QList<qint32>|standardBaudRates|

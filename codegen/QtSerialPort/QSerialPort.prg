@@ -70,8 +70,7 @@ $deleteMethod
 $prototype=void setPortName(const QString &name)
 $method=|void|setPortName|const QString &
 
-$prototype=QString portName() const
-$method=|QString|portName|
+$prototypeV2=QString portName() const
 
 $prototype=void setPort(const QSerialPortInfo &info)
 $method=|void|setPort|const QSerialPortInfo &
@@ -79,14 +78,12 @@ $method=|void|setPort|const QSerialPortInfo &
 $prototype=bool open(OpenMode mode) Q_DECL_OVERRIDE
 $method=|bool|open|QIODevice::OpenMode
 
-$prototype=void close() Q_DECL_OVERRIDE
-$method=|void|close|
+$prototypeV2=void close() Q_DECL_OVERRIDE
 
 $prototype=void setSettingsRestoredOnClose(bool restore)
 $method=|void|setSettingsRestoredOnClose|bool
 
-$prototype=bool settingsRestoredOnClose() const
-$method=|bool|settingsRestoredOnClose|
+$prototypeV2=bool settingsRestoredOnClose() const
 
 $prototype=bool setBaudRate(qint32 baudRate, Directions dir = AllDirections)
 $method=|bool|setBaudRate|qint32,QSerialPort::Directions=QSerialPort::AllDirections
@@ -97,80 +94,63 @@ $method=|qint32|baudRate|QSerialPort::Directions=QSerialPort::AllDirections
 $prototype=bool setDataBits(DataBits dataBits)
 $method=|bool|setDataBits|QSerialPort::DataBits
 
-$prototype=DataBits dataBits() const
-$method=|QSerialPort::DataBits|dataBits|
+$prototypeV2=QSerialPort::DataBits dataBits() const
 
 $prototype=bool setParity(Parity parity)
 $method=|bool|setParity|QSerialPort::Parity
 
-$prototype=Parity parity() const
-$method=|QSerialPort::Parity|parity|
+$prototypeV2=QSerialPort::Parity parity() const
 
 $prototype=bool setStopBits(StopBits stopBits)
 $method=|bool|setStopBits|QSerialPort::StopBits
 
-$prototype=StopBits stopBits() const
-$method=|QSerialPort::StopBits|stopBits|
+$prototypeV2=QSerialPort::StopBits stopBits() const
 
 $prototype=bool setFlowControl(FlowControl flow)
 $method=|bool|setFlowControl|QSerialPort::FlowControl
 
-$prototype=FlowControl flowControl() const
-$method=|QSerialPort::FlowControl|flowControl|
+$prototypeV2=QSerialPort::FlowControl flowControl() const
 
 $prototype=bool setDataTerminalReady(bool set)
 $method=|bool|setDataTerminalReady|bool
 
-$prototype=bool isDataTerminalReady()
-$method=|bool|isDataTerminalReady|
+$prototypeV2=bool isDataTerminalReady()
 
 $prototype=bool setRequestToSend(bool set)
 $method=|bool|setRequestToSend|bool
 
-$prototype=bool isRequestToSend()
-$method=|bool|isRequestToSend|
+$prototypeV2=bool isRequestToSend()
 
-$prototype=PinoutSignals pinoutSignals()
-$method=|QSerialPort::PinoutSignals|pinoutSignals|
+$prototypeV2=QSerialPort::PinoutSignals pinoutSignals()
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
 $prototype=bool clear(Directions dir = AllDirections)
 $method=|bool|clear|QSerialPort::Directions=QSerialPort::AllDirections
 
-$prototype=bool atEnd() const Q_DECL_OVERRIDE
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const Q_DECL_OVERRIDE
 
 $prototype=bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy)
 $method=|bool|setDataErrorPolicy|QSerialPort::DataErrorPolicy=QSerialPort::IgnorePolicy
 
-$prototype=DataErrorPolicy dataErrorPolicy() const
-$method=|QSerialPort::DataErrorPolicy|dataErrorPolicy|
+$prototypeV2=QSerialPort::DataErrorPolicy dataErrorPolicy() const
 
-$prototype=SerialPortError error() const
-$method=|QSerialPort::SerialPortError|error|
+$prototypeV2=QSerialPort::SerialPortError error() const
 
-$prototype=void clearError()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
-$prototype=qint64 readBufferSize() const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=void setReadBufferSize(qint64 size)
 $method=|void|setReadBufferSize|qint64
 
-$prototype=bool isSequential() const Q_DECL_OVERRIDE
-$method=|bool|isSequential|
+$prototypeV2=bool isSequential() const Q_DECL_OVERRIDE
 
-$prototype=qint64 bytesAvailable() const Q_DECL_OVERRIDE
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const Q_DECL_OVERRIDE
 
-$prototype=qint64 bytesToWrite() const Q_DECL_OVERRIDE
-$method=|qint64|bytesToWrite|
+$prototypeV2=qint64 bytesToWrite() const Q_DECL_OVERRIDE
 
-$prototype=bool canReadLine() const Q_DECL_OVERRIDE
-$method=|bool|canReadLine|
+$prototypeV2=bool canReadLine() const Q_DECL_OVERRIDE
 
 $prototype=bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
 $method=|bool|waitForReadyRead|int
