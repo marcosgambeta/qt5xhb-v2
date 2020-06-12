@@ -45,36 +45,31 @@ $deleteMethod
 %% Q_PROPERTY(bool modified READ isModified)
 %%
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 %%
 %% Q_PROPERTY(QString selectedText READ selectedText)
 %%
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 %%
 %% Q_PROPERTY(QString selectedHtml READ selectedHtml)
 %%
 
-$prototype=QString selectedHtml() const
-$method=|QString|selectedHtml|
+$prototypeV2=QString selectedHtml() const
 
 %%
 %% Q_PROPERTY(bool hasSelection READ hasSelection)
 %%
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
 %%
 %% Q_PROPERTY(QSize viewportSize READ viewportSize WRITE setViewportSize)
 %%
 
-$prototype=QSize viewportSize () const
-$method=|QSize|viewportSize|
+$prototypeV2=QSize viewportSize() const
 
 $prototype=void setViewportSize ( const QSize & size ) const
 $method=|void|setViewportSize|const QSize &
@@ -83,8 +78,7 @@ $method=|void|setViewportSize|const QSize &
 %% Q_PROPERTY(QSize preferredContentsSize READ preferredContentsSize WRITE setPreferredContentsSize)
 %%
 
-$prototype=QSize preferredContentsSize () const
-$method=|QSize|preferredContentsSize|
+$prototypeV2=QSize preferredContentsSize() const
 
 $prototype=void setPreferredContentsSize ( const QSize & size ) const
 $method=|void|setPreferredContentsSize|const QSize &
@@ -93,8 +87,7 @@ $method=|void|setPreferredContentsSize|const QSize &
 %% Q_PROPERTY(bool forwardUnsupportedContent READ forwardUnsupportedContent WRITE setForwardUnsupportedContent)
 %%
 
-$prototype=bool forwardUnsupportedContent () const
-$method=|bool|forwardUnsupportedContent|
+$prototypeV2=bool forwardUnsupportedContent() const
 
 $prototype=void setForwardUnsupportedContent ( bool forward )
 $method=|void|setForwardUnsupportedContent|bool
@@ -103,8 +96,7 @@ $method=|void|setForwardUnsupportedContent|bool
 %% Q_PROPERTY(LinkDelegationPolicy linkDelegationPolicy READ linkDelegationPolicy WRITE setLinkDelegationPolicy)
 %%
 
-$prototype=LinkDelegationPolicy linkDelegationPolicy () const
-$method=|QWebPage::LinkDelegationPolicy|linkDelegationPolicy|
+$prototypeV2=QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 
 $prototype=void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
 $method=|void|setLinkDelegationPolicy|QWebPage::LinkDelegationPolicy
@@ -113,8 +105,7 @@ $method=|void|setLinkDelegationPolicy|QWebPage::LinkDelegationPolicy
 %% Q_PROPERTY(QPalette palette READ palette WRITE setPalette)
 %%
 
-$prototype=QPalette palette () const
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette() const
 
 $prototype=void setPalette ( const QPalette & palette )
 $method=|void|setPalette|const QPalette &
@@ -123,8 +114,7 @@ $method=|void|setPalette|const QPalette &
 %% Q_PROPERTY(bool contentEditable READ isContentEditable WRITE setContentEditable)
 %%
 
-$prototype=bool isContentEditable () const
-$method=|bool|isContentEditable|
+$prototypeV2=bool isContentEditable() const
 
 $prototype=void setContentEditable ( bool editable )
 $method=|void|setContentEditable|bool
@@ -133,8 +123,7 @@ $method=|void|setContentEditable|bool
 %% Q_PROPERTY(VisibilityState visibilityState READ visibilityState WRITE setVisibilityState)
 %%
 
-$prototype=VisibilityState visibilityState() const
-$method=|QWebPage::VisibilityState|visibilityState|
+$prototypeV2=QWebPage::VisibilityState visibilityState() const
 
 $prototype=void setVisibilityState(VisibilityState)
 $method=|void|setVisibilityState|QWebPage::VisibilityState
@@ -146,14 +135,11 @@ $method=|void|setVisibilityState|QWebPage::VisibilityState
 $prototype=QAction * action ( WebAction action ) const
 $method=|QAction *|action|QWebPage::WebAction|#ifndef QT_NO_ACTION
 
-$prototype=quint64 bytesReceived () const
-$method=|quint64|bytesReceived|
+$prototypeV2=quint64 bytesReceived() const
 
-$prototype=QMenu * createStandardContextMenu ()
-$method=|QMenu *|createStandardContextMenu|
+$prototypeV2=QMenu * createStandardContextMenu()
 
-$prototype=QWebFrame * currentFrame () const
-$method=|QWebFrame *|currentFrame|
+$prototypeV2=QWebFrame * currentFrame() const
 
 $prototype=virtual bool extension ( Extension extension, const ExtensionOption * option = nullptr, ExtensionReturn * output = nullptr )
 %% TODO: corrigir (QWebPage::Extension é uma classe)
@@ -168,20 +154,16 @@ $method=|bool|focusNextPrevChild|bool
 $prototype=QWebFrame * frameAt ( const QPoint & pos ) const
 $method=|QWebFrame *|frameAt|const QPoint &
 
-$prototype=QWebHistory * history () const
-$method=|QWebHistory *|history|
+$prototypeV2=QWebHistory * history() const
 
 $prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=QWebFrame * mainFrame () const
-$method=|QWebFrame *|mainFrame|
+$prototypeV2=QWebFrame * mainFrame() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QWebPluginFactory * pluginFactory () const
-$method=|QWebPluginFactory *|pluginFactory|
+$prototypeV2=QWebPluginFactory * pluginFactory() const
 
 $prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
@@ -192,8 +174,7 @@ $method=|void|setPluginFactory|QWebPluginFactory *
 $prototype=void setView ( QWidget * view )
 $method=|void|setView|QWidget *
 
-$prototype=QWebSettings * settings () const
-$method=|QWebSettings *|settings|
+$prototypeV2=QWebSettings * settings() const
 
 $prototype=virtual bool supportsExtension ( Extension extension ) const
 %% TODO: corrigir (QWebPage::Extension é uma classe)
@@ -202,8 +183,7 @@ $prototype=virtual bool supportsExtension ( Extension extension ) const
 $prototype=bool swallowContextMenuEvent ( QContextMenuEvent * event )
 $method=|bool|swallowContextMenuEvent|QContextMenuEvent *|#ifndef QT_NO_CONTEXTMENU
 
-$prototype=quint64 totalBytes () const
-$method=|quint64|totalBytes|
+$prototypeV2=quint64 totalBytes() const
 
 $prototype=virtual void triggerAction ( WebAction action, bool checked = false )
 $virtualMethod=|void|triggerAction|QWebPage::WebAction,bool=false
@@ -214,16 +194,14 @@ $method=|QUndoStack *|undoStack||#ifndef QT_NO_UNDOSTACK
 $prototype=void updatePositionDependentActions ( const QPoint & pos )
 $method=|void|updatePositionDependentActions|const QPoint &
 
-$prototype=QWidget * view () const
-$method=|QWidget *|view|
+$prototypeV2=QWidget * view() const
 
 $prototype=virtual bool event ( QEvent * ev )
 $virtualMethod=|bool|event|QEvent *
 
 %% TODO: is virtual ?
 %% virtual bool shouldInterruptJavaScript()
-$prototype=bool shouldInterruptJavaScript ()
-$method=|bool|shouldInterruptJavaScript|
+$prototypeV2=bool shouldInterruptJavaScript()
 
 $prototype=ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const
 %% TODO: QWebPage::ViewportAttributes is a class
@@ -235,8 +213,7 @@ $method=|void|setActualVisibleContentRect|const QRect &
 $prototype=void setFeaturePermission(QWebFrame* frame, Feature feature, PermissionPolicy policy)
 $method=|void|setFeaturePermission|QWebFrame *,QWebPage::Feature,QWebPage::PermissionPolicy
 
-$prototype=QStringList supportedContentTypes() const
-$method=|QStringList|supportedContentTypes|
+$prototypeV2=QStringList supportedContentTypes() const
 
 $prototype=bool supportsContentType(const QString& mimeType) const
 $method=|bool|supportsContentType|const QString &

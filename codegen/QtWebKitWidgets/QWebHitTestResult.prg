@@ -57,57 +57,41 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 $prototype=~QWebHitTestResult()
 $deleteMethod
 
-$prototype=QString alternateText () const
-$method=|QString|alternateText|
+$prototypeV2=QString alternateText() const
 
-$prototype=QRect boundingRect () const
-$method=|QRect|boundingRect|
+$prototypeV2=QRect boundingRect() const
 
-$prototype=QWebElement element () const
-$method=|QWebElement|element|
+$prototypeV2=QWebElement element() const
 
-$prototype=QWebElement enclosingBlockElement () const
-$method=|QWebElement|enclosingBlockElement|
+$prototypeV2=QWebElement enclosingBlockElement() const
 
-$prototype=QWebFrame * frame () const
-$method=|QWebFrame *|frame|
+$prototypeV2=QWebFrame * frame() const
 
-$prototype=QUrl imageUrl () const
-$method=|QUrl|imageUrl|
+$prototypeV2=QUrl imageUrl() const
 
-$prototype=bool isContentEditable () const
-$method=|bool|isContentEditable|
+$prototypeV2=bool isContentEditable() const
 
-$prototype=bool isContentSelected () const
-$method=|bool|isContentSelected|
+$prototypeV2=bool isContentSelected() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QWebElement linkElement () const
-$method=|QWebElement|linkElement|
+$prototypeV2=QWebElement linkElement() const
 
-$prototype=QWebFrame * linkTargetFrame () const
-$method=|QWebFrame *|linkTargetFrame|
+$prototypeV2=QWebFrame * linkTargetFrame() const
 
-$prototype=QString linkText () const
-$method=|QString|linkText|
+$prototypeV2=QString linkText() const
 
 $prototype=QUrl linkTitle () const
 %% TODO: #if QT_DEPRECATED_SINCE(5,5)
 $method=|QUrl|linkTitle|
 
-$prototype=QUrl linkUrl () const
-$method=|QUrl|linkUrl|
+$prototypeV2=QUrl linkUrl() const
 
-$prototype=QPixmap pixmap () const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
-$prototype=QPoint pos () const
-$method=|QPoint|pos|
+$prototypeV2=QPoint pos() const
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=QString linkTitleString() const
 $method=5,5,0|QString|linkTitleString|

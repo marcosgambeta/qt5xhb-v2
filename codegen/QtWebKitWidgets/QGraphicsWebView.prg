@@ -41,22 +41,19 @@ $deleteMethod
 %% Q_PROPERTY(QString title READ title NOTIFY titleChanged)
 %%
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 %%
 %% Q_PROPERTY(QIcon icon READ icon NOTIFY iconChanged)
 %%
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 %%
 %% Q_PROPERTY(qreal zoomFactor READ zoomFactor WRITE setZoomFactor)
 %%
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void setZoomFactor ( qreal )
 $method=|void|setZoomFactor|qreal
@@ -65,8 +62,7 @@ $method=|void|setZoomFactor|qreal
 %% Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)
 %%
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl ( const QUrl & )
 $method=|void|setUrl|const QUrl &
@@ -75,15 +71,13 @@ $method=|void|setUrl|const QUrl &
 %% Q_PROPERTY(bool modified READ isModified)
 %%
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 %%
 %% Q_PROPERTY(bool resizesToContents READ resizesToContents WRITE setResizesToContents)
 %%
 
-$prototype=bool resizesToContents () const
-$method=|bool|resizesToContents|
+$prototypeV2=bool resizesToContents() const
 
 $prototype=void setResizesToContents ( bool enabled )
 $method=|void|setResizesToContents|bool
@@ -92,8 +86,7 @@ $method=|void|setResizesToContents|bool
 %% Q_PROPERTY(bool tiledBackingStoreFrozen READ isTiledBackingStoreFrozen WRITE setTiledBackingStoreFrozen)
 %%
 
-$prototype=bool isTiledBackingStoreFrozen () const
-$method=|bool|isTiledBackingStoreFrozen|
+$prototypeV2=bool isTiledBackingStoreFrozen() const
 
 $prototype=void setTiledBackingStoreFrozen ( bool frozen )
 $method=|void|setTiledBackingStoreFrozen|bool
@@ -102,8 +95,7 @@ $method=|void|setTiledBackingStoreFrozen|bool
 %% Q_PROPERTY(QPainter::RenderHints renderHints READ renderHints WRITE setRenderHints)
 %%
 
-$prototype=QPainter::RenderHints renderHints() const
-$method=|QPainter::RenderHints|renderHints|
+$prototypeV2=QPainter::RenderHints renderHints() const
 
 $prototype=void setRenderHints(QPainter::RenderHints)
 $method=|void|setRenderHints|QPainter::RenderHints
@@ -115,8 +107,7 @@ $method=|void|setRenderHints|QPainter::RenderHints
 $prototype=bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-$prototype=QWebHistory * history () const
-$method=|QWebHistory *|history|
+$prototypeV2=QWebHistory * history() const
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
@@ -146,8 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 }
 $addMethod=load
 
-$prototype=QWebPage * page () const
-$method=|QWebPage *|page|
+$prototypeV2=QWebPage * page() const
 
 $prototype=QAction * pageAction ( QWebPage::WebAction action ) const
 $method=|QAction *|pageAction|QWebPage::WebAction
@@ -161,29 +151,23 @@ $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 $prototype=void setPage ( QWebPage * page )
 $method=|void|setPage|QWebPage *
 
-$prototype=QWebSettings * settings () const
-$method=|QWebSettings *|settings|
+$prototypeV2=QWebSettings * settings() const
 
 $prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
-$prototype=void back ()
-$slotMethod=|void|back|
+$prototypeV2=void back()
 
-$prototype=void forward ()
-$slotMethod=|void|forward|
+$prototypeV2=void forward()
 
-$prototype=void reload ()
-$slotMethod=|void|reload|
+$prototypeV2=void reload()
 
-$prototype=void stop ()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=virtual void setGeometry(const QRectF& rect)
 $virtualMethod=|void|setGeometry|const QRectF &
 
-$prototype=virtual void updateGeometry()
-$virtualMethod=|void|updateGeometry|
+$prototypeV2=virtual void updateGeometry()
 
 $prototype=virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = nullptr)
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr

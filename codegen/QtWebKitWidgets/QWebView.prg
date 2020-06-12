@@ -41,15 +41,13 @@ $deleteMethod
 %% Q_PROPERTY(QString title READ title)
 %%
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 %%
 %% Q_PROPERTY(QUrl url READ url WRITE setUrl)
 %%
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
@@ -58,36 +56,31 @@ $method=|void|setUrl|const QUrl &
 %% Q_PROPERTY(QIcon icon READ icon)
 %%
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 %%
 %% Q_PROPERTY(QString selectedText READ selectedText)
 %%
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 %%
 %% Q_PROPERTY(QString selectedHtml READ selectedHtml)
 %%
 
-$prototype=QString selectedHtml() const
-$method=|QString|selectedHtml|
+$prototypeV2=QString selectedHtml() const
 
 %%
 %% Q_PROPERTY(bool hasSelection READ hasSelection)
 %%
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
 %%
 %% Q_PROPERTY(bool modified READ isModified)
 %%
 
-$prototype=bool isModified () const
-$method=|bool|isModified|
+$prototypeV2=bool isModified() const
 
 %%
 %% //Q_PROPERTY(Qt::TextInteractionFlags textInteractionFlags READ textInteractionFlags WRITE setTextInteractionFlags)
@@ -103,8 +96,7 @@ $method=|bool|isModified|
 %% Q_PROPERTY(qreal textSizeMultiplier READ textSizeMultiplier WRITE setTextSizeMultiplier DESIGNABLE false)
 %%
 
-$prototype=qreal textSizeMultiplier () const
-$method=|qreal|textSizeMultiplier|
+$prototypeV2=qreal textSizeMultiplier() const
 
 $prototype=void setTextSizeMultiplier ( qreal factor )
 $method=|void|setTextSizeMultiplier|qreal
@@ -113,8 +105,7 @@ $method=|void|setTextSizeMultiplier|qreal
 %% Q_PROPERTY(qreal zoomFactor READ zoomFactor WRITE setZoomFactor)
 %%
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void setZoomFactor ( qreal factor )
 $method=|void|setZoomFactor|qreal
@@ -123,8 +114,7 @@ $method=|void|setZoomFactor|qreal
 %% Q_PROPERTY(QPainter::RenderHints renderHints READ renderHints WRITE setRenderHints)
 %%
 
-$prototype=QPainter::RenderHints renderHints () const
-$method=|QPainter::RenderHints|renderHints|
+$prototypeV2=QPainter::RenderHints renderHints() const
 
 $prototype=void setRenderHints ( QPainter::RenderHints hints )
 $method=|void|setRenderHints|QPainter::RenderHints
@@ -136,8 +126,7 @@ $method=|void|setRenderHints|QPainter::RenderHints
 $prototype=bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-$prototype=QWebHistory * history () const
-$method=|QWebHistory *|history|
+$prototypeV2=QWebHistory * history() const
 
 $prototype=void load ( const QUrl & url )
 $internalMethod=|void|load,load1|const QUrl &
@@ -167,8 +156,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 }
 $addMethod=load
 
-$prototype=QWebPage * page () const
-$method=|QWebPage *|page|
+$prototypeV2=QWebPage * page() const
 
 $prototype=QAction * pageAction ( QWebPage::WebAction action ) const
 $method=|QAction *|pageAction|QWebPage::WebAction|#ifndef QT_NO_ACTION
@@ -185,34 +173,28 @@ $method=|void|setPage|QWebPage *
 $prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-$prototype=QWebSettings * settings () const
-$method=|QWebSettings *|settings|
+$prototypeV2=QWebSettings * settings() const
 
 $prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
 $method=|void|triggerPageAction|QWebPage::WebAction,bool=false
 
-$prototype=void back ()
-$slotMethod=|void|back|
+$prototypeV2=void back() [slot]
 
-$prototype=void forward ()
-$slotMethod=|void|forward|
+$prototypeV2=void forward() [slot]
 
 $prototype=void print ( QPrinter * printer ) const
 $slotMethod=|void|print|QPrinter *
 
-$prototype=void reload ()
-$slotMethod=|void|reload|
+$prototypeV2=void reload() [slot]
 
-$prototype=void stop ()
-$slotMethod=|void|stop|
+$prototypeV2=void stop() [slot]
 
 %% TODO: is virtual ?
 $prototype=QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
 %% TODO: is virtual ?
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=virtual bool event(QEvent*)
 $virtualMethod=|bool|event|QEvent *
