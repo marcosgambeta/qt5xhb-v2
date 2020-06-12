@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=void append ( const QHttpPart & httpPart )
 $method=|void|append|const QHttpPart &
 
-$prototype=QByteArray boundary () const
-$method=|QByteArray|boundary|
+$prototypeV2=QByteArray boundary() const
 
 $prototype=void setBoundary ( const QByteArray & boundary )
 $method=|void|setBoundary|const QByteArray &

@@ -80,8 +80,7 @@ $deleteMethod
 
 %% #ifndef QT_NO_BEARERMANAGEMENT
 
-$prototype=NetworkAccessibility networkAccessible() const
-$method=|QNetworkAccessManager::NetworkAccessibility|networkAccessible|
+$prototypeV2=QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 
 $prototype=void setNetworkAccessible(NetworkAccessibility accessible)
 $method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
@@ -95,36 +94,31 @@ $method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
 $prototype=QStringList supportedSchemes() const
 $method=5,2,0|QStringList|supportedSchemes|
 
-$prototype=void clearAccessCache()
-$method=|void|clearAccessCache|
+$prototypeV2=void clearAccessCache()
 
 $prototype=void clearConnectionCache()
 $method=5,9,0|void|clearConnectionCache|
 
 %% #ifndef QT_NO_NETWORKPROXY
 
-$prototype=QNetworkProxy proxy() const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
 $prototype=void setProxy(const QNetworkProxy &proxy)
 $method=|void|setProxy|const QNetworkProxy &
 
-$prototype=QNetworkProxyFactory *proxyFactory() const
-$method=|QNetworkProxyFactory *|proxyFactory|
+$prototypeV2=QNetworkProxyFactory * proxyFactory() const
 
 $prototype=void setProxyFactory(QNetworkProxyFactory *factory)
 $method=|void|setProxyFactory|QNetworkProxyFactory *
 
 %% #endif
 
-$prototype=QAbstractNetworkCache *cache() const
-$method=|QAbstractNetworkCache *|cache|
+$prototypeV2=QAbstractNetworkCache * cache() const
 
 $prototype=void setCache(QAbstractNetworkCache *cache)
 $method=|void|setCache|QAbstractNetworkCache *
 
-$prototype=QNetworkCookieJar *cookieJar() const
-$method=|QNetworkCookieJar *|cookieJar|
+$prototypeV2=QNetworkCookieJar * cookieJar() const
 
 $prototype=void setCookieJar(QNetworkCookieJar *cookieJar)
 $method=|void|setCookieJar|QNetworkCookieJar *
@@ -269,11 +263,9 @@ $addMethod=sendCustomRequest
 $prototype=void setConfiguration(const QNetworkConfiguration &config)
 $method=|void|setConfiguration|const QNetworkConfiguration &
 
-$prototype=QNetworkConfiguration configuration() const
-$method=|QNetworkConfiguration|configuration|
+$prototypeV2=QNetworkConfiguration configuration() const
 
-$prototype=QNetworkConfiguration activeConfiguration() const
-$method=|QNetworkConfiguration|activeConfiguration|
+$prototypeV2=QNetworkConfiguration activeConfiguration() const
 
 %% #endif
 

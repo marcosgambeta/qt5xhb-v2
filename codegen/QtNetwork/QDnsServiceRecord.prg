@@ -55,26 +55,20 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 $prototype=~QDnsServiceRecord()
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=quint16 port() const
-$method=|quint16|port|
+$prototypeV2=quint16 port() const
 
-$prototype=quint16 priority() const
-$method=|quint16|priority|
+$prototypeV2=quint16 priority() const
 
 $prototype=void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsServiceRecord &
 
-$prototype=QString target() const
-$method=|QString|target|
+$prototypeV2=QString target() const
 
-$prototype=quint32 timeToLive() const
-$method=|quint32|timeToLive|
+$prototypeV2=quint32 timeToLive() const
 
-$prototype=quint16 weight() const
-$method=|quint16|weight|
+$prototypeV2=quint16 weight() const
 
 $extraMethods
 

@@ -116,20 +116,15 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 $prototype=~QNetworkProxyQuery()
 $deleteMethod
 
-$prototype=int localPort () const
-$method=|int|localPort|
+$prototypeV2=int localPort() const
 
-$prototype=QString peerHostName () const
-$method=|QString|peerHostName|
+$prototypeV2=QString peerHostName() const
 
-$prototype=int peerPort () const
-$method=|int|peerPort|
+$prototypeV2=int peerPort() const
 
-$prototype=QString protocolTag () const
-$method=|QString|protocolTag|
+$prototypeV2=QString protocolTag() const
 
-$prototype=QueryType queryType () const
-$method=|QNetworkProxyQuery::QueryType|queryType|
+$prototypeV2=QNetworkProxyQuery::QueryType queryType() const
 
 $prototype=void setLocalPort ( int port )
 $method=|void|setLocalPort|int
@@ -149,16 +144,14 @@ $method=|void|setQueryType|QNetworkProxyQuery::QueryType
 $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void swap(QNetworkProxyQuery &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkProxyQuery &
 
 %% #if !defined(QT_NO_BEARERMANAGEMENT) && QT_DEPRECATED_SINCE(5, 10)
 
-$prototype=QNetworkConfiguration networkConfiguration() const
-$method=|QNetworkConfiguration|networkConfiguration|
+$prototypeV2=QNetworkConfiguration networkConfiguration() const
 
 $prototype=void setNetworkConfiguration(const QNetworkConfiguration &networkConfiguration)
 $method=|void|setNetworkConfiguration|const QNetworkConfiguration &

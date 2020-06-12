@@ -40,31 +40,23 @@ $constructor=|new|const QNetworkConfiguration &,QObject *=nullptr
 $prototype=virtual ~QNetworkSession()
 $deleteMethod
 
-$prototype=quint64 activeTime () const
-$method=|quint64|activeTime|
+$prototypeV2=quint64 activeTime() const
 
-$prototype=quint64 bytesReceived () const
-$method=|quint64|bytesReceived|
+$prototypeV2=quint64 bytesReceived() const
 
-$prototype=quint64 bytesWritten () const
-$method=|quint64|bytesWritten|
+$prototypeV2=quint64 bytesWritten() const
 
-$prototype=QNetworkConfiguration configuration () const
-$method=|QNetworkConfiguration|configuration|
+$prototypeV2=QNetworkConfiguration configuration() const
 
-$prototype=SessionError error () const
-$method=|QNetworkSession::SessionError|error|
+$prototypeV2=QNetworkSession::SessionError error() const
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 %% #ifndef QT_NO_NETWORKINTERFACE
-$prototype=QNetworkInterface interface () const
-$method=|QNetworkInterface|interface|
+$prototypeV2=QNetworkInterface interface() const
 %% #endif
 
-$prototype=bool isOpen () const
-$method=|bool|isOpen|
+$prototypeV2=bool isOpen() const
 
 $prototype=QVariant sessionProperty ( const QString & key ) const
 $method=|QVariant|sessionProperty|const QString &
@@ -72,35 +64,26 @@ $method=|QVariant|sessionProperty|const QString &
 $prototype=void setSessionProperty ( const QString & key, const QVariant & value )
 $method=|void|setSessionProperty|const QString &,const QVariant &
 
-$prototype=State state () const
-$method=|QNetworkSession::State|state|
+$prototypeV2=QNetworkSession::State state() const
 
 $prototype=bool waitForOpened ( int msecs = 30000 )
 $method=|bool|waitForOpened|int=30000
 
-$prototype=void accept () (slot)
-$method=|void|accept|
+$prototypeV2=void accept() (slot)
 
-$prototype=void close () (slot)
-$method=|void|close|
+$prototypeV2=void close() (slot)
 
-$prototype=void ignore () (slot)
-$method=|void|ignore|
+$prototypeV2=void ignore() (slot)
 
-$prototype=void migrate () (slot)
-$method=|void|migrate|
+$prototypeV2=void migrate() (slot)
 
-$prototype=void open () (slot)
-$method=|void|open|
+$prototypeV2=void open() (slot)
 
-$prototype=void reject () (slot)
-$method=|void|reject|
+$prototypeV2=void reject() (slot)
 
-$prototype=void stop () (slot)
-$method=|void|stop|
+$prototypeV2=void stop() (slot)
 
-$prototype=QNetworkSession::UsagePolicies usagePolicies() const
-$method=|QNetworkSession::UsagePolicies|usagePolicies|
+$prototypeV2=QNetworkSession::UsagePolicies usagePolicies() const
 
 $prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
 

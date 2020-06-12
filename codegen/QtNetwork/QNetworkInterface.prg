@@ -62,23 +62,17 @@ $deleteMethod
 $prototype=QList<QNetworkAddressEntry> addressEntries () const
 $method=|QList<QNetworkAddressEntry>|addressEntries|
 
-$prototype=InterfaceFlags flags () const
-$method=|QNetworkInterface::InterfaceFlags|flags|
+$prototypeV2=QNetworkInterface::InterfaceFlags flags() const
 
-$prototype=QString hardwareAddress () const
-$method=|QString|hardwareAddress|
+$prototypeV2=QString hardwareAddress() const
 
-$prototype=QString humanReadableName () const
-$method=|QString|humanReadableName|
+$prototypeV2=QString humanReadableName() const
 
-$prototype=int index () const
-$method=|int|index|
+$prototypeV2=int index() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=static QList<QHostAddress> allAddresses ()
 $staticMethod=|QList<QHostAddress>|allAddresses|

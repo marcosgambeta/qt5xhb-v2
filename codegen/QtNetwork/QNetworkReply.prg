@@ -54,38 +54,28 @@ $prototype=QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
 $prototype=~QNetworkReply()
 $deleteMethod
 
-$prototype=virtual void close() Q_DECL_OVERRIDE
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close() Q_DECL_OVERRIDE
 
-$prototype=virtual bool isSequential() const Q_DECL_OVERRIDE
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const Q_DECL_OVERRIDE
 
-$prototype=qint64 readBufferSize () const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=virtual void setReadBufferSize ( qint64 size )
 $virtualMethod=|void|setReadBufferSize|qint64
 
-$prototype=QNetworkAccessManager * manager () const
-$method=|QNetworkAccessManager *|manager|
+$prototypeV2=QNetworkAccessManager * manager() const
 
-$prototype=QNetworkAccessManager::Operation operation () const
-$method=|QNetworkAccessManager::Operation|operation|
+$prototypeV2=QNetworkAccessManager::Operation operation() const
 
-$prototype=QNetworkRequest request () const
-$method=|QNetworkRequest|request|
+$prototypeV2=QNetworkRequest request() const
 
-$prototype=NetworkError error () const
-$method=|QNetworkReply::NetworkError|error|
+$prototypeV2=QNetworkReply::NetworkError error() const
 
-$prototype=bool isFinished () const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=bool isRunning () const
-$method=|bool|isRunning|
+$prototypeV2=bool isRunning() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=QVariant header ( QNetworkRequest::KnownHeaders header ) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
@@ -108,16 +98,14 @@ $method=|QVariant|attribute|QNetworkRequest::Attribute
 
 %% #ifndef QT_NO_SSL
 
-$prototype=QSslConfiguration sslConfiguration () const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototype=void setSslConfiguration ( const QSslConfiguration & configuration )
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
 %% #endif
 
-$prototype=virtual void abort () = 0 (slot)
-$virtualMethod=|void|abort|
+$prototypeV2=virtual void abort() = 0 (slot)
 
 %% #ifndef QT_NO_SSL
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )

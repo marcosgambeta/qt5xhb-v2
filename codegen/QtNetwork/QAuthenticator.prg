@@ -55,20 +55,17 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 $prototype=~QAuthenticator()
 $deleteMethod
 
-$prototype=QString user() const
-$method=|QString|user|
+$prototypeV2=QString user() const
 
 $prototype=void setUser(const QString &user)
 $method=|void|setUser|const QString &
 
-$prototype=QString password() const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
 $prototype=void setPassword(const QString &password)
 $method=|void|setPassword|const QString &
 
-$prototype=QString realm() const
-$method=|QString|realm|
+$prototypeV2=QString realm() const
 
 $prototype=void setRealm(const QString &realm)
 %% TODO: check method and Qt version
@@ -84,11 +81,9 @@ $prototype=QVariantHash options() const
 $prototype=void setOption(const QString &opt, const QVariant &value)
 $method=|void|setOption|const QString &,const QVariant &
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=void detach()
-$method=|void|detach|
+$prototypeV2=void detach()
 
 $extraMethods
 

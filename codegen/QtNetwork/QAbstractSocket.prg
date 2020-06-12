@@ -49,11 +49,9 @@ $prototype=QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QO
 $prototype=virtual ~QAbstractSocket()
 $deleteMethod
 
-$prototype=virtual void resume()
-$virtualMethod=|void|resume|
+$prototypeV2=virtual void resume()
 
-$prototype=PauseModes pauseMode() const
-$method=|QAbstractSocket::PauseModes|pauseMode|
+$prototypeV2=QAbstractSocket::PauseModes pauseMode() const
 
 $prototype=void setPauseMode(PauseModes pauseMode)
 $method=|void|setPauseMode|QAbstractSocket::PauseModes
@@ -114,47 +112,34 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
 }
 $addMethod=connectToHost
 
-$prototype=virtual void disconnectFromHost()
-$virtualMethod=|void|disconnectFromHost|
+$prototypeV2=virtual void disconnectFromHost()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=qint64 bytesAvailable() const Q_DECL_OVERRIDE
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const Q_DECL_OVERRIDE
 
-$prototype=qint64 bytesToWrite() const Q_DECL_OVERRIDE
-$method=|qint64|bytesToWrite|
+$prototypeV2=qint64 bytesToWrite() const Q_DECL_OVERRIDE
 
-$prototype=bool canReadLine() const Q_DECL_OVERRIDE
-$method=|bool|canReadLine|
+$prototypeV2=bool canReadLine() const Q_DECL_OVERRIDE
 
-$prototype=quint16 localPort() const
-$method=|quint16|localPort|
+$prototypeV2=quint16 localPort() const
 
-$prototype=QHostAddress localAddress() const
-$method=|QHostAddress|localAddress|
+$prototypeV2=QHostAddress localAddress() const
 
-$prototype=quint16 peerPort() const
-$method=|quint16|peerPort|
+$prototypeV2=quint16 peerPort() const
 
-$prototype=QHostAddress peerAddress() const
-$method=|QHostAddress|peerAddress|
+$prototypeV2=QHostAddress peerAddress() const
 
-$prototype=QString peerName() const
-$method=|QString|peerName|
+$prototypeV2=QString peerName() const
 
-$prototype=qint64 readBufferSize() const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=virtual void setReadBufferSize(qint64 size)
 $virtualMethod=|void|setReadBufferSize|qint64
 
-$prototype=void abort()
-$method=|void|abort|
+$prototypeV2=void abort()
 
-$prototype=virtual qintptr socketDescriptor() const
-$virtualMethod=|qintptr|socketDescriptor|
+$prototypeV2=virtual qintptr socketDescriptor() const
 
 $prototype=virtual bool setSocketDescriptor(qintptr socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite)
 $virtualMethod=|bool|setSocketDescriptor|qintptr,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -165,26 +150,19 @@ $virtualMethod=|void|setSocketOption|QAbstractSocket::SocketOption,const QVarian
 $prototype=virtual QVariant socketOption(QAbstractSocket::SocketOption option)
 $virtualMethod=|QVariant|socketOption|QAbstractSocket::SocketOption
 
-$prototype=SocketType socketType() const
-$method=|QAbstractSocket::SocketType|socketType|
+$prototypeV2=QAbstractSocket::SocketType socketType() const
 
-$prototype=SocketState state() const
-$method=|QAbstractSocket::SocketState|state|
+$prototypeV2=QAbstractSocket::SocketState state() const
 
-$prototype=SocketError error() const
-$method=|QAbstractSocket::SocketError|error|
+$prototypeV2=QAbstractSocket::SocketError error() const
 
-$prototype=void close() Q_DECL_OVERRIDE
-$method=|void|close|
+$prototypeV2=void close() Q_DECL_OVERRIDE
 
-$prototype=bool isSequential() const Q_DECL_OVERRIDE
-$method=|bool|isSequential|
+$prototypeV2=bool isSequential() const Q_DECL_OVERRIDE
 
-$prototype=bool atEnd() const Q_DECL_OVERRIDE
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const Q_DECL_OVERRIDE
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
 $prototype=virtual bool waitForConnected(int msecs = 30000)
 $virtualMethod=|bool|waitForConnected|int=30000
@@ -203,8 +181,7 @@ $virtualMethod=|bool|waitForDisconnected|int=30000
 $prototype=void setProxy(const QNetworkProxy &networkProxy)
 $method=|void|setProxy|const QNetworkProxy &
 
-$prototype=QNetworkProxy proxy() const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
 %% #endif
 

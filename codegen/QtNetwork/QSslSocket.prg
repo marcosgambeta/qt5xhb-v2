@@ -58,8 +58,7 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QSslSocket()
 $deleteMethod
 
-$prototype=void resume() Q_DECL_OVERRIDE
-$method=|void|resume|
+$prototypeV2=void resume() Q_DECL_OVERRIDE
 
 $prototype=void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 $internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite,QAbstractSocket::NetworkLayerProtocol=QAbstractSocket::AnyIPProtocol
@@ -95,8 +94,7 @@ $method=|bool|setSocketDescriptor|qintptr,QAbstractSocket::SocketState=QAbstract
 $prototype=void connectToHost(const QString &hostName, quint16 port, OpenMode openMode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol) Q_DECL_OVERRIDE
 $method=|void|connectToHost|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite,QAbstractSocket::NetworkLayerProtocol=QAbstractSocket::AnyIPProtocol
 
-$prototype=void disconnectFromHost() Q_DECL_OVERRIDE
-$method=|void|disconnectFromHost|
+$prototypeV2=void disconnectFromHost() Q_DECL_OVERRIDE
 
 $prototype=virtual void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value) Q_DECL_OVERRIDE
 $virtualMethod=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
@@ -104,68 +102,52 @@ $virtualMethod=|void|setSocketOption|QAbstractSocket::SocketOption,const QVarian
 $prototype=virtual QVariant socketOption(QAbstractSocket::SocketOption option) Q_DECL_OVERRIDE
 $virtualMethod=|QVariant|socketOption|QAbstractSocket::SocketOption
 
-$prototype=SslMode mode() const
-$method=|QSslSocket::SslMode|mode|
+$prototypeV2=QSslSocket::SslMode mode() const
 
-$prototype=bool isEncrypted() const
-$method=|bool|isEncrypted|
+$prototypeV2=bool isEncrypted() const
 
-$prototype=QSsl::SslProtocol protocol() const
-$method=|QSsl::SslProtocol|protocol|
+$prototypeV2=QSsl::SslProtocol protocol() const
 
 $prototype=void setProtocol(QSsl::SslProtocol protocol)
 $method=|void|setProtocol|QSsl::SslProtocol
 
-$prototype=QSslSocket::PeerVerifyMode peerVerifyMode() const
-$method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
+$prototypeV2=QSslSocket::PeerVerifyMode peerVerifyMode() const
 
 $prototype=void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
-$prototype=int peerVerifyDepth() const
-$method=|int|peerVerifyDepth|
+$prototypeV2=int peerVerifyDepth() const
 
 $prototype=void setPeerVerifyDepth(int depth)
 $method=|void|setPeerVerifyDepth|int
 
-$prototype=QString peerVerifyName() const
-$method=|QString|peerVerifyName|
+$prototypeV2=QString peerVerifyName() const
 
 $prototype=void setPeerVerifyName(const QString &hostName)
 $method=|void|setPeerVerifyName|const QString &
 
-$prototype=qint64 bytesAvailable() const Q_DECL_OVERRIDE
-$method=|qint64|bytesAvailable|
+$prototypeV2=qint64 bytesAvailable() const Q_DECL_OVERRIDE
 
-$prototype=qint64 bytesToWrite() const Q_DECL_OVERRIDE
-$method=|qint64|bytesToWrite|
+$prototypeV2=qint64 bytesToWrite() const Q_DECL_OVERRIDE
 
-$prototype=bool canReadLine() const Q_DECL_OVERRIDE
-$method=|bool|canReadLine|
+$prototypeV2=bool canReadLine() const Q_DECL_OVERRIDE
 
-$prototype=void close() Q_DECL_OVERRIDE
-$method=|void|close|
+$prototypeV2=void close() Q_DECL_OVERRIDE
 
-$prototype=bool atEnd() const Q_DECL_OVERRIDE
-$method=|bool|atEnd|
+$prototypeV2=bool atEnd() const Q_DECL_OVERRIDE
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
-$prototype=void abort()
-$method=|void|abort|
+$prototypeV2=void abort()
 
 $prototype=void setReadBufferSize(qint64 size) Q_DECL_OVERRIDE
 $method=|void|setReadBufferSize|qint64
 
-$prototype=qint64 encryptedBytesAvailable() const
-$method=|qint64|encryptedBytesAvailable|
+$prototypeV2=qint64 encryptedBytesAvailable() const
 
-$prototype=qint64 encryptedBytesToWrite() const
-$method=|qint64|encryptedBytesToWrite|
+$prototypeV2=qint64 encryptedBytesToWrite() const
 
-$prototype=QSslConfiguration sslConfiguration() const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototype=void setSslConfiguration(const QSslConfiguration &config)
 $method=|void|setSslConfiguration|const QSslConfiguration &
@@ -204,17 +186,14 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 }
 $addMethod=setLocalCertificate
 
-$prototype=QSslCertificate localCertificate() const
-$method=|QSslCertificate|localCertificate|
+$prototypeV2=QSslCertificate localCertificate() const
 
-$prototype=QSslCertificate peerCertificate() const
-$method=|QSslCertificate|peerCertificate|
+$prototypeV2=QSslCertificate peerCertificate() const
 
 $prototype=QList<QSslCertificate> peerCertificateChain() const
 $method=|QList<QSslCertificate>|peerCertificateChain|
 
-$prototype=QSslCipher sessionCipher() const
-$method=|QSslCipher|sessionCipher|
+$prototypeV2=QSslCipher sessionCipher() const
 
 $prototype=QSsl::SslProtocol sessionProtocol() const
 $method=5,4,0|QSsl::SslProtocol|sessionProtocol|
@@ -247,8 +226,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 }
 $addMethod=setPrivateKey
 
-$prototype=QSslKey privateKey() const
-$method=|QSslKey|privateKey|
+$prototypeV2=QSslKey privateKey() const
 
 %% #if QT_DEPRECATED_SINCE(5, 5)
 $prototype=QList<QSslCipher> ciphers() const
@@ -391,14 +369,11 @@ $method=|bool|waitForDisconnected|int=30000
 $prototype=QList<QSslError> sslErrors() const
 $method=|QList<QSslError>|sslErrors|
 
-$prototype=static bool supportsSsl()
-$staticMethod=|bool|supportsSsl|
+$prototypeV2=static bool supportsSsl()
 
-$prototype=static long sslLibraryVersionNumber()
-$staticMethod=|long|sslLibraryVersionNumber|
+$prototypeV2=static long sslLibraryVersionNumber()
 
-$prototype=static QString sslLibraryVersionString()
-$staticMethod=|QString|sslLibraryVersionString|
+$prototypeV2=static QString sslLibraryVersionString()
 
 $prototype=static long sslLibraryBuildVersionNumber()
 $staticMethod=5,4,0|long|sslLibraryBuildVersionNumber|
@@ -434,11 +409,9 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 }
 $addMethod=ignoreSslErrors
 
-$prototype=void startClientEncryption() (slot)
-$method=|void|startClientEncryption|
+$prototypeV2=void startClientEncryption() (slot)
 
-$prototype=void startServerEncryption() (slot)
-$method=|void|startServerEncryption|
+$prototypeV2=void startServerEncryption() (slot)
 
 $prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 

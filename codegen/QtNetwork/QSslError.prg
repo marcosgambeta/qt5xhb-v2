@@ -75,14 +75,11 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 $prototype=~QSslError()
 $deleteMethod
 
-$prototype=QSslCertificate certificate () const
-$method=|QSslCertificate|certificate|
+$prototypeV2=QSslCertificate certificate() const
 
-$prototype=SslError error () const
-$method=|QSslError::SslError|error|
+$prototypeV2=QSslError::SslError error() const
 
-$prototype=QString errorString () const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=void swap(QSslError &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslError &

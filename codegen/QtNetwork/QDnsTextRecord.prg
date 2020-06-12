@@ -55,14 +55,12 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 $prototype=~QDnsTextRecord()
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsTextRecord &
 
-$prototype=quint32 timeToLive() const
-$method=|quint32|timeToLive|
+$prototypeV2=quint32 timeToLive() const
 
 $prototype=QList<QByteArray> values() const
 $method=|QList<QByteArray>|values|

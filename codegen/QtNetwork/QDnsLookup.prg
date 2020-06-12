@@ -71,22 +71,19 @@ $deleteMethod
 %% Q_PROPERTY(Error error READ error NOTIFY finished)
 %%
 
-$prototype=Error error() const
-$method=|QDnsLookup::Error|error|
+$prototypeV2=QDnsLookup::Error error() const
 
 %%
 %% Q_PROPERTY(QString errorString READ errorString NOTIFY finished)
 %%
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 %%
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
@@ -95,8 +92,7 @@ $method=|void|setName|const QString &
 %% Q_PROPERTY(Type type READ type WRITE setType NOTIFY typeChanged)
 %%
 
-$prototype=Type type() const
-$method=|QDnsLookup::Type|type|
+$prototypeV2=QDnsLookup::Type type() const
 
 $prototype=void setType(QDnsLookup::Type)
 $method=|void|setType|QDnsLookup::Type
@@ -117,8 +113,7 @@ $method=5,3,0|void|setNameserver|const QHostAddress &
 %%
 %%
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
 $prototype=QList<QDnsDomainNameRecord> canonicalNameRecords() const
 $method=|QList<QDnsDomainNameRecord>|canonicalNameRecords|
@@ -141,11 +136,9 @@ $method=|QList<QDnsServiceRecord>|serviceRecords|
 $prototype=QList<QDnsTextRecord> textRecords() const
 $method=|QList<QDnsTextRecord>|textRecords|
 
-$prototype=void abort() (slot)
-$slotMethod=|void|abort|
+$prototypeV2=void abort() (slot)
 
-$prototype=void lookup() (slot)
-$slotMethod=|void|lookup|
+$prototypeV2=void lookup() (slot)
 
 %%
 %% SIGNALS

@@ -59,17 +59,13 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 $prototype=~QNetworkAddressEntry()
 $deleteMethod
 
-$prototype=QHostAddress broadcast () const
-$method=|QHostAddress|broadcast|
+$prototypeV2=QHostAddress broadcast() const
 
-$prototype=QHostAddress ip () const
-$method=|QHostAddress|ip|
+$prototypeV2=QHostAddress ip() const
 
-$prototype=QHostAddress netmask () const
-$method=|QHostAddress|netmask|
+$prototypeV2=QHostAddress netmask() const
 
-$prototype=int prefixLength () const
-$method=|int|prefixLength|
+$prototypeV2=int prefixLength() const
 
 $prototype=void setBroadcast ( const QHostAddress & newBroadcast )
 $method=|void|setBroadcast|const QHostAddress &

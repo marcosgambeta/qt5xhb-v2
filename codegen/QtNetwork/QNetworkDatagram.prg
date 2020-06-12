@@ -73,32 +73,24 @@ $deleteMethod
 $prototype=void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkDatagram &
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=uint interfaceIndex() const
-$method=|uint|interfaceIndex|
+$prototypeV2=uint interfaceIndex() const
 
 $prototype=void setInterfaceIndex(uint index)
 $method=|void|setInterfaceIndex|uint
 
-$prototype=QHostAddress senderAddress() const
-$method=|QHostAddress|senderAddress|
+$prototypeV2=QHostAddress senderAddress() const
 
-$prototype=QHostAddress destinationAddress() const
-$method=|QHostAddress|destinationAddress|
+$prototypeV2=QHostAddress destinationAddress() const
 
-$prototype=int senderPort() const
-$method=|int|senderPort|
+$prototypeV2=int senderPort() const
 
-$prototype=int destinationPort() const
-$method=|int|destinationPort|
+$prototypeV2=int destinationPort() const
 
 $prototype=void setSender(const QHostAddress &address, quint16 port = 0)
 $method=|void|setSender|const QHostAddress &,quint16=0
@@ -106,14 +98,12 @@ $method=|void|setSender|const QHostAddress &,quint16=0
 $prototype=void setDestination(const QHostAddress &address, quint16 port)
 $method=|void|setDestination|const QHostAddress &,quint16
 
-$prototype=int hopLimit() const
-$method=|int|hopLimit|
+$prototypeV2=int hopLimit() const
 
 $prototype=void setHopLimit(int count)
 $method=|void|setHopLimit|int
 
-$prototype=QByteArray data() const
-$method=|QByteArray|data|
+$prototypeV2=QByteArray data() const
 
 $prototype=void setData(const QByteArray &data)
 $method=|void|setData|const QByteArray &

@@ -65,11 +65,9 @@ $deleteMethod
 $prototype=void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkCacheMetaData &
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
@@ -82,20 +80,17 @@ $prototype=void setRawHeaders(const RawHeaderList &headers)
 %% TODO: implementar
 %% $method=|void|setRawHeaders|const RawHeaderList &
 
-$prototype=QDateTime lastModified() const
-$method=|QDateTime|lastModified|
+$prototypeV2=QDateTime lastModified() const
 
 $prototype=void setLastModified(const QDateTime &dateTime)
 $method=|void|setLastModified|const QDateTime &
 
-$prototype=QDateTime expirationDate() const
-$method=|QDateTime|expirationDate|
+$prototypeV2=QDateTime expirationDate() const
 
 $prototype=void setExpirationDate(const QDateTime &dateTime)
 $method=|void|setExpirationDate|const QDateTime &
 
-$prototype=bool saveToDisk() const
-$method=|bool|saveToDisk|
+$prototypeV2=bool saveToDisk() const
 
 $prototype=void setSaveToDisk(bool allow)
 $method=|void|setSaveToDisk|bool

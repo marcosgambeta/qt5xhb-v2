@@ -55,20 +55,16 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 $prototype=~QDnsMailExchangeRecord()
 $deleteMethod
 
-$prototype=QString exchange() const
-$method=|QString|exchange|
+$prototypeV2=QString exchange() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=quint16 preference() const
-$method=|quint16|preference|
+$prototypeV2=quint16 preference() const
 
 $prototype=void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsMailExchangeRecord &
 
-$prototype=quint32 timeToLive() const
-$method=|quint32|timeToLive|
+$prototypeV2=quint32 timeToLive() const
 
 $extraMethods
 

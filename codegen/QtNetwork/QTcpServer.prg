@@ -47,26 +47,20 @@ $deleteMethod
 $prototype=bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
-$prototype=void close()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=bool isListening() const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
 $prototype=void setMaxPendingConnections(int numConnections)
 $method=|void|setMaxPendingConnections|int
 
-$prototype=int maxPendingConnections() const
-$method=|int|maxPendingConnections|
+$prototypeV2=int maxPendingConnections() const
 
-$prototype=quint16 serverPort() const
-$method=|quint16|serverPort|
+$prototypeV2=quint16 serverPort() const
 
-$prototype=QHostAddress serverAddress() const
-$method=|QHostAddress|serverAddress|
+$prototypeV2=QHostAddress serverAddress() const
 
-$prototype=qintptr socketDescriptor() const
-$method=|qintptr|socketDescriptor|
+$prototypeV2=qintptr socketDescriptor() const
 
 $prototype=bool setSocketDescriptor(qintptr socketDescriptor)
 $method=|bool|setSocketDescriptor|qintptr
@@ -74,31 +68,24 @@ $method=|bool|setSocketDescriptor|qintptr
 $prototype=bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
 $method=|bool|waitForNewConnection|int=0,bool *=nullptr
 
-$prototype=virtual bool hasPendingConnections() const
-$virtualMethod=|bool|hasPendingConnections|
+$prototypeV2=virtual bool hasPendingConnections() const
 
-$prototype=virtual QTcpSocket *nextPendingConnection()
-$virtualMethod=|QTcpSocket *|nextPendingConnection|
+$prototypeV2=virtual QTcpSocket * nextPendingConnection()
 
-$prototype=QAbstractSocket::SocketError serverError() const
-$method=|QAbstractSocket::SocketError|serverError|
+$prototypeV2=QAbstractSocket::SocketError serverError() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=void pauseAccepting()
-$method=|void|pauseAccepting|
+$prototypeV2=void pauseAccepting()
 
-$prototype=void resumeAccepting()
-$method=|void|resumeAccepting|
+$prototypeV2=void resumeAccepting()
 
 %% #ifndef QT_NO_NETWORKPROXY
 
 $prototype=void setProxy(const QNetworkProxy &networkProxy)
 $method=|void|setProxy|const QNetworkProxy &
 
-$prototype=QNetworkProxy proxy() const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
 %% #endif
 

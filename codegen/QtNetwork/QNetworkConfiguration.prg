@@ -55,38 +55,29 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 $prototype=~QNetworkConfiguration()
 $deleteMethod
 
-$prototype=BearerType bearerType () const
-$method=|QNetworkConfiguration::BearerType|bearerType|
+$prototypeV2=QNetworkConfiguration::BearerType bearerType () const
 
 $prototype=BearerType bearerTypeFamily() const
 $method=5,2,0|QNetworkConfiguration::BearerType|bearerTypeFamily|
 
-$prototype=QString bearerTypeName () const
-$method=|QString|bearerTypeName|
+$prototypeV2=QString bearerTypeName () const
 
 $prototype=QList<QNetworkConfiguration> children () const
 $method=|QList<QNetworkConfiguration>|children|
 
-$prototype=QString identifier () const
-$method=|QString|identifier|
+$prototypeV2=QString identifier() const
 
-$prototype=bool isRoamingAvailable () const
-$method=|bool|isRoamingAvailable|
+$prototypeV2=bool isRoamingAvailable() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=Purpose purpose () const
-$method=|QNetworkConfiguration::Purpose|purpose|
+$prototypeV2=QNetworkConfiguration::Purpose purpose() const
 
-$prototype=StateFlags state () const
-$method=|QNetworkConfiguration::StateFlags|state|
+$prototypeV2=QNetworkConfiguration::StateFlags state() const
 
-$prototype=Type type () const
-$method=|QNetworkConfiguration::Type|type|
+$prototypeV2=QNetworkConfiguration::Type type() const
 
 $prototype=void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkConfiguration &

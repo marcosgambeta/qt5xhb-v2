@@ -74,32 +74,23 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
 $prototype=~QSslCipher()
 $deleteMethod
 
-$prototype=QString authenticationMethod () const
-$method=|QString|authenticationMethod|
+$prototypeV2=QString authenticationMethod() const
 
-$prototype=QString encryptionMethod () const
-$method=|QString|encryptionMethod|
+$prototypeV2=QString encryptionMethod() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString keyExchangeMethod () const
-$method=|QString|keyExchangeMethod|
+$prototypeV2=QString keyExchangeMethod() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QSsl::SslProtocol protocol () const
-$method=|QSsl::SslProtocol|protocol|
+$prototypeV2=QSsl::SslProtocol protocol() const
 
-$prototype=QString protocolString () const
-$method=|QString|protocolString|
+$prototypeV2=QString protocolString() const
 
-$prototype=int supportedBits () const
-$method=|int|supportedBits|
+$prototypeV2=int supportedBits() const
 
-$prototype=int usedBits () const
-$method=|int|usedBits|
+$prototypeV2=int usedBits() const
 
 $prototype=void swap(QSslCipher &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslCipher &

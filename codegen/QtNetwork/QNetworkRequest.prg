@@ -72,11 +72,9 @@ $method=|bool|hasRawHeader|const QByteArray &
 $prototype=QVariant header ( KnownHeaders header ) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
 
-$prototype=QObject * originatingObject () const
-$method=|QObject *|originatingObject|
+$prototypeV2=QObject * originatingObject() const
 
-$prototype=Priority priority () const
-$method=|QNetworkRequest::Priority|priority|
+$prototypeV2=QNetworkRequest::Priority priority() const
 
 $prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
 $method=|QByteArray|rawHeader|const QByteArray &
@@ -108,12 +106,10 @@ $prototype=void setUrl ( const QUrl & url )
 $method=|void|setUrl|const QUrl &
 
 %% #ifndef QT_NO_SSL
-$prototype=QSslConfiguration sslConfiguration () const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 %% #endif
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void swap(QNetworkRequest &other) Q_DECL_NOTHROW
 $method=|void|swap|QNetworkRequest &

@@ -61,50 +61,37 @@ HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 }
 $addMethod=connectToServer
 
-$prototype=void disconnectFromServer()
-$method=|void|disconnectFromServer|
+$prototypeV2=void disconnectFromServer()
 
 $prototype=void setServerName(const QString &name)
 $method=|void|setServerName|const QString &
 
-$prototype=QString serverName() const
-$method=|QString|serverName|
+$prototypeV2=QString serverName() const
 
-$prototype=QString fullServerName() const
-$method=|QString|fullServerName|
+$prototypeV2=QString fullServerName() const
 
-$prototype=void abort()
-$method=|void|abort|
+$prototypeV2=void abort()
 
-$prototype=virtual bool isSequential() const Q_DECL_OVERRIDE
-$virtualMethod=|bool|isSequential|
+$prototypeV2=virtual bool isSequential() const Q_DECL_OVERRIDE
 
-$prototype=virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
-$virtualMethod=|qint64|bytesAvailable|
+$prototypeV2=virtual qint64 bytesAvailable() const Q_DECL_OVERRIDE
 
-$prototype=virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
-$virtualMethod=|qint64|bytesToWrite|
+$prototypeV2=virtual qint64 bytesToWrite() const Q_DECL_OVERRIDE
 
-$prototype=virtual bool canReadLine() const Q_DECL_OVERRIDE
-$virtualMethod=|bool|canReadLine|
+$prototypeV2=virtual bool canReadLine() const Q_DECL_OVERRIDE
 
 $prototype=virtual bool open(OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE
 $virtualMethod=|bool|open|QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=virtual void close() Q_DECL_OVERRIDE
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close() Q_DECL_OVERRIDE
 
-$prototype=LocalSocketError error() const
-$method=|QLocalSocket::LocalSocketError|error|
+$prototypeV2=QLocalSocket::LocalSocketError error() const
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=qint64 readBufferSize() const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=void setReadBufferSize(qint64 size)
 $method=|void|setReadBufferSize|qint64
@@ -112,11 +99,9 @@ $method=|void|setReadBufferSize|qint64
 $prototype=bool setSocketDescriptor(qintptr socketDescriptor, LocalSocketState socketState = ConnectedState, OpenMode openMode = ReadWrite)
 $method=|bool|setSocketDescriptor|qintptr,QLocalSocket::LocalSocketState=QLocalSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=qintptr socketDescriptor() const
-$method=|qintptr|socketDescriptor|
+$prototypeV2=qintptr socketDescriptor() const
 
-$prototype=LocalSocketState state() const
-$method=|QLocalSocket::LocalSocketState|state|
+$prototypeV2=QLocalSocket::LocalSocketState state() const
 
 $prototype=bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
 $method=|bool|waitForBytesWritten|int=30000

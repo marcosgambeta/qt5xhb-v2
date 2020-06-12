@@ -55,17 +55,14 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 $prototype=~QDnsDomainNameRecord()
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsDomainNameRecord &
 
-$prototype=quint32 timeToLive() const
-$method=|quint32|timeToLive|
+$prototypeV2=quint32 timeToLive() const
 
-$prototype=QString value() const
-$method=|QString|value|
+$prototypeV2=QString value() const
 
 $extraMethods
 

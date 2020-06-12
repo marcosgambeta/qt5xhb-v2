@@ -65,23 +65,19 @@ $deleteMethod
 $prototype=void swap(QSslConfiguration &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslConfiguration &
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QSsl::SslProtocol protocol() const
-$method=|QSsl::SslProtocol|protocol|
+$prototypeV2=QSsl::SslProtocol protocol() const
 
 $prototype=void setProtocol(QSsl::SslProtocol protocol)
 $method=|void|setProtocol|QSsl::SslProtocol
 
-$prototype=QSslSocket::PeerVerifyMode peerVerifyMode() const
-$method=|QSslSocket::PeerVerifyMode|peerVerifyMode|
+$prototypeV2=QSslSocket::PeerVerifyMode peerVerifyMode() const
 
 $prototype=void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
 $method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
 
-$prototype=int peerVerifyDepth() const
-$method=|int|peerVerifyDepth|
+$prototypeV2=int peerVerifyDepth() const
 
 $prototype=void setPeerVerifyDepth(int depth)
 $method=|void|setPeerVerifyDepth|int
@@ -92,26 +88,22 @@ $method=5,1,0|QList<QSslCertificate>|localCertificateChain|
 $prototype=void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
 $method=5,1,0|void|setLocalCertificateChain|const QList<QSslCertificate> &
 
-$prototype=QSslCertificate localCertificate() const
-$method=|QSslCertificate|localCertificate|
+$prototypeV2=QSslCertificate localCertificate() const
 
 $prototype=void setLocalCertificate(const QSslCertificate &certificate)
 $method=|void|setLocalCertificate|const QSslCertificate &
 
-$prototype=QSslCertificate peerCertificate() const
-$method=|QSslCertificate|peerCertificate|
+$prototypeV2=QSslCertificate peerCertificate() const
 
 $prototype=QList<QSslCertificate> peerCertificateChain() const
 $method=|QList<QSslCertificate>|peerCertificateChain|
 
-$prototype=QSslCipher sessionCipher() const
-$method=|QSslCipher|sessionCipher|
+$prototypeV2=QSslCipher sessionCipher() const
 
 $prototype=QSsl::SslProtocol sessionProtocol() const
 $method=5,4,0|QSsl::SslProtocol|sessionProtocol|
 
-$prototype=QSslKey privateKey() const
-$method=|QSslKey|privateKey|
+$prototypeV2=QSslKey privateKey() const
 
 $prototype=void setPrivateKey(const QSslKey &key)
 $method=|void|setPrivateKey|const QSslKey &
@@ -178,8 +170,7 @@ $prototype=void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &dh
 %% TODO: implementar
 %% $method=5,8,0|void|setDiffieHellmanParameters|const QSslDiffieHellmanParameters &
 
-$prototype=static QSslConfiguration defaultConfiguration()
-$staticMethod=|QSslConfiguration|defaultConfiguration|
+$prototypeV2=static QSslConfiguration defaultConfiguration()
 
 $prototype=static void setDefaultConfiguration(const QSslConfiguration &configuration)
 $staticMethod=|void|setDefaultConfiguration|const QSslConfiguration &

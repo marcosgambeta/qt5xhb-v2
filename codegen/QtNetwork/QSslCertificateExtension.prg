@@ -62,20 +62,15 @@ $deleteMethod
 $prototype=void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslCertificateExtension &
 
-$prototype=QString oid() const
-$method=|QString|oid|
+$prototypeV2=QString oid() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QVariant value() const
-$method=|QVariant|value|
+$prototypeV2=QVariant value() const
 
-$prototype=bool isCritical() const
-$method=|bool|isCritical|
+$prototypeV2=bool isCritical() const
 
-$prototype=bool isSupported() const
-$method=|bool|isSupported|
+$prototypeV2=bool isSupported() const
 
 $extraMethods
 

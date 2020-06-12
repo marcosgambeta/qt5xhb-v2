@@ -33,20 +33,17 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QNetworkDiskCache()
 $deleteMethod
 
-$prototype=QString cacheDirectory() const
-$method=|QString|cacheDirectory|
+$prototypeV2=QString cacheDirectory() const
 
 $prototype=void setCacheDirectory(const QString &cacheDir)
 $method=|void|setCacheDirectory|const QString &
 
-$prototype=qint64 maximumCacheSize() const
-$method=|qint64|maximumCacheSize|
+$prototypeV2=qint64 maximumCacheSize() const
 
 $prototype=void setMaximumCacheSize(qint64 size)
 $method=|void|setMaximumCacheSize|qint64
 
-$prototype=qint64 cacheSize() const Q_DECL_OVERRIDE
-$method=|qint64|cacheSize|
+$prototypeV2=qint64 cacheSize() const Q_DECL_OVERRIDE
 
 $prototype=QNetworkCacheMetaData metaData(const QUrl &url) Q_DECL_OVERRIDE
 $method=|QNetworkCacheMetaData|metaData|const QUrl &
@@ -69,8 +66,7 @@ $method=|void|insert|QIODevice *
 $prototype=QNetworkCacheMetaData fileMetaData(const QString &fileName) const
 $method=|QNetworkCacheMetaData|fileMetaData|const QString &
 
-$prototype=void clear() Q_DECL_OVERRIDE (slot)
-$slotMethod=|void|clear|
+$prototypeV2=void clear() Q_DECL_OVERRIDE (slot)
 
 $prototype=virtual qint64 expire() [protected]
 

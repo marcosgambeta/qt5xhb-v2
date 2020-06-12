@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(SocketOptions socketOptions READ socketOptions WRITE setSocketOptions)
 %%
 
-$prototype=SocketOptions socketOptions() const
-$method=|QLocalServer::SocketOptions|socketOptions|
+$prototypeV2=QLocalServer::SocketOptions socketOptions() const
 
 $prototype=void setSocketOptions(SocketOptions options)
 $method=|void|setSocketOptions|QLocalServer::SocketOptions
@@ -49,17 +48,13 @@ $method=|void|setSocketOptions|QLocalServer::SocketOptions
 %%
 %%
 
-$prototype=void close()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=virtual bool hasPendingConnections() const
-$virtualMethod=|bool|hasPendingConnections|
+$prototypeV2=virtual bool hasPendingConnections() const
 
-$prototype=bool isListening() const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
 $prototype=bool listen(const QString &name)
 $internalMethod=|bool|listen,listen1|const QString &
@@ -89,23 +84,18 @@ HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 }
 $addMethod=listen
 
-$prototype=int maxPendingConnections() const
-$method=|int|maxPendingConnections|
+$prototypeV2=int maxPendingConnections() const
 
-$prototype=virtual QLocalSocket *nextPendingConnection()
-$virtualMethod=|QLocalSocket *|nextPendingConnection|
+$prototypeV2=virtual QLocalSocket * nextPendingConnection()
 
-$prototype=QString serverName() const
-$method=|QString|serverName|
+$prototypeV2=QString serverName() const
 
-$prototype=QString fullServerName() const
-$method=|QString|fullServerName|
+$prototypeV2=QString fullServerName() const
 
 $prototype=static bool removeServer(const QString &name)
 $staticMethod=|bool|removeServer|const QString &
 
-$prototype=QAbstractSocket::SocketError serverError() const
-$method=|QAbstractSocket::SocketError|serverError|
+$prototypeV2=QAbstractSocket::SocketError serverError() const
 
 $prototype=void setMaxPendingConnections(int numConnections)
 $method=|void|setMaxPendingConnections|int

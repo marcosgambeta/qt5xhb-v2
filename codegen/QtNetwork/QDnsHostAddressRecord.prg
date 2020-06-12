@@ -57,17 +57,14 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 $prototype=~QDnsHostAddressRecord()
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 $method=|void|swap|QDnsHostAddressRecord &
 
-$prototype=quint32 timeToLive() const
-$method=|quint32|timeToLive|
+$prototypeV2=quint32 timeToLive() const
 
-$prototype=QHostAddress value() const
-$method=|QHostAddress|value|
+$prototypeV2=QHostAddress value() const
 
 $extraMethods
 

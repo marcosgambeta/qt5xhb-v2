@@ -81,28 +81,23 @@ $deleteMethod
 $prototype=void swap(QSslCertificate &other) Q_DECL_NOTHROW
 $method=|void|swap|QSslCertificate &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 %% #if QT_DEPRECATED_SINCE(5,0)
 $prototype=bool isValid() const
 $method=|bool|isValid||#if QT_DEPRECATED_SINCE(5,0)
 %% #endif
 
-$prototype=bool isBlacklisted() const
-$method=|bool|isBlacklisted|
+$prototypeV2=bool isBlacklisted() const
 
 $prototype=bool isSelfSigned() const
 $method=5,4,0|bool|isSelfSigned|
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QByteArray version () const
-$method=|QByteArray|version|
+$prototypeV2=QByteArray version() const
 
-$prototype=QByteArray serialNumber () const
-$method=|QByteArray|serialNumber|
+$prototypeV2=QByteArray serialNumber() const
 
 $prototype=QByteArray digest(QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5) const
 $method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
@@ -177,26 +172,20 @@ $prototype=QMultiMap<QSsl::AlternateNameEntryType, QString> alternateSubjectName
 $prototype=QMultiMap<QSsl::AlternativeNameEntryType, QString> subjectAlternativeNames() const
 %% TODO: implementar QMultiMap
 
-$prototype=QDateTime effectiveDate () const
-$method=|QDateTime|effectiveDate|
+$prototypeV2=QDateTime effectiveDate() const
 
-$prototype=QDateTime expiryDate () const
-$method=|QDateTime|expiryDate|
+$prototypeV2=QDateTime expiryDate() const
 
-$prototype=QSslKey publicKey () const
-$method=|QSslKey|publicKey|
+$prototypeV2=QSslKey publicKey() const
 
 $prototype=QList<QSslCertificateExtension> extensions() const
 $method=|QList<QSslCertificateExtension>|extensions|
 
-$prototype=QByteArray toPem () const
-$method=|QByteArray|toPem|
+$prototypeV2=QByteArray toPem() const
 
-$prototype=QByteArray toDer () const
-$method=|QByteArray|toDer|
+$prototypeV2=QByteArray toDer() const
 
-$prototype=QString toText() const
-$method=|QString|toText|
+$prototypeV2=QString toText() const
 
 $prototype=static QList<QSslCertificate> fromPath(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
 $staticMethod=|QList<QSslCertificate>|fromPath|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
@@ -214,8 +203,7 @@ $prototype=static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertifi
 %% TODO: implementar
 %% $staticMethod=5,4,0|bool|importPkcs12|QIODevice *,QSslKey *,QSslCertificate *,QList<QSslCertificate> *=nullptr,const QByteArray &=QByteArray()
 
-$prototype=Qt::HANDLE handle() const
-$method=|Qt::HANDLE|handle|
+$prototypeV2=Qt::HANDLE handle() const
 
 $extraMethods
 

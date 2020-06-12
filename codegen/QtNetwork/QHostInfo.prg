@@ -58,8 +58,7 @@ $deleteMethod
 $prototype=void swap(QHostInfo &other) Q_DECL_NOTHROW
 $method=5,10,0|void|swap|QHostInfo &
 
-$prototype=QString hostName() const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototype=void setHostName(const QString &name)
 $method=|void|setHostName|const QString &
@@ -70,14 +69,12 @@ $method=|QList<QHostAddress>|addresses|
 $prototype=void setAddresses(const QList<QHostAddress> &addresses)
 $method=|void|setAddresses|const QList<QHostAddress> &
 
-$prototype=HostInfoError error() const
-$method=|QHostInfo::HostInfoError|error|
+$prototypeV2=QHostInfo::HostInfoError error() const
 
 $prototype=void setError(HostInfoError error)
 $method=|void|setError|QHostInfo::HostInfoError
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=void setErrorString(const QString &errorString)
 $method=|void|setErrorString|const QString &
@@ -85,8 +82,7 @@ $method=|void|setErrorString|const QString &
 $prototype=void setLookupId(int id)
 $method=|void|setLookupId|int
 
-$prototype=int lookupId() const
-$method=|int|lookupId|
+$prototypeV2=int lookupId() const
 
 $prototype=static int lookupHost(const QString &name, QObject *receiver, const char *member)
 $staticMethod=|int|lookupHost|const QString &,QObject *,const char *
@@ -97,11 +93,9 @@ $staticMethod=|void|abortHostLookup|int
 $prototype=static QHostInfo fromName(const QString &name)
 $staticMethod=|QHostInfo|fromName|const QString &
 
-$prototype=static QString localHostName()
-$staticMethod=|QString|localHostName|
+$prototypeV2=static QString localHostName()
 
-$prototype=static QString localDomainName()
-$staticMethod=|QString|localDomainName|
+$prototypeV2=static QString localDomainName()
 
 $prototype=static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) [private]
 

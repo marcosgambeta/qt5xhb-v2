@@ -104,19 +104,16 @@ HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 }
 $addMethod=leaveMulticastGroup
 
-$prototype=QNetworkInterface multicastInterface() const
-$method=|QNetworkInterface|multicastInterface|
+$prototypeV2=QNetworkInterface multicastInterface() const
 
 $prototype=void setMulticastInterface(const QNetworkInterface &iface)
 $method=|void|setMulticastInterface|const QNetworkInterface &
 
 %% #endif
 
-$prototype=bool hasPendingDatagrams() const
-$method=|bool|hasPendingDatagrams|
+$prototypeV2=bool hasPendingDatagrams() const
 
-$prototype=qint64 pendingDatagramSize() const
-$method=|qint64|pendingDatagramSize|
+$prototypeV2=qint64 pendingDatagramSize() const
 
 $prototype=QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
 $method=5,8,0|QNetworkDatagram|receiveDatagram|qint64=-1

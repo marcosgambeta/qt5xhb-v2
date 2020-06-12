@@ -57,26 +57,19 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 $prototype=~QNetworkCookie()
 $deleteMethod
 
-$prototype=QString domain () const
-$method=|QString|domain|
+$prototypeV2=QString domain() const
 
-$prototype=QDateTime expirationDate () const
-$method=|QDateTime|expirationDate|
+$prototypeV2=QDateTime expirationDate() const
 
-$prototype=bool isHttpOnly () const
-$method=|bool|isHttpOnly|
+$prototypeV2=bool isHttpOnly() const
 
-$prototype=bool isSecure () const
-$method=|bool|isSecure|
+$prototypeV2=bool isSecure() const
 
-$prototype=bool isSessionCookie () const
-$method=|bool|isSessionCookie|
+$prototypeV2=bool isSessionCookie() const
 
-$prototype=QByteArray name () const
-$method=|QByteArray|name|
+$prototypeV2=QByteArray name() const
 
-$prototype=QString path () const
-$method=|QString|path|
+$prototypeV2=QString path() const
 
 $prototype=void setDomain ( const QString & domain )
 $method=|void|setDomain|const QString &

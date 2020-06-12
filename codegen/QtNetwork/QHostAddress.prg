@@ -139,8 +139,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 }
 $addMethod=setAddress
 
-$prototype=QAbstractSocket::NetworkLayerProtocol protocol() const
-$method=|QAbstractSocket::NetworkLayerProtocol|protocol|
+$prototypeV2=QAbstractSocket::NetworkLayerProtocol protocol() const
 
 $prototype=quint32 toIPv4Address() const
 $internalMethod=|quint32|toIPv4Address,toIPv4Address1|
@@ -173,11 +172,9 @@ $addMethod=toIPv4Address
 $prototype=Q_IPV6ADDR toIPv6Address() const
 %% TODO: implementar
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=QString scopeId() const
-$method=|QString|scopeId|
+$prototypeV2=QString scopeId() const
 
 $prototype=void setScopeId(const QString &id)
 $method=|void|setScopeId|const QString &
@@ -185,11 +182,9 @@ $method=|void|setScopeId|const QString &
 $prototype=bool isEqual(const QHostAddress &address, ConversionMode mode = TolerantConversion) const
 $method=5,8,0|bool|isEqual|const QHostAddress &,QHostAddress::ConversionMode=QHostAddress::TolerantConversion
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool isInSubnet(const QHostAddress &subnet, int netmask) const
 $internalMethod=|bool|isInSubnet,isInSubnet1|const QHostAddress &,int
@@ -220,8 +215,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 }
 $addMethod=isInSubnet
 
-$prototype=bool isLoopback() const
-$method=|bool|isLoopback|
+$prototypeV2=bool isLoopback() const
 
 $prototype=bool isMulticast() const
 $method=5,6,0|bool|isMulticast|

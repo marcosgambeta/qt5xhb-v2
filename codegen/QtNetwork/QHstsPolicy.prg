@@ -78,17 +78,14 @@ $method=|QString|host|QUrl::ComponentFormattingOptions=QUrl::FullyDecoded
 $prototype=void setExpiry(const QDateTime &expiry)
 $method=|void|setExpiry|const QDateTime &
 
-$prototype=QDateTime expiry() const
-$method=|QDateTime|expiry|
+$prototypeV2=QDateTime expiry() const
 
 $prototype=void setIncludesSubDomains(bool include)
 $method=|void|setIncludesSubDomains|bool
 
-$prototype=bool includesSubDomains() const
-$method=|bool|includesSubDomains|
+$prototypeV2=bool includesSubDomains() const
 
-$prototype=bool isExpired() const
-$method=|bool|isExpired|
+$prototypeV2=bool isExpired() const
 
 $extraMethods
 

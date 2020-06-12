@@ -70,50 +70,41 @@ $deleteMethod
 $prototype=void setType ( QNetworkProxy::ProxyType type )
 $method=|void|setType|QNetworkProxy::ProxyType
 
-$prototype=QNetworkProxy::ProxyType type () const
-$method=|QNetworkProxy::ProxyType|type|
+$prototypeV2=QNetworkProxy::ProxyType type() const
 
 $prototype=void setCapabilities ( Capabilities capabilities )
 $method=|void|setCapabilities|QNetworkProxy::Capabilities
 
-$prototype=Capabilities capabilities () const
-$method=|QNetworkProxy::Capabilities|capabilities|
+$prototypeV2=QNetworkProxy::Capabilities capabilities() const
 
-$prototype=bool isCachingProxy () const
-$method=|bool|isCachingProxy|
+$prototypeV2=bool isCachingProxy() const
 
-$prototype=bool isTransparentProxy () const
-$method=|bool|isTransparentProxy|
+$prototypeV2=bool isTransparentProxy() const
 
 $prototype=void setUser ( const QString & userName )
 $method=|void|setUser|const QString &
 
-$prototype=QString user () const
-$method=|QString|user|
+$prototypeV2=QString user() const
 
 $prototype=void setPassword ( const QString & password )
 $method=|void|setPassword|const QString &
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
 $prototype=void setHostName ( const QString & hostName )
 $method=|void|setHostName|const QString &
 
-$prototype=QString hostName () const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototype=void setPort ( quint16 port )
 $method=|void|setPort|quint16
 
-$prototype=quint16 port () const
-$method=|quint16|port|
+$prototypeV2=quint16 port() const
 
 $prototype=static void setApplicationProxy ( const QNetworkProxy & proxy )
 $staticMethod=|void|setApplicationProxy|const QNetworkProxy &
 
-$prototype=static QNetworkProxy applicationProxy ()
-$staticMethod=|QNetworkProxy|applicationProxy|
+$prototypeV2=static QNetworkProxy applicationProxy()
 
 $prototype=QVariant header(QNetworkRequest::KnownHeaders header) const
 $method=|QVariant|header|QNetworkRequest::KnownHeaders
