@@ -88,11 +88,9 @@ $prototype=virtual bool create ( const QGLContext * shareContext = nullptr ) [pr
 $prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint
 
-$prototype=QPaintDevice * device () const
-$method=|QPaintDevice *|device|
+$prototypeV2=QPaintDevice * device() const
 
-$prototype=virtual void doneCurrent ()
-$virtualMethod=|void|doneCurrent|
+$prototypeV2=virtual void doneCurrent()
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -122,32 +120,24 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFormat format () const
-$method=|QGLFormat|format|
+$prototypeV2=QGLFormat format() const
 
-$prototype=bool isSharing () const
-$method=|bool|isSharing|
+$prototypeV2=bool isSharing() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=virtual void makeCurrent ()
-$virtualMethod=|void|makeCurrent|
+$prototypeV2=virtual void makeCurrent()
 
-$prototype=QColor overlayTransparentColor () const
-$method=|QColor|overlayTransparentColor|
+$prototypeV2=QColor overlayTransparentColor() const
 
-$prototype=QGLFormat requestedFormat () const
-$method=|QGLFormat|requestedFormat|
+$prototypeV2=QGLFormat requestedFormat() const
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setFormat ( const QGLFormat & format )
 $method=|void|setFormat|const QGLFormat &
 
-$prototype=virtual void swapBuffers () const
-$virtualMethod=|void|swapBuffers|
+$prototypeV2=virtual void swapBuffers() const
 
 $prototype=static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
 $staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
@@ -158,8 +148,7 @@ $staticMethod=|const QGLContext *|currentContext|
 $prototype=static void setTextureCacheLimit ( int size )
 $staticMethod=|void|setTextureCacheLimit|int
 
-$prototype=static int textureCacheLimit ()
-$staticMethod=|int|textureCacheLimit|
+$prototypeV2=static int textureCacheLimit()
 
 $extraMethods
 

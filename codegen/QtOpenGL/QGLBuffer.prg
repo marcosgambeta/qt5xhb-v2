@@ -90,20 +90,15 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 }
 $addMethod=allocate
 
-$prototype=bool bind ()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
-$prototype=GLuint bufferId () const
-$method=|GLuint|bufferId|
+$prototypeV2=GLuint bufferId() const
 
-$prototype=bool create ()
-$method=|bool|create|
+$prototypeV2=bool create()
 
-$prototype=void destroy ()
-$method=|void|destroy|
+$prototypeV2=void destroy()
 
-$prototype=bool isCreated () const
-$method=|bool|isCreated|
+$prototypeV2=bool isCreated() const
 
 $prototype=void * map ( QGLBuffer::Access access )
 $method=|void *|map|QGLBuffer::Access
@@ -142,17 +137,13 @@ $addMethod=release
 $prototype=void setUsagePattern ( QGLBuffer::UsagePattern value )
 $method=|void|setUsagePattern|QGLBuffer::UsagePattern
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
-$prototype=QGLBuffer::Type type () const
-$method=|QGLBuffer::Type|type|
+$prototypeV2=QGLBuffer::Type type() const
 
-$prototype=bool unmap ()
-$method=|bool|unmap|
+$prototypeV2=bool unmap()
 
-$prototype=QGLBuffer::UsagePattern usagePattern () const
-$method=|QGLBuffer::UsagePattern|usagePattern|
+$prototypeV2=QGLBuffer::UsagePattern usagePattern() const
 
 $prototype=void write ( int offset, const void * data, int count )
 $method=|void|write|int,const void *,int

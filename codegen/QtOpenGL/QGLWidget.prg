@@ -123,11 +123,9 @@ $method=|const QGLContext *|context|
 $prototype=void deleteTexture ( GLuint id )
 $method=|void|deleteTexture|GLuint
 
-$prototype=void doneCurrent ()
-$method=|void|doneCurrent|
+$prototypeV2=void doneCurrent()
 
-$prototype=bool doubleBuffer () const
-$method=|bool|doubleBuffer|
+$prototypeV2=bool doubleBuffer() const
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -157,23 +155,18 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFormat format () const
-$method=|QGLFormat|format|
+$prototypeV2=QGLFormat format() const
 
 $prototype=QImage grabFrameBuffer ( bool withAlpha = false )
 $method=|QImage|grabFrameBuffer|bool=false
 
-$prototype=bool isSharing () const
-$method=|bool|isSharing|
+$prototypeV2=bool isSharing() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=void makeCurrent ()
-$method=|void|makeCurrent|
+$prototypeV2=void makeCurrent()
 
-$prototype=void makeOverlayCurrent ()
-$method=|void|makeOverlayCurrent|
+$prototypeV2=void makeOverlayCurrent()
 
 $prototype=const QGLContext * overlayContext () const
 $method=|const QGLContext *|overlayContext|
@@ -210,14 +203,11 @@ $method=|void|setColormap|const QGLColormap &
 $prototype=void setMouseTracking ( bool enable )
 $method=|void|setMouseTracking|bool
 
-$prototype=void swapBuffers ()
-$method=|void|swapBuffers|
+$prototypeV2=void swapBuffers()
 
-$prototype=virtual void updateGL ()
-$virtualMethod=|void|updateGL|
+$prototypeV2=virtual void updateGL()
 
-$prototype=virtual void updateOverlayGL ()
-$virtualMethod=|void|updateOverlayGL|
+$prototypeV2=virtual void updateOverlayGL()
 
 $prototype=static QImage convertToGLFormat ( const QImage & img )
 $staticMethod=|QImage|convertToGLFormat|const QImage &

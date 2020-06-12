@@ -96,8 +96,7 @@ $method=|bool|bindToDynamicTexture|GLuint
 $prototype=void deleteTexture ( GLuint texture_id )
 $method=|void|deleteTexture|GLuint
 
-$prototype=bool doneCurrent ()
-$method=|bool|doneCurrent|
+$prototypeV2=bool doneCurrent()
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -127,34 +126,25 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFormat format () const
-$method=|QGLFormat|format|
+$prototypeV2=QGLFormat format() const
 
-$prototype=GLuint generateDynamicTexture () const
-$method=|GLuint|generateDynamicTexture|
+$prototypeV2=GLuint generateDynamicTexture() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool makeCurrent ()
-$method=|bool|makeCurrent|
+$prototypeV2=bool makeCurrent()
 
-$prototype=void releaseFromDynamicTexture ()
-$method=|void|releaseFromDynamicTexture|
+$prototypeV2=void releaseFromDynamicTexture()
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QImage toImage () const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
 $prototype=void updateDynamicTexture ( GLuint texture_id ) const
 $method=|void|updateDynamicTexture|GLuint
 
-$prototype=virtual QPaintEngine * paintEngine () const
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const
 
-$prototype=bool hasOpenGLPbuffers ()
-$method=|bool|hasOpenGLPbuffers|
+$prototypeV2=bool hasOpenGLPbuffers()
 
 #pragma ENDDUMP

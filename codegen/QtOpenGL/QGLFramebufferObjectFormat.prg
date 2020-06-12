@@ -54,14 +54,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 
 $deleteMethod
 
-$prototype=QGLFramebufferObject::Attachment attachment () const
-$method=|QGLFramebufferObject::Attachment|attachment|
+$prototypeV2=QGLFramebufferObject::Attachment attachment() const
 
-$prototype=GLenum internalTextureFormat () const
-$method=|GLenum|internalTextureFormat|
+$prototypeV2=GLenum internalTextureFormat() const
 
-$prototype=int samples () const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setAttachment ( QGLFramebufferObject::Attachment attachment )
 $method=|void|setAttachment|QGLFramebufferObject::Attachment
@@ -75,7 +72,6 @@ $method=|void|setSamples|int
 $prototype=void setTextureTarget ( GLenum target )
 $method=|void|setTextureTarget|GLenum
 
-$prototype=GLenum textureTarget () const
-$method=|GLenum|textureTarget|
+$prototypeV2=GLenum textureTarget() const
 
 #pragma ENDDUMP

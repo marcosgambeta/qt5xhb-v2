@@ -62,62 +62,43 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
 
 $deleteMethod
 
-$prototype=bool accum () const
-$method=|bool|accum|
+$prototypeV2=bool accum() const
 
-$prototype=int accumBufferSize () const
-$method=|int|accumBufferSize|
+$prototypeV2=int accumBufferSize() const
 
-$prototype=bool alpha () const
-$method=|bool|alpha|
+$prototypeV2=bool alpha() const
 
-$prototype=int alphaBufferSize () const
-$method=|int|alphaBufferSize|
+$prototypeV2=int alphaBufferSize() const
 
-$prototype=int blueBufferSize () const
-$method=|int|blueBufferSize|
+$prototypeV2=int blueBufferSize() const
 
-$prototype=bool depth () const
-$method=|bool|depth|
+$prototypeV2=bool depth() const
 
-$prototype=int depthBufferSize () const
-$method=|int|depthBufferSize|
+$prototypeV2=int depthBufferSize() const
 
-$prototype=bool directRendering () const
-$method=|bool|directRendering|
+$prototypeV2=bool directRendering() const
 
-$prototype=bool doubleBuffer () const
-$method=|bool|doubleBuffer|
+$prototypeV2=bool doubleBuffer() const
 
-$prototype=int greenBufferSize () const
-$method=|int|greenBufferSize|
+$prototypeV2=int greenBufferSize() const
 
-$prototype=bool hasOverlay () const
-$method=|bool|hasOverlay|
+$prototypeV2=bool hasOverlay() const
 
-$prototype=int majorVersion () const
-$method=|int|majorVersion|
+$prototypeV2=int majorVersion() const
 
-$prototype=int minorVersion () const
-$method=|int|minorVersion|
+$prototypeV2=int minorVersion() const
 
-$prototype=int plane () const
-$method=|int|plane|
+$prototypeV2=int plane() const
 
-$prototype=OpenGLContextProfile profile () const
-$method=|QGLFormat::OpenGLContextProfile|profile|
+$prototypeV2=QGLFormat::OpenGLContextProfile profile() const
 
-$prototype=int redBufferSize () const
-$method=|int|redBufferSize|
+$prototypeV2=int redBufferSize() const
 
-$prototype=bool rgba () const
-$method=|bool|rgba|
+$prototypeV2=bool rgba() const
 
-$prototype=bool sampleBuffers () const
-$method=|bool|sampleBuffers|
+$prototypeV2=bool sampleBuffers() const
 
-$prototype=int samples () const
-$method=|int|samples|
+$prototypeV2=int samples() const
 
 $prototype=void setAccum ( bool enable )
 $method=|void|setAccum|bool
@@ -188,35 +169,26 @@ $method=|void|setSwapInterval|int
 $prototype=void setVersion ( int major, int minor )
 $method=|void|setVersion|int,int
 
-$prototype=bool stencil () const
-$method=|bool|stencil|
+$prototypeV2=bool stencil() const
 
-$prototype=int stencilBufferSize () const
-$method=|int|stencilBufferSize|
+$prototypeV2=int stencilBufferSize() const
 
-$prototype=bool stereo () const
-$method=|bool|stereo|
+$prototypeV2=bool stereo() const
 
-$prototype=int swapInterval () const
-$method=|int|swapInterval|
+$prototypeV2=int swapInterval() const
 
 $prototype=bool testOption ( QGL::FormatOptions opt ) const
 $method=|bool|testOption|QGL::FormatOptions
 
-$prototype=static QGLFormat defaultFormat ()
-$staticMethod=|QGLFormat|defaultFormat|
+$prototypeV2=static QGLFormat defaultFormat()
 
-$prototype=static QGLFormat defaultOverlayFormat ()
-$staticMethod=|QGLFormat|defaultOverlayFormat|
+$prototypeV2=static QGLFormat defaultOverlayFormat()
 
-$prototype=static bool hasOpenGL ()
-$staticMethod=|bool|hasOpenGL|
+$prototypeV2=static bool hasOpenGL()
 
-$prototype=static bool hasOpenGLOverlays ()
-$staticMethod=|bool|hasOpenGLOverlays|
+$prototypeV2=static bool hasOpenGLOverlays()
 
-$prototype=static OpenGLVersionFlags openGLVersionFlags ()
-$staticMethod=|QGLFormat::OpenGLVersionFlags|openGLVersionFlags|
+$prototypeV2=static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 
 $prototype=static void setDefaultFormat ( const QGLFormat & f )
 $staticMethod=|void|setDefaultFormat|const QGLFormat &

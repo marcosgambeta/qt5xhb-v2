@@ -93,8 +93,7 @@ $method=|void|glClearDepthf|GLclampf
 $prototype=void glCompileShader(GLuint shader)
 $method=|void|glCompileShader|GLuint
 
-$prototype=GLuint glCreateProgram()
-$method=|GLuint|glCreateProgram|
+$prototypeV2=GLuint glCreateProgram()
 
 $prototype=GLuint glCreateShader(GLenum type)
 $method=|GLuint|glCreateShader|GLenum
@@ -238,8 +237,7 @@ $method=|GLboolean|glIsShader|GLuint
 $prototype=void glLinkProgram(GLuint program)
 $method=|void|glLinkProgram|GLuint
 
-$prototype=void glReleaseShaderCompiler()
-$method=|void|glReleaseShaderCompiler|
+$prototypeV2=void glReleaseShaderCompiler()
 
 $prototype=void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
 $method=|void|glRenderbufferStorage|GLenum,GLenum,GLsizei,GLsizei
@@ -304,8 +302,7 @@ $method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
 $prototype=void initializeGLFunctions(const QGLContext * context = nullptr)
 $method=|void|initializeGLFunctions|const QGLContext *=nullptr
 
-$prototype=QGLFunctions::OpenGLFeatures openGLFeatures() const
-$method=|QGLFunctions::OpenGLFeatures|openGLFeatures|
+$prototypeV2=QGLFunctions::OpenGLFeatures openGLFeatures() const
 
 $extraMethods
 

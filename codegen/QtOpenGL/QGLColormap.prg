@@ -67,8 +67,7 @@ $method=|int|find|QRgb
 $prototype=int findNearest ( QRgb color ) const
 $method=|int|findNearest|QRgb
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=void setEntries ( int count, const QRgb * colors, int base = 0 )
 %% TODO: corrigir codigo
@@ -102,8 +101,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 }
 $addMethod=setEntry
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $extraMethods
 

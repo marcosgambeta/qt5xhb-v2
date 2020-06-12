@@ -89,20 +89,15 @@ $addMethod=compileSourceCode
 $prototype=bool compileSourceFile ( const QString & fileName )
 $method=|bool|compileSourceFile|const QString &
 
-$prototype=bool isCompiled () const
-$method=|bool|isCompiled|
+$prototypeV2=bool isCompiled() const
 
-$prototype=QString log () const
-$method=|QString|log|
+$prototypeV2=QString log() const
 
-$prototype=GLuint shaderId () const
-$method=|GLuint|shaderId|
+$prototypeV2=GLuint shaderId() const
 
-$prototype=QGLShader::ShaderType shaderType () const
-$method=|QGLShader::ShaderType|shaderType|
+$prototypeV2=QGLShader::ShaderType shaderType() const
 
-$prototype=QByteArray sourceCode () const
-$method=|QByteArray|sourceCode|
+$prototypeV2=QByteArray sourceCode() const
 
 $prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = nullptr ) [private]
 %% $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=nullptr

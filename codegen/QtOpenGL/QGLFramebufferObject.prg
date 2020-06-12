@@ -86,11 +86,9 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 
 $deleteMethod
 
-$prototype=Attachment attachment () const
-$method=|QGLFramebufferObject::Attachment|attachment|
+$prototypeV2=QGLFramebufferObject::Attachment attachment() const
 
-$prototype=bool bind ()
-$method=|bool|bind|
+$prototypeV2=bool bind()
 
 $prototype=void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_TEXTURE_2D
@@ -120,40 +118,29 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 }
 $addMethod=drawTexture
 
-$prototype=QGLFramebufferObjectFormat format () const
-$method=|QGLFramebufferObjectFormat|format|
+$prototypeV2=QGLFramebufferObjectFormat format() const
 
-$prototype=GLuint handle () const
-$method=|GLuint|handle|
+$prototypeV2=GLuint handle() const
 
-$prototype=bool isBound () const
-$method=|bool|isBound|
+$prototypeV2=bool isBound() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool release ()
-$method=|bool|release|
+$prototypeV2=bool release()
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=GLuint texture () const
-$method=|GLuint|texture|
+$prototypeV2=GLuint texture() const
 
-$prototype=QImage toImage () const
-$method=|QImage|toImage|
+$prototypeV2=QImage toImage() const
 
-$prototype=virtual QPaintEngine * paintEngine () const
-$virtualMethod=|QPaintEngine *|paintEngine|
+$prototypeV2=virtual QPaintEngine * paintEngine() const
 
 $prototype=static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 $staticMethod=|void|blitFramebuffer|QGLFramebufferObject *,const QRect &,QGLFramebufferObject *,const QRect &,GLbitfield=GL_COLOR_BUFFER_BIT,GLenum=GL_NEAREST
 
-$prototype=static bool hasOpenGLFramebufferBlit ()
-$staticMethod=|bool|hasOpenGLFramebufferBlit|
+$prototypeV2=static bool hasOpenGLFramebufferBlit()
 
-$prototype=static bool hasOpenGLFramebufferObjects ()
-$staticMethod=|bool|hasOpenGLFramebufferObjects|
+$prototypeV2=static bool hasOpenGLFramebufferObjects()
 
 #pragma ENDDUMP
