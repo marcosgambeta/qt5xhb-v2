@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QCompassReading *reading() const
-$method=|QCompassReading *|reading|
+$prototypeV2=QCompassReading * reading() const
 
 #pragma ENDDUMP

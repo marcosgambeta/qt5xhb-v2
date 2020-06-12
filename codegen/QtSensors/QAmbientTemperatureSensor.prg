@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QAmbientTemperatureReading *reading() const
-$method=|QAmbientTemperatureReading *|reading|
+$prototypeV2=QAmbientTemperatureReading * reading() const
 
 #pragma ENDDUMP

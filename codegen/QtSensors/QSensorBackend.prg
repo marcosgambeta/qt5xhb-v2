@@ -28,11 +28,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void start() = 0
-$virtualMethod=|void|start|
+$prototypeV2=virtual void start() = 0
 
-$prototype=virtual void stop() = 0
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop() = 0
 
 $prototype=virtual bool isFeatureSupported(QSensor::Feature feature) const
 $virtualMethod=|bool|isFeatureSupported|QSensor::Feature
@@ -49,20 +47,15 @@ $method=|void|addOutputRange|qreal,qreal,qreal
 $prototype=void setDescription(const QString &description)
 $method=|void|setDescription|const QString &
 
-$prototype=QSensorReading *reading() const
-$method=|QSensorReading *|reading|
+$prototypeV2=QSensorReading * reading() const
 
-$prototype=QSensor *sensor() const
-$method=|QSensor *|sensor|
+$prototypeV2=QSensor * sensor() const
 
-$prototype=void newReadingAvailable()
-$method=|void|newReadingAvailable|
+$prototypeV2=void newReadingAvailable()
 
-$prototype=void sensorStopped()
-$method=|void|sensorStopped|
+$prototypeV2=void sensorStopped()
 
-$prototype=void sensorBusy()
-$method=|void|sensorBusy|
+$prototypeV2=void sensorBusy()
 
 $prototype=void sensorError(int error)
 $method=|void|sensorError|int

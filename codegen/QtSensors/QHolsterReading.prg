@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=bool holstered() const
-$method=|bool|holstered|
+$prototypeV2=bool holstered() const
 
 $prototype=void setHolstered(bool holstered)
 $method=|void|setHolstered|bool

@@ -35,11 +35,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QLightReading *reading() const
-$method=|QLightReading *|reading|
+$prototypeV2=QLightReading * reading() const
 
-$prototype=qreal fieldOfView() const
-$method=|qreal|fieldOfView|
+$prototypeV2=qreal fieldOfView() const
 
 $prototype=void setFieldOfView(qreal fieldOfView)
 $method=|void|setFieldOfView|qreal

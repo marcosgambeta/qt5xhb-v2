@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal temperature() const
-$method=|qreal|temperature|
+$prototypeV2=qreal temperature() const
 
 $prototype=void setTemperature(qreal temperature)
 $method=|void|setTemperature|qreal

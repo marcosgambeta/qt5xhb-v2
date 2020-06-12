@@ -26,26 +26,22 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
 $prototype=void setX(qreal x)
 $method=|void|setX|qreal
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
 $prototype=void setY(qreal y)
 $method=|void|setY|qreal
 
-$prototype=qreal z() const
-$method=|qreal|z|
+$prototypeV2=qreal z() const
 
 $prototype=void setZ(qreal z)
 $method=|void|setZ|qreal
 
-$prototype=qreal calibrationLevel() const
-$method=|qreal|calibrationLevel|
+$prototypeV2=qreal calibrationLevel() const
 
 $prototype=void setCalibrationLevel(qreal calibrationLevel)
 $method=|void|setCalibrationLevel|qreal

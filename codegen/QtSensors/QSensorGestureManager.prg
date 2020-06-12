@@ -36,8 +36,7 @@ $deleteMethod
 $prototype=bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
 $method=|bool|registerSensorGestureRecognizer|QSensorGestureRecognizer *
 
-$prototype=QStringList gestureIds() const
-$method=|QStringList|gestureIds|
+$prototypeV2=QStringList gestureIds() const
 
 $prototype=QStringList recognizerSignals(const QString &recognizerId) const
 $method=|QStringList|recognizerSignals|const QString &

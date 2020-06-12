@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QOrientationReading *reading() const
-$method=|QOrientationReading *|reading|
+$prototypeV2=QOrientationReading * reading() const
 
 #pragma ENDDUMP

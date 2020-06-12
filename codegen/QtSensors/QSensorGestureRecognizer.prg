@@ -30,23 +30,17 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QString id() const = 0
-$virtualMethod=|QString|id|
+$prototypeV2=virtual QString id() const = 0
 
-$prototype=virtual bool isActive() = 0
-$virtualMethod=|bool|isActive|
+$prototypeV2=virtual bool isActive() = 0
 
-$prototype=void startBackend()
-$method=|void|startBackend|
+$prototypeV2=void startBackend()
 
-$prototype=void stopBackend()
-$method=|void|stopBackend|
+$prototypeV2=void stopBackend()
 
-$prototype=void createBackend()
-$method=|void|createBackend|
+$prototypeV2=void createBackend()
 
-$prototype=QStringList gestureSignals() const
-$method=|QStringList|gestureSignals|
+$prototypeV2=QStringList gestureSignals() const
 
 %%
 %% SIGNALS

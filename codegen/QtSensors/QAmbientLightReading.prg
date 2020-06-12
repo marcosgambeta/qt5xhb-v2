@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=LightLevel lightLevel() const
-$method=|QAmbientLightReading::LightLevel|lightLevel|
+$prototypeV2=QAmbientLightReading::LightLevel lightLevel() const
 
 $prototype=void setLightLevel(LightLevel lightLevel)
 $method=|void|setLightLevel|QAmbientLightReading::LightLevel

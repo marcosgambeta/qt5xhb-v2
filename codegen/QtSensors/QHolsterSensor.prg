@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QHolsterReading *reading() const
-$method=|QHolsterReading *|reading|
+$prototypeV2=QHolsterReading * reading() const
 
 #pragma ENDDUMP

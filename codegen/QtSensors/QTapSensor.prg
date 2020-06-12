@@ -33,11 +33,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QTapReading *reading() const
-$method=|QTapReading *|reading|
+$prototypeV2=QTapReading * reading() const
 
-$prototype=bool returnDoubleTapEvents() const
-$method=|bool|returnDoubleTapEvents|
+$prototypeV2=bool returnDoubleTapEvents() const
 
 $prototype=void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 $method=|void|setReturnDoubleTapEvents|bool

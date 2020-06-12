@@ -35,11 +35,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QMagnetometerReading *reading() const
-$method=|QMagnetometerReading *|reading|
+$prototypeV2=QMagnetometerReading * reading() const
 
-$prototype=bool returnGeoValues() const
-$method=|bool|returnGeoValues|
+$prototypeV2=bool returnGeoValues() const
 
 $prototype=void setReturnGeoValues(bool returnGeoValues)
 $method=|void|setReturnGeoValues|bool

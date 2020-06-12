@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QPressureReading *reading() const
-$method=|QPressureReading *|reading|
+$prototypeV2=QPressureReading * reading() const
 
 #pragma ENDDUMP

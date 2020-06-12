@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal pressure() const
-$method=|qreal|pressure|
+$prototypeV2=qreal pressure() const
 
 $prototype=void setPressure(qreal pressure)
 $method=|void|setPressure|qreal

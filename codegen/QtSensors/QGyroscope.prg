@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QGyroscopeReading *reading() const
-$method=|QGyroscopeReading *|reading|
+$prototypeV2=QGyroscopeReading * reading() const
 
 #pragma ENDDUMP

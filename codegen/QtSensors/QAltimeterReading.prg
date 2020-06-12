@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal altitude() const
-$method=|qreal|altitude|
+$prototypeV2=qreal altitude() const
 
 $prototype=void setAltitude(qreal altitude)
 $method=|void|setAltitude|qreal

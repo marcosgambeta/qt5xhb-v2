@@ -28,14 +28,12 @@ $includes
 
 $deleteMethod
 
-$prototype=quint64 timestamp() const
-$method=|quint64|timestamp|
+$prototypeV2=quint64 timestamp() const
 
 $prototype=void setTimestamp(quint64 timestamp)
 $method=|void|setTimestamp|quint64
 
-$prototype=int valueCount() const
-$method=|int|valueCount|
+$prototypeV2=int valueCount() const
 
 $prototype=QVariant value(int index) const
 $method=|QVariant|value|int

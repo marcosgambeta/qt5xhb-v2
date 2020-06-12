@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal reflectance() const
-$method=|qreal|reflectance|
+$prototypeV2=qreal reflectance() const
 
 $prototype=void setReflectance(qreal reflectance)
 $method=|void|setReflectance|qreal

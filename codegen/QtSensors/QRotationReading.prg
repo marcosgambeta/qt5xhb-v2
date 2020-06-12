@@ -28,14 +28,11 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal z() const
-$method=|qreal|z|
+$prototypeV2=qreal z() const
 
 $prototype=void setFromEuler(qreal x, qreal y, qreal z)
 $method=|void|setFromEuler|qreal,qreal,qreal

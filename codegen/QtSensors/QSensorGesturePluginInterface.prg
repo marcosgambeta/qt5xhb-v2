@@ -31,11 +31,9 @@ $deleteMethod
 $prototype=virtual QList <QSensorGestureRecognizer *> createRecognizers() = 0
 $virtualMethod=|QList<QSensorGestureRecognizer *>|createRecognizers|
 
-$prototype=virtual QStringList supportedIds() const = 0
-$virtualMethod=|QStringList|supportedIds|
+$prototypeV2=virtual QStringList supportedIds() const = 0
 
-$prototype=virtual QString name() const = 0
-$virtualMethod=|QString|name|
+$prototypeV2=virtual QString name() const = 0
 
 $extraMethods
 

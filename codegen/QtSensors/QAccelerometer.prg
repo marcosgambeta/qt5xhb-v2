@@ -33,14 +33,12 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=AccelerationMode accelerationMode() const
-$method=|QAccelerometer::AccelerationMode|accelerationMode|
+$prototypeV2=QAccelerometer::AccelerationMode accelerationMode() const
 
 $prototype=void setAccelerationMode(AccelerationMode accelerationMode)
 $method=|void|setAccelerationMode|QAccelerometer::AccelerationMode
 
-$prototype=QAccelerometerReading *reading() const
-$method=|QAccelerometerReading *|reading|
+$prototypeV2=QAccelerometerReading * reading() const
 
 %%
 %% SIGNALS

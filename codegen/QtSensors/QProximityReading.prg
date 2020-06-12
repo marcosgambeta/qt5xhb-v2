@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=bool close() const
-$method=|bool|close|
+$prototypeV2=bool close() const
 
 $prototype=void setClose(bool close)
 $method=|void|setClose|bool

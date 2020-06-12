@@ -33,23 +33,17 @@ $constructor=|new|const QStringList &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool isActive()
-$method=|bool|isActive|
+$prototypeV2=bool isActive()
 
-$prototype=QStringList validIds() const
-$method=|QStringList|validIds|
+$prototypeV2=QStringList validIds() const
 
-$prototype=QStringList invalidIds() const
-$method=|QStringList|invalidIds|
+$prototypeV2=QStringList invalidIds() const
 
-$prototype=QStringList gestureSignals() const
-$method=|QStringList|gestureSignals|
+$prototypeV2=QStringList gestureSignals() const
 
-$prototype=void startDetection()
-$method=|void|startDetection|
+$prototypeV2=void startDetection()
 
-$prototype=void stopDetection()
-$method=|void|stopDetection|
+$prototypeV2=void stopDetection()
 
 %%
 %% SIGNALS

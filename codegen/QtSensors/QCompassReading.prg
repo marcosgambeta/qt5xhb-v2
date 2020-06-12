@@ -28,14 +28,12 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal azimuth() const
-$method=|qreal|azimuth|
+$prototypeV2=qreal azimuth() const
 
 $prototype=void setAzimuth(qreal azimuth)
 $method=|void|setAzimuth|qreal
 
-$prototype=qreal calibrationLevel() const
-$method=|qreal|calibrationLevel|
+$prototypeV2=qreal calibrationLevel() const
 
 $prototype=void setCalibrationLevel(qreal calibrationLevel)
 $method=|void|setCalibrationLevel|qreal

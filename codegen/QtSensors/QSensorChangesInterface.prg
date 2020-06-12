@@ -26,8 +26,7 @@ $destructor
 
 $includes
 
-$prototype=virtual void sensorsChanged() = 0
-$virtualMethod=|void|sensorsChanged|
+$prototypeV2=virtual void sensorsChanged() = 0
 
 $extraMethods
 

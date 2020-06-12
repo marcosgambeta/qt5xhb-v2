@@ -33,38 +33,30 @@ $constructor=|new|const QByteArray &,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QByteArray identifier() const
-$method=|QByteArray|identifier|
+$prototypeV2=QByteArray identifier() const
 
 $prototype=void setIdentifier(const QByteArray &identifier)
 $method=|void|setIdentifier|const QByteArray &
 
-$prototype=QByteArray type() const
-$method=|QByteArray|type|
+$prototypeV2=QByteArray type() const
 
-$prototype=bool connectToBackend()
-$method=|bool|connectToBackend|
+$prototypeV2=bool connectToBackend()
 
-$prototype=bool isConnectedToBackend() const
-$method=|bool|isConnectedToBackend|
+$prototypeV2=bool isConnectedToBackend() const
 
-$prototype=bool isBusy() const
-$method=|bool|isBusy|
+$prototypeV2=bool isBusy() const
 
 $prototype=void setActive(bool active)
 $method=|void|setActive|bool
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isAlwaysOn() const
-$method=|bool|isAlwaysOn|
+$prototypeV2=bool isAlwaysOn() const
 
 $prototype=void setAlwaysOn(bool alwaysOn)
 $method=|void|setAlwaysOn|bool
 
-$prototype=bool skipDuplicates() const
-$method=|bool|skipDuplicates|
+$prototypeV2=bool skipDuplicates() const
 
 $prototype=void setSkipDuplicates(bool skipDuplicates)
 $method=|void|setSkipDuplicates|bool
@@ -73,8 +65,7 @@ $prototype=qrangelist availableDataRates() const
 %% TODO: implementar
 %% $method=|qrangelist|availableDataRates|
 
-$prototype=int dataRate() const
-$method=|int|dataRate|
+$prototypeV2=int dataRate() const
 
 $prototype=void setDataRate(int rate)
 $method=|void|setDataRate|int
@@ -83,17 +74,14 @@ $prototype=qoutputrangelist outputRanges() const
 %% TODO: implementar
 %% $method=|qoutputrangelist|outputRanges|
 
-$prototype=int outputRange() const
-$method=|int|outputRange|
+$prototypeV2=int outputRange() const
 
 $prototype=void setOutputRange(int index)
 $method=|void|setOutputRange|int
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=int error() const
-$method=|int|error|
+$prototypeV2=int error() const
 
 $prototype=void addFilter(QSensorFilter *filter)
 $method=|void|addFilter|QSensorFilter *
@@ -105,53 +93,44 @@ $prototype=QList<QSensorFilter*> filters() const
 %% TODO: implementar
 %% $method=|QList<QSensorFilter *>|filters|
 
-$prototype=QSensorReading *reading() const
-$method=|QSensorReading *|reading|
+$prototypeV2=QSensorReading * reading() const
 
 $prototype=bool isFeatureSupported(Feature feature) const
 $method=|bool|isFeatureSupported|QSensor::Feature
 
-$prototype=AxesOrientationMode axesOrientationMode() const
-$method=|QSensor::AxesOrientationMode|axesOrientationMode|
+$prototypeV2=QSensor::AxesOrientationMode axesOrientationMode() const
 
 $prototype=void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
 $method=|void|setAxesOrientationMode|QSensor::AxesOrientationMode
 
-$prototype=int currentOrientation() const
-$method=|int|currentOrientation|
+$prototypeV2=int currentOrientation() const
 
 $prototype=void setCurrentOrientation(int currentOrientation)
 $method=|void|setCurrentOrientation|int
 
-$prototype=int userOrientation() const
-$method=|int|userOrientation|
+$prototypeV2=int userOrientation() const
 
 $prototype=void setUserOrientation(int userOrientation)
 $method=|void|setUserOrientation|int
 
-$prototype=int maxBufferSize() const
-$method=|int|maxBufferSize|
+$prototypeV2=int maxBufferSize() const
 
 $prototype=void setMaxBufferSize(int maxBufferSize)
 $method=|void|setMaxBufferSize|int
 
-$prototype=int efficientBufferSize() const
-$method=|int|efficientBufferSize|
+$prototypeV2=int efficientBufferSize() const
 
 $prototype=void setEfficientBufferSize(int efficientBufferSize)
 $method=|void|setEfficientBufferSize|int
 
-$prototype=int bufferSize() const
-$method=|int|bufferSize|
+$prototypeV2=int bufferSize() const
 
 $prototype=void setBufferSize(int bufferSize)
 $method=|void|setBufferSize|int
 
-$prototype=bool start()
-$method=|bool|start|
+$prototypeV2=bool start()
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static QList<QByteArray> sensorTypes()
 $staticMethod=|QList<QByteArray>|sensorTypes|

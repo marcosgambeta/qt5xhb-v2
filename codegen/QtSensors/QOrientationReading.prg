@@ -28,8 +28,7 @@ $includes
 
 $deleteMethod
 
-$prototype=Orientation orientation() const
-$method=|QOrientationReading::Orientation|orientation|
+$prototypeV2=QOrientationReading::Orientation orientation() const
 
 $prototype=void setOrientation(Orientation orientation)
 $method=|void|setOrientation|QOrientationReading::Orientation

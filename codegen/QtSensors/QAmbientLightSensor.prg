@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QAmbientLightReading *reading() const
-$method=|QAmbientLightReading *|reading|
+$prototypeV2=QAmbientLightReading * reading() const
 
 #pragma ENDDUMP

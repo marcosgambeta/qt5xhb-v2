@@ -28,14 +28,12 @@ $includes
 
 $deleteMethod
 
-$prototype=TapDirection tapDirection() const
-$method=|QTapReading::TapDirection|tapDirection|
+$prototypeV2=QTapReading::TapDirection tapDirection() const
 
 $prototype=void setTapDirection(TapDirection tapDirection)
 $method=|void|setTapDirection|QTapReading::TapDirection
 
-$prototype=bool isDoubleTap() const
-$method=|bool|isDoubleTap|
+$prototypeV2=bool isDoubleTap() const
 
 $prototype=void setDoubleTap(bool doubleTap)
 $method=|void|setDoubleTap|bool

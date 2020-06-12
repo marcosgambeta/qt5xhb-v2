@@ -33,11 +33,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QRotationReading *reading() const
-$method=|QRotationReading *|reading|
+$prototypeV2=QRotationReading * reading() const
 
-$prototype=bool hasZ() const
-$method=|bool|hasZ|
+$prototypeV2=bool hasZ() const
 
 $prototype=void setHasZ(bool hasZ)
 $method=|void|setHasZ|bool

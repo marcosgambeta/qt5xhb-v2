@@ -26,8 +26,7 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal lux() const
-$method=|qreal|lux|
+$prototypeV2=qreal lux() const
 
 $prototype=void setLux(qreal lux)
 $method=|void|setLux|qreal

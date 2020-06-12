@@ -31,10 +31,8 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QTiltReading *reading() const
-$method=|QTiltReading *|reading|
+$prototypeV2=QTiltReading * reading() const
 
-$prototype=void calibrate()
-$method=|void|calibrate|
+$prototypeV2=void calibrate()
 
 #pragma ENDDUMP

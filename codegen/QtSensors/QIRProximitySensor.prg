@@ -31,7 +31,6 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QIRProximityReading *reading() const
-$method=|QIRProximityReading *|reading|
+$prototypeV2=QIRProximityReading * reading() const
 
 #pragma ENDDUMP

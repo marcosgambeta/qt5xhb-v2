@@ -28,14 +28,12 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal yRotation() const
-$method=|qreal|yRotation|
+$prototypeV2=qreal yRotation() const
 
 $prototype=void setYRotation(qreal y)
 $method=|void|setYRotation|qreal
 
-$prototype=qreal xRotation() const
-$method=|qreal|xRotation|
+$prototypeV2=qreal xRotation() const
 
 $prototype=void setXRotation(qreal x)
 $method=|void|setXRotation|qreal
