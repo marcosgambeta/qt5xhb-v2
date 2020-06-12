@@ -44,8 +44,7 @@ $deleteMethod
 %% Q_PROPERTY(QString clientIdentifier READ clientIdentifier WRITE setClientIdentifier NOTIFY clientIdentifierChanged)
 %%
 
-$prototype=QString clientIdentifier() const
-$method=|QString|clientIdentifier|
+$prototypeV2=QString clientIdentifier() const
 
 $prototype=void setClientIdentifier(const QString &clientIdentifier)
 $method=|void|setClientIdentifier|const QString &
@@ -54,8 +53,7 @@ $method=|void|setClientIdentifier|const QString &
 %% Q_PROPERTY(QString token READ token WRITE setToken NOTIFY tokenChanged)
 %%
 
-$prototype=QString token() const
-$method=|QString|token|
+$prototypeV2=QString token() const
 
 $prototype=void setToken(const QString &token)
 $method=|void|setToken|const QString &
@@ -72,8 +70,7 @@ $prototype=Status status() const
 %% Q_PROPERTY(QUrl authorizationUrl READ authorizationUrl WRITE setAuthorizationUrl NOTIFY authorizationUrlChanged)
 %%
 
-$prototype=QUrl authorizationUrl() const
-$method=|QUrl|authorizationUrl|
+$prototypeV2=QUrl authorizationUrl() const
 
 $prototype=void setAuthorizationUrl(const QUrl &url)
 $method=|void|setAuthorizationUrl|const QUrl &
@@ -100,14 +97,12 @@ $method=|void|setContentType|QAbstractOAuth::ContentType
 %%
 %%
 
-$prototype=QNetworkAccessManager *networkAccessManager() const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
 $prototype=void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 $method=|void|setNetworkAccessManager|QNetworkAccessManager *
 
-$prototype=QAbstractOAuthReplyHandler *replyHandler() const
-$method=|QAbstractOAuthReplyHandler *|replyHandler|
+$prototypeV2=QAbstractOAuthReplyHandler * replyHandler() const
 
 $prototype=void setReplyHandler(QAbstractOAuthReplyHandler *handler)
 $method=|void|setReplyHandler|QAbstractOAuthReplyHandler *
@@ -133,8 +128,7 @@ $prototype=ModifyParametersFunction modifyParametersFunction() const
 $prototype=void setModifyParametersFunction(const ModifyParametersFunction &modifyParametersFunction)
 %% TODO: implementar
 
-$prototype=virtual void grant() = 0 (slot)
-$virtualMethod=|void|grant|
+$prototypeV2=virtual void grant() = 0 (slot)
 
 $prototype=void setStatus(Status status) [protected]
 

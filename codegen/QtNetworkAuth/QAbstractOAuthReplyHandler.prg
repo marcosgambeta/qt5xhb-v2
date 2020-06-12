@@ -39,8 +39,7 @@ $prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullp
 $prototype=virtual ~QAbstractOAuthReplyHandler()
 $deleteMethod
 
-$prototype=virtual QString callback() const = 0
-$virtualMethod=|QString|callback|
+$prototypeV2=virtual QString callback() const = 0
 
 $prototype=virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
 $virtualMethod=|void|networkReplyFinished|QNetworkReply *

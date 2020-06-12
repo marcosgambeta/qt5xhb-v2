@@ -67,8 +67,7 @@ $deleteMethod
 %% Q_PROPERTY(QString scope READ scope WRITE setScope NOTIFY scopeChanged)
 %%
 
-$prototype=QString scope() const
-$method=|QString|scope|
+$prototypeV2=QString scope() const
 
 $prototype=void setScope(const QString &scope)
 $method=|void|setScope|const QString &
@@ -77,8 +76,7 @@ $method=|void|setScope|const QString &
 %% Q_PROPERTY(QString userAgent READ userAgent WRITE setUserAgent NOTIFY userAgentChanged)
 %%
 
-$prototype=QString userAgent() const
-$method=|QString|userAgent|
+$prototypeV2=QString userAgent() const
 
 $prototype=void setUserAgent(const QString &userAgent)
 $method=|void|setUserAgent|const QString &
@@ -87,8 +85,7 @@ $method=|void|setUserAgent|const QString &
 %% Q_PROPERTY(QString clientIdentifierSharedKey READ clientIdentifierSharedKey WRITE setClientIdentifierSharedKey NOTIFY clientIdentifierSharedKeyChanged)
 %%
 
-$prototype=QString clientIdentifierSharedKey() const
-$method=|QString|clientIdentifierSharedKey|
+$prototypeV2=QString clientIdentifierSharedKey() const
 
 $prototype=void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
 $method=|void|setClientIdentifierSharedKey|const QString &
@@ -97,8 +94,7 @@ $method=|void|setClientIdentifierSharedKey|const QString &
 %% Q_PROPERTY(QString state READ state WRITE setState NOTIFY stateChanged)
 %%
 
-$prototype=QString state() const
-$method=|QString|state|
+$prototypeV2=QString state() const
 
 $prototype=void setState(const QString &state)
 $method=|void|setState|const QString &
@@ -107,8 +103,7 @@ $method=|void|setState|const QString &
 %% Q_PROPERTY(QDateTime expiration READ expirationAt NOTIFY expirationAtChanged)
 %%
 
-$prototype=QDateTime expirationAt() const
-$method=|QDateTime|expirationAt|
+$prototypeV2=QDateTime expirationAt() const
 
 %%
 %%
@@ -132,13 +127,11 @@ $prototype=Q_INVOKABLE QNetworkReply *put(const QUrl &url, const QVariantMap &pa
 $prototype=Q_INVOKABLE QNetworkReply *deleteResource(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
 %% TODO: implementar QVariantMap
 
-$prototype=QString responseType() const
-$method=|QString|responseType|
+$prototypeV2=QString responseType() const
 
 $prototype=void setResponseType(const QString &responseType) [protected]
 
-$prototype=QString refreshToken() const
-$method=|QString|refreshToken|
+$prototypeV2=QString refreshToken() const
 
 $prototype=void setRefreshToken(const QString &refreshToken)
 $method=|void|setRefreshToken|const QString &

@@ -67,31 +67,25 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 $prototype=~QOAuthHttpServerReplyHandler()
 $deleteMethod
 
-$prototype=QString callback() const override
-$method=|QString|callback|
+$prototypeV2=QString callback() const override
 
-$prototype=QString callbackPath() const
-$method=|QString|callbackPath|
+$prototypeV2=QString callbackPath() const
 
 $prototype=void setCallbackPath(const QString &path)
 $method=|void|setCallbackPath|const QString &
 
-$prototype=QString callbackText() const
-$method=|QString|callbackText|
+$prototypeV2=QString callbackText() const
 
 $prototype=void setCallbackText(const QString &text)
 $method=|void|setCallbackText|const QString &
 
-$prototype=quint16 port() const
-$method=|quint16|port|
+$prototypeV2=quint16 port() const
 
 $prototype=bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
-$prototype=void close()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=bool isListening() const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
 #pragma ENDDUMP

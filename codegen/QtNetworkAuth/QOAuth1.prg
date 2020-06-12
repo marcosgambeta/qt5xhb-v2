@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
 
 $deleteMethod
 
-$prototype=QString clientSharedSecret() const
-$method=|QString|clientSharedSecret|
+$prototypeV2=QString clientSharedSecret() const
 
 $prototype=void setClientSharedSecret(const QString &clientSharedSecret)
 $method=|void|setClientSharedSecret|const QString &
@@ -80,8 +79,7 @@ $method=|void|setClientCredentials|const QString &,const QString &
 [2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
 */
 
-$prototype=QString tokenSecret() const
-$method=|QString|tokenSecret|
+$prototypeV2=QString tokenSecret() const
 
 $prototype=void setTokenSecret(const QString &tokenSecret)
 $method=|void|setTokenSecret|const QString &
@@ -98,14 +96,12 @@ $method=|void|setTokenCredentials|const QString &,const QString &
 [2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
 */
 
-$prototype=QUrl temporaryCredentialsUrl() const
-$method=|QUrl|temporaryCredentialsUrl|
+$prototypeV2=QUrl temporaryCredentialsUrl() const
 
 $prototype=void setTemporaryCredentialsUrl(const QUrl &url)
 $method=|void|setTemporaryCredentialsUrl|const QUrl &
 
-$prototype=QUrl tokenCredentialsUrl() const
-$method=|QUrl|tokenCredentialsUrl|
+$prototypeV2=QUrl tokenCredentialsUrl() const
 
 $prototype=void setTokenCredentialsUrl(const QUrl &url)
 $method=|void|setTokenCredentialsUrl|const QUrl &

@@ -71,8 +71,7 @@ $prototype=HttpRequestMethod httpRequestMethod() const
 $prototype=void setHttpRequestMethod(HttpRequestMethod method)
 $method=|void|setHttpRequestMethod|QOAuth1Signature::HttpRequestMethod
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
@@ -96,23 +95,19 @@ $method=|QVariant|take|const QString &
 $prototype=QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
 $method=|QVariant|value|const QString &,const QVariant &=QVariant()
 
-$prototype=QString clientSharedKey() const
-$method=|QString|clientSharedKey|
+$prototypeV2=QString clientSharedKey() const
 
 $prototype=void setClientSharedKey(const QString &secret)
 $method=|void|setClientSharedKey|const QString &
 
-$prototype=QString tokenSecret() const
-$method=|QString|tokenSecret|
+$prototypeV2=QString tokenSecret() const
 
 $prototype=void setTokenSecret(const QString &secret)
 $method=|void|setTokenSecret|const QString &
 
-$prototype=QByteArray hmacSha1() const
-$method=|QByteArray|hmacSha1|
+$prototypeV2=QByteArray hmacSha1() const
 
-$prototype=QByteArray rsaSha1() const
-$method=|QByteArray|rsaSha1|
+$prototypeV2=QByteArray rsaSha1() const
 
 $prototype=QByteArray plainText() const
 $internalMethod=|QByteArray|plainText,plainText1|

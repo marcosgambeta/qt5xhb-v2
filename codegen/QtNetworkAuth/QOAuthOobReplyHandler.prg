@@ -34,8 +34,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QString callback() const override
-$method=|QString|callback|
+$prototypeV2=QString callback() const override
 
 $prototype=void networkReplyFinished(QNetworkReply *reply) override [protected]
 

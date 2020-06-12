@@ -89,8 +89,7 @@ $deleteMethod
 %% Q_PROPERTY(QUrl accessTokenUrl READ accessTokenUrl WRITE setAccessTokenUrl NOTIFY accessTokenUrlChanged)
 %%
 
-$prototype=QUrl accessTokenUrl() const
-$method=|QUrl|accessTokenUrl|
+$prototypeV2=QUrl accessTokenUrl() const
 
 $prototype=void setAccessTokenUrl(const QUrl &accessTokenUrl)
 $method=|void|setAccessTokenUrl|const QUrl &
@@ -99,11 +98,9 @@ $method=|void|setAccessTokenUrl|const QUrl &
 %%
 %%
 
-$prototype=void grant() override (slot)
-$method=|void|grant|
+$prototypeV2=void grant() override (slot)
 
-$prototype=void refreshAccessToken() (slot)
-$method=|void|refreshAccessToken|
+$prototypeV2=void refreshAccessToken() (slot)
 
 $prototype=QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
 
