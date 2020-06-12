@@ -35,7 +35,6 @@ $method=|QScriptValue|setupPackage|const QString &,QScriptEngine *
 $prototype=virtual void initialize(const QString & key, QScriptEngine * engine) = 0
 $virtualMethod=|void|initialize|const QString &,QScriptEngine *
 
-$prototype=virtual QStringList keys() const = 0
-$virtualMethod=|QStringList|keys|
+$prototypeV2=virtual QStringList keys() const = 0
 
 #pragma ENDDUMP

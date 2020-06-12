@@ -62,17 +62,13 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 
 $deleteMethod
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=int firstLineNumber() const
-$method=|int|firstLineNumber|
+$prototypeV2=int firstLineNumber() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString sourceCode() const
-$method=|QString|sourceCode|
+$prototypeV2=QString sourceCode() const
 
 $extraMethods
 

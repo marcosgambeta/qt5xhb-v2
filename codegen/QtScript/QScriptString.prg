@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $extraMethods
 

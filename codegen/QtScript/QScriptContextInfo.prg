@@ -62,35 +62,25 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 
 $deleteMethod
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=int functionEndLineNumber() const
-$method=|int|functionEndLineNumber|
+$prototypeV2=int functionEndLineNumber() const
 
-$prototype=int functionMetaIndex() const
-$method=|int|functionMetaIndex|
+$prototypeV2=int functionMetaIndex() const
 
-$prototype=QString functionName() const
-$method=|QString|functionName|
+$prototypeV2=QString functionName() const
 
-$prototype=QStringList functionParameterNames() const
-$method=|QStringList|functionParameterNames|
+$prototypeV2=QStringList functionParameterNames() const
 
-$prototype=int functionStartLineNumber() const
-$method=|int|functionStartLineNumber|
+$prototypeV2=int functionStartLineNumber() const
 
-$prototype=FunctionType functionType() const
-$method=|QScriptContextInfo::FunctionType|functionType|
+$prototypeV2=QScriptContextInfo::FunctionType functionType() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=int lineNumber() const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
-$prototype=qint64 scriptId() const
-$method=|qint64|scriptId|
+$prototypeV2=qint64 scriptId() const
 
 $extraMethods
 

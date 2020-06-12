@@ -61,20 +61,15 @@ $deleteMethod
 $prototype=void abortEvaluation(const QScriptValue & result = QScriptValue())
 $method=|void|abortEvaluation|const QScriptValue &=QScriptValue()
 
-$prototype=QScriptEngineAgent * agent() const
-$method=|QScriptEngineAgent *|agent|
+$prototypeV2=QScriptEngineAgent * agent() const
 
-$prototype=QStringList availableExtensions() const
-$method=|QStringList|availableExtensions|
+$prototypeV2=QStringList availableExtensions() const
 
-$prototype=void clearExceptions()
-$method=|void|clearExceptions|
+$prototypeV2=void clearExceptions()
 
-$prototype=void collectGarbage()
-$method=|void|collectGarbage|
+$prototypeV2=void collectGarbage()
 
-$prototype=QScriptContext * currentContext() const
-$method=|QScriptContext *|currentContext|
+$prototypeV2=QScriptContext * currentContext() const
 
 $prototype=QScriptValue defaultPrototype(int metaTypeId) const
 $method=|QScriptValue|defaultPrototype|int
@@ -107,23 +102,19 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 }
 $addMethod=evaluate
 
-$prototype=QScriptValue globalObject() const
-$method=|QScriptValue|globalObject|
+$prototypeV2=QScriptValue globalObject() const
 
-$prototype=bool hasUncaughtException() const
-$method=|bool|hasUncaughtException|
+$prototypeV2=bool hasUncaughtException() const
 
 $prototype=QScriptValue importExtension(const QString & extension)
 $method=|QScriptValue|importExtension|const QString &
 
-$prototype=QStringList importedExtensions() const
-$method=|QStringList|importedExtensions|
+$prototypeV2=QStringList importedExtensions() const
 
 $prototype=void installTranslatorFunctions(const QScriptValue & object = QScriptValue())
 $method=|void|installTranslatorFunctions|const QScriptValue &=QScriptValue()
 
-$prototype=bool isEvaluating() const
-$method=|bool|isEvaluating|
+$prototypeV2=bool isEvaluating() const
 
 $prototype=QScriptValue newArray(uint length = 0)
 $method=|QScriptValue|newArray|uint=0
@@ -248,17 +239,13 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 }
 $addMethod=newVariant
 
-$prototype=QScriptValue nullValue()
-$method=|QScriptValue|nullValue|
+$prototypeV2=QScriptValue nullValue()
 
-$prototype=void popContext()
-$method=|void|popContext|
+$prototypeV2=void popContext()
 
-$prototype=int processEventsInterval() const
-$method=|int|processEventsInterval|
+$prototypeV2=int processEventsInterval() const
 
-$prototype=QScriptContext * pushContext()
-$method=|QScriptContext *|pushContext|
+$prototypeV2=QScriptContext * pushContext()
 
 $prototype=void reportAdditionalMemoryCost(int size)
 $method=|void|reportAdditionalMemoryCost|int
@@ -281,17 +268,13 @@ $method=|QScriptValue|toObject|const QScriptValue &
 $prototype=QScriptString toStringHandle(const QString & str)
 $method=|QScriptString|toStringHandle|const QString &
 
-$prototype=QScriptValue uncaughtException() const
-$method=|QScriptValue|uncaughtException|
+$prototypeV2=QScriptValue uncaughtException() const
 
-$prototype=QStringList uncaughtExceptionBacktrace() const
-$method=|QStringList|uncaughtExceptionBacktrace|
+$prototypeV2=QStringList uncaughtExceptionBacktrace() const
 
-$prototype=int uncaughtExceptionLineNumber() const
-$method=|int|uncaughtExceptionLineNumber|
+$prototypeV2=int uncaughtExceptionLineNumber() const
 
-$prototype=QScriptValue undefinedValue()
-$method=|QScriptValue|undefinedValue|
+$prototypeV2=QScriptValue undefinedValue()
 
 $prototype=static QScriptSyntaxCheckResult checkSyntax(const QString & program)
 $staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &

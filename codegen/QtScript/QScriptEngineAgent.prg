@@ -32,14 +32,11 @@ $constructor=|new|QScriptEngine *
 
 $deleteMethod
 
-$prototype=virtual void contextPop()
-$virtualMethod=|void|contextPop|
+$prototypeV2=virtual void contextPop()
 
-$prototype=virtual void contextPush()
-$virtualMethod=|void|contextPush|
+$prototypeV2=virtual void contextPush()
 
-$prototype=QScriptEngine * engine() const
-$method=|QScriptEngine *|engine|
+$prototypeV2=QScriptEngine * engine() const
 
 $prototype=virtual void exceptionCatch(qint64 scriptId, const QScriptValue & exception)
 $virtualMethod=|void|exceptionCatch|qint64,const QScriptValue &

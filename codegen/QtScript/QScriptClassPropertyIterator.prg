@@ -32,32 +32,23 @@ $deleteMethod
 $prototype=virtual QScriptValue::PropertyFlags flags() const
 $virtualMethod=|QScriptValue::PropertyFlags|flags|
 
-$prototype=virtual bool hasNext() const = 0
-$virtualMethod=|bool|hasNext|
+$prototypeV2=virtual bool hasNext() const = 0
 
-$prototype=virtual bool hasPrevious() const = 0
-$virtualMethod=|bool|hasPrevious|
+$prototypeV2=virtual bool hasPrevious() const = 0
 
-$prototype=virtual uint id() const
-$virtualMethod=|uint|id|
+$prototypeV2=virtual uint id() const
 
-$prototype=virtual QScriptString name() const = 0
-$virtualMethod=|QScriptString|name|
+$prototypeV2=virtual QScriptString name() const = 0
 
-$prototype=virtual void next() = 0
-$virtualMethod=|void|next|
+$prototypeV2=virtual void next() = 0
 
-$prototype=QScriptValue object() const
-$method=|QScriptValue|object|
+$prototypeV2=QScriptValue object() const
 
-$prototype=virtual void previous() = 0
-$virtualMethod=|void|previous|
+$prototypeV2=virtual void previous() = 0
 
-$prototype=virtual void toBack() = 0
-$virtualMethod=|void|toBack|
+$prototypeV2=virtual void toBack() = 0
 
-$prototype=virtual void toFront() = 0
-$virtualMethod=|void|toFront|
+$prototypeV2=virtual void toFront() = 0
 
 $extraMethods
 
