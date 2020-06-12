@@ -36,20 +36,16 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QWebEngineHistory *history() const
-$method=|QWebEngineHistory *|history|
+$prototypeV2=QWebEngineHistory * history() const
 
-$prototype=QWidget *view() const
-$method=|QWidget *|view|
+$prototypeV2=QWidget * view() const
 
 $prototype=void setView(QWidget *view)
 $method=|void|setView|QWidget *
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
-$prototype=QString selectedText() const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=QAction *action(WebAction action) const
 $method=|QAction *|action|QWebEnginePage::WebAction
@@ -64,8 +60,7 @@ $prototype=void findText(const QString &subString, FindFlags options = 0, const 
 %% TODO: implementar
 %% $method=|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
-$prototype=QMenu *createStandardContextMenu()
-$method=|QMenu *|createStandardContextMenu|
+$prototypeV2=QMenu * createStandardContextMenu()
 
 $prototype=void setFeaturePermission(const QUrl &securityOrigin, Feature feature, PermissionPolicy policy)
 $method=|void|setFeaturePermission|const QUrl &,QWebEnginePage::Feature,QWebEnginePage::PermissionPolicy
@@ -87,23 +82,18 @@ $prototype=void toPlainText(const QWebEngineCallback<const QString &> &resultCal
 %% TODO: implementar
 %% $method=|void|toPlainText|const QWebEngineCallback<const QString &> &
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl requestedUrl() const
-$method=|QUrl|requestedUrl|
+$prototypeV2=QUrl requestedUrl() const
 
-$prototype=QUrl iconUrl() const
-$method=|QUrl|iconUrl|
+$prototypeV2=QUrl iconUrl() const
 
-$prototype=qreal zoomFactor() const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void setZoomFactor(qreal factor)
 $method=|void|setZoomFactor|qreal
@@ -137,8 +127,7 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 }
 $addMethod=runJavaScript
 
-$prototype=QWebEngineSettings *settings() const
-$method=|QWebEngineSettings *|settings|
+$prototypeV2=QWebEngineSettings * settings() const
 
 %%
 %% SIGNALS

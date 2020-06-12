@@ -31,17 +31,13 @@ $constructor=|new|int,QUrl,bool,QString
 
 $deleteMethod
 
-$prototype=Error error() const
-$method=|QWebEngineCertificateError::Error|error|
+$prototypeV2=QWebEngineCertificateError::Error error() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
-$prototype=bool isOverridable() const
-$method=|bool|isOverridable|
+$prototypeV2=bool isOverridable() const
 
-$prototype=QString errorDescription() const
-$method=|QString|errorDescription|
+$prototypeV2=QString errorDescription() const
 
 $extraMethods
 

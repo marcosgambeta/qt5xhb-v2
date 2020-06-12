@@ -26,8 +26,7 @@ $destructor
 
 $includes
 
-$prototype=static QWebEngineSettings *globalSettings()
-$staticMethod=|QWebEngineSettings *|globalSettings|
+$prototypeV2=static QWebEngineSettings * globalSettings()
 
 $prototype=QString fontFamily(FontFamily which) const
 $method=|QString|fontFamily|QWebEngineSettings::FontFamily
@@ -56,8 +55,7 @@ $method=|bool|testAttribute|QWebEngineSettings::WebAttribute
 $prototype=void resetAttribute(WebAttribute attr)
 $method=|void|resetAttribute|QWebEngineSettings::WebAttribute
 
-$prototype=QString defaultTextEncoding() const
-$method=|QString|defaultTextEncoding|
+$prototypeV2=QString defaultTextEncoding() const
 
 $prototype=void setDefaultTextEncoding(const QString &encoding)
 $method=|void|setDefaultTextEncoding|const QString &

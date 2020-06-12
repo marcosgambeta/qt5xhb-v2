@@ -35,8 +35,7 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=QWebEnginePage* page() const
-$method=|QWebEnginePage *|page|
+$prototypeV2=QWebEnginePage * page() const
 
 $prototype=void setPage(QWebEnginePage* page)
 $method=|void|setPage|QWebEnginePage *
@@ -50,26 +49,20 @@ $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 $prototype=void setContent(const QByteArray& data, const QString& mimeType = QString(), const QUrl& baseUrl = QUrl())
 $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
 
-$prototype=QWebEngineHistory* history() const
-$method=|QWebEngineHistory *|history|
+$prototypeV2=QWebEngineHistory * history() const
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QUrl iconUrl() const
-$method=|QUrl|iconUrl|
+$prototypeV2=QUrl iconUrl() const
 
-$prototype=bool hasSelection() const
-$method=|bool|hasSelection|
+$prototypeV2=bool hasSelection() const
 
-$prototype=QString selectedText() const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=QAction* pageAction(QWebEnginePage::WebAction action) const
 $method=|QAction *|pageAction|QWebEnginePage::WebAction|#ifndef QT_NO_ACTION
@@ -77,8 +70,7 @@ $method=|QAction *|pageAction|QWebEnginePage::WebAction|#ifndef QT_NO_ACTION
 $prototype=void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
 $method=|void|triggerPageAction|QWebEnginePage::WebAction,bool=false
 
-$prototype=qreal zoomFactor() const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
 $prototype=void setZoomFactor(qreal factor)
 $method=|void|setZoomFactor|qreal
@@ -87,20 +79,15 @@ $prototype=void findText(const QString &subString, QWebEnginePage::FindFlags opt
 %% TODO: implementar
 %% $method=|void|findText|const QString &,QWebEnginePage::FindFlags=0,const QWebEngineCallback<bool> &=QWebEngineCallback<bool>()
 
-$prototype=virtual QSize sizeHint() const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void back()
-$method=|void|back|
+$prototypeV2=void back()
 
-$prototype=void forward()
-$method=|void|forward|
+$prototypeV2=void forward()
 
-$prototype=void reload()
-$method=|void|reload|
+$prototypeV2=void reload()
 
 %%
 %% SIGNALS

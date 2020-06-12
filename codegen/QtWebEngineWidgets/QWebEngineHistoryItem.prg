@@ -31,23 +31,17 @@ $constructor=|new|const QWebEngineHistoryItem &
 
 $deleteMethod
 
-$prototype=QUrl originalUrl() const
-$method=|QUrl|originalUrl|
+$prototypeV2=QUrl originalUrl() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QDateTime lastVisited() const
-$method=|QDateTime|lastVisited|
+$prototypeV2=QDateTime lastVisited() const
 
-$prototype=QUrl iconUrl() const
-$method=|QUrl|iconUrl|
+$prototypeV2=QUrl iconUrl() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $extraMethods
 
