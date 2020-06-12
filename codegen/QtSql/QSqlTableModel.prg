@@ -34,11 +34,9 @@ $constructor=|new|QObject *=nullptr,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
-$prototype=QSqlDatabase database () const
-$method=|QSqlDatabase|database|
+$prototypeV2=QSqlDatabase database() const
 
-$prototype=EditStrategy editStrategy () const
-$method=|QSqlTableModel::EditStrategy|editStrategy|
+$prototypeV2=QSqlTableModel::EditStrategy editStrategy() const
 
 $prototype=virtual void setEditStrategy ( EditStrategy strategy )
 $virtualMethod=|void|setEditStrategy|QSqlTableModel::EditStrategy
@@ -46,8 +44,7 @@ $virtualMethod=|void|setEditStrategy|QSqlTableModel::EditStrategy
 $prototype=int fieldIndex ( const QString & fieldName ) const
 $method=|int|fieldIndex|const QString &
 
-$prototype=QString filter () const
-$method=|QString|filter|
+$prototypeV2=QString filter() const
 
 $prototype=virtual void setFilter ( const QString & filter )
 $virtualMethod=|void|setFilter|const QString &
@@ -83,14 +80,12 @@ HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 }
 $addMethod=isDirty
 
-$prototype=QSqlIndex primaryKey () const
-$method=|QSqlIndex|primaryKey|
+$prototypeV2=QSqlIndex primaryKey() const
 
 $prototype=virtual void revertRow ( int row )
 $virtualMethod=|void|revertRow|int
 
-$prototype=virtual bool select ()
-$virtualMethod=|bool|select|
+$prototypeV2=virtual bool select()
 
 $prototype=bool setRecord ( int row, const QSqlRecord & record )
 $method=|bool|setRecord|int,const QSqlRecord &
@@ -104,11 +99,9 @@ $virtualMethod=|void|setSort|int,Qt::SortOrder
 $prototype=virtual void setTable ( const QString & tableName )
 $virtualMethod=|void|setTable|const QString &
 
-$prototype=QString tableName () const
-$method=|QString|tableName|
+$prototypeV2=QString tableName() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
@@ -134,17 +127,13 @@ $method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 $prototype=int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
 
-$prototype=void revert ()
-$method=|void|revert|
+$prototypeV2=void revert()
 
-$prototype=void revertAll ()
-$method=|void|revertAll|
+$prototypeV2=void revertAll()
 
-$prototype=bool submit ()
-$method=|bool|submit|
+$prototypeV2=bool submit()
 
-$prototype=bool submitAll ()
-$method=|bool|submitAll|
+$prototypeV2=bool submitAll()
 
 $prototype=QSqlRecord record() const
 $internalMethod=|QSqlRecord|record,record1|

@@ -66,32 +66,26 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 $deleteMethod
 
-$prototype=QString databaseText () const
-$method=|QString|databaseText|
+$prototypeV2=QString databaseText() const
 
 $prototype=QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
 $method=|void|setDatabaseText|const QString &
 
-$prototype=QString driverText () const
-$method=|QString|driverText|
+$prototypeV2=QString driverText() const
 
 $prototype=QT_DEPRECATED void setDriverText ( const QString & driverText )
 $method=|void|setDriverText|const QString &
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QT_DEPRECATED  int number () const
-$method=|int|number|
+$prototypeV2=QT_DEPRECATED int number() const
 
 $prototype=QT_DEPRECATED void setNumber ( int number )
 $method=|void|setNumber|int
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=ErrorType type () const
-$method=|QSqlError::ErrorType|type|
+$prototypeV2=QSqlError::ErrorType type() const
 
 $prototype=QT_DEPRECATED void setType ( ErrorType type )
 $method=|void|setType|QSqlError::ErrorType

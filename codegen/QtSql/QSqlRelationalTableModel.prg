@@ -39,8 +39,7 @@ $virtualMethod=|QSqlTableModel *|relationModel|int
 $prototype=virtual void setRelation ( int column, const QSqlRelation & relation )
 $virtualMethod=|void|setRelation|int,const QSqlRelation &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
@@ -48,8 +47,7 @@ $method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 $prototype=bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-$prototype=bool select ()
-$method=|bool|select|
+$prototypeV2=bool select()
 
 $prototype=bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole

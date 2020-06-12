@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 }
 $addMethod=append
 
-$prototype=QString cursorName () const
-$method=|QString|cursorName|
+$prototypeV2=QString cursorName() const
 
 $prototype=void setCursorName ( const QString & cursorName )
 $method=|void|setCursorName|const QString &
@@ -94,8 +93,7 @@ $method=|bool|isDescending|int
 $prototype=void setDescending ( int i, bool desc )
 $method=|void|setDescending|int,bool
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName ( const QString & name )
 $method=|void|setName|const QString &

@@ -61,56 +61,43 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
 
 $deleteMethod
 
-$prototype=void close ()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=bool commit ()
-$method=|bool|commit|
+$prototypeV2=bool commit()
 
-$prototype=QString connectOptions () const
-$method=|QString|connectOptions|
+$prototypeV2=QString connectOptions() const
 
 $prototype=void setConnectOptions ( const QString & options = QString() )
 $method=|void|setConnectOptions|const QString &=QString()
 
-$prototype=QString connectionName () const
-$method=|QString|connectionName|
+$prototypeV2=QString connectionName() const
 
-$prototype=QString databaseName () const
-$method=|QString|databaseName|
+$prototypeV2=QString databaseName() const
 
 $prototype=void setDatabaseName ( const QString & name )
 $method=|void|setDatabaseName|const QString &
 
-$prototype=QSqlDriver * driver () const
-$method=|QSqlDriver *|driver|
+$prototypeV2=QSqlDriver * driver() const
 
-$prototype=QString driverName () const
-$method=|QString|driverName|
+$prototypeV2=QString driverName() const
 
 $prototype=QSqlQuery exec ( const QString & query = QString() ) const
 $method=|QSqlQuery|exec|const QString &=QString()
 
-$prototype=QString hostName () const
-$method=|QString|hostName|
+$prototypeV2=QString hostName() const
 
 $prototype=void setHostName ( const QString & host )
 $method=|void|setHostName|const QString &
 
-$prototype=bool isOpen () const
-$method=|bool|isOpen|
+$prototypeV2=bool isOpen() const
 
-$prototype=bool isOpenError () const
-$method=|bool|isOpenError|
+$prototypeV2=bool isOpenError() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
@@ -143,14 +130,12 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 }
 $addMethod=open
 
-$prototype=QString password () const
-$method=|QString|password|
+$prototypeV2=QString password() const
 
 $prototype=void setPassword ( const QString & password )
 $method=|void|setPassword|const QString &
 
-$prototype=int port () const
-$method=|int|port|
+$prototypeV2=int port() const
 
 $prototype=void setPort ( int port )
 $method=|void|setPort|int
@@ -161,17 +146,14 @@ $method=|QSqlIndex|primaryIndex|const QString &
 $prototype=QSqlRecord record ( const QString & tablename ) const
 $method=|QSqlRecord|record|const QString &
 
-$prototype=bool rollback ()
-$method=|bool|rollback|
+$prototypeV2=bool rollback()
 
 $prototype=QStringList tables ( QSql::TableType type = QSql::Tables ) const
 $method=|QStringList|tables|QSql::TableType=QSql::Tables
 
-$prototype=bool transaction ()
-$method=|bool|transaction|
+$prototypeV2=bool transaction()
 
-$prototype=QString userName () const
-$method=|QString|userName|
+$prototypeV2=QString userName() const
 
 $prototype=void setUserName ( const QString & name )
 $method=|void|setUserName|const QString &
@@ -218,8 +200,7 @@ $addMethod=addDatabase
 $prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
 $staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &
 
-$prototype=static QStringList connectionNames ()
-$staticMethod=|QStringList|connectionNames|
+$prototypeV2=static QStringList connectionNames()
 
 $prototype=static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
@@ -252,8 +233,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 }
 $addMethod=database
 
-$prototype=static QStringList drivers ()
-$staticMethod=|QStringList|drivers|
+$prototypeV2=static QStringList drivers()
 
 $prototype=static bool isDriverAvailable ( const QString & name )
 $staticMethod=|bool|isDriverAvailable|const QString &

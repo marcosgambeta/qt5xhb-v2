@@ -34,17 +34,13 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool beginTransaction ()
-$virtualMethod=|bool|beginTransaction|
+$prototypeV2=virtual bool beginTransaction()
 
-$prototype=virtual void close () = 0
-$virtualMethod=|void|close|
+$prototypeV2=virtual void close() = 0
 
-$prototype=virtual bool commitTransaction ()
-$virtualMethod=|bool|commitTransaction|
+$prototypeV2=virtual bool commitTransaction()
 
-$prototype=virtual QSqlResult * createResult () const = 0
-$virtualMethod=|QSqlResult *|createResult|
+$prototypeV2=virtual QSqlResult * createResult() const = 0
 
 $prototype=virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
 $virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
@@ -52,8 +48,7 @@ $virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierT
 $prototype=virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 $virtualMethod=|QString|formatValue|const QSqlField &,bool=false
 
-$prototype=virtual QVariant handle () const
-$virtualMethod=|QVariant|handle|
+$prototypeV2=virtual QVariant handle() const
 
 $prototype=virtual bool hasFeature ( DriverFeature feature ) const = 0
 $virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
@@ -61,17 +56,13 @@ $virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
 $prototype=virtual bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
 $virtualMethod=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
 
-$prototype=virtual bool isOpen () const
-$virtualMethod=|bool|isOpen|
+$prototypeV2=virtual bool isOpen() const
 
-$prototype=bool isOpenError () const
-$method=|bool|isOpenError|
+$prototypeV2=bool isOpenError() const
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 $virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
@@ -82,8 +73,7 @@ $virtualMethod=|QSqlIndex|primaryIndex|const QString &
 $prototype=virtual QSqlRecord record ( const QString & tableName ) const
 $virtualMethod=|QSqlRecord|record|const QString &
 
-$prototype=virtual bool rollbackTransaction ()
-$virtualMethod=|bool|rollbackTransaction|
+$prototypeV2=virtual bool rollbackTransaction()
 
 $prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
@@ -97,8 +87,7 @@ $virtualMethod=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierTy
 $prototype=virtual bool subscribeToNotification ( const QString & name )
 $virtualMethod=|bool|subscribeToNotification|const QString &
 
-$prototype=virtual QStringList subscribedToNotifications () const
-$virtualMethod=|QStringList|subscribedToNotifications|
+$prototypeV2=virtual QStringList subscribedToNotifications() const
 
 $prototype=virtual QStringList tables ( QSql::TableType tableType ) const
 $virtualMethod=|QStringList|tables|QSql::TableType
@@ -106,8 +95,7 @@ $virtualMethod=|QStringList|tables|QSql::TableType
 $prototype=virtual bool unsubscribeFromNotification ( const QString & name )
 $virtualMethod=|bool|unsubscribeFromNotification|const QString &
 
-$prototype=virtual bool cancelQuery()
-$virtualMethod=|bool|cancelQuery|
+$prototypeV2=virtual bool cancelQuery()
 
 %%
 %% SIGNALS

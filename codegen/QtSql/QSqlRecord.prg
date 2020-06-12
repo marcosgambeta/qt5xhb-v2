@@ -60,17 +60,14 @@ $deleteMethod
 $prototype=void append ( const QSqlField & field )
 $method=|void|append|const QSqlField &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearValues ()
-$method=|void|clearValues|
+$prototypeV2=void clearValues()
 
 $prototype=bool contains ( const QString & name ) const
 $method=|bool|contains|const QString &
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QSqlField field ( int index ) const
 $internalMethod=|QSqlField|field,field1|int
@@ -109,8 +106,7 @@ $method=|int|indexOf|const QString &
 $prototype=void insert ( int pos, const QSqlField & field )
 $method=|void|insert|int,const QSqlField &
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=bool isGenerated ( const QString & name ) const
 $internalMethod=|bool|isGenerated,isGenerated1|const QString &

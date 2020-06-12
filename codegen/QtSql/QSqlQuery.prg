@@ -78,8 +78,7 @@ $deleteMethod
 $prototype=void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
 $method=|void|addBindValue|const QVariant &,QSql::ParamType=QSql::In
 
-$prototype=int at () const
-$method=|int|at|
+$prototypeV2=int at() const
 
 $prototype=void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 $internalMethod=|void|bindValue,bindValue1|const QString &,const QVariant &,QSql::ParamType=QSql::In
@@ -137,8 +136,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 }
 $addMethod=boundValue
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=const QSqlDriver * driver () const
 $method=|const QSqlDriver *|driver|
@@ -174,20 +172,15 @@ $addMethod=exec
 $prototype=bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 $method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
 
-$prototype=QString executedQuery () const
-$method=|QString|executedQuery|
+$prototypeV2=QString executedQuery() const
 
-$prototype=void finish ()
-$method=|void|finish|
+$prototypeV2=void finish()
 
-$prototype=bool first ()
-$method=|bool|first|
+$prototypeV2=bool first()
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isForwardOnly () const
-$method=|bool|isForwardOnly|
+$prototypeV2=bool isForwardOnly() const
 
 $prototype=void setForwardOnly ( bool forward )
 $method=|void|setForwardOnly|bool
@@ -221,35 +214,25 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 }
 $addMethod=isNull
 
-$prototype=bool isSelect () const
-$method=|bool|isSelect|
+$prototypeV2=bool isSelect() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool last ()
-$method=|bool|last|
+$prototypeV2=bool last()
 
-$prototype=QSqlError lastError () const
-$method=|QSqlError|lastError|
+$prototypeV2=QSqlError lastError() const
 
-$prototype=QVariant lastInsertId () const
-$method=|QVariant|lastInsertId|
+$prototypeV2=QVariant lastInsertId() const
 
-$prototype=QString lastQuery () const
-$method=|QString|lastQuery|
+$prototypeV2=QString lastQuery() const
 
-$prototype=bool next ()
-$method=|bool|next|
+$prototypeV2=bool next()
 
-$prototype=bool nextResult ()
-$method=|bool|nextResult|
+$prototypeV2=bool nextResult()
 
-$prototype=int numRowsAffected () const
-$method=|int|numRowsAffected|
+$prototypeV2=int numRowsAffected() const
 
-$prototype=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
-$method=|QSql::NumericalPrecisionPolicy|numericalPrecisionPolicy|
+$prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
 $prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
 $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
@@ -257,11 +240,9 @@ $method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
 $prototype=bool prepare ( const QString & query )
 $method=|bool|prepare|const QString &
 
-$prototype=bool previous ()
-$method=|bool|previous|
+$prototypeV2=bool previous()
 
-$prototype=QSqlRecord record () const
-$method=|QSqlRecord|record|
+$prototypeV2=QSqlRecord record() const
 
 $prototype=const QSqlResult * result () const
 $method=|const QSqlResult *|result|
@@ -269,8 +250,7 @@ $method=|const QSqlResult *|result|
 $prototype=bool seek ( int index, bool relative = false )
 $method=|bool|seek|int,bool=false
 
-$prototype=int size () const
-$method=|int|size|
+$prototypeV2=int size() const
 
 $prototype=QVariant value ( int index ) const
 $internalMethod=|QVariant|value,value1|int

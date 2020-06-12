@@ -54,17 +54,13 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 
 $deleteMethod
 
-$prototype=QString displayColumn () const
-$method=|QString|displayColumn|
+$prototypeV2=QString displayColumn() const
 
-$prototype=QString indexColumn () const
-$method=|QString|indexColumn|
+$prototypeV2=QString indexColumn() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QString tableName () const
-$method=|QString|tableName|
+$prototypeV2=QString tableName() const
 
 $extraMethods
 
