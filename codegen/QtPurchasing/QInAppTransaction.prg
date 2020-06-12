@@ -36,50 +36,43 @@ $deleteMethod
 %% Q_PROPERTY(TransactionStatus status READ status CONSTANT)
 %%
 
-$prototype=TransactionStatus status() const
-$method=|QInAppTransaction::TransactionStatus|status|
+$prototypeV2=QInAppTransaction::TransactionStatus status() const
 
 %%
 %% Q_PROPERTY(QInAppProduct * product READ product CONSTANT)
 %%
 
-$prototype=QInAppProduct *product() const
-$method=|QInAppProduct *|product|
+$prototypeV2=QInAppProduct * product() const
 
 %%
 %% Q_PROPERTY(QString orderId READ orderId CONSTANT)
 %%
 
-$prototype=virtual QString orderId() const
-$virtualMethod=|QString|orderId|
+$prototypeV2=virtual QString orderId() const
 
 %%
 %% Q_PROPERTY(FailureReason failureReason READ failureReason CONSTANT)
 %%
 
-$prototype=virtual FailureReason failureReason() const
-$virtualMethod=|QInAppTransaction::FailureReason|failureReason|
+$prototypeV2=virtual QInAppTransaction::FailureReason failureReason() const
 
 %%
 %% Q_PROPERTY(QString errorString READ errorString CONSTANT)
 %%
 
-$prototype=virtual QString errorString() const
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const
 
 %%
 %% Q_PROPERTY(QDateTime timestamp READ timestamp CONSTANT)
 %%
 
-$prototype=virtual QDateTime timestamp() const
-$virtualMethod=|QDateTime|timestamp|
+$prototypeV2=virtual QDateTime timestamp() const
 
 %%
 %%
 %%
 
-$prototype=Q_INVOKABLE virtual void finalize() = 0
-$virtualMethod=|void|finalize|
+$prototypeV2=Q_INVOKABLE virtual void finalize() = 0
 
 $prototype=Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const
 $virtualMethod=|QString|platformProperty|const QString &

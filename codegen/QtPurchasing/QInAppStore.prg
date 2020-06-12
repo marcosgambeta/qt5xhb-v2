@@ -35,8 +35,7 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QInAppStore()
 $deleteMethod
 
-$prototype=Q_INVOKABLE void restorePurchases()
-$method=|void|restorePurchases|
+$prototypeV2=Q_INVOKABLE void restorePurchases()
 
 $prototype=Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString &identifier)
 $method=|void|registerProduct|QInAppProduct::ProductType,const QString &

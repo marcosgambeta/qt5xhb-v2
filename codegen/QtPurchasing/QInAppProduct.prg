@@ -34,42 +34,36 @@ $deleteMethod
 %% Q_PROPERTY(QString identifier READ identifier CONSTANT)
 %%
 
-$prototype=QString identifier() const
-$method=|QString|identifier|
+$prototypeV2=QString identifier() const
 
 %%
 %% Q_PROPERTY(ProductType productType READ productType CONSTANT)
 %%
 
-$prototype=ProductType productType() const
-$method=|QInAppProduct::ProductType|productType|
+$prototypeV2=QInAppProduct::ProductType productType() const
 
 %%
 %% Q_PROPERTY(QString price READ price CONSTANT)
 %%
 
-$prototype=QString price() const
-$method=|QString|price|
+$prototypeV2=QString price() const
 
 %%
 %% Q_PROPERTY(QString title READ title CONSTANT)
 %%
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 %%
 %% Q_PROPERTY(QString description READ description CONSTANT)
 %%
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 %%
 %%
 %%
 
-$prototype=Q_INVOKABLE virtual void purchase() = 0
-$virtualMethod=|void|purchase|
+$prototypeV2=Q_INVOKABLE virtual void purchase() = 0
 
 #pragma ENDDUMP
