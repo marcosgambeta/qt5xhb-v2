@@ -124,14 +124,11 @@ $method=|QString|attributeNS|const QString &,const QString &,const QString &=QSt
 $prototype=QStringList attributeNames ( const QString & namespaceUri = QString() ) const
 $method=|QStringList|attributeNames|const QString &=QString()
 
-$prototype=QStringList classes () const
-$method=|QStringList|classes|
+$prototypeV2=QStringList classes() const
 
-$prototype=QWebElement clone () const
-$method=|QWebElement|clone|
+$prototypeV2=QWebElement clone() const
 
-$prototype=QWebElement document () const
-$method=|QWebElement|document|
+$prototypeV2=QWebElement document() const
 
 $prototype=void encloseContentsWith ( const QWebElement & element )
 $internalMethod=|void|encloseContentsWith,encloseContentsWith1|const QWebElement &
@@ -198,11 +195,9 @@ $method=|QWebElementCollection|findAll|const QString &
 $prototype=QWebElement findFirst ( const QString & selectorQuery ) const
 $method=|QWebElement|findFirst|const QString &
 
-$prototype=QWebElement firstChild () const
-$method=|QWebElement|firstChild|
+$prototypeV2=QWebElement firstChild() const
 
-$prototype=QRect geometry () const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
 $prototype=bool hasAttribute ( const QString & name ) const
 $method=|bool|hasAttribute|const QString &
@@ -210,35 +205,26 @@ $method=|bool|hasAttribute|const QString &
 $prototype=bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
 $method=|bool|hasAttributeNS|const QString &,const QString &
 
-$prototype=bool hasAttributes () const
-$method=|bool|hasAttributes|
+$prototypeV2=bool hasAttributes() const
 
 $prototype=bool hasClass ( const QString & name ) const
 $method=|bool|hasClass|const QString &
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QWebElement lastChild () const
-$method=|QWebElement|lastChild|
+$prototypeV2=QWebElement lastChild() const
 
-$prototype=QString localName () const
-$method=|QString|localName|
+$prototypeV2=QString localName() const
 
-$prototype=QString namespaceUri () const
-$method=|QString|namespaceUri|
+$prototypeV2=QString namespaceUri() const
 
-$prototype=QWebElement nextSibling () const
-$method=|QWebElement|nextSibling|
+$prototypeV2=QWebElement nextSibling() const
 
-$prototype=QWebElement parent () const
-$method=|QWebElement|parent|
+$prototypeV2=QWebElement parent() const
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=void prependInside ( const QString & markup )
 $internalMethod=|void|prependInside,prependInside1|const QString &
@@ -296,11 +282,9 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 }
 $addMethod=prependOutside
 
-$prototype=QWebElement previousSibling () const
-$method=|QWebElement|previousSibling|
+$prototypeV2=QWebElement previousSibling() const
 
-$prototype=void removeAllChildren ()
-$method=|void|removeAllChildren|
+$prototypeV2=void removeAllChildren()
 
 $prototype=void removeAttribute ( const QString & name )
 $method=|void|removeAttribute|const QString &
@@ -311,8 +295,7 @@ $method=|void|removeAttributeNS|const QString &,const QString &
 $prototype=void removeClass ( const QString & name )
 $method=|void|removeClass|const QString &
 
-$prototype=void removeFromDocument ()
-$method=|void|removeFromDocument|
+$prototypeV2=void removeFromDocument()
 
 $prototype=void render ( QPainter * painter )
 $internalMethod=|void|render,render1|QPainter *
@@ -376,8 +359,7 @@ $method=|void|setAttribute|const QString &,const QString &
 $prototype=void setAttributeNS ( const QString & namespaceUri, const QString & name, const QString & value )
 $method=|void|setAttributeNS|const QString &,const QString &,const QString &
 
-$prototype=void setFocus ()
-$method=|void|setFocus|
+$prototypeV2=void setFocus()
 
 $prototype=void setInnerXml ( const QString & markup )
 $method=|void|setInnerXml|const QString &
@@ -394,26 +376,20 @@ $method=|void|setStyleProperty|const QString &,const QString &
 $prototype=QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
 $method=|QString|styleProperty|const QString &,QWebElement::StyleResolveStrategy
 
-$prototype=QString tagName () const
-$method=|QString|tagName|
+$prototypeV2=QString tagName() const
 
-$prototype=QWebElement & takeFromDocument ()
-$method=|QWebElement &|takeFromDocument|
+$prototypeV2=QWebElement & takeFromDocument()
 
-$prototype=QString toInnerXml () const
-$method=|QString|toInnerXml|
+$prototypeV2=QString toInnerXml() const
 
-$prototype=QString toOuterXml () const
-$method=|QString|toOuterXml|
+$prototypeV2=QString toOuterXml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
 $prototype=void toggleClass ( const QString & name )
 $method=|void|toggleClass|const QString &
 
-$prototype=QWebFrame * webFrame () const
-$method=|QWebFrame *|webFrame|
+$prototypeV2=QWebFrame * webFrame() const
 
 $extraMethods
 

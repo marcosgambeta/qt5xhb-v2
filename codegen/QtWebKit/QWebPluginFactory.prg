@@ -30,7 +30,6 @@ $deleteMethod
 $prototype=virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 $virtualMethod=|QObject *|create|const QString &,const QUrl &,const QStringList &,const QStringList &
 
-$prototype=virtual void refreshPlugins ()
-$virtualMethod=|void|refreshPlugins|
+$prototypeV2=virtual void refreshPlugins()
 
 #pragma ENDDUMP

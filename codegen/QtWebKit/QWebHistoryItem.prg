@@ -32,29 +32,22 @@ $constructor=|new|const QWebHistoryItem &
 
 $deleteMethod
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QDateTime lastVisited () const
-$method=|QDateTime|lastVisited|
+$prototypeV2=QDateTime lastVisited() const
 
-$prototype=QUrl originalUrl () const
-$method=|QUrl|originalUrl|
+$prototypeV2=QUrl originalUrl() const
 
 $prototype=void setUserData ( const QVariant & userData )
 $method=|void|setUserData|const QVariant &
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QUrl url () const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
-$prototype=QVariant userData () const
-$method=|QVariant|userData|
+$prototypeV2=QVariant userData() const
 
 $extraMethods
 

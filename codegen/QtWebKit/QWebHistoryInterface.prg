@@ -33,8 +33,7 @@ $virtualMethod=|void|addHistoryEntry|const QString &
 $prototype=virtual bool historyContains ( const QString & url ) const = 0
 $virtualMethod=|bool|historyContains|const QString &
 
-$prototype=static QWebHistoryInterface * defaultInterface ()
-$staticMethod=|QWebHistoryInterface *|defaultInterface|
+$prototypeV2=static QWebHistoryInterface * defaultInterface()
 
 $prototype=static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 $staticMethod=|void|setDefaultInterface|QWebHistoryInterface *

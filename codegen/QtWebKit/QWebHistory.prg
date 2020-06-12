@@ -25,38 +25,28 @@ $destructor
 
 $includes
 
-$prototype=void back ()
-$method=|void|back|
+$prototypeV2=void back()
 
-$prototype=QWebHistoryItem backItem () const
-$method=|QWebHistoryItem|backItem|
+$prototypeV2=QWebHistoryItem backItem() const
 
 $prototype=QList<QWebHistoryItem> backItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|backItems|int
 
-$prototype=bool canGoBack () const
-$method=|bool|canGoBack|
+$prototypeV2=bool canGoBack() const
 
-$prototype=bool canGoForward () const
-$method=|bool|canGoForward|
+$prototypeV2=bool canGoForward() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=QWebHistoryItem currentItem () const
-$method=|QWebHistoryItem|currentItem|
+$prototypeV2=QWebHistoryItem currentItem() const
 
-$prototype=int currentItemIndex () const
-$method=|int|currentItemIndex|
+$prototypeV2=int currentItemIndex() const
 
-$prototype=void forward ()
-$method=|void|forward|
+$prototypeV2=void forward()
 
-$prototype=QWebHistoryItem forwardItem () const
-$method=|QWebHistoryItem|forwardItem|
+$prototypeV2=QWebHistoryItem forwardItem() const
 
 $prototype=QList<QWebHistoryItem> forwardItems ( int maxItems ) const
 $method=|QList<QWebHistoryItem>|forwardItems|int
@@ -70,8 +60,7 @@ $method=|QWebHistoryItem|itemAt|int
 $prototype=QList<QWebHistoryItem> items () const
 $method=|QList<QWebHistoryItem>|items|
 
-$prototype=int maximumItemCount () const
-$method=|int|maximumItemCount|
+$prototypeV2=int maximumItemCount() const
 
 $prototype=void setMaximumItemCount ( int count )
 $method=|void|setMaximumItemCount|int
