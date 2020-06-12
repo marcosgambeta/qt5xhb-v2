@@ -51,20 +51,17 @@ $prototype=static QWebEngineHttpRequest postRequest(const QUrl &url, const QMap<
 $prototype=void swap(QWebEngineHttpRequest &other)
 $method=|void|swap|QWebEngineHttpRequest &
 
-$prototype=Method method() const
-$method=|QWebEngineHttpRequest::Method|method|
+$prototypeV2=QWebEngineHttpRequest::Method method() const
 
 $prototype=void setMethod(QWebEngineHttpRequest::Method method)
 $method=|void|setMethod|QWebEngineHttpRequest::Method
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void setUrl(const QUrl &url)
 $method=|void|setUrl|const QUrl &
 
-$prototype=QByteArray postData() const
-$method=|QByteArray|postData|
+$prototypeV2=QByteArray postData() const
 
 $prototype=void setPostData(const QByteArray &postData)
 $method=|void|setPostData|const QByteArray &

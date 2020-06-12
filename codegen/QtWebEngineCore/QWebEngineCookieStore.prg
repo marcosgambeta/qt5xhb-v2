@@ -38,14 +38,11 @@ $method=|void|setCookie|const QNetworkCookie &,const QUrl &=QUrl()
 $prototype=void deleteCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
 $method=|void|deleteCookie|const QNetworkCookie &,const QUrl &=QUrl()
 
-$prototype=void deleteSessionCookies()
-$method=|void|deleteSessionCookies|
+$prototypeV2=void deleteSessionCookies()
 
-$prototype=void deleteAllCookies()
-$method=|void|deleteAllCookies|
+$prototypeV2=void deleteAllCookies()
 
-$prototype=void loadAllCookies()
-$method=|void|loadAllCookies|
+$prototypeV2=void loadAllCookies()
 
 %%
 %% SIGNALS

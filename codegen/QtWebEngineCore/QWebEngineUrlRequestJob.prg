@@ -30,11 +30,9 @@ $prototype=QWebEngineUrlRequestJob(QtWebEngineCore::URLRequestCustomJobDelegate 
 $prototype=~QWebEngineUrlRequestJob()
 $deleteMethod
 
-$prototype=QUrl requestUrl() const
-$method=|QUrl|requestUrl|
+$prototypeV2=QUrl requestUrl() const
 
-$prototype=QByteArray requestMethod() const
-$method=|QByteArray|requestMethod|
+$prototypeV2=QByteArray requestMethod() const
 
 $prototype=void reply(const QByteArray &contentType, QIODevice *device)
 $method=|void|reply|const QByteArray &,QIODevice *

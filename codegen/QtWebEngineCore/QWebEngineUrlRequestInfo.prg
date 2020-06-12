@@ -30,23 +30,17 @@ $prototype=QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfoPrivate *p) [private
 $prototype=~QWebEngineUrlRequestInfo() [private]
 %% $deleteMethod
 
-$prototype=ResourceType resourceType() const
-$method=|QWebEngineUrlRequestInfo::ResourceType|resourceType|
+$prototypeV2=QWebEngineUrlRequestInfo::ResourceType resourceType() const
 
-$prototype=NavigationType navigationType() const
-$method=|QWebEngineUrlRequestInfo::NavigationType|navigationType|
+$prototypeV2=QWebEngineUrlRequestInfo::NavigationType navigationType() const
 
-$prototype=QUrl requestUrl() const
-$method=|QUrl|requestUrl|
+$prototypeV2=QUrl requestUrl() const
 
-$prototype=QUrl firstPartyUrl() const
-$method=|QUrl|firstPartyUrl|
+$prototypeV2=QUrl firstPartyUrl() const
 
-$prototype=QByteArray requestMethod() const
-$method=|QByteArray|requestMethod|
+$prototypeV2=QByteArray requestMethod() const
 
-$prototype=bool changed() const
-$method=|bool|changed|
+$prototypeV2=bool changed() const
 
 $prototype=void block(bool shouldBlock)
 $method=|void|block|bool
