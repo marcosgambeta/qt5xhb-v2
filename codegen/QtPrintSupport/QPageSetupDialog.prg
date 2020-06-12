@@ -57,14 +57,12 @@ $deleteMethod
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=QPrinter * printer ()
-$method=|QPrinter *|printer|
+$prototypeV2=QPrinter * printer ()
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=virtual int exec()
-$virtualMethod=|int|exec|
+$prototypeV2=virtual int exec()
 
 $prototype=void done(int result)
 $method=|void|done|int

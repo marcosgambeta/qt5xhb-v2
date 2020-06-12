@@ -64,14 +64,11 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 $deleteMethod
 
-$prototype=bool isDefault () const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString printerName () const
-$method=|QString|printerName|
+$prototypeV2=QString printerName() const
 
 $prototype=QList<QPrinter::PaperSize> supportedPaperSizes () const
 $method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
@@ -79,17 +76,13 @@ $method=|QList<QPrinter::PaperSize>|supportedPaperSizes|
 $prototype=static QList<QPrinterInfo> availablePrinters ()
 $staticMethod=|QList<QPrinterInfo>|availablePrinters|
 
-$prototype=static QPrinterInfo defaultPrinter ()
-$staticMethod=|QPrinterInfo|defaultPrinter|
+$prototypeV2=static QPrinterInfo defaultPrinter()
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=QString location() const
-$method=|QString|location|
+$prototypeV2=QString location() const
 
-$prototype=QString makeAndModel() const
-$method=|QString|makeAndModel|
+$prototypeV2=QString makeAndModel() const
 
 $prototype=bool isRemote() const
 $method=5,3,0|bool|isRemote|

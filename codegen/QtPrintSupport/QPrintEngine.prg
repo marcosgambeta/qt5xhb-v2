@@ -27,17 +27,14 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool abort () = 0
-$virtualMethod=|bool|abort|
+$prototypeV2=virtual bool abort() = 0
 
 $prototype=virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
 $virtualMethod=|int|metric|QPaintDevice::PaintDeviceMetric
 
-$prototype=virtual bool newPage () = 0
-$virtualMethod=|bool|newPage|
+$prototypeV2=virtual bool newPage() = 0
 
-$prototype=virtual QPrinter::PrinterState printerState () const = 0
-$virtualMethod=|QPrinter::PrinterState|printerState|
+$prototypeV2=virtual QPrinter::PrinterState printerState() const = 0
 
 $prototype=virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
 $virtualMethod=|QVariant|property|QPrintEngine::PrintEnginePropertyKey

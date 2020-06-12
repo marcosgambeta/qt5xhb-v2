@@ -56,56 +56,42 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 
 $deleteMethod
 
-$prototype=int currentPage () const
-$method=|int|currentPage|
+$prototypeV2=int currentPage() const
 
-$prototype=QPrinter::Orientation orientation () const
-$method=|QPrinter::Orientation|orientation|
+$prototypeV2=QPrinter::Orientation orientation() const
 
-$prototype=int pageCount () const
-$method=|int|pageCount|
+$prototypeV2=int pageCount() const
 
-$prototype=ViewMode viewMode () const
-$method=|QPrintPreviewWidget::ViewMode|viewMode|
+$prototypeV2=QPrintPreviewWidget::ViewMode viewMode() const
 
-$prototype=qreal zoomFactor () const
-$method=|qreal|zoomFactor|
+$prototypeV2=qreal zoomFactor() const
 
-$prototype=ZoomMode zoomMode () const
-$method=|QPrintPreviewWidget::ZoomMode|zoomMode|
+$prototypeV2=QPrintPreviewWidget::ZoomMode zoomMode() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=void fitInView ()
-$method=|void|fitInView|
+$prototypeV2=void fitInView()
 
-$prototype=void fitToWidth ()
-$method=|void|fitToWidth|
+$prototypeV2=void fitToWidth()
 
-$prototype=void print ()
-$method=|void|print|
+$prototypeV2=void print()
 
-$prototype=void setAllPagesViewMode ()
-$method=|void|setAllPagesViewMode|
+$prototypeV2=void setAllPagesViewMode()
 
 $prototype=void setCurrentPage ( int page )
 $method=|void|setCurrentPage|int
 
-$prototype=void setFacingPagesViewMode ()
-$method=|void|setFacingPagesViewMode|
+$prototypeV2=void setFacingPagesViewMode()
 
-$prototype=void setLandscapeOrientation ()
-$method=|void|setLandscapeOrientation|
+$prototypeV2=void setLandscapeOrientation()
 
 $prototype=void setOrientation ( QPrinter::Orientation orientation )
 $method=|void|setOrientation|QPrinter::Orientation
 
-$prototype=void setPortraitOrientation ()
-$method=|void|setPortraitOrientation|
+$prototypeV2=void setPortraitOrientation()
 
-$prototype=void setSinglePageViewMode ()
-$method=|void|setSinglePageViewMode|
+$prototypeV2=void setSinglePageViewMode()
 
 $prototype=void setViewMode ( ViewMode mode )
 $method=|void|setViewMode|QPrintPreviewWidget::ViewMode
@@ -116,8 +102,7 @@ $method=|void|setZoomFactor|qreal
 $prototype=void setZoomMode ( ZoomMode zoomMode )
 $method=|void|setZoomMode|QPrintPreviewWidget::ZoomMode
 
-$prototype=void updatePreview ()
-$method=|void|updatePreview|
+$prototypeV2=void updatePreview()
 
 $prototype=void zoomIn ( qreal factor = 1.1 )
 $method=|void|zoomIn|qreal=1.1

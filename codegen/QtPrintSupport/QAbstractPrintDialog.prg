@@ -27,23 +27,17 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual int exec () = 0
-$virtualMethod=|int|exec|
+$prototypeV2=virtual int exec() = 0
 
-$prototype=int fromPage () const
-$method=|int|fromPage|
+$prototypeV2=int fromPage() const
 
-$prototype=int maxPage () const
-$method=|int|maxPage|
+$prototypeV2=int maxPage() const
 
-$prototype=int minPage () const
-$method=|int|minPage|
+$prototypeV2=int minPage() const
 
-$prototype=PrintRange printRange () const
-$method=|QAbstractPrintDialog::PrintRange|printRange|
+$prototypeV2=QAbstractPrintDialog::PrintRange printRange() const
 
-$prototype=QPrinter * printer () const
-$method=|QPrinter *|printer|
+$prototypeV2=QPrinter * printer() const
 
 $prototype=void setFromTo ( int from, int to )
 $method=|void|setFromTo|int,int
@@ -57,8 +51,7 @@ $method=|void|setOptionTabs|const QList<QWidget *> &
 $prototype=void setPrintRange ( PrintRange range )
 $method=|void|setPrintRange|QAbstractPrintDialog::PrintRange
 
-$prototype=int toPage () const
-$method=|int|toPage|
+$prototypeV2=int toPage() const
 
 $prototype=void addEnabledOption(PrintDialogOption option)
 $method=|void|addEnabledOption|QAbstractPrintDialog::PrintDialogOption
@@ -66,8 +59,7 @@ $method=|void|addEnabledOption|QAbstractPrintDialog::PrintDialogOption
 $prototype=void setEnabledOptions(PrintDialogOptions options)
 $method=|void|setEnabledOptions|QAbstractPrintDialog::PrintDialogOptions
 
-$prototype=PrintDialogOptions enabledOptions() const
-$method=|QAbstractPrintDialog::PrintDialogOptions|enabledOptions|
+$prototypeV2=QAbstractPrintDialog::PrintDialogOptions enabledOptions() const
 
 $prototype=bool isOptionEnabled(PrintDialogOption option) const
 $method=|bool|isOptionEnabled|QAbstractPrintDialog::PrintDialogOption
