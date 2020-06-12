@@ -39,8 +39,7 @@ $method=|void|registerObject|const QString &,QObject *
 $prototype=Q_INVOKABLE void deregisterObject(QObject *object)
 $method=|void|deregisterObject|QObject *
 
-$prototype=bool blockUpdates() const
-$method=|bool|blockUpdates|
+$prototypeV2=bool blockUpdates() const
 
 $prototype=void setBlockUpdates(bool block)
 $method=|void|setBlockUpdates|bool
