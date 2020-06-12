@@ -38,8 +38,7 @@ $deleteMethod
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged FINAL)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=Q_INVOKABLE void setName(const QString &name)
 $method=|void|setName|const QString &
@@ -48,8 +47,7 @@ $method=|void|setName|const QString &
 %% Q_PROPERTY(QUrl sourceUrl READ sourceUrl WRITE setSourceUrl NOTIFY sourceUrlChanged FINAL)
 %%
 
-$prototype=QUrl sourceUrl() const
-$method=|QUrl|sourceUrl|
+$prototypeV2=QUrl sourceUrl() const
 
 $prototype=Q_INVOKABLE void setSourceUrl(const QUrl &url)
 $method=|void|setSourceUrl|const QUrl &
@@ -58,8 +56,7 @@ $method=|void|setSourceUrl|const QUrl &
 %% Q_PROPERTY(QString sourceCode READ sourceCode WRITE setSourceCode NOTIFY sourceCodeChanged FINAL)
 %%
 
-$prototype=QString sourceCode() const
-$method=|QString|sourceCode|
+$prototypeV2=QString sourceCode() const
 
 $prototype=Q_INVOKABLE void setSourceCode(const QString &code)
 $method=|void|setSourceCode|const QString &
@@ -68,8 +65,7 @@ $method=|void|setSourceCode|const QString &
 %% Q_PROPERTY(InjectionPoint injectionPoint READ injectionPoint WRITE setInjectionPoint NOTIFY injectionPointChanged FINAL)
 %%
 
-$prototype=InjectionPoint injectionPoint() const
-$method=|QQuickWebEngineScript::InjectionPoint|injectionPoint|
+$prototypeV2=QQuickWebEngineScript::InjectionPoint injectionPoint() const
 
 $prototype=Q_INVOKABLE void setInjectionPoint(InjectionPoint injectionPoint)
 $method=|void|setInjectionPoint|QQuickWebEngineScript::InjectionPoint
@@ -78,8 +74,7 @@ $method=|void|setInjectionPoint|QQuickWebEngineScript::InjectionPoint
 %% Q_PROPERTY(ScriptWorldId worldId READ worldId WRITE setWorldId NOTIFY worldIdChanged FINAL)
 %%
 
-$prototype=ScriptWorldId worldId() const
-$method=|QQuickWebEngineScript::ScriptWorldId|worldId|
+$prototypeV2=QQuickWebEngineScript::ScriptWorldId worldId() const
 
 $prototype=Q_INVOKABLE void setWorldId(ScriptWorldId scriptWorldId)
 $method=|void|setWorldId|QQuickWebEngineScript::ScriptWorldId
@@ -88,8 +83,7 @@ $method=|void|setWorldId|QQuickWebEngineScript::ScriptWorldId
 %% Q_PROPERTY(bool runOnSubframes READ runOnSubframes WRITE setRunOnSubframes NOTIFY runOnSubframesChanged FINAL)
 %%
 
-$prototype=bool runOnSubframes() const
-$method=|bool|runOnSubframes|
+$prototypeV2=bool runOnSubframes() const
 
 $prototype=Q_INVOKABLE void setRunOnSubframes(bool on)
 $method=|void|setRunOnSubframes|bool
@@ -98,8 +92,7 @@ $method=|void|setRunOnSubframes|bool
 %%
 %%
 
-$prototype=Q_INVOKABLE QString toString() const
-$method=|QString|toString|
+$prototypeV2=Q_INVOKABLE QString toString() const
 
 %%
 %% SIGNALS

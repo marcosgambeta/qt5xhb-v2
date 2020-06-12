@@ -47,8 +47,7 @@ $deleteMethod
 %% Q_PROPERTY(QString storageName READ storageName WRITE setStorageName NOTIFY storageNameChanged FINAL)
 %%
 
-$prototype=QString storageName() const
-$method=|QString|storageName|
+$prototypeV2=QString storageName() const
 
 $prototype=void setStorageName(const QString &name)
 $method=|void|setStorageName|const QString &
@@ -57,8 +56,7 @@ $method=|void|setStorageName|const QString &
 %% Q_PROPERTY(bool offTheRecord READ isOffTheRecord WRITE setOffTheRecord NOTIFY offTheRecordChanged FINAL)
 %%
 
-$prototype=bool isOffTheRecord() const
-$method=|bool|isOffTheRecord|
+$prototypeV2=bool isOffTheRecord() const
 
 $prototype=void setOffTheRecord(bool offTheRecord)
 $method=|void|setOffTheRecord|bool
@@ -67,8 +65,7 @@ $method=|void|setOffTheRecord|bool
 %% Q_PROPERTY(QString persistentStoragePath READ persistentStoragePath WRITE setPersistentStoragePath NOTIFY persistentStoragePathChanged FINAL)
 %%
 
-$prototype=QString persistentStoragePath() const
-$method=|QString|persistentStoragePath|
+$prototypeV2=QString persistentStoragePath() const
 
 $prototype=void setPersistentStoragePath(const QString &path)
 $method=|void|setPersistentStoragePath|const QString &
@@ -77,8 +74,7 @@ $method=|void|setPersistentStoragePath|const QString &
 %% Q_PROPERTY(QString cachePath READ cachePath WRITE setCachePath NOTIFY cachePathChanged FINAL)
 %%
 
-$prototype=QString cachePath() const
-$method=|QString|cachePath|
+$prototypeV2=QString cachePath() const
 
 $prototype=void setCachePath(const QString &path)
 $method=|void|setCachePath|const QString &
@@ -87,8 +83,7 @@ $method=|void|setCachePath|const QString &
 %% Q_PROPERTY(QString httpUserAgent READ httpUserAgent WRITE setHttpUserAgent NOTIFY httpUserAgentChanged FINAL)
 %%
 
-$prototype=QString httpUserAgent() const
-$method=|QString|httpUserAgent|
+$prototypeV2=QString httpUserAgent() const
 
 $prototype=void setHttpUserAgent(const QString &userAgent)
 $method=|void|setHttpUserAgent|const QString &
@@ -97,8 +92,7 @@ $method=|void|setHttpUserAgent|const QString &
 %% Q_PROPERTY(HttpCacheType httpCacheType READ httpCacheType WRITE setHttpCacheType NOTIFY httpCacheTypeChanged FINAL)
 %%
 
-$prototype=HttpCacheType httpCacheType() const
-$method=|QQuickWebEngineProfile::HttpCacheType|httpCacheType|
+$prototypeV2=QQuickWebEngineProfile::HttpCacheType httpCacheType() const
 
 $prototype=void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
 $method=|void|setHttpCacheType|QQuickWebEngineProfile::HttpCacheType
@@ -107,8 +101,7 @@ $method=|void|setHttpCacheType|QQuickWebEngineProfile::HttpCacheType
 %% Q_PROPERTY(QString httpAcceptLanguage READ httpAcceptLanguage WRITE setHttpAcceptLanguage NOTIFY httpAcceptLanguageChanged FINAL REVISION 1)
 %%
 
-$prototype=QString httpAcceptLanguage() const
-$method=|QString|httpAcceptLanguage|
+$prototypeV2=QString httpAcceptLanguage() const
 
 $prototype=void setHttpAcceptLanguage(const QString &httpAcceptLanguage)
 $method=|void|setHttpAcceptLanguage|const QString &
@@ -117,8 +110,7 @@ $method=|void|setHttpAcceptLanguage|const QString &
 %% Q_PROPERTY(PersistentCookiesPolicy persistentCookiesPolicy READ persistentCookiesPolicy WRITE setPersistentCookiesPolicy NOTIFY persistentCookiesPolicyChanged FINAL)
 %%
 
-$prototype=PersistentCookiesPolicy persistentCookiesPolicy() const
-$method=|QQuickWebEngineProfile::PersistentCookiesPolicy|persistentCookiesPolicy|
+$prototypeV2=QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
 
 $prototype=void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
 $method=|void|setPersistentCookiesPolicy|QQuickWebEngineProfile::PersistentCookiesPolicy
@@ -127,8 +119,7 @@ $method=|void|setPersistentCookiesPolicy|QQuickWebEngineProfile::PersistentCooki
 %% Q_PROPERTY(int httpCacheMaximumSize READ httpCacheMaximumSize WRITE setHttpCacheMaximumSize NOTIFY httpCacheMaximumSizeChanged FINAL)
 %%
 
-$prototype=int httpCacheMaximumSize() const
-$method=|int|httpCacheMaximumSize|
+$prototypeV2=int httpCacheMaximumSize() const
 
 $prototype=void setHttpCacheMaximumSize(int maxSize)
 $method=|void|setHttpCacheMaximumSize|int
@@ -168,8 +159,7 @@ $prototype=QQmlListProperty<QQuickWebEngineScript> userScripts()
 %%
 %%
 
-$prototype=QWebEngineCookieStore *cookieStore() const
-$method=|QWebEngineCookieStore *|cookieStore|
+$prototypeV2=QWebEngineCookieStore * cookieStore() const
 
 $prototype=void setRequestInterceptor(QWebEngineUrlRequestInterceptor *interceptor)
 $method=|void|setRequestInterceptor|QWebEngineUrlRequestInterceptor *
@@ -186,14 +176,12 @@ $method=|void|removeUrlScheme|const QByteArray &
 $prototype=void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
 $method=|void|removeUrlSchemeHandler|QWebEngineUrlSchemeHandler *
 
-$prototype=void removeAllUrlSchemeHandlers()
-$method=|void|removeAllUrlSchemeHandlers|
+$prototypeV2=void removeAllUrlSchemeHandlers()
 
 $prototype=Q_REVISION(2) Q_INVOKABLE void clearHttpCache()
 $method=5,7,0|void|clearHttpCache|
 
-$prototype=static QQuickWebEngineProfile *defaultProfile()
-$staticMethod=|QQuickWebEngineProfile *|defaultProfile|
+$prototypeV2=static QQuickWebEngineProfile * defaultProfile()
 
 $prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) [private]
 
