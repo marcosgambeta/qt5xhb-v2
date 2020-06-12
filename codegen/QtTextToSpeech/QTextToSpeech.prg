@@ -65,15 +65,13 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
 %%
 
-$prototype=State state() const
-$method=|QTextToSpeech::State|state|
+$prototypeV2=QTextToSpeech::State state() const
 
 %%
 %% Q_PROPERTY(QLocale locale READ locale WRITE setLocale NOTIFY localeChanged)
 %%
 
-$prototype=QLocale locale() const
-$method=|QLocale|locale|
+$prototypeV2=QLocale locale() const
 
 $prototype=void setLocale(const QLocale &locale)
 $slotMethod=|void|setLocale|const QLocale &
@@ -82,8 +80,7 @@ $slotMethod=|void|setLocale|const QLocale &
 %% Q_PROPERTY(QVoice voice READ voice WRITE setVoice NOTIFY voiceChanged)
 %%
 
-$prototype=QVoice voice() const
-$method=|QVoice|voice|
+$prototypeV2=QVoice voice() const
 
 $prototype=void setVoice(const QVoice &voice)
 $slotMethod=|void|setVoice|const QVoice &
@@ -92,8 +89,7 @@ $slotMethod=|void|setVoice|const QVoice &
 %% Q_PROPERTY(double rate READ rate WRITE setRate NOTIFY rateChanged)
 %%
 
-$prototype=double rate() const
-$method=|double|rate|
+$prototypeV2=double rate() const
 
 $prototype=void setRate(double rate)
 $slotMethod=|void|setRate|double
@@ -102,8 +98,7 @@ $slotMethod=|void|setRate|double
 %% Q_PROPERTY(double pitch READ pitch WRITE setPitch NOTIFY pitchChanged)
 %%
 
-$prototype=double pitch() const
-$method=|double|pitch|
+$prototypeV2=double pitch() const
 
 $prototype=void setPitch(double pitch)
 $slotMethod=|void|setPitch|double
@@ -112,8 +107,7 @@ $slotMethod=|void|setPitch|double
 %% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
 %%
 
-$prototype=double volume() const
-$method=|double|volume|
+$prototypeV2=double volume() const
 
 $prototype=void setVolume(double volume)
 $slotMethod=|void|setVolume|double
@@ -128,20 +122,16 @@ $method=|QVector<QLocale>|availableLocales|
 $prototype=QVector<QVoice> availableVoices() const
 $method=|QVector<QVoice>|availableVoices|
 
-$prototype=static QStringList availableEngines()
-$staticMethod=|QStringList|availableEngines|
+$prototypeV2=static QStringList availableEngines()
 
 $prototype=void say(const QString &text)
 $slotMethod=|void|say|const QString &
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop() [slot]
 
-$prototype=void pause()
-$slotMethod=|void|pause|
+$prototypeV2=void pause() [slot]
 
-$prototype=void resume()
-$slotMethod=|void|resume|
+$prototypeV2=void resume() [slot]
 
 %%
 %% SIGNALS

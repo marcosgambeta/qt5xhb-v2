@@ -59,14 +59,11 @@ HB_FUNC_STATIC( QVOICE_NEW )
 $prototype=~QVoice()
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=Gender gender() const
-$method=|QVoice::Gender|gender|
+$prototypeV2=QVoice::Gender gender() const
 
-$prototype=Age age() const
-$method=|QVoice::Age|age|
+$prototypeV2=QVoice::Age age() const
 
 $prototype=static QString genderName(QVoice::Gender gender)
 $staticMethod=|QString|genderName|QVoice::Gender

@@ -47,47 +47,38 @@ $virtualMethod=|QVector<QVoice>|availableVoices|
 $prototype=virtual void say(const QString &text) = 0
 $virtualMethod=|void|say|const QString &
 
-$prototype=virtual void stop() = 0
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop() = 0
 
-$prototype=virtual void pause() = 0
-$virtualMethod=|void|pause|
+$prototypeV2=virtual void pause() = 0
 
-$prototype=virtual void resume() = 0
-$virtualMethod=|void|resume|
+$prototypeV2=virtual void resume() = 0
 
-$prototype=virtual double rate() const = 0
-$virtualMethod=|double|rate|
+$prototypeV2=virtual double rate() const = 0
 
 $prototype=virtual bool setRate(double rate) = 0
 $virtualMethod=|bool|setRate|double
 
-$prototype=virtual double pitch() const = 0
-$virtualMethod=|double|pitch|
+$prototypeV2=virtual double pitch() const = 0
 
 $prototype=virtual bool setPitch(double pitch) = 0
 $virtualMethod=|bool|setPitch|double
 
-$prototype=virtual QLocale locale() const = 0
-$virtualMethod=|QLocale|locale|
+$prototypeV2=virtual QLocale locale() const = 0
 
 $prototype=virtual bool setLocale(const QLocale &locale) = 0
 $virtualMethod=|bool|setLocale|const QLocale &
 
-$prototype=virtual double volume() const = 0
-$virtualMethod=|double|volume|
+$prototypeV2=virtual double volume() const = 0
 
 $prototype=virtual bool setVolume(double volume) = 0
 $virtualMethod=|bool|setVolume|double
 
-$prototype=virtual QVoice voice() const = 0
-$virtualMethod=|QVoice|voice|
+$prototypeV2=virtual QVoice voice() const = 0
 
 $prototype=virtual bool setVoice(const QVoice &voice) = 0
 $virtualMethod=|bool|setVoice|const QVoice &
 
-$prototype=virtual QTextToSpeech::State state() const = 0
-$virtualMethod=|QTextToSpeech::State|state|
+$prototypeV2=virtual QTextToSpeech::State state() const = 0
 
 $prototype=static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Age age, const QVariant &data) [protected]
 
