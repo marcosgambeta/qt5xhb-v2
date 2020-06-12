@@ -34,7 +34,7 @@ $prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *pare
 $prototype=~QModbusRtuSerialSlave()
 $deleteMethod
 
-$prototype=bool processesBroadcast() const override
+$prototypeV2=bool processesBroadcast() const override
 
 $prototype=bool open() override [protected]
 

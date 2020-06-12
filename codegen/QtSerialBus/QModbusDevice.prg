@@ -38,15 +38,15 @@ $prototype=QVariant connectionParameter(int parameter) const
 
 $prototype=void setConnectionParameter(int parameter, const QVariant &value)
 
-$prototype=bool connectDevice()
+$prototypeV2=bool connectDevice()
 
-$prototype=void disconnectDevice()
+$prototypeV2=void disconnectDevice()
 
-$prototype=State state() const
+$prototypeV2=QModbusDevice::State state() const
 
-$prototype=Error error() const
+$prototypeV2=QModbusDevice::Error error() const
 
-$prototype=QString errorString() const
+$prototypeV2=QString errorString() const
 
 $prototype=void setState(QModbusDevice::State newState) [protected]
 

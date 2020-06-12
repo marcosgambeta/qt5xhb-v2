@@ -34,7 +34,7 @@ $prototype=QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *pa
 $prototype=~QModbusRtuSerialMaster()
 $deleteMethod
 
-$prototype=int interFrameDelay() const
+$prototypeV2=int interFrameDelay() const
 
 $prototype=void setInterFrameDelay(int microseconds)
 

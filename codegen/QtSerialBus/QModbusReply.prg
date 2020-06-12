@@ -32,19 +32,19 @@ $prototype=QModbusReply(ReplyType type, int serverAddress, QObject *parent = nul
 
 %% $deleteMethod
 
-$prototype=ReplyType type() const
+$prototypeV2=QModbusReply::ReplyType type() const
 
-$prototype=int serverAddress() const
+$prototypeV2=int serverAddress() const
 
-$prototype=bool isFinished() const
+$prototypeV2=bool isFinished() const
 
-$prototype=QModbusDataUnit result() const
+$prototypeV2=QModbusDataUnit result() const
 
-$prototype=QModbusResponse rawResult() const
+$prototypeV2=QModbusResponse rawResult() const
 
-$prototype=QString errorString() const
+$prototypeV2=QString errorString() const
 
-$prototype=QModbusDevice::Error error() const
+$prototypeV2=QModbusDevice::Error error() const
 
 $prototype=void setResult(const QModbusDataUnit &unit)
 

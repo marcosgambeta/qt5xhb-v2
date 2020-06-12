@@ -34,13 +34,13 @@ $prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [p
 $prototype=~QModbusServer()
 $deleteMethod
 
-$prototype=int serverAddress() const
+$prototypeV2=int serverAddress() const
 
 $prototype=void setServerAddress(int serverAddress)
 
 $prototype=virtual bool setMap(const QModbusDataUnitMap &map)
 
-$prototype=virtual bool processesBroadcast() const
+$prototypeV2=virtual bool processesBroadcast() const
 
 $prototype=virtual QVariant value(int option) const
 

@@ -48,14 +48,11 @@ $method=|QVector<int>|configurationKeys|
 $prototype=virtual bool writeFrame(const QCanBusFrame &frame) = 0
 $virtualMethod=|bool|writeFrame|const QCanBusFrame &
 
-$prototype=QCanBusFrame readFrame()
-$method=|QCanBusFrame|readFrame|
+$prototypeV2=QCanBusFrame readFrame()
 
-$prototype=qint64 framesAvailable() const
-$method=|qint64|framesAvailable|
+$prototypeV2=qint64 framesAvailable() const
 
-$prototype=qint64 framesToWrite() const
-$method=|qint64|framesToWrite|
+$prototypeV2=qint64 framesToWrite() const
 
 $prototype=virtual bool waitForFramesWritten(int msecs)
 $virtualMethod=|bool|waitForFramesWritten|int
@@ -63,20 +60,15 @@ $virtualMethod=|bool|waitForFramesWritten|int
 $prototype=virtual bool waitForFramesReceived(int msecs)
 $virtualMethod=|bool|waitForFramesReceived|int
 
-$prototype=bool connectDevice()
-$method=|bool|connectDevice|
+$prototypeV2=bool connectDevice()
 
-$prototype=void disconnectDevice()
-$method=|void|disconnectDevice|
+$prototypeV2=void disconnectDevice()
 
-$prototype=CanBusDeviceState state() const
-$method=|QCanBusDevice::CanBusDeviceState|state|
+$prototypeV2=QCanBusDevice::CanBusDeviceState state() const
 
-$prototype=CanBusError error() const
-$method=|QCanBusDevice::CanBusError|error|
+$prototypeV2=QCanBusDevice::CanBusError error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
 $virtualMethod=|QString|interpretErrorFrame|const QCanBusFrame &

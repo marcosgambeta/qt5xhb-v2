@@ -65,14 +65,11 @@ $deleteMethod
 $prototype=void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
 $method=|void|swap|QCanBusDeviceInfo &
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=bool hasFlexibleDataRate() const
-$method=|bool|hasFlexibleDataRate|
+$prototypeV2=bool hasFlexibleDataRate() const
 
-$prototype=bool isVirtual() const
-$method=|bool|isVirtual|
+$prototypeV2=bool isVirtual() const
 
 $prototype=int QCanBusDeviceInfo::channel() const
 $method=5,11,0|int|channel|

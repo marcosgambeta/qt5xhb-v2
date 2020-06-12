@@ -32,11 +32,9 @@ $prototype=QCanBus(QObject *parent = nullptr) [private]
 
 %% $deleteMethod
 
-$prototype=static QCanBus *instance()
-$staticMethod=|QCanBus *|instance|
+$prototypeV2=static QCanBus * instance()
 
-$prototype=QStringList plugins() const
-$method=|QStringList|plugins|
+$prototypeV2=QStringList plugins() const
 
 $prototype=QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
 $method=5,9,0|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr

@@ -74,23 +74,19 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const Q_DECL_NOTHROW
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const Q_DECL_NOTHROW
 
-$prototype=FrameType frameType() const Q_DECL_NOTHROW
-$method=|QCanBusFrame::FrameType|frameType|
+$prototypeV2=QCanBusFrame::FrameType frameType() const Q_DECL_NOTHROW
 
 $prototype=void setFrameType(FrameType newFormat) Q_DECL_NOTHROW
 $method=|void|setFrameType|QCanBusFrame::FrameType
 
-$prototype=bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
-$method=|bool|hasExtendedFrameFormat|
+$prototypeV2=bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
 
 $prototype=void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
 $method=|void|setExtendedFrameFormat|bool
 
-$prototype=quint32 frameId() const Q_DECL_NOTHROW
-$method=|quint32|frameId|
+$prototypeV2=quint32 frameId() const Q_DECL_NOTHROW
 
 $prototype=void setFrameId(quint32 newFrameId)
 $method=|void|setFrameId|quint32
@@ -102,8 +98,7 @@ $prototype=void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
 %% TODO: implementar
 %% $method=|void|setTimeStamp|TimeStamp
 
-$prototype=QByteArray payload() const
-$method=|QByteArray|payload|
+$prototypeV2=QByteArray payload() const
 
 $prototype=TimeStamp timeStamp() const Q_DECL_NOTHROW
 %% TODO: implementar
@@ -115,8 +110,7 @@ $method=|QCanBusFrame::FrameErrors|error|
 $prototype=void setError(FrameErrors e)
 $method=|void|setError|QCanBusFrame::FrameErrors
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
 $prototype=bool hasFlexibleDataRateFormat() const Q_DECL_NOTHROW
 $method=|bool|hasFlexibleDataRateFormat|

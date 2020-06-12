@@ -38,7 +38,8 @@ $deleteMethod
 %% Q_PROPERTY(int timeout READ timeout WRITE setTimeout NOTIFY timeoutChanged)
 %%
 
-$prototype=int timeout() const
+$prototypeV2=int timeout() const
+
 $prototype=void setTimeout(int newTimeout)
 
 %%
@@ -53,7 +54,7 @@ $prototype=QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const
 
 $prototype=QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
 
-$prototype=int numberOfRetries() const
+$prototypeV2=int numberOfRetries() const
 
 $prototype=void setNumberOfRetries(int number)
 
