@@ -72,44 +72,35 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 
 $deleteMethod
 
-$prototype=QUrl source() const
-$method=|QUrl|source|
+$prototypeV2=QUrl source() const
 
 $prototype=void setSource(const QUrl&)
 $method=|void|setSource|const QUrl &
 
-$prototype=QQmlEngine* engine() const
-$method=|QQmlEngine *|engine|
+$prototypeV2=QQmlEngine * engine() const
 
-$prototype=QQmlContext* rootContext() const
-$method=|QQmlContext *|rootContext|
+$prototypeV2=QQmlContext * rootContext() const
 
-$prototype=QQuickItem *rootObject() const
-$method=|QQuickItem *|rootObject|
+$prototypeV2=QQuickItem * rootObject() const
 
-$prototype=ResizeMode resizeMode() const
-$method=|QQuickWidget::ResizeMode|resizeMode|
+$prototypeV2=QQuickWidget::ResizeMode resizeMode() const
 
 $prototype=void setResizeMode(ResizeMode)
 $method=|void|setResizeMode|QQuickWidget::ResizeMode
 
-$prototype=Status status() const
-$method=|QQuickWidget::Status|status|
+$prototypeV2=QQuickWidget::Status status() const
 
 $prototype=QList<QQmlError> errors() const
 $method=|QList<QQmlError>|errors|
 
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QSize initialSize() const
-$method=|QSize|initialSize|
+$prototypeV2=QSize initialSize() const
 
 $prototype=void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
 $method=|void|setContent|const QUrl &,QQmlComponent *,QObject *
 
-$prototype=QSurfaceFormat format() const
-$method=|QSurfaceFormat|format|
+$prototypeV2=QSurfaceFormat format() const
 
 $prototype=void setFormat(const QSurfaceFormat &format)
 $method=|void|setFormat|const QSurfaceFormat &
