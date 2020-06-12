@@ -57,20 +57,16 @@ $deleteMethod
 $prototype=bool booleanLiteral(bool * ok) const
 $method=|bool|booleanLiteral|bool *
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isNullLiteral() const
-$method=|bool|isNullLiteral|
+$prototypeV2=bool isNullLiteral() const
 
-$prototype=bool isUndefinedLiteral() const
-$method=|bool|isUndefinedLiteral|
+$prototypeV2=bool isUndefinedLiteral() const
 
 $prototype=qreal numberLiteral(bool * ok) const
 $method=|qreal|numberLiteral|bool *
 
-$prototype=QString stringLiteral() const
-$method=|QString|stringLiteral|
+$prototypeV2=QString stringLiteral() const
 
 $extraMethods
 

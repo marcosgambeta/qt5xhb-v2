@@ -32,8 +32,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QQmlEngine * engine() const
-$method=|QQmlEngine *|engine|
+$prototypeV2=QQmlEngine * engine() const
 
 $prototype=void incubateFor(int msecs)
 $method=|void|incubateFor|int
@@ -42,8 +41,7 @@ $prototype=void incubateWhile(volatile bool * flag, int msecs = 0)
 %% TODO: verificar 'volatile bool'
 $method=|void|incubateWhile|bool *,int=0
 
-$prototype=int incubatingObjectCount() const
-$method=|int|incubatingObjectCount|
+$prototypeV2=int incubatingObjectCount() const
 
 $extraMethods
 

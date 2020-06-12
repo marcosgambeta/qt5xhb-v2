@@ -67,38 +67,28 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 
 $deleteMethod
 
-$prototype=void clearError()
-$method=|void|clearError|
+$prototypeV2=void clearError()
 
-$prototype=int columnNumber() const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
-$prototype=QQmlContext * context() const
-$method=|QQmlContext *|context|
+$prototypeV2=QQmlContext * context() const
 
-$prototype=QQmlEngine * engine() const
-$method=|QQmlEngine *|engine|
+$prototypeV2=QQmlEngine * engine() const
 
-$prototype=QQmlError error() const
-$method=|QQmlError|error|
+$prototypeV2=QQmlError error() const
 
 $prototype=QVariant evaluate(bool * valueIsUndefined = nullptr)
 $method=|QVariant|evaluate|bool *=nullptr
 
-$prototype=QString expression() const
-$method=|QString|expression|
+$prototypeV2=QString expression() const
 
-$prototype=bool hasError() const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
-$prototype=int lineNumber() const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
-$prototype=bool notifyOnValueChanged() const
-$method=|bool|notifyOnValueChanged|
+$prototypeV2=bool notifyOnValueChanged() const
 
-$prototype=QObject * scopeObject() const
-$method=|QObject *|scopeObject|
+$prototypeV2=QObject * scopeObject() const
 
 $prototype=void setExpression(const QString & expression)
 $method=|void|setExpression|const QString &
@@ -109,8 +99,7 @@ $method=|void|setNotifyOnValueChanged|bool
 $prototype=void setSourceLocation(const QString & url, int line, int column = 0)
 $method=|void|setSourceLocation|const QString &,int,int=0
 
-$prototype=QString sourceFile() const
-$method=|QString|sourceFile|
+$prototypeV2=QString sourceFile() const
 
 %%
 %% SIGNALS

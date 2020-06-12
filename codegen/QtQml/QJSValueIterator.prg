@@ -30,17 +30,13 @@ $constructor=|new|const QJSValue &
 
 $deleteMethod
 
-$prototype=bool hasNext() const
-$method=|bool|hasNext|
+$prototypeV2=bool hasNext() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=bool next()
-$method=|bool|next|
+$prototypeV2=bool next()
 
-$prototype=QJSValue value() const
-$method=|QJSValue|value|
+$prototypeV2=QJSValue value() const
 
 $extraMethods
 

@@ -114,44 +114,31 @@ $method=|bool|hasOwnProperty|const QString &
 $prototype=bool hasProperty(const QString & name) const
 $method=|bool|hasProperty|const QString &
 
-$prototype=bool isArray() const
-$method=|bool|isArray|
+$prototypeV2=bool isArray() const
 
-$prototype=bool isBool() const
-$method=|bool|isBool|
+$prototypeV2=bool isBool() const
 
-$prototype=bool isCallable() const
-$method=|bool|isCallable|
+$prototypeV2=bool isCallable() const
 
-$prototype=bool isDate() const
-$method=|bool|isDate|
+$prototypeV2=bool isDate() const
 
-$prototype=bool isError() const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isNumber() const
-$method=|bool|isNumber|
+$prototypeV2=bool isNumber() const
 
-$prototype=bool isObject() const
-$method=|bool|isObject|
+$prototypeV2=bool isObject() const
 
-$prototype=bool isQObject() const
-$method=|bool|isQObject|
+$prototypeV2=bool isQObject() const
 
-$prototype=bool isRegExp() const
-$method=|bool|isRegExp|
+$prototypeV2=bool isRegExp() const
 
-$prototype=bool isString() const
-$method=|bool|isString|
+$prototypeV2=bool isString() const
 
-$prototype=bool isUndefined() const
-$method=|bool|isUndefined|
+$prototypeV2=bool isUndefined() const
 
-$prototype=bool isVariant() const
-$method=|bool|isVariant|
+$prototypeV2=bool isVariant() const
 
 $prototype=QJSValue property(const QString & name) const
 $internalMethod=|QJSValue|property,property1|const QString &
@@ -181,8 +168,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 }
 $addMethod=property
 
-$prototype=QJSValue prototype() const
-$method=|QJSValue|prototype|
+$prototypeV2=QJSValue prototype() const
 
 $prototype=void setProperty(const QString & name, const QJSValue & value)
 $internalMethod=|void|setProperty,setProperty1|const QString &,const QJSValue &
@@ -218,29 +204,21 @@ $method=|void|setPrototype|const QJSValue &
 $prototype=bool strictlyEquals(const QJSValue & other) const
 $method=|bool|strictlyEquals|const QJSValue &
 
-$prototype=bool toBool() const
-$method=|bool|toBool|
+$prototypeV2=bool toBool() const
 
-$prototype=QDateTime toDateTime() const
-$method=|QDateTime|toDateTime|
+$prototypeV2=QDateTime toDateTime() const
 
-$prototype=qint32 toInt() const
-$method=|qint32|toInt|
+$prototypeV2=qint32 toInt() const
 
-$prototype=double toNumber() const
-$method=|double|toNumber|
+$prototypeV2=double toNumber() const
 
-$prototype=QObject * toQObject() const
-$method=|QObject *|toQObject|
+$prototypeV2=QObject * toQObject() const
 
-$prototype=QString toString() const
-$method=|QString|toString|
+$prototypeV2=QString toString() const
 
-$prototype=quint32 toUInt() const
-$method=|quint32|toUInt|
+$prototypeV2=quint32 toUInt() const
 
-$prototype=QVariant toVariant() const
-$method=|QVariant|toVariant|
+$prototypeV2=QVariant toVariant() const
 
 $extraMethods
 

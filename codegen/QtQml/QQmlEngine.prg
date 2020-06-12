@@ -48,45 +48,35 @@ $method=|bool|addNamedBundle|const QString &,const QString &
 $prototype=void addPluginPath(const QString & path)
 $method=|void|addPluginPath|const QString &
 
-$prototype=QUrl baseUrl() const
-$method=|QUrl|baseUrl|
+$prototypeV2=QUrl baseUrl() const
 
-$prototype=void clearComponentCache()
-$method=|void|clearComponentCache|
+$prototypeV2=void clearComponentCache()
 
 $prototype=QQmlImageProviderBase * imageProvider(const QString & providerId) const
 $method=|QQmlImageProviderBase *|imageProvider|const QString &
 
-$prototype=QStringList importPathList() const
-$method=|QStringList|importPathList|
+$prototypeV2=QStringList importPathList() const
 
 $prototype=bool importPlugin(const QString & filePath, const QString & uri, QList<QQmlError> * errors)
 %% TODO: implementar
 %% $method=|bool|importPlugin|const QString &,const QString &,QList<QQmlError> *
 
-$prototype=QQmlIncubationController * incubationController() const
-$method=|QQmlIncubationController *|incubationController|
+$prototypeV2=QQmlIncubationController * incubationController() const
 
-$prototype=QNetworkAccessManager * networkAccessManager() const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
-$method=|QQmlNetworkAccessManagerFactory *|networkAccessManagerFactory|
+$prototypeV2=QQmlNetworkAccessManagerFactory * networkAccessManagerFactory() const
 
-$prototype=QString offlineStoragePath() const
-$method=|QString|offlineStoragePath|
+$prototypeV2=QString offlineStoragePath() const
 
-$prototype=bool outputWarningsToStandardError() const
-$method=|bool|outputWarningsToStandardError|
+$prototypeV2=bool outputWarningsToStandardError() const
 
-$prototype=QStringList pluginPathList() const
-$method=|QStringList|pluginPathList|
+$prototypeV2=QStringList pluginPathList() const
 
 $prototype=void removeImageProvider(const QString & providerId)
 $method=|void|removeImageProvider|const QString &
 
-$prototype=QQmlContext * rootContext() const
-$method=|QQmlContext *|rootContext|
+$prototypeV2=QQmlContext * rootContext() const
 
 $prototype=void setBaseUrl(const QUrl & url)
 $method=|void|setBaseUrl|const QUrl &
@@ -109,8 +99,7 @@ $method=|void|setOutputWarningsToStandardError|bool
 $prototype=void setPluginPathList(const QStringList & paths)
 $method=|void|setPluginPathList|const QStringList &
 
-$prototype=void trimComponentCache()
-$method=|void|trimComponentCache|
+$prototypeV2=void trimComponentCache()
 
 $prototype=static QQmlContext * contextForObject(const QObject * object)
 $staticMethod=|QQmlContext *|contextForObject|const QObject *

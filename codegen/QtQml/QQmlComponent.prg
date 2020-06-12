@@ -85,8 +85,7 @@ $deleteMethod
 $prototype=virtual QObject * beginCreate(QQmlContext * publicContext)
 $virtualMethod=|QObject *|beginCreate|QQmlContext *
 
-$prototype=virtual void completeCreate()
-$virtualMethod=|void|completeCreate|
+$prototypeV2=virtual void completeCreate()
 
 $prototype=virtual QObject * create(QQmlContext * context = nullptr)
 $internalVirtualMethod=|QObject *|create,create1|QQmlContext *=nullptr
@@ -116,29 +115,21 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 }
 $addMethod=create
 
-$prototype=QQmlContext * creationContext() const
-$method=|QQmlContext *|creationContext|
+$prototypeV2=QQmlContext * creationContext() const
 
-$prototype=bool isError() const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isLoading() const
-$method=|bool|isLoading|
+$prototypeV2=bool isLoading() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isReady() const
-$method=|bool|isReady|
+$prototypeV2=bool isReady() const
 
-$prototype=qreal progress() const
-$method=|qreal|progress|
+$prototypeV2=qreal progress() const
 
-$prototype=Status status() const
-$method=|QQmlComponent::Status|status|
+$prototypeV2=QQmlComponent::Status status() const
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
 $prototype=void loadUrl(const QUrl & url)
 $internalMethod=|void|loadUrl,loadUrl1|const QUrl &

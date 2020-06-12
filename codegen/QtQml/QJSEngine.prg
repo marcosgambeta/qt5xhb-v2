@@ -54,20 +54,17 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
 
 $deleteMethod
 
-$prototype=void collectGarbage()
-$method=|void|collectGarbage|
+$prototypeV2=void collectGarbage()
 
 $prototype=QJSValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
 $method=|QJSValue|evaluate|const QString &,const QString &=QString(),int=1
 
-$prototype=QJSValue globalObject() const
-$method=|QJSValue|globalObject|
+$prototypeV2=QJSValue globalObject() const
 
 $prototype=QJSValue newArray(uint length = 0)
 $method=|QJSValue|newArray|uint=0
 
-$prototype=QJSValue newObject()
-$method=|QJSValue|newObject|
+$prototypeV2=QJSValue newObject()
 
 $prototype=QJSValue newQObject(QObject * object)
 $method=|QJSValue|newQObject|QObject *

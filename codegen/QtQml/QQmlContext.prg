@@ -56,26 +56,21 @@ HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 
 $deleteMethod
 
-$prototype=QUrl baseUrl() const
-$method=|QUrl|baseUrl|
+$prototypeV2=QUrl baseUrl() const
 
-$prototype=QObject * contextObject() const
-$method=|QObject *|contextObject|
+$prototypeV2=QObject * contextObject() const
 
 $prototype=QVariant contextProperty(const QString & name) const
 $method=|QVariant|contextProperty|const QString &
 
-$prototype=QQmlEngine * engine() const
-$method=|QQmlEngine *|engine|
+$prototypeV2=QQmlEngine * engine() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QString nameForObject(QObject * object) const
 $method=|QString|nameForObject|QObject *
 
-$prototype=QQmlContext * parentContext() const
-$method=|QQmlContext *|parentContext|
+$prototypeV2=QQmlContext * parentContext() const
 
 $prototype=QUrl resolvedUrl(const QUrl & src)
 $method=|QUrl|resolvedUrl|const QUrl &

@@ -30,32 +30,23 @@ $constructor=|new|QQmlIncubator::IncubationMode=QQmlIncubator::Asynchronous
 
 $deleteMethod
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void forceCompletion()
-$method=|void|forceCompletion|
+$prototypeV2=void forceCompletion()
 
-$prototype=IncubationMode incubationMode() const
-$method=|QQmlIncubator::IncubationMode|incubationMode|
+$prototypeV2=QQmlIncubator::IncubationMode incubationMode() const
 
-$prototype=bool isError() const
-$method=|bool|isError|
+$prototypeV2=bool isError() const
 
-$prototype=bool isLoading() const
-$method=|bool|isLoading|
+$prototypeV2=bool isLoading() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isReady() const
-$method=|bool|isReady|
+$prototypeV2=bool isReady() const
 
-$prototype=QObject * object() const
-$method=|QObject *|object|
+$prototypeV2=QObject * object() const
 
-$prototype=Status status() const
-$method=|QQmlIncubator::Status|status|
+$prototypeV2=QQmlIncubator::Status status() const
 
 $extraMethods
 
