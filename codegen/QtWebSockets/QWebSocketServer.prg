@@ -40,59 +40,44 @@ $deleteMethod
 $prototype=bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 $method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
 
-$prototype=void close()
-$method=|void|close|
+$prototypeV2=void close()
 
-$prototype=bool isListening() const
-$method=|bool|isListening|
+$prototypeV2=bool isListening() const
 
-$prototype=int maxPendingConnections() const
-$method=|int|maxPendingConnections|
+$prototypeV2=int maxPendingConnections() const
 
 $prototype=void setMaxPendingConnections(int numConnections)
 $method=|void|setMaxPendingConnections|int
 
-$prototype=quint16 serverPort() const
-$method=|quint16|serverPort|
+$prototypeV2=quint16 serverPort() const
 
-$prototype=QHostAddress serverAddress() const
-$method=|QHostAddress|serverAddress|
+$prototypeV2=QHostAddress serverAddress() const
 
-$prototype=SslMode secureMode() const
-$method=|QWebSocketServer::SslMode|secureMode|
+$prototypeV2=QWebSocketServer::SslMode secureMode() const
 
-$prototype=int socketDescriptor() const
-$method=|int|socketDescriptor|
+$prototypeV2=int socketDescriptor() const
 
 $prototype=bool setSocketDescriptor(int socketDescriptor)
 $method=|bool|setSocketDescriptor|int
 
-$prototype=bool hasPendingConnections() const
-$method=|bool|hasPendingConnections|
+$prototypeV2=bool hasPendingConnections() const
 
-$prototype=virtual QWebSocket *nextPendingConnection()
-$virtualMethod=|QWebSocket *|nextPendingConnection|
+$prototypeV2=virtual QWebSocket * nextPendingConnection()
 
-$prototype=QWebSocketProtocol::CloseCode error() const
-$method=|QWebSocketProtocol::CloseCode|error|
+$prototypeV2=QWebSocketProtocol::CloseCode error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=void pauseAccepting()
-$method=|void|pauseAccepting|
+$prototypeV2=void pauseAccepting()
 
-$prototype=void resumeAccepting()
-$method=|void|resumeAccepting|
+$prototypeV2=void resumeAccepting()
 
-$prototype=QString serverName() const
-$method=|QString|serverName|
+$prototypeV2=QString serverName() const
 
 $prototype=void setServerName(const QString &serverName)
 $method=|void|setServerName|const QString &
 
-$prototype=QNetworkProxy proxy() const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
 $prototype=void setProxy(const QNetworkProxy &networkProxy)
 $method=|void|setProxy|const QNetworkProxy &
@@ -100,8 +85,7 @@ $method=|void|setProxy|const QNetworkProxy &
 $prototype=void setSslConfiguration(const QSslConfiguration &sslConfiguration)
 $method=|void|setSslConfiguration|const QSslConfiguration &
 
-$prototype=QSslConfiguration sslConfiguration() const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototype=QList<QWebSocketProtocol::Version> supportedVersions() const
 $method=|QList<QWebSocketProtocol::Version>|supportedVersions|

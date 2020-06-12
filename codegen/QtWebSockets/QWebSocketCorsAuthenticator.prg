@@ -61,11 +61,9 @@ $deleteMethod
 $prototype=void swap(QWebSocketCorsAuthenticator &other)
 $method=|void|swap|QWebSocketCorsAuthenticator &
 
-$prototype=QString origin() const
-$method=|QString|origin|
+$prototypeV2=QString origin() const
 
-$prototype=bool allowed() const
-$method=|bool|allowed|
+$prototypeV2=bool allowed() const
 
 $prototype=void setAllowed(bool allowed)
 $method=|void|setAllowed|bool

@@ -28,10 +28,8 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool seed() = 0
-$virtualMethod=|bool|seed|
+$prototypeV2=virtual bool seed() = 0
 
-$prototype=virtual quint32 nextMask() = 0
-$virtualMethod=|quint32|nextMask|
+$prototypeV2=virtual quint32 nextMask() = 0
 
 #pragma ENDDUMP

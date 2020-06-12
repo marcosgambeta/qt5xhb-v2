@@ -36,41 +36,29 @@ $constructor=|new|const QString &=QString(),QWebSocketProtocol::Version=QWebSock
 
 $deleteMethod
 
-$prototype=void abort()
-$method=|void|abort|
+$prototypeV2=void abort()
 
-$prototype=QAbstractSocket::SocketError error() const
-$method=|QAbstractSocket::SocketError|error|
+$prototypeV2=QAbstractSocket::SocketError error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=bool flush()
-$method=|bool|flush|
+$prototypeV2=bool flush()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QHostAddress localAddress() const
-$method=|QHostAddress|localAddress|
+$prototypeV2=QHostAddress localAddress() const
 
-$prototype=quint16 localPort() const
-$method=|quint16|localPort|
+$prototypeV2=quint16 localPort() const
 
-$prototype=QAbstractSocket::PauseModes pauseMode() const
-$method=|QAbstractSocket::PauseModes|pauseMode|
+$prototypeV2=QAbstractSocket::PauseModes pauseMode() const
 
-$prototype=QHostAddress peerAddress() const
-$method=|QHostAddress|peerAddress|
+$prototypeV2=QHostAddress peerAddress() const
 
-$prototype=QString peerName() const
-$method=|QString|peerName|
+$prototypeV2=QString peerName() const
 
-$prototype=quint16 peerPort() const
-$method=|quint16|peerPort|
+$prototypeV2=quint16 peerPort() const
 
-$prototype=QNetworkProxy proxy() const
-$method=|QNetworkProxy|proxy|
+$prototypeV2=QNetworkProxy proxy() const
 
 $prototype=void setProxy(const QNetworkProxy &networkProxy)
 $method=|void|setProxy|const QNetworkProxy &
@@ -81,38 +69,29 @@ $method=|const QMaskGenerator *|maskGenerator|
 $prototype=void setMaskGenerator(const QMaskGenerator *maskGenerator)
 $method=|void|setMaskGenerator|const QMaskGenerator *
 
-$prototype=qint64 readBufferSize() const
-$method=|qint64|readBufferSize|
+$prototypeV2=qint64 readBufferSize() const
 
 $prototype=void setReadBufferSize(qint64 size)
 $method=|void|setReadBufferSize|qint64
 
-$prototype=void resume()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setPauseMode(QAbstractSocket::PauseModes pauseMode)
 $method=|void|setPauseMode|QAbstractSocket::PauseModes
 
-$prototype=QAbstractSocket::SocketState state() const
-$method=|QAbstractSocket::SocketState|state|
+$prototypeV2=QAbstractSocket::SocketState state() const
 
-$prototype=QWebSocketProtocol::Version version() const
-$method=|QWebSocketProtocol::Version|version|
+$prototypeV2=QWebSocketProtocol::Version version() const
 
-$prototype=QString resourceName() const
-$method=|QString|resourceName|
+$prototypeV2=QString resourceName() const
 
-$prototype=QUrl requestUrl() const
-$method=|QUrl|requestUrl|
+$prototypeV2=QUrl requestUrl() const
 
-$prototype=QString origin() const
-$method=|QString|origin|
+$prototypeV2=QString origin() const
 
-$prototype=QWebSocketProtocol::CloseCode closeCode() const
-$method=|QWebSocketProtocol::CloseCode|closeCode|
+$prototypeV2=QWebSocketProtocol::CloseCode closeCode() const
 
-$prototype=QString closeReason() const
-$method=|QString|closeReason|
+$prototypeV2=QString closeReason() const
 
 $prototype=qint64 sendTextMessage(const QString &message)
 $method=|qint64|sendTextMessage|const QString &
@@ -148,8 +127,7 @@ HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
 }
 $addMethod=ignoreSslErrors
 
-$prototype=QSslConfiguration sslConfiguration() const
-$method=|QSslConfiguration|sslConfiguration|
+$prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototype=void setSslConfiguration(const QSslConfiguration &sslConfiguration)
 $method=|void|setSslConfiguration|const QSslConfiguration &
