@@ -35,35 +35,27 @@ $deleteMethod
 $prototype=virtual void setUpdateInterval(int msec)
 $virtualMethod=|void|setUpdateInterval|int
 
-$prototype=int updateInterval() const
-$method=|int|updateInterval|
+$prototypeV2=int updateInterval() const
 
 $prototype=virtual void setPreferredPositioningMethods(PositioningMethods methods)
 $virtualMethod=|void|setPreferredPositioningMethods|QGeoPositionInfoSource::PositioningMethods
 
-$prototype=PositioningMethods preferredPositioningMethods() const
-$method=|QGeoPositionInfoSource::PositioningMethods|preferredPositioningMethods|
+$prototypeV2=QGeoPositionInfoSource::PositioningMethods preferredPositioningMethods() const
 
 $prototype=virtual QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const = 0
 $virtualMethod=|QGeoPositionInfo|lastKnownPosition|bool=false
 
-$prototype=virtual PositioningMethods supportedPositioningMethods() const = 0
-$virtualMethod=|QGeoPositionInfoSource::PositioningMethods|supportedPositioningMethods|
+$prototypeV2=virtual QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const = 0
 
-$prototype=virtual int minimumUpdateInterval() const = 0
-$virtualMethod=|int|minimumUpdateInterval|
+$prototypeV2=virtual int minimumUpdateInterval() const = 0
 
-$prototype=QString sourceName() const
-$method=|QString|sourceName|
+$prototypeV2=QString sourceName() const
 
-$prototype=virtual Error error() const = 0
-$virtualMethod=|QGeoPositionInfoSource::Error|error|
+$prototypeV2=virtual QGeoPositionInfoSource::Error error() const = 0
 
-$prototype=virtual void startUpdates() = 0
-$virtualMethod=|void|startUpdates|
+$prototypeV2=virtual void startUpdates() = 0
 
-$prototype=virtual void stopUpdates() = 0
-$virtualMethod=|void|stopUpdates|
+$prototypeV2=virtual void stopUpdates() = 0
 
 $prototype=virtual void requestUpdate(int timeout = 0) = 0
 $virtualMethod=|void|requestUpdate|int=0
@@ -74,8 +66,7 @@ $staticMethod=|QGeoPositionInfoSource *|createDefaultSource|QObject *
 $prototype=static QGeoPositionInfoSource *createSource(const QString &sourceName, QObject *parent)
 $staticMethod=|QGeoPositionInfoSource *|createSource|const QString &,QObject *
 
-$prototype=static QStringList availableSources()
-$staticMethod=|QStringList|availableSources|
+$prototypeV2=static QStringList availableSources()
 
 %%
 %% SIGNALS

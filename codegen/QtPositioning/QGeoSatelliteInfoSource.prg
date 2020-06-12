@@ -32,26 +32,20 @@ $includes
 
 $deleteMethod
 
-$prototype=QString sourceName() const
-$method=|QString|sourceName|
+$prototypeV2=QString sourceName() const
 
 $prototype=virtual void setUpdateInterval(int msec)
 $virtualMethod=|void|setUpdateInterval|int
 
-$prototype=int updateInterval() const
-$method=|int|updateInterval|
+$prototypeV2=int updateInterval() const
 
-$prototype=virtual int minimumUpdateInterval() const = 0
-$virtualMethod=|int|minimumUpdateInterval|
+$prototypeV2=virtual int minimumUpdateInterval() const = 0
 
-$prototype=virtual Error error() const = 0
-$virtualMethod=|QGeoSatelliteInfoSource::Error|error|
+$prototypeV2=virtual QGeoSatelliteInfoSource::Error error() const = 0
 
-$prototype=virtual void startUpdates() = 0
-$virtualMethod=|void|startUpdates|
+$prototypeV2=virtual void startUpdates() = 0
 
-$prototype=virtual void stopUpdates() = 0
-$virtualMethod=|void|stopUpdates|
+$prototypeV2=virtual void stopUpdates() = 0
 
 $prototype=virtual void requestUpdate(int timeout = 0) = 0
 $virtualMethod=|void|requestUpdate|int=0
@@ -62,8 +56,7 @@ $staticMethod=|QGeoSatelliteInfoSource *|createDefaultSource|QObject *
 $prototype=static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject *parent)
 $staticMethod=|QGeoSatelliteInfoSource *|createSource|const QString &,QObject *
 
-$prototype=static QStringList availableSources()
-$staticMethod=|QStringList|availableSources|
+$prototypeV2=static QStringList availableSources()
 
 %%
 %% SIGNALS

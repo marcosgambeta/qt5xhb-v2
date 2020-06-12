@@ -57,68 +57,56 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
 
 $deleteMethod
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText(const QString &text)
 $method=|void|setText|const QString &
 
-$prototype=QString country() const
-$method=|QString|country|
+$prototypeV2=QString country() const
 
 $prototype=void setCountry(const QString &country)
 $method=|void|setCountry|const QString &
 
-$prototype=QString countryCode() const
-$method=|QString|countryCode|
+$prototypeV2=QString countryCode() const
 
 $prototype=void setCountryCode(const QString &countryCode)
 $method=|void|setCountryCode|const QString &
 
-$prototype=QString state() const
-$method=|QString|state|
+$prototypeV2=QString state() const
 
 $prototype=void setState(const QString &state)
 $method=|void|setState|const QString &
 
-$prototype=QString county() const
-$method=|QString|county|
+$prototypeV2=QString county() const
 
 $prototype=void setCounty(const QString &county)
 $method=|void|setCounty|const QString &
 
-$prototype=QString city() const
-$method=|QString|city|
+$prototypeV2=QString city() const
 
 $prototype=void setCity(const QString &city)
 $method=|void|setCity|const QString &
 
-$prototype=QString district() const
-$method=|QString|district|
+$prototypeV2=QString district() const
 
 $prototype=void setDistrict(const QString &district)
 $method=|void|setDistrict|const QString &
 
-$prototype=QString postalCode() const
-$method=|QString|postalCode|
+$prototypeV2=QString postalCode() const
 
 $prototype=void setPostalCode(const QString &postalCode)
 $method=|void|setPostalCode|const QString &
 
-$prototype=QString street() const
-$method=|QString|street|
+$prototypeV2=QString street() const
 
 $prototype=void setStreet(const QString &street)
 $method=|void|setStreet|const QString &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=bool isTextGenerated() const
-$method=|bool|isTextGenerated|
+$prototypeV2=bool isTextGenerated() const
 
 $extraMethods
 

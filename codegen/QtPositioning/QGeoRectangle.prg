@@ -82,44 +82,37 @@ $deleteMethod
 $prototype=void setTopLeft(const QGeoCoordinate &topLeft)
 $method=|void|setTopLeft|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate topLeft() const
-$method=|QGeoCoordinate|topLeft|
+$prototypeV2=QGeoCoordinate topLeft() const
 
 $prototype=void setTopRight(const QGeoCoordinate &topRight)
 $method=|void|setTopRight|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate topRight() const
-$method=|QGeoCoordinate|topRight|
+$prototypeV2=QGeoCoordinate topRight() const
 
 $prototype=void setBottomLeft(const QGeoCoordinate &bottomLeft)
 $method=|void|setBottomLeft|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate bottomLeft() const
-$method=|QGeoCoordinate|bottomLeft|
+$prototypeV2=QGeoCoordinate bottomLeft() const
 
 $prototype=void setBottomRight(const QGeoCoordinate &bottomRight)
 $method=|void|setBottomRight|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate bottomRight() const
-$method=|QGeoCoordinate|bottomRight|
+$prototypeV2=QGeoCoordinate bottomRight() const
 
 $prototype=void setCenter(const QGeoCoordinate &center)
 $method=|void|setCenter|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate center() const
-$method=|QGeoCoordinate|center|
+$prototypeV2=QGeoCoordinate center() const
 
 $prototype=void setWidth(double degreesWidth)
 $method=|void|setWidth|double
 
-$prototype=double width() const
-$method=|double|width|
+$prototypeV2=double width() const
 
 $prototype=void setHeight(double degreesHeight)
 $method=|void|setHeight|double
 
-$prototype=double height() const
-$method=|double|height|
+$prototypeV2=double height() const
 
 $prototype=bool contains(const QGeoCoordinate &coordinate) const
 $internalMethod=|bool|contains,contains1|const QGeoCoordinate &

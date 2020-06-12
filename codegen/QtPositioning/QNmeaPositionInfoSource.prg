@@ -33,14 +33,12 @@ $constructor=|new|QNmeaPositionInfoSource::UpdateMode,QObject *=nullptr
 
 $deleteMethod
 
-$prototype=UpdateMode updateMode() const
-$method=|QNmeaPositionInfoSource::UpdateMode|updateMode|
+$prototypeV2=QNmeaPositionInfoSource::UpdateMode updateMode() const
 
 $prototype=void setDevice(QIODevice *source)
 $method=|void|setDevice|QIODevice *
 
-$prototype=QIODevice *device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototype=void setUpdateInterval(int msec)
 $method=|void|setUpdateInterval|int
@@ -48,20 +46,15 @@ $method=|void|setUpdateInterval|int
 $prototype=QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const
 $method=|QGeoPositionInfo|lastKnownPosition|bool=false
 
-$prototype=PositioningMethods supportedPositioningMethods() const
-$method=|QGeoPositionInfoSource::PositioningMethods|supportedPositioningMethods|
+$prototypeV2=QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const
 
-$prototype=int minimumUpdateInterval() const
-$method=|int|minimumUpdateInterval|
+$prototypeV2=int minimumUpdateInterval() const
 
-$prototype=Error error() const
-$method=|QGeoPositionInfoSource::Error|error|
+$prototypeV2=QGeoPositionInfoSource::Error error() const
 
-$prototype=void startUpdates()
-$method=|void|startUpdates|
+$prototypeV2=void startUpdates()
 
-$prototype=void stopUpdates()
-$method=|void|stopUpdates|
+$prototypeV2=void stopUpdates()
 
 $prototype=void requestUpdate(int timeout = 0)
 $method=|void|requestUpdate|int=0

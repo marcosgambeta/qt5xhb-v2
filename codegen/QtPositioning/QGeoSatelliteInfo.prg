@@ -58,20 +58,17 @@ $deleteMethod
 $prototype=void setSatelliteSystem(SatelliteSystem system)
 $method=|void|setSatelliteSystem|QGeoSatelliteInfo::SatelliteSystem
 
-$prototype=SatelliteSystem satelliteSystem() const
-$method=|QGeoSatelliteInfo::SatelliteSystem|satelliteSystem|
+$prototypeV2=QGeoSatelliteInfo::SatelliteSystem satelliteSystem() const
 
 $prototype=void setSatelliteIdentifier(int satId)
 $method=|void|setSatelliteIdentifier|int
 
-$prototype=int satelliteIdentifier() const
-$method=|int|satelliteIdentifier|
+$prototypeV2=int satelliteIdentifier() const
 
 $prototype=void setSignalStrength(int signalStrength)
 $method=|void|setSignalStrength|int
 
-$prototype=int signalStrength() const
-$method=|int|signalStrength|
+$prototypeV2=int signalStrength() const
 
 $prototype=void setAttribute(Attribute attribute, qreal value)
 $method=|void|setAttribute|QGeoSatelliteInfo::Attribute,qreal

@@ -74,14 +74,12 @@ $deleteMethod
 $prototype=void setCenter(const QGeoCoordinate &center)
 $method=|void|setCenter|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate center() const
-$method=|QGeoCoordinate|center|
+$prototypeV2=QGeoCoordinate center() const
 
 $prototype=void setRadius(qreal radius)
 $method=|void|setRadius|qreal
 
-$prototype=qreal radius() const
-$method=|qreal|radius|
+$prototypeV2=qreal radius() const
 
 $prototype=void translate(double degreesLatitude, double degreesLongitude)
 $method=|void|translate|double,double

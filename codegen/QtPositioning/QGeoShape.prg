@@ -55,14 +55,11 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 
 $deleteMethod
 
-$prototype=ShapeType type() const
-$method=|QGeoShape::ShapeType|type|
+$prototypeV2=QGeoShape::ShapeType type() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=bool contains(const QGeoCoordinate &coordinate) const
 $method=|bool|contains|const QGeoCoordinate &

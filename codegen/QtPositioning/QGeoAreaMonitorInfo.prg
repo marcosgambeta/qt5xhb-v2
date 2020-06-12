@@ -57,32 +57,26 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 
 $deleteMethod
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
 $prototype=void setName(const QString &name)
 $method=|void|setName|const QString &
 
-$prototype=QString identifier() const
-$method=|QString|identifier|
+$prototypeV2=QString identifier() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QGeoShape area() const
-$method=|QGeoShape|area|
+$prototypeV2=QGeoShape area() const
 
 $prototype=void setArea(const QGeoShape &newShape)
 $method=|void|setArea|const QGeoShape &
 
-$prototype=QDateTime expiration() const
-$method=|QDateTime|expiration|
+$prototypeV2=QDateTime expiration() const
 
 $prototype=void setExpiration(const QDateTime &expiry)
 $method=|void|setExpiration|const QDateTime &
 
-$prototype=bool isPersistent() const
-$method=|bool|isPersistent|
+$prototypeV2=bool isPersistent() const
 
 $prototype=void setPersistent(bool isPersistent)
 $method=|void|setPersistent|bool

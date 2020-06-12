@@ -59,26 +59,22 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
 
 $deleteMethod
 
-$prototype=QGeoAddress address() const
-$method=|QGeoAddress|address|
+$prototypeV2=QGeoAddress address() const
 
 $prototype=void setAddress(const QGeoAddress &address)
 $method=|void|setAddress|const QGeoAddress &
 
-$prototype=QGeoCoordinate coordinate() const
-$method=|QGeoCoordinate|coordinate|
+$prototypeV2=QGeoCoordinate coordinate() const
 
 $prototype=void setCoordinate(const QGeoCoordinate &position)
 $method=|void|setCoordinate|const QGeoCoordinate &
 
-$prototype=QGeoRectangle boundingBox() const
-$method=|QGeoRectangle|boundingBox|
+$prototypeV2=QGeoRectangle boundingBox() const
 
 $prototype=void setBoundingBox(const QGeoRectangle &box)
 $method=|void|setBoundingBox|const QGeoRectangle &
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $extraMethods
 

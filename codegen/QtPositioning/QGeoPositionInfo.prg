@@ -63,20 +63,17 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=void setTimestamp(const QDateTime &timestamp)
 $method=|void|setTimestamp|const QDateTime &
 
-$prototype=QDateTime timestamp() const
-$method=|QDateTime|timestamp|
+$prototypeV2=QDateTime timestamp() const
 
 $prototype=void setCoordinate(const QGeoCoordinate &coordinate)
 $method=|void|setCoordinate|const QGeoCoordinate &
 
-$prototype=QGeoCoordinate coordinate() const
-$method=|QGeoCoordinate|coordinate|
+$prototypeV2=QGeoCoordinate coordinate() const
 
 $prototype=void setAttribute(Attribute attribute, qreal value)
 $method=|void|setAttribute|QGeoPositionInfo::Attribute,qreal

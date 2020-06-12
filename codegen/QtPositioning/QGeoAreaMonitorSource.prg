@@ -33,17 +33,13 @@ $deleteMethod
 $prototype=virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
 $virtualMethod=|void|setPositionInfoSource|QGeoPositionInfoSource *
 
-$prototype=virtual QGeoPositionInfoSource* positionInfoSource() const
-$virtualMethod=|QGeoPositionInfoSource *|positionInfoSource|
+$prototypeV2=virtual QGeoPositionInfoSource * positionInfoSource() const
 
-$prototype=QString sourceName() const
-$method=|QString|sourceName|
+$prototypeV2=QString sourceName() const
 
-$prototype=virtual Error error() const = 0
-$virtualMethod=|QGeoAreaMonitorSource::Error|error|
+$prototypeV2=virtual QGeoAreaMonitorSource::Error error() const = 0
 
-$prototype=virtual AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
-$virtualMethod=|QGeoAreaMonitorSource::AreaMonitorFeatures|supportedAreaMonitorFeatures|
+$prototypeV2=virtual QGeoAreaMonitorSource::AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
 
 $prototype=virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
 $virtualMethod=|bool|startMonitoring|const QGeoAreaMonitorInfo &
@@ -88,8 +84,7 @@ $staticMethod=|QGeoAreaMonitorSource *|createDefaultSource|QObject *
 $prototype=static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *parent)
 $staticMethod=|QGeoAreaMonitorSource *|createSource|const QString &,QObject *
 
-$prototype=static QStringList availableSources()
-$staticMethod=|QStringList|availableSources|
+$prototypeV2=static QStringList availableSources()
 
 %%
 %% SIGNALS

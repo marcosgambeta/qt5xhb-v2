@@ -71,29 +71,24 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=CoordinateType type() const
-$method=|QGeoCoordinate::CoordinateType|type|
+$prototypeV2=QGeoCoordinate::CoordinateType type() const
 
 $prototype=void setLatitude(double latitude)
 $method=|void|setLatitude|double
 
-$prototype=double latitude() const
-$method=|double|latitude|
+$prototypeV2=double latitude() const
 
 $prototype=void setLongitude(double longitude)
 $method=|void|setLongitude|double
 
-$prototype=double longitude() const
-$method=|double|longitude|
+$prototypeV2=double longitude() const
 
 $prototype=void setAltitude(double altitude)
 $method=|void|setAltitude|double
 
-$prototype=double altitude() const
-$method=|double|altitude|
+$prototypeV2=double altitude() const
 
 $prototype=qreal distanceTo(const QGeoCoordinate &other) const
 $method=|qreal|distanceTo|const QGeoCoordinate &
