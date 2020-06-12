@@ -43,8 +43,7 @@ $method=|QAction *|action|QScriptEngineDebugger::DebuggerAction
 $prototype=void attachTo(QScriptEngine * engine)
 $method=|void|attachTo|QScriptEngine *
 
-$prototype=bool autoShowStandardWindow() const
-$method=|bool|autoShowStandardWindow|
+$prototypeV2=bool autoShowStandardWindow() const
 
 $prototype=QMenu * createStandardMenu(QWidget * parent = nullptr)
 $method=|QMenu *|createStandardMenu|QWidget *=nullptr
@@ -52,17 +51,14 @@ $method=|QMenu *|createStandardMenu|QWidget *=nullptr
 $prototype=QToolBar * createStandardToolBar(QWidget * parent = nullptr)
 $method=|QToolBar *|createStandardToolBar|QWidget *=nullptr
 
-$prototype=void detach()
-$method=|void|detach|
+$prototypeV2=void detach()
 
 $prototype=void setAutoShowStandardWindow(bool autoShow)
 $method=|void|setAutoShowStandardWindow|bool
 
-$prototype=QMainWindow * standardWindow() const
-$method=|QMainWindow *|standardWindow|
+$prototypeV2=QMainWindow * standardWindow() const
 
-$prototype=DebuggerState state() const
-$method=|QScriptEngineDebugger::DebuggerState|state|
+$prototypeV2=QScriptEngineDebugger::DebuggerState state() const
 
 $prototype=QWidget * widget(DebuggerWidget widget) const
 $method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
