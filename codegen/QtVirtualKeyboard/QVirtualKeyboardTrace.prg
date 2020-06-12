@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(int traceId READ traceId WRITE setTraceId NOTIFY traceIdChanged)
 %%
 
-$prototype=int traceId() const
-$method=|int|traceId|
+$prototypeV2=int traceId() const
 
 $prototype=void setTraceId(int id)
 $method=|void|setTraceId|int
@@ -47,8 +46,7 @@ $method=|void|setTraceId|int
 %% Q_PROPERTY(QStringList channels READ channels WRITE setChannels NOTIFY channelsChanged)
 %%
 
-$prototype=QStringList channels() const
-$method=|QStringList|channels|
+$prototypeV2=QStringList channels() const
 
 $prototype=void setChannels(const QStringList &channels)
 $method=|void|setChannels|const QStringList &
@@ -57,15 +55,13 @@ $method=|void|setChannels|const QStringList &
 %% Q_PROPERTY(int length READ length NOTIFY lengthChanged)
 %%
 
-$prototype=int length() const
-$method=|int|length|
+$prototypeV2=int length() const
 
 %%
 %% Q_PROPERTY(bool final READ isFinal WRITE setFinal NOTIFY finalChanged)
 %%
 
-$prototype=bool isFinal() const
-$method=|bool|isFinal|
+$prototypeV2=bool isFinal() const
 
 $prototype=void setFinal(bool final)
 $method=|void|setFinal|bool
@@ -74,8 +70,7 @@ $method=|void|setFinal|bool
 %% Q_PROPERTY(bool canceled READ isCanceled WRITE setCanceled NOTIFY canceledChanged)
 %%
 
-$prototype=bool isCanceled() const
-$method=|bool|isCanceled|
+$prototypeV2=bool isCanceled() const
 
 $prototype=void setCanceled(bool canceled)
 $method=|void|setCanceled|bool
@@ -84,8 +79,7 @@ $method=|void|setCanceled|bool
 %% Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity NOTIFY opacityChanged)
 %%
 
-$prototype=qreal opacity() const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=void setOpacity(qreal opacity)
 $method=|void|setOpacity|qreal

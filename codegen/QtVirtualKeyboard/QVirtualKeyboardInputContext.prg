@@ -42,8 +42,7 @@ $deleteMethod
 %% Q_PROPERTY(bool shiftActive READ isShiftActive NOTIFY shiftActiveChanged REVISION 4)
 %%
 
-$prototype=bool isShiftActive() const
-$method=|bool|isShiftActive|
+$prototypeV2=bool isShiftActive() const
 
 %%
 %% Q_PROPERTY(bool capsLock READ isCapsLockActive NOTIFY capsLockActiveChanged)
@@ -52,43 +51,37 @@ $method=|bool|isShiftActive|
 %% Q_PROPERTY(bool capsLockActive READ isCapsLockActive NOTIFY capsLockActiveChanged REVISION 4)
 %%
 
-$prototype=bool isCapsLockActive() const
-$method=|bool|isCapsLockActive|
+$prototypeV2=bool isCapsLockActive() const
 
 %%
 %% Q_PROPERTY(bool uppercase READ isUppercase NOTIFY uppercaseChanged)
 %%
 
-$prototype=bool isUppercase() const
-$method=|bool|isUppercase|
+$prototypeV2=bool isUppercase() const
 
 %%
 %% Q_PROPERTY(int anchorPosition READ anchorPosition NOTIFY anchorPositionChanged)
 %%
 
-$prototype=int anchorPosition() const
-$method=|int|anchorPosition|
+$prototypeV2=int anchorPosition() const
 
 %%
 %% Q_PROPERTY(int cursorPosition READ cursorPosition NOTIFY cursorPositionChanged)
 %%
 
-$prototype=int cursorPosition() const
-$method=|int|cursorPosition|
+$prototypeV2=int cursorPosition() const
 
 %%
 %% Q_PROPERTY(Qt::InputMethodHints inputMethodHints READ inputMethodHints NOTIFY inputMethodHintsChanged)
 %%
 
-$prototype=Qt::InputMethodHints inputMethodHints() const
-$method=|Qt::InputMethodHints|inputMethodHints|
+$prototypeV2=Qt::InputMethodHints inputMethodHints() const
 
 %%
 %% Q_PROPERTY(QString preeditText READ preeditText WRITE setPreeditText NOTIFY preeditTextChanged)
 %%
 
-$prototype=QString preeditText() const
-$method=|QString|preeditText|
+$prototypeV2=QString preeditText() const
 
 $prototype=void setPreeditText(const QString &text, QList<QInputMethodEvent::Attribute> attributes = QList<QInputMethodEvent::Attribute>(), int replaceFrom = 0, int replaceLength = 0)
 %% TODO: $method=|void|setPreeditText|const QString &,QList<QInputMethodEvent::Attribute>=QList<QInputMethodEvent::Attribute>,int=0,int=0
@@ -97,36 +90,31 @@ $prototype=void setPreeditText(const QString &text, QList<QInputMethodEvent::Att
 %% Q_PROPERTY(QString surroundingText READ surroundingText NOTIFY surroundingTextChanged)
 %%
 
-$prototype=QString surroundingText() const
-$method=|QString|surroundingText|
+$prototypeV2=QString surroundingText() const
 
 %%
 %% Q_PROPERTY(QString selectedText READ selectedText NOTIFY selectedTextChanged)
 %%
 
-$prototype=QString selectedText() const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 %%
 %% Q_PROPERTY(QRectF anchorRectangle READ anchorRectangle NOTIFY anchorRectangleChanged)
 %%
 
-$prototype=QRectF anchorRectangle() const
-$method=|QRectF|anchorRectangle|
+$prototypeV2=QRectF anchorRectangle() const
 
 %%
 %% Q_PROPERTY(QRectF cursorRectangle READ cursorRectangle NOTIFY cursorRectangleChanged)
 %%
 
-$prototype=QRectF cursorRectangle() const
-$method=|QRectF|cursorRectangle|
+$prototypeV2=QRectF cursorRectangle() const
 
 %%
 %% Q_PROPERTY(bool animating READ isAnimating WRITE setAnimating NOTIFY animatingChanged)
 %%
 
-$prototype=bool isAnimating() const
-$method=|bool|isAnimating|
+$prototypeV2=bool isAnimating() const
 
 $prototype=void setAnimating(bool isAnimating)
 $method=|void|setAnimating|bool
@@ -135,36 +123,31 @@ $method=|void|setAnimating|bool
 %% Q_PROPERTY(QString locale READ locale NOTIFY localeChanged)
 %%
 
-$prototype=QString locale() const
-$method=|QString|locale|
+$prototypeV2=QString locale() const
 
 %%
 %% Q_PROPERTY(QVirtualKeyboardInputEngine *inputEngine READ inputEngine CONSTANT)
 %%
 
-$prototype=QVirtualKeyboardInputEngine *inputEngine() const
-$method=|QVirtualKeyboardInputEngine *|inputEngine|
+$prototypeV2=QVirtualKeyboardInputEngine * inputEngine() const
 
 %%
 %% Q_PROPERTY(bool selectionControlVisible READ isSelectionControlVisible NOTIFY selectionControlVisibleChanged)
 %%
 
-$prototype=bool isSelectionControlVisible() const
-$method=|bool|isSelectionControlVisible|
+$prototypeV2=bool isSelectionControlVisible() const
 
 %%
 %% Q_PROPERTY(bool anchorRectIntersectsClipRect READ anchorRectIntersectsClipRect NOTIFY anchorRectIntersectsClipRectChanged)
 %%
 
-$prototype=bool anchorRectIntersectsClipRect() const
-$method=|bool|anchorRectIntersectsClipRect|
+$prototypeV2=bool anchorRectIntersectsClipRect() const
 
 %%
 %% Q_PROPERTY(bool cursorRectIntersectsClipRect READ cursorRectIntersectsClipRect NOTIFY cursorRectIntersectsClipRectChanged)
 %%
 
-$prototype=bool cursorRectIntersectsClipRect() const
-$method=|bool|cursorRectIntersectsClipRect|
+$prototypeV2=bool cursorRectIntersectsClipRect() const
 
 %%
 %% Q_PROPERTY(QVirtualKeyboardInputContextPrivate *priv READ priv CONSTANT)
@@ -211,8 +194,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 }
 $addMethod=commit
 
-$prototype=Q_INVOKABLE void clear()
-$method=|void|clear|
+$prototypeV2=Q_INVOKABLE void clear()
 
 $prototype=Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 $method=|void|setSelectionOnFocusObject|const QPointF &,const QPointF &

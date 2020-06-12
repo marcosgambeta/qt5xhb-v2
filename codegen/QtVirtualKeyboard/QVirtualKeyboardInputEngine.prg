@@ -41,22 +41,19 @@ $deleteMethod
 %% Q_PROPERTY(Qt::Key activeKey READ activeKey NOTIFY activeKeyChanged)
 %%
 
-$prototype=Qt::Key activeKey() const
-$method=|Qt::Key|activeKey|
+$prototypeV2=Qt::Key activeKey() const
 
 %%
 %% Q_PROPERTY(Qt::Key previousKey READ previousKey NOTIFY previousKeyChanged)
 %%
 
-$prototype=Qt::Key previousKey() const
-$method=|Qt::Key|previousKey|
+$prototypeV2=Qt::Key previousKey() const
 
 %%
 %% Q_PROPERTY(QVirtualKeyboardAbstractInputMethod *inputMethod READ inputMethod WRITE setInputMethod NOTIFY inputMethodChanged)
 %%
 
-$prototype=QVirtualKeyboardAbstractInputMethod *inputMethod() const
-$method=|QVirtualKeyboardAbstractInputMethod *|inputMethod|
+$prototypeV2=QVirtualKeyboardAbstractInputMethod * inputMethod() const
 
 $prototype=void setInputMethod(QVirtualKeyboardAbstractInputMethod *inputMethod)
 $method=|void|setInputMethod|QVirtualKeyboardAbstractInputMethod *
@@ -90,15 +87,13 @@ $method=|QList<int>|patternRecognitionModes|
 %% Q_PROPERTY(QVirtualKeyboardSelectionListModel *wordCandidateListModel READ wordCandidateListModel NOTIFY wordCandidateListModelChanged)
 %%
 
-$prototype=QVirtualKeyboardSelectionListModel *wordCandidateListModel() const
-$method=|QVirtualKeyboardSelectionListModel *|wordCandidateListModel|
+$prototypeV2=QVirtualKeyboardSelectionListModel * wordCandidateListModel() const
 
 %%
 %% Q_PROPERTY(bool wordCandidateListVisibleHint READ wordCandidateListVisibleHint NOTIFY wordCandidateListVisibleHintChanged)
 %%
 
-$prototype=bool wordCandidateListVisibleHint() const
-$method=|bool|wordCandidateListVisibleHint|
+$prototypeV2=bool wordCandidateListVisibleHint() const
 
 %%
 %%
@@ -110,8 +105,7 @@ $prototype=void init() [private]
 $prototype=Q_INVOKABLE bool virtualKeyPress(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool repeat)
 $method=|bool|virtualKeyPress|Qt::Key,const QString &,Qt::KeyboardModifiers,bool
 
-$prototype=Q_INVOKABLE void virtualKeyCancel()
-$method=|void|virtualKeyCancel|
+$prototypeV2=Q_INVOKABLE void virtualKeyCancel()
 
 $prototype=Q_INVOKABLE bool virtualKeyRelease(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
 $method=|bool|virtualKeyRelease|Qt::Key,const QString &,Qt::KeyboardModifiers
@@ -119,8 +113,7 @@ $method=|bool|virtualKeyRelease|Qt::Key,const QString &,Qt::KeyboardModifiers
 $prototype=Q_INVOKABLE bool virtualKeyClick(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
 $method=|bool|virtualKeyClick|Qt::Key,const QString &,Qt::KeyboardModifiers
 
-$prototype=QVirtualKeyboardInputContext *inputContext() const
-$method=|QVirtualKeyboardInputContext *|inputContext|
+$prototypeV2=QVirtualKeyboardInputContext * inputContext() const
 
 $prototype=Q_INVOKABLE QVirtualKeyboardTrace *traceBegin(int traceId, PatternRecognitionMode patternRecognitionMode, const QVariantMap &traceCaptureDeviceInfo, const QVariantMap &traceScreenInfo)
 %% TODO: $method=|QVirtualKeyboardTrace *|traceBegin|int,QVirtualKeyboardInputEngine::PatternRecognitionMode,const QVariantMap &,const QVariantMap &

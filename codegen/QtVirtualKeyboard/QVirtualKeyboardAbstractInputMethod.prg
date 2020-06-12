@@ -35,11 +35,9 @@ $prototype=explicit QVirtualKeyboardAbstractInputMethod(QObject *parent = nullpt
 $prototype=~QVirtualKeyboardAbstractInputMethod()
 $deleteMethod
 
-$prototype=QVirtualKeyboardInputContext *inputContext() const
-$method=|QVirtualKeyboardInputContext *|inputContext|
+$prototypeV2=QVirtualKeyboardInputContext * inputContext() const
 
-$prototype=QVirtualKeyboardInputEngine *inputEngine() const
-$method=|QVirtualKeyboardInputEngine *|inputEngine|
+$prototypeV2=QVirtualKeyboardInputEngine * inputEngine() const
 
 $prototype=virtual QList<QVirtualKeyboardInputEngine::InputMode> inputModes(const QString &locale) = 0
 $virtualMethod=|QList<QVirtualKeyboardInputEngine::InputMode>|inputModes|const QString &
@@ -83,11 +81,9 @@ $prototype=virtual bool reselect(int cursorPosition, const QVirtualKeyboardInput
 $prototype=virtual bool clickPreeditText(int cursorPosition)
 $virtualMethod=|bool|clickPreeditText|int
 
-$prototype=virtual void reset() [slot]
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset() [slot]
 
-$prototype=virtual void update() [slot]
-$virtualMethod=|void|update|
+$prototypeV2=virtual void update() [slot]
 
 $prototype=void setInputEngine(QVirtualKeyboardInputEngine *inputEngine) [private]
 

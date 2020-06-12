@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
 %%
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 %%
 %%
@@ -49,8 +48,7 @@ $method=|int|count|
 $prototype=void setDataSource(QVirtualKeyboardAbstractInputMethod *dataSource, Type type)
 $method=|void|setDataSource|QVirtualKeyboardAbstractInputMethod *,QVirtualKeyboardSelectionListModel::Type
 
-$prototype=QVirtualKeyboardAbstractInputMethod *dataSource() const
-$method=|QVirtualKeyboardAbstractInputMethod *|dataSource|
+$prototypeV2=QVirtualKeyboardAbstractInputMethod * dataSource() const
 
 $prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const
 $method=|int|rowCount|const QModelIndex &=QModelIndex()
