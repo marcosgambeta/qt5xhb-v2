@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
 
 $deleteMethod
 
-$prototype=QSvgRenderer * renderer () const
-$method=|QSvgRenderer *|renderer|
+$prototypeV2=QSvgRenderer * renderer() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void load ( const QString & file )
 $internalMethod=|void|load,load1|const QString &

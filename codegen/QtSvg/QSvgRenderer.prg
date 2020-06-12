@@ -72,23 +72,19 @@ HB_FUNC_STATIC( QSVGRENDERER_NEW )
 
 $deleteMethod
 
-$prototype=bool animated () const
-$method=|bool|animated|
+$prototypeV2=bool animated() const
 
 $prototype=QRectF boundsOnElement ( const QString & id ) const
 $method=|QRectF|boundsOnElement|const QString &
 
-$prototype=QSize defaultSize () const
-$method=|QSize|defaultSize|
+$prototypeV2=QSize defaultSize() const
 
 $prototype=bool elementExists ( const QString & id ) const
 $method=|bool|elementExists|const QString &
 
-$prototype=int framesPerSecond () const
-$method=|int|framesPerSecond|
+$prototypeV2=int framesPerSecond() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
 $prototype=QMatrix matrixForElement ( const QString & id ) const
 $method=|QMatrix|matrixForElement|const QString &
@@ -124,11 +120,9 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 }
 $addMethod=setViewBox
 
-$prototype=QRect viewBox () const
-$method=|QRect|viewBox|
+$prototypeV2=QRect viewBox() const
 
-$prototype=QRectF viewBoxF () const
-$method=|QRectF|viewBoxF|
+$prototypeV2=QRectF viewBoxF() const
 
 $prototype=bool load ( const QString & filename )
 $internalMethod=|bool|load,load1|const QString &

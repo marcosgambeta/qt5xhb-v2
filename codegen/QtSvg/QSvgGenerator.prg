@@ -30,17 +30,13 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QString description () const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=QString fileName () const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=QIODevice * outputDevice () const
-$method=|QIODevice *|outputDevice|
+$prototypeV2=QIODevice * outputDevice() const
 
-$prototype=int resolution () const
-$method=|int|resolution|
+$prototypeV2=int resolution() const
 
 $prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
@@ -88,16 +84,12 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 }
 $addMethod=setViewBox
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=QRect viewBox () const
-$method=|QRect|viewBox|
+$prototypeV2=QRect viewBox() const
 
-$prototype=QRectF viewBoxF () const
-$method=|QRectF|viewBoxF|
+$prototypeV2=QRectF viewBoxF() const
 
 #pragma ENDDUMP
