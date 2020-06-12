@@ -30,11 +30,9 @@ $constructor=|new|QQmlImageProviderBase::ImageType,QQmlImageProviderBase::Flags=
 
 $deleteMethod
 
-$prototype=virtual Flags flags() const = 0
-$virtualMethod=|QQmlImageProviderBase::Flags|flags|
+$prototypeV2=virtual QQmlImageProviderBase::Flags flags() const = 0
 
-$prototype=virtual ImageType imageType() const = 0
-$virtualMethod=|QQmlImageProviderBase::ImageType|imageType|
+$prototypeV2=virtual QQmlImageProviderBase::ImageType imageType() const = 0
 
 $prototype=virtual QImage requestImage(const QString & id, QSize * size, const QSize & requestedSize)
 $virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &

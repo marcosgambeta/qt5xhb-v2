@@ -25,7 +25,6 @@ $destructor
 
 $includes
 
-$prototype=virtual bool updateTexture() = 0
-$virtualMethod=|bool|updateTexture|
+$prototypeV2=virtual bool updateTexture() = 0
 
 #pragma ENDDUMP

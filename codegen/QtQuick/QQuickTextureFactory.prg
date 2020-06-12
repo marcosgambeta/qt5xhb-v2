@@ -32,13 +32,10 @@ $deleteMethod
 $prototype=virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
 $virtualMethod=|QSGTexture *|createTexture|QQuickWindow *
 
-$prototype=virtual QImage image() const
-$virtualMethod=|QImage|image|
+$prototypeV2=virtual QImage image() const
 
-$prototype=virtual int textureByteCount() const = 0
-$virtualMethod=|int|textureByteCount|
+$prototypeV2=virtual int textureByteCount() const = 0
 
-$prototype=virtual QSize textureSize() const = 0
-$virtualMethod=|QSize|textureSize|
+$prototypeV2=virtual QSize textureSize() const = 0
 
 #pragma ENDDUMP

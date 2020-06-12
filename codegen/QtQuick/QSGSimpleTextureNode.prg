@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QSGTexture::Filtering filtering() const
-$method=|QSGTexture::Filtering|filtering|
+$prototypeV2=QSGTexture::Filtering filtering() const
 
-$prototype=QRectF rect() const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
 $prototype=void setFiltering(QSGTexture::Filtering filtering)
 $method=|void|setFiltering|QSGTexture::Filtering
@@ -70,7 +68,6 @@ $addMethod=setRect
 $prototype=void setTexture(QSGTexture * texture)
 $method=|void|setTexture|QSGTexture *
 
-$prototype=QSGTexture * texture() const
-$method=|QSGTexture *|texture|
+$prototypeV2=QSGTexture * texture() const
 
 #pragma ENDDUMP

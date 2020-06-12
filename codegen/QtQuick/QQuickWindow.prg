@@ -36,17 +36,13 @@ $constructor=|new|QWindow *=nullptr
 
 $deleteMethod
 
-$prototype=QQuickItem * activeFocusItem() const
-$method=|QQuickItem *|activeFocusItem|
+$prototypeV2=QQuickItem * activeFocusItem() const
 
-$prototype=bool clearBeforeRendering() const
-$method=|bool|clearBeforeRendering|
+$prototypeV2=bool clearBeforeRendering() const
 
-$prototype=QColor color() const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
-$prototype=QQuickItem * contentItem() const
-$method=|QQuickItem *|contentItem|
+$prototypeV2=QQuickItem * contentItem() const
 
 $prototype=QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
 $method=|QSGTexture *|createTextureFromId|uint,const QSize &,QQuickWindow::CreateTextureOptions=QQuickWindow::CreateTextureOption( 0 )
@@ -54,32 +50,23 @@ $method=|QSGTexture *|createTextureFromId|uint,const QSize &,QQuickWindow::Creat
 $prototype=QSGTexture * createTextureFromImage(const QImage & image) const
 $method=|QSGTexture *|createTextureFromImage|const QImage &
 
-$prototype=QImage grabWindow()
-$method=|QImage|grabWindow|
+$prototypeV2=QImage grabWindow()
 
-$prototype=QQmlIncubationController * incubationController() const
-$method=|QQmlIncubationController *|incubationController|
+$prototypeV2=QQmlIncubationController * incubationController() const
 
-$prototype=bool isPersistentOpenGLContext() const
-$method=|bool|isPersistentOpenGLContext|
+$prototypeV2=bool isPersistentOpenGLContext() const
 
-$prototype=bool isPersistentSceneGraph() const
-$method=|bool|isPersistentSceneGraph|
+$prototypeV2=bool isPersistentSceneGraph() const
 
-$prototype=QQuickItem * mouseGrabberItem() const
-$method=|QQuickItem *|mouseGrabberItem|
+$prototypeV2=QQuickItem * mouseGrabberItem() const
 
-$prototype=QOpenGLContext * openglContext() const
-$method=|QOpenGLContext *|openglContext|
+$prototypeV2=QOpenGLContext * openglContext() const
 
-$prototype=QOpenGLFramebufferObject * renderTarget() const
-$method=|QOpenGLFramebufferObject *|renderTarget|
+$prototypeV2=QOpenGLFramebufferObject * renderTarget() const
 
-$prototype=uint renderTargetId() const
-$method=|uint|renderTargetId|
+$prototypeV2=uint renderTargetId() const
 
-$prototype=QSize renderTargetSize() const
-$method=|QSize|renderTargetSize|
+$prototypeV2=QSize renderTargetSize() const
 
 $prototype=bool sendEvent(QQuickItem * item, QEvent * e)
 $method=|bool|sendEvent|QQuickItem *,QEvent *
@@ -124,14 +111,11 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 }
 $addMethod=setRenderTarget
 
-$prototype=virtual QAccessibleInterface * accessibleRoot() const
-$virtualMethod=|QAccessibleInterface *|accessibleRoot|
+$prototypeV2=virtual QAccessibleInterface * accessibleRoot() const
 
-$prototype=void releaseResources()
-$method=|void|releaseResources|
+$prototypeV2=void releaseResources()
 
-$prototype=void update()
-$method=|void|update|
+$prototypeV2=void update()
 
 %%
 %% SIGNALS

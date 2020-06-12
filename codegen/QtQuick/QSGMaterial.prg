@@ -30,17 +30,14 @@ $deleteMethod
 $prototype=virtual int compare(const QSGMaterial * other) const
 $virtualMethod=|int|compare|const QSGMaterial *
 
-$prototype=virtual QSGMaterialShader * createShader() const = 0
-$virtualMethod=|QSGMaterialShader *|createShader|
+$prototypeV2=virtual QSGMaterialShader * createShader() const = 0
 
-$prototype=QSGMaterial::Flags flags() const
-$method=|QSGMaterial::Flags|flags|
+$prototypeV2=QSGMaterial::Flags flags() const
 
 $prototype=void setFlag(Flags flags, bool on = true)
 $method=|void|setFlag|QSGMaterial::Flags,bool=true
 
-$prototype=virtual QSGMaterialType * type() const = 0
-$virtualMethod=|QSGMaterialType *|type|
+$prototypeV2=virtual QSGMaterialType * type() const = 0
 
 $extraMethods
 

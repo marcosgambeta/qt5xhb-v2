@@ -69,29 +69,22 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
 
 $deleteMethod
 
-$prototype=QQmlEngine * engine() const
-$method=|QQmlEngine *|engine|
+$prototypeV2=QQmlEngine * engine() const
 
-$prototype=QSize initialSize() const
-$method=|QSize|initialSize|
+$prototypeV2=QSize initialSize() const
 
-$prototype=ResizeMode resizeMode() const
-$method=|QQuickView::ResizeMode|resizeMode|
+$prototypeV2=QQuickView::ResizeMode resizeMode() const
 
-$prototype=QQmlContext * rootContext() const
-$method=|QQmlContext *|rootContext|
+$prototypeV2=QQmlContext * rootContext() const
 
-$prototype=QQuickItem * rootObject() const
-$method=|QQuickItem *|rootObject|
+$prototypeV2=QQuickItem * rootObject() const
 
 $prototype=void setResizeMode(ResizeMode)
 $method=|void|setResizeMode|QQuickView::ResizeMode
 
-$prototype=QUrl source() const
-$method=|QUrl|source|
+$prototypeV2=QUrl source() const
 
-$prototype=Status status() const
-$method=|QQuickView::Status|status|
+$prototypeV2=QQuickView::Status status() const
 
 $prototype=void setSource(const QUrl & url)
 $method=|void|setSource|const QUrl &

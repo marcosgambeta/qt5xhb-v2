@@ -29,38 +29,28 @@ $includes
 
 $deleteMethod
 
-$prototype=bool antialiasing() const
-$method=|bool|antialiasing|
+$prototypeV2=bool antialiasing() const
 
-$prototype=QRectF contentsBoundingRect() const
-$method=|QRectF|contentsBoundingRect|
+$prototypeV2=QRectF contentsBoundingRect() const
 
-$prototype=qreal contentsScale() const
-$method=|qreal|contentsScale|
+$prototypeV2=qreal contentsScale() const
 
-$prototype=QSize contentsSize() const
-$method=|QSize|contentsSize|
+$prototypeV2=QSize contentsSize() const
 
-$prototype=QColor fillColor() const
-$method=|QColor|fillColor|
+$prototypeV2=QColor fillColor() const
 
-$prototype=bool mipmap() const
-$method=|bool|mipmap|
+$prototypeV2=bool mipmap() const
 
-$prototype=bool opaquePainting() const
-$method=|bool|opaquePainting|
+$prototypeV2=bool opaquePainting() const
 
 $prototype=virtual void paint(QPainter * painter) = 0
 $virtualMethod=|void|paint|QPainter *
 
-$prototype=PerformanceHints performanceHints() const
-$method=|QQuickPaintedItem::PerformanceHints|performanceHints|
+$prototypeV2=QQuickPaintedItem::PerformanceHints performanceHints() const
 
-$prototype=RenderTarget renderTarget() const
-$method=|QQuickPaintedItem::RenderTarget|renderTarget|
+$prototypeV2=QQuickPaintedItem::RenderTarget renderTarget() const
 
-$prototype=void resetContentsSize()
-$method=|void|resetContentsSize|
+$prototypeV2=void resetContentsSize()
 
 $prototype=void setAntialiasing(bool enable)
 $method=|void|setAntialiasing|bool

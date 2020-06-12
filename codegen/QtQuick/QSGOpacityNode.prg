@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=qreal opacity() const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
 $prototype=void setOpacity(qreal opacity)
 $method=|void|setOpacity|qreal

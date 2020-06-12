@@ -27,14 +27,11 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void activate()
-$virtualMethod=|void|activate|
+$prototypeV2=virtual void activate()
 
-$prototype=virtual void deactivate()
-$virtualMethod=|void|deactivate|
+$prototypeV2=virtual void deactivate()
 
-$prototype=QOpenGLShaderProgram * program()
-$method=|QOpenGLShaderProgram *|program|
+$prototypeV2=QOpenGLShaderProgram * program()
 
 $extraMethods
 

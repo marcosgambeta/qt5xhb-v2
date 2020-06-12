@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QRectF clipRect() const
-$method=|QRectF|clipRect|
+$prototypeV2=QRectF clipRect() const
 
-$prototype=bool isRectangular() const
-$method=|bool|isRectangular|
+$prototypeV2=bool isRectangular() const
 
 $prototype=void setClipRect(const QRectF & rect)
 $method=|void|setClipRect|const QRectF &

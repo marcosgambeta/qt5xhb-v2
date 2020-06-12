@@ -27,35 +27,26 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void bind() = 0
-$virtualMethod=|void|bind|
+$prototypeV2=virtual void bind() = 0
 
 $prototype=QRectF convertToNormalizedSourceRect(const QRectF & rect) const
 $method=|QRectF|convertToNormalizedSourceRect|const QRectF &
 
-$prototype=QSGTexture::Filtering filtering() const
-$method=|QSGTexture::Filtering|filtering|
+$prototypeV2=QSGTexture::Filtering filtering() const
 
-$prototype=virtual bool hasAlphaChannel() const = 0
-$virtualMethod=|bool|hasAlphaChannel|
+$prototypeV2=virtual bool hasAlphaChannel() const = 0
 
-$prototype=virtual bool hasMipmaps() const = 0
-$virtualMethod=|bool|hasMipmaps|
+$prototypeV2=virtual bool hasMipmaps() const = 0
 
-$prototype=QSGTexture::WrapMode horizontalWrapMode() const
-$method=|QSGTexture::WrapMode|horizontalWrapMode|
+$prototypeV2=QSGTexture::WrapMode horizontalWrapMode() const
 
-$prototype=virtual bool isAtlasTexture() const
-$virtualMethod=|bool|isAtlasTexture|
+$prototypeV2=virtual bool isAtlasTexture() const
 
-$prototype=QSGTexture::Filtering mipmapFiltering() const
-$method=|QSGTexture::Filtering|mipmapFiltering|
+$prototypeV2=QSGTexture::Filtering mipmapFiltering() const
 
-$prototype=virtual QRectF normalizedTextureSubRect() const
-$virtualMethod=|QRectF|normalizedTextureSubRect|
+$prototypeV2=virtual QRectF normalizedTextureSubRect() const
 
-$prototype=virtual QSGTexture * removedFromAtlas() const
-$virtualMethod=|QSGTexture *|removedFromAtlas|
+$prototypeV2=virtual QSGTexture * removedFromAtlas() const
 
 $prototype=void setFiltering(Filtering filter)
 $method=|void|setFiltering|QSGTexture::Filtering
@@ -69,16 +60,13 @@ $method=|void|setMipmapFiltering|QSGTexture::Filtering
 $prototype=void setVerticalWrapMode(WrapMode vwrap)
 $method=|void|setVerticalWrapMode|QSGTexture::WrapMode
 
-$prototype=virtual int textureId() const = 0
-$virtualMethod=|int|textureId|
+$prototypeV2=virtual int textureId() const = 0
 
-$prototype=virtual QSize textureSize() const = 0
-$virtualMethod=|QSize|textureSize|
+$prototypeV2=virtual QSize textureSize() const = 0
 
 $prototype=void updateBindOptions(bool force = false)
 $method=|void|updateBindOptions|bool=false
 
-$prototype=QSGTexture::WrapMode verticalWrapMode() const
-$method=|QSGTexture::WrapMode|verticalWrapMode|
+$prototypeV2=QSGTexture::WrapMode verticalWrapMode() const
 
 #pragma ENDDUMP

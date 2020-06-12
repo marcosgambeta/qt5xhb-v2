@@ -34,80 +34,58 @@ $constructor=|new|QQuickItem *=nullptr
 
 $deleteMethod
 
-$prototype=bool acceptHoverEvents() const
-$method=|bool|acceptHoverEvents|
+$prototypeV2=bool acceptHoverEvents() const
 
-$prototype=Qt::MouseButtons acceptedMouseButtons() const
-$method=|Qt::MouseButtons|acceptedMouseButtons|
+$prototypeV2=Qt::MouseButtons acceptedMouseButtons() const
 
-$prototype=bool antialiasing() const
-$method=|bool|antialiasing|
+$prototypeV2=bool antialiasing() const
 
-$prototype=qreal baselineOffset() const
-$method=|qreal|baselineOffset|
+$prototypeV2=qreal baselineOffset() const
 
 $prototype=QQuickItem * childAt(qreal x, qreal y) const
 $method=|QQuickItem *|childAt|qreal,qreal
 
-$prototype=QRectF childrenRect()
-$method=|QRectF|childrenRect|
+$prototypeV2=QRectF childrenRect()
 
-$prototype=bool clip() const
-$method=|bool|clip|
+$prototypeV2=bool clip() const
 
 $prototype=virtual bool contains(const QPointF & point) const
 $virtualMethod=|bool|contains|const QPointF &
 
-$prototype=QCursor cursor() const
-$method=|QCursor|cursor|
+$prototypeV2=QCursor cursor() const
 
-$prototype=bool filtersChildMouseEvents() const
-$method=|bool|filtersChildMouseEvents|
+$prototypeV2=bool filtersChildMouseEvents() const
 
-$prototype=Flags flags() const
-$method=|QQuickItem::Flags|flags|
+$prototypeV2=QQuickItem::Flags flags() const
 
-$prototype=void forceActiveFocus()
-$method=|void|forceActiveFocus|
+$prototypeV2=void forceActiveFocus()
 
-$prototype=void grabMouse()
-$method=|void|grabMouse|
+$prototypeV2=void grabMouse()
 
-$prototype=bool hasActiveFocus() const
-$method=|bool|hasActiveFocus|
+$prototypeV2=bool hasActiveFocus() const
 
-$prototype=bool hasFocus() const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=qreal height() const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
-$prototype=qreal implicitHeight() const
-$method=|qreal|implicitHeight|
+$prototypeV2=qreal implicitHeight() const
 
-$prototype=qreal implicitWidth() const
-$method=|qreal|implicitWidth|
+$prototypeV2=qreal implicitWidth() const
 
 $prototype=virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
-$prototype=bool isFocusScope() const
-$method=|bool|isFocusScope|
+$prototypeV2=bool isFocusScope() const
 
-$prototype=virtual bool isTextureProvider() const
-$virtualMethod=|bool|isTextureProvider|
+$prototypeV2=virtual bool isTextureProvider() const
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
-$prototype=bool keepMouseGrab() const
-$method=|bool|keepMouseGrab|
+$prototypeV2=bool keepMouseGrab() const
 
-$prototype=bool keepTouchGrab() const
-$method=|bool|keepTouchGrab|
+$prototypeV2=bool keepTouchGrab() const
 
 $prototype=QPointF mapFromItem(const QQuickItem * item, const QPointF & point) const
 $method=|QPointF|mapFromItem|const QQuickItem *,const QPointF &
@@ -133,29 +111,21 @@ $method=|QPointF|mapToItem|const QQuickItem *,const QPointF &
 $prototype=QPointF mapToScene(const QPointF & point) const
 $method=|QPointF|mapToScene|const QPointF &
 
-$prototype=qreal opacity() const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
-$prototype=QQuickItem * parentItem() const
-$method=|QQuickItem *|parentItem|
+$prototypeV2=QQuickItem * parentItem() const
 
-$prototype=void polish()
-$method=|void|polish|
+$prototypeV2=void polish()
 
-$prototype=void resetHeight()
-$method=|void|resetHeight|
+$prototypeV2=void resetHeight()
 
-$prototype=void resetWidth()
-$method=|void|resetWidth|
+$prototypeV2=void resetWidth()
 
-$prototype=qreal rotation() const
-$method=|qreal|rotation|
+$prototypeV2=qreal rotation() const
 
-$prototype=qreal scale() const
-$method=|qreal|scale|
+$prototypeV2=qreal scale() const
 
-$prototype=QQuickItem * scopedFocusItem() const
-$method=|QQuickItem *|scopedFocusItem|
+$prototypeV2=QQuickItem * scopedFocusItem() const
 
 $prototype=void setAcceptHoverEvents(bool enabled)
 $method=|void|setAcceptHoverEvents|bool
@@ -241,8 +211,7 @@ $method=|void|setY|qreal
 $prototype=void setZ(qreal)
 $method=|void|setZ|qreal
 
-$prototype=bool smooth() const
-$method=|bool|smooth|
+$prototypeV2=bool smooth() const
 
 $prototype=void stackAfter(const QQuickItem * sibling)
 $method=|void|stackAfter|const QQuickItem *
@@ -250,40 +219,28 @@ $method=|void|stackAfter|const QQuickItem *
 $prototype=void stackBefore(const QQuickItem * sibling)
 $method=|void|stackBefore|const QQuickItem *
 
-$prototype=QString state() const
-$method=|QString|state|
+$prototypeV2=QString state() const
 
-$prototype=virtual QSGTextureProvider * textureProvider() const
-$virtualMethod=|QSGTextureProvider *|textureProvider|
+$prototypeV2=virtual QSGTextureProvider * textureProvider() const
 
-$prototype=TransformOrigin transformOrigin() const
-$method=|QQuickItem::TransformOrigin|transformOrigin|
+$prototypeV2=QQuickItem::TransformOrigin transformOrigin() const
 
-$prototype=void ungrabMouse()
-$method=|void|ungrabMouse|
+$prototypeV2=void ungrabMouse()
 
-$prototype=void ungrabTouchPoints()
-$method=|void|ungrabTouchPoints|
+$prototypeV2=void ungrabTouchPoints()
 
-$prototype=void unsetCursor()
-$method=|void|unsetCursor|
+$prototypeV2=void unsetCursor()
 
-$prototype=qreal width() const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=QQuickWindow * window() const
-$method=|QQuickWindow *|window|
+$prototypeV2=QQuickWindow * window() const
 
-$prototype=qreal x() const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y() const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal z() const
-$method=|qreal|z|
+$prototypeV2=qreal z() const
 
-$prototype=void update()
-$method=|void|update|
+$prototypeV2=void update()
 
 #pragma ENDDUMP

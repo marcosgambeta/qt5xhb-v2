@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QSGGeometry * geometry()
-$method=|QSGGeometry *|geometry|
+$prototypeV2=QSGGeometry * geometry()
 
 $prototype=void setGeometry(QSGGeometry * geometry)
 $method=|void|setGeometry|QSGGeometry *

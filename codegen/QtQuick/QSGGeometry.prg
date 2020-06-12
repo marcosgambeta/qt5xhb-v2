@@ -30,29 +30,21 @@ $deleteMethod
 $prototype=void allocate(int vertexCount, int indexCount = 0)
 $method=|void|allocate|int,int=0
 
-$prototype=int attributeCount() const
-$method=|int|attributeCount|
+$prototypeV2=int attributeCount() const
 
-$prototype=GLenum drawingMode() const
-$method=|GLenum|drawingMode|
+$prototypeV2=GLenum drawingMode() const
 
-$prototype=int indexCount() const
-$method=|int|indexCount|
+$prototypeV2=int indexCount() const
 
-$prototype=DataPattern indexDataPattern() const
-$method=|QSGGeometry::DataPattern|indexDataPattern|
+$prototypeV2=QSGGeometry::DataPattern indexDataPattern() const
 
-$prototype=int indexType() const
-$method=|int|indexType|
+$prototypeV2=int indexType() const
 
-$prototype=float lineWidth() const
-$method=|float|lineWidth|
+$prototypeV2=float lineWidth() const
 
-$prototype=void markIndexDataDirty()
-$method=|void|markIndexDataDirty|
+$prototypeV2=void markIndexDataDirty()
 
-$prototype=void markVertexDataDirty()
-$method=|void|markVertexDataDirty|
+$prototypeV2=void markVertexDataDirty()
 
 $prototype=void setDrawingMode(GLenum mode)
 $method=|void|setDrawingMode|GLenum
@@ -66,17 +58,13 @@ $method=|void|setLineWidth|float
 $prototype=void setVertexDataPattern(DataPattern p)
 $method=|void|setVertexDataPattern|QSGGeometry::DataPattern
 
-$prototype=int sizeOfIndex() const
-$method=|int|sizeOfIndex|
+$prototypeV2=int sizeOfIndex() const
 
-$prototype=int sizeOfVertex() const
-$method=|int|sizeOfVertex|
+$prototypeV2=int sizeOfVertex() const
 
-$prototype=int vertexCount() const
-$method=|int|vertexCount|
+$prototypeV2=int vertexCount() const
 
-$prototype=DataPattern vertexDataPattern() const
-$method=|QSGGeometry::DataPattern|vertexDataPattern|
+$prototypeV2=QSGGeometry::DataPattern vertexDataPattern() const
 
 $prototype=static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
 $staticMethod=|void|updateRectGeometry|QSGGeometry *,const QRectF &

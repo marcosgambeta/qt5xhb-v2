@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QSGMaterial * material() const
-$method=|QSGMaterial *|material|
+$prototypeV2=QSGMaterial * material() const
 
-$prototype=QSGMaterial * opaqueMaterial() const
-$method=|QSGMaterial *|opaqueMaterial|
+$prototypeV2=QSGMaterial * opaqueMaterial() const
 
 $prototype=void setMaterial(QSGMaterial * material)
 $method=|void|setMaterial|QSGMaterial *

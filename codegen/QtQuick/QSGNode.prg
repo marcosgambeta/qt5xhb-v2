@@ -36,14 +36,11 @@ $method=|void|appendChildNode|QSGNode *
 $prototype=QSGNode * childAtIndex(int i) const
 $method=|QSGNode *|childAtIndex|int
 
-$prototype=int childCount() const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
-$prototype=QSGNode * firstChild() const
-$method=|QSGNode *|firstChild|
+$prototypeV2=QSGNode * firstChild() const
 
-$prototype=Flags flags() const
-$method=|QSGNode::Flags|flags|
+$prototypeV2=QSGNode::Flags flags() const
 
 $prototype=void insertChildNodeAfter(QSGNode * node, QSGNode * after)
 $method=|void|insertChildNodeAfter|QSGNode *,QSGNode *
@@ -51,32 +48,25 @@ $method=|void|insertChildNodeAfter|QSGNode *,QSGNode *
 $prototype=void insertChildNodeBefore(QSGNode * node, QSGNode * before)
 $method=|void|insertChildNodeBefore|QSGNode *,QSGNode *
 
-$prototype=virtual bool isSubtreeBlocked() const
-$virtualMethod=|bool|isSubtreeBlocked|
+$prototypeV2=virtual bool isSubtreeBlocked() const
 
-$prototype=QSGNode * lastChild() const
-$method=|QSGNode *|lastChild|
+$prototypeV2=QSGNode * lastChild() const
 
 $prototype=void markDirty(DirtyState bits)
 $method=|void|markDirty|QSGNode::DirtyState
 
-$prototype=QSGNode * nextSibling() const
-$method=|QSGNode *|nextSibling|
+$prototypeV2=QSGNode * nextSibling() const
 
-$prototype=QSGNode * parent() const
-$method=|QSGNode *|parent|
+$prototypeV2=QSGNode * parent() const
 
 $prototype=void prependChildNode(QSGNode * node)
 $method=|void|prependChildNode|QSGNode *
 
-$prototype=virtual void preprocess()
-$virtualMethod=|void|preprocess|
+$prototypeV2=virtual void preprocess()
 
-$prototype=QSGNode * previousSibling() const
-$method=|QSGNode *|previousSibling|
+$prototypeV2=QSGNode * previousSibling() const
 
-$prototype=void removeAllChildNodes()
-$method=|void|removeAllChildNodes|
+$prototypeV2=void removeAllChildNodes()
 
 $prototype=void removeChildNode(QSGNode * node)
 $method=|void|removeChildNode|QSGNode *
@@ -87,8 +77,7 @@ $method=|void|setFlag|QSGNode::Flag,bool=true
 $prototype=void setFlags(Flags f, bool enabled = true)
 $method=|void|setFlags|QSGNode::Flags,bool=true
 
-$prototype=NodeType type() const
-$method=|QSGNode::NodeType|type|
+$prototypeV2=QSGNode::NodeType type() const
 
 $extraMethods
 
