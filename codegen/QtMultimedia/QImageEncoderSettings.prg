@@ -55,17 +55,14 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 $prototype=~QImageEncoderSettings()
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString codec() const
-$method=|QString|codec|
+$prototypeV2=QString codec() const
 
 $prototype=void setCodec(const QString &)
 $method=|void|setCodec|const QString &
 
-$prototype=QSize resolution() const
-$method=|QSize|resolution|
+$prototypeV2=QSize resolution() const
 
 $prototype=void setResolution(const QSize &)
 $internalMethod=|void|setResolution,setResolution1|const QSize &
@@ -95,8 +92,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 }
 $addMethod=setResolution
 
-$prototype=QMultimedia::EncodingQuality quality() const
-$method=|QMultimedia::EncodingQuality|quality|
+$prototypeV2=QMultimedia::EncodingQuality quality() const
 
 $prototype=void setQuality(QMultimedia::EncodingQuality quality)
 $method=|void|setQuality|QMultimedia::EncodingQuality

@@ -146,44 +146,32 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 }
 $addMethod=bytesPerLine
 
-$prototype=qint64 endTime () const
-$method=|qint64|endTime|
+$prototypeV2=qint64 endTime() const
 
-$prototype=FieldType fieldType () const
-$method=|QVideoFrame::FieldType|fieldType|
+$prototypeV2=QVideoFrame::FieldType fieldType() const
 
-$prototype=QVariant handle () const
-$method=|QVariant|handle|
+$prototypeV2=QVariant handle() const
 
-$prototype=QAbstractVideoBuffer::HandleType handleType () const
-$method=|QAbstractVideoBuffer::HandleType|handleType|
+$prototypeV2=QAbstractVideoBuffer::HandleType handleType() const
 
-$prototype=int height () const
-$method=|int|height|
+$prototypeV2=int height() const
 
-$prototype=bool isMapped () const
-$method=|bool|isMapped|
+$prototypeV2=bool isMapped() const
 
-$prototype=bool isReadable () const
-$method=|bool|isReadable|
+$prototypeV2=bool isReadable() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=bool isWritable () const
-$method=|bool|isWritable|
+$prototypeV2=bool isWritable() const
 
 $prototype=bool map ( QAbstractVideoBuffer::MapMode mode )
 $method=|bool|map|QAbstractVideoBuffer::MapMode
 
-$prototype=QAbstractVideoBuffer::MapMode mapMode () const
-$method=|QAbstractVideoBuffer::MapMode|mapMode|
+$prototypeV2=QAbstractVideoBuffer::MapMode mapMode() const
 
-$prototype=int mappedBytes () const
-$method=|int|mappedBytes|
+$prototypeV2=int mappedBytes() const
 
-$prototype=PixelFormat pixelFormat () const
-$method=|QVideoFrame::PixelFormat|pixelFormat|
+$prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
 $prototype=void setEndTime ( qint64 time )
 $method=|void|setEndTime|qint64
@@ -194,20 +182,15 @@ $method=|void|setFieldType|QVideoFrame::FieldType
 $prototype=void setStartTime ( qint64 time )
 $method=|void|setStartTime|qint64
 
-$prototype=QSize size () const
-$method=|QSize|size|
+$prototypeV2=QSize size() const
 
-$prototype=qint64 startTime () const
-$method=|qint64|startTime|
+$prototypeV2=qint64 startTime() const
 
-$prototype=void unmap ()
-$method=|void|unmap|
+$prototypeV2=void unmap()
 
-$prototype=int width () const
-$method=|int|width|
+$prototypeV2=int width() const
 
-$prototype=int planeCount() const
-$method=|int|planeCount|
+$prototypeV2=int planeCount() const
 
 $prototype=QVariantMap availableMetaData() const
 %% TODO: QVariantMap

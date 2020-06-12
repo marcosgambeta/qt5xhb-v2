@@ -32,11 +32,9 @@ $prototype=explicit QRadioTunerControl(QObject *parent = nullptr) [protected]
 $prototype=~QRadioTunerControl()
 $deleteMethod
 
-$prototype=virtual QRadioTuner::State state() const = 0
-$virtualMethod=|QRadioTuner::State|state|
+$prototypeV2=virtual QRadioTuner::State state() const = 0
 
-$prototype=virtual QRadioTuner::Band band() const = 0
-$virtualMethod=|QRadioTuner::Band|band|
+$prototypeV2=virtual QRadioTuner::Band band() const = 0
 
 $prototype=virtual void setBand(QRadioTuner::Band b) = 0
 $virtualMethod=|void|setBand|QRadioTuner::Band
@@ -44,8 +42,7 @@ $virtualMethod=|void|setBand|QRadioTuner::Band
 $prototype=virtual bool isBandSupported(QRadioTuner::Band b) const = 0
 $virtualMethod=|bool|isBandSupported|QRadioTuner::Band
 
-$prototype=virtual int frequency() const = 0
-$virtualMethod=|int|frequency|
+$prototypeV2=virtual int frequency() const = 0
 
 $prototype=virtual int frequencyStep(QRadioTuner::Band b) const = 0
 $virtualMethod=|int|frequencyStep|QRadioTuner::Band
@@ -53,59 +50,45 @@ $virtualMethod=|int|frequencyStep|QRadioTuner::Band
 $prototype=virtual void setFrequency(int frequency) = 0
 $virtualMethod=|void|setFrequency|int
 
-$prototype=virtual bool isStereo() const = 0
-$virtualMethod=|bool|isStereo|
+$prototypeV2=virtual bool isStereo() const = 0
 
-$prototype=virtual QRadioTuner::StereoMode stereoMode() const = 0
-$virtualMethod=|QRadioTuner::StereoMode|stereoMode|
+$prototypeV2=virtual QRadioTuner::StereoMode stereoMode() const = 0
 
 $prototype=virtual void setStereoMode(QRadioTuner::StereoMode mode) = 0
 $virtualMethod=|void|setStereoMode|QRadioTuner::StereoMode
 
-$prototype=virtual int signalStrength() const = 0
-$virtualMethod=|int|signalStrength|
+$prototypeV2=virtual int signalStrength() const = 0
 
-$prototype=virtual int volume() const = 0
-$virtualMethod=|int|volume|
+$prototypeV2=virtual int volume() const = 0
 
 $prototype=virtual void setVolume(int volume) = 0
 $virtualMethod=|void|setVolume|int
 
-$prototype=virtual bool isMuted() const = 0
-$virtualMethod=|bool|isMuted|
+$prototypeV2=virtual bool isMuted() const = 0
 
 $prototype=virtual void setMuted(bool muted) = 0
 $virtualMethod=|void|setMuted|bool
 
-$prototype=virtual bool isSearching() const = 0
-$virtualMethod=|bool|isSearching|
+$prototypeV2=virtual bool isSearching() const = 0
 
-$prototype=virtual bool isAntennaConnected() const
-$virtualMethod=|bool|isAntennaConnected|
+$prototypeV2=virtual bool isAntennaConnected() const
 
-$prototype=virtual void searchForward() = 0
-$virtualMethod=|void|searchForward|
+$prototypeV2=virtual void searchForward() = 0
 
-$prototype=virtual void searchBackward() = 0
-$virtualMethod=|void|searchBackward|
+$prototypeV2=virtual void searchBackward() = 0
 
 $prototype=virtual void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast) = 0
 $virtualMethod=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
 
-$prototype=virtual void cancelSearch() = 0
-$virtualMethod=|void|cancelSearch|
+$prototypeV2=virtual void cancelSearch() = 0
 
-$prototype=virtual void start() = 0
-$virtualMethod=|void|start|
+$prototypeV2=virtual void start() = 0
 
-$prototype=virtual void stop() = 0
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop() = 0
 
-$prototype=virtual QRadioTuner::Error error() const = 0
-$virtualMethod=|QRadioTuner::Error|error|
+$prototypeV2=virtual QRadioTuner::Error error() const = 0
 
-$prototype=virtual QString errorString() const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototype=virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 %% TODO: QPair<int,int>

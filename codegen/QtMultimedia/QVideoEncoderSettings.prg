@@ -55,14 +55,11 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 $prototype=~QVideoEncoderSettings()
 $deleteMethod
 
-$prototype=int bitRate() const
-$method=|int|bitRate|
+$prototypeV2=int bitRate() const
 
-$prototype=QString codec() const
-$method=|QString|codec|
+$prototypeV2=QString codec() const
 
-$prototype=QMultimedia::EncodingMode encodingMode() const
-$method=|QMultimedia::EncodingMode|encodingMode|
+$prototypeV2=QMultimedia::EncodingMode encodingMode() const
 
 $prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
@@ -70,17 +67,13 @@ $method=|QVariant|encodingOption|const QString &
 $prototype=QVariantMap encodingOptions() const
 %% TODO: QVariantMap
 
-$prototype=qreal frameRate() const
-$method=|qreal|frameRate|
+$prototypeV2=qreal frameRate() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QMultimedia::EncodingQuality quality() const
-$method=|QMultimedia::EncodingQuality|quality|
+$prototypeV2=QMultimedia::EncodingQuality quality() const
 
-$prototype=QSize resolution() const
-$method=|QSize|resolution|
+$prototypeV2=QSize resolution() const
 
 $prototype=void setBitRate(int bitrate)
 $method=|void|setBitRate|int

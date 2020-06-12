@@ -32,8 +32,7 @@ $prototype=explicit QCameraCaptureDestinationControl(QObject *parent = nullptr) 
 $prototype=~QCameraCaptureDestinationControl()
 $deleteMethod
 
-$prototype=virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
-$virtualMethod=|QCameraImageCapture::CaptureDestinations|captureDestination|
+$prototypeV2=virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 
 $prototype=virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
 $virtualMethod=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations

@@ -47,14 +47,11 @@ $constructor=|new|const QCameraFocusZone &
 $prototype=~QCameraFocusZone()
 $deleteMethod
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QRectF area() const
-$method=|QRectF|area|
+$prototypeV2=QRectF area() const
 
-$prototype=FocusZoneStatus status() const
-$method=|QCameraFocusZone::FocusZoneStatus|status|
+$prototypeV2=QCameraFocusZone::FocusZoneStatus status() const
 
 $prototype=void setStatus(FocusZoneStatus status)
 %% TODO: not presente in the documentation

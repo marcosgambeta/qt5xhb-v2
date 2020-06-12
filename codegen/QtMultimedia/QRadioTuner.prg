@@ -39,15 +39,13 @@ $deleteMethod
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
 %%
 
-$prototype=State state() const
-$method=|QRadioTuner::State|state|
+$prototypeV2=QRadioTuner::State state() const
 
 %%
 %% Q_PROPERTY(Band band READ band WRITE setBand NOTIFY bandChanged)
 %%
 
-$prototype=Band band() const
-$method=|QRadioTuner::Band|band|
+$prototypeV2=QRadioTuner::Band band() const
 
 $prototype=void setBand(Band band)
 $slotMethod=|void|setBand|QRadioTuner::Band
@@ -56,8 +54,7 @@ $slotMethod=|void|setBand|QRadioTuner::Band
 %% Q_PROPERTY(int frequency READ frequency WRITE setFrequency NOTIFY frequencyChanged)
 %%
 
-$prototype=int frequency() const
-$method=|int|frequency|
+$prototypeV2=int frequency() const
 
 $prototype=void setFrequency(int frequency)
 $slotMethod=|void|setFrequency|int
@@ -66,15 +63,13 @@ $slotMethod=|void|setFrequency|int
 %% Q_PROPERTY(bool stereo READ isStereo NOTIFY stereoStatusChanged)
 %%
 
-$prototype=bool isStereo() const
-$method=|bool|isStereo|
+$prototypeV2=bool isStereo() const
 
 %%
 %% Q_PROPERTY(StereoMode stereoMode READ stereoMode WRITE setStereoMode)
 %%
 
-$prototype=StereoMode stereoMode() const
-$method=|QRadioTuner::StereoMode|stereoMode|
+$prototypeV2=QRadioTuner::StereoMode stereoMode() const
 
 $prototype=void setStereoMode(QRadioTuner::StereoMode mode)
 $method=|void|setStereoMode|QRadioTuner::StereoMode
@@ -83,15 +78,13 @@ $method=|void|setStereoMode|QRadioTuner::StereoMode
 %% Q_PROPERTY(int signalStrength READ signalStrength NOTIFY signalStrengthChanged)
 %%
 
-$prototype=int signalStrength() const
-$method=|int|signalStrength|
+$prototypeV2=int signalStrength() const
 
 %%
 %% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
 %%
 
-$prototype=int volume() const
-$method=|int|volume|
+$prototypeV2=int volume() const
 
 $prototype=void setVolume(int volume)
 $slotMethod=|void|setVolume|int
@@ -100,8 +93,7 @@ $slotMethod=|void|setVolume|int
 %% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
 %%
 
-$prototype=bool isMuted() const
-$method=|bool|isMuted|
+$prototypeV2=bool isMuted() const
 
 $prototype=void setMuted(bool muted)
 $slotMethod=|void|setMuted|bool
@@ -110,29 +102,25 @@ $slotMethod=|void|setMuted|bool
 %% Q_PROPERTY(bool searching READ isSearching NOTIFY searchingChanged)
 %%
 
-$prototype=bool isSearching() const
-$method=|bool|isSearching|
+$prototypeV2=bool isSearching() const
 
 %%
 %% Q_PROPERTY(bool antennaConnected READ isAntennaConnected NOTIFY antennaConnectedChanged)
 %%
 
-$prototype=bool isAntennaConnected() const
-$method=|bool|isAntennaConnected|
+$prototypeV2=bool isAntennaConnected() const
 
 %%
 %% Q_PROPERTY(QRadioData *radioData READ radioData CONSTANT)
 %%
 
-$prototype=QRadioData *radioData() const
-$method=|QRadioData *|radioData|
+$prototypeV2=QRadioData * radioData() const
 
 %%
 %%
 %%
 
-$prototype=QMultimedia::AvailabilityStatus availability() const override
-$method=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=QMultimedia::AvailabilityStatus availability() const override
 
 $prototype=bool isBandSupported(Band b) const
 $method=|bool|isBandSupported|QRadioTuner::Band
@@ -140,29 +128,22 @@ $method=|bool|isBandSupported|QRadioTuner::Band
 $prototype=int frequencyStep(Band band) const
 $method=|int|frequencyStep|QRadioTuner::Band
 
-$prototype=Error error() const
-$method=|QRadioTuner::Error|error|
+$prototypeV2=QRadioTuner::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=void searchForward()
-$slotMethod=|void|searchForward|
+$prototypeV2=void searchForward()
 
-$prototype=void searchBackward()
-$slotMethod=|void|searchBackward|
+$prototypeV2=void searchBackward()
 
 $prototype=void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast)
 $slotMethod=|void|searchAllStations|QRadioTuner::SearchMode=QRadioTuner::SearchFast
 
-$prototype=void cancelSearch()
-$slotMethod=|void|cancelSearch|
+$prototypeV2=void cancelSearch()
 
-$prototype=void start()
-$slotMethod=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=QPair<int,int> frequencyRange(Band band) const
 %% TODO: QPair<int,int>

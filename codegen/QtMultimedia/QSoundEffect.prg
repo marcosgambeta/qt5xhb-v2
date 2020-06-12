@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
 %%
 
-$prototype=QUrl source() const
-$method=|QUrl|source|
+$prototypeV2=QUrl source() const
 
 $prototype=void setSource(const QUrl &url)
 $method=|void|setSource|const QUrl &
@@ -47,8 +46,7 @@ $method=|void|setSource|const QUrl &
 %% Q_PROPERTY(int loops READ loopCount WRITE setLoopCount NOTIFY loopCountChanged)
 %%
 
-$prototype=int loopCount() const
-$method=|int|loopCount|
+$prototypeV2=int loopCount() const
 
 $prototype=void setLoopCount(int loopCount)
 $method=|void|setLoopCount|int
@@ -57,15 +55,13 @@ $method=|void|setLoopCount|int
 %% Q_PROPERTY(int loopsRemaining READ loopsRemaining NOTIFY loopsRemainingChanged)
 %%
 
-$prototype=int loopsRemaining() const
-$method=|int|loopsRemaining|
+$prototypeV2=int loopsRemaining() const
 
 %%
 %% Q_PROPERTY(qreal volume READ volume WRITE setVolume NOTIFY volumeChanged)
 %%
 
-$prototype=qreal volume() const
-$method=|qreal|volume|
+$prototypeV2=qreal volume() const
 
 $prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
@@ -74,8 +70,7 @@ $method=|void|setVolume|qreal
 %% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
 %%
 
-$prototype=bool isMuted() const
-$method=|bool|isMuted|
+$prototypeV2=bool isMuted() const
 
 $prototype=void setMuted(bool muted)
 $method=|void|setMuted|bool
@@ -84,22 +79,19 @@ $method=|void|setMuted|bool
 %% Q_PROPERTY(bool playing READ isPlaying NOTIFY playingChanged)
 %%
 
-$prototype=bool isPlaying() const
-$method=|bool|isPlaying|
+$prototypeV2=bool isPlaying() const
 
 %%
 %% Q_PROPERTY(Status status READ status NOTIFY statusChanged)
 %%
 
-$prototype=Status status() const
-$method=|QSoundEffect::Status|status|
+$prototypeV2=QSoundEffect::Status status() const
 
 %%
 %% Q_PROPERTY(QString category READ category WRITE setCategory NOTIFY categoryChanged)
 %%
 
-$prototype=QString category() const
-$method=|QString|category|
+$prototypeV2=QString category() const
 
 $prototype=void setCategory(const QString &category)
 $method=|void|setCategory|const QString &
@@ -108,17 +100,13 @@ $method=|void|setCategory|const QString &
 %%
 %%
 
-$prototype=bool isLoaded() const
-$method=|bool|isLoaded|
+$prototypeV2=bool isLoaded() const
 
-$prototype=void play()
-$slotMethod=|void|play|
+$prototypeV2=void play()
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=static QStringList supportedMimeTypes()
-$staticMethod=|QStringList|supportedMimeTypes|
+$prototypeV2=static QStringList supportedMimeTypes()
 
 %%
 %% SIGNALS

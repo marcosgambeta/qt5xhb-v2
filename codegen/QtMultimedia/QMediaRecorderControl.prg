@@ -34,29 +34,22 @@ $prototype=explicit QMediaRecorderControl(QObject *parent = nullptr) [protected]
 $prototype=virtual ~QMediaRecorderControl()
 $deleteMethod
 
-$prototype=virtual void applySettings() = 0
-$virtualMethod=|void|applySettings|
+$prototypeV2=virtual void applySettings() = 0
 
-$prototype=virtual qint64 duration() const = 0
-$virtualMethod=|qint64|duration|
+$prototypeV2=virtual qint64 duration() const = 0
 
-$prototype=virtual bool isMuted() const = 0
-$virtualMethod=|bool|isMuted|
+$prototypeV2=virtual bool isMuted() const = 0
 
-$prototype=virtual QUrl outputLocation() const = 0
-$virtualMethod=|QUrl|outputLocation|
+$prototypeV2=virtual QUrl outputLocation() const = 0
 
 $prototype=virtual bool setOutputLocation(const QUrl & location) = 0
 $virtualMethod=|bool|setOutputLocation|const QUrl &
 
-$prototype=virtual QMediaRecorder::State state() const = 0
-$virtualMethod=|QMediaRecorder::State|state|
+$prototypeV2=virtual QMediaRecorder::State state() const = 0
 
-$prototype=virtual QMediaRecorder::Status status() const = 0
-$virtualMethod=|QMediaRecorder::Status|status|
+$prototypeV2=virtual QMediaRecorder::Status status() const = 0
 
-$prototype=virtual qreal volume() const = 0
-$virtualMethod=|qreal|volume|
+$prototypeV2=virtual qreal volume() const = 0
 
 $prototype=virtual void setMuted(bool muted) = 0
 $virtualSlotMethod=|void|setMuted|bool

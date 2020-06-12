@@ -55,26 +55,19 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 $prototype=~QAudioFormat()
 $deleteMethod
 
-$prototype=QAudioFormat::Endian byteOrder () const
-$method=|QAudioFormat::Endian|byteOrder|
+$prototypeV2=QAudioFormat::Endian byteOrder() const
 
-$prototype=int channelCount () const
-$method=|int|channelCount|
+$prototypeV2=int channelCount() const
 
-$prototype=QString codec () const
-$method=|QString|codec|
+$prototypeV2=QString codec() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int sampleRate () const
-$method=|int|sampleRate|
+$prototypeV2=int sampleRate() const
 
-$prototype=int sampleSize () const
-$method=|int|sampleSize|
+$prototypeV2=int sampleSize() const
 
-$prototype=QAudioFormat::SampleType sampleType () const
-$method=|QAudioFormat::SampleType|sampleType|
+$prototypeV2=QAudioFormat::SampleType sampleType() const
 
 $prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
 $method=|void|setByteOrder|QAudioFormat::Endian
@@ -112,8 +105,7 @@ $method=|qint32|framesForDuration|qint64
 $prototype=qint64 durationForFrames(qint32 frameCount) const
 $method=|qint64|durationForFrames|qint32
 
-$prototype=int bytesPerFrame() const
-$method=|int|bytesPerFrame|
+$prototypeV2=int bytesPerFrame() const
 
 $extraMethods
 

@@ -104,26 +104,21 @@ $addMethod=addInterval
 $prototype=void addTimeRange(const QMediaTimeRange & range)
 $method=|void|addTimeRange|const QMediaTimeRange &
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=bool contains(qint64 time) const
 $method=|bool|contains|qint64
 
-$prototype=qint64 earliestTime() const
-$method=|qint64|earliestTime|
+$prototypeV2=qint64 earliestTime() const
 
 $prototype=QList<QMediaTimeInterval> intervals() const
 $method=|QList<QMediaTimeInterval>|intervals|
 
-$prototype=bool isContinuous() const
-$method=|bool|isContinuous|
+$prototypeV2=bool isContinuous() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=qint64 latestTime() const
-$method=|qint64|latestTime|
+$prototypeV2=qint64 latestTime() const
 
 $prototype=void removeInterval(const QMediaTimeInterval & interval)
 $internalMethod=|void|removeInterval,removeInterval1|const QMediaTimeInterval &

@@ -32,17 +32,13 @@ $prototype=explicit QCameraFocusControl(QObject *parent = nullptr) [protected]
 $prototype=~QCameraFocusControl()
 $deleteMethod
 
-$prototype=virtual QPointF customFocusPoint() const = 0
-$virtualMethod=|QPointF|customFocusPoint|
+$prototypeV2=virtual QPointF customFocusPoint() const = 0
 
-$prototype=virtual QCameraFocus::FocusModes focusMode() const = 0
-$virtualMethod=|QCameraFocus::FocusModes|focusMode|
+$prototypeV2=virtual QCameraFocus::FocusModes focusMode() const = 0
 
-$prototype=virtual QCameraFocus::FocusPointMode focusPointMode() const = 0
-$virtualMethod=|QCameraFocus::FocusPointMode|focusPointMode|
+$prototypeV2=virtual QCameraFocus::FocusPointMode focusPointMode() const = 0
 
-$prototype=virtual QCameraFocusZoneList focusZones() const = 0
-$virtualMethod=|QCameraFocusZoneList|focusZones|
+$prototypeV2=virtual QCameraFocusZoneList focusZones() const = 0
 
 $prototype=virtual bool isFocusModeSupported(QCameraFocus::FocusModes mode) const = 0
 $virtualMethod=|bool|isFocusModeSupported|QCameraFocus::FocusModes

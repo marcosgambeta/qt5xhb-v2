@@ -35,13 +35,11 @@ $deleteMethod
 $prototype=virtual QString containerDescription(const QString & formatMimeType) const = 0
 $virtualMethod=|QString|containerDescription|const QString &
 
-$prototype=virtual QString containerFormat() const = 0
-$virtualMethod=|QString|containerFormat|
+$prototypeV2=virtual QString containerFormat() const = 0
 
 $prototype=virtual void setContainerFormat(const QString & format) = 0
 $virtualMethod=|void|setContainerFormat|const QString &
 
-$prototype=virtual QStringList supportedContainers() const = 0
-$virtualMethod=|QStringList|supportedContainers|
+$prototypeV2=virtual QStringList supportedContainers() const = 0
 
 #pragma ENDDUMP

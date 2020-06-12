@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(QMediaPlaylist::PlaybackMode playbackMode READ playbackMode WRITE setPlaybackMode NOTIFY playbackModeChanged)
 %%
 
-$prototype=PlaybackMode playbackMode() const
-$method=|QMediaPlaylist::PlaybackMode|playbackMode|
+$prototypeV2=QMediaPlaylist::PlaybackMode playbackMode() const
 
 $prototype=void setPlaybackMode(PlaybackMode mode)
 $method=|void|setPlaybackMode|QMediaPlaylist::PlaybackMode
@@ -47,15 +46,13 @@ $method=|void|setPlaybackMode|QMediaPlaylist::PlaybackMode
 %% Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)
 %%
 
-$prototype=QMediaContent currentMedia() const
-$method=|QMediaContent|currentMedia|
+$prototypeV2=QMediaContent currentMedia() const
 
 %%
 %% Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
 %%
 
-$prototype=int currentIndex() const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=void setCurrentIndex(int index)
 $method=|void|setCurrentIndex|int
@@ -92,14 +89,11 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
 }
 $addMethod=addMedia
 
-$prototype=bool clear()
-$method=|bool|clear|
+$prototypeV2=bool clear()
 
-$prototype=Error error() const
-$method=|QMediaPlaylist::Error|error|
+$prototypeV2=QMediaPlaylist::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=bool insertMedia(int pos, const QMediaContent & content)
 $internalMethod=|bool|insertMedia,insertMedia1|int,const QMediaContent &
@@ -129,11 +123,9 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
 }
 $addMethod=insertMedia
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isReadOnly() const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=void load(const QNetworkRequest & request, const char * format = nullptr)
 $internalMethod=|void|load,load1|const QNetworkRequest &,const char *=nullptr
@@ -174,8 +166,7 @@ $addMethod=load
 $prototype=QMediaContent media(int index) const
 $method=|QMediaContent|media|int
 
-$prototype=int mediaCount() const
-$method=|int|mediaCount|
+$prototypeV2=int mediaCount() const
 
 $prototype=int nextIndex(int steps = 1) const
 $method=|int|nextIndex|int=1
@@ -243,14 +234,11 @@ $prototype=virtual QMediaObject *mediaObject() const override
 %% TODO: is virtual ?
 $virtualMethod=|QMediaObject *|mediaObject|
 
-$prototype=void next()
-$slotMethod=|void|next|
+$prototypeV2=void next()
 
-$prototype=void previous()
-$slotMethod=|void|previous|
+$prototypeV2=void previous()
 
-$prototype=void shuffle()
-$slotMethod=|void|shuffle|
+$prototypeV2=void shuffle()
 
 $prototype=bool moveMedia(int from, int to)
 $method=5,7,0|bool|moveMedia|int,int

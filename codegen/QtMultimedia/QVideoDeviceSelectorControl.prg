@@ -32,11 +32,9 @@ $prototype=explicit QVideoDeviceSelectorControl(QObject *parent = nullptr) [prot
 $prototype=virtual ~QVideoDeviceSelectorControl()
 $deleteMethod
 
-$prototype=virtual int defaultDevice() const = 0
-$virtualMethod=|int|defaultDevice|
+$prototypeV2=virtual int defaultDevice() const = 0
 
-$prototype=virtual int deviceCount() const = 0
-$virtualMethod=|int|deviceCount|
+$prototypeV2=virtual int deviceCount() const = 0
 
 $prototype=virtual QString deviceDescription(int index) const = 0
 $virtualMethod=|QString|deviceDescription|int
@@ -44,8 +42,7 @@ $virtualMethod=|QString|deviceDescription|int
 $prototype=virtual QString deviceName(int index) const = 0
 $virtualMethod=|QString|deviceName|int
 
-$prototype=virtual int selectedDevice() const = 0
-$virtualMethod=|int|selectedDevice|
+$prototypeV2=virtual int selectedDevice() const = 0
 
 $prototype=virtual void setSelectedDevice(int index) = 0
 $virtualSlotMethod=|void|setSelectedDevice|int

@@ -30,8 +30,7 @@ $prototype=explicit QImageEncoderControl(QObject *parent = nullptr) [protected]
 $prototype=virtual ~QImageEncoderControl()
 $deleteMethod
 
-$prototype=virtual QStringList supportedImageCodecs() const = 0
-$virtualMethod=|QStringList|supportedImageCodecs|
+$prototypeV2=virtual QStringList supportedImageCodecs() const = 0
 
 $prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
 $virtualMethod=|QString|imageCodecDescription|const QString &
@@ -39,8 +38,7 @@ $virtualMethod=|QString|imageCodecDescription|const QString &
 $prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = nullptr) const = 0
 $virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=nullptr
 
-$prototype=virtual QImageEncoderSettings imageSettings() const = 0
-$virtualMethod=|QImageEncoderSettings|imageSettings|
+$prototypeV2=virtual QImageEncoderSettings imageSettings() const = 0
 
 $prototype=virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
 $virtualMethod=|void|setImageSettings|const QImageEncoderSettings &

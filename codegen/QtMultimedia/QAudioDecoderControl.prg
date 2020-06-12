@@ -32,26 +32,20 @@ $prototype=explicit QAudioDecoderControl(QObject *parent = nullptr) [protected]
 $prototype=~QAudioDecoderControl()
 $deleteMethod
 
-$prototype=virtual QAudioFormat audioFormat() const = 0
-$virtualMethod=|QAudioFormat|audioFormat|
+$prototypeV2=virtual QAudioFormat audioFormat() const = 0
 
-$prototype=virtual bool bufferAvailable() const = 0
-$virtualMethod=|bool|bufferAvailable|
+$prototypeV2=virtual bool bufferAvailable() const = 0
 
-$prototype=virtual qint64 duration() const = 0
-$virtualMethod=|qint64|duration|
+$prototypeV2=virtual qint64 duration() const = 0
 
-$prototype=virtual qint64 position() const = 0
-$virtualMethod=|qint64|position|
+$prototypeV2=virtual qint64 position() const = 0
 
-$prototype=virtual QAudioBuffer read() = 0
-$virtualMethod=|QAudioBuffer|read|
+$prototypeV2=virtual QAudioBuffer read() = 0
 
 $prototype=virtual void setAudioFormat(const QAudioFormat & format) = 0
 $virtualMethod=|void|setAudioFormat|const QAudioFormat &
 
-$prototype=virtual QIODevice * sourceDevice() const = 0
-$virtualMethod=|QIODevice *|sourceDevice|
+$prototypeV2=virtual QIODevice * sourceDevice() const = 0
 
 $prototype=virtual void setSourceDevice(QIODevice * device) = 0
 $virtualMethod=|void|setSourceDevice|QIODevice *
@@ -59,17 +53,13 @@ $virtualMethod=|void|setSourceDevice|QIODevice *
 $prototype=virtual void setSourceFilename(const QString & fileName) = 0
 $virtualMethod=|void|setSourceFilename|const QString &
 
-$prototype=virtual QString sourceFilename() const = 0
-$virtualMethod=|QString|sourceFilename|
+$prototypeV2=virtual QString sourceFilename() const = 0
 
-$prototype=virtual void start() = 0
-$virtualMethod=|void|start|
+$prototypeV2=virtual void start() = 0
 
-$prototype=virtual QAudioDecoder::State state() const = 0
-$virtualMethod=|QAudioDecoder::State|state|
+$prototypeV2=virtual QAudioDecoder::State state() const = 0
 
-$prototype=virtual void stop() = 0
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop() = 0
 
 %%
 %% SIGNALS

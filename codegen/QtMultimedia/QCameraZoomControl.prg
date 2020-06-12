@@ -32,23 +32,17 @@ $prototype=explicit QCameraZoomControl(QObject *parent = nullptr) [protected]
 $prototype=~QCameraZoomControl()
 $deleteMethod
 
-$prototype=virtual qreal currentDigitalZoom() const = 0
-$virtualMethod=|qreal|currentDigitalZoom|
+$prototypeV2=virtual qreal currentDigitalZoom() const = 0
 
-$prototype=virtual qreal currentOpticalZoom() const = 0
-$virtualMethod=|qreal|currentOpticalZoom|
+$prototypeV2=virtual qreal currentOpticalZoom() const = 0
 
-$prototype=virtual qreal maximumDigitalZoom() const = 0
-$virtualMethod=|qreal|maximumDigitalZoom|
+$prototypeV2=virtual qreal maximumDigitalZoom() const = 0
 
-$prototype=virtual qreal maximumOpticalZoom() const = 0
-$virtualMethod=|qreal|maximumOpticalZoom|
+$prototypeV2=virtual qreal maximumOpticalZoom() const = 0
 
-$prototype=virtual qreal requestedDigitalZoom() const = 0
-$virtualMethod=|qreal|requestedDigitalZoom|
+$prototypeV2=virtual qreal requestedDigitalZoom() const = 0
 
-$prototype=virtual qreal requestedOpticalZoom() const = 0
-$virtualMethod=|qreal|requestedOpticalZoom|
+$prototypeV2=virtual qreal requestedOpticalZoom() const = 0
 
 $prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
 $virtualMethod=|void|zoomTo|qreal,qreal

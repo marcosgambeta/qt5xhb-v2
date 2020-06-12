@@ -32,8 +32,7 @@ $prototype=explicit QMediaNetworkAccessControl(QObject *parent = nullptr) [prote
 $prototype=virtual ~QMediaNetworkAccessControl()
 $deleteMethod
 
-$prototype=virtual QNetworkConfiguration currentConfiguration() const = 0
-$virtualMethod=|QNetworkConfiguration|currentConfiguration|
+$prototypeV2=virtual QNetworkConfiguration currentConfiguration() const = 0
 
 $prototype=virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
 $virtualMethod=|void|setConfigurations|const QList<QNetworkConfiguration> &

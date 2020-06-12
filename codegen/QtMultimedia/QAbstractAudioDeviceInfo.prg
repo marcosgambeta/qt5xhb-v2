@@ -27,17 +27,14 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QAudioFormat preferredFormat() const = 0
-$virtualMethod=|QAudioFormat|preferredFormat|
+$prototypeV2=virtual QAudioFormat preferredFormat() const = 0
 
 $prototype=virtual bool isFormatSupported(const QAudioFormat &format) const = 0
 $virtualMethod=|bool|isFormatSupported|const QAudioFormat &
 
-$prototype=virtual QString deviceName() const = 0
-$virtualMethod=|QString|deviceName|
+$prototypeV2=virtual QString deviceName() const = 0
 
-$prototype=virtual QStringList supportedCodecs() = 0
-$virtualMethod=|QStringList|supportedCodecs|
+$prototypeV2=virtual QStringList supportedCodecs() = 0
 
 $prototype=virtual QList<int> supportedSampleRates() = 0
 $virtualMethod=|QList<int>|supportedSampleRates|

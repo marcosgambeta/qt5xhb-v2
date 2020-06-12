@@ -92,35 +92,25 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 $prototype=~QMediaResource()
 $deleteMethod
 
-$prototype=int audioBitRate() const
-$method=|int|audioBitRate|
+$prototypeV2=int audioBitRate() const
 
-$prototype=QString audioCodec() const
-$method=|QString|audioCodec|
+$prototypeV2=QString audioCodec() const
 
-$prototype=int channelCount() const
-$method=|int|channelCount|
+$prototypeV2=int channelCount() const
 
-$prototype=qint64 dataSize() const
-$method=|qint64|dataSize|
+$prototypeV2=qint64 dataSize() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString language() const
-$method=|QString|language|
+$prototypeV2=QString language() const
 
-$prototype=QString mimeType() const
-$method=|QString|mimeType|
+$prototypeV2=QString mimeType() const
 
-$prototype=QNetworkRequest request() const
-$method=|QNetworkRequest|request|
+$prototypeV2=QNetworkRequest request() const
 
-$prototype=QSize resolution() const
-$method=|QSize|resolution|
+$prototypeV2=QSize resolution() const
 
-$prototype=int sampleRate() const
-$method=|int|sampleRate|
+$prototypeV2=int sampleRate() const
 
 $prototype=void setAudioBitRate(int rate)
 $method=|void|setAudioBitRate|int
@@ -174,14 +164,11 @@ $method=|void|setVideoBitRate|int
 $prototype=void setVideoCodec(const QString & codec)
 $method=|void|setVideoCodec|const QString &
 
-$prototype=QUrl url() const
-$method=|QUrl|url|
+$prototypeV2=QUrl url() const
 
-$prototype=int videoBitRate() const
-$method=|int|videoBitRate|
+$prototypeV2=int videoBitRate() const
 
-$prototype=QString videoCodec() const
-$method=|QString|videoCodec|
+$prototypeV2=QString videoCodec() const
 
 $extraMethods
 

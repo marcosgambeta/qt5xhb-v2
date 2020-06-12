@@ -32,14 +32,12 @@ $prototype=explicit QMetaDataReaderControl(QObject *parent = nullptr) [protected
 $prototype=~QMetaDataReaderControl()
 $deleteMethod
 
-$prototype=virtual bool isMetaDataAvailable() const = 0
-$virtualMethod=|bool|isMetaDataAvailable|
+$prototypeV2=virtual bool isMetaDataAvailable() const = 0
 
 $prototype=virtual QVariant metaData(const QString &key) const = 0
 $virtualMethod=|QVariant|metaData|const QString &
 
-$prototype=virtual QStringList availableMetaData() const = 0
-$virtualMethod=|QStringList|availableMetaData|
+$prototypeV2=virtual QStringList availableMetaData() const = 0
 
 %%
 %% SIGNALS

@@ -59,11 +59,9 @@ $deleteMethod
 $prototype=void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
 $method=|void|swap|QCameraViewfinderSettings &
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QSize resolution() const
-$method=|QSize|resolution|
+$prototypeV2=QSize resolution() const
 
 $prototype=void setResolution(const QSize &)
 $internalMethod=|void|setResolution,setResolution1|const QSize &
@@ -93,26 +91,22 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 }
 $addMethod=setResolution
 
-$prototype=qreal minimumFrameRate() const
-$method=|qreal|minimumFrameRate|
+$prototypeV2=qreal minimumFrameRate() const
 
 $prototype=void setMinimumFrameRate(qreal rate)
 $method=|void|setMinimumFrameRate|qreal
 
-$prototype=qreal maximumFrameRate() const
-$method=|qreal|maximumFrameRate|
+$prototypeV2=qreal maximumFrameRate() const
 
 $prototype=void setMaximumFrameRate(qreal rate)
 $method=|void|setMaximumFrameRate|qreal
 
-$prototype=QVideoFrame::PixelFormat pixelFormat() const
-$method=|QVideoFrame::PixelFormat|pixelFormat|
+$prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
 $prototype=void setPixelFormat(QVideoFrame::PixelFormat format)
 $method=|void|setPixelFormat|QVideoFrame::PixelFormat
 
-$prototype=QSize pixelAspectRatio() const
-$method=|QSize|pixelAspectRatio|
+$prototypeV2=QSize pixelAspectRatio() const
 
 $prototype=void setPixelAspectRatio(const QSize &ratio)
 $internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &

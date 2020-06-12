@@ -59,59 +59,45 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
 }
 $addMethod=start
 
-$prototype=virtual void stop() = 0
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop() = 0
 
-$prototype=virtual void reset() = 0
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset() = 0
 
-$prototype=virtual void suspend()  = 0
-$virtualMethod=|void|suspend|
+$prototypeV2=virtual void suspend()  = 0
 
-$prototype=virtual void resume() = 0
-$virtualMethod=|void|resume|
+$prototypeV2=virtual void resume() = 0
 
-$prototype=virtual int bytesReady() const = 0
-$virtualMethod=|int|bytesReady|
+$prototypeV2=virtual int bytesReady() const = 0
 
-$prototype=virtual int periodSize() const = 0
-$virtualMethod=|int|periodSize|
+$prototypeV2=virtual int periodSize() const = 0
 
 $prototype=virtual void setBufferSize(int value) = 0
 $virtualMethod=|void|setBufferSize|int
 
-$prototype=virtual int bufferSize() const = 0
-$virtualMethod=|int|bufferSize|
+$prototypeV2=virtual int bufferSize() const = 0
 
 $prototype=virtual void setNotifyInterval(int milliSeconds) = 0
 $virtualMethod=|void|setNotifyInterval|int
 
-$prototype=virtual int notifyInterval() const = 0
-$virtualMethod=|int|notifyInterval|
+$prototypeV2=virtual int notifyInterval() const = 0
 
-$prototype=virtual qint64 processedUSecs() const = 0
-$virtualMethod=|qint64|processedUSecs|
+$prototypeV2=virtual qint64 processedUSecs() const = 0
 
-$prototype=virtual qint64 elapsedUSecs() const = 0
-$virtualMethod=|qint64|elapsedUSecs|
+$prototypeV2=virtual qint64 elapsedUSecs() const = 0
 
-$prototype=virtual QAudio::Error error() const = 0
-$virtualMethod=|QAudio::Error|error|
+$prototypeV2=virtual QAudio::Error error() const = 0
 
-$prototype=virtual QAudio::State state() const = 0
-$virtualMethod=|QAudio::State|state|
+$prototypeV2=virtual QAudio::State state() const = 0
 
 $prototype=virtual void setFormat(const QAudioFormat& fmt) = 0
 $virtualMethod=|void|setFormat|const QAudioFormat &
 
-$prototype=virtual QAudioFormat format() const = 0
-$virtualMethod=|QAudioFormat|format|
+$prototypeV2=virtual QAudioFormat format() const = 0
 
 $prototype=virtual void setVolume(qreal) = 0
 $virtualMethod=|void|setVolume|qreal
 
-$prototype=virtual qreal volume() const = 0
-$virtualMethod=|qreal|volume|
+$prototypeV2=virtual qreal volume() const = 0
 
 %%
 %% SIGNALS

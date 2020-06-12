@@ -41,8 +41,7 @@ $deleteMethod
 %% Q_PROPERTY(int notifyInterval READ notifyInterval WRITE setNotifyInterval NOTIFY notifyIntervalChanged)
 %%
 
-$prototype=int notifyInterval() const
-$method=|int|notifyInterval|
+$prototypeV2=int notifyInterval() const
 
 $prototype=void setNotifyInterval(int milliSeconds)
 $method=|void|setNotifyInterval|int
@@ -51,26 +50,21 @@ $method=|void|setNotifyInterval|int
 %%
 %%
 
-$prototype=virtual QMultimedia::AvailabilityStatus availability() const
-$virtualMethod=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=virtual QMultimedia::AvailabilityStatus availability() const
 
-$prototype=QStringList availableMetaData() const
-$method=|QStringList|availableMetaData|
+$prototypeV2=QStringList availableMetaData() const
 
 $prototype=virtual bool bind(QObject * object)
 $virtualMethod=|bool|bind|QObject *
 
-$prototype=virtual bool isAvailable() const
-$virtualMethod=|bool|isAvailable|
+$prototypeV2=virtual bool isAvailable() const
 
-$prototype=bool isMetaDataAvailable() const
-$method=|bool|isMetaDataAvailable|
+$prototypeV2=bool isMetaDataAvailable() const
 
 $prototype=QVariant metaData(const QString & key) const
 $method=|QVariant|metaData|const QString &
 
-$prototype=virtual QMediaService * service() const
-$virtualMethod=|QMediaService *|service|
+$prototypeV2=virtual QMediaService * service() const
 
 $prototype=virtual void unbind(QObject * object)
 $virtualMethod=|void|unbind|QObject *

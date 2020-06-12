@@ -97,23 +97,17 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 $prototype=~QMediaContent()
 $deleteMethod
 
-$prototype=QNetworkRequest canonicalRequest() const
-$method=|QNetworkRequest|canonicalRequest|
+$prototypeV2=QNetworkRequest canonicalRequest() const
 
-$prototype=QMediaResource canonicalResource() const
-$method=|QMediaResource|canonicalResource|
+$prototypeV2=QMediaResource canonicalResource() const
 
-$prototype=QUrl canonicalUrl() const
-$method=|QUrl|canonicalUrl|
+$prototypeV2=QUrl canonicalUrl() const
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QMediaPlaylist * playlist() const
-$method=|QMediaPlaylist *|playlist|
+$prototypeV2=QMediaPlaylist * playlist() const
 
-$prototype=QMediaResourceList resources() const
-$method=|QMediaResourceList|resources|
+$prototypeV2=QMediaResourceList resources() const
 
 $extraMethods
 

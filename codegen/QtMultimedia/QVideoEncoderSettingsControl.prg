@@ -39,13 +39,11 @@ $virtualMethod=|QList<qreal>|supportedFrameRates|const QVideoEncoderSettings &,b
 $prototype=virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = nullptr) const = 0
 $virtualMethod=|QList<QSize>|supportedResolutions|const QVideoEncoderSettings &,bool *=nullptr
 
-$prototype=virtual QStringList supportedVideoCodecs() const = 0
-$virtualMethod=|QStringList|supportedVideoCodecs|
+$prototypeV2=virtual QStringList supportedVideoCodecs() const = 0
 
 $prototype=virtual QString videoCodecDescription(const QString & codecName) const = 0
 $virtualMethod=|QString|videoCodecDescription|const QString &
 
-$prototype=virtual QVideoEncoderSettings videoSettings() const = 0
-$virtualMethod=|QVideoEncoderSettings|videoSettings|
+$prototypeV2=virtual QVideoEncoderSettings videoSettings() const = 0
 
 #pragma ENDDUMP

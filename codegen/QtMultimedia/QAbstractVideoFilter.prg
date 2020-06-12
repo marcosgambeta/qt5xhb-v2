@@ -38,8 +38,7 @@ $deleteMethod
 %% Q_PROPERTY(bool active READ isActive WRITE setActive NOTIFY activeChanged)
 %%
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=void setActive(bool v)
 $method=|void|setActive|bool
@@ -48,8 +47,7 @@ $method=|void|setActive|bool
 %%
 %%
 
-$prototype=virtual QVideoFilterRunnable *createFilterRunnable() = 0
-$virtualMethod=|QVideoFilterRunnable *|createFilterRunnable|
+$prototypeV2=virtual QVideoFilterRunnable * createFilterRunnable() = 0
 
 %%
 %% SIGNALS

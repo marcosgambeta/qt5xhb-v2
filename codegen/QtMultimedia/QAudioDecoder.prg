@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(QString sourceFilename READ sourceFilename WRITE setSourceFilename NOTIFY sourceChanged)
 %%
 
-$prototype=QString sourceFilename() const
-$method=|QString|sourceFilename|
+$prototypeV2=QString sourceFilename() const
 
 $prototype=void setSourceFilename(const QString & fileName)
 $method=|void|setSourceFilename|const QString &
@@ -47,56 +46,45 @@ $method=|void|setSourceFilename|const QString &
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
 %%
 
-$prototype=State state() const
-$method=|QAudioDecoder::State|state|
+$prototypeV2=QAudioDecoder::State state() const
 
 %%
 %% Q_PROPERTY(QString error READ errorString)
 %%
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 %%
 %% Q_PROPERTY(bool bufferAvailable READ bufferAvailable NOTIFY bufferAvailableChanged)
 %%
 
-$prototype=bool bufferAvailable() const
-$method=|bool|bufferAvailable|
+$prototypeV2=bool bufferAvailable() const
 
 %%
 %%
 %%
 
-$prototype=QAudioFormat audioFormat() const
-$method=|QAudioFormat|audioFormat|
+$prototypeV2=QAudioFormat audioFormat() const
 
 $prototype=void setAudioFormat(const QAudioFormat & format)
 $method=|void|setAudioFormat|const QAudioFormat &
 
-$prototype=qint64 duration() const
-$method=|qint64|duration|
+$prototypeV2=qint64 duration() const
 
-$prototype=Error error() const
-$method=|QAudioDecoder::Error|error|
+$prototypeV2=QAudioDecoder::Error error() const
 
-$prototype=qint64 position() const
-$method=|qint64|position|
+$prototypeV2=qint64 position() const
 
-$prototype=QAudioBuffer read() const
-$method=|QAudioBuffer|read|
+$prototypeV2=QAudioBuffer read() const
 
-$prototype=QIODevice * sourceDevice() const
-$method=|QIODevice *|sourceDevice|
+$prototypeV2=QIODevice * sourceDevice() const
 
 $prototype=void setSourceDevice(QIODevice * device)
 $method=|void|setSourceDevice|QIODevice *
 
-$prototype=void start()
-$slotMethod=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
 $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList()

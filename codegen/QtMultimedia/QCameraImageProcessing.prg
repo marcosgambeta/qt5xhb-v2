@@ -29,23 +29,18 @@ $prototype=QCameraImageProcessing(QCamera *camera) [private]
 
 $prototype=~QCameraImageProcessing() [private]
 
-$prototype=qreal contrast() const
-$method=|qreal|contrast|
+$prototypeV2=qreal contrast() const
 
-$prototype=qreal denoisingLevel() const
-$method=|qreal|denoisingLevel|
+$prototypeV2=qreal denoisingLevel() const
 
-$prototype=bool isAvailable() const
-$method=|bool|isAvailable|
+$prototypeV2=bool isAvailable() const
 
 $prototype=bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
 $method=|bool|isWhiteBalanceModeSupported|QCameraImageProcessing::WhiteBalanceMode
 
-$prototype=qreal manualWhiteBalance() const
-$method=|qreal|manualWhiteBalance|
+$prototypeV2=qreal manualWhiteBalance() const
 
-$prototype=qreal saturation() const
-$method=|qreal|saturation|
+$prototypeV2=qreal saturation() const
 
 $prototype=void setContrast(qreal value)
 $method=|void|setContrast|qreal
@@ -65,11 +60,9 @@ $method=|void|setSharpeningLevel|qreal
 $prototype=void setWhiteBalanceMode(WhiteBalanceMode mode)
 $method=|void|setWhiteBalanceMode|QCameraImageProcessing::WhiteBalanceMode
 
-$prototype=qreal sharpeningLevel() const
-$method=|qreal|sharpeningLevel|
+$prototypeV2=qreal sharpeningLevel() const
 
-$prototype=WhiteBalanceMode whiteBalanceMode() const
-$method=|QCameraImageProcessing::WhiteBalanceMode|whiteBalanceMode|
+$prototypeV2=QCameraImageProcessing::WhiteBalanceMode whiteBalanceMode() const
 
 $prototype=qreal brightness() const
 %% TODO: check version

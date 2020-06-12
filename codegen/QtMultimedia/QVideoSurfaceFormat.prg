@@ -65,29 +65,21 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 $prototype=~QVideoSurfaceFormat()
 $deleteMethod
 
-$prototype=int frameHeight () const
-$method=|int|frameHeight|
+$prototypeV2=int frameHeight() const
 
-$prototype=qreal frameRate () const
-$method=|qreal|frameRate|
+$prototypeV2=qreal frameRate() const
 
-$prototype=QSize frameSize () const
-$method=|QSize|frameSize|
+$prototypeV2=QSize frameSize() const
 
-$prototype=int frameWidth () const
-$method=|int|frameWidth|
+$prototypeV2=int frameWidth() const
 
-$prototype=QAbstractVideoBuffer::HandleType handleType () const
-$method=|QAbstractVideoBuffer::HandleType|handleType|
+$prototypeV2=QAbstractVideoBuffer::HandleType handleType() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QSize pixelAspectRatio () const
-$method=|QSize|pixelAspectRatio|
+$prototypeV2=QSize pixelAspectRatio() const
 
-$prototype=QVideoFrame::PixelFormat pixelFormat () const
-$method=|QVideoFrame::PixelFormat|pixelFormat|
+$prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
 $prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *
@@ -95,8 +87,7 @@ $method=|QVariant|property|const char *
 $prototype=QList<QByteArray> propertyNames () const
 $method=|QList<QByteArray>|propertyNames|
 
-$prototype=Direction scanLineDirection () const
-$method=|QVideoSurfaceFormat::Direction|scanLineDirection|
+$prototypeV2=QVideoSurfaceFormat::Direction scanLineDirection() const
 
 $prototype=void setFrameRate ( qreal rate )
 $method=|void|setFrameRate|qreal
@@ -169,14 +160,11 @@ $method=|void|setViewport|const QRect &
 $prototype=void setYCbCrColorSpace ( YCbCrColorSpace colorSpace )
 $method=|void|setYCbCrColorSpace|QVideoSurfaceFormat::YCbCrColorSpace
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QRect viewport () const
-$method=|QRect|viewport|
+$prototypeV2=QRect viewport() const
 
-$prototype=YCbCrColorSpace yCbCrColorSpace () const
-$method=|QVideoSurfaceFormat::YCbCrColorSpace|yCbCrColorSpace|
+$prototypeV2=QVideoSurfaceFormat::YCbCrColorSpace yCbCrColorSpace() const
 
 $extraMethods
 

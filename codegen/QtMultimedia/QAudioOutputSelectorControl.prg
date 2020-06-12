@@ -32,14 +32,12 @@ $prototype=explicit QAudioOutputSelectorControl(QObject *parent = nullptr) [prot
 $prototype=virtual ~QAudioOutputSelectorControl()
 $deleteMethod
 
-$prototype=virtual QString activeOutput() const = 0
-$virtualMethod=|QString|activeOutput|
+$prototypeV2=virtual QString activeOutput() const = 0
 
 $prototype=virtual QList<QString> availableOutputs() const = 0
 $virtualMethod=|QList<QString>|availableOutputs|
 
-$prototype=virtual QString defaultOutput() const = 0
-$virtualMethod=|QString|defaultOutput|
+$prototypeV2=virtual QString defaultOutput() const = 0
 
 $prototype=virtual QString outputDescription(const QString & name) const = 0
 $virtualMethod=|QString|outputDescription|const QString &

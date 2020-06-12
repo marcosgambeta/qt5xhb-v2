@@ -37,36 +37,28 @@ $deleteMethod
 %% Q_PROPERTY(bool readyForCapture READ isReadyForCapture NOTIFY readyForCaptureChanged)
 %%
 
-$prototype=bool isReadyForCapture() const
-$method=|bool|isReadyForCapture|
+$prototypeV2=bool isReadyForCapture() const
 
 %%
 %%
 %%
 
-$prototype=QMultimedia::AvailabilityStatus availability() const
-$method=|QtMultimedia::AvailabilityStatus|availability|
+$prototypeV2=QMultimedia::AvailabilityStatus availability() const
 
-$prototype=QVideoFrame::PixelFormat bufferFormat() const
-$method=|QVideoFrame::PixelFormat|bufferFormat|
+$prototypeV2=QVideoFrame::PixelFormat bufferFormat() const
 
-$prototype=CaptureDestinations captureDestination() const
-$method=|QCameraImageCapture::CaptureDestinations|captureDestination|
+$prototypeV2=QCameraImageCapture::CaptureDestinations captureDestination() const
 
-$prototype=QImageEncoderSettings encodingSettings() const
-$method=|QImageEncoderSettings|encodingSettings|
+$prototypeV2=QImageEncoderSettings encodingSettings() const
 
-$prototype=Error error() const
-$method=|QCameraImageCapture::Error|error|
+$prototypeV2=QCameraImageCapture::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=QString imageCodecDescription(const QString & codecName) const
 $method=|QString|imageCodecDescription|const QString &
 
-$prototype=bool isAvailable() const
-$method=|bool|isAvailable|
+$prototypeV2=bool isAvailable() const
 
 $prototype=bool isCaptureDestinationSupported(CaptureDestinations destination) const
 $method=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
@@ -88,14 +80,12 @@ $method=|void|setEncodingSettings|const QImageEncoderSettings &
 $prototype=QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 $method=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
 
-$prototype=QStringList supportedImageCodecs() const
-$method=|QStringList|supportedImageCodecs|
+$prototypeV2=QStringList supportedImageCodecs() const
 
 $prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr) const
 $method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=nullptr
 
-$prototype=void cancelCapture()
-$slotMethod=|void|cancelCapture|
+$prototypeV2=void cancelCapture()
 
 $prototype=int capture(const QString & location = QString())
 $slotMethod=|int|capture|const QString &=QString()

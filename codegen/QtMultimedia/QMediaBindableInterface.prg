@@ -28,8 +28,7 @@ $includes
 $prototype=virtual ~QMediaBindableInterface()
 $deleteMethod
 
-$prototype=virtual QMediaObject * mediaObject() const = 0
-$virtualMethod=|QMediaObject *|mediaObject|
+$prototypeV2=virtual QMediaObject * mediaObject() const = 0
 
 $prototype=virtual bool setMediaObject(QMediaObject *object) = 0 [protected]
 

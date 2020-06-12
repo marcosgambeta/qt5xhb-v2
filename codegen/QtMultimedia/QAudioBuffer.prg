@@ -75,8 +75,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 $prototype=~QAudioBuffer()
 $deleteMethod
 
-$prototype=int byteCount() const
-$method=|int|byteCount|
+$prototypeV2=int byteCount() const
 
 $prototype=const void* constData() const
 %% TODO: implementar
@@ -84,26 +83,19 @@ $prototype=const void* constData() const
 
 $prototype=const void* data() const
 
-$prototype=void * data()
-$method=|void *|data|
+$prototypeV2=void * data()
 
-$prototype=qint64 duration() const
-$method=|qint64|duration|
+$prototypeV2=qint64 duration() const
 
-$prototype=QAudioFormat format() const
-$method=|QAudioFormat|format|
+$prototypeV2=QAudioFormat format() const
 
-$prototype=int frameCount() const
-$method=|int|frameCount|
+$prototypeV2=int frameCount() const
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=int sampleCount() const
-$method=|int|sampleCount|
+$prototypeV2=int sampleCount() const
 
-$prototype=qint64 startTime() const
-$method=|qint64|startTime|
+$prototypeV2=qint64 startTime() const
 
 $extraMethods
 

@@ -32,11 +32,9 @@ $prototype=explicit QMetaDataWriterControl(QObject *parent = nullptr) [protected
 $prototype=~QMetaDataWriterControl()
 $deleteMethod
 
-$prototype=virtual bool isWritable() const = 0
-$virtualMethod=|bool|isWritable|
+$prototypeV2=virtual bool isWritable() const = 0
 
-$prototype=virtual bool isMetaDataAvailable() const = 0
-$virtualMethod=|bool|isMetaDataAvailable|
+$prototypeV2=virtual bool isMetaDataAvailable() const = 0
 
 $prototype=virtual QVariant metaData(const QString &key) const = 0
 $virtualMethod=|QVariant|metaData|const QString &
@@ -44,8 +42,7 @@ $virtualMethod=|QVariant|metaData|const QString &
 $prototype=virtual void setMetaData(const QString &key, const QVariant &value) = 0
 $virtualMethod=|void|setMetaData|const QString &,const QVariant &
 
-$prototype=virtual QStringList availableMetaData() const = 0
-$virtualMethod=|QStringList|availableMetaData|
+$prototypeV2=virtual QStringList availableMetaData() const = 0
 
 %%
 %% SIGNALS

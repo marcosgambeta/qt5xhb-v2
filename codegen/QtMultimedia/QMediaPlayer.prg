@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QMediaContent media READ media WRITE setMedia NOTIFY mediaChanged)
 %%
 
-$prototype=QMediaContent media() const
-$method=|QMediaContent|media|
+$prototypeV2=QMediaContent media() const
 
 $prototype=void setMedia(const QMediaContent &media, QIODevice *stream = nullptr)
 $slotMethod=|void|setMedia|const QMediaContent &,QIODevice *=nullptr
@@ -50,15 +49,13 @@ $slotMethod=|void|setMedia|const QMediaContent &,QIODevice *=nullptr
 %% Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)
 %%
 
-$prototype=QMediaContent currentMedia() const
-$method=|QMediaContent|currentMedia|
+$prototypeV2=QMediaContent currentMedia() const
 
 %%
 %% Q_PROPERTY(QMediaPlaylist * playlist READ playlist WRITE setPlaylist)
 %%
 
-$prototype=QMediaPlaylist * playlist() const
-$method=|QMediaPlaylist *|playlist|
+$prototypeV2=QMediaPlaylist * playlist() const
 
 $prototype=void setPlaylist(QMediaPlaylist * playlist)
 $slotMethod=|void|setPlaylist|QMediaPlaylist *
@@ -67,15 +64,13 @@ $slotMethod=|void|setPlaylist|QMediaPlaylist *
 %% Q_PROPERTY(qint64 duration READ duration NOTIFY durationChanged)
 %%
 
-$prototype=qint64 duration() const
-$method=|qint64|duration|
+$prototypeV2=qint64 duration() const
 
 %%
 %% Q_PROPERTY(qint64 position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=qint64 position() const
-$method=|qint64|position|
+$prototypeV2=qint64 position() const
 
 $prototype=void setPosition(qint64 position)
 $slotMethod=|void|setPosition|qint64
@@ -84,8 +79,7 @@ $slotMethod=|void|setPosition|qint64
 %% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
 %%
 
-$prototype=int volume() const
-$method=|int|volume|
+$prototypeV2=int volume() const
 
 $prototype=void setVolume(int volume)
 $slotMethod=|void|setVolume|int
@@ -94,8 +88,7 @@ $slotMethod=|void|setVolume|int
 %% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
 %%
 
-$prototype=bool isMuted() const
-$method=|bool|isMuted|
+$prototypeV2=bool isMuted() const
 
 $prototype=void setMuted(bool muted)
 $slotMethod=|void|setMuted|bool
@@ -104,50 +97,43 @@ $slotMethod=|void|setMuted|bool
 %% Q_PROPERTY(int bufferStatus READ bufferStatus NOTIFY bufferStatusChanged)
 %%
 
-$prototype=int bufferStatus() const
-$method=|int|bufferStatus|
+$prototypeV2=int bufferStatus() const
 
 %%
 %% Q_PROPERTY(bool audioAvailable READ isAudioAvailable NOTIFY audioAvailableChanged)
 %%
 
-$prototype=bool isAudioAvailable() const
-$method=|bool|isAudioAvailable|
+$prototypeV2=bool isAudioAvailable() const
 
 %%
 %% Q_PROPERTY(bool videoAvailable READ isVideoAvailable NOTIFY videoAvailableChanged)
 %%
 
-$prototype=bool isVideoAvailable() const
-$method=|bool|isVideoAvailable|
+$prototypeV2=bool isVideoAvailable() const
 
 %%
 %% Q_PROPERTY(bool seekable READ isSeekable NOTIFY seekableChanged)
 %%
 
-$prototype=bool isSeekable() const
-$method=|bool|isSeekable|
+$prototypeV2=bool isSeekable() const
 
 %%
 %% Q_PROPERTY(qreal playbackRate READ playbackRate WRITE setPlaybackRate NOTIFY playbackRateChanged)
 %%
 
-$prototype=qreal playbackRate() const
-$method=|qreal|playbackRate|
+$prototypeV2=qreal playbackRate() const
 
 %%
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
 %%
 
-$prototype=State state() const
-$method=|QMediaPlayer::State|state|
+$prototypeV2=QMediaPlayer::State state() const
 
 %%
 %% Q_PROPERTY(MediaStatus mediaStatus READ mediaStatus NOTIFY mediaStatusChanged)
 %%
 
-$prototype=MediaStatus mediaStatus() const
-$method=|QMediaPlayer::MediaStatus|mediaStatus|
+$prototypeV2=QMediaPlayer::MediaStatus mediaStatus() const
 
 %%
 %% Q_PROPERTY(QAudio::Role audioRole READ audioRole WRITE setAudioRole)
@@ -163,18 +149,15 @@ $method=5,6,0|void|setAudioRole|QAudio::Role
 %% Q_PROPERTY(QString error READ errorString)
 %%
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 %%
 %%
 %%
 
-$prototype=QNetworkConfiguration currentNetworkConfiguration() const
-$method=|QNetworkConfiguration|currentNetworkConfiguration|
+$prototypeV2=QNetworkConfiguration currentNetworkConfiguration() const
 
-$prototype=Error error() const
-$method=|QMediaPlayer::Error|error|
+$prototypeV2=QMediaPlayer::Error error() const
 
 $prototype=const QIODevice * mediaStream() const
 $method=|const QIODevice *|mediaStream|
@@ -215,14 +198,11 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 }
 $addMethod=setVideoOutput
 
-$prototype=virtual QMultimedia::AvailabilityStatus availability() const override
-$virtualMethod=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=virtual QMultimedia::AvailabilityStatus availability() const override
 
-$prototype=void pause()
-$slotMethod=|void|pause|
+$prototypeV2=void pause()
 
-$prototype=void play()
-$slotMethod=|void|play|
+$prototypeV2=void play()
 
 $prototype=void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
 $slotMethod=|void|setNetworkConfigurations|const QList<QNetworkConfiguration> &
@@ -230,8 +210,7 @@ $slotMethod=|void|setNetworkConfigurations|const QList<QNetworkConfiguration> &
 $prototype=void setPlaybackRate(qreal rate)
 $slotMethod=|void|setPlaybackRate|qreal
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList& codecs = QStringList(), Flags flags = Flags())
 $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList(),QMediaPlayer::Flags=0

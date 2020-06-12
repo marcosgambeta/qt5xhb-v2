@@ -30,8 +30,7 @@ $prototype=explicit QAudioEncoderSettingsControl(QObject *parent = nullptr) [pro
 $prototype=virtual ~QAudioEncoderSettingsControl()
 $deleteMethod
 
-$prototype=virtual QAudioEncoderSettings audioSettings() const = 0
-$virtualMethod=|QAudioEncoderSettings|audioSettings|
+$prototypeV2=virtual QAudioEncoderSettings audioSettings() const = 0
 
 $prototype=virtual QString codecDescription(const QString & codecName) const = 0
 $virtualMethod=|QString|codecDescription|const QString &
@@ -39,8 +38,7 @@ $virtualMethod=|QString|codecDescription|const QString &
 $prototype=virtual void setAudioSettings(const QAudioEncoderSettings & settings) = 0
 $virtualMethod=|void|setAudioSettings|const QAudioEncoderSettings &
 
-$prototype=virtual QStringList supportedAudioCodecs() const = 0
-$virtualMethod=|QStringList|supportedAudioCodecs|
+$prototypeV2=virtual QStringList supportedAudioCodecs() const = 0
 
 $prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = nullptr) const = 0
 $virtualMethod=|QList<int>|supportedSampleRates|const QAudioEncoderSettings &,bool *=nullptr

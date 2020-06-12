@@ -38,18 +38,15 @@ $deleteMethod
 %% Q_PROPERTY(QSize nativeResolution READ nativeResolution NOTIFY nativeResolutionChanged)
 %%
 
-$prototype=QSize nativeResolution() const
-$method=|QSize|nativeResolution|
+$prototypeV2=QSize nativeResolution() const
 
 %%
 %%
 %%
 
-$prototype=Error error () const
-$method=|QAbstractVideoSurface::Error|error|
+$prototypeV2=QAbstractVideoSurface::Error error() const
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 $virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &
@@ -63,11 +60,9 @@ $virtualMethod=|bool|present|const QVideoFrame &
 $prototype=virtual bool start ( const QVideoSurfaceFormat & format )
 $virtualMethod=|bool|start|const QVideoSurfaceFormat &
 
-$prototype=virtual void stop ()
-$virtualMethod=|void|stop|
+$prototypeV2=virtual void stop()
 
-$prototype=QVideoSurfaceFormat surfaceFormat () const
-$method=|QVideoSurfaceFormat|surfaceFormat|
+$prototypeV2=QVideoSurfaceFormat surfaceFormat() const
 
 $prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle) const = 0
 %% TODO: is pure virtual ?

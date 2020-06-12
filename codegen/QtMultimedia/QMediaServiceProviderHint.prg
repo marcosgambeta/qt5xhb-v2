@@ -84,26 +84,19 @@ $addMethod=new
 $prototype=~QMediaServiceProviderHint()
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=Type type() const
-$method=|QMediaServiceProviderHint::Type|type|
+$prototypeV2=QMediaServiceProviderHint::Type type() const
 
-$prototype=QString mimeType() const
-$method=|QString|mimeType|
+$prototypeV2=QString mimeType() const
 
-$prototype=QStringList codecs() const
-$method=|QStringList|codecs|
+$prototypeV2=QStringList codecs() const
 
-$prototype=QByteArray device() const
-$method=|QByteArray|device|
+$prototypeV2=QByteArray device() const
 
-$prototype=Features features() const
-$method=|QMediaServiceProviderHint::Features|features|
+$prototypeV2=QMediaServiceProviderHint::Features features() const
 
-$prototype=QCamera::Position cameraPosition() const
-$method=|QCamera::Position|cameraPosition|
+$prototypeV2=QCamera::Position cameraPosition() const
 
 $extraMethods
 

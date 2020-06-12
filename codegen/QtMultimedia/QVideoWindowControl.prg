@@ -32,56 +32,46 @@ $prototype=explicit QVideoWindowControl(QObject *parent = nullptr) [protected]
 $prototype=~QVideoWindowControl()
 $deleteMethod
 
-$prototype=virtual QRect displayRect() const = 0
-$virtualMethod=|QRect|displayRect|
+$prototypeV2=virtual QRect displayRect() const = 0
 
 $prototype=virtual void setDisplayRect(const QRect &rect) = 0
 $virtualMethod=|void|setDisplayRect|const QRect &
 
-$prototype=virtual bool isFullScreen() const = 0
-$virtualMethod=|bool|isFullScreen|
+$prototypeV2=virtual bool isFullScreen() const = 0
 
 $prototype=virtual void setFullScreen(bool fullScreen) = 0
 $virtualMethod=|void|setFullScreen|bool
 
-$prototype=virtual void repaint() = 0
-$virtualMethod=|void|repaint|
+$prototypeV2=virtual void repaint() = 0
 
-$prototype=virtual QSize nativeSize() const = 0
-$virtualMethod=|QSize|nativeSize|
+$prototypeV2=virtual QSize nativeSize() const = 0
 
-$prototype=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
-$virtualMethod=|Qt::AspectRatioMode|aspectRatioMode|
+$prototypeV2=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 
 $prototype=virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 $virtualMethod=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-$prototype=virtual int brightness() const = 0
-$virtualMethod=|int|brightness|
+$prototypeV2=virtual int brightness() const = 0
 
 $prototype=virtual void setBrightness(int brightness) = 0
 $virtualMethod=|void|setBrightness|int
 
-$prototype=virtual int contrast() const = 0
-$virtualMethod=|int|contrast|
+$prototypeV2=virtual int contrast() const = 0
 
 $prototype=virtual void setContrast(int contrast) = 0
 $virtualMethod=|void|setContrast|int
 
-$prototype=virtual int hue() const = 0
-$virtualMethod=|int|hue|
+$prototypeV2=virtual int hue() const = 0
 
 $prototype=virtual void setHue(int hue) = 0
 $virtualMethod=|void|setHue|int
 
-$prototype=virtual int saturation() const = 0
-$virtualMethod=|int|saturation|
+$prototypeV2=virtual int saturation() const = 0
 
 $prototype=virtual void setSaturation(int saturation) = 0
 $virtualMethod=|void|setSaturation|int
 
-$prototype=virtual WId winId() const = 0
-$virtualMethod=|WId|winId|
+$prototypeV2=virtual WId winId() const = 0
 
 $prototype=virtual void setWinId(WId id) = 0
 $virtualMethod=|void|setWinId|WId

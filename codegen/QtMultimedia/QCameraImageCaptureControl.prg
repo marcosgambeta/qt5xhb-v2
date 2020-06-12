@@ -32,17 +32,14 @@ $prototype=explicit QCameraImageCaptureControl(QObject *parent = nullptr) [prote
 $prototype=~QCameraImageCaptureControl()
 $deleteMethod
 
-$prototype=virtual void cancelCapture() = 0
-$virtualMethod=|void|cancelCapture|
+$prototypeV2=virtual void cancelCapture() = 0
 
 $prototype=virtual int capture(const QString & fileName) = 0
 $virtualMethod=|int|capture|const QString &
 
-$prototype=virtual QCameraImageCapture::DriveMode driveMode() const = 0
-$virtualMethod=|QCameraImageCapture::DriveMode|driveMode|
+$prototypeV2=virtual QCameraImageCapture::DriveMode driveMode() const = 0
 
-$prototype=virtual bool isReadyForCapture() const = 0
-$virtualMethod=|bool|isReadyForCapture|
+$prototypeV2=virtual bool isReadyForCapture() const = 0
 
 $prototype=virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
 $virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode

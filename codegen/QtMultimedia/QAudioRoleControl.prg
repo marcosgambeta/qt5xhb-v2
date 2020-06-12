@@ -33,8 +33,7 @@ $prototype=explicit QAudioRoleControl(QObject *parent = nullptr) [protected]
 $prototype=virtual ~QAudioRoleControl()
 $deleteMethod
 
-$prototype=virtual QAudio::Role audioRole() const = 0
-$virtualMethod=|QAudio::Role|audioRole|
+$prototypeV2=virtual QAudio::Role audioRole() const = 0
 
 $prototype=virtual void setAudioRole(QAudio::Role role) = 0
 $virtualMethod=|void|setAudioRole|QAudio::Role

@@ -57,35 +57,25 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 $prototype=~QAudioInput()
 $deleteMethod
 
-$prototype=int bufferSize () const
-$method=|int|bufferSize|
+$prototypeV2=int bufferSize() const
 
-$prototype=int bytesReady () const
-$method=|int|bytesReady|
+$prototypeV2=int bytesReady() const
 
-$prototype=qint64 elapsedUSecs () const
-$method=|qint64|elapsedUSecs|
+$prototypeV2=qint64 elapsedUSecs() const
 
-$prototype=QAudio::Error error () const
-$method=|QAudio::Error|error|
+$prototypeV2=QAudio::Error error() const
 
-$prototype=QAudioFormat format () const
-$method=|QAudioFormat|format|
+$prototypeV2=QAudioFormat format() const
 
-$prototype=int notifyInterval () const
-$method=|int|notifyInterval|
+$prototypeV2=int notifyInterval() const
 
-$prototype=int periodSize () const
-$method=|int|periodSize|
+$prototypeV2=int periodSize() const
 
-$prototype=qint64 processedUSecs () const
-$method=|qint64|processedUSecs|
+$prototypeV2=qint64 processedUSecs() const
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=void resume ()
-$method=|void|resume|
+$prototypeV2=void resume()
 
 $prototype=void setBufferSize ( int bytes )
 $method=|void|setBufferSize|int
@@ -121,20 +111,16 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
 }
 $addMethod=start
 
-$prototype=QAudio::State state () const
-$method=|QAudio::State|state|
+$prototypeV2=QAudio::State state() const
 
-$prototype=void stop ()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void suspend ()
-$method=|void|suspend|
+$prototypeV2=void suspend()
 
 $prototype=void setVolume(qreal volume)
 $method=|void|setVolume|qreal
 
-$prototype=qreal volume() const
-$method=|qreal|volume|
+$prototypeV2=qreal volume() const
 
 %%
 %% SIGNALS

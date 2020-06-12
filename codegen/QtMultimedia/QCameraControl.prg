@@ -35,8 +35,7 @@ $deleteMethod
 $prototype=virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
 $virtualMethod=|bool|canChangeProperty|QCameraControl::PropertyChangeType,QCamera::Status
 
-$prototype=virtual QCamera::CaptureModes captureMode() const = 0
-$virtualMethod=|QCamera::CaptureModes|captureMode|
+$prototypeV2=virtual QCamera::CaptureModes captureMode() const = 0
 
 $prototype=virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
 $virtualMethod=|bool|isCaptureModeSupported|QCamera::CaptureModes
@@ -47,11 +46,9 @@ $virtualMethod=|void|setCaptureMode|QCamera::CaptureModes
 $prototype=virtual void setState(QCamera::State state) = 0
 $virtualMethod=|void|setState|QCamera::State
 
-$prototype=virtual QCamera::State state() const = 0
-$virtualMethod=|QCamera::State|state|
+$prototypeV2=virtual QCamera::State state() const = 0
 
-$prototype=virtual QCamera::Status status() const = 0
-$virtualMethod=|QCamera::Status|status|
+$prototypeV2=virtual QCamera::Status status() const = 0
 
 %%
 %% SIGNALS

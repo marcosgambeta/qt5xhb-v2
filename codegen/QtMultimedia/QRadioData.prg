@@ -37,43 +37,37 @@ $deleteMethod
 %% Q_PROPERTY(QString stationId READ stationId NOTIFY stationIdChanged)
 %%
 
-$prototype=QString stationId() const
-$method=|QString|stationId|
+$prototypeV2=QString stationId() const
 
 %%
 %% Q_PROPERTY(ProgramType programType READ programType NOTIFY programTypeChanged)
 %%
 
-$prototype=ProgramType programType() const
-$method=|QRadioData::ProgramType|programType|
+$prototypeV2=QRadioData::ProgramType programType() const
 
 %%
 %% Q_PROPERTY(QString programTypeName READ programTypeName NOTIFY programTypeNameChanged)
 %%
 
-$prototype=QString programTypeName() const
-$method=|QString|programTypeName|
+$prototypeV2=QString programTypeName() const
 
 %%
 %% Q_PROPERTY(QString stationName READ stationName NOTIFY stationNameChanged)
 %%
 
-$prototype=QString stationName() const
-$method=|QString|stationName|
+$prototypeV2=QString stationName() const
 
 %%
 %% Q_PROPERTY(QString radioText READ radioText NOTIFY radioTextChanged)
 %%
 
-$prototype=QString radioText() const
-$method=|QString|radioText|
+$prototypeV2=QString radioText() const
 
 %%
 %% Q_PROPERTY(bool alternativeFrequenciesEnabled READ isAlternativeFrequenciesEnabled WRITE setAlternativeFrequenciesEnabled NOTIFY alternativeFrequenciesEnabledChanged)
 %%
 
-$prototype=bool isAlternativeFrequenciesEnabled() const
-$method=|bool|isAlternativeFrequenciesEnabled|
+$prototypeV2=bool isAlternativeFrequenciesEnabled() const
 
 $prototype=void setAlternativeFrequenciesEnabled(bool enabled)
 $slotMethod=|void|setAlternativeFrequenciesEnabled|bool
@@ -82,17 +76,13 @@ $slotMethod=|void|setAlternativeFrequenciesEnabled|bool
 %%
 %%
 
-$prototype=QMultimedia::AvailabilityStatus availability() const
-$method=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=QMultimedia::AvailabilityStatus availability() const
 
-$prototype=QMediaObject *mediaObject() const override
-$method=|QMediaObject *|mediaObject|
+$prototypeV2=QMediaObject * mediaObject() const override
 
-$prototype=Error error() const
-$method=|QRadioData::Error|error|
+$prototypeV2=QRadioData::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 

@@ -77,22 +77,19 @@ $deleteMethod
 %% Q_PROPERTY(QCamera::State state READ state NOTIFY stateChanged)
 %%
 
-$prototype=State state() const
-$method=|QCamera::State|state|
+$prototypeV2=QCamera::State state() const
 
 %%
 %% Q_PROPERTY(QCamera::Status status READ status NOTIFY statusChanged)
 %%
 
-$prototype=Status status() const
-$method=|QCamera::Status|status|
+$prototypeV2=QCamera::Status status() const
 
 %%
 %% Q_PROPERTY(QCamera::CaptureModes captureMode READ captureMode WRITE setCaptureMode NOTIFY captureModeChanged)
 %%
 
-$prototype=CaptureModes captureMode() const
-$method=|QCamera::CaptureModes|captureMode|
+$prototypeV2=QCamera::CaptureModes captureMode() const
 
 $prototype=void setCaptureMode(QCamera::CaptureModes mode)
 $slotMethod=|void|setCaptureMode|QCamera::CaptureModes
@@ -133,26 +130,20 @@ $addMethod=lockStatus
 %%
 %%
 
-$prototype=Error error() const
-$method=|QCamera::Error|error|
+$prototypeV2=QCamera::Error error() const
 
-$prototype=QString errorString() const
-$method=|QString|errorString|
+$prototypeV2=QString errorString() const
 
-$prototype=QCameraExposure * exposure() const
-$method=|QCameraExposure *|exposure|
+$prototypeV2=QCameraExposure * exposure() const
 
-$prototype=QCameraFocus * focus() const
-$method=|QCameraFocus *|focus|
+$prototypeV2=QCameraFocus * focus() const
 
-$prototype=QCameraImageProcessing * imageProcessing() const
-$method=|QCameraImageProcessing *|imageProcessing|
+$prototypeV2=QCameraImageProcessing * imageProcessing() const
 
 $prototype=bool isCaptureModeSupported(CaptureModes mode) const
 $method=|bool|isCaptureModeSupported|QCamera::CaptureModes
 
-$prototype=QCamera::LockTypes requestedLocks() const
-$method=|QCamera::LockTypes|requestedLocks|
+$prototypeV2=QCamera::LockTypes requestedLocks() const
 
 $prototype=void setViewfinder(QVideoWidget * viewfinder)
 $internalMethod=|void|setViewfinder,setViewfinder1|QVideoWidget *
@@ -190,11 +181,9 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
 }
 $addMethod=setViewfinder
 
-$prototype=QCamera::LockTypes supportedLocks() const
-$method=|QCamera::LockTypes|supportedLocks|
+$prototypeV2=QCamera::LockTypes supportedLocks() const
 
-$prototype=void load()
-$slotMethod=|void|load|
+$prototypeV2=void load()
 
 $prototype=void searchAndLock()
 $internalSlotMethod=|void|searchAndLock,searchAndLock1|
@@ -224,14 +213,11 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 }
 $addMethod=searchAndLock
 
-$prototype=void start()
-$slotMethod=|void|start|
+$prototypeV2=void start()
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=void unload()
-$slotMethod=|void|unload|
+$prototypeV2=void unload()
 
 $prototype=void unlock()
 $internalSlotMethod=|void|unlock,unlock1|
@@ -261,8 +247,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
 }
 $addMethod=unlock
 
-$prototype=QMultimedia::AvailabilityStatus availability() const override
-$method=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=QMultimedia::AvailabilityStatus availability() const override
 
 $prototype=QCameraViewfinderSettings viewfinderSettings() const
 $method=5,5,0|QCameraViewfinderSettings|viewfinderSettings|

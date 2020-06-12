@@ -31,23 +31,18 @@ $constructor=|new|const QString &,QObject *=nullptr
 $prototype=~QSound()
 $deleteMethod
 
-$prototype=int loops() const
-$method=|int|loops|
+$prototypeV2=int loops() const
 
-$prototype=int loopsRemaining() const
-$method=|int|loopsRemaining|
+$prototypeV2=int loopsRemaining() const
 
 $prototype=void setLoops(int)
 $method=|void|setLoops|int
 
-$prototype=QString fileName() const
-$method=|QString|fileName|
+$prototypeV2=QString fileName() const
 
-$prototype=bool isFinished() const
-$method=|bool|isFinished|
+$prototypeV2=bool isFinished() const
 
-$prototype=void stop()
-$slotMethod=|void|stop|
+$prototypeV2=void stop()
 
 $prototype=void play()
 $internalSlotMethod=|void|play,play1|

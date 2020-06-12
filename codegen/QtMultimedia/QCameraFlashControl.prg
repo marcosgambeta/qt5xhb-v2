@@ -32,14 +32,12 @@ $prototype=explicit QCameraFlashControl(QObject *parent = nullptr) [protected]
 $prototype=~QCameraFlashControl()
 $deleteMethod
 
-$prototype=virtual QCameraExposure::FlashModes flashMode() const = 0
-$virtualMethod=|QCameraExposure::FlashModes|flashMode|
+$prototypeV2=virtual QCameraExposure::FlashModes flashMode() const = 0
 
 $prototype=virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
 $virtualMethod=|bool|isFlashModeSupported|QCameraExposure::FlashModes
 
-$prototype=virtual bool isFlashReady() const = 0
-$virtualMethod=|bool|isFlashReady|
+$prototypeV2=virtual bool isFlashReady() const = 0
 
 $prototype=virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
 $virtualMethod=|void|setFlashMode|QCameraExposure::FlashModes

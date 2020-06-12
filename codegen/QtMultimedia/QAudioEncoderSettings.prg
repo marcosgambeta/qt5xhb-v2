@@ -55,17 +55,13 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 $prototype=~QAudioEncoderSettings()
 $deleteMethod
 
-$prototype=int bitRate() const
-$method=|int|bitRate|
+$prototypeV2=int bitRate() const
 
-$prototype=int channelCount() const
-$method=|int|channelCount|
+$prototypeV2=int channelCount() const
 
-$prototype=QString codec() const
-$method=|QString|codec|
+$prototypeV2=QString codec() const
 
-$prototype=QMultimedia::EncodingMode encodingMode() const
-$method=|QMultimedia::EncodingMode|encodingMode|
+$prototypeV2=QMultimedia::EncodingMode encodingMode() const
 
 $prototype=QVariant encodingOption(const QString & option) const
 $method=|QVariant|encodingOption|const QString &
@@ -73,14 +69,11 @@ $method=|QVariant|encodingOption|const QString &
 $prototype=QVariantMap encodingOptions() const
 %% TODO: QVariantMap
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QMultimedia::EncodingQuality quality() const
-$method=|QMultimedia::EncodingQuality|quality|
+$prototypeV2=QMultimedia::EncodingQuality quality() const
 
-$prototype=int sampleRate() const
-$method=|int|sampleRate|
+$prototypeV2=int sampleRate() const
 
 $prototype=void setBitRate(int bitrate)
 $method=|void|setBitRate|int

@@ -41,7 +41,6 @@ $deleteMethod
 $prototype=void audioBufferProbed( const QAudioBuffer & buffer )
 $signalMethod=|void|audioBufferProbed|const QAudioBuffer &
 
-$prototype=void flush()
-$signalMethod=|void|flush|
+$prototypeV2=void flush()
 
 #pragma ENDDUMP

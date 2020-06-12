@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(QString audioInput READ audioInput WRITE setAudioInput NOTIFY audioInputChanged)
 %%
 
-$prototype=QString audioInput() const
-$method=|QString|audioInput|
+$prototypeV2=QString audioInput() const
 
 $prototype=void setAudioInput(const QString & name)
 $slotMethod=|void|setAudioInput|const QString &
@@ -50,11 +49,9 @@ $slotMethod=|void|setAudioInput|const QString &
 $prototype=QString audioInputDescription(const QString & name) const
 $method=|QString|audioInputDescription|const QString &
 
-$prototype=QStringList audioInputs() const
-$method=|QStringList|audioInputs|
+$prototypeV2=QStringList audioInputs() const
 
-$prototype=QString defaultAudioInput() const
-$method=|QString|defaultAudioInput|
+$prototypeV2=QString defaultAudioInput() const
 
 %%
 %% SIGNALS

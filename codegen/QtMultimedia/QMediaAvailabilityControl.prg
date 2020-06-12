@@ -32,8 +32,7 @@ $prototype=explicit QMediaAvailabilityControl(QObject *parent = nullptr) [protec
 $prototype=~QMediaAvailabilityControl()
 $deleteMethod
 
-$prototype=virtual QMultimedia::AvailabilityStatus availability() const = 0
-$virtualMethod=|QMultimedia::AvailabilityStatus|availability|
+$prototypeV2=virtual QMultimedia::AvailabilityStatus availability() const = 0
 
 %%
 %% SIGNALS

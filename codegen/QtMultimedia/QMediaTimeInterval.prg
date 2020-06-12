@@ -66,17 +66,13 @@ $deleteMethod
 $prototype=bool contains(qint64 time) const
 $method=|bool|contains|qint64
 
-$prototype=qint64 end() const
-$method=|qint64|end|
+$prototypeV2=qint64 end() const
 
-$prototype=bool isNormal() const
-$method=|bool|isNormal|
+$prototypeV2=bool isNormal() const
 
-$prototype=QMediaTimeInterval normalized() const
-$method=|QMediaTimeInterval|normalized|
+$prototypeV2=QMediaTimeInterval normalized() const
 
-$prototype=qint64 start() const
-$method=|qint64|start|
+$prototypeV2=qint64 start() const
 
 $prototype=QMediaTimeInterval translated(qint64 offset) const
 $method=|QMediaTimeInterval|translated|qint64

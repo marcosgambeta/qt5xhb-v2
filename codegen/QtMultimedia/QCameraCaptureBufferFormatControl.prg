@@ -32,8 +32,7 @@ $prototype=explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr)
 $prototype=~QCameraCaptureBufferFormatControl()
 $deleteMethod
 
-$prototype=virtual QVideoFrame::PixelFormat bufferFormat() const = 0
-$virtualMethod=|QVideoFrame::PixelFormat|bufferFormat|
+$prototypeV2=virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 
 $prototype=virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
 $virtualMethod=|void|setBufferFormat|QVideoFrame::PixelFormat

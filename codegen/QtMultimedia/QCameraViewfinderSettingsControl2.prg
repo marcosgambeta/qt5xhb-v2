@@ -34,8 +34,7 @@ $deleteMethod
 $prototype=virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 $virtualMethod=|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
 
-$prototype=virtual QCameraViewfinderSettings viewfinderSettings() const = 0
-$virtualMethod=|QCameraViewfinderSettings|viewfinderSettings|
+$prototypeV2=virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 
 $prototype=virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
 $virtualMethod=|void|setViewfinderSettings|const QCameraViewfinderSettings &

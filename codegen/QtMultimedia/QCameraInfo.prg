@@ -64,23 +64,17 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
 $prototype=~QCameraInfo()
 $deleteMethod
 
-$prototype=bool isNull() const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QString deviceName() const
-$method=|QString|deviceName|
+$prototypeV2=QString deviceName() const
 
-$prototype=QString description() const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
-$prototype=QCamera::Position position() const
-$method=|QCamera::Position|position|
+$prototypeV2=QCamera::Position position() const
 
-$prototype=int orientation() const
-$method=|int|orientation|
+$prototypeV2=int orientation() const
 
-$prototype=static QCameraInfo defaultCamera()
-$staticMethod=|QCameraInfo|defaultCamera|
+$prototypeV2=static QCameraInfo defaultCamera()
 
 $prototype=static QList<QCameraInfo> availableCameras(QCamera::Position position = QCamera::UnspecifiedPosition)
 $staticMethod=|QList<QCameraInfo>|availableCameras|QCamera::Position=QCamera::UnspecifiedPosition

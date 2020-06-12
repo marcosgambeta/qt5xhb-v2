@@ -57,20 +57,17 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 $prototype=~QAudioDeviceInfo()
 $deleteMethod
 
-$prototype=QString deviceName () const
-$method=|QString|deviceName|
+$prototypeV2=QString deviceName() const
 
 $prototype=bool isFormatSupported ( const QAudioFormat & format ) const
 $method=|bool|isFormatSupported|const QAudioFormat &
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
 $prototype=QAudioFormat nearestFormat ( const QAudioFormat & format ) const
 $method=|QAudioFormat|nearestFormat|const QAudioFormat &
 
-$prototype=QAudioFormat preferredFormat () const
-$method=|QAudioFormat|preferredFormat|
+$prototypeV2=QAudioFormat preferredFormat() const
 
 $prototype=QList<QAudioFormat::Endian> supportedByteOrders () const
 $method=|QList<QAudioFormat::Endian>|supportedByteOrders|
@@ -78,8 +75,7 @@ $method=|QList<QAudioFormat::Endian>|supportedByteOrders|
 $prototype=QList<int> supportedChannelCounts () const
 $method=|QList<int>|supportedChannelCounts|
 
-$prototype=QStringList supportedCodecs () const
-$method=|QStringList|supportedCodecs|
+$prototypeV2=QStringList supportedCodecs() const
 
 $prototype=QList<int> supportedSampleRates () const
 $method=|QList<int>|supportedSampleRates|
@@ -93,11 +89,9 @@ $method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
 $prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 $staticMethod=|QList<QAudioDeviceInfo>|availableDevices|QAudio::Mode
 
-$prototype=static QAudioDeviceInfo defaultInputDevice ()
-$staticMethod=|QAudioDeviceInfo|defaultInputDevice|
+$prototypeV2=static QAudioDeviceInfo defaultInputDevice()
 
-$prototype=static QAudioDeviceInfo defaultOutputDevice ()
-$staticMethod=|QAudioDeviceInfo|defaultOutputDevice|
+$prototypeV2=static QAudioDeviceInfo defaultOutputDevice()
 
 $prototype=QString realm() const [private]
 

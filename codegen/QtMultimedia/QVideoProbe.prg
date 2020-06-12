@@ -33,8 +33,7 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QVideoProbe()
 $deleteMethod
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=bool setSource(QMediaObject * source)
 $internalMethod=|bool|setSource,setSource1|QMediaObject *
@@ -68,8 +67,7 @@ $addMethod=setSource
 %% SIGNALS
 %%
 
-$prototype=void flush()
-$signalMethod=|void|flush|
+$prototypeV2=void flush()
 
 $prototype=void videoFrameProbed( const QVideoFrame & frame )
 $signalMethod=|void|videoFrameProbed|const QVideoFrame &

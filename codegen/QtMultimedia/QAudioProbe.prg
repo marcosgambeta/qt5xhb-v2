@@ -33,8 +33,7 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QAudioProbe()
 $deleteMethod
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=bool setSource(QMediaObject * source)
 $internalMethod=|bool|setSource,setSource1|QMediaObject *
@@ -71,7 +70,6 @@ $addMethod=setSource
 $prototype=void audioBufferProbed( const QAudioBuffer & buffer )
 $signalMethod=|void|audioBufferProbed|const QAudioBuffer &
 
-$prototype=void flush()
-$signalMethod=|void|flush|
+$prototypeV2=void flush()
 
 #pragma ENDDUMP

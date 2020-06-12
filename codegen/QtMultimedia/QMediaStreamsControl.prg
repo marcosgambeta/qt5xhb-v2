@@ -41,8 +41,7 @@ $virtualMethod=|QVariant|metaData|int,const QString &
 $prototype=virtual void setActive(int streamNumber, bool state) = 0
 $virtualMethod=|void|setActive|int,bool
 
-$prototype=virtual int streamCount() = 0
-$virtualMethod=|int|streamCount|
+$prototypeV2=virtual int streamCount() = 0
 
 $prototype=virtual StreamType streamType(int streamNumber) = 0
 $virtualMethod=|QMediaStreamsControl::StreamType|streamType|int

@@ -32,32 +32,24 @@ $prototype=explicit QRadioDataControl(QObject *parent = nullptr) [protected]
 $prototype=~QRadioDataControl()
 $deleteMethod
 
-$prototype=virtual QString stationId() const = 0
-$virtualMethod=|QString|stationId|
+$prototypeV2=virtual QString stationId() const = 0
 
-$prototype=virtual QRadioData::ProgramType programType() const = 0
-$virtualMethod=|QRadioData::ProgramType|programType|
+$prototypeV2=virtual QRadioData::ProgramType programType() const = 0
 
-$prototype=virtual QString programTypeName() const = 0
-$virtualMethod=|QString|programTypeName|
+$prototypeV2=virtual QString programTypeName() const = 0
 
-$prototype=virtual QString stationName() const = 0
-$virtualMethod=|QString|stationName|
+$prototypeV2=virtual QString stationName() const = 0
 
-$prototype=virtual QString radioText() const = 0
-$virtualMethod=|QString|radioText|
+$prototypeV2=virtual QString radioText() const = 0
 
 $prototype=virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
 $virtualMethod=|void|setAlternativeFrequenciesEnabled|bool
 
-$prototype=virtual bool isAlternativeFrequenciesEnabled() const = 0
-$virtualMethod=|bool|isAlternativeFrequenciesEnabled|
+$prototypeV2=virtual bool isAlternativeFrequenciesEnabled() const = 0
 
-$prototype=virtual QRadioData::Error error() const = 0
-$virtualMethod=|QRadioData::Error|error|
+$prototypeV2=virtual QRadioData::Error error() const = 0
 
-$prototype=virtual QString errorString() const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 %%
 %% SIGNALS
