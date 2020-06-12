@@ -32,32 +32,26 @@ $constructor=|new|QGraphicsItem *=nullptr
 
 $deleteMethod
 
-$prototype=QMediaObject *mediaObject() const
-$method=|QMediaObject *|mediaObject|
+$prototypeV2=QMediaObject * mediaObject() const
 
-$prototype=Qt::AspectRatioMode aspectRatioMode() const
-$method=|Qt::AspectRatioMode|aspectRatioMode|
+$prototypeV2=Qt::AspectRatioMode aspectRatioMode() const
 
 $prototype=void setAspectRatioMode(Qt::AspectRatioMode mode)
 $method=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-$prototype=QPointF offset() const
-$method=|QPointF|offset|
+$prototypeV2=QPointF offset() const
 
 $prototype=void setOffset(const QPointF &offset)
 $method=|void|setOffset|const QPointF &
 
-$prototype=QSizeF size() const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
 $prototype=void setSize(const QSizeF &size)
 $method=|void|setSize|const QSizeF &
 
-$prototype=QSizeF nativeSize() const
-$method=|QSizeF|nativeSize|
+$prototypeV2=QSizeF nativeSize() const
 
-$prototype=QRectF boundingRect() const
-$method=|QRectF|boundingRect|
+$prototypeV2=QRectF boundingRect() const
 
 $prototype=void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
 $method=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr

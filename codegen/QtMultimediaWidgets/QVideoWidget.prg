@@ -32,29 +32,21 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=QMediaObject *mediaObject() const
-$method=|QMediaObject *|mediaObject|
+$prototypeV2=QMediaObject * mediaObject() const
 
-$prototype=bool isFullScreen() const
-$method=|bool|isFullScreen|
+$prototypeV2=bool isFullScreen() const
 
-$prototype=Qt::AspectRatioMode aspectRatioMode() const
-$method=|Qt::AspectRatioMode|aspectRatioMode|
+$prototypeV2=Qt::AspectRatioMode aspectRatioMode() const
 
-$prototype=int brightness() const
-$method=|int|brightness|
+$prototypeV2=int brightness() const
 
-$prototype=int contrast() const
-$method=|int|contrast|
+$prototypeV2=int contrast() const
 
-$prototype=int hue() const
-$method=|int|hue|
+$prototypeV2=int hue() const
 
-$prototype=int saturation() const
-$method=|int|saturation|
+$prototypeV2=int saturation() const
 
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=void setFullScreen(bool fullScreen)
 $method=|void|setFullScreen|bool

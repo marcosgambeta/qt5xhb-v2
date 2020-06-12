@@ -29,41 +29,34 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QWidget *videoWidget() = 0
-$virtualMethod=|QWidget *|videoWidget|
+$prototypeV2=virtual QWidget * videoWidget() = 0
 
-$prototype=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
-$virtualMethod=|Qt::AspectRatioMode|aspectRatioMode|
+$prototypeV2=virtual Qt::AspectRatioMode aspectRatioMode() const = 0
 
 $prototype=virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
 $virtualMethod=|void|setAspectRatioMode|Qt::AspectRatioMode
 
-$prototype=virtual bool isFullScreen() const = 0
-$virtualMethod=|bool|isFullScreen|
+$prototypeV2=virtual bool isFullScreen() const = 0
 
 $prototype=virtual void setFullScreen(bool fullScreen) = 0
 $virtualMethod=|void|setFullScreen|bool
 
-$prototype=virtual int brightness() const = 0
-$virtualMethod=|int|brightness|
+$prototypeV2=virtual int brightness() const = 0
 
 $prototype=virtual void setBrightness(int brightness) = 0
 $virtualMethod=|void|setBrightness|int
 
-$prototype=virtual int contrast() const = 0
-$virtualMethod=|int|contrast|
+$prototypeV2=virtual int contrast() const = 0
 
 $prototype=virtual void setContrast(int contrast) = 0
 $virtualMethod=|void|setContrast|int
 
-$prototype=virtual int hue() const = 0
-$virtualMethod=|int|hue|
+$prototypeV2=virtual int hue() const = 0
 
 $prototype=virtual void setHue(int hue) = 0
 $virtualMethod=|void|setHue|int
 
-$prototype=virtual int saturation() const = 0
-$virtualMethod=|int|saturation|
+$prototypeV2=virtual int saturation() const = 0
 
 $prototype=virtual void setSaturation(int saturation) = 0
 $virtualMethod=|void|setSaturation|int
