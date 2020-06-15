@@ -46,6 +46,9 @@ CLASS HAbstractTableModel INHERIT QAbstractTableModel
    METHOD setVerticalHeaderBackgroundRoleCB
    METHOD setVerticalHeaderForegroundRoleCB
 
+   METHOD setFlagsCB
+   METHOD setSetDataCB
+
    METHOD reloadData
 
    DESTRUCTOR destroyObject
@@ -764,6 +767,58 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
 }
 
 /*
+void setFlagsCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETFLAGSCB )
+{
+  auto obj = (HAbstractTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+void setSetDataCB( PHB_ITEM block )
+*/
+HB_FUNC_STATIC( HABSTRACTTABLEMODEL_SETSETDATACB )
+{
+  auto obj = (HAbstractTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setSetDataCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
 QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 
@@ -777,6 +832,14 @@ int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
 /*
 int columnCount( const QModelIndex & parent = QModelIndex() ) const
+*/
+
+/*
+Qt::ItemFlags flags( const QModelIndex &index ) const
+*/
+
+/*
+bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 */
 
 /*

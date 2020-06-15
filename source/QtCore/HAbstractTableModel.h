@@ -60,6 +60,9 @@ private:
   PHB_ITEM m_getVHBGColorCB;
   PHB_ITEM m_getVHFGColorCB;
 
+  PHB_ITEM m_flagsCB;
+  PHB_ITEM m_setDataCB;
+
 public:
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
@@ -90,12 +93,17 @@ public:
   void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block );
   void setVerticalHeaderForegroundRoleCB( PHB_ITEM block );
 
+  void setFlagsCB( PHB_ITEM block );
+  void setSetDataCB( PHB_ITEM block );
+
   QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const;
   QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const;
   int rowCount( const QModelIndex & parent = QModelIndex() ) const;
   int columnCount( const QModelIndex & parent = QModelIndex() ) const;
   void reloadData();
   //QModelIndex createIndex ( int row, int column );
+  Qt::ItemFlags flags( const QModelIndex &index ) const;
+  bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
 };
 
 #endif /* HABSTRACTTABLEMODEL_H */
