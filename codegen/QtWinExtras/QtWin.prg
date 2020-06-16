@@ -59,8 +59,7 @@ $staticMethod=|QString|errorStringFromHresult|HRESULT|#ifndef Q_OS_WIN64
 $prototype=static QColor colorizationColor(bool *opaqueBlend = nullptr)
 $staticMethod=|QColor|colorizationColor|bool *=nullptr
 
-$prototype=static QColor realColorizationColor()
-$staticMethod=|QColor|realColorizationColor|
+$prototypeV2=static QColor realColorizationColor()
 
 $prototype=static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
 $staticMethod=|void|setWindowExcludedFromPeek|QWindow *,bool
@@ -142,14 +141,12 @@ $addMethod=enableBlurBehindWindow
 $prototype=static void disableBlurBehindWindow(QWindow *window)
 $staticMethod=|void|disableBlurBehindWindow|QWindow *
 
-$prototype=static bool isCompositionEnabled()
-$staticMethod=|bool|isCompositionEnabled|
+$prototypeV2=static bool isCompositionEnabled()
 
 $prototype=static void setCompositionEnabled(bool enabled)
 $staticMethod=|void|setCompositionEnabled|bool
 
-$prototype=static bool isCompositionOpaque()
-$staticMethod=|bool|isCompositionOpaque|
+$prototypeV2=static bool isCompositionOpaque()
 
 $prototype=static void setCurrentProcessExplicitAppUserModelID(const QString &id)
 $staticMethod=|void|setCurrentProcessExplicitAppUserModelID|const QString &

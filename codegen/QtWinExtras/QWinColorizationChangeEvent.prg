@@ -31,10 +31,8 @@ $constructor=|new|QRgb,bool
 
 $deleteMethod
 
-$prototype=QRgb color() const
-$method=|QRgb|color|
+$prototypeV2=QRgb color() const
 
-$prototype=bool opaqueBlend() const
-$method=|bool|opaqueBlend|
+$prototypeV2=bool opaqueBlend() const
 
 #pragma ENDDUMP

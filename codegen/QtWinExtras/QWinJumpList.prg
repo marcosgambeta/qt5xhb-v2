@@ -31,20 +31,16 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QString identifier() const
-$method=|QString|identifier|
+$prototypeV2=QString identifier() const
 
 $prototype=void setIdentifier(const QString &identifier)
 $method=|void|setIdentifier|const QString &
 
-$prototype=QWinJumpListCategory *recent() const
-$method=|QWinJumpListCategory *|recent|
+$prototypeV2=QWinJumpListCategory * recent() const
 
-$prototype=QWinJumpListCategory *frequent() const
-$method=|QWinJumpListCategory *|frequent|
+$prototypeV2=QWinJumpListCategory * frequent() const
 
-$prototype=QWinJumpListCategory *tasks() const
-$method=|QWinJumpListCategory *|tasks|
+$prototypeV2=QWinJumpListCategory * tasks() const
 
 $prototype=QList<QWinJumpListCategory *> categories() const
 $method=|QList<QWinJumpListCategory *>|categories|
@@ -77,7 +73,6 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 }
 $addMethod=addCategory
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 #pragma ENDDUMP

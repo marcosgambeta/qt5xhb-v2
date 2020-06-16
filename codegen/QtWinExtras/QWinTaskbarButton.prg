@@ -34,29 +34,24 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QWindow *window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow * window() const
 
 $prototype=void setWindow(QWindow *window)
 $method=|void|setWindow|QWindow *
 
-$prototype=QIcon overlayIcon() const
-$method=|QIcon|overlayIcon|
+$prototypeV2=QIcon overlayIcon() const
 
 $prototype=void setOverlayIcon(const QIcon &icon)
 $method=|void|setOverlayIcon|const QIcon &
 
-$prototype=void clearOverlayIcon()
-$method=|void|clearOverlayIcon|
+$prototypeV2=void clearOverlayIcon()
 
-$prototype=QString overlayAccessibleDescription() const
-$method=|QString|overlayAccessibleDescription|
+$prototypeV2=QString overlayAccessibleDescription() const
 
 $prototype=void setOverlayAccessibleDescription(const QString &description)
 $method=|void|setOverlayAccessibleDescription|const QString &
 
-$prototype=QWinTaskbarProgress *progress() const
-$method=|QWinTaskbarProgress *|progress|
+$prototypeV2=QWinTaskbarProgress * progress() const
 
 $prototype=bool eventFilter(QObject *, QEvent *)
 $method=|bool|eventFilter|QObject *,QEvent *

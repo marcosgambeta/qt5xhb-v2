@@ -31,7 +31,6 @@ $constructor=|new|bool
 
 $deleteMethod
 
-$prototype=bool isCompositionEnabled() const
-$method=|bool|isCompositionEnabled|
+$prototypeV2=bool isCompositionEnabled() const
 
 #pragma ENDDUMP

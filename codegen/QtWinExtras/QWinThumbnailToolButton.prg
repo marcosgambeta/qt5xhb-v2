@@ -33,50 +33,42 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QString toolTip() const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=void setToolTip(const QString &toolTip)
 $method=|void|setToolTip|const QString &
 
-$prototype=QIcon icon() const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon(const QIcon &icon)
 $method=|void|setIcon|const QIcon &
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=void setEnabled(bool enabled)
 $method=|void|setEnabled|bool
 
-$prototype=bool isInteractive() const
-$method=|bool|isInteractive|
+$prototypeV2=bool isInteractive() const
 
 $prototype=void setInteractive(bool interactive)
 $method=|void|setInteractive|bool
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=bool dismissOnClick() const
-$method=|bool|dismissOnClick|
+$prototypeV2=bool dismissOnClick() const
 
 $prototype=void setDismissOnClick(bool dismiss)
 $method=|void|setDismissOnClick|bool
 
-$prototype=bool isFlat() const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setFlat(bool flat)
 $method=|void|setFlat|bool
 
-$prototype=void click()
-$method=|void|click|
+$prototypeV2=void click()
 
 %%
 %% SIGNALS

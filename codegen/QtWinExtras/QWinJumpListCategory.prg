@@ -31,26 +31,21 @@ $constructor=|new|const QString &=QString()
 
 $deleteMethod
 
-$prototype=Type type() const
-$method=|QWinJumpListCategory::Type|type|
+$prototypeV2=QWinJumpListCategory::Type type() const
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=QString title() const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle(const QString &title)
 $method=|void|setTitle|const QString &
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=bool isEmpty() const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
 $prototype=QList<QWinJumpListItem *> items() const
 $method=|QList<QWinJumpListItem *>|items|
@@ -89,11 +84,9 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 }
 $addMethod=addLink
 
-$prototype=QWinJumpListItem *addSeparator()
-$method=|QWinJumpListItem *|addSeparator|
+$prototypeV2=QWinJumpListItem * addSeparator()
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $extraMethods
 

@@ -33,59 +33,47 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=int value() const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setValue(int value)
 $method=|void|setValue|int
 
-$prototype=int minimum() const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=void setMinimum(int minimum)
 $method=|void|setMinimum|int
 
-$prototype=int maximum() const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
 $prototype=void setMaximum(int maximum)
 $method=|void|setMaximum|int
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=bool isPaused() const
-$method=|bool|isPaused|
+$prototypeV2=bool isPaused() const
 
 $prototype=void setPaused(bool paused)
 $method=|void|setPaused|bool
 
-$prototype=bool isStopped() const
-$method=|bool|isStopped|
+$prototypeV2=bool isStopped() const
 
 $prototype=void setRange(int minimum, int maximum)
 $method=|void|setRange|int,int
 
-$prototype=void reset()
-$method=|void|reset|
+$prototypeV2=void reset()
 
-$prototype=void show()
-$method=|void|show|
+$prototypeV2=void show()
 
-$prototype=void hide()
-$method=|void|hide|
+$prototypeV2=void hide()
 
-$prototype=void pause()
-$method=|void|pause|
+$prototypeV2=void pause()
 
-$prototype=void resume()
-$method=|void|resume|
+$prototypeV2=void resume()
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
 %%
 %% SIGNALS

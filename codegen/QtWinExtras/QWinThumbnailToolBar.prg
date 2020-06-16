@@ -33,8 +33,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QWindow *window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow * window() const
 
 $prototype=void setWindow(QWindow *window)
 $method=|void|setWindow|QWindow *
@@ -51,10 +50,8 @@ $method=|void|setButtons|const QList<QWinThumbnailToolButton *> &
 $prototype=QList<QWinThumbnailToolButton *> buttons() const
 $method=|QList<QWinThumbnailToolButton *>|buttons|
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 #pragma ENDDUMP
