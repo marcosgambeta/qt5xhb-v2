@@ -33,7 +33,6 @@ $deleteMethod
 $prototype=virtual bool parse ( const QXmlInputSource * input, bool incremental )
 $virtualMethod=|bool|parse|const QXmlInputSource *,bool
 
-$prototype=virtual bool parseContinue ()
-$virtualMethod=|bool|parseContinue|
+$prototypeV2=virtual bool parseContinue()
 
 #pragma ENDDUMP

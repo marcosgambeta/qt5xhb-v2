@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void popContext ()
-$method=|void|popContext|
+$prototypeV2=void popContext()
 
 $prototype=QString prefix ( const QString & uri ) const
 $method=|QString|prefix|const QString &
@@ -67,11 +66,9 @@ $addMethod=prefixes
 $prototype=void processName ( const QString & qname, bool isAttribute, QString & nsuri, QString & localname ) const
 $method=|void|processName|const QString &,bool,QString &,QString &
 
-$prototype=void pushContext ()
-$method=|void|pushContext|
+$prototypeV2=void pushContext()
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setPrefix ( const QString & pre, const QString & uri )
 $method=|void|setPrefix|const QString &,const QString &

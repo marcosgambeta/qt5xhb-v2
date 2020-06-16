@@ -54,25 +54,18 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 
 $deleteMethod
 
-$prototype=QDomNamedNodeMap entities () const
-$method=|QDomNamedNodeMap|entities|
+$prototypeV2=QDomNamedNodeMap entities() const
 
-$prototype=QString internalSubset () const
-$method=|QString|internalSubset|
+$prototypeV2=QString internalSubset() const
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QDomNamedNodeMap notations () const
-$method=|QDomNamedNodeMap|notations|
+$prototypeV2=QDomNamedNodeMap notations() const
 
-$prototype=QString publicId () const
-$method=|QString|publicId|
+$prototypeV2=QString publicId() const
 
-$prototype=QString systemId () const
-$method=|QString|systemId|
+$prototypeV2=QString systemId() const
 
 #pragma ENDDUMP

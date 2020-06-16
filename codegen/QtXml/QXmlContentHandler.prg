@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual bool characters ( const QString & ch ) = 0
 $virtualMethod=|bool|characters|const QString &
 
-$prototype=virtual bool endDocument () = 0
-$virtualMethod=|bool|endDocument|
+$prototypeV2=virtual bool endDocument() = 0
 
 $prototype=virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName ) = 0
 $virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
@@ -39,8 +38,7 @@ $virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
 $prototype=virtual bool endPrefixMapping ( const QString & prefix ) = 0
 $virtualMethod=|bool|endPrefixMapping|const QString &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototype=virtual bool ignorableWhitespace ( const QString & ch ) = 0
 $virtualMethod=|bool|ignorableWhitespace|const QString &
@@ -54,8 +52,7 @@ $virtualMethod=|void|setDocumentLocator|QXmlLocator *
 $prototype=virtual bool skippedEntity ( const QString & name ) = 0
 $virtualMethod=|bool|skippedEntity|const QString &
 
-$prototype=virtual bool startDocument () = 0
-$virtualMethod=|bool|startDocument|
+$prototypeV2=virtual bool startDocument() = 0
 
 $prototype=virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts ) = 0
 $virtualMethod=|bool|startElement|const QString &,const QString &,const QString &,const QXmlAttributes &

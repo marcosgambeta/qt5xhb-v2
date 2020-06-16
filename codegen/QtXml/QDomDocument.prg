@@ -82,8 +82,7 @@ $method=|QDomCDATASection|createCDATASection|const QString &
 $prototype=QDomComment createComment ( const QString & value )
 $method=|QDomComment|createComment|const QString &
 
-$prototype=QDomDocumentFragment createDocumentFragment ()
-$method=|QDomDocumentFragment|createDocumentFragment|
+$prototypeV2=QDomDocumentFragment createDocumentFragment()
 
 $prototype=QDomElement createElement ( const QString & tagName )
 $method=|QDomElement|createElement|const QString &
@@ -100,11 +99,9 @@ $method=|QDomProcessingInstruction|createProcessingInstruction|const QString &,c
 $prototype=QDomText createTextNode ( const QString & value )
 $method=|QDomText|createTextNode|const QString &
 
-$prototype=QDomDocumentType doctype () const
-$method=|QDomDocumentType|doctype|
+$prototypeV2=QDomDocumentType doctype() const
 
-$prototype=QDomElement documentElement () const
-$method=|QDomElement|documentElement|
+$prototypeV2=QDomElement documentElement() const
 
 $prototype=QDomElement elementById ( const QString & elementId )
 $method=|QDomElement|elementById|const QString &
@@ -115,14 +112,12 @@ $method=|QDomNodeList|elementsByTagName|const QString &
 $prototype=QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
 $method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
 
-$prototype=QDomImplementation implementation () const
-$method=|QDomImplementation|implementation|
+$prototypeV2=QDomImplementation implementation() const
 
 $prototype=QDomNode importNode ( const QDomNode & importedNode, bool deep )
 $method=|QDomNode|importNode|const QDomNode &,bool
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototype=bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = nullptr, int * errorLine = nullptr, int * errorColumn = nullptr )
 $internalMethod=|bool|setContent,setContent1|const QByteArray &,bool,QString *=nullptr,int *=nullptr,int *=nullptr

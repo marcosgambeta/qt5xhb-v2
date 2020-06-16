@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 
 $deleteMethod
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 #pragma ENDDUMP

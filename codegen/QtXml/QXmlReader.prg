@@ -27,20 +27,15 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QXmlDTDHandler * DTDHandler () const = 0
-$virtualMethod=|QXmlDTDHandler *|DTDHandler|
+$prototypeV2=virtual QXmlDTDHandler * DTDHandler() const = 0
 
-$prototype=virtual QXmlContentHandler * contentHandler () const = 0
-$virtualMethod=|QXmlContentHandler *|contentHandler|
+$prototypeV2=virtual QXmlContentHandler * contentHandler() const = 0
 
-$prototype=virtual QXmlDeclHandler * declHandler () const = 0
-$virtualMethod=|QXmlDeclHandler *|declHandler|
+$prototypeV2=virtual QXmlDeclHandler * declHandler() const = 0
 
-$prototype=virtual QXmlEntityResolver * entityResolver () const = 0
-$virtualMethod=|QXmlEntityResolver *|entityResolver|
+$prototypeV2=virtual QXmlEntityResolver * entityResolver() const = 0
 
-$prototype=virtual QXmlErrorHandler * errorHandler () const = 0
-$virtualMethod=|QXmlErrorHandler *|errorHandler|
+$prototypeV2=virtual QXmlErrorHandler * errorHandler() const = 0
 
 $prototype=virtual bool feature ( const QString & name, bool * ok = nullptr ) const = 0
 $virtualMethod=|bool|feature|const QString &,bool *=nullptr
@@ -51,8 +46,7 @@ $virtualMethod=|bool|hasFeature|const QString &
 $prototype=virtual bool hasProperty ( const QString & name ) const = 0
 $virtualMethod=|bool|hasProperty|const QString &
 
-$prototype=virtual QXmlLexicalHandler * lexicalHandler () const = 0
-$virtualMethod=|QXmlLexicalHandler *|lexicalHandler|
+$prototypeV2=virtual QXmlLexicalHandler * lexicalHandler() const = 0
 
 $prototype=virtual bool parse ( const QXmlInputSource * input ) = 0
 $virtualMethod=|bool|parse|const QXmlInputSource *

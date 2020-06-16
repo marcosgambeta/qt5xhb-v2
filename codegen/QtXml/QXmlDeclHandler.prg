@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
 $virtualMethod=|bool|attributeDecl|const QString &,const QString &,const QString &,const QString &,const QString &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototype=virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 $virtualMethod=|bool|externalEntityDecl|const QString &,const QString &,const QString &

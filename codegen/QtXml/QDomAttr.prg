@@ -54,22 +54,17 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
 
 $deleteMethod
 
-$prototype=QString name () const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QDomElement ownerElement () const
-$method=|QDomElement|ownerElement|
+$prototypeV2=QDomElement ownerElement() const
 
 $prototype=void setValue ( const QString & v )
 $method=|void|setValue|const QString &
 
-$prototype=bool specified () const
-$method=|bool|specified|
+$prototypeV2=bool specified() const
 
-$prototype=QString value () const
-$method=|QString|value|
+$prototypeV2=QString value() const
 
 #pragma ENDDUMP

@@ -66,8 +66,7 @@ $method=|QDomAttr|attributeNode|const QString &
 $prototype=QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
 $method=|QDomAttr|attributeNodeNS|const QString &,const QString &
 
-$prototype=QDomNamedNodeMap attributes () const
-$method=|QDomNamedNodeMap|attributes|
+$prototypeV2=QDomNamedNodeMap attributes() const
 
 $prototype=QDomNodeList elementsByTagName ( const QString & tagname ) const
 $method=|QDomNodeList|elementsByTagName|const QString &
@@ -81,8 +80,7 @@ $method=|bool|hasAttribute|const QString &
 $prototype=bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
 $method=|bool|hasAttributeNS|const QString &,const QString &
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototype=void removeAttribute ( const QString & name )
 $method=|void|removeAttribute|const QString &
@@ -195,10 +193,8 @@ $method=|QDomAttr|setAttributeNodeNS|const QDomAttr &
 $prototype=void setTagName ( const QString & name )
 $method=|void|setTagName|const QString &
 
-$prototype=QString tagName () const
-$method=|QString|tagName|
+$prototypeV2=QString tagName() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 #pragma ENDDUMP

@@ -57,32 +57,25 @@ $deleteMethod
 $prototype=QDomNode appendChild ( const QDomNode & newChild )
 $method=|QDomNode|appendChild|const QDomNode &
 
-$prototype=QDomNamedNodeMap attributes () const
-$method=|QDomNamedNodeMap|attributes|
+$prototypeV2=QDomNamedNodeMap attributes() const
 
-$prototype=QDomNodeList childNodes () const
-$method=|QDomNodeList|childNodes|
+$prototypeV2=QDomNodeList childNodes() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QDomNode cloneNode ( bool deep = true ) const
 $method=|QDomNode|cloneNode|bool=true
 
-$prototype=int columnNumber () const
-$method=|int|columnNumber|
+$prototypeV2=int columnNumber() const
 
-$prototype=QDomNode firstChild () const
-$method=|QDomNode|firstChild|
+$prototypeV2=QDomNode firstChild() const
 
 $prototype=QDomElement firstChildElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|firstChildElement|const QString &=QString()
 
-$prototype=bool hasAttributes () const
-$method=|bool|hasAttributes|
+$prototypeV2=bool hasAttributes() const
 
-$prototype=bool hasChildNodes () const
-$method=|bool|hasChildNodes|
+$prototypeV2=bool hasChildNodes() const
 
 $prototype=QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
 $method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
@@ -90,98 +83,71 @@ $method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
 $prototype=QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
 $method=|QDomNode|insertBefore|const QDomNode &,const QDomNode &
 
-$prototype=bool isAttr () const
-$method=|bool|isAttr|
+$prototypeV2=bool isAttr() const
 
-$prototype=bool isCDATASection () const
-$method=|bool|isCDATASection|
+$prototypeV2=bool isCDATASection() const
 
-$prototype=bool isCharacterData () const
-$method=|bool|isCharacterData|
+$prototypeV2=bool isCharacterData() const
 
-$prototype=bool isComment () const
-$method=|bool|isComment|
+$prototypeV2=bool isComment() const
 
-$prototype=bool isDocument () const
-$method=|bool|isDocument|
+$prototypeV2=bool isDocument() const
 
-$prototype=bool isDocumentFragment () const
-$method=|bool|isDocumentFragment|
+$prototypeV2=bool isDocumentFragment() const
 
-$prototype=bool isDocumentType () const
-$method=|bool|isDocumentType|
+$prototypeV2=bool isDocumentType() const
 
-$prototype=bool isElement () const
-$method=|bool|isElement|
+$prototypeV2=bool isElement() const
 
-$prototype=bool isEntity () const
-$method=|bool|isEntity|
+$prototypeV2=bool isEntity() const
 
-$prototype=bool isEntityReference () const
-$method=|bool|isEntityReference|
+$prototypeV2=bool isEntityReference() const
 
-$prototype=bool isNotation () const
-$method=|bool|isNotation|
+$prototypeV2=bool isNotation() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=bool isProcessingInstruction () const
-$method=|bool|isProcessingInstruction|
+$prototypeV2=bool isProcessingInstruction() const
 
 $prototype=bool isSupported ( const QString & feature, const QString & version ) const
 $method=|bool|isSupported|const QString &,const QString &
 
-$prototype=bool isText () const
-$method=|bool|isText|
+$prototypeV2=bool isText() const
 
-$prototype=QDomNode lastChild () const
-$method=|QDomNode|lastChild|
+$prototypeV2=QDomNode lastChild() const
 
 $prototype=QDomElement lastChildElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|lastChildElement|const QString &=QString()
 
-$prototype=int lineNumber () const
-$method=|int|lineNumber|
+$prototypeV2=int lineNumber() const
 
-$prototype=QString localName () const
-$method=|QString|localName|
+$prototypeV2=QString localName() const
 
 $prototype=QDomNode namedItem ( const QString & name ) const
 $method=|QDomNode|namedItem|const QString &
 
-$prototype=QString namespaceURI () const
-$method=|QString|namespaceURI|
+$prototypeV2=QString namespaceURI() const
 
-$prototype=QDomNode nextSibling () const
-$method=|QDomNode|nextSibling|
+$prototypeV2=QDomNode nextSibling() const
 
 $prototype=QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|nextSiblingElement|const QString &=QString()
 
-$prototype=QString nodeName () const
-$method=|QString|nodeName|
+$prototypeV2=QString nodeName() const
 
-$prototype=NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QString nodeValue () const
-$method=|QString|nodeValue|
+$prototypeV2=QString nodeValue() const
 
-$prototype=void normalize ()
-$method=|void|normalize|
+$prototypeV2=void normalize()
 
-$prototype=QDomDocument ownerDocument () const
-$method=|QDomDocument|ownerDocument|
+$prototypeV2=QDomDocument ownerDocument() const
 
-$prototype=QDomNode parentNode () const
-$method=|QDomNode|parentNode|
+$prototypeV2=QDomNode parentNode() const
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
-$prototype=QDomNode previousSibling () const
-$method=|QDomNode|previousSibling|
+$prototypeV2=QDomNode previousSibling() const
 
 $prototype=QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|previousSiblingElement|const QString &=QString()
@@ -226,44 +192,31 @@ $method=|void|setNodeValue|const QString &
 $prototype=void setPrefix ( const QString & pre )
 $method=|void|setPrefix|const QString &
 
-$prototype=QDomAttr toAttr () const
-$method=|QDomAttr|toAttr|
+$prototypeV2=QDomAttr toAttr() const
 
-$prototype=QDomCDATASection toCDATASection () const
-$method=|QDomCDATASection|toCDATASection|
+$prototypeV2=QDomCDATASection toCDATASection() const
 
-$prototype=QDomCharacterData toCharacterData () const
-$method=|QDomCharacterData|toCharacterData|
+$prototypeV2=QDomCharacterData toCharacterData() const
 
-$prototype=QDomComment toComment () const
-$method=|QDomComment|toComment|
+$prototypeV2=QDomComment toComment() const
 
-$prototype=QDomDocument toDocument () const
-$method=|QDomDocument|toDocument|
+$prototypeV2=QDomDocument toDocument() const
 
-$prototype=QDomDocumentFragment toDocumentFragment () const
-$method=|QDomDocumentFragment|toDocumentFragment|
+$prototypeV2=QDomDocumentFragment toDocumentFragment() const
 
-$prototype=QDomDocumentType toDocumentType () const
-$method=|QDomDocumentType|toDocumentType|
+$prototypeV2=QDomDocumentType toDocumentType() const
 
-$prototype=QDomElement toElement () const
-$method=|QDomElement|toElement|
+$prototypeV2=QDomElement toElement() const
 
-$prototype=QDomEntity toEntity () const
-$method=|QDomEntity|toEntity|
+$prototypeV2=QDomEntity toEntity() const
 
-$prototype=QDomEntityReference toEntityReference () const
-$method=|QDomEntityReference|toEntityReference|
+$prototypeV2=QDomEntityReference toEntityReference() const
 
-$prototype=QDomNotation toNotation () const
-$method=|QDomNotation|toNotation|
+$prototypeV2=QDomNotation toNotation() const
 
-$prototype=QDomProcessingInstruction toProcessingInstruction () const
-$method=|QDomProcessingInstruction|toProcessingInstruction|
+$prototypeV2=QDomProcessingInstruction toProcessingInstruction() const
 
-$prototype=QDomText toText () const
-$method=|QDomText|toText|
+$prototypeV2=QDomText toText() const
 
 $extraMethods
 

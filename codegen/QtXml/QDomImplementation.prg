@@ -63,11 +63,9 @@ $method=|QDomDocumentType|createDocumentType|const QString &,const QString &,con
 $prototype=bool hasFeature ( const QString & feature, const QString & version ) const
 $method=|bool|hasFeature|const QString &,const QString &
 
-$prototype=bool isNull ()
-$method=|bool|isNull|
+$prototypeV2=bool isNull()
 
-$prototype=static InvalidDataPolicy invalidDataPolicy ()
-$staticMethod=|QDomImplementation::InvalidDataPolicy|invalidDataPolicy|
+$prototypeV2=static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 
 $prototype=static void setInvalidDataPolicy ( InvalidDataPolicy policy )
 $staticMethod=|void|setInvalidDataPolicy|QDomImplementation::InvalidDataPolicy

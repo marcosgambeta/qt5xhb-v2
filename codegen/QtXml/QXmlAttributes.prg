@@ -33,11 +33,9 @@ $deleteMethod
 $prototype=void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 $method=|void|append|const QString &,const QString &,const QString &,const QString &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=int index ( const QString & qName ) const
 $internalMethod=|int|index,index1|const QString &
@@ -75,8 +73,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 }
 $addMethod=index
 
-$prototype=int length () const
-$method=|int|length|
+$prototypeV2=int length() const
 
 $prototype=QString localName ( int index ) const
 $method=|QString|localName|int

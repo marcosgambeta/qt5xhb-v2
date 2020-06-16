@@ -39,14 +39,11 @@ $virtualMethod=|bool|characters|const QString &
 $prototype=virtual bool comment ( const QString & ch )
 $virtualMethod=|bool|comment|const QString &
 
-$prototype=virtual bool endCDATA ()
-$virtualMethod=|bool|endCDATA|
+$prototypeV2=virtual bool endCDATA()
 
-$prototype=virtual bool endDTD ()
-$virtualMethod=|bool|endDTD|
+$prototypeV2=virtual bool endDTD()
 
-$prototype=virtual bool endDocument ()
-$virtualMethod=|bool|endDocument|
+$prototypeV2=virtual bool endDocument()
 
 $prototype=virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName )
 $virtualMethod=|bool|endElement|const QString &,const QString &,const QString &
@@ -60,8 +57,7 @@ $virtualMethod=|bool|endPrefixMapping|const QString &
 $prototype=virtual bool error ( const QXmlParseException & exception )
 $virtualMethod=|bool|error|const QXmlParseException &
 
-$prototype=virtual QString errorString () const
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const
 
 $prototype=virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|externalEntityDecl|const QString &,const QString &,const QString &
@@ -87,14 +83,12 @@ $virtualMethod=|void|setDocumentLocator|QXmlLocator *
 $prototype=virtual bool skippedEntity ( const QString & name )
 $virtualMethod=|bool|skippedEntity|const QString &
 
-$prototype=virtual bool startCDATA ()
-$virtualMethod=|bool|startCDATA|
+$prototypeV2=virtual bool startCDATA()
 
 $prototype=virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId )
 $virtualMethod=|bool|startDTD|const QString &,const QString &,const QString &
 
-$prototype=virtual bool startDocument ()
-$virtualMethod=|bool|startDocument|
+$prototypeV2=virtual bool startDocument()
 
 $prototype=virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts )
 $virtualMethod=|bool|startElement|const QString &,const QString &,const QString &,const QXmlAttributes &

@@ -54,7 +54,6 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 
 $deleteMethod
 
-$prototype=QDomNode::NodeType nodeType () cons
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() cons
 
 #pragma ENDDUMP

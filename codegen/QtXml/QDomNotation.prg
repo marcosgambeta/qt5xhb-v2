@@ -54,13 +54,10 @@ HB_FUNC_STATIC( QDOMNOTATION_NEW )
 
 $deleteMethod
 
-$prototype=QDomNode::NodeType nodeType () const
-$method=|QDomNode::NodeType|nodeType|
+$prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QString publicId () const
-$method=|QString|publicId|
+$prototypeV2=QString publicId() const
 
-$prototype=QString systemId () const
-$method=|QString|systemId|
+$prototypeV2=QString systemId() const
 
 #pragma ENDDUMP

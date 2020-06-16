@@ -30,8 +30,7 @@ $deleteMethod
 $prototype=virtual bool error ( const QXmlParseException & exception ) = 0
 $virtualMethod=|bool|error|const QXmlParseException &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
 $prototype=virtual bool fatalError ( const QXmlParseException & exception ) = 0
 $virtualMethod=|bool|fatalError|const QXmlParseException &

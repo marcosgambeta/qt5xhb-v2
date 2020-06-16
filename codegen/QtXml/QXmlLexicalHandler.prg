@@ -30,20 +30,16 @@ $deleteMethod
 $prototype=virtual bool comment ( const QString & ch ) = 0
 $virtualMethod=|bool|comment|const QString &
 
-$prototype=virtual bool endCDATA () = 0
-$virtualMethod=|bool|endCDATA|
+$prototypeV2=virtual bool endCDATA() = 0
 
-$prototype=virtual bool endDTD () = 0
-$virtualMethod=|bool|endDTD|
+$prototypeV2=virtual bool endDTD() = 0
 
 $prototype=virtual bool endEntity ( const QString & name ) = 0
 $virtualMethod=|bool|endEntity|const QString &
 
-$prototype=virtual QString errorString () const = 0
-$virtualMethod=|QString|errorString|
+$prototypeV2=virtual QString errorString() const = 0
 
-$prototype=virtual bool startCDATA () = 0
-$virtualMethod=|bool|startCDATA|
+$prototypeV2=virtual bool startCDATA() = 0
 
 $prototype=virtual bool startDTD ( const QString & name, const QString & publicId, const QString & systemId ) = 0
 $virtualMethod=|bool|startDTD|const QString &,const QString &,const QString &
