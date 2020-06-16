@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QXmlNamePool & namePool () const
-$method=|QXmlNamePool &|namePool|
+$prototypeV2=QXmlNamePool & namePool() const
 
 $prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
 $virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &

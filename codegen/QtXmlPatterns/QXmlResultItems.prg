@@ -32,14 +32,11 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QXmlItem current () const
-$method=|QXmlItem|current|
+$prototypeV2=QXmlItem current() const
 
-$prototype=bool hasError () const
-$method=|bool|hasError|
+$prototypeV2=bool hasError() const
 
-$prototype=QXmlItem next ()
-$method=|QXmlItem|next|
+$prototypeV2=QXmlItem next()
 
 $extraMethods
 

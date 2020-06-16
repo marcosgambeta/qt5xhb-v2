@@ -72,20 +72,15 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 $deleteMethod
 
-$prototype=bool isAtomicValue () const
-$method=|bool|isAtomicValue|
+$prototypeV2=bool isAtomicValue() const
 
-$prototype=bool isNode () const
-$method=|bool|isNode|
+$prototypeV2=bool isNode() const
 
-$prototype=bool isNull () const
-$method=|bool|isNull|
+$prototypeV2=bool isNull() const
 
-$prototype=QVariant toAtomicValue () const
-$method=|QVariant|toAtomicValue|
+$prototypeV2=QVariant toAtomicValue() const
 
-$prototype=QXmlNodeModelIndex toNodeModelIndex () const
-$method=|QXmlNodeModelIndex|toNodeModelIndex|
+$prototypeV2=QXmlNodeModelIndex toNodeModelIndex() const
 
 $extraMethods
 

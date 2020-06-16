@@ -59,17 +59,13 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 
 $deleteMethod
 
-$prototype=QAbstractMessageHandler * messageHandler () const
-$method=|QAbstractMessageHandler *|messageHandler|
+$prototypeV2=QAbstractMessageHandler * messageHandler() const
 
-$prototype=QXmlNamePool namePool () const
-$method=|QXmlNamePool|namePool|
+$prototypeV2=QXmlNamePool namePool() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QXmlSchema schema () const
-$method=|QXmlSchema|schema|
+$prototypeV2=QXmlSchema schema() const
 
 $prototype=void setMessageHandler ( QAbstractMessageHandler * handler )
 $method=|void|setMessageHandler|QAbstractMessageHandler *
@@ -83,8 +79,7 @@ $method=|void|setSchema|const QXmlSchema &
 $prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-$prototype=const QAbstractUriResolver * uriResolver () const
-$method=|const QAbstractUriResolver *|uriResolver|
+$prototypeV2=const QAbstractUriResolver * uriResolver() const
 
 $prototype=bool validate ( const QUrl & source ) const
 $internalMethod=|bool|validate,validate1|const QUrl &

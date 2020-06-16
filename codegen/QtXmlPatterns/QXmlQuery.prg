@@ -188,23 +188,17 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 }
 $addMethod=evaluateTo
 
-$prototype=QXmlName initialTemplateName () const
-$method=|QXmlName|initialTemplateName|
+$prototypeV2=QXmlName initialTemplateName() const
 
-$prototype=bool isValid () const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QAbstractMessageHandler * messageHandler () const
-$method=|QAbstractMessageHandler *|messageHandler|
+$prototypeV2=QAbstractMessageHandler * messageHandler() const
 
-$prototype=QXmlNamePool namePool () const
-$method=|QXmlNamePool|namePool|
+$prototypeV2=QXmlNamePool namePool() const
 
-$prototype=QNetworkAccessManager * networkAccessManager () const
-$method=|QNetworkAccessManager *|networkAccessManager|
+$prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
-$prototype=QueryLanguage queryLanguage () const
-$method=|QXmlQuery::QueryLanguage|queryLanguage|
+$prototypeV2=QXmlQuery::QueryLanguage queryLanguage() const
 
 $prototype=void setFocus ( const QXmlItem & item )
 $internalMethod=|void|setFocus,setFocus1|const QXmlItem &
@@ -323,8 +317,7 @@ $addMethod=setQuery
 $prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
 $method=|void|setUriResolver|const QAbstractUriResolver *
 
-$prototype=const QAbstractUriResolver * uriResolver () const
-$method=|const QAbstractUriResolver *|uriResolver|
+$prototypeV2=const QAbstractUriResolver * uriResolver() const
 
 $extraMethods
 

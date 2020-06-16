@@ -32,11 +32,9 @@ $constructor=|new|const QXmlQuery &,QIODevice *
 
 $deleteMethod
 
-$prototype=const QTextCodec * codec () const
-$method=|const QTextCodec *|codec|
+$prototypeV2=const QTextCodec * codec() const
 
-$prototype=QIODevice * outputDevice () const
-$method=|QIODevice *|outputDevice|
+$prototypeV2=QIODevice * outputDevice() const
 
 $prototype=void setCodec ( const QTextCodec * outputCodec )
 $method=|void|setCodec|const QTextCodec *
@@ -53,14 +51,11 @@ $virtualMethod=|void|characters|const QStringRef &
 $prototype=virtual void comment ( const QString & value )
 $virtualMethod=|void|comment|const QString &
 
-$prototype=virtual void endDocument ()
-$virtualMethod=|void|endDocument|
+$prototypeV2=virtual void endDocument()
 
-$prototype=virtual void endElement ()
-$virtualMethod=|void|endElement|
+$prototypeV2=virtual void endElement()
 
-$prototype=virtual void endOfSequence ()
-$virtualMethod=|void|endOfSequence|
+$prototypeV2=virtual void endOfSequence()
 
 $prototype=virtual void namespaceBinding ( const QXmlName & nb )
 $virtualMethod=|void|namespaceBinding|const QXmlName &
@@ -68,13 +63,11 @@ $virtualMethod=|void|namespaceBinding|const QXmlName &
 $prototype=virtual void processingInstruction ( const QXmlName & name, const QString & value )
 $virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
 
-$prototype=virtual void startDocument ()
-$virtualMethod=|void|startDocument|
+$prototypeV2=virtual void startDocument()
 
 $prototype=virtual void startElement ( const QXmlName & name )
 $virtualMethod=|void|startElement|const QXmlName &
 
-$prototype=virtual void startOfSequence ()
-$virtualMethod=|void|startOfSequence|
+$prototypeV2=virtual void startOfSequence()
 
 #pragma ENDDUMP

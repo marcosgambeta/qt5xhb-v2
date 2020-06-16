@@ -39,14 +39,11 @@ $virtualMethod=|void|characters|const QStringRef &
 $prototype=virtual void comment ( const QString & value ) = 0
 $virtualMethod=|void|comment|const QString &
 
-$prototype=virtual void endDocument () = 0
-$virtualMethod=|void|endDocument|
+$prototypeV2=virtual void endDocument() = 0
 
-$prototype=virtual void endElement () = 0
-$virtualMethod=|void|endElement|
+$prototypeV2=virtual void endElement() = 0
 
-$prototype=virtual void endOfSequence () = 0
-$virtualMethod=|void|endOfSequence|
+$prototypeV2=virtual void endOfSequence() = 0
 
 $prototype=virtual void namespaceBinding ( const QXmlName & name ) = 0
 $virtualMethod=|void|namespaceBinding|const QXmlName &
@@ -54,14 +51,12 @@ $virtualMethod=|void|namespaceBinding|const QXmlName &
 $prototype=virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
 $virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
 
-$prototype=virtual void startDocument () = 0
-$virtualMethod=|void|startDocument|
+$prototypeV2=virtual void startDocument() = 0
 
 $prototype=virtual void startElement ( const QXmlName & name ) = 0
 $virtualMethod=|void|startElement|const QXmlName &
 
-$prototype=virtual void startOfSequence () = 0
-$virtualMethod=|void|startOfSequence|
+$prototypeV2=virtual void startOfSequence() = 0
 
 $extraMethods
 
