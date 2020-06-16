@@ -32,11 +32,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QColor color () const
-$method=|QColor|color|
+$prototypeV2=QColor color() const
 
-$prototype=qreal strength () const
-$method=|qreal|strength|
+$prototypeV2=qreal strength() const
 
 $prototype=void setColor ( const QColor & c )
 $method=|void|setColor|const QColor &

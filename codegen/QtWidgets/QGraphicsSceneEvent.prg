@@ -27,7 +27,6 @@ $includes
 
 $deleteMethod
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 #pragma ENDDUMP

@@ -63,8 +63,7 @@ $method=|void|setScrollMetric|QScrollerProperties::ScrollMetric,const QVariant &
 $prototype=void setDefaultScrollerProperties(const QScrollerProperties & sp)
 $method=|void|setDefaultScrollerProperties|const QScrollerProperties &
 
-$prototype=void unsetDefaultScrollerProperties()
-$method=|void|unsetDefaultScrollerProperties|
+$prototypeV2=void unsetDefaultScrollerProperties()
 
 $extraMethods
 

@@ -58,17 +58,14 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 
 $deleteMethod
 
-$prototype=Qt::DockWidgetAreas allowedAreas () const
-$method=|Qt::DockWidgetAreas|allowedAreas|
+$prototypeV2=Qt::DockWidgetAreas allowedAreas() const
 
-$prototype=DockWidgetFeatures features () const
-$method=|QDockWidget::DockWidgetFeatures|features|
+$prototypeV2=QDockWidget::DockWidgetFeatures features() const
 
 $prototype=bool isAreaAllowed ( Qt::DockWidgetArea area ) const
 $method=|bool|isAreaAllowed|Qt::DockWidgetArea
 
-$prototype=bool isFloating () const
-$method=|bool|isFloating|
+$prototypeV2=bool isFloating() const
 
 $prototype=void setAllowedAreas ( Qt::DockWidgetAreas areas )
 $method=|void|setAllowedAreas|Qt::DockWidgetAreas
@@ -85,14 +82,11 @@ $method=|void|setTitleBarWidget|QWidget *
 $prototype=void setWidget ( QWidget * widget )
 $method=|void|setWidget|QWidget *
 
-$prototype=QWidget * titleBarWidget () const
-$method=|QWidget *|titleBarWidget|
+$prototypeV2=QWidget * titleBarWidget() const
 
-$prototype=QAction * toggleViewAction () const
-$method=|QAction *|toggleViewAction|
+$prototypeV2=QAction * toggleViewAction() const
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 %%
 %% SIGNALS

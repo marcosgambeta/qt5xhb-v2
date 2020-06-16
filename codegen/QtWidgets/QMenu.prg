@@ -62,8 +62,7 @@ $method=|QAction *|actionAt|const QPoint &
 $prototype=QRect actionGeometry ( QAction * act ) const
 $method=|QRect|actionGeometry|QAction *
 
-$prototype=QAction * activeAction () const
-$method=|QAction *|activeAction|
+$prototypeV2=QAction * activeAction() const
 
 $prototype=void setActiveAction ( QAction * act )
 $method=|void|setActiveAction|QAction *
@@ -156,14 +155,11 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
 }
 $addMethod=addMenu
 
-$prototype=QAction * addSeparator ()
-$method=|QAction *|addSeparator|
+$prototypeV2=QAction * addSeparator()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=QAction * defaultAction () const
-$method=|QAction *|defaultAction|
+$prototypeV2=QAction * defaultAction() const
 
 $prototype=void setDefaultAction ( QAction * act )
 $method=|void|setDefaultAction|QAction *
@@ -204,11 +200,9 @@ HB_FUNC_STATIC( QMENU_EXEC )
 }
 $addMethod=exec
 
-$prototype=void hideTearOffMenu ()
-$method=|void|hideTearOffMenu|
+$prototypeV2=void hideTearOffMenu()
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
@@ -219,38 +213,31 @@ $method=|QAction *|insertMenu|QAction *,QMenu *
 $prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-$prototype=bool isEmpty () const
-$method=|bool|isEmpty|
+$prototypeV2=bool isEmpty() const
 
-$prototype=bool isTearOffEnabled () const
-$method=|bool|isTearOffEnabled|
+$prototypeV2=bool isTearOffEnabled() const
 
 $prototype=void setTearOffEnabled ( bool )
 $method=|void|setTearOffEnabled|bool
 
-$prototype=bool isTearOffMenuVisible () const
-$method=|bool|isTearOffMenuVisible|
+$prototypeV2=bool isTearOffMenuVisible() const
 
-$prototype=QAction * menuAction () const
-$method=|QAction *|menuAction|
+$prototypeV2=QAction * menuAction() const
 
 $prototype=void popup ( const QPoint & pos, QAction * at = nullptr )
 $method=|void|popup|const QPoint &,QAction *=nullptr
 
-$prototype=bool separatorsCollapsible () const
-$method=|bool|separatorsCollapsible|
+$prototypeV2=bool separatorsCollapsible() const
 
 $prototype=void setSeparatorsCollapsible ( bool collapse )
 $method=|void|setSeparatorsCollapsible|bool
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=HMENU wceMenu ()
 $method=|HMENU|wceMenu||#ifdef Q_OS_WINCE

@@ -34,8 +34,7 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=int dateEditAcceptDelay () const
-$method=|int|dateEditAcceptDelay|
+$prototypeV2=int dateEditAcceptDelay() const
 
 $prototype=QMap<QDate, QTextCharFormat> dateTextFormat () const
 %% TODO: implementar
@@ -65,38 +64,27 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 }
 $addMethod=dateTextFormat
 
-$prototype=Qt::DayOfWeek firstDayOfWeek () const
-$method=|Qt::DayOfWeek|firstDayOfWeek|
+$prototypeV2=Qt::DayOfWeek firstDayOfWeek() const
 
-$prototype=QTextCharFormat headerTextFormat () const
-$method=|QTextCharFormat|headerTextFormat|
+$prototypeV2=QTextCharFormat headerTextFormat() const
 
-$prototype=HorizontalHeaderFormat horizontalHeaderFormat () const
-$method=|QCalendarWidget::HorizontalHeaderFormat|horizontalHeaderFormat|
+$prototypeV2=QCalendarWidget::HorizontalHeaderFormat horizontalHeaderFormat() const
 
-$prototype=bool isDateEditEnabled () const
-$method=|bool|isDateEditEnabled|
+$prototypeV2=bool isDateEditEnabled() const
 
-$prototype=bool isGridVisible () const
-$method=|bool|isGridVisible|
+$prototypeV2=bool isGridVisible() const
 
-$prototype=bool isNavigationBarVisible () const
-$method=|bool|isNavigationBarVisible|
+$prototypeV2=bool isNavigationBarVisible() const
 
-$prototype=QDate maximumDate () const
-$method=|QDate|maximumDate|
+$prototypeV2=QDate maximumDate() const
 
-$prototype=QDate minimumDate () const
-$method=|QDate|minimumDate|
+$prototypeV2=QDate minimumDate() const
 
-$prototype=int monthShown () const
-$method=|int|monthShown|
+$prototypeV2=int monthShown() const
 
-$prototype=QDate selectedDate () const
-$method=|QDate|selectedDate|
+$prototypeV2=QDate selectedDate() const
 
-$prototype=SelectionMode selectionMode () const
-$method=|QCalendarWidget::SelectionMode|selectionMode|
+$prototypeV2=QCalendarWidget::SelectionMode selectionMode() const
 
 $prototype=void setDateEditAcceptDelay ( int delay )
 $method=|void|setDateEditAcceptDelay|int
@@ -137,14 +125,11 @@ $method=|QCalendarWidget::VerticalHeaderFormat|verticalHeaderFormat|
 $prototype=QTextCharFormat weekdayTextFormat ( Qt::DayOfWeek dayOfWeek ) const
 $method=|QTextCharFormat|weekdayTextFormat|Qt::DayOfWeek
 
-$prototype=int yearShown () const
-$method=|int|yearShown|
+$prototypeV2=int yearShown() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setCurrentPage ( int year, int month )
 $method=|void|setCurrentPage|int,int
@@ -161,23 +146,17 @@ $method=|void|setNavigationBarVisible|bool
 $prototype=void setSelectedDate ( const QDate & date )
 $method=|void|setSelectedDate|const QDate &
 
-$prototype=void showNextMonth ()
-$method=|void|showNextMonth|
+$prototypeV2=void showNextMonth()
 
-$prototype=void showNextYear ()
-$method=|void|showNextYear|
+$prototypeV2=void showNextYear()
 
-$prototype=void showPreviousMonth ()
-$method=|void|showPreviousMonth|
+$prototypeV2=void showPreviousMonth()
 
-$prototype=void showPreviousYear ()
-$method=|void|showPreviousYear|
+$prototypeV2=void showPreviousYear()
 
-$prototype=void showSelectedDate ()
-$method=|void|showSelectedDate|
+$prototypeV2=void showSelectedDate()
 
-$prototype=void showToday ()
-$method=|void|showToday|
+$prototypeV2=void showToday()
 
 %%
 %% SIGNALS

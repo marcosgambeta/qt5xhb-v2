@@ -54,32 +54,26 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 
 $deleteMethod
 
-$prototype=QString actionText() const
-$method=|QString|actionText|
+$prototypeV2=QString actionText() const
 
 $prototype=const QUndoCommand * child(int index) const
 $method=|const QUndoCommand *|child|int
 
-$prototype=int childCount() const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
-$prototype=virtual int id() const
-$virtualMethod=|int|id|
+$prototypeV2=virtual int id() const
 
 $prototype=virtual bool mergeWith(const QUndoCommand * command)
 $virtualMethod=|bool|mergeWith|const QUndoCommand *
 
-$prototype=virtual void redo()
-$virtualMethod=|void|redo|
+$prototypeV2=virtual void redo()
 
 $prototype=void setText(const QString & text)
 $method=|void|setText|const QString &
 
-$prototype=QString text() const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=virtual void undo()
-$virtualMethod=|void|undo|
+$prototypeV2=virtual void undo()
 
 $extraMethods
 

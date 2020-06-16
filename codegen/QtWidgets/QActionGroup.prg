@@ -68,17 +68,13 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 }
 $addMethod=addAction
 
-$prototype=QAction * checkedAction () const
-$method=|QAction *|checkedAction|
+$prototypeV2=QAction * checkedAction() const
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
-$prototype=bool isExclusive () const
-$method=|bool|isExclusive|
+$prototypeV2=bool isExclusive() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void removeAction ( QAction * action )
 $method=|void|removeAction|QAction *

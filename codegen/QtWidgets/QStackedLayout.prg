@@ -67,11 +67,9 @@ $deleteMethod
 $prototype=int addWidget ( QWidget * widget )
 $method=|int|addWidget|QWidget *
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
-$prototype=QWidget * currentWidget () const
-$method=|QWidget *|currentWidget|
+$prototypeV2=QWidget * currentWidget() const
 
 $prototype=int insertWidget ( int index, QWidget * widget )
 $method=|int|insertWidget|int,QWidget *
@@ -79,8 +77,7 @@ $method=|int|insertWidget|int,QWidget *
 $prototype=void setStackingMode ( StackingMode stackingMode )
 $method=|void|setStackingMode|QStackedLayout::StackingMode
 
-$prototype=StackingMode stackingMode () const
-$method=|QStackedLayout::StackingMode|stackingMode|
+$prototypeV2=QStackedLayout::StackingMode stackingMode() const
 
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int

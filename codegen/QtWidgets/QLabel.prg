@@ -58,29 +58,21 @@ HB_FUNC_STATIC( QLABEL_NEW )
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=QWidget * buddy () const
-$method=|QWidget *|buddy|
+$prototypeV2=QWidget * buddy() const
 
-$prototype=bool hasScaledContents () const
-$method=|bool|hasScaledContents|
+$prototypeV2=bool hasScaledContents() const
 
-$prototype=bool hasSelectedText () const
-$method=|bool|hasSelectedText|
+$prototypeV2=bool hasSelectedText() const
 
-$prototype=int indent () const
-$method=|int|indent|
+$prototypeV2=int indent() const
 
-$prototype=int margin () const
-$method=|int|margin|
+$prototypeV2=int margin() const
 
-$prototype=QMovie * movie () const
-$method=|QMovie *|movie|
+$prototypeV2=QMovie * movie() const
 
-$prototype=bool openExternalLinks () const
-$method=|bool|openExternalLinks|
+$prototypeV2=bool openExternalLinks() const
 
 $prototype=const QPicture * picture () const
 $method=|const QPicture *|picture|
@@ -88,8 +80,7 @@ $method=|const QPicture *|picture|
 $prototype=const QPixmap * pixmap () const
 $method=|const QPixmap *|pixmap|
 
-$prototype=QString selectedText () const
-$method=|QString|selectedText|
+$prototypeV2=QString selectedText() const
 
 $prototype=void setAlignment ( Qt::Alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -121,29 +112,22 @@ $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 $prototype=void setWordWrap ( bool on )
 $method=|void|setWordWrap|bool
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=Qt::TextFormat textFormat () const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags () const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void setMovie ( QMovie * movie )
 $method=|void|setMovie|QMovie *

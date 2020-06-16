@@ -79,11 +79,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 
 $deleteMethod
 
-$prototype=QGraphicsItem * activePanel () const
-$method=|QGraphicsItem *|activePanel|
+$prototypeV2=QGraphicsItem * activePanel() const
 
-$prototype=QGraphicsWidget * activeWindow () const
-$method=|QGraphicsWidget *|activeWindow|
+$prototypeV2=QGraphicsWidget * activeWindow() const
 
 $prototype=QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse1|const QRectF &,const QPen &=QPen(),const QBrush &=QBrush()
@@ -190,14 +188,11 @@ $method=|QGraphicsTextItem *|addText|const QString &,const QFont &=QFont()
 $prototype=QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 )
 $method=|QGraphicsProxyWidget *|addWidget|QWidget *,Qt::WindowFlags=0
 
-$prototype=QBrush backgroundBrush () const
-$method=|QBrush|backgroundBrush|
+$prototypeV2=QBrush backgroundBrush() const
 
-$prototype=int bspTreeDepth () const
-$method=|int|bspTreeDepth|
+$prototypeV2=int bspTreeDepth() const
 
-$prototype=void clearFocus ()
-$method=|void|clearFocus|
+$prototypeV2=void clearFocus()
 
 $prototype=QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
 $method=|QGraphicsItemGroup *|createItemGroup|const QList<QGraphicsItem *> &
@@ -205,20 +200,15 @@ $method=|QGraphicsItemGroup *|createItemGroup|const QList<QGraphicsItem *> &
 $prototype=void destroyItemGroup ( QGraphicsItemGroup * group )
 $method=|void|destroyItemGroup|QGraphicsItemGroup *
 
-$prototype=QGraphicsItem * focusItem () const
-$method=|QGraphicsItem *|focusItem|
+$prototypeV2=QGraphicsItem * focusItem() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QBrush foregroundBrush () const
-$method=|QBrush|foregroundBrush|
+$prototypeV2=QBrush foregroundBrush() const
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=qreal height () const
-$method=|qreal|height|
+$prototypeV2=qreal height() const
 
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
@@ -251,11 +241,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 }
 $addMethod=invalidate
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isSortCacheEnabled () const
-$method=|bool|isSortCacheEnabled|
+$prototypeV2=bool isSortCacheEnabled() const
 
 $prototype=QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPointF &,const QTransform &
@@ -285,17 +273,13 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=ItemIndexMethod itemIndexMethod () const
-$method=|QGraphicsScene::ItemIndexMethod|itemIndexMethod|
+$prototypeV2=QGraphicsScene::ItemIndexMethod itemIndexMethod() const
 
-$prototype=QRectF itemsBoundingRect () const
-$method=|QRectF|itemsBoundingRect|
+$prototypeV2=QRectF itemsBoundingRect() const
 
-$prototype=QGraphicsItem * mouseGrabberItem () const
-$method=|QGraphicsItem *|mouseGrabberItem|
+$prototypeV2=QGraphicsItem * mouseGrabberItem() const
 
-$prototype=QPalette palette () const
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette() const
 
 $prototype=void removeItem ( QGraphicsItem * item )
 $method=|void|removeItem|QGraphicsItem *
@@ -303,11 +287,9 @@ $method=|void|removeItem|QGraphicsItem *
 $prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 $method=|void|render|QPainter *,const QRectF &=QRectF(),const QRectF &=QRectF(),Qt::AspectRatioMode=Qt::KeepAspectRatio
 
-$prototype=QRectF sceneRect () const
-$method=|QRectF|sceneRect|
+$prototypeV2=QRectF sceneRect() const
 
-$prototype=QPainterPath selectionArea () const
-$method=|QPainterPath|selectionArea|
+$prototypeV2=QPainterPath selectionArea() const
 
 $prototype=bool sendEvent ( QGraphicsItem * item, QEvent * event )
 $method=|bool|sendEvent|QGraphicsItem *,QEvent *
@@ -407,11 +389,9 @@ $method=|void|setStickyFocus|bool
 $prototype=void setStyle ( QStyle * style )
 $method=|void|setStyle|QStyle *
 
-$prototype=bool stickyFocus () const
-$method=|bool|stickyFocus|
+$prototypeV2=bool stickyFocus() const
 
-$prototype=QStyle * style () const
-$method=|QStyle *|style|
+$prototypeV2=QStyle * style() const
 
 $prototype=void update ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|update,update1|qreal,qreal,qreal,qreal
@@ -441,17 +421,13 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 }
 $addMethod=update
 
-$prototype=qreal width () const
-$method=|qreal|width|
+$prototypeV2=qreal width() const
 
-$prototype=void advance ()
-$method=|void|advance|
+$prototypeV2=void advance()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearSelection ()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
 %%
 %% SIGNALS

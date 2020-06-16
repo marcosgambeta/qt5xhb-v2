@@ -37,20 +37,15 @@ $deleteMethod
 $prototype=void addAction ( QAction * action )
 $method=|void|addAction|QAction *
 
-$prototype=void adjustSize ()
-$method=|void|adjustSize|
+$prototypeV2=void adjustSize()
 
-$prototype=bool autoFillBackground () const
-$method=|bool|autoFillBackground|
+$prototypeV2=bool autoFillBackground() const
 
-$prototype=Qt::FocusPolicy focusPolicy () const
-$method=|Qt::FocusPolicy|focusPolicy|
+$prototypeV2=Qt::FocusPolicy focusPolicy() const
 
-$prototype=QGraphicsWidget * focusWidget () const
-$method=|QGraphicsWidget *|focusWidget|
+$prototypeV2=QGraphicsWidget * focusWidget() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $method=|void|getWindowFrameMargins|qreal *,qreal *,qreal *,qreal *
@@ -61,23 +56,18 @@ $method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowSho
 $prototype=void insertAction ( QAction * before, QAction * action )
 $method=|void|insertAction|QAction *,QAction *
 
-$prototype=bool isActiveWindow () const
-$method=|bool|isActiveWindow|
+$prototypeV2=bool isActiveWindow() const
 
-$prototype=QGraphicsLayout * layout () const
-$method=|QGraphicsLayout *|layout|
+$prototypeV2=QGraphicsLayout * layout() const
 
-$prototype=Qt::LayoutDirection layoutDirection () const
-$method=|Qt::LayoutDirection|layoutDirection|
+$prototypeV2=Qt::LayoutDirection layoutDirection() const
 
 $prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 $virtualMethod=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
-$prototype=QPalette palette () const
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette() const
 
-$prototype=QRectF rect () const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
 $prototype=void releaseShortcut ( int id )
 $method=|void|releaseShortcut|int
@@ -183,38 +173,28 @@ $method=|void|setWindowFrameMargins|qreal,qreal,qreal,qreal
 $prototype=void setWindowTitle ( const QString & title )
 $method=|void|setWindowTitle|const QString &
 
-$prototype=QSizeF size () const
-$method=|QSizeF|size|
+$prototypeV2=QSizeF size() const
 
-$prototype=QStyle * style () const
-$method=|QStyle *|style|
+$prototypeV2=QStyle * style() const
 
 $prototype=bool testAttribute ( Qt::WidgetAttribute attribute ) const
 $method=|bool|testAttribute|Qt::WidgetAttribute
 
-$prototype=void unsetLayoutDirection ()
-$method=|void|unsetLayoutDirection|
+$prototypeV2=void unsetLayoutDirection()
 
-$prototype=void unsetWindowFrameMargins ()
-$method=|void|unsetWindowFrameMargins|
+$prototypeV2=void unsetWindowFrameMargins()
 
-$prototype=Qt::WindowFlags windowFlags () const
-$method=|Qt::WindowFlags|windowFlags|
+$prototypeV2=Qt::WindowFlags windowFlags() const
 
-$prototype=QRectF windowFrameGeometry () const
-$method=|QRectF|windowFrameGeometry|
+$prototypeV2=QRectF windowFrameGeometry() const
 
-$prototype=QRectF windowFrameRect () const
-$method=|QRectF|windowFrameRect|
+$prototypeV2=QRectF windowFrameRect() const
 
-$prototype=QString windowTitle () const
-$method=|QString|windowTitle|
+$prototypeV2=QString windowTitle() const
 
-$prototype=Qt::WindowType windowType () const
-$method=|Qt::WindowType|windowType|
+$prototypeV2=Qt::WindowType windowType() const
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
@@ -222,14 +202,11 @@ $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
-$prototype=bool close ()
-$method=|bool|close|
+$prototypeV2=bool close()
 
 $prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
 $staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *

@@ -109,53 +109,44 @@ $method=|Qt::ItemFlags|flags|const QModelIndex &
 $prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QStringList mimeTypes() const
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const
 
-$prototype=Qt::DropActions supportedDropActions() const
-$method=|Qt::DropActions|supportedDropActions|
+$prototypeV2=Qt::DropActions supportedDropActions() const
 
 $prototype=void setIconProvider(QFileIconProvider *provider)
 $method=|void|setIconProvider|QFileIconProvider *
 
-$prototype=QFileIconProvider *iconProvider() const
-$method=|QFileIconProvider *|iconProvider|
+$prototypeV2=QFileIconProvider * iconProvider() const
 
 $prototype=void setNameFilters(const QStringList &filters)
 $method=|void|setNameFilters|const QStringList &
 
-$prototype=QStringList nameFilters() const
-$method=|QStringList|nameFilters|
+$prototypeV2=QStringList nameFilters() const
 
 $prototype=void setFilter(QDir::Filters filters)
 $method=|void|setFilter|QDir::Filters
 
-$prototype=QDir::Filters filter() const
-$method=|QDir::Filters|filter|
+$prototypeV2=QDir::Filters filter() const
 
 $prototype=void setSorting(QDir::SortFlags sort)
 $method=|void|setSorting|QDir::SortFlags
 
-$prototype=QDir::SortFlags sorting() const
-$method=|QDir::SortFlags|sorting|
+$prototypeV2=QDir::SortFlags sorting() const
 
 $prototype=void setResolveSymlinks(bool enable)
 $method=|void|setResolveSymlinks|bool
 
-$prototype=bool resolveSymlinks() const
-$method=|bool|resolveSymlinks|
+$prototypeV2=bool resolveSymlinks() const
 
 $prototype=void setReadOnly(bool enable)
 $method=|void|setReadOnly|bool
 
-$prototype=bool isReadOnly() const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=void setLazyChildCount(bool enable)
 $method=|void|setLazyChildCount|bool
 
-$prototype=bool lazyChildCount() const
-$method=|bool|lazyChildCount|
+$prototypeV2=bool lazyChildCount() const
 
 $prototype=bool isDir(const QModelIndex &index) const
 $method=|bool|isDir|const QModelIndex &

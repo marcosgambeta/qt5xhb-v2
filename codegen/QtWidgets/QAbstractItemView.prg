@@ -29,68 +29,57 @@ $includes
 
 $deleteMethod
 
-$prototype=bool alternatingRowColors () const
-$method=|bool|alternatingRowColors|
+$prototypeV2=bool alternatingRowColors() const
 
 $prototype=void setAlternatingRowColors ( bool enable )
 $method=|void|setAlternatingRowColors|bool
 
-$prototype=int autoScrollMargin () const
-$method=|int|autoScrollMargin|
+$prototypeV2=int autoScrollMargin() const
 
 $prototype=void setAutoScrollMargin ( int margin )
 $method=|void|setAutoScrollMargin|int
 
-$prototype=QModelIndex currentIndex () const
-$method=|QModelIndex|currentIndex|
+$prototypeV2=QModelIndex currentIndex() const
 
 $prototype=void setCurrentIndex ( const QModelIndex & index )
 $method=|void|setCurrentIndex|const QModelIndex &
 
-$prototype=Qt::DropAction defaultDropAction () const
-$method=|Qt::DropAction|defaultDropAction|
+$prototypeV2=Qt::DropAction defaultDropAction() const
 
 $prototype=void setDefaultDropAction ( Qt::DropAction dropAction )
 $method=|void|setDefaultDropAction|Qt::DropAction
 
-$prototype=DragDropMode dragDropMode () const
-$method=|QAbstractItemView::DragDropMode|dragDropMode|
+$prototypeV2=QAbstractItemView::DragDropMode dragDropMode() const
 
 $prototype=void setDragDropMode ( DragDropMode behavior )
 $method=|void|setDragDropMode|QAbstractItemView::DragDropMode
 
-$prototype=bool dragDropOverwriteMode () const
-$method=|bool|dragDropOverwriteMode|
+$prototypeV2=bool dragDropOverwriteMode() const
 
 $prototype=void setDragDropOverwriteMode ( bool overwrite )
 $method=|void|setDragDropOverwriteMode|bool
 
-$prototype=bool dragEnabled () const
-$method=|bool|dragEnabled|
+$prototypeV2=bool dragEnabled() const
 
 $prototype=void setDragEnabled ( bool enable )
 $method=|void|setDragEnabled|bool
 
-$prototype=EditTriggers editTriggers () const
-$method=|QAbstractItemView::EditTriggers|editTriggers|
+$prototypeV2=QAbstractItemView::EditTriggers editTriggers() const
 
 $prototype=void setEditTriggers ( EditTriggers triggers )
 $method=|void|setEditTriggers|QAbstractItemView::EditTriggers
 
-$prototype=bool hasAutoScroll () const
-$method=|bool|hasAutoScroll|
+$prototypeV2=bool hasAutoScroll() const
 
 $prototype=void setAutoScroll ( bool enable )
 $method=|void|setAutoScroll|bool
 
-$prototype=ScrollMode horizontalScrollMode () const
-$method=|QAbstractItemView::ScrollMode|horizontalScrollMode|
+$prototypeV2=QAbstractItemView::ScrollMode horizontalScrollMode() const
 
 $prototype=void setHorizontalScrollMode ( ScrollMode mode )
 $method=|void|setHorizontalScrollMode|QAbstractItemView::ScrollMode
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
@@ -153,8 +142,7 @@ $method=|void|setItemDelegateForRow|int,QAbstractItemDelegate *
 $prototype=virtual void keyboardSearch ( const QString & search )
 $virtualMethod=|void|keyboardSearch|const QString &
 
-$prototype=QAbstractItemModel * model () const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
@@ -162,8 +150,7 @@ $virtualMethod=|void|setModel|QAbstractItemModel *
 $prototype=void openPersistentEditor ( const QModelIndex & index )
 $method=|void|openPersistentEditor|const QModelIndex &
 
-$prototype=QModelIndex rootIndex () const
-$method=|QModelIndex|rootIndex|
+$prototypeV2=QModelIndex rootIndex() const
 
 $prototype=virtual void setRootIndex ( const QModelIndex & index )
 $virtualMethod=|void|setRootIndex|const QModelIndex &
@@ -171,44 +158,37 @@ $virtualMethod=|void|setRootIndex|const QModelIndex &
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible ) = 0
 $virtualMethod=|void|scrollTo|const QModelIndex &,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
-$prototype=QAbstractItemView::SelectionBehavior selectionBehavior () const
-$method=|QAbstractItemView::SelectionBehavior|selectionBehavior|
+$prototypeV2=QAbstractItemView::SelectionBehavior selectionBehavior() const
 
 $prototype=void setSelectionBehavior ( QAbstractItemView::SelectionBehavior behavior )
 $method=|void|setSelectionBehavior|QAbstractItemView::SelectionBehavior
 
-$prototype=QAbstractItemView::SelectionMode selectionMode () const
-$method=|QAbstractItemView::SelectionMode|selectionMode|
+$prototypeV2=QAbstractItemView::SelectionMode selectionMode() const
 
 $prototype=void setSelectionMode ( QAbstractItemView::SelectionMode mode )
 $method=|void|setSelectionMode|QAbstractItemView::SelectionMode
 
-$prototype=QItemSelectionModel * selectionModel () const
-$method=|QItemSelectionModel *|selectionModel|
+$prototypeV2=QItemSelectionModel * selectionModel() const
 
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 $virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
-$prototype=bool showDropIndicator () const
-$method=|bool|showDropIndicator|
+$prototypeV2=bool showDropIndicator() const
 
 $prototype=void setDropIndicatorShown ( bool enable )
 $method=|void|setDropIndicatorShown|bool
 
-$prototype=bool tabKeyNavigation () const
-$method=|bool|tabKeyNavigation|
+$prototypeV2=bool tabKeyNavigation() const
 
 $prototype=void setTabKeyNavigation ( bool enable )
 $method=|void|setTabKeyNavigation|bool
 
-$prototype=Qt::TextElideMode textElideMode () const
-$method=|Qt::TextElideMode|textElideMode|
+$prototypeV2=Qt::TextElideMode textElideMode() const
 
 $prototype=void setTextElideMode ( Qt::TextElideMode mode )
 $method=|void|setTextElideMode|Qt::TextElideMode
 
-$prototype=ScrollMode verticalScrollMode () const
-$method=|QAbstractItemView::ScrollMode|verticalScrollMode|
+$prototypeV2=QAbstractItemView::ScrollMode verticalScrollMode() const
 
 $prototype=void setVerticalScrollMode ( ScrollMode mode )
 $method=|void|setVerticalScrollMode|QAbstractItemView::ScrollMode
@@ -228,23 +208,18 @@ $virtualMethod=|QRect|visualRect|const QModelIndex &
 $prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=void clearSelection ()
-$method=|void|clearSelection|
+$prototypeV2=void clearSelection()
 
 $prototype=void edit ( const QModelIndex & index )
 $method=|void|edit|const QModelIndex &
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
-$prototype=void scrollToBottom ()
-$method=|void|scrollToBottom|
+$prototypeV2=void scrollToBottom()
 
-$prototype=void scrollToTop ()
-$method=|void|scrollToTop|
+$prototypeV2=void scrollToTop()
 
-$prototype=virtual void selectAll ()
-$virtualMethod=|void|selectAll|
+$prototypeV2=virtual void selectAll()
 
 $prototype=void update ( int x, int y, int w, int h )
 $internalMethod=|void|update,update1|int,int,int,int
@@ -298,8 +273,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 }
 $addMethod=update
 
-$prototype=virtual void doItemsLayout()
-$virtualMethod=|void|doItemsLayout|
+$prototypeV2=virtual void doItemsLayout()
 
 %%
 %% SIGNALS

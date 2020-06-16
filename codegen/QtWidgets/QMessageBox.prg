@@ -105,11 +105,9 @@ $method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
 $prototype=QList<QAbstractButton *> buttons () const
 $method=|QList<QAbstractButton *>|buttons|
 
-$prototype=QAbstractButton * clickedButton () const
-$method=|QAbstractButton *|clickedButton|
+$prototypeV2=QAbstractButton * clickedButton() const
 
-$prototype=QPushButton * defaultButton () const
-$method=|QPushButton *|defaultButton|
+$prototypeV2=QPushButton * defaultButton() const
 
 $prototype=QString detailedText () const
 $method=|QString|detailedText||#ifndef QT_NO_TEXTEDIT
@@ -117,23 +115,19 @@ $method=|QString|detailedText||#ifndef QT_NO_TEXTEDIT
 $prototype=void setDetailedText ( const QString & text )
 $method=|void|setDetailedText|const QString &|#ifndef QT_NO_TEXTEDIT
 
-$prototype=QAbstractButton * escapeButton () const
-$method=|QAbstractButton *|escapeButton|
+$prototypeV2=QAbstractButton * escapeButton() const
 
-$prototype=Icon icon () const
-$method=|QMessageBox::Icon|icon|
+$prototypeV2=QMessageBox::Icon icon() const
 
 $prototype=void setIcon ( Icon )
 $method=|void|setIcon|QMessageBox::Icon
 
-$prototype=QPixmap iconPixmap () const
-$method=|QPixmap|iconPixmap|
+$prototypeV2=QPixmap iconPixmap() const
 
 $prototype=void setIconPixmap ( const QPixmap & pixmap )
 $method=|void|setIconPixmap|const QPixmap &
 
-$prototype=QString informativeText () const
-$method=|QString|informativeText|
+$prototypeV2=QString informativeText() const
 
 $prototype=void setInformativeText ( const QString & text )
 $method=|void|setInformativeText|const QString &
@@ -209,20 +203,17 @@ $method=|void|setWindowTitle|const QString &
 $prototype=StandardButton standardButton ( QAbstractButton * button ) const
 $method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
 
-$prototype=StandardButtons standardButtons () const
-$method=|QMessageBox::StandardButtons|standardButtons|
+$prototypeV2=QMessageBox::StandardButtons standardButtons() const
 
 $prototype=void setStandardButtons ( StandardButtons buttons )
 $method=|void|setStandardButtons|QMessageBox::StandardButtons
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-$prototype=Qt::TextFormat textFormat () const
-$method=|Qt::TextFormat|textFormat|
+$prototypeV2=Qt::TextFormat textFormat() const
 
 $prototype=void setTextFormat ( Qt::TextFormat format )
 $method=|void|setTextFormat|Qt::TextFormat
@@ -230,8 +221,7 @@ $method=|void|setTextFormat|Qt::TextFormat
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool|#ifdef Q_OS_WINCE
 
-$prototype=int exec ()
-$method=|int|exec|
+$prototypeV2=int exec()
 
 $prototype=static void about ( QWidget * parent, const QString & title, const QString & text )
 $staticMethod=|void|about|QWidget *,const QString &,const QString &
@@ -251,14 +241,12 @@ $staticMethod=|QMessageBox::StandardButton|question|QWidget *,const QString &,co
 $prototype=static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
 $staticMethod=|QMessageBox::StandardButton|warning|QWidget *,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::Ok,QMessageBox::StandardButton=QMessageBox::NoButton
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags() const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
 $prototype=void setTextInteractionFlags (Qt::TextInteractionFlags flags)
 $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 
-$prototype=QCheckBox * checkBox() const
-$method=|QCheckBox *|checkBox|
+$prototypeV2=QCheckBox * checkBox() const
 
 $prototype=void setCheckBox (QCheckBox *cb)
 $method=|void|setCheckBox|QCheckBox *

@@ -60,20 +60,15 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 
 $deleteMethod
 
-$prototype=void adjustSize ()
-$method=|void|adjustSize|
+$prototypeV2=void adjustSize()
 
-$prototype=QColor defaultTextColor () const
-$method=|QColor|defaultTextColor|
+$prototypeV2=QColor defaultTextColor() const
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=bool openExternalLinks () const
-$method=|bool|openExternalLinks|
+$prototypeV2=bool openExternalLinks() const
 
 $prototype=void setDefaultTextColor ( const QColor & col )
 $method=|void|setDefaultTextColor|const QColor &
@@ -105,26 +100,19 @@ $method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
 $prototype=void setTextWidth ( qreal width )
 $method=|void|setTextWidth|qreal
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
-$prototype=QTextCursor textCursor () const
-$method=|QTextCursor|textCursor|
+$prototypeV2=QTextCursor textCursor() const
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags () const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
-$prototype=qreal textWidth () const
-$method=|qreal|textWidth|
+$prototypeV2=qreal textWidth() const
 
-$prototype=QString toHtml () const
-$method=|QString|toHtml|
+$prototypeV2=QString toHtml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -132,17 +120,14 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 %%
 %% SIGNALS

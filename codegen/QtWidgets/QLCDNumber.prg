@@ -99,17 +99,13 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 }
 $addMethod=checkOverflow
 
-$prototype=int digitCount () const
-$method=|int|digitCount|
+$prototypeV2=int digitCount() const
 
-$prototype=int intValue () const
-$method=|int|intValue|
+$prototypeV2=int intValue() const
 
-$prototype=Mode mode () const
-$method=|QLCDNumber::Mode|mode|
+$prototypeV2=QLCDNumber::Mode mode() const
 
-$prototype=SegmentStyle segmentStyle () const
-$method=|QLCDNumber::SegmentStyle|segmentStyle|
+$prototypeV2=QLCDNumber::SegmentStyle segmentStyle() const
 
 $prototype=void setDigitCount ( int numDigits )
 $method=|void|setDigitCount|int
@@ -120,14 +116,11 @@ $method=|void|setMode|QLCDNumber::Mode
 $prototype=void setSegmentStyle ( SegmentStyle )
 $method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
 
-$prototype=bool smallDecimalPoint () const
-$method=|bool|smallDecimalPoint|
+$prototypeV2=bool smallDecimalPoint() const
 
-$prototype=double value () const
-$method=|double|value|
+$prototypeV2=double value() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void display ( const QString & s )
 $internalMethod=|void|display,display1|const QString &
@@ -187,17 +180,13 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 }
 $addMethod=display
 
-$prototype=void setBinMode ()
-$method=|void|setBinMode|
+$prototypeV2=void setBinMode()
 
-$prototype=void setDecMode ()
-$method=|void|setDecMode|
+$prototypeV2=void setDecMode()
 
-$prototype=void setHexMode ()
-$method=|void|setHexMode|
+$prototypeV2=void setHexMode()
 
-$prototype=void setOctMode ()
-$method=|void|setOctMode|
+$prototypeV2=void setOctMode()
 
 $prototype=void setSmallDecimalPoint ( bool )
 $method=|void|setSmallDecimalPoint|bool

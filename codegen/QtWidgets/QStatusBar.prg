@@ -38,8 +38,7 @@ $method=|void|addPermanentWidget|QWidget *,int=0
 $prototype=void addWidget ( QWidget * widget, int stretch = 0 )
 $method=|void|addWidget|QWidget *,int=0
 
-$prototype=QString currentMessage () const
-$method=|QString|currentMessage|
+$prototypeV2=QString currentMessage() const
 
 $prototype=int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertPermanentWidget|int,QWidget *,int=0
@@ -47,8 +46,7 @@ $method=|int|insertPermanentWidget|int,QWidget *,int=0
 $prototype=int insertWidget ( int index, QWidget * widget, int stretch = 0 )
 $method=|int|insertWidget|int,QWidget *,int=0
 
-$prototype=bool isSizeGripEnabled () const
-$method=|bool|isSizeGripEnabled|
+$prototypeV2=bool isSizeGripEnabled() const
 
 $prototype=void removeWidget ( QWidget * widget )
 $method=|void|removeWidget|QWidget *
@@ -56,8 +54,7 @@ $method=|void|removeWidget|QWidget *
 $prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-$prototype=void clearMessage ()
-$method=|void|clearMessage|
+$prototypeV2=void clearMessage()
 
 $prototype=void showMessage ( const QString & message, int timeout = 0 )
 $method=|void|showMessage|const QString &,int=0

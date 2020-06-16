@@ -27,16 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=SwipeDirection horizontalDirection() const
-$method=|QSwipeGesture::SwipeDirection|horizontalDirection|
+$prototypeV2=QSwipeGesture::SwipeDirection horizontalDirection() const
 
 $prototype=void setSwipeAngle(qreal value)
 $method=|void|setSwipeAngle|qreal
 
-$prototype=qreal swipeAngle() const
-$method=|qreal|swipeAngle|
+$prototypeV2=qreal swipeAngle() const
 
-$prototype=SwipeDirection verticalDirection() const
-$method=|QSwipeGesture::SwipeDirection|verticalDirection|
+$prototypeV2=QSwipeGesture::SwipeDirection verticalDirection() const
 
 #pragma ENDDUMP

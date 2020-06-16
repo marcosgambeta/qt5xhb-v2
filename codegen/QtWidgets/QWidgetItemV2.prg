@@ -30,14 +30,11 @@ $constructor=|new|QWidget *
 
 $deleteMethod
 
-$prototype=QSize sizeHint() const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QSize minimumSize() const
-$method=|QSize|minimumSize|
+$prototypeV2=QSize minimumSize() const
 
-$prototype=QSize maximumSize() const
-$method=|QSize|maximumSize|
+$prototypeV2=QSize maximumSize() const
 
 $prototype=int heightForWidth(int width) const
 $method=|int|heightForWidth|int

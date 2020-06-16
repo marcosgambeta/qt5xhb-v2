@@ -38,29 +38,23 @@ $method=|QString|buttonText|QWizard::WizardButton
 $prototype=void setButtonText ( QWizard::WizardButton which, const QString & text )
 $method=|void|setButtonText|QWizard::WizardButton,const QString &
 
-$prototype=virtual void cleanupPage ()
-$virtualMethod=|void|cleanupPage|
+$prototypeV2=virtual void cleanupPage()
 
-$prototype=virtual void initializePage ()
-$virtualMethod=|void|initializePage|
+$prototypeV2=virtual void initializePage()
 
-$prototype=bool isCommitPage () const
-$method=|bool|isCommitPage|
+$prototypeV2=bool isCommitPage() const
 
 $prototype=void setCommitPage ( bool commitPage )
 $method=|void|setCommitPage|bool
 
-$prototype=virtual bool isComplete () const
-$virtualMethod=|bool|isComplete|
+$prototypeV2=virtual bool isComplete() const
 
-$prototype=bool isFinalPage () const
-$method=|bool|isFinalPage|
+$prototypeV2=bool isFinalPage() const
 
 $prototype=void setFinalPage ( bool finalPage )
 $method=|void|setFinalPage|bool
 
-$prototype=virtual int nextId () const
-$virtualMethod=|int|nextId|
+$prototypeV2=virtual int nextId() const
 
 $prototype=QPixmap pixmap ( QWizard::WizardPixmap which ) const
 $method=|QPixmap|pixmap|QWizard::WizardPixmap
@@ -68,20 +62,17 @@ $method=|QPixmap|pixmap|QWizard::WizardPixmap
 $prototype=void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
 $method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
 
-$prototype=QString subTitle () const
-$method=|QString|subTitle|
+$prototypeV2=QString subTitle() const
 
 $prototype=void setSubTitle ( const QString & subTitle )
 $method=|void|setSubTitle|const QString &
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
 $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-$prototype=virtual bool validatePage ()
-$virtualMethod=|bool|validatePage|
+$prototypeV2=virtual bool validatePage()
 
 %%
 %% SIGNALS

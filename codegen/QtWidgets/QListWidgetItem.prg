@@ -70,20 +70,17 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 
 $deleteMethod
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
 $prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
 $prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
 
-$prototype=virtual QListWidgetItem * clone () const
-$virtualMethod=|QListWidgetItem *|clone|
+$prototypeV2=virtual QListWidgetItem * clone() const
 
 $prototype=virtual QVariant data ( int role ) const
 $virtualMethod=|QVariant|data|int
@@ -91,83 +88,69 @@ $virtualMethod=|QVariant|data|int
 $prototype=virtual void setData ( int role, const QVariant & value )
 $virtualMethod=|void|setData|int,const QVariant &
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
 $prototype=void setFlags ( Qt::ItemFlags flags )
 $method=|void|setFlags|Qt::ItemFlags
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
 $prototype=void setFont ( const QFont & font )
 $method=|void|setFont|const QFont &
 
-$prototype=QBrush foreground () const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
 $prototype=void setForeground ( const QBrush & brush )
 $method=|void|setForeground|const QBrush &
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
 
-$prototype=bool isHidden () const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
 $prototype=void setHidden ( bool hide )
 $method=|void|setHidden|bool
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
 $prototype=void setSelected ( bool select )
 $method=|void|setSelected|bool
 
-$prototype=QListWidget * listWidget () const
-$method=|QListWidget *|listWidget|
+$prototypeV2=QListWidget * listWidget() const
 
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=void setSizeHint ( const QSize & size )
 $method=|void|setSizeHint|const QSize &
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
 $prototype=void setStatusTip ( const QString & statusTip )
 $method=|void|setStatusTip|const QString &
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
 
-$prototype=int textAlignment () const
-$method=|int|textAlignment|
+$prototypeV2=int textAlignment() const
 
 $prototype=void setTextAlignment ( int alignment )
 $method=|void|setTextAlignment|int
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
 $prototype=void setToolTip ( const QString & toolTip )
 $method=|void|setToolTip|const QString &
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
@@ -175,14 +158,12 @@ $method=|void|setWhatsThis|const QString &
 $prototype=virtual void write ( QDataStream & out ) const
 $virtualMethod=|void|write|QDataStream &
 
-$prototype=QColor backgroundColor() const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
 $prototype=virtual void setBackgroundColor(const QColor &color)
 $virtualMethod=|void|setBackgroundColor|const QColor &
 
-$prototype=QColor textColor() const
-$method=|QColor|textColor|
+$prototypeV2=QColor textColor() const
 
 $prototype=void setTextColor(const QColor &color)
 $method=|void|setTextColor|const QColor &

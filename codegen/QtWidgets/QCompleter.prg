@@ -70,50 +70,36 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
 $prototype=~QCompleter()
 $deleteMethod
 
-$prototype=Qt::CaseSensitivity caseSensitivity () const
-$method=|Qt::CaseSensitivity|caseSensitivity|
+$prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
-$prototype=int completionColumn () const
-$method=|int|completionColumn|
+$prototypeV2=int completionColumn() const
 
-$prototype=int completionCount () const
-$method=|int|completionCount|
+$prototypeV2=int completionCount() const
 
-$prototype=CompletionMode completionMode () const
-$method=|QCompleter::CompletionMode|completionMode|
+$prototypeV2=QCompleter::CompletionMode completionMode() const
 
-$prototype=QAbstractItemModel * completionModel () const
-$method=|QAbstractItemModel *|completionModel|
+$prototypeV2=QAbstractItemModel * completionModel() const
 
-$prototype=QString completionPrefix () const
-$method=|QString|completionPrefix|
+$prototypeV2=QString completionPrefix() const
 
-$prototype=int completionRole () const
-$method=|int|completionRole|
+$prototypeV2=int completionRole() const
 
-$prototype=QString currentCompletion () const
-$method=|QString|currentCompletion|
+$prototypeV2=QString currentCompletion() const
 
-$prototype=QModelIndex currentIndex () const
-$method=|QModelIndex|currentIndex|
+$prototypeV2=QModelIndex currentIndex() const
 
-$prototype=int currentRow () const
-$method=|int|currentRow|
+$prototypeV2=int currentRow() const
 
-$prototype=int maxVisibleItems () const
-$method=|int|maxVisibleItems|
+$prototypeV2=int maxVisibleItems() const
 
-$prototype=QAbstractItemModel * model () const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
-$prototype=ModelSorting modelSorting () const
-$method=|QCompleter::ModelSorting|modelSorting|
+$prototypeV2=QCompleter::ModelSorting modelSorting() const
 
 $prototype=virtual QString pathFromIndex ( const QModelIndex & index ) const
 $virtualMethod=|QString|pathFromIndex|const QModelIndex &
 
-$prototype=QAbstractItemView * popup () const
-$method=|QAbstractItemView *|popup|
+$prototypeV2=QAbstractItemView * popup() const
 
 $prototype=void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
 $method=|void|setCaseSensitivity|Qt::CaseSensitivity
@@ -148,11 +134,9 @@ $method=|void|setWidget|QWidget *
 $prototype=virtual QStringList splitPath ( const QString & path ) const
 $virtualMethod=|QStringList|splitPath|const QString &
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
-$prototype=bool wrapAround () const
-$method=|bool|wrapAround|
+$prototypeV2=bool wrapAround() const
 
 $prototype=void complete ( const QRect & rect = QRect() )
 $method=|void|complete|const QRect &=QRect()

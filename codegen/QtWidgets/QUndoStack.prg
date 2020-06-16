@@ -37,23 +37,18 @@ $deleteMethod
 $prototype=void beginMacro(const QString & text)
 $method=|void|beginMacro|const QString &
 
-$prototype=bool canRedo() const
-$method=|bool|canRedo|
+$prototypeV2=bool canRedo() const
 
-$prototype=bool canUndo() const
-$method=|bool|canUndo|
+$prototypeV2=bool canUndo() const
 
-$prototype=int cleanIndex() const
-$method=|int|cleanIndex|
+$prototypeV2=int cleanIndex() const
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=const QUndoCommand * command(int index) const
 $method=|const QUndoCommand *|command|int
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
 $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
@@ -61,23 +56,18 @@ $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 $prototype=QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
 $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
-$prototype=void endMacro()
-$method=|void|endMacro|
+$prototypeV2=void endMacro()
 
-$prototype=int index() const
-$method=|int|index|
+$prototypeV2=int index() const
 
-$prototype=bool isActive() const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
-$prototype=bool isClean() const
-$method=|bool|isClean|
+$prototypeV2=bool isClean() const
 
 $prototype=void push(QUndoCommand * cmd)
 $method=|void|push|QUndoCommand *
 
-$prototype=QString redoText() const
-$method=|QString|redoText|
+$prototypeV2=QString redoText() const
 
 $prototype=void setUndoLimit(int limit)
 $method=|void|setUndoLimit|int
@@ -85,26 +75,21 @@ $method=|void|setUndoLimit|int
 $prototype=QString text(int idx) const
 $method=|QString|text|int
 
-$prototype=int undoLimit() const
-$method=|int|undoLimit|
+$prototypeV2=int undoLimit() const
 
-$prototype=QString undoText() const
-$method=|QString|undoText|
+$prototypeV2=QString undoText() const
 
-$prototype=void redo()
-$method=|void|redo|
+$prototypeV2=void redo()
 
 $prototype=void setActive(bool active = true)
 $method=|void|setActive|bool=true
 
-$prototype=void setClean()
-$method=|void|setClean|
+$prototypeV2=void setClean()
 
 $prototype=void setIndex(int idx)
 $method=|void|setIndex|int
 
-$prototype=void undo()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 %%
 %% SIGNALS

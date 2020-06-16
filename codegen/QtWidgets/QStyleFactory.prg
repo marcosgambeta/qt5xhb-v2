@@ -32,8 +32,7 @@ $deleteMethod
 $prototype=static QStyle * create(const QString & key)
 $staticMethod=|QStyle *|create|const QString &
 
-$prototype=static QStringList keys()
-$staticMethod=|QStringList|keys|
+$prototypeV2=static QStringList keys()
 
 $extraMethods
 

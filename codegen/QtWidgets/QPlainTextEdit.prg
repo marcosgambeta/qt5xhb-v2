@@ -62,23 +62,17 @@ $deleteMethod
 $prototype=QString anchorAt ( const QPoint & pos ) const
 $method=|QString|anchorAt|const QPoint &
 
-$prototype=bool backgroundVisible () const
-$method=|bool|backgroundVisible|
+$prototypeV2=bool backgroundVisible() const
 
-$prototype=int blockCount () const
-$method=|int|blockCount|
+$prototypeV2=int blockCount() const
 
-$prototype=bool canPaste () const
-$method=|bool|canPaste|
+$prototypeV2=bool canPaste() const
 
-$prototype=bool centerOnScroll () const
-$method=|bool|centerOnScroll|
+$prototypeV2=bool centerOnScroll() const
 
-$prototype=QMenu * createStandardContextMenu ()
-$method=|QMenu *|createStandardContextMenu|
+$prototypeV2=QMenu * createStandardContextMenu()
 
-$prototype=QTextCharFormat currentCharFormat () const
-$method=|QTextCharFormat|currentCharFormat|
+$prototypeV2=QTextCharFormat currentCharFormat() const
 
 $prototype=QTextCursor cursorForPosition ( const QPoint & pos ) const
 $method=|QTextCursor|cursorForPosition|const QPoint &
@@ -111,35 +105,27 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 }
 $addMethod=cursorRect
 
-$prototype=int cursorWidth () const
-$method=|int|cursorWidth|
+$prototypeV2=int cursorWidth() const
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=QString documentTitle () const
-$method=|QString|documentTitle|
+$prototypeV2=QString documentTitle() const
 
-$prototype=void ensureCursorVisible ()
-$method=|void|ensureCursorVisible|
+$prototypeV2=void ensureCursorVisible()
 
 $prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 $method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isUndoRedoEnabled () const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
-$prototype=LineWrapMode lineWrapMode () const
-$method=|QPlainTextEdit::LineWrapMode|lineWrapMode|
+$prototypeV2=QPlainTextEdit::LineWrapMode lineWrapMode() const
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
 $virtualMethod=|QVariant|loadResource|int,const QUrl &
 
-$prototype=int maximumBlockCount () const
-$method=|int|maximumBlockCount|
+$prototypeV2=int maximumBlockCount() const
 
 $prototype=void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
 $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
@@ -147,8 +133,7 @@ $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
-$prototype=bool overwriteMode () const
-$method=|bool|overwriteMode|
+$prototypeV2=bool overwriteMode() const
 
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
@@ -201,23 +186,17 @@ $method=|void|setUndoRedoEnabled|bool
 $prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
 $method=|void|setWordWrapMode|QTextOption::WrapMode
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
-$prototype=int tabStopWidth () const
-$method=|int|tabStopWidth|
+$prototypeV2=int tabStopWidth() const
 
-$prototype=QTextCursor textCursor () const
-$method=|QTextCursor|textCursor|
+$prototypeV2=QTextCursor textCursor() const
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags () const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
-$prototype=QTextOption::WrapMode wordWrapMode () const
-$method=|QTextOption::WrapMode|wordWrapMode|
+$prototypeV2=QTextOption::WrapMode wordWrapMode() const
 
 $prototype=void appendHtml ( const QString & html )
 $method=|void|appendHtml|const QString &
@@ -225,35 +204,27 @@ $method=|void|appendHtml|const QString &
 $prototype=void appendPlainText ( const QString & text )
 $method=|void|appendPlainText|const QString &
 
-$prototype=void centerCursor ()
-$method=|void|centerCursor|
+$prototypeV2=void centerCursor()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void copy ()
-$method=|void|copy|
+$prototypeV2=void copy()
 
-$prototype=void cut ()
-$method=|void|cut|
+$prototypeV2=void cut()
 
 $prototype=void insertPlainText ( const QString & text )
 $method=|void|insertPlainText|const QString &
 
-$prototype=void paste ()
-$method=|void|paste|
+$prototypeV2=void paste()
 
-$prototype=void redo ()
-$method=|void|redo|
+$prototypeV2=void redo()
 
-$prototype=void selectAll ()
-$method=|void|selectAll|
+$prototypeV2=void selectAll()
 
 $prototype=void setPlainText ( const QString & text )
 $method=|void|setPlainText|const QString &
 
-$prototype=void undo ()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 %%
 %% SIGNALS

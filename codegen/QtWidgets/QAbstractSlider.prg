@@ -29,38 +29,32 @@ $includes
 
 $deleteMethod
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
 $prototype=void setMaximum ( int )
 $method=|void|setMaximum|int
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=void setMinimum ( int )
 $method=|void|setMinimum|int
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setOrientation ( Qt::Orientation )
 $method=|void|setOrientation|Qt::Orientation
 
-$prototype=int pageStep () const
-$method=|int|pageStep|
+$prototypeV2=int pageStep() const
 
 $prototype=void setPageStep ( int )
 $method=|void|setPageStep|int
 
-$prototype=bool invertedAppearance () const
-$method=|bool|invertedAppearance|
+$prototypeV2=bool invertedAppearance() const
 
 $prototype=void setInvertedAppearance ( bool )
 $method=|void|setInvertedAppearance|bool
 
-$prototype=bool invertedControls () const
-$method=|bool|invertedControls|
+$prototypeV2=bool invertedControls() const
 
 $prototype=void setInvertedControls ( bool )
 $method=|void|setInvertedControls|bool
@@ -68,20 +62,17 @@ $method=|void|setInvertedControls|bool
 $prototype=void setRange ( int min, int max )
 $method=|void|setRange|int,int
 
-$prototype=bool isSliderDown () const
-$method=|bool|isSliderDown|
+$prototypeV2=bool isSliderDown() const
 
 $prototype=void setSliderDown ( bool )
 $method=|void|setSliderDown|bool
 
-$prototype=int singleStep () const
-$method=|int|singleStep|
+$prototypeV2=int singleStep() const
 
 $prototype=void setSingleStep ( int )
 $method=|void|setSingleStep|int
 
-$prototype=int sliderPosition () const
-$method=|int|sliderPosition|
+$prototypeV2=int sliderPosition() const
 
 $prototype=void setSliderPosition ( int )
 $method=|void|setSliderPosition|int
@@ -89,14 +80,12 @@ $method=|void|setSliderPosition|int
 $prototype=void triggerAction ( SliderAction action )
 $method=|void|triggerAction|QAbstractSlider::SliderAction
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setValue ( int )
 $method=|void|setValue|int
 
-$prototype=bool hasTracking () const
-$method=|bool|hasTracking|
+$prototypeV2=bool hasTracking() const
 
 $prototype=void setTracking ( bool enable )
 $method=|void|setTracking|bool

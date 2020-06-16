@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QPointF position() const
-$method=|QPointF|position|
+$prototypeV2=QPointF position() const
 
 $prototype=void setPosition(const QPointF & pos)
 $method=|void|setPosition|const QPointF &

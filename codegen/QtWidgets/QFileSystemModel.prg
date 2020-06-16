@@ -47,14 +47,12 @@ $method=|QString|fileName|const QModelIndex &
 $prototype=QString filePath ( const QModelIndex & index ) const
 $method=|QString|filePath|const QModelIndex &
 
-$prototype=QDir::Filters filter () const
-$method=|QDir::Filters|filter|
+$prototypeV2=QDir::Filters filter() const
 
 $prototype=void setFilter ( QDir::Filters filters )
 $method=|void|setFilter|QDir::Filters
 
-$prototype=QFileIconProvider * iconProvider () const
-$method=|QFileIconProvider *|iconProvider|
+$prototypeV2=QFileIconProvider * iconProvider() const
 
 $prototype=void setIconProvider ( QFileIconProvider * provider )
 $method=|void|setIconProvider|QFileIconProvider *
@@ -90,8 +88,7 @@ $addMethod=index
 $prototype=bool isDir ( const QModelIndex & index ) const
 $method=|bool|isDir|const QModelIndex &
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=void setReadOnly ( bool enable )
 $method=|void|setReadOnly|bool
@@ -105,14 +102,12 @@ $method=|QModelIndex|mkdir|const QModelIndex &,const QString &
 $prototype=QVariant myComputer ( int role = Qt::DisplayRole ) const
 $method=|QVariant|myComputer|int=Qt::DisplayRole
 
-$prototype=bool nameFilterDisables () const
-$method=|bool|nameFilterDisables|
+$prototypeV2=bool nameFilterDisables() const
 
 $prototype=void setNameFilterDisables ( bool enable )
 $method=|void|setNameFilterDisables|bool
 
-$prototype=QStringList nameFilters () const
-$method=|QStringList|nameFilters|
+$prototypeV2=QStringList nameFilters() const
 
 $prototype=void setNameFilters ( const QStringList & filters )
 $method=|void|setNameFilters|const QStringList &
@@ -123,8 +118,7 @@ $method=|QFile::Permissions|permissions|const QModelIndex &
 $prototype=bool remove ( const QModelIndex & index ) const
 $method=|bool|remove|const QModelIndex &
 
-$prototype=bool resolveSymlinks () const
-$method=|bool|resolveSymlinks|
+$prototypeV2=bool resolveSymlinks() const
 
 $prototype=void setResolveSymlinks ( bool enable )
 $method=|void|setResolveSymlinks|bool
@@ -132,11 +126,9 @@ $method=|void|setResolveSymlinks|bool
 $prototype=bool rmdir ( const QModelIndex & index ) const
 $method=|bool|rmdir|const QModelIndex &
 
-$prototype=QDir rootDirectory () const
-$method=|QDir|rootDirectory|
+$prototypeV2=QDir rootDirectory() const
 
-$prototype=QString rootPath () const
-$method=|QString|rootPath|
+$prototypeV2=QString rootPath() const
 
 $prototype=QModelIndex setRootPath ( const QString & newPath )
 $method=|QModelIndex|setRootPath|const QString &
@@ -177,8 +169,7 @@ $method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
 $prototype=QMimeData * mimeData ( const QModelIndexList & indexes ) const
 $method=|QMimeData *|mimeData|const QModelIndexList &
 
-$prototype=QStringList mimeTypes () const
-$method=|QStringList|mimeTypes|
+$prototypeV2=QStringList mimeTypes() const
 
 $prototype=QModelIndex parent ( const QModelIndex & index ) const
 $method=|QModelIndex|parent|const QModelIndex &
@@ -189,8 +180,7 @@ $method=|int|rowCount|const QModelIndex &=QModelIndex()
 $prototype=void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=Qt::DropActions supportedDropActions () const
-$method=|Qt::DropActions|supportedDropActions|
+$prototypeV2=Qt::DropActions supportedDropActions() const
 
 %%
 %% SIGNALS

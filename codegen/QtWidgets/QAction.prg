@@ -68,8 +68,7 @@ HB_FUNC_STATIC( QACTION_NEW )
 
 $deleteMethod
 
-$prototype=QActionGroup * actionGroup () const
-$method=|QActionGroup *|actionGroup|
+$prototypeV2=QActionGroup * actionGroup() const
 
 $prototype=void activate ( ActionEvent event )
 $method=|void|activate|QAction::ActionEvent
@@ -80,50 +79,35 @@ $method=|QList<QGraphicsWidget *>|associatedGraphicsWidgets|
 $prototype=QList<QWidget *> associatedWidgets () const
 $method=|QList<QWidget *>|associatedWidgets|
 
-$prototype=bool autoRepeat () const
-$method=|bool|autoRepeat|
+$prototypeV2=bool autoRepeat() const
 
-$prototype=QVariant data () const
-$method=|QVariant|data|
+$prototypeV2=QVariant data() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
-$prototype=QString iconText () const
-$method=|QString|iconText|
+$prototypeV2=QString iconText() const
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
-$prototype=bool isIconVisibleInMenu () const
-$method=|bool|isIconVisibleInMenu|
+$prototypeV2=bool isIconVisibleInMenu() const
 
-$prototype=bool isSeparator () const
-$method=|bool|isSeparator|
+$prototypeV2=bool isSeparator() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
-$prototype=QMenu * menu () const
-$method=|QMenu *|menu|
+$prototypeV2=QMenu * menu() const
 
-$prototype=MenuRole menuRole () const
-$method=|QAction::MenuRole|menuRole|
+$prototypeV2=QAction::MenuRole menuRole() const
 
-$prototype=QWidget * parentWidget () const
-$method=|QWidget *|parentWidget|
+$prototypeV2=QWidget * parentWidget() const
 
-$prototype=Priority priority () const
-$method=|QAction::Priority|priority|
+$prototypeV2=QAction::Priority priority() const
 
 $prototype=void setActionGroup ( QActionGroup * group )
 $method=|void|setActionGroup|QActionGroup *
@@ -207,11 +191,9 @@ $method=|void|setToolTip|const QString &
 $prototype=void setWhatsThis ( const QString & what )
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QKeySequence shortcut () const
-$method=|QKeySequence|shortcut|
+$prototypeV2=QKeySequence shortcut() const
 
-$prototype=Qt::ShortcutContext shortcutContext () const
-$method=|Qt::ShortcutContext|shortcutContext|
+$prototypeV2=Qt::ShortcutContext shortcutContext() const
 
 $prototype=QList<QKeySequence> shortcuts () const
 $method=|QList<QKeySequence>|shortcuts|
@@ -219,20 +201,15 @@ $method=|QList<QKeySequence>|shortcuts|
 $prototype=bool showStatusText ( QWidget * widget = nullptr )
 $method=|bool|showStatusText|QWidget *=nullptr
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
-$prototype=void hover ()
-$method=|void|hover|
+$prototypeV2=void hover()
 
 $prototype=void setChecked ( bool )
 $method=|void|setChecked|bool
@@ -246,11 +223,9 @@ $method=|void|setEnabled|bool
 $prototype=void setVisible ( bool )
 $method=|void|setVisible|bool
 
-$prototype=void toggle ()
-$method=|void|toggle|
+$prototypeV2=void toggle()
 
-$prototype=void trigger ()
-$method=|void|trigger|
+$prototypeV2=void trigger()
 
 %%
 %% SIGNALS

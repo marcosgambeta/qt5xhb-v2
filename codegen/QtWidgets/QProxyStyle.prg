@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 
 $deleteMethod
 
-$prototype=QStyle *baseStyle() const
-$method=|QStyle *|baseStyle|
+$prototypeV2=QStyle * baseStyle() const
 
 $prototype=void setBaseStyle(QStyle *style)
 $method=|void|setBaseStyle|QStyle *
@@ -111,8 +110,7 @@ $method=|QPixmap|standardPixmap|QStyle::StandardPixmap,const QStyleOption *,cons
 $prototype=QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
 $method=|QPixmap|generatedIconPixmap|QIcon::Mode,const QPixmap &,const QStyleOption *
 
-$prototype=QPalette standardPalette() const
-$method=|QPalette|standardPalette|
+$prototypeV2=QPalette standardPalette() const
 
 $prototype=void polish(QWidget *widget)
 $internalMethod=|void|polish,polish1|QWidget *

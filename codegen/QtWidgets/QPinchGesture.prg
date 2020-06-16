@@ -27,26 +27,19 @@ $includes
 
 $deleteMethod
 
-$prototype=QPointF centerPoint() const
-$method=|QPointF|centerPoint|
+$prototypeV2=QPointF centerPoint() const
 
-$prototype=ChangeFlags changeFlags() const
-$method=|QPinchGesture::ChangeFlags|changeFlags|
+$prototypeV2=QPinchGesture::ChangeFlags changeFlags() const
 
-$prototype=QPointF lastCenterPoint() const
-$method=|QPointF|lastCenterPoint|
+$prototypeV2=QPointF lastCenterPoint() const
 
-$prototype=qreal lastRotationAngle() const
-$method=|qreal|lastRotationAngle|
+$prototypeV2=qreal lastRotationAngle() const
 
-$prototype=qreal lastScaleFactor() const
-$method=|qreal|lastScaleFactor|
+$prototypeV2=qreal lastScaleFactor() const
 
-$prototype=qreal rotationAngle() const
-$method=|qreal|rotationAngle|
+$prototypeV2=qreal rotationAngle() const
 
-$prototype=qreal scaleFactor() const
-$method=|qreal|scaleFactor|
+$prototypeV2=qreal scaleFactor() const
 
 $prototype=void setCenterPoint(const QPointF & value)
 $method=|void|setCenterPoint|const QPointF &
@@ -81,16 +74,12 @@ $method=|void|setTotalRotationAngle|qreal
 $prototype=void setTotalScaleFactor(qreal value)
 $method=|void|setTotalScaleFactor|qreal
 
-$prototype=QPointF startCenterPoint() const
-$method=|QPointF|startCenterPoint|
+$prototypeV2=QPointF startCenterPoint() const
 
-$prototype=ChangeFlags totalChangeFlags() const
-$method=|QPinchGesture::ChangeFlags|totalChangeFlags|
+$prototypeV2=QPinchGesture::ChangeFlags totalChangeFlags() const
 
-$prototype=qreal totalRotationAngle() const
-$method=|qreal|totalRotationAngle|
+$prototypeV2=qreal totalRotationAngle() const
 
-$prototype=qreal totalScaleFactor() const
-$method=|qreal|totalScaleFactor|
+$prototypeV2=qreal totalScaleFactor() const
 
 #pragma ENDDUMP

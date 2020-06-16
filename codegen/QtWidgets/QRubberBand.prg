@@ -114,7 +114,6 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 }
 $addMethod=setGeometry
 
-$prototype=Shape shape () const
-$method=|QRubberBand::Shape|shape|
+$prototypeV2=QRubberBand::Shape shape() const
 
 #pragma ENDDUMP

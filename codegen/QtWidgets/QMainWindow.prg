@@ -104,26 +104,21 @@ $addMethod=addToolBar
 $prototype=void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
 $method=|void|addToolBarBreak|Qt::ToolBarArea=Qt::TopToolBarArea
 
-$prototype=QWidget * centralWidget () const
-$method=|QWidget *|centralWidget|
+$prototypeV2=QWidget * centralWidget() const
 
 $prototype=Qt::DockWidgetArea corner ( Qt::Corner corner ) const
 $method=|Qt::DockWidgetArea|corner|Qt::Corner
 
-$prototype=virtual QMenu * createPopupMenu ()
-$virtualMethod=|QMenu *|createPopupMenu|
+$prototypeV2=virtual QMenu * createPopupMenu()
 
-$prototype=DockOptions dockOptions () const
-$method=|QMainWindow::DockOptions|dockOptions|
+$prototypeV2=QMainWindow::DockOptions dockOptions() const
 
 $prototype=Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
 $method=|Qt::DockWidgetArea|dockWidgetArea|QDockWidget *
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=void insertToolBar ( QToolBar * before, QToolBar * toolbar )
 $method=|void|insertToolBar|QToolBar *,QToolBar *
@@ -131,17 +126,13 @@ $method=|void|insertToolBar|QToolBar *,QToolBar *
 $prototype=void insertToolBarBreak ( QToolBar * before )
 $method=|void|insertToolBarBreak|QToolBar *
 
-$prototype=bool isAnimated () const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
-$prototype=bool isDockNestingEnabled () const
-$method=|bool|isDockNestingEnabled|
+$prototypeV2=bool isDockNestingEnabled() const
 
-$prototype=QMenuBar * menuBar () const
-$method=|QMenuBar *|menuBar|
+$prototypeV2=QMenuBar * menuBar() const
 
-$prototype=QWidget * menuWidget () const
-$method=|QWidget *|menuWidget|
+$prototypeV2=QWidget * menuWidget() const
 
 $prototype=void removeDockWidget ( QDockWidget * dockwidget )
 $method=|void|removeDockWidget|QDockWidget *
@@ -197,14 +188,12 @@ $method=|void|setToolButtonStyle|Qt::ToolButtonStyle
 $prototype=void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
 $method=|void|splitDockWidget|QDockWidget *,QDockWidget *,Qt::Orientation
 
-$prototype=QStatusBar * statusBar () const
-$method=|QStatusBar *|statusBar|
+$prototypeV2=QStatusBar * statusBar() const
 
 $prototype=QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
 $method=|QTabWidget::TabPosition|tabPosition|Qt::DockWidgetArea
 
-$prototype=QTabWidget::TabShape tabShape () const
-$method=|QTabWidget::TabShape|tabShape|
+$prototypeV2=QTabWidget::TabShape tabShape() const
 
 $prototype=void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
 $method=|void|tabifyDockWidget|QDockWidget *,QDockWidget *
@@ -215,8 +204,7 @@ $method=|Qt::ToolBarArea|toolBarArea|QToolBar *
 $prototype=bool toolBarBreak ( QToolBar * toolbar ) const
 $method=|bool|toolBarBreak|QToolBar *
 
-$prototype=Qt::ToolButtonStyle toolButtonStyle () const
-$method=|Qt::ToolButtonStyle|toolButtonStyle|
+$prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
 $prototype=void setAnimated ( bool enabled )
 $method=|void|setAnimated|bool

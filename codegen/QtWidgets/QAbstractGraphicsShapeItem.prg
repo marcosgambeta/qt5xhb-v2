@@ -30,14 +30,12 @@ $includes
 
 $deleteMethod
 
-$prototype=QBrush brush () const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 $prototype=void setBrush ( const QBrush & brush )
 $method=|void|setBrush|const QBrush &
 
-$prototype=QPen pen () const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
 $prototype=void setPen ( const QPen & pen )
 $method=|void|setPen|const QPen &
@@ -45,7 +43,6 @@ $method=|void|setPen|const QPen &
 $prototype=bool isObscuredBy ( const QGraphicsItem * item ) const
 $method=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=QPainterPath opaqueArea () const
-$method=|QPainterPath|opaqueArea|
+$prototypeV2=QPainterPath opaqueArea() const
 
 #pragma ENDDUMP

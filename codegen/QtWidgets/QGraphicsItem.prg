@@ -32,41 +32,31 @@ $includes
 
 $deleteMethod
 
-$prototype=bool acceptDrops () const
-$method=|bool|acceptDrops|
+$prototypeV2=bool acceptDrops() const
 
-$prototype=bool acceptHoverEvents () const
-$method=|bool|acceptHoverEvents|
+$prototypeV2=bool acceptHoverEvents() const
 
-$prototype=bool acceptTouchEvents () const
-$method=|bool|acceptTouchEvents|
+$prototypeV2=bool acceptTouchEvents() const
 
-$prototype=Qt::MouseButtons acceptedMouseButtons () const
-$method=|Qt::MouseButtons|acceptedMouseButtons|
+$prototypeV2=Qt::MouseButtons acceptedMouseButtons() const
 
 $prototype=virtual void advance ( int phase )
 $virtualMethod=|void|advance|int
 
-$prototype=virtual QRectF boundingRect () const = 0
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const = 0
 
 $prototype=QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
 $method=|QRegion|boundingRegion|const QTransform &
 
-$prototype=qreal boundingRegionGranularity () const
-$method=|qreal|boundingRegionGranularity|
+$prototypeV2=qreal boundingRegionGranularity() const
 
-$prototype=CacheMode cacheMode () const
-$method=|QGraphicsItem::CacheMode|cacheMode|
+$prototypeV2=QGraphicsItem::CacheMode cacheMode() const
 
-$prototype=QRectF childrenBoundingRect () const
-$method=|QRectF|childrenBoundingRect|
+$prototypeV2=QRectF childrenBoundingRect() const
 
-$prototype=void clearFocus ()
-$method=|void|clearFocus|
+$prototypeV2=void clearFocus()
 
-$prototype=QPainterPath clipPath () const
-$method=|QPainterPath|clipPath|
+$prototypeV2=QPainterPath clipPath() const
 
 $prototype=virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 $virtualMethod=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
@@ -80,8 +70,7 @@ $method=|QGraphicsItem *|commonAncestorItem|const QGraphicsItem *
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
 
-$prototype=QCursor cursor () const
-$method=|QCursor|cursor|
+$prototypeV2=QCursor cursor() const
 
 $prototype=QVariant data ( int key ) const
 $method=|QVariant|data|int
@@ -89,8 +78,7 @@ $method=|QVariant|data|int
 $prototype=QTransform deviceTransform ( const QTransform & viewportTransform ) const
 $method=|QTransform|deviceTransform|const QTransform &
 
-$prototype=qreal effectiveOpacity () const
-$method=|qreal|effectiveOpacity|
+$prototypeV2=qreal effectiveOpacity() const
 
 $prototype=void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=50,int=50
@@ -120,47 +108,34 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 }
 $addMethod=ensureVisible
 
-$prototype=bool filtersChildEvents () const
-$method=|bool|filtersChildEvents|
+$prototypeV2=bool filtersChildEvents() const
 
-$prototype=GraphicsItemFlags flags () const
-$method=|QGraphicsItem::GraphicsItemFlags|flags|
+$prototypeV2=QGraphicsItem::GraphicsItemFlags flags() const
 
-$prototype=QGraphicsItem * focusItem () const
-$method=|QGraphicsItem *|focusItem|
+$prototypeV2=QGraphicsItem * focusItem() const
 
-$prototype=QGraphicsItem * focusProxy () const
-$method=|QGraphicsItem *|focusProxy|
+$prototypeV2=QGraphicsItem * focusProxy() const
 
-$prototype=void grabKeyboard ()
-$method=|void|grabKeyboard|
+$prototypeV2=void grabKeyboard()
 
-$prototype=void grabMouse ()
-$method=|void|grabMouse|
+$prototypeV2=void grabMouse()
 
-$prototype=QGraphicsEffect * graphicsEffect () const
-$method=|QGraphicsEffect *|graphicsEffect|
+$prototypeV2=QGraphicsEffect * graphicsEffect() const
 
-$prototype=QGraphicsItemGroup * group () const
-$method=|QGraphicsItemGroup *|group|
+$prototypeV2=QGraphicsItemGroup * group() const
 
-$prototype=bool hasCursor () const
-$method=|bool|hasCursor|
+$prototypeV2=bool hasCursor() const
 
-$prototype=bool hasFocus () const
-$method=|bool|hasFocus|
+$prototypeV2=bool hasFocus() const
 
-$prototype=void hide ()
-$method=|void|hide|
+$prototypeV2=void hide()
 
-$prototype=Qt::InputMethodHints inputMethodHints () const
-$method=|Qt::InputMethodHints|inputMethodHints|
+$prototypeV2=Qt::InputMethodHints inputMethodHints() const
 
 $prototype=void installSceneEventFilter ( QGraphicsItem * filterItem )
 $method=|void|installSceneEventFilter|QGraphicsItem *
 
-$prototype=bool isActive () const
-$method=|bool|isActive|
+$prototypeV2=bool isActive() const
 
 $prototype=bool isAncestorOf ( const QGraphicsItem * child ) const
 $method=|bool|isAncestorOf|const QGraphicsItem *
@@ -169,11 +144,9 @@ $prototype=bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = nullptr
 %% TODO: corrigir codigo da funcao
 %% $method=|bool|isBlockedByModalPanel|QGraphicsItem **=nullptr
 
-$prototype=bool isClipped () const
-$method=|bool|isClipped|
+$prototypeV2=bool isClipped() const
 
-$prototype=bool isEnabled () const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
 $prototype=bool isObscured () const
 $internalMethod=|bool|isObscured,isObscured1|
@@ -214,26 +187,20 @@ $addMethod=isObscured
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=bool isPanel () const
-$method=|bool|isPanel|
+$prototypeV2=bool isPanel() const
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
-$prototype=bool isUnderMouse () const
-$method=|bool|isUnderMouse|
+$prototypeV2=bool isUnderMouse() const
 
-$prototype=bool isVisible () const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=bool isVisibleTo ( const QGraphicsItem * parent ) const
 $method=|bool|isVisibleTo|const QGraphicsItem *
 
-$prototype=bool isWidget () const
-$method=|bool|isWidget|
+$prototypeV2=bool isWidget() const
 
-$prototype=bool isWindow () const
-$method=|bool|isWindow|
+$prototypeV2=bool isWindow() const
 
 $prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = nullptr ) const
 $method=|QTransform|itemTransform|const QGraphicsItem *,bool *=nullptr
@@ -769,56 +736,41 @@ $addMethod=mapToScene
 $prototype=void moveBy ( qreal dx, qreal dy )
 $method=|void|moveBy|qreal,qreal
 
-$prototype=qreal opacity () const
-$method=|qreal|opacity|
+$prototypeV2=qreal opacity() const
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr ) = 0
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
-$prototype=QGraphicsItem * panel () const
-$method=|QGraphicsItem *|panel|
+$prototypeV2=QGraphicsItem * panel() const
 
-$prototype=PanelModality panelModality () const
-$method=|QGraphicsItem::PanelModality|panelModality|
+$prototypeV2=QGraphicsItem::PanelModality panelModality() const
 
-$prototype=QGraphicsItem * parentItem () const
-$method=|QGraphicsItem *|parentItem|
+$prototypeV2=QGraphicsItem * parentItem() const
 
-$prototype=QGraphicsObject * parentObject () const
-$method=|QGraphicsObject *|parentObject|
+$prototypeV2=QGraphicsObject * parentObject() const
 
-$prototype=QGraphicsWidget * parentWidget () const
-$method=|QGraphicsWidget *|parentWidget|
+$prototypeV2=QGraphicsWidget * parentWidget() const
 
-$prototype=QPointF pos () const
-$method=|QPointF|pos|
+$prototypeV2=QPointF pos() const
 
 $prototype=void removeSceneEventFilter ( QGraphicsItem * filterItem )
 $method=|void|removeSceneEventFilter|QGraphicsItem *
 
-$prototype=void resetTransform ()
-$method=|void|resetTransform|
+$prototypeV2=void resetTransform()
 
-$prototype=qreal rotation () const
-$method=|qreal|rotation|
+$prototypeV2=qreal rotation() const
 
-$prototype=qreal scale () const
-$method=|qreal|scale|
+$prototypeV2=qreal scale() const
 
-$prototype=QGraphicsScene * scene () const
-$method=|QGraphicsScene *|scene|
+$prototypeV2=QGraphicsScene * scene() const
 
-$prototype=QRectF sceneBoundingRect () const
-$method=|QRectF|sceneBoundingRect|
+$prototypeV2=QRectF sceneBoundingRect() const
 
-$prototype=QPointF scenePos () const
-$method=|QPointF|scenePos|
+$prototypeV2=QPointF scenePos() const
 
-$prototype=QTransform sceneTransform () const
-$method=|QTransform|sceneTransform|
+$prototypeV2=QTransform sceneTransform() const
 
 $prototype=void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 $method=|void|scroll|qreal,qreal,const QRectF &=QRectF()
@@ -969,44 +921,32 @@ $method=|void|setY|qreal
 $prototype=void setZValue ( qreal z )
 $method=|void|setZValue|qreal
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=void show ()
-$method=|void|show|
+$prototypeV2=void show()
 
 $prototype=void stackBefore ( const QGraphicsItem * sibling )
 $method=|void|stackBefore|const QGraphicsItem *
 
-$prototype=QGraphicsObject * toGraphicsObject ()
-$method=|QGraphicsObject *|toGraphicsObject|
+$prototypeV2=QGraphicsObject * toGraphicsObject()
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=QGraphicsItem * topLevelItem () const
-$method=|QGraphicsItem *|topLevelItem|
+$prototypeV2=QGraphicsItem * topLevelItem() const
 
-$prototype=QGraphicsWidget * topLevelWidget () const
-$method=|QGraphicsWidget *|topLevelWidget|
+$prototypeV2=QGraphicsWidget * topLevelWidget() const
 
-$prototype=QTransform transform () const
-$method=|QTransform|transform|
+$prototypeV2=QTransform transform() const
 
-$prototype=QPointF transformOriginPoint () const
-$method=|QPointF|transformOriginPoint|
+$prototypeV2=QPointF transformOriginPoint() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
-$prototype=void ungrabKeyboard ()
-$method=|void|ungrabKeyboard|
+$prototypeV2=void ungrabKeyboard()
 
-$prototype=void ungrabMouse ()
-$method=|void|ungrabMouse|
+$prototypeV2=void ungrabMouse()
 
-$prototype=void unsetCursor ()
-$method=|void|unsetCursor|
+$prototypeV2=void unsetCursor()
 
 $prototype=void update ( const QRectF & rect = QRectF() )
 $internalMethod=|void|update,update1|const QRectF &=QRectF()
@@ -1036,17 +976,13 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 }
 $addMethod=update
 
-$prototype=QGraphicsWidget * window () const
-$method=|QGraphicsWidget *|window|
+$prototypeV2=QGraphicsWidget * window() const
 
-$prototype=qreal x () const
-$method=|qreal|x|
+$prototypeV2=qreal x() const
 
-$prototype=qreal y () const
-$method=|qreal|y|
+$prototypeV2=qreal y() const
 
-$prototype=qreal zValue () const
-$method=|qreal|zValue|
+$prototypeV2=qreal zValue() const
 
 $extraMethods
 

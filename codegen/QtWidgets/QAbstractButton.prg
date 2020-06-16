@@ -40,8 +40,7 @@ $deleteMethod
 %% Q_PROPERTY(QString text READ text WRITE setText)
 %%
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=void setText ( const QString & text )
 $method=|void|setText|const QString &
@@ -50,8 +49,7 @@ $method=|void|setText|const QString &
 %% Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
 %%
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
 $prototype=void setIcon ( const QIcon & icon )
 $method=|void|setIcon|const QIcon &
@@ -60,8 +58,7 @@ $method=|void|setIcon|const QIcon &
 %% Q_PROPERTY(QSize iconSize READ iconSize WRITE setIconSize)
 %%
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=void setIconSize ( const QSize & size ) (slot)
 $method=|void|setIconSize|const QSize &
@@ -84,8 +81,7 @@ $method=|void|setShortcut|const QKeySequence &|#ifndef QT_NO_SHORTCUT
 %% Q_PROPERTY(bool checkable READ isCheckable WRITE setCheckable)
 %%
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
 $prototype=void setCheckable ( bool )
 $method=|void|setCheckable|bool
@@ -94,8 +90,7 @@ $method=|void|setCheckable|bool
 %% Q_PROPERTY(bool checked READ isChecked WRITE setChecked DESIGNABLE isCheckable NOTIFY toggled USER true)
 %%
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
 $prototype=void setChecked ( bool ) (slot)
 $method=|void|setChecked|bool
@@ -104,8 +99,7 @@ $method=|void|setChecked|bool
 %% Q_PROPERTY(bool autoRepeat READ autoRepeat WRITE setAutoRepeat)
 %%
 
-$prototype=bool autoRepeat () const
-$method=|bool|autoRepeat|
+$prototypeV2=bool autoRepeat() const
 
 $prototype=void setAutoRepeat ( bool )
 $method=|void|setAutoRepeat|bool
@@ -114,8 +108,7 @@ $method=|void|setAutoRepeat|bool
 %% Q_PROPERTY(bool autoExclusive READ autoExclusive WRITE setAutoExclusive)
 %%
 
-$prototype=bool autoExclusive () const
-$method=|bool|autoExclusive|
+$prototypeV2=bool autoExclusive() const
 
 $prototype=void setAutoExclusive ( bool )
 $method=|void|setAutoExclusive|bool
@@ -124,8 +117,7 @@ $method=|void|setAutoExclusive|bool
 %% Q_PROPERTY(int autoRepeatDelay READ autoRepeatDelay WRITE setAutoRepeatDelay)
 %%
 
-$prototype=int autoRepeatDelay () const
-$method=|int|autoRepeatDelay|
+$prototypeV2=int autoRepeatDelay() const
 
 $prototype=void setAutoRepeatDelay ( int )
 $method=|void|setAutoRepeatDelay|int
@@ -134,8 +126,7 @@ $method=|void|setAutoRepeatDelay|int
 %% Q_PROPERTY(int autoRepeatInterval READ autoRepeatInterval WRITE setAutoRepeatInterval)
 %%
 
-$prototype=int autoRepeatInterval () const
-$method=|int|autoRepeatInterval|
+$prototypeV2=int autoRepeatInterval() const
 
 $prototype=void setAutoRepeatInterval ( int )
 $method=|void|setAutoRepeatInterval|int
@@ -144,8 +135,7 @@ $method=|void|setAutoRepeatInterval|int
 %% Q_PROPERTY(bool down READ isDown WRITE setDown DESIGNABLE false)
 %%
 
-$prototype=bool isDown () const
-$method=|bool|isDown|
+$prototypeV2=bool isDown() const
 
 $prototype=void setDown ( bool )
 $method=|void|setDown|bool
@@ -160,11 +150,9 @@ $method=|QButtonGroup *|group||#ifndef QT_NO_BUTTONGROUP
 $prototype=void animateClick ( int msec = 100 ) (slot)
 $method=|void|animateClick|int=100
 
-$prototype=void click () (slot)
-$method=|void|click|
+$prototypeV2=void click() (slot)
 
-$prototype=void toggle () (slot)
-$method=|void|toggle|
+$prototypeV2=void toggle() (slot)
 
 $prototype=void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE = 0 [protected]
 

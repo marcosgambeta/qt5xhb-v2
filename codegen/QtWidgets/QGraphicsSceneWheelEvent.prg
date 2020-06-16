@@ -27,25 +27,18 @@ $includes
 
 $deleteMethod
 
-$prototype=Qt::MouseButtons buttons () const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
-$prototype=int delta () const
-$method=|int|delta|
+$prototypeV2=int delta() const
 
-$prototype=Qt::KeyboardModifiers modifiers () const
-$method=|Qt::KeyboardModifiers|modifiers|
+$prototypeV2=Qt::KeyboardModifiers modifiers() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
-$prototype=QPointF pos () const
-$method=|QPointF|pos|
+$prototypeV2=QPointF pos() const
 
-$prototype=QPointF scenePos () const
-$method=|QPointF|scenePos|
+$prototypeV2=QPointF scenePos() const
 
-$prototype=QPoint screenPos () const
-$method=|QPoint|screenPos|
+$prototypeV2=QPoint screenPos() const
 
 #pragma ENDDUMP

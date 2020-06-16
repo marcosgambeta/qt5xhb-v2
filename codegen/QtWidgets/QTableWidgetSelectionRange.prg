@@ -62,23 +62,17 @@ HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 
 $deleteMethod
 
-$prototype=int bottomRow() const
-$method=|int|bottomRow|
+$prototypeV2=int bottomRow() const
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
-$prototype=int leftColumn() const
-$method=|int|leftColumn|
+$prototypeV2=int leftColumn() const
 
-$prototype=int rightColumn() const
-$method=|int|rightColumn|
+$prototypeV2=int rightColumn() const
 
-$prototype=int rowCount() const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
-$prototype=int topRow() const
-$method=|int|topRow|
+$prototypeV2=int topRow() const
 
 $extraMethods
 

@@ -32,23 +32,19 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=QString cleanText () const
-$method=|QString|cleanText|
+$prototypeV2=QString cleanText() const
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
 $prototype=void setMaximum ( int max )
 $method=|void|setMaximum|int
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=void setMinimum ( int min )
 $method=|void|setMinimum|int
 
-$prototype=QString prefix () const
-$method=|QString|prefix|
+$prototypeV2=QString prefix() const
 
 $prototype=void setPrefix ( const QString & prefix )
 $method=|void|setPrefix|const QString &
@@ -56,26 +52,22 @@ $method=|void|setPrefix|const QString &
 $prototype=void setRange ( int min, int max )
 $method=|void|setRange|int,int
 
-$prototype=int singleStep () const
-$method=|int|singleStep|
+$prototypeV2=int singleStep() const
 
 $prototype=void setSingleStep ( int val )
 $method=|void|setSingleStep|int
 
-$prototype=QString suffix () const
-$method=|QString|suffix|
+$prototypeV2=QString suffix() const
 
 $prototype=void setSuffix ( const QString & suffix )
 $method=|void|setSuffix|const QString &
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setValue ( int val )
 $method=|void|setValue|int
 
-$prototype=int displayIntegerBase() const
-$method=|int|displayIntegerBase|
+$prototypeV2=int displayIntegerBase() const
 
 $prototype=void setDisplayIntegerBase(int base)
 $method=|void|setDisplayIntegerBase|int

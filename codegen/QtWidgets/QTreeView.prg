@@ -34,11 +34,9 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=bool allColumnsShowFocus () const
-$method=|bool|allColumnsShowFocus|
+$prototypeV2=bool allColumnsShowFocus() const
 
-$prototype=int autoExpandDelay () const
-$method=|int|autoExpandDelay|
+$prototypeV2=int autoExpandDelay() const
 
 $prototype=int columnAt ( int x ) const
 $method=|int|columnAt|int
@@ -49,14 +47,11 @@ $method=|int|columnViewportPosition|int
 $prototype=int columnWidth ( int column ) const
 $method=|int|columnWidth|int
 
-$prototype=bool expandsOnDoubleClick () const
-$method=|bool|expandsOnDoubleClick|
+$prototypeV2=bool expandsOnDoubleClick() const
 
-$prototype=QHeaderView * header () const
-$method=|QHeaderView *|header|
+$prototypeV2=QHeaderView * header() const
 
-$prototype=int indentation () const
-$method=|int|indentation|
+$prototypeV2=int indentation() const
 
 $prototype=QModelIndex indexAbove ( const QModelIndex & index ) const
 $method=|QModelIndex|indexAbove|const QModelIndex &
@@ -64,8 +59,7 @@ $method=|QModelIndex|indexAbove|const QModelIndex &
 $prototype=QModelIndex indexBelow ( const QModelIndex & index ) const
 $method=|QModelIndex|indexBelow|const QModelIndex &
 
-$prototype=bool isAnimated () const
-$method=|bool|isAnimated|
+$prototypeV2=bool isAnimated() const
 
 $prototype=bool isColumnHidden ( int column ) const
 $method=|bool|isColumnHidden|int
@@ -76,20 +70,16 @@ $method=|bool|isExpanded|const QModelIndex &
 $prototype=bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
 $method=|bool|isFirstColumnSpanned|int,const QModelIndex &
 
-$prototype=bool isHeaderHidden () const
-$method=|bool|isHeaderHidden|
+$prototypeV2=bool isHeaderHidden() const
 
 $prototype=bool isRowHidden ( int row, const QModelIndex & parent ) const
 $method=|bool|isRowHidden|int,const QModelIndex &
 
-$prototype=bool isSortingEnabled () const
-$method=|bool|isSortingEnabled|
+$prototypeV2=bool isSortingEnabled() const
 
-$prototype=bool itemsExpandable () const
-$method=|bool|itemsExpandable|
+$prototypeV2=bool itemsExpandable() const
 
-$prototype=bool rootIsDecorated () const
-$method=|bool|rootIsDecorated|
+$prototypeV2=bool rootIsDecorated() const
 
 $prototype=void setAllColumnsShowFocus ( bool enable )
 $method=|void|setAllColumnsShowFocus|bool
@@ -145,11 +135,9 @@ $method=|void|setWordWrap|bool
 $prototype=void sortByColumn ( int column, Qt::SortOrder order )
 $method=|void|sortByColumn|int,Qt::SortOrder
 
-$prototype=bool uniformRowHeights () const
-$method=|bool|uniformRowHeights|
+$prototypeV2=bool uniformRowHeights() const
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 $virtualMethod=|void|dataChanged|const QModelIndex &,const QModelIndex &
@@ -160,14 +148,12 @@ $virtualMethod=|QModelIndex|indexAt|const QPoint &
 $prototype=virtual void keyboardSearch ( const QString & search )
 $virtualMethod=|void|keyboardSearch|const QString &
 
-$prototype=virtual void reset ()
-$virtualMethod=|void|reset|
+$prototypeV2=virtual void reset()
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $virtualMethod=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeView::EnsureVisible
 
-$prototype=virtual void selectAll ()
-$virtualMethod=|void|selectAll|
+$prototypeV2=virtual void selectAll()
 
 $prototype=virtual void setModel ( QAbstractItemModel * model )
 $virtualMethod=|void|setModel|QAbstractItemModel *
@@ -184,14 +170,12 @@ $virtualMethod=|QRect|visualRect|const QModelIndex &
 $prototype=void collapse ( const QModelIndex & index )
 $method=|void|collapse|const QModelIndex &
 
-$prototype=void collapseAll ()
-$method=|void|collapseAll|
+$prototypeV2=void collapseAll()
 
 $prototype=void expand ( const QModelIndex & index )
 $method=|void|expand|const QModelIndex &
 
-$prototype=void expandAll ()
-$method=|void|expandAll|
+$prototypeV2=void expandAll()
 
 $prototype=void expandToDepth ( int depth )
 $method=|void|expandToDepth|int

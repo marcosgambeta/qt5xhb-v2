@@ -32,86 +32,72 @@ $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=QString cancelButtonText () const
-$method=|QString|cancelButtonText|
+$prototypeV2=QString cancelButtonText() const
 
 $prototype=void setCancelButtonText ( const QString & text )
 $method=|void|setCancelButtonText|const QString &
 
-$prototype=QStringList comboBoxItems () const
-$method=|QStringList|comboBoxItems|
+$prototypeV2=QStringList comboBoxItems() const
 
 $prototype=void setComboBoxItems ( const QStringList & items )
 $method=|void|setComboBoxItems|const QStringList &
 
-$prototype=int doubleDecimals () const
-$method=|int|doubleDecimals|
+$prototypeV2=int doubleDecimals() const
 
 $prototype=void setDoubleDecimals ( int decimals )
 $method=|void|setDoubleDecimals|int
 
-$prototype=double doubleMaximum () const
-$method=|double|doubleMaximum|
+$prototypeV2=double doubleMaximum() const
 
 $prototype=void setDoubleMaximum ( double max )
 $method=|void|setDoubleMaximum|double
 
-$prototype=double doubleMinimum () const
-$method=|double|doubleMinimum|
+$prototypeV2=double doubleMinimum() const
 
 $prototype=void setDoubleMinimum ( double min )
 $method=|void|setDoubleMinimum|double
 
-$prototype=double doubleValue () const
-$method=|double|doubleValue|
+$prototypeV2=double doubleValue() const
 
 $prototype=void setDoubleValue ( double value )
 $method=|void|setDoubleValue|double
 
-$prototype=InputMode inputMode () const
-$method=|QInputDialog::InputMode|inputMode|
+$prototypeV2=QInputDialog::InputMode inputMode() const
 
 $prototype=void setInputMode ( InputMode mode )
 $method=|void|setInputMode|QInputDialog::InputMode
 
-$prototype=int intMaximum () const
-$method=|int|intMaximum|
+$prototypeV2=int intMaximum() const
 
 $prototype=void setIntMaximum ( int max )
 $method=|void|setIntMaximum|int
 
-$prototype=int intMinimum () const
-$method=|int|intMinimum|
+$prototypeV2=int intMinimum() const
 
 $prototype=void setIntMinimum ( int min )
 $method=|void|setIntMinimum|int
 
-$prototype=int intStep () const
-$method=|int|intStep|
+$prototypeV2=int intStep() const
 
 $prototype=void setIntStep ( int step )
 $method=|void|setIntStep|int
 
-$prototype=int intValue () const
-$method=|int|intValue|
+$prototypeV2=int intValue() const
 
 $prototype=void setIntValue ( int value )
 $method=|void|setIntValue|int
 
-$prototype=bool isComboBoxEditable () const
-$method=|bool|isComboBoxEditable|
+$prototypeV2=bool isComboBoxEditable() const
 
 $prototype=void setComboBoxEditable ( bool editable )
 $method=|void|setComboBoxEditable|bool
 
-$prototype=QString labelText () const
-$method=|QString|labelText|
+$prototypeV2=QString labelText() const
 
 $prototype=void setLabelText ( const QString & text )
 $method=|void|setLabelText|const QString &
 
-$prototype=QString okButtonText () const
-$method=|QString|okButtonText|
+$prototypeV2=QString okButtonText() const
 
 $prototype=void setOkButtonText ( const QString & text )
 $method=|void|setOkButtonText|const QString &
@@ -119,8 +105,7 @@ $method=|void|setOkButtonText|const QString &
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=InputDialogOptions options () const
-$method=|QInputDialog::InputDialogOptions|options|
+$prototypeV2=QInputDialog::InputDialogOptions options() const
 
 $prototype=void setOptions ( InputDialogOptions options )
 $method=|void|setOptions|QInputDialog::InputDialogOptions
@@ -137,14 +122,12 @@ $method=|void|setOption|QInputDialog::InputDialogOption,bool=true
 $prototype=bool testOption ( InputDialogOption option ) const
 $method=|bool|testOption|QInputDialog::InputDialogOption
 
-$prototype=QLineEdit::EchoMode textEchoMode () const
-$method=|QLineEdit::EchoMode|textEchoMode|
+$prototypeV2=QLineEdit::EchoMode textEchoMode() const
 
 $prototype=void setTextEchoMode ( QLineEdit::EchoMode mode )
 $method=|void|setTextEchoMode|QLineEdit::EchoMode
 
-$prototype=QString textValue () const
-$method=|QString|textValue|
+$prototypeV2=QString textValue() const
 
 $prototype=void setTextValue ( const QString & text )
 $method=|void|setTextValue|const QString &
@@ -152,14 +135,12 @@ $method=|void|setTextValue|const QString &
 $prototype=void done ( int result )
 $method=|void|done|int
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
 $staticMethod=|double|getDouble|QWidget *,const QString &,const QString &,double=0,double=-2147483647,double=2147483647,int=1,bool *=nullptr,Qt::WindowFlags=0

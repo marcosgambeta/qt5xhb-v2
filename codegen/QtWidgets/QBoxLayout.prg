@@ -48,8 +48,7 @@ $method=|void|addStrut|int
 $prototype=void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 $method=|void|addWidget|QWidget *,int=0,Qt::Alignment=0
 
-$prototype=Direction direction () const
-$method=|QBoxLayout::Direction|direction|
+$prototypeV2=QBoxLayout::Direction direction() const
 
 $prototype=void insertLayout ( int index, QLayout * layout, int stretch = 0 )
 $method=|void|insertLayout|int,QLayout *,int=0
@@ -103,8 +102,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 }
 $addMethod=setStretchFactor
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
 $prototype=int stretch ( int index ) const
 $method=|int|stretch|int
@@ -112,38 +110,31 @@ $method=|int|stretch|int
 $prototype=virtual void addItem ( QLayoutItem * item )
 $virtualMethod=|void|addItem|QLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QLayoutItem *|itemAt|int
 
-$prototype=virtual QSize maximumSize () const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
 $prototype=virtual int minimumHeightForWidth ( int w ) const
 $virtualMethod=|int|minimumHeightForWidth|int
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & r )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int

@@ -27,17 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=qreal acceleration() const
-$method=|qreal|acceleration|
+$prototypeV2=qreal acceleration() const
 
-$prototype=QPointF delta() const
-$method=|QPointF|delta|
+$prototypeV2=QPointF delta() const
 
-$prototype=QPointF lastOffset() const
-$method=|QPointF|lastOffset|
+$prototypeV2=QPointF lastOffset() const
 
-$prototype=QPointF offset() const
-$method=|QPointF|offset|
+$prototypeV2=QPointF offset() const
 
 $prototype=void setAcceleration(qreal value)
 $method=|void|setAcceleration|qreal

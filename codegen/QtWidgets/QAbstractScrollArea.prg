@@ -32,26 +32,22 @@ $deleteMethod
 $prototype=void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
 $method=|void|addScrollBarWidget|QWidget *,Qt::Alignment
 
-$prototype=Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
-$method=|Qt::ScrollBarPolicy|horizontalScrollBarPolicy|
+$prototypeV2=Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 
 $prototype=void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
 $method=|void|setHorizontalScrollBarPolicy|Qt::ScrollBarPolicy
 
-$prototype=QSize maximumViewportSize () const
-$method=|QSize|maximumViewportSize|
+$prototypeV2=QSize maximumViewportSize() const
 
 $prototype=QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
 $method=|QWidgetList|scrollBarWidgets|Qt::Alignment
 
-$prototype=QWidget * cornerWidget () const
-$method=|QWidget *|cornerWidget|
+$prototypeV2=QWidget * cornerWidget() const
 
 $prototype=void setCornerWidget ( QWidget * widget )
 $method=|void|setCornerWidget|QWidget *
 
-$prototype=QScrollBar * horizontalScrollBar () const
-$method=|QScrollBar *|horizontalScrollBar|
+$prototypeV2=QScrollBar * horizontalScrollBar() const
 
 $prototype=void setHorizontalScrollBar ( QScrollBar * scrollBar )
 $method=|void|setHorizontalScrollBar|QScrollBar *
@@ -59,8 +55,7 @@ $method=|void|setHorizontalScrollBar|QScrollBar *
 $prototype=void setViewport ( QWidget * widget )
 $method=|void|setViewport|QWidget *
 
-$prototype=QScrollBar * verticalScrollBar () const
-$method=|QScrollBar *|verticalScrollBar|
+$prototypeV2=QScrollBar * verticalScrollBar() const
 
 $prototype=void setVerticalScrollBar ( QScrollBar * scrollBar )
 $method=|void|setVerticalScrollBar|QScrollBar *
@@ -71,20 +66,16 @@ $method=|Qt::ScrollBarPolicy|verticalScrollBarPolicy|
 $prototype=void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
 $method=|void|setVerticalScrollBarPolicy|Qt::ScrollBarPolicy
 
-$prototype=QWidget * viewport () const
-$method=|QWidget *|viewport|
+$prototypeV2=QWidget * viewport() const
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=virtual void setupViewport(QWidget *viewport)
 $virtualMethod=|void|setupViewport|QWidget *
 
-$prototype=SizeAdjustPolicy sizeAdjustPolicy() const
-$method=|QAbstractScrollArea::SizeAdjustPolicy|sizeAdjustPolicy|
+$prototypeV2=QAbstractScrollArea::SizeAdjustPolicy sizeAdjustPolicy() const
 
 $prototype=void setSizeAdjustPolicy(SizeAdjustPolicy policy)
 $method=|void|setSizeAdjustPolicy|QAbstractScrollArea::SizeAdjustPolicy

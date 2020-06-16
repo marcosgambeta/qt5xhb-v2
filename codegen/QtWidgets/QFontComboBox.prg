@@ -32,11 +32,9 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=QFont currentFont () const
-$method=|QFont|currentFont|
+$prototypeV2=QFont currentFont() const
 
-$prototype=FontFilters fontFilters () const
-$method=|QFontComboBox::FontFilters|fontFilters|
+$prototypeV2=QFontComboBox::FontFilters fontFilters() const
 
 $prototype=void setFontFilters ( FontFilters filters )
 $method=|void|setFontFilters|QFontComboBox::FontFilters
@@ -44,11 +42,9 @@ $method=|void|setFontFilters|QFontComboBox::FontFilters
 $prototype=void setWritingSystem ( QFontDatabase::WritingSystem script )
 $method=|void|setWritingSystem|QFontDatabase::WritingSystem
 
-$prototype=QFontDatabase::WritingSystem writingSystem () const
-$method=|QFontDatabase::WritingSystem|writingSystem|
+$prototypeV2=QFontDatabase::WritingSystem writingSystem() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &

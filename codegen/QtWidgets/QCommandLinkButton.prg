@@ -62,14 +62,12 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 
 $deleteMethod
 
-$prototype=QString description () const
-$method=|QString|description|
+$prototypeV2=QString description() const
 
 $prototype=void setDescription ( const QString & description )
 $method=|void|setDescription|const QString &
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setFlat ( bool )
 $method=|void|setFlat|bool

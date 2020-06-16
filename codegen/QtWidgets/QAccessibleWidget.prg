@@ -30,26 +30,20 @@ $includes
 $prototype=QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
-$prototype=bool isValid() const
-$method=|bool|isValid|
+$prototypeV2=bool isValid() const
 
-$prototype=QWindow *window() const
-$method=|QWindow *|window|
+$prototypeV2=QWindow * window() const
 
-$prototype=int childCount() const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
 $prototype=int indexOfChild(const QAccessibleInterface *child) const
 $method=|int|indexOfChild|const QAccessibleInterface *
 
-$prototype=QAccessibleInterface *focusChild() const
-$method=|QAccessibleInterface *|focusChild|
+$prototypeV2=QAccessibleInterface * focusChild() const
 
-$prototype=QRect rect() const
-$method=|QRect|rect|
+$prototypeV2=QRect rect() const
 
-$prototype=QAccessibleInterface *parent() const
-$method=|QAccessibleInterface *|parent|
+$prototypeV2=QAccessibleInterface * parent() const
 
 $prototype=QAccessibleInterface *child(int index) const
 $method=|QAccessibleInterface *|child|int
@@ -57,20 +51,16 @@ $method=|QAccessibleInterface *|child|int
 $prototype=QString text(QAccessible::Text t) const
 $method=|QString|text|QAccessible::Text
 
-$prototype=QAccessible::Role role() const
-$method=|QAccessible::Role|role|
+$prototypeV2=QAccessible::Role role() const
 
-$prototype=QColor foregroundColor() const
-$method=|QColor|foregroundColor|
+$prototypeV2=QColor foregroundColor() const
 
-$prototype=QColor backgroundColor() const
-$method=|QColor|backgroundColor|
+$prototypeV2=QColor backgroundColor() const
 
 $prototype=void *interface_cast(QAccessible::InterfaceType t)
 $method=|void *|interface_cast|QAccessible::InterfaceType
 
-$prototype=QStringList actionNames() const
-$method=|QStringList|actionNames|
+$prototypeV2=QStringList actionNames() const
 
 $prototype=void doAction(const QString &actionName)
 $method=|void|doAction|const QString &

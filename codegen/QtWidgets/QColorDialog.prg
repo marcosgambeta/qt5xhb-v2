@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 
 $deleteMethod
 
-$prototype=QColor currentColor () const
-$method=|QColor|currentColor|
+$prototypeV2=QColor currentColor() const
 
 $prototype=void setCurrentColor ( const QColor & color )
 $method=|void|setCurrentColor|const QColor &
@@ -90,14 +89,12 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 }
 $addMethod=open
 
-$prototype=ColorDialogOptions options () const
-$method=|QColorDialog::ColorDialogOptions|options|
+$prototypeV2=QColorDialog::ColorDialogOptions options() const
 
 $prototype=void setOptions ( ColorDialogOptions options )
 $method=|void|setOptions|QColorDialog::ColorDialogOptions
 
-$prototype=QColor selectedColor () const
-$method=|QColor|selectedColor|
+$prototypeV2=QColor selectedColor() const
 
 $prototype=void setOption ( ColorDialogOption option, bool on = true )
 $method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
@@ -114,8 +111,7 @@ $staticMethod=|QColor|customColor|int
 $prototype=static void setCustomColor(int index, QColor color)
 $staticMethod=|void|setCustomColor|int,QColor
 
-$prototype=static int customCount ()
-$staticMethod=|int|customCount|
+$prototypeV2=static int customCount()
 
 $prototype=static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = nullptr, const QString &title = QString(), ColorDialogOptions options = 0)
 $staticMethod=|QColor|getColor|const QColor &=Qt::white,QWidget *=nullptr,const QString &=QString(),QColorDialog::ColorDialogOptions=0

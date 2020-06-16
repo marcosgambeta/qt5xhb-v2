@@ -32,8 +32,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QVector3D origin () const
-$method=|QVector3D|origin|
+$prototypeV2=QVector3D origin() const
 
 $prototype=void setOrigin ( const QVector3D & point )
 $method=|void|setOrigin|const QVector3D &
@@ -47,14 +46,11 @@ $method=|void|setYScale|qreal
 $prototype=void setZScale ( qreal )
 $method=|void|setZScale|qreal
 
-$prototype=qreal xScale () const
-$method=|qreal|xScale|
+$prototypeV2=qreal xScale() const
 
-$prototype=qreal yScale () const
-$method=|qreal|yScale|
+$prototypeV2=qreal yScale() const
 
-$prototype=qreal zScale () const
-$method=|qreal|zScale|
+$prototypeV2=qreal zScale() const
 
 $prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
 $virtualMethod=|void|applyTo|QMatrix4x4 *

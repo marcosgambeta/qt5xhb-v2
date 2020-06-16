@@ -58,17 +58,13 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 $deleteMethod
 
-$prototype=QMenu * contextMenu() const
-$method=|QMenu *|contextMenu|
+$prototypeV2=QMenu * contextMenu() const
 
-$prototype=QRect geometry() const
-$method=|QRect|geometry|
+$prototypeV2=QRect geometry() const
 
-$prototype=QIcon icon() const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
-$prototype=bool isVisible() const
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible() const
 
 $prototype=void setContextMenu(QMenu * menu)
 $method=|void|setContextMenu|QMenu *
@@ -82,23 +78,18 @@ $method=|void|setToolTip|const QString &
 $prototype=void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
 $method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
 
-$prototype=QString toolTip() const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=void hide()
-$method=|void|hide|
+$prototypeV2=void hide()
 
 $prototype=void setVisible(bool visible)
 $method=|void|setVisible|bool
 
-$prototype=void show()
-$method=|void|show|
+$prototypeV2=void show()
 
-$prototype=static bool isSystemTrayAvailable()
-$staticMethod=|bool|isSystemTrayAvailable|
+$prototypeV2=static bool isSystemTrayAvailable()
 
-$prototype=static bool supportsMessages()
-$staticMethod=|bool|supportsMessages|
+$prototypeV2=static bool supportsMessages()
 
 %%
 %% SIGNALS

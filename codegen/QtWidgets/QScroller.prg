@@ -27,17 +27,14 @@ $destructor
 
 $includes
 
-$prototype=QPointF finalPosition() const
-$method=|QPointF|finalPosition|
+$prototypeV2=QPointF finalPosition() const
 
 $prototype=bool handleInput(Input input, const QPointF & position, qint64 timestamp = 0)
 $method=|bool|handleInput|QScroller::Input,const QPointF &,qint64=0
 
-$prototype=QPointF pixelPerMeter() const
-$method=|QPointF|pixelPerMeter|
+$prototypeV2=QPointF pixelPerMeter() const
 
-$prototype=QScrollerProperties scrollerProperties() const
-$method=|QScrollerProperties|scrollerProperties|
+$prototypeV2=QScrollerProperties scrollerProperties() const
 
 $prototype=void setSnapPositionsX(const QList<qreal> & positions)
 $internalMethod=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
@@ -95,17 +92,13 @@ HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 }
 $addMethod=setSnapPositionsY
 
-$prototype=State state() const
-$method=|QScroller::State|state|
+$prototypeV2=QScroller::State state() const
 
-$prototype=void stop()
-$method=|void|stop|
+$prototypeV2=void stop()
 
-$prototype=QObject * target() const
-$method=|QObject *|target|
+$prototypeV2=QObject * target() const
 
-$prototype=QPointF velocity() const
-$method=|QPointF|velocity|
+$prototypeV2=QPointF velocity() const
 
 $prototype=void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
 $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,qreal,qreal
@@ -135,8 +128,7 @@ HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 }
 $addMethod=ensureVisible
 
-$prototype=void resendPrepareEvent()
-$method=|void|resendPrepareEvent|
+$prototypeV2=void resendPrepareEvent()
 
 $prototype=void scrollTo(const QPointF & pos)
 $internalMethod=|void|scrollTo,scrollTo1|const QPointF &

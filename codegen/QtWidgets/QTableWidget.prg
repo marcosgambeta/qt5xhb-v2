@@ -65,17 +65,14 @@ $method=|void|closePersistentEditor|QTableWidgetItem *
 $prototype=int column ( const QTableWidgetItem * item ) const
 $method=|int|column|const QTableWidgetItem *
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
-$prototype=int currentColumn () const
-$method=|int|currentColumn|
+$prototypeV2=int currentColumn() const
 
 $prototype=QTableWidgetItem * currentItem () const
 $method=|QTableWidgetItem *|currentItem|
 
-$prototype=int currentRow () const
-$method=|int|currentRow|
+$prototypeV2=int currentRow() const
 
 $prototype=void editItem ( QTableWidgetItem * item )
 $method=|void|editItem|QTableWidgetItem *
@@ -123,8 +120,7 @@ $method=|void|removeCellWidget|int,int
 $prototype=int row ( const QTableWidgetItem * item ) const
 $method=|int|row|const QTableWidgetItem *
 
-$prototype=int rowCount () const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=void setCellWidget ( int row, int column, QWidget * widget )
 $method=|void|setCellWidget|int,int,QWidget *
@@ -236,11 +232,9 @@ $method=|QRect|visualItemRect|const QTableWidgetItem *
 $prototype=int visualRow ( int logicalRow ) const
 $method=|int|visualRow|int
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void clearContents ()
-$method=|void|clearContents|
+$prototypeV2=void clearContents()
 
 $prototype=void insertColumn ( int column )
 $method=|void|insertColumn|int

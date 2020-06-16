@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 
 $deleteMethod
 
-$prototype=QRectF rect () const
-$method=|QRectF|rect|
+$prototypeV2=QRectF rect() const
 
 $prototype=void setRect ( const QRectF & rect )
 $internalMethod=|void|setRect,setRect1|const QRectF &
@@ -99,14 +98,11 @@ $method=|void|setSpanAngle|int
 $prototype=void setStartAngle ( int angle )
 $method=|void|setStartAngle|int
 
-$prototype=int spanAngle () const
-$method=|int|spanAngle|
+$prototypeV2=int spanAngle() const
 
-$prototype=int startAngle () const
-$method=|int|startAngle|
+$prototypeV2=int startAngle() const
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -114,16 +110,13 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

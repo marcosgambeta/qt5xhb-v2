@@ -105,7 +105,6 @@ $method=|void|drawItemText|const QRect &,int,const QPalette &,bool,const QString
 $prototype=void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
 $method=|void|drawItemPixmap|const QRect &,int,const QPixmap &
 
-$prototype=QStyle *style() const
-$method=|QStyle *|style|
+$prototypeV2=QStyle * style() const
 
 #pragma ENDDUMP

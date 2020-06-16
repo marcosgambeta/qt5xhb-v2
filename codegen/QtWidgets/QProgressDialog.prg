@@ -56,38 +56,32 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 $deleteMethod
 
-$prototype=bool autoClose () const
-$method=|bool|autoClose|
+$prototypeV2=bool autoClose() const
 
 $prototype=void setAutoClose ( bool close )
 $method=|void|setAutoClose|bool
 
-$prototype=bool autoReset () const
-$method=|bool|autoReset|
+$prototypeV2=bool autoReset() const
 
 $prototype=void setAutoReset ( bool reset )
 $method=|void|setAutoReset|bool
 
-$prototype=QString labelText () const
-$method=|QString|labelText|
+$prototypeV2=QString labelText() const
 
 $prototype=void setLabelText ( const QString & text )
 $method=|void|setLabelText|const QString &
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
 $prototype=void setMaximum ( int maximum )
 $method=|void|setMaximum|int
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
 $prototype=void setMinimum ( int minimum )
 $method=|void|setMinimum|int
 
-$prototype=int minimumDuration () const
-$method=|int|minimumDuration|
+$prototypeV2=int minimumDuration() const
 
 $prototype=void setMinimumDuration ( int ms )
 $method=|void|setMinimumDuration|int
@@ -104,23 +98,18 @@ $method=|void|setCancelButton|QPushButton *
 $prototype=void setLabel ( QLabel * label )
 $method=|void|setLabel|QLabel *
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
 $prototype=void setValue ( int progress )
 $method=|void|setValue|int
 
-$prototype=bool wasCanceled () const
-$method=|bool|wasCanceled|
+$prototypeV2=bool wasCanceled() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=void cancel ()
-$method=|void|cancel|
+$prototypeV2=void cancel()
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setCancelButtonText ( const QString & text )
 $method=|void|setCancelButtonText|const QString &

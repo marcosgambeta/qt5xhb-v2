@@ -30,26 +30,19 @@ $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=QRect frameRect () const
-$method=|QRect|frameRect|
+$prototypeV2=QRect frameRect() const
 
-$prototype=Shadow frameShadow () const
-$method=|QFrame::Shadow|frameShadow|
+$prototypeV2=QFrame::Shadow frameShadow() const
 
-$prototype=Shape frameShape () const
-$method=|QFrame::Shape|frameShape|
+$prototypeV2=QFrame::Shape frameShape() const
 
-$prototype=int frameStyle () const
-$method=|int|frameStyle|
+$prototypeV2=int frameStyle() const
 
-$prototype=int frameWidth () const
-$method=|int|frameWidth|
+$prototypeV2=int frameWidth() const
 
-$prototype=int lineWidth () const
-$method=|int|lineWidth|
+$prototypeV2=int lineWidth() const
 
-$prototype=int midLineWidth () const
-$method=|int|midLineWidth|
+$prototypeV2=int midLineWidth() const
 
 $prototype=void setFrameRect ( const QRect & )
 $method=|void|setFrameRect|const QRect &
@@ -69,7 +62,6 @@ $method=|void|setLineWidth|int
 $prototype=void setMidLineWidth ( int )
 $method=|void|setMidLineWidth|int
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

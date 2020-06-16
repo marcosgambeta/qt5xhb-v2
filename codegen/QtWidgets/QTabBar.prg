@@ -63,26 +63,19 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 }
 $addMethod=addTab
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
-$prototype=bool drawBase () const
-$method=|bool|drawBase|
+$prototypeV2=bool drawBase() const
 
-$prototype=Qt::TextElideMode elideMode () const
-$method=|Qt::TextElideMode|elideMode|
+$prototypeV2=Qt::TextElideMode elideMode() const
 
-$prototype=bool expanding () const
-$method=|bool|expanding|
+$prototypeV2=bool expanding() const
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=int insertTab ( int index, const QString & text )
 $internalMethod=|int|insertTab,insertTab1|int,const QString &
@@ -112,8 +105,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 }
 $addMethod=insertTab
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=bool isTabEnabled ( int index ) const
 $method=|bool|isTabEnabled|int
@@ -124,8 +116,7 @@ $method=|void|moveTab|int,int
 $prototype=void removeTab ( int index )
 $method=|void|removeTab|int
 
-$prototype=SelectionBehavior selectionBehaviorOnRemove () const
-$method=|QTabBar::SelectionBehavior|selectionBehaviorOnRemove|
+$prototypeV2=QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 
 $prototype=void setDocumentMode ( bool set )
 $method=|void|setDocumentMode|bool
@@ -181,8 +172,7 @@ $method=|void|setTabsClosable|bool
 $prototype=void setUsesScrollButtons ( bool useButtons )
 $method=|void|setUsesScrollButtons|bool
 
-$prototype=Shape shape () const
-$method=|QTabBar::Shape|shape|
+$prototypeV2=QTabBar::Shape shape() const
 
 $prototype=int tabAt ( const QPoint & position ) const
 $method=|int|tabAt|const QPoint &
@@ -211,17 +201,13 @@ $method=|QString|tabToolTip|int
 $prototype=QString tabWhatsThis ( int index ) const
 $method=|QString|tabWhatsThis|int
 
-$prototype=bool tabsClosable () const
-$method=|bool|tabsClosable|
+$prototypeV2=bool tabsClosable() const
 
-$prototype=bool usesScrollButtons () const
-$method=|bool|usesScrollButtons|
+$prototypeV2=bool usesScrollButtons() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int

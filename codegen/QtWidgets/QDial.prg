@@ -30,26 +30,20 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=int notchSize () const
-$method=|int|notchSize|
+$prototypeV2=int notchSize() const
 
-$prototype=qreal notchTarget () const
-$method=|qreal|notchTarget|
+$prototypeV2=qreal notchTarget() const
 
-$prototype=bool notchesVisible () const
-$method=|bool|notchesVisible|
+$prototypeV2=bool notchesVisible() const
 
 $prototype=void setNotchTarget ( double target )
 $method=|void|setNotchTarget|double
 
-$prototype=bool wrapping () const
-$method=|bool|wrapping|
+$prototypeV2=bool wrapping() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void setNotchesVisible ( bool visible )
 $method=|void|setNotchesVisible|bool

@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 
 $deleteMethod
 
-$prototype=QPainterPath path () const
-$method=|QPainterPath|path|
+$prototypeV2=QPainterPath path() const
 
 $prototype=void setPath ( const QPainterPath & path )
 $method=|void|setPath|const QPainterPath &
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -69,16 +67,13 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=nullptr
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

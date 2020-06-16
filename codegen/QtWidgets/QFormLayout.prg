@@ -90,14 +90,11 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 }
 $addMethod=addRow
 
-$prototype=FieldGrowthPolicy fieldGrowthPolicy () const
-$method=|QFormLayout::FieldGrowthPolicy|fieldGrowthPolicy|
+$prototypeV2=QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 
-$prototype=Qt::Alignment formAlignment () const
-$method=|Qt::Alignment|formAlignment|
+$prototypeV2=Qt::Alignment formAlignment() const
 
-$prototype=int horizontalSpacing () const
-$method=|int|horizontalSpacing|
+$prototypeV2=int horizontalSpacing() const
 
 $prototype=void insertRow ( int row, QWidget * label, QWidget * field )
 $internalMethod=|void|insertRow,insertRow1|int,QWidget *,QWidget *
@@ -187,8 +184,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=Qt::Alignment labelAlignment () const
-$method=|Qt::Alignment|labelAlignment|
+$prototypeV2=Qt::Alignment labelAlignment() const
 
 $prototype=QWidget * labelForField ( QWidget * field ) const
 $internalMethod=|QWidget *|labelForField,labelForField1|QWidget *
@@ -218,11 +214,9 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 }
 $addMethod=labelForField
 
-$prototype=int rowCount () const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
-$prototype=RowWrapPolicy rowWrapPolicy () const
-$method=|QFormLayout::RowWrapPolicy|rowWrapPolicy|
+$prototypeV2=QFormLayout::RowWrapPolicy rowWrapPolicy() const
 
 $prototype=void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
 $method=|void|setFieldGrowthPolicy|QFormLayout::FieldGrowthPolicy
@@ -254,38 +248,30 @@ $method=|void|setVerticalSpacing|int
 $prototype=void setWidget ( int row, ItemRole role, QWidget * widget )
 $method=|void|setWidget|int,QFormLayout::ItemRole,QWidget *
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
-$prototype=int verticalSpacing () const
-$method=|int|verticalSpacing|
+$prototypeV2=int verticalSpacing() const
 
 $prototype=virtual void addItem ( QLayoutItem * item )
 $virtualMethod=|void|addItem|QLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int width ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int

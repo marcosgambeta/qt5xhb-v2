@@ -59,17 +59,14 @@ $deleteMethod
 $prototype=void finish ( QWidget * mainWin )
 $method=|void|finish|QWidget *
 
-$prototype=const QPixmap pixmap () const
-$method=|const QPixmap|pixmap|
+$prototypeV2=const QPixmap pixmap() const
 
 $prototype=void setPixmap ( const QPixmap & pixmap )
 $method=|void|setPixmap|const QPixmap &
 
-$prototype=void repaint ()
-$method=|void|repaint|
+$prototypeV2=void repaint()
 
-$prototype=void clearMessage ()
-$method=|void|clearMessage|
+$prototypeV2=void clearMessage()
 
 $prototype=void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 $method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black

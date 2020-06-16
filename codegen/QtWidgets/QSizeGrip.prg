@@ -33,7 +33,6 @@ $deleteMethod
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

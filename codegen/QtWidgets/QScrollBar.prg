@@ -57,7 +57,6 @@ $deleteMethod
 $prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

@@ -35,17 +35,14 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QUndoStack * activeStack() const
-$method=|QUndoStack *|activeStack|
+$prototypeV2=QUndoStack * activeStack() const
 
 $prototype=void addStack(QUndoStack * stack)
 $method=|void|addStack|QUndoStack *
 
-$prototype=bool canRedo() const
-$method=|bool|canRedo|
+$prototypeV2=bool canRedo() const
 
-$prototype=bool canUndo() const
-$method=|bool|canUndo|
+$prototypeV2=bool canUndo() const
 
 $prototype=QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
 $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
@@ -53,11 +50,9 @@ $method=|QAction *|createRedoAction|QObject *,const QString &=QString()
 $prototype=QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
 $method=|QAction *|createUndoAction|QObject *,const QString &=QString()
 
-$prototype=bool isClean() const
-$method=|bool|isClean|
+$prototypeV2=bool isClean() const
 
-$prototype=QString redoText() const
-$method=|QString|redoText|
+$prototypeV2=QString redoText() const
 
 $prototype=void removeStack(QUndoStack * stack)
 $method=|void|removeStack|QUndoStack *
@@ -65,17 +60,14 @@ $method=|void|removeStack|QUndoStack *
 $prototype=QList<QUndoStack *> stacks() const
 $method=|QList<QUndoStack *>|stacks|
 
-$prototype=QString undoText() const
-$method=|QString|undoText|
+$prototypeV2=QString undoText() const
 
-$prototype=void redo()
-$method=|void|redo|
+$prototypeV2=void redo()
 
 $prototype=void setActiveStack(QUndoStack * stack)
 $method=|void|setActiveStack|QUndoStack *
 
-$prototype=void undo()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 %%
 %% SIGNALS

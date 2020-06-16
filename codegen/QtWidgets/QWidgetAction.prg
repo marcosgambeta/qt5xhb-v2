@@ -30,8 +30,7 @@ $constructor=|new|QObject *
 
 $deleteMethod
 
-$prototype=QWidget * defaultWidget() const
-$method=|QWidget *|defaultWidget|
+$prototypeV2=QWidget * defaultWidget() const
 
 $prototype=void releaseWidget(QWidget * widget)
 $method=|void|releaseWidget|QWidget *

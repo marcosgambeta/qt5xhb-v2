@@ -33,28 +33,21 @@ $deleteMethod
 $prototype=void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum)
 $method=|void|changeSize|int,int,QSizePolicy::Policy=QSizePolicy::Minimum,QSizePolicy::Policy=QSizePolicy::Minimum
 
-$prototype=virtual Qt::Orientations expandingDirections() const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=virtual QRect geometry() const
-$virtualMethod=|QRect|geometry|
+$prototypeV2=virtual QRect geometry() const
 
-$prototype=virtual bool isEmpty() const
-$virtualMethod=|bool|isEmpty|
+$prototypeV2=virtual bool isEmpty() const
 
-$prototype=virtual QSize maximumSize() const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
-$prototype=virtual QSize minimumSize() const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry(const QRect & r)
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint() const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual QSpacerItem * spacerItem()
-$virtualMethod=|QSpacerItem *|spacerItem|
+$prototypeV2=virtual QSpacerItem * spacerItem()
 
 #pragma ENDDUMP

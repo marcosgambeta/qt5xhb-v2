@@ -107,8 +107,7 @@ $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *
 $prototype=QIcon standardIcon ( StandardPixmap standardIcon, const QStyleOption * option = nullptr, const QWidget * widget = nullptr ) const
 $method=|QIcon|standardIcon|QStyle::StandardPixmap,const QStyleOption *=nullptr,const QWidget *=nullptr
 
-$prototype=virtual QPalette standardPalette () const
-$virtualMethod=|QPalette|standardPalette|
+$prototypeV2=virtual QPalette standardPalette() const
 
 $prototype=virtual int styleHint ( StyleHint hint, const QStyleOption * option = nullptr, const QWidget * widget = nullptr, QStyleHintReturn * returnData = nullptr ) const = 0
 $virtualMethod=|int|styleHint|QStyle::StyleHint,const QStyleOption *=nullptr,const QWidget *=nullptr,QStyleHintReturn *=nullptr

@@ -54,10 +54,8 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 
 $deleteMethod
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QSize minimumSizeHint() const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
 #pragma ENDDUMP

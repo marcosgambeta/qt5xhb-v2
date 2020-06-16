@@ -65,14 +65,11 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 $deleteMethod
 
-$prototype=QIcon cleanIcon () const
-$method=|QIcon|cleanIcon|
+$prototypeV2=QIcon cleanIcon() const
 
-$prototype=QString emptyLabel () const
-$method=|QString|emptyLabel|
+$prototypeV2=QString emptyLabel() const
 
-$prototype=QUndoGroup * group () const
-$method=|QUndoGroup *|group|
+$prototypeV2=QUndoGroup * group() const
 
 $prototype=void setCleanIcon ( const QIcon & icon )
 $method=|void|setCleanIcon|const QIcon &
@@ -80,8 +77,7 @@ $method=|void|setCleanIcon|const QIcon &
 $prototype=void setEmptyLabel ( const QString & label )
 $method=|void|setEmptyLabel|const QString &
 
-$prototype=QUndoStack * stack () const
-$method=|QUndoStack *|stack|
+$prototypeV2=QUndoStack * stack() const
 
 $prototype=void setGroup ( QUndoGroup * group )
 $method=|void|setGroup|QUndoGroup *

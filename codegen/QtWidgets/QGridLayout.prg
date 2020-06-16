@@ -116,8 +116,7 @@ $addMethod=addWidget
 $prototype=QRect cellRect ( int row, int column ) const
 $method=|QRect|cellRect|int,int
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=int columnMinimumWidth ( int column ) const
 $method=|int|columnMinimumWidth|int
@@ -128,17 +127,14 @@ $method=|int|columnStretch|int
 $prototype=void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
 $method=|void|getItemPosition|int,int *,int *,int *,int *
 
-$prototype=int horizontalSpacing () const
-$method=|int|horizontalSpacing|
+$prototypeV2=int horizontalSpacing() const
 
 $prototype=QLayoutItem * itemAtPosition ( int row, int column ) const
 $method=|QLayoutItem *|itemAtPosition|int,int
 
-$prototype=Qt::Corner originCorner () const
-$method=|Qt::Corner|originCorner|
+$prototypeV2=Qt::Corner originCorner() const
 
-$prototype=int rowCount () const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=int rowMinimumHeight ( int row ) const
 $method=|int|rowMinimumHeight|int
@@ -170,44 +166,35 @@ $method=|void|setSpacing|int
 $prototype=void setVerticalSpacing ( int spacing )
 $method=|void|setVerticalSpacing|int
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
-$prototype=int verticalSpacing () const
-$method=|int|verticalSpacing|
+$prototypeV2=int verticalSpacing() const
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
-$prototype=virtual Qt::Orientations expandingDirections () const
-$virtualMethod=|Qt::Orientations|expandingDirections|
+$prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=virtual bool hasHeightForWidth () const
-$virtualMethod=|bool|hasHeightForWidth|
+$prototypeV2=virtual bool hasHeightForWidth() const
 
 $prototype=virtual int heightForWidth ( int w ) const
 $virtualMethod=|int|heightForWidth|int
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QLayoutItem *|itemAt|int
 
-$prototype=virtual QSize maximumSize () const
-$virtualMethod=|QSize|maximumSize|
+$prototypeV2=virtual QSize maximumSize() const
 
 $prototype=virtual int minimumHeightForWidth ( int w ) const
 $virtualMethod=|int|minimumHeightForWidth|int
 
-$prototype=virtual QSize minimumSize () const
-$virtualMethod=|QSize|minimumSize|
+$prototypeV2=virtual QSize minimumSize() const
 
 $prototype=virtual void setGeometry ( const QRect & rect )
 $virtualMethod=|void|setGeometry|const QRect &
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual QLayoutItem * takeAt ( int index )
 $virtualMethod=|QLayoutItem *|takeAt|int

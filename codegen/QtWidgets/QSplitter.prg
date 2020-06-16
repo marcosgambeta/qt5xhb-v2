@@ -59,11 +59,9 @@ $deleteMethod
 $prototype=void addWidget ( QWidget * widget )
 $method=|void|addWidget|QWidget *
 
-$prototype=bool childrenCollapsible () const
-$method=|bool|childrenCollapsible|
+$prototypeV2=bool childrenCollapsible() const
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
 $prototype=void getRange ( int index, int * min, int * max ) const
 $method=|void|getRange|int,int *,int *
@@ -71,8 +69,7 @@ $method=|void|getRange|int,int *,int *
 $prototype=QSplitterHandle * handle ( int index ) const
 $method=|QSplitterHandle *|handle|int
 
-$prototype=int handleWidth () const
-$method=|int|handleWidth|
+$prototypeV2=int handleWidth() const
 
 $prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *
@@ -83,20 +80,16 @@ $method=|void|insertWidget|int,QWidget *
 $prototype=bool isCollapsible ( int index ) const
 $method=|bool|isCollapsible|int
 
-$prototype=bool opaqueResize () const
-$method=|bool|opaqueResize|
+$prototypeV2=bool opaqueResize() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void refresh ()
-$method=|void|refresh|
+$prototypeV2=void refresh()
 
 $prototype=bool restoreState ( const QByteArray & state )
 $method=|bool|restoreState|const QByteArray &
 
-$prototype=QByteArray saveState () const
-$method=|QByteArray|saveState|
+$prototypeV2=QByteArray saveState() const
 
 $prototype=void setChildrenCollapsible ( bool )
 $method=|void|setChildrenCollapsible|bool
@@ -119,11 +112,9 @@ $method=|void|setStretchFactor|int,int
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 %%
 %% SIGNALS

@@ -108,14 +108,11 @@ $method=|QPushButton *|button|QDialogButtonBox::StandardButton
 $prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
 $method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
 
-$prototype=bool centerButtons () const
-$method=|bool|centerButtons|
+$prototypeV2=bool centerButtons() const
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void removeButton ( QAbstractButton * button )
 $method=|void|removeButton|QAbstractButton *
@@ -132,8 +129,7 @@ $method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
 $prototype=StandardButton standardButton ( QAbstractButton * button ) const
 $method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
 
-$prototype=StandardButtons standardButtons () const
-$method=|QDialogButtonBox::StandardButtons|standardButtons|
+$prototypeV2=QDialogButtonBox::StandardButtons standardButtons() const
 
 %%
 %% SIGNALS

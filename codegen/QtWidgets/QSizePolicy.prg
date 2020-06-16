@@ -54,23 +54,17 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 
 $deleteMethod
 
-$prototype=ControlType controlType() const
-$method=|QSizePolicy::ControlType|controlType|
+$prototypeV2=QSizePolicy::ControlType controlType() const
 
-$prototype=Qt::Orientations expandingDirections() const
-$method=|Qt::Orientations|expandingDirections|
+$prototypeV2=Qt::Orientations expandingDirections() const
 
-$prototype=bool hasHeightForWidth() const
-$method=|bool|hasHeightForWidth|
+$prototypeV2=bool hasHeightForWidth() const
 
-$prototype=bool hasWidthForHeight() const
-$method=|bool|hasWidthForHeight|
+$prototypeV2=bool hasWidthForHeight() const
 
-$prototype=Policy horizontalPolicy() const
-$method=|QSizePolicy::Policy|horizontalPolicy|
+$prototypeV2=QSizePolicy::Policy horizontalPolicy() const
 
-$prototype=int horizontalStretch() const
-$method=|int|horizontalStretch|
+$prototypeV2=int horizontalStretch() const
 
 $prototype=void setControlType(ControlType type)
 $method=|void|setControlType|QSizePolicy::ControlType
@@ -93,14 +87,11 @@ $method=|void|setVerticalStretch|int
 $prototype=void setWidthForHeight(bool dependent)
 $method=|void|setWidthForHeight|bool
 
-$prototype=void transpose()
-$method=|void|transpose|
+$prototypeV2=void transpose()
 
-$prototype=Policy verticalPolicy() const
-$method=|QSizePolicy::Policy|verticalPolicy|
+$prototypeV2=QSizePolicy::Policy verticalPolicy() const
 
-$prototype=int verticalStretch() const
-$method=|int|verticalStretch|
+$prototypeV2=int verticalStretch() const
 
 $extraMethods
 

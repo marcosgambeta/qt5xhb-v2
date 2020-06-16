@@ -33,13 +33,10 @@ $method=|void|setSizePolicy|QSizePolicy::Policy
 $prototype=void setSpacing(qreal spacing)
 $method=|void|setSpacing|qreal
 
-$prototype=QSizePolicy::Policy sizePolicy() const
-$method=|QSizePolicy::Policy|sizePolicy|
+$prototypeV2=QSizePolicy::Policy sizePolicy() const
 
-$prototype=qreal spacing() const
-$method=|qreal|spacing|
+$prototypeV2=qreal spacing() const
 
-$prototype=void unsetSpacing()
-$method=|void|unsetSpacing|
+$prototypeV2=void unsetSpacing()
 
 #pragma ENDDUMP

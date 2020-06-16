@@ -72,8 +72,7 @@ $method=|void|insertStretch|int,int=1
 $prototype=qreal itemSpacing ( int index ) const
 $method=|qreal|itemSpacing|int
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void removeItem ( QGraphicsLayoutItem * item )
 $method=|void|removeItem|QGraphicsLayoutItem *
@@ -93,17 +92,14 @@ $method=|void|setSpacing|qreal
 $prototype=void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
 $method=|void|setStretchFactor|QGraphicsLayoutItem *,int
 
-$prototype=qreal spacing () const
-$method=|qreal|spacing|
+$prototypeV2=qreal spacing() const
 
 $prototype=int stretchFactor ( QGraphicsLayoutItem * item ) const
 $method=|int|stretchFactor|QGraphicsLayoutItem *
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
 $virtualMethod=|QGraphicsLayoutItem *|itemAt|int

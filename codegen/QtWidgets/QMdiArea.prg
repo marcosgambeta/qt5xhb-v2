@@ -34,23 +34,18 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=WindowOrder activationOrder () const
-$method=|QMdiArea::WindowOrder|activationOrder|
+$prototypeV2=QMdiArea::WindowOrder activationOrder() const
 
-$prototype=QMdiSubWindow * activeSubWindow () const
-$method=|QMdiSubWindow *|activeSubWindow|
+$prototypeV2=QMdiSubWindow * activeSubWindow() const
 
 $prototype=QMdiSubWindow * addSubWindow ( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
 $method=|QMdiSubWindow *|addSubWindow|QWidget *,Qt::WindowFlags=0
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
-$prototype=QMdiSubWindow * currentSubWindow () const
-$method=|QMdiSubWindow *|currentSubWindow|
+$prototypeV2=QMdiSubWindow * currentSubWindow() const
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
 $prototype=void removeSubWindow ( QWidget * widget )
 $method=|void|removeSubWindow|QWidget *
@@ -79,53 +74,40 @@ $method=|void|setViewMode|QMdiArea::ViewMode
 $prototype=QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
 $method=|QList<QMdiSubWindow *>|subWindowList|QMdiArea::WindowOrder=QMdiArea::CreationOrder
 
-$prototype=QTabWidget::TabPosition tabPosition () const
-$method=|QTabWidget::TabPosition|tabPosition|
+$prototypeV2=QTabWidget::TabPosition tabPosition() const
 
-$prototype=QTabWidget::TabShape tabShape () const
-$method=|QTabWidget::TabShape|tabShape|
+$prototypeV2=QTabWidget::TabShape tabShape() const
 
 $prototype=bool testOption ( AreaOption option ) const
 $method=|bool|testOption|QMdiArea::AreaOption
 
-$prototype=ViewMode viewMode () const
-$method=|QMdiArea::ViewMode|viewMode|
+$prototypeV2=QMdiArea::ViewMode viewMode() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void activateNextSubWindow ()
-$method=|void|activateNextSubWindow|
+$prototypeV2=void activateNextSubWindow()
 
-$prototype=void activatePreviousSubWindow ()
-$method=|void|activatePreviousSubWindow|
+$prototypeV2=void activatePreviousSubWindow()
 
-$prototype=void cascadeSubWindows ()
-$method=|void|cascadeSubWindows|
+$prototypeV2=void cascadeSubWindows()
 
-$prototype=void closeActiveSubWindow ()
-$method=|void|closeActiveSubWindow|
+$prototypeV2=void closeActiveSubWindow()
 
-$prototype=void closeAllSubWindows ()
-$method=|void|closeAllSubWindows|
+$prototypeV2=void closeAllSubWindows()
 
 $prototype=void setActiveSubWindow ( QMdiSubWindow * window )
 $method=|void|setActiveSubWindow|QMdiSubWindow *
 
-$prototype=void tileSubWindows ()
-$method=|void|tileSubWindows|
+$prototypeV2=void tileSubWindows()
 
-$prototype=bool tabsClosable () const
-$method=|bool|tabsClosable|
+$prototypeV2=bool tabsClosable() const
 
 $prototype=void setTabsClosable ( bool closable )
 $method=|void|setTabsClosable|bool
 
-$prototype=bool tabsMovable () const
-$method=|bool|tabsMovable|
+$prototypeV2=bool tabsMovable() const
 
 $prototype=void setTabsMovable ( bool movable )
 $method=|void|setTabsMovable|bool

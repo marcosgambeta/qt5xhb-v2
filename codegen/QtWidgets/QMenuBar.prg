@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=QAction * activeAction () const
-$method=|QAction *|activeAction|
+$prototypeV2=QAction * activeAction() const
 
 $prototype=QAction * addAction ( const QString & text )
 $internalMethod=|QAction *|addAction,addAction1|const QString &
@@ -107,11 +106,9 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 }
 $addMethod=addMenu
 
-$prototype=QAction * addSeparator ()
-$method=|QAction *|addSeparator|
+$prototypeV2=QAction * addSeparator()
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
 $method=|QAction *|insertMenu|QAction *,QMenu *
@@ -119,14 +116,12 @@ $method=|QAction *|insertMenu|QAction *,QMenu *
 $prototype=QAction * insertSeparator ( QAction * before )
 $method=|QAction *|insertSeparator|QAction *
 
-$prototype=bool isDefaultUp () const
-$method=|bool|isDefaultUp|
+$prototypeV2=bool isDefaultUp() const
 
 $prototype=void setDefaultUp ( bool )
 $method=|void|setDefaultUp|bool
 
-$prototype=bool isNativeMenuBar () const
-$method=|bool|isNativeMenuBar|
+$prototypeV2=bool isNativeMenuBar() const
 
 $prototype=void setNativeMenuBar ( bool nativeMenuBar )
 $method=|void|setNativeMenuBar|bool
@@ -137,11 +132,9 @@ $method=|void|setActiveAction|QAction *
 $prototype=int heightForWidth ( int ) const
 $method=|int|heightForWidth|int
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=virtual void setVisible ( bool visible )
 $virtualMethod=|void|setVisible|bool

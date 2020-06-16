@@ -30,10 +30,8 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QPointF newPos () const
-$method=|QPointF|newPos|
+$prototypeV2=QPointF newPos() const
 
-$prototype=QPointF oldPos () const
-$method=|QPointF|oldPos|
+$prototypeV2=QPointF oldPos() const
 
 #pragma ENDDUMP

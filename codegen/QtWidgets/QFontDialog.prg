@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
 
 $deleteMethod
 
-$prototype=QFont currentFont () const
-$method=|QFont|currentFont|
+$prototypeV2=QFont currentFont() const
 
 $prototype=void setCurrentFont ( const QFont & font )
 $method=|void|setCurrentFont|const QFont &
@@ -65,14 +64,12 @@ $method=|void|setCurrentFont|const QFont &
 $prototype=void open ( QObject * receiver, const char * member )
 $method=|void|open|QObject *,const char *
 
-$prototype=FontDialogOptions options () const
-$method=|QFontDialog::FontDialogOptions|options|
+$prototypeV2=QFontDialog::FontDialogOptions options() const
 
 $prototype=void setOptions ( FontDialogOptions options )
 $method=|void|setOptions|QFontDialog::FontDialogOptions
 
-$prototype=QFont selectedFont () const
-$method=|QFont|selectedFont|
+$prototypeV2=QFont selectedFont() const
 
 $prototype=void setOption ( FontDialogOption option, bool on = true )
 $method=|void|setOption|QFontDialog::FontDialogOption,bool=true

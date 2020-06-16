@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 $deleteMethod
 
-$prototype=int key () const
-$method=|int|key|
+$prototypeV2=int key() const
 
-$prototype=Qt::KeyboardModifiers modifierMask () const
-$method=|Qt::KeyboardModifiers|modifierMask|
+$prototypeV2=Qt::KeyboardModifiers modifierMask() const
 
 $prototype=void setKey ( int key )
 $method=|void|setKey|int

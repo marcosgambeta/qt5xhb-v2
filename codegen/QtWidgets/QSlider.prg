@@ -54,14 +54,12 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 
 $deleteMethod
 
-$prototype=int tickInterval () const
-$method=|int|tickInterval|
+$prototypeV2=int tickInterval() const
 
 $prototype=void setTickInterval ( int ti )
 $method=|void|setTickInterval|int
 
-$prototype=TickPosition tickPosition () const
-$method=|QSlider::TickPosition|tickPosition|
+$prototypeV2=QSlider::TickPosition tickPosition() const
 
 $prototype=void setTickPosition ( TickPosition position )
 $method=|void|setTickPosition|QSlider::TickPosition
@@ -69,10 +67,8 @@ $method=|void|setTickPosition|QSlider::TickPosition
 $prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

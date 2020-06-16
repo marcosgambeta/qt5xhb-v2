@@ -35,14 +35,11 @@ $deleteMethod
 $prototype=int addWidget ( QWidget * widget )
 $method=|int|addWidget|QWidget *
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
-$prototype=QWidget * currentWidget () const
-$method=|QWidget *|currentWidget|
+$prototypeV2=QWidget * currentWidget() const
 
 $prototype=int indexOf ( QWidget * widget ) const
 $method=|int|indexOf|QWidget *

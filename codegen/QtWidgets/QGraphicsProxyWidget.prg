@@ -39,8 +39,7 @@ $method=|void|setWidget|QWidget *
 $prototype=QRectF subWidgetRect ( const QWidget * widget ) const
 $method=|QRectF|subWidgetRect|const QWidget *
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
@@ -48,7 +47,6 @@ $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 $prototype=virtual void setGeometry ( const QRectF & rect )
 $virtualMethod=|void|setGeometry|const QRectF &
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

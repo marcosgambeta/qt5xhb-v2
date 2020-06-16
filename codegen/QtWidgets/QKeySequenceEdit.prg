@@ -59,14 +59,12 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 
 $deleteMethod
 
-$prototype=QKeySequence keySequence() const
-$method=|QKeySequence|keySequence|
+$prototypeV2=QKeySequence keySequence() const
 
 $prototype=void setKeySequence(const QKeySequence &keySequence)
 $method=|void|setKeySequence|const QKeySequence &
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 %%
 %% SIGNALS

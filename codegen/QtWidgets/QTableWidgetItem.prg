@@ -70,41 +70,31 @@ HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 
 $deleteMethod
 
-$prototype=QBrush background () const
-$method=|QBrush|background|
+$prototypeV2=QBrush background() const
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
-$prototype=virtual QTableWidgetItem * clone () const
-$virtualMethod=|QTableWidgetItem *|clone|
+$prototypeV2=virtual QTableWidgetItem * clone() const
 
-$prototype=int column () const
-$method=|int|column|
+$prototypeV2=int column() const
 
 $prototype=virtual QVariant data ( int role ) const
 $virtualMethod=|QVariant|data|int
 
-$prototype=Qt::ItemFlags flags () const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=QFont font () const
-$method=|QFont|font|
+$prototypeV2=QFont font() const
 
-$prototype=QBrush foreground () const
-$method=|QBrush|foreground|
+$prototypeV2=QBrush foreground() const
 
-$prototype=QIcon icon () const
-$method=|QIcon|icon|
+$prototypeV2=QIcon icon() const
 
-$prototype=bool isSelected () const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
 $prototype=virtual void read ( QDataStream & in )
 $virtualMethod=|void|read|QDataStream &
 
-$prototype=int row () const
-$method=|int|row|
+$prototypeV2=int row() const
 
 $prototype=void setBackground ( const QBrush & brush )
 $method=|void|setBackground|const QBrush &
@@ -148,29 +138,21 @@ $method=|void|setToolTip|const QString &
 $prototype=void setWhatsThis ( const QString & whatsThis )
 $method=|void|setWhatsThis|const QString &
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=QString statusTip () const
-$method=|QString|statusTip|
+$prototypeV2=QString statusTip() const
 
-$prototype=QTableWidget * tableWidget () const
-$method=|QTableWidget *|tableWidget|
+$prototypeV2=QTableWidget * tableWidget() const
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
-$prototype=int textAlignment () const
-$method=|int|textAlignment|
+$prototypeV2=int textAlignment() const
 
-$prototype=QString toolTip () const
-$method=|QString|toolTip|
+$prototypeV2=QString toolTip() const
 
-$prototype=int type () const
-$method=|int|type|
+$prototypeV2=int type() const
 
-$prototype=QString whatsThis () const
-$method=|QString|whatsThis|
+$prototypeV2=QString whatsThis() const
 
 $prototype=virtual void write ( QDataStream & out ) const
 $virtualMethod=|void|write|QDataStream &

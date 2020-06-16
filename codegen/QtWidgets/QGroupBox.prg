@@ -56,17 +56,13 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=bool isCheckable () const
-$method=|bool|isCheckable|
+$prototypeV2=bool isCheckable() const
 
-$prototype=bool isChecked () const
-$method=|bool|isChecked|
+$prototypeV2=bool isChecked() const
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=void setAlignment ( int alignment )
 $method=|void|setAlignment|int
@@ -80,11 +76,9 @@ $method=|void|setFlat|bool
 $prototype=void setTitle ( const QString & title )
 $method=|void|setTitle|const QString &
 
-$prototype=QString title () const
-$method=|QString|title|
+$prototypeV2=QString title() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototype=void setChecked ( bool checked )
 $method=|void|setChecked|bool

@@ -58,7 +58,6 @@ HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 }
 $addMethod=showMessage
 
-$prototype=static QErrorMessage * qtHandler ()
-$staticMethod=|QErrorMessage *|qtHandler|
+$prototypeV2=static QErrorMessage * qtHandler()
 
 #pragma ENDDUMP

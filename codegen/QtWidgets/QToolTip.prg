@@ -27,17 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=QFont font()
-$method=|QFont|font|
+$prototypeV2=QFont font()
 
-$prototype=void hideText()
-$method=|void|hideText|
+$prototypeV2=void hideText()
 
-$prototype=bool isVisible()
-$method=|bool|isVisible|
+$prototypeV2=bool isVisible()
 
-$prototype=QPalette palette()
-$method=|QPalette|palette|
+$prototypeV2=QPalette palette()
 
 $prototype=void setFont(const QFont & font)
 $method=|void|setFont|const QFont &
@@ -73,8 +69,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
 }
 $addMethod=showText
 
-$prototype=QString text()
-$method=|QString|text|
+$prototypeV2=QString text()
 
 $extraMethods
 

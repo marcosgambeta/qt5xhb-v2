@@ -32,62 +32,51 @@ $deleteMethod
 $prototype=virtual void fixup ( QString & input ) const
 $virtualMethod=|void|fixup|QString &
 
-$prototype=bool hasAcceptableInput () const
-$method=|bool|hasAcceptableInput|
+$prototypeV2=bool hasAcceptableInput() const
 
-$prototype=void interpretText ()
-$method=|void|interpretText|
+$prototypeV2=void interpretText()
 
-$prototype=bool isAccelerated () const
-$method=|bool|isAccelerated|
+$prototypeV2=bool isAccelerated() const
 
 $prototype=void setAccelerated ( bool on )
 $method=|void|setAccelerated|bool
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototype=void setAlignment ( Qt::Alignment flag )
 $method=|void|setAlignment|Qt::Alignment
 
-$prototype=ButtonSymbols buttonSymbols () const
-$method=|QAbstractSpinBox::ButtonSymbols|buttonSymbols|
+$prototypeV2=QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 
 $prototype=void setButtonSymbols ( ButtonSymbols bs )
 $method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
 
-$prototype=CorrectionMode correctionMode () const
-$method=|QAbstractSpinBox::CorrectionMode|correctionMode|
+$prototypeV2=QAbstractSpinBox::CorrectionMode correctionMode() const
 
 $prototype=void setCorrectionMode ( CorrectionMode cm )
 $method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
 
-$prototype=bool hasFrame () const
-$method=|bool|hasFrame|
+$prototypeV2=bool hasFrame() const
 
 $prototype=void setFrame ( bool )
 $method=|void|setFrame|bool
 
-$prototype=bool keyboardTracking () const
-$method=|bool|keyboardTracking|
+$prototypeV2=bool keyboardTracking() const
 
 $prototype=void setKeyboardTracking ( bool kt )
 $method=|void|setKeyboardTracking|bool
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
 $prototype=void setReadOnly ( bool r )
 $method=|void|setReadOnly|bool
 
-$prototype=QString specialValueText () const
-$method=|QString|specialValueText|
+$prototypeV2=QString specialValueText() const
 
 $prototype=void setSpecialValueText ( const QString & txt )
 $method=|void|setSpecialValueText|const QString &
 
-$prototype=bool wrapping () const
-$method=|bool|wrapping|
+$prototypeV2=bool wrapping() const
 
 $prototype=void setWrapping ( bool w )
 $method=|void|setWrapping|bool
@@ -95,8 +84,7 @@ $method=|void|setWrapping|bool
 $prototype=virtual void stepBy ( int steps )
 $virtualMethod=|void|stepBy|int
 
-$prototype=QString text () const
-$method=|QString|text|
+$prototypeV2=QString text() const
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 $virtualMethod=|QValidator::State|validate|QString &,int &
@@ -107,23 +95,17 @@ $method=|bool|event|QEvent *
 $prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
 $method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
-$prototype=void selectAll ()
-$method=|void|selectAll|
+$prototypeV2=void selectAll()
 
-$prototype=void stepDown ()
-$method=|void|stepDown|
+$prototypeV2=void stepDown()
 
-$prototype=void stepUp ()
-$method=|void|stepUp|
+$prototypeV2=void stepUp()
 
 $prototype=bool isGroupSeparatorShown() const
 $method=5,3,0|bool|isGroupSeparatorShown|

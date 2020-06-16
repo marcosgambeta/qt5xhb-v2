@@ -30,17 +30,13 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=GestureCancelPolicy gestureCancelPolicy() const
-$method=|QGesture::GestureCancelPolicy|gestureCancelPolicy|
+$prototypeV2=QGesture::GestureCancelPolicy gestureCancelPolicy() const
 
-$prototype=Qt::GestureType gestureType() const
-$method=|Qt::GestureType|gestureType|
+$prototypeV2=Qt::GestureType gestureType() const
 
-$prototype=bool hasHotSpot() const
-$method=|bool|hasHotSpot|
+$prototypeV2=bool hasHotSpot() const
 
-$prototype=QPointF hotSpot() const
-$method=|QPointF|hotSpot|
+$prototypeV2=QPointF hotSpot() const
 
 $prototype=void setGestureCancelPolicy(GestureCancelPolicy policy)
 $method=|void|setGestureCancelPolicy|QGesture::GestureCancelPolicy
@@ -48,10 +44,8 @@ $method=|void|setGestureCancelPolicy|QGesture::GestureCancelPolicy
 $prototype=void setHotSpot(const QPointF & value)
 $method=|void|setHotSpot|const QPointF &
 
-$prototype=Qt::GestureState state() const
-$method=|Qt::GestureState|state|
+$prototypeV2=Qt::GestureState state() const
 
-$prototype=void unsetHotSpot()
-$method=|void|unsetHotSpot|
+$prototypeV2=void unsetHotSpot()
 
 #pragma ENDDUMP

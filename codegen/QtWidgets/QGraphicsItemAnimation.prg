@@ -34,8 +34,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=qreal horizontalScaleAt ( qreal step ) const
 $method=|qreal|horizontalScaleAt|qreal
@@ -43,8 +42,7 @@ $method=|qreal|horizontalScaleAt|qreal
 $prototype=qreal horizontalShearAt ( qreal step ) const
 $method=|qreal|horizontalShearAt|qreal
 
-$prototype=QGraphicsItem * item () const
-$method=|QGraphicsItem *|item|
+$prototypeV2=QGraphicsItem * item() const
 
 $prototype=QMatrix matrixAt ( qreal step ) const
 $method=|QMatrix|matrixAt|qreal
@@ -76,8 +74,7 @@ $method=|void|setTimeLine|QTimeLine *
 $prototype=void setTranslationAt ( qreal step, qreal dx, qreal dy )
 $method=|void|setTranslationAt|qreal,qreal,qreal
 
-$prototype=QTimeLine * timeLine () const
-$method=|QTimeLine *|timeLine|
+$prototypeV2=QTimeLine * timeLine() const
 
 $prototype=qreal verticalScaleAt ( qreal step ) const
 $method=|qreal|verticalScaleAt|qreal

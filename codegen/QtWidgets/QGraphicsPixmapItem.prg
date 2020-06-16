@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 
 $deleteMethod
 
-$prototype=QPointF offset () const
-$method=|QPointF|offset|
+$prototypeV2=QPointF offset() const
 
-$prototype=QPixmap pixmap () const
-$method=|QPixmap|pixmap|
+$prototypeV2=QPixmap pixmap() const
 
 $prototype=void setOffset ( const QPointF & offset )
 $internalMethod=|void|setOffset,setOffset1|const QPointF &
@@ -97,14 +95,11 @@ $method=|void|setShapeMode|QGraphicsPixmapItem::ShapeMode
 $prototype=void setTransformationMode ( Qt::TransformationMode mode )
 $method=|void|setTransformationMode|Qt::TransformationMode
 
-$prototype=ShapeMode shapeMode () const
-$method=|QGraphicsPixmapItem::ShapeMode|shapeMode|
+$prototypeV2=QGraphicsPixmapItem::ShapeMode shapeMode() const
 
-$prototype=Qt::TransformationMode transformationMode () const
-$method=|Qt::TransformationMode|transformationMode|
+$prototypeV2=Qt::TransformationMode transformationMode() const
 
-$prototype=virtual QRectF boundingRect () const
-$virtualMethod=|QRectF|boundingRect|
+$prototypeV2=virtual QRectF boundingRect() const
 
 $prototype=virtual bool contains ( const QPointF & point ) const
 $virtualMethod=|bool|contains|const QPointF &
@@ -112,16 +107,13 @@ $virtualMethod=|bool|contains|const QPointF &
 $prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 $virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
 
-$prototype=virtual QPainterPath opaqueArea () const
-$virtualMethod=|QPainterPath|opaqueArea|
+$prototypeV2=virtual QPainterPath opaqueArea() const
 
 $prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 $virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
 
-$prototype=virtual QPainterPath shape () const
-$virtualMethod=|QPainterPath|shape|
+$prototypeV2=virtual QPainterPath shape() const
 
-$prototype=virtual int type () const
-$virtualMethod=|int|type|
+$prototypeV2=virtual int type() const
 
 #pragma ENDDUMP

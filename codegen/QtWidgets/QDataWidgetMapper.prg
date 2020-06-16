@@ -63,14 +63,11 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 }
 $addMethod=addMapping
 
-$prototype=void clearMapping ()
-$method=|void|clearMapping|
+$prototypeV2=void clearMapping()
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
-$prototype=QAbstractItemDelegate * itemDelegate () const
-$method=|QAbstractItemDelegate *|itemDelegate|
+$prototypeV2=QAbstractItemDelegate * itemDelegate() const
 
 $prototype=QByteArray mappedPropertyName ( QWidget * widget ) const
 $method=|QByteArray|mappedPropertyName|QWidget *
@@ -81,17 +78,14 @@ $method=|int|mappedSection|QWidget *
 $prototype=QWidget * mappedWidgetAt ( int section ) const
 $method=|QWidget *|mappedWidgetAt|int
 
-$prototype=QAbstractItemModel * model () const
-$method=|QAbstractItemModel *|model|
+$prototypeV2=QAbstractItemModel * model() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void removeMapping ( QWidget * widget )
 $method=|void|removeMapping|QWidget *
 
-$prototype=QModelIndex rootIndex () const
-$method=|QModelIndex|rootIndex|
+$prototypeV2=QModelIndex rootIndex() const
 
 $prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
 $method=|void|setItemDelegate|QAbstractItemDelegate *
@@ -108,11 +102,9 @@ $method=|void|setRootIndex|const QModelIndex &
 $prototype=void setSubmitPolicy ( SubmitPolicy policy )
 $method=|void|setSubmitPolicy|QDataWidgetMapper::SubmitPolicy
 
-$prototype=SubmitPolicy submitPolicy () const
-$method=|QDataWidgetMapper::SubmitPolicy|submitPolicy|
+$prototypeV2=QDataWidgetMapper::SubmitPolicy submitPolicy() const
 
-$prototype=void revert ()
-$method=|void|revert|
+$prototypeV2=void revert()
 
 $prototype=virtual void setCurrentIndex ( int index )
 $virtualMethod=|void|setCurrentIndex|int
@@ -120,20 +112,15 @@ $virtualMethod=|void|setCurrentIndex|int
 $prototype=void setCurrentModelIndex ( const QModelIndex & index )
 $method=|void|setCurrentModelIndex|const QModelIndex &
 
-$prototype=bool submit ()
-$method=|bool|submit|
+$prototypeV2=bool submit()
 
-$prototype=void toFirst ()
-$method=|void|toFirst|
+$prototypeV2=void toFirst()
 
-$prototype=void toLast ()
-$method=|void|toLast|
+$prototypeV2=void toLast()
 
-$prototype=void toNext ()
-$method=|void|toNext|
+$prototypeV2=void toNext()
 
-$prototype=void toPrevious ()
-$method=|void|toPrevious|
+$prototypeV2=void toPrevious()
 
 %%
 %% SIGNALS

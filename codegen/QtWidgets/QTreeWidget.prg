@@ -37,8 +37,7 @@ $deleteMethod
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount)
 %%
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=void setColumnCount ( int columns )
 $method=|void|setColumnCount|int
@@ -47,8 +46,7 @@ $method=|void|setColumnCount|int
 %% Q_PROPERTY(int topLevelItemCount READ topLevelItemCount)
 %%
 
-$prototype=int topLevelItemCount () const
-$method=|int|topLevelItemCount|
+$prototypeV2=int topLevelItemCount() const
 
 %%
 %%
@@ -60,17 +58,14 @@ $method=|void|addTopLevelItem|QTreeWidgetItem *
 $prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
 
-$prototype=int currentColumn () const
-$method=|int|currentColumn|
+$prototypeV2=int currentColumn() const
 
-$prototype=QTreeWidgetItem * currentItem () const
-$method=|QTreeWidgetItem *|currentItem|
+$prototypeV2=QTreeWidgetItem * currentItem() const
 
 $prototype=void editItem ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|editItem|QTreeWidgetItem *,int=0
 
-$prototype=QTreeWidgetItem *  headerItem () const
-$method=|QTreeWidgetItem *|headerItem|
+$prototypeV2=QTreeWidgetItem *  headerItem() const
 
 $prototype=int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
 $method=|int|indexOfTopLevelItem|QTreeWidgetItem *
@@ -78,8 +73,7 @@ $method=|int|indexOfTopLevelItem|QTreeWidgetItem *
 $prototype=void insertTopLevelItem ( int index, QTreeWidgetItem * item )
 $method=|void|insertTopLevelItem|int,QTreeWidgetItem *
 
-$prototype=QTreeWidgetItem * invisibleRootItem () const
-$method=|QTreeWidgetItem *|invisibleRootItem|
+$prototypeV2=QTreeWidgetItem * invisibleRootItem() const
 
 $prototype=bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
 $method=|bool|isFirstItemColumnSpanned|const QTreeWidgetItem *
@@ -178,8 +172,7 @@ $method=|void|setHeaderLabels|const QStringList &
 $prototype=void setItemWidget ( QTreeWidgetItem * item, int column, QWidget * widget )
 $method=|void|setItemWidget|QTreeWidgetItem *,int,QWidget *
 
-$prototype=int sortColumn () const
-$method=|int|sortColumn|
+$prototypeV2=int sortColumn() const
 
 $prototype=void sortItems ( int column, Qt::SortOrder order )
 $method=|void|sortItems|int,Qt::SortOrder
@@ -196,8 +189,7 @@ $method=|QRect|visualItemRect|const QTreeWidgetItem *
 $prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
 $virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=void collapseItem ( const QTreeWidgetItem * item )
 $method=|void|collapseItem|const QTreeWidgetItem *

@@ -73,14 +73,11 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 $deleteMethod
 
-$prototype=bool autoDefault () const
-$method=|bool|autoDefault|
+$prototypeV2=bool autoDefault() const
 
-$prototype=bool isDefault () const
-$method=|bool|isDefault|
+$prototypeV2=bool isDefault() const
 
-$prototype=bool isFlat () const
-$method=|bool|isFlat|
+$prototypeV2=bool isFlat() const
 
 $prototype=QMenu * menu () const
 $method=|QMenu *|menu||#ifndef QT_NO_MENU
@@ -100,10 +97,8 @@ $method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 $prototype=void showMenu ()
 $method=|void|showMenu||#ifndef QT_NO_MENU
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 #pragma ENDDUMP

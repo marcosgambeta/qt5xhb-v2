@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=Qt::MouseButton button () const
-$method=|Qt::MouseButton|button|
+$prototypeV2=Qt::MouseButton button() const
 
 $prototype=QPointF buttonDownPos ( Qt::MouseButton button ) const
 $method=|QPointF|buttonDownPos|Qt::MouseButton
@@ -39,28 +38,20 @@ $method=|QPointF|buttonDownScenePos|Qt::MouseButton
 $prototype=QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
 $method=|QPoint|buttonDownScreenPos|Qt::MouseButton
 
-$prototype=Qt::MouseButtons buttons () const
-$method=|Qt::MouseButtons|buttons|
+$prototypeV2=Qt::MouseButtons buttons() const
 
-$prototype=QPointF lastPos () const
-$method=|QPointF|lastPos|
+$prototypeV2=QPointF lastPos() const
 
-$prototype=QPointF lastScenePos () const
-$method=|QPointF|lastScenePos|
+$prototypeV2=QPointF lastScenePos() const
 
-$prototype=QPoint lastScreenPos () const
-$method=|QPoint|lastScreenPos|
+$prototypeV2=QPoint lastScreenPos() const
 
-$prototype=Qt::KeyboardModifiers modifiers () const
-$method=|Qt::KeyboardModifiers|modifiers|
+$prototypeV2=Qt::KeyboardModifiers modifiers() const
 
-$prototype=QPointF pos () const
-$method=|QPointF|pos|
+$prototypeV2=QPointF pos() const
 
-$prototype=QPointF scenePos () const
-$method=|QPointF|scenePos|
+$prototypeV2=QPointF scenePos() const
 
-$prototype=QPoint screenPos () const
-$method=|QPoint|screenPos|
+$prototypeV2=QPoint screenPos() const
 
 #pragma ENDDUMP

@@ -125,23 +125,18 @@ $method=|Qt::CheckState|checkState|int
 $prototype=QTreeWidgetItem * child(int index) const
 $method=|QTreeWidgetItem *|child|int
 
-$prototype=int childCount() const
-$method=|int|childCount|
+$prototypeV2=int childCount() const
 
-$prototype=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
-$method=|QTreeWidgetItem::ChildIndicatorPolicy|childIndicatorPolicy|
+$prototypeV2=QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy() const
 
-$prototype=virtual QTreeWidgetItem * clone() const
-$virtualMethod=|QTreeWidgetItem *|clone|
+$prototypeV2=virtual QTreeWidgetItem * clone() const
 
-$prototype=int columnCount() const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=virtual QVariant data(int column, int role) const
 $virtualMethod=|QVariant|data|int,int
 
-$prototype=Qt::ItemFlags flags() const
-$method=|Qt::ItemFlags|flags|
+$prototypeV2=Qt::ItemFlags flags() const
 
 $prototype=QFont font(int column) const
 $method=|QFont|font|int
@@ -161,23 +156,17 @@ $method=|void|insertChild|int,QTreeWidgetItem *
 $prototype=void insertChildren(int index, const QList<QTreeWidgetItem *> & children)
 $method=|void|insertChildren|int,const QList<QTreeWidgetItem *> &
 
-$prototype=bool isDisabled() const
-$method=|bool|isDisabled|
+$prototypeV2=bool isDisabled() const
 
-$prototype=bool isExpanded() const
-$method=|bool|isExpanded|
+$prototypeV2=bool isExpanded() const
 
-$prototype=bool isFirstColumnSpanned() const
-$method=|bool|isFirstColumnSpanned|
+$prototypeV2=bool isFirstColumnSpanned() const
 
-$prototype=bool isHidden() const
-$method=|bool|isHidden|
+$prototypeV2=bool isHidden() const
 
-$prototype=bool isSelected() const
-$method=|bool|isSelected|
+$prototypeV2=bool isSelected() const
 
-$prototype=QTreeWidgetItem * parent() const
-$method=|QTreeWidgetItem *|parent|
+$prototypeV2=QTreeWidgetItem * parent() const
 
 $prototype=virtual void read(QDataStream & in)
 $virtualMethod=|void|read|QDataStream &
@@ -269,8 +258,7 @@ $method=|QString|toolTip|int
 $prototype=QTreeWidget * treeWidget() const
 $method=|QTreeWidget *|treeWidget|
 
-$prototype=int type() const
-$method=|int|type|
+$prototypeV2=int type() const
 
 $prototype=QString whatsThis(int column) const
 $method=|QString|whatsThis|int

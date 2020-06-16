@@ -32,14 +32,12 @@ $constructor=|new|QWidget *=nullptr,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=bool isSizeGripEnabled () const
-$method=|bool|isSizeGripEnabled|
+$prototypeV2=bool isSizeGripEnabled() const
 
 $prototype=void setSizeGripEnabled ( bool )
 $method=|void|setSizeGripEnabled|bool
 
-$prototype=int result () const
-$method=|int|result|
+$prototypeV2=int result() const
 
 $prototype=void setModal ( bool modal )
 $method=|void|setModal|bool
@@ -47,38 +45,30 @@ $method=|void|setModal|bool
 $prototype=void setResult ( int i )
 $method=|void|setResult|int
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
 $prototype=void setVisible ( bool visible )
 $method=|void|setVisible|bool
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
-$prototype=virtual void accept ()
-$virtualMethod=|void|accept|
+$prototypeV2=virtual void accept()
 
 $prototype=virtual void done ( int r )
 $virtualMethod=|void|done|int
 
-$prototype=virtual int exec ()
-$virtualMethod=|int|exec|
+$prototypeV2=virtual int exec()
 
-$prototype=virtual void open ()
-$virtualMethod=|void|open|
+$prototypeV2=virtual void open()
 
-$prototype=virtual void reject ()
-$virtualMethod=|void|reject|
+$prototypeV2=virtual void reject()
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setOrientation (Qt::Orientation orientation)
 $method=|void|setOrientation|Qt::Orientation
 
-$prototype=QWidget* extension () const
-$method=|QWidget *|extension|
+$prototypeV2=QWidget * extension() const
 
 $prototype=void setExtension (QWidget* extension)
 $method=|void|setExtension|QWidget *

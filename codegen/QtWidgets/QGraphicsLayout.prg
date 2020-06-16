@@ -27,17 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=void activate ()
-$method=|void|activate|
+$prototypeV2=void activate()
 
-$prototype=virtual int count () const = 0
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const = 0
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
-$prototype=bool isActivated () const
-$method=|bool|isActivated|
+$prototypeV2=bool isActivated() const
 
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
 $virtualMethod=|QGraphicsLayoutItem *|itemAt|int
@@ -54,11 +50,9 @@ $virtualMethod=|void|widgetEvent|QEvent *
 $prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 $virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
 
-$prototype=virtual void updateGeometry ()
-$virtualMethod=|void|updateGeometry|
+$prototypeV2=virtual void updateGeometry()
 
-$prototype=static bool instantInvalidatePropagation ()
-$staticMethod=|bool|instantInvalidatePropagation|
+$prototypeV2=static bool instantInvalidatePropagation()
 
 $prototype=static void setInstantInvalidatePropagation ( bool enable )
 $staticMethod=|void|setInstantInvalidatePropagation|bool

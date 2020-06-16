@@ -32,26 +32,19 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
-$prototype=QString format () const
-$method=|QString|format|
+$prototypeV2=QString format() const
 
-$prototype=bool invertedAppearance ()
-$method=|bool|invertedAppearance|
+$prototypeV2=bool invertedAppearance()
 
-$prototype=bool isTextVisible () const
-$method=|bool|isTextVisible|
+$prototypeV2=bool isTextVisible() const
 
-$prototype=int maximum () const
-$method=|int|maximum|
+$prototypeV2=int maximum() const
 
-$prototype=int minimum () const
-$method=|int|minimum|
+$prototypeV2=int minimum() const
 
-$prototype=Qt::Orientation orientation () const
-$method=|Qt::Orientation|orientation|
+$prototypeV2=Qt::Orientation orientation() const
 
 $prototype=void setAlignment ( Qt::Alignment alignment )
 $method=|void|setAlignment|Qt::Alignment
@@ -68,23 +61,17 @@ $method=|void|setTextDirection|QProgressBar::Direction
 $prototype=void setTextVisible ( bool visible )
 $method=|void|setTextVisible|bool
 
-$prototype=virtual QString text () const
-$virtualMethod=|QString|text|
+$prototypeV2=virtual QString text() const
 
-$prototype=QProgressBar::Direction textDirection ()
-$method=|QProgressBar::Direction|textDirection|
+$prototypeV2=QProgressBar::Direction textDirection()
 
-$prototype=int value () const
-$method=|int|value|
+$prototypeV2=int value() const
 
-$prototype=virtual QSize minimumSizeHint () const
-$virtualMethod=|QSize|minimumSizeHint|
+$prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void reset ()
-$method=|void|reset|
+$prototypeV2=void reset()
 
 $prototype=void setMaximum ( int maximum )
 $method=|void|setMaximum|int

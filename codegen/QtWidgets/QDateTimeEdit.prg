@@ -74,71 +74,50 @@ HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 
 $deleteMethod
 
-$prototype=bool calendarPopup () const
-$method=|bool|calendarPopup|
+$prototypeV2=bool calendarPopup() const
 
-$prototype=QCalendarWidget * calendarWidget () const
-$method=|QCalendarWidget *|calendarWidget|
+$prototypeV2=QCalendarWidget * calendarWidget() const
 
-$prototype=void clearMaximumDate ()
-$method=|void|clearMaximumDate|
+$prototypeV2=void clearMaximumDate()
 
-$prototype=void clearMaximumDateTime ()
-$method=|void|clearMaximumDateTime|
+$prototypeV2=void clearMaximumDateTime()
 
-$prototype=void clearMaximumTime ()
-$method=|void|clearMaximumTime|
+$prototypeV2=void clearMaximumTime()
 
-$prototype=void clearMinimumDate ()
-$method=|void|clearMinimumDate|
+$prototypeV2=void clearMinimumDate()
 
-$prototype=void clearMinimumDateTime ()
-$method=|void|clearMinimumDateTime|
+$prototypeV2=void clearMinimumDateTime()
 
-$prototype=void clearMinimumTime ()
-$method=|void|clearMinimumTime|
+$prototypeV2=void clearMinimumTime()
 
-$prototype=Section currentSection () const
-$method=|QDateTimeEdit::Section|currentSection|
+$prototypeV2=QDateTimeEdit::Section currentSection() const
 
-$prototype=int currentSectionIndex () const
-$method=|int|currentSectionIndex|
+$prototypeV2=int currentSectionIndex() const
 
-$prototype=QDate date () const
-$method=|QDate|date|
+$prototypeV2=QDate date() const
 
-$prototype=QDateTime dateTime () const
-$method=|QDateTime|dateTime|
+$prototypeV2=QDateTime dateTime() const
 
-$prototype=QString displayFormat () const
-$method=|QString|displayFormat|
+$prototypeV2=QString displayFormat() const
 
-$prototype=Sections displayedSections () const
-$method=|QDateTimeEdit::Sections|displayedSections|
+$prototypeV2=QDateTimeEdit::Sections displayedSections() const
 
-$prototype=QDate maximumDate () const
-$method=|QDate|maximumDate|
+$prototypeV2=QDate maximumDate() const
 
-$prototype=QDateTime maximumDateTime () const
-$method=|QDateTime|maximumDateTime|
+$prototypeV2=QDateTime maximumDateTime() const
 
-$prototype=QTime maximumTime () const
-$method=|QTime|maximumTime|
+$prototypeV2=QTime maximumTime() const
 
-$prototype=QDate minimumDate () const
-$method=|QDate|minimumDate|
+$prototypeV2=QDate minimumDate() const
 
-$prototype=QDateTime minimumDateTime () const
-$method=|QDateTime|minimumDateTime|
+$prototypeV2=QDateTime minimumDateTime() const
 
-$prototype=QTime minimumTime () const
-$method=|QTime|minimumTime|
+$prototypeV2=QTime minimumTime() const
 
 $prototype=Section sectionAt ( int index ) const
 $method=|QDateTimeEdit::Section|sectionAt|int
 
-$prototype=int sectionCount () const
-$method=|int|sectionCount|
+$prototypeV2=int sectionCount() const
 
 $prototype=QString sectionText ( Section section ) const
 $method=|QString|sectionText|QDateTimeEdit::Section
@@ -191,20 +170,16 @@ $method=|void|setTimeRange|const QTime &,const QTime &
 $prototype=void setTimeSpec ( Qt::TimeSpec spec )
 $method=|void|setTimeSpec|Qt::TimeSpec
 
-$prototype=QTime time () const
-$method=|QTime|time|
+$prototypeV2=QTime time() const
 
-$prototype=Qt::TimeSpec timeSpec () const
-$method=|Qt::TimeSpec|timeSpec|
+$prototypeV2=Qt::TimeSpec timeSpec() const
 
-$prototype=virtual void clear ()
-$virtualMethod=|void|clear|
+$prototypeV2=virtual void clear()
 
 $prototype=virtual bool event ( QEvent * event )
 $virtualMethod=|bool|event|QEvent *
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 $prototype=virtual void stepBy ( int steps )
 $virtualMethod=|void|stepBy|int

@@ -35,14 +35,11 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=Qt::ArrowType arrowType () const
-$method=|Qt::ArrowType|arrowType|
+$prototypeV2=Qt::ArrowType arrowType() const
 
-$prototype=bool autoRaise () const
-$method=|bool|autoRaise|
+$prototypeV2=bool autoRaise() const
 
-$prototype=QAction * defaultAction () const
-$method=|QAction *|defaultAction|
+$prototypeV2=QAction * defaultAction() const
 
 $prototype=QMenu * menu () const
 $method=|QMenu *|menu||#ifndef QT_NO_MENU
@@ -62,14 +59,11 @@ $method=|void|setMenu|QMenu *|#ifndef QT_NO_MENU
 $prototype=void setPopupMode ( ToolButtonPopupMode mode )
 $method=|void|setPopupMode|QToolButton::ToolButtonPopupMode|#ifndef QT_NO_MENU
 
-$prototype=Qt::ToolButtonStyle toolButtonStyle () const
-$method=|Qt::ToolButtonStyle|toolButtonStyle|
+$prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=void setDefaultAction ( QAction * action )
 $method=|void|setDefaultAction|QAction *

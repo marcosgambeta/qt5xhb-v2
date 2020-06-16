@@ -32,38 +32,28 @@ $constructor=|new|QWidget *=nullptr
 
 $deleteMethod
 
-$prototype=int batchSize () const
-$method=|int|batchSize|
+$prototypeV2=int batchSize() const
 
-$prototype=void clearPropertyFlags ()
-$method=|void|clearPropertyFlags|
+$prototypeV2=void clearPropertyFlags()
 
-$prototype=Flow flow () const
-$method=|QListView::Flow|flow|
+$prototypeV2=QListView::Flow flow() const
 
-$prototype=QSize gridSize () const
-$method=|QSize|gridSize|
+$prototypeV2=QSize gridSize() const
 
 $prototype=bool isRowHidden ( int row ) const
 $method=|bool|isRowHidden|int
 
-$prototype=bool isSelectionRectVisible () const
-$method=|bool|isSelectionRectVisible|
+$prototypeV2=bool isSelectionRectVisible() const
 
-$prototype=bool isWrapping () const
-$method=|bool|isWrapping|
+$prototypeV2=bool isWrapping() const
 
-$prototype=LayoutMode layoutMode () const
-$method=|QListView::LayoutMode|layoutMode|
+$prototypeV2=QListView::LayoutMode layoutMode() const
 
-$prototype=int modelColumn () const
-$method=|int|modelColumn|
+$prototypeV2=int modelColumn() const
 
-$prototype=Movement movement () const
-$method=|QListView::Movement|movement|
+$prototypeV2=QListView::Movement movement() const
 
-$prototype=ResizeMode resizeMode () const
-$method=|QListView::ResizeMode|resizeMode|
+$prototypeV2=QListView::ResizeMode resizeMode() const
 
 $prototype=void setBatchSize ( int batchSize )
 $method=|void|setBatchSize|int
@@ -107,17 +97,13 @@ $method=|void|setWordWrap|bool
 $prototype=void setWrapping ( bool enable )
 $method=|void|setWrapping|bool
 
-$prototype=int spacing () const
-$method=|int|spacing|
+$prototypeV2=int spacing() const
 
-$prototype=bool uniformItemSizes () const
-$method=|bool|uniformItemSizes|
+$prototypeV2=bool uniformItemSizes() const
 
-$prototype=ViewMode viewMode () const
-$method=|QListView::ViewMode|viewMode|
+$prototypeV2=QListView::ViewMode viewMode() const
 
-$prototype=bool wordWrap () const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=virtual QModelIndex indexAt ( const QPoint & p ) const
 $virtualMethod=|QModelIndex|indexAt|const QPoint &

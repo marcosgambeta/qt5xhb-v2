@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 }
 $addMethod=addTab
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
 $prototype=QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
 $method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
@@ -71,35 +70,29 @@ $method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
 $prototype=void setCornerWidget ( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
 $method=|void|setCornerWidget|QWidget *,Qt::Corner=Qt::TopRightCorner
 
-$prototype=int count () const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=int currentIndex () const
-$method=|int|currentIndex|
+$prototypeV2=int currentIndex() const
 
 $prototype=void setCurrentIndex ( int index )
 $method=|void|setCurrentIndex|int
 
-$prototype=QWidget * currentWidget () const
-$method=|QWidget *|currentWidget|
+$prototypeV2=QWidget * currentWidget() const
 
 $prototype=void setCurrentWidget ( QWidget * widget )
 $method=|void|setCurrentWidget|QWidget *
 
-$prototype=bool documentMode () const
-$method=|bool|documentMode|
+$prototypeV2=bool documentMode() const
 
 $prototype=void setDocumentMode ( bool set )
 $method=|void|setDocumentMode|bool
 
-$prototype=Qt::TextElideMode elideMode () const
-$method=|Qt::TextElideMode|elideMode|
+$prototypeV2=Qt::TextElideMode elideMode() const
 
 $prototype=void setElideMode ( Qt::TextElideMode )
 $method=|void|setElideMode|Qt::TextElideMode
 
-$prototype=QSize iconSize () const
-$method=|QSize|iconSize|
+$prototypeV2=QSize iconSize() const
 
 $prototype=void setIconSize ( const QSize & size )
 $method=|void|setIconSize|const QSize &
@@ -135,8 +128,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 }
 $addMethod=insertTab
 
-$prototype=bool isMovable () const
-$method=|bool|isMovable|
+$prototypeV2=bool isMovable() const
 
 $prototype=void setMovable ( bool movable )
 $method=|void|setMovable|bool
@@ -156,14 +148,12 @@ $method=|QIcon|tabIcon|int
 $prototype=void setTabIcon ( int index, const QIcon & icon )
 $method=|void|setTabIcon|int,const QIcon &
 
-$prototype=TabPosition tabPosition () const
-$method=|QTabWidget::TabPosition|tabPosition|
+$prototypeV2=QTabWidget::TabPosition tabPosition() const
 
 $prototype=void setTabPosition ( TabPosition )
 $method=|void|setTabPosition|QTabWidget::TabPosition
 
-$prototype=TabShape tabShape () const
-$method=|QTabWidget::TabShape|tabShape|
+$prototypeV2=QTabWidget::TabShape tabShape() const
 
 $prototype=void setTabShape ( TabShape s )
 $method=|void|setTabShape|QTabWidget::TabShape
@@ -186,14 +176,12 @@ $method=|QString|tabWhatsThis|int|#ifndef QT_NO_WHATSTHIS
 $prototype=void setTabWhatsThis ( int index, const QString & text )
 $method=|void|setTabWhatsThis|int,const QString &|#ifndef QT_NO_WHATSTHIS
 
-$prototype=bool usesScrollButtons () const
-$method=|bool|usesScrollButtons|
+$prototypeV2=bool usesScrollButtons() const
 
 $prototype=void setUsesScrollButtons ( bool useButtons )
 $method=|void|setUsesScrollButtons|bool
 
-$prototype=bool tabsClosable () const
-$method=|bool|tabsClosable|
+$prototypeV2=bool tabsClosable() const
 
 $prototype=void setTabsClosable ( bool closeable )
 $method=|void|setTabsClosable|bool
@@ -201,17 +189,14 @@ $method=|void|setTabsClosable|bool
 $prototype=QWidget * widget ( int index ) const
 $method=|QWidget *|widget|int
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 $prototype=int heightForWidth(int width) const
 $method=|int|heightForWidth|int
 
-$prototype=bool hasHeightForWidth() const
-$method=|bool|hasHeightForWidth|
+$prototypeV2=bool hasHeightForWidth() const
 
 $prototype=bool tabBarAutoHide() const
 $method=5,4,0|bool|tabBarAutoHide|
@@ -219,8 +204,7 @@ $method=5,4,0|bool|tabBarAutoHide|
 $prototype=void setTabBarAutoHide(bool enabled)
 $method=5,4,0|void|setTabBarAutoHide|bool
 
-$prototype=QTabBar* tabBar() const
-$method=|QTabBar *|tabBar|
+$prototypeV2=QTabBar * tabBar() const
 
 %%
 %% SIGNALS

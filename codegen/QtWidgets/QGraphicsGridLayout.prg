@@ -64,8 +64,7 @@ $method=|Qt::Alignment|alignment|QGraphicsLayoutItem *
 $prototype=Qt::Alignment columnAlignment ( int column ) const
 $method=|Qt::Alignment|columnAlignment|int
 
-$prototype=int columnCount () const
-$method=|int|columnCount|
+$prototypeV2=int columnCount() const
 
 $prototype=qreal columnMaximumWidth ( int column ) const
 $method=|qreal|columnMaximumWidth|int
@@ -82,8 +81,7 @@ $method=|qreal|columnSpacing|int
 $prototype=int columnStretchFactor ( int column ) const
 $method=|int|columnStretchFactor|int
 
-$prototype=qreal horizontalSpacing () const
-$method=|qreal|horizontalSpacing|
+$prototypeV2=qreal horizontalSpacing() const
 
 $prototype=QGraphicsLayoutItem * itemAt ( int row, int column ) const
 $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
@@ -119,8 +117,7 @@ $method=|void|removeItem|QGraphicsLayoutItem *
 $prototype=Qt::Alignment rowAlignment ( int row ) const
 $method=|Qt::Alignment|rowAlignment|int
 
-$prototype=int rowCount () const
-$method=|int|rowCount|
+$prototypeV2=int rowCount() const
 
 $prototype=qreal rowMaximumHeight ( int row ) const
 $method=|qreal|rowMaximumHeight|int
@@ -191,14 +188,11 @@ $method=|void|setSpacing|qreal
 $prototype=void setVerticalSpacing ( qreal spacing )
 $method=|void|setVerticalSpacing|qreal
 
-$prototype=qreal verticalSpacing () const
-$method=|qreal|verticalSpacing|
+$prototypeV2=qreal verticalSpacing() const
 
-$prototype=virtual int count () const
-$virtualMethod=|int|count|
+$prototypeV2=virtual int count() const
 
-$prototype=virtual void invalidate ()
-$virtualMethod=|void|invalidate|
+$prototypeV2=virtual void invalidate()
 
 $prototype=virtual void removeAt ( int index )
 $virtualMethod=|void|removeAt|int

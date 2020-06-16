@@ -189,7 +189,6 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 }
 $addMethod=setAccepted
 
-$prototype=QWidget * widget () const
-$method=|QWidget *|widget|
+$prototypeV2=QWidget * widget() const
 
 #pragma ENDDUMP

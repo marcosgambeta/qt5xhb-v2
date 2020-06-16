@@ -39,8 +39,7 @@ $deleteMethod
 %% Q_PROPERTY(bool showGrid READ showGrid WRITE setShowGrid)
 %%
 
-$prototype=bool showGrid() const
-$method=|bool|showGrid|
+$prototypeV2=bool showGrid() const
 
 $prototype=void setShowGrid(bool show) [slot]
 $method=|void|setShowGrid|bool
@@ -49,8 +48,7 @@ $method=|void|setShowGrid|bool
 %% Q_PROPERTY(Qt::PenStyle gridStyle READ gridStyle WRITE setGridStyle)
 %%
 
-$prototype=Qt::PenStyle gridStyle() const
-$method=|Qt::PenStyle|gridStyle|
+$prototypeV2=Qt::PenStyle gridStyle() const
 
 $prototype=void setGridStyle(Qt::PenStyle style)
 $method=|void|setGridStyle|Qt::PenStyle
@@ -59,8 +57,7 @@ $method=|void|setGridStyle|Qt::PenStyle
 %% Q_PROPERTY(bool sortingEnabled READ isSortingEnabled WRITE setSortingEnabled)
 %%
 
-$prototype=bool isSortingEnabled() const
-$method=|bool|isSortingEnabled|
+$prototypeV2=bool isSortingEnabled() const
 
 $prototype=void setSortingEnabled(bool enable)
 $method=|void|setSortingEnabled|bool
@@ -69,8 +66,7 @@ $method=|void|setSortingEnabled|bool
 %% Q_PROPERTY(bool wordWrap READ wordWrap WRITE setWordWrap)
 %%
 
-$prototype=bool wordWrap() const
-$method=|bool|wordWrap|
+$prototypeV2=bool wordWrap() const
 
 $prototype=void setWordWrap(bool on)
 $method=|void|setWordWrap|bool
@@ -81,8 +77,7 @@ $method=|void|setWordWrap|bool
 
 %% #if QT_CONFIG(abstractbutton)
 
-$prototype=bool isCornerButtonEnabled() const
-$method=|bool|isCornerButtonEnabled|
+$prototypeV2=bool isCornerButtonEnabled() const
 
 $prototype=void setCornerButtonEnabled(bool enable)
 $method=|void|setCornerButtonEnabled|bool
@@ -105,11 +100,9 @@ $virtualMethod=|void|setSelectionModel|QItemSelectionModel *
 $prototype=void doItemsLayout() override
 %% TODO: ausente na documentacao do Qt
 
-$prototype=QHeaderView *horizontalHeader() const
-$method=|QHeaderView *|horizontalHeader|
+$prototypeV2=QHeaderView * horizontalHeader() const
 
-$prototype=QHeaderView *verticalHeader() const
-$method=|QHeaderView *|verticalHeader|
+$prototypeV2=QHeaderView * verticalHeader() const
 
 $prototype=void setHorizontalHeader(QHeaderView *header)
 $method=|void|setHorizontalHeader|QHeaderView *
@@ -171,8 +164,7 @@ $method=|int|rowSpan|int,int
 $prototype=int columnSpan(int row, int column) const
 $method=|int|columnSpan|int,int
 
-$prototype=void clearSpans()
-$method=|void|clearSpans|
+$prototypeV2=void clearSpans()
 
 $prototype=void sortByColumn(int column, Qt::SortOrder order)
 $method=|void|sortByColumn|int,Qt::SortOrder
@@ -198,14 +190,12 @@ $method=|void|showColumn|int
 $prototype=void resizeRowToContents(int row) [slot]
 $method=|void|resizeRowToContents|int
 
-$prototype=void resizeRowsToContents() [slot]
-$method=|void|resizeRowsToContents|
+$prototypeV2=void resizeRowsToContents() [slot]
 
 $prototype=void resizeColumnToContents(int column) [slot]
 $method=|void|resizeColumnToContents|int
 
-$prototype=void resizeColumnsToContents() [slot]
-$method=|void|resizeColumnsToContents|
+$prototypeV2=void resizeColumnsToContents() [slot]
 
 $prototype=void sortByColumn(int column) [slot]
 %% TODO: ausente na documentacao do Qt

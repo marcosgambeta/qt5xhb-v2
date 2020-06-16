@@ -59,20 +59,16 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
 
 $deleteMethod
 
-$prototype=bool acceptRichText () const
-$method=|bool|acceptRichText|
+$prototypeV2=bool acceptRichText() const
 
-$prototype=Qt::Alignment alignment () const
-$method=|Qt::Alignment|alignment|
+$prototypeV2=Qt::Alignment alignment() const
 
 $prototype=QString anchorAt ( const QPoint & pos ) const
 $method=|QString|anchorAt|const QPoint &
 
-$prototype=AutoFormatting autoFormatting () const
-$method=|QTextEdit::AutoFormatting|autoFormatting|
+$prototypeV2=QTextEdit::AutoFormatting autoFormatting() const
 
-$prototype=bool canPaste () const
-$method=|bool|canPaste|
+$prototypeV2=bool canPaste() const
 
 $prototype=QMenu * createStandardContextMenu ()
 $internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu1|
@@ -102,11 +98,9 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 }
 $addMethod=createStandardContextMenu
 
-$prototype=QTextCharFormat currentCharFormat () const
-$method=|QTextCharFormat|currentCharFormat|
+$prototypeV2=QTextCharFormat currentCharFormat() const
 
-$prototype=QFont currentFont () const
-$method=|QFont|currentFont|
+$prototypeV2=QFont currentFont() const
 
 $prototype=QTextCursor cursorForPosition ( const QPoint & pos ) const
 $method=|QTextCursor|cursorForPosition|const QPoint &
@@ -139,47 +133,34 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 }
 $addMethod=cursorRect
 
-$prototype=int cursorWidth () const
-$method=|int|cursorWidth|
+$prototypeV2=int cursorWidth() const
 
-$prototype=QTextDocument * document () const
-$method=|QTextDocument *|document|
+$prototypeV2=QTextDocument * document() const
 
-$prototype=QString documentTitle () const
-$method=|QString|documentTitle|
+$prototypeV2=QString documentTitle() const
 
-$prototype=void ensureCursorVisible ()
-$method=|void|ensureCursorVisible|
+$prototypeV2=void ensureCursorVisible()
 
 $prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
 $method=|bool|find|const QString &,QTextDocument::FindFlags=0
 
-$prototype=QString fontFamily () const
-$method=|QString|fontFamily|
+$prototypeV2=QString fontFamily() const
 
-$prototype=bool fontItalic () const
-$method=|bool|fontItalic|
+$prototypeV2=bool fontItalic() const
 
-$prototype=qreal fontPointSize () const
-$method=|qreal|fontPointSize|
+$prototypeV2=qreal fontPointSize() const
 
-$prototype=bool fontUnderline () const
-$method=|bool|fontUnderline|
+$prototypeV2=bool fontUnderline() const
 
-$prototype=int fontWeight () const
-$method=|int|fontWeight|
+$prototypeV2=int fontWeight() const
 
-$prototype=bool isReadOnly () const
-$method=|bool|isReadOnly|
+$prototypeV2=bool isReadOnly() const
 
-$prototype=bool isUndoRedoEnabled () const
-$method=|bool|isUndoRedoEnabled|
+$prototypeV2=bool isUndoRedoEnabled() const
 
-$prototype=int lineWrapColumnOrWidth () const
-$method=|int|lineWrapColumnOrWidth|
+$prototypeV2=int lineWrapColumnOrWidth() const
 
-$prototype=LineWrapMode lineWrapMode () const
-$method=|QTextEdit::LineWrapMode|lineWrapMode|
+$prototypeV2=QTextEdit::LineWrapMode lineWrapMode() const
 
 $prototype=virtual QVariant loadResource ( int type, const QUrl & name )
 $virtualMethod=|QVariant|loadResource|int,const QUrl &
@@ -190,8 +171,7 @@ $method=|void|mergeCurrentCharFormat|const QTextCharFormat &
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
-$prototype=bool overwriteMode () const
-$method=|bool|overwriteMode|
+$prototypeV2=bool overwriteMode() const
 
 $prototype=void print ( QPrinter * printer ) const
 $method=|void|print|QPrinter *
@@ -244,44 +224,32 @@ $method=|void|setUndoRedoEnabled|bool
 $prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
 $method=|void|setWordWrapMode|QTextOption::WrapMode
 
-$prototype=bool tabChangesFocus () const
-$method=|bool|tabChangesFocus|
+$prototypeV2=bool tabChangesFocus() const
 
-$prototype=int tabStopWidth () const
-$method=|int|tabStopWidth|
+$prototypeV2=int tabStopWidth() const
 
-$prototype=QColor textBackgroundColor () const
-$method=|QColor|textBackgroundColor|
+$prototypeV2=QColor textBackgroundColor() const
 
-$prototype=QColor textColor () const
-$method=|QColor|textColor|
+$prototypeV2=QColor textColor() const
 
-$prototype=QTextCursor textCursor () const
-$method=|QTextCursor|textCursor|
+$prototypeV2=QTextCursor textCursor() const
 
-$prototype=Qt::TextInteractionFlags textInteractionFlags () const
-$method=|Qt::TextInteractionFlags|textInteractionFlags|
+$prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
-$prototype=QString toHtml () const
-$method=|QString|toHtml|
+$prototypeV2=QString toHtml() const
 
-$prototype=QString toPlainText () const
-$method=|QString|toPlainText|
+$prototypeV2=QString toPlainText() const
 
-$prototype=QTextOption::WrapMode wordWrapMode () const
-$method=|QTextOption::WrapMode|wordWrapMode|
+$prototypeV2=QTextOption::WrapMode wordWrapMode() const
 
 $prototype=void append ( const QString & text )
 $method=|void|append|const QString &
 
-$prototype=void clear ()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=void copy ()
-$method=|void|copy|
+$prototypeV2=void copy()
 
-$prototype=void cut ()
-$method=|void|cut|
+$prototypeV2=void cut()
 
 $prototype=void insertHtml ( const QString & text )
 $method=|void|insertHtml|const QString &
@@ -289,17 +257,14 @@ $method=|void|insertHtml|const QString &
 $prototype=void insertPlainText ( const QString & text )
 $method=|void|insertPlainText|const QString &
 
-$prototype=void paste ()
-$method=|void|paste|
+$prototypeV2=void paste()
 
-$prototype=void redo ()
-$method=|void|redo|
+$prototypeV2=void redo()
 
 $prototype=void scrollToAnchor ( const QString & name )
 $method=|void|scrollToAnchor|const QString &
 
-$prototype=void selectAll ()
-$method=|void|selectAll|
+$prototypeV2=void selectAll()
 
 $prototype=void setAlignment ( Qt::Alignment a )
 $method=|void|setAlignment|Qt::Alignment
@@ -337,8 +302,7 @@ $method=|void|setTextBackgroundColor|const QColor &
 $prototype=void setTextColor ( const QColor & c )
 $method=|void|setTextColor|const QColor &
 
-$prototype=void undo ()
-$method=|void|undo|
+$prototypeV2=void undo()
 
 $prototype=void zoomIn ( int range = 1 )
 $method=|void|zoomIn|int=1

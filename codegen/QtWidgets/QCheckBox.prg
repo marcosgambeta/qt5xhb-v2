@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
 
 $deleteMethod
 
-$prototype=Qt::CheckState checkState () const
-$method=|Qt::CheckState|checkState|
+$prototypeV2=Qt::CheckState checkState() const
 
-$prototype=bool isTristate () const
-$method=|bool|isTristate|
+$prototypeV2=bool isTristate() const
 
 $prototype=void setCheckState ( Qt::CheckState state )
 $method=|void|setCheckState|Qt::CheckState
@@ -68,11 +66,9 @@ $method=|void|setCheckState|Qt::CheckState
 $prototype=void setTristate ( bool y = true )
 $method=|void|setTristate|bool=true
 
-$prototype=QSize minimumSizeHint () const
-$method=|QSize|minimumSizeHint|
+$prototypeV2=QSize minimumSizeHint() const
 
-$prototype=QSize sizeHint () const
-$method=|QSize|sizeHint|
+$prototypeV2=QSize sizeHint() const
 
 %%
 %% SIGNALS

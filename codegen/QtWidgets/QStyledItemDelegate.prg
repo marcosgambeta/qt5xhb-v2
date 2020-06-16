@@ -48,8 +48,7 @@ $method=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
 $prototype=void updateEditorGeometry(QWidget *editor,const QStyleOptionViewItem &option,const QModelIndex &index) const
 $method=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
 
-$prototype=QItemEditorFactory *itemEditorFactory() const
-$method=|QItemEditorFactory *|itemEditorFactory|
+$prototypeV2=QItemEditorFactory * itemEditorFactory() const
 
 $prototype=void setItemEditorFactory(QItemEditorFactory *factory)
 $method=|void|setItemEditorFactory|QItemEditorFactory *

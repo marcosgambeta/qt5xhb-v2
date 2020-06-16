@@ -65,17 +65,14 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 }
 $addMethod=availableGeometry
 
-$prototype=bool isVirtualDesktop () const
-$method=|bool|isVirtualDesktop|
+$prototypeV2=bool isVirtualDesktop() const
 
-$prototype=int primaryScreen () const
-$method=|int|primaryScreen|
+$prototypeV2=int primaryScreen() const
 
 $prototype=QWidget * screen ( int screen = -1 )
 $method=|QWidget *|screen|int=-1
 
-$prototype=int screenCount () const
-$method=|int|screenCount|
+$prototypeV2=int screenCount() const
 
 $prototype=const QRect screenGeometry ( int screen = -1 ) const
 $internalMethod=|const QRect|screenGeometry,screenGeometry1|int=-1
