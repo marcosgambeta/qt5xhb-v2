@@ -29,44 +29,31 @@ $deleteMethod
 
 $prototypeV2=virtual int count() const = 0
 
-$prototype=virtual QString declaredInClass ( int index ) const = 0
-$virtualMethod=|QString|declaredInClass|int
+$prototypeV2=virtual QString declaredInClass( int index ) const = 0
 
-$prototype=virtual int indexOf ( const QString & name ) const = 0
-$virtualMethod=|int|indexOf|const QString &
+$prototypeV2=virtual int indexOf( const QString & name ) const = 0
 
-$prototype=virtual bool inheritedFromWidget ( int index ) const = 0
-$virtualMethod=|bool|inheritedFromWidget|int
+$prototypeV2=virtual bool inheritedFromWidget( int index ) const = 0
 
-$prototype=virtual bool isSignal ( int index ) const = 0
-$virtualMethod=|bool|isSignal|int
+$prototypeV2=virtual bool isSignal( int index ) const = 0
 
-$prototype=virtual bool isSlot ( int index ) const = 0
-$virtualMethod=|bool|isSlot|int
+$prototypeV2=virtual bool isSlot( int index ) const = 0
 
-$prototype=virtual bool isVisible ( int index ) const = 0
-$virtualMethod=|bool|isVisible|int
+$prototypeV2=virtual bool isVisible( int index ) const = 0
 
-$prototype=virtual QString memberGroup ( int index ) const = 0
-$virtualMethod=|QString|memberGroup|int
+$prototypeV2=virtual QString memberGroup( int index ) const = 0
 
-$prototype=virtual QString memberName ( int index ) const = 0
-$virtualMethod=|QString|memberName|int
+$prototypeV2=virtual QString memberName( int index ) const = 0
 
-$prototype=virtual QList<QByteArray> parameterNames ( int index ) const = 0
-$virtualMethod=|QList<QByteArray>|parameterNames|int
+$prototypeV2=virtual QList<QByteArray> parameterNames( int index ) const = 0
 
-$prototype=virtual QList<QByteArray> parameterTypes ( int index ) const = 0
-$virtualMethod=|QList<QByteArray>|parameterTypes|int
+$prototypeV2=virtual QList<QByteArray> parameterTypes( int index ) const = 0
 
-$prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
-$virtualMethod=|void|setMemberGroup|int,const QString &
+$prototypeV2=virtual void setMemberGroup( int index, const QString & group ) = 0
 
-$prototype=virtual void setVisible ( int index, bool visible ) = 0
-$virtualMethod=|void|setVisible|int,bool
+$prototypeV2=virtual void setVisible( int index, bool visible ) = 0
 
-$prototype=virtual QString signature ( int index ) const = 0
-$virtualMethod=|QString|signature|int
+$prototypeV2=virtual QString signature( int index ) const = 0
 
 $extraMethods
 

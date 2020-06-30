@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=virtual QString codeTemplate() const
 
-$prototype=virtual QWidget * createWidget ( QWidget * parent ) = 0
-$virtualMethod=|QWidget *|createWidget|QWidget *
+$prototypeV2=virtual QWidget * createWidget( QWidget * parent ) = 0
 
 $prototypeV2=virtual QString domXml() const
 
@@ -40,8 +39,7 @@ $prototypeV2=virtual QIcon icon() const = 0
 
 $prototypeV2=virtual QString includeFile() const = 0
 
-$prototype=virtual void initialize ( QDesignerFormEditorInterface * formEditor )
-$virtualMethod=|void|initialize|QDesignerFormEditorInterface *
+$prototypeV2=virtual void initialize( QDesignerFormEditorInterface * formEditor )
 
 $prototypeV2=virtual bool isContainer() const = 0
 

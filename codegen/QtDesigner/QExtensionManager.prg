@@ -30,13 +30,10 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
-$virtualMethod=|QObject *|extension|QObject *,const QString &
+$prototypeV2=virtual QObject * extension( QObject * object, const QString & iid ) const
 
-$prototype=virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
-$virtualMethod=|void|registerExtensions|QAbstractExtensionFactory *,const QString &=QString()
+$prototypeV2=virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 
-$prototype=virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
-$virtualMethod=|void|unregisterExtensions|QAbstractExtensionFactory *,const QString &=QString()
+$prototypeV2=virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 
 #pragma ENDDUMP

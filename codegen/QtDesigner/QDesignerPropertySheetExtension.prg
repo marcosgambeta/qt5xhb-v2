@@ -31,47 +31,33 @@ $deleteMethod
 
 $prototypeV2=virtual int count() const = 0
 
-$prototype=virtual bool hasReset ( int index ) const = 0
-$virtualMethod=|bool|hasReset|int
+$prototypeV2=virtual bool hasReset( int index ) const = 0
 
-$prototype=virtual int indexOf ( const QString & name ) const = 0
-$virtualMethod=|int|indexOf|const QString &
+$prototypeV2=virtual int indexOf( const QString & name ) const = 0
 
-$prototype=virtual bool isAttribute ( int index ) const = 0
-$virtualMethod=|bool|isAttribute|int
+$prototypeV2=virtual bool isAttribute( int index ) const = 0
 
-$prototype=virtual bool isChanged ( int index ) const = 0
-$virtualMethod=|bool|isChanged|int
+$prototypeV2=virtual bool isChanged( int index ) const = 0
 
-$prototype=virtual bool isVisible ( int index ) const = 0
-$virtualMethod=|bool|isVisible|int
+$prototypeV2=virtual bool isVisible( int index ) const = 0
 
-$prototype=virtual QVariant property ( int index ) const = 0
-$virtualMethod=|QVariant|property|int
+$prototypeV2=virtual QVariant property( int index ) const = 0
 
-$prototype=virtual QString propertyGroup ( int index ) const = 0
-$virtualMethod=|QString|propertyGroup|int
+$prototypeV2=virtual QString propertyGroup( int index ) const = 0
 
-$prototype=virtual QString propertyName ( int index ) const = 0
-$virtualMethod=|QString|propertyName|int
+$prototypeV2=virtual QString propertyName( int index ) const = 0
 
-$prototype=virtual bool reset ( int index ) = 0
-$virtualMethod=|bool|reset|int
+$prototypeV2=virtual bool reset( int index ) = 0
 
-$prototype=virtual void setAttribute ( int index, bool attribute ) = 0
-$virtualMethod=|void|setAttribute|int,bool
+$prototypeV2=virtual void setAttribute( int index, bool attribute ) = 0
 
-$prototype=virtual void setChanged ( int index, bool changed ) = 0
-$virtualMethod=|void|setChanged|int,bool
+$prototypeV2=virtual void setChanged( int index, bool changed ) = 0
 
-$prototype=virtual void setProperty ( int index, const QVariant & value ) = 0
-$virtualMethod=|void|setProperty|int,const QVariant &
+$prototypeV2=virtual void setProperty( int index, const QVariant & value ) = 0
 
-$prototype=virtual void setPropertyGroup ( int index, const QString & group ) = 0
-$virtualMethod=|void|setPropertyGroup|int,const QString &
+$prototypeV2=virtual void setPropertyGroup( int index, const QString & group ) = 0
 
-$prototype=virtual void setVisible ( int index, bool visible ) = 0
-$virtualMethod=|void|setVisible|int,bool
+$prototypeV2=virtual void setVisible( int index, bool visible ) = 0
 
 $extraMethods
 

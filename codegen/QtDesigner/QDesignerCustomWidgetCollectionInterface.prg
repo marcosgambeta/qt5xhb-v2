@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
-$virtualMethod=|QList<QDesignerCustomWidgetInterface *>|customWidgets|
+$prototypeV2=virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
 
 $extraMethods
 

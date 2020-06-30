@@ -31,8 +31,7 @@ $deleteMethod
 
 $prototypeV2=virtual QAction * preferredEditAction() const
 
-$prototype=virtual QList<QAction *> taskActions () const = 0
-$virtualMethod=|QList<QAction *>|taskActions|
+$prototypeV2=virtual QList<QAction *> taskActions() const = 0
 
 $extraMethods
 

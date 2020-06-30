@@ -33,7 +33,6 @@ $prototypeV2=virtual bool load() = 0
 
 $prototypeV2=virtual bool save() = 0
 
-$prototype=virtual void setFileName ( const QString & fileName ) = 0
-$virtualMethod=|void|setFileName|const QString &
+$prototypeV2=virtual void setFileName( const QString & fileName ) = 0
 
 #pragma ENDDUMP

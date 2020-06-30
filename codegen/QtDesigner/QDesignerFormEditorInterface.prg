@@ -47,17 +47,13 @@ $prototypeV2=QDesignerObjectInspectorInterface * objectInspector() const
 
 $prototypeV2=QDesignerPropertyEditorInterface * propertyEditor() const
 
-$prototype=void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
-$method=|void|setActionEditor|QDesignerActionEditorInterface *
+$prototypeV2=void setActionEditor( QDesignerActionEditorInterface * actionEditor )
 
-$prototype=void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
-$method=|void|setObjectInspector|QDesignerObjectInspectorInterface *
+$prototypeV2=void setObjectInspector( QDesignerObjectInspectorInterface * objectInspector )
 
-$prototype=void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
-$method=|void|setPropertyEditor|QDesignerPropertyEditorInterface *
+$prototypeV2=void setPropertyEditor( QDesignerPropertyEditorInterface * propertyEditor )
 
-$prototype=void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
-$method=|void|setWidgetBox|QDesignerWidgetBoxInterface *
+$prototypeV2=void setWidgetBox( QDesignerWidgetBoxInterface * widgetBox )
 
 $prototypeV2=QWidget * topLevel() const
 

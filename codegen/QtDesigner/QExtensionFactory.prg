@@ -34,7 +34,6 @@ $deleteMethod
 
 $prototypeV2=QExtensionManager * extensionManager() const
 
-$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
-$virtualMethod=|QObject *|extension|QObject *,const QString &
+$prototypeV2=virtual QObject * extension( QObject * object, const QString & iid ) const
 
 #pragma ENDDUMP

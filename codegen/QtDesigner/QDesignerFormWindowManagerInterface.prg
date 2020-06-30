@@ -72,22 +72,17 @@ $prototypeV2=virtual QDesignerFormWindowInterface * activeFormWindow() const
 
 $prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
-$prototype=virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-$virtualMethod=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=nullptr,Qt::WindowFlags=0
+$prototypeV2=virtual QDesignerFormWindowInterface * createFormWindow( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 
-$prototype=virtual QDesignerFormWindowInterface * formWindow ( int index ) const
-$virtualMethod=|QDesignerFormWindowInterface *|formWindow|int
+$prototypeV2=virtual QDesignerFormWindowInterface * formWindow( int index ) const
 
 $prototypeV2=virtual int formWindowCount() const
 
-$prototype=virtual void addFormWindow ( QDesignerFormWindowInterface * formWindow )
-$virtualMethod=|void|addFormWindow|QDesignerFormWindowInterface *
+$prototypeV2=virtual void addFormWindow( QDesignerFormWindowInterface * formWindow )
 
-$prototype=virtual void removeFormWindow ( QDesignerFormWindowInterface * formWindow )
-$virtualMethod=|void|removeFormWindow|QDesignerFormWindowInterface *
+$prototypeV2=virtual void removeFormWindow( QDesignerFormWindowInterface * formWindow )
 
-$prototype=virtual void setActiveFormWindow ( QDesignerFormWindowInterface * formWindow )
-$virtualMethod=|void|setActiveFormWindow|QDesignerFormWindowInterface *
+$prototypeV2=virtual void setActiveFormWindow( QDesignerFormWindowInterface * formWindow )
 
 %%
 %% SIGNALS

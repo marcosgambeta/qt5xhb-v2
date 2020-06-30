@@ -31,10 +31,8 @@ $deleteMethod
 
 $prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
-$prototype=virtual void manageAction ( QAction * action ) = 0
-$virtualMethod=|void|manageAction|QAction *
+$prototypeV2=virtual void manageAction( QAction * action ) = 0
 
-$prototype=virtual void setFormWindow ( QDesignerFormWindowInterface * formWindow ) = 0
-$virtualMethod=|void|setFormWindow|QDesignerFormWindowInterface *
+$prototypeV2=virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 
 #pragma ENDDUMP
