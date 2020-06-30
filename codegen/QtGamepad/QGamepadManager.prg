@@ -37,9 +37,8 @@ $prototype=~QGamepadManager() [private]
 %% Q_PROPERTY(QList<int> connectedGamepads READ connectedGamepads NOTIFY connectedGamepadsChanged)
 %%
 
-$prototype=const QList<int> connectedGamepads() const
+$prototypeV2=const QList<int> connectedGamepads() const
 %% TODO: const QList<int>
-%% $method=|const QList<int>|connectedGamepads|
 
 %%
 %%
@@ -47,26 +46,19 @@ $prototype=const QList<int> connectedGamepads() const
 
 $prototypeV2=static QGamepadManager * instance()
 
-$prototype=bool isGamepadConnected(int deviceId) const
-$method=|bool|isGamepadConnected|int
+$prototypeV2=bool isGamepadConnected( int deviceId ) const
 
-$prototype=bool isConfigurationNeeded(int deviceId) const (slot)
-$slotMethod=|bool|isConfigurationNeeded|int
+$prototypeV2=bool isConfigurationNeeded( int deviceId ) const (slot)
 
-$prototype=bool configureButton(int deviceId, GamepadButton button) (slot)
-$slotMethod=|bool|configureButton|int,QGamepadManager::GamepadButton
+$prototypeV2=bool configureButton( int deviceId, QGamepadManager::GamepadButton button ) (slot)
 
-$prototype=bool configureAxis(int deviceId, GamepadAxis axis) (slot)
-$slotMethod=|bool|configureAxis|int,QGamepadManager::GamepadAxis
+$prototypeV2=bool configureAxis( int deviceId, QGamepadManager::GamepadAxis axis ) (slot)
 
-$prototype=bool setCancelConfigureButton(int deviceId, GamepadButton button) (slot)
-$slotMethod=|bool|setCancelConfigureButton|int,QGamepadManager::GamepadButton
+$prototypeV2=bool setCancelConfigureButton( int deviceId, QGamepadManager::GamepadButton button ) (slot)
 
-$prototype=void resetConfiguration(int deviceId) (slot)
-$slotMethod=|void|resetConfiguration|int
+$prototypeV2=void resetConfiguration( int deviceId ) (slot)
 
-$prototype=void setSettingsFile(const QString &file) (slot)
-$slotMethod=|void|setSettingsFile|const QString &
+$prototypeV2=void setSettingsFile( const QString & file ) (slot)
 
 %%
 %% SIGNALS

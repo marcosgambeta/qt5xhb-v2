@@ -40,8 +40,7 @@ $deleteMethod
 
 $prototypeV2=int deviceId() const
 
-$prototype=void setDeviceId(int number) (slot)
-$slotMethod=|void|setDeviceId|int
+$prototypeV2=void setDeviceId( int number ) (slot)
 
 %%
 %% Q_PROPERTY(bool connected READ isConnected NOTIFY connectedChanged)
