@@ -32,11 +32,9 @@ $deleteMethod
 
 $prototypeV2=QDeclarativeImageProvider::ImageType imageType() const
 
-$prototype=virtual QImage requestImage ( const QString & id, QSize * size, const QSize & requestedSize )
-$virtualMethod=|QImage|requestImage|const QString &,QSize *,const QSize &
+$prototypeV2=virtual QImage requestImage( const QString & id, QSize * size, const QSize & requestedSize )
 
-$prototype=virtual QPixmap requestPixmap ( const QString & id, QSize * size, const QSize & requestedSize )
-$virtualMethod=|QPixmap|requestPixmap|const QString &,QSize *,const QSize &
+$prototypeV2=virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & requestedSize )
 
 $extraMethods
 

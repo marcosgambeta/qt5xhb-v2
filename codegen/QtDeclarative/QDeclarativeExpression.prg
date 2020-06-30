@@ -67,8 +67,7 @@ $prototypeV2=QDeclarativeEngine * engine() const
 
 $prototypeV2=QDeclarativeError error() const
 
-$prototype=QVariant evaluate ( bool * valueIsUndefined = nullptr )
-$method=|QVariant|evaluate|bool *=nullptr
+$prototypeV2=QVariant evaluate( bool * valueIsUndefined = nullptr )
 
 $prototypeV2=QString expression() const
 
@@ -80,14 +79,11 @@ $prototypeV2=bool notifyOnValueChanged() const
 
 $prototypeV2=QObject * scopeObject() const
 
-$prototype=void setExpression ( const QString & expression )
-$method=|void|setExpression|const QString &
+$prototypeV2=void setExpression( const QString & expression )
 
-$prototype=void setNotifyOnValueChanged ( bool notifyOnChange )
-$method=|void|setNotifyOnValueChanged|bool
+$prototypeV2=void setNotifyOnValueChanged( bool notifyOnChange )
 
-$prototype=void setSourceLocation ( const QString & url, int line )
-$method=|void|setSourceLocation|const QString &,int
+$prototypeV2=void setSourceLocation( const QString & url, int line )
 
 $prototypeV2=QString sourceFile() const
 

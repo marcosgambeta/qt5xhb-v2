@@ -60,14 +60,11 @@ $prototypeV2=QObject * scopeObject() const
 
 $prototypeV2=QString script() const
 
-$prototype=void setContext ( QDeclarativeContext * context )
-$method=|void|setContext|QDeclarativeContext *
+$prototypeV2=void setContext( QDeclarativeContext * context )
 
-$prototype=void setScopeObject ( QObject * object )
-$method=|void|setScopeObject|QObject *
+$prototypeV2=void setScopeObject( QObject * object )
 
-$prototype=void setScript ( const QString & script )
-$method=|void|setScript|const QString &
+$prototypeV2=void setScript( const QString & script )
 
 $extraMethods
 

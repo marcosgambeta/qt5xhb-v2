@@ -66,18 +66,15 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 $deleteMethod
 
-$prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
-$virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
+$prototypeV2=virtual QObject * beginCreate( QDeclarativeContext * context )
 
 $prototypeV2=virtual void completeCreate()
 
-$prototype=virtual QObject * create ( QDeclarativeContext * context = nullptr )
-$virtualMethod=|QObject *|create|QDeclarativeContext *=nullptr
+$prototypeV2=virtual QObject * create( QDeclarativeContext * context = nullptr )
 
 $prototypeV2=QDeclarativeContext * creationContext() const
 
-$prototype=QList<QDeclarativeError> errors () const
-$method=|QList<QDeclarativeError>|errors|
+$prototypeV2=QList<QDeclarativeError> errors() const
 
 $prototypeV2=bool isError() const
 
@@ -87,13 +84,11 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isReady() const
 
-$prototype=void loadUrl ( const QUrl & url )
-$method=|void|loadUrl|const QUrl &
+$prototypeV2=void loadUrl( const QUrl & url )
 
 $prototypeV2=qreal progress() const
 
-$prototype=void setData ( const QByteArray & data, const QUrl & url )
-$method=|void|setData|const QByteArray &,const QUrl &
+$prototypeV2=void setData( const QByteArray & data, const QUrl & url )
 
 $prototypeV2=QDeclarativeComponent::Status status() const
 

@@ -158,8 +158,7 @@ $prototypeV2=int propertyType() const
 
 $prototypeV2=QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 
-$prototype=const char * propertyTypeName () const
-$method=|const char *|propertyTypeName|
+$prototypeV2=const char * propertyTypeName() const
 
 $prototypeV2=bool reset() const
 

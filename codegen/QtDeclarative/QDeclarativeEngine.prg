@@ -36,21 +36,17 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
-$method=|void|addImageProvider|const QString &,QDeclarativeImageProvider *
+$prototypeV2=void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
 
-$prototype=void addImportPath ( const QString & path )
-$method=|void|addImportPath|const QString &
+$prototypeV2=void addImportPath( const QString & path )
 
-$prototype=void addPluginPath ( const QString & path )
-$method=|void|addPluginPath|const QString &
+$prototypeV2=void addPluginPath( const QString & path )
 
 $prototypeV2=QUrl baseUrl() const
 
 $prototypeV2=void clearComponentCache()
 
-$prototype=QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
-$method=|QDeclarativeImageProvider *|imageProvider|const QString &
+$prototypeV2=QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
 
 $prototypeV2=QStringList importPathList() const
 
@@ -64,40 +60,29 @@ $prototypeV2=bool outputWarningsToStandardError() const
 
 $prototypeV2=QStringList pluginPathList() const
 
-$prototype=void removeImageProvider ( const QString & providerId )
-$method=|void|removeImageProvider|const QString &
+$prototypeV2=void removeImageProvider( const QString & providerId )
 
 $prototypeV2=QDeclarativeContext * rootContext() const
 
-$prototype=void setBaseUrl ( const QUrl & url )
-$method=|void|setBaseUrl|const QUrl &
+$prototypeV2=void setBaseUrl( const QUrl & url )
 
-$prototype=void setImportPathList ( const QStringList & paths )
-$method=|void|setImportPathList|const QStringList &
+$prototypeV2=void setImportPathList( const QStringList & paths )
 
-$prototype=void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * factory )
-$method=|void|setNetworkAccessManagerFactory|QDeclarativeNetworkAccessManagerFactory *
+$prototypeV2=void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
 
-$prototype=void setOfflineStoragePath ( const QString & dir )
-$method=|void|setOfflineStoragePath|const QString &
+$prototypeV2=void setOfflineStoragePath( const QString & dir )
 
-$prototype=void setOutputWarningsToStandardError ( bool enabled )
-$method=|void|setOutputWarningsToStandardError|bool
+$prototypeV2=void setOutputWarningsToStandardError( bool enabled )
 
-$prototype=void setPluginPathList ( const QStringList & paths )
-$method=|void|setPluginPathList|const QStringList &
+$prototypeV2=void setPluginPathList( const QStringList & paths )
 
-$prototype=static QDeclarativeContext * contextForObject ( const QObject * object )
-$staticMethod=|QDeclarativeContext *|contextForObject|const QObject *
+$prototypeV2=static QDeclarativeContext * contextForObject( const QObject * object )
 
-$prototype=static ObjectOwnership objectOwnership ( QObject * object )
-$staticMethod=|QDeclarativeEngine::ObjectOwnership|objectOwnership|QObject *
+$prototypeV2=static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
 
-$prototype=static void setContextForObject ( QObject * object, QDeclarativeContext * context )
-$staticMethod=|void|setContextForObject|QObject *,QDeclarativeContext *
+$prototypeV2=static void setContextForObject( QObject * object, QDeclarativeContext * context )
 
-$prototype=static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
-$staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
+$prototypeV2=static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
 
 %%
 %% SIGNALS

@@ -60,8 +60,7 @@ $prototypeV2=QUrl baseUrl() const
 
 $prototypeV2=QObject * contextObject() const
 
-$prototype=QVariant contextProperty ( const QString & name ) const
-$method=|QVariant|contextProperty|const QString &
+$prototypeV2=QVariant contextProperty( const QString & name ) const
 
 $prototypeV2=QDeclarativeEngine * engine() const
 
@@ -69,14 +68,11 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QDeclarativeContext * parentContext() const
 
-$prototype=QUrl resolvedUrl ( const QUrl & src )
-$method=|QUrl|resolvedUrl|const QUrl &
+$prototypeV2=QUrl resolvedUrl( const QUrl & src )
 
-$prototype=void setBaseUrl ( const QUrl & baseUrl )
-$method=|void|setBaseUrl|const QUrl &
+$prototypeV2=void setBaseUrl( const QUrl & baseUrl )
 
-$prototype=void setContextObject ( QObject * object )
-$method=|void|setContextObject|QObject *
+$prototypeV2=void setContextObject( QObject * object )
 
 $prototype=void setContextProperty ( const QString & name, QObject * value )
 $internalMethod=|void|setContextProperty,setContextProperty1|const QString &,QObject *

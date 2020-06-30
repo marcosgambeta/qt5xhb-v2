@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=qreal baselineOffset() const
 
-$prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
-$method=|QDeclarativeItem *|childAt|qreal,qreal
+$prototypeV2=QDeclarativeItem * childAt( qreal x, qreal y ) const
 
 $prototypeV2=QRectF childrenRect()
 
@@ -47,31 +46,23 @@ $prototypeV2=qreal implicitWidth() const
 
 $prototypeV2=bool keepMouseGrab() const
 
-$prototype=QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
-$method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
+$prototypeV2=QScriptValue mapFromItem( const QScriptValue & item, qreal x, qreal y ) const
 
-$prototype=QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
-$method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
+$prototypeV2=QScriptValue mapToItem( const QScriptValue & item, qreal x, qreal y ) const
 
 $prototypeV2=QDeclarativeItem * parentItem() const
 
-$prototype=void setBaselineOffset ( qreal )
-$method=|void|setBaselineOffset|qreal
+$prototypeV2=void setBaselineOffset( qreal )
 
-$prototype=void setClip ( bool )
-$method=|void|setClip|bool
+$prototypeV2=void setClip( bool )
 
-$prototype=void setKeepMouseGrab ( bool keep )
-$method=|void|setKeepMouseGrab|bool
+$prototypeV2=void setKeepMouseGrab( bool keep )
 
-$prototype=void setParentItem ( QDeclarativeItem * parent )
-$method=|void|setParentItem|QDeclarativeItem *
+$prototypeV2=void setParentItem( QDeclarativeItem * parent )
 
-$prototype=void setSmooth ( bool smooth )
-$method=|void|setSmooth|bool
+$prototypeV2=void setSmooth( bool smooth )
 
-$prototype=void setTransformOrigin ( TransformOrigin origin )
-$method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
+$prototypeV2=void setTransformOrigin( QDeclarativeItem::TransformOrigin origin )
 
 $prototypeV2=bool smooth() const
 

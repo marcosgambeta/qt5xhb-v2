@@ -60,17 +60,13 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=int line() const
 
-$prototype=void setColumn ( int column )
-$method=|void|setColumn|int
+$prototypeV2=void setColumn( int column )
 
-$prototype=void setDescription ( const QString & description )
-$method=|void|setDescription|const QString &
+$prototypeV2=void setDescription( const QString & description )
 
-$prototype=void setLine ( int line )
-$method=|void|setLine|int
+$prototypeV2=void setLine( int line )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
 $prototypeV2=QString toString() const
 
