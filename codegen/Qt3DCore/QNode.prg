@@ -39,65 +39,49 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DCore::QNode *parent READ parentNode WRITE setParent NOTIFY parentChanged)
 %%
 
-$prototype=QNode *parentNode() const
-$method=|QNode *|parentNode|
+$prototypeV2=QNode * parentNode() const
 
-$prototype=void setParent(QNode *parent) (slot)
-$slotMethod=|void|setParent|QNode *
+$prototypeV2=void setParent( QNode * parent ) (slot)
 
 %%
 %% Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
 %%
 
-$prototype=bool isEnabled() const
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const
 
-$prototype=void setEnabled(bool isEnabled) (slot)
-$slotMethod=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool isEnabled ) (slot)
 
 %%
 %% Q_PROPERTY(PropertyTrackingMode defaultPropertyTrackingMode READ defaultPropertyTrackingMode WRITE setDefaultPropertyTrackingMode NOTIFY defaultPropertyTrackingModeChanged REVISION 9)
 %%
 
-$prototype=PropertyTrackingMode defaultPropertyTrackingMode() const
-$method=|QNode::PropertyTrackingMode|defaultPropertyTrackingMode|
+$prototypeV2=QNode::PropertyTrackingMode defaultPropertyTrackingMode() const
 
-$prototype=void setDefaultPropertyTrackingMode(PropertyTrackingMode mode) (slot)
-$slotMethod=|void|setDefaultPropertyTrackingMode|QNode::PropertyTrackingMode
+$prototypeV2=void setDefaultPropertyTrackingMode( QNode::PropertyTrackingMode mode ) (slot)
 
 %%
 %%
 %%
 
-$prototype=QNodeId id() const
-$method=|QNodeId|id|
+$prototypeV2=QNodeId id() const
 
-$prototype=bool notificationsBlocked() const
-$method=|bool|notificationsBlocked|
+$prototypeV2=bool notificationsBlocked() const
 
-$prototype=bool blockNotifications(bool block)
-$method=|bool|blockNotifications|bool
+$prototypeV2=bool blockNotifications( bool block )
 
-$prototype=QNodeVector childNodes() const
-$method=|QNodeVector|childNodes|
+$prototypeV2=QNodeVector childNodes() const
 
-$prototype=void setPropertyTracking(const QString &propertyName, PropertyTrackingMode trackMode)
-$method=|void|setPropertyTracking|const QString &,QNode::PropertyTrackingMode
+$prototypeV2=void setPropertyTracking( const QString & propertyName, QNode::PropertyTrackingMode trackMode )
 
-$prototype=PropertyTrackingMode propertyTracking(const QString &propertyName) const
-$method=|QNode::PropertyTrackingMode|propertyTracking|const QString &
+$prototypeV2=QNode::PropertyTrackingMode propertyTracking( const QString & propertyName ) const
 
-$prototype=void clearPropertyTracking(const QString &propertyName)
-$method=|void|clearPropertyTracking|const QString &
+$prototypeV2=void clearPropertyTracking( const QString & propertyName )
 
-$prototype=void clearPropertyTrackings()
-$method=|void|clearPropertyTrackings|
+$prototypeV2=void clearPropertyTrackings()
 
-$prototype=QNodeCommand::CommandId sendCommand(const QString &name, const QVariant &data = QVariant(), QNodeCommand::CommandId replyTo = QNodeCommand::CommandId())
-$method=|QNodeCommand::CommandId|sendCommand|const QString &,const QVariant &=QVariant(),QNodeCommand::CommandId=QNodeCommand::CommandId()
+$prototypeV2=QNodeCommand::CommandId sendCommand( const QString & name, const QVariant & data = QVariant(), QNodeCommand::CommandId replyTo = QNodeCommand::CommandId() )
 
-$prototype=void sendReply(const QNodeCommandPtr &command)
-$method=|void|sendReply|const QNodeCommandPtr &
+$prototypeV2=void sendReply( const QNodeCommandPtr & command )
 
 $prototype=void notifyObservers(const QSceneChangePtr &change) [protected]
 

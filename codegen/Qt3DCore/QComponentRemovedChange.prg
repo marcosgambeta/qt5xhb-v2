@@ -33,13 +33,10 @@ $constructor=|new|const QEntity *,const QComponent *
 $prototype=~QComponentRemovedChange()
 $deleteMethod
 
-$prototype=QNodeId entityId() const Q_DECL_NOTHROW
-$method=|QNodeId|entityId|
+$prototypeV2=QNodeId entityId() const Q_DECL_NOTHROW
 
-$prototype=QNodeId componentId() const Q_DECL_NOTHROW
-$method=|QNodeId|componentId|
+$prototypeV2=QNodeId componentId() const Q_DECL_NOTHROW
 
-$prototype=const QMetaObject *componentMetaObject() const Q_DECL_NOTHROW
-$method=|const QMetaObject *|componentMetaObject|
+$prototypeV2=const QMetaObject * componentMetaObject() const Q_DECL_NOTHROW
 
 #pragma ENDDUMP

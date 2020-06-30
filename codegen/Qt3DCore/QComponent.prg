@@ -39,18 +39,15 @@ $deleteMethod
 %% Q_PROPERTY(bool isShareable READ isShareable WRITE setShareable NOTIFY shareableChanged)
 %%
 
-$prototype=bool isShareable() const
-$method=|bool|isShareable|
+$prototypeV2=bool isShareable() const
 
-$prototype=void setShareable(bool isShareable)
-$slotMethod=|void|setShareable|bool
+$prototypeV2=void setShareable( bool isShareable )
 
 %%
 %%
 %%
 
-$prototype=QVector<QEntity *> entities() const
-$method=|QVector<QEntity *>|entities|
+$prototypeV2=QVector<QEntity *> entities() const
 
 %%
 %% SIGNALS

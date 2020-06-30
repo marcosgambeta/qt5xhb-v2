@@ -35,17 +35,13 @@ $prototype=explicit QEntity(QEntityPrivate &dd, QNode *parent = nullptr) [protec
 $prototype=virtual ~QEntity()
 $deleteMethod
 
-$prototype=QComponentVector components() const
-$method=|QComponentVector|components|
+$prototypeV2=QComponentVector components() const
 
-$prototype=void addComponent(QComponent *comp)
-$method=|void|addComponent|QComponent *
+$prototypeV2=void addComponent( QComponent * comp )
 
-$prototype=void removeComponent(QComponent *comp)
-$method=|void|removeComponent|QComponent *
+$prototypeV2=void removeComponent( QComponent * comp )
 
-$prototype=QEntity *parentEntity() const
-$method=|QEntity *|parentEntity|
+$prototypeV2=QEntity * parentEntity() const
 
 $prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 

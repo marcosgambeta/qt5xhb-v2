@@ -39,11 +39,9 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DCore::QAbstractSkeleton* skeleton READ skeleton WRITE setSkeleton NOTIFY skeletonChanged)
 %%
 
-$prototype=QAbstractSkeleton* skeleton() const
-$method=|QAbstractSkeleton *|skeleton|
+$prototypeV2=QAbstractSkeleton * skeleton() const
 
-$prototype=void setSkeleton(Qt3DCore::QAbstractSkeleton* skeleton) (slot)
-$slotMethod=|void|setSkeleton|Qt3DCore::QAbstractSkeleton *
+$prototypeV2=void setSkeleton( Qt3DCore::QAbstractSkeleton * skeleton ) (slot)
 
 %%
 %%

@@ -34,8 +34,7 @@ $deleteMethod
 %% Q_PROPERTY(int jointCount READ jointCount NOTIFY jointCountChanged)
 %%
 
-$prototype=int jointCount() const
-$method=|int|jointCount|
+$prototypeV2=int jointCount() const
 
 %%
 %%

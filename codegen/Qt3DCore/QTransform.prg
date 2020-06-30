@@ -39,81 +39,65 @@ $deleteMethod
 %% Q_PROPERTY(QMatrix4x4 matrix READ matrix WRITE setMatrix NOTIFY matrixChanged)
 %%
 
-$prototype=QMatrix4x4 matrix() const
-$method=|QMatrix4x4|matrix|
+$prototypeV2=QMatrix4x4 matrix() const
 
-$prototype=void setMatrix(const QMatrix4x4 &matrix)
-$slotMethod=|void|setMatrix|const QMatrix4x4 &
+$prototypeV2=void setMatrix( const QMatrix4x4 & matrix )
 
 %%
 %% Q_PROPERTY(float scale READ scale WRITE setScale NOTIFY scaleChanged)
 %%
 
-$prototype=float scale() const
-$method=|float|scale|
+$prototypeV2=float scale() const
 
-$prototype=void setScale(float scale)
-$slotMethod=|void|setScale|float
+$prototypeV2=void setScale( float scale )
 
 %%
 %% Q_PROPERTY(QVector3D scale3D READ scale3D WRITE setScale3D NOTIFY scale3DChanged)
 %%
 
-$prototype=QVector3D scale3D() const
-$method=|QVector3D|scale3D|
+$prototypeV2=QVector3D scale3D() const
 
-$prototype=void setScale3D(const QVector3D &scale)
-$slotMethod=|void|setScale3D|const QVector3D &
+$prototypeV2=void setScale3D( const QVector3D & scale )
 
 %%
 %% Q_PROPERTY(QQuaternion rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
 %%
 
-$prototype=QQuaternion rotation() const
-$method=|QQuaternion|rotation|
+$prototypeV2=QQuaternion rotation() const
 
-$prototype=void setRotation(const QQuaternion &rotation)
-$slotMethod=|void|setRotation|const QQuaternion &
+$prototypeV2=void setRotation( const QQuaternion & rotation )
 
 %%
 %% Q_PROPERTY(QVector3D translation READ translation WRITE setTranslation NOTIFY translationChanged)
 %%
 
-$prototype=QVector3D translation() const
-$method=|QVector3D|translation|
+$prototypeV2=QVector3D translation() const
 
-$prototype=void setTranslation(const QVector3D &translation)
-$slotMethod=|void|setTranslation|const QVector3D &
+$prototypeV2=void setTranslation( const QVector3D & translation )
 
 %%
 %% Q_PROPERTY(float rotationX READ rotationX WRITE setRotationX NOTIFY rotationXChanged)
 %%
 
-$prototype=float rotationX() const
-$method=|float|rotationX|
+$prototypeV2=float rotationX() const
 
-$prototype=void setRotationX(float rotationX)
-$slotMethod=|void|setRotationX|float
+$prototypeV2=void setRotationX( float rotationX )
 
 %%
 %% Q_PROPERTY(float rotationY READ rotationY WRITE setRotationY NOTIFY rotationYChanged)
 %%
 
-$prototype=float rotationY() const
-$method=|float|rotationY|
+$prototypeV2=float rotationY() const
 
-$prototype=void setRotationY(float rotationY)
-$slotMethod=|void|setRotationY|float
+$prototypeV2=void setRotationY( float rotationY )
 
 %%
 %% Q_PROPERTY(float rotationZ READ rotationZ WRITE setRotationZ NOTIFY rotationZChanged)
 %%
 
-$prototype=float rotationZ() const
-$method=|float|rotationZ|
+$prototypeV2=float rotationZ() const
 
-$prototype=void setRotationZ(float rotationZ)
-$slotMethod=|void|setRotationZ|float
+$prototypeV2=void setRotationZ( float rotationZ )
 
 %%
 %%
@@ -161,8 +145,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMEULERANGLES )
 %% TODO: implementar
 }
 
-$prototype=Q_INVOKABLE static QMatrix4x4 rotateAround(const QVector3D &point, float angle, const QVector3D &axis)
-$staticMethod=|QMatrix4x4|rotateAround|const QVector3D &,float,const QVector3D &
+$prototypeV2=Q_INVOKABLE static QMatrix4x4 rotateAround( const QVector3D & point, float angle, const QVector3D & axis )
 
 $prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 

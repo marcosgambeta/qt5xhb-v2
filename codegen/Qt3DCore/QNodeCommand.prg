@@ -42,22 +42,18 @@ $prototype=explicit QNodeCommand(QNodeCommandPrivate &dd, QNodeId id) [protected
 $prototype=~QNodeCommand()
 $deleteMethod
 
-$prototype=CommandId commandId() const
+$prototypeV2=CommandId commandId() const
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
-$prototype=QVariant data() const
-$method=|QVariant|data|
+$prototypeV2=QVariant data() const
 
-$prototype=void setData(const QVariant &data)
-$method=|void|setData|const QVariant &
+$prototypeV2=void setData( const QVariant & data )
 
-$prototype=CommandId inReplyTo() const
+$prototypeV2=CommandId inReplyTo() const
 
-$prototype=void setReplyToCommandId(CommandId id)
+$prototypeV2=void setReplyToCommandId( CommandId id )
 
 #pragma ENDDUMP

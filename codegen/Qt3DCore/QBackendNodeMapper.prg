@@ -34,11 +34,9 @@ $prototype=virtual QBackendNode *create(const QNodeCreatedChangeBasePtr &change)
 %% TODO: implementar
 %% $virtualMethod=|QBackendNode *|create|const QNodeCreatedChangeBasePtr &
 
-$prototype=virtual QBackendNode *get(QNodeId id) const = 0
-$virtualMethod=|QBackendNode *|get|QNodeId
+$prototypeV2=virtual QBackendNode * get( QNodeId id ) const = 0
 
-$prototype=virtual void destroy(QNodeId id) const = 0
-$virtualMethod=|void|destroy|QNodeId
+$prototypeV2=virtual void destroy( QNodeId id ) const = 0
 
 $extraMethods
 

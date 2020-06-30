@@ -35,17 +35,13 @@ $prototype=explicit QBackendNode(QBackendNodePrivate &dd) [protected]
 $prototype=virtual ~QBackendNode()
 $deleteMethod
 
-$prototype=QNodeId peerId() const Q_DECL_NOEXCEPT
-$method=|QNodeId|peerId|
+$prototypeV2=QNodeId peerId() const Q_DECL_NOEXCEPT
 
-$prototype=void setEnabled(bool enabled) Q_DECL_NOEXCEPT
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool enabled ) Q_DECL_NOEXCEPT
 
-$prototype=bool isEnabled() const Q_DECL_NOEXCEPT
-$method=|bool|isEnabled|
+$prototypeV2=bool isEnabled() const Q_DECL_NOEXCEPT
 
-$prototype=Mode mode() const Q_DECL_NOEXCEPT
-$method=|QBackendNode::Mode|mode|
+$prototypeV2=QBackendNode::Mode mode() const Q_DECL_NOEXCEPT
 
 $prototype=void notifyObservers(const QSceneChangePtr &e) [protected]
 

@@ -35,13 +35,12 @@ $prototype=explicit QAspectJob(QAspectJobPrivate &dd) [protected]
 $prototype=virtual ~QAspectJob()
 $deleteMethod
 
-$prototype=void addDependency(QWeakPointer<QAspectJob> dependency)
+$prototypeV2=void addDependency( QWeakPointer<QAspectJob> dependency )
 
-$prototype=void removeDependency(QWeakPointer<QAspectJob> dependency)
+$prototypeV2=void removeDependency( QWeakPointer<QAspectJob> dependency )
 
-$prototype=QVector<QWeakPointer<QAspectJob> > dependencies() const
+$prototypeV2=QVector<QWeakPointer<QAspectJob> > dependencies() const
 
-$prototype=virtual void run() = 0
-$virtualMethod=|void|run|
+$prototypeV2=virtual void run() = 0
 
 #pragma ENDDUMP

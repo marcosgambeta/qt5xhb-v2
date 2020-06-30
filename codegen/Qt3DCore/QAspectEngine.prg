@@ -33,28 +33,20 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QAspectEngine()
 $deleteMethod
 
-$prototype=void setRootEntity(QEntityPtr root)
-$method=|void|setRootEntity|QEntityPtr
+$prototypeV2=void setRootEntity( QEntityPtr root )
 
-$prototype=QEntityPtr rootEntity() const
-$method=|QEntityPtr|rootEntity|
+$prototypeV2=QEntityPtr rootEntity() const
 
-$prototype=void registerAspect(QAbstractAspect *aspect)
-$method=|void|registerAspect|QAbstractAspect *
+$prototypeV2=void registerAspect( QAbstractAspect * aspect )
 
-$prototype=void registerAspect(const QString &name)
-$method=|void|registerAspect|const QString &
+$prototypeV2=void registerAspect( const QString & name )
 
-$prototype=void unregisterAspect(QAbstractAspect *aspect)
-$method=|void|unregisterAspect|QAbstractAspect *
+$prototypeV2=void unregisterAspect( QAbstractAspect * aspect )
 
-$prototype=void unregisterAspect(const QString &name)
-$method=|void|unregisterAspect|const QString &
+$prototypeV2=void unregisterAspect( const QString & name )
 
-$prototype=QVector<QAbstractAspect*> aspects() const
-$method=|QVector<QAbstractAspect *>|aspects|
+$prototypeV2=QVector<QAbstractAspect *> aspects() const
 
-$prototype=QVariant executeCommand(const QString &command)
-$method=|QVariant|executeCommand|const QString &
+$prototypeV2=QVariant executeCommand( const QString & command )
 
 #pragma ENDDUMP

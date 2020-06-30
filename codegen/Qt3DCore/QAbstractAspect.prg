@@ -33,8 +33,7 @@ $prototype=explicit QAbstractAspect(QAbstractAspectPrivate &dd, QObject *parent 
 $prototype=~QAbstractAspect()
 $deleteMethod
 
-$prototype=void scheduleSingleShotJob(const Qt3DCore::QAspectJobPtr &job)
-$method=|void|scheduleSingleShotJob|const Qt3DCore::QAspectJobPtr &
+$prototypeV2=void scheduleSingleShotJob( const Qt3DCore::QAspectJobPtr & job )
 
 $prototype=QNodeId rootEntityId() const Q_DECL_NOEXCEPT [protected]
 

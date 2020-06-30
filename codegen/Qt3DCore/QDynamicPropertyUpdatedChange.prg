@@ -35,16 +35,12 @@ $prototype=QDynamicPropertyUpdatedChange(QDynamicPropertyUpdatedChangePrivate &d
 $prototype=~QDynamicPropertyUpdatedChange()
 $deleteMethod
 
-$prototype=QByteArray propertyName() const
-$method=|QByteArray|propertyName|
+$prototypeV2=QByteArray propertyName() const
 
-$prototype=void setPropertyName(const QByteArray &name)
-$method=|void|setPropertyName|const QByteArray &
+$prototypeV2=void setPropertyName( const QByteArray & name )
 
-$prototype=QVariant value() const
-$method=|QVariant|value|
+$prototypeV2=QVariant value() const
 
-$prototype=void setValue(const QVariant &value)
-$method=|void|setValue|const QVariant &
+$prototypeV2=void setValue( const QVariant & value )
 
 #pragma ENDDUMP

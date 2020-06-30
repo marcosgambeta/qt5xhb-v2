@@ -37,97 +37,77 @@ $deleteMethod
 %% Q_PROPERTY(QVector3D scale READ scale WRITE setScale NOTIFY scaleChanged)
 %%
 
-$prototype=QVector3D scale() const
-$method=|QVector3D|scale|
+$prototypeV2=QVector3D scale() const
 
-$prototype=void setScale(const QVector3D &scale) (slot)
-$slotMethod=|void|setScale|const QVector3D &
+$prototypeV2=void setScale( const QVector3D & scale ) (slot)
 
 %%
 %% Q_PROPERTY(QQuaternion rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
 %%
 
-$prototype=QQuaternion rotation() const
-$method=|QQuaternion|rotation|
+$prototypeV2=QQuaternion rotation() const
 
-$prototype=void setRotation(const QQuaternion &rotation) (slot)
-$slotMethod=|void|setRotation|const QQuaternion &
+$prototypeV2=void setRotation( const QQuaternion & rotation ) (slot)
 
 %%
 %% Q_PROPERTY(QVector3D translation READ translation WRITE setTranslation NOTIFY translationChanged)
 %%
 
-$prototype=QVector3D translation() const
-$method=|QVector3D|translation|
+$prototypeV2=QVector3D translation() const
 
-$prototype=void setTranslation(const QVector3D &translation) (slot)
-$slotMethod=|void|setTranslation|const QVector3D &
+$prototypeV2=void setTranslation( const QVector3D & translation ) (slot)
 
 %%
 %% Q_PROPERTY(QMatrix4x4 inverseBindMatrix READ inverseBindMatrix WRITE setInverseBindMatrix NOTIFY inverseBindMatrixChanged)
 %%
 
-$prototype=QMatrix4x4 inverseBindMatrix() const
-$method=|QMatrix4x4|inverseBindMatrix|
+$prototypeV2=QMatrix4x4 inverseBindMatrix() const
 
-$prototype=void setInverseBindMatrix(const QMatrix4x4 &inverseBindMatrix) (slot)
-$slotMethod=|void|setInverseBindMatrix|const QMatrix4x4 &
+$prototypeV2=void setInverseBindMatrix( const QMatrix4x4 & inverseBindMatrix ) (slot)
 
 %%
 %% Q_PROPERTY(float rotationX READ rotationX WRITE setRotationX NOTIFY rotationXChanged)
 %%
 
-$prototype=float rotationX() const
-$method=|float|rotationX|
+$prototypeV2=float rotationX() const
 
-$prototype=void setRotationX(float rotationX) (slot)
-$method=|void|setRotationX|float
+$prototypeV2=void setRotationX( float rotationX ) (slot)
 
 %%
 %% Q_PROPERTY(float rotationY READ rotationY WRITE setRotationY NOTIFY rotationYChanged)
 %%
 
-$prototype=float rotationY() const
-$method=|float|rotationY|
+$prototypeV2=float rotationY() const
 
-$prototype=void setRotationY(float rotationY) (slot)
-$slotMethod=|void|setRotationY|float
+$prototypeV2=void setRotationY( float rotationY ) (slot)
 
 %%
 %% Q_PROPERTY(float rotationZ READ rotationZ WRITE setRotationZ NOTIFY rotationZChanged)
 %%
 
-$prototype=float rotationZ() const
-$method=|float|rotationZ|
+$prototypeV2=float rotationZ() const
 
-$prototype=void setRotationZ(float rotationZ) (slot)
-$slotMethod=|void|setRotationZ|float
+$prototypeV2=void setRotationZ( float rotationZ ) (slot)
 
 %%
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
-$method=|QString|name|
+$prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name) (slot)
-$slotMethod=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name ) (slot)
 
 %%
 %%
 %%
 
-$prototype=void addChildJoint(QJoint *joint)
-$method=|void|addChildJoint|QJoint *
+$prototypeV2=void addChildJoint( QJoint * joint )
 
-$prototype=void removeChildJoint(QJoint *joint)
-$method=|void|removeChildJoint|QJoint *
+$prototypeV2=void removeChildJoint( QJoint * joint )
 
-$prototype=QVector<QJoint *> childJoints() const
-$method=|QVector<QJoint *>|childJoints|
+$prototypeV2=QVector<QJoint *> childJoints() const
 
-$prototype=void setToIdentity() (slot)
-$slotMethod=|void|setToIdentity|
+$prototypeV2=void setToIdentity() (slot)
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
