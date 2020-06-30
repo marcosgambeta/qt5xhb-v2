@@ -61,8 +61,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
 $prototype=~QCompressedHelpInfo()
 $deleteMethod
 
-$prototype=void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
-$method=|void|swap|QCompressedHelpInfo &
+$prototypeV2=void swap( QCompressedHelpInfo & other ) Q_DECL_NOTHROW
 
 $prototypeV2=QString namespaceName() const
 
@@ -70,8 +69,7 @@ $prototypeV2=QString component() const
 
 $prototypeV2=QVersionNumber version() const
 
-$prototype=static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
-$staticMethod=|QCompressedHelpInfo|fromCompressedHelpFile|const QString &
+$prototypeV2=static QCompressedHelpInfo fromCompressedHelpFile( const QString & documentationFileName )
 
 $extraMethods
 

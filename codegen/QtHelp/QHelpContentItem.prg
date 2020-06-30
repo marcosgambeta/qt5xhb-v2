@@ -29,13 +29,11 @@ $includes
 
 $deleteMethod
 
-$prototype=QHelpContentItem * child ( int row ) const
-$method=|QHelpContentItem *|child|int
+$prototypeV2=QHelpContentItem * child( int row ) const
 
 $prototypeV2=int childCount() const
 
-$prototype=int childPosition ( QHelpContentItem * child ) const
-$method=|int|childPosition|QHelpContentItem *
+$prototypeV2=int childPosition( QHelpContentItem * child ) const
 
 $prototypeV2=QHelpContentItem * parent() const
 

@@ -29,28 +29,21 @@ $includes
 
 $deleteMethod
 
-$prototype=QHelpContentItem * contentItemAt ( const QModelIndex & index ) const
-$method=|QHelpContentItem *|contentItemAt|const QModelIndex &
+$prototypeV2=QHelpContentItem * contentItemAt( const QModelIndex & index ) const
 
-$prototype=void createContents ( const QString & customFilterName )
-$method=|void|createContents|const QString &
+$prototypeV2=void createContents( const QString & customFilterName )
 
 $prototypeV2=bool isCreatingContents() const
 
-$prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual QVariant data ( const QModelIndex & index, int role ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int
+$prototypeV2=virtual QVariant data( const QModelIndex & index, int role ) const
 
-$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual QModelIndex parent ( const QModelIndex & index ) const
-$virtualMethod=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=virtual QModelIndex parent( const QModelIndex & index ) const
 
-$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
 %%
 %% SIGNALS

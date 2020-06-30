@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QUrl linkAt ( const QPoint & point )
-$method=|QUrl|linkAt|const QPoint &
+$prototypeV2=QUrl linkAt( const QPoint & point )
 
 %%
 %% SIGNALS

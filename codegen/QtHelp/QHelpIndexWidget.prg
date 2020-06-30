@@ -31,8 +31,7 @@ $deleteMethod
 
 $prototypeV2=void activateCurrentItem()
 
-$prototype=void filterIndices ( const QString & filter, const QString & wildcard = QString() )
-$method=|void|filterIndices|const QString &,const QString &=QString()
+$prototypeV2=void filterIndices( const QString & filter, const QString & wildcard = QString() )
 
 %%
 %% SIGNALS

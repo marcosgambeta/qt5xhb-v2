@@ -27,11 +27,9 @@ $destructor
 
 $includes
 
-$prototype=void createIndex ( const QString & customFilterName )
-$method=|void|createIndex|const QString &
+$prototypeV2=void createIndex( const QString & customFilterName )
 
-$prototype=QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
-$method=|QModelIndex|filter|const QString &,const QString &=QString()
+$prototypeV2=QModelIndex filter( const QString & filter, const QString & wildcard = QString() )
 
 $prototypeV2=bool isCreatingIndex() const
 

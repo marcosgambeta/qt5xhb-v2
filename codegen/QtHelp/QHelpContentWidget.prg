@@ -31,8 +31,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QModelIndex indexOf ( const QUrl & link )
-$method=|QModelIndex|indexOf|const QUrl &
+$prototypeV2=QModelIndex indexOf( const QUrl & link )
 
 %%
 %% SIGNALS
