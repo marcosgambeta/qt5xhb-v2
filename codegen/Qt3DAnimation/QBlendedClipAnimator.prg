@@ -37,9 +37,9 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DAnimation::QAbstractClipBlendNode *blendTree READ blendTree WRITE setBlendTree NOTIFY blendTreeChanged)
 %%
 
-$prototype=QAbstractClipBlendNode *blendTree() const
+$prototypeV2=QAbstractClipBlendNode * blendTree() const
 
-$prototype=void setBlendTree(QAbstractClipBlendNode * blendTree) (slot)
+$prototypeV2=void setBlendTree( QAbstractClipBlendNode * blendTree ) (slot)
 
 %%
 %%

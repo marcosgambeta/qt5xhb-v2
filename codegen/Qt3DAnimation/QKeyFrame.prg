@@ -31,14 +31,21 @@ $prototype=Q_DECL_CONSTEXPR explicit QKeyFrame(QVector2D coords, QVector2D lh, Q
 
 $deleteMethod
 
-$prototype=void setCoordinates(QVector2D coords) Q_DECL_NOTHROW
-$prototype=Q_DECL_CONSTEXPR QVector2D coordinates() const Q_DECL_NOTHROW
-$prototype=void setLeftControlPoint(QVector2D lh) Q_DECL_NOTHROW
-$prototype=Q_DECL_CONSTEXPR QVector2D leftControlPoint() const Q_DECL_NOTHROW
-$prototype=void setRightControlPoint(QVector2D rh) Q_DECL_NOTHROW
-$prototype=Q_DECL_CONSTEXPR QVector2D rightControlPoint() const Q_DECL_NOTHROW
-$prototype=void setInterpolationType(InterpolationType interp) Q_DECL_NOTHROW
-$prototype=Q_DECL_CONSTEXPR InterpolationType interpolationType() const Q_DECL_NOTHROW
+$prototypeV2=void setCoordinates( QVector2D coords ) Q_DECL_NOTHROW
+
+$prototypeV2=Q_DECL_CONSTEXPR QVector2D coordinates() const Q_DECL_NOTHROW
+
+$prototypeV2=void setLeftControlPoint( QVector2D lh ) Q_DECL_NOTHROW
+
+$prototypeV2=Q_DECL_CONSTEXPR QVector2D leftControlPoint() const Q_DECL_NOTHROW
+
+$prototypeV2=void setRightControlPoint( QVector2D rh ) Q_DECL_NOTHROW
+
+$prototypeV2=Q_DECL_CONSTEXPR QVector2D rightControlPoint() const Q_DECL_NOTHROW
+
+$prototypeV2=void setInterpolationType( InterpolationType interp ) Q_DECL_NOTHROW
+
+$prototypeV2=Q_DECL_CONSTEXPR InterpolationType interpolationType() const Q_DECL_NOTHROW
 
 $extraMethods
 

@@ -37,17 +37,17 @@ $deleteMethod
 %% Q_PROPERTY(QString channelName READ channelName WRITE setChannelName NOTIFY channelNameChanged)
 %%
 
-$prototype=QString channelName() const
+$prototypeV2=QString channelName() const
 
-$prototype=void setChannelName(const QString &channelName) (slot)
+$prototypeV2=void setChannelName( const QString & channelName ) (slot)
 
 %%
 %%
 %%
 
-$prototype=QAnimationCallback *callback() const
+$prototypeV2=QAnimationCallback * callback() const
 
-$prototype=void setCallback(int type, QAnimationCallback *callback, QAnimationCallback::Flags flags = QAnimationCallback::OnOwningThread)
+$prototypeV2=void setCallback( int type, QAnimationCallback * callback, QAnimationCallback::Flags flags = QAnimationCallback::OnOwningThread )
 
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 

@@ -46,21 +46,21 @@ $prototype=QAnimationClipData(const QAnimationClipData &)
 $prototype=~QAnimationClipData()
 $deleteMethod
 
-$prototype=void setName(const QString &name)
+$prototypeV2=void setName( const QString & name )
 
-$prototype=QString name() const
+$prototypeV2=QString name() const
 
-$prototype=int channelCount() const
+$prototypeV2=int channelCount() const
 
-$prototype=void appendChannel(const QChannel &c)
+$prototypeV2=void appendChannel( const QChannel & c )
 
-$prototype=void insertChannel(int index, const QChannel &c)
+$prototypeV2=void insertChannel( int index, const QChannel & c )
 
-$prototype=void removeChannel(int index)
+$prototypeV2=void removeChannel( int index )
 
-$prototype=void clearChannels()
+$prototypeV2=void clearChannels()
 
-$prototype=bool isValid() const Q_DECL_NOTHROW
+$prototypeV2=bool isValid() const Q_DECL_NOTHROW
 
 $extraMethods
 

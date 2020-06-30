@@ -35,65 +35,65 @@ $prototype=QAnimationController(QObject *parent = nullptr)
 %% Q_PROPERTY(int activeAnimationGroup READ activeAnimationGroup WRITE setActiveAnimationGroup NOTIFY activeAnimationGroupChanged)
 %%
 
-$prototype=int activeAnimationGroup() const
+$prototypeV2=int activeAnimationGroup() const
 
-$prototype=void setActiveAnimationGroup(int index) (slot)
+$prototypeV2=void setActiveAnimationGroup( int index ) (slot)
 
 %%
 %% Q_PROPERTY(float position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=float position() const
+$prototypeV2=float position() const
 
-$prototype=void setPosition(float position) (slot)
+$prototypeV2=void setPosition( float position ) (slot)
 
 %%
 %% Q_PROPERTY(float positionScale READ positionScale WRITE setPositionScale NOTIFY positionScaleChanged)
 %%
 
-$prototype=float positionScale() const
+$prototypeV2=float positionScale() const
 
-$prototype=void setPositionScale(float scale) (slot)
+$prototypeV2=void setPositionScale( float scale ) (slot)
 
 %%
 %% Q_PROPERTY(float positionOffset READ positionOffset WRITE setPositionOffset NOTIFY positionOffsetChanged)
 %%
 
-$prototype=float positionOffset() const
+$prototypeV2=float positionOffset() const
 
-$prototype=void setPositionOffset(float offset) (slot)
+$prototypeV2=void setPositionOffset( float offset ) (slot)
 
 %%
 %% Q_PROPERTY(Qt3DCore::QEntity *entity READ entity WRITE setEntity NOTIFY entityChanged)
 %%
 
-$prototype=Qt3DCore::QEntity *entity() const
+$prototypeV2=Qt3DCore::QEntity * entity() const
 
-$prototype=void setEntity(Qt3DCore::QEntity *entity) (slot)
+$prototypeV2=void setEntity( Qt3DCore::QEntity * entity ) (slot)
 
 %%
 %% Q_PROPERTY(bool recursive READ recursive WRITE setRecursive NOTIFY recursiveChanged)
 %%
 
-$prototype=bool recursive() const
+$prototypeV2=bool recursive() const
 
-$prototype=void setRecursive(bool recursive) (slot)
+$prototypeV2=void setRecursive( bool recursive ) (slot)
 
 %%
 %%
 %%
 
-$prototype=QVector<Qt3DAnimation::QAnimationGroup *> animationGroupList()
+$prototypeV2=QVector<Qt3DAnimation::QAnimationGroup *> animationGroupList()
 
-$prototype=void setAnimationGroups(const QVector<Qt3DAnimation::QAnimationGroup *> &animationGroups)
+$prototypeV2=void setAnimationGroups( const QVector<Qt3DAnimation::QAnimationGroup *> & animationGroups )
 
-$prototype=void addAnimationGroup(Qt3DAnimation::QAnimationGroup *animationGroups)
+$prototypeV2=void addAnimationGroup( Qt3DAnimation::QAnimationGroup * animationGroups )
 
-$prototype=void removeAnimationGroup(Qt3DAnimation::QAnimationGroup *animationGroups)
+$prototypeV2=void removeAnimationGroup( Qt3DAnimation::QAnimationGroup * animationGroups )
 
-$prototype=Q_INVOKABLE int getAnimationIndex(const QString &name) const
+$prototypeV2=Q_INVOKABLE int getAnimationIndex( const QString & name ) const
 
-$prototype=Q_INVOKABLE Qt3DAnimation::QAnimationGroup *getGroup(int index) const
+$prototypeV2=Q_INVOKABLE Qt3DAnimation::QAnimationGroup * getGroup( int index ) const
 
 %%
 %% SIGNALS

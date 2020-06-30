@@ -35,37 +35,44 @@ $deleteMethod
 %% Q_PROPERTY(QVector<float> targetPositions READ targetPositions WRITE setTargetPositions NOTIFY targetPositionsChanged)
 %%
 
-$prototype=QVector<float> targetPositions() const
-$prototype=void setTargetPositions(const QVector<float> &targetPositions) (slot)
+$prototypeV2=QVector<float> targetPositions() const
+
+$prototypeV2=void setTargetPositions( const QVector<float> & targetPositions ) (slot)
 
 %%
 %% Q_PROPERTY(float interpolator READ interpolator NOTIFY interpolatorChanged)
 %%
 
-$prototype=float interpolator() const
+$prototypeV2=float interpolator() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QGeometryRenderer *target READ target WRITE setTarget NOTIFY targetChanged)
 %%
 
-$prototype=Qt3DRender::QGeometryRenderer *target() const
-$prototype=void setTarget(Qt3DRender::QGeometryRenderer *target) (slot)
+$prototypeV2=Qt3DRender::QGeometryRenderer * target() const
+
+$prototypeV2=void setTarget( Qt3DRender::QGeometryRenderer * target ) (slot)
 
 %%
 %% Q_PROPERTY(QString targetName READ targetName WRITE setTargetName NOTIFY targetNameChanged)
 %%
 
-$prototype=QString targetName() const
-$prototype=void setTargetName(const QString name) (slot)
+$prototypeV2=QString targetName() const
+
+$prototypeV2=void setTargetName( const QString name ) (slot)
 
 %%
 %%
 %%
 
-$prototype=void setMorphTargets(const QVector<Qt3DAnimation::QMorphTarget *> &targets)
-$prototype=void addMorphTarget(Qt3DAnimation::QMorphTarget *target)
-$prototype=void removeMorphTarget(Qt3DAnimation::QMorphTarget *target)
-$prototype=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
+$prototypeV2=void setMorphTargets( const QVector<Qt3DAnimation::QMorphTarget *> & targets )
+
+$prototypeV2=void addMorphTarget( Qt3DAnimation::QMorphTarget * target )
+
+$prototypeV2=void removeMorphTarget( Qt3DAnimation::QMorphTarget * target )
+
+$prototypeV2=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
+
 $prototype=void updateAnimation(float position) [private]
 
 %%

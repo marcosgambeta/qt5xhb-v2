@@ -40,15 +40,15 @@ $deleteMethod
 %% Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
 %%
 
-$prototype=QUrl source() const
+$prototypeV2=QUrl source() const
 
-$prototype=void setSource(const QUrl &source) (slot)
+$prototypeV2=void setSource( const QUrl & source ) (slot)
 
 %%
 %% Q_PROPERTY(Status status READ status NOTIFY statusChanged)
 %%
 
-$prototype=Status status() const
+$prototypeV2=Status status() const
 
 %%
 %%

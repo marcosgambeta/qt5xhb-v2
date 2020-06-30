@@ -28,7 +28,7 @@ $includes
 $prototype=virtual ~QAnimationCallback()
 $deleteMethod
 
-$prototype=virtual void valueChanged(const QVariant &value) = 0
+$prototypeV2=virtual void valueChanged( const QVariant & value ) = 0
 
 $extraMethods
 

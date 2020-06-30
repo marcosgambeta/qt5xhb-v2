@@ -37,8 +37,9 @@ $deleteMethod
 %% Q_PROPERTY(double playbackRate READ playbackRate WRITE setPlaybackRate NOTIFY playbackRateChanged)
 %%
 
-$prototype=double playbackRate() const
-$prototype=void setPlaybackRate(double playbackRate)
+$prototypeV2=double playbackRate() const
+
+$prototypeV2=void setPlaybackRate( double playbackRate )
 
 %%
 %%

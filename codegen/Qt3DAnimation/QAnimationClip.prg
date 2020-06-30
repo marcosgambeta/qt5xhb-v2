@@ -36,9 +36,9 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DAnimation::QAnimationClipData clipData READ clipData WRITE setClipData NOTIFY clipDataChanged)
 %%
 
-$prototype=Qt3DAnimation::QAnimationClipData clipData() const
+$prototypeV2=Qt3DAnimation::QAnimationClipData clipData() const
 
-$prototype=void setClipData(const Qt3DAnimation::QAnimationClipData &clipData) (slot)
+$prototypeV2=void setClipData( const Qt3DAnimation::QAnimationClipData & clipData ) (slot)
 
 %%
 %%

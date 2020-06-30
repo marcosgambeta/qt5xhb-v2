@@ -46,13 +46,19 @@ $prototype=QChannelComponent(const QChannelComponent &)
 $prototype=~QChannelComponent()
 $deleteMethod
 
-$prototype=void setName(const QString &name)
-$prototype=QString name() const
-$prototype=int keyFrameCount() const
-$prototype=void appendKeyFrame(const QKeyFrame &kf)
-$prototype=void insertKeyFrame(int index, const QKeyFrame &kf)
-$prototype=void removeKeyFrame(int index)
-$prototype=void clearKeyFrames()
+$prototypeV2=void setName( const QString & name )
+
+$prototypeV2=QString name() const
+
+$prototypeV2=int keyFrameCount() const
+
+$prototypeV2=void appendKeyFrame( const QKeyFrame & kf )
+
+$prototypeV2=void insertKeyFrame( int index, const QKeyFrame & kf )
+
+$prototypeV2=void removeKeyFrame( int index )
+
+$prototypeV2=void clearKeyFrames()
 
 $extraMethods
 

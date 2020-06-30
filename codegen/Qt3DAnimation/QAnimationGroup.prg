@@ -35,35 +35,35 @@ $prototype=explicit QAnimationGroup(QObject *parent = nullptr)
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 %%
 
-$prototype=QString name() const
+$prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name) (slot)
+$prototypeV2=void setName( const QString & name ) (slot)
 
 %%
 %% Q_PROPERTY(float position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=float position() const
+$prototypeV2=float position() const
 
-$prototype=void setPosition(float position) (slot)
+$prototypeV2=void setPosition( float position ) (slot)
 
 %%
 %% Q_PROPERTY(float duration READ duration NOTIFY durationChanged)
 %%
 
-$prototype=float duration() const
+$prototypeV2=float duration() const
 
 %%
 %%
 %%
 
-$prototype=QVector<Qt3DAnimation::QAbstractAnimation *> animationList()
+$prototypeV2=QVector<Qt3DAnimation::QAbstractAnimation *> animationList()
 
-$prototype=void setAnimations(const QVector<Qt3DAnimation::QAbstractAnimation *> &animations)
+$prototypeV2=void setAnimations( const QVector<Qt3DAnimation::QAbstractAnimation *> & animations )
 
-$prototype=void addAnimation(Qt3DAnimation::QAbstractAnimation *animation)
+$prototypeV2=void addAnimation( Qt3DAnimation::QAbstractAnimation * animation )
 
-$prototype=void removeAnimation(Qt3DAnimation::QAbstractAnimation *animation)
+$prototypeV2=void removeAnimation( Qt3DAnimation::QAbstractAnimation * animation )
 
 %%
 %% SIGNALS

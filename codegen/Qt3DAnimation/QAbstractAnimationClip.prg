@@ -36,8 +36,7 @@ $deleteMethod
 %% Q_PROPERTY(float duration READ duration NOTIFY durationChanged)
 %%
 
-$prototype=float duration() const
-$method=|float|duration|
+$prototypeV2=float duration() const
 
 %%
 %%

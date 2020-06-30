@@ -35,35 +35,29 @@ $prototype=explicit QAbstractAnimation(QAbstractAnimationPrivate &dd, QObject *p
 %% Q_PROPERTY(QString animationName READ animationName WRITE setAnimationName NOTIFY animationNameChanged)
 %%
 
-$prototype=QString animationName() const
-$method=|QString|animationName|
+$prototypeV2=QString animationName() const
 
-$prototype=void setAnimationName(const QString &name) (slot)
-$slotMethod=|void|setAnimationName|const QString &
+$prototypeV2=void setAnimationName( const QString & name ) (slot)
 
 %%
 %% Q_PROPERTY(QAbstractAnimation::AnimationType animationType READ animationType CONSTANT)
 %%
 
-$prototype=QAbstractAnimation::AnimationType animationType() const
-$method=|QAbstractAnimation::AnimationType|animationType|
+$prototypeV2=QAbstractAnimation::AnimationType animationType() const
 
 %%
 %% Q_PROPERTY(float position READ position WRITE setPosition NOTIFY positionChanged)
 %%
 
-$prototype=float position() const
-$method=|float|position|
+$prototypeV2=float position() const
 
-$prototype=void setPosition(float position) (slot)
-$slotMethod=|void|setPosition|float
+$prototypeV2=void setPosition( float position ) (slot)
 
 %%
 %% Q_PROPERTY(float duration READ duration NOTIFY durationChanged)
 %%
 
-$prototype=float duration() const
-$method=|float|duration|
+$prototypeV2=float duration() const
 
 %%
 %%

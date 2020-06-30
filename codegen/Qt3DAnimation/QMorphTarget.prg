@@ -35,17 +35,21 @@ $deleteMethod
 %% Q_PROPERTY(QStringList attributeNames READ attributeNames NOTIFY attributeNamesChanged)
 %%
 
-$prototype=QStringList attributeNames() const
+$prototypeV2=QStringList attributeNames() const
 
 %%
 %%
 %%
 
-$prototype=QVector<Qt3DRender::QAttribute *> attributeList() const
-$prototype=void setAttributes(const QVector<Qt3DRender::QAttribute *> &attributes)
-$prototype=void addAttribute(Qt3DRender::QAttribute *attribute)
-$prototype=void removeAttribute(Qt3DRender::QAttribute *attribute)
-$prototype=Q_INVOKABLE static QMorphTarget *fromGeometry(Qt3DRender::QGeometry *geometry, const QStringList &attributes)
+$prototypeV2=QVector<Qt3DRender::QAttribute *> attributeList() const
+
+$prototypeV2=void setAttributes( const QVector<Qt3DRender::QAttribute *> & attributes )
+
+$prototypeV2=void addAttribute( Qt3DRender::QAttribute * attribute )
+
+$prototypeV2=void removeAttribute( Qt3DRender::QAttribute * attribute )
+
+$prototypeV2=Q_INVOKABLE static QMorphTarget * fromGeometry( Qt3DRender::QGeometry * geometry, const QStringList & attributes )
 
 %%
 %% SIGNALS

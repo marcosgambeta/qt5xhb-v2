@@ -37,25 +37,25 @@ $deleteMethod
 %% Q_PROPERTY(QString channelName READ channelName WRITE setChannelName NOTIFY channelNameChanged)
 %%
 
-$prototype=QString channelName() const
+$prototypeV2=QString channelName() const
 
-$prototype=void setChannelName(const QString &channelName) (slot)
+$prototypeV2=void setChannelName( const QString & channelName ) (slot)
 
 %%
 %% Q_PROPERTY(Qt3DCore::QNode *target READ target WRITE setTarget NOTIFY targetChanged)
 %%
 
-$prototype=Qt3DCore::QNode *target() const
+$prototypeV2=Qt3DCore::QNode * target() const
 
-$prototype=void setTarget(Qt3DCore::QNode *target) (slot)
+$prototypeV2=void setTarget( Qt3DCore::QNode * target ) (slot)
 
 %%
 %% Q_PROPERTY(QString property READ property WRITE setProperty NOTIFY propertyChanged)
 %%
 
-$prototype=QString property() const
+$prototypeV2=QString property() const
 
-$prototype=void setProperty(const QString &property) (slot)
+$prototypeV2=void setProperty( const QString & property ) (slot)
 
 %%
 %%

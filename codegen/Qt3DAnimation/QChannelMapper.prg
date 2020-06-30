@@ -31,9 +31,12 @@ $prototype=explicit QChannelMapper(QChannelMapperPrivate &dd, Qt3DCore::QNode *p
 $prototype=~QChannelMapper()
 $deleteMethod
 
-$prototype=void addMapping(QAbstractChannelMapping *mapping)
-$prototype=void removeMapping(QAbstractChannelMapping *mapping)
-$prototype=QVector<QAbstractChannelMapping *> mappings() const
+$prototypeV2=void addMapping( QAbstractChannelMapping * mapping )
+
+$prototypeV2=void removeMapping( QAbstractChannelMapping * mapping )
+
+$prototypeV2=QVector<QAbstractChannelMapping *> mappings() const
+
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 #pragma ENDDUMP

@@ -38,41 +38,41 @@ $deleteMethod
 %% Q_PROPERTY(bool running READ isRunning WRITE setRunning NOTIFY runningChanged)
 %%
 
-$prototype=bool isRunning() const
+$prototypeV2=bool isRunning() const
 
-$prototype=void setRunning(bool running) (slot)
+$prototypeV2=void setRunning( bool running ) (slot)
 
 %%
 %% Q_PROPERTY(int loops READ loopCount WRITE setLoopCount NOTIFY loopCountChanged)
 %%
 
-$prototype=int loopCount() const
+$prototypeV2=int loopCount() const
 
-$prototype=void setLoopCount(int loops) (slot)
+$prototypeV2=void setLoopCount( int loops ) (slot)
 
 %%
 %% Q_PROPERTY(Qt3DAnimation::QChannelMapper *channelMapper READ channelMapper WRITE setChannelMapper NOTIFY channelMapperChanged)
 %%
 
-$prototype=Qt3DAnimation::QChannelMapper *channelMapper() const
+$prototypeV2=Qt3DAnimation::QChannelMapper * channelMapper() const
 
-$prototype=void setChannelMapper(Qt3DAnimation::QChannelMapper *channelMapper) (slot)
+$prototypeV2=void setChannelMapper( Qt3DAnimation::QChannelMapper * channelMapper ) (slot)
 
 %%
 %% Q_PROPERTY(Qt3DAnimation::QClock *clock READ clock WRITE setClock NOTIFY clockChanged)
 %%
 
-$prototype=Qt3DAnimation::QClock *clock() const
+$prototypeV2=Qt3DAnimation::QClock * clock() const
 
-$prototype=void setClock(Qt3DAnimation::QClock *clock) (slot)
+$prototypeV2=void setClock( Qt3DAnimation::QClock * clock ) (slot)
 
 %%
 %%
 %%
 
-$prototype=void start() (slot)
+$prototypeV2=void start() (slot)
 
-$prototype=void stop() (slot)
+$prototypeV2=void stop() (slot)
 
 %%
 %% SIGNALS

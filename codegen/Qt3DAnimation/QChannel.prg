@@ -46,23 +46,23 @@ $prototype=QChannel(const QChannel &)
 $prototype=~QChannel()
 $deleteMethod
 
-$prototype=void setName(const QString &name)
+$prototypeV2=void setName( const QString & name )
 
-$prototype=QString name() const
+$prototypeV2=QString name() const
 
-$prototype=void setJointIndex(int jointIndex)
+$prototypeV2=void setJointIndex( int jointIndex )
 
-$prototype=int jointIndex() const
+$prototypeV2=int jointIndex() const
 
-$prototype=int channelComponentCount() const
+$prototypeV2=int channelComponentCount() const
 
-$prototype=void appendChannelComponent(const QChannelComponent &component)
+$prototypeV2=void appendChannelComponent( const QChannelComponent & component )
 
-$prototype=void insertChannelComponent(int index, const QChannelComponent &component)
+$prototypeV2=void insertChannelComponent( int index, const QChannelComponent & component )
 
-$prototype=void removeChannelComponent(int index)
+$prototypeV2=void removeChannelComponent( int index )
 
-$prototype=void clearChannelComponents()
+$prototypeV2=void clearChannelComponents()
 
 $extraMethods
 

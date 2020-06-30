@@ -38,25 +38,25 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DAnimation::QAbstractClipBlendNode *baseClip READ baseClip WRITE setBaseClip NOTIFY baseClipChanged)
 %%
 
-$prototype=Qt3DAnimation::QAbstractClipBlendNode *baseClip() const
+$prototypeV2=Qt3DAnimation::QAbstractClipBlendNode * baseClip() const
 
-$prototype=void setBaseClip(Qt3DAnimation::QAbstractClipBlendNode *baseClip) (slot)
+$prototypeV2=void setBaseClip( Qt3DAnimation::QAbstractClipBlendNode * baseClip ) (slot)
 
 %%
 %% Q_PROPERTY(Qt3DAnimation::QAbstractClipBlendNode *additiveClip READ additiveClip WRITE setAdditiveClip NOTIFY additiveClipChanged)
 %%
 
-$prototype=Qt3DAnimation::QAbstractClipBlendNode *additiveClip() const
+$prototypeV2=Qt3DAnimation::QAbstractClipBlendNode * additiveClip() const
 
-$prototype=void setAdditiveClip(Qt3DAnimation::QAbstractClipBlendNode *additiveClip) (slot)
+$prototypeV2=void setAdditiveClip( Qt3DAnimation::QAbstractClipBlendNode * additiveClip ) (slot)
 
 %%
 %% Q_PROPERTY(float additiveFactor READ additiveFactor WRITE setAdditiveFactor NOTIFY additiveFactorChanged)
 %%
 
-$prototype=float additiveFactor() const
+$prototypeV2=float additiveFactor() const
 
-$prototype=void setAdditiveFactor(float additiveFactor) (slot)
+$prototypeV2=void setAdditiveFactor( float additiveFactor ) (slot)
 
 %%
 %%

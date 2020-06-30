@@ -38,8 +38,9 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DAnimation::QAbstractAnimationClip *clip READ clip WRITE setClip NOTIFY clipChanged)
 %%
 
-$prototype=Qt3DAnimation::QAbstractAnimationClip *clip() const
-$prototype=void setClip(Qt3DAnimation::QAbstractAnimationClip *clip) (slot)
+$prototypeV2=Qt3DAnimation::QAbstractAnimationClip * clip() const
+
+$prototypeV2=void setClip( Qt3DAnimation::QAbstractAnimationClip * clip ) (slot)
 
 %%
 %%
