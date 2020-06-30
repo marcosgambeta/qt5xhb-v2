@@ -58,27 +58,21 @@ $deleteMethod
 
 $prototypeV2=int bottom() const
 
-$prototype=virtual void fixup(QString & input) const
-$virtualMethod=|void|fixup|QString &
+$prototypeV2=virtual void fixup( QString & input ) const
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setBottom(int)
-$method=|void|setBottom|int
+$prototypeV2=void setBottom( int )
 
-$prototype=void setLocale(const QLocale & locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
-$prototype=virtual void setRange(int bottom, int top)
-$virtualMethod=|void|setRange|int,int
+$prototypeV2=virtual void setRange( int bottom, int top )
 
-$prototype=void setTop(int)
-$method=|void|setTop|int
+$prototypeV2=void setTop( int )
 
 $prototypeV2=int top() const
 
-$prototype=virtual State validate(QString & input, int & pos) const = 0
-$virtualMethod=|QValidator::State|validate|QString &,int &
+$prototypeV2=virtual QValidator::State validate( QString & input, int & pos ) const = 0
 
 %%
 %% SIGNALS

@@ -95,15 +95,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual bool notify(QObject * object, QEvent * event)
-$virtualMethod=|bool|notify|QObject *,QEvent *
+$prototypeV2=virtual bool notify( QObject * object, QEvent * event )
 
 $prototypeV2=static QWindowList allWindows()
 
 $prototypeV2=static QString applicationDisplayName()
 
-$prototype=static void changeOverrideCursor(const QCursor & cursor)
-$staticMethod=|void|changeOverrideCursor|const QCursor &
+$prototypeV2=static void changeOverrideCursor( const QCursor & cursor )
 
 $prototypeV2=static QClipboard * clipboard()
 
@@ -149,34 +147,25 @@ $prototypeV2=static bool quitOnLastWindowClosed()
 
 $prototypeV2=static void restoreOverrideCursor()
 
-$prototype=static QList<QScreen *> screens()
-$staticMethod=|QList<QScreen *>|screens|
+$prototypeV2=static QList<QScreen *> screens()
 
-$prototype=static void setApplicationDisplayName(const QString & name)
-$staticMethod=|void|setApplicationDisplayName|const QString &
+$prototypeV2=static void setApplicationDisplayName( const QString & name )
 
-$prototype=static void setDesktopSettingsAware(bool on)
-$staticMethod=|void|setDesktopSettingsAware|bool
+$prototypeV2=static void setDesktopSettingsAware( bool on )
 
-$prototype=static void setFont(const QFont & font)
-$staticMethod=|void|setFont|const QFont &
+$prototypeV2=static void setFont( const QFont & font )
 
-$prototype=static void setLayoutDirection(Qt::LayoutDirection direction)
-$staticMethod=|void|setLayoutDirection|Qt::LayoutDirection
+$prototypeV2=static void setLayoutDirection( Qt::LayoutDirection direction )
 
-$prototype=static void setOverrideCursor(const QCursor & cursor)
-$staticMethod=|void|setOverrideCursor|const QCursor &
+$prototypeV2=static void setOverrideCursor( const QCursor & cursor )
 
-$prototype=static void setPalette(const QPalette & pal)
-$staticMethod=|void|setPalette|const QPalette &
+$prototypeV2=static void setPalette( const QPalette & pal )
 
-$prototype=static void setQuitOnLastWindowClosed(bool quit)
-$staticMethod=|void|setQuitOnLastWindowClosed|bool
+$prototypeV2=static void setQuitOnLastWindowClosed( bool quit )
 
 $prototypeV2=static QStyleHints * styleHints()
 
-$prototype=static QWindow * topLevelAt(const QPoint & pos)
-$staticMethod=|QWindow *|topLevelAt|const QPoint &
+$prototypeV2=static QWindow * topLevelAt( const QPoint & pos )
 
 $prototypeV2=static QWindowList topLevelWindows()
 

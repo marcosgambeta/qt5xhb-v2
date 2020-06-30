@@ -34,19 +34,14 @@ $prototypeV2=Qt::NativeGestureType gestureType() const
 
 $prototypeV2=qreal value() const
 
-$prototype=const QPoint pos() const
-$method=|const QPoint|pos|
+$prototypeV2=const QPoint pos() const
 
-$prototype=const QPoint globalPos() const
-$method=|const QPoint|globalPos|
+$prototypeV2=const QPoint globalPos() const
 
-$prototype=const QPointF &localPos() const
-$method=|const QPointF &|localPos|
+$prototypeV2=const QPointF & localPos() const
 
-$prototype=const QPointF &windowPos() const
-$method=|const QPointF &|windowPos|
+$prototypeV2=const QPointF & windowPos() const
 
-$prototype=const QPointF &screenPos() const
-$method=|const QPointF &|screenPos|
+$prototypeV2=const QPointF & screenPos() const
 
 #pragma ENDDUMP

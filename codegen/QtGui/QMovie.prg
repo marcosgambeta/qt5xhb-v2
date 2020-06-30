@@ -89,8 +89,7 @@ $prototypeV2=QRect frameRect() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=bool jumpToFrame ( int frameNumber )
-$method=|bool|jumpToFrame|int
+$prototypeV2=bool jumpToFrame( int frameNumber )
 
 $prototypeV2=int loopCount() const
 
@@ -98,23 +97,17 @@ $prototypeV2=int nextFrameDelay() const
 
 $prototypeV2=QSize scaledSize()
 
-$prototype=void setBackgroundColor ( const QColor & color )
-$method=|void|setBackgroundColor|const QColor &
+$prototypeV2=void setBackgroundColor( const QColor & color )
 
-$prototype=void setCacheMode ( CacheMode mode )
-$method=|void|setCacheMode|QMovie::CacheMode
+$prototypeV2=void setCacheMode( QMovie::CacheMode mode )
 
-$prototype=void setDevice ( QIODevice * device )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setFormat ( const QByteArray & format )
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
-$prototype=void setScaledSize ( const QSize & size )
-$method=|void|setScaledSize|const QSize &
+$prototypeV2=void setScaledSize( const QSize & size )
 
 $prototypeV2=int speed() const
 
@@ -124,11 +117,9 @@ $prototypeV2=QMovie::MovieState state() const
 
 $prototypeV2=bool jumpToNextFrame()
 
-$prototype=void setPaused ( bool paused )
-$method=|void|setPaused|bool
+$prototypeV2=void setPaused( bool paused )
 
-$prototype=void setSpeed ( int percentSpeed )
-$method=|void|setSpeed|int
+$prototypeV2=void setSpeed( int percentSpeed )
 
 $prototypeV2=void start()
 

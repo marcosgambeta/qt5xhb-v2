@@ -149,13 +149,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 }
 $addMethod=isBound
 
-$prototype=void setFormat(TextureFormat format)
-$method=|void|setFormat|QOpenGLTexture::TextureFormat
+$prototypeV2=void setFormat( QOpenGLTexture::TextureFormat format )
 
 $prototypeV2=QOpenGLTexture::TextureFormat format() const
 
-$prototype=void setSize(int width, int height = 1, int depth = 1)
-$method=|void|setSize|int,int=1,int=1
+$prototypeV2=void setSize( int width, int height = 1, int depth = 1 )
 
 $prototypeV2=int width() const
 
@@ -163,15 +161,13 @@ $prototypeV2=int height() const
 
 $prototypeV2=int depth() const
 
-$prototype=void setMipLevels(int levels)
-$method=|void|setMipLevels|int
+$prototypeV2=void setMipLevels( int levels )
 
 $prototypeV2=int mipLevels() const
 
 $prototypeV2=int maximumMipLevels() const
 
-$prototype=void setLayers(int layers)
-$method=|void|setLayers|int
+$prototypeV2=void setLayers( int layers )
 
 $prototypeV2=int layers() const
 
@@ -181,8 +177,7 @@ $prototypeV2=void allocateStorage()
 
 $prototypeV2=bool isStorageAllocated() const
 
-$prototype=QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
-$method=|QOpenGLTexture *|createTextureView|QOpenGLTexture::Target,QOpenGLTexture::TextureFormat,int,int,int,int
+$prototypeV2=QOpenGLTexture * createTextureView( QOpenGLTexture::Target target, QOpenGLTexture::TextureFormat viewFormat, int minimumMipmapLevel, int maximumMipmapLevel, int minimumLayer, int maximumLayer ) const
 
 $prototypeV2=bool isTextureView() const
 
@@ -264,21 +259,17 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA )
 }
 $addMethod=setCompressedData
 
-$prototype=void setMipBaseLevel(int baseLevel)
-$method=|void|setMipBaseLevel|int
+$prototypeV2=void setMipBaseLevel( int baseLevel )
 
 $prototypeV2=int mipBaseLevel() const
 
-$prototype=void setMipMaxLevel(int maxLevel)
-$method=|void|setMipMaxLevel|int
+$prototypeV2=void setMipMaxLevel( int maxLevel )
 
 $prototypeV2=int mipMaxLevel() const
 
-$prototype=void setMipLevelRange(int baseLevel, int maxLevel)
-$method=|void|setMipLevelRange|int,int
+$prototypeV2=void setMipLevelRange( int baseLevel, int maxLevel )
 
-$prototype=void setAutoMipMapGenerationEnabled(bool enabled)
-$method=|void|setAutoMipMapGenerationEnabled|bool
+$prototypeV2=void setAutoMipMapGenerationEnabled( bool enabled )
 
 $prototypeV2=bool isAutoMipMapGenerationEnabled() const
 
@@ -338,29 +329,23 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 }
 $addMethod=setSwizzleMask
 
-$prototype=SwizzleValue swizzleMask(SwizzleComponent component) const
-$method=|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
+$prototypeV2=QOpenGLTexture::SwizzleValue swizzleMask( QOpenGLTexture::SwizzleComponent component ) const
 
-$prototype=void setDepthStencilMode(DepthStencilMode mode)
-$method=|void|setDepthStencilMode|QOpenGLTexture::DepthStencilMode
+$prototypeV2=void setDepthStencilMode( QOpenGLTexture::DepthStencilMode mode )
 
 $prototypeV2=QOpenGLTexture::DepthStencilMode depthStencilMode() const
 
-$prototype=void setMinificationFilter(Filter filter)
-$method=|void|setMinificationFilter|QOpenGLTexture::Filter
+$prototypeV2=void setMinificationFilter( QOpenGLTexture::Filter filter )
 
 $prototypeV2=QOpenGLTexture::Filter minificationFilter() const
 
-$prototype=void setMagnificationFilter(Filter filter)
-$method=|void|setMagnificationFilter|QOpenGLTexture::Filter
+$prototypeV2=void setMagnificationFilter( QOpenGLTexture::Filter filter )
 
 $prototypeV2=QOpenGLTexture::Filter magnificationFilter() const
 
-$prototype=void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
-$method=|void|setMinMagFilters|QOpenGLTexture::Filter,QOpenGLTexture::Filter
+$prototypeV2=void setMinMagFilters( QOpenGLTexture::Filter minificationFilter, QOpenGLTexture::Filter magnificationFilter )
 
-$prototype=void setMaximumAnisotropy(float anisotropy)
-$method=|void|setMaximumAnisotropy|float
+$prototypeV2=void setMaximumAnisotropy( float anisotropy )
 
 $prototypeV2=float maximumAnisotropy() const
 
@@ -392,8 +377,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 }
 $addMethod=setWrapMode
 
-$prototype=WrapMode wrapMode(CoordinateDirection direction) const
-$method=|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
+$prototypeV2=QOpenGLTexture::WrapMode wrapMode( QOpenGLTexture::CoordinateDirection direction ) const
 
 $prototype=void setBorderColor(QColor color)
 $method=|void|setBorderColor,setBorderColor1|QColor
@@ -485,21 +469,17 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 }
 $addMethod=borderColor
 
-$prototype=void setMinimumLevelOfDetail(float value)
-$method=|void|setMinimumLevelOfDetail|float
+$prototypeV2=void setMinimumLevelOfDetail( float value )
 
 $prototypeV2=float minimumLevelOfDetail() const
 
-$prototype=void setMaximumLevelOfDetail(float value)
-$method=|void|setMaximumLevelOfDetail|float
+$prototypeV2=void setMaximumLevelOfDetail( float value )
 
 $prototypeV2=float maximumLevelOfDetail() const
 
-$prototype=void setLevelOfDetailRange(float min, float max)
-$method=|void|setLevelOfDetailRange|float,float
+$prototypeV2=void setLevelOfDetailRange( float min, float max )
 
-$prototype=void setLevelofDetailBias(float bias)
-$method=|void|setLevelofDetailBias|float
+$prototypeV2=void setLevelofDetailBias( float bias )
 
 $prototypeV2=float levelofDetailBias() const
 
@@ -531,8 +511,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 }
 $addMethod=boundTextureId
 
-$prototype=static bool hasFeature(Feature feature)
-$staticMethod=|bool|hasFeature|QOpenGLTexture::Feature
+$prototypeV2=static bool hasFeature( QOpenGLTexture::Feature feature )
 
 $extraMethods
 

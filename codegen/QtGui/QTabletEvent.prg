@@ -32,11 +32,9 @@ $deleteMethod
 
 $prototypeV2=QTabletEvent::TabletDevice device() const
 
-$prototype=const QPoint globalPos() const
-$method=|const QPoint|globalPos|
+$prototypeV2=const QPoint globalPos() const
 
-$prototype=const QPointF & globalPosF() const
-$method=|const QPointF &|globalPosF|
+$prototypeV2=const QPointF & globalPosF() const
 
 $prototypeV2=int globalX() const
 
@@ -48,11 +46,9 @@ $prototypeV2=qreal hiResGlobalY() const
 
 $prototypeV2=QTabletEvent::PointerType pointerType() const
 
-$prototype=const QPoint pos() const
-$method=|const QPoint|pos|
+$prototypeV2=const QPoint pos() const
 
-$prototype=const QPointF & posF() const
-$method=|const QPointF &|posF|
+$prototypeV2=const QPointF & posF() const
 
 $prototypeV2=qreal pressure() const
 

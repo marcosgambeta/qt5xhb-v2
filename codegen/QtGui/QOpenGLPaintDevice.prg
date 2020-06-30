@@ -70,24 +70,19 @@ $prototypeV2=QOpenGLContext * context() const
 
 $prototypeV2=QSize size() const
 
-$prototype=void setSize(const QSize &size)
-$method=|void|setSize|const QSize &
+$prototypeV2=void setSize( const QSize & size )
 
-$prototype=void setDevicePixelRatio(qreal devicePixelRatio)
-$method=|void|setDevicePixelRatio|qreal
+$prototypeV2=void setDevicePixelRatio( qreal devicePixelRatio )
 
 $prototypeV2=qreal dotsPerMeterX() const
 
 $prototypeV2=qreal dotsPerMeterY() const
 
-$prototype=void setDotsPerMeterX(qreal)
-$method=|void|setDotsPerMeterX|qreal
+$prototypeV2=void setDotsPerMeterX( qreal )
 
-$prototype=void setDotsPerMeterY(qreal)
-$method=|void|setDotsPerMeterY|qreal
+$prototypeV2=void setDotsPerMeterY( qreal )
 
-$prototype=void setPaintFlipped(bool flipped)
-$method=|void|setPaintFlipped|bool
+$prototypeV2=void setPaintFlipped( bool flipped )
 
 $prototypeV2=bool paintFlipped() const
 

@@ -115,17 +115,13 @@ $prototypeV2=float z() const
 
 $prototypeV2=float w() const
 
-$prototype=void setX(float x)
-$method=|void|setX|float
+$prototypeV2=void setX( float x )
 
-$prototype=void setY(float y)
-$method=|void|setY|float
+$prototypeV2=void setY( float y )
 
-$prototype=void setZ(float z)
-$method=|void|setZ|float
+$prototypeV2=void setZ( float z )
 
-$prototype=void setW(float w)
-$method=|void|setW|float
+$prototypeV2=void setW( float w )
 
 $prototypeV2=float length() const
 
@@ -147,8 +143,7 @@ $prototypeV2=QPoint toPoint() const
 
 $prototypeV2=QPointF toPointF() const
 
-$prototype=static float dotProduct(const QVector4D& v1, const QVector4D& v2)
-$staticMethod=|float|dotProduct|const QVector4D &,const QVector4D &
+$prototypeV2=static float dotProduct( const QVector4D & v1, const QVector4D & v2 )
 
 $extraMethods
 

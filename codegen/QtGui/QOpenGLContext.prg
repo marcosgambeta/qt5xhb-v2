@@ -48,24 +48,19 @@ $prototype=QFunctionPointer getProcAddress(const QByteArray & procName) const
 %% TODO: implementar ?
 %% $method=|QFunctionPointer|getProcAddress|const QByteArray &
 
-$prototype=bool hasExtension(const QByteArray & extension) const
-$method=|bool|hasExtension|const QByteArray &
+$prototypeV2=bool hasExtension( const QByteArray & extension ) const
 
 $prototypeV2=bool isValid() const
 
-$prototype=bool makeCurrent(QSurface * surface)
-$method=|bool|makeCurrent|QSurface *
+$prototypeV2=bool makeCurrent( QSurface * surface )
 
 $prototypeV2=QScreen * screen() const
 
-$prototype=void setFormat(const QSurfaceFormat & format)
-$method=|void|setFormat|const QSurfaceFormat &
+$prototypeV2=void setFormat( const QSurfaceFormat & format )
 
-$prototype=void setScreen(QScreen * screen)
-$method=|void|setScreen|QScreen *
+$prototypeV2=void setScreen( QScreen * screen )
 
-$prototype=void setShareContext(QOpenGLContext * shareContext)
-$method=|void|setShareContext|QOpenGLContext *
+$prototypeV2=void setShareContext( QOpenGLContext * shareContext )
 
 $prototypeV2=QOpenGLContext * shareContext() const
 
@@ -73,11 +68,9 @@ $prototypeV2=QOpenGLContextGroup * shareGroup() const
 
 $prototypeV2=QSurface * surface() const
 
-$prototype=void swapBuffers(QSurface * surface)
-$method=|void|swapBuffers|QSurface *
+$prototypeV2=void swapBuffers( QSurface * surface )
 
-$prototype=static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
-$staticMethod=|bool|areSharing|QOpenGLContext *,QOpenGLContext *
+$prototypeV2=static bool areSharing( QOpenGLContext * first, QOpenGLContext * second )
 
 $prototypeV2=static QOpenGLContext * currentContext()
 

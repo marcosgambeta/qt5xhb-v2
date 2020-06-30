@@ -30,7 +30,6 @@ $constructor=|new|const QRegion &
 
 $deleteMethod
 
-$prototype=const QRegion & region() const
-$method=|const QRegion &|region|
+$prototypeV2=const QRegion & region() const
 
 #pragma ENDDUMP

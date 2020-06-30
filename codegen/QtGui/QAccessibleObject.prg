@@ -31,10 +31,8 @@ $prototypeV2=QObject * object() const
 
 $prototypeV2=QRect rect() const
 
-$prototype=void setText(QAccessible::Text t, const QString &text)
-$method=|void|setText|QAccessible::Text,const QString &
+$prototypeV2=void setText( QAccessible::Text t, const QString & text )
 
-$prototype=QAccessibleInterface *childAt(int x, int y) const
-$method=|QAccessibleInterface *|childAt|int,int
+$prototypeV2=QAccessibleInterface * childAt( int x, int y ) const
 
 #pragma ENDDUMP

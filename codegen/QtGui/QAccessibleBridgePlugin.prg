@@ -27,7 +27,6 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QAccessibleBridge *create(const QString &key) = 0
-$virtualMethod=|QAccessibleBridge *|create|const QString &
+$prototypeV2=virtual QAccessibleBridge * create( const QString & key ) = 0
 
 #pragma ENDDUMP

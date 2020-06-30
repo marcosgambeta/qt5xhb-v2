@@ -42,8 +42,7 @@ $prototypeV2=void destroy()
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setFormat(const QSurfaceFormat &format)
-$method=|void|setFormat|const QSurfaceFormat &
+$prototypeV2=void setFormat( const QSurfaceFormat & format )
 
 $prototypeV2=QSurfaceFormat format() const
 
@@ -53,8 +52,7 @@ $prototypeV2=QSize size() const
 
 $prototypeV2=QScreen * screen() const
 
-$prototype=void setScreen(QScreen *screen)
-$method=|void|setScreen|QScreen *
+$prototypeV2=void setScreen( QScreen * screen )
 
 $prototype=QPlatformOffscreenSurface *handle() const
 %% TODO: QPlatformOffscreenSurface class

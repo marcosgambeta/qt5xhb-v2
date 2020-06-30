@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=static int cacheLimit()
 
-$prototype=static void setCacheLimit(int)
-$staticMethod=|void|setCacheLimit|int
+$prototypeV2=static void setCacheLimit( int )
 
 $prototype=static QPixmap *find(const QString &key)
 $staticMethod=|QPixmap *|find,find1|const QString &

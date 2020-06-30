@@ -82,11 +82,9 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QPageSize &other)
-$method=|void|swap|QPageSize &
+$prototypeV2=void swap( QPageSize & other )
 
-$prototype=bool isEquivalentTo(const QPageSize &other) const
-$method=|bool|isEquivalentTo|const QPageSize &
+$prototypeV2=bool isEquivalentTo( const QPageSize & other ) const
 
 $prototypeV2=bool isValid() const
 
@@ -358,13 +356,11 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
 }
 $addMethod=sizePixels
 
-$prototype=QRectF rect(Unit units) const
-$method=|QRectF|rect|QPageSize::Unit
+$prototypeV2=QRectF rect( QPageSize::Unit units ) const
 
 $prototypeV2=QRect rectPoints() const
 
-$prototype=QRect rectPixels(int resolution) const
-$method=|QRect|rectPixels|int
+$prototypeV2=QRect rectPixels( int resolution ) const
 
 $extraMethods
 

@@ -27,17 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QSize actualSize(const QSize & size, QIcon::Mode mode, QIcon::State state)
-$virtualMethod=|QSize|actualSize|const QSize &,QIcon::Mode,QIcon::State
+$prototypeV2=virtual QSize actualSize( const QSize & size, QIcon::Mode mode, QIcon::State state )
 
-$prototype=virtual void addFile(const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state)
-$virtualMethod=|void|addFile|const QString &,const QSize &,QIcon::Mode,QIcon::State
+$prototypeV2=virtual void addFile( const QString & fileName, const QSize & size, QIcon::Mode mode, QIcon::State state )
 
-$prototype=virtual void addPixmap(const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state)
-$virtualMethod=|void|addPixmap|const QPixmap &,QIcon::Mode,QIcon::State
+$prototypeV2=virtual void addPixmap( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State state )
 
-$prototype=virtual QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
-$virtualMethod=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=virtual QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 
 $prototypeV2=virtual QIconEngine * clone() const = 0
 
@@ -45,20 +41,15 @@ $prototypeV2=virtual QString iconName() const
 
 $prototypeV2=virtual QString key() const
 
-$prototype=virtual void paint(QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state) = 0
-$virtualMethod=|void|paint|QPainter *,const QRect &,QIcon::Mode,QIcon::State
+$prototypeV2=virtual void paint( QPainter * painter, const QRect & rect, QIcon::Mode mode, QIcon::State state ) = 0
 
-$prototype=virtual QPixmap pixmap(const QSize & size, QIcon::Mode mode, QIcon::State state)
-$virtualMethod=|QPixmap|pixmap|const QSize &,QIcon::Mode,QIcon::State
+$prototypeV2=virtual QPixmap pixmap( const QSize & size, QIcon::Mode mode, QIcon::State state )
 
-$prototype=virtual bool read(QDataStream & in)
-$virtualMethod=|bool|read|QDataStream &
+$prototypeV2=virtual bool read( QDataStream & in )
 
-$prototype=virtual void virtual_hook(int id, void * data)
-$virtualMethod=|void|virtual_hook|int,void *
+$prototypeV2=virtual void virtual_hook( int id, void * data )
 
-$prototype=virtual bool write(QDataStream & out) const
-$virtualMethod=|bool|write|QDataStream &
+$prototypeV2=virtual bool write( QDataStream & out ) const
 
 $extraMethods
 

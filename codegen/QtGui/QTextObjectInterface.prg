@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
-$virtualMethod=|QSizeF|intrinsicSize|QTextDocument *,int,const QTextFormat &
+$prototypeV2=virtual QSizeF intrinsicSize( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 
-$prototype=virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
-$virtualMethod=|void|drawObject|QPainter *,const QRectF &,QTextDocument *,int,const QTextFormat &
+$prototypeV2=virtual void drawObject( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 
 $extraMethods
 

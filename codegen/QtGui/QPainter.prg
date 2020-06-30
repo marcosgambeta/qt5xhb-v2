@@ -56,14 +56,12 @@ HB_FUNC_STATIC( QPAINTER_NEW )
 
 $deleteMethod
 
-$prototype=const QBrush & background () const
-$method=|const QBrush &|background|
+$prototypeV2=const QBrush & background() const
 
 $prototypeV2=Qt::BGMode backgroundMode() const
 
-$prototype=bool begin ( QPaintDevice * device )
+$prototypeV2=bool begin( QPaintDevice * device )
 %% TODO: refinar identificacao dos objetos
-$method=|bool|begin|QPaintDevice *
 
 $prototypeV2=void beginNativePainting()
 
@@ -111,8 +109,7 @@ HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 }
 $addMethod=boundingRect
 
-$prototype=const QBrush & brush () const
-$method=|const QBrush &|brush|
+$prototypeV2=const QBrush & brush() const
 
 $prototypeV2=QPoint brushOrigin() const
 
@@ -126,8 +123,7 @@ $prototypeV2=QPainter::CompositionMode compositionMode() const
 
 $prototypeV2=QPaintDevice * device() const
 
-$prototype=const QTransform & deviceTransform () const
-$method=|const QTransform &|deviceTransform|
+$prototypeV2=const QTransform & deviceTransform() const
 
 $prototype=void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
 $internalMethod=|void|drawArc,drawArc1|const QRectF &,int,int
@@ -448,8 +444,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES )
 }
 $addMethod=drawLines
 
-$prototype=void drawPath ( const QPainterPath & path )
-$method=|void|drawPath|const QPainterPath &
+$prototypeV2=void drawPath( const QPainterPath & path )
 
 $prototype=void drawPicture ( const QPointF & point, const QPicture & picture )
 $internalMethod=|void|drawPicture,drawPicture1|const QPointF &,const QPicture &
@@ -1022,8 +1017,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
 }
 $addMethod=eraseRect
 
-$prototype=void fillPath ( const QPainterPath & path, const QBrush & brush )
-$method=|void|fillPath|const QPainterPath &,const QBrush &
+$prototypeV2=void fillPath( const QPainterPath & path, const QBrush & brush )
 
 $prototype=void fillRect ( const QRectF & rectangle, const QBrush & brush )
 $internalMethod=|void|fillRect,fillRect1|const QRectF &,const QBrush &
@@ -1159,8 +1153,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
 }
 $addMethod=fillRect
 
-$prototype=const QFont & font () const
-$method=|const QFont &|font|
+$prototypeV2=const QFont & font() const
 
 $prototypeV2=QFontInfo fontInfo() const
 
@@ -1176,8 +1169,7 @@ $prototypeV2=qreal opacity() const
 
 $prototypeV2=QPaintEngine * paintEngine() const
 
-$prototype=const QPen & pen () const
-$method=|const QPen &|pen|
+$prototypeV2=const QPen & pen() const
 
 $prototypeV2=QPainter::RenderHints renderHints() const
 
@@ -1185,19 +1177,15 @@ $prototypeV2=void resetTransform()
 
 $prototypeV2=void restore()
 
-$prototype=void rotate ( qreal angle )
-$method=|void|rotate|qreal
+$prototypeV2=void rotate( qreal angle )
 
 $prototypeV2=void save()
 
-$prototype=void scale ( qreal sx, qreal sy )
-$method=|void|scale|qreal,qreal
+$prototypeV2=void scale( qreal sx, qreal sy )
 
-$prototype=void setBackground ( const QBrush & brush )
-$method=|void|setBackground|const QBrush &
+$prototypeV2=void setBackground( const QBrush & brush )
 
-$prototype=void setBackgroundMode ( Qt::BGMode mode )
-$method=|void|setBackgroundMode|Qt::BGMode
+$prototypeV2=void setBackgroundMode( Qt::BGMode mode )
 
 $prototype=void setBrush ( const QBrush & brush )
 $internalMethod=|void|setBrush,setBrush1|const QBrush &
@@ -1263,8 +1251,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 }
 $addMethod=setBrushOrigin
 
-$prototype=void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
-$method=|void|setClipPath|const QPainterPath &,Qt::ClipOperation=Qt::ReplaceClip
+$prototypeV2=void setClipPath( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
 
 $prototype=void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 $internalMethod=|void|setClipRect,setClipRect1|const QRectF &,Qt::ClipOperation=Qt::ReplaceClip
@@ -1302,23 +1289,17 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 }
 $addMethod=setClipRect
 
-$prototype=void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
-$method=|void|setClipRegion|const QRegion &,Qt::ClipOperation=Qt::ReplaceClip
+$prototypeV2=void setClipRegion( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
 
-$prototype=void setClipping ( bool enable )
-$method=|void|setClipping|bool
+$prototypeV2=void setClipping( bool enable )
 
-$prototype=void setCompositionMode ( CompositionMode mode )
-$method=|void|setCompositionMode|QPainter::CompositionMode
+$prototypeV2=void setCompositionMode( QPainter::CompositionMode mode )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
-$method=|void|setLayoutDirection|Qt::LayoutDirection
+$prototypeV2=void setLayoutDirection( Qt::LayoutDirection direction )
 
-$prototype=void setOpacity ( qreal opacity )
-$method=|void|setOpacity|qreal
+$prototypeV2=void setOpacity( qreal opacity )
 
 $prototype=void setPen ( const QPen & pen )
 $internalMethod=|void|setPen,setPen1|const QPen &
@@ -1356,17 +1337,13 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 }
 $addMethod=setPen
 
-$prototype=void setRenderHint ( RenderHint hint, bool on = true )
-$method=|void|setRenderHint|QPainter::RenderHint,bool=true
+$prototypeV2=void setRenderHint( QPainter::RenderHint hint, bool on = true )
 
-$prototype=void setRenderHints ( RenderHints hints, bool on = true )
-$method=|void|setRenderHints|QPainter::RenderHints,bool=true
+$prototypeV2=void setRenderHints( QPainter::RenderHints hints, bool on = true )
 
-$prototype=void setTransform ( const QTransform & transform, bool combine = false )
-$method=|void|setTransform|const QTransform &,bool=false
+$prototypeV2=void setTransform( const QTransform & transform, bool combine = false )
 
-$prototype=void setViewTransformEnabled ( bool enable )
-$method=|void|setViewTransformEnabled|bool
+$prototypeV2=void setViewTransformEnabled( bool enable )
 
 $prototype=void setViewport ( const QRect & rectangle )
 $internalMethod=|void|setViewport,setViewport1|const QRect &
@@ -1424,23 +1401,17 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 }
 $addMethod=setWindow
 
-$prototype=void setWorldMatrixEnabled ( bool enable )
-$method=|void|setWorldMatrixEnabled|bool
+$prototypeV2=void setWorldMatrixEnabled( bool enable )
 
-$prototype=void setWorldTransform ( const QTransform & matrix, bool combine = false )
-$method=|void|setWorldTransform|const QTransform &,bool=false
+$prototypeV2=void setWorldTransform( const QTransform & matrix, bool combine = false )
 
-$prototype=void shear ( qreal sh, qreal sv )
-$method=|void|shear|qreal,qreal
+$prototypeV2=void shear( qreal sh, qreal sv )
 
-$prototype=void strokePath ( const QPainterPath & path, const QPen & pen )
-$method=|void|strokePath|const QPainterPath &,const QPen &
+$prototypeV2=void strokePath( const QPainterPath & path, const QPen & pen )
 
-$prototype=bool testRenderHint ( RenderHint hint ) const
-$method=|bool|testRenderHint|QPainter::RenderHint
+$prototypeV2=bool testRenderHint( QPainter::RenderHint hint ) const
 
-$prototype=const QTransform & transform () const
-$method=|const QTransform &|transform|
+$prototypeV2=const QTransform & transform() const
 
 $prototype=void translate ( const QPointF & offset )
 $internalMethod=|void|translate,translate1|const QPointF &
@@ -1486,8 +1457,7 @@ $prototypeV2=QRect window() const
 
 $prototypeV2=bool worldMatrixEnabled() const
 
-$prototype=const QTransform & worldTransform () const
-$method=|const QTransform &|worldTransform|
+$prototypeV2=const QTransform & worldTransform() const
 
 $extraMethods
 

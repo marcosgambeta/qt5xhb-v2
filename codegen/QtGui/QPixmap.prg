@@ -87,8 +87,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QPixmap &other)
-$method=|void|swap|QPixmap &
+$prototypeV2=void swap( QPixmap & other )
 
 $prototypeV2=bool isNull() const
 
@@ -142,23 +141,19 @@ $addMethod=fill
 
 $prototypeV2=QBitmap mask() const
 
-$prototype=void setMask(const QBitmap &)
-$method=|void|setMask|const QBitmap &
+$prototypeV2=void setMask( const QBitmap & )
 
 $prototypeV2=qreal devicePixelRatio() const
 
-$prototype=void setDevicePixelRatio(qreal scaleFactor)
-$method=|void|setDevicePixelRatio|qreal
+$prototypeV2=void setDevicePixelRatio( qreal scaleFactor )
 
 $prototypeV2=bool hasAlpha() const
 
 $prototypeV2=bool hasAlphaChannel() const
 
-$prototype=QBitmap createHeuristicMask(bool clipTight = true) const
-$method=|QBitmap|createHeuristicMask|bool=true
+$prototypeV2=QBitmap createHeuristicMask( bool clipTight = true ) const
 
-$prototype=QBitmap createMaskFromColor(const QColor &maskColor, Qt::MaskMode mode = Qt::MaskInColor) const
-$method=|QBitmap|createMaskFromColor|const QColor &,Qt::MaskMode=Qt::MaskInColor
+$prototypeV2=QBitmap createMaskFromColor( const QColor & maskColor, Qt::MaskMode mode = Qt::MaskInColor ) const
 
 $prototype=QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
 $internalMethod=|QPixmap|scaled,scaled1|int,int,Qt::AspectRatioMode=Qt::IgnoreAspectRatio,Qt::TransformationMode=Qt::FastTransformation
@@ -188,11 +183,9 @@ HB_FUNC_STATIC( QPIXMAP_SCALED )
 }
 $addMethod=scaled
 
-$prototype=QPixmap scaledToWidth(int w, Qt::TransformationMode mode = Qt::FastTransformation) const
-$method=|QPixmap|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QPixmap scaledToWidth( int w, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
-$prototype=QPixmap scaledToHeight(int h, Qt::TransformationMode mode = Qt::FastTransformation) const
-$method=|QPixmap|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QPixmap scaledToHeight( int h, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
 $prototype=QPixmap transformed(const QMatrix &, Qt::TransformationMode mode = Qt::FastTransformation) const
 $internalMethod=|QPixmap|transformed,transformed1|const QMatrix &,Qt::TransformationMode=Qt::FastTransformation
@@ -224,8 +217,7 @@ $addMethod=transformed
 
 $prototypeV2=QImage toImage() const
 
-$prototype=bool load(const QString& fileName, const char *format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$method=|bool|load|const QString &,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=bool load( const QString & fileName, const char * format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $prototype=bool loadFromData(const uchar *buf, uint len, const char* format = nullptr, Qt::ImageConversionFlags flags = Qt::AutoColor)
 $internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=nullptr,Qt::ImageConversionFlags=Qt::AutoColor
@@ -283,8 +275,7 @@ HB_FUNC_STATIC( QPIXMAP_SAVE )
 }
 $addMethod=save
 
-$prototype=bool convertFromImage(const QImage &img, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$method=|bool|convertFromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=bool convertFromImage( const QImage & img, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $prototype=QPixmap copy(int x, int y, int width, int height) const
 $internalMethod=|QPixmap|copy,copy1|int,int,int,int
@@ -354,8 +345,7 @@ $prototypeV2=QPaintEngine * paintEngine() const
 
 $prototypeV2=static int defaultDepth()
 
-$prototype=static QPixmap grabWindow(WId, int x=0, int y=0, int w=-1, int h=-1)
-$staticMethod=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
+$prototypeV2=static QPixmap grabWindow( WId, int x = 0, int y = 0, int w = -1, int h = -1 )
 
 $prototype=static QPixmap grabWidget(QObject *widget, const QRect &rect)
 $internalStaticMethod=|QPixmap|grabWidget,grabWidget1|QObject *,const QRect &
@@ -413,11 +403,9 @@ HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
 }
 $addMethod=trueMatrix
 
-$prototype=static QPixmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$staticMethod=|QPixmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=static QPixmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
-$prototype=static QPixmap fromImageReader(QImageReader *imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$staticMethod=|QPixmap|fromImageReader|QImageReader *,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=static QPixmap fromImageReader( QImageReader * imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $variantMethods
 

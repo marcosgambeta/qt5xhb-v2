@@ -130,30 +130,23 @@ $prototypeV2=qreal dx() const
 
 $prototypeV2=qreal dy() const
 
-$prototype=void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
-$method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
+$prototypeV2=void setMatrix( qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33 )
 
-$prototype=QTransform inverted(bool *invertible = nullptr) const
-$method=|QTransform|inverted|bool *=nullptr
+$prototypeV2=QTransform inverted( bool * invertible = nullptr ) const
 
 $prototypeV2=QTransform adjoint() const
 
 $prototypeV2=QTransform transposed() const
 
-$prototype=QTransform &translate(qreal dx, qreal dy)
-$method=|QTransform &|translate|qreal,qreal
+$prototypeV2=QTransform & translate( qreal dx, qreal dy )
 
-$prototype=QTransform &scale(qreal sx, qreal sy)
-$method=|QTransform &|scale|qreal,qreal
+$prototypeV2=QTransform & scale( qreal sx, qreal sy )
 
-$prototype=QTransform &shear(qreal sh, qreal sv)
-$method=|QTransform &|shear|qreal,qreal
+$prototypeV2=QTransform & shear( qreal sh, qreal sv )
 
-$prototype=QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
-$method=|QTransform &|rotate|qreal,Qt::Axis=Qt::ZAxis
+$prototypeV2=QTransform & rotate( qreal a, Qt::Axis axis = Qt::ZAxis )
 
-$prototype=QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
-$method=|QTransform &|rotateRadians|qreal,Qt::Axis=Qt::ZAxis
+$prototypeV2=QTransform & rotateRadians( qreal a, Qt::Axis axis = Qt::ZAxis )
 
 $prototypeV2=void reset()
 
@@ -249,8 +242,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 }
 $addMethod=map
 
-$prototype=QPolygon mapToPolygon(const QRect &r) const
-$method=|QPolygon|mapToPolygon|const QRect &
+$prototypeV2=QPolygon mapToPolygon( const QRect & r ) const
 
 $prototype=QRect mapRect(const QRect &) const
 $internalMethod=|QRect|mapRect,mapRect1|const QRect &
@@ -280,23 +272,17 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 }
 $addMethod=mapRect
 
-$prototype=const QMatrix &toAffine() const
-$method=|const QMatrix &|toAffine|
+$prototypeV2=const QMatrix & toAffine() const
 
-$prototype=static bool squareToQuad(const QPolygonF &square, QTransform &result)
-$staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
+$prototypeV2=static bool squareToQuad( const QPolygonF & square, QTransform & result )
 
-$prototype=static bool quadToSquare(const QPolygonF &quad, QTransform &result)
-$staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
+$prototypeV2=static bool quadToSquare( const QPolygonF & quad, QTransform & result )
 
-$prototype=static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &result)
-$staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
+$prototypeV2=static bool quadToQuad( const QPolygonF & one,const QPolygonF & two, QTransform & result )
 
-$prototype=static QTransform fromTranslate(qreal dx, qreal dy)
-$staticMethod=|QTransform|fromTranslate|qreal,qreal
+$prototypeV2=static QTransform fromTranslate( qreal dx, qreal dy )
 
-$prototype=static QTransform fromScale(qreal dx, qreal dy)
-$staticMethod=|QTransform|fromScale|qreal,qreal
+$prototypeV2=static QTransform fromScale( qreal dx, qreal dy )
 
 $extraMethods
 

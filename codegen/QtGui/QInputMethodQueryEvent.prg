@@ -32,10 +32,8 @@ $deleteMethod
 
 $prototypeV2=Qt::InputMethodQueries queries() const
 
-$prototype=void setValue(Qt::InputMethodQuery query, const QVariant & value)
-$method=|void|setValue|Qt::InputMethodQuery,const QVariant &
+$prototypeV2=void setValue( Qt::InputMethodQuery query, const QVariant & value )
 
-$prototype=QVariant value(Qt::InputMethodQuery query) const
-$method=|QVariant|value|Qt::InputMethodQuery
+$prototypeV2=QVariant value( Qt::InputMethodQuery query ) const
 
 #pragma ENDDUMP

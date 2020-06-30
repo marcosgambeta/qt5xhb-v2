@@ -60,21 +60,17 @@ $prototypeV2=bool overline() const
 
 $prototypeV2=QRawFont rawFont() const
 
-$prototype=void setOverline ( bool overline )
-$method=|void|setOverline|bool
+$prototypeV2=void setOverline( bool overline )
 
 $prototype=void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
 %% TODO: corrigir implementacao
 %% $method=|void|setRawData|const quint32 *,const QPointF *,int
 
-$prototype=void setRawFont ( const QRawFont & rawFont )
-$method=|void|setRawFont|const QRawFont &
+$prototypeV2=void setRawFont( const QRawFont & rawFont )
 
-$prototype=void setStrikeOut ( bool strikeOut )
-$method=|void|setStrikeOut|bool
+$prototypeV2=void setStrikeOut( bool strikeOut )
 
-$prototype=void setUnderline ( bool underline )
-$method=|void|setUnderline|bool
+$prototypeV2=void setUnderline( bool underline )
 
 $prototypeV2=bool strikeOut() const
 

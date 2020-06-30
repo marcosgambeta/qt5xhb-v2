@@ -90,8 +90,7 @@ $prototypeV2=QByteArray format() const
 
 $prototypeV2=int imageCount() const
 
-$prototype=bool jumpToImage ( int imageNumber )
-$method=|bool|jumpToImage|int
+$prototypeV2=bool jumpToImage( int imageNumber )
 
 $prototypeV2=bool jumpToNextImage()
 
@@ -133,45 +132,33 @@ $prototypeV2=QRect scaledClipRect() const
 
 $prototypeV2=QSize scaledSize() const
 
-$prototype=void setAutoDetectImageFormat ( bool enabled )
-$method=|void|setAutoDetectImageFormat|bool
+$prototypeV2=void setAutoDetectImageFormat( bool enabled )
 
-$prototype=void setBackgroundColor ( const QColor & color )
-$method=|void|setBackgroundColor|const QColor &
+$prototypeV2=void setBackgroundColor( const QColor & color )
 
-$prototype=void setClipRect ( const QRect & rect )
-$method=|void|setClipRect|const QRect &
+$prototypeV2=void setClipRect( const QRect & rect )
 
-$prototype=void setDecideFormatFromContent ( bool ignored )
-$method=|void|setDecideFormatFromContent|bool
+$prototypeV2=void setDecideFormatFromContent( bool ignored )
 
-$prototype=void setDevice ( QIODevice * device )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setFormat ( const QByteArray & format )
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
-$prototype=void setQuality ( int quality )
-$method=|void|setQuality|int
+$prototypeV2=void setQuality( int quality )
 
-$prototype=void setScaledClipRect ( const QRect & rect )
-$method=|void|setScaledClipRect|const QRect &
+$prototypeV2=void setScaledClipRect( const QRect & rect )
 
-$prototype=void setScaledSize ( const QSize & size )
-$method=|void|setScaledSize|const QSize &
+$prototypeV2=void setScaledSize( const QSize & size )
 
 $prototypeV2=QSize size() const
 
 $prototypeV2=bool supportsAnimation() const
 
-$prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
-$method=|bool|supportsOption|QImageIOHandler::ImageOption
+$prototypeV2=bool supportsOption( QImageIOHandler::ImageOption option ) const
 
-$prototype=QString text ( const QString & key ) const
-$method=|QString|text|const QString &
+$prototypeV2=QString text( const QString & key ) const
 
 $prototypeV2=QStringList textKeys() const
 
@@ -211,11 +198,9 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 }
 $addMethod=imageFormat
 
-$prototype=static QList<QByteArray> supportedImageFormats ()
-$staticMethod=|QList<QByteArray>|supportedImageFormats|
+$prototypeV2=static QList<QByteArray> supportedImageFormats ()
 
-$prototype=static QList<QByteArray> QImageReader::imageFormatsForMimeType(const QByteArray &mimeType)
-$staticMethod=5,12,0|QList<QByteArray>|imageFormatsForMimeType|const QByteArray &
+$prototypeV2=5,12,0|static QList<QByteArray> QImageReader::imageFormatsForMimeType( const QByteArray & mimeType )
 
 $extraMethods
 

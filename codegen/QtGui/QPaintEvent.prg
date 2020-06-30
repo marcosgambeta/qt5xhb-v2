@@ -54,10 +54,8 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 
 $deleteMethod
 
-$prototype=const QRect & rect () const
-$method=|const QRect &|rect|
+$prototypeV2=const QRect & rect() const
 
-$prototype=const QRegion & region () const
-$method=|const QRegion &|region|
+$prototypeV2=const QRegion & region() const
 
 #pragma ENDDUMP

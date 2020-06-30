@@ -116,13 +116,11 @@ $addMethod=boundingRect
 
 $prototypeV2=int descent() const
 
-$prototype=QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
-$method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
+$prototypeV2=QString elidedText( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 
 $prototypeV2=int height() const
 
-$prototype=bool inFontUcs4 ( uint character ) const
-$method=|bool|inFontUcs4|uint
+$prototypeV2=bool inFontUcs4( uint character ) const
 
 $prototypeV2=int leading() const
 
@@ -138,14 +136,12 @@ $prototypeV2=int minRightBearing() const
 
 $prototypeV2=int overlinePos() const
 
-$prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+$prototypeV2=QSize size( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 %% TODO: parametro 4 = array
-$method=|QSize|size|int,const QString &,int=0,int *=nullptr
 
 $prototypeV2=int strikeOutPos() const
 
-$prototype=QRect tightBoundingRect ( const QString & text ) const
-$method=|QRect|tightBoundingRect|const QString &
+$prototypeV2=QRect tightBoundingRect( const QString & text ) const
 
 $prototypeV2=int underlinePos() const
 

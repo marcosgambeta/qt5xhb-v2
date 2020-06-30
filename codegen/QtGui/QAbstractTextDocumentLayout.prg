@@ -31,34 +31,27 @@ $includes
 
 $deleteMethod
 
-$prototype=QString anchorAt ( const QPointF & position ) const
-$method=|QString|anchorAt|const QPointF &
+$prototypeV2=QString anchorAt( const QPointF & position ) const
 
-$prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
-$virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
+$prototypeV2=virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
 
 $prototypeV2=QTextDocument * document() const
 
 $prototypeV2=virtual QSizeF documentSize() const = 0
 
-$prototype=virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
-$virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
+$prototypeV2=virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
 
-$prototype=QTextObjectInterface * handlerForObject ( int objectType ) const
-$method=|QTextObjectInterface *|handlerForObject|int
+$prototypeV2=QTextObjectInterface * handlerForObject( int objectType ) const
 
-$prototype=virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
-$virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
+$prototypeV2=virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 
 $prototypeV2=virtual int pageCount() const = 0
 
 $prototypeV2=QPaintDevice * paintDevice() const
 
-$prototype=void registerHandler ( int objectType, QObject * component )
-$method=|void|registerHandler|int,QObject *
+$prototypeV2=void registerHandler( int objectType, QObject * component )
 
-$prototype=void setPaintDevice ( QPaintDevice * device )
-$method=|void|setPaintDevice|QPaintDevice *
+$prototypeV2=void setPaintDevice( QPaintDevice * device )
 
 %%
 %% SIGNALS

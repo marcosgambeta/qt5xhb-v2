@@ -35,24 +35,19 @@ $prototypeV2=virtual QWindow * window() const
 
 $prototypeV2=virtual QAccessibleInterface * focusChild() const
 
-$prototype=virtual QAccessibleInterface *childAt(int x, int y) const = 0
-$virtualMethod=|QAccessibleInterface *|childAt|int,int
+$prototypeV2=virtual QAccessibleInterface * childAt( int x, int y ) const = 0
 
 $prototypeV2=virtual QAccessibleInterface * parent() const = 0
 
-$prototype=virtual QAccessibleInterface *child(int index) const = 0
-$virtualMethod=|QAccessibleInterface *|child|int
+$prototypeV2=virtual QAccessibleInterface * child( int index ) const = 0
 
 $prototypeV2=virtual int childCount() const = 0
 
-$prototype=virtual int indexOfChild(const QAccessibleInterface *) const = 0
-$virtualMethod=|int|indexOfChild|const QAccessibleInterface *
+$prototypeV2=virtual int indexOfChild( const QAccessibleInterface * ) const = 0
 
-$prototype=virtual QString text(QAccessible::Text t) const = 0
-$virtualMethod=|QString|text|QAccessible::Text
+$prototypeV2=virtual QString text( QAccessible::Text t ) const = 0
 
-$prototype=virtual void setText(QAccessible::Text t, const QString &text) = 0
-$virtualMethod=|void|setText|QAccessible::Text,const QString &
+$prototypeV2=virtual void setText( QAccessible::Text t, const QString & text ) = 0
 
 $prototypeV2=virtual QRect rect() const = 0
 
@@ -76,11 +71,9 @@ $prototypeV2=QAccessibleTableInterface * tableInterface()
 
 $prototypeV2=QAccessibleTableCellInterface * tableCellInterface()
 
-$prototype=void virtual_hook(int id, void *data)
-$method=|void|virtual_hook|int,void *
+$prototypeV2=void virtual_hook( int id, void * data )
 
-$prototype=virtual void *interface_cast(QAccessible::InterfaceType)
-$virtualMethod=|void *|interface_cast|QAccessible::InterfaceType
+$prototypeV2=virtual void * interface_cast( QAccessible::InterfaceType )
 
 $extraMethods
 

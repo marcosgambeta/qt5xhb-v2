@@ -62,78 +62,63 @@ HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 
 $deleteMethod
 
-$prototype=void setDepthBufferSize(int size)
-$method=|void|setDepthBufferSize|int
+$prototypeV2=void setDepthBufferSize( int size )
 
 $prototypeV2=int depthBufferSize() const
 
-$prototype=void setStencilBufferSize(int size)
-$method=|void|setStencilBufferSize|int
+$prototypeV2=void setStencilBufferSize( int size )
 
 $prototypeV2=int stencilBufferSize() const
 
-$prototype=void setRedBufferSize(int size)
-$method=|void|setRedBufferSize|int
+$prototypeV2=void setRedBufferSize( int size )
 
 $prototypeV2=int redBufferSize() const
 
-$prototype=void setGreenBufferSize(int size)
-$method=|void|setGreenBufferSize|int
+$prototypeV2=void setGreenBufferSize( int size )
 
 $prototypeV2=int greenBufferSize() const
 
-$prototype=void setBlueBufferSize(int size)
-$method=|void|setBlueBufferSize|int
+$prototypeV2=void setBlueBufferSize( int size )
 
 $prototypeV2=int blueBufferSize() const
 
-$prototype=void setAlphaBufferSize(int size)
-$method=|void|setAlphaBufferSize|int
+$prototypeV2=void setAlphaBufferSize( int size )
 
 $prototypeV2=int alphaBufferSize() const
 
-$prototype=void setSamples(int numSamples)
-$method=|void|setSamples|int
+$prototypeV2=void setSamples( int numSamples )
 
 $prototypeV2=int samples() const
 
-$prototype=void setSwapBehavior(SwapBehavior behavior)
-$method=|void|setSwapBehavior|QSurfaceFormat::SwapBehavior
+$prototypeV2=void setSwapBehavior( QSurfaceFormat::SwapBehavior behavior )
 
 $prototypeV2=QSurfaceFormat::SwapBehavior swapBehavior() const
 
 $prototypeV2=bool hasAlpha() const
 
-$prototype=void setProfile(OpenGLContextProfile profile)
-$method=|void|setProfile|QSurfaceFormat::OpenGLContextProfile
+$prototypeV2=void setProfile( QSurfaceFormat::OpenGLContextProfile profile )
 
 $prototypeV2=QSurfaceFormat::OpenGLContextProfile profile() const
 
-$prototype=void setRenderableType(RenderableType type)
-$method=|void|setRenderableType|QSurfaceFormat::RenderableType
+$prototypeV2=void setRenderableType( QSurfaceFormat::RenderableType type )
 
 $prototypeV2=QSurfaceFormat::RenderableType renderableType() const
 
-$prototype=void setMajorVersion(int majorVersion)
-$method=|void|setMajorVersion|int
+$prototypeV2=void setMajorVersion( int majorVersion )
 
 $prototypeV2=int majorVersion() const
 
-$prototype=void setMinorVersion(int minorVersion)
-$method=|void|setMinorVersion|int
+$prototypeV2=void setMinorVersion( int minorVersion )
 
 $prototypeV2=int minorVersion() const
 
 $prototypeV2=bool stereo() const
 
-$prototype=void setStereo(bool enable)
-$method=|void|setStereo|bool
+$prototypeV2=void setStereo( bool enable )
 
-$prototype=void setOption(QSurfaceFormat::FormatOptions opt)
-$method=|void|setOption|QSurfaceFormat::FormatOptions
+$prototypeV2=void setOption( QSurfaceFormat::FormatOptions opt )
 
-$prototype=bool testOption(QSurfaceFormat::FormatOptions opt) const
-$method=|bool|testOption|QSurfaceFormat::FormatOptions
+$prototypeV2=bool testOption( QSurfaceFormat::FormatOptions opt ) const
 
 $extraMethods
 

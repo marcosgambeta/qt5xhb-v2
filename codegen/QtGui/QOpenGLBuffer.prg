@@ -100,11 +100,9 @@ $prototypeV2=void destroy()
 
 $prototypeV2=bool isCreated() const
 
-$prototype=void * map(QOpenGLBuffer::Access access)
-$method=|void *|map|QOpenGLBuffer::Access
+$prototypeV2=void * map( QOpenGLBuffer::Access access )
 
-$prototype=bool read(int offset, void * data, int count)
-$method=|bool|read|int,void *,int
+$prototypeV2=bool read( int offset, void * data, int count )
 
 $prototype=void release()
 $internalMethod=|void|release,release1|
@@ -134,8 +132,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 }
 $addMethod=release
 
-$prototype=void setUsagePattern(QOpenGLBuffer::UsagePattern value)
-$method=|void|setUsagePattern|QOpenGLBuffer::UsagePattern
+$prototypeV2=void setUsagePattern( QOpenGLBuffer::UsagePattern value )
 
 $prototypeV2=int size() const
 
@@ -145,7 +142,6 @@ $prototypeV2=bool unmap()
 
 $prototypeV2=QOpenGLBuffer::UsagePattern usagePattern() const
 
-$prototype=void write(int offset, const void * data, int count)
-$method=|void|write|int,const void *,int
+$prototypeV2=void write( int offset, const void * data, int count )
 
 #pragma ENDDUMP

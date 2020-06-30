@@ -75,8 +75,7 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void swap(QRawFont &other)
-$method=|void|swap|QRawFont &
+$prototypeV2=void swap( QRawFont & other )
 
 $prototypeV2=QString familyName() const
 
@@ -86,8 +85,7 @@ $prototypeV2=QFont::Style style() const
 
 $prototypeV2=int weight() const
 
-$prototype=QVector<quint32> glyphIndexesForString(const QString &text) const
-$method=|QVector<quint32>|glyphIndexesForString|const QString &
+$prototypeV2=QVector<quint32> glyphIndexesForString( const QString & text ) const
 
 $prototype=inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
 $internalMethod=|QVector<QPointF>|advancesForGlyphIndexes,advancesForGlyphIndexes1|const QVector<quint32> &
@@ -122,17 +120,13 @@ $prototype=bool glyphIndexesForChars(const QChar *chars, int numChars, quint32 *
 %% TODO: implementar
 %% $method=|bool|glyphIndexesForChars|const QChar *,int,quint32 *,int *
 
-$prototype=QImage alphaMapForGlyph(quint32 glyphIndex,AntialiasingType antialiasingType = SubPixelAntialiasing,const QTransform &transform = QTransform()) const
-$method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
+$prototypeV2=QImage alphaMapForGlyph( quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType = QRawFont::SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 
-$prototype=QPainterPath pathForGlyph(quint32 glyphIndex) const
-$method=|QPainterPath|pathForGlyph|quint32
+$prototypeV2=QPainterPath pathForGlyph( quint32 glyphIndex ) const
 
-$prototype=QRectF boundingRect(quint32 glyphIndex) const
-$method=|QRectF|boundingRect|quint32
+$prototypeV2=QRectF boundingRect( quint32 glyphIndex ) const
 
-$prototype=void setPixelSize(qreal pixelSize)
-$method=|void|setPixelSize|qreal
+$prototypeV2=void setPixelSize( qreal pixelSize )
 
 $prototypeV2=qreal pixelSize() const
 
@@ -156,11 +150,9 @@ $prototypeV2=qreal underlinePosition() const
 
 $prototypeV2=qreal unitsPerEm() const
 
-$prototype=void loadFromFile(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference)
-$method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference
+$prototypeV2=void loadFromFile( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 
-$prototype=void loadFromData(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference)
-$method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
+$prototypeV2=void loadFromData( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 
 $prototype=bool supportsCharacter(uint ucs4) const
 $internalMethod=|bool|supportsCharacter,supportsCharacter1|uint
@@ -190,14 +182,11 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 }
 $addMethod=supportsCharacter
 
-$prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
-$method=|QList<QFontDatabase::WritingSystem>|supportedWritingSystems|
+$prototypeV2=QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 
-$prototype=QByteArray fontTable(const char *tagName) const
-$method=|QByteArray|fontTable|const char *
+$prototypeV2=QByteArray fontTable( const char * tagName ) const
 
-$prototype=static QRawFont fromFont(const QFont &font,QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any)
-$staticMethod=|QRawFont|fromFont|const QFont &,QFontDatabase::WritingSystem=QFontDatabase::Any
+$prototypeV2=static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 
 $extraMethods
 

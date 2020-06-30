@@ -58,28 +58,23 @@ $deleteMethod
 
 $prototypeV2=Qt::PenCapStyle capStyle() const
 
-$prototype=QPainterPath createStroke ( const QPainterPath & path ) const
-$method=|QPainterPath|createStroke|const QPainterPath &
+$prototypeV2=QPainterPath createStroke( const QPainterPath & path ) const
 
 $prototypeV2=qreal curveThreshold() const
 
 $prototypeV2=qreal dashOffset() const
 
-$prototype=QVector<qreal> dashPattern () const
-$method=|QVector<qreal>|dashPattern|
+$prototypeV2=QVector<qreal> dashPattern () const
 
 $prototypeV2=Qt::PenJoinStyle joinStyle() const
 
 $prototypeV2=qreal miterLimit() const
 
-$prototype=void setCapStyle ( Qt::PenCapStyle style )
-$method=|void|setCapStyle|Qt::PenCapStyle
+$prototypeV2=void setCapStyle( Qt::PenCapStyle style )
 
-$prototype=void setCurveThreshold ( qreal threshold )
-$method=|void|setCurveThreshold|qreal
+$prototypeV2=void setCurveThreshold( qreal threshold )
 
-$prototype=void setDashOffset ( qreal offset )
-$method=|void|setDashOffset|qreal
+$prototypeV2=void setDashOffset( qreal offset )
 
 $prototype=void setDashPattern ( Qt::PenStyle style )
 $internalMethod=|void|setDashPattern,setDashPattern1|Qt::PenStyle
@@ -109,14 +104,11 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 }
 $addMethod=setDashPattern
 
-$prototype=void setJoinStyle ( Qt::PenJoinStyle style )
-$method=|void|setJoinStyle|Qt::PenJoinStyle
+$prototypeV2=void setJoinStyle( Qt::PenJoinStyle style )
 
-$prototype=void setMiterLimit ( qreal limit )
-$method=|void|setMiterLimit|qreal
+$prototypeV2=void setMiterLimit( qreal limit )
 
-$prototype=void setWidth ( qreal width )
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal width )
 
 $prototypeV2=qreal width() const
 

@@ -37,18 +37,15 @@ $prototypeV2=void release()
 
 $prototypeV2=void cancel()
 
-$prototype=void setRestartHint(RestartHint)
-$method=|void|setRestartHint|QSessionManager::RestartHint
+$prototypeV2=void setRestartHint( QSessionManager::RestartHint )
 
 $prototypeV2=QSessionManager::RestartHint restartHint() const
 
-$prototype=void setRestartCommand(const QStringList&)
-$method=|void|setRestartCommand|const QStringList &
+$prototypeV2=void setRestartCommand( const QStringList & )
 
 $prototypeV2=QStringList restartCommand() const
 
-$prototype=void setDiscardCommand(const QStringList&)
-$method=|void|setDiscardCommand|const QStringList &
+$prototypeV2=void setDiscardCommand( const QStringList & )
 
 $prototypeV2=QStringList discardCommand() const
 

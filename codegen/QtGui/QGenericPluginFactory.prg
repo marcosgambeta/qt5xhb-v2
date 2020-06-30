@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QObject * create ( const QString & key, const QString & specification )
-$method=|QObject *|create|const QString &,const QString &
+$prototypeV2=QObject * create( const QString & key, const QString & specification )
 
 $prototypeV2=QStringList keys()
 

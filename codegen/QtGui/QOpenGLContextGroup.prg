@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QList<QOpenGLContext *> shares() const
-$method=|QList<QOpenGLContext *>|shares|
+$prototypeV2=QList<QOpenGLContext *> shares() const
 
 $prototypeV2=static QOpenGLContextGroup * currentContextGroup()
 

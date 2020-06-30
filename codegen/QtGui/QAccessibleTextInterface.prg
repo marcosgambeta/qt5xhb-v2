@@ -27,41 +27,31 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void selection(int selectionIndex, int *startOffset, int *endOffset) const = 0
-$virtualMethod=|void|selection|int,int *,int *
+$prototypeV2=virtual void selection( int selectionIndex, int * startOffset, int * endOffset ) const = 0
 
 $prototypeV2=virtual int selectionCount() const = 0
 
-$prototype=virtual void addSelection(int startOffset, int endOffset) = 0
-$virtualMethod=|void|addSelection|int,int
+$prototypeV2=virtual void addSelection( int startOffset, int endOffset ) = 0
 
-$prototype=virtual void removeSelection(int selectionIndex) = 0
-$virtualMethod=|void|removeSelection|int
+$prototypeV2=virtual void removeSelection( int selectionIndex ) = 0
 
-$prototype=virtual void setSelection(int selectionIndex, int startOffset, int endOffset) = 0
-$virtualMethod=|void|setSelection|int,int,int
+$prototypeV2=virtual void setSelection( int selectionIndex, int startOffset, int endOffset ) = 0
 
 $prototypeV2=virtual int cursorPosition() const = 0
 
-$prototype=virtual void setCursorPosition(int position) = 0
-$virtualMethod=|void|setCursorPosition|int
+$prototypeV2=virtual void setCursorPosition( int position ) = 0
 
-$prototype=virtual QString text(int startOffset, int endOffset) const = 0
-$virtualMethod=|QString|text|int,int
+$prototypeV2=virtual QString text( int startOffset, int endOffset ) const = 0
 
 $prototypeV2=virtual int characterCount() const = 0
 
-$prototype=virtual QRect characterRect(int offset) const = 0
-$virtualMethod=|QRect|characterRect|int
+$prototypeV2=virtual QRect characterRect( int offset ) const = 0
 
-$prototype=virtual int offsetAtPoint(const QPoint &point) const = 0
-$virtualMethod=|int|offsetAtPoint|const QPoint &
+$prototypeV2=virtual int offsetAtPoint( const QPoint & point ) const = 0
 
-$prototype=virtual void scrollToSubstring(int startIndex, int endIndex) = 0
-$virtualMethod=|void|scrollToSubstring|int,int
+$prototypeV2=virtual void scrollToSubstring( int startIndex, int endIndex ) = 0
 
-$prototype=virtual QString attributes(int offset, int *startOffset, int *endOffset) const = 0
-$virtualMethod=|QString|attributes|int,int *,int *
+$prototypeV2=virtual QString attributes( int offset, int * startOffset, int * endOffset ) const = 0
 
 $extraMethods
 

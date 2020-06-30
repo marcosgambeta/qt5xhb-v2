@@ -61,14 +61,12 @@ $prototype=explicit QSyntaxHighlighter(QTextDocument *parent)
 $prototype=virtual ~QSyntaxHighlighter()
 $deleteMethod
 
-$prototype=void setDocument(QTextDocument *doc)
-$method=|void|setDocument|QTextDocument *
+$prototypeV2=void setDocument( QTextDocument * doc )
 
 $prototypeV2=QTextDocument * document() const
 
 $prototypeV2=void rehighlight()
 
-$prototype=void rehighlightBlock(const QTextBlock &block)
-$slotMethod=|void|rehighlightBlock|const QTextBlock &
+$prototypeV2=void rehighlightBlock( const QTextBlock & block )
 
 #pragma ENDDUMP

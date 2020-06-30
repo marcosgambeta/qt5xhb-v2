@@ -82,11 +82,9 @@ $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=const QPointF &posF() const
-$method=|const QPointF &|posF|
+$prototypeV2=const QPointF & posF() const
 
-$prototype=const QPointF &globalPosF() const
-$method=|const QPointF &|globalPosF|
+$prototypeV2=const QPointF & globalPosF() const
 
 $prototypeV2=Qt::MouseButtons buttons() const
 

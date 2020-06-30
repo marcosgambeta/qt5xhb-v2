@@ -134,16 +134,14 @@ HB_FUNC_STATIC( QBRUSH_NEW )
 
 $deleteMethod
 
-$prototype=const QColor & color () const
-$method=|const QColor &|color|
+$prototypeV2=const QColor & color() const
 
-$prototype=const QGradient * gradient () const
-$method=|const QGradient *|gradient|
+$prototypeV2=const QGradient * gradient() const
 
 $prototypeV2=bool isOpaque() const
 
-$prototype=const QMatrix & matrix () const // TODO: revisar e corrigir(?)
-$method=|const QMatrix &|matrix|
+%% TODO: revisar e corrigir(?)
+$prototypeV2=const QMatrix & matrix() const
 
 $prototype=void setColor ( const QColor & color )
 $internalMethod=|void|setColor,setColor1|const QColor &
@@ -173,20 +171,15 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 }
 $addMethod=setColor
 
-$prototype=void setMatrix ( const QMatrix & matrix )
-$method=|void|setMatrix|const QMatrix &
+$prototypeV2=void setMatrix( const QMatrix & matrix )
 
-$prototype=void setStyle ( Qt::BrushStyle style )
-$method=|void|setStyle|Qt::BrushStyle
+$prototypeV2=void setStyle( Qt::BrushStyle style )
 
-$prototype=void setTexture ( const QPixmap & pixmap )
-$method=|void|setTexture|const QPixmap &
+$prototypeV2=void setTexture( const QPixmap & pixmap )
 
-$prototype=void setTextureImage ( const QImage & image )
-$method=|void|setTextureImage|const QImage &
+$prototypeV2=void setTextureImage( const QImage & image )
 
-$prototype=void setTransform ( const QTransform & matrix )
-$method=|void|setTransform|const QTransform &
+$prototypeV2=void setTransform( const QTransform & matrix )
 
 $prototypeV2=Qt::BrushStyle style() const
 

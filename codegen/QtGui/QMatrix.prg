@@ -74,8 +74,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
 
 $deleteMethod
 
-$prototype=void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
-$method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal
+$prototypeV2=void setMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
 
 $prototypeV2=qreal m11() const
 
@@ -210,31 +209,25 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
 }
 $addMethod=mapRect
 
-$prototype=QPolygon mapToPolygon(const QRect &r) const
-$method=|QPolygon|mapToPolygon|const QRect &
+$prototypeV2=QPolygon mapToPolygon( const QRect & r ) const
 
 $prototypeV2=void reset()
 
 $prototypeV2=bool isIdentity() const
 
-$prototype=QMatrix &translate(qreal dx, qreal dy)
-$method=|QMatrix &|translate|qreal,qreal
+$prototypeV2=QMatrix & translate( qreal dx, qreal dy )
 
-$prototype=QMatrix &scale(qreal sx, qreal sy)
-$method=|QMatrix &|scale|qreal,qreal
+$prototypeV2=QMatrix & scale( qreal sx, qreal sy )
 
-$prototype=QMatrix &shear(qreal sh, qreal sv)
-$method=|QMatrix &|shear|qreal,qreal
+$prototypeV2=QMatrix & shear( qreal sh, qreal sv )
 
-$prototype=QMatrix &rotate(qreal a)
-$method=|QMatrix &|rotate|qreal
+$prototypeV2=QMatrix & rotate( qreal a )
 
 $prototypeV2=bool isInvertible() const
 
 $prototypeV2=qreal determinant() const
 
-$prototype=QMatrix inverted(bool *invertible = nullptr) const
-$method=|QMatrix|inverted|bool *=nullptr
+$prototypeV2=QMatrix inverted( bool * invertible = nullptr ) const
 
 $extraMethods
 

@@ -59,8 +59,7 @@ $deleteMethod
 
 $prototypeV2=QRegularExpression regularExpression() const
 
-$prototype=void setRegularExpression(const QRegularExpression &re)
-$method=|void|setRegularExpression|const QRegularExpression &
+$prototypeV2=void setRegularExpression( const QRegularExpression & re )
 
 %%
 %% SIGNALS

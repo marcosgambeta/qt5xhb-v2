@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 
 $deleteMethod
 
-$prototype=void setFormat(const QTextCharFormat &format)
-$method=|void|setFormat|const QTextCharFormat &
+$prototypeV2=void setFormat( const QTextCharFormat & format )
 
 $prototypeV2=QTextCharFormat format() const
 

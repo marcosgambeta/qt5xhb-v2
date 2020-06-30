@@ -74,17 +74,13 @@ HB_FUNC_STATIC( QICON_NEW )
 
 $deleteMethod
 
-$prototype=QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
-$method=|QSize|actualSize|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=QSize actualSize( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 
-$prototype=void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
-$method=|void|addFile|const QString &,const QSize &=QSize(),QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=void addFile( const QString & fileName, const QSize & size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 
-$prototype=void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
-$method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=void addPixmap( const QPixmap & pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 
-$prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
-$method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 
 $prototypeV2=qint64 cacheKey() const
 
@@ -156,27 +152,21 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 $addMethod=pixmap
 
-$prototype=static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
-$staticMethod=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
+$prototypeV2=static QIcon fromTheme( const QString & name, const QIcon & fallback = QIcon() )
 
-$prototype=static bool hasThemeIcon ( const QString & name )
-$staticMethod=|bool|hasThemeIcon|const QString &
+$prototypeV2=static bool hasThemeIcon( const QString & name )
 
-$prototype=static void setThemeName ( const QString & name )
-$staticMethod=|void|setThemeName|const QString &
+$prototypeV2=static void setThemeName( const QString & name )
 
-$prototype=static void setThemeSearchPaths ( const QStringList & paths )
-$staticMethod=|void|setThemeSearchPaths|const QStringList &
+$prototypeV2=static void setThemeSearchPaths( const QStringList & paths )
 
 $prototypeV2=static QString themeName()
 
 $prototypeV2=static QStringList themeSearchPaths()
 
-$prototype=static QString QIcon::fallbackThemeName()
-$staticMethod=5,12,0|QString|fallbackThemeName|
+$prototypeV2=5,12,0|static QString QIcon::fallbackThemeName()
 
-$prototype=static void QIcon::setFallbackThemeName(const QString &name)
-$staticMethod=5,12,0|void|setFallbackThemeName|const QString &
+$prototypeV2=5,12,0|static void QIcon::setFallbackThemeName( const QString & name )
 
 $variantMethods
 

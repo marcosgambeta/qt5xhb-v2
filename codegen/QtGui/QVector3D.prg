@@ -105,14 +105,11 @@ $prototypeV2=float y() const
 
 $prototypeV2=float z() const
 
-$prototype=void setX(float x)
-$method=|void|setX|float
+$prototypeV2=void setX( float x )
 
-$prototype=void setY(float y)
-$method=|void|setY|float
+$prototypeV2=void setY( float y )
 
-$prototype=void setZ(float z)
-$method=|void|setZ|float
+$prototypeV2=void setZ( float z )
 
 $prototypeV2=float length() const
 
@@ -122,8 +119,7 @@ $prototypeV2=QVector3D normalized() const
 
 $prototypeV2=void normalize()
 
-$prototype=float distanceToPoint(const QVector3D& point) const
-$method=|float|distanceToPoint|const QVector3D &
+$prototypeV2=float distanceToPoint( const QVector3D & point ) const
 
 $prototype=float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
 $internalMethod=|float|distanceToPlane,distanceToPlane1|const QVector3D &,const QVector3D &
@@ -153,8 +149,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 }
 $addMethod=distanceToPlane
 
-$prototype=float distanceToLine(const QVector3D& point, const QVector3D& direction) const
-$method=|float|distanceToLine|const QVector3D &,const QVector3D &
+$prototypeV2=float distanceToLine( const QVector3D & point, const QVector3D & direction ) const
 
 $prototypeV2=QVector2D toVector2D() const
 
@@ -164,11 +159,9 @@ $prototypeV2=QPoint toPoint() const
 
 $prototypeV2=QPointF toPointF() const
 
-$prototype=static float dotProduct(const QVector3D& v1, const QVector3D& v2)
-$staticMethod=|float|dotProduct|const QVector3D &,const QVector3D &
+$prototypeV2=static float dotProduct( const QVector3D & v1, const QVector3D & v2 )
 
-$prototype=static QVector3D crossProduct(const QVector3D& v1, const QVector3D& v2)
-$staticMethod=|QVector3D|crossProduct|const QVector3D &,const QVector3D &
+$prototypeV2=static QVector3D crossProduct( const QVector3D & v1, const QVector3D & v2 )
 
 $prototype=static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 $internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &

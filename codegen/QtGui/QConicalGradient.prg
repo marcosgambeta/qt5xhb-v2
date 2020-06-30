@@ -66,8 +66,7 @@ $prototypeV2=qreal angle() const
 
 $prototypeV2=QPointF center() const
 
-$prototype=void setAngle ( qreal angle )
-$method=|void|setAngle|qreal
+$prototypeV2=void setAngle( qreal angle )
 
 $prototype=void setCenter ( const QPointF & center )
 $internalMethod=|void|setCenter,setCenter1|const QPointF &

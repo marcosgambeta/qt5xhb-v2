@@ -30,8 +30,7 @@ $constructor=|new|QObject *,int
 
 $deleteMethod
 
-$prototype=void setCursorPosition(int position)
-$method=|void|setCursorPosition|int
+$prototypeV2=void setCursorPosition( int position )
 
 $prototypeV2=int cursorPosition() const
 

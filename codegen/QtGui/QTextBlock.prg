@@ -73,8 +73,7 @@ $prototypeV2=int position() const
 
 $prototypeV2=int length() const
 
-$prototype=bool contains(int position) const
-$method=|bool|contains|int
+$prototypeV2=bool contains( int position ) const
 
 $prototypeV2=QTextLayout * layout() const
 
@@ -92,37 +91,31 @@ $prototypeV2=Qt::LayoutDirection textDirection() const
 
 $prototypeV2=QString text() const
 
-$prototype=const QTextDocument *document() const
-$method=|const QTextDocument *|document|
+$prototypeV2=const QTextDocument * document() const
 
 $prototypeV2=QTextList * textList() const
 
 $prototypeV2=QTextBlockUserData * userData() const
 
-$prototype=void setUserData(QTextBlockUserData *data)
-$method=|void|setUserData|QTextBlockUserData *
+$prototypeV2=void setUserData( QTextBlockUserData * data )
 
 $prototypeV2=int userState() const
 
-$prototype=void setUserState(int state)
-$method=|void|setUserState|int
+$prototypeV2=void setUserState( int state )
 
 $prototypeV2=int revision() const
 
-$prototype=void setRevision(int rev)
-$method=|void|setRevision|int
+$prototypeV2=void setRevision( int rev )
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 $prototypeV2=int blockNumber() const
 
 $prototypeV2=int firstLineNumber() const
 
-$prototype=void setLineCount(int count)
-$method=|void|setLineCount|int
+$prototypeV2=void setLineCount( int count )
 
 $prototypeV2=int lineCount() const
 

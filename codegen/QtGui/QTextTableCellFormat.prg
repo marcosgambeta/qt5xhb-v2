@@ -32,27 +32,22 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setTopPadding(qreal padding)
-$method=|void|setTopPadding|qreal
+$prototypeV2=void setTopPadding( qreal padding )
 
 $prototypeV2=qreal topPadding() const
 
-$prototype=void setBottomPadding(qreal padding)
-$method=|void|setBottomPadding|qreal
+$prototypeV2=void setBottomPadding( qreal padding )
 
 $prototypeV2=qreal bottomPadding() const
 
-$prototype=void setLeftPadding(qreal padding)
-$method=|void|setLeftPadding|qreal
+$prototypeV2=void setLeftPadding( qreal padding )
 
 $prototypeV2=qreal leftPadding() const
 
-$prototype=void setRightPadding(qreal padding)
-$method=|void|setRightPadding|qreal
+$prototypeV2=void setRightPadding( qreal padding )
 
 $prototypeV2=qreal rightPadding() const
 
-$prototype=void setPadding(qreal padding)
-$method=|void|setPadding|qreal
+$prototypeV2=void setPadding( qreal padding )
 
 #pragma ENDDUMP

@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QOpenGLDebugMessage &debugMessage)
-$method=|void|swap|QOpenGLDebugMessage &
+$prototypeV2=void swap( QOpenGLDebugMessage & debugMessage )
 
 $prototypeV2=QOpenGLDebugMessage::Source source() const
 
@@ -67,11 +66,9 @@ $prototypeV2=GLuint id() const
 
 $prototypeV2=QString message() const
 
-$prototype=static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
-$staticMethod=|QOpenGLDebugMessage|createApplicationMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
+$prototypeV2=static QOpenGLDebugMessage createApplicationMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 
-$prototype=static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
-$staticMethod=|QOpenGLDebugMessage|createThirdPartyMessage|const QString &,GLuint=0,QOpenGLDebugMessage::Severity=QOpenGLDebugMessage::NotificationSeverity,QOpenGLDebugMessage::Type=QOpenGLDebugMessage::OtherType
+$prototypeV2=static QOpenGLDebugMessage createThirdPartyMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 
 $extraMethods
 

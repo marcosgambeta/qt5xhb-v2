@@ -63,8 +63,8 @@ $prototypeV2=QSize availableSize() const
 
 $prototypeV2=QRect availableGeometry() const
 
-$prototype=QList<QScreen *> virtualSiblings() const // TODO: implementar método
-$method=|QList<QScreen *>|virtualSiblings|
+$prototypeV2=QList<QScreen *> virtualSiblings() const
+%% TODO: implementar método
 
 $prototypeV2=QSize virtualSize() const
 
@@ -80,26 +80,19 @@ $prototypeV2=Qt::ScreenOrientation orientation() const
 
 $prototypeV2=Qt::ScreenOrientations orientationUpdateMask() const
 
-$prototype=void setOrientationUpdateMask(Qt::ScreenOrientations mask)
-$method=|void|setOrientationUpdateMask|Qt::ScreenOrientations
+$prototypeV2=void setOrientationUpdateMask( Qt::ScreenOrientations mask )
 
-$prototype=int angleBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b) const
-$method=|int|angleBetween|Qt::ScreenOrientation,Qt::ScreenOrientation
+$prototypeV2=int angleBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b ) const
 
-$prototype=QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target) const
-$method=|QTransform|transformBetween|Qt::ScreenOrientation,Qt::ScreenOrientation,const QRect &
+$prototypeV2=QTransform transformBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & target ) const
 
-$prototype=QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect) const
-$method=|QRect|mapBetween|Qt::ScreenOrientation,Qt::ScreenOrientation,const QRect &
+$prototypeV2=QRect mapBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & rect ) const
 
-$prototype=bool isPortrait(Qt::ScreenOrientation orientation) const
-$method=|bool|isPortrait|Qt::ScreenOrientation
+$prototypeV2=bool isPortrait( Qt::ScreenOrientation orientation ) const
 
-$prototype=bool isLandscape(Qt::ScreenOrientation orientation) const
-$method=|bool|isLandscape|Qt::ScreenOrientation
+$prototypeV2=bool isLandscape( Qt::ScreenOrientation orientation ) const
 
-$prototype=QPixmap grabWindow(WId window, int x = 0, int y = 0, int w = -1, int h = -1)
-$method=|QPixmap|grabWindow|WId,int=0,int=0,int=-1,int=-1
+$prototypeV2=QPixmap grabWindow( WId window, int x = 0, int y = 0, int w = -1, int h = -1 )
 
 $prototypeV2=qreal refreshRate() const
 

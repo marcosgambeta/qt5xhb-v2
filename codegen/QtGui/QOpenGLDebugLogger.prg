@@ -40,16 +40,13 @@ $prototypeV2=QOpenGLDebugLogger::LoggingMode loggingMode() const
 
 $prototypeV2=qint64 maximumMessageLength() const
 
-$prototype=void pushGroup(const QString &name,GLuint id = 0,QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource)
-$method=|void|pushGroup|const QString &,GLuint=0,QOpenGLDebugMessage::Source=QOpenGLDebugMessage::ApplicationSource
+$prototypeV2=void pushGroup( const QString & name, GLuint id = 0, QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource )
 
 $prototypeV2=void popGroup()
 
-$prototype=void logMessage(const QOpenGLDebugMessage &debugMessage)
-$method=|void|logMessage|const QOpenGLDebugMessage &
+$prototypeV2=void logMessage( const QOpenGLDebugMessage & debugMessage )
 
-$prototype=void startLogging(LoggingMode loggingMode = AsynchronousLogging)
-$method=|void|startLogging|QOpenGLDebugLogger::LoggingMode=QOpenGLDebugLogger::AsynchronousLogging
+$prototypeV2=void startLogging( QOpenGLDebugLogger::LoggingMode loggingMode = QOpenGLDebugLogger::AsynchronousLogging )
 
 $prototypeV2=void stopLogging()
 

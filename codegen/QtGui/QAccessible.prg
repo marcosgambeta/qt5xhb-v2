@@ -25,16 +25,13 @@ $destructor
 
 $includes
 
-$prototype=static QAccessibleInterface *queryAccessibleInterface(QObject *)
-$staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
+$prototypeV2=static QAccessibleInterface * queryAccessibleInterface( QObject * )
 
-$prototype=static void updateAccessibility(QAccessibleEvent *event)
-$staticMethod=|void|updateAccessibility|QAccessibleEvent *
+$prototypeV2=static void updateAccessibility( QAccessibleEvent * event )
 
 $prototypeV2=static bool isActive()
 
-$prototype=static void setRootObject(QObject *object)
-$staticMethod=|void|setRootObject|QObject *
+$prototypeV2=static void setRootObject( QObject * object )
 
 $prototypeV2=static void cleanup()
 

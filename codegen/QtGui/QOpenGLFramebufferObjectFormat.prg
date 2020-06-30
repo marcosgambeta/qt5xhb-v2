@@ -54,28 +54,23 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 
 $deleteMethod
 
-$prototype=void setSamples(int samples)
-$method=|void|setSamples|int
+$prototypeV2=void setSamples( int samples )
 
 $prototypeV2=int samples() const
 
-$prototype=void setMipmap(bool enabled)
-$method=|void|setMipmap|bool
+$prototypeV2=void setMipmap( bool enabled )
 
 $prototypeV2=bool mipmap() const
 
-$prototype=void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
-$method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
+$prototypeV2=void setAttachment( QOpenGLFramebufferObject::Attachment attachment )
 
 $prototypeV2=QOpenGLFramebufferObject::Attachment attachment() const
 
-$prototype=void setTextureTarget(GLenum target)
-$method=|void|setTextureTarget|GLenum
+$prototypeV2=void setTextureTarget( GLenum target )
 
 $prototypeV2=GLenum textureTarget() const
 
-$prototype=void setInternalTextureFormat(GLenum internalTextureFormat)
-$method=|void|setInternalTextureFormat|GLenum
+$prototypeV2=void setInternalTextureFormat( GLenum internalTextureFormat )
 
 $prototypeV2=GLenum internalTextureFormat() const
 

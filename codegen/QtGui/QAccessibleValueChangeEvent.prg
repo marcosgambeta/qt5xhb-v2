@@ -30,8 +30,7 @@ $constructor=|new|QObject *,const QVariant &
 
 $deleteMethod
 
-$prototype=void setValue(const QVariant & val)
-$method=|void|setValue|const QVariant &
+$prototypeV2=void setValue( const QVariant & val)
 
 $prototypeV2=QVariant value() const
 

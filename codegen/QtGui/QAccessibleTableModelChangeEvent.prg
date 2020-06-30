@@ -30,22 +30,17 @@ $constructor=|new|QObject *,QAccessibleTableModelChangeEvent::ModelChangeType
 
 $deleteMethod
 
-$prototype=void setModelChangeType(ModelChangeType changeType)
-$method=|void|setModelChangeType|QAccessibleTableModelChangeEvent::ModelChangeType
+$prototypeV2=void setModelChangeType( QAccessibleTableModelChangeEvent::ModelChangeType changeType )
 
 $prototypeV2=QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
 
-$prototype=void setFirstRow(int row)
-$method=|void|setFirstRow|int
+$prototypeV2=void setFirstRow( int row )
 
-$prototype=void setFirstColumn(int col)
-$method=|void|setFirstColumn|int
+$prototypeV2=void setFirstColumn( int col )
 
-$prototype=void setLastRow(int row)
-$method=|void|setLastRow|int
+$prototypeV2=void setLastRow( int row )
 
-$prototype=void setLastColumn(int col)
-$method=|void|setLastColumn|int
+$prototypeV2=void setLastColumn( int col )
 
 $prototypeV2=int firstRow() const
 

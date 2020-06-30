@@ -70,8 +70,7 @@ $prototypeV2=int position() const
 
 $prototypeV2=int length() const
 
-$prototype=bool contains(int position) const
-$method=|bool|contains|int
+$prototypeV2=bool contains( int position ) const
 
 $prototypeV2=QTextCharFormat charFormat() const
 
@@ -79,8 +78,7 @@ $prototypeV2=int charFormatIndex() const
 
 $prototypeV2=QString text() const
 
-$prototype=QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
-$method=|QList<QGlyphRun>|glyphRuns|int=-1,int=-1
+$prototypeV2=QList<QGlyphRun> glyphRuns( int from = -1, int length = -1 ) const
 
 $extraMethods
 

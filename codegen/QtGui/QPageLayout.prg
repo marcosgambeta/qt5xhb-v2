@@ -66,45 +66,35 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QPageLayout &other)
-$method=|void|swap|QPageLayout &
+$prototypeV2=void swap( QPageLayout & other )
 
-$prototype=bool isEquivalentTo(const QPageLayout &other) const
-$method=|bool|isEquivalentTo|const QPageLayout &
+$prototypeV2=bool isEquivalentTo( const QPageLayout & other ) const
 
 $prototypeV2=bool isValid() const
 
 $prototypeV2=QPageLayout::Mode mode() const
 
-$prototype=void setMode(Mode mode)
-$method=|void|setMode|QPageLayout::Mode
+$prototypeV2=void setMode( QPageLayout::Mode mode )
 
 $prototypeV2=QPageSize pageSize() const
 
 $prototypeV2=QPageLayout::Orientation orientation() const
 
-$prototype=void setOrientation(Orientation orientation)
-$method=|void|setOrientation|QPageLayout::Orientation
+$prototypeV2=void setOrientation( QPageLayout::Orientation orientation )
 
 $prototypeV2=QPageLayout::Unit units() const
 
-$prototype=void setUnits(Unit units)
-$method=|void|setUnits|QPageLayout::Unit
+$prototypeV2=void setUnits( QPageLayout::Unit units )
 
-$prototype=bool setMargins(const QMarginsF &margins)
-$method=|bool|setMargins|const QMarginsF &
+$prototypeV2=bool setMargins( const QMarginsF & margins )
 
-$prototype=bool setLeftMargin(qreal leftMargin)
-$method=|bool|setLeftMargin|qreal
+$prototypeV2=bool setLeftMargin( qreal leftMargin )
 
-$prototype=bool setRightMargin(qreal rightMargin)
-$method=|bool|setRightMargin|qreal
+$prototypeV2=bool setRightMargin( qreal rightMargin )
 
-$prototype=bool setTopMargin(qreal topMargin)
-$method=|bool|setTopMargin|qreal
+$prototypeV2=bool setTopMargin( qreal topMargin )
 
-$prototype=bool setBottomMargin(qreal bottomMargin)
-$method=|bool|setBottomMargin|qreal
+$prototypeV2=bool setBottomMargin( qreal bottomMargin )
 
 $prototype=QMarginsF margins() const
 $internalMethod=|QMarginsF|margins,margins1|
@@ -136,11 +126,9 @@ $addMethod=margins
 
 $prototypeV2=QMargins marginsPoints() const
 
-$prototype=QMargins marginsPixels(int resolution) const
-$method=|QMargins|marginsPixels|int
+$prototypeV2=QMargins marginsPixels( int resolution ) const
 
-$prototype=void setMinimumMargins(const QMarginsF &minMargins)
-$method=|void|setMinimumMargins|const QMarginsF &
+$prototypeV2=void setMinimumMargins( const QMarginsF & minMargins )
 
 $prototypeV2=QMarginsF minimumMargins() const
 
@@ -176,8 +164,7 @@ $addMethod=fullRect
 
 $prototypeV2=QRect fullRectPoints() const
 
-$prototype=QRect fullRectPixels(int resolution) const
-$method=|QRect|fullRectPixels|int
+$prototypeV2=QRect fullRectPixels( int resolution ) const
 
 $prototype=QRectF paintRect() const
 $internalMethod=|QRectF|paintRect,paintRect1|
@@ -209,8 +196,7 @@ $addMethod=paintRect
 
 $prototypeV2=QRect paintRectPoints() const
 
-$prototype=QRect paintRectPixels(int resolution) const
-$method=|QRect|paintRectPixels|int
+$prototypeV2=QRect paintRectPixels( int resolution ) const
 
 $extraMethods
 

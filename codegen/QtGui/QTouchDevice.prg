@@ -36,14 +36,11 @@ $prototypeV2=QTouchDevice::DeviceType type() const
 
 $prototypeV2=QTouchDevice::Capabilities capabilities() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
-$prototype=void setType(DeviceType devType)
-$method=|void|setType|QTouchDevice::DeviceType
+$prototypeV2=void setType( QTouchDevice::DeviceType devType )
 
-$prototype=void setCapabilities(Capabilities caps)
-$method=|void|setCapabilities|QTouchDevice::Capabilities
+$prototypeV2=void setCapabilities( QTouchDevice::Capabilities caps )
 
 $prototype=static QList<const QTouchDevice *> devices()
 %% TODO: $staticMethod=|QList<const QTouchDevice *>|devices|

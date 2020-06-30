@@ -30,10 +30,8 @@ $constructor=|new|const QSize &,const QSize &
 
 $deleteMethod
 
-$prototype=const QSize &size() const
-$method=|const QSize &|size|
+$prototypeV2=const QSize & size() const
 
-$prototype=const QSize &oldSize() const
-$method=|const QSize &|oldSize|
+$prototypeV2=const QSize & oldSize() const
 
 #pragma ENDDUMP

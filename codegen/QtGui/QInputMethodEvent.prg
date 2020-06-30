@@ -62,17 +62,14 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 $deleteMethod
 
-$prototype=const QString & commitString () const
-$method=|const QString &|commitString|
+$prototypeV2=const QString & commitString() const
 
-$prototype=const QString & preeditString () const
-$method=|const QString &|preeditString|
+$prototypeV2=const QString & preeditString() const
 
 $prototypeV2=int replacementLength() const
 
 $prototypeV2=int replacementStart() const
 
-$prototype=void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
-$method=|void|setCommitString|const QString &,int=0,int=0
+$prototypeV2=void setCommitString( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 
 #pragma ENDDUMP

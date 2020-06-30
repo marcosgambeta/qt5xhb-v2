@@ -67,8 +67,7 @@ $deleteMethod
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString &) [slot]
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & ) [slot]
 
 %%
 %% Q_PROPERTY(Qt::WindowModality modality READ modality WRITE setModality NOTIFY modalityChanged)
@@ -76,8 +75,7 @@ $method=|void|setTitle|const QString &
 
 $prototypeV2=Qt::WindowModality modality() const
 
-$prototype=void setModality(Qt::WindowModality modality)
-$method=|void|setModality|Qt::WindowModality
+$prototypeV2=void setModality( Qt::WindowModality modality )
 
 %%
 %% Q_PROPERTY(Qt::WindowFlags flags READ flags WRITE setFlags)
@@ -85,8 +83,7 @@ $method=|void|setModality|Qt::WindowModality
 
 $prototypeV2=Qt::WindowFlags flags() const
 
-$prototype=void setFlags(Qt::WindowFlags flags)
-$method=|void|setFlags|Qt::WindowFlags
+$prototypeV2=void setFlags( Qt::WindowFlags flags )
 
 %%
 %% Q_PROPERTY(int x READ x WRITE setX NOTIFY xChanged)
@@ -94,8 +91,7 @@ $method=|void|setFlags|Qt::WindowFlags
 
 $prototypeV2=int x() const
 
-$prototype=void setX(int arg) [slot]
-$method=|void|setX|int
+$prototypeV2=void setX( int arg ) [slot]
 
 %%
 %% Q_PROPERTY(int y READ y WRITE setY NOTIFY yChanged)
@@ -103,8 +99,7 @@ $method=|void|setX|int
 
 $prototypeV2=int y() const
 
-$prototype=void setY(int arg) [slot]
-$method=|void|setY|int
+$prototypeV2=void setY( int arg ) [slot]
 
 %%
 %% Q_PROPERTY(int width READ width WRITE setWidth NOTIFY widthChanged)
@@ -112,8 +107,7 @@ $method=|void|setY|int
 
 $prototypeV2=int width() const
 
-$prototype=void setWidth(int arg) [slot]
-$method=|void|setWidth|int
+$prototypeV2=void setWidth( int arg ) [slot]
 
 %%
 %% Q_PROPERTY(int height READ height WRITE setHeight NOTIFY heightChanged)
@@ -121,8 +115,7 @@ $method=|void|setWidth|int
 
 $prototypeV2=int height() const
 
-$prototype=void setHeight(int arg) [slot]
-$method=|void|setHeight|int
+$prototypeV2=void setHeight( int arg ) [slot]
 
 %%
 %% Q_PROPERTY(int minimumWidth READ minimumWidth WRITE setMinimumWidth NOTIFY minimumWidthChanged)
@@ -130,8 +123,7 @@ $method=|void|setHeight|int
 
 $prototypeV2=int minimumWidth() const
 
-$prototype=void setMinimumWidth(int w) [slot]
-$method=|void|setMinimumWidth|int
+$prototypeV2=void setMinimumWidth( int w ) [slot]
 
 %%
 %% Q_PROPERTY(int minimumHeight READ minimumHeight WRITE setMinimumHeight NOTIFY minimumHeightChanged)
@@ -139,8 +131,7 @@ $method=|void|setMinimumWidth|int
 
 $prototypeV2=int minimumHeight() const
 
-$prototype=void setMinimumHeight(int h) [slot]
-$method=|void|setMinimumHeight|int
+$prototypeV2=void setMinimumHeight( int h ) [slot]
 
 %%
 %% Q_PROPERTY(int maximumWidth READ maximumWidth WRITE setMaximumWidth NOTIFY maximumWidthChanged)
@@ -148,8 +139,7 @@ $method=|void|setMinimumHeight|int
 
 $prototypeV2=int maximumWidth() const
 
-$prototype=void setMaximumWidth(int w) [slot]
-$method=|void|setMaximumWidth|int
+$prototypeV2=void setMaximumWidth( int w ) [slot]
 
 %%
 %% Q_PROPERTY(int maximumHeight READ maximumHeight WRITE setMaximumHeight NOTIFY maximumHeightChanged)
@@ -157,8 +147,7 @@ $method=|void|setMaximumWidth|int
 
 $prototypeV2=int maximumHeight() const
 
-$prototype=void setMaximumHeight(int h) [slot]
-$method=|void|setMaximumHeight|int
+$prototypeV2=void setMaximumHeight( int h ) [slot]
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
@@ -166,25 +155,21 @@ $method=|void|setMaximumHeight|int
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible) [slot]
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible ) [slot]
 
 %%
 %% Q_PROPERTY(bool active READ isActive NOTIFY activeChanged REVISION 1)
 %%
 
-$prototype=bool isActive() const
-$method=5,1,0|bool|isActive|
+$prototypeV2=5,1,0|bool isActive() const
 
 %%
 %% Q_PROPERTY(Visibility visibility READ visibility WRITE setVisibility NOTIFY visibilityChanged REVISION 1)
 %%
 
-$prototype=Visibility visibility() const
-$method=5,1,0|QWindow::Visibility|visibility|
+$prototypeV2=5,1,0|QWindow::Visibility visibility() const
 
-$prototype=void setVisibility(Visibility v)
-$method=5,1,0|void|setVisibility|QWindow::Visibility
+$prototypeV2=5,1,0|void setVisibility( QWindow::Visibility v )
 
 %%
 %% Q_PROPERTY(Qt::ScreenOrientation contentOrientation READ contentOrientation WRITE reportContentOrientationChange NOTIFY contentOrientationChanged)
@@ -192,18 +177,15 @@ $method=5,1,0|void|setVisibility|QWindow::Visibility
 
 $prototypeV2=Qt::ScreenOrientation contentOrientation() const
 
-$prototype=void reportContentOrientationChange(Qt::ScreenOrientation orientation)
-$method=|void|reportContentOrientationChange|Qt::ScreenOrientation
+$prototypeV2=void reportContentOrientationChange( Qt::ScreenOrientation orientation )
 
 %%
 %% Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity NOTIFY opacityChanged REVISION 1)
 %%
 
-$prototype=qreal opacity() const
-$method=5,1,0|qreal|opacity|
+$prototypeV2=5,1,0|qreal opacity() const
 
-$prototype=void setOpacity(qreal level)
-$method=5,1,0|void|setOpacity|qreal
+$prototypeV2=5,1,0|void setOpacity( qreal level )
 
 %%
 %%
@@ -226,8 +208,7 @@ $prototypeV2=QMargins frameMargins() const
 
 $prototypeV2=QRect geometry() const
 
-$prototype=bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) const
-$method=|bool|isAncestorOf|const QWindow *,QWindow::AncestorMode=QWindow::IncludeTransients
+$prototypeV2=bool isAncestorOf( const QWindow * child, QWindow::AncestorMode mode = QWindow::IncludeTransients ) const
 
 $prototypeV2=bool isExposed() const
 
@@ -235,11 +216,9 @@ $prototypeV2=bool isModal() const
 
 $prototypeV2=bool isTopLevel() const
 
-$prototype=QPoint mapFromGlobal(const QPoint & pos) const
-$method=|QPoint|mapFromGlobal|const QPoint &
+$prototypeV2=QPoint mapFromGlobal( const QPoint & pos ) const
 
-$prototype=QPoint mapToGlobal(const QPoint & pos) const
-$method=|QPoint|mapToGlobal|const QPoint &
+$prototypeV2=QPoint mapToGlobal( const QPoint & pos ) const
 
 $prototypeV2=QSize maximumSize() const
 
@@ -305,14 +284,12 @@ $addMethod=resize
 
 $prototypeV2=QScreen * screen() const
 
-$prototype=void setBaseSize(const QSize & size)
-$method=|void|setBaseSize|const QSize &
+$prototypeV2=void setBaseSize( const QSize & size )
 
 $prototype=void setCursor(const QCursor &)
 $method=|void|setCursor|const QCursor &|#ifndef QT_NO_CURSOR
 
-$prototype=void setFormat(const QSurfaceFormat & format)
-$method=|void|setFormat|const QSurfaceFormat &
+$prototypeV2=void setFormat( const QSurfaceFormat & format )
 
 $prototype=void setGeometry(int posx, int posy, int w, int h) [slot]
 $internalMethod=|void|setGeometry,setGeometry1|int,int,int,int
@@ -342,32 +319,23 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 }
 $addMethod=setGeometry
 
-$prototype=bool setKeyboardGrabEnabled(bool grab)
-$method=|bool|setKeyboardGrabEnabled|bool
+$prototypeV2=bool setKeyboardGrabEnabled( bool grab )
 
-$prototype=void setMaximumSize(const QSize & size)
-$method=|void|setMaximumSize|const QSize &
+$prototypeV2=void setMaximumSize( const QSize & size )
 
-$prototype=void setMinimumSize(const QSize & size)
-$method=|void|setMinimumSize|const QSize &
+$prototypeV2=void setMinimumSize( const QSize & size )
 
-$prototype=bool setMouseGrabEnabled(bool grab)
-$method=|bool|setMouseGrabEnabled|bool
+$prototypeV2=bool setMouseGrabEnabled( bool grab )
 
-$prototype=void setParent(QWindow * parent)
-$method=|void|setParent|QWindow *
+$prototypeV2=void setParent( QWindow * parent )
 
-$prototype=void setScreen(QScreen * newScreen)
-$method=|void|setScreen|QScreen *
+$prototypeV2=void setScreen( QScreen * newScreen )
 
-$prototype=void setSizeIncrement(const QSize & size)
-$method=|void|setSizeIncrement|const QSize &
+$prototypeV2=void setSizeIncrement( const QSize & size )
 
-$prototype=void setSurfaceType(SurfaceType surfaceType)
-$method=|void|setSurfaceType|QSurface::SurfaceType
+$prototypeV2=void setSurfaceType( QSurface::SurfaceType surfaceType )
 
-$prototype=void setTransientParent(QWindow * parent)
-$method=|void|setTransientParent|QWindow *
+$prototypeV2=void setTransientParent( QWindow * parent )
 
 $prototypeV2=QSize sizeIncrement() const
 
@@ -378,17 +346,14 @@ $method=|void|unsetCursor||#ifndef QT_NO_CURSOR
 
 $prototypeV2=Qt::WindowState windowState() const
 
-$prototype=virtual QSurfaceFormat format() const override
+$prototypeV2=virtual QSurfaceFormat format() const override
 %% TODO: is virtual ?
-$virtualMethod=|QSurfaceFormat|format|
 
-$prototype=virtual QSize size() const override
+$prototypeV2=virtual QSize size() const override
 %% TODO: is virtual ?
-$virtualMethod=|QSize|size|
 
-$prototype=virtual SurfaceType surfaceType() const override
+$prototypeV2=virtual QSurface::SurfaceType surfaceType() const override
 %% TODO: is virtual ?
-$virtualMethod=|QSurface::SurfaceType|surfaceType|
 
 $prototypeV2=bool close() [slot]
 
@@ -443,39 +408,31 @@ $slotMethod=5,5,0|void|requestUpdate|
 
 $prototypeV2=WId winId() const
 
-$prototype=void setFlag(Qt::WindowType, bool on = true)
-$method=5,9,0|void|setFlag|Qt::WindowType,bool=true
+$prototypeV2=5,9,0|void setFlag( Qt::WindowType, bool on = true )
 
 $prototypeV2=Qt::WindowType type() const
 
-$prototype=void setMask(const QRegion &region)
-$method=|void|setMask|const QRegion &
+$prototypeV2=void setMask( const QRegion & region )
 
 $prototypeV2=QRegion mask() const
 
 $prototypeV2=qreal devicePixelRatio() const
 
-$prototype=Qt::WindowStates windowStates() const
-$method=5,10,0|Qt::WindowStates|windowStates|
+$prototypeV2=5,10,0|Qt::WindowStates windowStates() const
 
-$prototype=void setWindowState(Qt::WindowState state)
-$method=|void|setWindowState|Qt::WindowState
+$prototypeV2=void setWindowState( Qt::WindowState state )
 
-$prototype=void setWindowStates(Qt::WindowStates states)
-$method=5,10,0|void|setWindowStates|Qt::WindowStates
+$prototypeV2=5,10,0|void setWindowStates( Qt::WindowStates states )
 
 $prototypeV2=QPoint framePosition() const
 
-$prototype=void setFramePosition(const QPoint &point)
-$method=|void|setFramePosition|const QPoint &
+$prototypeV2=void setFramePosition( const QPoint & point )
 
-$prototype=void setFilePath(const QString &filePath)
-$method=|void|setFilePath|const QString &
+$prototypeV2=void setFilePath( const QString & filePath )
 
 $prototypeV2=QString filePath() const
 
-$prototype=void setIcon(const QIcon &icon)
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
 $prototypeV2=QIcon icon() const
 
@@ -484,8 +441,7 @@ $prototype=QPlatformWindow *handle() const
 
 $prototypeV2=virtual QAccessibleInterface * accessibleRoot() const
 
-$prototype=static QWindow *fromWinId(WId id)
-$staticMethod=|QWindow *|fromWinId|WId
+$prototypeV2=static QWindow * fromWinId( WId id )
 
 $prototype=void setVulkanInstance(QVulkanInstance *instance)
 %% TODO: $method=|void|setVulkanInstance|QVulkanInstance *|#if QT_CONFIG(vulkan) || defined(Q_CLANG_QDOC)

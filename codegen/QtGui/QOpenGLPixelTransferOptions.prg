@@ -54,46 +54,37 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QOpenGLPixelTransferOptions &other)
-$method=|void|swap|QOpenGLPixelTransferOptions &
+$prototypeV2=void swap( QOpenGLPixelTransferOptions & other )
 
-$prototype=void setAlignment(int alignment)
-$method=|void|setAlignment|int
+$prototypeV2=void setAlignment( int alignment )
 
 $prototypeV2=int alignment() const
 
-$prototype=void setSkipImages(int skipImages)
-$method=|void|setSkipImages|int
+$prototypeV2=void setSkipImages( int skipImages )
 
 $prototypeV2=int skipImages() const
 
-$prototype=void setSkipRows(int skipRows)
-$method=|void|setSkipRows|int
+$prototypeV2=void setSkipRows( int skipRows )
 
 $prototypeV2=int skipRows() const
 
-$prototype=void setSkipPixels(int skipPixels)
-$method=|void|setSkipPixels|int
+$prototypeV2=void setSkipPixels( int skipPixels )
 
 $prototypeV2=int skipPixels() const
 
-$prototype=void setImageHeight(int imageHeight)
-$method=|void|setImageHeight|int
+$prototypeV2=void setImageHeight( int imageHeight )
 
 $prototypeV2=int imageHeight() const
 
-$prototype=void setRowLength(int rowLength)
-$method=|void|setRowLength|int
+$prototypeV2=void setRowLength( int rowLength )
 
 $prototypeV2=int rowLength() const
 
-$prototype=void setLeastSignificantByteFirst(bool lsbFirst)
-$method=|void|setLeastSignificantByteFirst|bool
+$prototypeV2=void setLeastSignificantByteFirst( bool lsbFirst )
 
 $prototypeV2=bool isLeastSignificantBitFirst() const
 
-$prototype=void setSwapBytesEnabled(bool swapBytes)
-$method=|void|setSwapBytesEnabled|bool
+$prototypeV2=void setSwapBytesEnabled( bool swapBytes )
 
 $prototypeV2=bool isSwapBytesEnabled() const
 

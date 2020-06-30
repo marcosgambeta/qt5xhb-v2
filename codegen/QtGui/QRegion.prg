@@ -86,8 +86,7 @@ HB_FUNC_STATIC( QREGION_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QRegion &other)
-$method=|void|swap|QRegion &
+$prototypeV2=void swap( QRegion & other )
 
 $prototypeV2=bool isEmpty() const
 
@@ -205,11 +204,9 @@ HB_FUNC_STATIC( QREGION_UNITED )
 }
 $addMethod=united
 
-$prototype=QRegion subtracted(const QRegion &r) const
-$method=|QRegion|subtracted|const QRegion &
+$prototypeV2=QRegion subtracted( const QRegion & r ) const
 
-$prototype=QRegion xored(const QRegion &r) const
-$method=|QRegion|xored|const QRegion &
+$prototypeV2=QRegion xored( const QRegion & r ) const
 
 $prototype=bool intersects(const QRegion &r) const
 $internalMethod=|bool|intersects,intersects1|const QRegion &

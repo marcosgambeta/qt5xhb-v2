@@ -54,13 +54,10 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 $deleteMethod
 
-$prototype=const QRegExp & regExp () const
-$method=|const QRegExp &|regExp|
+$prototypeV2=const QRegExp & regExp() const
 
-$prototype=void setRegExp ( const QRegExp & rx )
-$method=|void|setRegExp|const QRegExp &
+$prototypeV2=void setRegExp( const QRegExp & rx )
 
-$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
-$virtualMethod=|QValidator::State|validate|QString &,int &
+$prototypeV2=virtual QValidator::State validate( QString & input, int & pos ) const
 
 #pragma ENDDUMP

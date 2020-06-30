@@ -95,11 +95,9 @@ $prototypeV2=float x() const
 
 $prototypeV2=float y() const
 
-$prototype=void setX(float x)
-$method=|void|setX|float
+$prototypeV2=void setX( float x )
 
-$prototype=void setY(float y)
-$method=|void|setY|float
+$prototypeV2=void setY( float y )
 
 $prototypeV2=float length() const
 
@@ -109,11 +107,9 @@ $prototypeV2=QVector2D normalized() const
 
 $prototypeV2=void normalize()
 
-$prototype=float distanceToPoint(const QVector2D &point) const
-$method=|float|distanceToPoint|const QVector2D &
+$prototypeV2=float distanceToPoint( const QVector2D & point ) const
 
-$prototype=float distanceToLine(const QVector2D& point, const QVector2D& direction) const
-$method=|float|distanceToLine|const QVector2D &,const QVector2D &
+$prototypeV2=float distanceToLine( const QVector2D & point, const QVector2D & direction ) const
 
 $prototypeV2=QVector3D toVector3D() const
 
@@ -123,8 +119,7 @@ $prototypeV2=QPoint toPoint() const
 
 $prototypeV2=QPointF toPointF() const
 
-$prototype=static float dotProduct(const QVector2D& v1, const QVector2D& v2)
-$staticMethod=|float|dotProduct|const QVector2D &,const QVector2D &
+$prototypeV2=static float dotProduct( const QVector2D & v1, const QVector2D & v2 )
 
 $extraMethods
 

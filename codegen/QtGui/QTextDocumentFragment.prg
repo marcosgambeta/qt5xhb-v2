@@ -74,11 +74,9 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=QString toPlainText() const
 
-$prototype=QString toHtml(const QByteArray &encoding = QByteArray()) const
-$method=|QString|toHtml|const QByteArray &=QByteArray()
+$prototypeV2=QString toHtml( const QByteArray & encoding = QByteArray() ) const
 
-$prototype=static QTextDocumentFragment fromPlainText(const QString &plainText)
-$staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
+$prototypeV2=static QTextDocumentFragment fromPlainText( const QString & plainText )
 
 $prototype=static QTextDocumentFragment fromHtml(const QString &html)
 $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &

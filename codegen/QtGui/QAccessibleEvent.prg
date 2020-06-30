@@ -34,8 +34,7 @@ $prototypeV2=QAccessible::Event type() const
 
 $prototypeV2=QObject * object() const
 
-$prototype=void setChild(int chld)
-$method=|void|setChild|int
+$prototypeV2=void setChild( int chld )
 
 $prototypeV2=int child() const
 

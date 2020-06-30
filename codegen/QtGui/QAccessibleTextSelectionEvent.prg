@@ -30,8 +30,7 @@ $constructor=|new|QObject *,int,int
 
 $deleteMethod
 
-$prototype=void setSelection(int start, int end)
-$method=|void|setSelection|int,int
+$prototypeV2=void setSelection( int start, int end )
 
 $prototypeV2=int selectionStart() const
 

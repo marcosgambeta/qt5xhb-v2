@@ -99,11 +99,9 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
 }
 $addMethod=addEllipse
 
-$prototype=void addPath ( const QPainterPath & path )
-$method=|void|addPath|const QPainterPath &
+$prototypeV2=void addPath( const QPainterPath & path )
 
-$prototype=void addPolygon ( const QPolygonF & polygon )
-$method=|void|addPolygon|const QPolygonF &
+$prototypeV2=void addPolygon( const QPolygonF & polygon )
 
 $prototype=void addRect ( const QRectF & rectangle )
 $internalMethod=|void|addRect,addRect1|const QRectF &
@@ -133,8 +131,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
 }
 $addMethod=addRect
 
-$prototype=void addRegion ( const QRegion & region )
-$method=|void|addRegion|const QRegion &
+$prototypeV2=void addRegion( const QRegion & region )
 
 $prototype=void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
 $internalMethod=|void|addRoundedRect,addRoundedRect1|const QRectF &,qreal,qreal,Qt::SizeMode=Qt::AbsoluteSize
@@ -192,8 +189,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 }
 $addMethod=addText
 
-$prototype=qreal angleAtPercent ( qreal t ) const
-$method=|qreal|angleAtPercent|qreal
+$prototypeV2=qreal angleAtPercent( qreal t ) const
 
 $prototype=void arcMoveTo ( const QRectF & rectangle, qreal angle )
 $internalMethod=|void|arcMoveTo,arcMoveTo1|const QRectF &,qreal
@@ -255,8 +251,7 @@ $prototypeV2=QRectF boundingRect() const
 
 $prototypeV2=void closeSubpath()
 
-$prototype=void connectPath ( const QPainterPath & path )
-$method=|void|connectPath|const QPainterPath &
+$prototypeV2=void connectPath( const QPainterPath & path )
 
 $prototype=bool contains ( const QPointF & point ) const
 $internalMethod=|bool|contains,contains1|const QPointF &
@@ -330,8 +325,7 @@ $prototypeV2=int elementCount() const
 
 $prototypeV2=Qt::FillRule fillRule() const
 
-$prototype=QPainterPath intersected ( const QPainterPath & p ) const
-$method=|QPainterPath|intersected|const QPainterPath &
+$prototypeV2=QPainterPath intersected( const QPainterPath & p ) const
 
 $prototype=bool intersects ( const QRectF & rectangle ) const
 $internalMethod=|bool|intersects,intersects1|const QRectF &
@@ -421,11 +415,9 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
 }
 $addMethod=moveTo
 
-$prototype=qreal percentAtLength ( qreal len ) const
-$method=|qreal|percentAtLength|qreal
+$prototypeV2=qreal percentAtLength( qreal len ) const
 
-$prototype=QPointF pointAtPercent ( qreal t ) const
-$method=|QPointF|pointAtPercent|qreal
+$prototypeV2=QPointF pointAtPercent( qreal t ) const
 
 $prototype=void quadTo ( const QPointF & c, const QPointF & endPoint )
 $internalMethod=|void|quadTo,quadTo1|const QPointF &,const QPointF &
@@ -455,22 +447,17 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
 }
 $addMethod=quadTo
 
-$prototype=void setElementPositionAt ( int index, qreal x, qreal y )
-$method=|void|setElementPositionAt|int,qreal,qreal
+$prototypeV2=void setElementPositionAt( int index, qreal x, qreal y )
 
-$prototype=void setFillRule ( Qt::FillRule fillRule )
-$method=|void|setFillRule|Qt::FillRule
+$prototypeV2=void setFillRule( Qt::FillRule fillRule )
 
 $prototypeV2=QPainterPath simplified() const
 
-$prototype=qreal slopeAtPercent ( qreal t ) const
-$method=|qreal|slopeAtPercent|qreal
+$prototypeV2=qreal slopeAtPercent( qreal t ) const
 
-$prototype=QPainterPath subtracted ( const QPainterPath & p ) const
-$method=|QPainterPath|subtracted|const QPainterPath &
+$prototypeV2=QPainterPath subtracted( const QPainterPath & p ) const
 
-$prototype=void swap ( QPainterPath & other )
-$method=|void|swap|QPainterPath &
+$prototypeV2=void swap( QPainterPath & other )
 
 $prototype=QPolygonF toFillPolygon ( const QTransform & matrix ) const
 $internalMethod=|QPolygonF|toFillPolygon,toFillPolygon1|const QTransform &
@@ -558,17 +545,13 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QPainterPath united ( const QPainterPath & p ) const
-$method=|QPainterPath|united|const QPainterPath &
+$prototypeV2=QPainterPath united( const QPainterPath & p ) const
 
-$prototype=int QPainterPath::capacity() const
-$method=5,13,0|int|capacity|
+$prototypeV2=5,13,0|int QPainterPath::capacity() const
 
-$prototype=void QPainterPath::clear()
-$method=5,13,0|void|clear|
+$prototypeV2=5,13,0|void QPainterPath::clear()
 
-$prototype=void QPainterPath::reserve(int size)
-$method=5,13,0|void|reserve|int
+$prototypeV2=5,13,0|void QPainterPath::reserve( int size )
 
 $extraMethods
 

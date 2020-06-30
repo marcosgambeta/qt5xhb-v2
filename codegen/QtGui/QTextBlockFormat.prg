@@ -32,43 +32,35 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setAlignment(Qt::Alignment alignment)
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
 $prototypeV2=Qt::Alignment alignment() const
 
-$prototype=void setTopMargin(qreal margin)
-$method=|void|setTopMargin|qreal
+$prototypeV2=void setTopMargin( qreal margin )
 
 $prototypeV2=qreal topMargin() const
 
-$prototype=void setBottomMargin(qreal margin)
-$method=|void|setBottomMargin|qreal
+$prototypeV2=void setBottomMargin( qreal margin )
 
 $prototypeV2=qreal bottomMargin() const
 
-$prototype=void setLeftMargin(qreal margin)
-$method=|void|setLeftMargin|qreal
+$prototypeV2=void setLeftMargin( qreal margin )
 
 $prototypeV2=qreal leftMargin() const
 
-$prototype=void setRightMargin(qreal margin)
-$method=|void|setRightMargin|qreal
+$prototypeV2=void setRightMargin( qreal margin )
 
 $prototypeV2=qreal rightMargin() const
 
-$prototype=void setTextIndent(qreal aindent)
-$method=|void|setTextIndent|qreal
+$prototypeV2=void setTextIndent( qreal aindent )
 
 $prototypeV2=qreal textIndent() const
 
-$prototype=void setIndent(int indent)
-$method=|void|setIndent|int
+$prototypeV2=void setIndent( int indent )
 
 $prototypeV2=int indent() const
 
-$prototype=void setLineHeight(qreal height, int heightType)
-$method=|void|setLineHeight|qreal,int
+$prototypeV2=void setLineHeight( qreal height, int heightType )
 
 $prototype=qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
 $internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
@@ -100,20 +92,16 @@ $addMethod=lineHeight
 
 $prototypeV2=int lineHeightType() const
 
-$prototype=void setNonBreakableLines(bool b)
-$method=|void|setNonBreakableLines|bool
+$prototypeV2=void setNonBreakableLines( bool b )
 
 $prototypeV2=bool nonBreakableLines() const
 
-$prototype=void setPageBreakPolicy(PageBreakFlags flags)
-$method=|void|setPageBreakPolicy|QTextBlockFormat::PageBreakFlags
+$prototypeV2=void setPageBreakPolicy( QTextBlockFormat::PageBreakFlags flags )
 
 $prototypeV2=QTextBlockFormat::PageBreakFlags pageBreakPolicy() const
 
-$prototype=int QTextBlockFormat::headingLevel() const
-$method=5,12,0|int|headingLevel|
+$prototypeV2=5,12,0|int QTextBlockFormat::headingLevel() const
 
-$prototype=void QTextBlockFormat::setHeadingLevel(int level)
-$method=5,12,0|void|setHeadingLevel|int
+$prototypeV2=5,12,0|void QTextBlockFormat::setHeadingLevel( int level )
 
 #pragma ENDDUMP

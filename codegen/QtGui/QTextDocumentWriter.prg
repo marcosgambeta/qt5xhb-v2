@@ -64,18 +64,15 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 
 $deleteMethod
 
-$prototype=void setFormat (const QByteArray &format)
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
 $prototypeV2=QByteArray format() const
 
-$prototype=void setDevice (QIODevice *device)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
 $prototypeV2=QIODevice * device() const
 
-$prototype=void setFileName (const QString &fileName)
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName(const QString & fileName )
 
 $prototypeV2=QString fileName() const
 
@@ -107,8 +104,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 }
 $addMethod=write
 
-$prototype=void setCodec(QTextCodec *codec)
-$method=|void|setCodec|QTextCodec *
+$prototypeV2=void setCodec( QTextCodec * codec )
 
 $prototypeV2=QTextCodec * codec() const
 

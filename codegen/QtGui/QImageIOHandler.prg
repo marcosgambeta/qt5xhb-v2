@@ -42,8 +42,7 @@ $prototypeV2=QByteArray format() const
 
 $prototypeV2=virtual int imageCount() const
 
-$prototype=virtual bool jumpToImage ( int imageNumber )
-$virtualMethod=|bool|jumpToImage|int
+$prototypeV2=virtual bool jumpToImage( int imageNumber )
 
 $prototypeV2=virtual bool jumpToNextImage()
 
@@ -51,26 +50,19 @@ $prototypeV2=virtual int loopCount() const
 
 $prototypeV2=virtual int nextImageDelay() const
 
-$prototype=virtual QVariant option ( ImageOption option ) const
-$virtualMethod=|QVariant|option|QImageIOHandler::ImageOption
+$prototypeV2=virtual QVariant option( QImageIOHandler::ImageOption option ) const
 
-$prototype=virtual bool read ( QImage * image ) = 0
-$virtualMethod=|bool|read|QImage *
+$prototypeV2=virtual bool read( QImage * image ) = 0
 
-$prototype=void setDevice ( QIODevice * device )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setFormat ( const QByteArray & format )
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
-$prototype=virtual void setOption ( ImageOption option, const QVariant & value )
-$virtualMethod=|void|setOption|QImageIOHandler::ImageOption,const QVariant &
+$prototypeV2=virtual void setOption( QImageIOHandler::ImageOption option, const QVariant & value )
 
-$prototype=virtual bool supportsOption ( ImageOption option ) const
-$virtualMethod=|bool|supportsOption|QImageIOHandler::ImageOption
+$prototypeV2=virtual bool supportsOption( QImageIOHandler::ImageOption option ) const
 
-$prototype=virtual bool write ( const QImage & image )
-$virtualMethod=|bool|write|const QImage &
+$prototypeV2=virtual bool write( const QImage & image )
 
 $extraMethods
 

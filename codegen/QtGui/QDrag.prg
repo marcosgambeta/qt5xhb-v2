@@ -38,8 +38,7 @@ $deleteMethod
 
 $prototypeV2=Qt::DropAction defaultAction() const
 
-$prototype=QPixmap dragCursor(Qt::DropAction action) const
-$method=|QPixmap|dragCursor|Qt::DropAction
+$prototypeV2=QPixmap dragCursor( Qt::DropAction action ) const
 
 $prototype=Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
 $internalMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
@@ -75,17 +74,13 @@ $prototypeV2=QMimeData * mimeData() const
 
 $prototypeV2=QPixmap pixmap() const
 
-$prototype=void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
-$method=|void|setDragCursor|const QPixmap &,Qt::DropAction
+$prototypeV2=void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
 
-$prototype=void setHotSpot(const QPoint & hotspot)
-$method=|void|setHotSpot|const QPoint &
+$prototypeV2=void setHotSpot( const QPoint & hotspot )
 
-$prototype=void setMimeData(QMimeData * data)
-$method=|void|setMimeData|QMimeData *
+$prototypeV2=void setMimeData( QMimeData * data )
 
-$prototype=void setPixmap(const QPixmap & pixmap)
-$method=|void|setPixmap|const QPixmap &
+$prototypeV2=void setPixmap( const QPixmap & pixmap )
 
 $prototypeV2=QObject * source() const
 

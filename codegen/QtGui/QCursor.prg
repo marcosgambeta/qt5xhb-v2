@@ -82,18 +82,15 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 $deleteMethod
 
-$prototype=const QBitmap * bitmap () const
-$method=|const QBitmap *|bitmap|
+$prototypeV2=const QBitmap * bitmap() const
 
 $prototypeV2=QPoint hotSpot() const
 
-$prototype=const QBitmap * mask () const
-$method=|const QBitmap *|mask|
+$prototypeV2=const QBitmap * mask() const
 
 $prototypeV2=QPixmap pixmap() const
 
-$prototype=void setShape ( Qt::CursorShape shape )
-$method=|void|setShape|Qt::CursorShape
+$prototypeV2=void setShape( Qt::CursorShape shape )
 
 $prototypeV2=Qt::CursorShape shape() const
 

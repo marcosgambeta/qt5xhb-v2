@@ -112,17 +112,13 @@ $prototypeV2=float z() const
 
 $prototypeV2=float scalar() const
 
-$prototype=void setX(float x)
-$method=|void|setX|float
+$prototypeV2=void setX( float x )
 
-$prototype=void setY(float y)
-$method=|void|setY|float
+$prototypeV2=void setY( float y )
 
-$prototype=void setZ(float z)
-$method=|void|setZ|float
+$prototypeV2=void setZ( float z )
 
-$prototype=void setScalar(float scalar)
-$method=|void|setScalar|float
+$prototypeV2=void setScalar( float scalar )
 
 $prototypeV2=float length() const
 
@@ -134,8 +130,7 @@ $prototypeV2=void normalize()
 
 $prototypeV2=QQuaternion conjugate() const
 
-$prototype=QVector3D rotatedVector(const QVector3D& vector) const
-$method=|QVector3D|rotatedVector|const QVector3D &
+$prototypeV2=QVector3D rotatedVector( const QVector3D & vector ) const
 
 $prototypeV2=QVector4D toVector4D() const
 
@@ -167,11 +162,9 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
 }
 $addMethod=fromAxisAndAngle
 
-$prototype=static QQuaternion slerp(const QQuaternion& q1, const QQuaternion& q2, float t)
-$staticMethod=|QQuaternion|slerp|const QQuaternion &,const QQuaternion &,float
+$prototypeV2=static QQuaternion slerp( const QQuaternion & q1, const QQuaternion & q2, float t )
 
-$prototype=static QQuaternion nlerp(const QQuaternion& q1, const QQuaternion& q2, float t)
-$staticMethod=|QQuaternion|nlerp|const QQuaternion &,const QQuaternion &,float
+$prototypeV2=static QQuaternion nlerp( const QQuaternion & q1, const QQuaternion & q2, float t )
 
 $extraMethods
 

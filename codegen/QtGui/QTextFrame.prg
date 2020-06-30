@@ -32,8 +32,7 @@ $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-$prototype=void setFrameFormat(const QTextFrameFormat &format)
-$method=|void|setFrameFormat|const QTextFrameFormat &
+$prototypeV2=void setFrameFormat( const QTextFrameFormat & format )
 
 $prototypeV2=QTextFrameFormat frameFormat() const
 
@@ -53,8 +52,7 @@ $prototype=void setLayoutData(QTextFrameLayoutData *data)
 %% TODO: implementar ?
 %% $method=|void|setLayoutData|QTextFrameLayoutData *
 
-$prototype=QList<QTextFrame *> childFrames() const
-$method=|QList<QTextFrame *>|childFrames|
+$prototypeV2=QList<QTextFrame *> childFrames() const
 
 $prototypeV2=QTextFrame * parentFrame() const
 

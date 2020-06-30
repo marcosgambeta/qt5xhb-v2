@@ -62,13 +62,11 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
 
 $deleteMethod
 
-$prototype=const QPicture &picture() const
-$method=|const QPicture &|picture|
+$prototypeV2=const QPicture & picture() const
 
 $prototypeV2=int status() const
 
-$prototype=const char *format() const
-$method=|const char *|format|
+$prototypeV2=const char * format() const
 
 $prototypeV2=QIODevice * ioDevice() const
 
@@ -78,37 +76,27 @@ $prototypeV2=int quality() const
 
 $prototypeV2=QString description() const
 
-$prototype=const char *parameters() const
-$method=|const char *|parameters|
+$prototypeV2=const char * parameters() const
 
 $prototypeV2=float gamma() const
 
-$prototype=void setPicture(const QPicture &)
-$method=|void|setPicture|const QPicture &
+$prototypeV2=void setPicture( const QPicture & )
 
-$prototype=void setStatus(int)
-$method=|void|setStatus|int
+$prototypeV2=void setStatus( int )
 
-$prototype=void setFormat ( const char * )
-$method=|void|setFormat|const char *
+$prototypeV2=void setFormat( const char * )
 
-$prototype=void setIODevice(QIODevice *)
-$method=|void|setIODevice|QIODevice *
+$prototypeV2=void setIODevice( QIODevice * )
 
-$prototype=void setFileName(const QString &)
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & )
 
-$prototype=void setQuality(int)
-$method=|void|setQuality|int
+$prototypeV2=void setQuality( int )
 
-$prototype=void setDescription(const QString &)
-$method=|void|setDescription|const QString &
+$prototypeV2=void setDescription( const QString & )
 
-$prototype=void setParameters ( const char * )
-$method=|void|setParameters|const char *
+$prototypeV2=void setParameters( const char * )
 
-$prototype=void setGamma(float)
-$method=|void|setGamma|float
+$prototypeV2=void setGamma( float )
 
 $prototypeV2=bool read()
 
@@ -142,11 +130,9 @@ HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 }
 $addMethod=pictureFormat
 
-$prototype=static QList<QByteArray> inputFormats()
-$staticMethod=|QList<QByteArray>|inputFormats|
+$prototypeV2=static QList<QByteArray> inputFormats()
 
-$prototype=static QList<QByteArray> outputFormats()
-$staticMethod=|QList<QByteArray>|outputFormats|
+$prototypeV2=static QList<QByteArray> outputFormats()
 
 $extraMethods
 

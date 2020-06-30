@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=virtual QVariant currentValue() const = 0
 
-$prototype=virtual void setCurrentValue(const QVariant &value) = 0
-$virtualMethod=|void|setCurrentValue|const QVariant &
+$prototypeV2=virtual void setCurrentValue( const QVariant & value ) = 0
 
 $prototypeV2=virtual QVariant maximumValue() const = 0
 

@@ -31,22 +31,17 @@ $prototypeV2=virtual bool newPage() = 0
 
 $prototypeV2=QPagedPaintDevice::PageSize pageSize() const
 
-$prototype=virtual void setPageSize(PageSize size)
-$virtualMethod=5,3,0|void|setPageSize|QPagedPaintDevice::PageSize
+$prototypeV2=5,3,0|virtual void setPageSize( QPagedPaintDevice::PageSize size )
 
 $prototypeV2=QSizeF pageSizeMM() const
 
-$prototype=virtual void setPageSizeMM(const QSizeF & size)
-$virtualMethod=|void|setPageSizeMM|const QSizeF &
+$prototypeV2=virtual void setPageSizeMM( const QSizeF & size )
 
-$prototype=QPageLayout pageLayout() const
-$method=5,3,0|QPageLayout|pageLayout|
+$prototypeV2=5,3,0|QPageLayout pageLayout() const
 
-$prototype=bool setPageLayout(const QPageLayout &pageLayout)
-$method=5,3,0|bool|setPageLayout|const QPageLayout &
+$prototypeV2=5,3,0|bool setPageLayout( const QPageLayout & pageLayout )
 
-$prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
-$method=5,3,0|bool|setPageOrientation|QPageLayout::Orientation
+$prototypeV2=5,3,0|bool setPageOrientation( QPageLayout::Orientation orientation )
 
 $prototype=bool setPageMargins(const QMarginsF &margins)
 $internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &

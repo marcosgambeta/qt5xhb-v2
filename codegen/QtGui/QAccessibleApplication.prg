@@ -34,18 +34,15 @@ $prototypeV2=QWindow *window() const
 
 $prototypeV2=int childCount() const
 
-$prototype=int indexOfChild(const QAccessibleInterface*) const
-$method=|int|indexOfChild|const QAccessibleInterface *
+$prototypeV2=int indexOfChild( const QAccessibleInterface * ) const
 
 $prototypeV2=QAccessibleInterface * focusChild() const
 
 $prototypeV2=QAccessibleInterface * parent() const
 
-$prototype=QAccessibleInterface *child(int index) const
-$method=|QAccessibleInterface *|child|int
+$prototypeV2=QAccessibleInterface * child( int index ) const
 
-$prototype=QString text(QAccessible::Text t) const
-$method=|QString|text|QAccessible::Text
+$prototypeV2=QString text( QAccessible::Text t ) const
 
 $prototypeV2=QAccessible::Role role() const
 

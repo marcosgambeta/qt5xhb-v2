@@ -38,8 +38,7 @@ $prototypeV2=Qt::DropAction dropAction() const
 
 $prototypeV2=Qt::KeyboardModifiers keyboardModifiers() const
 
-$prototype=const QMimeData * mimeData () const
-$method=|const QMimeData *|mimeData|
+$prototypeV2=const QMimeData * mimeData() const
 
 $prototypeV2=Qt::MouseButtons mouseButtons() const
 
@@ -47,8 +46,7 @@ $prototypeV2=Qt::DropActions possibleActions() const
 
 $prototypeV2=Qt::DropAction proposedAction() const
 
-$prototype=void setDropAction ( Qt::DropAction action )
-$method=|void|setDropAction|Qt::DropAction
+$prototypeV2=void setDropAction( Qt::DropAction action )
 
 $prototypeV2=QObject * source() const
 

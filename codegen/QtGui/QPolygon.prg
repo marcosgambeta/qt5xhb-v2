@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QPolygon &other)
-$method=|void|swap|QPolygon &
+$prototypeV2=void swap( QPolygon & other )
 
 $prototype=void translate(int dx, int dy)
 $internalMethod=|void|translate,translate1|int,int
@@ -206,20 +205,15 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 }
 $addMethod=setPoint
 
-$prototype=void putPoints(int index, int nPoints, const QPolygon & from, int fromIndex=0)
-$method=|void|putPoints|int,int,const QPolygon &,int=0
+$prototypeV2=void putPoints( int index, int nPoints, const QPolygon & from, int fromIndex = 0 )
 
-$prototype=bool containsPoint(const QPoint &pt, Qt::FillRule fillRule) const
-$method=|bool|containsPoint|const QPoint &,Qt::FillRule
+$prototypeV2=bool containsPoint( const QPoint & pt, Qt::FillRule fillRule ) const
 
-$prototype=QPolygon united(const QPolygon &r) const
-$method=|QPolygon|united|const QPolygon &
+$prototypeV2=QPolygon united( const QPolygon & r ) const
 
-$prototype=QPolygon intersected(const QPolygon &r) const
-$method=|QPolygon|intersected|const QPolygon &
+$prototypeV2=QPolygon intersected( const QPolygon & r ) const
 
-$prototype=QPolygon subtracted(const QPolygon &r) const
-$method=|QPolygon|subtracted|const QPolygon &
+$prototypeV2=QPolygon subtracted( const QPolygon & r ) const
 
 $extraMethods
 

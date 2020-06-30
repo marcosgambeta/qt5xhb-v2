@@ -56,13 +56,11 @@ $deleteMethod
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString & title)
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototypeV2=QString creator() const
 
-$prototype=void setCreator(const QString & creator)
-$method=|void|setCreator|const QString &
+$prototypeV2=void setCreator( const QString & creator )
 
 $prototypeV2=bool newPage()
 
@@ -94,23 +92,18 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 }
 $addMethod=setPageSize
 
-$prototype=void setPageSizeMM(const QSizeF & size) (obsolet)
-$method=|void|setPageSizeMM|const QSizeF &
+%% (obsolet)
+$prototypeV2=void setPageSizeMM( const QSizeF & size )
 
-$prototype=int resolution() const
-$method=5,3,0|int|resolution|
+$prototypeV2=5,3,0|int resolution() const
 
-$prototype=void setResolution(int resolution)
-$method=5,3,0|void|setResolution|int
+$prototypeV2=5,3,0|void setResolution( int resolution )
 
-$prototype=QPageLayout pageLayout() const
-$method=5,3,0|QPageLayout|pageLayout|
+$prototypeV2=5,3,0|QPageLayout pageLayout() const
 
-$prototype=bool setPageLayout(const QPageLayout &newPageLayout)
-$method=5,3,0|bool|setPageLayout|const QPageLayout &
+$prototypeV2=5,3,0|bool setPageLayout( const QPageLayout & newPageLayout )
 
-$prototype=PdfVersion pdfVersion() const
-$method=5,10,0|QPagedPaintDevice::PdfVersion|pdfVersion|
+$prototypeV2=5,10,0|QPagedPaintDevice::PdfVersion pdfVersion() const
 
 $prototype=bool setPageMargins(const QMarginsF &margins)
 $internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &
@@ -140,11 +133,9 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 }
 $addMethod=setPageMargins
 
-$prototype=bool setPageOrientation(QPageLayout::Orientation orientation)
-$method=5,3,0|bool|setPageOrientation|QPageLayout::Orientation
+$prototypeV2=5,3,0|bool setPageOrientation( QPageLayout::Orientation orientation )
 
-$prototype=void setPdfVersion(PdfVersion version)
-$method=5,10,0|void|setPdfVersion|QPagedPaintDevice::PdfVersion
+$prototypeV2=5,10,0|void setPdfVersion( QPagedPaintDevice::PdfVersion version )
 
 $prototype=virtual void setMargins(const Margins &m) override (obsolete)
 

@@ -45,25 +45,21 @@ $prototypeV2=QRectF keyboardRectangle() const
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setInputItemTransform(const QTransform & transform)
-$method=|void|setInputItemTransform|const QTransform &
+$prototypeV2=void setInputItemTransform( const QTransform & transform )
 
-$prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 $prototypeV2=void commit()
 
 $prototypeV2=void hide()
 
-$prototype=void invokeAction(Action a, int cursorPosition)
-$method=|void|invokeAction|QInputMethod::Action,int
+$prototypeV2=void invokeAction( QInputMethod::Action a, int cursorPosition )
 
 $prototypeV2=void reset()
 
 $prototypeV2=void show()
 
-$prototype=void update(Qt::InputMethodQueries queries)
-$method=|void|update|Qt::InputMethodQueries
+$prototypeV2=void update( Qt::InputMethodQueries queries )
 
 %%
 %% SIGNALS

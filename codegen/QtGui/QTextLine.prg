@@ -48,8 +48,7 @@ $prototypeV2=qreal height() const
 
 $prototypeV2=qreal leading() const
 
-$prototype=void setLeadingIncluded(bool included)
-$method=|void|setLeadingIncluded|bool
+$prototypeV2=void setLeadingIncluded( bool included )
 
 $prototypeV2=bool leadingIncluded() const
 
@@ -88,11 +87,9 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 }
 $addMethod=cursorToX
 
-$prototype=int xToCursor(qreal x, CursorPosition = CursorBetweenCharacters) const
-$method=|int|xToCursor|qreal,QTextLine::CursorPosition=QTextLine::CursorBetweenCharacters
+$prototypeV2=int xToCursor( qreal x, QTextLine::CursorPosition = QTextLine::CursorBetweenCharacters ) const
 
-$prototype=void setLineWidth(qreal width)
-$method=|void|setLineWidth|qreal
+$prototypeV2=void setLineWidth( qreal width )
 
 $prototype=void setNumColumns(int columns)
 $internalMethod=|void|setNumColumns,setNumColumns1|int
@@ -122,8 +119,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 }
 $addMethod=setNumColumns
 
-$prototype=void setPosition(const QPointF &pos)
-$method=|void|setPosition|const QPointF &
+$prototypeV2=void setPosition( const QPointF & pos )
 
 $prototypeV2=QPointF position() const
 

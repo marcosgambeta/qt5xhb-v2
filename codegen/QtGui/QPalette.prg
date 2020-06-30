@@ -86,14 +86,11 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 
 $deleteMethod
 
-$prototype=const QBrush & alternateBase () const
-$method=|const QBrush &|alternateBase|
+$prototypeV2=const QBrush & alternateBase() const
 
-$prototype=const QBrush & base () const
-$method=|const QBrush &|base|
+$prototypeV2=const QBrush & base() const
 
-$prototype=const QBrush & brightText () const
-$method=|const QBrush &|brightText|
+$prototypeV2=const QBrush & brightText() const
 
 $prototype=const QBrush & brush ( ColorGroup group, ColorRole role ) const
 $internalMethod=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::ColorRole
@@ -123,11 +120,9 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 }
 $addMethod=brush
 
-$prototype=const QBrush & button () const
-$method=|const QBrush &|button|
+$prototypeV2=const QBrush & button() const
 
-$prototype=const QBrush & buttonText () const
-$method=|const QBrush &|buttonText|
+$prototypeV2=const QBrush & buttonText() const
 
 $prototypeV2=qint64 cacheKey() const
 
@@ -161,41 +156,29 @@ $addMethod=color
 
 $prototypeV2=QPalette::ColorGroup currentColorGroup() const
 
-$prototype=const QBrush & dark () const
-$method=|const QBrush &|dark|
+$prototypeV2=const QBrush & dark() const
 
-$prototype=const QBrush & highlight () const
-$method=|const QBrush &|highlight|
+$prototypeV2=const QBrush & highlight() const
 
-$prototype=const QBrush & highlightedText () const
-$method=|const QBrush &|highlightedText|
+$prototypeV2=const QBrush & highlightedText() const
 
-$prototype=bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
-$method=|bool|isBrushSet|QPalette::ColorGroup,QPalette::ColorRole
+$prototypeV2=bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 
-$prototype=bool isCopyOf ( const QPalette & p ) const
-$method=|bool|isCopyOf|const QPalette &
+$prototypeV2=bool isCopyOf( const QPalette & p ) const
 
-$prototype=bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
-$method=|bool|isEqual|QPalette::ColorGroup,QPalette::ColorGroup
+$prototypeV2=bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 
-$prototype=const QBrush & light () const
-$method=|const QBrush &|light|
+$prototypeV2=const QBrush & light() const
 
-$prototype=const QBrush & link () const
-$method=|const QBrush &|link|
+$prototypeV2=const QBrush & link() const
 
-$prototype=const QBrush & linkVisited () const
-$method=|const QBrush &|linkVisited|
+$prototypeV2=const QBrush & linkVisited() const
 
-$prototype=const QBrush & mid () const
-$method=|const QBrush &|mid|
+$prototypeV2=const QBrush & mid() const
 
-$prototype=const QBrush & midlight () const
-$method=|const QBrush &|midlight|
+$prototypeV2=const QBrush & midlight() const
 
-$prototype=QPalette resolve ( const QPalette & other ) const
-$method=|QPalette|resolve|const QPalette &
+$prototypeV2=QPalette resolve( const QPalette & other ) const
 
 $prototype=void setBrush ( ColorRole role, const QBrush & brush )
 $internalMethod=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
@@ -253,32 +236,23 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 }
 $addMethod=setColor
 
-$prototype=void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-$method=|void|setColorGroup|QPalette::ColorGroup,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
+$prototypeV2=void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 
-$prototype=void setCurrentColorGroup ( ColorGroup cg )
-$method=|void|setCurrentColorGroup|QPalette::ColorGroup
+$prototypeV2=void setCurrentColorGroup( QPalette::ColorGroup cg )
 
-$prototype=const QBrush & shadow () const
-$method=|const QBrush &|shadow|
+$prototypeV2=const QBrush & shadow() const
 
-$prototype=const QBrush & text () const
-$method=|const QBrush &|text|
+$prototypeV2=const QBrush & text() const
 
-$prototype=const QBrush & toolTipBase () const
-$method=|const QBrush &|toolTipBase|
+$prototypeV2=const QBrush & toolTipBase() const
 
-$prototype=const QBrush & toolTipText () const
-$method=|const QBrush &|toolTipText|
+$prototypeV2=const QBrush & toolTipText() const
 
-$prototype=const QBrush & window () const
-$method=|const QBrush &|window|
+$prototypeV2=const QBrush & window() const
 
-$prototype=const QBrush & windowText () const
-$method=|const QBrush &|windowText|
+$prototypeV2=const QBrush & windowText() const
 
-$prototype=const QBrush &QPalette::placeholderText() const
-$method=5,12,0|const QBrush &|placeholderText|
+$prototypeV2=5,12,0|const QBrush & QPalette::placeholderText() const
 
 $extraMethods
 

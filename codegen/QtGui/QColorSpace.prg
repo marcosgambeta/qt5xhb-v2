@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
 $prototype=~QColorSpace()
 $deleteMethod
 
-$prototype=void swap(QColorSpace &colorSpace) noexcept
-$method=|void|swap|QColorSpace &
+$prototypeV2=void swap( QColorSpace & colorSpace ) noexcept
 
 $prototypeV2=QColorSpace::Primaries primaries() const noexcept
 
@@ -103,11 +102,9 @@ $prototypeV2=QColorSpace::TransferFunction transferFunction() const noexcept
 
 $prototypeV2=float gamma() const noexcept
 
-$prototype=void setTransferFunction(TransferFunction transferFunction, float gamma = 0.0f)
-$method=|void|setTransferFunction|QColorSpace::TransferFunction,float=0.0f
+$prototypeV2=void setTransferFunction( QColorSpace::TransferFunction transferFunction, float gamma = 0.0f )
 
-$prototype=QColorSpace withTransferFunction(TransferFunction transferFunction, float gamma = 0.0f) const
-$method=|QColorSpace|withTransferFunction|QColorSpace::TransferFunction,float=0.0f
+$prototypeV2=QColorSpace withTransferFunction( QColorSpace::TransferFunction transferFunction, float gamma = 0.0f ) const
 
 $prototype=void setPrimaries(Primaries primariesId)
 $internalMethod=|void|setPrimaries,setPrimaries1|QColorSpace::Primaries
@@ -139,8 +136,7 @@ $addMethod=setPrimaries
 
 $prototypeV2=bool isValid() const noexcept
 
-$prototype=static QColorSpace fromIccProfile(const QByteArray &iccProfile)
-$staticMethod=|QColorSpace|fromIccProfile|const QByteArray &
+$prototypeV2=static QColorSpace fromIccProfile( const QByteArray & iccProfile )
 
 $prototypeV2=QByteArray iccProfile() const
 

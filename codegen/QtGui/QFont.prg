@@ -85,11 +85,9 @@ $prototypeV2=QString family() const
 
 $prototypeV2=bool fixedPitch() const
 
-$prototype=bool fromString ( const QString & descrip )
-$method=|bool|fromString|const QString &
+$prototypeV2=bool fromString( const QString & descrip )
 
-$prototype=bool isCopyOf ( const QFont & f ) const
-$method=|bool|isCopyOf|const QFont &
+$prototypeV2=bool isCopyOf( const QFont & f ) const
 
 $prototypeV2=bool italic() const
 
@@ -117,71 +115,49 @@ $prototypeV2=bool rawMode() const
 
 $prototypeV2=QString rawName() const
 
-$prototype=QFont resolve ( const QFont & other ) const
-$method=|QFont|resolve|const QFont &
+$prototypeV2=QFont resolve( const QFont & other ) const
 
-$prototype=void setBold ( bool enable )
-$method=|void|setBold|bool
+$prototypeV2=void setBold( bool enable )
 
-$prototype=void setCapitalization ( Capitalization caps )
-$method=|void|setCapitalization|QFont::Capitalization
+$prototypeV2=void setCapitalization( QFont::Capitalization caps )
 
-$prototype=void setFamily ( const QString & family )
-$method=|void|setFamily|const QString &
+$prototypeV2=void setFamily( const QString & family )
 
-$prototype=void setFixedPitch ( bool enable )
-$method=|void|setFixedPitch|bool
+$prototypeV2=void setFixedPitch( bool enable )
 
-$prototype=void setItalic ( bool enable )
-$method=|void|setItalic|bool
+$prototypeV2=void setItalic( bool enable )
 
-$prototype=void setKerning ( bool enable )
-$method=|void|setKerning|bool
+$prototypeV2=void setKerning( bool enable )
 
-$prototype=void setLetterSpacing ( SpacingType type, qreal spacing )
-$method=|void|setLetterSpacing|QFont::SpacingType,qreal
+$prototypeV2=void setLetterSpacing( QFont::SpacingType type, qreal spacing )
 
-$prototype=void setOverline ( bool enable )
-$method=|void|setOverline|bool
+$prototypeV2=void setOverline( bool enable )
 
-$prototype=void setPixelSize ( int pixelSize )
-$method=|void|setPixelSize|int
+$prototypeV2=void setPixelSize( int pixelSize )
 
-$prototype=void setPointSize ( int pointSize )
-$method=|void|setPointSize|int
+$prototypeV2=void setPointSize( int pointSize )
 
-$prototype=void setPointSizeF ( qreal pointSize )
-$method=|void|setPointSizeF|qreal
+$prototypeV2=void setPointSizeF( qreal pointSize )
 
-$prototype=void setRawMode ( bool enable )
-$method=|void|setRawMode|bool
+$prototypeV2=void setRawMode( bool enable )
 
-$prototype=void setRawName ( const QString & name )
-$method=|void|setRawName|const QString &
+$prototypeV2=void setRawName( const QString & name )
 
-$prototype=void setStretch ( int factor )
-$method=|void|setStretch|int
+$prototypeV2=void setStretch( int factor )
 
-$prototype=void setStrikeOut ( bool enable )
-$method=|void|setStrikeOut|bool
+$prototypeV2=void setStrikeOut( bool enable )
 
-$prototype=void setStyle ( Style style )
-$method=|void|setStyle|QFont::Style
+$prototypeV2=void setStyle( QFont::Style style )
 
-$prototype=void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
-$method=|void|setStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
+$prototypeV2=void setStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 
-$prototype=void setStyleStrategy ( StyleStrategy s )
-$method=|void|setStyleStrategy|QFont::StyleStrategy
+$prototypeV2=void setStyleStrategy( QFont::StyleStrategy s )
 
-$prototype=void setUnderline ( bool enable )
-$method=|void|setUnderline|bool
+$prototypeV2=void setUnderline( bool enable )
 
-$prototype=void setWeight ( int weight )
-$method=|void|setWeight|int
+$prototypeV2=void setWeight( int weight )
 
-$prototype=void setWordSpacing ( qreal spacing )
-$method=|void|setWordSpacing|qreal
+$prototypeV2=void setWordSpacing( qreal spacing )
 
 $prototypeV2=int stretch() const
 
@@ -201,17 +177,13 @@ $prototypeV2=int weight() const
 
 $prototypeV2=qreal wordSpacing() const
 
-$prototype=static void insertSubstitution ( const QString & familyName, const QString & substituteName )
-$staticMethod=|void|insertSubstitution|const QString &,const QString &
+$prototypeV2=static void insertSubstitution( const QString & familyName, const QString & substituteName )
 
-$prototype=static void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
-$staticMethod=|void|insertSubstitutions|const QString &,const QStringList &
+$prototypeV2=static void insertSubstitutions( const QString & familyName, const QStringList & substituteNames )
 
-$prototype=static QString substitute ( const QString & familyName )
-$staticMethod=|QString|substitute|const QString &
+$prototypeV2=static QString substitute( const QString & familyName )
 
-$prototype=static QStringList substitutes ( const QString & familyName )
-$staticMethod=|QStringList|substitutes|const QString &
+$prototypeV2=static QStringList substitutes( const QString & familyName )
 
 $prototypeV2=static QStringList substitutions()
 

@@ -70,14 +70,11 @@ $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=const QPointF & localPos() const
-$method=|const QPointF &|localPos|
+$prototypeV2=const QPointF & localPos() const
 
-$prototype=const QPointF & screenPos() const
-$method=|const QPointF &|screenPos|
+$prototypeV2=const QPointF & screenPos() const
 
-$prototype=const QPointF & windowPos() const
-$method=|const QPointF &|windowPos|
+$prototypeV2=const QPointF & windowPos() const
 
 $prototypeV2=int x() const
 

@@ -60,24 +60,18 @@ $prototypeV2=int decimals() const
 
 $prototypeV2=QDoubleValidator::Notation notation() const
 
-$prototype=void setBottom ( double )
-$method=|void|setBottom|double
+$prototypeV2=void setBottom( double )
 
-$prototype=void setDecimals ( int )
-$method=|void|setDecimals|int
+$prototypeV2=void setDecimals( int )
 
-$prototype=void setNotation ( Notation )
-$method=|void|setNotation|QDoubleValidator::Notation
+$prototypeV2=void setNotation( QDoubleValidator::Notation )
 
-$prototype=virtual void setRange ( double minimum, double maximum, int decimals = 0 )
-$virtualMethod=|void|setRange|double,double,int=0
+$prototypeV2=virtual void setRange( double minimum, double maximum, int decimals = 0 )
 
-$prototype=void setTop ( double )
-$method=|void|setTop|double
+$prototypeV2=void setTop( double )
 
 $prototypeV2=double top() const
 
-$prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
-$virtualMethod=|QValidator::State|validate|QString &,int &
+$prototypeV2=virtual QValidator::State validate( QString & input, int & pos ) const
 
 #pragma ENDDUMP

@@ -32,26 +32,19 @@ $constructor=|new|QTextDocument *
 
 $deleteMethod
 
-$prototype=void resize(int rows, int cols)
-$method=|void|resize|int,int
+$prototypeV2=void resize( int rows, int cols )
 
-$prototype=void insertRows(int pos, int num)
-$method=|void|insertRows|int,int
+$prototypeV2=void insertRows( int pos, int num )
 
-$prototype=void insertColumns(int pos, int num)
-$method=|void|insertColumns|int,int
+$prototypeV2=void insertColumns( int pos, int num )
 
-$prototype=void appendRows(int count)
-$method=|void|appendRows|int
+$prototypeV2=void appendRows( int count )
 
-$prototype=void appendColumns(int count)
-$method=|void|appendColumns|int
+$prototypeV2=void appendColumns( int count )
 
-$prototype=void removeRows(int pos, int num)
-$method=|void|removeRows|int,int
+$prototypeV2=void removeRows( int pos, int num )
 
-$prototype=void removeColumns(int pos, int num)
-$method=|void|removeColumns|int,int
+$prototypeV2=void removeColumns( int pos, int num )
 
 $prototype=void mergeCells(int row, int col, int numRows, int numCols)
 $internalMethod=|void|mergeCells,mergeCells1|int,int,int,int
@@ -81,8 +74,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 }
 $addMethod=mergeCells
 
-$prototype=void splitCell(int row, int col, int numRows, int numCols)
-$method=|void|splitCell|int,int,int,int
+$prototypeV2=void splitCell( int row, int col, int numRows, int numCols )
 
 $prototypeV2=int rows() const
 
@@ -124,14 +116,11 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 }
 $addMethod=cellAt
 
-$prototype=QTextCursor rowStart(const QTextCursor &c) const
-$method=|QTextCursor|rowStart|const QTextCursor &
+$prototypeV2=QTextCursor rowStart( const QTextCursor & c ) const
 
-$prototype=QTextCursor rowEnd(const QTextCursor &c) const
-$method=|QTextCursor|rowEnd|const QTextCursor &
+$prototypeV2=QTextCursor rowEnd( const QTextCursor & c ) const
 
-$prototype=void setFormat(const QTextTableFormat &format)
-$method=|void|setFormat|const QTextTableFormat &
+$prototypeV2=void setFormat( const QTextTableFormat & format )
 
 $prototypeV2=QTextTableFormat format() const
 

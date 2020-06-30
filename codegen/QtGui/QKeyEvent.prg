@@ -36,8 +36,7 @@ $prototypeV2=bool isAutoRepeat() const
 
 $prototypeV2=int key() const
 
-$prototype=bool matches ( QKeySequence::StandardKey key ) const
-$method=|bool|matches|QKeySequence::StandardKey
+$prototypeV2=bool matches( QKeySequence::StandardKey key ) const
 
 $prototypeV2=Qt::KeyboardModifiers modifiers() const
 

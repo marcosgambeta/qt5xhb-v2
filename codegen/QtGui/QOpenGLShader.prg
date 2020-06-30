@@ -53,8 +53,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE )
 }
 $addMethod=compileSourceCode
 
-$prototype=bool compileSourceFile(const QString& fileName)
-$method=|bool|compileSourceFile|const QString &
+$prototypeV2=bool compileSourceFile( const QString & fileName )
 
 $prototypeV2=QByteArray sourceCode() const
 
@@ -64,7 +63,6 @@ $prototypeV2=QString log() const
 
 $prototypeV2=GLuint shaderId() const
 
-$prototype=static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = nullptr)
-$staticMethod=|bool|hasOpenGLShaders|QOpenGLShader::ShaderType,QOpenGLContext *=nullptr
+$prototypeV2=static bool hasOpenGLShaders( QOpenGLShader::ShaderType type, QOpenGLContext * context = nullptr )
 
 #pragma ENDDUMP

@@ -132,8 +132,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 }
 $addMethod=setCenter
 
-$prototype=void setCenterRadius(qreal radius)
-$method=|void|setCenterRadius|qreal
+$prototypeV2=void setCenterRadius( qreal radius )
 
 $prototype=void setFocalPoint(const QPointF & focalPoint)
 $internalMethod=|void|setFocalPoint,setFocalPoint1|const QPointF &
@@ -163,10 +162,8 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 }
 $addMethod=setFocalPoint
 
-$prototype=void setFocalRadius(qreal radius)
-$method=|void|setFocalRadius|qreal
+$prototypeV2=void setFocalRadius( qreal radius )
 
-$prototype=void setRadius(qreal radius)
-$method=|void|setRadius|qreal
+$prototypeV2=void setRadius( qreal radius )
 
 #pragma ENDDUMP

@@ -30,14 +30,11 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool addShader(QOpenGLShader *shader)
-$method=|bool|addShader|QOpenGLShader *
+$prototypeV2=bool addShader( QOpenGLShader * shader )
 
-$prototype=void removeShader(QOpenGLShader *shader)
-$method=|void|removeShader|QOpenGLShader *
+$prototypeV2=void removeShader( QOpenGLShader * shader )
 
-$prototype=QList<QOpenGLShader *> shaders() const
-$method=|QList<QOpenGLShader *>|shaders|
+$prototypeV2=QList<QOpenGLShader *> shaders() const
 
 $prototype=bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QOpenGLShader::ShaderType,const char *
@@ -60,8 +57,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 }
 $addMethod=addShaderFromSourceCode
 
-$prototype=bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
-$method=|bool|addShaderFromSourceFile|QOpenGLShader::ShaderType,const QString &
+$prototypeV2=bool addShaderFromSourceFile( QOpenGLShader::ShaderType type, const QString & fileName )
 
 $prototypeV2=void removeAllShaders()
 
@@ -79,12 +75,10 @@ $prototypeV2=GLuint programId() const
 
 $prototypeV2=int maxGeometryOutputVertices() const
 
-$prototype=void setPatchVertexCount(int count)
-$method=|void|setPatchVertexCount|int
+$prototypeV2=void setPatchVertexCount( int count )
 
 $prototypeV2=int patchVertexCount() const
 
-$prototype=static bool hasOpenGLShaderPrograms(QOpenGLContext *context = nullptr)
-$staticMethod=|bool|hasOpenGLShaderPrograms|QOpenGLContext *=nullptr
+$prototypeV2=static bool hasOpenGLShaderPrograms( QOpenGLContext * context = nullptr )
 
 #pragma ENDDUMP

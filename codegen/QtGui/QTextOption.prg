@@ -64,39 +64,31 @@ HB_FUNC_STATIC( QTEXTOPTION_NEW )
 
 $deleteMethod
 
-$prototype=void setAlignment(Qt::Alignment alignment)
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
 $prototypeV2=Qt::Alignment alignment() const
 
-$prototype=void setTextDirection(Qt::LayoutDirection aDirection)
-$method=|void|setTextDirection|Qt::LayoutDirection
+$prototypeV2=void setTextDirection( Qt::LayoutDirection aDirection )
 
 $prototypeV2=Qt::LayoutDirection textDirection() const
 
-$prototype=void setWrapMode(WrapMode wrap)
-$method=|void|setWrapMode|QTextOption::WrapMode
+$prototypeV2=void setWrapMode( QTextOption::WrapMode wrap )
 
 $prototypeV2=QTextOption::WrapMode wrapMode() const
 
-$prototype=void setFlags(Flags flags)
-$method=|void|setFlags|QTextOption::Flags
+$prototypeV2=void setFlags( QTextOption::Flags flags )
 
 $prototypeV2=QTextOption::Flags flags() const
 
-$prototype=void setTabStop(qreal tabStop)
-$method=|void|setTabStop|qreal
+$prototypeV2=void setTabStop( qreal tabStop )
 
 $prototypeV2=qreal tabStop() const
 
-$prototype=void setTabArray(const QList<qreal> &tabStops)
-$method=|void|setTabArray|const QList<qreal> &
+$prototypeV2=void setTabArray( const QList<qreal> & tabStops )
 
-$prototype=QList<qreal> tabArray() const
-$method=|QList<qreal>|tabArray|
+$prototypeV2=QList<qreal> tabArray() const
 
-$prototype=void setUseDesignMetrics(bool b)
-$method=|void|setUseDesignMetrics|bool
+$prototypeV2=void setUseDesignMetrics( bool b )
 
 $prototypeV2=bool useDesignMetrics() const
 

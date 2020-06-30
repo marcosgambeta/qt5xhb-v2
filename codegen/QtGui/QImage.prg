@@ -134,13 +134,11 @@ $prototypeV2=int bytesPerLine() const
 
 $prototypeV2=qint64 cacheKey() const
 
-$prototype=QRgb color ( int i ) const
-$method=|QRgb|color|int
+$prototypeV2=QRgb color( int i ) const
 
 $prototypeV2=int colorCount() const
 
-$prototype=QVector<QRgb> colorTable () const
-$method=|QVector<QRgb>|colorTable|
+$prototypeV2=QVector<QRgb> colorTable() const
 
 $prototype=QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 $internalMethod=|QImage|convertToFormat,convertToFormat1|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
@@ -198,14 +196,11 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 }
 $addMethod=copy
 
-$prototype=QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-$method=|QImage|createAlphaMask|Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=QImage createAlphaMask( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 
-$prototype=QImage createHeuristicMask ( bool clipTight = true ) const
-$method=|QImage|createHeuristicMask|bool=true
+$prototypeV2=QImage createHeuristicMask( bool clipTight = true ) const
 
-$prototype=QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
-$method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
+$prototypeV2=QImage createMaskFromColor( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 
 $prototypeV2=int depth() const
 
@@ -256,8 +251,7 @@ $prototypeV2=bool hasAlphaChannel() const
 
 $prototypeV2=int height() const
 
-$prototype=void invertPixels ( InvertMode mode = InvertRgb )
-$method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
+$prototypeV2=void invertPixels( QImage::InvertMode mode = QImage::InvertRgb )
 
 $prototypeV2=bool isGrayscale() const
 
@@ -319,8 +313,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 }
 $addMethod=loadFromData
 
-$prototype=QImage mirrored ( bool horizontal = false, bool vertical = true ) const
-$method=|QImage|mirrored|bool=false,bool=true
+$prototypeV2=QImage mirrored( bool horizontal = false, bool vertical = true ) const
 
 $prototypeV2=QPoint offset() const
 
@@ -440,11 +433,9 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 }
 $addMethod=scaled
 
-$prototype=QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QImage scaledToHeight( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
-$prototype=QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QImage scaledToWidth( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
 $prototype=uchar * scanLine(int i)
 
@@ -462,20 +453,15 @@ HB_FUNC_STATIC( QIMAGE_SCANLINE )
 }
 $addMethod=scanLine
 
-$prototype=void setColor ( int index, QRgb colorValue )
-$method=|void|setColor|int,QRgb
+$prototypeV2=void setColor( int index, QRgb colorValue )
 
-$prototype=void setColorCount ( int colorCount )
-$method=|void|setColorCount|int
+$prototypeV2=void setColorCount( int colorCount )
 
-$prototype=void setDotsPerMeterX ( int x )
-$method=|void|setDotsPerMeterX|int
+$prototypeV2=void setDotsPerMeterX( int x )
 
-$prototype=void setDotsPerMeterY ( int y )
-$method=|void|setDotsPerMeterY|int
+$prototypeV2=void setDotsPerMeterY( int y )
 
-$prototype=void setOffset ( const QPoint & offset )
-$method=|void|setOffset|const QPoint &
+$prototypeV2=void setOffset( const QPoint & offset )
 
 $prototype=void setPixel ( const QPoint & position, uint index_or_rgb )
 $internalMethod=|void|setPixel,setPixel1|const QPoint &,uint
@@ -505,16 +491,13 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 }
 $addMethod=setPixel
 
-$prototype=void setText ( const QString & key, const QString & text )
-$method=|void|setText|const QString &,const QString &
+$prototypeV2=void setText( const QString & key, const QString & text )
 
 $prototypeV2=QSize size() const
 
-$prototype=void swap ( QImage & other )
-$method=|void|swap|QImage &
+$prototypeV2=void swap( QImage & other )
 
-$prototype=QString text ( const QString & key = QString() ) const
-$method=|QString|text|const QString &=QString()
+$prototypeV2=QString text( const QString & key = QString() ) const
 
 $prototypeV2=QStringList textKeys() const
 
@@ -660,8 +643,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELCOLOR )
 }
 $addMethod=pixelColor
 
-$prototype=bool QImage::reinterpretAsFormat(Format format)
-$method=5,9,0|bool|reinterpretAsFormat|QImage::Format
+$prototypeV2=5,9,0|bool QImage::reinterpretAsFormat( QImage::Format format )
 
 $prototype=void QImage::setPixelColor(const QPoint &position, const QColor &color)
 $internalMethod=5,6,0|void|setPixelColor,setPixelColor1|const QPoint &,const QColor &
@@ -691,8 +673,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXELCOLOR )
 }
 $addMethod=setPixelColor
 
-$prototype=void QImage::convertTo(QImage::Format format, Qt::ImageConversionFlags flags = Qt::AutoColor)
-$method=5,13,0|void|convertTo|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=5,13,0|void QImage::convertTo( QImage::Format format, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $variantMethods
 

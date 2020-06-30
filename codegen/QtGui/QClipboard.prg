@@ -31,14 +31,11 @@ $includes
 #include <QtGui/QImage>
 #include <QtGui/QPixmap>
 
-$prototype=void clear ( Mode mode = Clipboard )
-$method=|void|clear|QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=void clear( QClipboard::Mode mode = QClipboard::Clipboard )
 
-$prototype=QImage image ( Mode mode = Clipboard ) const
-$method=|QImage|image|QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=QImage image( QClipboard::Mode mode = QClipboard::Clipboard ) const
 
-$prototype=const QMimeData * mimeData ( Mode mode = Clipboard ) const
-$method=|const QMimeData *|mimeData|QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=const QMimeData * mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) const
 
 $prototypeV2=bool ownsClipboard() const
 
@@ -46,20 +43,15 @@ $prototypeV2=bool ownsFindBuffer() const
 
 $prototypeV2=bool ownsSelection() const
 
-$prototype=QPixmap pixmap ( Mode mode = Clipboard ) const
-$method=|QPixmap|pixmap|QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=QPixmap pixmap( QClipboard::Mode mode = QClipboard::Clipboard ) const
 
-$prototype=void setImage ( const QImage & image, Mode mode = Clipboard )
-$method=|void|setImage|const QImage &,QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=void setImage( const QImage & image, QClipboard::Mode mode = QClipboard::Clipboard )
 
-$prototype=void setMimeData ( QMimeData * src, Mode mode = Clipboard )
-$method=|void|setMimeData|QMimeData *,QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=void setMimeData( QMimeData * src, QClipboard::Mode mode = QClipboard::Clipboard )
 
-$prototype=void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
-$method=|void|setPixmap|const QPixmap &,QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=void setPixmap( const QPixmap & pixmap, QClipboard::Mode mode = QClipboard::Clipboard )
 
-$prototype=void setText ( const QString & text, Mode mode = Clipboard )
-$method=|void|setText|const QString &,QClipboard::Mode=QClipboard::Clipboard
+$prototypeV2=void setText( const QString & text, QClipboard::Mode mode = QClipboard::Clipboard )
 
 $prototypeV2=bool supportsFindBuffer() const
 
@@ -112,10 +104,13 @@ $addMethod=text
 $prototype=void changed( QClipboard::Mode mode )
 $signalMethod=|void|changed|QClipboard::Mode
 
-$prototypeV2=void dataChanged()
+$prototype=void dataChanged()
+$signalMethod=|void|dataChanged|
 
-$prototypeV2=void findBufferChanged()
+$prototype=void findBufferChanged()
+$signalMethod=|void|findBufferChanged|
 
-$prototypeV2=void selectionChanged()
+$prototype=void selectionChanged()
+$signalMethod=|void|selectionChanged|
 
 #pragma ENDDUMP

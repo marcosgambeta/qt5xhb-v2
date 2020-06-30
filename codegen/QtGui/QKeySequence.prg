@@ -94,20 +94,15 @@ $prototypeV2=uint count() const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=SequenceMatch matches ( const QKeySequence & seq ) const
-$method=|QKeySequence::SequenceMatch|matches|const QKeySequence &
+$prototypeV2=QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 
-$prototype=QString toString ( SequenceFormat format = PortableText ) const
-$method=|QString|toString|QKeySequence::SequenceFormat=QKeySequence::PortableText
+$prototypeV2=QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableText ) const
 
-$prototype=static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
-$staticMethod=|QKeySequence|fromString|const QString &,QKeySequence::SequenceFormat=QKeySequence::PortableText
+$prototypeV2=static QKeySequence fromString( const QString & str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
 
-$prototype=static QList<QKeySequence> keyBindings ( StandardKey key )
-$staticMethod=|QList<QKeySequence>|keyBindings|QKeySequence::StandardKey
+$prototypeV2=static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 
-$prototype=static QKeySequence mnemonic ( const QString & text )
-$staticMethod=|QKeySequence|mnemonic|const QString &
+$prototypeV2=static QKeySequence mnemonic( const QString & text )
 
 $extraMethods
 

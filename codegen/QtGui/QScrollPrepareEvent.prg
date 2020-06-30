@@ -38,13 +38,10 @@ $prototypeV2=QRectF contentPosRange() const
 
 $prototypeV2=QPointF contentPos() const
 
-$prototype=void setViewportSize(const QSizeF &size)
-$method=|void|setViewportSize|const QSizeF &
+$prototypeV2=void setViewportSize( const QSizeF & size )
 
-$prototype=void setContentPosRange(const QRectF &rect)
-$method=|void|setContentPosRange|const QRectF &
+$prototypeV2=void setContentPosRange( const QRectF & rect )
 
-$prototype=void setContentPos(const QPointF &pos)
-$method=|void|setContentPos|const QPointF &
+$prototypeV2=void setContentPos( const QPointF & pos )
 
 #pragma ENDDUMP

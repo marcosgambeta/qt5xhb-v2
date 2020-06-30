@@ -29,15 +29,13 @@ $deleteMethod
 
 $prototypeV2=virtual int columnExtent() const = 0
 
-$prototype=virtual QList<QAccessibleInterface*> columnHeaderCells() const = 0
-$virtualMethod=|QList<QAccessibleInterface *>|columnHeaderCells|
+$prototypeV2=virtual QList<QAccessibleInterface *> columnHeaderCells() const = 0
 
 $prototypeV2=virtual int columnIndex() const = 0
 
 $prototypeV2=virtual int rowExtent() const = 0
 
-$prototype=virtual QList<QAccessibleInterface*> rowHeaderCells() const = 0
-$virtualMethod=|QList<QAccessibleInterface *>|rowHeaderCells|
+$prototypeV2=virtual QList<QAccessibleInterface *> rowHeaderCells() const = 0
 
 $prototypeV2=virtual int rowIndex() const = 0
 

@@ -61,15 +61,13 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 
 $deleteMethod
 
-$prototype=QTextDocument *clone(QObject *parent = nullptr) const
-$method=|QTextDocument *|clone|QObject *=nullptr
+$prototypeV2=QTextDocument * clone( QObject * parent = nullptr ) const
 
 $prototypeV2=bool isEmpty() const
 
 $prototypeV2=virtual void clear()
 
-$prototype=void setUndoRedoEnabled(bool enable)
-$method=|void|setUndoRedoEnabled|bool
+$prototypeV2=void setUndoRedoEnabled( bool enable )
 
 $prototypeV2=bool isUndoRedoEnabled() const
 
@@ -83,30 +81,23 @@ $prototypeV2=int availableRedoSteps() const
 
 $prototypeV2=int revision() const
 
-$prototype=void setDocumentLayout(QAbstractTextDocumentLayout *layout)
-$method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
+$prototypeV2=void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 
 $prototypeV2=QAbstractTextDocumentLayout * documentLayout() const
 
-$prototype=void setMetaInformation(MetaInformation info, const QString &)
-$method=|void|setMetaInformation|QTextDocument::MetaInformation,const QString &
+$prototypeV2=void setMetaInformation( QTextDocument::MetaInformation info, const QString & )
 
-$prototype=QString metaInformation(MetaInformation info) const
-$method=|QString|metaInformation|QTextDocument::MetaInformation
+$prototypeV2=QString metaInformation( QTextDocument::MetaInformation info ) const
 
-$prototype=QString toHtml(const QByteArray &encoding = QByteArray()) const
-$method=|QString|toHtml|const QByteArray &=QByteArray()
+$prototypeV2=QString toHtml( const QByteArray & encoding = QByteArray() ) const
 
-$prototype=void setHtml(const QString &html)
-$method=|void|setHtml|const QString &
+$prototypeV2=void setHtml( const QString & html )
 
 $prototypeV2=QString toPlainText() const
 
-$prototype=void setPlainText(const QString &text)
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
-$prototype=QChar characterAt(int pos) const
-$method=|QChar|characterAt|int
+$prototypeV2=QChar characterAt( int pos ) const
 
 $prototype=QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
 $internalMethod=|QTextCursor|find,find1|const QString &,int=0,QTextDocument::FindFlags=0
@@ -152,25 +143,19 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 }
 $addMethod=find
 
-$prototype=QTextFrame *frameAt(int pos) const
-$method=|QTextFrame *|frameAt|int
+$prototypeV2=QTextFrame * frameAt( int pos ) const
 
 $prototypeV2=QTextFrame * rootFrame() const
 
-$prototype=QTextObject *object(int objectIndex) const
-$method=|QTextObject *|object|int
+$prototypeV2=QTextObject * object( int objectIndex ) const
 
-$prototype=QTextObject *objectForFormat(const QTextFormat &) const
-$method=|QTextObject *|objectForFormat|const QTextFormat &
+$prototypeV2=QTextObject * objectForFormat( const QTextFormat & ) const
 
-$prototype=QTextBlock findBlock(int pos) const
-$method=|QTextBlock|findBlock|int
+$prototypeV2=QTextBlock findBlock( int pos ) const
 
-$prototype=QTextBlock findBlockByNumber(int blockNumber) const
-$method=|QTextBlock|findBlockByNumber|int
+$prototypeV2=QTextBlock findBlockByNumber( int blockNumber ) const
 
-$prototype=QTextBlock findBlockByLineNumber(int blockNumber) const
-$method=|QTextBlock|findBlockByLineNumber|int
+$prototypeV2=QTextBlock findBlockByLineNumber( int blockNumber ) const
 
 $prototypeV2=QTextBlock begin() const
 
@@ -180,13 +165,11 @@ $prototypeV2=QTextBlock firstBlock() const
 
 $prototypeV2=QTextBlock lastBlock() const
 
-$prototype=void setPageSize(const QSizeF &size)
-$method=|void|setPageSize|const QSizeF &
+$prototypeV2=void setPageSize( const QSizeF & size )
 
 $prototypeV2=QSizeF pageSize() const
 
-$prototype=void setDefaultFont(const QFont &font)
-$method=|void|setDefaultFont|const QFont &
+$prototypeV2=void setDefaultFont( const QFont & font )
 
 $prototypeV2=QFont defaultFont() const
 
@@ -194,28 +177,21 @@ $prototypeV2=int pageCount() const
 
 $prototypeV2=bool isModified() const
 
-$prototype=void print(QPagedPaintDevice *printer) const
-$method=|void|print|QPagedPaintDevice *
+$prototypeV2=void print( QPagedPaintDevice * printer ) const
 
-$prototype=QVariant resource(int type, const QUrl &name) const
-$method=|QVariant|resource|int,const QUrl &
+$prototypeV2=QVariant resource( int type, const QUrl & name ) const
 
-$prototype=void addResource(int type, const QUrl &name, const QVariant &resource)
-$method=|void|addResource|int,const QUrl &,const QVariant &
+$prototypeV2=void addResource( int type, const QUrl & name, const QVariant & resource )
 
-$prototype=void markContentsDirty(int from, int length)
-$method=|void|markContentsDirty|int,int
+$prototypeV2=void markContentsDirty( int from, int length )
 
-$prototype=void setUseDesignMetrics(bool b)
-$method=|void|setUseDesignMetrics|bool
+$prototypeV2=void setUseDesignMetrics( bool b )
 
 $prototypeV2=bool useDesignMetrics() const
 
-$prototype=void drawContents(QPainter *painter, const QRectF &rect = QRectF())
-$method=|void|drawContents|QPainter *,const QRectF &=QRectF()
+$prototypeV2=void drawContents( QPainter * painter, const QRectF & rect = QRectF() )
 
-$prototype=void setTextWidth(qreal width)
-$method=|void|setTextWidth|qreal
+$prototypeV2=void setTextWidth( qreal width )
 
 $prototypeV2=qreal textWidth() const
 
@@ -223,13 +199,11 @@ $prototypeV2=qreal idealWidth() const
 
 $prototypeV2=qreal indentWidth() const
 
-$prototype=void setIndentWidth(qreal width)
-$method=|void|setIndentWidth|qreal
+$prototypeV2=void setIndentWidth( qreal width )
 
 $prototypeV2=qreal documentMargin() const
 
-$prototype=void setDocumentMargin(qreal margin)
-$method=|void|setDocumentMargin|qreal
+$prototypeV2=void setDocumentMargin( qreal margin )
 
 $prototypeV2=void adjustSize()
 
@@ -241,28 +215,23 @@ $prototypeV2=int lineCount() const
 
 $prototypeV2=int characterCount() const
 
-$prototype=void setDefaultStyleSheet(const QString &sheet)
-$method=|void|setDefaultStyleSheet|const QString &
+$prototypeV2=void setDefaultStyleSheet( const QString & sheet )
 
 $prototypeV2=QString defaultStyleSheet() const
 
-$prototype=void clearUndoRedoStacks(Stacks historyToClear = UndoAndRedoStacks)
-$method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
+$prototypeV2=void clearUndoRedoStacks( QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks )
 
 $prototypeV2=int maximumBlockCount() const
 
-$prototype=void setMaximumBlockCount(int maximum)
-$method=|void|setMaximumBlockCount|int
+$prototypeV2=void setMaximumBlockCount( int maximum )
 
 $prototypeV2=QTextOption defaultTextOption() const
 
-$prototype=void setDefaultTextOption(const QTextOption &option)
-$method=|void|setDefaultTextOption|const QTextOption &
+$prototypeV2=void setDefaultTextOption( const QTextOption & option )
 
 $prototypeV2=Qt::CursorMoveStyle defaultCursorMoveStyle() const
 
-$prototype=void setDefaultCursorMoveStyle(Qt::CursorMoveStyle style)
-$method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle
+$prototypeV2=void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 
 $prototype=void undo(QTextCursor *cursor)
 $internalMethod=|void|undo,undo1|QTextCursor *
@@ -324,18 +293,15 @@ $prototype=void appendUndoItem(QAbstractUndoItem *)
 %% TODO: implementar
 %% $method=|void|appendUndoItem|QAbstractUndoItem *
 
-$prototype=void setModified(bool m = true)
-$method=|void|setModified|bool=true
+$prototypeV2=void setModified( bool m = true )
 
 $prototype=QTextDocumentPrivate *docHandle() const
 %% TODO: implementar ?
 %% $method=|QTextDocumentPrivate *|docHandle|
 
-$prototype=void QTextDocument::setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub)
-$method=5,14,0|void|setMarkdown|const QString &,QTextDocument::MarkdownFeatures=QTextDocument::MarkdownDialectGitHub
+$prototypeV2=5,14,0|void QTextDocument::setMarkdown( const QString & markdown, QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub )
 
-$prototype=QString QTextDocument::toMarkdown(QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub) const
-$method=5,14,0|QString|toMarkdown|QTextDocument::MarkdownFeatures=QTextDocument::MarkdownDialectGitHub
+$prototypeV2=5,14,0|QString QTextDocument::toMarkdown( QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub ) const
 
 %%
 %% SIGNALS

@@ -62,36 +62,29 @@ HB_FUNC_STATIC( QSTATICTEXT_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QStaticText &other)
-$method=|void|swap|QStaticText &
+$prototypeV2=void swap( QStaticText & other )
 
-$prototype=void setText(const QString &text)
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=QString text() const
 
-$prototype=void setTextFormat(Qt::TextFormat textFormat)
-$method=|void|setTextFormat|Qt::TextFormat
+$prototypeV2=void setTextFormat( Qt::TextFormat textFormat )
 
 $prototypeV2=Qt::TextFormat textFormat() const
 
-$prototype=void setTextWidth(qreal textWidth)
-$method=|void|setTextWidth|qreal
+$prototypeV2=void setTextWidth( qreal textWidth )
 
 $prototypeV2=qreal textWidth() const
 
-$prototype=void setTextOption(const QTextOption &textOption)
-$method=|void|setTextOption|const QTextOption &
+$prototypeV2=void setTextOption( const QTextOption & textOption )
 
 $prototypeV2=QTextOption textOption() const
 
 $prototypeV2=QSizeF size() const
 
-$prototype=void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
-$method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
+$prototypeV2=void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 
-$prototype=void setPerformanceHint(PerformanceHint performanceHint)
-$method=|void|setPerformanceHint|QStaticText::PerformanceHint
+$prototypeV2=void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 
 $prototypeV2=QStaticText::PerformanceHint performanceHint() const
 

@@ -80,38 +80,27 @@ $prototypeV2=float gamma() const
 
 $prototypeV2=int quality() const
 
-$prototype=void setCompression ( int compression )
-$method=|void|setCompression|int
+$prototypeV2=void setCompression( int compression )
 
-$prototype=void setDevice ( QIODevice * device )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setFormat ( const QByteArray & format )
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
-$prototype=void setGamma ( float gamma )
-$method=|void|setGamma|float
+$prototypeV2=void setGamma( float gamma )
 
-$prototype=void setQuality ( int quality )
-$method=|void|setQuality|int
+$prototypeV2=void setQuality( int quality )
 
-$prototype=void setText ( const QString & key, const QString & text )
-$method=|void|setText|const QString &,const QString &
+$prototypeV2=void setText( const QString & key, const QString & text )
 
-$prototype=bool supportsOption ( QImageIOHandler::ImageOption option ) const
-$method=|bool|supportsOption|QImageIOHandler::ImageOption
+$prototypeV2=bool supportsOption( QImageIOHandler::ImageOption option ) const
 
-$prototype=bool write ( const QImage & image )
-$method=|bool|write|const QImage &
+$prototypeV2=bool write( const QImage & image )
 
-$prototype=static QList<QByteArray> supportedImageFormats ()
-$staticMethod=|QList<QByteArray>|supportedImageFormats|
+$prototypeV2=static QList<QByteArray> supportedImageFormats()
 
-$prototype=static QList<QByteArray> QImageWriter::imageFormatsForMimeType(const QByteArray &mimeType)
-$staticMethod=5,12,0|QList<QByteArray>|imageFormatsForMimeType|const QByteArray &
+$prototypeV2=5,12,0|static QList<QByteArray> QImageWriter::imageFormatsForMimeType( const QByteArray & mimeType )
 
 $extraMethods
 

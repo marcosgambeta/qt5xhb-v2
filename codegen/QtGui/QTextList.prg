@@ -34,26 +34,19 @@ $prototypeV2=int count() const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=QTextBlock item(int i) const
-$method=|QTextBlock|item|int
+$prototypeV2=QTextBlock item( int i ) const
 
-$prototype=int itemNumber(const QTextBlock &) const
-$method=|int|itemNumber|const QTextBlock &
+$prototypeV2=int itemNumber( const QTextBlock & ) const
 
-$prototype=QString itemText(const QTextBlock &) const
-$method=|QString|itemText|const QTextBlock &
+$prototypeV2=QString itemText( const QTextBlock & ) const
 
-$prototype=void removeItem(int i)
-$method=|void|removeItem|int
+$prototypeV2=void removeItem( int i )
 
-$prototype=void remove(const QTextBlock &)
-$method=|void|remove|const QTextBlock &
+$prototypeV2=void remove( const QTextBlock & )
 
-$prototype=void add(const QTextBlock &block)
-$method=|void|add|const QTextBlock &
+$prototypeV2=void add( const QTextBlock & block )
 
-$prototype=void setFormat(const QTextListFormat &format)
-$method=|void|setFormat|const QTextListFormat &
+$prototypeV2=void setFormat( const QTextListFormat & format )
 
 $prototypeV2=QTextListFormat format() const
 

@@ -32,25 +32,21 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 $prototypeV2=QString name() const
 
-$prototype=void setWidth(qreal width)
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal width )
 
 $prototypeV2=qreal width() const
 
-$prototype=void setHeight(qreal height)
-$method=|void|setHeight|qreal
+$prototypeV2=void setHeight( qreal height )
 
 $prototypeV2=qreal height() const
 
-$prototype=int QTextImageFormat::quality() const
-$method=5,12,0|int|quality|
+$prototypeV2=5,12,0|int QTextImageFormat::quality() const
 
-$prototype=void QTextImageFormat::setQuality(int quality = ...)
-$method=5,12,0|void|setQuality|int=100
+%% TODO: to check $prototypeV2=5,12,0|void QTextImageFormat::setQuality( int quality = ... )
+$prototypeV2=5,12,0|void QTextImageFormat::setQuality( int quality = 100 )
 
 #pragma ENDDUMP

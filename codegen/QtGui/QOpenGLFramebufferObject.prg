@@ -152,8 +152,7 @@ $prototypeV2=QImage toImage() const
 
 $prototypeV2=QOpenGLFramebufferObject::Attachment attachment() const
 
-$prototype=void setAttachment(Attachment attachment)
-$method=|void|setAttachment|QOpenGLFramebufferObject::Attachment
+$prototypeV2=void setAttachment( QOpenGLFramebufferObject::Attachment attachment )
 
 $prototypeV2=GLuint handle() const
 

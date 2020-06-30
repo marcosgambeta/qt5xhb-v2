@@ -101,21 +101,18 @@ $method=|QVector4D|row|int|#ifndef QT_NO_VECTOR4D
 $prototype=void setRow(int index, const QVector4D& value)
 $method=|void|setRow|int,const QVector4D &|#ifndef QT_NO_VECTOR4D
 
-$prototype=bool isAffine() const
-$method=5,5,0|bool|isAffine|
+$prototypeV2=5,5,0|bool isAffine() const
 
 $prototypeV2=bool isIdentity() const
 
 $prototypeV2=void setToIdentity()
 
-$prototype=void fill(float value)
-$method=|void|fill|float
+$prototypeV2=void fill( float value )
 
 $prototypeV2=double determinant() const
 
-$prototype=QMatrix4x4 inverted(bool *invertible = nullptr) const
+$prototypeV2=QMatrix4x4 inverted( bool * invertible = nullptr ) const
 %% TODO: revisar implementacao
-$method=|QMatrix4x4|inverted|bool *=nullptr
 
 $prototypeV2=QMatrix4x4 transposed() const
 
@@ -273,11 +270,9 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 }
 $addMethod=ortho
 
-$prototype=void frustum(float left, float right, float bottom, float top, float nearPlane, float farPlane)
-$method=|void|frustum|float,float,float,float,float,float
+$prototypeV2=void frustum( float left, float right, float bottom, float top, float nearPlane, float farPlane )
 
-$prototype=void perspective(float verticalAngle, float aspectRatio, float nearPlane, float farPlane)
-$method=|void|perspective|float,float,float,float
+$prototypeV2=void perspective( float verticalAngle, float aspectRatio, float nearPlane, float farPlane )
 
 $prototype=void lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)
 $method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &|#ifndef QT_NO_VECTOR3D
