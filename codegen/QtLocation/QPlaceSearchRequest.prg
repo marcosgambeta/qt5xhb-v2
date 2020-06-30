@@ -60,47 +60,37 @@ $deleteMethod
 
 $prototypeV2=QString searchTerm() const
 
-$prototype=void setSearchTerm(const QString &term)
-$method=|void|setSearchTerm|const QString &
+$prototypeV2=void setSearchTerm( const QString & term )
 
-$prototype=QList<QPlaceCategory> categories() const
-$method=|QList<QPlaceCategory>|categories|
+$prototypeV2=QList<QPlaceCategory> categories() const
 
-$prototype=void setCategory(const QPlaceCategory &category)
-$method=|void|setCategory|const QPlaceCategory &
+$prototypeV2=void setCategory( const QPlaceCategory & category )
 
-$prototype=void setCategories(const QList<QPlaceCategory> &categories)
-$method=|void|setCategories|const QList<QPlaceCategory> &
+$prototypeV2=void setCategories( const QList<QPlaceCategory> & categories )
 
 $prototypeV2=QGeoShape searchArea() const
 
-$prototype=void setSearchArea(const QGeoShape &area)
-$method=|void|setSearchArea|const QGeoShape &
+$prototypeV2=void setSearchArea( const QGeoShape & area )
 
 $prototypeV2=QString recommendationId() const
 
-$prototype=void setRecommendationId(const QString &recommendationId)
-$method=|void|setRecommendationId|const QString &
+$prototypeV2=void setRecommendationId( const QString & recommendationId )
 
 $prototypeV2=QVariant searchContext() const
 
-$prototype=void setSearchContext(const QVariant &context)
-$method=|void|setSearchContext|const QVariant &
+$prototypeV2=void setSearchContext( const QVariant & context )
 
 $prototypeV2=QLocation::VisibilityScope visibilityScope() const
 
-$prototype=void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
-$method=|void|setVisibilityScope|QLocation::VisibilityScope
+$prototypeV2=void setVisibilityScope( QLocation::VisibilityScope visibilityScopes )
 
 $prototypeV2=QPlaceSearchRequest::RelevanceHint relevanceHint() const
 
-$prototype=void setRelevanceHint(RelevanceHint hint)
-$method=|void|setRelevanceHint|QPlaceSearchRequest::RelevanceHint
+$prototypeV2=void setRelevanceHint( QPlaceSearchRequest::RelevanceHint hint )
 
 $prototypeV2=int limit() const
 
-$prototype=void setLimit(int limit)
-$method=|void|setLimit|int
+$prototypeV2=void setLimit( int limit )
 
 $prototypeV2=void clear()
 

@@ -57,13 +57,11 @@ $deleteMethod
 
 $prototypeV2=QString userId() const
 
-$prototype=void setUserId(const QString &identifier)
-$method=|void|setUserId|const QString &
+$prototypeV2=void setUserId( const QString & identifier )
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 $extraMethods
 

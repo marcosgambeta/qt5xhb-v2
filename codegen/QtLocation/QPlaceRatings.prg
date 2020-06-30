@@ -57,18 +57,15 @@ $deleteMethod
 
 $prototypeV2=qreal average() const
 
-$prototype=void setAverage(qreal average)
-$method=|void|setAverage|qreal
+$prototypeV2=void setAverage( qreal average )
 
 $prototypeV2=int count() const
 
-$prototype=void setCount(int count)
-$method=|void|setCount|int
+$prototypeV2=void setCount( int count )
 
 $prototypeV2=qreal maximum() const
 
-$prototype=void setMaximum(qreal max)
-$method=|void|setMaximum|qreal
+$prototypeV2=void setMaximum( qreal max )
 
 $prototypeV2=bool isEmpty() const
 

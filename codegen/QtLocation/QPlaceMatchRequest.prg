@@ -55,14 +55,11 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 
 $deleteMethod
 
-$prototype=QList<QPlace> places() const
-$method=|QList<QPlace>|places|
+$prototypeV2=QList<QPlace> places() const
 
-$prototype=void setPlaces(const QList<QPlace> places)
-$method=|void|setPlaces|const QList<QPlace> &
+$prototypeV2=void setPlaces( const QList<QPlace> places )
 
-$prototype=void setResults(const QList<QPlaceSearchResult> &results)
-$method=|void|setResults|const QList<QPlaceSearchResult> &
+$prototypeV2=void setResults( const QList<QPlaceSearchResult> & results )
 
 $prototypeV2=void clear()
 

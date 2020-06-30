@@ -57,13 +57,11 @@ $deleteMethod
 
 $prototypeV2=QString label() const
 
-$prototype=void setLabel(const QString &label)
-$method=|void|setLabel|const QString &
+$prototypeV2=void setLabel( const QString & label )
 
 $prototypeV2=QString text() const
 
-$prototype=void setText(const QString &text)
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=bool isEmpty() const
 

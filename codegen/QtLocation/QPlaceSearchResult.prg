@@ -61,13 +61,11 @@ $prototypeV2=QPlaceSearchResult::SearchResultType type() const
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString &title)
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototypeV2=QPlaceIcon icon() const
 
-$prototype=void setIcon(const QPlaceIcon &icon)
-$method=|void|setIcon|const QPlaceIcon &
+$prototypeV2=void setIcon( const QPlaceIcon & icon )
 
 $extraMethods
 

@@ -36,58 +36,41 @@ $prototypeV2=QString managerName() const
 
 $prototypeV2=int managerVersion() const
 
-$prototype=virtual QPlaceDetailsReply *getPlaceDetails(const QString &placeId)
-$virtualMethod=|QPlaceDetailsReply *|getPlaceDetails|const QString &
+$prototypeV2=virtual QPlaceDetailsReply * getPlaceDetails( const QString & placeId )
 
-$prototype=virtual QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request)
-$virtualMethod=|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
+$prototypeV2=virtual QPlaceContentReply * getPlaceContent( const QPlaceContentRequest & request )
 
-$prototype=virtual QPlaceSearchReply *search(const QPlaceSearchRequest &request)
-$virtualMethod=|QPlaceSearchReply *|search|const QPlaceSearchRequest &
+$prototypeV2=virtual QPlaceSearchReply * search( const QPlaceSearchRequest & request )
 
-$prototype=virtual QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request)
-$virtualMethod=|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
+$prototypeV2=virtual QPlaceSearchSuggestionReply * searchSuggestions( const QPlaceSearchRequest & request )
 
-$prototype=virtual QPlaceIdReply *savePlace(const QPlace &place)
-$virtualMethod=|QPlaceIdReply *|savePlace|const QPlace &
+$prototypeV2=virtual QPlaceIdReply * savePlace( const QPlace & place )
 
-$prototype=virtual QPlaceIdReply *removePlace(const QString &placeId)
-$virtualMethod=|QPlaceIdReply *|removePlace|const QString &
+$prototypeV2=virtual QPlaceIdReply * removePlace( const QString & placeId )
 
-$prototype=virtual QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId)
-$virtualMethod=|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &
+$prototypeV2=virtual QPlaceIdReply * saveCategory( const QPlaceCategory & category, const QString & parentId )
 
-$prototype=virtual QPlaceIdReply *removeCategory(const QString &categoryId)
-$virtualMethod=|QPlaceIdReply *|removeCategory|const QString &
+$prototypeV2=virtual QPlaceIdReply * removeCategory( const QString & categoryId )
 
 $prototypeV2=virtual QPlaceReply * initializeCategories()
 
-$prototype=virtual QString parentCategoryId(const QString &categoryId) const
-$virtualMethod=|QString|parentCategoryId|const QString &
+$prototypeV2=virtual QString parentCategoryId( const QString & categoryId ) const
 
-$prototype=virtual QStringList childCategoryIds(const QString &categoryId) const
-$virtualMethod=|QStringList|childCategoryIds|const QString &
+$prototypeV2=virtual QStringList childCategoryIds( const QString & categoryId ) const
 
-$prototype=virtual QPlaceCategory category(const QString &categoryId) const
-$virtualMethod=|QPlaceCategory|category|const QString &
+$prototypeV2=virtual QPlaceCategory category( const QString & categoryId ) const
 
-$prototype=virtual QList<QPlaceCategory> childCategories(const QString &parentId) const
-$virtualMethod=|QList<QPlaceCategory>|childCategories|const QString &
+$prototypeV2=virtual QList<QPlaceCategory> childCategories( const QString & parentId ) const
 
-$prototype=virtual QList<QLocale> locales() const
-$virtualMethod=|QList<QLocale>|locales|
+$prototypeV2=virtual QList<QLocale> locales() const
 
-$prototype=virtual void setLocales(const QList<QLocale> &locales)
-$virtualMethod=|void|setLocales|const QList<QLocale> &
+$prototypeV2=virtual void setLocales( const QList<QLocale> & locales )
 
-$prototype=virtual QUrl constructIconUrl(const QPlaceIcon &icon, const QSize &size) const
-$virtualMethod=|QUrl|constructIconUrl|const QPlaceIcon &,const QSize &
+$prototypeV2=virtual QUrl constructIconUrl( const QPlaceIcon & icon, const QSize & size ) const
 
-$prototype=virtual QPlace compatiblePlace(const QPlace &original) const
-$virtualMethod=|QPlace|compatiblePlace|const QPlace &
+$prototypeV2=virtual QPlace compatiblePlace( const QPlace & original ) const
 
-$prototype=virtual QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request)
-$virtualMethod=|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
+$prototypeV2=virtual QPlaceMatchReply * matchingPlaces( const QPlaceMatchRequest & request )
 
 %%
 %% SIGNALS

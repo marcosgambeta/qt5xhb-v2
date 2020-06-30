@@ -59,23 +59,19 @@ $deleteMethod
 
 $prototypeV2=QPlaceContent::Type contentType() const
 
-$prototype=void setContentType(QPlaceContent::Type type)
-$method=|void|setContentType|QPlaceContent::Type
+$prototypeV2=void setContentType( QPlaceContent::Type type )
 
 $prototypeV2=QString placeId() const
 
-$prototype=void setPlaceId(const QString &identifier)
-$method=|void|setPlaceId|const QString &
+$prototypeV2=void setPlaceId( const QString & identifier )
 
 $prototypeV2=QVariant contentContext() const
 
-$prototype=void setContentContext(const QVariant &context)
-$method=|void|setContentContext|const QVariant &
+$prototypeV2=void setContentContext( const QVariant & context )
 
 $prototypeV2=int limit() const
 
-$prototype=void setLimit(int limit)
-$method=|void|setLimit|int
+$prototypeV2=void setLimit( int limit )
 
 $prototypeV2=void clear()
 

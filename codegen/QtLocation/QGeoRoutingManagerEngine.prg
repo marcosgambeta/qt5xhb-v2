@@ -34,11 +34,9 @@ $prototypeV2=QString managerName() const
 
 $prototypeV2=int managerVersion() const
 
-$prototype=virtual QGeoRouteReply *calculateRoute(const QGeoRouteRequest &request) = 0
-$virtualMethod=|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
+$prototypeV2=virtual QGeoRouteReply * calculateRoute( const QGeoRouteRequest & request ) = 0
 
-$prototype=virtual QGeoRouteReply *updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
-$virtualMethod=|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
+$prototypeV2=virtual QGeoRouteReply * updateRoute( const QGeoRoute & route, const QGeoCoordinate & position )
 
 $prototypeV2=QGeoRouteRequest::TravelModes supportedTravelModes() const
 
@@ -52,13 +50,11 @@ $prototypeV2=QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
 
 $prototypeV2=QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setMeasurementSystem(QLocale::MeasurementSystem system)
-$method=|void|setMeasurementSystem|QLocale::MeasurementSystem
+$prototypeV2=void setMeasurementSystem( QLocale::MeasurementSystem system )
 
 $prototypeV2=QLocale::MeasurementSystem measurementSystem() const
 

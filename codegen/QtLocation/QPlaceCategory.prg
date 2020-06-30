@@ -59,23 +59,19 @@ $deleteMethod
 
 $prototypeV2=QString categoryId() const
 
-$prototype=void setCategoryId(const QString &identifier)
-$method=|void|setCategoryId|const QString &
+$prototypeV2=void setCategoryId( const QString & identifier )
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 $prototypeV2=QLocation::Visibility visibility() const
 
-$prototype=void setVisibility(QLocation::Visibility visibility)
-$method=|void|setVisibility|QLocation::Visibility
+$prototypeV2=void setVisibility( QLocation::Visibility visibility )
 
 $prototypeV2=QPlaceIcon icon() const
 
-$prototype=void setIcon(const QPlaceIcon &icon)
-$method=|void|setIcon|const QPlaceIcon &
+$prototypeV2=void setIcon( const QPlaceIcon & icon )
 
 $prototypeV2=bool isEmpty() const
 

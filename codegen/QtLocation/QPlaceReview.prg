@@ -35,32 +35,26 @@ $deleteMethod
 
 $prototypeV2=QDateTime dateTime() const
 
-$prototype=void setDateTime(const QDateTime &dt)
-$method=|void|setDateTime|const QDateTime &
+$prototypeV2=void setDateTime( const QDateTime & dt )
 
 $prototypeV2=QString text() const
 
-$prototype=void setText(const QString &text)
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=QString language() const
 
-$prototype=void setLanguage(const QString &data)
-$method=|void|setLanguage|const QString &
+$prototypeV2=void setLanguage( const QString & data )
 
 $prototypeV2=qreal rating() const
 
-$prototype=void setRating(qreal data)
-$method=|void|setRating|qreal
+$prototypeV2=void setRating( qreal data )
 
 $prototypeV2=QString reviewId() const
 
-$prototype=void setReviewId(const QString &identifier)
-$method=|void|setReviewId|const QString &
+$prototypeV2=void setReviewId( const QString & identifier )
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString &data)
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & data )
 
 #pragma ENDDUMP

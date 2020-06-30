@@ -64,11 +64,9 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 }
 $addMethod=geocode
 
-$prototype=virtual QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds)
-$virtualMethod=|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
+$prototypeV2=virtual QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const QGeoShape & bounds )
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=QLocale locale() const
 

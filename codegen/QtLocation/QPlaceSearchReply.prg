@@ -35,8 +35,7 @@ $deleteMethod
 
 $prototypeV2=QPlaceReply::Type type() const
 
-$prototype=QList<QPlaceSearchResult> results() const
-$method=|QList<QPlaceSearchResult>|results|
+$prototypeV2=QList<QPlaceSearchResult> results() const
 
 $prototypeV2=QPlaceSearchRequest request() const
 

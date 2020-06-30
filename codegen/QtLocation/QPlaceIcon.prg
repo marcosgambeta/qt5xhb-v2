@@ -57,13 +57,11 @@ HB_FUNC_STATIC( QPLACEICON_NEW )
 
 $deleteMethod
 
-$prototype=QUrl url(const QSize &size = QSize()) const
-$method=|QUrl|url|const QSize &=QSize()
+$prototypeV2=QUrl url( const QSize & size = QSize() ) const
 
 $prototypeV2=QPlaceManager * manager() const
 
-$prototype=void setManager(QPlaceManager *manager)
-$method=|void|setManager|QPlaceManager *
+$prototypeV2=void setManager( QPlaceManager * manager )
 
 $prototypeV2=bool isEmpty() const
 

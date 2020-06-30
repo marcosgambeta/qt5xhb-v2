@@ -43,8 +43,7 @@ $prototypeV2=QString errorString() const
 
 $prototypeV2=QGeoShape viewport() const
 
-$prototype=QList<QGeoLocation> locations() const
-$method=|QList<QGeoLocation>|locations|
+$prototypeV2=QList<QGeoLocation> locations() const
 
 $prototypeV2=int limit() const
 

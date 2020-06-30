@@ -41,8 +41,7 @@ $prototypeV2=QString errorString() const
 
 $prototypeV2=QGeoRouteRequest request() const
 
-$prototype=QList<QGeoRoute> routes() const
-$method=|QList<QGeoRoute>|routes|
+$prototypeV2=QList<QGeoRoute> routes() const
 
 $prototypeV2=virtual void abort()
 

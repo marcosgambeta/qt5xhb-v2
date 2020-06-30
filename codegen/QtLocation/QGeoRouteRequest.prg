@@ -79,49 +79,37 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 
 $deleteMethod
 
-$prototype=void setWaypoints(const QList<QGeoCoordinate> &waypoints)
-$method=|void|setWaypoints|const QList<QGeoCoordinate> &
+$prototypeV2=void setWaypoints( const QList<QGeoCoordinate> & waypoints )
 
-$prototype=QList<QGeoCoordinate> waypoints() const
-$method=|QList<QGeoCoordinate>|waypoints|
+$prototypeV2=QList<QGeoCoordinate> waypoints() const
 
-$prototype=void setExcludeAreas(const QList<QGeoRectangle> &areas)
-$method=|void|setExcludeAreas|const QList<QGeoRectangle> &
+$prototypeV2=void setExcludeAreas( const QList<QGeoRectangle> & areas )
 
-$prototype=QList<QGeoRectangle> excludeAreas() const
-$method=|QList<QGeoRectangle>|excludeAreas|
+$prototypeV2=QList<QGeoRectangle> excludeAreas() const
 
-$prototype=void setNumberAlternativeRoutes(int alternatives)
-$method=|void|setNumberAlternativeRoutes|int
+$prototypeV2=void setNumberAlternativeRoutes( int alternatives )
 
 $prototypeV2=int numberAlternativeRoutes() const
 
-$prototype=void setTravelModes(TravelModes travelModes)
-$method=|void|setTravelModes|QGeoRouteRequest::TravelModes
+$prototypeV2=void setTravelModes( QGeoRouteRequest::TravelModes travelModes )
 
 $prototypeV2=QGeoRouteRequest::TravelModes travelModes() const
 
-$prototype=void setFeatureWeight(FeatureType featureType, FeatureWeight featureWeight)
-$method=|void|setFeatureWeight|QGeoRouteRequest::FeatureType,QGeoRouteRequest::FeatureWeight
+$prototypeV2=void setFeatureWeight( QGeoRouteRequest::FeatureType featureType, QGeoRouteRequest::FeatureWeight featureWeight)
 
-$prototype=FeatureWeight featureWeight(FeatureType featureType) const
-$method=|QGeoRouteRequest::FeatureWeight|featureWeight|QGeoRouteRequest::FeatureType
+$prototypeV2=QGeoRouteRequest::FeatureWeight featureWeight( QGeoRouteRequest::FeatureType featureType ) const
 
-$prototype=QList<FeatureType> featureTypes() const
-$method=|QList<QGeoRouteRequest::FeatureType>|featureTypes|
+$prototypeV2=QList<QGeoRouteRequest::FeatureType> featureTypes() const
 
-$prototype=void setRouteOptimization(RouteOptimizations optimization)
-$method=|void|setRouteOptimization|QGeoRouteRequest::RouteOptimizations
+$prototypeV2=void setRouteOptimization( QGeoRouteRequest::RouteOptimizations optimization )
 
 $prototypeV2=QGeoRouteRequest::RouteOptimizations routeOptimization() const
 
-$prototype=void setSegmentDetail(SegmentDetail segmentDetail)
-$method=|void|setSegmentDetail|QGeoRouteRequest::SegmentDetail
+$prototypeV2=void setSegmentDetail( QGeoRouteRequest::SegmentDetail segmentDetail )
 
 $prototypeV2=QGeoRouteRequest::SegmentDetail segmentDetail() const
 
-$prototype=void setManeuverDetail(ManeuverDetail maneuverDetail)
-$method=|void|setManeuverDetail|QGeoRouteRequest::ManeuverDetail
+$prototypeV2=void setManeuverDetail( QGeoRouteRequest::ManeuverDetail maneuverDetail )
 
 $prototypeV2=QGeoRouteRequest::ManeuverDetail maneuverDetail() const
 

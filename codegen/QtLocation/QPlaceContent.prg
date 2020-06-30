@@ -62,18 +62,15 @@ $prototypeV2=QPlaceContent::Type type() const
 
 $prototypeV2=QPlaceSupplier supplier() const
 
-$prototype=void setSupplier(const QPlaceSupplier &supplier)
-$method=|void|setSupplier|const QPlaceSupplier &
+$prototypeV2=void setSupplier( const QPlaceSupplier & supplier )
 
 $prototypeV2=QPlaceUser user() const
 
-$prototype=void setUser(const QPlaceUser &user)
-$method=|void|setUser|const QPlaceUser &
+$prototypeV2=void setUser( const QPlaceUser & user )
 
 $prototypeV2=QString attribution() const
 
-$prototype=void setAttribution(const QString &attribution)
-$method=|void|setAttribution|const QString &
+$prototypeV2=void setAttribution( const QString & attribution )
 
 $extraMethods
 

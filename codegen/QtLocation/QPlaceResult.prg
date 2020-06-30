@@ -33,17 +33,14 @@ $deleteMethod
 
 $prototypeV2=qreal distance() const
 
-$prototype=void setDistance(qreal distance)
-$method=|void|setDistance|qreal
+$prototypeV2=void setDistance( qreal distance )
 
 $prototypeV2=QPlace place() const
 
-$prototype=void setPlace(const QPlace &place)
-$method=|void|setPlace|const QPlace &
+$prototypeV2=void setPlace( const QPlace & place )
 
 $prototypeV2=bool isSponsored() const
 
-$prototype=void setSponsored(bool sponsored)
-$method=|void|setSponsored|bool
+$prototypeV2=void setSponsored( bool sponsored )
 
 #pragma ENDDUMP

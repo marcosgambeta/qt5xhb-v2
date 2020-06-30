@@ -59,33 +59,27 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setPosition(const QGeoCoordinate &position)
-$method=|void|setPosition|const QGeoCoordinate &
+$prototypeV2=void setPosition( const QGeoCoordinate & position )
 
 $prototypeV2=QGeoCoordinate position() const
 
-$prototype=void setInstructionText(const QString &instructionText)
-$method=|void|setInstructionText|const QString &
+$prototypeV2=void setInstructionText( const QString & instructionText )
 
 $prototypeV2=QString instructionText() const
 
-$prototype=void setDirection(InstructionDirection direction)
-$method=|void|setDirection|QGeoManeuver::InstructionDirection
+$prototypeV2=void setDirection( QGeoManeuver::InstructionDirection direction )
 
 $prototypeV2=QGeoManeuver::InstructionDirection direction() const
 
-$prototype=void setTimeToNextInstruction(int secs)
-$method=|void|setTimeToNextInstruction|int
+$prototypeV2=void setTimeToNextInstruction( int secs )
 
 $prototypeV2=int timeToNextInstruction() const
 
-$prototype=void setDistanceToNextInstruction(qreal distance)
-$method=|void|setDistanceToNextInstruction|qreal
+$prototypeV2=void setDistanceToNextInstruction( qreal distance )
 
 $prototypeV2=qreal distanceToNextInstruction() const
 
-$prototype=void setWaypoint(const QGeoCoordinate &coordinate)
-$method=|void|setWaypoint|const QGeoCoordinate &
+$prototypeV2=void setWaypoint( const QGeoCoordinate & coordinate )
 
 $prototypeV2=QGeoCoordinate waypoint() const
 

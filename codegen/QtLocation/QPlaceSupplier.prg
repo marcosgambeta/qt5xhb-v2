@@ -57,23 +57,19 @@ $deleteMethod
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &data)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & data )
 
 $prototypeV2=QString supplierId() const
 
-$prototype=void setSupplierId(const QString &identifier)
-$method=|void|setSupplierId|const QString &
+$prototypeV2=void setSupplierId( const QString & identifier )
 
 $prototypeV2=QUrl url() const
 
-$prototype=void setUrl(const QUrl &data)
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & data )
 
 $prototypeV2=QPlaceIcon icon() const
 
-$prototype=void setIcon(const QPlaceIcon &icon)
-$method=|void|setIcon|const QPlaceIcon &
+$prototypeV2=void setIcon( const QPlaceIcon & icon )
 
 $prototypeV2=bool isEmpty() const
 

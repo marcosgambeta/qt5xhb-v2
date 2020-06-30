@@ -56,10 +56,8 @@ $prototypeV2=QGeoServiceProvider::Error error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
-$prototype=void setAllowExperimental(bool allow)
-$method=|void|setAllowExperimental|bool
+$prototypeV2=void setAllowExperimental( bool allow )
 
 #pragma ENDDUMP

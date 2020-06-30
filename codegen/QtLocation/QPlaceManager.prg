@@ -36,58 +36,41 @@ $prototypeV2=QString managerName() const
 
 $prototypeV2=int managerVersion() const
 
-$prototype=QPlaceDetailsReply *getPlaceDetails(const QString &placeId) const
-$method=|QPlaceDetailsReply *|getPlaceDetails|const QString &
+$prototypeV2=QPlaceDetailsReply * getPlaceDetails( const QString & placeId ) const
 
-$prototype=QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request) const
-$method=|QPlaceContentReply *|getPlaceContent|const QPlaceContentRequest &
+$prototypeV2=QPlaceContentReply * getPlaceContent( const QPlaceContentRequest & request ) const
 
-$prototype=QPlaceSearchReply *search(const QPlaceSearchRequest &query) const
-$method=|QPlaceSearchReply *|search|const QPlaceSearchRequest &
+$prototypeV2=QPlaceSearchReply * search( const QPlaceSearchRequest & query ) const
 
-$prototype=QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request) const
-$method=|QPlaceSearchSuggestionReply *|searchSuggestions|const QPlaceSearchRequest &
+$prototypeV2=QPlaceSearchSuggestionReply * searchSuggestions( const QPlaceSearchRequest & request ) const
 
-$prototype=QPlaceIdReply *savePlace(const QPlace &place)
-$method=|QPlaceIdReply *|savePlace|const QPlace &
+$prototypeV2=QPlaceIdReply * savePlace( const QPlace & place )
 
-$prototype=QPlaceIdReply *removePlace(const QString &placeId)
-$method=|QPlaceIdReply *|removePlace|const QString &
+$prototypeV2=QPlaceIdReply * removePlace( const QString & placeId )
 
-$prototype=QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId = QString())
-$method=|QPlaceIdReply *|saveCategory|const QPlaceCategory &,const QString &=QString()
+$prototypeV2=QPlaceIdReply * saveCategory( const QPlaceCategory & category, const QString & parentId = QString() )
 
-$prototype=QPlaceIdReply *removeCategory(const QString &categoryId)
-$method=|QPlaceIdReply *|removeCategory|const QString &
+$prototypeV2=QPlaceIdReply * removeCategory( const QString & categoryId )
 
 $prototypeV2=QPlaceReply * initializeCategories()
 
-$prototype=QString parentCategoryId(const QString &categoryId) const
-$method=|QString|parentCategoryId|const QString &
+$prototypeV2=QString parentCategoryId( const QString & categoryId ) const
 
-$prototype=QStringList childCategoryIds(const QString &parentId = QString()) const
-$method=|QStringList|childCategoryIds|const QString &=QString()
+$prototypeV2=QStringList childCategoryIds( const QString & parentId = QString() ) const
 
-$prototype=QPlaceCategory category(const QString &categoryId) const
-$method=|QPlaceCategory|category|const QString &
+$prototypeV2=QPlaceCategory category( const QString & categoryId ) const
 
-$prototype=QList<QPlaceCategory> childCategories(const QString &parentId = QString()) const
-$method=|QList<QPlaceCategory>|childCategories|const QString &=QString()
+$prototypeV2=QList<QPlaceCategory> childCategories( const QString & parentId = QString() ) const
 
-$prototype=QList<QLocale> locales() const
-$method=|QList<QLocale>|locales|
+$prototypeV2=QList<QLocale> locales() const
 
-$prototype=void setLocales(const QList<QLocale> &locale)
-$method=|void|setLocales|const QList<QLocale> &
+$prototypeV2=void setLocales( const QList<QLocale> & locale )
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
-$prototype=QPlace compatiblePlace(const QPlace &place)
-$method=|QPlace|compatiblePlace|const QPlace &
+$prototypeV2=QPlace compatiblePlace( const QPlace & place )
 
-$prototype=QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request) const
-$method=|QPlaceMatchReply *|matchingPlaces|const QPlaceMatchRequest &
+$prototypeV2=QPlaceMatchReply * matchingPlaces( const QPlaceMatchRequest & request ) const
 
 %%
 %% SIGNALS

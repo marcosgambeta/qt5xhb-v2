@@ -60,34 +60,27 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
-$method=|void|setNextRouteSegment|const QGeoRouteSegment &
+$prototypeV2=void setNextRouteSegment( const QGeoRouteSegment & routeSegment )
 
 $prototypeV2=QGeoRouteSegment nextRouteSegment() const
 
-$prototype=void setTravelTime(int secs)
-$method=|void|setTravelTime|int
+$prototypeV2=void setTravelTime( int secs )
 
 $prototypeV2=int travelTime() const
 
-$prototype=void setDistance(qreal distance)
-$method=|void|setDistance|qreal
+$prototypeV2=void setDistance( qreal distance )
 
 $prototypeV2=qreal distance() const
 
-$prototype=void setPath(const QList<QGeoCoordinate> &path)
-$method=|void|setPath|const QList<QGeoCoordinate> &
+$prototypeV2=void setPath( const QList<QGeoCoordinate> & path )
 
-$prototype=QList<QGeoCoordinate> path() const
-$method=|QList<QGeoCoordinate>|path|
+$prototypeV2=QList<QGeoCoordinate> path() const
 
-$prototype=void setManeuver(const QGeoManeuver &maneuver)
-$method=|void|setManeuver|const QGeoManeuver &
+$prototypeV2=void setManeuver( const QGeoManeuver & maneuver )
 
 $prototypeV2=QGeoManeuver maneuver() const
 
-$prototype=bool QGeoRouteSegment::isLegLastSegment() const
-$method=5,12,0|bool|isLegLastSegment|
+$prototypeV2=5,12,0|bool QGeoRouteSegment::isLegLastSegment() const
 
 $extraMethods
 

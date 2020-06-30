@@ -57,17 +57,14 @@ $deleteMethod
 
 $prototypeV2=QUrl url() const
 
-$prototype=void setUrl(const QUrl &url)
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
 $prototypeV2=QString imageId() const
 
-$prototype=void setImageId(const QString &identifier)
-$method=|void|setImageId|const QString &
+$prototypeV2=void setImageId( const QString & identifier )
 
 $prototypeV2=QString mimeType() const
 
-$prototype=void setMimeType(const QString &data)
-$method=|void|setMimeType|const QString &
+$prototypeV2=void setMimeType( const QString & data )
 
 #pragma ENDDUMP

@@ -57,17 +57,14 @@ $deleteMethod
 
 $prototypeV2=QString text() const
 
-$prototype=void setText(const QString &text)
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString &data)
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & data )
 
 $prototypeV2=QString language() const
 
-$prototype=void setLanguage(const QString &data)
-$method=|void|setLanguage|const QString &
+$prototypeV2=void setLanguage( const QString & data )
 
 #pragma ENDDUMP

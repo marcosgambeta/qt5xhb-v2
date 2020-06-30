@@ -35,7 +35,6 @@ $deleteMethod
 
 $prototypeV2=QPlaceSearchRequest searchRequest() const
 
-$prototype=void setSearchRequest(const QPlaceSearchRequest &request)
-$method=|void|setSearchRequest|const QPlaceSearchRequest &
+$prototypeV2=void setSearchRequest( const QPlaceSearchRequest & request )
 
 #pragma ENDDUMP

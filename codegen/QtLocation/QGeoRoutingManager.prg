@@ -34,37 +34,27 @@ $prototypeV2=QString managerName() const
 
 $prototypeV2=int managerVersion() const
 
-$prototype=QGeoRouteReply *calculateRoute(const QGeoRouteRequest &request)
-$method=|QGeoRouteReply *|calculateRoute|const QGeoRouteRequest &
+$prototypeV2=QGeoRouteReply * calculateRoute( const QGeoRouteRequest & request )
 
-$prototype=QGeoRouteReply *updateRoute(const QGeoRoute &route, const QGeoCoordinate &position)
-$method=|QGeoRouteReply *|updateRoute|const QGeoRoute &,const QGeoCoordinate &
+$prototypeV2=QGeoRouteReply * updateRoute( const QGeoRoute & route, const QGeoCoordinate & position )
 
-$prototype=QGeoRouteRequest::TravelModes supportedTravelModes() const
-$method=|QGeoRouteRequest::TravelModes|supportedTravelModes|
+$prototypeV2=QGeoRouteRequest::TravelModes supportedTravelModes() const
 
-$prototype=QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
-$method=|QGeoRouteRequest::FeatureTypes|supportedFeatureTypes|
+$prototypeV2=QGeoRouteRequest::FeatureTypes supportedFeatureTypes() const
 
-$prototype=QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
-$method=|QGeoRouteRequest::FeatureWeights|supportedFeatureWeights|
+$prototypeV2=QGeoRouteRequest::FeatureWeights supportedFeatureWeights() const
 
-$prototype=QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
-$method=|QGeoRouteRequest::RouteOptimizations|supportedRouteOptimizations|
+$prototypeV2=QGeoRouteRequest::RouteOptimizations supportedRouteOptimizations() const
 
-$prototype=QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
-$method=|QGeoRouteRequest::SegmentDetails|supportedSegmentDetails|
+$prototypeV2=QGeoRouteRequest::SegmentDetails supportedSegmentDetails() const
 
-$prototype=QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
-$method=|QGeoRouteRequest::ManeuverDetails|supportedManeuverDetails|
+$prototypeV2=QGeoRouteRequest::ManeuverDetails supportedManeuverDetails() const
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setMeasurementSystem(QLocale::MeasurementSystem system)
-$method=|void|setMeasurementSystem|QLocale::MeasurementSystem
+$prototypeV2=void setMeasurementSystem( QLocale::MeasurementSystem system )
 
 $prototypeV2=QLocale::MeasurementSystem measurementSystem() const
 
