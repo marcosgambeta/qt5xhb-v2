@@ -37,36 +37,41 @@ $deleteMethod
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
-$prototype=QFont font() const
-$prototype=void setFont(const QFont &font)
+$prototypeV2=QFont font() const
+
+$prototypeV2=void setFont( const QFont & font )
 
 %%
 %% Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 %%
 
-$prototype=QString text() const
-$prototype=void setText(const QString &text)
+$prototypeV2=QString text() const
+
+$prototypeV2=void setText( const QString & text )
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=QColor color() const
-$prototype=void setColor(const QColor &color)
+$prototypeV2=QColor color() const
+
+$prototypeV2=void setColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(float width READ width WRITE setWidth NOTIFY widthChanged)
 %%
 
-$prototype=float width() const
-$prototype=void setWidth(float width)
+$prototypeV2=float width() const
+
+$prototypeV2=void setWidth( float width )
 
 %%
 %% Q_PROPERTY(float height READ height WRITE setHeight NOTIFY heightChanged)
 %%
 
-$prototype=float height() const
-$prototype=void setHeight(float height)
+$prototypeV2=float height() const
+
+$prototypeV2=void setHeight( float height )
 
 %%
 %% SIGNALS

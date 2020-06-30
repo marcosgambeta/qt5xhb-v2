@@ -37,25 +37,25 @@ $deleteMethod
 %% Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 %%
 
-$prototype=QString text() const
+$prototypeV2=QString text() const
 
-$prototype=void setText(const QString &text) [slot]
+$prototypeV2=void setText( const QString & text ) [slot]
 
 %%
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
 %%
 
-$prototype=QFont font() const
+$prototypeV2=QFont font() const
 
-$prototype=void setFont(const QFont &font) [slot]
+$prototypeV2=void setFont( const QFont & font ) [slot]
 
 %%
 %% Q_PROPERTY(float depth READ depth WRITE setDepth NOTIFY depthChanged)
 %%
 
-$prototype=float depth() const
+$prototypeV2=float depth() const
 
-$prototype=void setDepth(float depth) [slot]
+$prototypeV2=void setDepth( float depth ) [slot]
 
 %%
 %%

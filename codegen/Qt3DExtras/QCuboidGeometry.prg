@@ -38,80 +38,87 @@ $deleteMethod
 %% Q_PROPERTY(float xExtent READ xExtent WRITE setXExtent NOTIFY xExtentChanged)
 %%
 
-$prototype=float xExtent() const
-$prototype=void setXExtent(float xExtent) [slot]
+$prototypeV2=float xExtent() const
+
+$prototypeV2=void setXExtent( float xExtent ) [slot]
 
 %%
 %% Q_PROPERTY(float yExtent READ yExtent WRITE setYExtent NOTIFY yExtentChanged)
 %%
 
-$prototype=float yExtent() const
-$prototype=void setYExtent(float yExtent) [slot]
+$prototypeV2=float yExtent() const
+
+$prototypeV2=void setYExtent( float yExtent ) [slot]
 
 %%
 %% Q_PROPERTY(float zExtent READ zExtent WRITE setZExtent NOTIFY zExtentChanged)
 %%
 
-$prototype=float zExtent() const
-$prototype=void setZExtent(float zExtent) [slot]
+$prototypeV2=float zExtent() const
+
+$prototypeV2=void setZExtent( float zExtent ) [slot]
 
 %%
 %% Q_PROPERTY(QSize xyMeshResolution READ xyMeshResolution WRITE setXYMeshResolution NOTIFY xyMeshResolutionChanged)
 %%
 
-$prototype=QSize xyMeshResolution() const
-$prototype=void setXYMeshResolution(const QSize &resolution) [slot]
+$prototypeV2=QSize xyMeshResolution() const
+
+$prototypeV2=void setXYMeshResolution( const QSize & resolution ) [slot]
 
 %%
 %% Q_PROPERTY(QSize yzMeshResolution READ yzMeshResolution WRITE setYZMeshResolution NOTIFY yzMeshResolutionChanged)
 %%
 
-$prototype=QSize yzMeshResolution() const
-$prototype=void setYZMeshResolution(const QSize &resolution) [slot]
+$prototypeV2=QSize yzMeshResolution() const
+
+$prototypeV2=void setYZMeshResolution( const QSize & resolution ) [slot]
 
 %%
 %% Q_PROPERTY(QSize xzMeshResolution READ xzMeshResolution WRITE setXZMeshResolution NOTIFY xzMeshResolutionChanged)
 %%
 
-$prototype=QSize xzMeshResolution() const
-$prototype=void setXZMeshResolution(const QSize &resolution) [slot]
+$prototypeV2=QSize xzMeshResolution() const
+
+$prototypeV2=void setXZMeshResolution( const QSize & resolution ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *positionAttribute READ positionAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *positionAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * positionAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *normalAttribute READ normalAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *normalAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * normalAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *texCoordAttribute READ texCoordAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *texCoordAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * texCoordAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *tangentAttribute READ tangentAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *tangentAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * tangentAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *indexAttribute READ indexAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *indexAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * indexAttribute() const
 
 %%
 %%
 %%
 
-$prototype=void updateIndices()
-$prototype=void updateVertices()
+$prototypeV2=void updateIndices()
+
+$prototypeV2=void updateVertices()
 
 %%
 %% SIGNALS

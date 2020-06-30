@@ -38,50 +38,57 @@ $deleteMethod
 %% Q_PROPERTY(QColor diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)
 %%
 
-$prototype=QColor diffuse() const
-$prototype=void setDiffuse(const QColor &diffuse) [slot]
+$prototypeV2=QColor diffuse() const
+
+$prototypeV2=void setDiffuse( const QColor & diffuse ) [slot]
 
 %%
 %% Q_PROPERTY(QColor specular READ specular WRITE setSpecular NOTIFY specularChanged)
 %%
 
-$prototype=QColor specular() const
-$prototype=void setSpecular(const QColor &specular) [slot]
+$prototypeV2=QColor specular() const
+
+$prototypeV2=void setSpecular( const QColor & specular ) [slot]
 
 %%
 %% Q_PROPERTY(QColor cool READ cool WRITE setCool NOTIFY coolChanged)
 %%
 
-$prototype=QColor cool() const
-$prototype=void setCool(const QColor &cool) [slot]
+$prototypeV2=QColor cool() const
+
+$prototypeV2=void setCool( const QColor & cool ) [slot]
 
 %%
 %% Q_PROPERTY(QColor warm READ warm WRITE setWarm NOTIFY warmChanged)
 %%
 
-$prototype=QColor warm() const
-$prototype=void setWarm(const QColor &warm) [slot]
+$prototypeV2=QColor warm() const
+
+$prototypeV2=void setWarm( const QColor & warm ) [slot]
 
 %%
 %% Q_PROPERTY(float alpha READ alpha WRITE setAlpha NOTIFY alphaChanged)
 %%
 
-$prototype=float alpha() const
-$prototype=void setAlpha(float alpha) [slot]
+$prototypeV2=float alpha() const
+
+$prototypeV2=void setAlpha( float alpha ) [slot]
 
 %%
 %% Q_PROPERTY(float beta READ beta WRITE setBeta NOTIFY betaChanged)
 %%
 
-$prototype=float beta() const
-$prototype=void setBeta(float beta) [slot]
+$prototypeV2=float beta() const
+
+$prototypeV2=void setBeta( float beta ) [slot]
 
 %%
 %% Q_PROPERTY(float shininess READ shininess WRITE setShininess NOTIFY shininessChanged)
 %%
 
-$prototype=float shininess() const
-$prototype=void setShininess(float shininess) [slot]
+$prototypeV2=float shininess() const
+
+$prototypeV2=void setShininess( float shininess ) [slot]
 
 %%
 %%

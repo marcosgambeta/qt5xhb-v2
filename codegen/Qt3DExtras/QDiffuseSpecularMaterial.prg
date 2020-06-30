@@ -37,50 +37,57 @@ $deleteMethod
 %% Q_PROPERTY(QColor ambient READ ambient WRITE setAmbient NOTIFY ambientChanged)
 %%
 
-$prototype=QColor ambient() const
-$prototype=void setAmbient(const QColor &ambient) [slot]
+$prototypeV2=QColor ambient() const
+
+$prototypeV2=void setAmbient( const QColor & ambient ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)
 %%
 
-$prototype=QVariant diffuse() const
-$prototype=void setDiffuse(const QVariant &diffuse) [slot]
+$prototypeV2=QVariant diffuse() const
+
+$prototypeV2=void setDiffuse( const QVariant & diffuse ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant specular READ specular WRITE setSpecular NOTIFY specularChanged)
 %%
 
-$prototype=QVariant specular() const
-$prototype=void setSpecular(const QVariant &specular) [slot]
+$prototypeV2=QVariant specular() const
+
+$prototypeV2=void setSpecular( const QVariant & specular ) [slot]
 
 %%
 %% Q_PROPERTY(float shininess READ shininess WRITE setShininess NOTIFY shininessChanged)
 %%
 
-$prototype=float shininess() const
-$prototype=void setShininess(float shininess) [slot]
+$prototypeV2=float shininess() const
+
+$prototypeV2=void setShininess( float shininess ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant normal READ normal WRITE setNormal NOTIFY normalChanged)
 %%
 
-$prototype=QVariant normal() const
-$prototype=void setNormal(const QVariant &normal) [slot]
+$prototypeV2=QVariant normal() const
+
+$prototypeV2=void setNormal( const QVariant & normal ) [slot]
 
 %%
 %% Q_PROPERTY(float textureScale READ textureScale WRITE setTextureScale NOTIFY textureScaleChanged)
 %%
 
-$prototype=float textureScale() const
-$prototype=void setTextureScale(float textureScale) [slot]
+$prototypeV2=float textureScale() const
+
+$prototypeV2=void setTextureScale( float textureScale ) [slot]
 
 %%
 %% Q_PROPERTY(bool alphaBlending READ isAlphaBlendingEnabled WRITE setAlphaBlendingEnabled NOTIFY alphaBlendingEnabledChanged)
 %%
 
-$prototype=bool isAlphaBlendingEnabled() const
-$prototype=void setAlphaBlendingEnabled(bool enabled) [slot]
+$prototypeV2=bool isAlphaBlendingEnabled() const
+
+$prototypeV2=void setAlphaBlendingEnabled( bool enabled ) [slot]
 
 %%
 %%

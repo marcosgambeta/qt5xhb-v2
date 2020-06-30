@@ -37,36 +37,41 @@ $deleteMethod
 %% Q_PROPERTY(QColor ambient READ ambient WRITE setAmbient NOTIFY ambientChanged)
 %%
 
-$prototype=QColor ambient() const
-$prototype=void setAmbient(const QColor &ambient) [slot]
+$prototypeV2=QColor ambient() const
+
+$prototypeV2=void setAmbient( const QColor & ambient ) [slot]
 
 %%
 %% Q_PROPERTY(float shininess READ shininess WRITE setShininess NOTIFY shininessChanged)
 %%
 
-$prototype=float shininess() const
-$prototype=void setShininess(float shininess) [slot]
+$prototypeV2=float shininess() const
+
+$prototypeV2=void setShininess( float shininess ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAbstractTexture *specular READ specular WRITE setSpecular NOTIFY specularChanged)
 %%
 
-$prototype=Qt3DRender::QAbstractTexture *specular() const
-$prototype=void setSpecular(Qt3DRender::QAbstractTexture *specular) [slot]
+$prototypeV2=Qt3DRender::QAbstractTexture * specular() const
+
+$prototypeV2=void setSpecular( Qt3DRender::QAbstractTexture * specular ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAbstractTexture *diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)
 %%
 
-$prototype=Qt3DRender::QAbstractTexture *diffuse() const
-$prototype=void setDiffuse(Qt3DRender::QAbstractTexture *diffuse) [slot]
+$prototypeV2=Qt3DRender::QAbstractTexture * diffuse() const
+
+$prototypeV2=void setDiffuse( Qt3DRender::QAbstractTexture * diffuse ) [slot]
 
 %%
 %% Q_PROPERTY(float textureScale READ textureScale WRITE setTextureScale NOTIFY textureScaleChanged)
 %%
 
-$prototype=float textureScale() const
-$prototype=void setTextureScale(float textureScale) [slot]
+$prototypeV2=float textureScale() const
+
+$prototypeV2=void setTextureScale( float textureScale ) [slot]
 
 %%
 %%

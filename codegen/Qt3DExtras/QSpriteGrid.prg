@@ -37,15 +37,17 @@ $deleteMethod
 %% Q_PROPERTY(int rows READ rows WRITE setRows NOTIFY rowsChanged)
 %%
 
-$prototype=int rows() const
-$prototype=void setRows(int rows) [slot]
+$prototypeV2=int rows() const
+
+$prototypeV2=void setRows( int rows ) [slot]
 
 %%
 %% Q_PROPERTY(int columns READ columns WRITE setColumns NOTIFY columnsChanged)
 %%
 
-$prototype=int columns() const
-$prototype=void setColumns(int columns) [slot]
+$prototypeV2=int columns() const
+
+$prototypeV2=void setColumns( int columns ) [slot]
 
 %%
 %% SIGNALS

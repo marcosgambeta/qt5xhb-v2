@@ -37,36 +37,41 @@ $deleteMethod
 %% Q_PROPERTY(QColor ambient READ ambient WRITE setAmbient NOTIFY ambientChanged)
 %%
 
-$prototype=QColor ambient() const
-$prototype=void setAmbient(const QColor &ambient) [slot]
+$prototypeV2=QColor ambient() const
+
+$prototypeV2=void setAmbient( const QColor & ambient ) [slot]
 
 %%
 %% Q_PROPERTY(QColor diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)
 %%
 
-$prototype=QColor diffuse() const
-$prototype=void setDiffuse(const QColor &diffuse) [slot]
+$prototypeV2=QColor diffuse() const
+
+$prototypeV2=void setDiffuse( const QColor & diffuse ) [slot]
 
 %%
 %% Q_PROPERTY(QColor specular READ specular WRITE setSpecular NOTIFY specularChanged)
 %%
 
-$prototype=QColor specular() const
-$prototype=void setSpecular(const QColor &specular) [slot]
+$prototypeV2=QColor specular() const
+
+$prototypeV2=void setSpecular( const QColor & specular ) [slot]
 
 %%
 %% Q_PROPERTY(float shininess READ shininess WRITE setShininess NOTIFY shininessChanged)
 %%
 
-$prototype=float shininess() const
-$prototype=void setShininess(float shininess) [slot]
+$prototypeV2=float shininess() const
+
+$prototypeV2=void setShininess( float shininess ) [slot]
 
 %%
 %% Q_PROPERTY(float interpolator READ interpolator WRITE setInterpolator NOTIFY interpolatorChanged)
 %%
 
-$prototype=float interpolator() const
-$prototype=void setInterpolator(float interpolator) [slot]
+$prototypeV2=float interpolator() const
+
+$prototypeV2=void setInterpolator( float interpolator ) [slot]
 
 %%
 %% SIGNALS

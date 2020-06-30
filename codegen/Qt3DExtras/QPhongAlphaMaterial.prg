@@ -37,71 +37,81 @@ $deleteMethod
 %% Q_PROPERTY(QColor ambient READ ambient WRITE setAmbient NOTIFY ambientChanged)
 %%
 
-$prototype=QColor ambient() const
-$prototype=void setAmbient(const QColor &ambient) [slot]
+$prototypeV2=QColor ambient() const
+
+$prototypeV2=void setAmbient( const QColor & ambient ) [slot]
 
 %%
 %% Q_PROPERTY(QColor diffuse READ diffuse WRITE setDiffuse NOTIFY diffuseChanged)
 %%
 
-$prototype=QColor diffuse() const
-$prototype=void setDiffuse(const QColor &diffuse) [slot]
+$prototypeV2=QColor diffuse() const
+
+$prototypeV2=void setDiffuse( const QColor & diffuse ) [slot]
 
 %%
 %% Q_PROPERTY(QColor specular READ specular WRITE setSpecular NOTIFY specularChanged)
 %%
 
-$prototype=QColor specular() const
-$prototype=void setSpecular(const QColor &specular) [slot]
+$prototypeV2=QColor specular() const
+
+$prototypeV2=void setSpecular( const QColor & specular ) [slot]
 
 %%
 %% Q_PROPERTY(float shininess READ shininess WRITE setShininess NOTIFY shininessChanged)
 %%
 
-$prototype=float shininess() const
-$prototype=void setShininess(float shininess) [slot]
+$prototypeV2=float shininess() const
+
+$prototypeV2=void setShininess( float shininess ) [slot]
 
 %%
 %% Q_PROPERTY(float alpha READ alpha WRITE setAlpha NOTIFY alphaChanged)
 %%
 
-$prototype=float alpha() const
-$prototype=void setAlpha(float alpha) [slot]
+$prototypeV2=float alpha() const
+
+$prototypeV2=void setAlpha( float alpha ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QBlendEquationArguments::Blending sourceRgbArg READ sourceRgbArg WRITE setSourceRgbArg NOTIFY sourceRgbArgChanged)
 %%
 
-$prototype=Qt3DRender::QBlendEquationArguments::Blending sourceRgbArg() const
-$prototype=void setSourceRgbArg(Qt3DRender::QBlendEquationArguments::Blending sourceRgbArg) [slot]
+$prototypeV2=Qt3DRender::QBlendEquationArguments::Blending sourceRgbArg() const
+
+$prototypeV2=void setSourceRgbArg( Qt3DRender::QBlendEquationArguments::Blending sourceRgbArg ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QBlendEquationArguments::Blending destinationRgbArg READ destinationRgbArg WRITE setDestinationRgbArg NOTIFY destinationRgbArgChanged)
 %%
 
-$prototype=Qt3DRender::QBlendEquationArguments::Blending destinationRgbArg() const
-$prototype=void setDestinationRgbArg(Qt3DRender::QBlendEquationArguments::Blending destinationRgbArg) [slot]
+$prototypeV2=Qt3DRender::QBlendEquationArguments::Blending destinationRgbArg() const
+
+$prototypeV2=void setDestinationRgbArg( Qt3DRender::QBlendEquationArguments::Blending destinationRgbArg ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QBlendEquationArguments::Blending sourceAlphaArg READ sourceAlphaArg WRITE setSourceAlphaArg NOTIFY sourceAlphaArgChanged)
 %%
 
-$prototype=Qt3DRender::QBlendEquationArguments::Blending sourceAlphaArg() const
-$prototype=void setSourceAlphaArg(Qt3DRender::QBlendEquationArguments::Blending sourceAlphaArg) [slot]
+$prototypeV2=Qt3DRender::QBlendEquationArguments::Blending sourceAlphaArg() const
+
+$prototypeV2=void setSourceAlphaArg( Qt3DRender::QBlendEquationArguments::Blending sourceAlphaArg ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QBlendEquationArguments::Blending destinationAlphaArg READ destinationAlphaArg WRITE setDestinationAlphaArg NOTIFY destinationAlphaArgChanged)
 %%
 
-$prototype=Qt3DRender::QBlendEquationArguments::Blending destinationAlphaArg() const
-$prototype=void setDestinationAlphaArg(Qt3DRender::QBlendEquationArguments::Blending destinationAlphaArg) [slot]
+$prototypeV2=Qt3DRender::QBlendEquationArguments::Blending destinationAlphaArg() const
+
+$prototypeV2=void setDestinationAlphaArg( Qt3DRender::QBlendEquationArguments::Blending destinationAlphaArg ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QBlendEquation::BlendFunction blendFunctionArg READ blendFunctionArg WRITE setBlendFunctionArg NOTIFY blendFunctionArgChanged)
 %%
 
-$prototype=Qt3DRender::QBlendEquation::BlendFunction blendFunctionArg() const
-$prototype=void setBlendFunctionArg(Qt3DRender::QBlendEquation::BlendFunction blendFunctionArg) [slot]
+$prototypeV2=Qt3DRender::QBlendEquation::BlendFunction blendFunctionArg() const
+
+$prototypeV2=void setBlendFunctionArg( Qt3DRender::QBlendEquation::BlendFunction blendFunctionArg ) [slot]
 
 %%
 %% SIGNALS

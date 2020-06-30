@@ -37,21 +37,23 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DRender::QAbstractTexture *texture READ texture WRITE setTexture NOTIFY textureChanged)
 %%
 
-$prototype=Qt3DRender::QAbstractTexture *texture() const
-$prototype=void setTexture(Qt3DRender::QAbstractTexture *texture) [slot]
+$prototypeV2=Qt3DRender::QAbstractTexture * texture() const
+
+$prototypeV2=void setTexture( Qt3DRender::QAbstractTexture * texture ) [slot]
 
 %%
 %% Q_PROPERTY(QMatrix3x3 textureTransform READ textureTransform NOTIFY textureTransformChanged)
 %%
 
-$prototype=QMatrix3x3 textureTransform() const
+$prototypeV2=QMatrix3x3 textureTransform() const
 
 %%
 %% Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
 %%
 
-$prototype=int currentIndex() const
-$prototype=void setCurrentIndex(int currentIndex) [slot]
+$prototypeV2=int currentIndex() const
+
+$prototypeV2=void setCurrentIndex( int currentIndex ) [slot]
 
 %%
 %%

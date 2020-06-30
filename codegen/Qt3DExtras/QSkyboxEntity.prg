@@ -37,22 +37,25 @@ $deleteMethod
 %% Q_PROPERTY(QString baseName READ baseName WRITE setBaseName NOTIFY baseNameChanged)
 %%
 
-$prototype=QString baseName() const
-$prototype=void setBaseName(const QString &path) [slot]
+$prototypeV2=QString baseName() const
+
+$prototypeV2=void setBaseName( const QString & path ) [slot]
 
 %%
 %% Q_PROPERTY(QString extension READ extension WRITE setExtension NOTIFY extensionChanged)
 %%
 
-$prototype=QString extension() const
-$prototype=void setExtension(const QString &extension) [slot]
+$prototypeV2=QString extension() const
+
+$prototypeV2=void setExtension( const QString & extension ) [slot]
 
 %%
 %% Q_PROPERTY(bool gammaCorrect READ isGammaCorrectEnabled WRITE setGammaCorrectEnabled NOTIFY gammaCorrectEnabledChanged REVISION 9)
 %%
 
-$prototype=bool isGammaCorrectEnabled() const
-$prototype=void setGammaCorrectEnabled(bool enabled) [slot]
+$prototypeV2=bool isGammaCorrectEnabled() const
+
+$prototypeV2=void setGammaCorrectEnabled( bool enabled ) [slot]
 
 %%
 %% SIGNALS

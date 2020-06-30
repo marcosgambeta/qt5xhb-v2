@@ -36,29 +36,33 @@ $prototype=explicit QSpriteSheetItem(Qt3DCore::QNode *parent = nullptr)
 %% Q_PROPERTY(int x READ x WRITE setX NOTIFY xChanged)
 %%
 
-$prototype=int x() const
-$prototype=void setX(int x) [slot]
+$prototypeV2=int x() const
+
+$prototypeV2=void setX( int x ) [slot]
 
 %%
 %% Q_PROPERTY(int y READ y WRITE setY NOTIFY yChanged)
 %%
 
-$prototype=int y() const
-$prototype=void setY(int y) [slot]
+$prototypeV2=int y() const
+
+$prototypeV2=void setY( int y ) [slot]
 
 %%
 %% Q_PROPERTY(int width READ width WRITE setWidth NOTIFY widthChanged)
 %%
 
-$prototype=int width() const
-$prototype=void setWidth(int width) [slot]
+$prototypeV2=int width() const
+
+$prototypeV2=void setWidth( int width ) [slot]
 
 %%
 %% Q_PROPERTY(int height READ height WRITE setHeight NOTIFY heightChanged)
 %%
 
-$prototype=int height() const
-$prototype=void setHeight(int height) [slot]
+$prototypeV2=int height() const
+
+$prototypeV2=void setHeight( int height ) [slot]
 
 %%
 %% SIGNALS

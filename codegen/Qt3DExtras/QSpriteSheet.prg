@@ -37,16 +37,19 @@ $deleteMethod
 %% Q_PROPERTY(QVector<QSpriteSheetItem *> sprites READ sprites WRITE setSprites NOTIFY spritesChanged)
 %%
 
-$prototype=QVector<QSpriteSheetItem *> sprites() const
-$prototype=void setSprites(QVector<QSpriteSheetItem *> sprites) [slot]
+$prototypeV2=QVector<QSpriteSheetItem *> sprites() const
+
+$prototypeV2=void setSprites( QVector<QSpriteSheetItem *> sprites ) [slot]
 
 %%
 %%
 %%
 
-$prototype=QSpriteSheetItem *addSprite(int x, int y, int width, int height)
-$prototype=void addSprite(QSpriteSheetItem *sprite)
-$prototype=void removeSprite(QSpriteSheetItem *sprite)
+$prototypeV2=QSpriteSheetItem * addSprite( int x, int y, int width, int height )
+
+$prototypeV2=void addSprite( QSpriteSheetItem * sprite )
+
+$prototypeV2=void removeSprite( QSpriteSheetItem * sprite )
 
 %%
 %% SIGNALS

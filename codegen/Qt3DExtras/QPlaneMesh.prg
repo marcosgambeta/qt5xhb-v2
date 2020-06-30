@@ -37,41 +37,52 @@ $deleteMethod
 %% Q_PROPERTY(float width READ width WRITE setWidth NOTIFY widthChanged)
 %%
 
-$prototype=float width() const
-$prototype=void setWidth(float width) [slot]
+$prototypeV2=float width() const
+
+$prototypeV2=void setWidth( float width ) [slot]
 
 %%
 %% Q_PROPERTY(float height READ height WRITE setHeight NOTIFY heightChanged)
 %%
 
-$prototype=float height() const
-$prototype=void setHeight(float height) [slot]
+$prototypeV2=float height() const
+
+$prototypeV2=void setHeight( float height ) [slot]
 
 %%
 %% Q_PROPERTY(QSize meshResolution READ meshResolution WRITE setMeshResolution NOTIFY meshResolutionChanged)
 %%
 
-$prototype=QSize meshResolution() const
-$prototype=void setMeshResolution(const QSize &resolution) [slot]
+$prototypeV2=QSize meshResolution() const
+
+$prototypeV2=void setMeshResolution( const QSize & resolution ) [slot]
 
 %%
 %% Q_PROPERTY(bool mirrored READ mirrored WRITE setMirrored NOTIFY mirroredChanged REVISION 9)
 %%
 
-$prototype=bool mirrored() const
-$prototype=void setMirrored(bool mirrored) [slot]
+$prototypeV2=bool mirrored() const
+
+$prototypeV2=void setMirrored( bool mirrored ) [slot]
 
 %%
 %%
 %%
 
 $prototype=void setInstanceCount(int instanceCount) [private]
+
 $prototype=void setVertexCount(int vertexCount) [private]
+
 $prototype=void setIndexOffset(int indexOffset) [private]
+
 $prototype=void setFirstInstance(int firstInstance) [private]
+
 $prototype=void setRestartIndexValue(int index) [private]
+
 $prototype=void setPrimitiveRestartEnabled(bool enabled) [private]
+
 $prototype=void setGeometry(Qt3DRender::QGeometry *geometry) [private]
+
 $prototype=void setPrimitiveType(PrimitiveType primitiveType) [private]
 
 %%

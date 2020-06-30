@@ -38,65 +38,70 @@ $deleteMethod
 %% Q_PROPERTY(float width READ width WRITE setWidth NOTIFY widthChanged)
 %%
 
-$prototype=float width() const
-$prototype=void setWidth(float width) [slot]
+$prototypeV2=float width() const
+
+$prototypeV2=void setWidth( float width ) [slot]
 
 %%
 %% Q_PROPERTY(float height READ height WRITE setHeight NOTIFY heightChanged)
 %%
 
-$prototype=float height() const
-$prototype=void setHeight(float height) [slot]
+$prototypeV2=float height() const
+
+$prototypeV2=void setHeight( float height ) [slot]
 
 %%
 %% Q_PROPERTY(QSize resolution READ resolution WRITE setResolution NOTIFY resolutionChanged)
 %%
 
-$prototype=QSize resolution() const
-$prototype=void setResolution(const QSize &resolution) [slot]
+$prototypeV2=QSize resolution() const
+
+$prototypeV2=void setResolution( const QSize & resolution ) [slot]
 
 %%
 %% Q_PROPERTY(bool mirrored READ mirrored WRITE setMirrored NOTIFY mirroredChanged REVISION 9)
 %%
 
-$prototype=bool mirrored() const
-$prototype=void setMirrored(bool mirrored) [slot]
+$prototypeV2=bool mirrored() const
+
+$prototypeV2=void setMirrored( bool mirrored ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *positionAttribute READ positionAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *positionAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * positionAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *normalAttribute READ normalAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *normalAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * normalAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *texCoordAttribute READ texCoordAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *texCoordAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * texCoordAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *tangentAttribute READ tangentAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *tangentAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * tangentAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *indexAttribute READ indexAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *indexAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * indexAttribute() const
 
 %%
 %%
 
-$prototype=void updateVertices()
-$prototype=void updateIndices()
+$prototypeV2=void updateVertices()
+
+$prototypeV2=void updateIndices()
 
 %%
 %% SIGNALS

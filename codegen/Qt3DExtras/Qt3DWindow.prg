@@ -33,15 +33,24 @@ $prototype=Qt3DWindow(QScreen *screen = nullptr)
 $prototype=~Qt3DWindow()
 $deleteMethod
 
-$prototype=void registerAspect(Qt3DCore::QAbstractAspect *aspect)
-$prototype=void registerAspect(const QString &name)
-$prototype=void setRootEntity(Qt3DCore::QEntity *root)
-$prototype=void setActiveFrameGraph(Qt3DRender::QFrameGraphNode *activeFrameGraph)
-$prototype=Qt3DRender::QFrameGraphNode *activeFrameGraph() const
-$prototype=Qt3DExtras::QForwardRenderer *defaultFrameGraph() const
-$prototype=Qt3DRender::QCamera *camera() const
-$prototype=Qt3DRender::QRenderSettings *renderSettings() const
+$prototypeV2=void registerAspect( Qt3DCore::QAbstractAspect * aspect )
+
+$prototypeV2=void registerAspect( const QString & name )
+
+$prototypeV2=void setRootEntity( Qt3DCore::QEntity * root )
+
+$prototypeV2=void setActiveFrameGraph( Qt3DRender::QFrameGraphNode * activeFrameGraph )
+
+$prototypeV2=Qt3DRender::QFrameGraphNode * activeFrameGraph() const
+
+$prototypeV2=Qt3DExtras::QForwardRenderer * defaultFrameGraph() const
+
+$prototypeV2=Qt3DRender::QCamera * camera() const
+
+$prototypeV2=Qt3DRender::QRenderSettings * renderSettings() const
+
 $prototype=void showEvent(QShowEvent *e) Q_DECL_OVERRIDE [protected]
+
 $prototype=void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE [protected]
 
 #pragma ENDDUMP

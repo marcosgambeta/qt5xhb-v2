@@ -38,43 +38,50 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DRender::QCamera *camera READ camera WRITE setCamera NOTIFY cameraChanged)
 %%
 
-$prototype=Qt3DRender::QCamera *camera() const
-$prototype=void setCamera(Qt3DRender::QCamera *camera)
+$prototypeV2=Qt3DRender::QCamera * camera() const
+
+$prototypeV2=void setCamera( Qt3DRender::QCamera * camera )
 
 %%
 %% Q_PROPERTY(float linearSpeed READ linearSpeed WRITE setLinearSpeed NOTIFY linearSpeedChanged)
 %%
 
-$prototype=float linearSpeed() const
-$prototype=void setLinearSpeed(float linearSpeed)
+$prototypeV2=float linearSpeed() const
+
+$prototypeV2=void setLinearSpeed( float linearSpeed )
 
 %%
 %% Q_PROPERTY(float lookSpeed READ lookSpeed WRITE setLookSpeed NOTIFY lookSpeedChanged)
 %%
 
-$prototype=float lookSpeed() const
-$prototype=void setLookSpeed(float lookSpeed)
+$prototypeV2=float lookSpeed() const
+
+$prototypeV2=void setLookSpeed( float lookSpeed )
 
 %%
 %% Q_PROPERTY(float acceleration READ acceleration WRITE setAcceleration NOTIFY accelerationChanged)
 %%
 
-$prototype=float acceleration() const
-$prototype=void setAcceleration(float acceleration)
+$prototypeV2=float acceleration() const
+
+$prototypeV2=void setAcceleration( float acceleration )
 
 %%
 %% Q_PROPERTY(float deceleration READ deceleration WRITE setDeceleration NOTIFY decelerationChanged)
 %%
 
-$prototype=float deceleration() const
-$prototype=void setDeceleration(float deceleration)
+$prototypeV2=float deceleration() const
+
+$prototypeV2=void setDeceleration( float deceleration )
 
 %%
 %%
 %%
 
 $prototype=Qt3DInput::QKeyboardDevice *keyboardDevice() const [protected]
+
 $prototype=Qt3DInput::QMouseDevice *mouseDevice() const [protected]
+
 $prototype=virtual void moveCamera(const InputState &state, float dt) = 0 [private]
 
 %%

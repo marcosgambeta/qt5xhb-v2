@@ -38,60 +38,65 @@ $deleteMethod
 %% Q_PROPERTY(int rings READ rings WRITE setRings NOTIFY ringsChanged)
 %%
 
-$prototype=int rings() const
-$prototype=void setRings(int rings) [slot]
+$prototypeV2=int rings() const
+
+$prototypeV2=void setRings( int rings ) [slot]
 
 %%
 %% Q_PROPERTY(int slices READ slices WRITE setSlices NOTIFY slicesChanged)
 %%
 
-$prototype=int slices() const
-$prototype=void setSlices(int slices) [slot]
+$prototypeV2=int slices() const
+
+$prototypeV2=void setSlices( int slices ) [slot]
 
 %%
 %% Q_PROPERTY(float radius READ radius WRITE setRadius NOTIFY radiusChanged)
 %%
 
-$prototype=float radius() const
-$prototype=void setRadius(float radius) [slot]
+$prototypeV2=float radius() const
+
+$prototypeV2=void setRadius( float radius ) [slot]
 
 %%
 %% Q_PROPERTY(float length READ length WRITE setLength NOTIFY lengthChanged)
 %%
 
-$prototype=float length() const
-$prototype=void setLength(float length) [slot]
+$prototypeV2=float length() const
+
+$prototypeV2=void setLength( float length ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *positionAttribute READ positionAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *positionAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * positionAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *normalAttribute READ normalAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *normalAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * normalAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *texCoordAttribute READ texCoordAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *texCoordAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * texCoordAttribute() const
 
 %%
 %% Q_PROPERTY(Qt3DRender::QAttribute *indexAttribute READ indexAttribute CONSTANT)
 %%
 
-$prototype=Qt3DRender::QAttribute *indexAttribute() const
+$prototypeV2=Qt3DRender::QAttribute * indexAttribute() const
 
 %%
 %%
 %%
 
-$prototype=void updateVertices()
-$prototype=void updateIndices()
+$prototypeV2=void updateVertices()
+
+$prototypeV2=void updateIndices()
 
 %%
 %% SIGNALS

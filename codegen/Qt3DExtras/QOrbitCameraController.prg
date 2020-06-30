@@ -38,8 +38,9 @@ $deleteMethod
 %% Q_PROPERTY(float zoomInLimit READ zoomInLimit WRITE setZoomInLimit NOTIFY zoomInLimitChanged)
 %%
 
-$prototype=float zoomInLimit() const
-$prototype=void setZoomInLimit(float zoomInLimit)
+$prototypeV2=float zoomInLimit() const
+
+$prototypeV2=void setZoomInLimit( float zoomInLimit )
 
 %%
 %%

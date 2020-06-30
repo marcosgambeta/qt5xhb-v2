@@ -37,41 +37,52 @@ $deleteMethod
 %% Q_PROPERTY(int rings READ rings WRITE setRings NOTIFY ringsChanged)
 %%
 
-$prototype=int rings() const
-$prototype=void setRings(int rings) [slot]
+$prototypeV2=int rings() const
+
+$prototypeV2=void setRings( int rings ) [slot]
 
 %%
 %% Q_PROPERTY(int slices READ slices WRITE setSlices NOTIFY slicesChanged)
 %%
 
-$prototype=int slices() const
-$prototype=void setSlices(int slices) [slot]
+$prototypeV2=int slices() const
+
+$prototypeV2=void setSlices( int slices ) [slot]
 
 %%
 %% Q_PROPERTY(float radius READ radius WRITE setRadius NOTIFY radiusChanged)
 %%
 
-$prototype=float radius() const
-$prototype=void setRadius(float radius) [slot]
+$prototypeV2=float radius() const
+
+$prototypeV2=void setRadius( float radius ) [slot]
 
 %%
 %% Q_PROPERTY(float minorRadius READ minorRadius WRITE setMinorRadius NOTIFY minorRadiusChanged)
 %%
 
-$prototype=float minorRadius() const
-$prototype=void setMinorRadius(float minorRadius) [slot]
+$prototypeV2=float minorRadius() const
+
+$prototypeV2=void setMinorRadius( float minorRadius ) [slot]
 
 %%
 %%
 %%
 
 $prototype=void setInstanceCount(int instanceCount) [private]
+
 $prototype=void setVertexCount(int vertexCount) [private]
+
 $prototype=void setIndexOffset(int indexOffset) [private]
+
 $prototype=void setFirstInstance(int firstInstance) [private]
+
 $prototype=void setRestartIndexValue(int index) [private]
+
 $prototype=void setPrimitiveRestartEnabled(bool enabled) [private]
+
 $prototype=void setGeometry(Qt3DRender::QGeometry *geometry) [private]
+
 $prototype=void setPrimitiveType(PrimitiveType primitiveType) [private]
 
 %%

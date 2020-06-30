@@ -38,43 +38,49 @@ $deleteMethod
 %% Q_PROPERTY(QVariant baseColor READ baseColor WRITE setBaseColor NOTIFY baseColorChanged)
 %%
 
-$prototype=QVariant baseColor() const
-$prototype=void setBaseColor(const QVariant &baseColor) [slot]
+$prototypeV2=QVariant baseColor() const
+
+$prototypeV2=void setBaseColor( const QVariant & baseColor ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant metalness READ metalness WRITE setMetalness NOTIFY metalnessChanged)
 %%
 
-$prototype=QVariant metalness() const
-$prototype=void setMetalness(const QVariant &metalness) [slot]
+$prototypeV2=QVariant metalness() const
+
+$prototypeV2=void setMetalness( const QVariant & metalness ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant roughness READ roughness WRITE setRoughness NOTIFY roughnessChanged)
 %%
 
-$prototype=QVariant roughness() const
-$prototype=void setRoughness(const QVariant &roughness) [slot]
+$prototypeV2=QVariant roughness() const
+
+$prototypeV2=void setRoughness( const QVariant & roughness ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant ambientOcclusion READ ambientOcclusion WRITE setAmbientOcclusion NOTIFY ambientOcclusionChanged REVISION 10)
 %%
 
-$prototype=QVariant ambientOcclusion() const
-$prototype=void setAmbientOcclusion(const QVariant &ambientOcclusion) [slot]
+$prototypeV2=QVariant ambientOcclusion() const
+
+$prototypeV2=void setAmbientOcclusion( const QVariant & ambientOcclusion ) [slot]
 
 %%
 %% Q_PROPERTY(QVariant normal READ normal WRITE setNormal NOTIFY normalChanged REVISION 10)
 %%
 
-$prototype=QVariant normal() const
-$prototype=void setNormal(const QVariant &normal) [slot]
+$prototypeV2=QVariant normal() const
+
+$prototypeV2=void setNormal( const QVariant & normal ) [slot]
 
 %%
 %% Q_PROPERTY(float textureScale READ textureScale WRITE setTextureScale NOTIFY textureScaleChanged REVISION 10)
 %%
 
-$prototype=float textureScale() const
-$prototype=void setTextureScale(float textureScale) [slot]
+$prototypeV2=float textureScale() const
+
+$prototypeV2=void setTextureScale( float textureScale ) [slot]
 
 %%
 %% SIGNALS

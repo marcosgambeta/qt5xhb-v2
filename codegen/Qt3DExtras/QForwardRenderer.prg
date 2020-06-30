@@ -41,50 +41,57 @@ $deleteMethod
 %% Q_PROPERTY(QObject *window READ surface WRITE setSurface NOTIFY surfaceChanged)
 %%
 
-$prototype=QObject *surface() const
-$prototype=void setSurface(QObject * surface) [slot]
+$prototypeV2=QObject * surface() const
+
+$prototypeV2=void setSurface( QObject * surface ) [slot]
 
 %%
 %% Q_PROPERTY(QRectF viewportRect READ viewportRect WRITE setViewportRect NOTIFY viewportRectChanged)
 %%
 
-$prototype=QRectF viewportRect() const
-$prototype=void setViewportRect(const QRectF &viewportRect) [slot]
+$prototypeV2=QRectF viewportRect() const
+
+$prototypeV2=void setViewportRect( const QRectF & viewportRect ) [slot]
 
 %%
 %% Q_PROPERTY(QColor clearColor READ clearColor WRITE setClearColor NOTIFY clearColorChanged)
 %%
 
-$prototype=QColor clearColor() const
-$prototype=void setClearColor(const QColor &clearColor) [slot]
+$prototypeV2=QColor clearColor() const
+
+$prototypeV2=void setClearColor( const QColor & clearColor ) [slot]
 
 %%
 %% Q_PROPERTY(Qt3DCore::QEntity *camera READ camera WRITE setCamera NOTIFY cameraChanged)
 %%
 
-$prototype=Qt3DCore::QEntity *camera() const
-$prototype=void setCamera(Qt3DCore::QEntity *camera) [slot]
+$prototypeV2=Qt3DCore::QEntity * camera() const
+
+$prototypeV2=void setCamera( Qt3DCore::QEntity * camera ) [slot]
 
 %%
 %% Q_PROPERTY(QSize externalRenderTargetSize READ externalRenderTargetSize WRITE setExternalRenderTargetSize NOTIFY externalRenderTargetSizeChanged)
 %%
 
-$prototype=QSize externalRenderTargetSize() const
-$prototype=void setExternalRenderTargetSize(const QSize &size) [slot]
+$prototypeV2=QSize externalRenderTargetSize() const
+
+$prototypeV2=void setExternalRenderTargetSize( const QSize & size ) [slot]
 
 %%
 %% Q_PROPERTY(bool frustumCulling READ isFrustumCullingEnabled WRITE setFrustumCullingEnabled NOTIFY frustumCullingEnabledChanged)
 %%
 
-$prototype=bool isFrustumCullingEnabled() const
-$prototype=void setFrustumCullingEnabled(bool enabled) [slot]
+$prototypeV2=bool isFrustumCullingEnabled() const
+
+$prototypeV2=void setFrustumCullingEnabled( bool enabled ) [slot]
 
 %%
 %% Q_PROPERTY(float gamma READ gamma WRITE setGamma NOTIFY gammaChanged REVISION 9)
 %%
 
-$prototype=float gamma() const
-$prototype=void setGamma(float gamma) [slot]
+$prototypeV2=float gamma() const
+
+$prototypeV2=void setGamma( float gamma ) [slot]
 
 %%
 %%

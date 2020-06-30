@@ -37,22 +37,25 @@ $deleteMethod
 %% Q_PROPERTY(Qt3DRender::QAbstractTexture *texture READ texture WRITE setTexture NOTIFY textureChanged)
 %%
 
-$prototype=Qt3DRender::QAbstractTexture *texture() const
-$prototype=void setTexture(Qt3DRender::QAbstractTexture *texture) [slot]
+$prototypeV2=Qt3DRender::QAbstractTexture * texture() const
+
+$prototypeV2=void setTexture( Qt3DRender::QAbstractTexture * texture ) [slot]
 
 %%
 %% Q_PROPERTY(QVector2D textureOffset READ textureOffset WRITE setTextureOffset NOTIFY textureOffsetChanged)
 %%
 
-$prototype=QVector2D textureOffset() const
-$prototype=void setTextureOffset(QVector2D textureOffset) [slot]
+$prototypeV2=QVector2D textureOffset() const
+
+$prototypeV2=void setTextureOffset( QVector2D textureOffset ) [slot]
 
 %%
 %% Q_PROPERTY(QMatrix3x3 textureTransform READ textureTransform WRITE setTextureTransform NOTIFY textureTransformChanged REVISION 10)
 %%
 
-$prototype=QMatrix3x3 textureTransform() const
-$prototype=void setTextureTransform(const QMatrix3x3 &matrix) [slot]
+$prototypeV2=QMatrix3x3 textureTransform() const
+
+$prototypeV2=void setTextureTransform( const QMatrix3x3 & matrix ) [slot]
 
 %%
 %% SIGNALS
