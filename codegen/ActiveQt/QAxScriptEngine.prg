@@ -30,8 +30,7 @@ $constructor=|new|const QString &,QAxScript *
 
 $deleteMethod
 
-$prototype=void addItem ( const QString & name )
-$method=|void|addItem|const QString &
+$prototypeV2=void addItem( const QString & name )
 
 $prototypeV2=bool hasIntrospection() const
 
@@ -39,8 +38,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QString scriptLanguage() const
 
-$prototype=void setState ( State st )
-$method=|void|setState|QAxScriptEngine::State
+$prototypeV2=void setState( QAxScriptEngine::State st )
 
 $prototypeV2=QAxScriptEngine::State state() const
 

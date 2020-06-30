@@ -76,8 +76,7 @@ $prototypeV2=QString generateDocumentation()
 
 $prototypeV2=bool isNull() const
 
-$prototype=virtual bool propertyWritable ( const char * prop ) const
-$virtualMethod=|bool|propertyWritable|const char *
+$prototypeV2=virtual bool propertyWritable( const char * prop ) const
 
 $prototype=QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QAxObject *|querySubObject,querySubObject1|const char *,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
@@ -107,19 +106,15 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 }
 $addMethod=querySubObject
 
-$prototype=bool setControl ( const QString & )
-$method=|bool|setControl|const QString &
+$prototypeV2=bool setControl( const QString & )
 
-$prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
-$virtualMethod=|void|setPropertyWritable|const char *,bool
+$prototypeV2=virtual void setPropertyWritable( const char * prop, bool ok )
 
 $prototypeV2=QStringList verbs() const
 
-$prototype=unsigned long QAxBase::classContext() const
-$method=5,13,0|unsigned long|classContext|
+$prototypeV2=5,13,0|unsigned long QAxBase::classContext() const
 
-$prototype=void QAxBase::setClassContext(unsigned long classContext)
-$method=5,13,0|void|setClassContext|unsigned long
+$prototypeV2=5,13,0|void QAxBase::setClassContext( unsigned long classContext )
 
 $extraMethods
 

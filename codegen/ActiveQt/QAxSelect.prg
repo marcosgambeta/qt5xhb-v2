@@ -35,8 +35,7 @@ $deleteMethod
 
 $prototypeV2=QString clsid() const
 
-$prototype=SandboxingLevel sandboxingLevel() const
-$method=5,13,0|QAxSelect::SandboxingLevel|sandboxingLevel|
+$prototypeV2=5,13,0|QAxSelect::SandboxingLevel sandboxingLevel() const
 
 $prototype=void onActiveXListCurrentChanged(const QModelIndex &) [private] [slot]
 

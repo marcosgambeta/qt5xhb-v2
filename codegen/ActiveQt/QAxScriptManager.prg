@@ -88,8 +88,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 }
 $addMethod=call
 
-$prototype=QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
-$method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
+$prototypeV2=QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 
 $prototype=QAxScript * load ( const QString & code, const QString & name, const QString & language )
 $internalMethod=|QAxScript *|load,load1|const QString &,const QString &,const QString &
@@ -119,13 +118,11 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 }
 $addMethod=load
 
-$prototype=QAxScript * script ( const QString & name ) const
-$method=|QAxScript *|script|const QString &
+$prototypeV2=QAxScript * script( const QString & name ) const
 
 $prototypeV2=QStringList scriptNames() const
 
-$prototype=static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
-$staticMethod=|bool|registerEngine|const QString &,const QString &,const QString &=QString()
+$prototypeV2=static bool registerEngine( const QString & name, const QString & extension, const QString & code = QString() )
 
 $prototypeV2=static QString scriptFileFilter()
 
