@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QMIMETYPE_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QMimeType &other)
-$method=|void|swap|QMimeType &
+$prototypeV2=void swap( QMimeType & other )
 
 $prototypeV2=bool isValid() const
 
@@ -83,8 +82,7 @@ $prototypeV2=QStringList suffixes() const
 
 $prototypeV2=QString preferredSuffix() const
 
-$prototype=bool inherits(const QString &mimeTypeName) const
-$method=|bool|inherits|const QString &
+$prototypeV2=bool inherits( const QString & mimeTypeName ) const
 
 $prototypeV2=QString filterString() const
 

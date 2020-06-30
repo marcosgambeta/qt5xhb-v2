@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 
 $deleteMethod
 
-$prototype=void addState(QAbstractState *state)
-$method=|void|addState|QAbstractState *
+$prototypeV2=void addState( QAbstractState * state )
 
-$prototype=void removeState(QAbstractState *state)
-$method=|void|removeState|QAbstractState *
+$prototypeV2=void removeState( QAbstractState * state )
 
 $prototypeV2=QStateMachine::Error error() const
 
@@ -72,35 +70,25 @@ $prototypeV2=bool isRunning() const
 
 $prototypeV2=bool isAnimated() const
 
-$prototype=void setAnimated(bool enabled)
-$method=|void|setAnimated|bool
+$prototypeV2=void setAnimated( bool enabled )
 
-$prototype=void addDefaultAnimation(QAbstractAnimation *animation)
-$method=|void|addDefaultAnimation|QAbstractAnimation *
+$prototypeV2=void addDefaultAnimation( QAbstractAnimation * animation )
 
-$prototype=QList<QAbstractAnimation *> defaultAnimations() const
-$method=|QList<QAbstractAnimation *>|defaultAnimations|
+$prototypeV2=QList<QAbstractAnimation *> defaultAnimations() const
 
-$prototype=void removeDefaultAnimation(QAbstractAnimation *animation)
-$method=|void|removeDefaultAnimation|QAbstractAnimation *
+$prototypeV2=void removeDefaultAnimation( QAbstractAnimation * animation )
 
-$prototype=QState::RestorePolicy globalRestorePolicy() const
-$method=|QState::RestorePolicy|globalRestorePolicy|
+$prototypeV2=QState::RestorePolicy globalRestorePolicy() const
 
-$prototype=void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
-$method=|void|setGlobalRestorePolicy|QState::RestorePolicy
+$prototypeV2=void setGlobalRestorePolicy( QState::RestorePolicy restorePolicy )
 
-$prototype=void postEvent(QEvent *event, EventPriority priority = NormalPriority)
-$method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
+$prototypeV2=void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
 
-$prototype=int postDelayedEvent(QEvent *event, int delay)
-$method=|int|postDelayedEvent|QEvent *,int
+$prototypeV2=int postDelayedEvent( QEvent * event, int delay )
 
-$prototype=bool cancelDelayedEvent(int id)
-$method=|bool|cancelDelayedEvent|int
+$prototypeV2=bool cancelDelayedEvent( int id )
 
-$prototype=bool eventFilter(QObject *watched, QEvent *event)
-$method=|bool|eventFilter|QObject *,QEvent *
+$prototypeV2=bool eventFilter( QObject * watched, QEvent * event )
 
 $prototypeV2=void start()
 

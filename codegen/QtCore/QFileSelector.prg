@@ -62,8 +62,7 @@ $addMethod=select
 
 $prototypeV2=QStringList extraSelectors() const
 
-$prototype=void setExtraSelectors(const QStringList &list)
-$method=|void|setExtraSelectors|const QStringList &
+$prototypeV2=void setExtraSelectors( const QStringList & list )
 
 $prototypeV2=QStringList allSelectors() const
 

@@ -55,31 +55,25 @@ HB_FUNC_STATIC( QCOLLATOR_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QCollator &other)
-$method=|void|swap|QCollator &
+$prototypeV2=void swap( QCollator & other )
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=QLocale locale() const
 
 $prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
-$prototype=void setCaseSensitivity(Qt::CaseSensitivity cs)
-$method=|void|setCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setCaseSensitivity( Qt::CaseSensitivity cs )
 
-$prototype=void setNumericMode(bool on)
-$method=|void|setNumericMode|bool
+$prototypeV2=void setNumericMode( bool on )
 
 $prototypeV2=bool numericMode() const
 
-$prototype=void setIgnorePunctuation(bool on)
-$method=|void|setIgnorePunctuation|bool
+$prototypeV2=void setIgnorePunctuation( bool on )
 
 $prototypeV2=bool ignorePunctuation() const
 
-$prototype=QCollatorSortKey sortKey(const QString &string) const
-$method=|QCollatorSortKey|sortKey|const QString &
+$prototypeV2=QCollatorSortKey sortKey( const QString & string ) const
 
 $extraMethods
 

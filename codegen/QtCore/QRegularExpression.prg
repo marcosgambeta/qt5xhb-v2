@@ -66,13 +66,11 @@ $prototypeV2=int captureCount() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=QRegularExpressionMatchIterator globalMatch(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
-$method=|QRegularExpressionMatchIterator|globalMatch|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
+$prototypeV2=QRegularExpressionMatchIterator globalMatch( const QString & subject, int offset = 0, QRegularExpression::MatchType matchType = QRegularExpression::NormalMatch, QRegularExpression::MatchOptions matchOptions = QRegularExpression::NoMatchOption ) const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QRegularExpressionMatch match(const QString & subject, int offset = 0, MatchType matchType = NormalMatch, MatchOptions matchOptions = NoMatchOption) const
-$method=|QRegularExpressionMatch|match|const QString &,int=0,QRegularExpression::MatchType=QRegularExpression::NormalMatch,QRegularExpression::MatchOptions=QRegularExpression::NoMatchOption
+$prototypeV2=QRegularExpressionMatch match( const QString & subject, int offset = 0, QRegularExpression::MatchType matchType = QRegularExpression::NormalMatch, QRegularExpression::MatchOptions matchOptions = QRegularExpression::NoMatchOption ) const
 
 $prototypeV2=QString pattern() const
 
@@ -80,23 +78,17 @@ $prototypeV2=int patternErrorOffset() const
 
 $prototypeV2=QRegularExpression::PatternOptions patternOptions() const
 
-$prototype=void setPattern(const QString & pattern)
-$method=|void|setPattern|const QString &
+$prototypeV2=void setPattern( const QString & pattern )
 
-$prototype=void setPatternOptions(PatternOptions options)
-$method=|void|setPatternOptions|QRegularExpression::PatternOptions
+$prototypeV2=void setPatternOptions( QRegularExpression::PatternOptions options )
 
-$prototype=void swap(QRegularExpression & other)
-$method=|void|swap|QRegularExpression &
+$prototypeV2=void swap( QRegularExpression & other )
 
-$prototype=static QString escape(const QString & str)
-$staticMethod=|QString|escape|const QString &
+$prototypeV2=static QString escape( const QString & str )
 
-$prototype=static QString QRegularExpression::anchoredPattern(const QString &expression)
-$staticMethod=5,12,0|QString|anchoredPattern|const QString &
+$prototypeV2=5,12,0|static QString QRegularExpression::anchoredPattern( const QString & expression )
 
-$prototype=static QString QRegularExpression::wildcardToRegularExpression(const QString &pattern)
-$staticMethod=5,12,0|QString|wildcardToRegularExpression|const QString &
+$prototypeV2=5,12,0|static QString QRegularExpression::wildcardToRegularExpression( const QString & pattern )
 
 $extraMethods
 

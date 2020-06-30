@@ -27,26 +27,20 @@ $includes
 
 $deleteMethod
 
-$prototype=void addAnimation ( QAbstractAnimation * animation )
-$method=|void|addAnimation|QAbstractAnimation *
+$prototypeV2=void addAnimation( QAbstractAnimation * animation )
 
-$prototype=QAbstractAnimation * animationAt ( int index ) const
-$method=|QAbstractAnimation *|animationAt|int
+$prototypeV2=QAbstractAnimation * animationAt( int index ) const
 
 $prototypeV2=int animationCount() const
 
 $prototypeV2=void clear()
 
-$prototype=int indexOfAnimation ( QAbstractAnimation * animation ) const
-$method=|int|indexOfAnimation|QAbstractAnimation *
+$prototypeV2=int indexOfAnimation( QAbstractAnimation * animation ) const
 
-$prototype=void insertAnimation ( int index, QAbstractAnimation * animation )
-$method=|void|insertAnimation|int,QAbstractAnimation *
+$prototypeV2=void insertAnimation( int index, QAbstractAnimation * animation )
 
-$prototype=void removeAnimation ( QAbstractAnimation * animation )
-$method=|void|removeAnimation|QAbstractAnimation *
+$prototypeV2=void removeAnimation( QAbstractAnimation * animation )
 
-$prototype=QAbstractAnimation * takeAnimation ( int index )
-$method=|QAbstractAnimation *|takeAnimation|int
+$prototypeV2=QAbstractAnimation * takeAnimation( int index )
 
 #pragma ENDDUMP

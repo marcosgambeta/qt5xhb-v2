@@ -73,11 +73,9 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 }
 $addMethod=buffer
 
-$prototype=const QByteArray & data () const
-$method=|const QByteArray &|data|
+$prototypeV2=const QByteArray & data() const
 
-$prototype=void setBuffer ( QByteArray * byteArray )
-$method=|void|setBuffer|QByteArray *
+$prototypeV2=void setBuffer( QByteArray * byteArray )
 
 $prototype=void setData ( const QByteArray & data )
 $internalMethod=|void|setData,setData1|const QByteArray &
@@ -113,13 +111,11 @@ $prototypeV2=virtual bool canReadLine() const
 
 $prototypeV2=virtual void close()
 
-$prototype=virtual bool open ( OpenMode flags )
-$virtualMethod=|bool|open|QBuffer::OpenMode
+$prototypeV2=virtual bool open( QBuffer::OpenMode flags )
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=virtual bool seek ( qint64 pos )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
 $prototypeV2=virtual qint64 size() const
 

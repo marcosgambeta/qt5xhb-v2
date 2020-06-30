@@ -54,8 +54,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 $deleteMethod
 
-$prototype=void setDuration ( int msecs )
-$method=|void|setDuration|int
+$prototypeV2=void setDuration( int msecs )
 
 $prototypeV2=virtual int duration() const
 

@@ -35,23 +35,17 @@ $prototypeV2=QEasingCurve easingCurve() const
 
 $prototypeV2=QVariant endValue() const
 
-$prototype=QVariant keyValueAt ( qreal step ) const
-$method=|QVariant|keyValueAt|qreal
+$prototypeV2=QVariant keyValueAt( qreal step ) const
 
-$prototype=void setDuration ( int msecs )
-$method=|void|setDuration|int
+$prototypeV2=void setDuration( int msecs )
 
-$prototype=void setEasingCurve ( const QEasingCurve & easing )
-$method=|void|setEasingCurve|const QEasingCurve &
+$prototypeV2=void setEasingCurve( const QEasingCurve & easing )
 
-$prototype=void setEndValue ( const QVariant & value )
-$method=|void|setEndValue|const QVariant &
+$prototypeV2=void setEndValue( const QVariant & value )
 
-$prototype=void setKeyValueAt ( qreal step, const QVariant & value )
-$method=|void|setKeyValueAt|qreal,const QVariant &
+$prototypeV2=void setKeyValueAt( qreal step, const QVariant & value )
 
-$prototype=void setStartValue ( const QVariant & value )
-$method=|void|setStartValue|const QVariant &
+$prototypeV2=void setStartValue( const QVariant & value )
 
 $prototypeV2=QVariant startValue() const
 

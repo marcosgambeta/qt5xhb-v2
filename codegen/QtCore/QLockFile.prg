@@ -33,21 +33,18 @@ $deleteMethod
 
 $prototypeV2=bool lock()
 
-$prototype=bool tryLock(int timeout = 0)
-$method=|bool|tryLock|int=0
+$prototypeV2=bool tryLock( int timeout = 0 )
 
 $prototypeV2=void unlock()
 
-$prototype=void setStaleLockTime(int)
-$method=|void|setStaleLockTime|int
+$prototypeV2=void setStaleLockTime( int )
 
 $prototypeV2=int staleLockTime() const
 
 $prototypeV2=bool isLocked() const
 
-$prototype=bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
+$prototypeV2=bool getLockInfo( qint64 * pid, QString * hostname, QString * appname ) const
 %% TODO: revisar implementacao do metodo e corrigir(?)
-%% $method=|bool|getLockInfo|qint64 *,QString *,QString *
 
 $prototypeV2=bool removeStaleLockFile()
 

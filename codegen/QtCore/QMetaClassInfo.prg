@@ -30,14 +30,11 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=const char *name() const
-$method=|const char *|name|
+$prototypeV2=const char * name() const
 
-$prototype=const char *value() const
-$method=|const char *|value|
+$prototypeV2=const char * value() const
 
-$prototype=const QMetaObject *enclosingMetaObject() const
-$method=|const QMetaObject *|enclosingMetaObject|
+$prototypeV2=const QMetaObject * enclosingMetaObject() const
 
 $extraMethods
 

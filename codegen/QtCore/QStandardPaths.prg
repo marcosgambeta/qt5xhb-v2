@@ -25,26 +25,19 @@ $destructor
 
 $includes
 
-$prototype=static QString writableLocation(StandardLocation type)
-$staticMethod=|QString|writableLocation|QStandardPaths::StandardLocation
+$prototypeV2=static QString writableLocation( QStandardPaths::StandardLocation type )
 
-$prototype=static QStringList standardLocations(StandardLocation type)
-$staticMethod=|QStringList|standardLocations|QStandardPaths::StandardLocation
+$prototypeV2=static QStringList standardLocations( QStandardPaths::StandardLocation type )
 
-$prototype=static QString locate(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
-$staticMethod=|QString|locate|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
+$prototypeV2=static QString locate( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 
-$prototype=static QStringList locateAll(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
-$staticMethod=|QStringList|locateAll|QStandardPaths::StandardLocation,const QString &,QStandardPaths::LocateOptions=QStandardPaths::LocateFile
+$prototypeV2=static QStringList locateAll( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 
-$prototype=static QString displayName(StandardLocation type)
-$staticMethod=|QString|displayName|QStandardPaths::StandardLocation
+$prototypeV2=static QString displayName( QStandardPaths::StandardLocation type )
 
-$prototype=static QString findExecutable(const QString &executableName, const QStringList &paths = QStringList())
-$staticMethod=|QString|findExecutable|const QString &,const QStringList &=QStringList()
+$prototypeV2=static QString findExecutable( const QString & executableName, const QStringList & paths = QStringList() )
 
-$prototype=static void setTestModeEnabled(bool testMode)
-$staticMethod=|void|setTestModeEnabled|bool
+$prototypeV2=static void setTestModeEnabled( bool testMode )
 
 $prototypeV2=static bool isTestModeEnabled()
 

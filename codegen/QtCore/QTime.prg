@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 $deleteMethod
 
-$prototype=QTime addMSecs(int ms) const
-$method=|QTime|addMSecs|int
+$prototypeV2=QTime addMSecs( int ms ) const
 
-$prototype=QTime addSecs(int s) const
-$method=|QTime|addSecs|int
+$prototypeV2=QTime addSecs( int s ) const
 
 $prototypeV2=int elapsed() const
 
@@ -98,18 +96,15 @@ $prototypeV2=int minute() const
 
 $prototypeV2=int msec() const
 
-$prototype=int msecsTo(const QTime & t) const
-$method=|int|msecsTo|const QTime &
+$prototypeV2=int msecsTo( const QTime & t ) const
 
 $prototypeV2=int restart()
 
 $prototypeV2=int second() const
 
-$prototype=int secsTo(const QTime & t) const
-$method=|int|secsTo|const QTime &
+$prototypeV2=int secsTo( const QTime & t ) const
 
-$prototype=bool setHMS(int h, int m, int s, int ms = 0)
-$method=|bool|setHMS|int,int,int,int=0
+$prototypeV2=bool setHMS( int h, int m, int s, int ms = 0 )
 
 $prototypeV2=void start()
 

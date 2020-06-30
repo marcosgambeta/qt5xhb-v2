@@ -70,11 +70,9 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 
 $deleteMethod
 
-$prototype=void setPattern(const QString &pattern)
-$method=|void|setPattern|const QString &
+$prototypeV2=void setPattern( const QString & pattern )
 
-$prototype=void setCaseSensitivity(Qt::CaseSensitivity cs)
-$method=|void|setCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setCaseSensitivity( Qt::CaseSensitivity cs )
 
 $prototype=int indexIn(const QString &str, int from = 0) const
 $internalMethod=|int|indexIn,indexIn1|const QString &,int=0

@@ -314,8 +314,7 @@ HB_FUNC_STATIC( QFILE_RESIZE )
 }
 $addMethod=resize
 
-$prototype=void setFileName ( const QString & name )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & name )
 
 $prototype=bool setPermissions ( Permissions permissions )
 $internalMethod=|bool|setPermissions,setPermissions1|QFile::Permissions
@@ -373,8 +372,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
 }
 $addMethod=symLinkTarget
 
-$prototype=bool unmap ( uchar * address )
-$method=|bool|unmap|uchar *
+$prototypeV2=bool unmap( uchar * address )
 
 $prototypeV2=void unsetError()
 
@@ -386,8 +384,7 @@ $prototypeV2=virtual bool isSequential() const
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=virtual bool seek ( qint64 pos )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
 $prototypeV2=qint64 size() const
 
@@ -419,8 +416,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
 }
 $addMethod=decodeName
 
-$prototype=static QByteArray encodeName ( const QString & fileName )
-$staticMethod=|QByteArray|encodeName|const QString &
+$prototypeV2=static QByteArray encodeName( const QString & fileName )
 
 $prototype=QString readLink() const
 $internalMethod=|QString|readLink,readLink1|

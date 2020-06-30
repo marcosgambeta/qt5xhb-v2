@@ -35,11 +35,9 @@ $prototypeV2=virtual void run() = 0
 
 $prototypeV2=bool autoDelete() const
 
-$prototype=void setAutoDelete(bool _autoDelete)
-$method=|void|setAutoDelete|bool
+$prototypeV2=void setAutoDelete( bool _autoDelete )
 
-$prototype=static QRunnable *create(std::function<void()> functionToRun)
-%% TODO: $staticMethod=5,15,0|QRunnable *|create|std::function<void()>
+%% TODO: $prototypeV2=5,15,0|static QRunnable * create( std::function<void()> functionToRun )
 
 $extraMethods
 

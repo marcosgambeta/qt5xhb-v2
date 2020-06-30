@@ -57,14 +57,11 @@ HB_FUNC_STATIC( QJSONARRAY_NEW )
 
 $deleteMethod
 
-$prototype=void append(const QJsonValue & value)
-$method=|void|append|const QJsonValue &
+$prototypeV2=void append( const QJsonValue & value )
 
-$prototype=QJsonValue at(int i) const
-$method=|QJsonValue|at|int
+$prototypeV2=QJsonValue at( int i ) const
 
-$prototype=bool contains(const QJsonValue & value) const
-$method=|bool|contains|const QJsonValue &
+$prototypeV2=bool contains( const QJsonValue & value ) const
 
 $prototypeV2=int count() const
 
@@ -72,8 +69,7 @@ $prototypeV2=bool empty() const
 
 $prototypeV2=QJsonValue first() const
 
-$prototype=void insert(int i, const QJsonValue & value)
-$method=|void|insert|int,const QJsonValue &
+$prototypeV2=void insert( int i, const QJsonValue & value )
 
 $prototypeV2=bool isEmpty() const
 
@@ -83,37 +79,29 @@ $prototypeV2=void pop_back()
 
 $prototypeV2=void pop_front()
 
-$prototype=void prepend(const QJsonValue & value)
-$method=|void|prepend|const QJsonValue &
+$prototypeV2=void prepend( const QJsonValue & value )
 
-$prototype=void push_back(const QJsonValue & value)
-$method=|void|push_back|const QJsonValue &
+$prototypeV2=void push_back( const QJsonValue & value )
 
-$prototype=void push_front(const QJsonValue & value)
-$method=|void|push_front|const QJsonValue &
+$prototypeV2=void push_front( const QJsonValue & value )
 
-$prototype=void removeAt(int i)
-$method=|void|removeAt|int
+$prototypeV2=void removeAt( int i )
 
 $prototypeV2=void removeFirst()
 
 $prototypeV2=void removeLast()
 
-$prototype=void replace(int i, const QJsonValue & value)
-$method=|void|replace|int,const QJsonValue &
+$prototypeV2=void replace( int i, const QJsonValue & value )
 
 $prototypeV2=int size() const
 
-$prototype=QJsonValue takeAt(int i)
-$method=|QJsonValue|takeAt|int
+$prototypeV2=QJsonValue takeAt( int i )
 
 $prototypeV2=QVariantList toVariantList() const
 
-$prototype=static QJsonArray fromStringList(const QStringList & list)
-$staticMethod=|QJsonArray|fromStringList|const QStringList &
+$prototypeV2=static QJsonArray fromStringList( const QStringList & list )
 
-$prototype=static QJsonArray fromVariantList(const QVariantList & list)
-$staticMethod=|QJsonArray|fromVariantList|const QVariantList &
+$prototypeV2=static QJsonArray fromVariantList( const QVariantList & list )
 
 $extraMethods
 

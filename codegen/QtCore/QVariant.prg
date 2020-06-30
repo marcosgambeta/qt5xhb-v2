@@ -437,21 +437,17 @@ HB_FUNC_STATIC( QVARIANT_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QVariant &other)
-$method=|void|swap|QVariant &
+$prototypeV2=void swap( QVariant & other )
 
 $prototypeV2=QVariant::Type type() const
 
 $prototypeV2=int userType() const
 
-$prototype=const char *typeName() const
-$method=|const char *|typeName|
+$prototypeV2=const char * typeName() const
 
-$prototype=bool canConvert(int targetTypeId) const
-$method=|bool|canConvert|int
+$prototypeV2=bool canConvert( int targetTypeId ) const
 
-$prototype=bool convert(int targetTypeId)
-$method=|bool|convert|int
+$prototypeV2=bool convert( int targetTypeId )
 
 $prototypeV2=bool isValid() const
 
@@ -463,35 +459,28 @@ $prototypeV2=void detach()
 
 $prototypeV2=bool isDetached() const
 
-$prototype=int toInt(bool *ok = nullptr) const
+$prototypeV2=int toInt( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|int|toInt|bool *=nullptr
 
-$prototype=uint toUInt(bool *ok = nullptr) const
+$prototypeV2=uint toUInt( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|uint|toUInt|bool *=nullptr
 
-$prototype=qlonglong toLongLong(bool *ok = nullptr) const
+$prototypeV2=qlonglong toLongLong( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|qlonglong|toLongLong|bool *=nullptr
 
-$prototype=qulonglong toULongLong(bool *ok = nullptr) const
+$prototypeV2=qulonglong toULongLong( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|qulonglong|toULongLong|bool *=nullptr
 
 $prototypeV2=bool toBool() const
 
-$prototype=double toDouble(bool *ok = nullptr) const
+$prototypeV2=double toDouble( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|double|toDouble|bool *=nullptr
 
-$prototype=float toFloat(bool *ok = nullptr) const
+$prototypeV2=float toFloat( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|float|toFloat|bool *=nullptr
 
-$prototype=qreal toReal(bool *ok = nullptr) const
+$prototypeV2=qreal toReal( bool * ok = nullptr ) const
 %% TODO: implementar parametro opcional
-$method=|qreal|toReal|bool *=nullptr
 
 $prototypeV2=QByteArray toByteArray() const
 
@@ -509,8 +498,7 @@ $prototypeV2=QTime toTime() const
 
 $prototypeV2=QDateTime toDateTime() const
 
-$prototype=QList<QVariant> toList() const
-$method=|QList<QVariant>|toList|
+$prototypeV2=QList<QVariant> toList() const
 
 $prototype=QPoint toPoint() const
 $method=|QPoint|toPoint||#ifndef QT_NO_GEOM_VARIANT
@@ -568,11 +556,9 @@ $method=|void|save|QDataStream &|#ifndef QT_NO_DATASTREAM
 
 $prototypeV2=void * data()
 
-$prototype=static const char *typeToName(int typeId)
-$staticMethod=|const char *|typeToName|int
+$prototypeV2=static const char * typeToName( int typeId )
 
-$prototype=static Type nameToType(const char *name)
-$staticMethod=|QVariant::Type|nameToType|const char *
+$prototypeV2=static QVariant::Type nameToType( const char * name )
 
 $extraMethods
 

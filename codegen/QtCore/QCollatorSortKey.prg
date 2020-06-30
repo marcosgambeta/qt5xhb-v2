@@ -30,11 +30,9 @@ $constructor=|new|const QCollatorSortKey &
 
 $deleteMethod
 
-$prototype=void swap(QCollatorSortKey &other)
-$method=|void|swap|QCollatorSortKey &
+$prototypeV2=void swap( QCollatorSortKey & other )
 
-$prototype=int compare(const QCollatorSortKey &key) const
-$method=|int|compare|const QCollatorSortKey &
+$prototypeV2=int compare( const QCollatorSortKey & key ) const
 
 $extraMethods
 

@@ -33,29 +33,23 @@ $includes
 
 $deleteMethod
 
-$prototype=void addAnimation ( QAbstractAnimation * animation )
-$method=|void|addAnimation|QAbstractAnimation *
+$prototypeV2=void addAnimation( QAbstractAnimation * animation )
 
-$prototype=QList<QAbstractAnimation *> animations () const
-$method=|QList<QAbstractAnimation *>|animations|
+$prototypeV2=QList<QAbstractAnimation *> animations() const
 
 $prototypeV2=QStateMachine * machine() const
 
-$prototype=void removeAnimation ( QAbstractAnimation * animation )
-$method=|void|removeAnimation|QAbstractAnimation *
+$prototypeV2=void removeAnimation( QAbstractAnimation * animation )
 
-$prototype=void setTargetState ( QAbstractState * target )
-$method=|void|setTargetState|QAbstractState *
+$prototypeV2=void setTargetState( QAbstractState * target )
 
-$prototype=void setTargetStates ( const QList<QAbstractState *> & targets )
-$method=|void|setTargetStates|const QList<QAbstractState *> &
+$prototypeV2=void setTargetStates( const QList<QAbstractState *> & targets )
 
 $prototypeV2=QState * sourceState() const
 
 $prototypeV2=QAbstractState * targetState() const
 
-$prototype=QList<QAbstractState *> targetStates () const
-$method=|QList<QAbstractState *>|targetStates|
+$prototypeV2=QList<QAbstractState *> targetStates() const
 
 %%
 %% SIGNALS

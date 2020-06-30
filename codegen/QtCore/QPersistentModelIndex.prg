@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QPersistentModelIndex &other)
-$method=|void|swap|QPersistentModelIndex &
+$prototypeV2=void swap( QPersistentModelIndex & other )
 
 $prototypeV2=int row() const
 
@@ -75,19 +74,15 @@ $prototypeV2=quintptr internalId() const
 
 $prototypeV2=QModelIndex parent() const
 
-$prototype=QModelIndex sibling(int row, int column) const
-$method=|QModelIndex|sibling|int,int
+$prototypeV2=QModelIndex sibling( int row, int column ) const
 
-$prototype=QModelIndex child(int row, int column) const
-$method=|QModelIndex|child|int,int
+$prototypeV2=QModelIndex child( int row, int column ) const
 
-$prototype=QVariant data(int role = Qt::DisplayRole) const
-$method=|QVariant|data|int=Qt::DisplayRole
+$prototypeV2=QVariant data( int role = Qt::DisplayRole ) const
 
 $prototypeV2=Qt::ItemFlags flags() const
 
-$prototype=const QAbstractItemModel *model() const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
 $prototypeV2=bool isValid() const
 

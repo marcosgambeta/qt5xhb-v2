@@ -72,11 +72,9 @@ $prototypeV2=qreal width() const
 
 $prototypeV2=qreal height() const
 
-$prototype=void setWidth(qreal w)
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal w )
 
-$prototype=void setHeight(qreal h)
-$method=|void|setHeight|qreal
+$prototypeV2=void setHeight( qreal h )
 
 $prototypeV2=void transpose()
 
@@ -138,11 +136,9 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
 }
 $addMethod=scaled
 
-$prototype=QSizeF expandedTo(const QSizeF &) const
-$method=|QSizeF|expandedTo|const QSizeF &
+$prototypeV2=QSizeF expandedTo( const QSizeF & ) const
 
-$prototype=QSizeF boundedTo(const QSizeF &) const
-$method=|QSizeF|boundedTo|const QSizeF &
+$prototypeV2=QSizeF boundedTo( const QSizeF & ) const
 
 $prototypeV2=QSize toSize() const
 

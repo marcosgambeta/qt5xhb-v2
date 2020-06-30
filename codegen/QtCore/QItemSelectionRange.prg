@@ -82,16 +82,13 @@ $prototypeV2=int width() const
 
 $prototypeV2=int height() const
 
-$prototype=const QPersistentModelIndex &topLeft() const
-$method=|const QPersistentModelIndex &|topLeft|
+$prototypeV2=const QPersistentModelIndex & topLeft() const
 
-$prototype=const QPersistentModelIndex &bottomRight() const
-$method=|const QPersistentModelIndex &|bottomRight|
+$prototypeV2=const QPersistentModelIndex & bottomRight() const
 
 $prototypeV2=QModelIndex parent() const
 
-$prototype=const QAbstractItemModel *model() const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
 $prototype=bool contains(const QModelIndex &index) const
 $internalMethod=|bool|contains,contains1|const QModelIndex &
@@ -121,11 +118,9 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=bool intersects(const QItemSelectionRange &other) const
-$method=|bool|intersects|const QItemSelectionRange &
+$prototypeV2=bool intersects( const QItemSelectionRange & other ) const
 
-$prototype=QItemSelectionRange intersected(const QItemSelectionRange &other) const
-$method=|QItemSelectionRange|intersected|const QItemSelectionRange &
+$prototypeV2=QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 
 $prototypeV2=bool isValid() const
 

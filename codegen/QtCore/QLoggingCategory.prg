@@ -30,11 +30,9 @@ $constructor=|new|const char *
 
 $deleteMethod
 
-$prototype=bool isEnabled(QtMsgType type) const
-$method=|bool|isEnabled|QtMsgType
+$prototypeV2=bool isEnabled( QtMsgType type ) const
 
-$prototype=void setEnabled(QtMsgType type, bool enable)
-$method=|void|setEnabled|QtMsgType,bool
+$prototypeV2=void setEnabled( QtMsgType type, bool enable )
 
 $prototypeV2=bool isDebugEnabled() const
 
@@ -42,13 +40,11 @@ $prototypeV2=bool isWarningEnabled() const
 
 $prototypeV2=bool isCriticalEnabled() const
 
-$prototype=const char *categoryName() const
-$method=|const char *|categoryName|
+$prototypeV2=const char * categoryName() const
 
 $prototypeV2=static QLoggingCategory * defaultCategory()
 
-$prototype=static void setFilterRules(const QString &rules)
-$staticMethod=|void|setFilterRules|const QString &
+$prototypeV2=static void setFilterRules( const QString & rules )
 
 $extraMethods
 

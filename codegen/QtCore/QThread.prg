@@ -36,8 +36,7 @@ $deleteMethod
 
 $prototypeV2=QAbstractEventDispatcher * eventDispatcher() const
 
-$prototype=void exit(int returnCode = 0)
-$method=|void|exit|int=0
+$prototypeV2=void exit( int returnCode = 0 )
 
 $prototypeV2=bool isFinished() const
 
@@ -45,24 +44,19 @@ $prototypeV2=bool isRunning() const
 
 $prototypeV2=QThread::Priority priority() const
 
-$prototype=void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
-$method=|void|setEventDispatcher|QAbstractEventDispatcher *
+$prototypeV2=void setEventDispatcher( QAbstractEventDispatcher * eventDispatcher )
 
-$prototype=void setPriority(Priority priority)
-$method=|void|setPriority|QThread::Priority
+$prototypeV2=void setPriority( QThread::Priority priority )
 
-$prototype=void setStackSize(uint stackSize)
-$method=|void|setStackSize|uint
+$prototypeV2=void setStackSize( uint stackSize )
 
 $prototypeV2=uint stackSize() const
 
-$prototype=virtual bool event(QEvent * event)
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=void quit()
 
-$prototype=void start(Priority priority = InheritPriority)
-$method=|void|start|QThread::Priority=QThread::InheritPriority
+$prototypeV2=void start( QThread::Priority priority = QThread::InheritPriority )
 
 $prototypeV2=void terminate()
 
@@ -70,14 +64,11 @@ $prototypeV2=static QThread * currentThread()
 
 $prototypeV2=static int idealThreadCount()
 
-$prototype=static void msleep(unsigned long msecs)
-$staticMethod=|void|msleep|unsigned long
+$prototypeV2=static void msleep( unsigned long msecs )
 
-$prototype=static void sleep(unsigned long secs)
-$staticMethod=|void|sleep|unsigned long
+$prototypeV2=static void sleep( unsigned long secs )
 
-$prototype=static void usleep(unsigned long usecs)
-$staticMethod=|void|usleep|unsigned long
+$prototypeV2=static void usleep( unsigned long usecs )
 
 $prototypeV2=static void yieldCurrentThread()
 

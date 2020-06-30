@@ -94,8 +94,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 }
 $addMethod=addTransition
 
-$prototype=void assignProperty ( QObject * object, const char * name, const QVariant & value )
-$method=|void|assignProperty|QObject *,const char *,const QVariant &
+$prototypeV2=void assignProperty( QObject * object, const char * name, const QVariant & value )
 
 $prototypeV2=QState::ChildMode childMode() const
 
@@ -103,20 +102,15 @@ $prototypeV2=QAbstractState * errorState() const
 
 $prototypeV2=QAbstractState * initialState() const
 
-$prototype=void removeTransition ( QAbstractTransition * transition )
-$method=|void|removeTransition|QAbstractTransition *
+$prototypeV2=void removeTransition( QAbstractTransition * transition )
 
-$prototype=void setChildMode ( ChildMode mode )
-$method=|void|setChildMode|QState::ChildMode
+$prototypeV2=void setChildMode( QState::ChildMode mode )
 
-$prototype=void setErrorState ( QAbstractState * state )
-$method=|void|setErrorState|QAbstractState *
+$prototypeV2=void setErrorState( QAbstractState * state )
 
-$prototype=void setInitialState ( QAbstractState * state )
-$method=|void|setInitialState|QAbstractState *
+$prototypeV2=void setInitialState( QAbstractState * state )
 
-$prototype=QList<QAbstractTransition *> transitions () const
-$method=|QList<QAbstractTransition *>|transitions|
+$prototypeV2=QList<QAbstractTransition *> transitions() const
 
 %%
 %% SIGNALS

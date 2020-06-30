@@ -75,20 +75,15 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=int daysInMonth(int month, int year = Unspecified) const
-%% TODO: $method=|int|daysInMonth|int,int=Unspecified
+%% TODO: $prototypeV2=int daysInMonth( int month, int year = Unspecified ) const
 
-$prototype=int daysInYear(int year) const
-$method=|int|daysInYear|int
+$prototypeV2=int daysInYear( int year ) const
 
-$prototype=int monthsInYear(int year) const
-$method=|int|monthsInYear|int
+$prototypeV2=int monthsInYear( int year ) const
 
-$prototype=bool isDateValid(int year, int month, int day) const
-$method=|bool|isDateValid|int,int,int
+$prototypeV2=bool isDateValid( int year, int month, int day ) const
 
-$prototype=bool isLeapYear(int year) const
-$method=|bool|isLeapYear|int
+$prototypeV2=bool isLeapYear( int year ) const
 
 $prototypeV2=bool isGregorian() const
 
@@ -110,32 +105,23 @@ $prototypeV2=int maximumMonthsInYear() const
 
 $prototypeV2=QString name() const
 
-$prototype=QDate dateFromParts(int year, int month, int day) const
-$method=|QDate|dateFromParts|int,int,int
+$prototypeV2=QDate dateFromParts( int year, int month, int day ) const
 
-$prototype=QDate dateFromParts(const YearMonthDay &parts) const
-%% TODO: $method=|QDate|dateFromParts|const YearMonthDay &
+%% TODO: $prototypeV2=QDate dateFromParts( const YearMonthDay & parts ) const
 
-$prototype=YearMonthDay partsFromDate(QDate date) const
-%% TODO: $method=|YearMonthDay|partsFromDate|QDate
+%% TODO: $prototypeV2=YearMonthDay partsFromDate( QDate date ) const
 
-$prototype=int dayOfWeek(QDate date) const
-$method=|int|dayOfWeek|QDate
+$prototypeV2=int dayOfWeek( QDate date ) const
 
-$prototype=QString monthName(const QLocale &locale, int month, int year = Unspecified, QLocale::FormatType format=QLocale::LongFormat) const
-%% TODO: $method=|QString|monthName|const QLocale &,int,int=Unspecified,QLocale::FormatType=QLocale::LongFormat
+%% TODO: $prototypeV2=QString monthName( const QLocale & locale, int month, int year = Unspecified, QLocale::FormatType format = QLocale::LongFormat ) const
 
-$prototype=QString standaloneMonthName(const QLocale &locale, int month, int year = Unspecified, QLocale::FormatType format = QLocale::LongFormat) const
-%% TODO: $method=|QString|standaloneMonthName|const QLocale &,int,int=Unspecified,QLocale::FormatType=QLocale::LongFormat
+%% TODO: $prototypeV2=QString standaloneMonthName( const QLocale & locale, int month, int year = Unspecified, QLocale::FormatType format = QLocale::LongFormat ) const
 
-$prototype=QString weekDayName(const QLocale &locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
-$method=|QString|weekDayName|const QLocale &,int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString weekDayName( const QLocale & locale, int day, QLocale::FormatType format = QLocale::LongFormat ) const
 
-$prototype=QString standaloneWeekDayName(const QLocale &locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
-$method=|QString|standaloneWeekDayName|const QLocale &,int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString standaloneWeekDayName( const QLocale & locale, int day, QLocale::FormatType format=QLocale::LongFormat ) const
 
-$prototype=QString dateTimeToString(QStringView format, const QDateTime &datetime, const QDate &dateOnly, const QTime &timeOnly, const QLocale &locale) const
-%% TODO: $method=|QString|dateTimeToString|QStringView,const QDateTime &,const QDate &,const QTime &,const QLocale &
+%% TODO: $prototypeV2=QString dateTimeToString( QStringView format, const QDateTime & datetime, const QDate & dateOnly, const QTime & timeOnly, const QLocale & locale ) const
 
 $prototypeV2=static QStringList availableCalendars()
 

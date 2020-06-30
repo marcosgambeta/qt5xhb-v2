@@ -62,8 +62,7 @@ $prototypeV2=QString path() const
 
 $prototypeV2=bool remove()
 
-$prototype=void setAutoRemove(bool b)
-$method=|void|setAutoRemove|bool
+$prototypeV2=void setAutoRemove( bool b )
 
 $extraMethods
 

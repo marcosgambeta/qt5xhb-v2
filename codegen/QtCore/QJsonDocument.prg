@@ -86,14 +86,11 @@ $prototypeV2=bool isObject() const
 
 $prototypeV2=QJsonObject object() const
 
-$prototype=const char * rawData(int * size) const
-$method=|const char *|rawData|int *
+$prototypeV2=const char * rawData( int * size ) const
 
-$prototype=void setArray(const QJsonArray & array)
-$method=|void|setArray|const QJsonArray &
+$prototypeV2=void setArray( const QJsonArray & array )
 
-$prototype=void setObject(const QJsonObject & object)
-$method=|void|setObject|const QJsonObject &
+$prototypeV2=void setObject( const QJsonObject & object )
 
 $prototypeV2=QByteArray toBinaryData() const
 
@@ -101,17 +98,13 @@ $prototypeV2=QByteArray toJson() const
 
 $prototypeV2=QVariant toVariant() const
 
-$prototype=static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
-$staticMethod=|QJsonDocument|fromBinaryData|const QByteArray &,QJsonDocument::DataValidation=QJsonDocument::Validate
+$prototypeV2=static QJsonDocument fromBinaryData( const QByteArray & data, QJsonDocument::DataValidation validation = QJsonDocument::Validate )
 
-$prototype=static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = nullptr)
-$staticMethod=|QJsonDocument|fromJson|const QByteArray &,QJsonParseError *=nullptr
+$prototypeV2=static QJsonDocument fromJson( const QByteArray & json, QJsonParseError * error = nullptr )
 
-$prototype=static QJsonDocument fromRawData(const char * data, int size, DataValidation validation = Validate)
-$staticMethod=|QJsonDocument|fromRawData|const char *,int,QJsonDocument::DataValidation=QJsonDocument::Validate
+$prototypeV2=static QJsonDocument fromRawData( const char * data, int size, QJsonDocument::DataValidation validation = QJsonDocument::Validate )
 
-$prototype=static QJsonDocument fromVariant(const QVariant & variant)
-$staticMethod=|QJsonDocument|fromVariant|const QVariant &
+$prototypeV2=static QJsonDocument fromVariant( const QVariant & variant )
 
 $extraMethods
 

@@ -37,23 +37,17 @@ $constructor=|new|QObject *=nullptr
 $prototype=~QConcatenateTablesProxyModel()
 $deleteMethod
 
-$prototype=Q_SCRIPTABLE void addSourceModel(QAbstractItemModel *sourceModel)
-$method=|void|addSourceModel|QAbstractItemModel *
+$prototypeV2=Q_SCRIPTABLE void addSourceModel( QAbstractItemModel * sourceModel )
 
-$prototype=Q_SCRIPTABLE void removeSourceModel(QAbstractItemModel *sourceModel)
-$method=|void|removeSourceModel|QAbstractItemModel *
+$prototypeV2=Q_SCRIPTABLE void removeSourceModel( QAbstractItemModel * sourceModel )
 
-$prototype=QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
-$method=|QModelIndex|mapFromSource|const QModelIndex &
+$prototypeV2=QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 
-$prototype=QModelIndex mapToSource(const QModelIndex &proxyIndex) const
-$method=|QModelIndex|mapToSource|const QModelIndex &
+$prototypeV2=QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 
-$prototype=QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
-$method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const override
 
-$prototype=bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
-$method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole ) override
 
 $prototype=QMap<int, QVariant> itemData(const QModelIndex &proxyIndex) const override
 %% TODO:
@@ -61,39 +55,28 @@ $prototype=QMap<int, QVariant> itemData(const QModelIndex &proxyIndex) const ove
 $prototype=bool setItemData(const QModelIndex &index, const QMap<int, QVariant> &roles) override
 %% TODO:
 
-$prototype=Qt::ItemFlags flags(const QModelIndex &index) const override
-$method=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=Qt::ItemFlags flags( const QModelIndex & index ) const override
 
-$prototype=QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override
-$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const override
 
-$prototype=QModelIndex parent(const QModelIndex &index) const override
-$method=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=QModelIndex parent( const QModelIndex & index ) const override
 
-$prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const override
-$method=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int rowCount( const QModelIndex & parent = QModelIndex() ) const override
 
-$prototype=QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
-$method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
+$prototypeV2=QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const override
 
-$prototype=int columnCount(const QModelIndex &parent = QModelIndex()) const override
-$method=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int columnCount( const QModelIndex & parent = QModelIndex() ) const override
 
 $prototypeV2=QStringList mimeTypes() const override
 
-$prototype=QMimeData *mimeData(const QModelIndexList &indexes) const override
-$method=|QMimeData *|mimeData|const QModelIndexList &
+$prototypeV2=QMimeData * mimeData( const QModelIndexList & indexes ) const override
 
-$prototype=bool canDropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) const override
-$method=|bool|canDropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=bool canDropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent ) const override
 
-$prototype=bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override
-$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent ) override
 
-$prototype=QList<QAbstractItemModel *> sourceModels() const
-$method=5,15,0|QList<QAbstractItemModel *>|sourceModels|
+$prototypeV2=5,15,0|QList<QAbstractItemModel *> sourceModels() const
 
-$prototype=QSize span(const QModelIndex &index) const override
-$method=|QSize|span|const QModelIndex &
+$prototypeV2=QSize span( const QModelIndex & index ) const override
 
 #pragma ENDDUMP

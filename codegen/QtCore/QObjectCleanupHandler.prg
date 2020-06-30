@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=QObject* add(QObject* object)
-$method=|QObject *|add|QObject *
+$prototypeV2=QObject * add( QObject * object )
 
-$prototype=void remove(QObject *object)
-$method=|void|remove|QObject *
+$prototypeV2=void remove( QObject * object )
 
 $prototypeV2=bool isEmpty() const
 

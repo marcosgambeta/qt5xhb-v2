@@ -32,8 +32,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=void closeReadChannel ( ProcessChannel channel )
-$method=|void|closeReadChannel|QProcess::ProcessChannel
+$prototypeV2=void closeReadChannel( QProcess::ProcessChannel channel )
 
 $prototypeV2=void closeWriteChannel()
 
@@ -58,35 +57,26 @@ $prototypeV2=QByteArray readAllStandardOutput()
 
 $prototype=QProcess::ProcessChannel readChannel() const
 
-$prototype=void setEnvironment ( const QStringList & environment )
-$method=|void|setEnvironment|const QStringList &
+$prototypeV2=void setEnvironment( const QStringList & environment )
 
 $prototype=void setNativeArguments ( const QString & arguments )
 $method=|void|setNativeArguments|const QString &|#if defined(Q_OS_WIN)
 
-$prototype=void setProcessChannelMode ( ProcessChannelMode mode )
-$method=|void|setProcessChannelMode|QProcess::ProcessChannelMode
+$prototypeV2=void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 
-$prototype=void setProcessEnvironment ( const QProcessEnvironment & environment )
-$method=|void|setProcessEnvironment|const QProcessEnvironment &
+$prototypeV2=void setProcessEnvironment( const QProcessEnvironment & environment )
 
-$prototype=void setReadChannel ( ProcessChannel channel )
-$method=|void|setReadChannel|QProcess::ProcessChannel
+$prototypeV2=void setReadChannel( QProcess::ProcessChannel channel )
 
-$prototype=void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
-$method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
+$prototypeV2=void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 
-$prototype=void setStandardInputFile ( const QString & fileName )
-$method=|void|setStandardInputFile|const QString &
+$prototypeV2=void setStandardInputFile( const QString & fileName )
 
-$prototype=void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
-$method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
+$prototypeV2=void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 
-$prototype=void setStandardOutputProcess ( QProcess * destination )
-$method=|void|setStandardOutputProcess|QProcess *
+$prototypeV2=void setStandardOutputProcess( QProcess * destination )
 
-$prototype=void setWorkingDirectory ( const QString & dir )
-$method=|void|setWorkingDirectory|const QString &
+$prototypeV2=void setWorkingDirectory( const QString & dir )
 
 $prototype=void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
 $internalMethod=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -126,11 +116,9 @@ $addMethod=start
 
 $prototypeV2=QProcess::ProcessState state() const
 
-$prototype=bool waitForFinished ( int msecs = 30000 )
-$method=|bool|waitForFinished|int=30000
+$prototypeV2=bool waitForFinished( int msecs = 30000 )
 
-$prototype=bool waitForStarted ( int msecs = 30000 )
-$method=|bool|waitForStarted|int=30000
+$prototypeV2=bool waitForStarted( int msecs = 30000 )
 
 $prototypeV2=QString workingDirectory() const
 
@@ -146,11 +134,9 @@ $prototypeV2=void close()
 
 $prototypeV2=bool isSequential() const
 
-$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$virtualMethod=|bool|waitForBytesWritten|int=30000
+$prototypeV2=virtual bool waitForBytesWritten( int msecs = 30000 )
 
-$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$virtualMethod=|bool|waitForReadyRead|int=30000
+$prototypeV2=virtual bool waitForReadyRead( int msecs = 30000 )
 
 $prototypeV2=void kill()
 
@@ -227,35 +213,27 @@ $addMethod=startDetached
 
 $prototypeV2=static QStringList systemEnvironment()
 
-$prototype=bool open(OpenMode mode = ReadWrite) Q_DECL_OVERRIDE
-$method=|bool|open|QIODevice::OpenMode=QIODevice::ReadWrite
+$prototypeV2=bool open( QIODevice::OpenMode mode = QIODevice::ReadWrite ) Q_DECL_OVERRIDE
 
 $prototypeV2=QString program() const
 
-$prototype=void setProgram(const QString &program)
-$method=5,1,0|void|setProgram|const QString &
+$prototypeV2=5,1,0|void setProgram( const QString & program )
 
 $prototypeV2=QStringList arguments() const
 
-$prototype=void setArguments(const QStringList & arguments)
-$method=5,1,0|void|setArguments|const QStringList &
+$prototypeV2=5,1,0|void setArguments( const QStringList & arguments )
 
 $prototypeV2=QProcess::ProcessChannelMode readChannelMode() const
 
-$prototype=void setReadChannelMode(ProcessChannelMode mode)
-$method=|void|setReadChannelMode|QProcess::ProcessChannelMode
+$prototypeV2=void setReadChannelMode( QProcess::ProcessChannelMode mode )
 
-$prototype=InputChannelMode inputChannelMode() const
-$method=5,2,0|QProcess::InputChannelMode|inputChannelMode|
+$prototypeV2=5,2,0|QProcess::InputChannelMode inputChannelMode() const
 
-$prototype=void setInputChannelMode(InputChannelMode mode)
-$method=5,2,0|void|setInputChannelMode|QProcess::InputChannelMode
+$prototypeV2=5,2,0|void setInputChannelMode( QProcess::InputChannelMode mode )
 
-$prototype=qint64 processId() const
-$method=5,3,0|qint64|processId|
+$prototypeV2=5,3,0|qint64 processId() const
 
-$prototype=static QString nullDevice()
-$staticMethod=5,2,0|QString|nullDevice|
+$prototypeV2=5,2,0|static QString nullDevice()
 
 $prototype=CreateProcessArgumentModifier QProcess::createProcessArgumentsModifier() const
 %% TODO: implementar

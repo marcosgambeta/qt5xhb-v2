@@ -26,7 +26,7 @@ $destructor
 
 $includes
 
-$prototype=QVersionNumber(int maj, int min, int mic)
+$prototype=QVersionNumber( int maj, int min, int mic)
 $internalConstructor=|new1|int,int,int
 
 $prototype=QVersionNumber(int maj, int min)
@@ -83,8 +83,7 @@ $prototypeV2=bool isNormalized() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=bool isPrefixOf(const QVersionNumber &other) const
-$method=|bool|isPrefixOf|const QVersionNumber &
+$prototypeV2=bool isPrefixOf( const QVersionNumber & other ) const
 
 $prototypeV2=int majorVersion() const
 
@@ -94,29 +93,25 @@ $prototypeV2=int minorVersion() const
 
 $prototypeV2=QVersionNumber normalized() const
 
-$prototype=int segmentAt(int index) const
-$method=|int|segmentAt|int
+$prototypeV2=int segmentAt( int index ) const
 
 $prototypeV2=int segmentCount() const
 
-$prototype=QVector<int> segments() const
-$method=|QVector<int>|segments|
+$prototypeV2=QVector<int> segments() const
 
 $prototypeV2=QString toString() const
 
-$prototype=static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
-$staticMethod=|QVersionNumber|commonPrefix|const QVersionNumber &,const QVersionNumber &
+$prototypeV2=static QVersionNumber commonPrefix( const QVersionNumber & v1, const QVersionNumber & v2 )
 
-$prototype=static int compare(const QVersionNumber &v1, const QVersionNumber &v2)
-$staticMethod=|int|compare|const QVersionNumber &,const QVersionNumber &
+$prototypeV2=static int compare( const QVersionNumber & v1, const QVersionNumber & v2 )
 
-$prototype=static QVersionNumber fromString(const QString &string, int *suffixIndex = nullptr)
+$prototypeV2=static QVersionNumber fromString( const QString & string, int * suffixIndex = nullptr )
 %% TODO: implementar
 
-$prototype=static QVersionNumber fromString(QLatin1String string, int *suffixIndex = nullptr)
+$prototypeV2=static QVersionNumber fromString( QLatin1String string, int * suffixIndex = nullptr )
 %% TODO: implementar
 
-$prototype=static QVersionNumber fromString(QStringView string, int *suffixIndex = nullptr)
+$prototypeV2=static QVersionNumber fromString( QStringView string, int * suffixIndex = nullptr )
 %% TODO: implementar
 
 $extraMethods

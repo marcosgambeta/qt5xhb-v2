@@ -32,11 +32,9 @@ $deleteMethod
 
 $prototypeV2=uint measurementSystem()
 
-$prototype=QVariant timeFormat(QLocale::FormatType)
-$method=|QVariant|timeFormat|QLocale::FormatType
+$prototypeV2=QVariant timeFormat( QLocale::FormatType )
 
-$prototype=QVariant dateTimeFormat(QLocale::FormatType)
-$method=|QVariant|dateTimeFormat|QLocale::FormatType
+$prototypeV2=QVariant dateTimeFormat( QLocale::FormatType )
 
 $prototypeV2=QLocale languageLocale()
 

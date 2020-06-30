@@ -62,26 +62,21 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QCommandLineOption &other)
-$method=|void|swap|QCommandLineOption &
+$prototypeV2=void swap( QCommandLineOption & other )
 
 $prototypeV2=QStringList names() const
 
-$prototype=void setValueName(const QString &name)
-$method=|void|setValueName|const QString &
+$prototypeV2=void setValueName( const QString & name )
 
 $prototypeV2=QString valueName() const
 
-$prototype=void setDescription(const QString &description)
-$method=|void|setDescription|const QString &
+$prototypeV2=void setDescription( const QString & description )
 
 $prototypeV2=QString description() const
 
-$prototype=void setDefaultValue(const QString &defaultValue)
-$method=|void|setDefaultValue|const QString &
+$prototypeV2=void setDefaultValue( const QString & defaultValue )
 
-$prototype=void setDefaultValues(const QStringList &defaultValues)
-$method=|void|setDefaultValues|const QStringList &
+$prototypeV2=void setDefaultValues( const QStringList & defaultValues )
 
 $prototypeV2=QStringList defaultValues() const
 

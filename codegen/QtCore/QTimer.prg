@@ -38,11 +38,9 @@ $prototypeV2=bool isActive() const
 
 $prototypeV2=bool isSingleShot() const
 
-$prototype=void setInterval ( int msec )
-$method=|void|setInterval|int
+$prototypeV2=void setInterval( int msec )
 
-$prototype=void setSingleShot ( bool singleShot )
-$method=|void|setSingleShot|bool
+$prototypeV2=void setSingleShot( bool singleShot )
 
 $prototypeV2=int timerId () const
 
@@ -76,8 +74,7 @@ $addMethod=start
 
 $prototypeV2=void stop()
 
-$prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
-$staticMethod=|void|singleShot|int,QObject *,const char *
+$prototypeV2=static void singleShot( int msec, QObject * receiver, const char * member )
 
 %%
 %% SIGNALS

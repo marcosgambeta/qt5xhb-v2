@@ -66,11 +66,9 @@ $prototypeV2=bool load()
 
 $prototypeV2=QLibrary::LoadHints loadHints() const
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setLoadHints ( QLibrary::LoadHints loadHints )
-$method=|void|setLoadHints|QLibrary::LoadHints
+$prototypeV2=void setLoadHints( QLibrary::LoadHints loadHints )
 
 $prototypeV2=bool unload()
 

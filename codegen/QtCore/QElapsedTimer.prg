@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=qint64 elapsed() const
 
-$prototype=bool hasExpired(qint64 timeout) const
-$method=|bool|hasExpired|qint64
+$prototypeV2=bool hasExpired( qint64 timeout ) const
 
 $prototypeV2=void invalidate()
 
@@ -41,15 +40,13 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=qint64 msecsSinceReference() const
 
-$prototype=qint64 msecsTo(const QElapsedTimer & other) const
-$method=|qint64|msecsTo|const QElapsedTimer &
+$prototypeV2=qint64 msecsTo( const QElapsedTimer & other ) const
 
 $prototypeV2=qint64 nsecsElapsed() const
 
 $prototypeV2=qint64 restart()
 
-$prototype=qint64 secsTo(const QElapsedTimer & other) const
-$method=|qint64|secsTo|const QElapsedTimer &
+$prototypeV2=qint64 secsTo( const QElapsedTimer & other ) const
 
 $prototypeV2=void start()
 

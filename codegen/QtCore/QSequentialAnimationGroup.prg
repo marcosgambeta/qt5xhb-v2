@@ -34,13 +34,11 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QPauseAnimation * addPause ( int msecs )
-$method=|QPauseAnimation *|addPause|int
+$prototypeV2=QPauseAnimation * addPause( int msecs )
 
 $prototypeV2=QAbstractAnimation * currentAnimation() const
 
-$prototype=QPauseAnimation * insertPause ( int index, int msecs )
-$method=|QPauseAnimation *|insertPause|int,int
+$prototypeV2=QPauseAnimation * insertPause( int index, int msecs )
 
 $prototypeV2=virtual int duration() const
 

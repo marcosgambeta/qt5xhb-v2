@@ -179,15 +179,13 @@ $prototypeV2=uint ownerId() const
 
 $prototypeV2=QString path() const
 
-$prototype=bool permission(QFile::Permissions permissions) const
-$method=|bool|permission|QFile::Permissions
+$prototypeV2=bool permission( QFile::Permissions permissions ) const
 
 $prototypeV2=QFile::Permissions permissions() const
 
 $prototypeV2=void refresh()
 
-$prototype=void setCaching(bool enable)
-$method=|void|setCaching|bool
+$prototypeV2=void setCaching( bool enable )
 
 $prototype=void setFile(const QString & file)
 $internalMethod=|void|setFile,setFile1|const QString &
@@ -229,23 +227,18 @@ $prototypeV2=qint64 size() const
 
 $prototypeV2=QString suffix() const
 
-$prototype=void swap(QFileInfo & other)
-$method=|void|swap|QFileInfo &
+$prototypeV2=void swap( QFileInfo & other )
 
 $prototypeV2=QString symLinkTarget() const
 
-$prototype=QDateTime birthTime() const
-$method=5,10,0|QDateTime|birthTime|
+$prototypeV2=5,10,0|QDateTime birthTime() const
 
-$prototype=QDateTime fileTime(QFile::FileTime time) const
+$prototypeV2=5,10,0|QDateTime fileTime( QFile::FileTime time ) const
 %% TODO: QFile::FileTime -> QFileDevice::FileTime
-$method=5,10,0|QDateTime|fileTime|QFile::FileTime
 
-$prototype=QDateTime metadataChangeTime() const
-$method=5,10,0|QDateTime|metadataChangeTime|
+$prototypeV2=5,10,0|QDateTime metadataChangeTime() const
 
-$prototype=bool isJunction() const
-$method=5,15,0|bool|isJunction|
+$prototypeV2=5,15,0|bool isJunction() const
 
 $extraMethods
 

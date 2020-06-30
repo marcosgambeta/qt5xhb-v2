@@ -44,13 +44,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual bool notify ( QObject * receiver, QEvent * event )
-$virtualMethod=|bool|notify|QObject *,QEvent *
+$prototypeV2=virtual bool notify( QObject * receiver, QEvent * event )
 
 $prototypeV2=void quit()
 
-$prototype=static void addLibraryPath ( const QString & path )
-$staticMethod=|void|addLibraryPath|const QString &
+$prototypeV2=static void addLibraryPath( const QString & path )
 
 $prototypeV2=static QString applicationDirPath()
 
@@ -68,15 +66,13 @@ $prototypeV2=static bool closingDown()
 
 $prototypeV2=static int exec()
 
-$prototype=static void exit ( int returnCode = 0 )
-$staticMethod=|void|exit|int=0
+$prototypeV2=static void exit( int returnCode = 0 )
 
 $prototypeV2=static void flush()
 
 $prototypeV2=static bool hasPendingEvents()
 
-$prototype=static void installTranslator ( QTranslator * translationFile )
-$staticMethod=|void|installTranslator|QTranslator *
+$prototypeV2=static void installTranslator( QTranslator * translationFile )
 
 $prototypeV2=static QCoreApplication * instance()
 
@@ -142,8 +138,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 }
 $addMethod=processEvents
 
-$prototype=static void removeLibraryPath ( const QString & path )
-$staticMethod=|void|removeLibraryPath|const QString &
+$prototypeV2=static void removeLibraryPath( const QString & path )
 
 $prototype=static void removePostedEvents ( QObject * receiver )
 $internalStaticMethod=|void|removePostedEvents,removePostedEvents1|QObject *
@@ -173,11 +168,9 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 }
 $addMethod=removePostedEvents
 
-$prototype=static void removeTranslator ( QTranslator * translationFile )
-$staticMethod=|void|removeTranslator|QTranslator *
+$prototypeV2=static void removeTranslator( QTranslator * translationFile )
 
-$prototype=static bool sendEvent ( QObject * receiver, QEvent * event )
-$staticMethod=|bool|sendEvent|QObject *,QEvent *
+$prototypeV2=static bool sendEvent( QObject * receiver, QEvent * event )
 
 $prototype=static void sendPostedEvents ( QObject * receiver, int event_type )
 $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int
@@ -207,31 +200,23 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 }
 $addMethod=sendPostedEvents
 
-$prototype=static void setApplicationName ( const QString & application )
-$staticMethod=|void|setApplicationName|const QString &
+$prototypeV2=static void setApplicationName( const QString & application )
 
-$prototype=static void setApplicationVersion ( const QString & version )
-$staticMethod=|void|setApplicationVersion|const QString &
+$prototypeV2=static void setApplicationVersion( const QString & version )
 
-$prototype=static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
-$staticMethod=|void|setAttribute|Qt::ApplicationAttribute,bool=true
+$prototypeV2=static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 
-$prototype=static void setLibraryPaths ( const QStringList & paths )
-$staticMethod=|void|setLibraryPaths|const QStringList &
+$prototypeV2=static void setLibraryPaths( const QStringList & paths )
 
-$prototype=static void setOrganizationDomain ( const QString & orgDomain )
-$staticMethod=|void|setOrganizationDomain|const QString &
+$prototypeV2=static void setOrganizationDomain( const QString & orgDomain )
 
-$prototype=static void setOrganizationName ( const QString & orgName )
-$staticMethod=|void|setOrganizationName|const QString &
+$prototypeV2=static void setOrganizationName( const QString & orgName )
 
 $prototypeV2=static bool startingUp()
 
-$prototype=static bool testAttribute ( Qt::ApplicationAttribute attribute )
-$staticMethod=|bool|testAttribute|Qt::ApplicationAttribute
+$prototypeV2=static bool testAttribute( Qt::ApplicationAttribute attribute )
 
-$prototype=static QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1)
-$staticMethod=|QString|translate|const char *,const char *,const char *=nullptr,int=-1
+$prototypeV2=static QString translate( const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
 
 %%
 %% SIGNALS

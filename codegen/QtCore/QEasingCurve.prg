@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 $deleteMethod
 
-$prototype=void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint)
-$method=|void|addCubicBezierSegment|const QPointF &,const QPointF &,const QPointF &
+$prototypeV2=void addCubicBezierSegment( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 
-$prototype=void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
-$method=|void|addTCBSegment|const QPointF &,qreal,qreal,qreal
+$prototypeV2=void addTCBSegment( const QPointF & nextPoint, qreal t, qreal c, qreal b )
 
 $prototypeV2=qreal amplitude() const
 
@@ -68,28 +66,21 @@ $prototypeV2=qreal overshoot() const
 
 $prototypeV2=qreal period() const
 
-$prototype=void setAmplitude(qreal amplitude)
-$method=|void|setAmplitude|qreal
+$prototypeV2=void setAmplitude( qreal amplitude )
 
-$prototype=void setOvershoot(qreal overshoot)
-$method=|void|setOvershoot|qreal
+$prototypeV2=void setOvershoot( qreal overshoot )
 
-$prototype=void setPeriod(qreal period)
-$method=|void|setPeriod|qreal
+$prototypeV2=void setPeriod( qreal period )
 
-$prototype=void setType(Type type)
-$method=|void|setType|QEasingCurve::Type
+$prototypeV2=void setType( QEasingCurve::Type type )
 
-$prototype=void swap(QEasingCurve & other)
-$method=|void|swap|QEasingCurve &
+$prototypeV2=void swap( QEasingCurve & other )
 
-$prototype=QVector<QPointF> toCubicSpline() const
-$method=|QVector<QPointF>|toCubicSpline|
+$prototypeV2=QVector<QPointF> toCubicSpline() const
 
 $prototypeV2=QEasingCurve::Type type() const
 
-$prototype=qreal valueForProgress(qreal progress) const
-$method=|qreal|valueForProgress|qreal
+$prototypeV2=qreal valueForProgress( qreal progress ) const
 
 $extraMethods
 

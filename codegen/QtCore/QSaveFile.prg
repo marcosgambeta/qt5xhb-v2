@@ -67,18 +67,15 @@ $deleteMethod
 
 $prototypeV2=QString fileName() const
 
-$prototype=void setFileName(const QString &name)
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & name )
 
-$prototype=bool open(OpenMode flags)
-$method=|bool|open|QIODevice::OpenMode
+$prototypeV2=bool open( QIODevice::OpenMode flags )
 
 $prototypeV2=bool commit()
 
 $prototypeV2=void cancelWriting()
 
-$prototype=void setDirectWriteFallback(bool enabled)
-$method=|void|setDirectWriteFallback|bool
+$prototypeV2=void setDirectWriteFallback( bool enabled )
 
 $prototypeV2=bool directWriteFallback() const
 

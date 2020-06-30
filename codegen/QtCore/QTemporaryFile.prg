@@ -76,11 +76,9 @@ $prototypeV2=QString fileTemplate() const
 
 $prototypeV2=bool open()
 
-$prototype=void setAutoRemove(bool b)
-$method=|void|setAutoRemove|bool
+$prototypeV2=void setAutoRemove( bool b )
 
-$prototype=void setFileTemplate(const QString & name)
-$method=|void|setFileTemplate|const QString &
+$prototypeV2=void setFileTemplate( const QString & name )
 
 $prototypeV2=virtual QString fileName() const
 

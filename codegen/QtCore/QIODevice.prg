@@ -57,8 +57,8 @@ $prototypeV2=virtual void close()
 
 $prototypeV2=QString errorString() const
 
-$prototype=bool getChar ( char * c ) // TODO: revisar e implementar corretamente(?)
-$method=|bool|getChar|char *
+%% TODO: revisar e implementar corretamente(?)
+$prototypeV2=bool getChar( char * c )
 
 $prototypeV2=bool isOpen() const
 
@@ -70,8 +70,7 @@ $prototypeV2=bool isTextModeEnabled() const
 
 $prototypeV2=bool isWritable() const
 
-$prototype=virtual bool open ( OpenMode mode )
-$virtualMethod=|bool|open|QIODevice::OpenMode
+$prototypeV2=virtual bool open( QIODevice::OpenMode mode )
 
 $prototypeV2=QIODevice::OpenMode openMode() const
 
@@ -106,8 +105,7 @@ $addMethod=peek
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=bool putChar ( char c )
-$method=|bool|putChar|char
+$prototypeV2=bool putChar( char c )
 
 $prototype=qint64 read ( char * data, qint64 maxSize )
 %% TODO: corrigir
@@ -171,22 +169,17 @@ $addMethod=readLine
 
 $prototypeV2=virtual bool reset()
 
-$prototype=virtual bool seek ( qint64 pos )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
-$prototype=void setTextModeEnabled ( bool enabled )
-$method=|void|setTextModeEnabled|bool
+$prototypeV2=void setTextModeEnabled( bool enabled )
 
 $prototypeV2=virtual qint64 size() const
 
-$prototype=void ungetChar ( char c )
-$method=|void|ungetChar|char
+$prototypeV2=void ungetChar( char c )
 
-$prototype=virtual bool waitForBytesWritten ( int msecs )
-$virtualMethod=|bool|waitForBytesWritten|int
+$prototypeV2=virtual bool waitForBytesWritten( int msecs )
 
-$prototype=virtual bool waitForReadyRead ( int msecs )
-$virtualMethod=|bool|waitForReadyRead|int
+$prototypeV2=virtual bool waitForReadyRead( int msecs )
 
 $prototype=qint64 write ( const char * data, qint64 maxSize )
 $internalMethod=|qint64|write,write1|const char *,qint64

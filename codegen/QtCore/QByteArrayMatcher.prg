@@ -100,8 +100,7 @@ $addMethod=indexIn
 
 $prototypeV2=QByteArray pattern() const
 
-$prototype=void setPattern ( const QByteArray & pattern )
-$method=|void|setPattern|const QByteArray &
+$prototypeV2=void setPattern( const QByteArray & pattern )
 
 $extraMethods
 

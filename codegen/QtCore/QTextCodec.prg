@@ -103,16 +103,13 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 }
 $addMethod=fromUnicode
 
-$prototype=QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
-$method=|QTextDecoder *|makeDecoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
+$prototypeV2=QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 
-$prototype=QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
-$method=|QTextEncoder *|makeEncoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
+$prototypeV2=QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 
 $prototypeV2=virtual QByteArray name() const = 0
 
-$prototype=virtual QList<QByteArray> aliases() const
-$virtualMethod=|QList<QByteArray>|aliases|
+$prototypeV2=virtual QList<QByteArray> aliases() const
 
 $prototypeV2=virtual int mibEnum() const = 0
 
@@ -144,19 +141,15 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 }
 $addMethod=codecForName
 
-$prototype=static QTextCodec* codecForMib(int mib)
-$staticMethod=|QTextCodec *|codecForMib|int
+$prototypeV2=static QTextCodec * codecForMib( int mib )
 
-$prototype=static QList<QByteArray> availableCodecs()
-$staticMethod=|QList<QByteArray>|availableCodecs|
+$prototypeV2=static QList<QByteArray> availableCodecs()
 
-$prototype=static QList<int> availableMibs()
-$staticMethod=|QList<int>|availableMibs|
+$prototypeV2=static QList<int> availableMibs()
 
 $prototypeV2=static QTextCodec * codecForLocale()
 
-$prototype=static void setCodecForLocale(QTextCodec *c)
-$staticMethod=|void|setCodecForLocale|QTextCodec *
+$prototypeV2=static void setCodecForLocale( QTextCodec * c )
 
 $prototype=static QTextCodec *codecForHtml(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &

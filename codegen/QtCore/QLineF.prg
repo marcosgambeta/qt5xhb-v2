@@ -84,15 +84,13 @@ $prototypeV2=qreal y2() const
 
 $prototypeV2=qreal angle() const
 
-$prototype=qreal angleTo(const QLineF & line) const
-$method=|qreal|angleTo|const QLineF &
+$prototypeV2=qreal angleTo( const QLineF & line ) const
 
 $prototypeV2=qreal dx() const
 
 $prototypeV2=qreal dy() const
 
-$prototype=IntersectType intersect(const QLineF & line, QPointF * intersectionPoint) const
-$method=|QLineF::IntersectType|intersect|const QLineF &,QPointF *
+$prototypeV2=QLineF::IntersectType intersect( const QLineF & line, QPointF * intersectionPoint ) const
 
 $prototypeV2=bool isNull() const
 
@@ -100,26 +98,19 @@ $prototypeV2=qreal length() const
 
 $prototypeV2=QLineF normalVector() const
 
-$prototype=QPointF pointAt(qreal t) const
-$method=|QPointF|pointAt|qreal
+$prototypeV2=QPointF pointAt( qreal t ) const
 
-$prototype=void setP1(const QPointF & p1)
-$method=|void|setP1|const QPointF &
+$prototypeV2=void setP1( const QPointF & p1 )
 
-$prototype=void setP2(const QPointF & p2)
-$method=|void|setP2|const QPointF &
+$prototypeV2=void setP2( const QPointF & p2 )
 
-$prototype=void setAngle(qreal angle)
-$method=|void|setAngle|qreal
+$prototypeV2=void setAngle( qreal angle )
 
-$prototype=void setLength(qreal length)
-$method=|void|setLength|qreal
+$prototypeV2=void setLength( qreal length )
 
-$prototype=void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
-$method=|void|setLine|qreal,qreal,qreal,qreal
+$prototypeV2=void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 
-$prototype=void setPoints(const QPointF & p1, const QPointF & p2)
-$method=|void|setPoints|const QPointF &,const QPointF &
+$prototypeV2=void setPoints( const QPointF & p1, const QPointF & p2 )
 
 $prototypeV2=QLine toLine() const
 
@@ -181,8 +172,7 @@ $addMethod=translated
 
 $prototypeV2=QLineF unitVector() const
 
-$prototype=static QLineF fromPolar(qreal length, qreal angle)
-$staticMethod=|QLineF|fromPolar|qreal,qreal
+$prototypeV2=static QLineF fromPolar( qreal length, qreal angle )
 
 $extraMethods
 

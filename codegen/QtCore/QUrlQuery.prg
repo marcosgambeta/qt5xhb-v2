@@ -72,43 +72,33 @@ HB_FUNC_STATIC( QURLQUERY_NEW )
 
 $deleteMethod
 
-$prototype=void addQueryItem(const QString & key, const QString & value)
-$method=|void|addQueryItem|const QString &,const QString &
+$prototypeV2=void addQueryItem( const QString & key, const QString & value )
 
-$prototype=QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-$method=|QStringList|allQueryItemValues|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
+$prototypeV2=QStringList allQueryItemValues( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 
 $prototypeV2=void clear()
 
-$prototype=bool hasQueryItem(const QString & key) const
-$method=|bool|hasQueryItem|const QString &
+$prototypeV2=bool hasQueryItem( const QString & key ) const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-$method=|QString|query|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
+$prototypeV2=QString query( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 
-$prototype=QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-$method=|QString|queryItemValue|const QString &,QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
+$prototypeV2=QString queryItemValue( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 
 $prototypeV2=QChar queryPairDelimiter() const
 
 $prototypeV2=QChar queryValueDelimiter() const
 
-$prototype=void removeAllQueryItems(const QString & key)
-$method=|void|removeAllQueryItems|const QString &
+$prototypeV2=void removeAllQueryItems( const QString & key )
 
-$prototype=void removeQueryItem(const QString & key)
-$method=|void|removeQueryItem|const QString &
+$prototypeV2=void removeQueryItem( const QString & key )
 
-$prototype=void setQuery(const QString & queryString)
-$method=|void|setQuery|const QString &
+$prototypeV2=void setQuery( const QString & queryString )
 
-$prototype=void swap(QUrlQuery & other)
-$method=|void|swap|QUrlQuery &
+$prototypeV2=void swap( QUrlQuery & other )
 
-$prototype=QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
-$method=|QString|toString|QUrl::ComponentFormattingOptions=QUrl::PrettyDecoded
+$prototypeV2=QString toString( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 
 $prototypeV2=static QChar defaultQueryPairDelimiter()
 

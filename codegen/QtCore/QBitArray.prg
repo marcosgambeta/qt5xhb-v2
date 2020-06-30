@@ -62,13 +62,11 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
 
 $deleteMethod
 
-$prototype=bool at ( int i ) const
-$method=|bool|at|int
+$prototypeV2=bool at( int i ) const
 
 $prototypeV2=void clear()
 
-$prototype=void clearBit ( int i )
-$method=|void|clearBit|int
+$prototypeV2=void clearBit( int i )
 
 $prototype=int count () const
 $internalMethod=|int|count,count1|
@@ -130,8 +128,7 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=void resize ( int size )
-$method=|void|resize|int
+$prototypeV2=void resize( int size )
 
 $prototype=void setBit ( int i )
 $internalMethod=|void|setBit,setBit1|int
@@ -163,14 +160,11 @@ $addMethod=setBit
 
 $prototypeV2=int size() const
 
-$prototype=bool testBit ( int i ) const
-$method=|bool|testBit|int
+$prototypeV2=bool testBit( int i ) const
 
-$prototype=bool toggleBit ( int i )
-$method=|bool|toggleBit|int
+$prototypeV2=bool toggleBit( int i )
 
-$prototype=void truncate ( int pos )
-$method=|void|truncate|int
+$prototypeV2=void truncate( int pos )
 
 $extraMethods
 

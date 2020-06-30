@@ -64,8 +64,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
 
 $deleteMethod
 
-$prototype=QString cap ( int nth = 0 ) const
-$method=|QString|cap|int=0
+$prototypeV2=QString cap( int nth = 0 ) const
 
 $prototypeV2=int captureCount() const
 
@@ -75,11 +74,9 @@ $prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=bool exactMatch ( const QString & str ) const
-$method=|bool|exactMatch|const QString &
+$prototypeV2=bool exactMatch( const QString & str ) const
 
-$prototype=int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
-$method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
+$prototypeV2=int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 
 $prototypeV2=bool isEmpty() const
 
@@ -87,8 +84,7 @@ $prototypeV2=bool isMinimal() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
-$method=|int|lastIndexIn|const QString &,int=-1,QRegExp::CaretMode=QRegExp::CaretAtZero
+$prototypeV2=int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 
 $prototypeV2=int matchedLength() const
 
@@ -96,23 +92,17 @@ $prototypeV2=QString pattern() const
 
 $prototypeV2=QRegExp::PatternSyntax patternSyntax() const
 
-$prototype=int pos ( int nth = 0 ) const
-$method=|int|pos|int=0
+$prototypeV2=int pos( int nth = 0 ) const
 
-$prototype=void setCaseSensitivity ( Qt::CaseSensitivity cs )
-$method=|void|setCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setCaseSensitivity( Qt::CaseSensitivity cs )
 
-$prototype=void setMinimal ( bool minimal )
-$method=|void|setMinimal|bool
+$prototypeV2=void setMinimal( bool minimal )
 
-$prototype=void setPattern ( const QString & pattern )
-$method=|void|setPattern|const QString &
+$prototypeV2=void setPattern( const QString & pattern )
 
-$prototype=void setPatternSyntax ( PatternSyntax syntax )
-$method=|void|setPatternSyntax|QRegExp::PatternSyntax
+$prototypeV2=void setPatternSyntax( QRegExp::PatternSyntax syntax )
 
-$prototype=static QString escape ( const QString & str )
-$staticMethod=|QString|escape|const QString &
+$prototypeV2=static QString escape( const QString & str )
 
 $extraMethods
 

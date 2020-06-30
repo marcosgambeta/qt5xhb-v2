@@ -126,8 +126,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 }
 $addMethod=createUuidV5
 
-$prototype=static QUuid fromRfc4122(const QByteArray & bytes)
-$staticMethod=|QUuid|fromRfc4122|const QByteArray &
+$prototypeV2=static QUuid fromRfc4122( const QByteArray & bytes )
 
 $extraMethods
 

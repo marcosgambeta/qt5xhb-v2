@@ -32,9 +32,8 @@ $deleteMethod
 
 $prototypeV2=QString absoluteFilePath() const
 
-$prototype=const uchar * data () const
+$prototypeV2=const uchar * data() const
 %% TODO: implementar 'const uchar *'
-$method=|const char *|data|
 
 $prototypeV2=QString fileName() const
 
@@ -44,19 +43,15 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setFileName ( const QString & file )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & file )
 
-$prototype=void setLocale ( const QLocale & locale )
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=qint64 size() const
 
-$prototype=static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
-$staticMethod=|bool|registerResource|const QString &,const QString &=QString()
+$prototypeV2=static bool registerResource( const QString & rccFileName, const QString & mapRoot = QString() )
 
-$prototype=static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
-$staticMethod=|bool|unregisterResource|const QString &,const QString &=QString()
+$prototypeV2=static bool unregisterResource( const QString & rccFileName, const QString & mapRoot = QString() )
 
 $extraMethods
 

@@ -56,12 +56,10 @@ $deleteMethod
 
 $prototypeV2=QAbstractState * defaultState() const
 
-$prototype=void setDefaultState(QAbstractState *state)
-$method=|void|setDefaultState|QAbstractState *
+$prototypeV2=void setDefaultState( QAbstractState * state )
 
 $prototypeV2=QHistoryState::HistoryType historyType() const
 
-$prototype=void setHistoryType(HistoryType type)
-$method=|void|setHistoryType|QHistoryState::HistoryType
+$prototypeV2=void setHistoryType( QHistoryState::HistoryType type )
 
 #pragma ENDDUMP

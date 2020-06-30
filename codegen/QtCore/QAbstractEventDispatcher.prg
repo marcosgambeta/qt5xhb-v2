@@ -29,26 +29,22 @@ $includes
 
 $deleteMethod
 
-$prototype=bool filterNativeEvent(const QByteArray & eventType, void * message, long * result)
-$method=|bool|filterNativeEvent|const QByteArray &,void *,long *
+$prototypeV2=bool filterNativeEvent( const QByteArray & eventType, void * message, long * result )
 
 $prototypeV2=virtual void flush() = 0
 
 $prototypeV2=virtual bool hasPendingEvents() = 0
 
-$prototype=void installNativeEventFilter(QAbstractNativeEventFilter * filterObj)
-$method=|void|installNativeEventFilter|QAbstractNativeEventFilter *
+$prototypeV2=void installNativeEventFilter( QAbstractNativeEventFilter * filterObj )
 
 $prototypeV2=virtual void interrupt() = 0
 
-$prototype=virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
-$virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
+$prototypeV2=virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 
 $prototype=virtual bool registerEventNotifier(QWinEventNotifier * notifier) = 0
 $virtualMethod=|bool|registerEventNotifier|QWinEventNotifier *|#ifdef Q_OS_WIN
 
-$prototype=virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
-$virtualMethod=|void|registerSocketNotifier|QSocketNotifier *
+$prototypeV2=virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 
 $prototype=int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
 $internalMethod=|int|registerTimer,registerTimer1|int,Qt::TimerType,QObject *
@@ -78,28 +74,22 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 }
 $addMethod=registerTimer
 
-$prototype=virtual int remainingTime(int timerId) = 0
-$virtualMethod=|int|remainingTime|int
+$prototypeV2=virtual int remainingTime( int timerId ) = 0
 
-$prototype=void removeNativeEventFilter(QAbstractNativeEventFilter * filter)
-$method=|void|removeNativeEventFilter|QAbstractNativeEventFilter *
+$prototypeV2=void removeNativeEventFilter( QAbstractNativeEventFilter * filter )
 
 $prototype=virtual void unregisterEventNotifier(QWinEventNotifier * notifier) = 0
 $virtualMethod=|void|unregisterEventNotifier|QWinEventNotifier *|#ifdef Q_OS_WIN
 
-$prototype=virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
-$virtualMethod=|void|unregisterSocketNotifier|QSocketNotifier *
+$prototypeV2=virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 
-$prototype=virtual bool unregisterTimer ( int timerId ) = 0
-$virtualMethod=|bool|unregisterTimer|int
+$prototypeV2=virtual bool unregisterTimer( int timerId ) = 0
 
-$prototype=virtual bool unregisterTimers ( QObject * object ) = 0
-$virtualMethod=|bool|unregisterTimers|QObject *
+$prototypeV2=virtual bool unregisterTimers( QObject * object ) = 0
 
 $prototypeV2=virtual void wakeUp() = 0
 
-$prototype=static QAbstractEventDispatcher * instance ( QThread * thread = nullptr )
-$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=nullptr
+$prototypeV2=static QAbstractEventDispatcher * instance( QThread * thread = nullptr )
 
 $prototypeV2=virtual void startingUp()
 

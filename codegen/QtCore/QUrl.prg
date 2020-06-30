@@ -90,8 +90,7 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=bool isLocalFile() const
 
-$prototype=bool isParentOf ( const QUrl & childUrl ) const
-$method=|bool|isParentOf|const QUrl &
+$prototypeV2=bool isParentOf( const QUrl & childUrl ) const
 
 $prototypeV2=bool isRelative() const
 
@@ -129,31 +128,23 @@ HB_FUNC_STATIC( QURL_PORT )
 }
 $addMethod=port
 
-$prototype=QUrl resolved ( const QUrl & relative ) const
-$method=|QUrl|resolved|const QUrl &
+$prototypeV2=QUrl resolved( const QUrl & relative ) const
 
 $prototypeV2=QString scheme() const
 
-$prototype=void setAuthority ( const QString & authority )
-$method=|void|setAuthority|const QString &
+$prototypeV2=void setAuthority( const QString & authority )
 
-$prototype=void setFragment ( const QString & fragment )
-$method=|void|setFragment|const QString &
+$prototypeV2=void setFragment( const QString & fragment )
 
-$prototype=void setHost ( const QString & host )
-$method=|void|setHost|const QString &
+$prototypeV2=void setHost( const QString & host )
 
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
+$prototypeV2=void setPassword( const QString & password )
 
-$prototype=void setPath ( const QString & path )
-$method=|void|setPath|const QString &
+$prototypeV2=void setPath( const QString & path )
 
-$prototype=void setPort ( int port )
-$method=|void|setPort|int
+$prototypeV2=void setPort( int port )
 
-$prototype=void setScheme ( const QString & scheme )
-$method=|void|setScheme|const QString &
+$prototypeV2=void setScheme( const QString & scheme )
 
 $prototype=void setUrl ( const QString & url )
 $internalMethod=|void|setUrl,setUrl1|const QString &
@@ -183,22 +174,17 @@ HB_FUNC_STATIC( QURL_SETURL )
 }
 $addMethod=setUrl
 
-$prototype=void setUserInfo ( const QString & userInfo )
-$method=|void|setUserInfo|const QString &
+$prototypeV2=void setUserInfo( const QString & userInfo )
 
-$prototype=void setUserName ( const QString & userName )
-$method=|void|setUserName|const QString &
+$prototypeV2=void setUserName( const QString & userName )
 
-$prototype=void swap ( QUrl & other )
-$method=|void|swap|QUrl &
+$prototypeV2=void swap( QUrl & other )
 
-$prototype=QByteArray toEncoded ( FormattingOptions options = None ) const
-$method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
+$prototypeV2=QByteArray toEncoded( QUrl::FormattingOptions options = QUrl::None ) const
 
 $prototypeV2=QString toLocalFile() const
 
-$prototype=QString toString ( FormattingOptions options = None ) const
-$method=|QString|toString|QUrl::FormattingOptions=QUrl::None
+$prototypeV2=QString toString( QUrl::FormattingOptions options = QUrl::None ) const
 
 $prototypeV2=QString topLevelDomain() const
 
@@ -206,8 +192,7 @@ $prototypeV2=QString userInfo() const
 
 $prototypeV2=QString userName() const
 
-$prototype=static QString fromAce ( const QByteArray & domain )
-$staticMethod=|QString|fromAce|const QByteArray &
+$prototypeV2=static QString fromAce( const QByteArray & domain )
 
 $prototype=static QUrl fromEncoded ( const QByteArray & input )
 $internalStaticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
@@ -237,23 +222,17 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 }
 $addMethod=fromEncoded
 
-$prototype=static QUrl fromLocalFile ( const QString & localFile )
-$staticMethod=|QUrl|fromLocalFile|const QString &
+$prototypeV2=static QUrl fromLocalFile( const QString & localFile )
 
-$prototype=static QString fromPercentEncoding ( const QByteArray & input )
-$staticMethod=|QString|fromPercentEncoding|const QByteArray &
+$prototypeV2=static QString fromPercentEncoding( const QByteArray & input )
 
-$prototype=static QUrl fromUserInput ( const QString & userInput )
-$staticMethod=|QUrl|fromUserInput|const QString &
+$prototypeV2=static QUrl fromUserInput( const QString & userInput )
 
-$prototype=static void setIdnWhitelist ( const QStringList & list )
-$staticMethod=|void|setIdnWhitelist|const QStringList &
+$prototypeV2=static void setIdnWhitelist( const QStringList & list )
 
-$prototype=static QByteArray toAce ( const QString & domain )
-$staticMethod=|QByteArray|toAce|const QString &
+$prototypeV2=static QByteArray toAce( const QString & domain )
 
-$prototype=static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
-$staticMethod=|QByteArray|toPercentEncoding|const QString &,const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
+$prototypeV2=static QByteArray toPercentEncoding( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 
 $extraMethods
 

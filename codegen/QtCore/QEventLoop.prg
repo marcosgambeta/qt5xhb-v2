@@ -30,11 +30,9 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=int exec ( ProcessEventsFlags flags = AllEvents )
-$method=|int|exec|QEventLoop::ProcessEventsFlags=QEventLoop::AllEvents
+$prototypeV2=int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 
-$prototype=void exit ( int returnCode = 0 )
-$method=|void|exit|int=0
+$prototypeV2=void exit( int returnCode = 0 )
 
 $prototypeV2=bool isRunning() const
 

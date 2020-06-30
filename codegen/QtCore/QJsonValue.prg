@@ -151,11 +151,9 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 }
 $addMethod=toArray
 
-$prototype=bool toBool(bool defaultValue = false) const
-$method=|bool|toBool|bool=false
+$prototypeV2=bool toBool( bool defaultValue = false ) const
 
-$prototype=double toDouble(double defaultValue = 0) const
-$method=|double|toDouble|double=0
+$prototypeV2=double toDouble( double defaultValue = 0 ) const
 
 $prototype=QJsonObject toObject(const QJsonObject & defaultValue) const
 $internalMethod=|QJsonObject|toObject,toObject1|const QJsonObject &
@@ -185,15 +183,13 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 }
 $addMethod=toObject
 
-$prototype=QString toString(const QString & defaultValue = QString()) const
-$method=|QString|toString|const QString &=QString()
+$prototypeV2=QString toString( const QString & defaultValue = QString() ) const
 
 $prototypeV2=QVariant toVariant() const
 
 $prototypeV2=QJsonValue::Type type() const
 
-$prototype=static QJsonValue fromVariant(const QVariant & variant)
-$staticMethod=|QJsonValue|fromVariant|const QVariant &
+$prototypeV2=static QJsonValue fromVariant( const QVariant & variant )
 
 $extraMethods
 

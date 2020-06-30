@@ -186,8 +186,7 @@ $prototypeV2=QRegularExpression::MatchType matchType() const
 
 $prototypeV2=QRegularExpression regularExpression() const
 
-$prototype=void swap(QRegularExpressionMatch & other)
-$method=|void|swap|QRegularExpressionMatch &
+$prototypeV2=void swap( QRegularExpressionMatch & other )
 
 $extraMethods
 

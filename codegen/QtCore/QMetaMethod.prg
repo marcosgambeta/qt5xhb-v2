@@ -30,17 +30,13 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=const char *typeName() const
-$method=|const char *|typeName|
+$prototypeV2=const char * typeName() const
 
-$prototype=QList<QByteArray> parameterTypes() const
-$method=|QList<QByteArray>|parameterTypes|
+$prototypeV2=QList<QByteArray> parameterTypes() const
 
-$prototype=QList<QByteArray> parameterNames() const
-$method=|QList<QByteArray>|parameterNames|
+$prototypeV2=QList<QByteArray> parameterNames() const
 
-$prototype=const char *tag() const
-$method=|const char *|tag|
+$prototypeV2=const char * tag() const
 
 $prototypeV2=QMetaMethod::Access access() const
 
@@ -52,8 +48,7 @@ $prototypeV2=int methodIndex() const
 
 $prototypeV2=int revision() const
 
-$prototype=const QMetaObject *enclosingMetaObject() const
-$method=|const QMetaObject *|enclosingMetaObject|
+$prototypeV2=const QMetaObject * enclosingMetaObject() const
 
 %% TODO: implementar
 
@@ -109,11 +104,9 @@ $prototypeV2=int returnType() const
 
 $prototypeV2=int parameterCount() const
 
-$prototype=int parameterType(int index) const
-$method=|int|parameterType|int
+$prototypeV2=int parameterType( int index ) const
 
-$prototype=void getParameterTypes(int *types) const
-$method=|void|getParameterTypes|int *
+$prototypeV2=void getParameterTypes( int * types ) const
 
 $prototypeV2=bool isValid() const
 

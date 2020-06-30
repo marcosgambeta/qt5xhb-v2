@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 }
 $addMethod=addData
 
-$prototype=void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
-$method=|void|addExtraNamespaceDeclaration|const QXmlStreamNamespaceDeclaration &
+$prototypeV2=void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
 
 $prototypeV2=bool atEnd() const
 
@@ -190,24 +189,19 @@ $prototypeV2=QStringRef processingInstructionTarget() const
 
 $prototypeV2=QStringRef qualifiedName() const
 
-$prototype=void raiseError(const QString & message = QString())
-$method=|void|raiseError|const QString &=QString()
+$prototypeV2=void raiseError( const QString & message = QString() )
 
-$prototype=QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
-$method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
+$prototypeV2=QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour = QXmlStreamReader::ErrorOnUnexpectedElement )
 
 $prototypeV2=QXmlStreamReader::TokenType readNext()
 
 $prototypeV2=bool readNextStartElement()
 
-$prototype=void setDevice(QIODevice * device)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setEntityResolver(QXmlStreamEntityResolver * resolver)
-$method=|void|setEntityResolver|QXmlStreamEntityResolver *
+$prototypeV2=void setEntityResolver( QXmlStreamEntityResolver * resolver )
 
-$prototype=void setNamespaceProcessing(bool)
-$method=|void|setNamespaceProcessing|bool
+$prototypeV2=void setNamespaceProcessing( bool )
 
 $prototypeV2=void skipCurrentElement()
 

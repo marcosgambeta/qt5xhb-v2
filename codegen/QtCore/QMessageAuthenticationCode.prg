@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=void reset()
 
-$prototype=void setKey(const QByteArray &key)
-$method=|void|setKey|const QByteArray &
+$prototypeV2=void setKey( const QByteArray & key )
 
 $prototype=void addData(const char *data, int length)
 $internalMethod=|void|addData,addData1|const char *,int
@@ -73,8 +72,7 @@ $addMethod=addData
 
 $prototypeV2=QByteArray result() const
 
-$prototype=static QByteArray hash(const QByteArray &message, const QByteArray &key,QCryptographicHash::Algorithm method)
-$staticMethod=|QByteArray|hash|const QByteArray &,const QByteArray &,QCryptographicHash::Algorithm
+$prototypeV2=static QByteArray hash( const QByteArray & message, const QByteArray & key, QCryptographicHash::Algorithm method )
 
 $extraMethods
 

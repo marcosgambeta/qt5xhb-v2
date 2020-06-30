@@ -66,11 +66,9 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=qreal manhattanLength() const
 
-$prototype=void setX(qreal x)
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY(qreal y)
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
 $prototypeV2=QPoint toPoint() const
 

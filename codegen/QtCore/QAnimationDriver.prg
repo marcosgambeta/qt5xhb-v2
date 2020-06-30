@@ -42,8 +42,7 @@ $prototypeV2=bool isRunning() const
 
 $prototypeV2=virtual qint64 elapsed() const
 
-$prototype=void setStartTime(qint64 startTime)
-$method=|void|setStartTime|qint64
+$prototypeV2=void setStartTime( qint64 startTime )
 
 $prototypeV2=qint64 startTime() const
 

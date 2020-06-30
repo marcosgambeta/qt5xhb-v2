@@ -54,15 +54,13 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QProcessEnvironment &other)
-$method=|void|swap|QProcessEnvironment &
+$prototypeV2=void swap( QProcessEnvironment & other )
 
 $prototypeV2=bool isEmpty() const
 
 $prototypeV2=void clear()
 
-$prototype=bool contains(const QString &name) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & name ) const
 
 $prototype=void insert(const QString &name, const QString &value)
 $internalMethod=|void|insert,insert1|const QString &,const QString &
@@ -92,11 +90,9 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 }
 $addMethod=insert
 
-$prototype=void remove(const QString &name)
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & name )
 
-$prototype=QString value(const QString &name, const QString &defaultValue = QString()) const
-$method=|QString|value|const QString &,const QString &=QString()
+$prototypeV2=QString value( const QString & name, const QString & defaultValue = QString() ) const
 
 $prototypeV2=QStringList toStringList() const
 

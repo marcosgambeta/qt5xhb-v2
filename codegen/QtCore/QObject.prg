@@ -215,13 +215,11 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=bool blockSignals ( bool block )
-$method=|bool|blockSignals|bool
+$prototypeV2=bool blockSignals( bool block )
 
-$prototype=const QObjectList & children () const
+$prototypeV2=const QObjectList & children() const
 %% TODO: to check
 %% $method=|const QObjectList &|children|
-$method=|QObjectList|children|
 
 $prototypeV2=void dumpObjectInfo()
 
@@ -230,11 +228,9 @@ $prototypeV2=void dumpObjectTree()
 $prototype=QList<QByteArray> dynamicPropertyNames () const
 $method=|QList<QByteArray>|dynamicPropertyNames||#ifndef QT_NO_PROPERTIES
 
-$prototype=virtual bool event ( QEvent * e )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * e )
 
-$prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
-$virtualMethod=|bool|eventFilter|QObject *,QEvent *
+$prototypeV2=virtual bool eventFilter( QObject * watched, QEvent * event )
 
 $prototype=T findChild(const QString & name = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString(),Qt::FindChildOptions=Qt::FindChildrenRecursively
@@ -275,34 +271,27 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 }
 $addMethod=findChildren
 
-$prototype=bool inherits ( const char * className ) const
-$method=|bool|inherits|const char *
+$prototypeV2=bool inherits( const char * className ) const
 
-$prototype=void installEventFilter ( QObject * filterObj )
-$method=|void|installEventFilter|QObject *
+$prototypeV2=void installEventFilter( QObject * filterObj )
 
 $prototypeV2=bool isWidgetType() const
 
 $prototypeV2=bool isWindowType() const
 
-$prototype=void killTimer ( int id )
-$method=|void|killTimer|int
+$prototypeV2=void killTimer( int id )
 
-$prototype=virtual const QMetaObject * metaObject () const
-$virtualMethod=|const QMetaObject *|metaObject|
+$prototypeV2=virtual const QMetaObject * metaObject() const
 
-$prototype=void moveToThread ( QThread * targetThread )
-$method=|void|moveToThread|QThread *
+$prototypeV2=void moveToThread( QThread * targetThread )
 
 $prototypeV2=QString objectName() const
 
-$prototype=void setObjectName ( const QString & name )
-$method=|void|setObjectName|const QString &
+$prototypeV2=void setObjectName( const QString & name )
 
 $prototypeV2=QObject * parent() const
 
-$prototype=void setParent ( QObject * parent )
-$method=|void|setParent|QObject *
+$prototypeV2=void setParent( QObject * parent )
 
 $prototype=QVariant property ( const char * name ) const
 $method=|QVariant|property|const char *|#ifndef QT_NO_PROPERTIES
@@ -310,20 +299,17 @@ $method=|QVariant|property|const char *|#ifndef QT_NO_PROPERTIES
 $prototype=bool setProperty ( const char * name, const QVariant & value )
 $method=|bool|setProperty|const char *,const QVariant &|#ifndef QT_NO_PROPERTIES
 
-$prototype=void removeEventFilter ( QObject * obj )
-$method=|void|removeEventFilter|QObject *
+$prototypeV2=void removeEventFilter( QObject * obj )
 
 $prototypeV2=bool signalsBlocked() const
 
-$prototype=int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
-$method=|int|startTimer|int,Qt::TimerType=Qt::CoarseTimer
+$prototypeV2=int startTimer( int interval, Qt::TimerType timerType = Qt::CoarseTimer )
 
 $prototypeV2=QThread * thread() const
 
 $prototypeV2=void deleteLater()
 
-$prototype=static QString tr ( const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
-$staticMethod=|QString|tr|const char *,const char *=nullptr,int=-1
+$prototypeV2=static QString tr( const char * sourceText, const char * disambiguation = nullptr, int n = -1 )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
 {
@@ -916,11 +902,9 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 %% SIGNALS
 %%
 
-$prototype=void destroyed( QObject * obj = nullptr )
-$signalMethod=|void|destroyed|QObject *
+$prototypeV2=void destroyed( QObject * obj = nullptr )
 
-$prototype=void objectNameChanged( const QString & objectName )
-$signalMethod=|void|objectNameChanged|const QString &
+$prototypeV2=void objectNameChanged( const QString & objectName )
 
 $extraMethods
 

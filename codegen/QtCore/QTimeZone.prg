@@ -79,8 +79,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QTimeZone &other)
-$method=|void|swap|QTimeZone &
+$prototypeV2=void swap( QTimeZone & other )
 
 $prototypeV2=bool isValid() const
 
@@ -118,29 +117,23 @@ HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
 }
 $addMethod=displayName
 
-$prototype=QString abbreviation(const QDateTime &atDateTime) const
-$method=|QString|abbreviation|const QDateTime &
+$prototypeV2=QString abbreviation( const QDateTime & atDateTime ) const
 
-$prototype=int offsetFromUtc(const QDateTime &atDateTime) const
-$method=|int|offsetFromUtc|const QDateTime &
+$prototypeV2=int offsetFromUtc( const QDateTime & atDateTime ) const
 
-$prototype=int standardTimeOffset(const QDateTime &atDateTime) const
-$method=|int|standardTimeOffset|const QDateTime &
+$prototypeV2=int standardTimeOffset( const QDateTime & atDateTime ) const
 
-$prototype=int daylightTimeOffset(const QDateTime &atDateTime) const
-$method=|int|daylightTimeOffset|const QDateTime &
+$prototypeV2=int daylightTimeOffset( const QDateTime & atDateTime ) const
 
 $prototypeV2=bool hasDaylightTime() const
 
-$prototype=bool isDaylightTime(const QDateTime &atDateTime) const
-$method=|bool|isDaylightTime|const QDateTime &
+$prototypeV2=bool isDaylightTime( const QDateTime & atDateTime ) const
 
 $prototypeV2=bool hasTransitions() const
 
 $prototypeV2=static QByteArray systemTimeZoneId()
 
-$prototype=static bool isTimeZoneIdAvailable(const QByteArray &ianaId)
-$staticMethod=|bool|isTimeZoneIdAvailable|const QByteArray &
+$prototypeV2=static bool isTimeZoneIdAvailable( const QByteArray & ianaId )
 
 $prototype=static QList<QByteArray> availableTimeZoneIds()
 $staticMethod=|QList<QByteArray>|availableTimeZoneIds,availableTimeZoneIds1|
@@ -178,8 +171,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS ) // TODO: resolver conflito entr
 }
 $addMethod=availableTimeZoneIds
 
-$prototype=static QByteArray ianaIdToWindowsId(const QByteArray &ianaId)
-$staticMethod=|QByteArray|ianaIdToWindowsId|const QByteArray &
+$prototypeV2=static QByteArray ianaIdToWindowsId( const QByteArray & ianaId )
 
 $prototype=static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
 $internalStaticMethod=|QByteArray|windowsIdToDefaultIanaId,windowsIdToDefaultIanaId1|const QByteArray &

@@ -70,11 +70,9 @@ $addMethod=addData
 
 $prototypeV2=QByteArray result() const
 
-$prototype=static QByteArray hash(const QByteArray &data, Algorithm method)
-$staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
+$prototypeV2=static QByteArray hash( const QByteArray & data, QCryptographicHash::Algorithm method )
 
-$prototype=static int QCryptographicHash::hashLength(QCryptographicHash::Algorithm method)
-$staticMethod=5,12,0|int|hashLength|QCryptographicHash::Algorithm
+$prototypeV2=5,12,0|static int QCryptographicHash::hashLength( QCryptographicHash::Algorithm method )
 
 $extraMethods
 

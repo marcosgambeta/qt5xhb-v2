@@ -32,55 +32,38 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=int columnCount(const QModelIndex& parent = QModelIndex()) const
-$method=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int columnCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const
-$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=QModelIndex mapFromSource(const QModelIndex& sourceIndex) const
-$method=|QModelIndex|mapFromSource|const QModelIndex &
+$prototypeV2=QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 
-$prototype=QModelIndex mapToSource(const QModelIndex& proxyIndex) const
-$method=|QModelIndex|mapToSource|const QModelIndex &
+$prototypeV2=QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 
-$prototype=QModelIndex parent(const QModelIndex& child) const
-$method=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=QModelIndex parent( const QModelIndex & child ) const
 
-$prototype=int rowCount(const QModelIndex& parent = QModelIndex()) const
-$method=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=QVariant headerData(int section, Qt::Orientation orientation, int role) const
-$method=|QVariant|headerData|int,Qt::Orientation,int
+$prototypeV2=QVariant headerData( int section, Qt::Orientation orientation, int role ) const
 
-$prototype=bool dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent)
-$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
-$prototype=QModelIndex sibling(int row, int column, const QModelIndex &idx) const
-$method=|QModelIndex|sibling|int,int,const QModelIndex &
+$prototypeV2=QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
 
-$prototype=QItemSelection mapSelectionFromSource(const QItemSelection& selection) const
-$method=|QItemSelection|mapSelectionFromSource|const QItemSelection &
+$prototypeV2=QItemSelection mapSelectionFromSource( const QItemSelection & selection ) const
 
-$prototype=QItemSelection mapSelectionToSource(const QItemSelection& selection) const
-$method=|QItemSelection|mapSelectionToSource|const QItemSelection &
+$prototypeV2=QItemSelection mapSelectionToSource( const QItemSelection & selection ) const
 
-$prototype=QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags(Qt::MatchStartsWith|Qt::MatchWrap)) const
-$method=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags(Qt::MatchStartsWith OR Qt::MatchWrap)
+$prototypeV2=QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 
-$prototype=void setSourceModel(QAbstractItemModel* sourceModel)
-$method=|void|setSourceModel|QAbstractItemModel *
+$prototypeV2=void setSourceModel( QAbstractItemModel * sourceModel )
 
-$prototype=bool insertColumns(int column, int count, const QModelIndex& parent = QModelIndex())
-$method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool insertRows(int row, int count, const QModelIndex& parent = QModelIndex())
-$method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool removeColumns(int column, int count, const QModelIndex& parent = QModelIndex())
-$method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool removeRows(int row, int count, const QModelIndex& parent = QModelIndex())
-$method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
 #pragma ENDDUMP

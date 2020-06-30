@@ -44,8 +44,7 @@ $prototypeV2=QRegularExpressionMatch peekNext() const
 
 $prototypeV2=QRegularExpression regularExpression() const
 
-$prototype=void swap(QRegularExpressionMatchIterator & other)
-$method=|void|swap|QRegularExpressionMatchIterator &
+$prototypeV2=void swap( QRegularExpressionMatchIterator & other )
 
 $extraMethods
 

@@ -39,11 +39,9 @@ $prototypeV2=int handle() const
 
 $prototypeV2=virtual QFileDevice::Permissions permissions() const
 
-$prototype=virtual bool resize(qint64 sz)
-$virtualMethod=|bool|resize|qint64
+$prototypeV2=virtual bool resize( qint64 sz )
 
-$prototype=virtual bool setPermissions(Permissions permissions)
-$virtualMethod=|bool|setPermissions|QFileDevice::Permissions
+$prototypeV2=virtual bool setPermissions( QFileDevice::Permissions permissions )
 
 $prototypeV2=void unsetError()
 
@@ -55,15 +53,12 @@ $prototypeV2=virtual bool isSequential() const
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=virtual bool seek(qint64 pos)
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
 $prototypeV2=virtual qint64 size() const
 
-$prototype=QDateTime fileTime(QFileDevice::FileTime time) const
-$method=5,10,0|QDateTime|fileTime|QFileDevice::FileTime
+$prototypeV2=5,10,0|QDateTime fileTime( QFileDevice::FileTime time ) const
 
-$prototype=bool setFileTime(const QDateTime &newDate, QFileDevice::FileTime fileTime)
-$method=5,10,0|bool|setFileTime|const QDateTime &,QFileDevice::FileTime
+$prototypeV2=5,10,0|bool setFileTime( const QDateTime & newDate, QFileDevice::FileTime fileTime )
 
 #pragma ENDDUMP

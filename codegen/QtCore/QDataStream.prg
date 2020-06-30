@@ -72,8 +72,7 @@ $deleteMethod
 
 $prototypeV2=QIODevice * device() const
 
-$prototype=void setDevice(QIODevice *)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * )
 
 $prototypeV2=void unsetDevice()
 
@@ -81,42 +80,34 @@ $prototypeV2=bool atEnd() const
 
 $prototypeV2=QDataStream::Status status() const
 
-$prototype=void setStatus(Status status)
-$method=|void|setStatus|QDataStream::Status
+$prototypeV2=void setStatus( QDataStream::Status status )
 
 $prototypeV2=void resetStatus()
 
 $prototypeV2=QDataStream::FloatingPointPrecision floatingPointPrecision() const
 
-$prototype=void setFloatingPointPrecision(FloatingPointPrecision precision)
-$method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
+$prototypeV2=void setFloatingPointPrecision( QDataStream::FloatingPointPrecision precision )
 
 $prototypeV2=QDataStream::ByteOrder byteOrder() const
 
-$prototype=void setByteOrder(ByteOrder)
-$method=|void|setByteOrder|QDataStream::ByteOrder
+$prototypeV2=void setByteOrder( QDataStream::ByteOrder )
 
 $prototypeV2=int version() const
 
-$prototype=void setVersion(int)
-$method=|void|setVersion|int
+$prototypeV2=void setVersion( int )
 
 $prototype=QDataStream &readBytes(char *&, uint &len)
 %% TODO: revisar e corrigir implementacao do metodo
 %% $method=|QDataStream &|readBytes|char *&,uint &
 
-$prototype=int readRawData(char *, int len)
+$prototypeV2=int readRawData( char *, int len )
 %% TODO: corrigir codigo gerado
-$method=|int|readRawData|char *,int
 
-$prototype=QDataStream &writeBytes(const char *, uint len)
-$method=|QDataStream &|writeBytes|const char *,uint
+$prototypeV2=QDataStream & writeBytes( const char *, uint len )
 
-$prototype=int writeRawData(const char *, int len)
-$method=|int|writeRawData|const char *,int
+$prototypeV2=int writeRawData( const char *, int len )
 
-$prototype=int skipRawData(int len)
-$method=|int|skipRawData|int
+$prototypeV2=int skipRawData( int len )
 
 $extraMethods
 

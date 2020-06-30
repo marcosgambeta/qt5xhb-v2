@@ -36,7 +36,6 @@ $prototypeV2=QSocketNotifier::Type type() const
 
 $prototypeV2=bool isEnabled() const
 
-$prototype=void setEnabled(bool)
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool )
 
 #pragma ENDDUMP

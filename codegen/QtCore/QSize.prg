@@ -54,11 +54,9 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 $deleteMethod
 
-$prototype=QSize boundedTo ( const QSize & otherSize ) const
-$method=|QSize|boundedTo|const QSize &
+$prototypeV2=QSize boundedTo( const QSize & otherSize ) const
 
-$prototype=QSize expandedTo ( const QSize & otherSize ) const
-$method=|QSize|expandedTo|const QSize &
+$prototypeV2=QSize expandedTo( const QSize & otherSize ) const
 
 $prototypeV2=int height() const
 
@@ -96,11 +94,9 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 }
 $addMethod=scale
 
-$prototype=void setHeight ( int height )
-$method=|void|setHeight|int
+$prototypeV2=void setHeight( int height )
 
-$prototype=void setWidth ( int width )
-$method=|void|setWidth|int
+$prototypeV2=void setWidth( int width )
 
 $prototypeV2=void transpose()
 

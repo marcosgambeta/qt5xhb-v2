@@ -71,37 +71,27 @@ HB_FUNC_STATIC( QDEBUG_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QDebug &other)
-$method=|void|swap|QDebug &
+$prototypeV2=void swap( QDebug & other )
 
-$prototype=QDebug &space()
-$method=|QDebug &|space|
+$prototypeV2=QDebug & space()
 
-$prototype=QDebug &nospace()
-$method=|QDebug &|nospace|
+$prototypeV2=QDebug & nospace()
 
-$prototype=QDebug &maybeSpace()
-$method=|QDebug &|maybeSpace|
+$prototypeV2=QDebug & maybeSpace()
 
 $prototypeV2=bool autoInsertSpaces() const
 
-$prototype=void setAutoInsertSpaces(bool b)
-$method=|void|setAutoInsertSpaces|bool
+$prototypeV2=void setAutoInsertSpaces( bool b )
 
-$prototype=QDebug &maybeQuote(char c = '"')
-%% TODO: Qt 5.4
+$prototypeV2=5,4,0|QDebug & maybeQuote( char c = '"' )
 
-$prototype=QDebug &noquote()
-$method=5,4,0|QDebug &|noquote|
+$prototypeV2=5,4,0|QDebug & noquote()
 
-$prototype=QDebug &quote()
-$method=5,4,0|QDebug &|quote|
+$prototypeV2=5,4,0|QDebug & quote()
 
-$prototype=QDebug &resetFormat()
-$method=5,4,0|QDebug &|resetFormat|
+$prototypeV2=5,4,0|QDebug & resetFormat()
 
-$prototype=void setVerbosity(int verbosityLevel)
-$method=5,6,0|void|setVerbosity|int
+$prototypeV2=5,6,0|void setVerbosity( int verbosityLevel )
 
 $prototype=int verbosity() const
 $internalMethod=5,6,0|int|verbosity,verbosity1|

@@ -56,11 +56,9 @@ $deleteMethod
 
 $prototypeV2=QByteArray propertyName() const
 
-$prototype=void setPropertyName ( const QByteArray & propertyName )
-$method=|void|setPropertyName|const QByteArray &
+$prototypeV2=void setPropertyName( const QByteArray & propertyName )
 
-$prototype=void setTargetObject ( QObject * target )
-$method=|void|setTargetObject|QObject *
+$prototypeV2=void setTargetObject( QObject * target )
 
 $prototypeV2=QObject * targetObject() const
 

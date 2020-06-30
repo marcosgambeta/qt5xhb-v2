@@ -54,19 +54,15 @@ HB_FUNC_STATIC( QITEMSELECTION_NEW )
 
 $deleteMethod
 
-$prototype=void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-$method=|void|select|const QModelIndex &,const QModelIndex &
+$prototypeV2=void select( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 
-$prototype=bool contains(const QModelIndex &index) const
-$method=|bool|contains|const QModelIndex &
+$prototypeV2=bool contains( const QModelIndex & index ) const
 
 $prototypeV2=QModelIndexList indexes() const
 
-$prototype=void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
-$method=|void|merge|const QItemSelection &,QItemSelectionModel::SelectionFlags
+$prototypeV2=void merge( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 
-$prototype=static void split(const QItemSelectionRange &range,const QItemSelectionRange &other,QItemSelection *result)
-$staticMethod=|void|split|const QItemSelectionRange &,const QItemSelectionRange &,QItemSelection *
+$prototypeV2=static void split( const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result )
 
 $extraMethods
 

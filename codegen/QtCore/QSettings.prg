@@ -84,14 +84,11 @@ $prototypeV2=QStringList allKeys() const
 
 $prototypeV2=QString applicationName() const
 
-$prototype=void beginGroup ( const QString & prefix )
-$method=|void|beginGroup|const QString &
+$prototypeV2=void beginGroup( const QString & prefix )
 
-$prototype=int beginReadArray ( const QString & prefix )
-$method=|int|beginReadArray|const QString &
+$prototypeV2=int beginReadArray( const QString & prefix )
 
-$prototype=void beginWriteArray ( const QString & prefix, int size = -1 )
-$method=|void|beginWriteArray|const QString &,int=-1
+$prototypeV2=void beginWriteArray( const QString & prefix, int size = -1 )
 
 $prototypeV2=QStringList childGroups() const
 
@@ -99,8 +96,7 @@ $prototypeV2=QStringList childKeys() const
 
 $prototypeV2=void clear()
 
-$prototype=bool contains ( const QString & key ) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & key ) const
 
 $prototypeV2=void endArray()
 
@@ -120,16 +116,13 @@ $prototypeV2=bool isWritable() const
 
 $prototypeV2=QString organizationName() const
 
-$prototype=void remove ( const QString & key )
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & key )
 
 $prototypeV2=QSettings::Scope scope() const
 
-$prototype=void setArrayIndex ( int i )
-$method=|void|setArrayIndex|int
+$prototypeV2=void setArrayIndex( int i )
 
-$prototype=void setFallbacksEnabled ( bool b )
-$method=|void|setFallbacksEnabled|bool
+$prototypeV2=void setFallbacksEnabled( bool b )
 
 $prototype=void setIniCodec ( QTextCodec * codec )
 $internalMethod=|void|setIniCodec,setIniCodec1|QTextCodec *
@@ -159,22 +152,18 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 }
 $addMethod=setIniCodec
 
-$prototype=void setValue ( const QString & key, const QVariant & value )
-$method=|void|setValue|const QString &,const QVariant &
+$prototypeV2=void setValue( const QString & key, const QVariant & value )
 
 $prototypeV2=QSettings::Status status() const
 
 $prototypeV2=void sync()
 
-$prototype=QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
-$method=|QVariant|value|const QString &,const QVariant &=QVariant()
+$prototypeV2=QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 
 $prototypeV2=static QSettings::Format defaultFormat()
 
-$prototype=static void setDefaultFormat ( Format format )
-$staticMethod=|void|setDefaultFormat|QSettings::Format
+$prototypeV2=static void setDefaultFormat( QSettings::Format format )
 
-$prototype=static void setPath ( Format format, Scope scope, const QString & path )
-$staticMethod=|void|setPath|QSettings::Format,QSettings::Scope,const QString &
+$prototypeV2=static void setPath( QSettings::Format format, QSettings::Scope scope, const QString & path )
 
 #pragma ENDDUMP

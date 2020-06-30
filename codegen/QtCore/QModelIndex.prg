@@ -54,13 +54,11 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 
 $deleteMethod
 
-$prototype=QModelIndex child(int row, int column) const
-$method=|QModelIndex|child|int,int
+$prototypeV2=QModelIndex child( int row, int column ) const
 
 $prototypeV2=int column() const
 
-$prototype=QVariant data(int role = Qt::DisplayRole) const
-$method=|QVariant|data|int=Qt::DisplayRole
+$prototypeV2=QVariant data( int role = Qt::DisplayRole ) const
 
 $prototypeV2=Qt::ItemFlags flags() const
 
@@ -70,15 +68,13 @@ $prototypeV2=void * internalPointer() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=const QAbstractItemModel * model() const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
 $prototypeV2=QModelIndex parent() const
 
 $prototypeV2=int row() const
 
-$prototype=QModelIndex sibling(int row, int column) const
-$method=|QModelIndex|sibling|int,int
+$prototypeV2=QModelIndex sibling( int row, int column ) const
 
 $extraMethods
 

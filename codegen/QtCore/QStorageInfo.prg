@@ -71,11 +71,9 @@ HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QStorageInfo &other)
-$method=|void|swap|QStorageInfo &
+$prototypeV2=void swap( QStorageInfo & other )
 
-$prototype=void setPath(const QString &path)
-$method=|void|setPath|const QString &
+$prototypeV2=void setPath( const QString & path )
 
 $prototypeV2=QString rootPath() const
 
@@ -103,8 +101,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=void refresh()
 
-$prototype=static QList<QStorageInfo> mountedVolumes()
-$staticMethod=|QList<QStorageInfo>|mountedVolumes|
+$prototypeV2=static QList<QStorageInfo> mountedVolumes()
 
 $prototypeV2=static QStorageInfo root()
 

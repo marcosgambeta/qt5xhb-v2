@@ -78,11 +78,9 @@ HB_FUNC_STATIC( QRECTF_NEW )
 
 $deleteMethod
 
-$prototype=void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
-$method=|void|adjust|qreal,qreal,qreal,qreal
+$prototypeV2=void adjust( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 
-$prototype=QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
-$method=|QRectF|adjusted|qreal,qreal,qreal,qreal
+$prototypeV2=QRectF adjusted( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 
 $prototypeV2=qreal bottom() const
 
@@ -128,19 +126,15 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
-$method=|void|getCoords|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=void getCoords( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 
-$prototype=void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
-$method=|void|getRect|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=void getRect( qreal * x, qreal * y, qreal * width, qreal * height ) const
 
 $prototypeV2=qreal height() const
 
-$prototype=QRectF intersected ( const QRectF & rectangle ) const
-$method=|QRectF|intersected|const QRectF &
+$prototypeV2=QRectF intersected( const QRectF & rectangle ) const
 
-$prototype=bool intersects ( const QRectF & rectangle ) const
-$method=|bool|intersects|const QRectF &
+$prototypeV2=bool intersects( const QRectF & rectangle ) const
 
 $prototypeV2=bool isEmpty() const
 
@@ -150,23 +144,17 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=qreal left() const
 
-$prototype=void moveBottom ( qreal y )
-$method=|void|moveBottom|qreal
+$prototypeV2=void moveBottom( qreal y )
 
-$prototype=void moveBottomLeft ( const QPointF & position )
-$method=|void|moveBottomLeft|const QPointF &
+$prototypeV2=void moveBottomLeft( const QPointF & position )
 
-$prototype=void moveBottomRight ( const QPointF & position )
-$method=|void|moveBottomRight|const QPointF &
+$prototypeV2=void moveBottomRight( const QPointF & position )
 
-$prototype=void moveCenter ( const QPointF & position )
-$method=|void|moveCenter|const QPointF &
+$prototypeV2=void moveCenter( const QPointF & position )
 
-$prototype=void moveLeft ( qreal x )
-$method=|void|moveLeft|qreal
+$prototypeV2=void moveLeft( qreal x )
 
-$prototype=void moveRight ( qreal x )
-$method=|void|moveRight|qreal
+$prototypeV2=void moveRight( qreal x )
 
 $prototype=void moveTo ( qreal x, qreal y )
 $internalMethod=|void|moveTo,moveTo1|qreal,qreal
@@ -196,63 +184,45 @@ HB_FUNC_STATIC( QRECTF_MOVETO )
 }
 $addMethod=moveTo
 
-$prototype=void moveTop ( qreal y )
-$method=|void|moveTop|qreal
+$prototypeV2=void moveTop( qreal y )
 
-$prototype=void moveTopLeft ( const QPointF & position )
-$method=|void|moveTopLeft|const QPointF &
+$prototypeV2=void moveTopLeft( const QPointF & position )
 
-$prototype=void moveTopRight ( const QPointF & position )
-$method=|void|moveTopRight|const QPointF &
+$prototypeV2=void moveTopRight( const QPointF & position )
 
 $prototypeV2=QRectF normalized() const
 
 $prototypeV2=qreal right() const
 
-$prototype=void setBottom ( qreal y )
-$method=|void|setBottom|qreal
+$prototypeV2=void setBottom( qreal y )
 
-$prototype=void setBottomLeft ( const QPointF & position )
-$method=|void|setBottomLeft|const QPointF &
+$prototypeV2=void setBottomLeft( const QPointF & position )
 
-$prototype=void setBottomRight ( const QPointF & position )
-$method=|void|setBottomRight|const QPointF &
+$prototypeV2=void setBottomRight( const QPointF & position )
 
-$prototype=void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
-$method=|void|setCoords|qreal,qreal,qreal,qreal
+$prototypeV2=void setCoords( qreal x1, qreal y1, qreal x2, qreal y2 )
 
-$prototype=void setHeight ( qreal height )
-$method=|void|setHeight|qreal
+$prototypeV2=void setHeight( qreal height )
 
-$prototype=void setLeft ( qreal x )
-$method=|void|setLeft|qreal
+$prototypeV2=void setLeft( qreal x )
 
-$prototype=void setRect ( qreal x, qreal y, qreal width, qreal height )
-$method=|void|setRect|qreal,qreal,qreal,qreal
+$prototypeV2=void setRect( qreal x, qreal y, qreal width, qreal height )
 
-$prototype=void setRight ( qreal x )
-$method=|void|setRight|qreal
+$prototypeV2=void setRight( qreal x )
 
-$prototype=void setSize ( const QSizeF & size )
-$method=|void|setSize|const QSizeF &
+$prototypeV2=void setSize( const QSizeF & size )
 
-$prototype=void setTop ( qreal y )
-$method=|void|setTop|qreal
+$prototypeV2=void setTop( qreal y )
 
-$prototype=void setTopLeft ( const QPointF & position )
-$method=|void|setTopLeft|const QPointF &
+$prototypeV2=void setTopLeft( const QPointF & position )
 
-$prototype=void setTopRight ( const QPointF & position )
-$method=|void|setTopRight|const QPointF &
+$prototypeV2=void setTopRight( const QPointF & position )
 
-$prototype=void setWidth ( qreal width )
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal width )
 
-$prototype=void setX ( qreal x )
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY ( qreal y )
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
 $prototypeV2=QSizeF size() const
 
@@ -322,8 +292,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QRectF united ( const QRectF & rectangle ) const
-$method=|QRectF|united|const QRectF &
+$prototypeV2=QRectF united( const QRectF & rectangle ) const
 
 $prototypeV2=qreal width() const
 

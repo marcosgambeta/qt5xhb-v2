@@ -31,23 +31,19 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
-$method=|void|setSingleDashWordOptionMode|QCommandLineParser::SingleDashWordOptionMode
+$prototypeV2=void setSingleDashWordOptionMode( QCommandLineParser::SingleDashWordOptionMode parsingMode )
 
-$prototype=bool addOption(const QCommandLineOption &commandLineOption)
-$method=|bool|addOption|const QCommandLineOption &
+$prototypeV2=bool addOption( const QCommandLineOption & commandLineOption )
 
 $prototypeV2=QCommandLineOption addVersionOption()
 
 $prototypeV2=QCommandLineOption addHelpOption()
 
-$prototype=void setApplicationDescription(const QString &description)
-$method=|void|setApplicationDescription|const QString &
+$prototypeV2=void setApplicationDescription( const QString & description )
 
 $prototypeV2=QString applicationDescription() const
 
-$prototype=void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
-$method=|void|addPositionalArgument|const QString &,const QString &,const QString &=QString()
+$prototypeV2=void addPositionalArgument( const QString & name, const QString & description, const QString & syntax = QString() )
 
 $prototypeV2=void clearPositionalArguments()
 
@@ -79,8 +75,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 }
 $addMethod=process
 
-$prototype=bool parse(const QStringList &arguments)
-$method=|bool|parse|const QStringList &
+$prototypeV2=bool parse( const QStringList & arguments )
 
 $prototypeV2=QString errorText() const
 
@@ -174,8 +169,7 @@ $prototypeV2=QStringList optionNames() const
 
 $prototypeV2=QStringList unknownOptionNames() const
 
-$prototype=Q_NORETURN void showHelp(int exitCode = 0)
-$method=|void|showHelp|int=0
+$prototypeV2=Q_NORETURN void showHelp( int exitCode = 0 )
 
 $prototypeV2=QString helpText() const
 

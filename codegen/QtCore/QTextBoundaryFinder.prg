@@ -82,8 +82,7 @@ $prototypeV2=void toEnd()
 
 $prototypeV2=int position() const
 
-$prototype=void setPosition(int position)
-$method=|void|setPosition|int
+$prototypeV2=void setPosition( int position )
 
 $prototypeV2=int toNextBoundary()
 

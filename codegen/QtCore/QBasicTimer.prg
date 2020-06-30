@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=bool isActive() const
 
-$prototype=void start ( int msec, QObject * object )
-$method=|void|start|int,QObject *
+$prototypeV2=void start( int msec, QObject * object )
 
 $prototypeV2=void stop()
 

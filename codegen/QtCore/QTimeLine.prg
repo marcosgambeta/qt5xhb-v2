@@ -46,37 +46,27 @@ $prototypeV2=int duration() const
 
 $prototypeV2=int endFrame() const
 
-$prototype=int frameForTime ( int msec ) const
-$method=|int|frameForTime|int
+$prototypeV2=int frameForTime( int msec ) const
 
 $prototypeV2=int loopCount() const
 
-$prototype=void setCurveShape ( CurveShape shape )
-$method=|void|setCurveShape|QTimeLine::CurveShape
+$prototypeV2=void setCurveShape( QTimeLine::CurveShape shape )
 
-$prototype=void setDirection ( Direction direction )
-$method=|void|setDirection|QTimeLine::Direction
+$prototypeV2=void setDirection( QTimeLine::Direction direction )
 
-$prototype=void setDuration ( int duration )
-$method=|void|setDuration|int
+$prototypeV2=void setDuration( int duration )
 
-$prototype=void setEasingCurve ( const QEasingCurve & curve )
-$method=|void|setEasingCurve|const QEasingCurve &
+$prototypeV2=void setEasingCurve( const QEasingCurve & curve )
 
-$prototype=void setEndFrame ( int frame )
-$method=|void|setEndFrame|int
+$prototypeV2=void setEndFrame( int frame )
 
-$prototype=void setFrameRange ( int startFrame, int endFrame )
-$method=|void|setFrameRange|int,int
+$prototypeV2=void setFrameRange( int startFrame, int endFrame )
 
-$prototype=void setLoopCount ( int count )
-$method=|void|setLoopCount|int
+$prototypeV2=void setLoopCount( int count )
 
-$prototype=void setStartFrame ( int frame )
-$method=|void|setStartFrame|int
+$prototypeV2=void setStartFrame( int frame )
 
-$prototype=void setUpdateInterval ( int interval )
-$method=|void|setUpdateInterval|int
+$prototypeV2=void setUpdateInterval( int interval )
 
 $prototypeV2=int startFrame() const
 
@@ -84,16 +74,13 @@ $prototypeV2=QTimeLine::State state() const
 
 $prototypeV2=int updateInterval() const
 
-$prototype=virtual qreal valueForTime ( int msec ) const
-$virtualMethod=|qreal|valueForTime|int
+$prototypeV2=virtual qreal valueForTime( int msec ) const
 
 $prototypeV2=void resume()
 
-$prototype=void setCurrentTime ( int msec )
-$method=|void|setCurrentTime|int
+$prototypeV2=void setCurrentTime( int msec )
 
-$prototype=void setPaused ( bool paused )
-$method=|void|setPaused|bool
+$prototypeV2=void setPaused( bool paused )
 
 $prototypeV2=void start()
 

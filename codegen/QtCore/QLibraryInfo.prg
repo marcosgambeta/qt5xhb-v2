@@ -35,8 +35,7 @@ $prototypeV2=static QDate buildDate()
 
 $prototypeV2=static bool isDebugBuild()
 
-$prototype=static QString location(LibraryLocation)
-$staticMethod=|QString|location|QLibraryInfo::LibraryLocation
+$prototypeV2=static QString location( QLibraryInfo::LibraryLocation )
 
 $extraMethods
 

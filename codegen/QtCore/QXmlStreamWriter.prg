@@ -81,11 +81,9 @@ $prototypeV2=QIODevice * device() const
 
 $prototypeV2=bool hasError() const
 
-$prototype=void setAutoFormatting(bool enable)
-$method=|void|setAutoFormatting|bool
+$prototypeV2=void setAutoFormatting( bool enable )
 
-$prototype=void setAutoFormattingIndent(int spacesOrTabs)
-$method=|void|setAutoFormattingIndent|int
+$prototypeV2=void setAutoFormattingIndent( int spacesOrTabs )
 
 $prototype=void setCodec(QTextCodec * codec)
 $internalMethod=|void|setCodec,setCodec1|QTextCodec *
@@ -115,8 +113,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 }
 $addMethod=setCodec
 
-$prototype=void setDevice(QIODevice * device)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
 $prototype=void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 $internalMethod=|void|writeAttribute,writeAttribute1|const QString &,const QString &,const QString &
@@ -154,26 +151,19 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 }
 $addMethod=writeAttribute
 
-$prototype=void writeAttributes(const QXmlStreamAttributes & attributes)
-$method=|void|writeAttributes|const QXmlStreamAttributes &
+$prototypeV2=void writeAttributes( const QXmlStreamAttributes & attributes )
 
-$prototype=void writeCDATA(const QString & text)
-$method=|void|writeCDATA|const QString &
+$prototypeV2=void writeCDATA( const QString & text )
 
-$prototype=void writeCharacters(const QString & text)
-$method=|void|writeCharacters|const QString &
+$prototypeV2=void writeCharacters( const QString & text )
 
-$prototype=void writeComment(const QString & text)
-$method=|void|writeComment|const QString &
+$prototypeV2=void writeComment( const QString & text )
 
-$prototype=void writeCurrentToken(const QXmlStreamReader & reader)
-$method=|void|writeCurrentToken|const QXmlStreamReader &
+$prototypeV2=void writeCurrentToken( const QXmlStreamReader & reader )
 
-$prototype=void writeDTD(const QString & dtd)
-$method=|void|writeDTD|const QString &
+$prototypeV2=void writeDTD( const QString & dtd )
 
-$prototype=void writeDefaultNamespace(const QString & namespaceUri)
-$method=|void|writeDefaultNamespace|const QString &
+$prototypeV2=void writeDefaultNamespace( const QString & namespaceUri )
 
 $prototype=void writeEmptyElement(const QString & namespaceUri, const QString & name)
 $internalMethod=|void|writeEmptyElement,writeEmptyElement1|const QString &,const QString &
@@ -207,14 +197,11 @@ $prototypeV2=void writeEndDocument()
 
 $prototypeV2=void writeEndElement()
 
-$prototype=void writeEntityReference(const QString & name)
-$method=|void|writeEntityReference|const QString &
+$prototypeV2=void writeEntityReference( const QString & name )
 
-$prototype=void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
-$method=|void|writeNamespace|const QString &,const QString &=QString()
+$prototypeV2=void writeNamespace( const QString & namespaceUri, const QString & prefix = QString() )
 
-$prototype=void writeProcessingInstruction(const QString & target, const QString & data = QString())
-$method=|void|writeProcessingInstruction|const QString &,const QString &=QString()
+$prototypeV2=void writeProcessingInstruction( const QString & target, const QString & data = QString() )
 
 $prototype=void writeStartDocument(const QString & version)
 $internalMethod=|void|writeStartDocument,writeStartDocument1|const QString &

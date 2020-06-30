@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QJSONOBJECT_NEW )
 
 $deleteMethod
 
-$prototype=bool contains(const QString & key) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & key ) const
 
 $prototypeV2=int count() const
 
@@ -69,16 +68,13 @@ $prototypeV2=QStringList keys() const
 
 $prototypeV2=int length() const
 
-$prototype=void remove(const QString & key)
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & key )
 
 $prototypeV2=int size() const
 
-$prototype=QJsonValue take(const QString & key)
-$method=|QJsonValue|take|const QString &
+$prototypeV2=QJsonValue take( const QString & key )
 
-$prototype=QJsonValue value(const QString & key) const
-$method=|QJsonValue|value|const QString &
+$prototypeV2=QJsonValue value( const QString & key ) const
 
 $extraMethods
 

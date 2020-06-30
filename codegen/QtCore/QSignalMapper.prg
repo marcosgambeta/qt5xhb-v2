@@ -78,8 +78,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 }
 $addMethod=setMapping
 
-$prototype=void removeMappings(QObject *sender)
-$method=|void|removeMappings|QObject *
+$prototypeV2=void removeMappings( QObject * sender )
 
 $prototype=QObject *mapping(int id) const
 $internalMethod=|QObject *|mapping,mapping1|int

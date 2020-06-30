@@ -58,11 +58,9 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=int manhattanLength() const
 
-$prototype=void setX(int x)
-$method=|void|setX|int
+$prototypeV2=void setX( int x )
 
-$prototype=void setY(int y)
-$method=|void|setY|int
+$prototypeV2=void setY( int y )
 
 $prototypeV2=int x() const
 

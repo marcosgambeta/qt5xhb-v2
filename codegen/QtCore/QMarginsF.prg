@@ -73,17 +73,13 @@ $prototypeV2=qreal right() const
 
 $prototypeV2=qreal bottom() const
 
-$prototype=void setLeft(qreal left)
-$method=|void|setLeft|qreal
+$prototypeV2=void setLeft( qreal left )
 
-$prototype=void setTop(qreal top)
-$method=|void|setTop|qreal
+$prototypeV2=void setTop( qreal top )
 
-$prototype=void setRight(qreal right)
-$method=|void|setRight|qreal
+$prototypeV2=void setRight( qreal right )
 
-$prototype=void setBottom(qreal bottom)
-$method=|void|setBottom|qreal
+$prototypeV2=void setBottom( qreal bottom )
 
 $prototypeV2=QMargins toMargins() const
 

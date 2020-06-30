@@ -58,39 +58,29 @@ $deleteMethod
 
 $prototypeV2=QModelIndex currentIndex() const
 
-$prototype=bool isSelected(const QModelIndex &index) const
-$method=|bool|isSelected|const QModelIndex &
+$prototypeV2=bool isSelected( const QModelIndex & index ) const
 
-$prototype=bool isRowSelected(int row, const QModelIndex &parent) const
-$method=|bool|isRowSelected|int,const QModelIndex &
+$prototypeV2=bool isRowSelected( int row, const QModelIndex & parent ) const
 
-$prototype=bool isColumnSelected(int column, const QModelIndex &parent) const
-$method=|bool|isColumnSelected|int,const QModelIndex &
+$prototypeV2=bool isColumnSelected( int column, const QModelIndex & parent ) const
 
-$prototype=bool rowIntersectsSelection(int row, const QModelIndex &parent) const
-$method=|bool|rowIntersectsSelection|int,const QModelIndex &
+$prototypeV2=bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 
-$prototype=bool columnIntersectsSelection(int column, const QModelIndex &parent) const
-$method=|bool|columnIntersectsSelection|int,const QModelIndex &
+$prototypeV2=bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
 
 $prototypeV2=bool hasSelection() const
 
 $prototypeV2=QModelIndexList selectedIndexes() const
 
-$prototype=QModelIndexList selectedRows(int column = 0) const
-$method=|QModelIndexList|selectedRows|int=0
+$prototypeV2=QModelIndexList selectedRows( int column = 0 ) const
 
-$prototype=QModelIndexList selectedColumns(int row = 0) const
-$method=|QModelIndexList|selectedColumns|int=0
+$prototypeV2=QModelIndexList selectedColumns( int row = 0 ) const
 
-$prototype=const QItemSelection selection() const // TODO: implementar
-$method=|const QItemSelection|selection|
+$prototypeV2=const QItemSelection selection() const
 
-$prototype=const QAbstractItemModel *model() const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
-$prototype=virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-$virtualMethod=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
+$prototypeV2=virtual void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 
 $prototype=virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 $internalVirtualMethod=|void|select,select1|const QModelIndex &,QItemSelectionModel::SelectionFlags

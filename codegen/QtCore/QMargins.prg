@@ -64,17 +64,13 @@ $prototypeV2=int right() const
 
 $prototypeV2=int bottom() const
 
-$prototype=void setLeft(int left)
-$method=|void|setLeft|int
+$prototypeV2=void setLeft( int left )
 
-$prototype=void setTop(int top)
-$method=|void|setTop|int
+$prototypeV2=void setTop( int top )
 
-$prototype=void setRight(int right)
-$method=|void|setRight|int
+$prototypeV2=void setRight( int right )
 
-$prototype=void setBottom(int bottom)
-$method=|void|setBottom|int
+$prototypeV2=void setBottom( int bottom )
 
 $extraMethods
 

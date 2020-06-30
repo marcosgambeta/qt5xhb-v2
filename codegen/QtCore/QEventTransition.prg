@@ -58,10 +58,8 @@ $prototypeV2=QObject * eventSource() const
 
 $prototypeV2=QEvent::Type eventType() const
 
-$prototype=void setEventSource(QObject * object)
-$method=|void|setEventSource|QObject *
+$prototypeV2=void setEventSource( QObject * object )
 
-$prototype=void setEventType(QEvent::Type type)
-$method=|void|setEventType|QEvent::Type
+$prototypeV2=void setEventType( QEvent::Type type )
 
 #pragma ENDDUMP

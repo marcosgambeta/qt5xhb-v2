@@ -58,21 +58,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 
 $deleteMethod
 
-$prototype=bool addPath(const QString & path)
-$method=|bool|addPath|const QString &
+$prototypeV2=bool addPath( const QString & path )
 
-$prototype=QStringList addPaths(const QStringList & paths)
-$method=|QStringList|addPaths|const QStringList &
+$prototypeV2=QStringList addPaths( const QStringList & paths )
 
 $prototypeV2=QStringList directories() const
 
 $prototypeV2=QStringList files() const
 
-$prototype=bool removePath(const QString & path)
-$method=|bool|removePath|const QString &
+$prototypeV2=bool removePath( const QString & path )
 
-$prototype=QStringList removePaths(const QStringList & paths)
-$method=|QStringList|removePaths|const QStringList &
+$prototypeV2=QStringList removePaths( const QStringList & paths )
 
 %%
 %% SIGNALS

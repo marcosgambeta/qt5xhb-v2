@@ -30,15 +30,13 @@ $constructor=|new|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSema
 
 $deleteMethod
 
-$prototype=void setKey(const QString &key, int initialValue = 0, AccessMode mode = Open)
-$method=|void|setKey|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
+$prototypeV2=void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
 
 $prototypeV2=QString key() const
 
 $prototypeV2=bool acquire()
 
-$prototype=bool release(int n = 1)
-$method=|bool|release|int=1
+$prototypeV2=bool release( int n = 1 )
 
 $prototypeV2=QSystemSemaphore::SystemSemaphoreError error() const
 
