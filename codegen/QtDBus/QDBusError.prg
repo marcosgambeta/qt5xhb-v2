@@ -87,8 +87,7 @@ $prototypeV2=QString message() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=static QString errorString(ErrorType error)
-$staticMethod=|QString|errorString|QDBusError::ErrorType
+$prototypeV2=static QString errorString( QDBusError::ErrorType error )
 
 $extraMethods
 

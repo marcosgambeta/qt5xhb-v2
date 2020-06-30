@@ -137,27 +137,21 @@ $prototypeV2=QString signature() const
 
 $prototypeV2=bool isReplyRequired() const
 
-$prototype=void setDelayedReply(bool enable) const
-$method=|void|setDelayedReply|bool
+$prototypeV2=void setDelayedReply( bool enable ) const
 
 $prototypeV2=bool isDelayedReply() const
 
-$prototype=void setAutoStartService(bool enable)
-$method=|void|setAutoStartService|bool
+$prototypeV2=void setAutoStartService( bool enable )
 
 $prototypeV2=bool autoStartService() const
 
-$prototype=void setArguments(const QList<QVariant> &arguments)
-$method=|void|setArguments|const QList<QVariant> &
+$prototypeV2=void setArguments( const QList<QVariant> & arguments )
 
-$prototype=QList<QVariant> arguments() const
-$method=|QList<QVariant>|arguments|
+$prototypeV2=QList<QVariant> arguments() const
 
-$prototype=static QDBusMessage createSignal(const QString &path, const QString &interface,const QString &name)
-$staticMethod=|QDBusMessage|createSignal|const QString &,const QString &,const QString &
+$prototypeV2=static QDBusMessage createSignal( const QString & path, const QString & interface, const QString & name )
 
-$prototype=static QDBusMessage createMethodCall(const QString &destination, const QString &path,const QString &interface, const QString &method)
-$staticMethod=|QDBusMessage|createMethodCall|const QString &,const QString &,const QString &,const QString &
+$prototypeV2=static QDBusMessage createMethodCall( const QString & destination, const QString & path, const QString & interface, const QString & method )
 
 $prototype=static QDBusMessage createError(const QString &name, const QString &msg)
 $internalStaticMethod=|QDBusMessage|createError,createError1|const QString &,const QString &
@@ -195,11 +189,9 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 }
 $addMethod=createError
 
-$prototype=bool QDBusMessage::isInteractiveAuthorizationAllowed() const
-$method=5,12,0|bool|isInteractiveAuthorizationAllowed|
+$prototypeV2=5,12,0|bool QDBusMessage::isInteractiveAuthorizationAllowed() const
 
-$prototype=void QDBusMessage::setInteractiveAuthorizationAllowed(bool enable)
-$method=5,12,0|void|setInteractiveAuthorizationAllowed|bool
+$prototypeV2=5,12,0|void QDBusMessage::setInteractiveAuthorizationAllowed( bool enable )
 
 $extraMethods
 

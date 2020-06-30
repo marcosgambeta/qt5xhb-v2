@@ -89,8 +89,7 @@ $prototypeV2=void beginMapEntry()
 
 $prototypeV2=void endMapEntry()
 
-$prototype=void appendVariant(const QVariant &v)
-$method=|void|appendVariant|const QVariant &
+$prototypeV2=void appendVariant( const QVariant & v )
 
 $prototypeV2=QString currentSignature() const
 

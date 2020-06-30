@@ -36,13 +36,11 @@ $prototypeV2=bool calledFromDBus() const
 
 $prototypeV2=QDBusConnection connection() const
 
-$prototype=const QDBusMessage &message() const
-$method=|const QDBusMessage &|message|
+$prototypeV2=const QDBusMessage & message() const
 
 $prototypeV2=bool isDelayedReply() const
 
-$prototype=void setDelayedReply(bool enable) const
-$method=|void|setDelayedReply|bool
+$prototypeV2=void setDelayedReply( bool enable ) const
 
 $prototype=void sendErrorReply(const QString &name, const QString &msg = QString()) const
 $internalMethod=|void|sendErrorReply,sendErrorReply1|const QString &,const QString &=QString()

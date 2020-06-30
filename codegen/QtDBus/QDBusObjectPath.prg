@@ -74,8 +74,7 @@ $deleteMethod
 
 $prototypeV2=QString path() const
 
-$prototype=void setPath(const QString &path)
-$method=|void|setPath|const QString &
+$prototypeV2=void setPath( const QString & path )
 
 $extraMethods
 

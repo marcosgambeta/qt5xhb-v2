@@ -62,18 +62,15 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 
 $deleteMethod
 
-$prototype=void swap(QDBusUnixFileDescriptor &other)
-$method=|void|swap|QDBusUnixFileDescriptor &
+$prototypeV2=void swap( QDBusUnixFileDescriptor & other )
 
 $prototypeV2=bool isValid() const
 
 $prototypeV2=int fileDescriptor() const
 
-$prototype=void setFileDescriptor(int fileDescriptor)
-$method=|void|setFileDescriptor|int
+$prototypeV2=void setFileDescriptor( int fileDescriptor )
 
-$prototype=void giveFileDescriptor(int fileDescriptor)
-$method=|void|giveFileDescriptor|int
+$prototypeV2=void giveFileDescriptor( int fileDescriptor )
 
 $prototypeV2=int takeFileDescriptor()
 

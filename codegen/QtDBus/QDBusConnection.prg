@@ -58,8 +58,7 @@ $prototypeV2=QString name() const
 
 $prototypeV2=QDBusConnection::ConnectionCapabilities connectionCapabilities() const
 
-$prototype=bool send(const QDBusMessage &message) const
-$method=|bool|send|const QDBusMessage &
+$prototypeV2=bool send( const QDBusMessage & message ) const
 
 $prototype=bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *returnMethod, const char *errorMethod,int timeout = -1) const
 $internalMethod=|bool|callWithCallback,callWithCallback1|const QDBusMessage &,QObject *,const char *,const char *,int=-1
@@ -78,11 +77,9 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 }
 $addMethod=callWithCallback
 
-$prototype=QDBusMessage call(const QDBusMessage &message, QDBus::CallMode mode = QDBus::Block,int timeout = -1) const
-$method=|QDBusMessage|call|const QDBusMessage &,QDBus::CallMode=QDBus::Block,int=-1
+$prototypeV2=QDBusMessage call( const QDBusMessage & message, QDBus::CallMode mode = QDBus::Block, int timeout = -1 ) const
 
-$prototype=QDBusPendingCall asyncCall(const QDBusMessage &message, int timeout = -1) const
-$method=|QDBusPendingCall|asyncCall|const QDBusMessage &,int=-1
+$prototypeV2=QDBusPendingCall asyncCall( const QDBusMessage & message, int timeout = -1 ) const
 
 $prototype=bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
 $internalMethod=|bool|connect,connect1|const QString &,const QString &,const QString &,const QString &,QObject *,const char *
@@ -126,24 +123,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT )
 }
 $addMethod=disconnect
 
-$prototype=bool registerObject(const QString &path, QObject *object,RegisterOptions options = ExportAdaptors)
-$method=|bool|registerObject|const QString &,QObject *,QDBusConnection::RegisterOptions=QDBusConnection::ExportAdaptors
+$prototypeV2=bool registerObject( const QString & path, QObject * object, QDBusConnection::RegisterOptions options = QDBusConnection::ExportAdaptors )
 
-$prototype=void unregisterObject(const QString &path, UnregisterMode mode = UnregisterNode)
-$method=|void|unregisterObject|const QString &,QDBusConnection::UnregisterMode=QDBusConnection::UnregisterNode
+$prototypeV2=void unregisterObject( const QString & path, QDBusConnection::UnregisterMode mode = QDBusConnection::UnregisterNode )
 
-$prototype=QObject *objectRegisteredAt(const QString &path) const
-$method=|QObject *|objectRegisteredAt|const QString &
+$prototypeV2=QObject * objectRegisteredAt( const QString & path ) const
 
 $prototype=bool registerVirtualObject(const QString &path, QDBusVirtualObject *object,VirtualObjectRegisterOption options = SingleNode)
 %% TODO: check
 %% $method=|bool|registerVirtualObject|const QString &,QDBusVirtualObject *,VirtualObjectRegisterOption=SingleNode
 
-$prototype=bool registerService(const QString &serviceName)
-$method=|bool|registerService|const QString &
+$prototypeV2=bool registerService( const QString & serviceName )
 
-$prototype=bool unregisterService(const QString &serviceName)
-$method=|bool|unregisterService|const QString &
+$prototypeV2=bool unregisterService( const QString & serviceName )
 
 $prototypeV2=QDBusConnectionInterface * interface() const
 
@@ -166,14 +158,11 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS )
 }
 $addMethod=connectToBus
 
-$prototype=static QDBusConnection connectToPeer(const QString &address, const QString &name)
-$staticMethod=|QDBusConnection|connectToPeer|const QString &,const QString &
+$prototypeV2=static QDBusConnection connectToPeer( const QString & address, const QString & name )
 
-$prototype=static void disconnectFromBus(const QString &name)
-$staticMethod=|void|disconnectFromBus|const QString &
+$prototypeV2=static void disconnectFromBus( const QString & name )
 
-$prototype=static void disconnectFromPeer(const QString &name)
-$staticMethod=|void|disconnectFromPeer|const QString &
+$prototypeV2=static void disconnectFromPeer( const QString & name )
 
 $prototypeV2=static QByteArray localMachineId()
 

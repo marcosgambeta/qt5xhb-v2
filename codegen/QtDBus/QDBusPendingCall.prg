@@ -30,8 +30,7 @@ $constructor=|new|const QDBusPendingCall &
 
 $deleteMethod
 
-$prototype=void swap(QDBusPendingCall &other)
-$method=|void|swap|QDBusPendingCall &
+$prototypeV2=void swap( QDBusPendingCall & other )
 
 $prototype=bool isFinished() const
 $method=|bool|isFinished||#ifndef Q_QDOC
@@ -51,11 +50,9 @@ $method=|QDBusError|error||#ifndef Q_QDOC
 $prototype=QDBusMessage reply() const
 $method=|QDBusMessage|reply||#ifndef Q_QDOC
 
-$prototype=static QDBusPendingCall fromError(const QDBusError &error)
-$staticMethod=|QDBusPendingCall|fromError|const QDBusError &
+$prototypeV2=static QDBusPendingCall fromError( const QDBusError & error )
 
-$prototype=static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
-$staticMethod=|QDBusPendingCall|fromCompletedCall|const QDBusMessage &
+$prototypeV2=static QDBusPendingCall fromCompletedCall( const QDBusMessage & message )
 
 $extraMethods
 

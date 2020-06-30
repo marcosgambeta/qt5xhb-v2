@@ -60,24 +60,19 @@ $deleteMethod
 
 $prototypeV2=QStringList watchedServices() const
 
-$prototype=void setWatchedServices(const QStringList &services)
-$method=|void|setWatchedServices|const QStringList &
+$prototypeV2=void setWatchedServices( const QStringList & services )
 
-$prototype=void addWatchedService(const QString &newService)
-$method=|void|addWatchedService|const QString &
+$prototypeV2=void addWatchedService( const QString & newService )
 
-$prototype=bool removeWatchedService(const QString &service)
-$method=|bool|removeWatchedService|const QString &
+$prototypeV2=bool removeWatchedService( const QString & service )
 
 $prototypeV2=QDBusServiceWatcher::WatchMode watchMode() const
 
-$prototype=void setWatchMode(WatchMode mode)
-$method=|void|setWatchMode|QDBusServiceWatcher::WatchMode
+$prototypeV2=void setWatchMode( QDBusServiceWatcher::WatchMode mode )
 
 $prototypeV2=QDBusConnection connection() const
 
-$prototype=void setConnection(const QDBusConnection &connection)
-$method=|void|setConnection|const QDBusConnection &
+$prototypeV2=void setConnection( const QDBusConnection & connection )
 
 %%
 %% SIGNALS

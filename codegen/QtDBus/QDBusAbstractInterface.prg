@@ -41,8 +41,7 @@ $prototypeV2=QString interface() const
 
 $prototypeV2=QDBusError lastError() const
 
-$prototype=void setTimeout(int timeout)
-$method=|void|setTimeout|int
+$prototypeV2=void setTimeout( int timeout )
 
 $prototypeV2=int timeout() const
 
@@ -83,10 +82,8 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
 }
 $addMethod=callWithCallback
 
-$prototype=QDBusPendingCall asyncCall(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
-$method=|QDBusPendingCall|asyncCall|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
+$prototypeV2=QDBusPendingCall asyncCall( const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
 
-$prototype=QDBusPendingCall asyncCallWithArgumentList(const QString &method,const QList<QVariant> &args)
-$method=|QDBusPendingCall|asyncCallWithArgumentList|const QString &,const QList<QVariant> &
+$prototypeV2=QDBusPendingCall asyncCallWithArgumentList( const QString & method, const QList<QVariant> & args )
 
 #pragma ENDDUMP
