@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=float xRotation() const
 
-$prototype=void setXRotation(float rotation)
-$method=|void|setXRotation|float
+$prototypeV2=void setXRotation( float rotation )
 
 %%
 %% Q_PROPERTY(float yRotation READ yRotation WRITE setYRotation NOTIFY yRotationChanged)
@@ -51,8 +50,7 @@ $method=|void|setXRotation|float
 
 $prototypeV2=float yRotation() const
 
-$prototype=void setYRotation(float rotation)
-$method=|void|setYRotation|float
+$prototypeV2=void setYRotation( float rotation )
 
 %%
 %% Q_PROPERTY(float zoomLevel READ zoomLevel WRITE setZoomLevel NOTIFY zoomLevelChanged)
@@ -60,8 +58,7 @@ $method=|void|setYRotation|float
 
 $prototypeV2=float zoomLevel() const
 
-$prototype=void setZoomLevel(float zoomLevel)
-$method=|void|setZoomLevel|float
+$prototypeV2=void setZoomLevel( float zoomLevel )
 
 %%
 %% Q_PROPERTY(CameraPreset cameraPreset READ cameraPreset WRITE setCameraPreset NOTIFY cameraPresetChanged)
@@ -69,8 +66,7 @@ $method=|void|setZoomLevel|float
 
 $prototypeV2=Q3DCamera::CameraPreset cameraPreset() const
 
-$prototype=void setCameraPreset(CameraPreset preset)
-$method=|void|setCameraPreset|Q3DCamera::CameraPreset
+$prototypeV2=void setCameraPreset( Q3DCamera::CameraPreset preset )
 
 %%
 %% Q_PROPERTY(bool wrapXRotation READ wrapXRotation WRITE setWrapXRotation NOTIFY wrapXRotationChanged)
@@ -78,8 +74,7 @@ $method=|void|setCameraPreset|Q3DCamera::CameraPreset
 
 $prototypeV2=bool wrapXRotation() const
 
-$prototype=void setWrapXRotation(bool isEnabled)
-$method=|void|setWrapXRotation|bool
+$prototypeV2=void setWrapXRotation( bool isEnabled )
 
 %%
 %% Q_PROPERTY(bool wrapYRotation READ wrapYRotation WRITE setWrapYRotation NOTIFY wrapYRotationChanged)
@@ -87,8 +82,7 @@ $method=|void|setWrapXRotation|bool
 
 $prototypeV2=bool wrapYRotation() const
 
-$prototype=void setWrapYRotation(bool isEnabled)
-$method=|void|setWrapYRotation|bool
+$prototypeV2=void setWrapYRotation( bool isEnabled )
 
 %%
 %% Q_PROPERTY(QVector3D target READ target WRITE setTarget NOTIFY targetChanged REVISION 1)
@@ -96,8 +90,7 @@ $method=|void|setWrapYRotation|bool
 
 $prototypeV2=QVector3D target() const
 
-$prototype=void setTarget(const QVector3D &target)
-$method=|void|setTarget|const QVector3D &
+$prototypeV2=void setTarget( const QVector3D & target )
 
 %%
 %% Q_PROPERTY(float minZoomLevel READ minZoomLevel WRITE setMinZoomLevel NOTIFY minZoomLevelChanged REVISION 1)
@@ -105,8 +98,7 @@ $method=|void|setTarget|const QVector3D &
 
 $prototypeV2=float minZoomLevel() const
 
-$prototype=void setMinZoomLevel(float zoomLevel)
-$method=|void|setMinZoomLevel|float
+$prototypeV2=void setMinZoomLevel( float zoomLevel )
 
 %%
 %% Q_PROPERTY(float maxZoomLevel READ maxZoomLevel WRITE setMaxZoomLevel NOTIFY maxZoomLevelChanged REVISION 1)
@@ -114,18 +106,15 @@ $method=|void|setMinZoomLevel|float
 
 $prototypeV2=float maxZoomLevel() const
 
-$prototype=void setMaxZoomLevel(float zoomLevel)
-$method=|void|setMaxZoomLevel|float
+$prototypeV2=void setMaxZoomLevel( float zoomLevel )
 
 %%
 %%
 %%
 
-$prototype=virtual void copyValuesFrom(const Q3DObject &source)
-$virtualMethod=|void|copyValuesFrom|const Q3DObject &
+$prototypeV2=virtual void copyValuesFrom( const Q3DObject & source )
 
-$prototype=void setCameraPosition(float horizontal, float vertical, float zoom = 100.0f)
-$method=|void|setCameraPosition|float,float,float=100.0f
+$prototypeV2=void setCameraPosition( float horizontal, float vertical, float zoom = 100.0f )
 
 %%
 %% SIGNALS

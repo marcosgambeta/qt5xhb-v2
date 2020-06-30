@@ -68,8 +68,7 @@ $deleteMethod
 
 $prototypeV2=QSurfaceDataProxy * dataProxy() const
 
-$prototype=void setDataProxy(QSurfaceDataProxy *proxy)
-$method=|void|setDataProxy|QSurfaceDataProxy *
+$prototypeV2=void setDataProxy( QSurfaceDataProxy * proxy )
 
 %%
 %% Q_PROPERTY(QPoint selectedPoint READ selectedPoint WRITE setSelectedPoint NOTIFY selectedPointChanged)
@@ -77,8 +76,7 @@ $method=|void|setDataProxy|QSurfaceDataProxy *
 
 $prototypeV2=QPoint selectedPoint() const
 
-$prototype=void setSelectedPoint(const QPoint &position)
-$method=|void|setSelectedPoint|const QPoint &
+$prototypeV2=void setSelectedPoint( const QPoint & position )
 
 %%
 %% Q_PROPERTY(bool flatShadingEnabled READ isFlatShadingEnabled WRITE setFlatShadingEnabled NOTIFY flatShadingEnabledChanged)
@@ -86,8 +84,7 @@ $method=|void|setSelectedPoint|const QPoint &
 
 $prototypeV2=bool isFlatShadingEnabled() const
 
-$prototype=void setFlatShadingEnabled(bool enabled)
-$method=|void|setFlatShadingEnabled|bool
+$prototypeV2=void setFlatShadingEnabled( bool enabled )
 
 %%
 %% Q_PROPERTY(bool flatShadingSupported READ isFlatShadingSupported NOTIFY flatShadingSupportedChanged)
@@ -101,8 +98,7 @@ $prototypeV2=bool isFlatShadingSupported() const
 
 $prototypeV2=QSurface3DSeries::DrawFlags drawMode() const
 
-$prototype=void setDrawMode(DrawFlags mode)
-$method=|void|setDrawMode|QSurface3DSeries::DrawFlags
+$prototypeV2=void setDrawMode( QSurface3DSeries::DrawFlags mode )
 
 %%
 %% Q_PROPERTY(QImage texture READ texture WRITE setTexture NOTIFY textureChanged)
@@ -110,8 +106,7 @@ $method=|void|setDrawMode|QSurface3DSeries::DrawFlags
 
 $prototypeV2=QImage texture() const
 
-$prototype=void setTexture(const QImage &texture)
-$method=|void|setTexture|const QImage &
+$prototypeV2=void setTexture( const QImage & texture )
 
 %%
 %% Q_PROPERTY(QString textureFile READ textureFile WRITE setTextureFile NOTIFY textureFileChanged)
@@ -119,8 +114,7 @@ $method=|void|setTexture|const QImage &
 
 $prototypeV2=QString textureFile() const
 
-$prototype=void setTextureFile(const QString &filename)
-$method=|void|setTextureFile|const QString &
+$prototypeV2=void setTextureFile( const QString & filename )
 
 %%
 %%

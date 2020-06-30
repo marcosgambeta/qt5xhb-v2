@@ -50,15 +50,13 @@ $prototypeV2=Q3DScene * parentScene()
 
 $prototypeV2=QVector3D position() const
 
-$prototype=void setPosition(const QVector3D &position)
-$method=|void|setPosition|const QVector3D &
+$prototypeV2=void setPosition( const QVector3D & position )
 
 %%
 %%
 %%
 
-$prototype=virtual void copyValuesFrom(const Q3DObject &source)
-$virtualMethod=|void|copyValuesFrom|const Q3DObject &
+$prototypeV2=virtual void copyValuesFrom( const Q3DObject & source )
 
 $prototype=void setDirty(bool dirty) [protected]
 

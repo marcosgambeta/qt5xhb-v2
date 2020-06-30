@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=QValue3DAxis * axisX() const
 
-$prototype=void setAxisX(QValue3DAxis *axis)
-$method=|void|setAxisX|QValue3DAxis *
+$prototypeV2=void setAxisX( QValue3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QValue3DAxis *axisY READ axisY WRITE setAxisY NOTIFY axisYChanged)
@@ -51,8 +50,7 @@ $method=|void|setAxisX|QValue3DAxis *
 
 $prototypeV2=QValue3DAxis * axisY() const
 
-$prototype=void setAxisY(QValue3DAxis *axis)
-$method=|void|setAxisY|QValue3DAxis *
+$prototypeV2=void setAxisY( QValue3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QValue3DAxis *axisZ READ axisZ WRITE setAxisZ NOTIFY axisZChanged)
@@ -60,8 +58,7 @@ $method=|void|setAxisY|QValue3DAxis *
 
 $prototypeV2=QValue3DAxis * axisZ() const
 
-$prototype=void setAxisZ(QValue3DAxis *axis)
-$method=|void|setAxisZ|QValue3DAxis *
+$prototypeV2=void setAxisZ( QValue3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QSurface3DSeries *selectedSeries READ selectedSeries NOTIFY selectedSeriesChanged)
@@ -75,30 +72,23 @@ $prototypeV2=QSurface3DSeries * selectedSeries() const
 
 $prototypeV2=bool flipHorizontalGrid() const
 
-$prototype=void setFlipHorizontalGrid(bool flip)
-$method=|void|setFlipHorizontalGrid|bool
+$prototypeV2=void setFlipHorizontalGrid( bool flip )
 
 %%
 %%
 %%
 
-$prototype=void addSeries(QSurface3DSeries *series)
-$method=|void|addSeries|QSurface3DSeries *
+$prototypeV2=void addSeries( QSurface3DSeries * series )
 
-$prototype=void removeSeries(QSurface3DSeries *series)
-$method=|void|removeSeries|QSurface3DSeries *
+$prototypeV2=void removeSeries( QSurface3DSeries * series )
 
-$prototype=QList<QSurface3DSeries *> seriesList() const
-$method=|QList<QSurface3DSeries *>|seriesList|
+$prototypeV2=QList<QSurface3DSeries *> seriesList() const
 
-$prototype=void addAxis(QValue3DAxis *axis)
-$method=|void|addAxis|QValue3DAxis *
+$prototypeV2=void addAxis( QValue3DAxis * axis )
 
-$prototype=void releaseAxis(QValue3DAxis *axis)
-$method=|void|releaseAxis|QValue3DAxis *
+$prototypeV2=void releaseAxis( QValue3DAxis * axis )
 
-$prototype=QList<QValue3DAxis *> axes() const
-$method=|QList<QValue3DAxis *>|axes|
+$prototypeV2=QList<QValue3DAxis *> axes() const
 
 %%
 %% SIGNALS

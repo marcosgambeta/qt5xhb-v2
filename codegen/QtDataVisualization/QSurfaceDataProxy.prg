@@ -149,8 +149,7 @@ $prototype=void insertRow(int rowIndex, QSurfaceDataRow *row)
 $prototype=void insertRows(int rowIndex, const QSurfaceDataArray &rows)
 %% TODO: implementar
 
-$prototype=void removeRows(int rowIndex, int removeCount)
-$method=|void|removeRows|int,int
+$prototypeV2=void removeRows( int rowIndex, int removeCount )
 
 %%
 %% SIGNALS

@@ -66,8 +66,7 @@ $deleteMethod
 
 $prototypeV2=QBarDataProxy * dataProxy() const
 
-$prototype=void setDataProxy(QBarDataProxy *proxy)
-$method=|void|setDataProxy|QBarDataProxy *
+$prototypeV2=void setDataProxy( QBarDataProxy * proxy )
 
 %%
 %% Q_PROPERTY(QPoint selectedBar READ selectedBar WRITE setSelectedBar NOTIFY selectedBarChanged)
@@ -75,8 +74,7 @@ $method=|void|setDataProxy|QBarDataProxy *
 
 $prototypeV2=QPoint selectedBar() const
 
-$prototype=void setSelectedBar(const QPoint &position)
-$method=|void|setSelectedBar|const QPoint &
+$prototypeV2=void setSelectedBar( const QPoint & position )
 
 %%
 %% Q_PROPERTY(float meshAngle READ meshAngle WRITE setMeshAngle NOTIFY meshAngleChanged)
@@ -84,8 +82,7 @@ $method=|void|setSelectedBar|const QPoint &
 
 $prototypeV2=float meshAngle() const
 
-$prototype=void setMeshAngle(float angle)
-$method=|void|setMeshAngle|float
+$prototypeV2=void setMeshAngle( float angle )
 
 %%
 %%

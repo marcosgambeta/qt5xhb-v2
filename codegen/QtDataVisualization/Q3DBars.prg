@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=bool isMultiSeriesUniform() const
 
-$prototype=void setMultiSeriesUniform(bool uniform)
-$method=|void|setMultiSeriesUniform|bool
+$prototypeV2=void setMultiSeriesUniform( bool uniform )
 
 %%
 %% Q_PROPERTY(float barThickness READ barThickness WRITE setBarThickness NOTIFY barThicknessChanged)
@@ -51,8 +50,7 @@ $method=|void|setMultiSeriesUniform|bool
 
 $prototypeV2=float barThickness() const
 
-$prototype=void setBarThickness(float thicknessRatio)
-$method=|void|setBarThickness|float
+$prototypeV2=void setBarThickness( float thicknessRatio )
 
 %%
 %% Q_PROPERTY(QSizeF barSpacing READ barSpacing WRITE setBarSpacing NOTIFY barSpacingChanged)
@@ -60,8 +58,7 @@ $method=|void|setBarThickness|float
 
 $prototypeV2=QSizeF barSpacing() const
 
-$prototype=void setBarSpacing(const QSizeF &spacing)
-$method=|void|setBarSpacing|const QSizeF &
+$prototypeV2=void setBarSpacing( const QSizeF & spacing )
 
 %%
 %% Q_PROPERTY(bool barSpacingRelative READ isBarSpacingRelative WRITE setBarSpacingRelative NOTIFY barSpacingRelativeChanged)
@@ -69,8 +66,7 @@ $method=|void|setBarSpacing|const QSizeF &
 
 $prototypeV2=bool isBarSpacingRelative() const
 
-$prototype=void setBarSpacingRelative(bool relative)
-$method=|void|setBarSpacingRelative|bool
+$prototypeV2=void setBarSpacingRelative( bool relative )
 
 %%
 %% Q_PROPERTY(QCategory3DAxis *rowAxis READ rowAxis WRITE setRowAxis NOTIFY rowAxisChanged)
@@ -78,8 +74,7 @@ $method=|void|setBarSpacingRelative|bool
 
 $prototypeV2=QCategory3DAxis * rowAxis() const
 
-$prototype=void setRowAxis(QCategory3DAxis *axis)
-$method=|void|setRowAxis|QCategory3DAxis *
+$prototypeV2=void setRowAxis( QCategory3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QCategory3DAxis *columnAxis READ columnAxis WRITE setColumnAxis NOTIFY columnAxisChanged)
@@ -87,8 +82,7 @@ $method=|void|setRowAxis|QCategory3DAxis *
 
 $prototypeV2=QCategory3DAxis * columnAxis() const
 
-$prototype=void setColumnAxis(QCategory3DAxis *axis)
-$method=|void|setColumnAxis|QCategory3DAxis *
+$prototypeV2=void setColumnAxis( QCategory3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QValue3DAxis *valueAxis READ valueAxis WRITE setValueAxis NOTIFY valueAxisChanged)
@@ -96,8 +90,7 @@ $method=|void|setColumnAxis|QCategory3DAxis *
 
 $prototypeV2=QValue3DAxis * valueAxis() const
 
-$prototype=void setValueAxis(QValue3DAxis *axis)
-$method=|void|setValueAxis|QValue3DAxis *
+$prototypeV2=void setValueAxis( QValue3DAxis * axis )
 
 %%
 %% Q_PROPERTY(QBar3DSeries *primarySeries READ primarySeries WRITE setPrimarySeries NOTIFY primarySeriesChanged)
@@ -105,8 +98,7 @@ $method=|void|setValueAxis|QValue3DAxis *
 
 $prototypeV2=QBar3DSeries * primarySeries() const
 
-$prototype=void setPrimarySeries(QBar3DSeries *series)
-$method=|void|setPrimarySeries|QBar3DSeries *
+$prototypeV2=void setPrimarySeries( QBar3DSeries * series )
 
 %%
 %% Q_PROPERTY(QBar3DSeries *selectedSeries READ selectedSeries NOTIFY selectedSeriesChanged)
@@ -120,33 +112,25 @@ $prototypeV2=QBar3DSeries * selectedSeries() const
 
 $prototypeV2=float floorLevel() const
 
-$prototype=void setFloorLevel(float level)
-$method=|void|setFloorLevel|float
+$prototypeV2=void setFloorLevel( float level )
 
 %%
 %%
 %%
 
-$prototype=void addSeries(QBar3DSeries *series)
-$method=|void|addSeries|QBar3DSeries *
+$prototypeV2=void addSeries( QBar3DSeries * series )
 
-$prototype=void removeSeries(QBar3DSeries *series)
-$method=|void|removeSeries|QBar3DSeries *
+$prototypeV2=void removeSeries( QBar3DSeries * series )
 
-$prototype=void insertSeries(int index, QBar3DSeries *series)
-$method=|void|insertSeries|int,QBar3DSeries *
+$prototypeV2=void insertSeries( int index, QBar3DSeries * series )
 
-$prototype=QList<QBar3DSeries *> seriesList() const
-$method=|QList<QBar3DSeries *>|seriesList|
+$prototypeV2=QList<QBar3DSeries *> seriesList() const
 
-$prototype=void addAxis(QAbstract3DAxis *axis)
-$method=|void|addAxis|QAbstract3DAxis *
+$prototypeV2=void addAxis( QAbstract3DAxis * axis )
 
-$prototype=void releaseAxis(QAbstract3DAxis *axis)
-$method=|void|releaseAxis|QAbstract3DAxis *
+$prototypeV2=void releaseAxis( QAbstract3DAxis * axis )
 
-$prototype=QList<QAbstract3DAxis *> axes() const
-$method=|QList<QAbstract3DAxis *>|axes|
+$prototypeV2=QList<QAbstract3DAxis *> axes() const
 
 %%
 %% SIGNALS

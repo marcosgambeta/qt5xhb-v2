@@ -44,8 +44,7 @@ $deleteMethod
 
 $prototypeV2=qreal base() const
 
-$prototype=void setBase(qreal base)
-$method=|void|setBase|qreal
+$prototypeV2=void setBase( qreal base )
 
 %%
 %% Q_PROPERTY(bool autoSubGrid READ autoSubGrid WRITE setAutoSubGrid NOTIFY autoSubGridChanged)
@@ -53,8 +52,7 @@ $method=|void|setBase|qreal
 
 $prototypeV2=bool autoSubGrid() const
 
-$prototype=void setAutoSubGrid(bool enabled)
-$method=|void|setAutoSubGrid|bool
+$prototypeV2=void setAutoSubGrid( bool enabled )
 
 %%
 %% Q_PROPERTY(bool showEdgeLabels READ showEdgeLabels WRITE setShowEdgeLabels NOTIFY showEdgeLabelsChanged)
@@ -62,8 +60,7 @@ $method=|void|setAutoSubGrid|bool
 
 $prototypeV2=bool showEdgeLabels() const
 
-$prototype=void setShowEdgeLabels(bool enabled)
-$method=|void|setShowEdgeLabels|bool
+$prototypeV2=void setShowEdgeLabels( bool enabled )
 
 %%
 %%

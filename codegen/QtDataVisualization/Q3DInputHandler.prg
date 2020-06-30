@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=bool isRotationEnabled() const
 
-$prototype=void setRotationEnabled(bool enable)
-$method=|void|setRotationEnabled|bool
+$prototypeV2=void setRotationEnabled( bool enable )
 
 %%
 %% Q_PROPERTY(bool zoomEnabled READ isZoomEnabled WRITE setZoomEnabled NOTIFY zoomEnabledChanged)
@@ -51,8 +50,7 @@ $method=|void|setRotationEnabled|bool
 
 $prototypeV2=bool isZoomEnabled() const
 
-$prototype=void setZoomEnabled(bool enable)
-$method=|void|setZoomEnabled|bool
+$prototypeV2=void setZoomEnabled( bool enable )
 
 %%
 %% Q_PROPERTY(bool selectionEnabled READ isSelectionEnabled WRITE setSelectionEnabled NOTIFY selectionEnabledChanged)
@@ -60,8 +58,7 @@ $method=|void|setZoomEnabled|bool
 
 $prototypeV2=bool isSelectionEnabled() const
 
-$prototype=void setSelectionEnabled(bool enable)
-$method=|void|setSelectionEnabled|bool
+$prototypeV2=void setSelectionEnabled( bool enable )
 
 %%
 %% Q_PROPERTY(bool zoomAtTargetEnabled READ isZoomAtTargetEnabled WRITE setZoomAtTargetEnabled NOTIFY zoomAtTargetEnabledChanged)
@@ -69,8 +66,7 @@ $method=|void|setSelectionEnabled|bool
 
 $prototypeV2=bool isZoomAtTargetEnabled() const
 
-$prototype=void setZoomAtTargetEnabled(bool enable)
-$method=|void|setZoomAtTargetEnabled|bool
+$prototypeV2=void setZoomAtTargetEnabled( bool enable )
 
 %%
 %%

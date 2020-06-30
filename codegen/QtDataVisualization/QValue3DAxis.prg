@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=int segmentCount() const
 
-$prototype=void setSegmentCount(int count)
-$method=|void|setSegmentCount|int
+$prototypeV2=void setSegmentCount( int count )
 
 %%
 %% Q_PROPERTY(int subSegmentCount READ subSegmentCount WRITE setSubSegmentCount NOTIFY subSegmentCountChanged)
@@ -51,8 +50,7 @@ $method=|void|setSegmentCount|int
 
 $prototypeV2=int subSegmentCount() const
 
-$prototype=void setSubSegmentCount(int count)
-$method=|void|setSubSegmentCount|int
+$prototypeV2=void setSubSegmentCount( int count )
 
 %%
 %% Q_PROPERTY(QString labelFormat READ labelFormat WRITE setLabelFormat NOTIFY labelFormatChanged)
@@ -60,8 +58,7 @@ $method=|void|setSubSegmentCount|int
 
 $prototypeV2=QString labelFormat() const
 
-$prototype=void setLabelFormat(const QString &format)
-$method=|void|setLabelFormat|const QString &
+$prototypeV2=void setLabelFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(QValue3DAxisFormatter* formatter READ formatter WRITE setFormatter NOTIFY formatterChanged REVISION 1)
@@ -69,8 +66,7 @@ $method=|void|setLabelFormat|const QString &
 
 $prototypeV2=QValue3DAxisFormatter * formatter() const
 
-$prototype=void setFormatter(QValue3DAxisFormatter *formatter)
-$method=|void|setFormatter|QValue3DAxisFormatter *
+$prototypeV2=void setFormatter( QValue3DAxisFormatter * formatter )
 
 %%
 %% Q_PROPERTY(bool reversed READ reversed WRITE setReversed NOTIFY reversedChanged REVISION 1)
@@ -78,8 +74,7 @@ $method=|void|setFormatter|QValue3DAxisFormatter *
 
 $prototypeV2=bool reversed() const
 
-$prototype=void setReversed(bool enable)
-$method=|void|setReversed|bool
+$prototypeV2=void setReversed( bool enable )
 
 %%
 %% SIGNALS

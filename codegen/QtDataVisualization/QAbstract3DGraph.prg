@@ -45,8 +45,7 @@ $deleteMethod
 
 $prototypeV2=QAbstract3DInputHandler * activeInputHandler() const
 
-$prototype=void setActiveInputHandler(QAbstract3DInputHandler *inputHandler)
-$method=|void|setActiveInputHandler|QAbstract3DInputHandler *
+$prototypeV2=void setActiveInputHandler( QAbstract3DInputHandler * inputHandler )
 
 %%
 %% Q_PROPERTY(Q3DTheme* activeTheme READ activeTheme WRITE setActiveTheme NOTIFY activeThemeChanged)
@@ -54,8 +53,7 @@ $method=|void|setActiveInputHandler|QAbstract3DInputHandler *
 
 $prototypeV2=Q3DTheme * activeTheme() const
 
-$prototype=void setActiveTheme(Q3DTheme *theme)
-$method=|void|setActiveTheme|Q3DTheme *
+$prototypeV2=void setActiveTheme( Q3DTheme * theme )
 
 %%
 %% Q_PROPERTY(SelectionFlags selectionMode READ selectionMode WRITE setSelectionMode NOTIFY selectionModeChanged)
@@ -63,8 +61,7 @@ $method=|void|setActiveTheme|Q3DTheme *
 
 $prototypeV2=QAbstract3DGraph::SelectionFlags selectionMode() const
 
-$prototype=void setSelectionMode(SelectionFlags mode)
-$method=|void|setSelectionMode|QAbstract3DGraph::SelectionFlags
+$prototypeV2=void setSelectionMode( QAbstract3DGraph::SelectionFlags mode )
 
 %%
 %% Q_PROPERTY(ShadowQuality shadowQuality READ shadowQuality WRITE setShadowQuality NOTIFY shadowQualityChanged)
@@ -72,8 +69,7 @@ $method=|void|setSelectionMode|QAbstract3DGraph::SelectionFlags
 
 $prototypeV2=QAbstract3DGraph::ShadowQuality shadowQuality() const
 
-$prototype=void setShadowQuality(ShadowQuality quality)
-$method=|void|setShadowQuality|QAbstract3DGraph::ShadowQuality
+$prototypeV2=void setShadowQuality( QAbstract3DGraph::ShadowQuality quality )
 
 %%
 %% Q_PROPERTY(Q3DScene* scene READ scene)
@@ -87,8 +83,7 @@ $prototypeV2=Q3DScene * scene() const
 
 $prototypeV2=bool measureFps() const
 
-$prototype=void setMeasureFps(bool enable)
-$method=|void|setMeasureFps|bool
+$prototypeV2=void setMeasureFps( bool enable )
 
 %%
 %% Q_PROPERTY(qreal currentFps READ currentFps NOTIFY currentFpsChanged)
@@ -102,8 +97,7 @@ $prototypeV2=qreal currentFps() const
 
 $prototypeV2=bool isOrthoProjection() const
 
-$prototype=void setOrthoProjection(bool enable)
-$method=|void|setOrthoProjection|bool
+$prototypeV2=void setOrthoProjection( bool enable )
 
 %%
 %% Q_PROPERTY(ElementType selectedElement READ selectedElement NOTIFY selectedElementChanged)
@@ -117,8 +111,7 @@ $prototypeV2=QAbstract3DGraph::ElementType selectedElement() const
 
 $prototypeV2=qreal aspectRatio() const
 
-$prototype=void setAspectRatio(qreal ratio)
-$method=|void|setAspectRatio|qreal
+$prototypeV2=void setAspectRatio( qreal ratio )
 
 %%
 %% Q_PROPERTY(OptimizationHints optimizationHints READ optimizationHints WRITE setOptimizationHints NOTIFY optimizationHintsChanged)
@@ -126,8 +119,7 @@ $method=|void|setAspectRatio|qreal
 
 $prototypeV2=QAbstract3DGraph::OptimizationHints optimizationHints() const
 
-$prototype=void setOptimizationHints(OptimizationHints hints)
-$method=|void|setOptimizationHints|QAbstract3DGraph::OptimizationHints
+$prototypeV2=void setOptimizationHints( QAbstract3DGraph::OptimizationHints hints )
 
 %%
 %% Q_PROPERTY(bool polar READ isPolar WRITE setPolar NOTIFY polarChanged)
@@ -135,8 +127,7 @@ $method=|void|setOptimizationHints|QAbstract3DGraph::OptimizationHints
 
 $prototypeV2=bool isPolar() const
 
-$prototype=void setPolar(bool enable)
-$method=|void|setPolar|bool
+$prototypeV2=void setPolar( bool enable )
 
 %%
 %% Q_PROPERTY(float radialLabelOffset READ radialLabelOffset WRITE setRadialLabelOffset NOTIFY radialLabelOffsetChanged)
@@ -144,8 +135,7 @@ $method=|void|setPolar|bool
 
 $prototypeV2=float radialLabelOffset() const
 
-$prototype=void setRadialLabelOffset(float offset)
-$method=|void|setRadialLabelOffset|float
+$prototypeV2=void setRadialLabelOffset( float offset )
 
 %%
 %% Q_PROPERTY(qreal horizontalAspectRatio READ horizontalAspectRatio WRITE setHorizontalAspectRatio NOTIFY horizontalAspectRatioChanged)
@@ -153,8 +143,7 @@ $method=|void|setRadialLabelOffset|float
 
 $prototypeV2=qreal horizontalAspectRatio() const
 
-$prototype=void setHorizontalAspectRatio(qreal ratio)
-$method=|void|setHorizontalAspectRatio|qreal
+$prototypeV2=void setHorizontalAspectRatio( qreal ratio )
 
 %%
 %% Q_PROPERTY(bool reflection READ isReflection WRITE setReflection NOTIFY reflectionChanged)
@@ -162,8 +151,7 @@ $method=|void|setHorizontalAspectRatio|qreal
 
 $prototypeV2=bool isReflection() const
 
-$prototype=void setReflection(bool enable)
-$method=|void|setReflection|bool
+$prototypeV2=void setReflection( bool enable )
 
 %%
 %% Q_PROPERTY(qreal reflectivity READ reflectivity WRITE setReflectivity NOTIFY reflectivityChanged)
@@ -171,8 +159,7 @@ $method=|void|setReflection|bool
 
 $prototypeV2=qreal reflectivity() const
 
-$prototype=void setReflectivity(qreal reflectivity)
-$method=|void|setReflectivity|qreal
+$prototypeV2=void setReflectivity( qreal reflectivity )
 
 %%
 %% Q_PROPERTY(QLocale locale READ locale WRITE setLocale NOTIFY localeChanged)
@@ -180,8 +167,7 @@ $method=|void|setReflectivity|qreal
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 %%
 %% Q_PROPERTY(QVector3D queriedGraphPosition READ queriedGraphPosition NOTIFY queriedGraphPositionChanged)
@@ -195,51 +181,39 @@ $prototypeV2=QVector3D queriedGraphPosition() const
 
 $prototypeV2=qreal margin() const
 
-$prototype=void setMargin(qreal margin)
-$method=|void|setMargin|qreal
+$prototypeV2=void setMargin( qreal margin )
 
 %%
 %%
 %%
 
-$prototype=void addInputHandler(QAbstract3DInputHandler *inputHandler)
-$method=|void|addInputHandler|QAbstract3DInputHandler *
+$prototypeV2=void addInputHandler( QAbstract3DInputHandler * inputHandler )
 
-$prototype=void releaseInputHandler(QAbstract3DInputHandler *inputHandler)
-$method=|void|releaseInputHandler|QAbstract3DInputHandler *
+$prototypeV2=void releaseInputHandler( QAbstract3DInputHandler * inputHandler )
 
-$prototype=QList<QAbstract3DInputHandler *> inputHandlers() const
-$method=|QList<QAbstract3DInputHandler *>|inputHandlers|
+$prototypeV2=QList<QAbstract3DInputHandler *> inputHandlers() const
 
-$prototype=void addTheme(Q3DTheme *theme)
-$method=|void|addTheme|Q3DTheme *
+$prototypeV2=void addTheme( Q3DTheme * theme )
 
-$prototype=void releaseTheme(Q3DTheme *theme)
-$method=|void|releaseTheme|Q3DTheme *
+$prototypeV2=void releaseTheme( Q3DTheme * theme )
 
-$prototype=QList<Q3DTheme *> themes() const
-$method=|QList<Q3DTheme *>|themes|
+$prototypeV2=QList<Q3DTheme *> themes() const
 
 $prototypeV2=virtual bool shadowsSupported() const
 
 $prototypeV2=void clearSelection()
 
-$prototype=int addCustomItem(QCustom3DItem *item)
-$method=|int|addCustomItem|QCustom3DItem *
+$prototypeV2=int addCustomItem( QCustom3DItem * item )
 
 $prototypeV2=void removeCustomItems()
 
-$prototype=void removeCustomItem(QCustom3DItem *item)
-$method=|void|removeCustomItem|QCustom3DItem *
+$prototypeV2=void removeCustomItem( QCustom3DItem * item )
 
-$prototype=void removeCustomItemAt(const QVector3D &position)
-$method=|void|removeCustomItemAt|const QVector3D &
+$prototypeV2=void removeCustomItemAt( const QVector3D & position )
 
-$prototype=void releaseCustomItem(QCustom3DItem *item)
-$method=|void|releaseCustomItem|QCustom3DItem *
+$prototypeV2=void releaseCustomItem( QCustom3DItem * item )
 
-$prototype=QList<QCustom3DItem *> customItems() const
-$method=|QList<QCustom3DItem *>|customItems|
+$prototypeV2=QList<QCustom3DItem *> customItems() const
 
 $prototypeV2=QAbstract3DAxis * selectedAxis() const
 
@@ -249,8 +223,7 @@ $prototypeV2=int selectedCustomItemIndex() const
 
 $prototypeV2=QCustom3DItem * selectedCustomItem() const
 
-$prototype=QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
-$method=|QImage|renderToImage|int=0,const QSize &=QSize()
+$prototypeV2=QImage renderToImage( int msaaSamples = 0, const QSize & imageSize = QSize() )
 
 $prototypeV2=bool hasContext() const
 

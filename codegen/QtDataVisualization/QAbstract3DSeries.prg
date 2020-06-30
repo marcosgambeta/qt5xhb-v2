@@ -47,8 +47,7 @@ $prototypeV2=QAbstract3DSeries::SeriesType type() const
 
 $prototypeV2=QString itemLabelFormat() const
 
-$prototype=void setItemLabelFormat(const QString &format)
-$method=|void|setItemLabelFormat|const QString &
+$prototypeV2=void setItemLabelFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibilityChanged)
@@ -56,8 +55,7 @@ $method=|void|setItemLabelFormat|const QString &
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 %%
 %% Q_PROPERTY(Mesh mesh READ mesh WRITE setMesh NOTIFY meshChanged)
@@ -65,8 +63,7 @@ $method=|void|setVisible|bool
 
 $prototypeV2=QAbstract3DSeries::Mesh mesh() const
 
-$prototype=void setMesh(Mesh mesh)
-$method=|void|setMesh|QAbstract3DSeries::Mesh
+$prototypeV2=void setMesh( QAbstract3DSeries::Mesh mesh )
 
 %%
 %% Q_PROPERTY(bool meshSmooth READ isMeshSmooth WRITE setMeshSmooth NOTIFY meshSmoothChanged)
@@ -74,8 +71,7 @@ $method=|void|setMesh|QAbstract3DSeries::Mesh
 
 $prototypeV2=bool isMeshSmooth() const
 
-$prototype=void setMeshSmooth(bool enable)
-$method=|void|setMeshSmooth|bool
+$prototypeV2=void setMeshSmooth( bool enable )
 
 %%
 %% Q_PROPERTY(QQuaternion meshRotation READ meshRotation WRITE setMeshRotation NOTIFY meshRotationChanged)
@@ -83,8 +79,7 @@ $method=|void|setMeshSmooth|bool
 
 $prototypeV2=QQuaternion meshRotation() const
 
-$prototype=void setMeshRotation(const QQuaternion &rotation)
-$method=|void|setMeshRotation|const QQuaternion &
+$prototypeV2=void setMeshRotation( const QQuaternion & rotation )
 
 %%
 %% Q_PROPERTY(QString userDefinedMesh READ userDefinedMesh WRITE setUserDefinedMesh NOTIFY userDefinedMeshChanged)
@@ -92,8 +87,7 @@ $method=|void|setMeshRotation|const QQuaternion &
 
 $prototypeV2=QString userDefinedMesh() const
 
-$prototype=void setUserDefinedMesh(const QString &fileName)
-$method=|void|setUserDefinedMesh|const QString &
+$prototypeV2=void setUserDefinedMesh( const QString & fileName )
 
 %%
 %% Q_PROPERTY(QtDataVisualization::Q3DTheme::ColorStyle colorStyle READ colorStyle WRITE setColorStyle NOTIFY colorStyleChanged)
@@ -101,8 +95,7 @@ $method=|void|setUserDefinedMesh|const QString &
 
 $prototypeV2=Q3DTheme::ColorStyle colorStyle() const
 
-$prototype=void setColorStyle(Q3DTheme::ColorStyle style)
-$method=|void|setColorStyle|Q3DTheme::ColorStyle
+$prototypeV2=void setColorStyle( Q3DTheme::ColorStyle style )
 
 %%
 %% Q_PROPERTY(QColor baseColor READ baseColor WRITE setBaseColor NOTIFY baseColorChanged)
@@ -110,8 +103,7 @@ $method=|void|setColorStyle|Q3DTheme::ColorStyle
 
 $prototypeV2=QColor baseColor() const
 
-$prototype=void setBaseColor(const QColor &color)
-$method=|void|setBaseColor|const QColor &
+$prototypeV2=void setBaseColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QLinearGradient baseGradient READ baseGradient WRITE setBaseGradient NOTIFY baseGradientChanged)
@@ -119,8 +111,7 @@ $method=|void|setBaseColor|const QColor &
 
 $prototypeV2=QLinearGradient baseGradient() const
 
-$prototype=void setBaseGradient(const QLinearGradient &gradient)
-$method=|void|setBaseGradient|const QLinearGradient &
+$prototypeV2=void setBaseGradient( const QLinearGradient & gradient )
 
 %%
 %% Q_PROPERTY(QColor singleHighlightColor READ singleHighlightColor WRITE setSingleHighlightColor NOTIFY singleHighlightColorChanged)
@@ -128,8 +119,7 @@ $method=|void|setBaseGradient|const QLinearGradient &
 
 $prototypeV2=QColor singleHighlightColor() const
 
-$prototype=void setSingleHighlightColor(const QColor &color)
-$method=|void|setSingleHighlightColor|const QColor &
+$prototypeV2=void setSingleHighlightColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QLinearGradient singleHighlightGradient READ singleHighlightGradient WRITE setSingleHighlightGradient NOTIFY singleHighlightGradientChanged)
@@ -137,8 +127,7 @@ $method=|void|setSingleHighlightColor|const QColor &
 
 $prototypeV2=QLinearGradient singleHighlightGradient() const
 
-$prototype=void setSingleHighlightGradient(const QLinearGradient &gradient)
-$method=|void|setSingleHighlightGradient|const QLinearGradient &
+$prototypeV2=void setSingleHighlightGradient( const QLinearGradient & gradient )
 
 %%
 %% Q_PROPERTY(QColor multiHighlightColor READ multiHighlightColor WRITE setMultiHighlightColor NOTIFY multiHighlightColorChanged)
@@ -146,8 +135,7 @@ $method=|void|setSingleHighlightGradient|const QLinearGradient &
 
 $prototypeV2=QColor multiHighlightColor() const
 
-$prototype=void setMultiHighlightColor(const QColor &color)
-$method=|void|setMultiHighlightColor|const QColor &
+$prototypeV2=void setMultiHighlightColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QLinearGradient multiHighlightGradient READ multiHighlightGradient WRITE setMultiHighlightGradient NOTIFY multiHighlightGradientChanged)
@@ -155,8 +143,7 @@ $method=|void|setMultiHighlightColor|const QColor &
 
 $prototypeV2=QLinearGradient multiHighlightGradient() const
 
-$prototype=void setMultiHighlightGradient(const QLinearGradient &gradient)
-$method=|void|setMultiHighlightGradient|const QLinearGradient &
+$prototypeV2=void setMultiHighlightGradient( const QLinearGradient & gradient )
 
 %%
 %% Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
@@ -164,8 +151,7 @@ $method=|void|setMultiHighlightGradient|const QLinearGradient &
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 %%
 %% Q_PROPERTY(QString itemLabel READ itemLabel NOTIFY itemLabelChanged REVISION 1)
@@ -179,15 +165,13 @@ $prototypeV2=QString itemLabel() const
 
 $prototypeV2=bool isItemLabelVisible() const
 
-$prototype=void setItemLabelVisible(bool visible)
-$method=|void|setItemLabelVisible|bool
+$prototypeV2=void setItemLabelVisible( bool visible )
 
 %%
 %%
 %%
 
-$prototype=Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
-$method=|void|setMeshAxisAndAngle|const QVector3D &,float
+$prototypeV2=Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
 
 %%
 %% SIGNALS

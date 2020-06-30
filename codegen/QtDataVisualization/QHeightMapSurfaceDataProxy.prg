@@ -76,8 +76,7 @@ $deleteMethod
 
 $prototypeV2=QImage heightMap() const
 
-$prototype=void setHeightMap(const QImage &image)
-$method=|void|setHeightMap|const QImage &
+$prototypeV2=void setHeightMap( const QImage & image )
 
 %%
 %% Q_PROPERTY(QString heightMapFile READ heightMapFile WRITE setHeightMapFile NOTIFY heightMapFileChanged)
@@ -85,8 +84,7 @@ $method=|void|setHeightMap|const QImage &
 
 $prototypeV2=QString heightMapFile() const
 
-$prototype=void setHeightMapFile(const QString &filename)
-$method=|void|setHeightMapFile|const QString &
+$prototypeV2=void setHeightMapFile( const QString & filename )
 
 %%
 %% Q_PROPERTY(float minXValue READ minXValue WRITE setMinXValue NOTIFY minXValueChanged)
@@ -94,8 +92,7 @@ $method=|void|setHeightMapFile|const QString &
 
 $prototypeV2=float minXValue() const
 
-$prototype=void setMinXValue(float min)
-$method=|void|setMinXValue|float
+$prototypeV2=void setMinXValue( float min )
 
 %%
 %% Q_PROPERTY(float maxXValue READ maxXValue WRITE setMaxXValue NOTIFY maxXValueChanged)
@@ -103,8 +100,7 @@ $method=|void|setMinXValue|float
 
 $prototypeV2=float maxXValue() const
 
-$prototype=void setMaxXValue(float max)
-$method=|void|setMaxXValue|float
+$prototypeV2=void setMaxXValue( float max )
 
 %%
 %% Q_PROPERTY(float minZValue READ minZValue WRITE setMinZValue NOTIFY minZValueChanged)
@@ -112,8 +108,7 @@ $method=|void|setMaxXValue|float
 
 $prototypeV2=float minZValue() const
 
-$prototype=void setMinZValue(float min)
-$method=|void|setMinZValue|float
+$prototypeV2=void setMinZValue( float min )
 
 %%
 %% Q_PROPERTY(float maxZValue READ maxZValue WRITE setMaxZValue NOTIFY maxZValueChanged)
@@ -121,15 +116,13 @@ $method=|void|setMinZValue|float
 
 $prototypeV2=float maxZValue() const
 
-$prototype=void setMaxZValue(float max)
-$method=|void|setMaxZValue|float
+$prototypeV2=void setMaxZValue( float max )
 
 %%
 %%
 %%
 
-$prototype=void setValueRanges(float minX, float maxX, float minZ, float maxZ)
-$method=|void|setValueRanges|float,float,float,float
+$prototypeV2=void setValueRanges( float minX, float maxX, float minZ, float maxZ )
 
 %%
 %% SIGNALS

@@ -66,19 +66,15 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 $prototype=~QSurfaceDataItem()
 $deleteMethod
 
-$prototype=void setPosition(const QVector3D &pos)
-$method=|void|setPosition|const QVector3D &
+$prototypeV2=void setPosition( const QVector3D & pos )
 
 $prototypeV2=QVector3D position() const
 
-$prototype=void setX(float value)
-$method=|void|setX|float
+$prototypeV2=void setX( float value )
 
-$prototype=void setY(float value)
-$method=|void|setY|float
+$prototypeV2=void setY( float value )
 
-$prototype=void setZ(float value)
-$method=|void|setZ|float
+$prototypeV2=void setZ( float value )
 
 $prototypeV2=float x() const
 

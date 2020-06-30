@@ -68,8 +68,7 @@ $deleteMethod
 
 $prototypeV2=QScatterDataProxy * dataProxy() const
 
-$prototype=void setDataProxy(QScatterDataProxy *proxy)
-$method=|void|setDataProxy|QScatterDataProxy *
+$prototypeV2=void setDataProxy( QScatterDataProxy * proxy )
 
 %%
 %% Q_PROPERTY(int selectedItem READ selectedItem WRITE setSelectedItem NOTIFY selectedItemChanged)
@@ -77,8 +76,7 @@ $method=|void|setDataProxy|QScatterDataProxy *
 
 $prototypeV2=int selectedItem() const
 
-$prototype=void setSelectedItem(int index)
-$method=|void|setSelectedItem|int
+$prototypeV2=void setSelectedItem( int index )
 
 %%
 %% Q_PROPERTY(float itemSize READ itemSize WRITE setItemSize NOTIFY itemSizeChanged)
@@ -86,8 +84,7 @@ $method=|void|setSelectedItem|int
 
 $prototypeV2=float itemSize() const
 
-$prototype=void setItemSize(float size)
-$method=|void|setItemSize|float
+$prototypeV2=void setItemSize( float size )
 
 %%
 %%

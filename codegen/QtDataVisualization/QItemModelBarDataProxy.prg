@@ -106,8 +106,7 @@ $deleteMethod
 
 $prototypeV2=QAbstractItemModel * itemModel() const
 
-$prototype=void setItemModel(QAbstractItemModel *itemModel)
-$method=|void|setItemModel|QAbstractItemModel *
+$prototypeV2=void setItemModel( QAbstractItemModel * itemModel )
 
 %%
 %% Q_PROPERTY(QString rowRole READ rowRole WRITE setRowRole NOTIFY rowRoleChanged)
@@ -115,8 +114,7 @@ $method=|void|setItemModel|QAbstractItemModel *
 
 $prototypeV2=QString rowRole() const
 
-$prototype=void setRowRole(const QString &role)
-$method=|void|setRowRole|const QString &
+$prototypeV2=void setRowRole( const QString & role )
 
 %%
 %% Q_PROPERTY(QString columnRole READ columnRole WRITE setColumnRole NOTIFY columnRoleChanged)
@@ -124,8 +122,7 @@ $method=|void|setRowRole|const QString &
 
 $prototypeV2=QString columnRole() const
 
-$prototype=void setColumnRole(const QString &role)
-$method=|void|setColumnRole|const QString &
+$prototypeV2=void setColumnRole( const QString & role )
 
 %%
 %% Q_PROPERTY(QString valueRole READ valueRole WRITE setValueRole NOTIFY valueRoleChanged)
@@ -133,8 +130,7 @@ $method=|void|setColumnRole|const QString &
 
 $prototypeV2=QString valueRole() const
 
-$prototype=void setValueRole(const QString &role)
-$method=|void|setValueRole|const QString &
+$prototypeV2=void setValueRole( const QString & role )
 
 %%
 %% Q_PROPERTY(QString rotationRole READ rotationRole WRITE setRotationRole NOTIFY rotationRoleChanged)
@@ -142,8 +138,7 @@ $method=|void|setValueRole|const QString &
 
 $prototypeV2=QString rotationRole() const
 
-$prototype=void setRotationRole(const QString &role)
-$method=|void|setRotationRole|const QString &
+$prototypeV2=void setRotationRole( const QString & role )
 
 %%
 %% Q_PROPERTY(QStringList rowCategories READ rowCategories WRITE setRowCategories NOTIFY rowCategoriesChanged)
@@ -151,8 +146,7 @@ $method=|void|setRotationRole|const QString &
 
 $prototypeV2=QStringList rowCategories() const
 
-$prototype=void setRowCategories(const QStringList &categories)
-$method=|void|setRowCategories|const QStringList &
+$prototypeV2=void setRowCategories( const QStringList & categories )
 
 %%
 %% Q_PROPERTY(QStringList columnCategories READ columnCategories WRITE setColumnCategories NOTIFY columnCategoriesChanged)
@@ -160,8 +154,7 @@ $method=|void|setRowCategories|const QStringList &
 
 $prototypeV2=QStringList columnCategories() const
 
-$prototype=void setColumnCategories(const QStringList &categories)
-$method=|void|setColumnCategories|const QStringList &
+$prototypeV2=void setColumnCategories( const QStringList & categories )
 
 %%
 %% Q_PROPERTY(bool useModelCategories READ useModelCategories WRITE setUseModelCategories NOTIFY useModelCategoriesChanged)
@@ -169,8 +162,7 @@ $method=|void|setColumnCategories|const QStringList &
 
 $prototypeV2=bool useModelCategories() const
 
-$prototype=void setUseModelCategories(bool enable)
-$method=|void|setUseModelCategories|bool
+$prototypeV2=void setUseModelCategories( bool enable )
 
 %%
 %% Q_PROPERTY(bool autoRowCategories READ autoRowCategories WRITE setAutoRowCategories NOTIFY autoRowCategoriesChanged)
@@ -178,8 +170,7 @@ $method=|void|setUseModelCategories|bool
 
 $prototypeV2=bool autoRowCategories() const
 
-$prototype=void setAutoRowCategories(bool enable)
-$method=|void|setAutoRowCategories|bool
+$prototypeV2=void setAutoRowCategories( bool enable )
 
 %%
 %% Q_PROPERTY(bool autoColumnCategories READ autoColumnCategories WRITE setAutoColumnCategories NOTIFY autoColumnCategoriesChanged)
@@ -187,8 +178,7 @@ $method=|void|setAutoRowCategories|bool
 
 $prototypeV2=bool autoColumnCategories() const
 
-$prototype=void setAutoColumnCategories(bool enable)
-$method=|void|setAutoColumnCategories|bool
+$prototypeV2=void setAutoColumnCategories( bool enable )
 
 %%
 %% Q_PROPERTY(QRegExp rowRolePattern READ rowRolePattern WRITE setRowRolePattern NOTIFY rowRolePatternChanged REVISION 1)
@@ -196,8 +186,7 @@ $method=|void|setAutoColumnCategories|bool
 
 $prototypeV2=QRegExp rowRolePattern() const
 
-$prototype=void setRowRolePattern(const QRegExp &pattern)
-$method=|void|setRowRolePattern|const QRegExp &
+$prototypeV2=void setRowRolePattern( const QRegExp & pattern )
 
 %%
 %% Q_PROPERTY(QRegExp columnRolePattern READ columnRolePattern WRITE setColumnRolePattern NOTIFY columnRolePatternChanged REVISION 1)
@@ -205,8 +194,7 @@ $method=|void|setRowRolePattern|const QRegExp &
 
 $prototypeV2=QRegExp columnRolePattern() const
 
-$prototype=void setColumnRolePattern(const QRegExp &pattern)
-$method=|void|setColumnRolePattern|const QRegExp &
+$prototypeV2=void setColumnRolePattern( const QRegExp & pattern )
 
 %%
 %% Q_PROPERTY(QRegExp valueRolePattern READ valueRolePattern WRITE setValueRolePattern NOTIFY valueRolePatternChanged REVISION 1)
@@ -214,8 +202,7 @@ $method=|void|setColumnRolePattern|const QRegExp &
 
 $prototypeV2=QRegExp valueRolePattern() const
 
-$prototype=void setValueRolePattern(const QRegExp &pattern)
-$method=|void|setValueRolePattern|const QRegExp &
+$prototypeV2=void setValueRolePattern( const QRegExp & pattern )
 
 %%
 %% Q_PROPERTY(QRegExp rotationRolePattern READ rotationRolePattern WRITE setRotationRolePattern NOTIFY rotationRolePatternChanged REVISION 1)
@@ -223,8 +210,7 @@ $method=|void|setValueRolePattern|const QRegExp &
 
 $prototypeV2=QRegExp rotationRolePattern() const
 
-$prototype=void setRotationRolePattern(const QRegExp &pattern)
-$method=|void|setRotationRolePattern|const QRegExp &
+$prototypeV2=void setRotationRolePattern( const QRegExp & pattern )
 
 %%
 %% Q_PROPERTY(QString rowRoleReplace READ rowRoleReplace WRITE setRowRoleReplace NOTIFY rowRoleReplaceChanged REVISION 1)
@@ -232,8 +218,7 @@ $method=|void|setRotationRolePattern|const QRegExp &
 
 $prototypeV2=QString rowRoleReplace() const
 
-$prototype=void setRowRoleReplace(const QString &replace)
-$method=|void|setRowRoleReplace|const QString &
+$prototypeV2=void setRowRoleReplace( const QString & replace )
 
 %%
 %% Q_PROPERTY(QString columnRoleReplace READ columnRoleReplace WRITE setColumnRoleReplace NOTIFY columnRoleReplaceChanged REVISION 1)
@@ -241,8 +226,7 @@ $method=|void|setRowRoleReplace|const QString &
 
 $prototypeV2=QString columnRoleReplace() const
 
-$prototype=void setColumnRoleReplace(const QString &replace)
-$method=|void|setColumnRoleReplace|const QString &
+$prototypeV2=void setColumnRoleReplace( const QString & replace )
 
 %%
 %% Q_PROPERTY(QString valueRoleReplace READ valueRoleReplace WRITE setValueRoleReplace NOTIFY valueRoleReplaceChanged REVISION 1)
@@ -250,8 +234,7 @@ $method=|void|setColumnRoleReplace|const QString &
 
 $prototypeV2=QString valueRoleReplace() const
 
-$prototype=void setValueRoleReplace(const QString &replace)
-$method=|void|setValueRoleReplace|const QString &
+$prototypeV2=void setValueRoleReplace( const QString & replace )
 
 %%
 %% Q_PROPERTY(QString rotationRoleReplace READ rotationRoleReplace WRITE setRotationRoleReplace NOTIFY rotationRoleReplaceChanged REVISION 1)
@@ -259,8 +242,7 @@ $method=|void|setValueRoleReplace|const QString &
 
 $prototypeV2=QString rotationRoleReplace() const
 
-$prototype=void setRotationRoleReplace(const QString &replace)
-$method=|void|setRotationRoleReplace|const QString &
+$prototypeV2=void setRotationRoleReplace( const QString & replace )
 
 %%
 %% Q_PROPERTY(MultiMatchBehavior multiMatchBehavior READ multiMatchBehavior WRITE setMultiMatchBehavior NOTIFY multiMatchBehaviorChanged REVISION 1)
@@ -268,21 +250,17 @@ $method=|void|setRotationRoleReplace|const QString &
 
 $prototypeV2=QItemModelBarDataProxy::MultiMatchBehavior multiMatchBehavior() const
 
-$prototype=void setMultiMatchBehavior(MultiMatchBehavior behavior)
-$method=|void|setMultiMatchBehavior|QItemModelBarDataProxy::MultiMatchBehavior
+$prototypeV2=void setMultiMatchBehavior( QItemModelBarDataProxy::MultiMatchBehavior behavior )
 
 %%
 %%
 %%
 
-$prototype=void remap(const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories)
-$method=|void|remap|const QString &,const QString &,const QString &,const QString &,const QStringList &,const QStringList &
+$prototypeV2=void remap( const QString & rowRole, const QString & columnRole, const QString & valueRole, const QString & rotationRole, const QStringList & rowCategories, const QStringList & columnCategories )
 
-$prototype=Q_INVOKABLE int rowCategoryIndex(const QString& category)
-$method=|int|rowCategoryIndex|const QString &
+$prototypeV2=Q_INVOKABLE int rowCategoryIndex( const QString & category )
 
-$prototype=Q_INVOKABLE int columnCategoryIndex(const QString& category)
-$method=|int|columnCategoryIndex|const QString &
+$prototypeV2=Q_INVOKABLE int columnCategoryIndex( const QString & category )
 
 %%
 %% SIGNALS

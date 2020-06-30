@@ -52,8 +52,7 @@ $prototypeV2=int rowCount() const
 
 $prototypeV2=QStringList rowLabels() const
 
-$prototype=void setRowLabels(const QStringList &labels)
-$method=|void|setRowLabels|const QStringList &
+$prototypeV2=void setRowLabels( const QStringList & labels )
 
 %%
 %% Q_PROPERTY(QStringList columnLabels READ columnLabels WRITE setColumnLabels NOTIFY columnLabelsChanged)
@@ -61,8 +60,7 @@ $method=|void|setRowLabels|const QStringList &
 
 $prototypeV2=QStringList columnLabels() const
 
-$prototype=void setColumnLabels(const QStringList &labels)
-$method=|void|setColumnLabels|const QStringList &
+$prototypeV2=void setColumnLabels( const QStringList & labels )
 
 %%
 %% Q_PROPERTY(QBar3DSeries *series READ series NOTIFY seriesChanged)

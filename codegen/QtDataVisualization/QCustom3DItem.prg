@@ -68,8 +68,7 @@ $deleteMethod
 
 $prototypeV2=QString meshFile() const
 
-$prototype=void setMeshFile(const QString &meshFile)
-$method=|void|setMeshFile|const QString &
+$prototypeV2=void setMeshFile( const QString & meshFile )
 
 %%
 %% Q_PROPERTY(QString textureFile READ textureFile WRITE setTextureFile NOTIFY textureFileChanged)
@@ -77,8 +76,7 @@ $method=|void|setMeshFile|const QString &
 
 $prototypeV2=QString textureFile() const
 
-$prototype=void setTextureFile(const QString &textureFile)
-$method=|void|setTextureFile|const QString &
+$prototypeV2=void setTextureFile( const QString & textureFile )
 
 %%
 %% Q_PROPERTY(QVector3D position READ position WRITE setPosition NOTIFY positionChanged)
@@ -86,8 +84,7 @@ $method=|void|setTextureFile|const QString &
 
 $prototypeV2=QVector3D position() const
 
-$prototype=void setPosition(const QVector3D &position)
-$method=|void|setPosition|const QVector3D &
+$prototypeV2=void setPosition( const QVector3D & position )
 
 %%
 %% Q_PROPERTY(bool positionAbsolute READ isPositionAbsolute WRITE setPositionAbsolute NOTIFY positionAbsoluteChanged)
@@ -95,8 +92,7 @@ $method=|void|setPosition|const QVector3D &
 
 $prototypeV2=bool isPositionAbsolute() const
 
-$prototype=void setPositionAbsolute(bool positionAbsolute)
-$method=|void|setPositionAbsolute|bool
+$prototypeV2=void setPositionAbsolute( bool positionAbsolute )
 
 %%
 %% Q_PROPERTY(QVector3D scaling READ scaling WRITE setScaling NOTIFY scalingChanged)
@@ -104,8 +100,7 @@ $method=|void|setPositionAbsolute|bool
 
 $prototypeV2=QVector3D scaling() const
 
-$prototype=void setScaling(const QVector3D &scaling)
-$method=|void|setScaling|const QVector3D &
+$prototypeV2=void setScaling( const QVector3D & scaling )
 
 %%
 %% Q_PROPERTY(QQuaternion rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
@@ -113,8 +108,7 @@ $method=|void|setScaling|const QVector3D &
 
 $prototypeV2=QQuaternion rotation()
 
-$prototype=void setRotation(const QQuaternion &rotation)
-$method=|void|setRotation|const QQuaternion &
+$prototypeV2=void setRotation( const QQuaternion & rotation )
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
@@ -122,8 +116,7 @@ $method=|void|setRotation|const QQuaternion &
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 %%
 %% Q_PROPERTY(bool shadowCasting READ isShadowCasting WRITE setShadowCasting NOTIFY shadowCastingChanged)
@@ -131,8 +124,7 @@ $method=|void|setVisible|bool
 
 $prototypeV2=bool isShadowCasting() const
 
-$prototype=void setShadowCasting(bool enabled)
-$method=|void|setShadowCasting|bool
+$prototypeV2=void setShadowCasting( bool enabled )
 
 %%
 %% Q_PROPERTY(bool scalingAbsolute READ isScalingAbsolute WRITE setScalingAbsolute NOTIFY scalingAbsoluteChanged REVISION 1)
@@ -140,18 +132,15 @@ $method=|void|setShadowCasting|bool
 
 $prototypeV2=bool isScalingAbsolute() const
 
-$prototype=void setScalingAbsolute(bool scalingAbsolute)
-$method=|void|setScalingAbsolute|bool
+$prototypeV2=void setScalingAbsolute( bool scalingAbsolute )
 
 %%
 %%
 %%
 
-$prototype=Q_INVOKABLE void setRotationAxisAndAngle(const QVector3D &axis, float angle)
-$method=|void|setRotationAxisAndAngle|const QVector3D &,float
+$prototypeV2=Q_INVOKABLE void setRotationAxisAndAngle( const QVector3D & axis, float angle )
 
-$prototype=void setTextureImage(const QImage &textureImage)
-$method=|void|setTextureImage|const QImage &
+$prototypeV2=void setTextureImage( const QImage & textureImage )
 
 %%
 %% SIGNALS

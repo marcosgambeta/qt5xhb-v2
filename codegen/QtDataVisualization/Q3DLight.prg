@@ -40,11 +40,9 @@ $deleteMethod
 %% Q_PROPERTY(bool autoPosition READ isAutoPosition WRITE setAutoPosition NOTIFY autoPositionChanged REVISION 1)
 %%
 
-$prototype=void setAutoPosition(bool enabled)
-$method=5,9,0|void|setAutoPosition|bool
+$prototypeV2=5,9,0|void setAutoPosition( bool enabled )
 
-$prototype=bool isAutoPosition()
-$method=5,9,0|bool|isAutoPosition|
+$prototypeV2=5,9,0|bool isAutoPosition()
 
 %%
 %%

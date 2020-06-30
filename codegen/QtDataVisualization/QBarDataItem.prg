@@ -74,13 +74,11 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
 $prototype=~QBarDataItem()
 $deleteMethod
 
-$prototype=void setValue(float val)
-$method=|void|setValue|float
+$prototypeV2=void setValue( float val )
 
 $prototypeV2=float value() const
 
-$prototype=void setRotation(float angle)
-$method=|void|setRotation|float
+$prototypeV2=void setRotation( float angle )
 
 $prototypeV2=float rotation() const
 

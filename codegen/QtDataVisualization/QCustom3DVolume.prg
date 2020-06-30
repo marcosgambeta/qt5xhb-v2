@@ -63,8 +63,7 @@ $deleteMethod
 
 $prototypeV2=int textureWidth() const
 
-$prototype=void setTextureWidth(int value)
-$method=|void|setTextureWidth|int
+$prototypeV2=void setTextureWidth( int value )
 
 %%
 %% Q_PROPERTY(int textureHeight READ textureHeight WRITE setTextureHeight NOTIFY textureHeightChanged)
@@ -72,8 +71,7 @@ $method=|void|setTextureWidth|int
 
 $prototypeV2=int textureHeight() const
 
-$prototype=void setTextureHeight(int value)
-$method=|void|setTextureHeight|int
+$prototypeV2=void setTextureHeight( int value )
 
 %%
 %% Q_PROPERTY(int textureDepth READ textureDepth WRITE setTextureDepth NOTIFY textureDepthChanged)
@@ -81,8 +79,7 @@ $method=|void|setTextureHeight|int
 
 $prototypeV2=int textureDepth() const
 
-$prototype=void setTextureDepth(int value)
-$method=|void|setTextureDepth|int
+$prototypeV2=void setTextureDepth( int value )
 
 %%
 %% Q_PROPERTY(int sliceIndexX READ sliceIndexX WRITE setSliceIndexX NOTIFY sliceIndexXChanged)
@@ -90,8 +87,7 @@ $method=|void|setTextureDepth|int
 
 $prototypeV2=int sliceIndexX() const
 
-$prototype=void setSliceIndexX(int value)
-$method=|void|setSliceIndexX|int
+$prototypeV2=void setSliceIndexX( int value )
 
 %%
 %% Q_PROPERTY(int sliceIndexY READ sliceIndexY WRITE setSliceIndexY NOTIFY sliceIndexYChanged)
@@ -99,8 +95,7 @@ $method=|void|setSliceIndexX|int
 
 $prototypeV2=int sliceIndexY() const
 
-$prototype=void setSliceIndexY(int value)
-$method=|void|setSliceIndexY|int
+$prototypeV2=void setSliceIndexY( int value )
 
 %%
 %% Q_PROPERTY(int sliceIndexZ READ sliceIndexZ WRITE setSliceIndexZ NOTIFY sliceIndexZChanged)
@@ -108,8 +103,7 @@ $method=|void|setSliceIndexY|int
 
 $prototypeV2=int sliceIndexZ() const
 
-$prototype=void setSliceIndexZ(int value)
-$method=|void|setSliceIndexZ|int
+$prototypeV2=void setSliceIndexZ( int value )
 
 %%
 %% Q_PROPERTY(QVector<QRgb> colorTable READ colorTable WRITE setColorTable NOTIFY colorTableChanged)
@@ -141,8 +135,7 @@ $prototype=void setTextureData(QVector<uchar> *data)
 
 $prototypeV2=float alphaMultiplier() const
 
-$prototype=void setAlphaMultiplier(float mult)
-$method=|void|setAlphaMultiplier|float
+$prototypeV2=void setAlphaMultiplier( float mult )
 
 %%
 %% Q_PROPERTY(bool preserveOpacity READ preserveOpacity WRITE setPreserveOpacity NOTIFY preserveOpacityChanged)
@@ -150,8 +143,7 @@ $method=|void|setAlphaMultiplier|float
 
 $prototypeV2=bool preserveOpacity() const
 
-$prototype=void setPreserveOpacity(bool enable)
-$method=|void|setPreserveOpacity|bool
+$prototypeV2=void setPreserveOpacity( bool enable )
 
 %%
 %% Q_PROPERTY(bool useHighDefShader READ useHighDefShader WRITE setUseHighDefShader NOTIFY useHighDefShaderChanged)
@@ -159,8 +151,7 @@ $method=|void|setPreserveOpacity|bool
 
 $prototypeV2=bool useHighDefShader() const
 
-$prototype=void setUseHighDefShader(bool enable)
-$method=|void|setUseHighDefShader|bool
+$prototypeV2=void setUseHighDefShader( bool enable )
 
 %%
 %% Q_PROPERTY(bool drawSlices READ drawSlices WRITE setDrawSlices NOTIFY drawSlicesChanged)
@@ -168,8 +159,7 @@ $method=|void|setUseHighDefShader|bool
 
 $prototypeV2=bool drawSlices() const
 
-$prototype=void setDrawSlices(bool enable)
-$method=|void|setDrawSlices|bool
+$prototypeV2=void setDrawSlices( bool enable )
 
 %%
 %% Q_PROPERTY(bool drawSliceFrames READ drawSliceFrames WRITE setDrawSliceFrames NOTIFY drawSliceFramesChanged)
@@ -177,8 +167,7 @@ $method=|void|setDrawSlices|bool
 
 $prototypeV2=bool drawSliceFrames() const
 
-$prototype=void setDrawSliceFrames(bool enable)
-$method=|void|setDrawSliceFrames|bool
+$prototypeV2=void setDrawSliceFrames( bool enable )
 
 %%
 %% Q_PROPERTY(QColor sliceFrameColor READ sliceFrameColor WRITE setSliceFrameColor NOTIFY sliceFrameColorChanged)
@@ -186,8 +175,7 @@ $method=|void|setDrawSliceFrames|bool
 
 $prototypeV2=QColor sliceFrameColor() const
 
-$prototype=void setSliceFrameColor(const QColor &color)
-$method=|void|setSliceFrameColor|const QColor &
+$prototypeV2=void setSliceFrameColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QVector3D sliceFrameWidths READ sliceFrameWidths WRITE setSliceFrameWidths NOTIFY sliceFrameWidthsChanged)
@@ -195,8 +183,7 @@ $method=|void|setSliceFrameColor|const QColor &
 
 $prototypeV2=QVector3D sliceFrameWidths() const
 
-$prototype=void setSliceFrameWidths(const QVector3D &values)
-$method=|void|setSliceFrameWidths|const QVector3D &
+$prototypeV2=void setSliceFrameWidths( const QVector3D & values )
 
 %%
 %% Q_PROPERTY(QVector3D sliceFrameGaps READ sliceFrameGaps WRITE setSliceFrameGaps NOTIFY sliceFrameGapsChanged)
@@ -204,8 +191,7 @@ $method=|void|setSliceFrameWidths|const QVector3D &
 
 $prototypeV2=QVector3D sliceFrameGaps() const
 
-$prototype=void setSliceFrameGaps(const QVector3D &values)
-$method=|void|setSliceFrameGaps|const QVector3D &
+$prototypeV2=void setSliceFrameGaps( const QVector3D & values )
 
 %%
 %% Q_PROPERTY(QVector3D sliceFrameThicknesses READ sliceFrameThicknesses WRITE setSliceFrameThicknesses NOTIFY sliceFrameThicknessesChanged)
@@ -213,20 +199,17 @@ $method=|void|setSliceFrameGaps|const QVector3D &
 
 $prototypeV2=QVector3D sliceFrameThicknesses() const
 
-$prototype=void setSliceFrameThicknesses(const QVector3D &values)
-$method=|void|setSliceFrameThicknesses|const QVector3D &
+$prototypeV2=void setSliceFrameThicknesses( const QVector3D & values )
 
 %%
 %%
 %%
 
-$prototype=void setTextureDimensions(int width, int height, int depth)
-$method=|void|setTextureDimensions|int,int,int
+$prototypeV2=void setTextureDimensions( int width, int height, int depth )
 
 $prototypeV2=int textureDataWidth() const
 
-$prototype=void setSliceIndices(int x, int y, int z)
-$method=|void|setSliceIndices|int,int,int
+$prototypeV2=void setSliceIndices( int x, int y, int z )
 
 $prototype=QVector<uchar> *createTextureData(const QVector<QImage *> &images)
 %% TODO: implementar
@@ -260,13 +243,11 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 }
 $addMethod=setSubTextureData
 
-$prototype=void setTextureFormat(QImage::Format format)
-$method=|void|setTextureFormat|QImage::Format
+$prototypeV2=void setTextureFormat( QImage::Format format )
 
 $prototypeV2=QImage::Format textureFormat() const
 
-$prototype=QImage renderSlice(Qt::Axis axis, int index)
-$method=|QImage|renderSlice|Qt::Axis,int
+$prototypeV2=QImage renderSlice( Qt::Axis axis, int index )
 
 %%
 %% SIGNALS

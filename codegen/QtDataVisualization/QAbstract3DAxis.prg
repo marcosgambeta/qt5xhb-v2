@@ -41,8 +41,7 @@ $deleteMethod
 
 $prototypeV2=QString title() const
 
-$prototype=void setTitle(const QString &title)
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 %%
 %% Q_PROPERTY(QStringList labels READ labels WRITE setLabels NOTIFY labelsChanged)
@@ -50,8 +49,7 @@ $method=|void|setTitle|const QString &
 
 $prototypeV2=QStringList labels() const
 
-$prototype=void setLabels(const QStringList &labels)
-$method=|void|setLabels|const QStringList &
+$prototypeV2=void setLabels( const QStringList & labels )
 
 %%
 %% Q_PROPERTY(AxisOrientation orientation READ orientation NOTIFY orientationChanged)
@@ -71,8 +69,7 @@ $prototypeV2=QAbstract3DAxis::AxisType type() const
 
 $prototypeV2=float min() const
 
-$prototype=void setMin(float min)
-$method=|void|setMin|float
+$prototypeV2=void setMin( float min )
 
 %%
 %% Q_PROPERTY(float max READ max WRITE setMax NOTIFY maxChanged)
@@ -80,8 +77,7 @@ $method=|void|setMin|float
 
 $prototypeV2=float max() const
 
-$prototype=void setMax(float max)
-$method=|void|setMax|float
+$prototypeV2=void setMax( float max )
 
 %%
 %% Q_PROPERTY(bool autoAdjustRange READ isAutoAdjustRange WRITE setAutoAdjustRange NOTIFY autoAdjustRangeChanged)
@@ -89,8 +85,7 @@ $method=|void|setMax|float
 
 $prototypeV2=bool isAutoAdjustRange() const
 
-$prototype=void setAutoAdjustRange(bool autoAdjust)
-$method=|void|setAutoAdjustRange|bool
+$prototypeV2=void setAutoAdjustRange( bool autoAdjust )
 
 %%
 %% Q_PROPERTY(float labelAutoRotation READ labelAutoRotation WRITE setLabelAutoRotation NOTIFY labelAutoRotationChanged REVISION 1)
@@ -98,8 +93,7 @@ $method=|void|setAutoAdjustRange|bool
 
 $prototypeV2=float labelAutoRotation() const
 
-$prototype=void setLabelAutoRotation(float angle)
-$method=|void|setLabelAutoRotation|float
+$prototypeV2=void setLabelAutoRotation( float angle )
 
 %%
 %% Q_PROPERTY(bool titleVisible READ isTitleVisible WRITE setTitleVisible NOTIFY titleVisibilityChanged REVISION 1)
@@ -107,8 +101,7 @@ $method=|void|setLabelAutoRotation|float
 
 $prototypeV2=bool isTitleVisible() const
 
-$prototype=void setTitleVisible(bool visible)
-$method=|void|setTitleVisible|bool
+$prototypeV2=void setTitleVisible( bool visible )
 
 %%
 %% Q_PROPERTY(bool titleFixed READ isTitleFixed WRITE setTitleFixed NOTIFY titleFixedChanged REVISION 1)
@@ -116,15 +109,13 @@ $method=|void|setTitleVisible|bool
 
 $prototypeV2=bool isTitleFixed() const
 
-$prototype=void setTitleFixed(bool fixed)
-$method=|void|setTitleFixed|bool
+$prototypeV2=void setTitleFixed( bool fixed )
 
 %%
 %%
 %%
 
-$prototype=void setRange(float min, float max)
-$method=|void|setRange|float,float
+$prototypeV2=void setRange( float min, float max )
 
 %%
 %% SIGNALS

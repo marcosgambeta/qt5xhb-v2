@@ -65,32 +65,27 @@ $prototypeV2=QScatter3DSeries * series() const
 $prototype=const QScatterDataArray *array() const
 %% TODO: implementar
 
-$prototype=const QScatterDataItem *itemAt(int index) const
-$method=|const QScatterDataItem *|itemAt|int
+$prototypeV2=const QScatterDataItem * itemAt( int index ) const
 
 $prototype=void resetArray(QScatterDataArray *newArray)
 %% TODO: implementar
 
-$prototype=void setItem(int index, const QScatterDataItem &item)
-$method=|void|setItem|int,const QScatterDataItem &
+$prototypeV2=void setItem( int index, const QScatterDataItem & item )
 
 $prototype=void setItems(int index, const QScatterDataArray &items)
 %% TODO: implementar
 
-$prototype=int addItem(const QScatterDataItem &item)
-$method=|int|addItem|const QScatterDataItem &
+$prototypeV2=int addItem( const QScatterDataItem & item )
 
 $prototype=int addItems(const QScatterDataArray &items)
 %% TODO: implementar
 
-$prototype=void insertItem(int index, const QScatterDataItem &item)
-$method=|void|insertItem|int,const QScatterDataItem &
+$prototypeV2=void insertItem( int index, const QScatterDataItem & item )
 
 $prototype=void insertItems(int index, const QScatterDataArray &items)
 %% TODO: implementar
 
-$prototype=void removeItems(int index, int removeCount)
-$method=|void|removeItems|int,int
+$prototypeV2=void removeItems( int index, int removeCount )
 
 %%
 %% SIGNALS

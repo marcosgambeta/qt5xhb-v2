@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=QStringList labels() const
 
-$prototype=void setLabels(const QStringList &labels)
-$method=|void|setLabels|const QStringList &
+$prototypeV2=void setLabels( const QStringList & labels )
 
 %%
 %%

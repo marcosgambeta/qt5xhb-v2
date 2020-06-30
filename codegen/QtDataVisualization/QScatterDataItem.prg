@@ -74,24 +74,19 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
 $prototype=~QScatterDataItem()
 $deleteMethod
 
-$prototype=void setPosition(const QVector3D &pos)
-$method=|void|setPosition|const QVector3D &
+$prototypeV2=void setPosition( const QVector3D & pos )
 
 $prototypeV2=QVector3D position() const
 
-$prototype=void setRotation(const QQuaternion &rot)
-$method=|void|setRotation|const QQuaternion &
+$prototypeV2=void setRotation( const QQuaternion & rot )
 
 $prototypeV2=QQuaternion rotation() const
 
-$prototype=void setX(float value)
-$method=|void|setX|float
+$prototypeV2=void setX( float value )
 
-$prototype=void setY(float value)
-$method=|void|setY|float
+$prototypeV2=void setY( float value )
 
-$prototype=void setZ(float value)
-$method=|void|setZ|float
+$prototypeV2=void setZ( float value )
 
 $prototypeV2=float x() const
 

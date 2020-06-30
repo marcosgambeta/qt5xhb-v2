@@ -34,7 +34,6 @@ $constructor=|new|QObject *=nullptr
 $prototype=virtual ~QTouch3DInputHandler()
 $deleteMethod
 
-$prototype=virtual void touchEvent(QTouchEvent *event)
-$virtualMethod=|void|touchEvent|QTouchEvent *
+$prototypeV2=virtual void touchEvent( QTouchEvent * event )
 
 #pragma ENDDUMP
