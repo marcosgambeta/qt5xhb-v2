@@ -50,8 +50,7 @@ $prototypeV2=virtual QMediaContent media() const = 0
 
 $prototypeV2=virtual QMediaPlayer::MediaStatus mediaStatus() const = 0
 
-$prototype=virtual const QIODevice * mediaStream() const = 0
-$virtualMethod=|const QIODevice *|mediaStream|
+$prototypeV2=virtual const QIODevice * mediaStream() const = 0
 
 $prototypeV2=virtual void pause() = 0
 
@@ -61,20 +60,15 @@ $prototypeV2=virtual qreal playbackRate() const = 0
 
 $prototypeV2=virtual qint64 position() const = 0
 
-$prototype=virtual void setMedia(const QMediaContent & media, QIODevice * stream) = 0
-$virtualMethod=|void|setMedia|const QMediaContent &,QIODevice *
+$prototypeV2=virtual void setMedia( const QMediaContent & media, QIODevice * stream ) = 0
 
-$prototype=virtual void setMuted(bool mute) = 0
-$virtualMethod=|void|setMuted|bool
+$prototypeV2=virtual void setMuted( bool mute ) = 0
 
-$prototype=virtual void setPlaybackRate(qreal rate) = 0
-$virtualMethod=|void|setPlaybackRate|qreal
+$prototypeV2=virtual void setPlaybackRate( qreal rate ) = 0
 
-$prototype=virtual void setPosition(qint64 position) = 0
-$virtualMethod=|void|setPosition|qint64
+$prototypeV2=virtual void setPosition( qint64 position ) = 0
 
-$prototype=virtual void setVolume(int volume) = 0
-$virtualMethod=|void|setVolume|int
+$prototypeV2=virtual void setVolume( int volume ) = 0
 
 $prototypeV2=virtual QMediaPlayer::State state() const = 0
 

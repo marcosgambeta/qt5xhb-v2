@@ -32,19 +32,15 @@ $prototype=explicit QCameraControl(QObject *parent = nullptr) [protected]
 $prototype=~QCameraControl()
 $deleteMethod
 
-$prototype=virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
-$virtualMethod=|bool|canChangeProperty|QCameraControl::PropertyChangeType,QCamera::Status
+$prototypeV2=virtual bool canChangeProperty( QCameraControl::PropertyChangeType changeType, QCamera::Status status ) const = 0
 
 $prototypeV2=virtual QCamera::CaptureModes captureMode() const = 0
 
-$prototype=virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
-$virtualMethod=|bool|isCaptureModeSupported|QCamera::CaptureModes
+$prototypeV2=virtual bool isCaptureModeSupported( QCamera::CaptureModes mode ) const = 0
 
-$prototype=virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
-$virtualMethod=|void|setCaptureMode|QCamera::CaptureModes
+$prototypeV2=virtual void setCaptureMode( QCamera::CaptureModes mode ) = 0
 
-$prototype=virtual void setState(QCamera::State state) = 0
-$virtualMethod=|void|setState|QCamera::State
+$prototypeV2=virtual void setState( QCamera::State state ) = 0
 
 $prototypeV2=virtual QCamera::State state() const = 0
 

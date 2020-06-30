@@ -32,15 +32,12 @@ $deleteMethod
 
 $prototypeV2=virtual QAudioEncoderSettings audioSettings() const = 0
 
-$prototype=virtual QString codecDescription(const QString & codecName) const = 0
-$virtualMethod=|QString|codecDescription|const QString &
+$prototypeV2=virtual QString codecDescription( const QString & codecName ) const = 0
 
-$prototype=virtual void setAudioSettings(const QAudioEncoderSettings & settings) = 0
-$virtualMethod=|void|setAudioSettings|const QAudioEncoderSettings &
+$prototypeV2=virtual void setAudioSettings( const QAudioEncoderSettings & settings ) = 0
 
 $prototypeV2=virtual QStringList supportedAudioCodecs() const = 0
 
-$prototype=virtual QList<int> supportedSampleRates(const QAudioEncoderSettings & settings, bool * continuous = nullptr) const = 0
-$virtualMethod=|QList<int>|supportedSampleRates|const QAudioEncoderSettings &,bool *=nullptr
+$prototypeV2=virtual QList<int> supportedSampleRates( const QAudioEncoderSettings & settings, bool * continuous = nullptr ) const = 0
 
 #pragma ENDDUMP

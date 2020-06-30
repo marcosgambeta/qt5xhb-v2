@@ -71,13 +71,11 @@ $prototypeV2=virtual int bytesReady() const = 0
 
 $prototypeV2=virtual int periodSize() const = 0
 
-$prototype=virtual void setBufferSize(int value) = 0
-$virtualMethod=|void|setBufferSize|int
+$prototypeV2=virtual void setBufferSize( int value ) = 0
 
 $prototypeV2=virtual int bufferSize() const = 0
 
-$prototype=virtual void setNotifyInterval(int milliSeconds) = 0
-$virtualMethod=|void|setNotifyInterval|int
+$prototypeV2=virtual void setNotifyInterval( int milliSeconds ) = 0
 
 $prototypeV2=virtual int notifyInterval() const = 0
 
@@ -89,13 +87,11 @@ $prototypeV2=virtual QAudio::Error error() const = 0
 
 $prototypeV2=virtual QAudio::State state() const = 0
 
-$prototype=virtual void setFormat(const QAudioFormat& fmt) = 0
-$virtualMethod=|void|setFormat|const QAudioFormat &
+$prototypeV2=virtual void setFormat( const QAudioFormat & fmt ) = 0
 
 $prototypeV2=virtual QAudioFormat format() const = 0
 
-$prototype=virtual void setVolume(qreal) = 0
-$virtualMethod=|void|setVolume|qreal
+$prototypeV2=virtual void setVolume( qreal ) = 0
 
 $prototypeV2=virtual qreal volume() const = 0
 

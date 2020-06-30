@@ -25,8 +25,7 @@ $destructor
 
 $includes
 
-$prototype=qreal convertVolume(qreal volume, VolumeScale from, VolumeScale to)
-$staticMethod=5,8,0|qreal|convertVolume|qreal,QAudio::VolumeScale,QAudio::VolumeScale
+$prototypeV2=5,8,0|qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
 
 $extraMethods
 

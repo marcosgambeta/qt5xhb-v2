@@ -39,15 +39,13 @@ $deleteMethod
 
 $prototypeV2=QString audioInput() const
 
-$prototype=void setAudioInput(const QString & name)
-$slotMethod=|void|setAudioInput|const QString &
+$prototypeV2=void setAudioInput( const QString & name )
 
 %%
 %%
 %%
 
-$prototype=QString audioInputDescription(const QString & name) const
-$method=|QString|audioInputDescription|const QString &
+$prototypeV2=QString audioInputDescription( const QString & name ) const
 
 $prototypeV2=QStringList audioInputs() const
 

@@ -40,8 +40,7 @@ $deleteMethod
 
 $prototypeV2=bool isActive() const
 
-$prototype=void setActive(bool v)
-$method=|void|setActive|bool
+$prototypeV2=void setActive( bool v )
 
 %%
 %%

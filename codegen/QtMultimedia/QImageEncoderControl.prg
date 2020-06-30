@@ -32,15 +32,12 @@ $deleteMethod
 
 $prototypeV2=virtual QStringList supportedImageCodecs() const = 0
 
-$prototype=virtual QString imageCodecDescription(const QString &codecName) const = 0
-$virtualMethod=|QString|imageCodecDescription|const QString &
+$prototypeV2=virtual QString imageCodecDescription( const QString & codecName ) const = 0
 
-$prototype=virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = nullptr) const = 0
-$virtualMethod=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &,bool *=nullptr
+$prototypeV2=virtual QList<QSize> supportedResolutions( const QImageEncoderSettings & settings, bool * continuous = nullptr ) const = 0
 
 $prototypeV2=virtual QImageEncoderSettings imageSettings() const = 0
 
-$prototype=virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
-$virtualMethod=|void|setImageSettings|const QImageEncoderSettings &
+$prototypeV2=virtual void setImageSettings( const QImageEncoderSettings & settings ) = 0
 
 #pragma ENDDUMP

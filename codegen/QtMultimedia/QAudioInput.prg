@@ -77,11 +77,9 @@ $prototypeV2=void reset()
 
 $prototypeV2=void resume()
 
-$prototype=void setBufferSize ( int bytes )
-$method=|void|setBufferSize|int
+$prototypeV2=void setBufferSize( int bytes )
 
-$prototype=void setNotifyInterval ( int milliSeconds )
-$method=|void|setNotifyInterval|int
+$prototypeV2=void setNotifyInterval( int milliSeconds )
 
 $prototype=void start ( QIODevice * device )
 $internalMethod=|void|start,start1|QIODevice *
@@ -117,8 +115,7 @@ $prototypeV2=void stop()
 
 $prototypeV2=void suspend()
 
-$prototype=void setVolume(qreal volume)
-$method=|void|setVolume|qreal
+$prototypeV2=void setVolume( qreal volume )
 
 $prototypeV2=qreal volume() const
 

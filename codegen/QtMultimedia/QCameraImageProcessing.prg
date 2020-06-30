@@ -35,50 +35,38 @@ $prototypeV2=qreal denoisingLevel() const
 
 $prototypeV2=bool isAvailable() const
 
-$prototype=bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
-$method=|bool|isWhiteBalanceModeSupported|QCameraImageProcessing::WhiteBalanceMode
+$prototypeV2=bool isWhiteBalanceModeSupported( QCameraImageProcessing::WhiteBalanceMode mode ) const
 
 $prototypeV2=qreal manualWhiteBalance() const
 
 $prototypeV2=qreal saturation() const
 
-$prototype=void setContrast(qreal value)
-$method=|void|setContrast|qreal
+$prototypeV2=void setContrast( qreal value )
 
-$prototype=void setDenoisingLevel(qreal value)
-$method=|void|setDenoisingLevel|qreal
+$prototypeV2=void setDenoisingLevel( qreal value )
 
-$prototype=void setManualWhiteBalance(qreal colorTemperature)
-$method=|void|setManualWhiteBalance|qreal
+$prototypeV2=void setManualWhiteBalance( qreal colorTemperature )
 
-$prototype=void setSaturation(qreal value)
-$method=|void|setSaturation|qreal
+$prototypeV2=void setSaturation( qreal value )
 
-$prototype=void setSharpeningLevel(qreal level)
-$method=|void|setSharpeningLevel|qreal
+$prototypeV2=void setSharpeningLevel( qreal level )
 
-$prototype=void setWhiteBalanceMode(WhiteBalanceMode mode)
-$method=|void|setWhiteBalanceMode|QCameraImageProcessing::WhiteBalanceMode
+$prototypeV2=void setWhiteBalanceMode( QCameraImageProcessing::WhiteBalanceMode mode )
 
 $prototypeV2=qreal sharpeningLevel() const
 
 $prototypeV2=QCameraImageProcessing::WhiteBalanceMode whiteBalanceMode() const
 
-$prototype=qreal brightness() const
+$prototypeV2=5,7,0|qreal brightness() const
 %% TODO: check version
-$method=5,7,0|qreal|brightness|
 
-$prototype=void setBrightness(qreal value)
+$prototypeV2=5,7,0|void setBrightness( qreal value )
 %% TODO: check version
-$method=5,7,0|void|setBrightness|qreal
 
-$prototype=ColorFilter colorFilter() const
-$method=5,5,0|QCameraImageProcessing::ColorFilter|colorFilter|
+$prototypeV2=5,5,0|QCameraImageProcessing::ColorFilter colorFilter() const
 
-$prototype=void setColorFilter(ColorFilter filter)
-$method=5,5,0|void|setColorFilter|QCameraImageProcessing::ColorFilter
+$prototypeV2=5,5,0|void setColorFilter( QCameraImageProcessing::ColorFilter filter )
 
-$prototype=bool isColorFilterSupported(ColorFilter filter) const
-$method=5,5,0|bool|isColorFilterSupported|QCameraImageProcessing::ColorFilter
+$prototypeV2=5,5,0|bool isColorFilterSupported( QCameraImageProcessing::ColorFilter filter ) const
 
 #pragma ENDDUMP

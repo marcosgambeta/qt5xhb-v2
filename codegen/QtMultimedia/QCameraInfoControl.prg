@@ -31,10 +31,8 @@ $prototype=explicit QCameraInfoControl(QObject *parent = nullptr) [protected]
 $prototype=virtual ~QCameraInfoControl()
 $deleteMethod
 
-$prototype=virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
-$virtualMethod=|QCamera::Position|cameraPosition|const QString &
+$prototypeV2=virtual QCamera::Position cameraPosition( const QString & deviceName ) const = 0
 
-$prototype=virtual int cameraOrientation(const QString &deviceName) const = 0
-$virtualMethod=|int|cameraOrientation|const QString &
+$prototypeV2=virtual int cameraOrientation( const QString & deviceName ) const = 0
 
 #pragma ENDDUMP

@@ -63,8 +63,7 @@ $prototypeV2=QString codec() const
 
 $prototypeV2=QMultimedia::EncodingMode encodingMode() const
 
-$prototype=QVariant encodingOption(const QString & option) const
-$method=|QVariant|encodingOption|const QString &
+$prototypeV2=QVariant encodingOption( const QString & option ) const
 
 $prototype=QVariantMap encodingOptions() const
 %% TODO: QVariantMap
@@ -75,29 +74,22 @@ $prototypeV2=QMultimedia::EncodingQuality quality() const
 
 $prototypeV2=int sampleRate() const
 
-$prototype=void setBitRate(int bitrate)
-$method=|void|setBitRate|int
+$prototypeV2=void setBitRate( int bitrate )
 
-$prototype=void setChannelCount(int channels)
-$method=|void|setChannelCount|int
+$prototypeV2=void setChannelCount( int channels )
 
-$prototype=void setCodec(const QString & codec)
-$method=|void|setCodec|const QString &
+$prototypeV2=void setCodec( const QString & codec )
 
-$prototype=void setEncodingMode(QMultimedia::EncodingMode mode)
-$method=|void|setEncodingMode|QMultimedia::EncodingMode
+$prototypeV2=void setEncodingMode( QMultimedia::EncodingMode mode )
 
-$prototype=void setEncodingOption(const QString & option, const QVariant & value)
-$method=|void|setEncodingOption|const QString &,const QVariant &
+$prototypeV2=void setEncodingOption( const QString & option, const QVariant & value )
 
 $prototype=void setEncodingOptions(const QVariantMap &options)
 %% TODO: QVariantMap
 
-$prototype=void setQuality(QMultimedia::EncodingQuality quality)
-$method=|void|setQuality|QMultimedia::EncodingQuality
+$prototypeV2=void setQuality( QMultimedia::EncodingQuality quality )
 
-$prototype=void setSampleRate(int rate)
-$method=|void|setSampleRate|int
+$prototypeV2=void setSampleRate( int rate )
 
 $extraMethods
 

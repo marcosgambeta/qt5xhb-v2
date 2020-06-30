@@ -34,11 +34,9 @@ $deleteMethod
 
 $prototypeV2=virtual QVideoFrame::PixelFormat bufferFormat() const = 0
 
-$prototype=virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
-$virtualMethod=|void|setBufferFormat|QVideoFrame::PixelFormat
+$prototypeV2=virtual void setBufferFormat( QVideoFrame::PixelFormat format ) = 0
 
-$prototype=virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
-$virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
+$prototypeV2=virtual QList<QVideoFrame::PixelFormat> supportedBufferFormats() const = 0
 
 %%
 %% SIGNALS

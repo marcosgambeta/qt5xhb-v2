@@ -55,40 +55,31 @@ $prototypeV2=QCameraImageCapture::Error error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=QString imageCodecDescription(const QString & codecName) const
-$method=|QString|imageCodecDescription|const QString &
+$prototypeV2=QString imageCodecDescription( const QString & codecName ) const
 
 $prototypeV2=bool isAvailable() const
 
-$prototype=bool isCaptureDestinationSupported(CaptureDestinations destination) const
-$method=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
+$prototypeV2=bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations destination ) const
 
-$prototype=QMediaObject *mediaObject() const override
+$prototypeV2=QMediaObject * mediaObject() const override
 %% TODO: is virtual ?
-$virtualMethod=|QMediaObject *|mediaObject|
 
-$prototype=void setBufferFormat(const QVideoFrame::PixelFormat format)
+$prototypeV2=void setBufferFormat( const QVideoFrame::PixelFormat format )
 %% TODO: const ?
-$method=|void|setBufferFormat|QVideoFrame::PixelFormat
 
-$prototype=void setCaptureDestination(CaptureDestinations destination)
-$method=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
+$prototypeV2=void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination )
 
-$prototype=void setEncodingSettings(const QImageEncoderSettings & settings)
-$method=|void|setEncodingSettings|const QImageEncoderSettings &
+$prototypeV2=void setEncodingSettings( const QImageEncoderSettings & settings )
 
-$prototype=QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
-$method=|QList<QVideoFrame::PixelFormat>|supportedBufferFormats|
+$prototypeV2=QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 
 $prototypeV2=QStringList supportedImageCodecs() const
 
-$prototype=QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr) const
-$method=|QList<QSize>|supportedResolutions|const QImageEncoderSettings &=QImageEncoderSettings(),bool *=nullptr
+$prototypeV2=QList<QSize> supportedResolutions( const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr ) const
 
 $prototypeV2=void cancelCapture()
 
-$prototype=int capture(const QString & location = QString())
-$slotMethod=|int|capture|const QString &=QString()
+$prototypeV2=int capture( const QString & location = QString() )
 
 $prototype=bool setMediaObject(QMediaObject *) override [protected]
 

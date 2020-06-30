@@ -32,16 +32,13 @@ $prototype=explicit QCameraLocksControl(QObject *parent = nullptr) [protected]
 $prototype=~QCameraLocksControl()
 $deleteMethod
 
-$prototype=virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
-$virtualMethod=|QCamera::LockStatus|lockStatus|QCamera::LockType
+$prototypeV2=virtual QCamera::LockStatus lockStatus( QCamera::LockType lock ) const = 0
 
-$prototype=virtual void searchAndLock(QCamera::LockTypes locks) = 0
-$virtualMethod=|void|searchAndLock|QCamera::LockTypes
+$prototypeV2=virtual void searchAndLock( QCamera::LockTypes locks ) = 0
 
 $prototypeV2=virtual QCamera::LockTypes supportedLocks() const = 0
 
-$prototype=virtual void unlock(QCamera::LockTypes locks) = 0
-$virtualMethod=|void|unlock|QCamera::LockTypes
+$prototypeV2=virtual void unlock( QCamera::LockTypes locks ) = 0
 
 %%
 %% SIGNALS

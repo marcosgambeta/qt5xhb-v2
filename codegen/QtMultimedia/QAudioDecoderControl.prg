@@ -42,16 +42,13 @@ $prototypeV2=virtual qint64 position() const = 0
 
 $prototypeV2=virtual QAudioBuffer read() = 0
 
-$prototype=virtual void setAudioFormat(const QAudioFormat & format) = 0
-$virtualMethod=|void|setAudioFormat|const QAudioFormat &
+$prototypeV2=virtual void setAudioFormat( const QAudioFormat & format ) = 0
 
 $prototypeV2=virtual QIODevice * sourceDevice() const = 0
 
-$prototype=virtual void setSourceDevice(QIODevice * device) = 0
-$virtualMethod=|void|setSourceDevice|QIODevice *
+$prototypeV2=virtual void setSourceDevice( QIODevice * device ) = 0
 
-$prototype=virtual void setSourceFilename(const QString & fileName) = 0
-$virtualMethod=|void|setSourceFilename|const QString &
+$prototypeV2=virtual void setSourceFilename( const QString & fileName ) = 0
 
 $prototypeV2=virtual QString sourceFilename() const = 0
 

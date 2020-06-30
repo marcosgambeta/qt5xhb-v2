@@ -30,16 +30,12 @@ $prototype=explicit QCameraImageProcessingControl(QObject *parent = nullptr) [pr
 $prototype=~QCameraImageProcessingControl()
 $deleteMethod
 
-$prototype=virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
-$virtualMethod=|bool|isParameterSupported|QCameraImageProcessingControl::ProcessingParameter
+$prototypeV2=virtual bool isParameterSupported( QCameraImageProcessingControl::ProcessingParameter parameter ) const = 0
 
-$prototype=virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVariant & value) const = 0
-$virtualMethod=|bool|isParameterValueSupported|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
+$prototypeV2=virtual bool isParameterValueSupported( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value ) const = 0
 
-$prototype=virtual QVariant parameter(ProcessingParameter parameter) const = 0
-$virtualMethod=|QVariant|parameter|QCameraImageProcessingControl::ProcessingParameter
+$prototypeV2=virtual QVariant parameter( QCameraImageProcessingControl::ProcessingParameter parameter ) const = 0
 
-$prototype=virtual void setParameter(ProcessingParameter parameter, const QVariant & value) = 0
-$virtualMethod=|void|setParameter|QCameraImageProcessingControl::ProcessingParameter,const QVariant &
+$prototypeV2=virtual void setParameter( QCameraImageProcessingControl::ProcessingParameter parameter, const QVariant & value ) = 0
 
 #pragma ENDDUMP

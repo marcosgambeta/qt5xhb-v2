@@ -38,11 +38,9 @@ $prototypeV2=virtual bool isCrossfadeSupported() const = 0
 
 $prototypeV2=virtual QMediaContent nextMedia() const = 0
 
-$prototype=virtual void setCrossfadeTime(qreal crossfadeTime) = 0
-$virtualMethod=|void|setCrossfadeTime|qreal
+$prototypeV2=virtual void setCrossfadeTime( qreal crossfadeTime ) = 0
 
-$prototype=virtual void setNextMedia(const QMediaContent & media) = 0
-$virtualMethod=|void|setNextMedia|const QMediaContent &
+$prototypeV2=virtual void setNextMedia( const QMediaContent & media ) = 0
 
 %%
 %% SIGNALS

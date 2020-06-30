@@ -59,35 +59,27 @@ $deleteMethod
 
 $prototypeV2=QString deviceName() const
 
-$prototype=bool isFormatSupported ( const QAudioFormat & format ) const
-$method=|bool|isFormatSupported|const QAudioFormat &
+$prototypeV2=bool isFormatSupported( const QAudioFormat & format ) const
 
 $prototypeV2=bool isNull() const
 
-$prototype=QAudioFormat nearestFormat ( const QAudioFormat & format ) const
-$method=|QAudioFormat|nearestFormat|const QAudioFormat &
+$prototypeV2=QAudioFormat nearestFormat( const QAudioFormat & format ) const
 
 $prototypeV2=QAudioFormat preferredFormat() const
 
-$prototype=QList<QAudioFormat::Endian> supportedByteOrders () const
-$method=|QList<QAudioFormat::Endian>|supportedByteOrders|
+$prototypeV2=QList<QAudioFormat::Endian> supportedByteOrders() const
 
-$prototype=QList<int> supportedChannelCounts () const
-$method=|QList<int>|supportedChannelCounts|
+$prototypeV2=QList<int> supportedChannelCounts() const
 
 $prototypeV2=QStringList supportedCodecs() const
 
-$prototype=QList<int> supportedSampleRates () const
-$method=|QList<int>|supportedSampleRates|
+$prototypeV2=QList<int> supportedSampleRates() const
 
-$prototype=QList<int> supportedSampleSizes () const
-$method=|QList<int>|supportedSampleSizes|
+$prototypeV2=QList<int> supportedSampleSizes() const
 
-$prototype=QList<QAudioFormat::SampleType> supportedSampleTypes () const
-$method=|QList<QAudioFormat::SampleType>|supportedSampleTypes|
+$prototypeV2=QList<QAudioFormat::SampleType> supportedSampleTypes() const
 
-$prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
-$staticMethod=|QList<QAudioDeviceInfo>|availableDevices|QAudio::Mode
+$prototypeV2=static QList<QAudioDeviceInfo> availableDevices( QAudio::Mode mode )
 
 $prototypeV2=static QAudioDeviceInfo defaultInputDevice()
 

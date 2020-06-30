@@ -69,41 +69,29 @@ $prototypeV2=int sampleSize() const
 
 $prototypeV2=QAudioFormat::SampleType sampleType() const
 
-$prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
-$method=|void|setByteOrder|QAudioFormat::Endian
+$prototypeV2=void setByteOrder( QAudioFormat::Endian byteOrder )
 
-$prototype=void setChannelCount ( int channelCount )
-$method=|void|setChannelCount|int
+$prototypeV2=void setChannelCount( int channelCount )
 
-$prototype=void setCodec ( const QString & codec )
-$method=|void|setCodec|const QString &
+$prototypeV2=void setCodec( const QString & codec )
 
-$prototype=void setSampleRate ( int sampleRate )
-$method=|void|setSampleRate|int
+$prototypeV2=void setSampleRate( int sampleRate )
 
-$prototype=void setSampleSize ( int sampleSize )
-$method=|void|setSampleSize|int
+$prototypeV2=void setSampleSize( int sampleSize )
 
-$prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
-$method=|void|setSampleType|QAudioFormat::SampleType
+$prototypeV2=void setSampleType( QAudioFormat::SampleType sampleType )
 
-$prototype=qint32 bytesForDuration(qint64 duration) const
-$method=|qint32|bytesForDuration|qint64
+$prototypeV2=qint32 bytesForDuration( qint64 duration ) const
 
-$prototype=qint64 durationForBytes(qint32 byteCount) const
-$method=|qint64|durationForBytes|qint32
+$prototypeV2=qint64 durationForBytes( qint32 byteCount ) const
 
-$prototype=qint32 bytesForFrames(qint32 frameCount) const
-$method=|qint32|bytesForFrames|qint32
+$prototypeV2=qint32 bytesForFrames( qint32 frameCount ) const
 
-$prototype=qint32 framesForBytes(qint32 byteCount) const
-$method=|qint32|framesForBytes|qint32
+$prototypeV2=qint32 framesForBytes( qint32 byteCount ) const
 
-$prototype=qint32 framesForDuration(qint64 duration) const
-$method=|qint32|framesForDuration|qint64
+$prototypeV2=qint32 framesForDuration( qint64 duration ) const
 
-$prototype=qint64 durationForFrames(qint32 frameCount) const
-$method=|qint64|durationForFrames|qint32
+$prototypeV2=qint64 durationForFrames( qint32 frameCount ) const
 
 $prototypeV2=int bytesPerFrame() const
 

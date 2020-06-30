@@ -40,20 +40,15 @@ $prototypeV2=virtual QCameraFocus::FocusPointMode focusPointMode() const = 0
 
 $prototypeV2=virtual QCameraFocusZoneList focusZones() const = 0
 
-$prototype=virtual bool isFocusModeSupported(QCameraFocus::FocusModes mode) const = 0
-$virtualMethod=|bool|isFocusModeSupported|QCameraFocus::FocusModes
+$prototypeV2=virtual bool isFocusModeSupported( QCameraFocus::FocusModes mode ) const = 0
 
-$prototype=virtual bool isFocusPointModeSupported(QCameraFocus::FocusPointMode mode) const = 0
-$virtualMethod=|bool|isFocusPointModeSupported|QCameraFocus::FocusPointMode
+$prototypeV2=virtual bool isFocusPointModeSupported( QCameraFocus::FocusPointMode mode ) const = 0
 
-$prototype=virtual void setCustomFocusPoint(const QPointF & point) = 0
-$virtualMethod=|void|setCustomFocusPoint|const QPointF &
+$prototypeV2=virtual void setCustomFocusPoint( const QPointF & point ) = 0
 
-$prototype=virtual void setFocusMode(QCameraFocus::FocusModes mode) = 0
-$virtualMethod=|void|setFocusMode|QCameraFocus::FocusModes
+$prototypeV2=virtual void setFocusMode( QCameraFocus::FocusModes mode ) = 0
 
-$prototype=virtual void setFocusPointMode(QCameraFocus::FocusPointMode mode) = 0
-$virtualMethod=|void|setFocusPointMode|QCameraFocus::FocusPointMode
+$prototypeV2=virtual void setFocusPointMode( QCameraFocus::FocusPointMode mode ) = 0
 
 %%
 %% SIGNALS

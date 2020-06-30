@@ -34,13 +34,11 @@ $deleteMethod
 
 $prototypeV2=virtual QCameraExposure::FlashModes flashMode() const = 0
 
-$prototype=virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
-$virtualMethod=|bool|isFlashModeSupported|QCameraExposure::FlashModes
+$prototypeV2=virtual bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const = 0
 
 $prototypeV2=virtual bool isFlashReady() const = 0
 
-$prototype=virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
-$virtualMethod=|void|setFlashMode|QCameraExposure::FlashModes
+$prototypeV2=virtual void setFlashMode( QCameraExposure::FlashModes mode ) = 0
 
 %%
 %% SIGNALS

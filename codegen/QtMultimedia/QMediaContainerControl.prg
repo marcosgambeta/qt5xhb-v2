@@ -32,13 +32,11 @@ $prototype=explicit QMediaContainerControl(QObject *parent = nullptr) [protected
 $prototype=virtual ~QMediaContainerControl()
 $deleteMethod
 
-$prototype=virtual QString containerDescription(const QString & formatMimeType) const = 0
-$virtualMethod=|QString|containerDescription|const QString &
+$prototypeV2=virtual QString containerDescription( const QString & formatMimeType ) const = 0
 
 $prototypeV2=virtual QString containerFormat() const = 0
 
-$prototype=virtual void setContainerFormat(const QString & format) = 0
-$virtualMethod=|void|setContainerFormat|const QString &
+$prototypeV2=virtual void setContainerFormat( const QString & format ) = 0
 
 $prototypeV2=virtual QStringList supportedContainers() const = 0
 

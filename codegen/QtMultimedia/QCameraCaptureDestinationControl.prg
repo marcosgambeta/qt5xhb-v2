@@ -34,11 +34,9 @@ $deleteMethod
 
 $prototypeV2=virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 
-$prototype=virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
-$virtualMethod=|bool|isCaptureDestinationSupported|QCameraImageCapture::CaptureDestinations
+$prototypeV2=virtual bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations destination ) const = 0
 
-$prototype=virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
-$virtualMethod=|void|setCaptureDestination|QCameraImageCapture::CaptureDestinations
+$prototypeV2=virtual void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination ) = 0
 
 %%
 %% SIGNALS

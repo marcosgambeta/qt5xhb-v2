@@ -35,11 +35,9 @@ $deleteMethod
 
 $prototypeV2=virtual QAudio::Role audioRole() const = 0
 
-$prototype=virtual void setAudioRole(QAudio::Role role) = 0
-$virtualMethod=|void|setAudioRole|QAudio::Role
+$prototypeV2=virtual void setAudioRole( QAudio::Role role ) = 0
 
-$prototype=virtual QList<QAudio::Role> supportedAudioRoles() const = 0
-$virtualMethod=|QList<QAudio::Role>|supportedAudioRoles|
+$prototypeV2=virtual QList<QAudio::Role> supportedAudioRoles() const = 0
 
 %%
 %% SIGNALS

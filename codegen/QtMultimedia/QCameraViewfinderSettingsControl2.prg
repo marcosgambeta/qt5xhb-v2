@@ -31,12 +31,10 @@ $prototype=explicit QCameraViewfinderSettingsControl2(QObject *parent = nullptr)
 $prototype=virtual ~QCameraViewfinderSettingsControl2()
 $deleteMethod
 
-$prototype=virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
-$virtualMethod=|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|
+$prototypeV2=virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 
 $prototypeV2=virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 
-$prototype=virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
-$virtualMethod=|void|setViewfinderSettings|const QCameraViewfinderSettings &
+$prototypeV2=virtual void setViewfinderSettings( const QCameraViewfinderSettings & settings ) = 0
 
 #pragma ENDDUMP

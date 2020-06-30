@@ -39,8 +39,7 @@ $deleteMethod
 
 $prototypeV2=QString sourceFilename() const
 
-$prototype=void setSourceFilename(const QString & fileName)
-$method=|void|setSourceFilename|const QString &
+$prototypeV2=void setSourceFilename( const QString & fileName )
 
 %%
 %% Q_PROPERTY(State state READ state NOTIFY stateChanged)
@@ -66,8 +65,7 @@ $prototypeV2=bool bufferAvailable() const
 
 $prototypeV2=QAudioFormat audioFormat() const
 
-$prototype=void setAudioFormat(const QAudioFormat & format)
-$method=|void|setAudioFormat|const QAudioFormat &
+$prototypeV2=void setAudioFormat( const QAudioFormat & format )
 
 $prototypeV2=qint64 duration() const
 
@@ -79,15 +77,13 @@ $prototypeV2=QAudioBuffer read() const
 
 $prototypeV2=QIODevice * sourceDevice() const
 
-$prototype=void setSourceDevice(QIODevice * device)
-$method=|void|setSourceDevice|QIODevice *
+$prototypeV2=void setSourceDevice( QIODevice * device )
 
 $prototypeV2=void start()
 
 $prototypeV2=void stop()
 
-$prototype=static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
-$staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList()
+$prototypeV2=static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const QStringList & codecs = QStringList() )
 
 $prototype=bool bind(QObject *) override
 

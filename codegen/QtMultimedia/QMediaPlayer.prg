@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=QMediaContent media() const
 
-$prototype=void setMedia(const QMediaContent &media, QIODevice *stream = nullptr)
-$slotMethod=|void|setMedia|const QMediaContent &,QIODevice *=nullptr
+$prototypeV2=void setMedia( const QMediaContent & media, QIODevice * stream = nullptr )
 
 %%
 %% Q_PROPERTY(QMediaContent currentMedia READ currentMedia NOTIFY currentMediaChanged)
@@ -57,8 +56,7 @@ $prototypeV2=QMediaContent currentMedia() const
 
 $prototypeV2=QMediaPlaylist * playlist() const
 
-$prototype=void setPlaylist(QMediaPlaylist * playlist)
-$slotMethod=|void|setPlaylist|QMediaPlaylist *
+$prototypeV2=void setPlaylist( QMediaPlaylist * playlist )
 
 %%
 %% Q_PROPERTY(qint64 duration READ duration NOTIFY durationChanged)
@@ -72,8 +70,7 @@ $prototypeV2=qint64 duration() const
 
 $prototypeV2=qint64 position() const
 
-$prototype=void setPosition(qint64 position)
-$slotMethod=|void|setPosition|qint64
+$prototypeV2=void setPosition( qint64 position )
 
 %%
 %% Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
@@ -81,8 +78,7 @@ $slotMethod=|void|setPosition|qint64
 
 $prototypeV2=int volume() const
 
-$prototype=void setVolume(int volume)
-$slotMethod=|void|setVolume|int
+$prototypeV2=void setVolume( int volume )
 
 %%
 %% Q_PROPERTY(bool muted READ isMuted WRITE setMuted NOTIFY mutedChanged)
@@ -90,8 +86,7 @@ $slotMethod=|void|setVolume|int
 
 $prototypeV2=bool isMuted() const
 
-$prototype=void setMuted(bool muted)
-$slotMethod=|void|setMuted|bool
+$prototypeV2=void setMuted( bool muted )
 
 %%
 %% Q_PROPERTY(int bufferStatus READ bufferStatus NOTIFY bufferStatusChanged)
@@ -139,11 +134,9 @@ $prototypeV2=QMediaPlayer::MediaStatus mediaStatus() const
 %% Q_PROPERTY(QAudio::Role audioRole READ audioRole WRITE setAudioRole)
 %%
 
-$prototype=QAudio::Role audioRole() const
-$method=5,6,0|QAudio::Role|audioRole|
+$prototypeV2=5,6,0|QAudio::Role audioRole() const
 
-$prototype=void setAudioRole(QAudio::Role audioRole)
-$method=5,6,0|void|setAudioRole|QAudio::Role
+$prototypeV2=5,6,0|void setAudioRole( QAudio::Role audioRole )
 
 %%
 %% Q_PROPERTY(QString error READ errorString)
@@ -159,8 +152,7 @@ $prototypeV2=QNetworkConfiguration currentNetworkConfiguration() const
 
 $prototypeV2=QMediaPlayer::Error error() const
 
-$prototype=const QIODevice * mediaStream() const
-$method=|const QIODevice *|mediaStream|
+$prototypeV2=const QIODevice * mediaStream() const
 
 $prototype=void setVideoOutput(QVideoWidget * output)
 $internalMethod=|void|setVideoOutput,setVideoOutput1|QVideoWidget *
@@ -204,22 +196,19 @@ $prototypeV2=void pause()
 
 $prototypeV2=void play()
 
-$prototype=void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
-$slotMethod=|void|setNetworkConfigurations|const QList<QNetworkConfiguration> &
+$prototypeV2=void setNetworkConfigurations( const QList<QNetworkConfiguration> & configurations )
 
-$prototype=void setPlaybackRate(qreal rate)
-$slotMethod=|void|setPlaybackRate|qreal
+$prototypeV2=void setPlaybackRate( qreal rate )
 
 $prototypeV2=void stop()
 
-$prototype=static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList& codecs = QStringList(), Flags flags = Flags())
-$staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList(),QMediaPlayer::Flags=0
+$prototypeV2=static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const QStringList & codecs = QStringList(), QMediaPlayer::Flags flags = QMediaPlayer::Flags() )
+%% $staticMethod=|QMultimedia::SupportEstimate|hasSupport|const QString &,const QStringList &=QStringList(),QMediaPlayer::Flags=0
 
-$prototype=static QStringList supportedMimeTypes(Flags flags = Flags())
-$staticMethod=|QStringList|supportedMimeTypes|QMediaPlayer::Flags=0
+$prototypeV2=static QStringList supportedMimeTypes( QMediaPlayer::Flags flags = QMediaPlayer::Flags() )
+%% $staticMethod=|QStringList|supportedMimeTypes|QMediaPlayer::Flags=0
 
-$prototype=QList<QAudio::Role> supportedAudioRoles() const
-$method=5,6,0|QList<QAudio::Role>|supportedAudioRoles|
+$prototypeV2=5,6,0|QList<QAudio::Role> supportedAudioRoles() const
 
 $prototype=bool bind(QObject *) override
 %% TODO: not present in the documentation

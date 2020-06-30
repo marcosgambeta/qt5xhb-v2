@@ -56,8 +56,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 $prototype=~QCameraViewfinderSettings()
 $deleteMethod
 
-$prototype=void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
-$method=|void|swap|QCameraViewfinderSettings &
+$prototypeV2=void swap( QCameraViewfinderSettings & other ) Q_DECL_NOTHROW
 
 $prototypeV2=bool isNull() const
 
@@ -93,18 +92,15 @@ $addMethod=setResolution
 
 $prototypeV2=qreal minimumFrameRate() const
 
-$prototype=void setMinimumFrameRate(qreal rate)
-$method=|void|setMinimumFrameRate|qreal
+$prototypeV2=void setMinimumFrameRate( qreal rate )
 
 $prototypeV2=qreal maximumFrameRate() const
 
-$prototype=void setMaximumFrameRate(qreal rate)
-$method=|void|setMaximumFrameRate|qreal
+$prototypeV2=void setMaximumFrameRate( qreal rate )
 
 $prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
-$prototype=void setPixelFormat(QVideoFrame::PixelFormat format)
-$method=|void|setPixelFormat|QVideoFrame::PixelFormat
+$prototypeV2=void setPixelFormat( QVideoFrame::PixelFormat format )
 
 $prototypeV2=QSize pixelAspectRatio() const
 

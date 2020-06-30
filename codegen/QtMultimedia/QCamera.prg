@@ -91,8 +91,7 @@ $prototypeV2=QCamera::Status status() const
 
 $prototypeV2=QCamera::CaptureModes captureMode() const
 
-$prototype=void setCaptureMode(QCamera::CaptureModes mode)
-$slotMethod=|void|setCaptureMode|QCamera::CaptureModes
+$prototypeV2=void setCaptureMode( QCamera::CaptureModes mode )
 
 %%
 %% Q_PROPERTY(QCamera::LockStatus lockStatus READ lockStatus NOTIFY lockStatusChanged)
@@ -140,8 +139,7 @@ $prototypeV2=QCameraFocus * focus() const
 
 $prototypeV2=QCameraImageProcessing * imageProcessing() const
 
-$prototype=bool isCaptureModeSupported(CaptureModes mode) const
-$method=|bool|isCaptureModeSupported|QCamera::CaptureModes
+$prototypeV2=bool isCaptureModeSupported( QCamera::CaptureModes mode ) const
 
 $prototypeV2=QCamera::LockTypes requestedLocks() const
 
@@ -249,24 +247,19 @@ $addMethod=unlock
 
 $prototypeV2=QMultimedia::AvailabilityStatus availability() const override
 
-$prototype=QCameraViewfinderSettings viewfinderSettings() const
-$method=5,5,0|QCameraViewfinderSettings|viewfinderSettings|
+$prototypeV2=5,5,0|QCameraViewfinderSettings viewfinderSettings() const
 
-$prototype=void setViewfinderSettings(const QCameraViewfinderSettings &settings)
-$method=5,5,0|void|setViewfinderSettings|const QCameraViewfinderSettings &
+$prototypeV2=5,5,0|void setViewfinderSettings( const QCameraViewfinderSettings & settings )
 
-$prototype=QList<QCameraViewfinderSettings> supportedViewfinderSettings(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
-$method=5,5,0|QList<QCameraViewfinderSettings>|supportedViewfinderSettings|const QCameraViewfinderSettings &=QCameraViewfinderSettings()
+$prototypeV2=5,5,0|QList<QCameraViewfinderSettings> supportedViewfinderSettings( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 
-$prototype=QList<QSize> supportedViewfinderResolutions(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
-$method=5,5,0|QList<QSize>|supportedViewfinderResolutions|const QCameraViewfinderSettings &=QCameraViewfinderSettings()
+$prototypeV2=5,5,0|QList<QSize> supportedViewfinderResolutions( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 
 $prototype=QList<FrameRateRange> supportedViewfinderFrameRateRanges(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
 %% TODO: FrameRateRange is a structure
 %% $method=5,5,0|QList<FrameRateRange>|supportedViewfinderFrameRateRanges|const QCameraViewfinderSettings &=QCameraViewfinderSettings()
 
-$prototype=QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
-$method=5,5,0|QList<QVideoFrame::PixelFormat>|supportedViewfinderPixelFormats|const QCameraViewfinderSettings &=QCameraViewfinderSettings()
+$prototypeV2=5,5,0|QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 
 $prototype=static QList<QByteArray> availableDevices()
 %% TODO: #if QT_DEPRECATED_SINCE(5, 3)

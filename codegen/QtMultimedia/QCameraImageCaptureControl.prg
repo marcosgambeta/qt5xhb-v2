@@ -34,15 +34,13 @@ $deleteMethod
 
 $prototypeV2=virtual void cancelCapture() = 0
 
-$prototype=virtual int capture(const QString & fileName) = 0
-$virtualMethod=|int|capture|const QString &
+$prototypeV2=virtual int capture( const QString & fileName ) = 0
 
 $prototypeV2=virtual QCameraImageCapture::DriveMode driveMode() const = 0
 
 $prototypeV2=virtual bool isReadyForCapture() const = 0
 
-$prototype=virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
-$virtualMethod=|void|setDriveMode|QCameraImageCapture::DriveMode
+$prototypeV2=virtual void setDriveMode( QCameraImageCapture::DriveMode mode ) = 0
 
 %%
 %% SIGNALS

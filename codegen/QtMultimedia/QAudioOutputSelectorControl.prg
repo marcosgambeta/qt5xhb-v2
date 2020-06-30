@@ -34,16 +34,13 @@ $deleteMethod
 
 $prototypeV2=virtual QString activeOutput() const = 0
 
-$prototype=virtual QList<QString> availableOutputs() const = 0
-$virtualMethod=|QList<QString>|availableOutputs|
+$prototypeV2=virtual QList<QString> availableOutputs() const = 0
 
 $prototypeV2=virtual QString defaultOutput() const = 0
 
-$prototype=virtual QString outputDescription(const QString & name) const = 0
-$virtualMethod=|QString|outputDescription|const QString &
+$prototypeV2=virtual QString outputDescription( const QString & name ) const = 0
 
-$prototype=virtual void setActiveOutput(const QString & name) = 0
-$virtualSlotMethod=|void|setActiveOutput|const QString &
+$prototypeV2=virtual void setActiveOutput( const QString & name ) = 0
 
 %%
 %% SIGNALS

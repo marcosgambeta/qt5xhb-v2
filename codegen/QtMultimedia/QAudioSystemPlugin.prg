@@ -33,16 +33,12 @@ $deleteMethod
 
 %% TODO: is virtual ?
 
-$prototype=virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
-$virtualMethod=|QList<QByteArray>|availableDevices|QAudio::Mode
+$prototypeV2=virtual QList<QByteArray> availableDevices( QAudio::Mode ) const override = 0
 
-$prototype=virtual QAbstractAudioInput* createInput(const QByteArray& device) override = 0
-$virtualMethod=|QAbstractAudioInput *|createInput|const QByteArray &
+$prototypeV2=virtual QAbstractAudioInput * createInput( const QByteArray & device ) override = 0
 
-$prototype=virtual QAbstractAudioOutput* createOutput(const QByteArray& device) override = 0
-$virtualMethod=|QAbstractAudioOutput *|createOutput|const QByteArray &
+$prototypeV2=virtual QAbstractAudioOutput * createOutput( const QByteArray & device ) override = 0
 
-$prototype=virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAudio::Mode mode) override = 0
-$virtualMethod=|QAbstractAudioDeviceInfo *|createDeviceInfo|const QByteArray &,QAudio::Mode
+$prototypeV2=virtual QAbstractAudioDeviceInfo * createDeviceInfo( const QByteArray & device, QAudio::Mode mode ) override = 0
 
 #pragma ENDDUMP

@@ -48,17 +48,13 @@ $prototypeV2=QAbstractVideoSurface::Error error() const
 
 $prototypeV2=bool isActive() const
 
-$prototype=virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
-$virtualMethod=|bool|isFormatSupported|const QVideoSurfaceFormat &
+$prototypeV2=virtual bool isFormatSupported( const QVideoSurfaceFormat & format ) const
 
-$prototype=virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format ) const
-$virtualMethod=|QVideoSurfaceFormat|nearestFormat|const QVideoSurfaceFormat &
+$prototypeV2=virtual QVideoSurfaceFormat nearestFormat( const QVideoSurfaceFormat & format ) const
 
-$prototype=virtual bool present ( const QVideoFrame & frame ) = 0
-$virtualMethod=|bool|present|const QVideoFrame &
+$prototypeV2=virtual bool present( const QVideoFrame & frame ) = 0
 
-$prototype=virtual bool start ( const QVideoSurfaceFormat & format )
-$virtualMethod=|bool|start|const QVideoSurfaceFormat &
+$prototypeV2=virtual bool start( const QVideoSurfaceFormat & format )
 
 $prototypeV2=virtual void stop()
 

@@ -76,7 +76,6 @@ $prototypeV2=int orientation() const
 
 $prototypeV2=static QCameraInfo defaultCamera()
 
-$prototype=static QList<QCameraInfo> availableCameras(QCamera::Position position = QCamera::UnspecifiedPosition)
-$staticMethod=|QList<QCameraInfo>|availableCameras|QCamera::Position=QCamera::UnspecifiedPosition
+$prototypeV2=static QList<QCameraInfo> availableCameras( QCamera::Position position = QCamera::UnspecifiedPosition )
 
 #pragma ENDDUMP

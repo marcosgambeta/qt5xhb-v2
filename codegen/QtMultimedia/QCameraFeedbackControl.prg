@@ -30,19 +30,14 @@ $prototype=explicit QCameraFeedbackControl(QObject *parent = nullptr) [protected
 $prototype=~QCameraFeedbackControl()
 $deleteMethod
 
-$prototype=virtual bool isEventFeedbackEnabled(EventType event) const = 0
-$virtualMethod=|bool|isEventFeedbackEnabled|QCameraFeedbackControl::EventType
+$prototypeV2=virtual bool isEventFeedbackEnabled( QCameraFeedbackControl::EventType event ) const = 0
 
-$prototype=virtual bool isEventFeedbackLocked(EventType event) const = 0
-$virtualMethod=|bool|isEventFeedbackLocked|QCameraFeedbackControl::EventType
+$prototypeV2=virtual bool isEventFeedbackLocked( QCameraFeedbackControl::EventType event ) const = 0
 
-$prototype=virtual void resetEventFeedback(EventType event) = 0
-$virtualMethod=|void|resetEventFeedback|QCameraFeedbackControl::EventType
+$prototypeV2=virtual void resetEventFeedback( QCameraFeedbackControl::EventType event ) = 0
 
-$prototype=virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
-$virtualMethod=|bool|setEventFeedbackEnabled|QCameraFeedbackControl::EventType,bool
+$prototypeV2=virtual bool setEventFeedbackEnabled( QCameraFeedbackControl::EventType event, bool enabled ) = 0
 
-$prototype=virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 0
-$virtualMethod=|bool|setEventFeedbackSound|QCameraFeedbackControl::EventType,const QString &
+$prototypeV2=virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString & filePath ) = 0
 
 #pragma ENDDUMP

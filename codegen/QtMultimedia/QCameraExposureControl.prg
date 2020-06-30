@@ -32,20 +32,15 @@ $prototype=explicit QCameraExposureControl(QObject *parent = nullptr) [protected
 $prototype=~QCameraExposureControl()
 $deleteMethod
 
-$prototype=virtual QVariant actualValue(ExposureParameter parameter) const = 0
-$virtualMethod=|QVariant|actualValue|QCameraExposureControl::ExposureParameter
+$prototypeV2=virtual QVariant actualValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 
-$prototype=virtual bool isParameterSupported(ExposureParameter parameter) const = 0
-$virtualMethod=|bool|isParameterSupported|QCameraExposureControl::ExposureParameter
+$prototypeV2=virtual bool isParameterSupported( QCameraExposureControl::ExposureParameter parameter ) const = 0
 
-$prototype=virtual QVariant requestedValue(ExposureParameter parameter) const = 0
-$virtualMethod=|QVariant|requestedValue|QCameraExposureControl::ExposureParameter
+$prototypeV2=virtual QVariant requestedValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 
-$prototype=virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
-$virtualMethod=|bool|setValue|QCameraExposureControl::ExposureParameter,const QVariant &
+$prototypeV2=virtual bool setValue( QCameraExposureControl::ExposureParameter parameter, const QVariant & value ) = 0
 
-$prototype=virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
-$virtualMethod=|QVariantList|supportedParameterRange|QCameraExposureControl::ExposureParameter,bool *
+$prototypeV2=virtual QVariantList supportedParameterRange( QCameraExposureControl::ExposureParameter parameter, bool * continuous ) const = 0
 
 %%
 %% SIGNALS

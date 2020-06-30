@@ -44,8 +44,7 @@ $prototypeV2=virtual qreal requestedDigitalZoom() const = 0
 
 $prototypeV2=virtual qreal requestedOpticalZoom() const = 0
 
-$prototype=virtual void zoomTo(qreal optical, qreal digital) = 0
-$virtualMethod=|void|zoomTo|qreal,qreal
+$prototypeV2=virtual void zoomTo( qreal optical, qreal digital ) = 0
 
 %%
 %% SIGNALS
