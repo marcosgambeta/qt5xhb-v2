@@ -33,23 +33,17 @@ $deleteMethod
 
 $prototypeV2=virtual QString convertorName() = 0
 
-$prototype=virtual bool canConvert(const QString &mime, QString flav) = 0
-$virtualMethod=|bool|canConvert|const QString &,QString
+$prototypeV2=virtual bool canConvert( const QString & mime, QString flav ) = 0
 
-$prototype=virtual QString mimeFor(QString flav) = 0
-$virtualMethod=|QString|mimeFor|QString
+$prototypeV2=virtual QString mimeFor( QString flav ) = 0
 
-$prototype=virtual QString flavorFor(const QString &mime) = 0
-$virtualMethod=|QString|flavorFor|const QString &
+$prototypeV2=virtual QString flavorFor( const QString & mime ) = 0
 
-$prototype=virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QString flav) = 0
-$virtualMethod=|QVariant|convertToMime|const QString &,QList<QByteArray>,QString
+$prototypeV2=virtual QVariant convertToMime( const QString & mime, QList<QByteArray> data, QString flav ) = 0
 
-$prototype=virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QString flav) = 0
-$virtualMethod=|QList<QByteArray>|convertFromMime|const QString &,QVariant,QString
+$prototypeV2=virtual QList<QByteArray> convertFromMime( const QString & mime, QVariant data, QString flav ) = 0
 
-$prototype=virtual int count(QMimeData *mimeData)
-$virtualMethod=|int|count|QMimeData *
+$prototypeV2=virtual int count( QMimeData * mimeData )
 
 $extraMethods
 
