@@ -48,8 +48,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=bool boxOutlineVisible()
 
-$prototype=void setBoxOutlineVisible(bool visible)
-$method=|void|setBoxOutlineVisible|bool
+$prototypeV2=void setBoxOutlineVisible( bool visible )
 
 %%
 %% Q_PROPERTY(qreal boxWidth READ boxWidth WRITE setBoxWidth NOTIFY boxWidthChanged)
@@ -57,8 +56,7 @@ $method=|void|setBoxOutlineVisible|bool
 
 $prototypeV2=qreal boxWidth()
 
-$prototype=void setBoxWidth(qreal width)
-$method=|void|setBoxWidth|qreal
+$prototypeV2=void setBoxWidth( qreal width )
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
@@ -66,8 +64,7 @@ $method=|void|setBoxWidth|qreal
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
@@ -75,8 +72,7 @@ $method=|void|setBrush|const QBrush &
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 %%
 %%
@@ -110,17 +106,13 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 }
 $addMethod=append
 
-$prototype=bool remove(QBoxSet *box)
-$method=|bool|remove|QBoxSet *
+$prototypeV2=bool remove( QBoxSet * box )
 
-$prototype=bool take(QBoxSet *box)
-$method=|bool|take|QBoxSet *
+$prototypeV2=bool take( QBoxSet * box )
 
-$prototype=bool insert(int index, QBoxSet *box)
-$method=|bool|insert|int,QBoxSet *
+$prototypeV2=bool insert( int index, QBoxSet * box )
 
-$prototype=QList<QBoxSet *> boxSets() const
-$method=|QList<QBoxSet *>|boxSets|
+$prototypeV2=QList<QBoxSet *> boxSets() const
 
 $prototypeV2=void clear()
 

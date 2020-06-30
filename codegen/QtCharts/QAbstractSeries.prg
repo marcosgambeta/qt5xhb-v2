@@ -49,8 +49,7 @@ $prototypeV2=virtual QAbstractSeries::SeriesType type() const = 0
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
@@ -58,8 +57,7 @@ $method=|void|setName|const QString &
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible = true)
-$method=|void|setVisible|bool=true
+$prototypeV2=void setVisible( bool visible = true )
 
 %%
 %% Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity NOTIFY opacityChanged)
@@ -67,8 +65,7 @@ $method=|void|setVisible|bool=true
 
 $prototypeV2=qreal opacity() const
 
-$prototype=void setOpacity(qreal opacity)
-$method=|void|setOpacity|qreal
+$prototypeV2=void setOpacity( qreal opacity )
 
 %%
 %% Q_PROPERTY(bool useOpenGL READ useOpenGL WRITE setUseOpenGL NOTIFY useOpenGLChanged)
@@ -76,8 +73,7 @@ $method=|void|setOpacity|qreal
 
 $prototypeV2=bool useOpenGL() const
 
-$prototype=void setUseOpenGL(bool enable = true)
-$method=|void|setUseOpenGL|bool=true
+$prototypeV2=void setUseOpenGL( bool enable = true )
 
 %%
 %%
@@ -85,14 +81,11 @@ $method=|void|setUseOpenGL|bool=true
 
 $prototypeV2=QChart * chart() const
 
-$prototype=bool attachAxis(QAbstractAxis *axis)
-$method=|bool|attachAxis|QAbstractAxis *
+$prototypeV2=bool attachAxis( QAbstractAxis * axis )
 
-$prototype=bool detachAxis(QAbstractAxis *axis)
-$method=|bool|detachAxis|QAbstractAxis *
+$prototypeV2=bool detachAxis( QAbstractAxis * axis )
 
-$prototype=QList<QAbstractAxis*> attachedAxes()
-$method=|QList<QAbstractAxis *>|attachedAxes|
+$prototypeV2=QList<QAbstractAxis *> attachedAxes()
 
 $prototypeV2=void show()
 

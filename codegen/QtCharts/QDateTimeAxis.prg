@@ -46,8 +46,7 @@ $deleteMethod
 
 $prototypeV2=QDateTime min() const
 
-$prototype=void setMin(QDateTime min)
-$method=|void|setMin|QDateTime
+$prototypeV2=void setMin( QDateTime min )
 
 %%
 %% Q_PROPERTY(QDateTime max READ max WRITE setMax NOTIFY maxChanged)
@@ -55,8 +54,7 @@ $method=|void|setMin|QDateTime
 
 $prototypeV2=QDateTime max() const
 
-$prototype=void setMax(QDateTime max)
-$method=|void|setMax|QDateTime
+$prototypeV2=void setMax( QDateTime max )
 
 %%
 %% Q_PROPERTY(QString format READ format WRITE setFormat NOTIFY formatChanged)
@@ -64,8 +62,7 @@ $method=|void|setMax|QDateTime
 
 $prototypeV2=QString format() const
 
-$prototype=void setFormat(QString format)
-$method=|void|setFormat|QString
+$prototypeV2=void setFormat( QString format )
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount WRITE setTickCount NOTIFY tickCountChanged)
@@ -73,8 +70,7 @@ $method=|void|setFormat|QString
 
 $prototypeV2=int tickCount() const
 
-$prototype=void setTickCount(int count)
-$method=|void|setTickCount|int
+$prototypeV2=void setTickCount( int count )
 
 %%
 %%
@@ -82,8 +78,7 @@ $method=|void|setTickCount|int
 
 $prototypeV2=QAbstractAxis::AxisType type() const
 
-$prototype=void setRange(QDateTime min, QDateTime max)
-$method=|void|setRange|QDateTime,QDateTime
+$prototypeV2=void setRange( QDateTime min, QDateTime max )
 
 %%
 %% SIGNALS

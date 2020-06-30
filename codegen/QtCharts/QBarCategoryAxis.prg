@@ -44,8 +44,7 @@ $deleteMethod
 
 $prototypeV2=QStringList categories()
 
-$prototype=void setCategories(const QStringList &categories)
-$method=|void|setCategories|const QStringList &
+$prototypeV2=void setCategories( const QStringList & categories )
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
@@ -59,8 +58,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=QString min() const
 
-$prototype=void setMin(const QString &minCategory)
-$method=|void|setMin|const QString &
+$prototypeV2=void setMin( const QString & minCategory )
 
 %%
 %% Q_PROPERTY(QString max READ max WRITE setMax NOTIFY maxChanged)
@@ -68,8 +66,7 @@ $method=|void|setMin|const QString &
 
 $prototypeV2=QString max() const
 
-$prototype=void setMax(const QString &maxCategory)
-$method=|void|setMax|const QString &
+$prototypeV2=void setMax( const QString & maxCategory )
 
 %%
 %%
@@ -105,22 +102,17 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 }
 $addMethod=append
 
-$prototype=void remove(const QString &category)
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & category )
 
-$prototype=void insert(int index, const QString &category)
-$method=|void|insert|int,const QString &
+$prototypeV2=void insert( int index, const QString & category )
 
-$prototype=void replace(const QString &oldCategory, const QString &newCategory)
-$method=|void|replace|const QString &,const QString &
+$prototypeV2=void replace( const QString & oldCategory, const QString & newCategory )
 
 $prototypeV2=Q_INVOKABLE void clear()
 
-$prototype=QString at(int index) const
-$method=|QString|at|int
+$prototypeV2=QString at( int index ) const
 
-$prototype=void setRange(const QString &minCategory, const QString &maxCategory)
-$method=|void|setRange|const QString &,const QString &
+$prototypeV2=void setRange( const QString & minCategory, const QString & maxCategory )
 
 %%
 %% SIGNALS

@@ -80,8 +80,7 @@ $prototypeV2=QLineSeries * lowerSeries() const
 
 $prototypeV2=QColor color() const
 
-$prototype=void setColor(const QColor &color)
-$method=|void|setColor|const QColor &
+$prototypeV2=void setColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
@@ -89,8 +88,7 @@ $method=|void|setColor|const QColor &
 
 $prototypeV2=QColor borderColor() const
 
-$prototype=void setBorderColor(const QColor &color)
-$method=|void|setBorderColor|const QColor &
+$prototypeV2=void setBorderColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QString pointLabelsFormat READ pointLabelsFormat WRITE setPointLabelsFormat NOTIFY pointLabelsFormatChanged)
@@ -98,8 +96,7 @@ $method=|void|setBorderColor|const QColor &
 
 $prototypeV2=QString pointLabelsFormat() const
 
-$prototype=void setPointLabelsFormat(const QString &format)
-$method=|void|setPointLabelsFormat|const QString &
+$prototypeV2=void setPointLabelsFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(bool pointLabelsVisible READ pointLabelsVisible WRITE setPointLabelsVisible NOTIFY pointLabelsVisibilityChanged)
@@ -107,8 +104,7 @@ $method=|void|setPointLabelsFormat|const QString &
 
 $prototypeV2=bool pointLabelsVisible() const
 
-$prototype=void setPointLabelsVisible(bool visible = true)
-$method=|void|setPointLabelsVisible|bool=true
+$prototypeV2=void setPointLabelsVisible( bool visible = true )
 
 %%
 %% Q_PROPERTY(QFont pointLabelsFont READ pointLabelsFont WRITE setPointLabelsFont NOTIFY pointLabelsFontChanged)
@@ -116,8 +112,7 @@ $method=|void|setPointLabelsVisible|bool=true
 
 $prototypeV2=QFont pointLabelsFont() const
 
-$prototype=void setPointLabelsFont(const QFont &font)
-$method=|void|setPointLabelsFont|const QFont &
+$prototypeV2=void setPointLabelsFont( const QFont & font )
 
 %%
 %% Q_PROPERTY(QColor pointLabelsColor READ pointLabelsColor WRITE setPointLabelsColor NOTIFY pointLabelsColorChanged)
@@ -125,8 +120,7 @@ $method=|void|setPointLabelsFont|const QFont &
 
 $prototypeV2=QColor pointLabelsColor() const
 
-$prototype=void setPointLabelsColor(const QColor &color)
-$method=|void|setPointLabelsColor|const QColor &
+$prototypeV2=void setPointLabelsColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(bool pointLabelsClipping READ pointLabelsClipping WRITE setPointLabelsClipping NOTIFY pointLabelsClippingChanged)
@@ -134,8 +128,7 @@ $method=|void|setPointLabelsColor|const QColor &
 
 $prototypeV2=bool pointLabelsClipping() const
 
-$prototype=void setPointLabelsClipping(bool enabled = true)
-$method=|void|setPointLabelsClipping|bool=true
+$prototypeV2=void setPointLabelsClipping( bool enabled = true )
 
 %%
 %%
@@ -143,24 +136,19 @@ $method=|void|setPointLabelsClipping|bool=true
 
 $prototypeV2=QAbstractSeries::SeriesType type() const
 
-$prototype=void setUpperSeries(QLineSeries *series)
-$method=|void|setUpperSeries|QLineSeries *
+$prototypeV2=void setUpperSeries( QLineSeries * series )
 
-$prototype=void setLowerSeries(QLineSeries *series)
-$method=|void|setLowerSeries|QLineSeries *
+$prototypeV2=void setLowerSeries( QLineSeries * series )
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setPointsVisible(bool visible = true)
-$method=|void|setPointsVisible|bool=true
+$prototypeV2=void setPointsVisible( bool visible = true )
 
 $prototypeV2=bool pointsVisible() const
 

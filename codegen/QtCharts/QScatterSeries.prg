@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=QColor color() const
 
-$prototype=void setColor(const QColor &color)
-$method=|void|setColor|const QColor &
+$prototypeV2=void setColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QColor borderColor READ borderColor WRITE setBorderColor NOTIFY borderColorChanged)
@@ -51,8 +50,7 @@ $method=|void|setColor|const QColor &
 
 $prototypeV2=QColor borderColor() const
 
-$prototype=void setBorderColor(const QColor &color)
-$method=|void|setBorderColor|const QColor &
+$prototypeV2=void setBorderColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(MarkerShape markerShape READ markerShape WRITE setMarkerShape NOTIFY markerShapeChanged)
@@ -60,8 +58,7 @@ $method=|void|setBorderColor|const QColor &
 
 $prototypeV2=QScatterSeries::MarkerShape markerShape() const
 
-$prototype=void setMarkerShape(MarkerShape shape)
-$method=|void|setMarkerShape|QScatterSeries::MarkerShape
+$prototypeV2=void setMarkerShape( QScatterSeries::MarkerShape shape )
 
 %%
 %% Q_PROPERTY(qreal markerSize READ markerSize WRITE setMarkerSize NOTIFY markerSizeChanged)
@@ -69,8 +66,7 @@ $method=|void|setMarkerShape|QScatterSeries::MarkerShape
 
 $prototypeV2=qreal markerSize() const
 
-$prototype=void setMarkerSize(qreal size)
-$method=|void|setMarkerSize|qreal
+$prototypeV2=void setMarkerSize( qreal size )
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush)
@@ -78,8 +74,7 @@ $method=|void|setMarkerSize|qreal
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 %%
 %%
@@ -87,8 +82,7 @@ $method=|void|setBrush|const QBrush &
 
 $prototypeV2=QAbstractSeries::SeriesType type() const
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 %%
 %% SIGNALS

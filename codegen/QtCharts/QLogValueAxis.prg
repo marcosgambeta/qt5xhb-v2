@@ -44,8 +44,7 @@ $deleteMethod
 
 $prototypeV2=qreal min() const
 
-$prototype=void setMin(qreal min)
-$method=|void|setMin|qreal
+$prototypeV2=void setMin( qreal min )
 
 %%
 %% Q_PROPERTY(qreal max READ max WRITE setMax NOTIFY maxChanged)
@@ -53,8 +52,7 @@ $method=|void|setMin|qreal
 
 $prototypeV2=qreal max() const
 
-$prototype=void setMax(qreal max)
-$method=|void|setMax|qreal
+$prototypeV2=void setMax( qreal max )
 
 %%
 %% Q_PROPERTY(QString labelFormat READ labelFormat WRITE setLabelFormat NOTIFY labelFormatChanged)
@@ -62,8 +60,7 @@ $method=|void|setMax|qreal
 
 $prototypeV2=QString labelFormat() const
 
-$prototype=void setLabelFormat(const QString &format)
-$method=|void|setLabelFormat|const QString &
+$prototypeV2=void setLabelFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(qreal base READ base WRITE setBase NOTIFY baseChanged)
@@ -71,25 +68,21 @@ $method=|void|setLabelFormat|const QString &
 
 $prototypeV2=qreal base() const
 
-$prototype=void setBase(qreal base)
-$method=|void|setBase|qreal
+$prototypeV2=void setBase( qreal base )
 
 %%
 %% Q_PROPERTY(int tickCount READ tickCount NOTIFY tickCountChanged)
 %%
 
-$prototype=int tickCount() const
-$method=5,9,0|int|tickCount|
+$prototypeV2=5,9,0|int tickCount() const
 
 %%
 %% Q_PROPERTY(int minorTickCount READ minorTickCount WRITE setMinorTickCount NOTIFY minorTickCountChanged)
 %%
 
-$prototype=int minorTickCount() const
-$method=5,9,0|int|minorTickCount|
+$prototypeV2=5,9,0|int minorTickCount() const
 
-$prototype=void setMinorTickCount(int minorTickCount)
-$method=5,9,0|void|setMinorTickCount|int
+$prototypeV2=5,9,0|void setMinorTickCount( int minorTickCount )
 
 %%
 %%
@@ -97,8 +90,7 @@ $method=5,9,0|void|setMinorTickCount|int
 
 $prototypeV2=QAbstractAxis::AxisType type() const
 
-$prototype=void setRange(qreal min, qreal max)
-$method=|void|setRange|qreal,qreal
+$prototypeV2=void setRange( qreal min, qreal max )
 
 %%
 %% SIGNALS

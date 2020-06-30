@@ -43,8 +43,7 @@ $constructor=|new|QObject *=nullptr
 
 $prototypeV2=int timestampRow() const
 
-$prototype=void setTimestampRow(int timestampRow)
-$method=|void|setTimestampRow|int
+$prototypeV2=void setTimestampRow( int timestampRow )
 
 %%
 %% Q_PROPERTY(int openRow READ openRow WRITE setOpenRow NOTIFY openRowChanged)
@@ -52,8 +51,7 @@ $method=|void|setTimestampRow|int
 
 $prototypeV2=int openRow() const
 
-$prototype=void setOpenRow(int openRow)
-$method=|void|setOpenRow|int
+$prototypeV2=void setOpenRow( int openRow )
 
 %%
 %% Q_PROPERTY(int highRow READ highRow WRITE setHighRow NOTIFY highRowChanged)
@@ -61,8 +59,7 @@ $method=|void|setOpenRow|int
 
 $prototypeV2=int highRow() const
 
-$prototype=void setHighRow(int highRow)
-$method=|void|setHighRow|int
+$prototypeV2=void setHighRow( int highRow )
 
 %%
 %% Q_PROPERTY(int lowRow READ lowRow WRITE setLowRow NOTIFY lowRowChanged)
@@ -70,8 +67,7 @@ $method=|void|setHighRow|int
 
 $prototypeV2=int lowRow() const
 
-$prototype=void setLowRow(int lowRow)
-$method=|void|setLowRow|int
+$prototypeV2=void setLowRow( int lowRow )
 
 %%
 %% Q_PROPERTY(int closeRow READ closeRow WRITE setCloseRow NOTIFY closeRowChanged)
@@ -79,8 +75,7 @@ $method=|void|setLowRow|int
 
 $prototypeV2=int closeRow() const
 
-$prototype=void setCloseRow(int closeRow)
-$method=|void|setCloseRow|int
+$prototypeV2=void setCloseRow( int closeRow )
 
 %%
 %% Q_PROPERTY(int firstSetColumn READ firstSetColumn WRITE setFirstSetColumn NOTIFY firstSetColumnChanged)
@@ -88,8 +83,7 @@ $method=|void|setCloseRow|int
 
 $prototypeV2=int firstSetColumn() const
 
-$prototype=void setFirstSetColumn(int firstSetColumn)
-$method=|void|setFirstSetColumn|int
+$prototypeV2=void setFirstSetColumn( int firstSetColumn )
 
 %%
 %% Q_PROPERTY(int lastSetColumn READ lastSetColumn WRITE setLastSetColumn NOTIFY lastSetColumnChanged)
@@ -97,8 +91,7 @@ $method=|void|setFirstSetColumn|int
 
 $prototypeV2=int lastSetColumn() const
 
-$prototype=void setLastSetColumn(int lastSetColumn)
-$method=|void|setLastSetColumn|int
+$prototypeV2=void setLastSetColumn( int lastSetColumn )
 
 %%
 %%

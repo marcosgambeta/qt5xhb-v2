@@ -42,11 +42,9 @@ $deleteMethod
 %% Q_PROPERTY(qreal startValue READ startValue WRITE setStartValue)
 %%
 
-$prototype=qreal startValue(const QString &categoryLabel = QString()) const
-$method=|qreal|startValue|const QString &=QString()
+$prototypeV2=qreal startValue( const QString & categoryLabel = QString() ) const
 
-$prototype=void setStartValue(qreal min)
-$method=|void|setStartValue|qreal
+$prototypeV2=void setStartValue( qreal min )
 
 %%
 %% Q_PROPERTY(QStringList categoriesLabels READ categoriesLabels)
@@ -66,8 +64,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=QCategoryAxis::AxisLabelsPosition labelsPosition() const
 
-$prototype=void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
-$method=|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
+$prototypeV2=void setLabelsPosition( QCategoryAxis::AxisLabelsPosition position )
 
 %%
 %%
@@ -75,17 +72,13 @@ $method=|void|setLabelsPosition|QCategoryAxis::AxisLabelsPosition
 
 $prototypeV2=QAbstractAxis::AxisType type() const
 
-$prototype=void append(const QString &label, qreal categoryEndValue)
-$method=|void|append|const QString &,qreal
+$prototypeV2=void append( const QString & label, qreal categoryEndValue )
 
-$prototype=void remove(const QString &label)
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & label )
 
-$prototype=void replaceLabel(const QString &oldLabel, const QString &newLabel)
-$method=|void|replaceLabel|const QString &,const QString &
+$prototypeV2=void replaceLabel( const QString & oldLabel, const QString & newLabel )
 
-$prototype=qreal endValue(const QString &categoryLabel) const
-$method=|qreal|endValue|const QString &
+$prototypeV2=qreal endValue( const QString & categoryLabel ) const
 
 %%
 %% SIGNALS

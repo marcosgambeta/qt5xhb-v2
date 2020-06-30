@@ -43,8 +43,7 @@ $constructor=|new|QObject *=nullptr
 
 $prototypeV2=int timestampColumn() const
 
-$prototype=void setTimestampColumn(int timestampColumn)
-$method=|void|setTimestampColumn|int
+$prototypeV2=void setTimestampColumn( int timestampColumn )
 
 %%
 %% Q_PROPERTY(int openColumn READ openColumn WRITE setOpenColumn NOTIFY openColumnChanged)
@@ -52,8 +51,7 @@ $method=|void|setTimestampColumn|int
 
 $prototypeV2=int openColumn() const
 
-$prototype=void setOpenColumn(int openColumn)
-$method=|void|setOpenColumn|int
+$prototypeV2=void setOpenColumn( int openColumn )
 
 %%
 %% Q_PROPERTY(int highColumn READ highColumn WRITE setHighColumn NOTIFY highColumnChanged)
@@ -61,8 +59,7 @@ $method=|void|setOpenColumn|int
 
 $prototypeV2=int highColumn() const
 
-$prototype=void setHighColumn(int highColumn)
-$method=|void|setHighColumn|int
+$prototypeV2=void setHighColumn( int highColumn )
 
 %%
 %% Q_PROPERTY(int lowColumn READ lowColumn WRITE setLowColumn NOTIFY lowColumnChanged)
@@ -70,8 +67,7 @@ $method=|void|setHighColumn|int
 
 $prototypeV2=int lowColumn() const
 
-$prototype=void setLowColumn(int lowColumn)
-$method=|void|setLowColumn|int
+$prototypeV2=void setLowColumn( int lowColumn )
 
 %%
 %% Q_PROPERTY(int closeColumn READ closeColumn WRITE setCloseColumn NOTIFY closeColumnChanged)
@@ -79,8 +75,7 @@ $method=|void|setLowColumn|int
 
 $prototypeV2=int closeColumn() const
 
-$prototype=void setCloseColumn(int closeColumn)
-$method=|void|setCloseColumn|int
+$prototypeV2=void setCloseColumn( int closeColumn )
 
 %%
 %% Q_PROPERTY(int firstSetRow READ firstSetRow WRITE setFirstSetRow NOTIFY firstSetRowChanged)
@@ -88,8 +83,7 @@ $method=|void|setCloseColumn|int
 
 $prototypeV2=int firstSetRow() const
 
-$prototype=void setFirstSetRow(int firstSetRow)
-$method=|void|setFirstSetRow|int
+$prototypeV2=void setFirstSetRow( int firstSetRow )
 
 %%
 %% Q_PROPERTY(int lastSetRow READ lastSetRow WRITE setLastSetRow NOTIFY lastSetRowChanged)
@@ -97,8 +91,7 @@ $method=|void|setFirstSetRow|int
 
 $prototypeV2=int lastSetRow() const
 
-$prototype=void setLastSetRow(int lastSetRow)
-$method=|void|setLastSetRow|int
+$prototypeV2=void setLastSetRow( int lastSetRow )
 
 %%
 %%

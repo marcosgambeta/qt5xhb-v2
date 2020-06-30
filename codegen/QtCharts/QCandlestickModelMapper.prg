@@ -48,8 +48,7 @@ $prototype=explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract
 
 $prototypeV2=QAbstractItemModel * model() const
 
-$prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
 %%
 %% Q_PROPERTY(QCandlestickSeries *series READ series WRITE setSeries NOTIFY seriesReplaced)
@@ -57,8 +56,7 @@ $method=|void|setModel|QAbstractItemModel *
 
 $prototypeV2=QCandlestickSeries * series() const
 
-$prototype=void setSeries(QCandlestickSeries *series)
-$method=|void|setSeries|QCandlestickSeries *
+$prototypeV2=void setSeries( QCandlestickSeries * series )
 
 %%
 %%

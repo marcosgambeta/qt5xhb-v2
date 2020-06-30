@@ -44,8 +44,7 @@ $constructor=|new|QObject *=nullptr
 
 $prototypeV2=QAbstractBarSeries * series() const
 
-$prototype=void setSeries(QAbstractBarSeries *series)
-$method=|void|setSeries|QAbstractBarSeries *
+$prototypeV2=void setSeries( QAbstractBarSeries * series )
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
@@ -53,8 +52,7 @@ $method=|void|setSeries|QAbstractBarSeries *
 
 $prototypeV2=QAbstractItemModel * model() const
 
-$prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
 %%
 %% Q_PROPERTY(int firstBarSetColumn READ firstBarSetColumn WRITE setFirstBarSetColumn NOTIFY firstBarSetColumnChanged)
@@ -62,8 +60,7 @@ $method=|void|setModel|QAbstractItemModel *
 
 $prototypeV2=int firstBarSetColumn() const
 
-$prototype=void setFirstBarSetColumn(int firstBarSetColumn)
-$method=|void|setFirstBarSetColumn|int
+$prototypeV2=void setFirstBarSetColumn( int firstBarSetColumn )
 
 %%
 %% Q_PROPERTY(int lastBarSetColumn READ lastBarSetColumn WRITE setLastBarSetColumn NOTIFY lastBarSetColumnChanged)
@@ -71,8 +68,7 @@ $method=|void|setFirstBarSetColumn|int
 
 $prototypeV2=int lastBarSetColumn() const
 
-$prototype=void setLastBarSetColumn(int lastBarSetColumn)
-$method=|void|setLastBarSetColumn|int
+$prototypeV2=void setLastBarSetColumn( int lastBarSetColumn )
 
 %%
 %% Q_PROPERTY(int firstRow READ firstRow WRITE setFirstRow NOTIFY firstRowChanged)
@@ -80,8 +76,7 @@ $method=|void|setLastBarSetColumn|int
 
 $prototypeV2=int firstRow() const
 
-$prototype=void setFirstRow(int firstRow)
-$method=|void|setFirstRow|int
+$prototypeV2=void setFirstRow( int firstRow )
 
 %%
 %% Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
@@ -89,8 +84,7 @@ $method=|void|setFirstRow|int
 
 $prototypeV2=int rowCount() const
 
-$prototype=void setRowCount(int rowCount)
-$method=|void|setRowCount|int
+$prototypeV2=void setRowCount( int rowCount )
 
 %%
 %%

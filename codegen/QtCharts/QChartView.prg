@@ -66,8 +66,7 @@ $prototypeV2=QChartView::RubberBands rubberBand() const
 
 $prototypeV2=QChart * chart() const
 
-$prototype=void setChart(QChart *chart)
-$method=|void|setChart|QChart *
+$prototypeV2=void setChart( QChart * chart )
 
 $prototype=void resizeEvent(QResizeEvent *event) [protected]
 

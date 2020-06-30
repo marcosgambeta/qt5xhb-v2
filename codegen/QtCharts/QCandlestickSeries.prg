@@ -54,8 +54,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=qreal maximumColumnWidth() const
 
-$prototype=void setMaximumColumnWidth(qreal maximumColumnWidth)
-$method=|void|setMaximumColumnWidth|qreal
+$prototypeV2=void setMaximumColumnWidth( qreal maximumColumnWidth )
 
 %%
 %% Q_PROPERTY(qreal minimumColumnWidth READ minimumColumnWidth WRITE setMinimumColumnWidth NOTIFY minimumColumnWidthChanged)
@@ -63,8 +62,7 @@ $method=|void|setMaximumColumnWidth|qreal
 
 $prototypeV2=qreal minimumColumnWidth() const
 
-$prototype=void setMinimumColumnWidth(qreal minimumColumnWidth)
-$method=|void|setMinimumColumnWidth|qreal
+$prototypeV2=void setMinimumColumnWidth( qreal minimumColumnWidth )
 
 %%
 %% Q_PROPERTY(qreal bodyWidth READ bodyWidth WRITE setBodyWidth NOTIFY bodyWidthChanged)
@@ -72,8 +70,7 @@ $method=|void|setMinimumColumnWidth|qreal
 
 $prototypeV2=qreal bodyWidth() const
 
-$prototype=void setBodyWidth(qreal bodyWidth)
-$method=|void|setBodyWidth|qreal
+$prototypeV2=void setBodyWidth( qreal bodyWidth )
 
 %%
 %% Q_PROPERTY(bool bodyOutlineVisible READ bodyOutlineVisible WRITE setBodyOutlineVisible NOTIFY bodyOutlineVisibilityChanged)
@@ -81,8 +78,7 @@ $method=|void|setBodyWidth|qreal
 
 $prototypeV2=bool bodyOutlineVisible() const
 
-$prototype=void setBodyOutlineVisible(bool bodyOutlineVisible)
-$method=|void|setBodyOutlineVisible|bool
+$prototypeV2=void setBodyOutlineVisible( bool bodyOutlineVisible )
 
 %%
 %% Q_PROPERTY(qreal capsWidth READ capsWidth WRITE setCapsWidth NOTIFY capsWidthChanged)
@@ -90,8 +86,7 @@ $method=|void|setBodyOutlineVisible|bool
 
 $prototypeV2=qreal capsWidth() const
 
-$prototype=void setCapsWidth(qreal capsWidth)
-$method=|void|setCapsWidth|qreal
+$prototypeV2=void setCapsWidth( qreal capsWidth )
 
 %%
 %% Q_PROPERTY(bool capsVisible READ capsVisible WRITE setCapsVisible NOTIFY capsVisibilityChanged)
@@ -99,8 +94,7 @@ $method=|void|setCapsWidth|qreal
 
 $prototypeV2=bool capsVisible() const
 
-$prototype=void setCapsVisible(bool capsVisible)
-$method=|void|setCapsVisible|bool
+$prototypeV2=void setCapsVisible( bool capsVisible )
 
 %%
 %% Q_PROPERTY(QColor increasingColor READ increasingColor WRITE setIncreasingColor NOTIFY increasingColorChanged)
@@ -108,8 +102,7 @@ $method=|void|setCapsVisible|bool
 
 $prototypeV2=QColor increasingColor() const
 
-$prototype=void setIncreasingColor(const QColor &increasingColor)
-$method=|void|setIncreasingColor|const QColor &
+$prototypeV2=void setIncreasingColor( const QColor & increasingColor )
 
 %%
 %% Q_PROPERTY(QColor decreasingColor READ decreasingColor WRITE setDecreasingColor NOTIFY decreasingColorChanged)
@@ -117,8 +110,7 @@ $method=|void|setIncreasingColor|const QColor &
 
 $prototypeV2=QColor decreasingColor() const
 
-$prototype=void setDecreasingColor(const QColor &decreasingColor)
-$method=|void|setDecreasingColor|const QColor &
+$prototypeV2=void setDecreasingColor( const QColor & decreasingColor )
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
@@ -126,8 +118,7 @@ $method=|void|setDecreasingColor|const QColor &
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
@@ -135,8 +126,7 @@ $method=|void|setBrush|const QBrush &
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 %%
 %%
@@ -198,16 +188,13 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 }
 $addMethod=remove
 
-$prototype=bool insert(int index, QCandlestickSet *set)
-$method=|bool|insert|int,QCandlestickSet *
+$prototypeV2=bool insert( int index, QCandlestickSet * set )
 
-$prototype=bool take(QCandlestickSet *set)
-$method=|bool|take|QCandlestickSet *
+$prototypeV2=bool take( QCandlestickSet * set )
 
 $prototypeV2=void clear()
 
-$prototype=QList<QCandlestickSet *> sets() const
-$method=|QList<QCandlestickSet *>|sets|
+$prototypeV2=QList<QCandlestickSet *> sets() const
 
 $prototypeV2=QAbstractSeries::SeriesType type() const
 

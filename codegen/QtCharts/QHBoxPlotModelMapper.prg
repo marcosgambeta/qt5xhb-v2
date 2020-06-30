@@ -46,8 +46,7 @@ $constructor=|new|QObject *=nullptr
 
 $prototypeV2=QBoxPlotSeries * series() const
 
-$prototype=void setSeries(QBoxPlotSeries *series)
-$method=|void|setSeries|QBoxPlotSeries *
+$prototypeV2=void setSeries( QBoxPlotSeries * series )
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
@@ -55,8 +54,7 @@ $method=|void|setSeries|QBoxPlotSeries *
 
 $prototypeV2=QAbstractItemModel * model() const
 
-$prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
 %%
 %% Q_PROPERTY(int firstBoxSetRow READ firstBoxSetRow WRITE setFirstBoxSetRow NOTIFY firstBoxSetRowChanged)
@@ -64,8 +62,7 @@ $method=|void|setModel|QAbstractItemModel *
 
 $prototypeV2=int firstBoxSetRow() const
 
-$prototype=void setFirstBoxSetRow(int firstBoxSetRow)
-$method=|void|setFirstBoxSetRow|int
+$prototypeV2=void setFirstBoxSetRow( int firstBoxSetRow )
 
 %%
 %% Q_PROPERTY(int lastBoxSetRow READ lastBoxSetRow WRITE setLastBoxSetRow NOTIFY lastBoxSetRowChanged)
@@ -73,8 +70,7 @@ $method=|void|setFirstBoxSetRow|int
 
 $prototypeV2=int lastBoxSetRow() const
 
-$prototype=void setLastBoxSetRow(int lastBoxSetRow)
-$method=|void|setLastBoxSetRow|int
+$prototypeV2=void setLastBoxSetRow( int lastBoxSetRow )
 
 %%
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
@@ -82,8 +78,7 @@ $method=|void|setLastBoxSetRow|int
 
 $prototypeV2=int firstColumn() const
 
-$prototype=void setFirstColumn(int firstColumn)
-$method=|void|setFirstColumn|int
+$prototypeV2=void setFirstColumn( int firstColumn )
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
@@ -91,8 +86,7 @@ $method=|void|setFirstColumn|int
 
 $prototypeV2=int columnCount() const
 
-$prototype=void setColumnCount(int rowCount)
-$method=|void|setColumnCount|int
+$prototypeV2=void setColumnCount( int rowCount )
 
 %%
 %%

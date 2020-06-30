@@ -66,8 +66,7 @@ $deleteMethod
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
@@ -75,8 +74,7 @@ $method=|void|setPen|const QPen &
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 %%
 %%
@@ -112,16 +110,13 @@ $addMethod=append
 
 $prototypeV2=void clear()
 
-$prototype=void setLabel(const QString label)
-$method=|void|setLabel|const QString &
+$prototypeV2=void setLabel( const QString label )
 
 $prototypeV2=QString label() const
 
-$prototype=void setValue(const int index, const qreal value)
-$method=|void|setValue|const int,const qreal
+$prototypeV2=void setValue( const int index, const qreal value )
 
-$prototype=qreal at(const int index) const
-$method=|qreal|at|const int
+$prototypeV2=qreal at( const int index ) const
 
 $prototypeV2=int count() const
 

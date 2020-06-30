@@ -43,8 +43,7 @@ $deleteMethod
 
 $prototypeV2=qreal barWidth() const
 
-$prototype=void setBarWidth(qreal width)
-$method=|void|setBarWidth|qreal
+$prototypeV2=void setBarWidth( qreal width )
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
@@ -58,8 +57,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=bool isLabelsVisible() const
 
-$prototype=void setLabelsVisible(bool visible = true)
-$method=|void|setLabelsVisible|bool=true
+$prototypeV2=void setLabelsVisible( bool visible = true )
 
 %%
 %% Q_PROPERTY(QString labelsFormat READ labelsFormat WRITE setLabelsFormat NOTIFY labelsFormatChanged)
@@ -67,8 +65,7 @@ $method=|void|setLabelsVisible|bool=true
 
 $prototypeV2=QString labelsFormat() const
 
-$prototype=void setLabelsFormat(const QString &format)
-$method=|void|setLabelsFormat|const QString &
+$prototypeV2=void setLabelsFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(qreal labelsAngle READ labelsAngle WRITE setLabelsAngle NOTIFY labelsAngleChanged)
@@ -76,8 +73,7 @@ $method=|void|setLabelsFormat|const QString &
 
 $prototypeV2=qreal labelsAngle() const
 
-$prototype=void setLabelsAngle(qreal angle)
-$method=|void|setLabelsAngle|qreal
+$prototypeV2=void setLabelsAngle( qreal angle )
 
 %%
 %% Q_PROPERTY(LabelsPosition labelsPosition READ labelsPosition WRITE setLabelsPosition NOTIFY labelsPositionChanged)
@@ -85,8 +81,7 @@ $method=|void|setLabelsAngle|qreal
 
 $prototypeV2=QAbstractBarSeries::LabelsPosition labelsPosition() const
 
-$prototype=void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
-$method=|void|setLabelsPosition|QAbstractBarSeries::LabelsPosition
+$prototypeV2=void setLabelsPosition( QAbstractBarSeries::LabelsPosition position )
 
 %%
 %%
@@ -120,17 +115,13 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 }
 $addMethod=append
 
-$prototype=bool remove(QBarSet *set)
-$method=|bool|remove|QBarSet *
+$prototypeV2=bool remove( QBarSet * set )
 
-$prototype=bool take(QBarSet *set)
-$method=|bool|take|QBarSet *
+$prototypeV2=bool take( QBarSet * set )
 
-$prototype=bool insert(int index, QBarSet *set)
-$method=|bool|insert|int,QBarSet *
+$prototypeV2=bool insert( int index, QBarSet * set )
 
-$prototype=QList<QBarSet *> barSets() const
-$method=|QList<QBarSet *>|barSets|
+$prototypeV2=QList<QBarSet *> barSets() const
 
 $prototypeV2=void clear()
 

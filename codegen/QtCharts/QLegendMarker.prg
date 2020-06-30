@@ -44,8 +44,7 @@ $deleteMethod
 
 $prototypeV2=QString label() const
 
-$prototype=void setLabel(const QString &label)
-$method=|void|setLabel|const QString &
+$prototypeV2=void setLabel( const QString & label )
 
 %%
 %% Q_PROPERTY(QBrush labelBrush READ labelBrush WRITE setLabelBrush NOTIFY labelBrushChanged)
@@ -53,8 +52,7 @@ $method=|void|setLabel|const QString &
 
 $prototypeV2=QBrush labelBrush() const
 
-$prototype=void setLabelBrush(const QBrush &brush)
-$method=|void|setLabelBrush|const QBrush &
+$prototypeV2=void setLabelBrush( const QBrush & brush )
 
 %%
 %% Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontChanged)
@@ -62,8 +60,7 @@ $method=|void|setLabelBrush|const QBrush &
 
 $prototypeV2=QFont font() const
 
-$prototype=void setFont(const QFont &font)
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
 %%
 %% Q_PROPERTY(QPen pen READ pen WRITE setPen NOTIFY penChanged)
@@ -71,8 +68,7 @@ $method=|void|setFont|const QFont &
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setPen(const QPen &pen)
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
 %%
 %% Q_PROPERTY(QBrush brush READ brush WRITE setBrush NOTIFY brushChanged)
@@ -80,8 +76,7 @@ $method=|void|setPen|const QPen &
 
 $prototypeV2=QBrush brush() const
 
-$prototype=void setBrush(const QBrush &brush)
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
 %%
 %% Q_PROPERTY(bool visible READ isVisible WRITE setVisible NOTIFY visibleChanged)
@@ -89,18 +84,15 @@ $method=|void|setBrush|const QBrush &
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setVisible(bool visible)
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 %%
 %% Q_PROPERTY(QLegend::MarkerShape shape READ shape WRITE setShape NOTIFY shapeChanged)
 %%
 
-$prototype=QLegend::MarkerShape shape() const
-$method=5,9,0|QLegend::MarkerShape|shape|
+$prototypeV2=5,9,0|QLegend::MarkerShape shape() const
 
-$prototype=void setShape(QLegend::MarkerShape shape)
-$method=5,9,0|void|setShape|QLegend::MarkerShape
+$prototypeV2=5,9,0|void setShape( QLegend::MarkerShape shape )
 
 %%
 %%

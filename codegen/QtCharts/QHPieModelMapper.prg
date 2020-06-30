@@ -44,8 +44,7 @@ $constructor=|new|QObject *=nullptr
 
 $prototypeV2=QPieSeries * series() const
 
-$prototype=void setSeries(QPieSeries *series)
-$method=|void|setSeries|QPieSeries *
+$prototypeV2=void setSeries( QPieSeries * series )
 
 %%
 %% Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelReplaced)
@@ -53,8 +52,7 @@ $method=|void|setSeries|QPieSeries *
 
 $prototypeV2=QAbstractItemModel * model() const
 
-$prototype=void setModel(QAbstractItemModel *model)
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
 %%
 %% Q_PROPERTY(int valuesRow READ valuesRow WRITE setValuesRow NOTIFY valuesRowChanged)
@@ -62,8 +60,7 @@ $method=|void|setModel|QAbstractItemModel *
 
 $prototypeV2=int valuesRow() const
 
-$prototype=void setValuesRow(int valuesRow)
-$method=|void|setValuesRow|int
+$prototypeV2=void setValuesRow( int valuesRow )
 
 %%
 %% Q_PROPERTY(int labelsRow READ labelsRow WRITE setLabelsRow NOTIFY labelsRowChanged)
@@ -71,8 +68,7 @@ $method=|void|setValuesRow|int
 
 $prototypeV2=int labelsRow() const
 
-$prototype=void setLabelsRow(int labelsRow)
-$method=|void|setLabelsRow|int
+$prototypeV2=void setLabelsRow( int labelsRow )
 
 %%
 %% Q_PROPERTY(int firstColumn READ firstColumn WRITE setFirstColumn NOTIFY firstColumnChanged)
@@ -80,8 +76,7 @@ $method=|void|setLabelsRow|int
 
 $prototypeV2=int firstColumn() const
 
-$prototype=void setFirstColumn(int firstColumn)
-$method=|void|setFirstColumn|int
+$prototypeV2=void setFirstColumn( int firstColumn )
 
 %%
 %% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
@@ -89,8 +84,7 @@ $method=|void|setFirstColumn|int
 
 $prototypeV2=int columnCount() const
 
-$prototype=void setColumnCount(int columnCount)
-$method=|void|setColumnCount|int
+$prototypeV2=void setColumnCount( int columnCount )
 
 %%
 %%

@@ -42,8 +42,7 @@ $deleteMethod
 
 $prototypeV2=qreal horizontalPosition() const
 
-$prototype=void setHorizontalPosition(qreal relativePosition)
-$method=|void|setHorizontalPosition|qreal
+$prototypeV2=void setHorizontalPosition( qreal relativePosition )
 
 %%
 %% Q_PROPERTY(qreal verticalPosition READ verticalPosition WRITE setVerticalPosition)
@@ -51,8 +50,7 @@ $method=|void|setHorizontalPosition|qreal
 
 $prototypeV2=qreal verticalPosition() const
 
-$prototype=void setVerticalPosition(qreal relativePosition)
-$method=|void|setVerticalPosition|qreal
+$prototypeV2=void setVerticalPosition( qreal relativePosition )
 
 %%
 %% Q_PROPERTY(qreal size READ pieSize WRITE setPieSize)
@@ -60,8 +58,7 @@ $method=|void|setVerticalPosition|qreal
 
 $prototypeV2=qreal pieSize() const
 
-$prototype=void setPieSize(qreal relativeSize)
-$method=|void|setPieSize|qreal
+$prototypeV2=void setPieSize( qreal relativeSize )
 
 %%
 %% Q_PROPERTY(qreal startAngle READ pieStartAngle WRITE setPieStartAngle)
@@ -69,8 +66,7 @@ $method=|void|setPieSize|qreal
 
 $prototypeV2=qreal pieStartAngle() const
 
-$prototype=void setPieStartAngle(qreal startAngle)
-$method=|void|setPieStartAngle|qreal
+$prototypeV2=void setPieStartAngle( qreal startAngle )
 
 %%
 %% Q_PROPERTY(qreal endAngle READ pieEndAngle WRITE setPieEndAngle)
@@ -78,8 +74,7 @@ $method=|void|setPieStartAngle|qreal
 
 $prototypeV2=qreal pieEndAngle() const
 
-$prototype=void setPieEndAngle(qreal endAngle)
-$method=|void|setPieEndAngle|qreal
+$prototypeV2=void setPieEndAngle( qreal endAngle )
 
 %%
 %% Q_PROPERTY(int count READ count NOTIFY countChanged)
@@ -99,8 +94,7 @@ $prototypeV2=qreal sum() const
 
 $prototypeV2=qreal holeSize() const
 
-$prototype=void setHoleSize(qreal holeSize)
-$method=|void|setHoleSize|qreal
+$prototypeV2=void setHoleSize( qreal holeSize )
 
 %%
 %%
@@ -144,27 +138,21 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
 }
 $addMethod=append
 
-$prototype=bool insert(int index, QPieSlice *slice)
-$method=|bool|insert|int,QPieSlice *
+$prototypeV2=bool insert( int index, QPieSlice * slice )
 
-$prototype=bool remove(QPieSlice *slice)
-$method=|bool|remove|QPieSlice *
+$prototypeV2=bool remove( QPieSlice * slice )
 
-$prototype=bool take(QPieSlice *slice)
-$method=|bool|take|QPieSlice *
+$prototypeV2=bool take( QPieSlice * slice )
 
 $prototypeV2=void clear()
 
-$prototype=QList<QPieSlice *> slices() const
-$method=|QList<QPieSlice *>|slices|
+$prototypeV2=QList<QPieSlice *> slices() const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=void setLabelsVisible(bool visible = true)
-$method=|void|setLabelsVisible|bool=true
+$prototypeV2=void setLabelsVisible( bool visible = true )
 
-$prototype=void setLabelsPosition(QPieSlice::LabelPosition position)
-$method=|void|setLabelsPosition|QPieSlice::LabelPosition
+$prototypeV2=void setLabelsPosition( QPieSlice::LabelPosition position )
 
 %%
 %% SIGNALS

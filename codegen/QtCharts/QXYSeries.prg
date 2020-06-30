@@ -39,71 +39,57 @@ $deleteMethod
 %% Q_PROPERTY(bool pointsVisible READ pointsVisible WRITE setPointsVisible)
 %%
 
-$prototype=bool pointsVisible() const
-$method=|bool|pointsVisible|
+$prototypeV2=bool pointsVisible() const
 
-$prototype=void setPointsVisible(bool visible = true)
-$method=|void|setPointsVisible|bool=true
+$prototypeV2=void setPointsVisible( bool visible = true )
 
 %%
 %% Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 %%
 
-$prototype=virtual QColor color() const
-$virtualMethod=|QColor|color|
+$prototypeV2=virtual QColor color() const
 
-$prototype=virtual void setColor(const QColor &color)
-$virtualMethod=|void|setColor|const QColor &
+$prototypeV2=virtual void setColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(QString pointLabelsFormat READ pointLabelsFormat WRITE setPointLabelsFormat NOTIFY pointLabelsFormatChanged)
 %%
 
-$prototype=QString pointLabelsFormat() const
-$method=|QString|pointLabelsFormat|
+$prototypeV2=QString pointLabelsFormat() const
 
-$prototype=void setPointLabelsFormat(const QString &format)
-$method=|void|setPointLabelsFormat|const QString &
+$prototypeV2=void setPointLabelsFormat( const QString & format )
 
 %%
 %% Q_PROPERTY(bool pointLabelsVisible READ pointLabelsVisible WRITE setPointLabelsVisible NOTIFY pointLabelsVisibilityChanged)
 %%
 
-$prototype=bool pointLabelsVisible() const
-$method=|bool|pointLabelsVisible|
+$prototypeV2=bool pointLabelsVisible() const
 
-$prototype=void setPointLabelsVisible(bool visible = true)
-$method=|void|setPointLabelsVisible|bool=true
+$prototypeV2=void setPointLabelsVisible( bool visible = true )
 
 %%
 %% Q_PROPERTY(QFont pointLabelsFont READ pointLabelsFont WRITE setPointLabelsFont NOTIFY pointLabelsFontChanged)
 %%
 
-$prototype=QFont pointLabelsFont() const
-$method=|QFont|pointLabelsFont|
+$prototypeV2=QFont pointLabelsFont() const
 
-$prototype=void setPointLabelsFont(const QFont &font)
-$method=|void|setPointLabelsFont|const QFont &
+$prototypeV2=void setPointLabelsFont( const QFont & font )
 
 %%
 %% Q_PROPERTY(QColor pointLabelsColor READ pointLabelsColor WRITE setPointLabelsColor NOTIFY pointLabelsColorChanged)
 %%
 
-$prototype=QColor pointLabelsColor() const
-$method=|QColor|pointLabelsColor|
+$prototypeV2=QColor pointLabelsColor() const
 
-$prototype=void setPointLabelsColor(const QColor &color)
-$method=|void|setPointLabelsColor|const QColor &
+$prototypeV2=void setPointLabelsColor( const QColor & color )
 
 %%
 %% Q_PROPERTY(bool pointLabelsClipping READ pointLabelsClipping WRITE setPointLabelsClipping NOTIFY pointLabelsClippingChanged)
 %%
 
-$prototype=bool pointLabelsClipping() const
-$method=|bool|pointLabelsClipping|
+$prototypeV2=bool pointLabelsClipping() const
 
-$prototype=void setPointLabelsClipping(bool enabled = true)
-$method=|void|setPointLabelsClipping|bool=true
+$prototypeV2=void setPointLabelsClipping( bool enabled = true )
 
 %%
 %%
@@ -243,38 +229,27 @@ HB_FUNC_STATIC( QXYSERIES_REMOVE )
 }
 $addMethod=remove
 
-$prototype=void removePoints(int index, int count)
-$method=|void|removePoints|int,int
+$prototypeV2=void removePoints( int index, int count )
 
-$prototype=void insert(int index, const QPointF &point)
-$method=|void|insert|int,const QPointF &
+$prototypeV2=void insert( int index, const QPointF & point )
 
-$prototype=void clear()
-$method=|void|clear|
+$prototypeV2=void clear()
 
-$prototype=int count() const
-$method=|int|count|
+$prototypeV2=int count() const
 
-$prototype=QList<QPointF> points() const
-$method=|QList<QPointF>|points|
+$prototypeV2=QList<QPointF> points() const
 
-$prototype=QVector<QPointF> pointsVector() const
-$method=|QVector<QPointF>|pointsVector|
+$prototypeV2=QVector<QPointF> pointsVector() const
 
-$prototype=const QPointF &at(int index) const
-$method=|const QPointF &|at|int
+$prototypeV2=const QPointF & at( int index ) const
 
-$prototype=virtual void setPen(const QPen &pen)
-$virtualMethod=|void|setPen|const QPen &
+$prototypeV2=virtual void setPen( const QPen & pen )
 
-$prototype=QPen pen() const
-$method=|QPen|pen|
+$prototypeV2=QPen pen() const
 
-$prototype=virtual void setBrush(const QBrush &brush)
-$virtualMethod=|void|setBrush|const QBrush &
+$prototypeV2=virtual void setBrush( const QBrush & brush )
 
-$prototype=QBrush brush() const
-$method=|QBrush|brush|
+$prototypeV2=QBrush brush() const
 
 %%
 %% SIGNALS
