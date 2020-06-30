@@ -57,13 +57,11 @@ $deleteMethod
 
 $prototypeV2=QBluetoothAddress address() const
 
-$prototype=void setAddress(const QBluetoothAddress &address)
-$method=|void|setAddress|const QBluetoothAddress &
+$prototypeV2=void setAddress( const QBluetoothAddress & address )
 
 $prototypeV2=QString name() const
 
-$prototype=void setName(const QString &name)
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 $extraMethods
 

@@ -59,14 +59,11 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void requestPairing(const QBluetoothAddress &address, Pairing pairing)
-$method=|void|requestPairing|const QBluetoothAddress &,QBluetoothLocalDevice::Pairing
+$prototypeV2=void requestPairing( const QBluetoothAddress & address, QBluetoothLocalDevice::Pairing pairing )
 
-$prototype=Pairing pairingStatus(const QBluetoothAddress &address) const
-$method=|QBluetoothLocalDevice::Pairing|pairingStatus|const QBluetoothAddress &
+$prototypeV2=QBluetoothLocalDevice::Pairing pairingStatus( const QBluetoothAddress & address ) const
 
-$prototype=void setHostMode(QBluetoothLocalDevice::HostMode mode)
-$method=|void|setHostMode|QBluetoothLocalDevice::HostMode
+$prototypeV2=void setHostMode( QBluetoothLocalDevice::HostMode mode )
 
 $prototypeV2=QBluetoothLocalDevice::HostMode hostMode() const
 
@@ -76,11 +73,9 @@ $prototypeV2=QString name() const
 
 $prototypeV2=QBluetoothAddress address() const
 
-$prototype=void pairingConfirmation(bool confirmation)
-$method=|void|pairingConfirmation|bool
+$prototypeV2=void pairingConfirmation( bool confirmation )
 
-$prototype=static QList<QBluetoothHostInfo> allDevices()
-$staticMethod=|QList<QBluetoothHostInfo>|allDevices|
+$prototypeV2=static QList<QBluetoothHostInfo> allDevices()
 
 %%
 %% SIGNALS

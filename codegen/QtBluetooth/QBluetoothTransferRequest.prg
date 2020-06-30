@@ -55,11 +55,9 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 
 $deleteMethod
 
-$prototype=QVariant attribute(Attribute code, const QVariant &defaultValue = QVariant()) const
-$method=|QVariant|attribute|QBluetoothTransferRequest::Attribute,const QVariant &=QVariant()
+$prototypeV2=QVariant attribute( QBluetoothTransferRequest::Attribute code, const QVariant & defaultValue = QVariant() ) const
 
-$prototype=void setAttribute(Attribute code, const QVariant &value)
-$method=|void|setAttribute|QBluetoothTransferRequest::Attribute,const QVariant &
+$prototypeV2=void setAttribute( QBluetoothTransferRequest::Attribute code, const QVariant & value )
 
 $prototypeV2=QBluetoothAddress address() const
 

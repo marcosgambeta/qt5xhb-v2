@@ -35,8 +35,7 @@ $constructor=|new|QObject *=nullptr
 
 $deleteMethod
 
-$prototype=QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
-$method=|QBluetoothTransferReply *|put|const QBluetoothTransferRequest &,QIODevice *
+$prototypeV2=QBluetoothTransferReply * put( const QBluetoothTransferRequest & request, QIODevice * data )
 
 %%
 %% SIGNALS

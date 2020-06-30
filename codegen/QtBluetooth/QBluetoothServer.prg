@@ -65,8 +65,7 @@ $addMethod=listen
 
 $prototypeV2=bool isListening() const
 
-$prototype=void setMaxPendingConnections(int numConnections)
-$method=|void|setMaxPendingConnections|int
+$prototypeV2=void setMaxPendingConnections( int numConnections )
 
 $prototypeV2=int maxPendingConnections() const
 
@@ -78,8 +77,7 @@ $prototypeV2=QBluetoothAddress serverAddress() const
 
 $prototypeV2=quint16 serverPort() const
 
-$prototype=void setSecurityFlags(QBluetooth::SecurityFlags security)
-$method=|void|setSecurityFlags|QBluetooth::SecurityFlags
+$prototypeV2=void setSecurityFlags( QBluetooth::SecurityFlags security )
 
 $prototypeV2=QBluetooth::SecurityFlags securityFlags() const
 

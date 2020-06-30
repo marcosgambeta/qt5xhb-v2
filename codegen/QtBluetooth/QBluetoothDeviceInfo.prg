@@ -82,8 +82,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isCached() const
 
-$prototype=void setCached(bool cached)
-$method=|void|setCached|bool
+$prototypeV2=void setCached( bool cached )
 
 $prototypeV2=QBluetoothAddress address() const
 
@@ -97,8 +96,7 @@ $prototypeV2=quint8 minorDeviceClass() const
 
 $prototypeV2=qint16 rssi() const
 
-$prototype=void setRssi(qint16 signal)
-$method=|void|setRssi|qint16
+$prototypeV2=void setRssi( qint16 signal )
 
 $prototype=void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
 %% TODO: ausente na documentacao - verificar
@@ -134,29 +132,22 @@ $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = n
 
 $prototypeV2=QBluetoothDeviceInfo::DataCompleteness serviceUuidsCompleteness() const
 
-$prototype=QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
-$method=5,4,0|QBluetoothDeviceInfo::CoreConfigurations|coreConfigurations|
+$prototypeV2=5,4,0|QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
 
-$prototype=void setCoreConfigurations(QBluetoothDeviceInfo::CoreConfigurations coreConfigs)
-$method=5,4,0|void|setCoreConfigurations|QBluetoothDeviceInfo::CoreConfigurations
+$prototypeV2=5,4,0|void setCoreConfigurations( QBluetoothDeviceInfo::CoreConfigurations coreConfigs )
 
-$prototype=QBluetoothUuid deviceUuid() const
-$method=5,5,0|QBluetoothUuid|deviceUuid|
+$prototypeV2=5,5,0|QBluetoothUuid deviceUuid() const
 
-$prototype=void setDeviceUuid(const QBluetoothUuid &uuid)
-$method=5,5,0|void|setDeviceUuid|const QBluetoothUuid &
+$prototypeV2=5,5,0|void setDeviceUuid( const QBluetoothUuid & uuid )
 
-$prototype=QByteArray manufacturerData(quint16 manufacturerId) const
-$method=5,12,0|QByteArray|manufacturerData|quint16
+$prototypeV2=5,12,0|QByteArray manufacturerData( quint16 manufacturerId ) const
 
 $prototype=QHash<quint16, QByteArray> manufacturerData() const
 %% TODO: implementar (Qt 5.12.0)
 
-$prototype=bool setManufacturerData(quint16 manufacturerId, const QByteArray &data)
-$method=5,12,0|bool|setManufacturerData|quint16,const QByteArray &
+$prototypeV2=5,12,0|bool setManufacturerData( quint16 manufacturerId, const QByteArray & data )
 
-$prototype=QVector<quint16> manufacturerIds() const
-$method=5,12,0|QVector<quint16>|manufacturerIds|
+$prototypeV2=5,12,0|QVector<quint16> manufacturerIds() const
 
 $extraMethods
 

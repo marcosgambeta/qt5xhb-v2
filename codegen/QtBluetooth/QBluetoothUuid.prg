@@ -114,13 +114,11 @@ $deleteMethod
 
 $prototypeV2=int minimumSize() const
 
-$prototype=quint16 toUInt16(bool *ok = nullptr) const
+$prototypeV2=quint16 toUInt16( bool * ok = nullptr ) const
 %% TODO: revisar e implementar parametro opcional
-$method=|quint16|toUInt16|bool *=nullptr
 
-$prototype=quint32 toUInt32(bool *ok = nullptr) const
+$prototypeV2=quint32 toUInt32( bool * ok = nullptr ) const
 %% TODO: revisar e implementar parametro opcional
-$method=|quint32|toUInt32|bool *=nullptr
 
 %% /*
 %%   convert QList<QBluetoothUuid> to array

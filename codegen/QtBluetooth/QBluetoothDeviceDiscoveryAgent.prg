@@ -59,8 +59,7 @@ $deleteMethod
 
 $prototypeV2=QBluetoothDeviceDiscoveryAgent::InquiryType inquiryType() const
 
-$prototype=void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
-$method=|void|setInquiryType|QBluetoothDeviceDiscoveryAgent::InquiryType
+$prototypeV2=void setInquiryType( QBluetoothDeviceDiscoveryAgent::InquiryType type )
 
 $prototypeV2=bool isActive() const
 
@@ -68,8 +67,7 @@ $prototypeV2=QBluetoothDeviceDiscoveryAgent::Error error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=QList<QBluetoothDeviceInfo> discoveredDevices() const
-$method=|QList<QBluetoothDeviceInfo>|discoveredDevices|
+$prototypeV2=QList<QBluetoothDeviceInfo> discoveredDevices() const
 
 $prototypeV2=void start()
 

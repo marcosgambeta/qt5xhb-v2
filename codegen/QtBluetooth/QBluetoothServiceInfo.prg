@@ -61,8 +61,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isComplete() const
 
-$prototype=void setDevice(const QBluetoothDeviceInfo &info)
-$method=|void|setDevice|const QBluetoothDeviceInfo &
+$prototypeV2=void setDevice( const QBluetoothDeviceInfo & info )
 
 $prototypeV2=QBluetoothDeviceInfo device() const
 
@@ -100,30 +99,23 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 }
 $addMethod=setAttribute
 
-$prototype=QVariant attribute(quint16 attributeId) const
-$method=|QVariant|attribute|quint16
+$prototypeV2=QVariant attribute( quint16 attributeId ) const
 
-$prototype=QList<quint16> attributes() const
-$method=|QList<quint16>|attributes|
+$prototypeV2=QList<quint16> attributes() const
 
-$prototype=bool contains(quint16 attributeId) const
-$method=|bool|contains|quint16
+$prototypeV2=bool contains( quint16 attributeId ) const
 
-$prototype=void removeAttribute(quint16 attributeId)
-$method=|void|removeAttribute|quint16
+$prototypeV2=void removeAttribute( quint16 attributeId )
 
-$prototype=void setServiceName(const QString &name)
-$method=|void|setServiceName|const QString &
+$prototypeV2=void setServiceName( const QString & name )
 
 $prototypeV2=QString serviceName() const
 
-$prototype=void setServiceDescription(const QString &description)
-$method=|void|setServiceDescription|const QString &
+$prototypeV2=void setServiceDescription( const QString & description )
 
 $prototypeV2=QString serviceDescription() const
 
-$prototype=void setServiceProvider(const QString &provider)
-$method=|void|setServiceProvider|const QString &
+$prototypeV2=void setServiceProvider( const QString & provider )
 
 $prototypeV2=QString serviceProvider() const
 
@@ -133,23 +125,19 @@ $prototypeV2=int protocolServiceMultiplexer() const
 
 $prototypeV2=int serverChannel() const
 
-$prototype=void setServiceAvailability(quint8 availability)
-$method=|void|setServiceAvailability|quint8
+$prototypeV2=void setServiceAvailability( quint8 availability )
 
 $prototypeV2=quint8 serviceAvailability() const
 
-$prototype=void setServiceUuid(const QBluetoothUuid &uuid)
-$method=|void|setServiceUuid|const QBluetoothUuid &
+$prototypeV2=void setServiceUuid( const QBluetoothUuid & uuid )
 
 $prototypeV2=QBluetoothUuid serviceUuid() const
 
-$prototype=QList<QBluetoothUuid> serviceClassUuids() const
-$method=|QList<QBluetoothUuid>|serviceClassUuids|
+$prototypeV2=QList<QBluetoothUuid> serviceClassUuids() const
 
 $prototypeV2=bool isRegistered() const
 
-$prototype=bool registerService(const QBluetoothAddress &localAdapter = QBluetoothAddress())
-$method=|bool|registerService|const QBluetoothAddress &=QBluetoothAddress()
+$prototypeV2=bool registerService( const QBluetoothAddress & localAdapter = QBluetoothAddress() )
 
 $prototypeV2=bool unregisterService()
 
