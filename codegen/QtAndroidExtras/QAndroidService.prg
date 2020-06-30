@@ -47,7 +47,6 @@ $prototype=QAndroidService(int &argc, char **argv, const std::function<QAndroidB
 $prototype=virtual ~QAndroidService()
 $deleteMethod
 
-$prototype=virtual QAndroidBinder* onBind(const QAndroidIntent &intent)
-$virtualMethod=|QAndroidBinder *|onBind|const QAndroidIntent &
+$prototypeV2=virtual QAndroidBinder * onBind( const QAndroidIntent & intent )
 
 #pragma ENDDUMP

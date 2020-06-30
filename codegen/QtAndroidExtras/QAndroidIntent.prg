@@ -72,17 +72,13 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 $prototype=virtual ~QAndroidIntent();
 $deleteMethod
 
-$prototype=void putExtra(const QString &key, const QByteArray &data)
-$method=|void|putExtra|const QString &,const QByteArray &
+$prototypeV2=void putExtra( const QString & key, const QByteArray & data )
 
-$prototype=QByteArray extraBytes(const QString &key)
-$method=|QByteArray|extraBytes|const QString &
+$prototypeV2=QByteArray extraBytes( const QString & key )
 
-$prototype=void putExtra(const QString &key, const QVariant &value)
-$method=|void|putExtra|const QString &,const QVariant &
+$prototypeV2=void putExtra( const QString & key, const QVariant & value )
 
-$prototype=QVariant extraVariant(const QString &key)
-$method=|QVariant|extraVariant|const QString &
+$prototypeV2=QVariant extraVariant( const QString & key )
 
 $prototypeV2=QAndroidJniObject handle() const
 

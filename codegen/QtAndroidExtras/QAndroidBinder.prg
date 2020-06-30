@@ -56,11 +56,9 @@ HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 $prototype=virtual ~QAndroidBinder()
 $deleteMethod
 
-$prototype=virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, CallType flags)
-$virtualMethod=|bool|onTransact|int,const QAndroidParcel &,const QAndroidParcel &,QAndroidBinder::CallType
+$prototypeV2=virtual bool onTransact( int code, const QAndroidParcel & data, const QAndroidParcel & reply, QAndroidBinder::CallType flags )
 
-$prototype=bool transact(int code, const QAndroidParcel &data, QAndroidParcel *reply = nullptr, CallType flags = CallType::Normal) const
-$method=|bool|transact|int,const QAndroidParcel &,QAndroidParcel *=nullptr,QAndroidBinder::CallType=CallType::Normal
+$prototypeV2=bool transact( int code, const QAndroidParcel & data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags = CallType::Normal ) const
 
 $prototypeV2=QAndroidJniObject handle() const
 

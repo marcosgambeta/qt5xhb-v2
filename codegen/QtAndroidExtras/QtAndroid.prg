@@ -30,20 +30,15 @@ $prototypeV2=static QAndroidJniObject androidActivity()
 
 $prototypeV2=static int androidSdkVersion()
 
-$prototype=static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
-$staticMethod=|void|startIntentSender|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
+$prototypeV2=static void startIntentSender( const QAndroidJniObject & intentSender, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr )
 
-$prototype=static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
-$staticMethod=|void|startActivity|const QAndroidJniObject &,int,QAndroidActivityResultReceiver *=nullptr
+$prototypeV2=static void startActivity( const QAndroidJniObject & intent, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr )
 
-$prototype=static QAndroidJniObject androidService()
-$staticMethod=5,7,0|QAndroidJniObject|androidService|
+$prototypeV2=5,7,0|static QAndroidJniObject androidService()
 
-$prototype=static QAndroidJniObject androidContext()
-$staticMethod=5,8,0|QAndroidJniObject|androidContext|
+$prototypeV2=5,8,0|static QAndroidJniObject androidContext()
 
-$prototype=static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection, BindFlags flags = BindFlag::None)
-$staticMethod=5,10,0|bool|bindService|const QAndroidIntent &,const QAndroidServiceConnection &,QtAndroid::BindFlags=QtAndroid::BindFlag::None
+$prototypeV2=5,10,0|static bool bindService( const QAndroidIntent & serviceIntent, const QAndroidServiceConnection & serviceConnection, QtAndroid::BindFlags flags = QtAndroid::BindFlag::None )
 
 %% typedef std::function<void()> Runnable
 
@@ -86,11 +81,9 @@ $prototype=static void requestPermissions(const QStringList &permissions, const 
 
 $prototype=static PermissionResultMap requestPermissionsSync(const QStringList &permissions, int timeoutMs = INT_MAX)
 
-$prototype=static PermissionResult checkPermission(const QString &permission)
-$staticMethod=5,10,0|QtAndroid::PermissionResult|checkPermission|const QString &
+$prototypeV2=5,10,0|static QtAndroid::PermissionResult checkPermission( const QString & permission )
 
-$prototype=static bool shouldShowRequestPermissionRationale(const QString &permission)
-$staticMethod=5,10,0|bool|shouldShowRequestPermissionRationale|const QString &
+$prototypeV2=5,10,0|static bool shouldShowRequestPermissionRationale( const QString & permission )
 
 $extraMethods
 

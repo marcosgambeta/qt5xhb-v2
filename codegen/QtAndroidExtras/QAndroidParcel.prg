@@ -58,17 +58,13 @@ HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 $prototype=virtual ~QAndroidParcel()
 $deleteMethod
 
-$prototype=void writeData(const QByteArray &data) const
-$method=|void|writeData|const QByteArray &
+$prototypeV2=void writeData( const QByteArray & data ) const
 
-$prototype=void writeVariant(const QVariant &value) const
-$method=|void|writeVariant|const QVariant &
+$prototypeV2=void writeVariant( const QVariant & value ) const
 
-$prototype=void writeBinder(const QAndroidBinder &binder) const
-$method=|void|writeBinder|const QAndroidBinder &
+$prototypeV2=void writeBinder( const QAndroidBinder & binder ) const
 
-$prototype=void writeFileDescriptor(int fd) const
-$method=|void|writeFileDescriptor|int
+$prototypeV2=void writeFileDescriptor( int fd ) const
 
 $prototypeV2=QByteArray readData() const
 

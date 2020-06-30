@@ -160,11 +160,9 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD )
 }
 $addMethod=callStaticObjectMethod
 
-$prototype=static QAndroidJniObject fromLocalRef(int localRef)
-$staticMethod=5,7,0|QAndroidJniObject|fromLocalRef|int
+$prototypeV2=5,7,0|static QAndroidJniObject fromLocalRef( int localRef )
 
-$prototype=static QAndroidJniObject fromString(const QString &string)
-$staticMethod=|QAndroidJniObject|fromString|const QString &
+$prototypeV2=static QAndroidJniObject fromString( const QString & string )
 
 $prototype=static T getStaticField(const char *className, const char *fieldName)
 
@@ -201,8 +199,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD )
 }
 $addMethod=getStaticObjectField
 
-$prototype=static bool isClassAvailable(const char *className)
-$staticMethod=|bool|isClassAvailable|const char *
+$prototypeV2=static bool isClassAvailable( const char * className )
 
 $prototype=static void setStaticField(const char *className, const char *fieldName, const char *signature, T value)
 

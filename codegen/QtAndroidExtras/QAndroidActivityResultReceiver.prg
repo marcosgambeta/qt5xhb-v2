@@ -31,8 +31,7 @@ $prototype=QAndroidActivityResultReceiver()
 $prototype=virtual ~QAndroidActivityResultReceiver()
 $deleteMethod
 
-$prototype=virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
-$virtualMethod=|void|handleActivityResult|int,int,const QAndroidJniObject &
+$prototypeV2=virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject & data ) = 0
 
 $extraMethods
 
