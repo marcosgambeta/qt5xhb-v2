@@ -8,6 +8,7 @@ rem
 
 hbmk2 HEventFilter            %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 HEventFilter2           %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HHeaderView             %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QBoxLayout1             %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QBoxLayout2             %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QBoxLayout3             %1 %2 %3 ..\..\qt5xhb.hbc

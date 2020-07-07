@@ -13,6 +13,7 @@
 #include <QtCore/QStringList>
 #include <QtWidgets/QWidget>
 #include <QtCore/QVariant>
+#include <QtCore/QRect>
 
 namespace Qt5xHb
 {
@@ -896,4 +897,39 @@ PHB_ITEM returnQObjectObject( QObject * ptr )
 
   return pObject;
 }
+
+/*
+  cria um objeto da classe QRect, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQRectObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = nullptr;
+
+  if( pDynSym == nullptr )
+  {
+    pDynSym = hb_dynsymFindName( "QRECT" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( nullptr );
+
+  if( pDynSym != nullptr )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( nullptr );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QRECT", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
 }

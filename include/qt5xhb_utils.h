@@ -63,4 +63,5 @@ namespace Qt5xHb
   PHB_ITEM returnQLocaleObject( void * ptr );
   PHB_ITEM returnQWidgetObject( QWidget * ptr );
   PHB_ITEM returnQObjectObject( QObject * ptr );
+  PHB_ITEM returnQRectObject( void * ptr );
 }
