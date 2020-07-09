@@ -30,12 +30,11 @@ void HHeaderView::paintSection( QPainter *painter, const QRect &rect, int logica
     PHB_ITEM pRect = Qt5xHb::returnQRectObject( (void *) &rect );
     PHB_ITEM pLogicalIndex = hb_itemPutNI( NULL, logicalIndex );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_paintSectionBlock, 3, pPainter, pRect, pLogicalIndex );
+    hb_vmEvalBlockV( m_paintSectionBlock, 3, pPainter, pRect, pLogicalIndex );
 
     hb_itemRelease( pPainter );
     hb_itemRelease( pRect );
     hb_itemRelease( pLogicalIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
