@@ -99,19 +99,15 @@ void HStyledItemDelegate::paint( QPainter *painter, const QStyleOptionViewItem &
 {
   if( m_paintBlock != nullptr )
   {
-    // PHB_ITEM pPainter = hb_itemPutPtr( NULL, (QPainter *) painter );
     PHB_ITEM pPainter = Qt5xHb::returnQPainterObject( (void *) painter );
-    // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_paintBlock, 3, pPainter, pOption, pIndex );
+    hb_vmEvalBlockV( m_paintBlock, 3, pPainter, pOption, pIndex );
 
     hb_itemRelease( pPainter );
     hb_itemRelease( pOption );
     hb_itemRelease( pIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
@@ -229,16 +225,13 @@ void HStyledItemDelegate::setEditorData( QWidget *editor, const QModelIndex &ind
 {
   if( m_setEditorDataBlock != nullptr )
   {
-    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_setEditorDataBlock, 2, pEditor, pIndex );
+    hb_vmEvalBlockV( m_setEditorDataBlock, 2, pEditor, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
@@ -250,19 +243,15 @@ void HStyledItemDelegate::setModelData( QWidget *editor, QAbstractItemModel *mod
 {
   if( m_setModelDataBlock != nullptr )
   {
-    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    // PHB_ITEM pModel = hb_itemPutPtr( NULL, (QAbstractItemModel *) model );
     PHB_ITEM pModel = Qt5xHb::returnQObjectObject( model );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_setModelDataBlock, 3, pEditor, pModel, pIndex );
+    hb_vmEvalBlockV( m_setModelDataBlock, 3, pEditor, pModel, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pModel );
     hb_itemRelease( pIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
@@ -274,19 +263,15 @@ void HStyledItemDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
 {
   if( m_updateEditorGeometryBlock != nullptr )
   {
-    // PHB_ITEM pEditor = hb_itemPutPtr( NULL, (QWidget *) editor );
     PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
-    // PHB_ITEM pOption = hb_itemPutPtr( NULL, (QStyleOptionViewItem *) &option );
     PHB_ITEM pOption = Qt5xHb::returnQStyleOptionViewItemObject( (void *) &option );
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
+    hb_vmEvalBlockV( m_updateEditorGeometryBlock, 3, pEditor, pOption, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pOption );
     hb_itemRelease( pIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
@@ -301,11 +286,10 @@ void HStyledItemDelegate::destroyEditor( QWidget *editor, const QModelIndex &ind
     PHB_ITEM pEditor = Qt5xHb::returnQWidgetObject( editor );
     PHB_ITEM pIndex = Qt5xHb::returnQModelIndexObject( (void *) &index );
 
-    PHB_ITEM pRet = hb_vmEvalBlockV( m_destroyEditorBlock, 2, pEditor, pIndex );
+    hb_vmEvalBlockV( m_destroyEditorBlock, 2, pEditor, pIndex );
 
     hb_itemRelease( pEditor );
     hb_itemRelease( pIndex );
-    hb_itemRelease( pRet );
   }
   else
   {
