@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QANDROIDSERVICE_DELETE )
 }
 
 /*
-virtual QAndroidBinder* onBind(const QAndroidIntent &intent)
+virtual QAndroidBinder * onBind( const QAndroidIntent & intent )
 */
 HB_FUNC_STATIC( QANDROIDSERVICE_ONBIND )
 {

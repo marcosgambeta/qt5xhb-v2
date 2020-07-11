@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QANDROIDBINDER_DELETE )
 }
 
 /*
-virtual bool onTransact(int code, const QAndroidParcel &data, const QAndroidParcel &reply, CallType flags)
+virtual bool onTransact( int code, const QAndroidParcel & data, const QAndroidParcel & reply, QAndroidBinder::CallType flags )
 */
 HB_FUNC_STATIC( QANDROIDBINDER_ONTRANSACT )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QANDROIDBINDER_ONTRANSACT )
 }
 
 /*
-bool transact(int code, const QAndroidParcel &data, QAndroidParcel *reply = nullptr, CallType flags = CallType::Normal) const
+bool transact( int code, const QAndroidParcel & data, QAndroidParcel * reply = nullptr, QAndroidBinder::CallType flags = CallType::Normal ) const
 */
 HB_FUNC_STATIC( QANDROIDBINDER_TRANSACT )
 {

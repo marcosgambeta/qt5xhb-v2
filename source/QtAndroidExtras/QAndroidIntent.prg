@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_DELETE )
 }
 
 /*
-void putExtra(const QString &key, const QByteArray &data)
+void putExtra( const QString & key, const QByteArray & data )
 */
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 }
 
 /*
-QByteArray extraBytes(const QString &key)
+QByteArray extraBytes( const QString & key )
 */
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRABYTES )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_EXTRABYTES )
 }
 
 /*
-void putExtra(const QString &key, const QVariant &value)
+void putExtra( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
 }
 
 /*
-QVariant extraVariant(const QString &key)
+QVariant extraVariant( const QString & key )
 */
 HB_FUNC_STATIC( QANDROIDINTENT_EXTRAVARIANT )
 {

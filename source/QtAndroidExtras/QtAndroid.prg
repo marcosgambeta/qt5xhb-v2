@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDSDKVERSION )
 }
 
 /*
-static void startIntentSender(const QAndroidJniObject &intentSender, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
+static void startIntentSender( const QAndroidJniObject & intentSender, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr )
 */
 HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTANDROID_STARTINTENTSENDER )
 }
 
 /*
-static void startActivity(const QAndroidJniObject &intent, int receiverRequestCode, QAndroidActivityResultReceiver *resultReceiver = nullptr)
+static void startActivity( const QAndroidJniObject & intent, int receiverRequestCode, QAndroidActivityResultReceiver * resultReceiver = nullptr )
 */
 HB_FUNC_STATIC( QTANDROID_STARTACTIVITY )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QTANDROID_ANDROIDCONTEXT )
 }
 
 /*
-static bool bindService(const QAndroidIntent &serviceIntent, const QAndroidServiceConnection &serviceConnection, BindFlags flags = BindFlag::None)
+static bool bindService( const QAndroidIntent & serviceIntent, const QAndroidServiceConnection & serviceConnection, QtAndroid::BindFlags flags = QtAndroid::BindFlag::None )
 */
 HB_FUNC_STATIC( QTANDROID_BINDSERVICE )
 {
@@ -243,7 +243,7 @@ void QtAndroid_hideSplashScreen1()
 }
 
 /*
-static void hideSplashScreen(int duration)
+static void hideSplashScreen( int duration )
 */
 void QtAndroid_hideSplashScreen2()
 {
@@ -284,7 +284,7 @@ static PermissionResultMap requestPermissionsSync(const QStringList &permissions
 */
 
 /*
-static PermissionResult checkPermission(const QString &permission)
+static QtAndroid::PermissionResult checkPermission( const QString & permission )
 */
 HB_FUNC_STATIC( QTANDROID_CHECKPERMISSION )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QTANDROID_CHECKPERMISSION )
 }
 
 /*
-static bool shouldShowRequestPermissionRationale(const QString &permission)
+static bool shouldShowRequestPermissionRationale( const QString & permission )
 */
 HB_FUNC_STATIC( QTANDROID_SHOULDSHOWREQUESTPERMISSIONRATIONALE )
 {

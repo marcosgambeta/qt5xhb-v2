@@ -85,7 +85,7 @@ void QAndroidJniObject_new1()
 }
 
 /*
-QAndroidJniObject(const char *className)
+QAndroidJniObject( const char * className )
 */
 void QAndroidJniObject_new2()
 {
@@ -149,7 +149,7 @@ T callMethod(const char *methodName, const char *sig, ...) const
 */
 
 /*
-QAndroidJniObject callObjectMethod(const char *methodName) const
+QAndroidJniObject callObjectMethod( const char * methodName ) const
 */
 void QAndroidJniObject_callObjectMethod1()
 {
@@ -186,7 +186,7 @@ T getField(const char *fieldName) const
 */
 
 /*
-QAndroidJniObject getObjectField(const char *fieldName) const
+QAndroidJniObject getObjectField( const char * fieldName ) const
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD1 )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD1 )
 }
 
 /*
-QAndroidJniObject getObjectField(const char *fieldName, const char *signature) const
+QAndroidJniObject getObjectField( const char * fieldName, const char * signature ) const
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD2 )
 {
@@ -341,7 +341,7 @@ static T callStaticMethod(jclass clazz, const char *methodName, const char *sign
 */
 
 /*
-static QAndroidJniObject callStaticObjectMethod(const char *className, const char *methodName)
+static QAndroidJniObject callStaticObjectMethod( const char * className, const char * methodName )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD1 )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD )
 }
 
 /*
-static QAndroidJniObject fromLocalRef(int localRef)
+static QAndroidJniObject fromLocalRef( int localRef )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMLOCALREF )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMLOCALREF )
 }
 
 /*
-static QAndroidJniObject fromString(const QString &string)
+static QAndroidJniObject fromString( const QString & string )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_FROMSTRING )
 {
@@ -434,7 +434,7 @@ static T getStaticField(jclass clazz, const char *fieldName)
 */
 
 /*
-static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
+static QAndroidJniObject getStaticObjectField( const char * className, const char * fieldName )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 )
 }
 
 /*
-static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName, const char *sig)
+static QAndroidJniObject getStaticObjectField( const char * className, const char * fieldName, const char * sig )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD )
 }
 
 /*
-static bool isClassAvailable(const char *className)
+static bool isClassAvailable( const char * className )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISCLASSAVAILABLE )
 {

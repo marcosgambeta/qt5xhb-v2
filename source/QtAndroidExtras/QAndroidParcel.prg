@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_DELETE )
 }
 
 /*
-void writeData(const QByteArray &data) const
+void writeData( const QByteArray & data ) const
 */
 HB_FUNC_STATIC( QANDROIDPARCEL_WRITEDATA )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEDATA )
 }
 
 /*
-void writeVariant(const QVariant &value) const
+void writeVariant( const QVariant & value ) const
 */
 HB_FUNC_STATIC( QANDROIDPARCEL_WRITEVARIANT )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEVARIANT )
 }
 
 /*
-void writeBinder(const QAndroidBinder &binder) const
+void writeBinder( const QAndroidBinder & binder ) const
 */
 HB_FUNC_STATIC( QANDROIDPARCEL_WRITEBINDER )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QANDROIDPARCEL_WRITEBINDER )
 }
 
 /*
-void writeFileDescriptor(int fd) const
+void writeFileDescriptor( int fd ) const
 */
 HB_FUNC_STATIC( QANDROIDPARCEL_WRITEFILEDESCRIPTOR )
 {
