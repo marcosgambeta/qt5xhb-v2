@@ -66,7 +66,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxScript ( const QString & name, QAxScriptManager * manager )
+QAxScript( const QString & name, QAxScriptManager * manager )
 */
 HB_FUNC_STATIC( QAXSCRIPT_NEW )
 {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 }
 
 /*
-QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxScript_call1()
 {
@@ -115,7 +115,7 @@ void QAxScript_call1()
 }
 
 /*
-QVariant call ( const QString & function, QList<QVariant> & arguments )
+QVariant call( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScript_call2()
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 }
 
 /*
-QStringList functions ( FunctionFlags flags = FunctionNames ) const
+QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 */
 HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 }
 
 /*
-bool load ( const QString & code, const QString & language = QString() )
+bool load( const QString & code, const QString & language = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 }
 
 /*
-QString scriptCode () const
+QString scriptCode() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTCODE )
 }
 
 /*
-QAxScriptEngine * scriptEngine () const
+QAxScriptEngine * scriptEngine() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
 }
 
 /*
-QString scriptName () const
+QString scriptName() const
 */
 HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
 {

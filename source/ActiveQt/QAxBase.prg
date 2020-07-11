@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QAXBASE_DELETE )
 }
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXBASE_CLEAR )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QAXBASE_CLEAR )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXBASE_CONTROL )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAXBASE_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 }
 
 /*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxBase_dynamicCall1()
 {
@@ -260,7 +260,7 @@ void QAxBase_dynamicCall1()
 }
 
 /*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxBase_dynamicCall2()
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXBASE_ISNULL )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAXBASE_ISNULL )
 }
 
 /*
-virtual bool propertyWritable ( const char * prop ) const
+virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
 }
 
 /*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxBase_querySubObject1()
 {
@@ -381,7 +381,7 @@ void QAxBase_querySubObject1()
 }
 
 /*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxBase_querySubObject2()
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 }
 
 /*
-bool setControl ( const QString & )
+bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 }
 
 /*
-virtual void setPropertyWritable ( const char * prop, bool ok )
+virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXBASE_VERBS )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QAXBASE_VERBS )
 }
 
 /*
-unsigned long QAxBase::classContext() const
+unsigned long classContext() const
 */
 HB_FUNC_STATIC( QAXBASE_CLASSCONTEXT )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QAXBASE_CLASSCONTEXT )
 }
 
 /*
-void QAxBase::setClassContext(unsigned long classContext)
+void setClassContext( unsigned long classContext )
 */
 HB_FUNC_STATIC( QAXBASE_SETCLASSCONTEXT )
 {

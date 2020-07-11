@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-explicit QAxSelect(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags())
+explicit QAxSelect( QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags() )
 */
 HB_FUNC_STATIC( QAXSELECT_NEW )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAXSELECT_CLSID )
 }
 
 /*
-SandboxingLevel sandboxingLevel() const
+QAxSelect::SandboxingLevel sandboxingLevel() const
 */
 HB_FUNC_STATIC( QAXSELECT_SANDBOXINGLEVEL )
 {

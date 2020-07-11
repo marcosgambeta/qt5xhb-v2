@@ -67,7 +67,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxObject ( QObject * parent = nullptr )
+QAxObject( QObject * parent = nullptr )
 */
 void QAxObject_new1()
 {
@@ -76,7 +76,7 @@ void QAxObject_new1()
 }
 
 /*
-QAxObject ( const QString & c, QObject * parent = nullptr )
+QAxObject( const QString & c, QObject * parent = nullptr )
 */
 void QAxObject_new2()
 {
@@ -85,7 +85,7 @@ void QAxObject_new2()
 }
 
 /*
-QAxObject ( IUnknown * iface, QObject * parent = nullptr )
+QAxObject( IUnknown * iface, QObject * parent = nullptr )
 */
 void QAxObject_new3()
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QAXOBJECT_DELETE )
 }
 
 /*
-bool doVerb ( const QString & verb )
+bool doVerb( const QString & verb )
 */
 HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 // resolver problemas na utilização dos métodos
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 }
 
 /*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxObject_dynamicCall1()
 {
@@ -335,7 +335,7 @@ void QAxObject_dynamicCall1()
 }
 
 /*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxObject_dynamicCall2()
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 }
 
 /*
-virtual bool propertyWritable ( const char * prop ) const
+virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 }
 
 /*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxObject_querySubObject1()
 {
@@ -456,7 +456,7 @@ void QAxObject_querySubObject1()
 }
 
 /*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxObject_querySubObject2()
 {
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
 }
 
 /*
-bool setControl ( const QString & )
+bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
 }
 
 /*
-virtual void setPropertyWritable ( const char * prop, bool ok )
+virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXOBJECT_VERBS )
 {

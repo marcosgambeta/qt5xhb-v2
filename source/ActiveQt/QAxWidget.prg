@@ -74,7 +74,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxWidget ( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+QAxWidget( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new1()
 {
@@ -83,7 +83,7 @@ void QAxWidget_new1()
 }
 
 /*
-QAxWidget ( const QString & c, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+QAxWidget( const QString & c, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new2()
 {
@@ -92,7 +92,7 @@ void QAxWidget_new2()
 }
 
 /*
-QAxWidget ( IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
+QAxWidget( IUnknown * iface, QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 void QAxWidget_new3()
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAXWIDGET_DELETE )
 }
 
 /*
-virtual QAxAggregated * createAggregate ()
+virtual QAxAggregated * createAggregate()
 */
 HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 }
 
 /*
-bool doVerb ( const QString & verb )
+bool doVerb( const QString & verb )
 */
 HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 // resolver problemas na utilização dos métodos
 
 /*
-QVariant asVariant () const
+QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 }
 
 /*
-QString control () const
+QString control() const
 */
 HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 }
 
 /*
-void disableClassInfo ()
+void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 }
 
 /*
-void disableEventSink ()
+void disableEventSink()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 }
 
 /*
-void disableMetaObject ()
+void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 }
 
 /*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxWidget_dynamicCall1()
 {
@@ -417,7 +417,7 @@ void QAxWidget_dynamicCall1()
 }
 
 /*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxWidget_dynamicCall2()
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
 }
 
 /*
-QString generateDocumentation ()
+QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 }
 
 /*
-virtual bool propertyWritable ( const char * prop ) const
+virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 }
 
 /*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxWidget_querySubObject1()
 {
@@ -538,7 +538,7 @@ void QAxWidget_querySubObject1()
 }
 
 /*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxWidget_querySubObject2()
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
 }
 
 /*
-bool setControl ( const QString & )
+bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 }
 
 /*
-virtual void setPropertyWritable ( const char * prop, bool ok )
+virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 }
 
 /*
-QStringList verbs () const
+QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXWIDGET_VERBS )
 {

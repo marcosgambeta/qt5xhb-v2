@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxScriptManager ( QObject * parent = nullptr )
+QAxScriptManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 }
 
 /*
-void addObject ( QAxBase * object )
+void addObject( QAxBase * object )
 */
 void QAxScriptManager_addObject1()
 {
@@ -111,7 +111,7 @@ void QAxScriptManager_addObject1()
 }
 
 /*
-void addObject ( QObject * object )
+void addObject( QObject * object )
 */
 void QAxScriptManager_addObject2()
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 }
 
 /*
-QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxScriptManager_call1()
 {
@@ -161,7 +161,7 @@ void QAxScriptManager_call1()
 }
 
 /*
-QVariant call ( const QString & function, QList<QVariant> & arguments )
+QVariant call( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScriptManager_call2()
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 }
 
 /*
-QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
+QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 }
 
 /*
-QAxScript * load ( const QString & code, const QString & name, const QString & language )
+QAxScript * load( const QString & code, const QString & name, const QString & language )
 */
 void QAxScriptManager_load1()
 {
@@ -234,7 +234,7 @@ void QAxScriptManager_load1()
 }
 
 /*
-QAxScript * load ( const QString & file, const QString & name )
+QAxScript * load( const QString & file, const QString & name )
 */
 void QAxScriptManager_load2()
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 }
 
 /*
-QAxScript * script ( const QString & name ) const
+QAxScript * script( const QString & name ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 }
 
 /*
-static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
+static bool registerEngine( const QString & name, const QString & extension, const QString & code = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 }
 
 /*
-static QString scriptFileFilter ()
+static QString scriptFileFilter()
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 {
