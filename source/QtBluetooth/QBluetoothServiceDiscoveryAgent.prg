@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QBluetoothServiceDiscoveryAgent(QObject *parent = nullptr)
+QBluetoothServiceDiscoveryAgent( QObject * parent = nullptr )
 */
 void QBluetoothServiceDiscoveryAgent_new1()
 {
@@ -83,7 +83,7 @@ void QBluetoothServiceDiscoveryAgent_new1()
 }
 
 /*
-QBluetoothServiceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = nullptr)
+QBluetoothServiceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = nullptr )
 */
 void QBluetoothServiceDiscoveryAgent_new2()
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ISACTIVE )
 }
 
 /*
-Error error() const
+QBluetoothDeviceDiscoveryAgent::Error error() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_ERROR )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
 }
 
 /*
-void setUuidFilter(const QList<QBluetoothUuid> &uuids)
+void setUuidFilter( const QList<QBluetoothUuid> & uuids )
 */
 void QBluetoothServiceDiscoveryAgent_setUuidFilter1()
 {
@@ -292,7 +292,7 @@ void QBluetoothServiceDiscoveryAgent_setUuidFilter1()
 }
 
 /*
-void setUuidFilter(const QBluetoothUuid &uuid)
+void setUuidFilter( const QBluetoothUuid & uuid )
 */
 void QBluetoothServiceDiscoveryAgent_setUuidFilter2()
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER )
 }
 
 /*
-bool setRemoteAddress(const QBluetoothAddress &address)
+bool setRemoteAddress( const QBluetoothAddress & address )
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETREMOTEADDRESS )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_REMOTEADDRESS )
 }
 
 /*
-void start(DiscoveryMode mode = MinimalDiscovery)
+void start( QBluetoothServiceDiscoveryAgent::DiscoveryMode mode = QBluetoothServiceDiscoveryAgent::MinimalDiscovery )
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_START )
 {

@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = nullptr)
+QBluetoothServer( QBluetoothServiceInfo::Protocol serverType, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 }
 
 /*
-bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
+bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
 */
 void QBluetoothServer_listen1()
 {
@@ -154,7 +154,7 @@ void QBluetoothServer_listen1()
 }
 
 /*
-QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
+QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
 */
 void QBluetoothServer_listen2()
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_ISLISTENING )
 }
 
 /*
-void setMaxPendingConnections(int numConnections)
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-QBluetoothSocket *nextPendingConnection()
+QBluetoothSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVER_NEXTPENDINGCONNECTION )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERPORT )
 }
 
 /*
-void setSecurityFlags(QBluetooth::SecurityFlags security)
+void setSecurityFlags( QBluetooth::SecurityFlags security )
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SERVERTYPE )
 }
 
 /*
-Error error() const
+QBluetoothServer::Error error() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSERVER_ERROR )
 {

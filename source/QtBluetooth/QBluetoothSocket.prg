@@ -79,7 +79,7 @@ RETURN
 #endif
 
 /*
-QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = nullptr)
+QBluetoothSocket( QBluetoothServiceInfo::Protocol socketType, QObject * parent = nullptr )
 */
 void QBluetoothSocket_new1()
 {
@@ -90,7 +90,7 @@ void QBluetoothSocket_new1()
 }
 
 /*
-QBluetoothSocket(QObject *parent = nullptr)
+QBluetoothSocket( QObject * parent = nullptr )
 */
 void QBluetoothSocket_new2()
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 }
 
 /*
-void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothServiceInfo & service, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService1()
 {
@@ -320,7 +320,7 @@ void QBluetoothSocket_connectToService1()
 }
 
 /*
-void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothAddress & address, const QBluetoothUuid & uuid, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService2()
 {
@@ -337,7 +337,7 @@ void QBluetoothSocket_connectToService2()
 }
 
 /*
-void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService3()
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
 }
 
 /*
-bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,SocketState socketState = ConnectedState,OpenMode openMode = ReadWrite)
+bool setSocketDescriptor( int socketDescriptor, QBluetoothServiceInfo::Protocol socketType, QBluetoothSocket::SocketState socketState = QBluetoothSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
 }
 
 /*
-SocketState state() const
+QBluetoothSocket::SocketState state() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 }
 
 /*
-SocketError error() const
+QBluetoothSocket::SocketError error() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
 {

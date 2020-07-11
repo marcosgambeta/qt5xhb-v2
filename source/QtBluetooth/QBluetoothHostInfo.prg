@@ -76,7 +76,7 @@ void QBluetoothHostInfo_new1()
 }
 
 /*
-QBluetoothHostInfo(const QBluetoothHostInfo &other)
+QBluetoothHostInfo( const QBluetoothHostInfo & other )
 */
 void QBluetoothHostInfo_new2()
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
 }
 
 /*
-void setAddress(const QBluetoothAddress &address)
+void setAddress( const QBluetoothAddress & address )
 */
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETNAME )
 {

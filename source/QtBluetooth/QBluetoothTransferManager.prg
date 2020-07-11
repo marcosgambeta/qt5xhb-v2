@@ -59,7 +59,7 @@ RETURN
 #include <QtBluetooth/QBluetoothTransferReply>
 
 /*
-QBluetoothTransferManager(QObject *parent = nullptr)
+QBluetoothTransferManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 }
 
 /*
-QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice *data)
+QBluetoothTransferReply * put( const QBluetoothTransferRequest & request, QIODevice * data )
 */
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 {
