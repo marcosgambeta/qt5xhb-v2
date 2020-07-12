@@ -37,3 +37,5 @@ hbmk2 QStandardPaths          %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QTimer1                 %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QTimer2                 %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QTimer3                 %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QVariantList            %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QXmlStreamWriter        %1 %2 %3 ..\..\qt5xhb.hbc
