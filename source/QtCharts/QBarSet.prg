@@ -99,7 +99,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarSet(const QString label, QObject *parent = nullptr)
+explicit QBarSet( const QString label, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARSET_NEW )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QBARSET_LABEL )
 }
 
 /*
-void setLabel(const QString label)
+void setLabel( const QString label )
 */
 HB_FUNC_STATIC( QBARSET_SETLABEL )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QBARSET_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QBARSET_SETPEN )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QBARSET_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QBARSET_SETBRUSH )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QBARSET_LABELBRUSH )
 }
 
 /*
-void setLabelBrush(const QBrush &brush)
+void setLabelBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QBARSET_LABELFONT )
 }
 
 /*
-void setLabelFont(const QFont &font)
+void setLabelFont( const QFont & font )
 */
 HB_FUNC_STATIC( QBARSET_SETLABELFONT )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QBARSET_COLOR )
 }
 
 /*
-void setColor(QColor color)
+void setColor( QColor color )
 */
 HB_FUNC_STATIC( QBARSET_SETCOLOR )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(QColor color)
+void setBorderColor( QColor color )
 */
 HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
 {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QBARSET_LABELCOLOR )
 }
 
 /*
-void setLabelColor(QColor color)
+void setLabelColor( QColor color )
 */
 HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 }
 
 /*
-void append(const qreal value)
+void append( const qreal value )
 */
 void QBarSet_append1()
 {
@@ -597,7 +597,7 @@ void QBarSet_append1()
 }
 
 /*
-void append(const QList<qreal> &values)
+void append( const QList<qreal> & values )
 */
 void QBarSet_append2()
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QBARSET_APPEND )
 }
 
 /*
-void insert(const int index, const qreal value)
+void insert( const int index, const qreal value )
 */
 HB_FUNC_STATIC( QBARSET_INSERT )
 {
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QBARSET_INSERT )
 }
 
 /*
-void remove(const int index, const int count = 1)
+void remove( const int index, const int count = 1 )
 */
 HB_FUNC_STATIC( QBARSET_REMOVE )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
 }
 
 /*
-void replace(const int index, const qreal value)
+void replace( const int index, const qreal value )
 */
 HB_FUNC_STATIC( QBARSET_REPLACE )
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QBARSET_REPLACE )
 }
 
 /*
-qreal at(const int index) const
+qreal at( const int index ) const
 */
 HB_FUNC_STATIC( QBARSET_AT )
 {

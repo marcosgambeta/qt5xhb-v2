@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )
 }
 
 /*
-virtual SeriesType type() const = 0
+virtual QAbstractSeries::SeriesType type() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_TYPE )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible = true)
+void setVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_OPACITY )
 }
 
 /*
-void setOpacity(qreal opacity)
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_USEOPENGL )
 }
 
 /*
-void setUseOpenGL(bool enable = true)
+void setUseOpenGL( bool enable = true )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
 }
 
 /*
-QChart *chart() const
+QChart * chart() const
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_CHART )
 }
 
 /*
-bool attachAxis(QAbstractAxis *axis)
+bool attachAxis( QAbstractAxis * axis )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHAXIS )
 }
 
 /*
-bool detachAxis(QAbstractAxis *axis)
+bool detachAxis( QAbstractAxis * axis )
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_DETACHAXIS )
 }
 
 /*
-QList<QAbstractAxis*> attachedAxes()
+QList<QAbstractAxis *> attachedAxes()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_ATTACHEDAXES )
 {

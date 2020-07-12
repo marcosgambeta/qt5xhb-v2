@@ -58,7 +58,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = nullptr)
+explicit QXYLegendMarker( QXYSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_TYPE )
 }
 
 /*
-virtual QXYSeries* series()
+virtual QXYSeries * series()
 */
 HB_FUNC_STATIC( QXYLEGENDMARKER_SERIES )
 {

@@ -79,7 +79,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
+explicit QBoxSet( const QString label = QString(), QObject * parent = nullptr )
 */
 void QBoxSet_new1()
 {
@@ -90,7 +90,7 @@ void QBoxSet_new1()
 }
 
 /*
-explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
+explicit QBoxSet( const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject * parent = nullptr )
 */
 void QBoxSet_new2()
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QBOXSET_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QBOXSET_SETPEN )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QBOXSET_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 }
 
 /*
-void append(const qreal value)
+void append( const qreal value )
 */
 void QBoxSet_append1()
 {
@@ -273,7 +273,7 @@ void QBoxSet_append1()
 }
 
 /*
-void append(const QList<qreal> &values)
+void append( const QList<qreal> & values )
 */
 void QBoxSet_append2()
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QBOXSET_CLEAR )
 }
 
 /*
-void setLabel(const QString label)
+void setLabel( const QString label )
 */
 HB_FUNC_STATIC( QBOXSET_SETLABEL )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QBOXSET_LABEL )
 }
 
 /*
-void setValue(const int index, const qreal value)
+void setValue( const int index, const qreal value )
 */
 HB_FUNC_STATIC( QBOXSET_SETVALUE )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QBOXSET_SETVALUE )
 }
 
 /*
-qreal at(const int index) const
+qreal at( const int index ) const
 */
 HB_FUNC_STATIC( QBOXSET_AT )
 {

@@ -59,7 +59,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QChartView(QWidget *parent = nullptr)
+explicit QChartView( QWidget * parent = nullptr )
 */
 void QChartView_new1()
 {
@@ -70,7 +70,7 @@ void QChartView_new1()
 }
 
 /*
-explicit QChartView(QChart *chart, QWidget *parent = nullptr)
+explicit QChartView( QChart * chart, QWidget * parent = nullptr )
 */
 void QChartView_new2()
 {
@@ -130,7 +130,7 @@ void setRubberBand(const RubberBands &rubberBands)
 */
 
 /*
-RubberBands rubberBand() const
+QChartView::RubberBands rubberBand() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 }
 
 /*
-QChart *chart() const
+QChart * chart() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_CHART )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
 }
 
 /*
-void setChart(QChart *chart)
+void setChart( QChart * chart )
 */
 HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 {

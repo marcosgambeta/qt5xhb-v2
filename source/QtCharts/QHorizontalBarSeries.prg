@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QHorizontalBarSeries(QObject *parent = nullptr)
+explicit QHorizontalBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHORIZONTALBARSERIES_NEW )
 {

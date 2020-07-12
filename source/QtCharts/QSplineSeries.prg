@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QSplineSeries(QObject *parent = nullptr)
+explicit QSplineSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSPLINESERIES_NEW )
 {

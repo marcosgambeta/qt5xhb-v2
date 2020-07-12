@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QLEGEND_ISBACKGROUNDVISIBLE )
 }
 
 /*
-void setBackgroundVisible(bool visible = true)
+void setBackgroundVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QLEGEND_COLOR )
 }
 
 /*
-void setColor(QColor color)
+void setColor( QColor color )
 */
 HB_FUNC_STATIC( QLEGEND_SETCOLOR )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QLEGEND_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(QColor color)
+void setBorderColor( QColor color )
 */
 HB_FUNC_STATIC( QLEGEND_SETBORDERCOLOR )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QLEGEND_FONT )
 }
 
 /*
-void setFont(const QFont &font)
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QLEGEND_SETFONT )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QLEGEND_LABELCOLOR )
 }
 
 /*
-void setLabelColor(QColor color)
+void setLabelColor( QColor color )
 */
 HB_FUNC_STATIC( QLEGEND_SETLABELCOLOR )
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QLEGEND_REVERSEMARKERS )
 }
 
 /*
-void setReverseMarkers(bool reverseMarkers = true)
+void setReverseMarkers( bool reverseMarkers = true )
 */
 HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QLEGEND_SHOWTOOLTIPS )
 }
 
 /*
-void setShowToolTips(bool show)
+void setShowToolTips( bool show )
 */
 HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
 }
 
 /*
-MarkerShape markerShape() const
+QLegend::MarkerShape markerShape() const
 */
 HB_FUNC_STATIC( QLEGEND_MARKERSHAPE )
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERSHAPE )
 }
 
 /*
-void setMarkerShape(MarkerShape shape)
+void setMarkerShape( QLegend::MarkerShape shape )
 */
 HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
 }
 
 /*
-void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr)
+void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = nullptr )
 */
 HB_FUNC_STATIC( QLEGEND_PAINT )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QLEGEND_PAINT )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLEGEND_SETBRUSH )
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QLEGEND_BRUSH )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QLEGEND_SETPEN )
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QLEGEND_PEN )
 }
 
 /*
-void setLabelBrush(const QBrush &brush)
+void setLabelBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLEGEND_SETLABELBRUSH )
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QLEGEND_LABELBRUSH )
 }
 
 /*
-void setAlignment(Qt::Alignment alignment)
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QLEGEND_ISATTACHEDTOCHART )
 }
 
 /*
-QList <QLegendMarker*> markers(QAbstractSeries *series = nullptr) const
+QList<QLegendMarker *> markers( QAbstractSeries * series = nullptr ) const
 */
 HB_FUNC_STATIC( QLEGEND_MARKERS )
 {

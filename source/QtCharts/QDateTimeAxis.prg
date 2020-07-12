@@ -74,7 +74,7 @@ using namespace QtCharts;
 #include <QtCore/QDateTime>
 
 /*
-explicit QDateTimeAxis(QObject *parent = nullptr)
+explicit QDateTimeAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MIN )
 }
 
 /*
-void setMin(QDateTime min)
+void setMin( QDateTime min )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMIN )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MAX )
 }
 
 /*
-void setMax(QDateTime max)
+void setMax( QDateTime max )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMAX )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_FORMAT )
 }
 
 /*
-void setFormat(QString format)
+void setFormat( QString format )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETFORMAT )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TICKCOUNT )
 }
 
 /*
-void setTickCount(int count)
+void setTickCount( int count )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 }
 
 /*
-void setRange(QDateTime min, QDateTime max)
+void setRange( QDateTime min, QDateTime max )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 {

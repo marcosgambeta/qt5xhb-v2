@@ -116,7 +116,7 @@ using namespace QtCharts;
 #include <QtCharts/QPieSeries>
 
 /*
-explicit QPieSlice(QObject *parent = nullptr)
+explicit QPieSlice( QObject * parent = nullptr )
 */
 void QPieSlice_new1()
 {
@@ -127,7 +127,7 @@ void QPieSlice_new1()
 }
 
 /*
-QPieSlice(QString label, qreal value, QObject *parent = nullptr)
+QPieSlice( QString label, qreal value, QObject * parent = nullptr )
 */
 void QPieSlice_new2()
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPIESLICE_LABEL )
 }
 
 /*
-void setLabel(QString label)
+void setLabel( QString label )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABEL )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPIESLICE_VALUE )
 }
 
 /*
-void setValue(qreal value)
+void setValue( qreal value )
 */
 HB_FUNC_STATIC( QPIESLICE_SETVALUE )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QPIESLICE_ISLABELVISIBLE )
 }
 
 /*
-void setLabelVisible(bool visible = true)
+void setLabelVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELVISIBLE )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QPIESLICE_SETLABELVISIBLE )
 }
 
 /*
-LabelPosition labelPosition()
+QPieSlice::LabelPosition labelPosition()
 */
 HB_FUNC_STATIC( QPIESLICE_LABELPOSITION )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELPOSITION )
 }
 
 /*
-void setLabelPosition(LabelPosition position)
+void setLabelPosition( QPieSlice::LabelPosition position )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELPOSITION )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPIESLICE_ISEXPLODED )
 }
 
 /*
-void setExploded(bool exploded = true)
+void setExploded( bool exploded = true )
 */
 HB_FUNC_STATIC( QPIESLICE_SETEXPLODED )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QPIESLICE_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QPIESLICE_SETPEN )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QPIESLICE_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(QColor color)
+void setBorderColor( QColor color )
 */
 HB_FUNC_STATIC( QPIESLICE_SETBORDERCOLOR )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPIESLICE_BORDERWIDTH )
 }
 
 /*
-void setBorderWidth(int width)
+void setBorderWidth( int width )
 */
 HB_FUNC_STATIC( QPIESLICE_SETBORDERWIDTH )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QPIESLICE_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPIESLICE_SETBRUSH )
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QPIESLICE_COLOR )
 }
 
 /*
-void setColor(QColor color)
+void setColor( QColor color )
 */
 HB_FUNC_STATIC( QPIESLICE_SETCOLOR )
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELBRUSH )
 }
 
 /*
-void setLabelBrush(const QBrush &brush)
+void setLabelBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELBRUSH )
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELCOLOR )
 }
 
 /*
-void setLabelColor(QColor color)
+void setLabelColor( QColor color )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELCOLOR )
 {
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELFONT )
 }
 
 /*
-void setLabelFont(const QFont &font)
+void setLabelFont( const QFont & font )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELFONT )
 {
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QPIESLICE_LABELARMLENGTHFACTOR )
 }
 
 /*
-void setLabelArmLengthFactor(qreal factor)
+void setLabelArmLengthFactor( qreal factor )
 */
 HB_FUNC_STATIC( QPIESLICE_SETLABELARMLENGTHFACTOR )
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QPIESLICE_EXPLODEDISTANCEFACTOR )
 }
 
 /*
-void setExplodeDistanceFactor(qreal factor)
+void setExplodeDistanceFactor( qreal factor )
 */
 HB_FUNC_STATIC( QPIESLICE_SETEXPLODEDISTANCEFACTOR )
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QPIESLICE_ANGLESPAN )
 }
 
 /*
-QPieSeries *series() const
+QPieSeries * series() const
 */
 HB_FUNC_STATIC( QPIESLICE_SERIES )
 {

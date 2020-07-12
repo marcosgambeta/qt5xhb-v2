@@ -90,7 +90,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieSeries(QObject *parent = nullptr)
+explicit QPieSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPIESERIES_NEW )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPIESERIES_HORIZONTALPOSITION )
 }
 
 /*
-void setHorizontalPosition(qreal relativePosition)
+void setHorizontalPosition( qreal relativePosition )
 */
 HB_FUNC_STATIC( QPIESERIES_SETHORIZONTALPOSITION )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QPIESERIES_VERTICALPOSITION )
 }
 
 /*
-void setVerticalPosition(qreal relativePosition)
+void setVerticalPosition( qreal relativePosition )
 */
 HB_FUNC_STATIC( QPIESERIES_SETVERTICALPOSITION )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QPIESERIES_PIESIZE )
 }
 
 /*
-void setPieSize(qreal relativeSize)
+void setPieSize( qreal relativeSize )
 */
 HB_FUNC_STATIC( QPIESERIES_SETPIESIZE )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QPIESERIES_PIESTARTANGLE )
 }
 
 /*
-void setPieStartAngle(qreal startAngle)
+void setPieStartAngle( qreal startAngle )
 */
 HB_FUNC_STATIC( QPIESERIES_SETPIESTARTANGLE )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QPIESERIES_PIEENDANGLE )
 }
 
 /*
-void setPieEndAngle(qreal endAngle)
+void setPieEndAngle( qreal endAngle )
 */
 HB_FUNC_STATIC( QPIESERIES_SETPIEENDANGLE )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QPIESERIES_HOLESIZE )
 }
 
 /*
-void setHoleSize(qreal holeSize)
+void setHoleSize( qreal holeSize )
 */
 HB_FUNC_STATIC( QPIESERIES_SETHOLESIZE )
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QPIESERIES_TYPE )
 }
 
 /*
-bool append(QPieSlice *slice)
+bool append( QPieSlice * slice )
 */
 void QPieSeries_append1()
 {
@@ -549,7 +549,7 @@ void QPieSeries_append1()
 }
 
 /*
-bool append(QList<QPieSlice *> slices)
+bool append( QList<QPieSlice *> slices )
 */
 void QPieSeries_append2()
 {
@@ -571,7 +571,7 @@ void QPieSeries_append2()
 }
 
 /*
-QPieSlice *append(QString label, qreal value)
+QPieSlice * append( QString label, qreal value )
 */
 void QPieSeries_append3()
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
 }
 
 /*
-bool insert(int index, QPieSlice *slice)
+bool insert( int index, QPieSlice * slice )
 */
 HB_FUNC_STATIC( QPIESERIES_INSERT )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QPIESERIES_INSERT )
 }
 
 /*
-bool remove(QPieSlice *slice)
+bool remove( QPieSlice * slice )
 */
 HB_FUNC_STATIC( QPIESERIES_REMOVE )
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QPIESERIES_REMOVE )
 }
 
 /*
-bool take(QPieSlice *slice)
+bool take( QPieSlice * slice )
 */
 HB_FUNC_STATIC( QPIESERIES_TAKE )
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QPIESERIES_ISEMPTY )
 }
 
 /*
-void setLabelsVisible(bool visible = true)
+void setLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
 }
 
 /*
-void setLabelsPosition(QPieSlice::LabelPosition position)
+void setLabelsPosition( QPieSlice::LabelPosition position )
 */
 HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
 {

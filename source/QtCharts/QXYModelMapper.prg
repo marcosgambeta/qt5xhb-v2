@@ -55,7 +55,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QXYModelMapper(QObject *parent = nullptr) [protected]
+explicit QXYModelMapper( QObject * parent = nullptr ) [protected]
 */
 
 /*

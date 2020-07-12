@@ -57,7 +57,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPolarChart(QGraphicsItem *parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags())
+explicit QPolarChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
 */
 HB_FUNC_STATIC( QPOLARCHART_NEW )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPOLARCHART_DELETE )
 }
 
 /*
-void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
+void addAxis( QAbstractAxis * axis, QPolarChart::PolarOrientation polarOrientation)
 */
 HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 {
@@ -131,7 +131,7 @@ QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientation
 */
 
 /*
-static PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
+static QPolarChart::PolarOrientation axisPolarOrientation( QAbstractAxis * axis )
 */
 HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
 {

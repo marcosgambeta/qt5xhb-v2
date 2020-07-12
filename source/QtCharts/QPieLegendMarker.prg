@@ -60,7 +60,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = nullptr)
+explicit QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 }
 
 /*
-virtual QPieSeries* series()
+virtual QPieSeries * series()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 }
 
 /*
-QPieSlice* slice()
+QPieSlice * slice()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {

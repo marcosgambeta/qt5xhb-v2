@@ -58,7 +58,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = nullptr)
+explicit QAreaLegendMarker( QAreaSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 }
 
 /*
-virtual QAreaSeries* series()
+virtual QAreaSeries * series()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
 {

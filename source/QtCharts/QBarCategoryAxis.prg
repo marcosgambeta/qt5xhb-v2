@@ -76,7 +76,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarCategoryAxis(QObject *parent = nullptr)
+explicit QBarCategoryAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CATEGORIES )
 }
 
 /*
-void setCategories(const QStringList &categories)
+void setCategories( const QStringList & categories )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_SETCATEGORIES )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MIN )
 }
 
 /*
-void setMin(const QString &minCategory)
+void setMin( const QString & minCategory )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMIN )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_MAX )
 }
 
 /*
-void setMax(const QString &maxCategory)
+void setMax( const QString & maxCategory )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 }
 
 /*
-void append(const QStringList &categories)
+void append( const QStringList & categories )
 */
 void QBarCategoryAxis_append1()
 {
@@ -353,7 +353,7 @@ void QBarCategoryAxis_append1()
 }
 
 /*
-void append(const QString &category)
+void append( const QString & category )
 */
 void QBarCategoryAxis_append2()
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 }
 
 /*
-void remove(const QString &category)
+void remove( const QString & category )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
 }
 
 /*
-void insert(int index, const QString &category)
+void insert( int index, const QString & category )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
 }
 
 /*
-void replace(const QString &oldCategory, const QString &newCategory)
+void replace( const QString & oldCategory, const QString & newCategory )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_REPLACE )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_CLEAR )
 }
 
 /*
-QString at(int index) const
+QString at( int index ) const
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
 }
 
 /*
-void setRange(const QString &minCategory, const QString &maxCategory)
+void setRange( const QString & minCategory, const QString & maxCategory )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
 {

@@ -78,7 +78,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QHBarModelMapper(QObject *parent = nullptr)
+explicit QHBarModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_NEW )
 }
 
 /*
-QAbstractBarSeries *series() const
+QAbstractBarSeries * series() const
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QAbstractBarSeries *series)
+void setSeries( QAbstractBarSeries * series )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTBARSETROW )
 }
 
 /*
-void setFirstBarSetRow(int firstBarSetRow)
+void setFirstBarSetRow( int firstBarSetRow )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTBARSETROW )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_LASTBARSETROW )
 }
 
 /*
-void setLastBarSetRow(int lastBarSetRow)
+void setLastBarSetRow( int lastBarSetRow )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETLASTBARSETROW )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn(int firstColumn)
+void setFirstColumn( int firstColumn )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETFIRSTCOLUMN )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QHBARMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount(int columnCount)
+void setColumnCount( int columnCount )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_SETCOLUMNCOUNT )
 {

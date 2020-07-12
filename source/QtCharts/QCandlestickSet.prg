@@ -86,7 +86,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
+explicit QCandlestickSet( qreal timestamp = 0.0, QObject * parent = nullptr )
 */
 void QCandlestickSet_new1()
 {
@@ -97,7 +97,7 @@ void QCandlestickSet_new1()
 }
 
 /*
-explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
+explicit QCandlestickSet( qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject * parent = nullptr )
 */
 void QCandlestickSet_new2()
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_TIMESTAMP )
 }
 
 /*
-void setTimestamp(qreal timestamp)
+void setTimestamp( qreal timestamp )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_OPEN )
 }
 
 /*
-void setOpen(qreal open)
+void setOpen( qreal open )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_HIGH )
 }
 
 /*
-void setHigh(qreal high)
+void setHigh( qreal high )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_LOW )
 }
 
 /*
-void setLow(qreal low)
+void setLow( qreal low )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_CLOSE )
 }
 
 /*
-void setClose(qreal close)
+void setClose( qreal close )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETBRUSH )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 {

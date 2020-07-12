@@ -78,7 +78,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QVPieModelMapper(QObject *parent = nullptr)
+explicit QVPieModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_NEW )
 }
 
 /*
-QPieSeries *series() const
+QPieSeries * series() const
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QPieSeries *series)
+void setSeries( QPieSeries * series )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_VALUESCOLUMN )
 }
 
 /*
-void setValuesColumn(int valuesColumn)
+void setValuesColumn( int valuesColumn )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETVALUESCOLUMN )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_LABELSCOLUMN )
 }
 
 /*
-void setLabelsColumn(int labelsColumn)
+void setLabelsColumn( int labelsColumn )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETLABELSCOLUMN )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_FIRSTROW )
 }
 
 /*
-void setFirstRow(int firstRow)
+void setFirstRow( int firstRow )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETFIRSTROW )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QVPIEMODELMAPPER_ROWCOUNT )
 }
 
 /*
-void setRowCount(int rowCount)
+void setRowCount( int rowCount )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_SETROWCOUNT )
 {

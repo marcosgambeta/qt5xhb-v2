@@ -87,7 +87,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxPlotSeries(QObject *parent = nullptr)
+explicit QBoxPlotSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXOUTLINEVISIBLE )
 }
 
 /*
-void setBoxOutlineVisible(bool visible)
+void setBoxOutlineVisible( bool visible )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXOUTLINEVISIBLE )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BOXWIDTH )
 }
 
 /*
-void setBoxWidth(qreal width)
+void setBoxWidth( qreal width )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBOXWIDTH )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETBRUSH )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 }
 
 /*
-bool append(QBoxSet *box)
+bool append( QBoxSet * box )
 */
 void QBoxPlotSeries_append1()
 {
@@ -388,7 +388,7 @@ void QBoxPlotSeries_append1()
 }
 
 /*
-bool append(QList<QBoxSet *> boxes)
+bool append( QList<QBoxSet *> boxes )
 */
 void QBoxPlotSeries_append2()
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 }
 
 /*
-bool remove(QBoxSet *box)
+bool remove( QBoxSet * box )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_REMOVE )
 }
 
 /*
-bool take(QBoxSet *box)
+bool take( QBoxSet * box )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_TAKE )
 }
 
 /*
-bool insert(int index, QBoxSet *box)
+bool insert( int index, QBoxSet * box )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_INSERT )
 {

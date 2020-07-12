@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
 }
 
 /*
-void setLabel(const QString &label)
+void setLabel( const QString & label )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
 }
 
 /*
-void setLabelBrush(const QBrush &brush)
+void setLabelBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
 }
 
 /*
-void setFont(const QFont &font)
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
 }
 
 /*
-void setShape(QLegend::MarkerShape shape)
+void setShape( QLegend::MarkerShape shape )
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
 }
 
 /*
-virtual LegendMarkerType type() = 0
+virtual QLegendMarker::LegendMarkerType type() = 0
 */
 HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
 }
 
 /*
-virtual QAbstractSeries* series() = 0
+virtual QAbstractSeries * series() = 0
 */
 HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 {

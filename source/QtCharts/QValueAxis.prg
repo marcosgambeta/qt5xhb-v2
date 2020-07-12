@@ -75,7 +75,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QValueAxis(QObject *parent = nullptr)
+explicit QValueAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVALUEAXIS_NEW )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
 }
 
 /*
-void setTickCount(int count)
+void setTickCount( int count )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MIN )
 }
 
 /*
-void setMin(qreal min)
+void setMin( qreal min )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MAX )
 }
 
 /*
-void setMax(qreal max)
+void setMax( qreal max )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
 }
 
 /*
-void setLabelFormat(const QString &format)
+void setLabelFormat( const QString & format )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
 }
 
 /*
-void setMinorTickCount(int count)
+void setMinorTickCount( int count )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 }
 
 /*
-void setRange(qreal min, qreal max)
+void setRange( qreal min, qreal max )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
 {

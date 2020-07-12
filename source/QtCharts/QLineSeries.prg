@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLineSeries(QObject *parent = nullptr)
+explicit QLineSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLINESERIES_NEW )
 {

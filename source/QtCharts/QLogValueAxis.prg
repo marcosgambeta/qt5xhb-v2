@@ -76,7 +76,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLogValueAxis(QObject *parent = nullptr)
+explicit QLogValueAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
 }
 
 /*
-void setMin(qreal min)
+void setMin( qreal min )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
 }
 
 /*
-void setMax(qreal max)
+void setMax( qreal max )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
 }
 
 /*
-void setLabelFormat(const QString &format)
+void setLabelFormat( const QString & format )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
 }
 
 /*
-void setBase(qreal base)
+void setBase( qreal base )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
 }
 
 /*
-void setMinorTickCount(int minorTickCount)
+void setMinorTickCount( int minorTickCount )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 }
 
 /*
-void setRange(qreal min, qreal max)
+void setRange( qreal min, qreal max )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 {

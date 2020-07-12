@@ -101,7 +101,7 @@ using namespace QtCharts;
 #include <QtCharts/QLineSeries>
 
 /*
-explicit QAreaSeries(QObject *parent = nullptr)
+explicit QAreaSeries( QObject * parent = nullptr )
 */
 void QAreaSeries_new1()
 {
@@ -112,7 +112,7 @@ void QAreaSeries_new1()
 }
 
 /*
-explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
+explicit QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
 */
 void QAreaSeries_new2()
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
 }
 
 /*
-QLineSeries *upperSeries() const
+QLineSeries * upperSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 }
 
 /*
-QLineSeries *lowerSeries() const
+QLineSeries * lowerSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
 }
 
 /*
-void setColor(const QColor &color)
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(const QColor &color)
+void setBorderColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
 }
 
 /*
-void setPointLabelsFormat(const QString &format)
+void setPointLabelsFormat( const QString & format )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
 }
 
 /*
-void setPointLabelsVisible(bool visible = true)
+void setPointLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
 }
 
 /*
-void setPointLabelsFont(const QFont &font)
+void setPointLabelsFont( const QFont & font )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
 }
 
 /*
-void setPointLabelsColor(const QColor &color)
+void setPointLabelsColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
 }
 
 /*
-void setPointLabelsClipping(bool enabled = true)
+void setPointLabelsClipping( bool enabled = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QAREASERIES_TYPE )
 }
 
 /*
-void setUpperSeries(QLineSeries *series)
+void setUpperSeries( QLineSeries * series )
 */
 HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 }
 
 /*
-void setLowerSeries(QLineSeries *series)
+void setLowerSeries( QLineSeries * series )
 */
 HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPEN )
 {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
 }
 
 /*
-void setPointsVisible(bool visible = true)
+void setPointsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
 {

@@ -74,7 +74,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QScatterSeries(QObject *parent = nullptr)
+explicit QScatterSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_NEW )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_COLOR )
 }
 
 /*
-void setColor(const QColor &color)
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETCOLOR )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(const QColor &color)
+void setBorderColor( const QColor & color )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETBORDERCOLOR )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_SETBORDERCOLOR )
 }
 
 /*
-MarkerShape markerShape() const
+QScatterSeries::MarkerShape markerShape() const
 */
 HB_FUNC_STATIC( QSCATTERSERIES_MARKERSHAPE )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_MARKERSHAPE )
 }
 
 /*
-void setMarkerShape(MarkerShape shape)
+void setMarkerShape( QScatterSeries::MarkerShape shape )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETMARKERSHAPE )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_MARKERSIZE )
 }
 
 /*
-void setMarkerSize(qreal size)
+void setMarkerSize( qreal size )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETMARKERSIZE )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETBRUSH )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_TYPE )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_SETPEN )
 {
