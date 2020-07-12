@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QAnimationDriver(QObject *parent = nullptr)
+QAnimationDriver( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_NEW )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
 }
 
 /*
-void setStartTime(qint64 startTime)
+void setStartTime( qint64 startTime )
 */
 HB_FUNC_STATIC( QANIMATIONDRIVER_SETSTARTTIME )
 {

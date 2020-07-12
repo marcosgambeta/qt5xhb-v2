@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_DELETE )
 }
 
 /*
-void setSingleDashWordOptionMode(SingleDashWordOptionMode parsingMode)
+void setSingleDashWordOptionMode( QCommandLineParser::SingleDashWordOptionMode parsingMode )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETSINGLEDASHWORDOPTIONMODE )
 }
 
 /*
-bool addOption(const QCommandLineOption &commandLineOption)
+bool addOption( const QCommandLineOption & commandLineOption )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDOPTION )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDHELPOPTION )
 }
 
 /*
-void setApplicationDescription(const QString &description)
+void setApplicationDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_SETAPPLICATIONDESCRIPTION )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_APPLICATIONDESCRIPTION )
 }
 
 /*
-void addPositionalArgument(const QString &name, const QString &description, const QString &syntax = QString())
+void addPositionalArgument( const QString & name, const QString & description, const QString & syntax = QString() )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_CLEARPOSITIONALARGUMENTS )
 }
 
 /*
-void process(const QStringList &arguments)
+void process( const QStringList & arguments )
 */
 void QCommandLineParser_process1()
 {
@@ -352,7 +352,7 @@ void QCommandLineParser_process1()
 }
 
 /*
-void process(const QCoreApplication &app)
+void process( const QCoreApplication & app )
 */
 void QCommandLineParser_process2()
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 }
 
 /*
-bool parse(const QStringList &arguments)
+bool parse( const QStringList & arguments )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_PARSE )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ERRORTEXT )
 }
 
 /*
-bool isSet(const QString &name) const
+bool isSet( const QString & name ) const
 */
 void QCommandLineParser_isSet1()
 {
@@ -457,7 +457,7 @@ void QCommandLineParser_isSet1()
 }
 
 /*
-bool isSet(const QCommandLineOption &option) const
+bool isSet( const QCommandLineOption & option ) const
 */
 void QCommandLineParser_isSet2()
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 }
 
 /*
-QString value(const QString &name) const
+QString value( const QString & name ) const
 */
 void QCommandLineParser_value1()
 {
@@ -508,7 +508,7 @@ void QCommandLineParser_value1()
 }
 
 /*
-QString value(const QCommandLineOption &option) const
+QString value( const QCommandLineOption & option ) const
 */
 void QCommandLineParser_value2()
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 }
 
 /*
-QStringList values(const QString &name) const
+QStringList values( const QString & name ) const
 */
 void QCommandLineParser_values1()
 {
@@ -559,7 +559,7 @@ void QCommandLineParser_values1()
 }
 
 /*
-QStringList values(const QCommandLineOption &option) const
+QStringList values( const QCommandLineOption & option ) const
 */
 void QCommandLineParser_values2()
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_UNKNOWNOPTIONNAMES )
 }
 
 /*
-Q_NORETURN void showHelp(int exitCode = 0)
+Q_NORETURN void showHelp( int exitCode = 0 )
 */
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
 {

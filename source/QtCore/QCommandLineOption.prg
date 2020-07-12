@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
 */
 void QCommandLineOption_new1()
 {
@@ -74,7 +74,7 @@ void QCommandLineOption_new1()
 }
 
 /*
-QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
 */
 void QCommandLineOption_new2()
 {
@@ -83,7 +83,7 @@ void QCommandLineOption_new2()
 }
 
 /*
-QCommandLineOption(const QCommandLineOption &other)
+QCommandLineOption( const QCommandLineOption & other )
 */
 void QCommandLineOption_new3()
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 }
 
 /*
-void swap(QCommandLineOption &other)
+void swap( QCommandLineOption & other )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 }
 
 /*
-void setValueName(const QString &name)
+void setValueName( const QString & name )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 }
 
 /*
-void setDescription(const QString &description)
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 }
 
 /*
-void setDefaultValue(const QString &defaultValue)
+void setDefaultValue( const QString & defaultValue )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 }
 
 /*
-void setDefaultValues(const QStringList &defaultValues)
+void setDefaultValues( const QStringList & defaultValues )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {

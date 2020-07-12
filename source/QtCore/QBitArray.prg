@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QBitArray ()
+QBitArray()
 */
 void QBitArray_new1()
 {
@@ -78,7 +78,7 @@ void QBitArray_new1()
 }
 
 /*
-QBitArray ( int size, bool value = false )
+QBitArray( int size, bool value = false )
 */
 void QBitArray_new2()
 {
@@ -87,7 +87,7 @@ void QBitArray_new2()
 }
 
 /*
-QBitArray ( const QBitArray & other )
+QBitArray( const QBitArray & other )
 */
 void QBitArray_new3()
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QBITARRAY_DELETE )
 }
 
 /*
-bool at ( int i ) const
+bool at( int i ) const
 */
 HB_FUNC_STATIC( QBITARRAY_AT )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBITARRAY_CLEAR )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEAR )
 }
 
 /*
-void clearBit ( int i )
+void clearBit( int i )
 */
 HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 }
 
 /*
-int count () const
+int count() const
 */
 void QBitArray_count1()
 {
@@ -228,7 +228,7 @@ void QBitArray_count1()
 }
 
 /*
-int count ( bool on ) const
+int count( bool on ) const
 */
 void QBitArray_count2()
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 }
 
 /*
-bool fill ( bool value, int size = -1 )
+bool fill( bool value, int size = -1 )
 */
 void QBitArray_fill1()
 {
@@ -275,7 +275,7 @@ void QBitArray_fill1()
 }
 
 /*
-void fill ( bool value, int begin, int end )
+void fill( bool value, int begin, int end )
 */
 void QBitArray_fill2()
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QBITARRAY_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QBITARRAY_ISNULL )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QBITARRAY_ISNULL )
 }
 
 /*
-void resize ( int size )
+void resize( int size )
 */
 HB_FUNC_STATIC( QBITARRAY_RESIZE )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
 }
 
 /*
-void setBit ( int i )
+void setBit( int i )
 */
 void QBitArray_setBit1()
 {
@@ -400,7 +400,7 @@ void QBitArray_setBit1()
 }
 
 /*
-void setBit ( int i, bool value )
+void setBit( int i, bool value )
 */
 void QBitArray_setBit2()
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QBITARRAY_SETBIT )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QBITARRAY_SIZE )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QBITARRAY_SIZE )
 }
 
 /*
-bool testBit ( int i ) const
+bool testBit( int i ) const
 */
 HB_FUNC_STATIC( QBITARRAY_TESTBIT )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
 }
 
 /*
-bool toggleBit ( int i )
+bool toggleBit( int i )
 */
 HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
 }
 
 /*
-void truncate ( int pos )
+void truncate( int pos )
 */
 HB_FUNC_STATIC( QBITARRAY_TRUNCATE )
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual QModelIndex index ( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {

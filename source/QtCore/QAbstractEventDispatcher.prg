@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 }
 
 /*
-bool filterNativeEvent(const QByteArray & eventType, void * message, long * result)
+bool filterNativeEvent( const QByteArray & eventType, void * message, long * result )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTERNATIVEEVENT )
 }
 
 /*
-virtual void flush () = 0
+virtual void flush() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 }
 
 /*
-virtual bool hasPendingEvents () = 0
+virtual bool hasPendingEvents() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 }
 
 /*
-void installNativeEventFilter(QAbstractNativeEventFilter * filterObj)
+void installNativeEventFilter( QAbstractNativeEventFilter * filterObj )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTALLNATIVEEVENTFILTER )
 }
 
 /*
-virtual void interrupt () = 0
+virtual void interrupt() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 }
 
 /*
-virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
+virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTEREVENTNOTIFIER )
 }
 
 /*
-virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
+virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 }
 
 /*
-int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
+int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
 */
 void QAbstractEventDispatcher_registerTimer1()
 {
@@ -306,7 +306,7 @@ void QAbstractEventDispatcher_registerTimer1()
 }
 
 /*
-virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
+virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
 */
 void QAbstractEventDispatcher_registerTimer2()
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 }
 
 /*
-virtual int remainingTime(int timerId) = 0
+virtual int remainingTime( int timerId ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMAININGTIME )
 }
 
 /*
-void removeNativeEventFilter(QAbstractNativeEventFilter * filter)
+void removeNativeEventFilter( QAbstractNativeEventFilter * filter )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REMOVENATIVEEVENTFILTER )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTEREVENTNOTIFIER )
 }
 
 /*
-virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
+virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 }
 
 /*
-virtual bool unregisterTimer ( int timerId ) = 0
+virtual bool unregisterTimer( int timerId ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 }
 
 /*
-virtual bool unregisterTimers ( QObject * object ) = 0
+virtual bool unregisterTimers( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 }
 
 /*
-virtual void wakeUp () = 0
+virtual void wakeUp() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 }
 
 /*
-static QAbstractEventDispatcher * instance ( QThread * thread = nullptr )
+static QAbstractEventDispatcher * instance( QThread * thread = nullptr )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {

@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QByteArrayMatcher ()
+QByteArrayMatcher()
 */
 void QByteArrayMatcher_new1()
 {
@@ -69,7 +69,7 @@ void QByteArrayMatcher_new1()
 }
 
 /*
-QByteArrayMatcher ( const QByteArray & pattern )
+QByteArrayMatcher( const QByteArray & pattern )
 */
 void QByteArrayMatcher_new2()
 {
@@ -78,7 +78,7 @@ void QByteArrayMatcher_new2()
 }
 
 /*
-QByteArrayMatcher ( const char * pattern, int length )
+QByteArrayMatcher( const char * pattern, int length )
 */
 void QByteArrayMatcher_new3()
 {
@@ -87,7 +87,7 @@ void QByteArrayMatcher_new3()
 }
 
 /*
-QByteArrayMatcher ( const QByteArrayMatcher & other )
+QByteArrayMatcher( const QByteArrayMatcher & other )
 */
 void QByteArrayMatcher_new4()
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 }
 
 /*
-int indexIn ( const QByteArray & ba, int from = 0 ) const
+int indexIn( const QByteArray & ba, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn1()
 {
@@ -157,7 +157,7 @@ void QByteArrayMatcher_indexIn1()
 }
 
 /*
-int indexIn ( const char * str, int len, int from = 0 ) const
+int indexIn( const char * str, int len, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn2()
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 }
 
 /*
-QByteArray pattern () const
+QByteArray pattern() const
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 }
 
 /*
-void setPattern ( const QByteArray & pattern )
+void setPattern( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {

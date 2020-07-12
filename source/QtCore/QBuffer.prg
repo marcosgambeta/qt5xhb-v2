@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QBuffer ( QObject * parent = nullptr )
+QBuffer( QObject * parent = nullptr )
 */
 void QBuffer_new1()
 {
@@ -72,7 +72,7 @@ void QBuffer_new1()
 }
 
 /*
-QBuffer ( QByteArray * byteArray, QObject * parent = nullptr )
+QBuffer( QByteArray * byteArray, QObject * parent = nullptr )
 */
 void QBuffer_new2()
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
 }
 
 /*
-QByteArray & buffer ()
+QByteArray & buffer()
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 }
 
 /*
-const QByteArray & buffer () const
+const QByteArray & buffer() const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 }
 
 /*
-const QByteArray & data () const
+const QByteArray & data() const
 */
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
 }
 
 /*
-void setBuffer ( QByteArray * byteArray )
+void setBuffer( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 }
 
 /*
-void setData ( const QByteArray & data )
+void setData( const QByteArray & data )
 */
 void QBuffer_setData1()
 {
@@ -247,7 +247,7 @@ void QBuffer_setData1()
 }
 
 /*
-void setData ( const char * data, int size )
+void setData( const char * data, int size )
 */
 void QBuffer_setData2()
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
 }
 
 /*
-virtual bool atEnd () const
+virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
 }
 
 /*
-virtual bool canReadLine () const
+virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 }
 
 /*
-virtual void close ()
+virtual void close()
 */
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
 }
 
 /*
-virtual bool open ( OpenMode flags )
+virtual bool open( QBuffer::OpenMode flags )
 */
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
 }
 
 /*
-virtual qint64 pos () const
+virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QBUFFER_POS )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
 }
 
 /*
-virtual bool seek ( qint64 pos )
+virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
 }
 
 /*
-virtual qint64 size () const
+virtual qint64 size() const
 */
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
