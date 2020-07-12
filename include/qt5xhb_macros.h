@@ -86,6 +86,7 @@
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
 #define PCHAR(n)                                            (char) hb_parni(n)
+#define PUCHAR(n)                                           (uchar) hb_parni(n)
 #define PSHORT(n)                                           (short) hb_parni(n)
 #define PUSHORT(n)                                          (ushort) hb_parni(n)
 #define PINT(n)                                             (int) hb_parni(n)
