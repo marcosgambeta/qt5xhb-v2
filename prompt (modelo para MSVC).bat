@@ -27,7 +27,7 @@ rem Pasta include do Qt5xHb.
 set QT5XHB_INC_DIR=C:\qt5xhb\include
 
 rem Pasta lib do Qt5xHb.
-rem Exemplo: C:\qt5xhb\lib\qt540\msvc\windows\harbour
+rem Exemplo: C:\qt5xhb\lib\msvc\windows\harbour
 set QT5XHB_LIB_DIR=
 
 %ComSpec%
