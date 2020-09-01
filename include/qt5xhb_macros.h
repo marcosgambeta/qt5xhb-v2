@@ -36,6 +36,7 @@
 #include "qt5xhb_macros_qtquickwidgets.h"
 #include "qt5xhb_macros_qtscript.h"
 #include "qt5xhb_macros_qtscripttools.h"
+#include "qt5xhb_macros_qtscxml.h"
 #include "qt5xhb_macros_qtsensors.h"
 #include "qt5xhb_macros_qtserialbus.h"
 #include "qt5xhb_macros_qtserialport.h"
@@ -85,7 +86,8 @@
 #define PQSTRING(n)                                         QString::fromLatin1( hb_parc(n) )
 //#define PQSTRING(n)                                         QString::fromUtf8( hb_parc(n) )
 #define PBOOL(n)                                            (bool) hb_parl(n)
-#define PCHAR(n)                                            (char) hb_parni(n)
+//#define PCHAR(n)                                            (char) hb_parni(n)
+#define PCHAR(n)                                            ISCHAR(n)? (char) hb_parc(n)[0] : (ISNUM(n)? hb_parni(n) : 0)
 #define PUCHAR(n)                                           (uchar) hb_parni(n)
 #define PSHORT(n)                                           (short) hb_parni(n)
 #define PUSHORT(n)                                          (ushort) hb_parni(n)
