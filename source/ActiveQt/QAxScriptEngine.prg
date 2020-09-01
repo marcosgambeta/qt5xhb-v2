@@ -54,9 +54,7 @@ RETURN
 #include <ActiveQt/QAxScriptEngine>
 #endif
 
-/*
-QAxScriptEngine( const QString & language, QAxScript * script )
-*/
+// QAxScriptEngine( const QString & language, QAxScript * script )
 HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
@@ -89,9 +87,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addItem( const QString & name )
-*/
+// void addItem( const QString & name )
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -115,9 +111,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool hasIntrospection() const
-*/
+// bool hasIntrospection() const
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -139,9 +133,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -163,9 +155,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
   }
 }
 
-/*
-QString scriptLanguage() const
-*/
+// QString scriptLanguage() const
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -187,9 +177,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
   }
 }
 
-/*
-void setState( QAxScriptEngine::State st )
-*/
+// void setState( QAxScriptEngine::State st )
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -213,9 +201,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QAxScriptEngine::State state() const
-*/
+// QAxScriptEngine::State state() const
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
   auto obj = (QAxScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();

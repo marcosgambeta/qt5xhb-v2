@@ -66,38 +66,26 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QAxObject( QObject * parent = nullptr )
-*/
+// QAxObject( QObject * parent = nullptr )
 void QAxObject_new1()
 {
   auto obj = new QAxObject( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-QAxObject( const QString & c, QObject * parent = nullptr )
-*/
+// QAxObject( const QString & c, QObject * parent = nullptr )
 void QAxObject_new2()
 {
   auto obj = new QAxObject( PQSTRING(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-QAxObject( IUnknown * iface, QObject * parent = nullptr )
-*/
+// QAxObject( IUnknown * iface, QObject * parent = nullptr )
 void QAxObject_new3()
 {
   auto obj = new QAxObject( (IUnknown *) hb_parptr(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QAxObject ( QObject * parent = nullptr )
-[2]QAxObject ( const QString & c, QObject * parent = nullptr )
-[3]QAxObject ( IUnknown * iface, QObject * parent = nullptr )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
@@ -111,7 +99,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
   }
   else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTQOBJECT(2) )
   {
-    QAxObject_new3(); // TODO: revisar parametro 'IUnknown * iface'
+    QAxObject_new3();
   }
   else
   {
@@ -138,9 +126,7 @@ HB_FUNC_STATIC( QAXOBJECT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool doVerb( const QString & verb )
-*/
+// bool doVerb( const QString & verb )
 HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -164,12 +150,7 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 
 // QAxBase methods - begin
 
-// métodos da classe QAxBase, adicionados aqui, para
-// resolver problemas na utilização dos métodos
-
-/*
-QVariant asVariant() const
-*/
+// QVariant asVariant() const
 HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -192,9 +173,7 @@ HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -218,9 +197,7 @@ HB_FUNC_STATIC( QAXOBJECT_CLEAR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QString control() const
-*/
+// QString control() const
 HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -242,9 +219,7 @@ HB_FUNC_STATIC( QAXOBJECT_CONTROL )
   }
 }
 
-/*
-void disableClassInfo()
-*/
+// void disableClassInfo()
 HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -268,9 +243,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void disableEventSink()
-*/
+// void disableEventSink()
 HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -294,9 +267,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void disableMetaObject()
-*/
+// void disableMetaObject()
 HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -320,9 +291,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+// QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 void QAxObject_dynamicCall1()
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -334,9 +303,7 @@ void QAxObject_dynamicCall1()
   }
 }
 
-/*
-QVariant dynamicCall( const char * function, QList<QVariant> & vars )
-*/
+// QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 void QAxObject_dynamicCall2()
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -347,11 +314,6 @@ void QAxObject_dynamicCall2()
     Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 {
@@ -369,9 +331,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
   }
 }
 
-/*
-QString generateDocumentation()
-*/
+// QString generateDocumentation()
 HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -393,9 +353,7 @@ HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -417,9 +375,7 @@ HB_FUNC_STATIC( QAXOBJECT_ISNULL )
   }
 }
 
-/*
-virtual bool propertyWritable( const char * prop ) const
-*/
+// virtual bool propertyWritable( const char * prop ) const
 HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -441,9 +397,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
   }
 }
 
-/*
-QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-*/
+// QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 void QAxObject_querySubObject1()
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -455,9 +409,7 @@ void QAxObject_querySubObject1()
   }
 }
 
-/*
-QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
-*/
+// QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 void QAxObject_querySubObject2()
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -468,11 +420,6 @@ void QAxObject_querySubObject2()
     Qt5xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
-
-/*
-[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
 {
@@ -490,9 +437,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
   }
 }
 
-/*
-bool setControl( const QString & )
-*/
+// bool setControl( const QString & )
 HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -514,9 +459,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
   }
 }
 
-/*
-virtual void setPropertyWritable( const char * prop, bool ok )
-*/
+// virtual void setPropertyWritable( const char * prop, bool ok )
 HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -540,9 +483,7 @@ HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QStringList verbs() const
-*/
+// QStringList verbs() const
 HB_FUNC_STATIC( QAXOBJECT_VERBS )
 {
   auto obj = (QAxObject *) Qt5xHb::itemGetPtrStackSelfItem();

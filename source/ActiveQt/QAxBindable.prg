@@ -60,9 +60,7 @@ RETURN
 #include <ActiveQt/QAxBindable>
 #endif
 
-/*
-QAxBindable()
-*/
+// QAxBindable()
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -93,9 +91,7 @@ HB_FUNC_STATIC( QAXBINDABLE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual QAxAggregated * createAggregate()
-*/
+// virtual QAxAggregated * createAggregate()
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
   auto obj = (QAxBindable *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -118,9 +114,7 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
   }
 }
 
-/*
-virtual bool readData( QIODevice * source, const QString & format )
-*/
+// virtual bool readData( QIODevice * source, const QString & format )
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
   auto obj = (QAxBindable *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -142,9 +136,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
   }
 }
 
-/*
-void reportError( int code, const QString & src, const QString & desc, const QString & context = QString() )
-*/
+// void reportError( int code, const QString & src, const QString & desc, const QString & context = QString() )
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
   auto obj = (QAxBindable *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -152,7 +144,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
+    if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
     {
 #endif
       obj->reportError( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
@@ -168,9 +160,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual bool writeData( QIODevice * sink )
-*/
+// virtual bool writeData( QIODevice * sink )
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
   auto obj = (QAxBindable *) Qt5xHb::itemGetPtrStackSelfItem();
