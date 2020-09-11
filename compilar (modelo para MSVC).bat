@@ -28,8 +28,8 @@ call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.ba
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%PATH%
 
-rem Define a plataforma (windows)
-set QTPLATFORM=windows
+rem Define a plataforma (win)
+set QTPLATFORM=win
 
 rem Define o compilador C++ (msvc/msvc64)
 set QTCOMP=msvc
