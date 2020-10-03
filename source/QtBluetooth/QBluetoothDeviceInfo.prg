@@ -128,13 +128,6 @@ void QBluetoothDeviceInfo_new4()
 #endif
 }
 
-/*
-[1]QBluetoothDeviceInfo()
-[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
-[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
-*/
-
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
@@ -493,21 +486,18 @@ void QBluetoothDeviceInfo_setServiceUuids2()
 #endif
 }
 
-/*
-[1]void setServiceUuids(const QList<QBluetoothUuid> &uuids, DataCompleteness completeness)
-[2]void QBluetoothDeviceInfo::setServiceUuids(const QVector<QBluetoothUuid> &uuids)
-*/
-
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETSERVICEUUIDS )
 {
   if( ISNUMPAR(2) && ISARRAY(1) && ISNUM(2) )
   {
     QBluetoothDeviceInfo_setServiceUuids1();
   }
+#if (QT_VERSION >= QT_VERSION_CHECK(5,13,0))
   else if( ISNUMPAR(1) && ISARRAY(1) )
   {
     QBluetoothDeviceInfo_setServiceUuids2();
   }
+#endif
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

@@ -145,19 +145,7 @@ void QBluetoothUuid_new9()
 #endif
 }
 
-/*
-[1]QBluetoothUuid()
-[2]QBluetoothUuid(ProtocolUuid uuid)
-[3]QBluetoothUuid(ServiceClassUuid uuid)
-[4]QBluetoothUuid(quint16 uuid)
-[5]QBluetoothUuid(quint32 uuid)
-[6]QBluetoothUuid(quint128 uuid)
-[7]QBluetoothUuid(const QString &uuid)
-[8]QBluetoothUuid(const QBluetoothUuid &uuid)
-[9]QBluetoothUuid(const QUuid &uuid)
-*/
-
-HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
+HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -253,7 +241,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -281,7 +269,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;

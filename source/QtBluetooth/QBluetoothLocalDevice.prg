@@ -92,18 +92,13 @@ void QBluetoothLocalDevice_new2()
 #endif
 }
 
-/*
-[1]QBluetoothLocalDevice(QObject *parent = nullptr)
-[2]QBluetoothLocalDevice(const QBluetoothAddress &address, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QBluetoothLocalDevice_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QBluetoothLocalDevice_new2();
   }
