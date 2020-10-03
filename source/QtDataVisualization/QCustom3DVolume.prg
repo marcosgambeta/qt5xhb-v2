@@ -113,7 +113,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCustom3DVolume(QObject *parent = nullptr)
+QCustom3DVolume( QObject * parent = nullptr )
 */
 void QCustom3DVolume_new1()
 {
@@ -122,15 +122,6 @@ void QCustom3DVolume_new1()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
-*/
-
-/*
-[1]explicit QCustom3DVolume(QObject *parent = nullptr)
-[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
@@ -195,7 +186,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREWIDTH )
 }
 
 /*
-void setTextureWidth(int value)
+void setTextureWidth( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREWIDTH )
 {
@@ -249,7 +240,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREHEIGHT )
 }
 
 /*
-void setTextureHeight(int value)
+void setTextureHeight( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREHEIGHT )
 {
@@ -303,7 +294,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDEPTH )
 }
 
 /*
-void setTextureDepth(int value)
+void setTextureDepth( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDEPTH )
 {
@@ -357,7 +348,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXX )
 }
 
 /*
-void setSliceIndexX(int value)
+void setSliceIndexX( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXX )
 {
@@ -411,7 +402,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXY )
 }
 
 /*
-void setSliceIndexY(int value)
+void setSliceIndexY( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXY )
 {
@@ -465,7 +456,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEINDEXZ )
 }
 
 /*
-void setSliceIndexZ(int value)
+void setSliceIndexZ( int value )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
 {
@@ -491,22 +482,6 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDEXZ )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QVector<QRgb> colorTable() const
-*/
-
-/*
-void setColorTable(const QVector<QRgb> &colors)
-*/
-
-/*
-QVector<uchar> *textureData() const
-*/
-
-/*
-void setTextureData(QVector<uchar> *data)
-*/
 
 /*
 float alphaMultiplier() const
@@ -535,7 +510,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_ALPHAMULTIPLIER )
 }
 
 /*
-void setAlphaMultiplier(float mult)
+void setAlphaMultiplier( float mult )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETALPHAMULTIPLIER )
 {
@@ -589,7 +564,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_PRESERVEOPACITY )
 }
 
 /*
-void setPreserveOpacity(bool enable)
+void setPreserveOpacity( bool enable )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETPRESERVEOPACITY )
 {
@@ -643,7 +618,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_USEHIGHDEFSHADER )
 }
 
 /*
-void setUseHighDefShader(bool enable)
+void setUseHighDefShader( bool enable )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETUSEHIGHDEFSHADER )
 {
@@ -697,7 +672,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICES )
 }
 
 /*
-void setDrawSlices(bool enable)
+void setDrawSlices( bool enable )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICES )
 {
@@ -751,7 +726,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DRAWSLICEFRAMES )
 }
 
 /*
-void setDrawSliceFrames(bool enable)
+void setDrawSliceFrames( bool enable )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETDRAWSLICEFRAMES )
 {
@@ -806,7 +781,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMECOLOR )
 }
 
 /*
-void setSliceFrameColor(const QColor &color)
+void setSliceFrameColor( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMECOLOR )
 {
@@ -861,7 +836,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEWIDTHS )
 }
 
 /*
-void setSliceFrameWidths(const QVector3D &values)
+void setSliceFrameWidths( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEWIDTHS )
 {
@@ -916,7 +891,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMEGAPS )
 }
 
 /*
-void setSliceFrameGaps(const QVector3D &values)
+void setSliceFrameGaps( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMEGAPS )
 {
@@ -971,7 +946,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SLICEFRAMETHICKNESSES )
 }
 
 /*
-void setSliceFrameThicknesses(const QVector3D &values)
+void setSliceFrameThicknesses( const QVector3D & values )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
 {
@@ -999,7 +974,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEFRAMETHICKNESSES )
 }
 
 /*
-void setTextureDimensions(int width, int height, int depth)
+void setTextureDimensions( int width, int height, int depth )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREDIMENSIONS )
 {
@@ -1053,7 +1028,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREDATAWIDTH )
 }
 
 /*
-void setSliceIndices(int x, int y, int z)
+void setSliceIndices( int x, int y, int z )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 {
@@ -1081,11 +1056,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
 }
 
 /*
-QVector<uchar> *createTextureData(const QVector<QImage *> &images)
-*/
-
-/*
-void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
 */
 void QCustom3DVolume_setSubTextureData1()
 {
@@ -1102,7 +1073,7 @@ void QCustom3DVolume_setSubTextureData1()
 }
 
 /*
-void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
 */
 void QCustom3DVolume_setSubTextureData2()
 {
@@ -1117,11 +1088,6 @@ void QCustom3DVolume_setSubTextureData2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
-[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
-*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {
@@ -1140,7 +1106,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 }
 
 /*
-void setTextureFormat(QImage::Format format)
+void setTextureFormat( QImage::Format format )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETTEXTUREFORMAT )
 {
@@ -1194,7 +1160,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_TEXTUREFORMAT )
 }
 
 /*
-QImage renderSlice(Qt::Axis axis, int index)
+QImage renderSlice( Qt::Axis axis, int index )
 */
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_RENDERSLICE )
 {

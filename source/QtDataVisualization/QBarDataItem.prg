@@ -77,7 +77,7 @@ void QBarDataItem_new1()
 }
 
 /*
-QBarDataItem(float value)
+QBarDataItem( float value )
 */
 void QBarDataItem_new2()
 {
@@ -88,7 +88,7 @@ void QBarDataItem_new2()
 }
 
 /*
-QBarDataItem(float value, float angle)
+QBarDataItem( float value, float angle )
 */
 void QBarDataItem_new3()
 {
@@ -99,7 +99,7 @@ void QBarDataItem_new3()
 }
 
 /*
-QBarDataItem(const QBarDataItem &other)
+QBarDataItem( const QBarDataItem & other )
 */
 void QBarDataItem_new4()
 {
@@ -108,13 +108,6 @@ void QBarDataItem_new4()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QBarDataItem()
-[2]QBarDataItem(float value)
-[3]QBarDataItem(float value, float angle)
-[4]QBarDataItem(const QBarDataItem &other)
-*/
 
 HB_FUNC_STATIC( QBARDATAITEM_NEW )
 {
@@ -163,7 +156,7 @@ HB_FUNC_STATIC( QBARDATAITEM_DELETE )
 }
 
 /*
-void setValue(float val)
+void setValue( float val )
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 {
@@ -217,7 +210,7 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 }
 
 /*
-void setRotation(float angle)
+void setRotation( float angle )
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 {
@@ -269,10 +262,6 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
   }
 #endif
 }
-
-/*
-void createExtraData() [protected]
-*/
 
 HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
 {

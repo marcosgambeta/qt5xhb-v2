@@ -92,7 +92,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DScene(QObject *parent = nullptr)
+Q3DScene( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DSCENE_NEW )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 }
 
 /*
-void setPrimarySubViewport(const QRect &primarySubViewport)
+void setPrimarySubViewport( const QRect & primarySubViewport )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 }
 
 /*
-void setSecondarySubViewport(const QRect &secondarySubViewport)
+void setSecondarySubViewport( const QRect & secondarySubViewport )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 }
 
 /*
-void setSelectionQueryPosition(const QPoint &point)
+void setSelectionQueryPosition( const QPoint & point )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 }
 
 /*
-void setSecondarySubviewOnTop(bool isSecondaryOnTop)
+void setSecondarySubviewOnTop( bool isSecondaryOnTop )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 }
 
 /*
-void setSlicingActive(bool isSlicing)
+void setSlicingActive( bool isSlicing )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 }
 
 /*
-Q3DCamera *activeCamera() const
+Q3DCamera * activeCamera() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 }
 
 /*
-void setActiveCamera(Q3DCamera *camera)
+void setActiveCamera( Q3DCamera * camera )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 }
 
 /*
-Q3DLight *activeLight() const
+Q3DLight * activeLight() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 }
 
 /*
-void setActiveLight(Q3DLight *light)
+void setActiveLight( Q3DLight * light )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 }
 
 /*
-void setDevicePixelRatio(float pixelRatio)
+void setDevicePixelRatio( float pixelRatio )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 }
 
 /*
-void setGraphPositionQuery(const QPoint &point)
+void setGraphPositionQuery( const QPoint & point )
 */
 HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 }
 
 /*
-bool isPointInPrimarySubView(const QPoint &point)
+bool isPointInPrimarySubView( const QPoint & point )
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 }
 
 /*
-bool isPointInSecondarySubView(const QPoint &point)
+bool isPointInSecondarySubView( const QPoint & point )
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {

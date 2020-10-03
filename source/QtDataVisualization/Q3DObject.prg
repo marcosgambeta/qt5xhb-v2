@@ -65,7 +65,7 @@ using namespace QtDataVisualization;
 #include <QtDataVisualization/Q3DScene>
 
 /*
-explicit Q3DObject(QObject *parent = nullptr)
+Q3DObject( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 }
 
 /*
-Q3DScene *parentScene()
+Q3DScene * parentScene()
 */
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 }
 
 /*
-void setPosition(const QVector3D &position)
+void setPosition( const QVector3D & position )
 */
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 }
 
 /*
-virtual void copyValuesFrom(const Q3DObject &source)
+virtual void copyValuesFrom( const Q3DObject & source )
 */
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {
@@ -215,14 +215,6 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void setDirty(bool dirty) [protected]
-*/
-
-/*
-bool isDirty() const [protected]
-*/
 
 /*
 void positionChanged( const QVector3D & position )

@@ -75,7 +75,7 @@ using namespace QtDataVisualization;
 #include <QtDataVisualization/QSurface3DSeries>
 
 /*
-explicit QSurfaceDataProxy(QObject *parent = nullptr)
+QSurfaceDataProxy( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 {
@@ -91,10 +91,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
   }
 #endif
 }
-
-/*
-explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 virtual ~QSurfaceDataProxy()
@@ -173,7 +169,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
 }
 
 /*
-QSurface3DSeries *series() const
+QSurface3DSeries * series() const
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 {
@@ -204,7 +200,7 @@ const QSurfaceDataArray *array() const
 */
 
 /*
-const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
+const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
 */
 void QSurfaceDataProxy_itemAt1()
 {
@@ -220,7 +216,7 @@ void QSurfaceDataProxy_itemAt1()
 }
 
 /*
-const QSurfaceDataItem *itemAt(const QPoint &position) const
+const QSurfaceDataItem * itemAt( const QPoint & position ) const
 */
 void QSurfaceDataProxy_itemAt2()
 {
@@ -234,11 +230,6 @@ void QSurfaceDataProxy_itemAt2()
   }
 #endif
 }
-
-/*
-[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
-[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
-*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
@@ -259,17 +250,15 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 /*
 void resetArray(QSurfaceDataArray *newArray)
 */
-
 /*
 void setRow(int rowIndex, QSurfaceDataRow *row)
 */
-
 /*
 void setRows(int rowIndex, const QSurfaceDataArray &rows)
 */
 
 /*
-void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
+void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
 */
 void QSurfaceDataProxy_setItem1()
 {
@@ -286,7 +275,7 @@ void QSurfaceDataProxy_setItem1()
 }
 
 /*
-void setItem(const QPoint &position, const QSurfaceDataItem &item)
+void setItem( const QPoint & position, const QSurfaceDataItem & item )
 */
 void QSurfaceDataProxy_setItem2()
 {
@@ -301,11 +290,6 @@ void QSurfaceDataProxy_setItem2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
-[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
-*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
@@ -326,21 +310,17 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 /*
 int addRow(QSurfaceDataRow *row)
 */
-
 /*
 int addRows(const QSurfaceDataArray &rows)
 */
-
 /*
 void insertRow(int rowIndex, QSurfaceDataRow *row)
 */
-
 /*
 void insertRows(int rowIndex, const QSurfaceDataArray &rows)
 */
-
 /*
-void removeRows(int rowIndex, int removeCount)
+void removeRows( int rowIndex, int removeCount )
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
 {

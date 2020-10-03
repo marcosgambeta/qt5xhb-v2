@@ -56,7 +56,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QTouch3DInputHandler(QObject *parent = nullptr)
+QTouch3DInputHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
 }
 
 /*
-virtual void touchEvent(QTouchEvent *event)
+virtual void touchEvent( QTouchEvent * event )
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
 {

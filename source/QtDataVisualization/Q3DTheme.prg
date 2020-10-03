@@ -125,7 +125,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DTheme(QObject *parent = nullptr)
+Q3DTheme( QObject * parent = nullptr )
 */
 void Q3DTheme_new1()
 {
@@ -136,7 +136,7 @@ void Q3DTheme_new1()
 }
 
 /*
-explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
+Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )
 */
 void Q3DTheme_new2()
 {
@@ -145,16 +145,6 @@ void Q3DTheme_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
-*/
-
-/*
-[1]explicit Q3DTheme(QObject *parent = nullptr)
-[2]explicit Q3DTheme(Theme themeType, QObject *parent = nullptr)
-[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = nullptr) [protected]
-*/
 
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {
@@ -197,7 +187,7 @@ HB_FUNC_STATIC( Q3DTHEME_DELETE )
 }
 
 /*
-Theme type() const
+Q3DTheme::Theme type() const
 */
 HB_FUNC_STATIC( Q3DTHEME_TYPE )
 {
@@ -223,7 +213,7 @@ HB_FUNC_STATIC( Q3DTHEME_TYPE )
 }
 
 /*
-void setType(Theme themeType)
+void setType( Q3DTheme::Theme themeType )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETTYPE )
 {
@@ -305,7 +295,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASECOLORS )
 }
 
 /*
-void setBaseColors(const QList<QColor> &colors)
+void setBaseColors( const QList<QColor> & colors )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBASECOLORS )
 {
@@ -367,7 +357,7 @@ HB_FUNC_STATIC( Q3DTHEME_BACKGROUNDCOLOR )
 }
 
 /*
-void setBackgroundColor(const QColor &color)
+void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDCOLOR )
 {
@@ -422,7 +412,7 @@ HB_FUNC_STATIC( Q3DTHEME_WINDOWCOLOR )
 }
 
 /*
-void setWindowColor(const QColor &color)
+void setWindowColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETWINDOWCOLOR )
 {
@@ -477,7 +467,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELTEXTCOLOR )
 }
 
 /*
-void setLabelTextColor(const QColor &color)
+void setLabelTextColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELTEXTCOLOR )
 {
@@ -532,7 +522,7 @@ HB_FUNC_STATIC( Q3DTHEME_LABELBACKGROUNDCOLOR )
 }
 
 /*
-void setLabelBackgroundColor(const QColor &color)
+void setLabelBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDCOLOR )
 {
@@ -587,7 +577,7 @@ HB_FUNC_STATIC( Q3DTHEME_GRIDLINECOLOR )
 }
 
 /*
-void setGridLineColor(const QColor &color)
+void setGridLineColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETGRIDLINECOLOR )
 {
@@ -642,7 +632,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTCOLOR )
 }
 
 /*
-void setSingleHighlightColor(const QColor &color)
+void setSingleHighlightColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTCOLOR )
 {
@@ -697,7 +687,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTCOLOR )
 }
 
 /*
-void setMultiHighlightColor(const QColor &color)
+void setMultiHighlightColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTCOLOR )
 {
@@ -752,7 +742,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTCOLOR )
 }
 
 /*
-void setLightColor(const QColor &color)
+void setLightColor( const QColor & color )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLIGHTCOLOR )
 {
@@ -834,7 +824,7 @@ HB_FUNC_STATIC( Q3DTHEME_BASEGRADIENTS )
 }
 
 /*
-void setBaseGradients(const QList<QLinearGradient> &gradients)
+void setBaseGradients( const QList<QLinearGradient> & gradients )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBASEGRADIENTS )
 {
@@ -896,7 +886,7 @@ HB_FUNC_STATIC( Q3DTHEME_SINGLEHIGHLIGHTGRADIENT )
 }
 
 /*
-void setSingleHighlightGradient(const QLinearGradient &gradient)
+void setSingleHighlightGradient( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETSINGLEHIGHLIGHTGRADIENT )
 {
@@ -951,7 +941,7 @@ HB_FUNC_STATIC( Q3DTHEME_MULTIHIGHLIGHTGRADIENT )
 }
 
 /*
-void setMultiHighlightGradient(const QLinearGradient &gradient)
+void setMultiHighlightGradient( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETMULTIHIGHLIGHTGRADIENT )
 {
@@ -1005,7 +995,7 @@ HB_FUNC_STATIC( Q3DTHEME_LIGHTSTRENGTH )
 }
 
 /*
-void setLightStrength(float strength)
+void setLightStrength( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLIGHTSTRENGTH )
 {
@@ -1059,7 +1049,7 @@ HB_FUNC_STATIC( Q3DTHEME_AMBIENTLIGHTSTRENGTH )
 }
 
 /*
-void setAmbientLightStrength(float strength)
+void setAmbientLightStrength( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETAMBIENTLIGHTSTRENGTH )
 {
@@ -1113,7 +1103,7 @@ HB_FUNC_STATIC( Q3DTHEME_HIGHLIGHTLIGHTSTRENGTH )
 }
 
 /*
-void setHighlightLightStrength(float strength)
+void setHighlightLightStrength( float strength )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETHIGHLIGHTLIGHTSTRENGTH )
 {
@@ -1167,7 +1157,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBORDERENABLED )
 }
 
 /*
-void setLabelBorderEnabled(bool enabled)
+void setLabelBorderEnabled( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBORDERENABLED )
 {
@@ -1222,7 +1212,7 @@ HB_FUNC_STATIC( Q3DTHEME_FONT )
 }
 
 /*
-void setFont(const QFont &font)
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETFONT )
 {
@@ -1276,7 +1266,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISBACKGROUNDENABLED )
 }
 
 /*
-void setBackgroundEnabled(bool enabled)
+void setBackgroundEnabled( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETBACKGROUNDENABLED )
 {
@@ -1330,7 +1320,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISGRIDENABLED )
 }
 
 /*
-void setGridEnabled(bool enabled)
+void setGridEnabled( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETGRIDENABLED )
 {
@@ -1384,7 +1374,7 @@ HB_FUNC_STATIC( Q3DTHEME_ISLABELBACKGROUNDENABLED )
 }
 
 /*
-void setLabelBackgroundEnabled(bool enabled)
+void setLabelBackgroundEnabled( bool enabled )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
 {
@@ -1412,7 +1402,7 @@ HB_FUNC_STATIC( Q3DTHEME_SETLABELBACKGROUNDENABLED )
 }
 
 /*
-ColorStyle colorStyle() const
+Q3DTheme::ColorStyle colorStyle() const
 */
 HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
 {
@@ -1438,7 +1428,7 @@ HB_FUNC_STATIC( Q3DTHEME_COLORSTYLE )
 }
 
 /*
-void setColorStyle(ColorStyle style)
+void setColorStyle( Q3DTheme::ColorStyle style )
 */
 HB_FUNC_STATIC( Q3DTHEME_SETCOLORSTYLE )
 {

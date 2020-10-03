@@ -79,7 +79,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCustom3DLabel(QObject *parent = nullptr)
+QCustom3DLabel( QObject * parent = nullptr )
 */
 void QCustom3DLabel_new1()
 {
@@ -90,7 +90,7 @@ void QCustom3DLabel_new1()
 }
 
 /*
-explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
+QCustom3DLabel( const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, QObject * parent = nullptr )
 */
 void QCustom3DLabel_new2()
 {
@@ -99,11 +99,6 @@ void QCustom3DLabel_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QCustom3DLabel(QObject *parent = nullptr)
-[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXT )
 {
@@ -227,7 +222,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_FONT )
 }
 
 /*
-void setFont(const QFont &font)
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFONT )
 {
@@ -282,7 +277,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_TEXTCOLOR )
 }
 
 /*
-void setTextColor(const QColor &color)
+void setTextColor( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETTEXTCOLOR )
 {
@@ -337,7 +332,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_BACKGROUNDCOLOR )
 }
 
 /*
-void setBackgroundColor(const QColor &color)
+void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDCOLOR )
 {
@@ -391,7 +386,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBORDERENABLED )
 }
 
 /*
-void setBorderEnabled(bool enabled)
+void setBorderEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBORDERENABLED )
 {
@@ -445,7 +440,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISBACKGROUNDENABLED )
 }
 
 /*
-void setBackgroundEnabled(bool enabled)
+void setBackgroundEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETBACKGROUNDENABLED )
 {
@@ -499,7 +494,7 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_ISFACINGCAMERA )
 }
 
 /*
-void setFacingCamera(bool enabled)
+void setFacingCamera( bool enabled )
 */
 HB_FUNC_STATIC( QCUSTOM3DLABEL_SETFACINGCAMERA )
 {

@@ -78,7 +78,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DSurface(const QSurfaceFormat *format = nullptr, QWindow *parent = nullptr)
+Q3DSurface( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DSURFACE_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( Q3DSURFACE_DELETE )
 }
 
 /*
-QValue3DAxis *axisX() const
+QValue3DAxis * axisX() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 }
 
 /*
-void setAxisX(QValue3DAxis *axis)
+void setAxisX( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 }
 
 /*
-QValue3DAxis *axisY() const
+QValue3DAxis * axisY() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 }
 
 /*
-void setAxisY(QValue3DAxis *axis)
+void setAxisY( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 }
 
 /*
-QValue3DAxis *axisZ() const
+QValue3DAxis * axisZ() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 }
 
 /*
-void setAxisZ(QValue3DAxis *axis)
+void setAxisZ( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 }
 
 /*
-QSurface3DSeries *selectedSeries() const
+QSurface3DSeries * selectedSeries() const
 */
 HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
 }
 
 /*
-void setFlipHorizontalGrid(bool flip)
+void setFlipHorizontalGrid( bool flip )
 */
 HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 }
 
 /*
-void addSeries(QSurface3DSeries *series)
+void addSeries( QSurface3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 }
 
 /*
-void removeSeries(QSurface3DSeries *series)
+void removeSeries( QSurface3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
 }
 
 /*
-void addAxis(QValue3DAxis *axis)
+void addAxis( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 }
 
 /*
-void releaseAxis(QValue3DAxis *axis)
+void releaseAxis( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
 {

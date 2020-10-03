@@ -65,7 +65,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QLogValue3DAxisFormatter(QObject *parent = nullptr)
+QLogValue3DAxisFormatter( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 {
@@ -81,10 +81,6 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
   }
 #endif
 }
-
-/*
-explicit QLogValue3DAxisFormatter(QLogValue3DAxisFormatterPrivate *d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 virtual ~QLogValue3DAxisFormatter()
@@ -137,7 +133,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 }
 
 /*
-void setBase(qreal base)
+void setBase( qreal base )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
@@ -191,7 +187,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 }
 
 /*
-void setAutoSubGrid(bool enabled)
+void setAutoSubGrid( bool enabled )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
@@ -245,7 +241,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 }
 
 /*
-void setShowEdgeLabels(bool enabled)
+void setShowEdgeLabels( bool enabled )
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
@@ -271,26 +267,6 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-virtual QValue3DAxisFormatter *createNewInstance() const [protected]
-*/
-
-/*
-virtual void recalculate() [protected]
-*/
-
-/*
-virtual float positionAt(float value) const [protected]
-*/
-
-/*
-virtual float valueAt(float position) const [protected]
-*/
-
-/*
-virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
-*/
 
 /*
 void autoSubGridChanged( bool enabled )

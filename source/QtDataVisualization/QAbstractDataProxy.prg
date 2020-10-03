@@ -55,10 +55,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstractDataProxy(QAbstractDataProxyPrivate *d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstractDataProxy()
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
@@ -83,7 +79,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 }
 
 /*
-DataType type() const
+QAbstractDataProxy::DataType type() const
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
 {

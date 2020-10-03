@@ -72,7 +72,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QValue3DAxis(QObject *parent = nullptr)
+QValue3DAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_NEW )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SEGMENTCOUNT )
 }
 
 /*
-void setSegmentCount(int count)
+void setSegmentCount( int count )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSEGMENTCOUNT )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SUBSEGMENTCOUNT )
 }
 
 /*
-void setSubSegmentCount(int count)
+void setSubSegmentCount( int count )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETSUBSEGMENTCOUNT )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_LABELFORMAT )
 }
 
 /*
-void setLabelFormat(const QString &format)
+void setLabelFormat( const QString & format )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_SETLABELFORMAT )
 }
 
 /*
-QValue3DAxisFormatter *formatter() const
+QValue3DAxisFormatter * formatter() const
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_FORMATTER )
 }
 
 /*
-void setFormatter(QValue3DAxisFormatter *formatter)
+void setFormatter( QValue3DAxisFormatter * formatter )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETFORMATTER )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QVALUE3DAXIS_REVERSED )
 }
 
 /*
-void setReversed(bool enable)
+void setReversed( bool enable )
 */
 HB_FUNC_STATIC( QVALUE3DAXIS_SETREVERSED )
 {

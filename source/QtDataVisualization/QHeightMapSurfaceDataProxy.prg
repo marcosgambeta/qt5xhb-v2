@@ -76,7 +76,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
+QHeightMapSurfaceDataProxy( QObject * parent = nullptr )
 */
 void QHeightMapSurfaceDataProxy_new1()
 {
@@ -87,7 +87,7 @@ void QHeightMapSurfaceDataProxy_new1()
 }
 
 /*
-explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
+QHeightMapSurfaceDataProxy( const QImage & image, QObject * parent = nullptr )
 */
 void QHeightMapSurfaceDataProxy_new2()
 {
@@ -98,7 +98,7 @@ void QHeightMapSurfaceDataProxy_new2()
 }
 
 /*
-explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
+QHeightMapSurfaceDataProxy( const QString & filename, QObject * parent = nullptr )
 */
 void QHeightMapSurfaceDataProxy_new3()
 {
@@ -107,16 +107,6 @@ void QHeightMapSurfaceDataProxy_new3()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-explicit QHeightMapSurfaceDataProxy(QHeightMapSurfaceDataProxyPrivate *d, QObject *parent = nullptr) [protected]
-*/
-
-/*
-[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = nullptr)
-[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = nullptr)
-[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {
@@ -190,7 +180,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
 }
 
 /*
-void setHeightMap(const QImage &image)
+void setHeightMap( const QImage & image )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
 {
@@ -244,7 +234,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE )
 }
 
 /*
-void setHeightMapFile(const QString &filename)
+void setHeightMapFile( const QString & filename )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE )
 {
@@ -298,7 +288,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE )
 }
 
 /*
-void setMinXValue(float min)
+void setMinXValue( float min )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE )
 {
@@ -352,7 +342,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE )
 }
 
 /*
-void setMaxXValue(float max)
+void setMaxXValue( float max )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE )
 {
@@ -406,7 +396,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE )
 }
 
 /*
-void setMinZValue(float min)
+void setMinZValue( float min )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE )
 {
@@ -460,7 +450,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE )
 }
 
 /*
-void setMaxZValue(float max)
+void setMaxZValue( float max )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
 {
@@ -488,7 +478,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
 }
 
 /*
-void setValueRanges(float minX, float maxX, float minZ, float maxZ)
+void setValueRanges( float minX, float maxX, float minZ, float maxZ )
 */
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
 {

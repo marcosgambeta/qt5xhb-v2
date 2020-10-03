@@ -68,7 +68,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DInputHandler(QObject *parent = nullptr)
+Q3DInputHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
 }
 
 /*
-void setRotationEnabled(bool enable)
+void setRotationEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
 }
 
 /*
-void setZoomEnabled(bool enable)
+void setZoomEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
 }
 
 /*
-void setSelectionEnabled(bool enable)
+void setSelectionEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
 }
 
 /*
-void setZoomAtTargetEnabled(bool enable)
+void setZoomAtTargetEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 {

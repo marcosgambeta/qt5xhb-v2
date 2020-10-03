@@ -84,10 +84,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstract3DAxis()
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
@@ -138,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TITLE )
 }
 
 /*
-void setTitle(const QString &title)
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
 {
@@ -192,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELS )
 }
 
 /*
-void setLabels(const QStringList &labels)
+void setLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
 {
@@ -220,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
 }
 
 /*
-AxisOrientation orientation() const
+QAbstract3DAxis::AxisOrientation orientation() const
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
 {
@@ -246,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
 }
 
 /*
-AxisType type() const
+QAbstract3DAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_TYPE )
 {
@@ -298,7 +294,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MIN )
 }
 
 /*
-void setMin(float min)
+void setMin( float min )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
 {
@@ -352,7 +348,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MAX )
 }
 
 /*
-void setMax(float max)
+void setMax( float max )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
 {
@@ -406,7 +402,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISAUTOADJUSTRANGE )
 }
 
 /*
-void setAutoAdjustRange(bool autoAdjust)
+void setAutoAdjustRange( bool autoAdjust )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
 {
@@ -460,7 +456,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELAUTOROTATION )
 }
 
 /*
-void setLabelAutoRotation(float angle)
+void setLabelAutoRotation( float angle )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
 {
@@ -514,7 +510,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEVISIBLE )
 }
 
 /*
-void setTitleVisible(bool visible)
+void setTitleVisible( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
 {
@@ -568,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEFIXED )
 }
 
 /*
-void setTitleFixed(bool fixed)
+void setTitleFixed( bool fixed )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
 {
@@ -596,7 +592,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
 }
 
 /*
-void setRange(float min, float max)
+void setRange( float min, float max )
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
 {

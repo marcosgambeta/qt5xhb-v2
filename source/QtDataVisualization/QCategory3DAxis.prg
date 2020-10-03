@@ -59,7 +59,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QCategory3DAxis(QObject *parent = nullptr)
+QCategory3DAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 }
 
 /*
-void setLabels(const QStringList &labels)
+void setLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 {

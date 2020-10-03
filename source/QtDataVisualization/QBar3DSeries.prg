@@ -68,7 +68,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QBar3DSeries(QObject *parent = nullptr)
+QBar3DSeries( QObject * parent = nullptr )
 */
 void QBar3DSeries_new1()
 {
@@ -79,7 +79,7 @@ void QBar3DSeries_new1()
 }
 
 /*
-explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
+QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
 */
 void QBar3DSeries_new2()
 {
@@ -88,11 +88,6 @@ void QBar3DSeries_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QBar3DSeries(QObject *parent = nullptr)
-[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DELETE )
 }
 
 /*
-QBarDataProxy *dataProxy() const
+QBarDataProxy * dataProxy() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
 {
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
 }
 
 /*
-void setDataProxy(QBarDataProxy *proxy)
+void setDataProxy( QBarDataProxy * proxy )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETDATAPROXY )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SETDATAPROXY )
 }
 
 /*
-QPoint selectedBar() const;
+QPoint selectedBar() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
 {
@@ -217,7 +212,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
 }
 
 /*
-void setSelectedBar(const QPoint &position)
+void setSelectedBar( const QPoint & position )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETSELECTEDBAR )
 {
@@ -271,7 +266,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_MESHANGLE )
 }
 
 /*
-void setMeshAngle(float angle)
+void setMeshAngle( float angle )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETMESHANGLE )
 {

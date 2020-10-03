@@ -66,10 +66,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DInputHandler(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstract3DInputHandler()
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
@@ -94,7 +90,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 }
 
 /*
-InputView inputView() const
+QAbstract3DInputHandler::InputView inputView() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
@@ -120,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 }
 
 /*
-void setInputView(InputView inputView)
+void setInputView( QAbstract3DInputHandler::InputView inputView )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
@@ -175,7 +171,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 }
 
 /*
-void setInputPosition(const QPoint &position)
+void setInputPosition( const QPoint & position )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
@@ -203,7 +199,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 }
 
 /*
-Q3DScene *scene() const
+Q3DScene * scene() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
@@ -230,7 +226,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 }
 
 /*
-void setScene(Q3DScene *scene)
+void setScene( Q3DScene * scene )
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
@@ -260,41 +256,20 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 /*
 virtual void mouseDoubleClickEvent(QMouseEvent *event)
 */
-
 /*
 virtual void touchEvent(QTouchEvent *event)
 */
-
 /*
 virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
 */
-
 /*
 virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
 */
-
 /*
 virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 */
-
 /*
 virtual void wheelEvent(QWheelEvent *event)
-*/
-
-/*
-void setPrevDistance(int distance) [protected]
-*/
-
-/*
-int prevDistance() const [protected]
-*/
-
-/*
-void setPreviousInputPos(const QPoint &position) [protected]
-*/
-
-/*
-QPoint previousInputPos() const [protected]
 */
 
 /*

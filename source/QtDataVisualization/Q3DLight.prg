@@ -59,7 +59,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DLight(QObject *parent = nullptr)
+Q3DLight( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 }
 
 /*
-void setAutoPosition(bool enabled)
+void setAutoPosition( bool enabled )
 */
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {

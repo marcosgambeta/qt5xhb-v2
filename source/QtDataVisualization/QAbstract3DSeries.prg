@@ -107,10 +107,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstract3DSeries()
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
@@ -135,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
 }
 
 /*
-SeriesType type() const
+QAbstract3DSeries::SeriesType type() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
 {
@@ -187,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
 }
 
 /*
-void setItemLabelFormat(const QString &format)
+void setItemLabelFormat( const QString & format )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
 {
@@ -241,7 +237,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
 {
@@ -269,7 +265,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
 }
 
 /*
-Mesh mesh() const
+QAbstract3DSeries::Mesh mesh() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
 {
@@ -295,7 +291,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
 }
 
 /*
-void setMesh(Mesh mesh)
+void setMesh( QAbstract3DSeries::Mesh mesh )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
 {
@@ -349,7 +345,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
 }
 
 /*
-void setMeshSmooth(bool enable)
+void setMeshSmooth( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
 {
@@ -404,7 +400,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
 }
 
 /*
-void setMeshRotation(const QQuaternion &rotation)
+void setMeshRotation( const QQuaternion & rotation )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
 {
@@ -458,7 +454,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
 }
 
 /*
-void setUserDefinedMesh(const QString &fileName)
+void setUserDefinedMesh( const QString & fileName )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
 {
@@ -512,7 +508,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
 }
 
 /*
-void setColorStyle(Q3DTheme::ColorStyle style)
+void setColorStyle( Q3DTheme::ColorStyle style )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
 {
@@ -567,7 +563,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
 }
 
 /*
-void setBaseColor(const QColor &color)
+void setBaseColor( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
 {
@@ -622,7 +618,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
 }
 
 /*
-void setBaseGradient(const QLinearGradient &gradient)
+void setBaseGradient( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
 {
@@ -677,7 +673,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
 }
 
 /*
-void setSingleHighlightColor(const QColor &color)
+void setSingleHighlightColor( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
 {
@@ -732,7 +728,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
 }
 
 /*
-void setSingleHighlightGradient(const QLinearGradient &gradient)
+void setSingleHighlightGradient( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
 {
@@ -787,7 +783,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
 }
 
 /*
-void setMultiHighlightColor(const QColor &color)
+void setMultiHighlightColor( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
 {
@@ -842,7 +838,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
 }
 
 /*
-void setMultiHighlightGradient(const QLinearGradient &gradient)
+void setMultiHighlightGradient( const QLinearGradient & gradient )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
 {
@@ -896,7 +892,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
 {
@@ -976,7 +972,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
 }
 
 /*
-void setItemLabelVisible(bool visible)
+void setItemLabelVisible( bool visible )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
 {
@@ -1004,7 +1000,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
 }
 
 /*
-Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
+Q_INVOKABLE void setMeshAxisAndAngle( const QVector3D & axis, float angle )
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
 {

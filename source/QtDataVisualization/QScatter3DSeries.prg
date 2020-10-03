@@ -67,7 +67,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QScatter3DSeries(QObject *parent = nullptr)
+QScatter3DSeries( QObject * parent = nullptr )
 */
 void QScatter3DSeries_new1()
 {
@@ -78,7 +78,7 @@ void QScatter3DSeries_new1()
 }
 
 /*
-explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
+QScatter3DSeries( QScatterDataProxy * dataProxy, QObject * parent = nullptr )
 */
 void QScatter3DSeries_new2()
 {
@@ -87,15 +87,6 @@ void QScatter3DSeries_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = nullptr) [protected]
-*/
-
-/*
-[1]explicit QScatter3DSeries(QObject *parent = nullptr)
-[2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {
@@ -138,7 +129,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 }
 
 /*
-QScatterDataProxy *dataProxy() const
+QScatterDataProxy * dataProxy() const
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
 {
@@ -165,7 +156,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
 }
 
 /*
-void setDataProxy(QScatterDataProxy *proxy)
+void setDataProxy( QScatterDataProxy * proxy )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
 {
@@ -219,7 +210,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
 }
 
 /*
-void setSelectedItem(int index)
+void setSelectedItem( int index )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
 {
@@ -273,7 +264,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
 }
 
 /*
-void setItemSize(float size)
+void setItemSize( float size )
 */
 HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
 {
