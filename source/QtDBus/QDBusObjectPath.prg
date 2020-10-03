@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
 }
 
 /*
-explicit QDBusObjectPath(const char *path)
+QDBusObjectPath( const char * path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 }
 
 /*
-explicit QDBusObjectPath(QLatin1String path)
+QDBusObjectPath( QLatin1String path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
@@ -88,20 +88,13 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 }
 
 /*
-explicit QDBusObjectPath(const QString &path)
+QDBusObjectPath( const QString & path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
   auto obj = new QDBusObjectPath( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDBusObjectPath()
-[2]explicit QDBusObjectPath(const char *path)
-[3]explicit QDBusObjectPath(QLatin1String path)
-[4]explicit QDBusObjectPath(const QString &path)
-*/
 
 HB_FUNC( QDBUSOBJECTPATH_NEW )
 {
@@ -169,7 +162,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 }
 
 /*
-void setPath(const QString &path)
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
 {

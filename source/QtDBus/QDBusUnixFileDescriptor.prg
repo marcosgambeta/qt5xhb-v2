@@ -72,7 +72,7 @@ void QDBusUnixFileDescriptor_new1()
 }
 
 /*
-explicit QDBusUnixFileDescriptor(int fileDescriptor)
+QDBusUnixFileDescriptor( int fileDescriptor )
 */
 void QDBusUnixFileDescriptor_new2()
 {
@@ -81,19 +81,13 @@ void QDBusUnixFileDescriptor_new2()
 }
 
 /*
-QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
+QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
 */
 void QDBusUnixFileDescriptor_new3()
 {
   auto obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDBusUnixFileDescriptor()
-[2]explicit QDBusUnixFileDescriptor(int fileDescriptor)
-[3]QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
-*/
 
 HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {
@@ -133,7 +127,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_DELETE )
 }
 
 /*
-void swap(QDBusUnixFileDescriptor &other)
+void swap( QDBusUnixFileDescriptor & other )
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SWAP )
 {
@@ -207,7 +201,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR )
 }
 
 /*
-void setFileDescriptor(int fileDescriptor)
+void setFileDescriptor( int fileDescriptor )
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR )
 {
@@ -233,7 +227,7 @@ HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR )
 }
 
 /*
-void giveFileDescriptor(int fileDescriptor)
+void giveFileDescriptor( int fileDescriptor )
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR )
 {

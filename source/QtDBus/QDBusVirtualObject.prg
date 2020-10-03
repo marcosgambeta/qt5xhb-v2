@@ -17,6 +17,8 @@
 
 CLASS QDBusVirtualObject INHERIT QObject
 
+   METHOD delete
+
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -32,7 +34,9 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #include <QtDBus/QDBusVirtualObject>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -42,19 +46,33 @@ RETURN
 #include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #include <QtDBus/QDBusVirtualObject>
+#endif
 #endif
 
 /*
-explicit QDBusVirtualObject(QObject *parent = nullptr)
+virtual ~QDBusVirtualObject()
 */
+HB_FUNC_STATIC( QDBUSVIRTUALOBJECT_DELETE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  auto obj = (QDBusVirtualObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-virtual QString introspect(const QString &path) const = 0
-*/
+  if( obj != nullptr )
+  {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    delete obj;
+    obj = nullptr;
+    PHB_ITEM self = hb_stackSelfItem();
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, nullptr );
+    hb_objSendMsg( self, "_pointer", 1, ptr );
+    hb_itemRelease( ptr );
+  }
 
-/*
-virtual bool handleMessage(const QDBusMessage &message, const QDBusConnection &connection) = 0
-*/
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 #pragma ENDDUMP

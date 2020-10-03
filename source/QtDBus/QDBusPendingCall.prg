@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QDBusPendingCall(const QDBusPendingCall &other)
+QDBusPendingCall( const QDBusPendingCall & other )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_DELETE )
 }
 
 /*
-void swap(QDBusPendingCall &other)
+void swap( QDBusPendingCall & other )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_SWAP )
 {
@@ -150,7 +150,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISFINISHED )
   }
 #endif
 }
-
 /*
 void waitForFinished()
 */
@@ -178,7 +177,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 /*
 bool isError() const
 */
@@ -204,7 +202,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISERROR )
   }
 #endif
 }
-
 /*
 bool isValid() const
 */
@@ -230,7 +227,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ISVALID )
   }
 #endif
 }
-
 /*
 QDBusError error() const
 */
@@ -257,7 +253,6 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_ERROR )
   }
 #endif
 }
-
 /*
 QDBusMessage reply() const
 */
@@ -284,9 +279,8 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_REPLY )
   }
 #endif
 }
-
 /*
-static QDBusPendingCall fromError(const QDBusError &error)
+static QDBusPendingCall fromError( const QDBusError & error )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 {
@@ -306,7 +300,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 }
 
 /*
-static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
+static QDBusPendingCall fromCompletedCall( const QDBusMessage & message )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
 {

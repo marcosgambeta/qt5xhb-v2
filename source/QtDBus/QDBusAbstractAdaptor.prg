@@ -47,10 +47,6 @@ RETURN
 #include <QtDBus/QDBusAbstractAdaptor>
 #endif
 
-/*
-QDBusAbstractAdaptor(QObject *parent) [protected]
-*/
-
 HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_DELETE )
 {
   auto obj = (QDBusAbstractAdaptor *) Qt5xHb::itemGetPtrStackSelfItem();

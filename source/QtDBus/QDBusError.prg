@@ -70,11 +70,7 @@ void QDBusError_new1()
 }
 
 /*
-QDBusError(const DBusError *error)
-*/
-
-/*
-QDBusError(const QDBusMessage& msg)
+QDBusError( const QDBusMessage & msg )
 */
 void QDBusError_new3()
 {
@@ -83,7 +79,7 @@ void QDBusError_new3()
 }
 
 /*
-QDBusError(ErrorType error, const QString &message)
+QDBusError( QDBusError::ErrorType error, const QString & message )
 */
 void QDBusError_new4()
 {
@@ -92,7 +88,7 @@ void QDBusError_new4()
 }
 
 /*
-QDBusError(const QDBusError &other)
+QDBusError( const QDBusError & other )
 */
 void QDBusError_new5()
 {
@@ -100,24 +96,12 @@ void QDBusError_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusError()
-[2]QDBusError(const DBusError *error)
-[3]QDBusError(const QDBusMessage& msg)
-[4]QDBusError(ErrorType error, const QString &message)
-[5]QDBusError(const QDBusError &other)
-*/
-
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QDBusError_new1();
   }
-  //else if( ISNUMPAR(1) && ISDBUSERROR(1) )
-  //{
-  //  QDBusError_new2();
-  //}
   else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
   {
     QDBusError_new3();
@@ -154,7 +138,7 @@ HB_FUNC_STATIC( QDBUSERROR_DELETE )
 }
 
 /*
-ErrorType type() const
+QDBusError::ErrorType type() const
 */
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
@@ -250,7 +234,7 @@ HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 }
 
 /*
-static QString errorString(ErrorType error)
+static QString errorString( QDBusError::ErrorType error )
 */
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {

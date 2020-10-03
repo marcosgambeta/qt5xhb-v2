@@ -79,7 +79,7 @@ void QDBusArgument_new1()
 }
 
 /*
-QDBusArgument(const QDBusArgument &other)
+QDBusArgument( const QDBusArgument & other )
 */
 void QDBusArgument_new2()
 {
@@ -87,14 +87,20 @@ void QDBusArgument_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusArgument()
-[2]QDBusArgument(const QDBusArgument &other)
-*/
-
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
-  // TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QDBusArgument_new1();
+  }
+  else if( ISNUMPAR(1) && ISQDBUSARGUMENT(1) )
+  {
+    QDBusArgument_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
@@ -167,7 +173,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
 }
 
 /*
-void beginArray(int elementMetaTypeId)
+void beginArray( int elementMetaTypeId )
 */
 void QDBusArgument_beginArray1()
 {
@@ -196,14 +202,20 @@ void QDBusArgument_beginArray2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void beginArray(int elementMetaTypeId)
-[2]void beginArray() const
-*/
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
-  // TODO: implementar
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    QDBusArgument_beginArray1();
+  }
+  else if( ISNUMPAR(0) )
+  {
+    QDBusArgument_beginArray2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -233,7 +245,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
 }
 
 /*
-void beginMap(int keyMetaTypeId, int valueMetaTypeId)
+void beginMap( int keyMetaTypeId, int valueMetaTypeId )
 */
 void QDBusArgument_beginMap1()
 {
@@ -262,14 +274,20 @@ void QDBusArgument_beginMap2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
-[2]void beginMap() const
-*/
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
-  // TODO: implementar
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    QDBusArgument_beginMap1();
+  }
+  else if( ISNUMPAR(0) )
+  {
+    QDBusArgument_beginMap2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -351,7 +369,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
 }
 
 /*
-void appendVariant(const QVariant &v)
+void appendVariant( const QVariant & v )
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
 {
@@ -401,7 +419,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
 }
 
 /*
-ElementType currentType() const
+QDBusArgument::ElementType currentType() const
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
 {

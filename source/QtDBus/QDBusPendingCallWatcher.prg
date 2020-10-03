@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QDBusPendingCallWatcher(const QDBusPendingCall &call, QObject *parent = nullptr)
+QDBusPendingCallWatcher( const QDBusPendingCall & call, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {

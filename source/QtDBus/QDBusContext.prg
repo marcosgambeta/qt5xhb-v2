@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 }
 
 /*
-const QDBusMessage &message() const
+const QDBusMessage & message() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 }
 
 /*
-void setDelayedReply(bool enable) const
+void setDelayedReply( bool enable ) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 }
 
 /*
-void sendErrorReply(const QString &name, const QString &msg = QString()) const
+void sendErrorReply( const QString & name, const QString & msg = QString() ) const
 */
 void QDBusContext_sendErrorReply1()
 {
@@ -238,7 +238,7 @@ void QDBusContext_sendErrorReply1()
 }
 
 /*
-void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
 */
 void QDBusContext_sendErrorReply2()
 {
@@ -252,14 +252,20 @@ void QDBusContext_sendErrorReply2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
-[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
-*/
-
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
-  // TODO: implementar
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QDBusContext_sendErrorReply1();
+  }
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISCHAR(2)||ISNIL(2)) )
+  {
+    QDBusContext_sendErrorReply2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )

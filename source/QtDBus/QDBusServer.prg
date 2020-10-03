@@ -57,7 +57,7 @@ RETURN
 #include <QtDBus/QDBusError>
 
 /*
-QDBusServer(const QString &address, QObject *parent = nullptr)
+QDBusServer( const QString & address, QObject * parent = nullptr )
 */
 void QDBusServer_new1()
 {
@@ -66,7 +66,7 @@ void QDBusServer_new1()
 }
 
 /*
-QDBusServer(QObject *parent = nullptr)
+QDBusServer( QObject * parent = nullptr )
 */
 void QDBusServer_new2()
 {
@@ -74,14 +74,20 @@ void QDBusServer_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QDBusServer(const QString &address, QObject *parent = nullptr)
-[2]QDBusServer(QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
-  // TODO: implementar
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  {
+    QDBusServer_new1();
+  }
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    QDBusServer_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QDBUSSERVER_DELETE )
