@@ -84,7 +84,7 @@ void QAndroidParcel_new1()
 }
 
 /*
-explicit QAndroidParcel(const QAndroidJniObject& parcel)
+QAndroidParcel( const QAndroidJniObject & parcel )
 */
 void QAndroidParcel_new2()
 {
@@ -93,11 +93,6 @@ void QAndroidParcel_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QAndroidParcel()
-[2]explicit QAndroidParcel(const QAndroidJniObject& parcel)
-*/
 
 HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 {

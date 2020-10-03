@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTANDROID_BINDSERVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQANDROIDINTENT(1) && ISQANDROIDSERVICECONNECTION(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RBOOL( QtAndroid::bindService( *PQANDROIDINTENT(1), *PQANDROIDSERVICECONNECTION(2), ISNIL(3)? (QtAndroid::BindFlags) QtAndroid::BindFlag::None : (QtAndroid::BindFlags) hb_parni(3) ) );
@@ -225,7 +225,6 @@ HB_FUNC_STATIC( QTANDROID_BINDSERVICE )
 /*
 static void runOnAndroidThread(const Runnable &runnable)
 */
-
 /*
 static void runOnAndroidThreadSync(const Runnable &runnable, int timeoutMs = INT_MAX)
 */
@@ -254,11 +253,6 @@ void QtAndroid_hideSplashScreen2()
 #endif
 }
 
-/*
-[1]static void hideSplashScreen()
-[2]static void hideSplashScreen(int duration)
-*/
-
 HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 {
   if( ISNUMPAR(0) )
@@ -278,11 +272,9 @@ HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 /*
 static void requestPermissions(const QStringList &permissions, const PermissionResultCallback &callbackFunc)
 */
-
 /*
 static PermissionResultMap requestPermissionsSync(const QStringList &permissions, int timeoutMs = INT_MAX)
 */
-
 /*
 static QtAndroid::PermissionResult checkPermission( const QString & permission )
 */

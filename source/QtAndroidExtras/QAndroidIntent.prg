@@ -78,7 +78,7 @@ void QAndroidIntent_new1()
 }
 
 /*
-explicit QAndroidIntent(const QAndroidJniObject &intent)
+QAndroidIntent( const QAndroidJniObject & intent )
 */
 void QAndroidIntent_new2()
 {
@@ -89,7 +89,7 @@ void QAndroidIntent_new2()
 }
 
 /*
-explicit QAndroidIntent(const QString &action)
+QAndroidIntent( const QString & action )
 */
 void QAndroidIntent_new3()
 {
@@ -100,7 +100,7 @@ void QAndroidIntent_new3()
 }
 
 /*
-explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
+QAndroidIntent( const QAndroidJniObject & packageContext, const char * className )
 */
 void QAndroidIntent_new4()
 {
@@ -109,13 +109,6 @@ void QAndroidIntent_new4()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QAndroidIntent()
-[2]explicit QAndroidIntent(const QAndroidJniObject &intent)
-[3]explicit QAndroidIntent(const QString &action)
-[4]explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
-*/
 
 HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 {
@@ -142,7 +135,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 }
 
 /*
-virtual ~QAndroidIntent();
+virtual ~QAndroidIntent()
 */
 HB_FUNC_STATIC( QANDROIDINTENT_DELETE )
 {

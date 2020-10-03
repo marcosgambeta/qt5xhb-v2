@@ -61,14 +61,14 @@ RETURN
 #endif
 
 /*
-explicit QAndroidJniExceptionCleaner(OutputMode outputMode = OutputMode::Silent)
+QAndroidJniExceptionCleaner( QAndroidJniExceptionCleaner::OutputMode outputMode = QAndroidJniExceptionCleaner::OutputMode::Silent )
 */
 HB_FUNC_STATIC( QANDROIDJNIEXCEPTIONCLEANER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
-    auto obj = new QAndroidJniExceptionCleaner( ISNIL(1)? (QAndroidJniExceptionCleaner::OutputMode) QAndroidJniExceptionCleaner::Silent : (QAndroidJniExceptionCleaner::OutputMode) hb_parni(1) );
+    auto obj = new QAndroidJniExceptionCleaner( ISNIL(1)? (QAndroidJniExceptionCleaner::OutputMode) QAndroidJniExceptionCleaner::OutputMode::Silent : (QAndroidJniExceptionCleaner::OutputMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else

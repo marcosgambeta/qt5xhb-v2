@@ -23,6 +23,8 @@ CLASS QAndroidServiceConnection
 
    METHOD new
    METHOD delete
+   METHOD onServiceConnected
+   METHOD onServiceDisconnected
    METHOD handle
 
    METHOD newFrom
@@ -73,7 +75,7 @@ void QAndroidServiceConnection_new1()
 }
 
 /*
-explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
+QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
 */
 void QAndroidServiceConnection_new2()
 {
@@ -82,11 +84,6 @@ void QAndroidServiceConnection_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QAndroidServiceConnection()
-[2]explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
-*/
 
 HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
 {
@@ -127,12 +124,60 @@ HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_DELETE )
 }
 
 /*
-virtual void onServiceConnected(const QString &name, const QAndroidBinder &serviceBinder) = 0
+virtual void onServiceConnected( const QString & name, const QAndroidBinder & serviceBinder ) = 0
 */
+HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_ONSERVICECONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QAndroidServiceConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQANDROIDBINDER(2) )
+    {
+#endif
+      obj->onServiceConnected( PQSTRING(1), *PQANDROIDBINDER(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
-virtual void onServiceDisconnected(const QString &name) = 0
+virtual void onServiceDisconnected( const QString & name ) = 0
 */
+HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_ONSERVICEDISCONNECTED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QAndroidServiceConnection *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+#endif
+      obj->onServiceDisconnected( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 QAndroidJniObject handle() const

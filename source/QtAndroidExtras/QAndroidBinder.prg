@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-explicit QAndroidBinder()
+QAndroidBinder()
 */
 void QAndroidBinder_new1()
 {
@@ -75,7 +75,7 @@ void QAndroidBinder_new1()
 }
 
 /*
-QAndroidBinder(const QAndroidJniObject &binder)
+QAndroidBinder( const QAndroidJniObject & binder )
 */
 void QAndroidBinder_new2()
 {
@@ -84,11 +84,6 @@ void QAndroidBinder_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]explicit QAndroidBinder()
-[2]QAndroidBinder(const QAndroidJniObject &binder)
-*/
 
 HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QANDROIDBINDER_TRANSACT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISQANDROIDPARCEL(2) && (ISQANDROIDPARCEL(3)||ISNIL(3)) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISNUM(1) && ISQANDROIDPARCEL(2) && (ISQANDROIDPARCEL(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RBOOL( obj->transact( PINT(1), *PQANDROIDPARCEL(2), ISNIL(3)? nullptr : (QAndroidParcel *) Qt5xHb::itemGetPtr(3), ISNIL(4)? (QAndroidBinder::CallType) CallType::Normal : (QAndroidBinder::CallType) hb_parni(4) ) );
