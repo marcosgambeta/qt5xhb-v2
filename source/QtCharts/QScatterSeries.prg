@@ -74,7 +74,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QScatterSeries( QObject * parent = nullptr )
+QScatterSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSCATTERSERIES_NEW )
 {

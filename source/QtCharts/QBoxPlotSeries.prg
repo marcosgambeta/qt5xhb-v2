@@ -87,7 +87,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxPlotSeries( QObject * parent = nullptr )
+QBoxPlotSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBOXPLOTSERIES_NEW )
 {
@@ -408,11 +408,6 @@ void QBoxPlotSeries_append2()
   }
 #endif
 }
-
-/*
-[1]bool append(QBoxSet *box)
-[2]bool append(QList<QBoxSet *> boxes)
-*/
 
 HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 {

@@ -76,7 +76,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarCategoryAxis( QObject * parent = nullptr )
+QBarCategoryAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 {
@@ -92,10 +92,6 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
   }
 #endif
 }
-
-/*
-QBarCategoryAxis(QBarCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QBarCategoryAxis()
@@ -368,11 +364,6 @@ void QBarCategoryAxis_append2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void append(const QStringList &categories)
-[2]void append(const QString &category)
-*/
 
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {

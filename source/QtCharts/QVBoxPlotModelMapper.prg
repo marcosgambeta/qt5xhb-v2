@@ -78,7 +78,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QVBoxPlotModelMapper( QObject * parent = nullptr )
+QVBoxPlotModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_NEW )
 {

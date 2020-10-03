@@ -74,7 +74,7 @@ using namespace QtCharts;
 #include <QtCore/QDateTime>
 
 /*
-explicit QDateTimeAxis( QObject * parent = nullptr )
+QDateTimeAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 {
@@ -90,10 +90,6 @@ HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
   }
 #endif
 }
-
-/*
-QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QDateTimeAxis()

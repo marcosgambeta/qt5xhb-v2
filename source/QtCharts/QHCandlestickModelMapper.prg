@@ -79,7 +79,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QHCandlestickModelMapper( QObject * parent = nullptr )
+QHCandlestickModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_NEW )
 {

@@ -90,7 +90,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieSeries( QObject * parent = nullptr )
+QPieSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPIESERIES_NEW )
 {
@@ -586,12 +586,6 @@ void QPieSeries_append3()
 #endif
 }
 
-/*
-[1]bool append(QPieSlice *slice)
-[2]bool append(QList<QPieSlice *> slices)
-[3]QPieSlice *append(QString label, qreal value)
-*/
-
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQPIESLICE(1) )
@@ -805,7 +799,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );

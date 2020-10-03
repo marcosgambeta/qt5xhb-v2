@@ -79,7 +79,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxSet( const QString label = QString(), QObject * parent = nullptr )
+QBoxSet( const QString label = QString(), QObject * parent = nullptr )
 */
 void QBoxSet_new1()
 {
@@ -90,7 +90,7 @@ void QBoxSet_new1()
 }
 
 /*
-explicit QBoxSet( const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject * parent = nullptr )
+QBoxSet( const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject * parent = nullptr )
 */
 void QBoxSet_new2()
 {
@@ -99,11 +99,6 @@ void QBoxSet_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QBoxSet(const QString label = QString(), QObject *parent = nullptr)
-[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
@@ -297,11 +292,6 @@ void QBoxSet_append2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void append(const qreal value)
-[2]void append(const QList<qreal> &values)
-*/
 
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {

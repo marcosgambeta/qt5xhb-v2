@@ -78,7 +78,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QVPieModelMapper( QObject * parent = nullptr )
+QVPieModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVPIEMODELMAPPER_NEW )
 {

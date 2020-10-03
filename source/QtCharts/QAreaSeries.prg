@@ -101,7 +101,7 @@ using namespace QtCharts;
 #include <QtCharts/QLineSeries>
 
 /*
-explicit QAreaSeries( QObject * parent = nullptr )
+QAreaSeries( QObject * parent = nullptr )
 */
 void QAreaSeries_new1()
 {
@@ -112,7 +112,7 @@ void QAreaSeries_new1()
 }
 
 /*
-explicit QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
+QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
 */
 void QAreaSeries_new2()
 {
@@ -121,11 +121,6 @@ void QAreaSeries_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QAreaSeries(QObject *parent = nullptr)
-[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = nullptr)
-*/
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
@@ -422,7 +417,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsVisible( OPBOOL(1,true) );
@@ -586,7 +581,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsClipping( OPBOOL(1,true) );
@@ -806,7 +801,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointsVisible( OPBOOL(1,true) );

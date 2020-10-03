@@ -75,7 +75,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QValueAxis( QObject * parent = nullptr )
+QValueAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVALUEAXIS_NEW )
 {
@@ -91,10 +91,6 @@ HB_FUNC_STATIC( QVALUEAXIS_NEW )
   }
 #endif
 }
-
-/*
-QValueAxis(QValueAxisPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QValueAxis()

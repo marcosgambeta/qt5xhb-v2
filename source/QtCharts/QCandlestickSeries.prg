@@ -112,7 +112,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QCandlestickSeries( QObject * parent = nullptr )
+QCandlestickSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 {
@@ -760,11 +760,6 @@ void QCandlestickSeries_append2()
 #endif
 }
 
-/*
-[1]bool append(QCandlestickSet *set)
-[2]bool append(const QList<QCandlestickSet *> &sets)
-*/
-
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
@@ -817,11 +812,6 @@ void QCandlestickSeries_remove2()
   }
 #endif
 }
-
-/*
-[1]bool remove(QCandlestickSet *set)
-[2]bool remove(const QList<QCandlestickSet *> &sets)
-*/
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {

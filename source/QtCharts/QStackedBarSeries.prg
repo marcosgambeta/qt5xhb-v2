@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QStackedBarSeries( QObject * parent = nullptr )
+QStackedBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTACKEDBARSERIES_NEW )
 {

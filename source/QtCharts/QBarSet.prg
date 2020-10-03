@@ -99,7 +99,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarSet( const QString label, QObject * parent = nullptr )
+QBarSet( const QString label, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARSET_NEW )
 {
@@ -622,11 +622,6 @@ void QBarSet_append2()
 #endif
 }
 
-/*
-[1]void append(const qreal value)
-[2]void append(const QList<qreal> &values)
-*/
-
 HB_FUNC_STATIC( QBARSET_APPEND )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -682,7 +677,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->remove( PINT(1), OPINT(2,1) );

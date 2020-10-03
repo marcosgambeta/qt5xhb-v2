@@ -78,7 +78,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QHBarModelMapper( QObject * parent = nullptr )
+QHBarModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHBARMODELMAPPER_NEW )
 {

@@ -87,10 +87,6 @@ using namespace QtCharts;
 #include <QtCharts/QBarSet>
 
 /*
-explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstractBarSeries()
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )
@@ -231,7 +227,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -447,11 +443,6 @@ void QAbstractBarSeries_append2()
 #endif
 }
 
-/*
-[1]bool append(QBarSet *set)
-[2]bool append(QList<QBarSet *> sets)
-*/
-
 HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQBARSET(1) )
@@ -625,7 +616,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_CLEAR )
 }
 
 /*
-void barsetsAdded( QList<QBarSet*> sets )
+void barsetsAdded( QList<QBarSet *> sets )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 {
@@ -645,7 +636,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::barsetsAdded, 
                                                               [sender, indexOfCodeBlock]
-                                                              (QList<QBarSet*> arg1) {
+                                                              (QList<QBarSet *> arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )
@@ -713,7 +704,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSADDED )
 }
 
 /*
-void barsetsRemoved( QList<QBarSet*> sets )
+void barsetsRemoved( QList<QBarSet *> sets )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
 {
@@ -733,7 +724,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ONBARSETSREMOVED )
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractBarSeries::barsetsRemoved, 
                                                               [sender, indexOfCodeBlock]
-                                                              (QList<QBarSet*> arg1) {
+                                                              (QList<QBarSet *> arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )

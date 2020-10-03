@@ -97,10 +97,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLegend(QChart *chart) [private]
-*/
-
-/*
 ~QLegend()
 */
 HB_FUNC_STATIC( QLEGEND_DELETE )
@@ -187,7 +183,7 @@ HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setBackgroundVisible( OPBOOL(1,true) );
@@ -461,7 +457,7 @@ HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setReverseMarkers( OPBOOL(1,true) );
@@ -938,14 +934,6 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
   }
 #endif
 }
-
-/*
-void hideEvent(QHideEvent *event) [protected]
-*/
-
-/*
-void showEvent(QShowEvent *event) [protected]
-*/
 
 /*
 void backgroundVisibleChanged( bool visible )

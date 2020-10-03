@@ -76,7 +76,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLogValueAxis( QObject * parent = nullptr )
+QLogValueAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 {
@@ -92,10 +92,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
   }
 #endif
 }
-
-/*
-QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QLogValueAxis()

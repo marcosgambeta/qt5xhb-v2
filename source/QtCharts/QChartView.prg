@@ -59,7 +59,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QChartView( QWidget * parent = nullptr )
+QChartView( QWidget * parent = nullptr )
 */
 void QChartView_new1()
 {
@@ -70,7 +70,7 @@ void QChartView_new1()
 }
 
 /*
-explicit QChartView( QChart * chart, QWidget * parent = nullptr )
+QChartView( QChart * chart, QWidget * parent = nullptr )
 */
 void QChartView_new2()
 {
@@ -79,11 +79,6 @@ void QChartView_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QChartView(QWidget *parent = nullptr)
-[2]explicit QChartView(QChart *chart, QWidget *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QCHARTVIEW_NEW )
 {
@@ -128,7 +123,6 @@ HB_FUNC_STATIC( QCHARTVIEW_DELETE )
 /*
 void setRubberBand(const RubberBands &rubberBands)
 */
-
 /*
 QChartView::RubberBands rubberBand() const
 */
@@ -209,21 +203,5 @@ HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void resizeEvent(QResizeEvent *event) [protected]
-*/
-
-/*
-void mousePressEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseMoveEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseReleaseEvent(QMouseEvent *event) [protected]
-*/
 
 #pragma ENDDUMP

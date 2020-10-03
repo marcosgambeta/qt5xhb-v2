@@ -60,7 +60,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarLegendMarker( QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr )
+QBarLegendMarker( QAbstractBarSeries * series, QBarSet * barset, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
 {
@@ -76,10 +76,6 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
   }
 #endif
 }
-
-/*
-QBarLegendMarker(QBarLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 virtual ~QBarLegendMarker()

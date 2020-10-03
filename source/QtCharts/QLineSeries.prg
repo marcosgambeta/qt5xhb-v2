@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLineSeries( QObject * parent = nullptr )
+QLineSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLINESERIES_NEW )
 {
@@ -72,10 +72,6 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
   }
 #endif
 }
-
-/*
-QLineSeries(QLineSeriesPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QLineSeries()

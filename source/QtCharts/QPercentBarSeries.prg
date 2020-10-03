@@ -56,7 +56,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPercentBarSeries( QObject * parent = nullptr )
+QPercentBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPERCENTBARSERIES_NEW )
 {

@@ -69,7 +69,7 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QCategoryAxis( QObject * parent = nullptr )
+QCategoryAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 {
@@ -85,10 +85,6 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
   }
 #endif
 }
-
-/*
-QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QCategoryAxis()
@@ -125,7 +121,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );

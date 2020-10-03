@@ -130,12 +130,12 @@ using namespace QtCharts;
 #include <QtCore/QLocale>
 
 /*
-explicit QChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
+QChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
 */
 HB_FUNC_STATIC( QCHART_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     auto obj = new QChart( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -146,10 +146,6 @@ HB_FUNC_STATIC( QCHART_NEW )
   }
 #endif
 }
-
-/*
-explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags wFlags) [protected]
-*/
 
 /*
 ~QChart()
@@ -292,7 +288,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setBackgroundVisible( OPBOOL(1,true) );
@@ -346,7 +342,7 @@ HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setDropShadowEnabled( OPBOOL(1,true) );
@@ -699,7 +695,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPlotAreaBackgroundVisible( OPBOOL(1,true) );
@@ -1162,7 +1158,7 @@ HB_FUNC_STATIC( QCHART_AXES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
     {
 #endif
       QList<QAbstractAxis *> list = obj->axes( ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,nullptr) );
@@ -1510,11 +1506,6 @@ void QChart_zoomIn2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void zoomIn()
-[2]void zoomIn(const QRectF &rect)
-*/
 
 HB_FUNC_STATIC( QCHART_ZOOMIN )
 {

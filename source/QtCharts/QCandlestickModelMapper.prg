@@ -70,7 +70,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
+QCandlestickModelMapper(QObject *parent = nullptr) [ABSTRACT]
 */
 
 /*
@@ -208,62 +208,6 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
   }
 #endif
 }
-
-/*
-void setTimestamp(int timestamp) [protected]
-*/
-
-/*
-int timestamp() const [protected]
-*/
-
-/*
-void setOpen(int open) [protected]
-*/
-
-/*
-int open() const [protected]
-*/
-
-/*
-void setHigh(int high) [protected]
-*/
-
-/*
-int high() const [protected]
-*/
-
-/*
-void setLow(int low) [protected]
-*/
-
-/*
-int low() const [protected]
-*/
-
-/*
-void setClose(int close) [protected]
-*/
-
-/*
-int close() const [protected]
-*/
-
-/*
-void setFirstSetSection(int firstSetSection) [protected]
-*/
-
-/*
-int firstSetSection() const [protected]
-*/
-
-/*
-void setLastSetSection(int lastSetSection) [protected]
-*/
-
-/*
-int lastSetSection() const [protected]
-*/
 
 /*
 void modelReplaced()

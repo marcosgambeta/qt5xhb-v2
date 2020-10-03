@@ -105,10 +105,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QXYSeries()
 */
 HB_FUNC_STATIC( QXYSERIES_DELETE )
@@ -169,7 +165,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointsVisible( OPBOOL(1,true) );
@@ -332,7 +328,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsVisible( OPBOOL(1,true) );
@@ -496,7 +492,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsClipping( OPBOOL(1,true) );
@@ -570,12 +566,6 @@ void QXYSeries_append3()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void append(qreal x, qreal y)
-[2]void append(const QPointF &point)
-[3]void append(const QList<QPointF> &points)
-*/
 
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
@@ -713,15 +703,6 @@ void QXYSeries_replace6()
 #endif
 }
 
-/*
-[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
-[3]void replace(int index, qreal newX, qreal newY)
-[4]void replace(int index, const QPointF &newPoint)
-[5]void replace(QList<QPointF> points)
-[6]void replace(QVector<QPointF> points)
-*/
-
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
   if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
@@ -804,12 +785,6 @@ void QXYSeries_remove3()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void remove(qreal x, qreal y)
-[2]void remove(const QPointF &point)
-[3]void remove(int index)
-*/
 
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {

@@ -86,10 +86,6 @@ using namespace QtCharts;
 #include <QtCharts/QAbstractSeries>
 
 /*
-explicit QLegendMarker(QLegendMarkerPrivate &d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QLegendMarker()
 */
 HB_FUNC_STATIC( QLEGENDMARKER_DELETE )

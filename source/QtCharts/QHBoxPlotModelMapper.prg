@@ -80,7 +80,7 @@ using namespace QtCharts;
 #include <QtCore/QAbstractItemModel>
 
 /*
-explicit QHBoxPlotModelMapper( QObject * parent = nullptr )
+QHBoxPlotModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
 {
