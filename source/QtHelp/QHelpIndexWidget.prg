@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 }
 
 /*
-void activateCurrentItem ()
+void activateCurrentItem()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 }
 
 /*
-void filterIndices ( const QString & filter, const QString & wildcard = QString() )
+void filterIndices( const QString & filter, const QString & wildcard = QString() )
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->filterIndices( PQSTRING(1), OPQSTRING(2,QString()) );

@@ -79,7 +79,7 @@ void QCompressedHelpInfo_new1()
 }
 
 /*
-QCompressedHelpInfo(const QCompressedHelpInfo &other)
+QCompressedHelpInfo( const QCompressedHelpInfo & other )
 */
 void QCompressedHelpInfo_new2()
 {
@@ -91,12 +91,6 @@ void QCompressedHelpInfo_new2()
 
 /*
 QCompressedHelpInfo(QCompressedHelpInfo &&other)
-*/
-
-/*
-[1]QCompressedHelpInfo()
-[2]QCompressedHelpInfo(const QCompressedHelpInfo &other)
-[3]QCompressedHelpInfo(QCompressedHelpInfo &&other)
 */
 
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_NEW )
@@ -138,7 +132,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_DELETE )
 }
 
 /*
-void swap(QCompressedHelpInfo &other) Q_DECL_NOTHROW
+void swap( QCompressedHelpInfo & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_SWAP )
 {
@@ -245,7 +239,7 @@ HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_VERSION )
 }
 
 /*
-static QCompressedHelpInfo fromCompressedHelpFile(const QString &documentationFileName)
+static QCompressedHelpInfo fromCompressedHelpFile( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QCOMPRESSEDHELPINFO_FROMCOMPRESSEDHELPFILE )
 {

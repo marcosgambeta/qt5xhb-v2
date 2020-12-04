@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-void createIndex ( const QString & customFilterName )
+void createIndex( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 }
 
 /*
-QModelIndex filter ( const QString & filter, const QString & wildcard = QString() )
+QModelIndex filter( const QString & filter, const QString & wildcard = QString() )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 }
 
 /*
-bool isCreatingIndex () const
+bool isCreatingIndex() const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
