@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QHistoryState(QState *parent = nullptr)
+QHistoryState( QState * parent = nullptr )
 */
 void QHistoryState_new1()
 {
@@ -63,18 +63,13 @@ void QHistoryState_new1()
 }
 
 /*
-QHistoryState(HistoryType type, QState *parent = nullptr)
+QHistoryState( QHistoryState::HistoryType type, QState * parent = nullptr )
 */
 void QHistoryState_new2()
 {
   auto obj = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QHistoryState(QState *parent = nullptr)
-[2]QHistoryState(HistoryType type, QState *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {
@@ -112,7 +107,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 }
 
 /*
-QAbstractState *defaultState() const
+QAbstractState * defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 }
 
 /*
-void setDefaultState(QAbstractState *state)
+void setDefaultState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 }
 
 /*
-HistoryType historyType() const
+QHistoryState::HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
@@ -187,7 +182,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 }
 
 /*
-void setHistoryType(HistoryType type)
+void setHistoryType( QHistoryState::HistoryType type )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {

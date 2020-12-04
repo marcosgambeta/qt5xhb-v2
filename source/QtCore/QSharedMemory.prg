@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QSharedMemory(QObject *parent = nullptr)
+QSharedMemory( QObject * parent = nullptr )
 */
 void QSharedMemory_new1()
 {
@@ -72,7 +72,7 @@ void QSharedMemory_new1()
 }
 
 /*
-QSharedMemory(const QString &key, QObject *parent = nullptr)
+QSharedMemory( const QString & key, QObject * parent = nullptr )
 */
 void QSharedMemory_new2()
 {
@@ -80,18 +80,13 @@ void QSharedMemory_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSharedMemory(QObject *parent = nullptr)
-[2]QSharedMemory(const QString &key, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSharedMemory_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSharedMemory_new2();
   }
@@ -121,7 +116,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 }
 
 /*
-void setKey(const QString &key)
+void setKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
@@ -171,7 +166,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 }
 
 /*
-void setNativeKey(const QString &key)
+void setNativeKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
@@ -221,7 +216,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 }
 
 /*
-bool create(int size, AccessMode mode = ReadWrite)
+bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
@@ -230,7 +225,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->create( PINT(1), ISNIL(2)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
@@ -269,7 +264,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 }
 
 /*
-bool attach(AccessMode mode = ReadWrite)
+bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
@@ -278,7 +273,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->attach( ISNIL(1)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
@@ -341,7 +336,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 }
 
 /*
-void *data()
+void * data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
@@ -413,7 +408,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 }
 
 /*
-SharedMemoryError error() const
+QSharedMemory::SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {

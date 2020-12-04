@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QSignalTransition(QState *sourceState = nullptr)
+QSignalTransition( QState * sourceState = nullptr )
 */
 void QSignalTransition_new1()
 {
@@ -62,18 +62,13 @@ void QSignalTransition_new1()
 }
 
 /*
-QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
+QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = nullptr )
 */
 void QSignalTransition_new2()
 {
   auto obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,nullptr) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSignalTransition(QState *sourceState = nullptr)
-[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = nullptr)
-*/
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
@@ -109,7 +104,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 }
 
 /*
-QObject *senderObject() const
+QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
@@ -134,7 +129,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 }
 
 /*
-void setSenderObject(const QObject *sender)
+void setSenderObject( const QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
@@ -185,7 +180,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 }
 
 /*
-void setSignal(const QByteArray &signal)
+void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {

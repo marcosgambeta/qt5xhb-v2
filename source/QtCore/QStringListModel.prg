@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QStringListModel(QObject * parent = nullptr)
+QStringListModel( QObject * parent = nullptr )
 */
 void QStringListModel_new1()
 {
@@ -70,7 +70,7 @@ void QStringListModel_new1()
 }
 
 /*
-QStringListModel(const QStringList & strings, QObject * parent = nullptr)
+QStringListModel( const QStringList & strings, QObject * parent = nullptr )
 */
 void QStringListModel_new2()
 {
@@ -78,18 +78,13 @@ void QStringListModel_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QStringListModel(QObject * parent = nullptr)
-[2]QStringListModel(const QStringList & strings, QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QStringListModel_new1();
   }
-  else if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QStringListModel_new2();
   }
@@ -100,7 +95,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 }
 
 /*
-void setStringList(const QStringList & strings)
+void setStringList( const QStringList & strings )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
@@ -150,7 +145,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 }
 
 /*
-virtual QVariant data(const QModelIndex & index, int role) const
+virtual QVariant data( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
@@ -175,7 +170,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 }
 
 /*
-virtual Qt::ItemFlags flags(const QModelIndex & index) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {
@@ -199,7 +194,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 }
 
 /*
-virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
@@ -223,7 +218,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 }
 
 /*
-virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
@@ -247,7 +242,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
@@ -271,7 +266,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
@@ -280,7 +275,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
@@ -295,7 +290,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 }
 
 /*
-virtual QModelIndex sibling(int row, int column, const QModelIndex & idx) const
+virtual QModelIndex sibling( int row, int column, const QModelIndex & idx ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
 {
@@ -320,7 +315,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SIBLING )
 }
 
 /*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {
@@ -329,7 +324,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->sort( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );

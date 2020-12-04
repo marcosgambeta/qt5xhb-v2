@@ -60,7 +60,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QFileSystemWatcher(QObject * parent = nullptr)
+QFileSystemWatcher( QObject * parent = nullptr )
 */
 void QFileSystemWatcher_new1()
 {
@@ -69,7 +69,7 @@ void QFileSystemWatcher_new1()
 }
 
 /*
-QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
+QFileSystemWatcher( const QStringList & paths, QObject * parent = nullptr )
 */
 void QFileSystemWatcher_new2()
 {
@@ -77,18 +77,13 @@ void QFileSystemWatcher_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QFileSystemWatcher(QObject * parent = nullptr)
-[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QFileSystemWatcher_new1();
   }
-  else if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QFileSystemWatcher_new2();
   }
@@ -118,7 +113,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 }
 
 /*
-bool addPath(const QString & path)
+bool addPath( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 }
 
 /*
-QStringList addPaths(const QStringList & paths)
+QStringList addPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 }
 
 /*
-bool removePath(const QString & path)
+bool removePath( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
@@ -238,7 +233,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 }
 
 /*
-QStringList removePaths(const QStringList & paths)
+QStringList removePaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {

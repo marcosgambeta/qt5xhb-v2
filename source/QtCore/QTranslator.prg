@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QTranslator(QObject * parent = nullptr)
+QTranslator( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 }
 
 /*
-bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
+bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load1()
 {
@@ -124,7 +124,7 @@ void QTranslator_load1()
 }
 
 /*
-bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
+bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load2()
 {
@@ -137,7 +137,7 @@ void QTranslator_load2()
 }
 
 /*
-bool load(const uchar * data, int len, const QString & directory = QString())
+bool load( const uchar * data, int len, const QString & directory = QString() )
 */
 void QTranslator_load3()
 {
@@ -149,23 +149,17 @@ void QTranslator_load3()
   }
 }
 
-/*
-[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
-[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
-[3]bool load(const uchar * data, int len, const QString & directory = QString())
-*/
-
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
-  if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
+  if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
     QTranslator_load1();
   }
-  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) )
+  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
     QTranslator_load2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
     QTranslator_load3();
   }
@@ -176,7 +170,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 
 /*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1) const
+virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = nullptr, int n = -1) const
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
@@ -185,7 +179,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RQSTRING( obj->translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,nullptr), OPINT(4,-1) ) );

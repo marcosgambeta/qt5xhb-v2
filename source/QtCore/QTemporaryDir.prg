@@ -70,18 +70,13 @@ void QTemporaryDir_new1()
 }
 
 /*
-QTemporaryDir(const QString & templateName)
+QTemporaryDir( const QString & templateName )
 */
 void QTemporaryDir_new2()
 {
   auto obj = new QTemporaryDir( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTemporaryDir()
-[2]QTemporaryDir(const QString & templateName)
-*/
 
 HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 {
@@ -213,7 +208,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 }
 
 /*
-void setAutoRemove(bool b)
+void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {

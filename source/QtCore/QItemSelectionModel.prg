@@ -75,7 +75,7 @@ RETURN
 #endif
 
 /*
-QItemSelectionModel(QAbstractItemModel *model)
+QItemSelectionModel( QAbstractItemModel * model )
 */
 void QItemSelectionModel_new1()
 {
@@ -84,18 +84,13 @@ void QItemSelectionModel_new1()
 }
 
 /*
-QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
+QItemSelectionModel( QAbstractItemModel * model, QObject * parent )
 */
 void QItemSelectionModel_new2()
 {
   auto obj = new QItemSelectionModel( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QItemSelectionModel(QAbstractItemModel *model)
-[2]QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 {
@@ -158,7 +153,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 }
 
 /*
-bool isSelected(const QModelIndex &index) const
+bool isSelected( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 {
@@ -182,7 +177,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 }
 
 /*
-bool isRowSelected(int row, const QModelIndex &parent) const
+bool isRowSelected( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 {
@@ -206,7 +201,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 }
 
 /*
-bool isColumnSelected(int column, const QModelIndex &parent) const
+bool isColumnSelected( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 {
@@ -230,7 +225,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 }
 
 /*
-bool rowIntersectsSelection(int row, const QModelIndex &parent) const
+bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 }
 
 /*
-bool columnIntersectsSelection(int column, const QModelIndex &parent) const
+bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 {
@@ -354,7 +349,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 }
 
 /*
-QModelIndexList selectedRows(int column = 0) const
+QModelIndexList selectedRows( int column = 0 ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 {
@@ -363,7 +358,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT(1,0) );
@@ -406,7 +401,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 }
 
 /*
-QModelIndexList selectedColumns(int row = 0) const
+QModelIndexList selectedColumns( int row = 0 ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 {
@@ -415,7 +410,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT(1,0) );
@@ -458,7 +453,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 }
 
 /*
-const QItemSelection selection() const // TODO: implementar
+const QItemSelection selection() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 {
@@ -483,7 +478,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 }
 
 /*
-const QAbstractItemModel *model() const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 {
@@ -508,7 +503,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 }
 
 /*
-virtual void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
+virtual void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 {
@@ -534,7 +529,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 }
 
 /*
-virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
+virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
 void QItemSelectionModel_select1()
 {
@@ -549,7 +544,7 @@ void QItemSelectionModel_select1()
 }
 
 /*
-virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
+virtual void select( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
 */
 void QItemSelectionModel_select2()
 {
@@ -562,11 +557,6 @@ void QItemSelectionModel_select2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-[2]virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {

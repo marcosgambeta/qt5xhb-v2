@@ -93,18 +93,13 @@ void QJsonArray_new1()
 }
 
 /*
-QJsonArray(const QJsonArray & other)
+QJsonArray( const QJsonArray & other )
 */
 void QJsonArray_new2()
 {
   auto obj = new QJsonArray( *PQJSONARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QJsonArray()
-[2]QJsonArray(const QJsonArray & other)
-*/
 
 HB_FUNC_STATIC( QJSONARRAY_NEW )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QJSONARRAY_DELETE )
 }
 
 /*
-void append(const QJsonValue & value)
+void append( const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_APPEND )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QJSONARRAY_APPEND )
 }
 
 /*
-QJsonValue at(int i) const
+QJsonValue at( int i ) const
 */
 HB_FUNC_STATIC( QJSONARRAY_AT )
 {
@@ -191,7 +186,7 @@ HB_FUNC_STATIC( QJSONARRAY_AT )
 }
 
 /*
-bool contains(const QJsonValue & value) const
+bool contains( const QJsonValue & value ) const
 */
 HB_FUNC_STATIC( QJSONARRAY_CONTAINS )
 {
@@ -288,7 +283,7 @@ HB_FUNC_STATIC( QJSONARRAY_FIRST )
 }
 
 /*
-void insert(int i, const QJsonValue & value)
+void insert( int i, const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_INSERT )
 {
@@ -415,7 +410,7 @@ HB_FUNC_STATIC( QJSONARRAY_POP_FRONT )
 }
 
 /*
-void prepend(const QJsonValue & value)
+void prepend( const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_PREPEND )
 {
@@ -441,7 +436,7 @@ HB_FUNC_STATIC( QJSONARRAY_PREPEND )
 }
 
 /*
-void push_back(const QJsonValue & value)
+void push_back( const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
 {
@@ -467,7 +462,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_BACK )
 }
 
 /*
-void push_front(const QJsonValue & value)
+void push_front( const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
 {
@@ -493,7 +488,7 @@ HB_FUNC_STATIC( QJSONARRAY_PUSH_FRONT )
 }
 
 /*
-void removeAt(int i)
+void removeAt( int i )
 */
 HB_FUNC_STATIC( QJSONARRAY_REMOVEAT )
 {
@@ -571,7 +566,7 @@ HB_FUNC_STATIC( QJSONARRAY_REMOVELAST )
 }
 
 /*
-void replace(int i, const QJsonValue & value)
+void replace( int i, const QJsonValue & value )
 */
 HB_FUNC_STATIC( QJSONARRAY_REPLACE )
 {
@@ -621,7 +616,7 @@ HB_FUNC_STATIC( QJSONARRAY_SIZE )
 }
 
 /*
-QJsonValue takeAt(int i)
+QJsonValue takeAt( int i )
 */
 HB_FUNC_STATIC( QJSONARRAY_TAKEAT )
 {
@@ -698,7 +693,7 @@ HB_FUNC_STATIC( QJSONARRAY_TOVARIANTLIST )
 }
 
 /*
-static QJsonArray fromStringList(const QStringList & list)
+static QJsonArray fromStringList( const QStringList & list )
 */
 HB_FUNC_STATIC( QJSONARRAY_FROMSTRINGLIST )
 {
@@ -718,7 +713,7 @@ HB_FUNC_STATIC( QJSONARRAY_FROMSTRINGLIST )
 }
 
 /*
-static QJsonArray fromVariantList(const QVariantList & list)
+static QJsonArray fromVariantList( const QVariantList & list )
 */
 HB_FUNC_STATIC( QJSONARRAY_FROMVARIANTLIST )
 {

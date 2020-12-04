@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QPropertyAnimation ( QObject * parent = nullptr )
+QPropertyAnimation( QObject * parent = nullptr )
 */
 void QPropertyAnimation_new1()
 {
@@ -64,7 +64,7 @@ void QPropertyAnimation_new1()
 }
 
 /*
-QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
+QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
 */
 void QPropertyAnimation_new2()
 {
@@ -72,18 +72,13 @@ void QPropertyAnimation_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPropertyAnimation ( QObject * parent = nullptr )
-[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPropertyAnimation_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QPropertyAnimation_new2();
   }
@@ -113,7 +108,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 }
 
 /*
-QByteArray propertyName () const
+QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
@@ -138,7 +133,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 }
 
 /*
-void setPropertyName ( const QByteArray & propertyName )
+void setPropertyName( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 }
 
 /*
-void setTargetObject ( QObject * target )
+void setTargetObject( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 }
 
 /*
-QObject * targetObject () const
+QObject * targetObject() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {

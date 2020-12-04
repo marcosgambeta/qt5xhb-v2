@@ -110,7 +110,7 @@ RETURN
 #endif
 
 /*
-explicit QProcess ( QObject * parent = nullptr )
+QProcess( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPROCESS_DELETE )
 }
 
 /*
-void closeReadChannel ( ProcessChannel channel )
+void closeReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 }
 
 /*
-void closeWriteChannel ()
+void closeWriteChannel()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 }
 
 /*
-QStringList environment () const
+QStringList environment() const
 */
 HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 }
 
 /*
-QProcess::ProcessError error () const
+QProcess::ProcessError error() const
 */
 HB_FUNC_STATIC( QPROCESS_ERROR )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QPROCESS_ERROR )
 }
 
 /*
-int exitCode () const
+int exitCode() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QPROCESS_EXITCODE )
 }
 
 /*
-QProcess::ExitStatus exitStatus () const
+QProcess::ExitStatus exitStatus() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 }
 
 /*
-ProcessChannelMode processChannelMode () const
+QProcess::ProcessChannelMode processChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 }
 
 /*
-QProcessEnvironment processEnvironment () const
+QProcessEnvironment processEnvironment() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 }
 
 /*
-QByteArray readAllStandardError ()
+QByteArray readAllStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 }
 
 /*
-QByteArray readAllStandardOutput ()
+QByteArray readAllStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 }
 
 /*
-ProcessChannel readChannel () const
+QProcess::ProcessChannel readChannel() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 }
 
 /*
-void setEnvironment ( const QStringList & environment )
+void setEnvironment( const QStringList & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 }
 
 /*
-void setProcessChannelMode ( ProcessChannelMode mode )
+void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 }
 
 /*
-void setProcessEnvironment ( const QProcessEnvironment & environment )
+void setProcessEnvironment( const QProcessEnvironment & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 }
 
 /*
-void setReadChannel ( ProcessChannel channel )
+void setReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 }
 
 /*
-void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
+void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setStandardErrorFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 }
 
 /*
-void setStandardInputFile ( const QString & fileName )
+void setStandardInputFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 }
 
 /*
-void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
+void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setStandardOutputFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 }
 
 /*
-void setStandardOutputProcess ( QProcess * destination )
+void setStandardOutputProcess( QProcess * destination )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 }
 
 /*
-void setWorkingDirectory ( const QString & dir )
+void setWorkingDirectory( const QString & dir )
 */
 HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 }
 
 /*
-void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
+void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite )
 */
 void QProcess_start1()
 {
@@ -719,7 +719,7 @@ void QProcess_start1()
 }
 
 /*
-void start(const QString &command, OpenMode mode = ReadWrite)
+void start( const QString & command, QIODevice::OpenMode mode = QIODevice::ReadWrite )
 */
 void QProcess_start2()
 {
@@ -734,7 +734,7 @@ void QProcess_start2()
 }
 
 /*
-void start(OpenMode mode = ReadWrite)
+void start( QIODevice::OpenMode mode = QIODevice::ReadWrite )
 */
 void QProcess_start3()
 {
@@ -750,23 +750,17 @@ void QProcess_start3()
 #endif
 }
 
-/*
-[1]void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
-[2]void start(const QString &command, OpenMode mode = ReadWrite)
-[3]void start(OpenMode mode = ReadWrite)
-*/
-
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QProcess_start1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QProcess_start2();
   }
-  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QProcess_start3();
   }
@@ -777,7 +771,7 @@ HB_FUNC_STATIC( QPROCESS_START )
 }
 
 /*
-QProcess::ProcessState state () const
+QProcess::ProcessState state() const
 */
 HB_FUNC_STATIC( QPROCESS_STATE )
 {
@@ -801,7 +795,7 @@ HB_FUNC_STATIC( QPROCESS_STATE )
 }
 
 /*
-bool waitForFinished ( int msecs = 30000 )
+bool waitForFinished( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
@@ -810,7 +804,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForFinished( OPINT(1,30000) ) );
@@ -825,7 +819,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 }
 
 /*
-bool waitForStarted ( int msecs = 30000 )
+bool waitForStarted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
@@ -834,7 +828,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForStarted( OPINT(1,30000) ) );
@@ -849,7 +843,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 }
 
 /*
-QString workingDirectory () const
+QString workingDirectory() const
 */
 HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {
@@ -873,7 +867,7 @@ HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 }
 
 /*
-bool atEnd () const
+bool atEnd() const
 */
 HB_FUNC_STATIC( QPROCESS_ATEND )
 {
@@ -897,7 +891,7 @@ HB_FUNC_STATIC( QPROCESS_ATEND )
 }
 
 /*
-qint64 bytesAvailable () const
+qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
@@ -921,7 +915,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 }
 
 /*
-qint64 bytesToWrite () const
+qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
@@ -945,7 +939,7 @@ HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 }
 
 /*
-bool canReadLine () const
+bool canReadLine() const
 */
 HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
@@ -969,7 +963,7 @@ HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
@@ -995,7 +989,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSE )
 }
 
 /*
-bool isSequential () const
+bool isSequential() const
 */
 HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {
@@ -1019,7 +1013,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
+virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
@@ -1028,7 +1022,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -1043,7 +1037,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs = 30000 )
+virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {
@@ -1052,7 +1046,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -1067,7 +1061,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 }
 
 /*
-void kill ()
+void kill()
 */
 HB_FUNC_STATIC( QPROCESS_KILL )
 {
@@ -1093,7 +1087,7 @@ HB_FUNC_STATIC( QPROCESS_KILL )
 }
 
 /*
-void terminate ()
+void terminate()
 */
 HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
@@ -1119,7 +1113,7 @@ HB_FUNC_STATIC( QPROCESS_TERMINATE )
 }
 
 /*
-static int execute ( const QString & program, const QStringList & arguments )
+static int execute( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1()
 {
@@ -1127,17 +1121,12 @@ void QProcess_execute1()
 }
 
 /*
-static int execute ( const QString & command )
+static int execute( const QString & command )
 */
 void QProcess_execute2()
 {
   RINT( QProcess::execute( PQSTRING(1) ) );
 }
-
-/*
-[1]int execute ( const QString & program, const QStringList & arguments )
-[2]int execute ( const QString & program )
-*/
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
@@ -1156,15 +1145,17 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 /*
-static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
+static bool startDetached( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
 */
 void QProcess_startDetached1()
 {
-  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3) ) );
+  qint64 par4;
+  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), &par4 ) );
+  hb_stornll( par4, 4 );
 }
 
 /*
-static bool startDetached ( const QString & program, const QStringList & arguments )
+static bool startDetached( const QString & program, const QStringList & arguments )
 */
 void QProcess_startDetached2()
 {
@@ -1172,7 +1163,7 @@ void QProcess_startDetached2()
 }
 
 /*
-static bool startDetached ( const QString & program )
+static bool startDetached( const QString & program )
 */
 void QProcess_startDetached3()
 {
@@ -1180,18 +1171,23 @@ void QProcess_startDetached3()
 }
 
 /*
-bool QProcess::startDetached(qint64 *pid = nullptr) Require 5.10.0
+bool startDetached( qint64 *pid = nullptr )
 */
+void QProcess_startDetached4()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = nullptr )
-[2]bool startDetached ( const QString & program, const QStringList & arguments )
-[3]bool startDetached ( const QString & program )
-*/
+  if( obj != nullptr )
+  {
+    RBOOL( obj->startDetached( OPQINT64(1,nullptr) ) );
+  }
+#endif
+}
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QProcess_startDetached1();
   }
@@ -1210,7 +1206,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 }
 
 /*
-static QStringList systemEnvironment ()
+static QStringList systemEnvironment()
 */
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
@@ -1229,7 +1225,7 @@ HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 }
 
 /*
-bool open(OpenMode mode = ReadWrite) Q_DECL_OVERRIDE
+bool open( QIODevice::OpenMode mode = QIODevice::ReadWrite ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QPROCESS_OPEN )
 {
@@ -1238,7 +1234,7 @@ HB_FUNC_STATIC( QPROCESS_OPEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->open( ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) ) );
@@ -1277,7 +1273,7 @@ HB_FUNC_STATIC( QPROCESS_PROGRAM )
 }
 
 /*
-void setProgram(const QString &program)
+void setProgram( const QString & program )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROGRAM )
 {
@@ -1329,7 +1325,7 @@ HB_FUNC_STATIC( QPROCESS_ARGUMENTS )
 }
 
 /*
-void setArguments(const QStringList & arguments)
+void setArguments( const QStringList & arguments )
 */
 HB_FUNC_STATIC( QPROCESS_SETARGUMENTS )
 {
@@ -1357,7 +1353,7 @@ HB_FUNC_STATIC( QPROCESS_SETARGUMENTS )
 }
 
 /*
-ProcessChannelMode readChannelMode() const
+QProcess::ProcessChannelMode readChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNELMODE )
 {
@@ -1381,7 +1377,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNELMODE )
 }
 
 /*
-void setReadChannelMode(ProcessChannelMode mode)
+void setReadChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
 {
@@ -1407,7 +1403,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
 }
 
 /*
-InputChannelMode inputChannelMode() const
+QProcess::InputChannelMode inputChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_INPUTCHANNELMODE )
 {
@@ -1433,7 +1429,7 @@ HB_FUNC_STATIC( QPROCESS_INPUTCHANNELMODE )
 }
 
 /*
-void setInputChannelMode(InputChannelMode mode)
+void setInputChannelMode( QProcess::InputChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETINPUTCHANNELMODE )
 {
@@ -1506,14 +1502,6 @@ HB_FUNC_STATIC( QPROCESS_NULLDEVICE )
 #endif
 #endif
 }
-
-/*
-CreateProcessArgumentModifier QProcess::createProcessArgumentsModifier() const
-*/
-
-/*
-void QProcess::setCreateProcessArgumentsModifier(CreateProcessArgumentModifier modifier) Require 5.7.0 Win C++11
-*/
 
 /*
 void error( QProcess::ProcessError error )

@@ -28,7 +28,6 @@ CLASS QLibrary INHERIT QObject
    METHOD errorString
    METHOD setLoadHints
    METHOD loadHints
-   METHOD resolve
    METHOD isLibrary
 
    DESTRUCTOR destroyObject
@@ -60,7 +59,7 @@ RETURN
 #endif
 
 /*
-QLibrary(QObject *parent = nullptr)
+QLibrary( QObject * parent = nullptr )
 */
 void QLibrary_new1()
 {
@@ -69,7 +68,7 @@ void QLibrary_new1()
 }
 
 /*
-QLibrary(const QString& fileName, QObject *parent = nullptr)
+QLibrary( const QString & fileName, QObject * parent = nullptr )
 */
 void QLibrary_new2()
 {
@@ -78,7 +77,7 @@ void QLibrary_new2()
 }
 
 /*
-QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
+QLibrary( const QString & fileName, int verNum, QObject * parent = nullptr )
 */
 void QLibrary_new3()
 {
@@ -87,7 +86,7 @@ void QLibrary_new3()
 }
 
 /*
-QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
+QLibrary( const QString & fileName, const QString & version, QObject * parent = nullptr )
 */
 void QLibrary_new4()
 {
@@ -95,28 +94,21 @@ void QLibrary_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QLibrary(QObject *parent = nullptr)
-[2]QLibrary(const QString& fileName, QObject *parent = nullptr)
-[3]QLibrary(const QString& fileName, int verNum, QObject *parent = nullptr)
-[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLibrary_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QLibrary_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QLibrary_new3();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QLibrary_new4();
   }
@@ -218,7 +210,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 }
 
 /*
-void setFileName(const QString &fileName)
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
@@ -268,7 +260,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, int verNum)
+void setFileNameAndVersion( const QString & fileName, int verNum )
 */
 void QLibrary_setFileNameAndVersion1()
 {
@@ -283,7 +275,7 @@ void QLibrary_setFileNameAndVersion1()
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, const QString &version)
+void setFileNameAndVersion( const QString & fileName, const QString & version )
 */
 void QLibrary_setFileNameAndVersion2()
 {
@@ -296,11 +288,6 @@ void QLibrary_setFileNameAndVersion2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFileNameAndVersion(const QString &fileName, int verNum)
-[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
-*/
 
 HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
@@ -343,7 +330,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 }
 
 /*
-void setLoadHints(LoadHints hints)
+void setLoadHints( QLibrary::LoadHints hints )
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
@@ -369,7 +356,7 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 }
 
 /*
-LoadHints loadHints() const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
@@ -395,33 +382,18 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 /*
 QFunctionPointer resolve(const char *symbol)
 */
-
 /*
 static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-
 /*
 static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
 */
-
 /*
 static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 */
 
 /*
-[1]QFunctionPointer resolve(const char *symbol)
-[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
-[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
-[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
-*/
-
-HB_FUNC_STATIC( QLIBRARY_RESOLVE )
-{
-  hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-}
-
-/*
-static bool isLibrary(const QString &fileName)
+static bool isLibrary( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {

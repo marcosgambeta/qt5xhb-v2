@@ -78,7 +78,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QRegExp ()
+QRegExp()
 */
 void QRegExp_new1()
 {
@@ -87,7 +87,7 @@ void QRegExp_new1()
 }
 
 /*
-QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
+QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
 */
 void QRegExp_new2()
 {
@@ -96,7 +96,7 @@ void QRegExp_new2()
 }
 
 /*
-QRegExp ( const QRegExp & rx )
+QRegExp( const QRegExp & rx )
 */
 void QRegExp_new3()
 {
@@ -104,19 +104,13 @@ void QRegExp_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QRegExp ()
-[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
-[3]QRegExp ( const QRegExp & rx )
-*/
-
 HB_FUNC_STATIC( QREGEXP_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QRegExp_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QRegExp_new2();
   }
@@ -148,7 +142,7 @@ HB_FUNC_STATIC( QREGEXP_DELETE )
 }
 
 /*
-QString cap ( int nth = 0 ) const
+QString cap( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_CAP )
 {
@@ -157,7 +151,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->cap( OPINT(1,0) ) );
@@ -172,7 +166,7 @@ HB_FUNC_STATIC( QREGEXP_CAP )
 }
 
 /*
-int captureCount () const
+int captureCount() const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 {
@@ -196,7 +190,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 }
 
 /*
-QStringList capturedTexts () const
+QStringList capturedTexts() const
 */
 HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 {
@@ -220,7 +214,7 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 }
 
 /*
-Qt::CaseSensitivity caseSensitivity () const
+Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 {
@@ -244,7 +238,7 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 {
@@ -268,7 +262,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 }
 
 /*
-bool exactMatch ( const QString & str ) const
+bool exactMatch( const QString & str ) const
 */
 HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 {
@@ -292,7 +286,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 }
 
 /*
-int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
+int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC( QREGEXP_INDEXIN )
 {
@@ -301,7 +295,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RINT( obj->indexIn( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
@@ -316,7 +310,7 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 {
@@ -340,7 +334,7 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 }
 
 /*
-bool isMinimal () const
+bool isMinimal() const
 */
 HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 {
@@ -364,7 +358,7 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QREGEXP_ISVALID )
 {
@@ -388,7 +382,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
 }
 
 /*
-int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
+int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 {
@@ -397,7 +391,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RINT( obj->lastIndexIn( PQSTRING(1), OPINT(2,-1), ISNIL(3)? (QRegExp::CaretMode) QRegExp::CaretAtZero : (QRegExp::CaretMode) hb_parni(3) ) );
@@ -412,7 +406,7 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 }
 
 /*
-int matchedLength () const
+int matchedLength() const
 */
 HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 {
@@ -436,7 +430,7 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 }
 
 /*
-QString pattern () const
+QString pattern() const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERN )
 {
@@ -460,7 +454,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
 }
 
 /*
-PatternSyntax patternSyntax () const
+QRegExp::PatternSyntax patternSyntax() const
 */
 HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 {
@@ -484,7 +478,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 }
 
 /*
-int pos ( int nth = 0 ) const
+int pos( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_POS )
 {
@@ -493,7 +487,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RINT( obj->pos( OPINT(1,0) ) );
@@ -508,7 +502,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
 }
 
 /*
-void setCaseSensitivity ( Qt::CaseSensitivity cs )
+void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 {
@@ -534,7 +528,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 }
 
 /*
-void setMinimal ( bool minimal )
+void setMinimal( bool minimal )
 */
 HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 {
@@ -560,7 +554,7 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 }
 
 /*
-void setPattern ( const QString & pattern )
+void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 {
@@ -586,7 +580,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 }
 
 /*
-void setPatternSyntax ( PatternSyntax syntax )
+void setPatternSyntax( QRegExp::PatternSyntax syntax )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 {
@@ -612,7 +606,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 }
 
 /*
-static QString escape ( const QString & str )
+static QString escape( const QString & str )
 */
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {

@@ -68,12 +68,12 @@ RETURN
 #endif
 
 /*
-Q_DECL_CONSTEXPR QOperatingSystemVersion(OSType osType, int vmajor, int vminor = -1, int vmicro = -1)
+Q_DECL_CONSTEXPR QOperatingSystemVersion( QOperatingSystemVersion::OSType osType, int vmajor, int vminor = -1, int vmicro = -1 )
 */
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     auto obj = new QOperatingSystemVersion( (QOperatingSystemVersion::OSType) hb_parni(1), PINT(2), OPINT(3,-1), OPINT(4,-1) );
     Qt5xHb::returnNewObject( obj, true );
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_CURRENT )
 }
 
 /*
-static Q_DECL_CONSTEXPR OSType currentType()
+static Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType currentType()
 */
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_CURRENTTYPE )
 {
@@ -254,9 +254,8 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_SEGMENTCOUNT )
 /*
 bool isAnyOfType(std::initializer_list<OSType> types) const
 */
-
 /*
-Q_DECL_CONSTEXPR OSType type() const
+Q_DECL_CONSTEXPR QOperatingSystemVersion::OSType type() const
 */
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_TYPE )
 {
@@ -306,10 +305,6 @@ HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NAME )
   }
 #endif
 }
-
-/*
-static int compare(const QOperatingSystemVersion &v1, const QOperatingSystemVersion &v2) [private]
-*/
 
 HB_FUNC_STATIC( QOPERATINGSYSTEMVERSION_NEWFROM )
 {

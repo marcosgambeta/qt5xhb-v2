@@ -84,7 +84,7 @@ void QItemSelectionRange_new1()
 }
 
 /*
-QItemSelectionRange(const QItemSelectionRange &other)
+QItemSelectionRange( const QItemSelectionRange & other )
 */
 void QItemSelectionRange_new2()
 {
@@ -93,7 +93,7 @@ void QItemSelectionRange_new2()
 }
 
 /*
-QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 void QItemSelectionRange_new3()
 {
@@ -102,20 +102,13 @@ void QItemSelectionRange_new3()
 }
 
 /*
-QItemSelectionRange(const QModelIndex &index)
+QItemSelectionRange( const QModelIndex & index )
 */
 void QItemSelectionRange_new4()
 {
   auto obj = new QItemSelectionRange( *PQMODELINDEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QItemSelectionRange()
-[2]QItemSelectionRange(const QItemSelectionRange &other)
-[3]QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-[4]QItemSelectionRange(const QModelIndex &index)
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
@@ -303,7 +296,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_HEIGHT )
 }
 
 /*
-const QPersistentModelIndex &topLeft() const
+const QPersistentModelIndex & topLeft() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 {
@@ -328,7 +321,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_TOPLEFT )
 }
 
 /*
-const QPersistentModelIndex &bottomRight() const
+const QPersistentModelIndex & bottomRight() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 {
@@ -378,7 +371,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_PARENT )
 }
 
 /*
-const QAbstractItemModel *model() const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {
@@ -403,7 +396,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 }
 
 /*
-bool contains(const QModelIndex &index) const
+bool contains( const QModelIndex & index ) const
 */
 void QItemSelectionRange_contains1()
 {
@@ -416,7 +409,7 @@ void QItemSelectionRange_contains1()
 }
 
 /*
-bool contains(int row, int column, const QModelIndex &parentIndex) const
+bool contains( int row, int column, const QModelIndex & parentIndex ) const
 */
 void QItemSelectionRange_contains2()
 {
@@ -427,11 +420,6 @@ void QItemSelectionRange_contains2()
     RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
-
-/*
-[1]bool contains(const QModelIndex &index) const
-[2]bool contains(int row, int column, const QModelIndex &parentIndex) const
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
@@ -450,7 +438,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 }
 
 /*
-bool intersects(const QItemSelectionRange &other) const
+bool intersects( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
@@ -474,7 +462,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 }
 
 /*
-QItemSelectionRange intersected(const QItemSelectionRange &other) const
+QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {

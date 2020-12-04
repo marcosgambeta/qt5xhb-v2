@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QJsonObject>
 
 /*
-QJsonValueRef(QJsonArray *array, int idx)
+QJsonValueRef( QJsonArray * array, int idx )
 */
 void QJsonValueRef_new1()
 {
@@ -84,18 +84,13 @@ void QJsonValueRef_new1()
 }
 
 /*
-QJsonValueRef(QJsonObject *object, int idx)
+QJsonValueRef( QJsonObject * object, int idx )
 */
 void QJsonValueRef_new2()
 {
   auto obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QJsonValueRef(QJsonArray *array, int idx)
-[2]QJsonValueRef(QJsonObject *object, int idx)
-*/
 
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {

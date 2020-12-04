@@ -69,18 +69,13 @@ void QXmlStreamNotationDeclaration_new1()
 }
 
 /*
-QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
+QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
 */
 void QXmlStreamNotationDeclaration_new2()
 {
-  auto obj = new QXmlStreamNotationDeclaration();
+  auto obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlStreamNotationDeclaration()
-[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {

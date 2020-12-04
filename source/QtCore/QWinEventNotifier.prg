@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-explicit QWinEventNotifier(QObject *parent = nullptr)
+QWinEventNotifier(QObject *parent = nullptr)
 */
 void QWinEventNotifier_new1()
 {
@@ -62,18 +62,13 @@ void QWinEventNotifier_new1()
 }
 
 /*
-explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
-*/
-
-/*
-[1]explicit QWinEventNotifier(QObject *parent = nullptr)
-[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
+QWinEventNotifier(HANDLE hEvent, QObject *parent = nullptr)
 */
 
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {
 #ifdef Q_OS_WIN
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QWinEventNotifier_new1();
   }

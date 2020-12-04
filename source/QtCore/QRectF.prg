@@ -114,7 +114,7 @@ RETURN
 #endif
 
 /*
-QRectF ()
+QRectF()
 */
 void QRectF_new1()
 {
@@ -123,7 +123,7 @@ void QRectF_new1()
 }
 
 /*
-QRectF ( const QPointF & topLeft, const QSizeF & size )
+QRectF( const QPointF & topLeft, const QSizeF & size )
 */
 void QRectF_new2()
 {
@@ -132,7 +132,7 @@ void QRectF_new2()
 }
 
 /*
-QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
+QRectF( const QPointF & topLeft, const QPointF & bottomRight )
 */
 void QRectF_new3()
 {
@@ -141,7 +141,7 @@ void QRectF_new3()
 }
 
 /*
-QRectF ( qreal x, qreal y, qreal width, qreal height )
+QRectF( qreal x, qreal y, qreal width, qreal height )
 */
 void QRectF_new4()
 {
@@ -150,21 +150,13 @@ void QRectF_new4()
 }
 
 /*
-QRectF ( const QRect & rectangle )
+QRectF( const QRect & rectangle )
 */
 void QRectF_new5()
 {
   auto obj = new QRectF( *PQRECT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRectF ()
-[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
-[3]QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
-[4]QRectF ( qreal x, qreal y, qreal width, qreal height )
-[5]QRectF ( const QRect & rectangle )
-*/
 
 HB_FUNC_STATIC( QRECTF_NEW )
 {
@@ -212,7 +204,7 @@ HB_FUNC_STATIC( QRECTF_DELETE )
 }
 
 /*
-void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
+void adjust( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 */
 HB_FUNC_STATIC( QRECTF_ADJUST )
 {
@@ -238,7 +230,7 @@ HB_FUNC_STATIC( QRECTF_ADJUST )
 }
 
 /*
-QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
+QRectF adjusted( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 */
 HB_FUNC_STATIC( QRECTF_ADJUSTED )
 {
@@ -263,7 +255,7 @@ HB_FUNC_STATIC( QRECTF_ADJUSTED )
 }
 
 /*
-qreal bottom () const
+qreal bottom() const
 */
 HB_FUNC_STATIC( QRECTF_BOTTOM )
 {
@@ -287,7 +279,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOM )
 }
 
 /*
-QPointF bottomLeft () const
+QPointF bottomLeft() const
 */
 HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 {
@@ -312,7 +304,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMLEFT )
 }
 
 /*
-QPointF bottomRight () const
+QPointF bottomRight() const
 */
 HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 {
@@ -337,7 +329,7 @@ HB_FUNC_STATIC( QRECTF_BOTTOMRIGHT )
 }
 
 /*
-QPointF center () const
+QPointF center() const
 */
 HB_FUNC_STATIC( QRECTF_CENTER )
 {
@@ -362,7 +354,7 @@ HB_FUNC_STATIC( QRECTF_CENTER )
 }
 
 /*
-bool contains ( const QPointF & point ) const
+bool contains( const QPointF & point ) const
 */
 void QRectF_contains1()
 {
@@ -375,7 +367,7 @@ void QRectF_contains1()
 }
 
 /*
-bool contains ( qreal x, qreal y ) const
+bool contains( qreal x, qreal y ) const
 */
 void QRectF_contains2()
 {
@@ -388,7 +380,7 @@ void QRectF_contains2()
 }
 
 /*
-bool contains ( const QRectF & rectangle ) const
+bool contains( const QRectF & rectangle ) const
 */
 void QRectF_contains3()
 {
@@ -399,12 +391,6 @@ void QRectF_contains3()
     RBOOL( obj->contains( *PQRECTF(1) ) );
   }
 }
-
-/*
-[1]bool contains ( const QPointF & point ) const
-[2]bool contains ( qreal x, qreal y ) const
-[3]bool contains ( const QRectF & rectangle ) const
-*/
 
 HB_FUNC_STATIC( QRECTF_CONTAINS )
 {
@@ -427,7 +413,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 }
 
 /*
-void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
+void getCoords( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 */
 HB_FUNC_STATIC( QRECTF_GETCOORDS )
 {
@@ -461,7 +447,7 @@ HB_FUNC_STATIC( QRECTF_GETCOORDS )
 }
 
 /*
-void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
+void getRect( qreal * x, qreal * y, qreal * width, qreal * height ) const
 */
 HB_FUNC_STATIC( QRECTF_GETRECT )
 {
@@ -495,7 +481,7 @@ HB_FUNC_STATIC( QRECTF_GETRECT )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QRECTF_HEIGHT )
 {
@@ -519,7 +505,7 @@ HB_FUNC_STATIC( QRECTF_HEIGHT )
 }
 
 /*
-QRectF intersected ( const QRectF & rectangle ) const
+QRectF intersected( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_INTERSECTED )
 {
@@ -544,7 +530,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTED )
 }
 
 /*
-bool intersects ( const QRectF & rectangle ) const
+bool intersects( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_INTERSECTS )
 {
@@ -568,7 +554,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QRECTF_ISEMPTY )
 {
@@ -592,7 +578,7 @@ HB_FUNC_STATIC( QRECTF_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QRECTF_ISNULL )
 {
@@ -616,7 +602,7 @@ HB_FUNC_STATIC( QRECTF_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRECTF_ISVALID )
 {
@@ -640,7 +626,7 @@ HB_FUNC_STATIC( QRECTF_ISVALID )
 }
 
 /*
-qreal left () const
+qreal left() const
 */
 HB_FUNC_STATIC( QRECTF_LEFT )
 {
@@ -664,7 +650,7 @@ HB_FUNC_STATIC( QRECTF_LEFT )
 }
 
 /*
-void moveBottom ( qreal y )
+void moveBottom( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
 {
@@ -690,7 +676,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
 }
 
 /*
-void moveBottomLeft ( const QPointF & position )
+void moveBottomLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
 {
@@ -716,7 +702,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
 }
 
 /*
-void moveBottomRight ( const QPointF & position )
+void moveBottomRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
 {
@@ -742,7 +728,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
 }
 
 /*
-void moveCenter ( const QPointF & position )
+void moveCenter( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVECENTER )
 {
@@ -768,7 +754,7 @@ HB_FUNC_STATIC( QRECTF_MOVECENTER )
 }
 
 /*
-void moveLeft ( qreal x )
+void moveLeft( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_MOVELEFT )
 {
@@ -794,7 +780,7 @@ HB_FUNC_STATIC( QRECTF_MOVELEFT )
 }
 
 /*
-void moveRight ( qreal x )
+void moveRight( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_MOVERIGHT )
 {
@@ -820,7 +806,7 @@ HB_FUNC_STATIC( QRECTF_MOVERIGHT )
 }
 
 /*
-void moveTo ( qreal x, qreal y )
+void moveTo( qreal x, qreal y )
 */
 void QRectF_moveTo1()
 {
@@ -835,7 +821,7 @@ void QRectF_moveTo1()
 }
 
 /*
-void moveTo ( const QPointF & position )
+void moveTo( const QPointF & position )
 */
 void QRectF_moveTo2()
 {
@@ -848,11 +834,6 @@ void QRectF_moveTo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void moveTo ( qreal x, qreal y )
-[2]void moveTo ( const QPointF & position )
-*/
 
 HB_FUNC_STATIC( QRECTF_MOVETO )
 {
@@ -871,7 +852,7 @@ HB_FUNC_STATIC( QRECTF_MOVETO )
 }
 
 /*
-void moveTop ( qreal y )
+void moveTop( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOP )
 {
@@ -897,7 +878,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOP )
 }
 
 /*
-void moveTopLeft ( const QPointF & position )
+void moveTopLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
 {
@@ -923,7 +904,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
 }
 
 /*
-void moveTopRight ( const QPointF & position )
+void moveTopRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
 {
@@ -949,7 +930,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
 }
 
 /*
-QRectF normalized () const
+QRectF normalized() const
 */
 HB_FUNC_STATIC( QRECTF_NORMALIZED )
 {
@@ -974,7 +955,7 @@ HB_FUNC_STATIC( QRECTF_NORMALIZED )
 }
 
 /*
-qreal right () const
+qreal right() const
 */
 HB_FUNC_STATIC( QRECTF_RIGHT )
 {
@@ -998,7 +979,7 @@ HB_FUNC_STATIC( QRECTF_RIGHT )
 }
 
 /*
-void setBottom ( qreal y )
+void setBottom( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOM )
 {
@@ -1024,7 +1005,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOM )
 }
 
 /*
-void setBottomLeft ( const QPointF & position )
+void setBottomLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
 {
@@ -1050,7 +1031,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
 }
 
 /*
-void setBottomRight ( const QPointF & position )
+void setBottomRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
 {
@@ -1076,7 +1057,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
 }
 
 /*
-void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
+void setCoords( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 HB_FUNC_STATIC( QRECTF_SETCOORDS )
 {
@@ -1102,7 +1083,7 @@ HB_FUNC_STATIC( QRECTF_SETCOORDS )
 }
 
 /*
-void setHeight ( qreal height )
+void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QRECTF_SETHEIGHT )
 {
@@ -1128,7 +1109,7 @@ HB_FUNC_STATIC( QRECTF_SETHEIGHT )
 }
 
 /*
-void setLeft ( qreal x )
+void setLeft( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETLEFT )
 {
@@ -1154,7 +1135,7 @@ HB_FUNC_STATIC( QRECTF_SETLEFT )
 }
 
 /*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
+void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 HB_FUNC_STATIC( QRECTF_SETRECT )
 {
@@ -1180,7 +1161,7 @@ HB_FUNC_STATIC( QRECTF_SETRECT )
 }
 
 /*
-void setRight ( qreal x )
+void setRight( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETRIGHT )
 {
@@ -1206,7 +1187,7 @@ HB_FUNC_STATIC( QRECTF_SETRIGHT )
 }
 
 /*
-void setSize ( const QSizeF & size )
+void setSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QRECTF_SETSIZE )
 {
@@ -1232,7 +1213,7 @@ HB_FUNC_STATIC( QRECTF_SETSIZE )
 }
 
 /*
-void setTop ( qreal y )
+void setTop( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETTOP )
 {
@@ -1258,7 +1239,7 @@ HB_FUNC_STATIC( QRECTF_SETTOP )
 }
 
 /*
-void setTopLeft ( const QPointF & position )
+void setTopLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
 {
@@ -1284,7 +1265,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
 }
 
 /*
-void setTopRight ( const QPointF & position )
+void setTopRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
 {
@@ -1310,7 +1291,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
 }
 
 /*
-void setWidth ( qreal width )
+void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QRECTF_SETWIDTH )
 {
@@ -1336,7 +1317,7 @@ HB_FUNC_STATIC( QRECTF_SETWIDTH )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETX )
 {
@@ -1362,7 +1343,7 @@ HB_FUNC_STATIC( QRECTF_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETY )
 {
@@ -1388,7 +1369,7 @@ HB_FUNC_STATIC( QRECTF_SETY )
 }
 
 /*
-QSizeF size () const
+QSizeF size() const
 */
 HB_FUNC_STATIC( QRECTF_SIZE )
 {
@@ -1413,7 +1394,7 @@ HB_FUNC_STATIC( QRECTF_SIZE )
 }
 
 /*
-QRect toAlignedRect () const
+QRect toAlignedRect() const
 */
 HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 {
@@ -1438,7 +1419,7 @@ HB_FUNC_STATIC( QRECTF_TOALIGNEDRECT )
 }
 
 /*
-QRect toRect () const
+QRect toRect() const
 */
 HB_FUNC_STATIC( QRECTF_TORECT )
 {
@@ -1463,7 +1444,7 @@ HB_FUNC_STATIC( QRECTF_TORECT )
 }
 
 /*
-qreal top () const
+qreal top() const
 */
 HB_FUNC_STATIC( QRECTF_TOP )
 {
@@ -1487,7 +1468,7 @@ HB_FUNC_STATIC( QRECTF_TOP )
 }
 
 /*
-QPointF topLeft () const
+QPointF topLeft() const
 */
 HB_FUNC_STATIC( QRECTF_TOPLEFT )
 {
@@ -1512,7 +1493,7 @@ HB_FUNC_STATIC( QRECTF_TOPLEFT )
 }
 
 /*
-QPointF topRight () const
+QPointF topRight() const
 */
 HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 {
@@ -1537,7 +1518,7 @@ HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 }
 
 /*
-void translate ( qreal dx, qreal dy )
+void translate( qreal dx, qreal dy )
 */
 void QRectF_translate1()
 {
@@ -1552,7 +1533,7 @@ void QRectF_translate1()
 }
 
 /*
-void translate ( const QPointF & offset )
+void translate( const QPointF & offset )
 */
 void QRectF_translate2()
 {
@@ -1565,11 +1546,6 @@ void QRectF_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( qreal dx, qreal dy )
-[2]void translate ( const QPointF & offset )
-*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATE )
 {
@@ -1588,7 +1564,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATE )
 }
 
 /*
-QRectF translated ( qreal dx, qreal dy ) const
+QRectF translated( qreal dx, qreal dy ) const
 */
 void QRectF_translated1()
 {
@@ -1602,7 +1578,7 @@ void QRectF_translated1()
 }
 
 /*
-QRectF translated ( const QPointF & offset ) const
+QRectF translated( const QPointF & offset ) const
 */
 void QRectF_translated2()
 {
@@ -1614,11 +1590,6 @@ void QRectF_translated2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF translated ( qreal dx, qreal dy ) const
-[2]QRectF translated ( const QPointF & offset ) const
-*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATED )
 {
@@ -1637,7 +1608,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 }
 
 /*
-QRectF united ( const QRectF & rectangle ) const
+QRectF united( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_UNITED )
 {
@@ -1662,7 +1633,7 @@ HB_FUNC_STATIC( QRECTF_UNITED )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QRECTF_WIDTH )
 {
@@ -1686,7 +1657,7 @@ HB_FUNC_STATIC( QRECTF_WIDTH )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QRECTF_X )
 {
@@ -1710,7 +1681,7 @@ HB_FUNC_STATIC( QRECTF_X )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QRECTF_Y )
 {

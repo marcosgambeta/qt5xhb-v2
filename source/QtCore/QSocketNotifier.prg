@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QSocketNotifier(qintptr socket, Type, QObject *parent = nullptr)
+QSocketNotifier( qintptr socket, QSocketNotifier::Type, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 }
 
 /*
-Type type() const
+QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 }
 
 /*
-void setEnabled(bool)
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {

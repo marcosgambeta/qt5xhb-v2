@@ -105,7 +105,7 @@ void QTextStream_new1()
 }
 
 /*
-QTextStream(QIODevice *device)
+QTextStream( QIODevice * device )
 */
 void QTextStream_new2()
 {
@@ -114,7 +114,7 @@ void QTextStream_new2()
 }
 
 /*
-QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QTextStream_new3()
 {
@@ -123,11 +123,10 @@ void QTextStream_new3()
 }
 
 /*
-QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+QTextStream[4](QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-
 /*
-QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QTextStream_new5()
 {
@@ -136,7 +135,7 @@ void QTextStream_new5()
 }
 
 /*
-QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
 */
 void QTextStream_new6()
 {
@@ -144,16 +143,7 @@ void QTextStream_new6()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QTextStream()
-[2]QTextStream(QIODevice *device)
-[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite) // TODO: revisar implementacao
-[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-*/
-
-HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
+HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -163,15 +153,11 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
   {
     QTextStream_new2();
   }
-  else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTextStream_new3();
   }
-  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
-  //{
-  //  QTextStream_new5();
-  //}
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTextStream_new6();
   }
@@ -199,7 +185,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
 }
 
 /*
-void setCodec(QTextCodec *codec)
+void setCodec( QTextCodec * codec )
 */
 void QTextStream_setCodec1()
 {
@@ -214,7 +200,7 @@ void QTextStream_setCodec1()
 }
 
 /*
-void setCodec(const char *codecName)
+void setCodec( const char * codecName )
 */
 void QTextStream_setCodec2()
 {
@@ -227,11 +213,6 @@ void QTextStream_setCodec2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCodec(QTextCodec *codec)
-[2]void setCodec(const char *codecName)
-*/
 
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {
@@ -250,7 +231,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 }
 
 /*
-QTextCodec *codec() const
+QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 {
@@ -275,7 +256,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 }
 
 /*
-void setAutoDetectUnicode(bool enabled)
+void setAutoDetectUnicode( bool enabled )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
 {
@@ -325,7 +306,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
 }
 
 /*
-void setGenerateByteOrderMark(bool generate)
+void setGenerateByteOrderMark( bool generate )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
 {
@@ -375,7 +356,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
 {
@@ -426,7 +407,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
 }
 
 /*
-void setDevice(QIODevice *device)
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
 {
@@ -452,7 +433,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
 }
 
 /*
-QIODevice *device() const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 {
@@ -479,13 +460,11 @@ HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 /*
 void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
-
 /*
 QString *string() const
 */
-
 /*
-Status status() const
+QTextStream::Status status() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 {
@@ -509,7 +488,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 }
 
 /*
-void setStatus(Status status)
+void setStatus( QTextStream::Status status )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
 {
@@ -637,7 +616,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
 }
 
 /*
-bool seek(qint64 pos)
+bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
 {
@@ -711,7 +690,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
 }
 
 /*
-QString readLine(qint64 maxlen = 0)
+QString readLine( qint64 maxlen = 0 )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 {
@@ -720,7 +699,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->readLine( OPQINT64(1,0) ) );
@@ -759,7 +738,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 }
 
 /*
-QString read(qint64 maxlen)
+QString read( qint64 maxlen )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READ )
 {
@@ -783,7 +762,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
 }
 
 /*
-void setFieldAlignment(FieldAlignment alignment)
+void setFieldAlignment( QTextStream::FieldAlignment alignment )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
 {
@@ -809,7 +788,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
 }
 
 /*
-FieldAlignment fieldAlignment() const
+QTextStream::FieldAlignment fieldAlignment() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 {
@@ -833,7 +812,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 }
 
 /*
-void setPadChar(QChar ch)
+void setPadChar( QChar ch )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETPADCHAR )
 {
@@ -884,7 +863,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
 }
 
 /*
-void setFieldWidth(int width)
+void setFieldWidth( int width )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
 {
@@ -934,7 +913,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
 }
 
 /*
-void setNumberFlags(NumberFlags flags)
+void setNumberFlags( QTextStream::NumberFlags flags )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
 {
@@ -960,7 +939,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
 }
 
 /*
-NumberFlags numberFlags() const
+QTextStream::NumberFlags numberFlags() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 {
@@ -984,7 +963,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 }
 
 /*
-void setIntegerBase(int base)
+void setIntegerBase( int base )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
 {
@@ -1034,7 +1013,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
 }
 
 /*
-void setRealNumberNotation(RealNumberNotation notation)
+void setRealNumberNotation( QTextStream::RealNumberNotation notation )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
 {
@@ -1060,7 +1039,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
 }
 
 /*
-RealNumberNotation realNumberNotation() const
+QTextStream::RealNumberNotation realNumberNotation() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 {
@@ -1084,7 +1063,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 }
 
 /*
-void setRealNumberPrecision(int precision)
+void setRealNumberPrecision( int precision )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
 {

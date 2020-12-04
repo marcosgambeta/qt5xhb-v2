@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QRUNNABLE_AUTODELETE )
 }
 
 /*
-void setAutoDelete(bool _autoDelete)
+void setAutoDelete( bool _autoDelete )
 */
 HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {
@@ -156,10 +156,6 @@ HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-static QRunnable *create(std::function<void()> functionToRun)
-*/
 
 HB_FUNC_STATIC( QRUNNABLE_NEWFROM )
 {

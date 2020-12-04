@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new1()
 {
@@ -72,7 +72,7 @@ void QDirIterator_new1()
 }
 
 /*
-QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new2()
 {
@@ -81,7 +81,7 @@ void QDirIterator_new2()
 }
 
 /*
-QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new3()
 {
@@ -90,7 +90,7 @@ void QDirIterator_new3()
 }
 
 /*
-QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new4()
 {
@@ -98,28 +98,21 @@ void QDirIterator_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
-[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
-[3]QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
-[4]QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
-*/
-
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDIR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQDIR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDirIterator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDirIterator_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QDirIterator_new3();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISARRAY(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QDirIterator_new4();
   }
@@ -147,7 +140,7 @@ HB_FUNC_STATIC( QDIRITERATOR_DELETE )
 }
 
 /*
-QFileInfo fileInfo () const
+QFileInfo fileInfo() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 {
@@ -172,7 +165,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEINFO )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 {
@@ -196,7 +189,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILENAME )
 }
 
 /*
-QString filePath () const
+QString filePath() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 {
@@ -220,7 +213,7 @@ HB_FUNC_STATIC( QDIRITERATOR_FILEPATH )
 }
 
 /*
-bool hasNext () const
+bool hasNext() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 {
@@ -244,7 +237,7 @@ HB_FUNC_STATIC( QDIRITERATOR_HASNEXT )
 }
 
 /*
-QString next ()
+QString next()
 */
 HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 {
@@ -268,7 +261,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEXT )
 }
 
 /*
-QString path () const
+QString path() const
 */
 HB_FUNC_STATIC( QDIRITERATOR_PATH )
 {

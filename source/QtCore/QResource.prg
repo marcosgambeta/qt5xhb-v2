@@ -68,11 +68,11 @@ RETURN
 #endif
 
 /*
-QResource ( const QString & file = QString(), const QLocale & locale = QLocale() )
+QResource( const QString & file = QString(), const QLocale & locale = QLocale() )
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISQLOCALE(2)||ISNIL(2)) )
   {
     auto obj = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(2) );
     Qt5xHb::returnNewObject( obj, true );
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QRESOURCE_DELETE )
 }
 
 /*
-QString absoluteFilePath () const
+QString absoluteFilePath() const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 }
 
 /*
-const uchar * data () const
+const uchar * data() const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QRESOURCE_DATA )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QRESOURCE_FILENAME )
 }
 
 /*
-bool isCompressed () const
+bool isCompressed() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QRESOURCE_ISVALID )
 }
 
 /*
-QLocale locale () const
+QLocale locale() const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
 }
 
 /*
-void setFileName ( const QString & file )
+void setFileName( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 }
 
 /*
-void setLocale ( const QLocale & locale )
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 }
 
 /*
-qint64 size () const
+qint64 size() const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
@@ -322,12 +322,12 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
 }
 
 /*
-static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool registerResource( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     RBOOL( QResource::registerResource( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -341,12 +341,12 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 }
 
 /*
-static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool unregisterResource( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     RBOOL( QResource::unregisterResource( PQSTRING(1), OPQSTRING(2,QString()) ) );

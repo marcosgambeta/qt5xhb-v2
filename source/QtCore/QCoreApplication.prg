@@ -54,8 +54,14 @@ CLASS QCoreApplication INHERIT QObject
    METHOD startingUp
    METHOD testAttribute
    METHOD translate
+   METHOD isSetuidAllowed
+   METHOD setSetuidAllowed
 
    METHOD onAboutToQuit
+   METHOD onApplicationNameChanged
+   METHOD onApplicationVersionChanged
+   METHOD onOrganizationDomainChanged
+   METHOD onOrganizationNameChanged
 
    DESTRUCTOR destroyObject
 
@@ -348,7 +354,7 @@ static void exit( int returnCode = 0 )
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
 #endif
     QCoreApplication::exit( OPINT(1,0) );
@@ -521,11 +527,6 @@ void QCoreApplication_postEvent2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void postEvent ( QObject * receiver, QEvent * event )
-[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
-*/
-
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
@@ -562,14 +563,9 @@ void QCoreApplication_processEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
-*/
-
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QCoreApplication_processEvents1();
   }
@@ -623,11 +619,6 @@ void QCoreApplication_removePostedEvents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void removePostedEvents ( QObject * receiver )
-[2]void removePostedEvents ( QObject * receiver, int eventType )
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
@@ -705,11 +696,6 @@ void QCoreApplication_sendPostedEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void sendPostedEvents ( QObject * receiver, int event_type )
-[2]void sendPostedEvents ()
-*/
-
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
@@ -774,7 +760,7 @@ static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
   {
 #endif
     QCoreApplication::setAttribute( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );
@@ -896,7 +882,7 @@ static QString translate( const char * context, const char * sourceText, const c
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
 #endif
     RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,nullptr), OPINT(4,-1) ) );
@@ -906,6 +892,50 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
+}
+
+/*
+static bool isSetuidAllowed()
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_ISSETUIDALLOWED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(0) )
+  {
+#endif
+    RBOOL( QCoreApplication::isSetuidAllowed() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static void setSetuidAllowed( bool allow )
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_SETSETUIDALLOWED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(1) && ISLOG(1) )
+  {
+#endif
+    QCoreApplication::setSetuidAllowed( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
 
@@ -928,6 +958,246 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QCoreApplication::aboutToQuit, 
+                                                              [sender, indexOfCodeBlock]
+                                                              () {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCOREAPPLICATION" );
+            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void applicationNameChanged()
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONNAMECHANGED )
+{
+  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("applicationNameChanged()");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCoreApplication::applicationNameChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              () {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCOREAPPLICATION" );
+            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void applicationVersionChanged()
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_ONAPPLICATIONVERSIONCHANGED )
+{
+  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("applicationVersionChanged()");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCoreApplication::applicationVersionChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              () {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCOREAPPLICATION" );
+            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void organizationDomainChanged()
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONDOMAINCHANGED )
+{
+  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("organizationDomainChanged()");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCoreApplication::organizationDomainChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              () {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QCOREAPPLICATION" );
+            hb_vmEvalBlockV( cb, 1, pSender );
+            hb_itemRelease( pSender );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
+void organizationNameChanged()
+*/
+HB_FUNC_STATIC( QCOREAPPLICATION_ONORGANIZATIONNAMECHANGED )
+{
+  auto sender = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("organizationNameChanged()");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QCoreApplication::organizationNameChanged, 
                                                               [sender, indexOfCodeBlock]
                                                               () {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );

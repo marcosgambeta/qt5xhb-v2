@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QSaveFile(const QString &name)
+QSaveFile( const QString & name )
 */
 void QSaveFile_new1()
 {
@@ -71,7 +71,7 @@ void QSaveFile_new1()
 }
 
 /*
-QSaveFile(QObject *parent = nullptr)
+QSaveFile( QObject * parent = nullptr )
 */
 void QSaveFile_new2()
 {
@@ -82,7 +82,7 @@ void QSaveFile_new2()
 }
 
 /*
-QSaveFile(const QString &name, QObject *parent)
+QSaveFile( const QString & name, QObject * parent )
 */
 void QSaveFile_new3()
 {
@@ -92,12 +92,6 @@ void QSaveFile_new3()
 #endif
 }
 
-/*
-[1]QSaveFile(const QString &name)
-[2]QSaveFile(QObject *parent = nullptr)
-[3]QSaveFile(const QString &name, QObject *parent)
-*/
-
 HB_FUNC_STATIC( QSAVEFILE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -105,7 +99,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
   {
     QSaveFile_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSaveFile_new2();
   }
@@ -168,7 +162,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 }
 
 /*
-void setFileName(const QString &name)
+void setFileName( const QString & name )
 */
 HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 {
@@ -196,7 +190,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 }
 
 /*
-bool open(OpenMode flags)
+bool open( QIODevice::OpenMode flags )
 */
 HB_FUNC_STATIC( QSAVEFILE_OPEN )
 {
@@ -276,7 +270,7 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 }
 
 /*
-void setDirectWriteFallback(bool enabled)
+void setDirectWriteFallback( bool enabled )
 */
 HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 {

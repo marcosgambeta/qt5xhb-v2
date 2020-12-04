@@ -29,6 +29,10 @@ CLASS QSignalMapper INHERIT QObject
    METHOD onMapped2
    METHOD onMapped3
    METHOD onMapped4
+   METHOD onMappedInt
+   METHOD onMappedObject
+   METHOD onMappedString
+   METHOD onMappedWidget
 
    DESTRUCTOR destroyObject
 
@@ -61,7 +65,7 @@ RETURN
 #include <QtWidgets/QWidget>
 
 /*
-QSignalMapper(QObject *parent = nullptr)
+QSignalMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
@@ -96,7 +100,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 }
 
 /*
-void setMapping(QObject *sender, int id)
+void setMapping( QObject * sender, int id )
 */
 void QSignalMapper_setMapping1()
 {
@@ -111,7 +115,7 @@ void QSignalMapper_setMapping1()
 }
 
 /*
-void setMapping(QObject *sender, const QString &text)
+void setMapping( QObject * sender, const QString & text )
 */
 void QSignalMapper_setMapping2()
 {
@@ -126,7 +130,7 @@ void QSignalMapper_setMapping2()
 }
 
 /*
-void setMapping(QObject *sender, QWidget *widget)
+void setMapping( QObject * sender, QWidget * widget )
 */
 void QSignalMapper_setMapping3()
 {
@@ -141,7 +145,7 @@ void QSignalMapper_setMapping3()
 }
 
 /*
-void setMapping(QObject *sender, QObject *object)
+void setMapping( QObject * sender, QObject * object )
 */
 void QSignalMapper_setMapping4()
 {
@@ -154,13 +158,6 @@ void QSignalMapper_setMapping4()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMapping(QObject *sender, int id)
-[2]void setMapping(QObject *sender, const QString &text)
-[3]void setMapping(QObject *sender, QWidget *widget)
-[4]void setMapping(QObject *sender, QObject *object)
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
@@ -187,7 +184,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 }
 
 /*
-void removeMappings(QObject *sender)
+void removeMappings( QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
@@ -213,7 +210,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 }
 
 /*
-QObject *mapping(int id) const
+QObject * mapping( int id ) const
 */
 void QSignalMapper_mapping1()
 {
@@ -227,7 +224,7 @@ void QSignalMapper_mapping1()
 }
 
 /*
-QObject *mapping(const QString &text) const
+QObject * mapping( const QString & text ) const
 */
 void QSignalMapper_mapping2()
 {
@@ -241,7 +238,7 @@ void QSignalMapper_mapping2()
 }
 
 /*
-QObject *mapping(QWidget *widget) const
+QObject * mapping( QWidget * widget ) const
 */
 void QSignalMapper_mapping3()
 {
@@ -255,7 +252,7 @@ void QSignalMapper_mapping3()
 }
 
 /*
-QObject *mapping(QObject *object) const
+QObject * mapping( QObject * object ) const
 */
 void QSignalMapper_mapping4()
 {
@@ -267,13 +264,6 @@ void QSignalMapper_mapping4()
     Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
-
-/*
-[1]QObject *mapping(int id) const
-[2]QObject *mapping(const QString &text) const
-[3]QObject *mapping(QWidget *widget) const
-[4]QObject *mapping(QObject *object) const
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
@@ -315,7 +305,7 @@ void QSignalMapper_map1()
 }
 
 /*
-void map(QObject *sender)
+void map( QObject * sender )
 */
 void QSignalMapper_map2()
 {
@@ -328,11 +318,6 @@ void QSignalMapper_map2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void map()
-[2]void map(QObject *sender)
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {
@@ -596,6 +581,270 @@ HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPED4 )
   {
     hb_retl( false );
   }
+}
+
+/*
+void mappedInt( int i )
+*/
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDINT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedInt(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSignalMapper::mappedInt, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void mappedObject( QObject * object )
+*/
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDOBJECT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedObject(QObject*)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSignalMapper::mappedObject, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QObject * arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QOBJECT" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void mappedString( const QString & text )
+*/
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDSTRING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedString(QString)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSignalMapper::mappedString, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (const QString & arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = hb_itemPutC( nullptr, QSTRINGTOSTRING(arg1) );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void mappedWidget( QWidget * widget )
+*/
+HB_FUNC_STATIC( QSIGNALMAPPER_ONMAPPEDWIDGET )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("mappedWidget(QWidget*)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QSignalMapper::mappedWidget, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QWidget * arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QSIGNALMAPPER" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QWIDGET" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

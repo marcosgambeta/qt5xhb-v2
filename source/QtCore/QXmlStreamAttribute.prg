@@ -72,7 +72,7 @@ void QXmlStreamAttribute_new1()
 }
 
 /*
-QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
+QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
 */
 void QXmlStreamAttribute_new2()
 {
@@ -81,7 +81,7 @@ void QXmlStreamAttribute_new2()
 }
 
 /*
-QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
 */
 void QXmlStreamAttribute_new3()
 {
@@ -90,18 +90,13 @@ void QXmlStreamAttribute_new3()
 }
 
 /*
-QXmlStreamAttribute(const QXmlStreamAttribute & other)
+QXmlStreamAttribute( const QXmlStreamAttribute & other )
 */
 void QXmlStreamAttribute_new4()
 {
   auto obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-//[1]QXmlStreamAttribute()
-//[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
-//[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-//[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {

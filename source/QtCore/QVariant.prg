@@ -186,7 +186,7 @@ void QVariant_new1()
 }
 
 /*
-QVariant(Type type)
+QVariant( QVariant::Type type )
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QVARIANT_NEW2 )
 }
 
 /*
-QVariant(int typeId, const void *copy)
+QVariant( int typeId, const void * copy )
 */
 void QVariant_new3()
 {
@@ -204,7 +204,7 @@ void QVariant_new3()
 }
 
 /*
-QVariant(int typeId, const void *copy, uint flags)
+QVariant( int typeId, const void * copy, uint flags )
 */
 void QVariant_new4()
 {
@@ -213,7 +213,7 @@ void QVariant_new4()
 }
 
 /*
-QVariant(const QVariant &other)
+QVariant( const QVariant & other )
 */
 void QVariant_new5()
 {
@@ -234,7 +234,7 @@ void QVariant_new6 ()
 }
 
 /*
-QVariant(int i)
+QVariant( int i )
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QVARIANT_NEW7 )
 }
 
 /*
-QVariant(uint ui)
+QVariant( uint ui )
 */
 HB_FUNC_STATIC( QVARIANT_NEW8 )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QVARIANT_NEW8 )
 }
 
 /*
-QVariant(qlonglong ll)
+QVariant( qlonglong ll )
 */
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QVARIANT_NEW9 )
 }
 
 /*
-QVariant(qulonglong ull)
+QVariant( qulonglong ull )
 */
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QVARIANT_NEW10 )
 }
 
 /*
-QVariant(bool b)
+QVariant( bool b )
 */
 void QVariant_new11()
 {
@@ -279,7 +279,7 @@ void QVariant_new11()
 }
 
 /*
-QVariant(double d)
+QVariant( double d )
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVARIANT_NEW12 )
 }
 
 /*
-QVariant(float f)
+QVariant( float f )
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 }
 
 /*
-QVariant(const QByteArray &bytearray)
+QVariant( const QByteArray & bytearray )
 */
 void QVariant_new15()
 {
@@ -317,7 +317,7 @@ void QVariant_new15()
 }
 
 /*
-QVariant(const QBitArray &bitarray)
+QVariant( const QBitArray & bitarray )
 */
 void QVariant_new16()
 {
@@ -326,7 +326,7 @@ void QVariant_new16()
 }
 
 /*
-QVariant(const QString &string)
+QVariant( const QString & string )
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QVARIANT_NEW17 )
 }
 
 /*
-QVariant(QLatin1String string)
+QVariant( QLatin1String string )
 */
 void QVariant_new18()
 {
@@ -344,7 +344,7 @@ void QVariant_new18()
 }
 
 /*
-QVariant(const QStringList &stringlist)
+QVariant( const QStringList & stringlist )
 */
 HB_FUNC_STATIC( QVARIANT_NEW19 )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QVARIANT_NEW19 )
 }
 
 /*
-QVariant(QChar qchar)
+QVariant( QChar qchar )
 */
 void QVariant_new20()
 {
@@ -362,7 +362,7 @@ void QVariant_new20()
 }
 
 /*
-QVariant(const QDate &date)
+QVariant( const QDate & date )
 */
 void QVariant_new21()
 {
@@ -371,7 +371,7 @@ void QVariant_new21()
 }
 
 /*
-QVariant(const QTime &time)
+QVariant( const QTime & time )
 */
 void QVariant_new22()
 {
@@ -380,7 +380,7 @@ void QVariant_new22()
 }
 
 /*
-QVariant(const QDateTime &datetime)
+QVariant( const QDateTime & datetime )
 */
 void QVariant_new23()
 {
@@ -389,7 +389,7 @@ void QVariant_new23()
 }
 
 /*
-QVariant(const QList<QVariant> &list)
+QVariant( const QList<QVariant> & list )
 */
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
@@ -403,14 +403,6 @@ HB_FUNC_STATIC( QVARIANT_NEW24 )
   auto obj = new QVariant( par1 );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QVariant(const QMap<QString,QVariant> &map)
-*/
-
-/*
-QVariant(const QHash<QString,QVariant> &hash)
-*/
 
 /*
 QVariant(const QSize &size)
@@ -501,7 +493,7 @@ void QVariant_new34()
 }
 
 /*
-QVariant(const QLocale &locale)
+QVariant( const QLocale & locale )
 */
 void QVariant_new35()
 {
@@ -532,7 +524,7 @@ void QVariant_new37()
 }
 
 /*
-QVariant(const QUrl &url)
+QVariant( const QUrl & url )
 */
 void QVariant_new38()
 {
@@ -541,7 +533,7 @@ void QVariant_new38()
 }
 
 /*
-QVariant(const QEasingCurve &easing)
+QVariant( const QEasingCurve & easing )
 */
 void QVariant_new39()
 {
@@ -550,7 +542,7 @@ void QVariant_new39()
 }
 
 /*
-QVariant(const QUuid &uuid)
+QVariant( const QUuid & uuid )
 */
 void QVariant_new40()
 {
@@ -559,7 +551,7 @@ void QVariant_new40()
 }
 
 /*
-QVariant(const QModelIndex &modelIndex)
+QVariant( const QModelIndex & modelIndex )
 */
 void QVariant_new41()
 {
@@ -568,7 +560,7 @@ void QVariant_new41()
 }
 
 /*
-QVariant(const QJsonValue &jsonValue)
+QVariant( const QJsonValue & jsonValue )
 */
 void QVariant_new42()
 {
@@ -577,7 +569,7 @@ void QVariant_new42()
 }
 
 /*
-QVariant(const QJsonObject &jsonObject)
+QVariant( const QJsonObject & jsonObject )
 */
 void QVariant_new43()
 {
@@ -586,7 +578,7 @@ void QVariant_new43()
 }
 
 /*
-QVariant(const QJsonArray &jsonArray)
+QVariant( const QJsonArray & jsonArray )
 */
 void QVariant_new44()
 {
@@ -595,74 +587,13 @@ void QVariant_new44()
 }
 
 /*
-QVariant(const QJsonDocument &jsonDocument)
+QVariant( const QJsonDocument & jsonDocument )
 */
 void QVariant_new45()
 {
   auto obj = new QVariant( *PQJSONDOCUMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVariant()
-[2]QVariant(Type type)
-[3]QVariant(int typeId, const void *copy)
-[4]QVariant(int typeId, const void *copy, uint flags)
-[5]QVariant(const QVariant &other)
-[6]QVariant(QDataStream &s)
-[7]QVariant(int i)
-[8]QVariant(uint ui)
-[9]QVariant(qlonglong ll)
-[10]QVariant(qulonglong ull)
-[11]QVariant(bool b)
-[12]QVariant(double d)
-[13]QVariant(float f)
-[14]QVariant(const char *str)
-[15]QVariant(const QByteArray &bytearray)
-[16]QVariant(const QBitArray &bitarray)
-[17]QVariant(const QString &string)
-[18]QVariant(QLatin1String string)
-[19]QVariant(const QStringList &stringlist)
-[20]QVariant(QChar qchar)
-[21]QVariant(const QDate &date)
-[22]QVariant(const QTime &time)
-[23]QVariant(const QDateTime &datetime)
-[24]QVariant(const QList<QVariant> &list)
-[25]QVariant(const QMap<QString,QVariant> &map)
-[26]QVariant(const QHash<QString,QVariant> &hash)
-[27]QVariant(const QSize &size)
-[28]QVariant(const QSizeF &size)
-[29]QVariant(const QPoint &pt)
-[30]QVariant(const QPointF &pt)
-[31]QVariant(const QLine &line)
-[32]QVariant(const QLineF &line)
-[33]QVariant(const QRect &rect)
-[34]QVariant(const QRectF &rect)
-[35]QVariant(const QLocale &locale)
-[36]QVariant(const QRegExp &regExp)
-[37]QVariant(const QRegularExpression &re)
-[38]QVariant(const QUrl &url)
-[39]QVariant(const QEasingCurve &easing)
-[40]QVariant(const QUuid &uuid)
-[41]QVariant(const QModelIndex &modelIndex)
-[42]QVariant(const QJsonValue &jsonValue)
-[43]QVariant(const QJsonObject &jsonObject)
-[44]QVariant(const QJsonArray &jsonArray)
-[45]QVariant(const QJsonDocument &jsonDocument)
-*/
-
-/*
-TODO: implementar reconhecimento de parâmetros, se possível, para os casos abaixo
-
-[2]QVariant(Type type)
-[8]QVariant(uint ui)
-[10]QVariant(qulonglong ull)
-[13]QVariant(float f)
-[14]QVariant(const char *str)
-[24]QVariant(const QList<QVariant> &list)
-[25]QVariant(const QMap<QString,QVariant> &map)
-[26]QVariant(const QHash<QString,QVariant> &hash)
-*/
 
 HB_FUNC_STATIC( QVARIANT_NEW )
 {
@@ -856,7 +787,7 @@ HB_FUNC_STATIC( QVARIANT_DELETE )
 }
 
 /*
-void swap(QVariant &other)
+void swap( QVariant & other )
 */
 HB_FUNC_STATIC( QVARIANT_SWAP )
 {
@@ -882,7 +813,7 @@ HB_FUNC_STATIC( QVARIANT_SWAP )
 }
 
 /*
-Type type() const
+QVariant::Type type() const
 */
 HB_FUNC_STATIC( QVARIANT_TYPE )
 {
@@ -930,7 +861,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
 }
 
 /*
-const char *typeName() const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QVARIANT_TYPENAME )
 {
@@ -954,7 +885,7 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
 }
 
 /*
-bool canConvert(int targetTypeId) const
+bool canConvert( int targetTypeId ) const
 */
 HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 {
@@ -978,7 +909,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 }
 
 /*
-bool convert(int targetTypeId)
+bool convert( int targetTypeId )
 */
 HB_FUNC_STATIC( QVARIANT_CONVERT )
 {
@@ -1126,7 +1057,7 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
 }
 
 /*
-int toInt(bool *ok = nullptr) const
+int toInt( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOINT )
 {
@@ -1135,7 +1066,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1152,7 +1083,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
 }
 
 /*
-uint toUInt(bool *ok = nullptr) const
+uint toUInt( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOUINT )
 {
@@ -1161,7 +1092,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1178,7 +1109,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
 }
 
 /*
-qlonglong toLongLong(bool *ok = nullptr) const
+qlonglong toLongLong( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 {
@@ -1187,7 +1118,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1204,7 +1135,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
 }
 
 /*
-qulonglong toULongLong(bool *ok = nullptr) const
+qulonglong toULongLong( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
 {
@@ -1213,7 +1144,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1254,7 +1185,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
 }
 
 /*
-double toDouble(bool *ok = nullptr) const
+double toDouble( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 {
@@ -1263,7 +1194,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1280,7 +1211,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
 }
 
 /*
-float toFloat(bool *ok = nullptr) const
+float toFloat( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 {
@@ -1289,7 +1220,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1306,7 +1237,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
 }
 
 /*
-qreal toReal(bool *ok = nullptr) const
+qreal toReal( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOREAL )
 {
@@ -1315,7 +1246,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -2105,7 +2036,7 @@ HB_FUNC_STATIC( QVARIANT_SAVE )
 }
 
 /*
-void *data()
+void * data()
 */
 HB_FUNC_STATIC( QVARIANT_DATA )
 {
@@ -2129,7 +2060,7 @@ HB_FUNC_STATIC( QVARIANT_DATA )
 }
 
 /*
-static const char *typeToName(int typeId)
+static const char * typeToName( int typeId )
 */
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
@@ -2148,7 +2079,7 @@ HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 }
 
 /*
-static Type nameToType(const char *name)
+static QVariant::Type nameToType( const char * name )
 */
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {

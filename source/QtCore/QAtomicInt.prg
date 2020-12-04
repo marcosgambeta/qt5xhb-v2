@@ -95,12 +95,9 @@ void QAtomicInt_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//[1]QAtomicInt(int value = 0)
-//[2]QAtomicInt(const QAtomicInt & other)
-
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QAtomicInt_new1();
   }

@@ -82,7 +82,7 @@ void QMarginsF_new1()
 }
 
 /*
-QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
+QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
 */
 void QMarginsF_new2()
 {
@@ -93,7 +93,7 @@ void QMarginsF_new2()
 }
 
 /*
-QMarginsF(const QMargins &margins)
+QMarginsF( const QMargins & margins )
 */
 void QMarginsF_new3()
 {
@@ -102,12 +102,6 @@ void QMarginsF_new3()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QMarginsF()
-[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
-[3]QMarginsF(const QMargins &margins)
-*/
 
 HB_FUNC_STATIC( QMARGINSF_NEW )
 {
@@ -279,7 +273,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 }
 
 /*
-void setLeft(qreal left)
+void setLeft( qreal left )
 */
 HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 {
@@ -307,7 +301,7 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 }
 
 /*
-void setTop(qreal top)
+void setTop( qreal top )
 */
 HB_FUNC_STATIC( QMARGINSF_SETTOP )
 {
@@ -335,7 +329,7 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
 }
 
 /*
-void setRight(qreal right)
+void setRight( qreal right )
 */
 HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 {
@@ -363,7 +357,7 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 }
 
 /*
-void setBottom(qreal bottom)
+void setBottom( qreal bottom )
 */
 HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 {

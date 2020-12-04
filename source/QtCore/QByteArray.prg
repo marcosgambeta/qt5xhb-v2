@@ -128,7 +128,9 @@ CLASS QByteArray
    METHOD number4
    METHOD number5
    METHOD number
+   METHOD back
    METHOD chopped
+   METHOD compare
    METHOD isLower
    METHOD isUpper
 
@@ -168,7 +170,7 @@ RETURN
 #include <QtCore/QString>
 
 /*
-QByteArray ()
+QByteArray()
 */
 void QByteArray_new1()
 {
@@ -177,7 +179,7 @@ void QByteArray_new1()
 }
 
 /*
-QByteArray ( const char * str )
+QByteArray( const char * str )
 */
 void QByteArray_new2()
 {
@@ -186,7 +188,7 @@ void QByteArray_new2()
 }
 
 /*
-QByteArray ( const char * data, int size )
+QByteArray( const char * data, int size )
 */
 void QByteArray_new3()
 {
@@ -195,31 +197,22 @@ void QByteArray_new3()
 }
 
 /*
-QByteArray ( int size, char ch )
+QByteArray( int size, char ch )
 */
-void QByteArray_new4 ()
+void QByteArray_new4()
 {
-  char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-  QByteArray * o = new QByteArray ( PINT(1), par2 );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QByteArray( PINT(1), PCHAR(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
-QByteArray ( const QByteArray & other )
+QByteArray( const QByteArray & other )
 */
 void QByteArray_new5()
 {
   auto obj = new QByteArray( *PQBYTEARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QByteArray ()
-[2]QByteArray ( const char * str )
-[3]QByteArray ( const char * data, int size )
-[4]QByteArray ( int size, char ch )
-[5]QByteArray ( const QByteArray & other )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
@@ -267,7 +260,7 @@ HB_FUNC_STATIC( QBYTEARRAY_DELETE )
 }
 
 /*
-QByteArray & append ( const QByteArray & ba )
+QByteArray & append( const QByteArray & ba )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
 {
@@ -292,7 +285,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
 }
 
 /*
-QByteArray & append ( const QString & str )
+QByteArray & append( const QString & str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
 {
@@ -317,7 +310,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
 }
 
 /*
-QByteArray & append ( const char * str )
+QByteArray & append( const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
 {
@@ -342,7 +335,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
 }
 
 /*
-QByteArray & append ( const char * str, int len )
+QByteArray & append( const char * str, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
 {
@@ -367,7 +360,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
 }
 
 /*
-QByteArray & append ( char ch )
+QByteArray & append( char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
 {
@@ -376,7 +369,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && (ISNUM(1)||ISCHAR(1)) )
     {
 #endif
       QByteArray * ptr = &obj->append( PCHAR(1) );
@@ -392,7 +385,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
 }
 
 /*
-QByteArray &QByteArray::append(int count, char ch)
+QByteArray & append( int count, char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
 {
@@ -402,7 +395,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->append( PINT(1), PCHAR(2) );
@@ -417,15 +410,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
   }
 #endif
 }
-
-/*
-[1]QByteArray & append ( const QByteArray & ba )
-[2]QByteArray & append ( const QString & str )
-[3]QByteArray & append ( const char * str )
-[4]QByteArray & append ( const char * str, int len )
-[5]QByteArray & append ( char ch )
-[6]QByteArray & append ( int count, char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 {
@@ -456,7 +440,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 }
 
 /*
-char at ( int i ) const
+char at( int i ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_AT )
 {
@@ -480,7 +464,7 @@ HB_FUNC_STATIC( QBYTEARRAY_AT )
 }
 
 /*
-int capacity () const
+int capacity() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 {
@@ -504,7 +488,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 }
 
 /*
-void chop ( int n )
+void chop( int n )
 */
 HB_FUNC_STATIC( QBYTEARRAY_CHOP )
 {
@@ -530,7 +514,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CHOP )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
 {
@@ -556,7 +540,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CLEAR )
 }
 
 /*
-const char * constData () const
+const char * constData() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
 {
@@ -580,7 +564,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
 }
 
 /*
-bool contains ( const QByteArray & ba ) const
+bool contains( const QByteArray & ba ) const
 */
 void QByteArray_contains1()
 {
@@ -593,7 +577,7 @@ void QByteArray_contains1()
 }
 
 /*
-bool contains ( const char * str ) const
+bool contains( const char * str ) const
 */
 void QByteArray_contains2()
 {
@@ -606,7 +590,7 @@ void QByteArray_contains2()
 }
 
 /*
-bool contains ( char ch ) const
+bool contains( char ch ) const
 */
 void QByteArray_contains3()
 {
@@ -617,12 +601,6 @@ void QByteArray_contains3()
     RBOOL( obj->contains( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool contains ( const QByteArray & ba ) const
-[2]bool contains ( const char * str ) const
-[3]bool contains ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
@@ -645,7 +623,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 }
 
 /*
-int count ( const QByteArray & ba ) const
+int count( const QByteArray & ba ) const
 */
 void QByteArray_count1()
 {
@@ -658,7 +636,7 @@ void QByteArray_count1()
 }
 
 /*
-int count ( const char * str ) const
+int count( const char * str ) const
 */
 void QByteArray_count2()
 {
@@ -671,7 +649,7 @@ void QByteArray_count2()
 }
 
 /*
-int count ( char ch ) const
+int count( char ch ) const
 */
 void QByteArray_count3()
 {
@@ -684,7 +662,7 @@ void QByteArray_count3()
 }
 
 /*
-int count () const
+int count() const
 */
 void QByteArray_count4()
 {
@@ -695,13 +673,6 @@ void QByteArray_count4()
     RINT( obj->count() );
   }
 }
-
-/*
-[1]int count ( const QByteArray & ba ) const
-[2]int count ( const char * str ) const
-[3]int count ( char ch ) const
-[4]int count () const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
@@ -728,7 +699,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 }
 
 /*
-const char * data () const
+const char * data() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
 {
@@ -751,18 +722,13 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
   }
 }
 
-/*
-[1]char * data ()
-[2]const char * data () const
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_DATA )
 {
   HB_FUNC_EXEC( QBYTEARRAY_DATA2 );
 }
 
 /*
-bool endsWith ( const QByteArray & ba ) const
+bool endsWith( const QByteArray & ba ) const
 */
 void QByteArray_endsWith1()
 {
@@ -775,7 +741,7 @@ void QByteArray_endsWith1()
 }
 
 /*
-bool endsWith ( const char * str ) const
+bool endsWith( const char * str ) const
 */
 void QByteArray_endsWith2()
 {
@@ -788,7 +754,7 @@ void QByteArray_endsWith2()
 }
 
 /*
-bool endsWith ( char ch ) const
+bool endsWith( char ch ) const
 */
 void QByteArray_endsWith3()
 {
@@ -799,12 +765,6 @@ void QByteArray_endsWith3()
     RBOOL( obj->endsWith( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool endsWith ( const QByteArray & ba ) const
-[2]bool endsWith ( const char * str ) const
-[3]bool endsWith ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
@@ -827,7 +787,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 }
 
 /*
-QByteArray & fill ( char ch, int size = -1 )
+QByteArray & fill( char ch, int size = -1 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FILL )
 {
@@ -836,7 +796,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->fill( PCHAR(1), OPINT(2,-1) );
@@ -852,7 +812,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
 }
 
 /*
-int indexOf ( const QByteArray & ba, int from = 0 ) const
+int indexOf( const QByteArray & ba, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
 {
@@ -861,7 +821,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->indexOf( *PQBYTEARRAY(1), OPINT(2,0) ) );
@@ -876,7 +836,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
 }
 
 /*
-int indexOf ( const QString & str, int from = 0 ) const
+int indexOf( const QString & str, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
 {
@@ -885,7 +845,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->indexOf( PQSTRING(1), OPINT(2,0) ) );
@@ -900,7 +860,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
 }
 
 /*
-int indexOf ( const char * str, int from = 0 ) const
+int indexOf( const char * str, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
 {
@@ -909,7 +869,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->indexOf( PCONSTCHAR(1), OPINT(2,0) ) );
@@ -924,7 +884,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
 }
 
 /*
-int indexOf ( char ch, int from = 0 ) const
+int indexOf( char ch, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
 {
@@ -933,7 +893,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->indexOf( PCHAR(1), OPINT(2,0) ) );
@@ -947,28 +907,21 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   }
 }
 
-/*
-[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
-[2]int indexOf ( const QString & str, int from = 0 ) const
-[3]int indexOf ( const char * str, int from = 0 ) const
-[4]int indexOf ( char ch, int from = 0 ) const
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF1 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF2 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_INDEXOF4 );
   }
@@ -979,7 +932,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 }
 
 /*
-QByteArray & insert ( int i, const QByteArray & ba )
+QByteArray & insert( int i, const QByteArray & ba )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
 {
@@ -1004,7 +957,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
 }
 
 /*
-QByteArray & insert ( int i, const QString & str )
+QByteArray & insert( int i, const QString & str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
 {
@@ -1029,7 +982,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
 }
 
 /*
-QByteArray & insert ( int i, const char * str )
+QByteArray & insert( int i, const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
 {
@@ -1054,7 +1007,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
 }
 
 /*
-QByteArray & insert ( int i, const char * str, int len )
+QByteArray & insert( int i, const char * str, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
 {
@@ -1079,7 +1032,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
 }
 
 /*
-QByteArray & insert ( int i, char ch )
+QByteArray & insert( int i, char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
 {
@@ -1088,7 +1041,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->insert( PINT(1), PCHAR(2) );
@@ -1102,14 +1055,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & insert ( int i, const QByteArray & ba )
-[2]QByteArray & insert ( int i, const QString & str )
-[3]QByteArray & insert ( int i, const char * str )
-[4]QByteArray & insert ( int i, const char * str, int len )
-[5]QByteArray & insert ( int i, char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 {
@@ -1136,7 +1081,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 {
@@ -1160,7 +1105,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 {
@@ -1184,7 +1129,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 }
 
 /*
-int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
+int lastIndexOf( const QByteArray & ba, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
 {
@@ -1193,7 +1138,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->lastIndexOf( *PQBYTEARRAY(1), OPINT(2,-1) ) );
@@ -1208,7 +1153,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
 }
 
 /*
-int lastIndexOf ( const QString & str, int from = -1 ) const
+int lastIndexOf( const QString & str, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
 {
@@ -1217,7 +1162,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->lastIndexOf( PQSTRING(1), OPINT(2,-1) ) );
@@ -1232,7 +1177,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
 }
 
 /*
-int lastIndexOf ( const char * str, int from = -1 ) const
+int lastIndexOf( const char * str, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
 {
@@ -1241,7 +1186,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->lastIndexOf( PCONSTCHAR(1), OPINT(2,-1) ) );
@@ -1256,7 +1201,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
 }
 
 /*
-int lastIndexOf ( char ch, int from = -1 ) const
+int lastIndexOf( char ch, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
 {
@@ -1265,7 +1210,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->lastIndexOf( PCHAR(1), OPINT(2,-1) ) );
@@ -1279,28 +1224,21 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   }
 }
 
-/*
-[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
-[2]int lastIndexOf ( const QString & str, int from = -1 ) const
-[3]int lastIndexOf ( const char * str, int from = -1 ) const
-[4]int lastIndexOf ( char ch, int from = -1 ) const
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 {
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF1 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF2 );
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF4 );
   }
@@ -1311,7 +1249,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 }
 
 /*
-QByteArray left ( int len ) const
+QByteArray left( int len ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LEFT )
 {
@@ -1336,7 +1274,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFT )
 }
 
 /*
-QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
+QByteArray leftJustified( int width, char fill = ' ', bool truncate = false ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
 {
@@ -1345,7 +1283,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTLOG(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISLOG(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->leftJustified( PINT(1), OPCHAR(2,' '), OPBOOL(3,false) ) );
@@ -1361,7 +1299,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 {
@@ -1385,7 +1323,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 }
 
 /*
-QByteArray mid ( int pos, int len = -1 ) const
+QByteArray mid( int pos, int len = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_MID )
 {
@@ -1394,7 +1332,7 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QByteArray( obj->mid( PINT(1), OPINT(2,-1) ) );
@@ -1410,7 +1348,7 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
 }
 
 /*
-QByteArray & prepend ( const QByteArray & ba )
+QByteArray & prepend( const QByteArray & ba )
 */
 void QByteArray_prepend1()
 {
@@ -1424,7 +1362,7 @@ void QByteArray_prepend1()
 }
 
 /*
-QByteArray & prepend ( const char * str )
+QByteArray & prepend( const char * str )
 */
 void QByteArray_prepend2()
 {
@@ -1438,7 +1376,7 @@ void QByteArray_prepend2()
 }
 
 /*
-QByteArray & prepend ( const char * str, int len )
+QByteArray & prepend( const char * str, int len )
 */
 void QByteArray_prepend3()
 {
@@ -1452,7 +1390,7 @@ void QByteArray_prepend3()
 }
 
 /*
-QByteArray & prepend ( char ch )
+QByteArray & prepend( char ch )
 */
 void QByteArray_prepend4()
 {
@@ -1464,13 +1402,6 @@ void QByteArray_prepend4()
     Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
   }
 }
-
-/*
-[1]QByteArray & prepend ( const QByteArray & ba )
-[2]QByteArray & prepend ( const char * str )
-[3]QByteArray & prepend ( const char * str, int len )
-[4]QByteArray & prepend ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 {
@@ -1497,7 +1428,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 }
 
 /*
-void push_back ( const QByteArray & other )
+void push_back( const QByteArray & other )
 */
 void QByteArray_push_back1()
 {
@@ -1512,7 +1443,7 @@ void QByteArray_push_back1()
 }
 
 /*
-void push_back ( const char * str )
+void push_back( const char * str )
 */
 void QByteArray_push_back2()
 {
@@ -1527,7 +1458,7 @@ void QByteArray_push_back2()
 }
 
 /*
-void push_back ( char ch )
+void push_back( char ch )
 */
 void QByteArray_push_back3()
 {
@@ -1540,12 +1471,6 @@ void QByteArray_push_back3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void push_back ( const QByteArray & other )
-[2]void push_back ( const char * str )
-[3]void push_back ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
@@ -1568,7 +1493,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 }
 
 /*
-void push_front ( const QByteArray & other )
+void push_front( const QByteArray & other )
 */
 void QByteArray_push_front1()
 {
@@ -1583,7 +1508,7 @@ void QByteArray_push_front1()
 }
 
 /*
-void push_front ( const char * str )
+void push_front( const char * str )
 */
 void QByteArray_push_front2()
 {
@@ -1598,7 +1523,7 @@ void QByteArray_push_front2()
 }
 
 /*
-void push_front ( char ch )
+void push_front( char ch )
 */
 void QByteArray_push_front3()
 {
@@ -1611,12 +1536,6 @@ void QByteArray_push_front3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void push_front ( const QByteArray & other )
-[2]void push_front ( const char * str )
-[3]void push_front ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
@@ -1639,7 +1558,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 }
 
 /*
-QByteArray & remove ( int pos, int len )
+QByteArray & remove( int pos, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
 {
@@ -1664,7 +1583,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
 }
 
 /*
-QByteArray repeated ( int times ) const
+QByteArray repeated( int times ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
 {
@@ -1689,7 +1608,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const QByteArray & after )
+QByteArray & replace( int pos, int len, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
 {
@@ -1714,7 +1633,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const char * after )
+QByteArray & replace( int pos, int len, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
 {
@@ -1739,7 +1658,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const char * after, int alen )
+QByteArray & replace( int pos, int len, const char * after, int alen )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
 {
@@ -1764,7 +1683,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
 }
 
 /*
-QByteArray & replace ( const QByteArray & before, const QByteArray & after )
+QByteArray & replace( const QByteArray & before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
 {
@@ -1789,7 +1708,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
 }
 
 /*
-QByteArray & replace ( const char * before, const QByteArray & after )
+QByteArray & replace( const char * before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
 {
@@ -1814,7 +1733,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
 }
 
 /*
-QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
+QByteArray & replace( const char * before, int bsize, const char * after, int asize )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
 {
@@ -1839,7 +1758,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
 }
 
 /*
-QByteArray & replace ( const QByteArray & before, const char * after )
+QByteArray & replace( const QByteArray & before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
 {
@@ -1864,7 +1783,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
 }
 
 /*
-QByteArray & replace ( const QString & before, const QByteArray & after )
+QByteArray & replace( const QString & before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
 {
@@ -1889,7 +1808,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
 }
 
 /*
-QByteArray & replace ( const QString & before, const char * after )
+QByteArray & replace( const QString & before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
 {
@@ -1914,7 +1833,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
 }
 
 /*
-QByteArray & replace ( const char * before, const char * after )
+QByteArray & replace( const char * before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
 {
@@ -1939,7 +1858,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
 }
 
 /*
-QByteArray & replace ( char before, const QByteArray & after )
+QByteArray & replace( char before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
 {
@@ -1948,7 +1867,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR(2) && (ISNUM(1)||ISCHAR(1)) && ISQBYTEARRAY(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), *PQBYTEARRAY(2) );
@@ -1964,7 +1883,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
 }
 
 /*
-QByteArray & replace ( char before, const QString & after )
+QByteArray & replace( char before, const QString & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
 {
@@ -1973,7 +1892,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && (ISNUM(1)||ISCHAR(1)) && ISCHAR(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PQSTRING(2) );
@@ -1989,7 +1908,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
 }
 
 /*
-QByteArray & replace ( char before, const char * after )
+QByteArray & replace( char before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
 {
@@ -1998,7 +1917,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && (ISNUM(1)||ISCHAR(1)) && ISCHAR(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PCONSTCHAR(2) );
@@ -2014,7 +1933,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
 }
 
 /*
-QByteArray & replace ( char before, char after )
+QByteArray & replace( char before, char after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
 {
@@ -2023,7 +1942,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && (ISNUM(1)||ISCHAR(1)) && (ISNUM(2)||ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PCHAR(2) );
@@ -2037,23 +1956,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
 #endif
   }
 }
-
-/*
-[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
-[02]QByteArray & replace ( int pos, int len, const char * after )
-[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
-[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
-[05]QByteArray & replace ( const char * before, const QByteArray & after )
-[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
-[07]QByteArray & replace ( const QByteArray & before, const char * after )
-[08]QByteArray & replace ( const QString & before, const QByteArray & after )
-[09]QByteArray & replace ( const QString & before, const char * after )
-[10]QByteArray & replace ( const char * before, const char * after )
-[11]QByteArray & replace ( char before, const QByteArray & after )
-[12]QByteArray & replace ( char before, const QString & after )
-[13]QByteArray & replace ( char before, const char * after )
-[14]QByteArray & replace ( char before, char after )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 {
@@ -2120,7 +2022,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 }
 
 /*
-void reserve ( int size )
+void reserve( int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
 {
@@ -2146,7 +2048,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
 }
 
 /*
-void resize ( int size )
+void resize( int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
 {
@@ -2172,7 +2074,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
 }
 
 /*
-QByteArray right ( int len ) const
+QByteArray right( int len ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
 {
@@ -2197,7 +2099,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
 }
 
 /*
-QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
+QByteArray rightJustified( int width, char fill = ' ', bool truncate = false ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
 {
@@ -2206,7 +2108,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTLOG(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISLOG(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->rightJustified( PINT(1), OPCHAR(2,' '), OPBOOL(3,false) ) );
@@ -2222,7 +2124,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
 }
 
 /*
-QByteArray & setNum ( int n, int base = 10 )
+QByteArray & setNum( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
 {
@@ -2231,7 +2133,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PINT(1), OPINT(2,10) );
@@ -2247,7 +2149,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
 }
 
 /*
-QByteArray & setNum ( uint n, int base = 10 )
+QByteArray & setNum( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
 {
@@ -2256,7 +2158,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PUINT(1), OPINT(2,10) );
@@ -2272,7 +2174,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
 }
 
 /*
-QByteArray & setNum ( short n, int base = 10 )
+QByteArray & setNum( short n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
 {
@@ -2281,7 +2183,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PSHORT(1), OPINT(2,10) );
@@ -2297,7 +2199,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
 }
 
 /*
-QByteArray & setNum ( ushort n, int base = 10 )
+QByteArray & setNum( ushort n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
 {
@@ -2306,7 +2208,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PUSHORT(1), OPINT(2,10) );
@@ -2322,7 +2224,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
 }
 
 /*
-QByteArray & setNum ( qlonglong n, int base = 10 )
+QByteArray & setNum( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
 {
@@ -2331,7 +2233,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PQLONGLONG(1), OPINT(2,10) );
@@ -2347,7 +2249,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
 }
 
 /*
-QByteArray & setNum ( qulonglong n, int base = 10 )
+QByteArray & setNum( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
 {
@@ -2356,7 +2258,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PQULONGLONG(1), OPINT(2,10) );
@@ -2372,7 +2274,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
 }
 
 /*
-QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
+QByteArray & setNum( double n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
 {
@@ -2381,7 +2283,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) );
@@ -2397,7 +2299,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
 }
 
 /*
-QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+QByteArray & setNum( float n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
 {
@@ -2406,7 +2308,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PFLOAT(1), OPCHAR(2,'g'), OPINT(3,6) );
@@ -2421,20 +2323,9 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
   }
 }
 
-/*
-[1]QByteArray & setNum ( int n, int base = 10 )
-[2]QByteArray & setNum ( uint n, int base = 10 )
-[3]QByteArray & setNum ( short n, int base = 10 )
-[4]QByteArray & setNum ( ushort n, int base = 10 )
-[5]QByteArray & setNum ( qlonglong n, int base = 10 )
-[6]QByteArray & setNum ( qulonglong n, int base = 10 )
-[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
-[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_SETNUM1 );
   }
@@ -2445,7 +2336,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 }
 
 /*
-QByteArray & setRawData ( const char * data, uint size )
+QByteArray & setRawData( const char * data, uint size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
 {
@@ -2470,7 +2361,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
 }
 
 /*
-QByteArray simplified () const
+QByteArray simplified() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
 {
@@ -2495,7 +2386,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIMPLIFIED )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 {
@@ -2519,7 +2410,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 }
 
 /*
-QList<QByteArray> split ( char sep ) const
+QList<QByteArray> split( char sep ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
 {
@@ -2528,7 +2419,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && (ISNUM(1)||ISCHAR(1)) )
     {
 #endif
       QList<QByteArray> list = obj->split( PCHAR(1) );
@@ -2571,7 +2462,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
 }
 
 /*
-void squeeze ()
+void squeeze()
 */
 HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
 {
@@ -2597,7 +2488,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
 }
 
 /*
-bool startsWith ( const QByteArray & ba ) const
+bool startsWith( const QByteArray & ba ) const
 */
 void QByteArray_startsWith1()
 {
@@ -2610,7 +2501,7 @@ void QByteArray_startsWith1()
 }
 
 /*
-bool startsWith ( const char * str ) const
+bool startsWith( const char * str ) const
 */
 void QByteArray_startsWith2()
 {
@@ -2623,7 +2514,7 @@ void QByteArray_startsWith2()
 }
 
 /*
-bool startsWith ( char ch ) const
+bool startsWith( char ch ) const
 */
 void QByteArray_startsWith3()
 {
@@ -2634,12 +2525,6 @@ void QByteArray_startsWith3()
     RBOOL( obj->startsWith( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool startsWith ( const QByteArray & ba ) const
-[2]bool startsWith ( const char * str ) const
-[3]bool startsWith ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
@@ -2662,7 +2547,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 }
 
 /*
-QByteArray toBase64 () const
+QByteArray toBase64() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 {
@@ -2687,7 +2572,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 }
 
 /*
-double toDouble ( bool * ok = nullptr ) const
+double toDouble( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 {
@@ -2696,7 +2581,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -2713,7 +2598,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 }
 
 /*
-float toFloat ( bool * ok = nullptr ) const
+float toFloat( bool * ok = nullptr ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
 {
@@ -2722,7 +2607,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -2739,7 +2624,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
 }
 
 /*
-QByteArray toHex () const
+QByteArray toHex() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 {
@@ -2764,7 +2649,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 }
 
 /*
-int toInt ( bool * ok = nullptr, int base = 10 ) const
+int toInt( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 {
@@ -2773,7 +2658,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2790,7 +2675,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 }
 
 /*
-long toLong ( bool * ok = nullptr, int base = 10 ) const
+long toLong( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 {
@@ -2799,7 +2684,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2816,7 +2701,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 }
 
 /*
-qlonglong toLongLong ( bool * ok = nullptr, int base = 10 ) const
+qlonglong toLongLong( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 {
@@ -2825,7 +2710,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2842,7 +2727,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 }
 
 /*
-QByteArray toLower () const
+QByteArray toLower() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
 {
@@ -2867,7 +2752,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
 }
 
 /*
-QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
+QByteArray toPercentEncoding( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 {
@@ -2876,7 +2761,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,3) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) && ISOPTNUM(3) )
+    if( ISBETWEEN(0,3) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISNUM(3)||ISCHAR(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->toPercentEncoding( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPCHAR(3,'%') ) );
@@ -2892,7 +2777,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 }
 
 /*
-short toShort ( bool * ok = nullptr, int base = 10 ) const
+short toShort( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 {
@@ -2901,7 +2786,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2918,7 +2803,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 }
 
 /*
-uint toUInt ( bool * ok = nullptr, int base = 10 ) const
+uint toUInt( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 {
@@ -2927,7 +2812,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2944,7 +2829,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 }
 
 /*
-ulong toULong ( bool * ok = nullptr, int base = 10 ) const
+ulong toULong( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 {
@@ -2953,7 +2838,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2970,7 +2855,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 }
 
 /*
-qulonglong toULongLong ( bool * ok = nullptr, int base = 10 ) const
+qulonglong toULongLong( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 {
@@ -2979,7 +2864,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -2996,7 +2881,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 }
 
 /*
-ushort toUShort ( bool * ok = nullptr, int base = 10 ) const
+ushort toUShort( bool * ok = nullptr, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 {
@@ -3005,7 +2890,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTLOG(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       bool par1;
@@ -3022,7 +2907,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 }
 
 /*
-QByteArray toUpper () const
+QByteArray toUpper() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
 {
@@ -3047,7 +2932,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUPPER )
 }
 
 /*
-QByteArray trimmed () const
+QByteArray trimmed() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
 {
@@ -3072,7 +2957,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
 }
 
 /*
-void truncate ( int pos )
+void truncate( int pos )
 */
 HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
 {
@@ -3098,31 +2983,43 @@ HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
 }
 
 /*
-static QByteArray fromBase64 ( const QByteArray & base64 )
+static QByteArray fromBase64( const QByteArray & base64 )
 */
+void QByteArray_fromBase641()
+{
+  auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY(1) ) );
+  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+}
+
+/*
+static QByteArray fromBase64( const QByteArray & base64, QByteArray::Base64Options options )
+*/
+void QByteArray_fromBase642()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY(1), (QByteArray::Base64Options) hb_parni(2) ) );
+  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+#endif
+}
+
 HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
 {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-#endif
-    auto ptr = new QByteArray( QByteArray::fromBase64( *PQBYTEARRAY(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    QByteArray_fromBase641();
+  }
+  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  {
+    QByteArray_fromBase642();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-#endif
 }
 
 /*
-static QByteArray fromBase64(const QByteArray &base64, QByteArray::Base64Options options)
-*/
-
-/*
-static QByteArray fromHex ( const QByteArray & hexEncoded )
+static QByteArray fromHex( const QByteArray & hexEncoded )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
 {
@@ -3142,24 +3039,27 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
 }
 
 /*
-static QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
+static QByteArray fromPercentEncoding( const QByteArray & input, char percent = '%' )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
 {
-  if( ISQBYTEARRAY(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) )
   {
-    char par2 = ISNIL(2)? 37 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), par2 ) );
-    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
+#endif
+    auto ptr = new QByteArray( QByteArray::fromPercentEncoding( *PQBYTEARRAY(1), OPCHAR(2,'%') ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
-static QByteArray fromRawData ( const char * data, int size )
+static QByteArray fromRawData( const char * data, int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
 {
@@ -3179,12 +3079,12 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
 }
 
 /*
-static QByteArray number ( int n, int base = 10 )
+static QByteArray number( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::number( PINT(1), OPINT(2,10) ) );
@@ -3199,12 +3099,12 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 }
 
 /*
-static QByteArray number ( uint n, int base = 10 )
+static QByteArray number( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::number( PUINT(1), OPINT(2,10) ) );
@@ -3219,12 +3119,12 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 }
 
 /*
-static QByteArray number ( qlonglong n, int base = 10 )
+static QByteArray number( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::number( PQLONGLONG(1), OPINT(2,10) ) );
@@ -3239,12 +3139,12 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 }
 
 /*
-static QByteArray number ( qulonglong n, int base = 10 )
+static QByteArray number( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::number( PQULONGLONG(1), OPINT(2,10) ) );
@@ -3259,49 +3159,44 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 }
 
 /*
-static QByteArray number ( double n, char f = 'g', int prec = 6 )
+static QByteArray number( double n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
-  if( ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
-    char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
-    QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
-    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
+#endif
+    auto ptr = new QByteArray( QByteArray::number( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) ) );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
-
-/*
-[1]static QByteArray number ( int n, int base = 10 )
-[2]static QByteArray number ( uint n, int base = 10 )
-[3]static QByteArray number ( qlonglong n, int base = 10 )
-[4]static QByteArray number ( qulonglong n, int base = 10 )
-[5]static QByteArray number ( double n, char f = 'g', int prec = 6 )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER1 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER2 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER3 );
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER4 );
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER5 );
   }
@@ -3312,15 +3207,37 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
 }
 
 /*
-char QByteArray::back() const
+char back() const
+*/
+HB_FUNC_STATIC( QBYTEARRAY_BACK )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QByteArray *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      hb_retni( obj->back() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+QByteRef back()
 */
 
 /*
-QByteRef QByteArray::back()
-*/
-
-/*
-QByteArray QByteArray::chopped(int len) const
+QByteArray chopped( int len ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_CHOPPED )
 {
@@ -3347,15 +3264,53 @@ HB_FUNC_STATIC( QBYTEARRAY_CHOPPED )
 }
 
 /*
-int QByteArray::compare(const char *c, Qt::CaseSensitivity cs = ...) const
+int compare( const char * c, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
 */
+void QByteArray_compare1()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  auto obj = (QByteArray *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+    RINT( obj->compare( PCONSTCHAR(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) ) );
+  }
+#endif
+}
 
 /*
-int QByteArray::compare(const QByteArray &a, Qt::CaseSensitivity cs = ...) const
+int compare( const QByteArray & a, Qt::CaseSensitivity cs = Qt::CaseSensitive ) const
 */
+void QByteArray_compare2()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  auto obj = (QByteArray *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+    RINT( obj->compare( *PQBYTEARRAY(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2) ) );
+  }
+#endif
+}
+
+HB_FUNC_STATIC( QBYTEARRAY_COMPARE )
+{
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QByteArray_compare1();
+  }
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QByteArray_compare2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
-bool QByteArray::isLower() const
+bool isLower() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISLOWER )
 {
@@ -3381,7 +3336,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISLOWER )
 }
 
 /*
-bool QByteArray::isUpper() const
+bool isUpper() const
 */
 HB_FUNC_STATIC( QBYTEARRAY_ISUPPER )
 {

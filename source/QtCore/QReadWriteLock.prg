@@ -61,11 +61,11 @@ RETURN
 #endif
 
 /*
-QReadWriteLock(RecursionMode recursionMode = NonRecursive)
+QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     auto obj = new QReadWriteLock( ISNIL(1)? (QReadWriteLock::RecursionMode) QReadWriteLock::NonRecursive : (QReadWriteLock::RecursionMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );
@@ -133,7 +133,7 @@ void QReadWriteLock_tryLockForRead1()
 }
 
 /*
-bool tryLockForRead(int timeout)
+bool tryLockForRead( int timeout )
 */
 void QReadWriteLock_tryLockForRead2()
 {
@@ -144,11 +144,6 @@ void QReadWriteLock_tryLockForRead2()
     RBOOL( obj->tryLockForRead( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLockForRead()
-[2]bool tryLockForRead(int timeout)
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
@@ -206,7 +201,7 @@ void QReadWriteLock_tryLockForWrite1()
 }
 
 /*
-bool tryLockForWrite(int timeout)
+bool tryLockForWrite( int timeout )
 */
 void QReadWriteLock_tryLockForWrite2()
 {
@@ -217,11 +212,6 @@ void QReadWriteLock_tryLockForWrite2()
     RBOOL( obj->tryLockForWrite( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLockForWrite()
-[2]bool tryLockForWrite(int timeout)
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {

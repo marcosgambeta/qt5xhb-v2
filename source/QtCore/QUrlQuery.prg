@@ -84,7 +84,7 @@ void QUrlQuery_new1()
 }
 
 /*
-QUrlQuery(const QUrl & url)
+QUrlQuery( const QUrl & url )
 */
 void QUrlQuery_new2()
 {
@@ -93,7 +93,7 @@ void QUrlQuery_new2()
 }
 
 /*
-QUrlQuery(const QString & queryString)
+QUrlQuery( const QString & queryString )
 */
 void QUrlQuery_new3()
 {
@@ -102,20 +102,13 @@ void QUrlQuery_new3()
 }
 
 /*
-QUrlQuery(const QUrlQuery & other)
+QUrlQuery( const QUrlQuery & other )
 */
 void QUrlQuery_new4()
 {
   auto obj = new QUrlQuery( *PQURLQUERY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QUrlQuery()
-[2]QUrlQuery(const QUrl & url)
-[3]QUrlQuery(const QString & queryString)
-[4]QUrlQuery(const QUrlQuery & other)
-*/
 
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {
@@ -159,7 +152,7 @@ HB_FUNC_STATIC( QURLQUERY_DELETE )
 }
 
 /*
-void addQueryItem(const QString & key, const QString & value)
+void addQueryItem( const QString & key, const QString & value )
 */
 HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 {
@@ -185,7 +178,7 @@ HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
 }
 
 /*
-QStringList allQueryItemValues(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
+QStringList allQueryItemValues( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 */
 HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
 {
@@ -194,7 +187,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RQSTRINGLIST( obj->allQueryItemValues( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
@@ -235,7 +228,7 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
 }
 
 /*
-bool hasQueryItem(const QString & key) const
+bool hasQueryItem( const QString & key ) const
 */
 HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
 {
@@ -283,7 +276,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
 }
 
 /*
-QString query(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
+QString query( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERY )
 {
@@ -292,7 +285,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->query( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
@@ -307,7 +300,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
 }
 
 /*
-QString queryItemValue(const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
+QString queryItemValue( const QString & key, QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 */
 HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
 {
@@ -316,7 +309,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->queryItemValue( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
@@ -381,7 +374,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
 }
 
 /*
-void removeAllQueryItems(const QString & key)
+void removeAllQueryItems( const QString & key )
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 {
@@ -407,7 +400,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
 }
 
 /*
-void removeQueryItem(const QString & key)
+void removeQueryItem( const QString & key )
 */
 HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 {
@@ -433,7 +426,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
 }
 
 /*
-void setQuery(const QString & queryString)
+void setQuery( const QString & queryString )
 */
 HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 {
@@ -459,7 +452,7 @@ HB_FUNC_STATIC( QURLQUERY_SETQUERY )
 }
 
 /*
-void swap(QUrlQuery & other)
+void swap( QUrlQuery & other )
 */
 HB_FUNC_STATIC( QURLQUERY_SWAP )
 {
@@ -485,7 +478,7 @@ HB_FUNC_STATIC( QURLQUERY_SWAP )
 }
 
 /*
-QString toString(QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded) const
+QString toString( QUrl::ComponentFormattingOptions encoding = QUrl::PrettyDecoded ) const
 */
 HB_FUNC_STATIC( QURLQUERY_TOSTRING )
 {
@@ -494,7 +487,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );

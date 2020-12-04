@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_ADDPOSITIONALARGUMENT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
     {
 #endif
       obj->addPositionalArgument( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) );
@@ -367,11 +367,6 @@ void QCommandLineParser_process2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void process(const QStringList &arguments)
-[2]void process(const QCoreApplication &app)
-*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 {
@@ -471,11 +466,6 @@ void QCommandLineParser_isSet2()
 #endif
 }
 
-/*
-[1]bool isSet(const QString &name) const
-[2]bool isSet(const QCommandLineOption &option) const
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -522,11 +512,6 @@ void QCommandLineParser_value2()
 #endif
 }
 
-/*
-[1]QString value(const QString &name) const
-[2]QString value(const QCommandLineOption &option) const
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -572,11 +557,6 @@ void QCommandLineParser_values2()
   }
 #endif
 }
-
-/*
-[1]QStringList values(const QString &name) const
-[2]QStringList values(const QCommandLineOption &option) const
-*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 {
@@ -683,7 +663,7 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_SHOWHELP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->showHelp( OPINT(1,0) );

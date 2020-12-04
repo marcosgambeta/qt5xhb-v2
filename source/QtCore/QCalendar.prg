@@ -83,7 +83,7 @@ RETURN
 #include <QtCore/QDate>
 
 /*
-explicit QCalendar()
+QCalendar()
 */
 void QCalendar_new1()
 {
@@ -94,7 +94,7 @@ void QCalendar_new1()
 }
 
 /*
-explicit QCalendar(System system)
+QCalendar( QCalendar::System system )
 */
 void QCalendar_new2()
 {
@@ -103,21 +103,6 @@ void QCalendar_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-explicit QCalendar(QLatin1String name)
-*/
-
-/*
-explicit QCalendar(QStringView name)
-*/
-
-/*
-[1]explicit QCalendar()
-[2]explicit QCalendar(System system)
-[3]explicit QCalendar(QLatin1String name)
-[4]explicit QCalendar(QStringView name)
-*/
 
 HB_FUNC_STATIC( QCALENDAR_NEW )
 {
@@ -181,11 +166,7 @@ HB_FUNC_STATIC( QCALENDAR_ISVALID )
 }
 
 /*
-int daysInMonth(int month, int year = Unspecified) const
-*/
-
-/*
-int daysInYear(int year) const
+int daysInYear( int year ) const
 */
 HB_FUNC_STATIC( QCALENDAR_DAYSINYEAR )
 {
@@ -211,7 +192,7 @@ HB_FUNC_STATIC( QCALENDAR_DAYSINYEAR )
 }
 
 /*
-int monthsInYear(int year) const
+int monthsInYear( int year ) const
 */
 HB_FUNC_STATIC( QCALENDAR_MONTHSINYEAR )
 {
@@ -237,7 +218,7 @@ HB_FUNC_STATIC( QCALENDAR_MONTHSINYEAR )
 }
 
 /*
-bool isDateValid(int year, int month, int day) const
+bool isDateValid( int year, int month, int day ) const
 */
 HB_FUNC_STATIC( QCALENDAR_ISDATEVALID )
 {
@@ -263,7 +244,7 @@ HB_FUNC_STATIC( QCALENDAR_ISDATEVALID )
 }
 
 /*
-bool isLeapYear(int year) const
+bool isLeapYear( int year ) const
 */
 HB_FUNC_STATIC( QCALENDAR_ISLEAPYEAR )
 {
@@ -549,7 +530,7 @@ HB_FUNC_STATIC( QCALENDAR_NAME )
 }
 
 /*
-QDate dateFromParts(int year, int month, int day) const
+QDate dateFromParts( int year, int month, int day ) const
 */
 HB_FUNC_STATIC( QCALENDAR_DATEFROMPARTS )
 {
@@ -576,15 +557,7 @@ HB_FUNC_STATIC( QCALENDAR_DATEFROMPARTS )
 }
 
 /*
-QDate dateFromParts(const YearMonthDay &parts) const
-*/
-
-/*
-YearMonthDay partsFromDate(QDate date) const
-*/
-
-/*
-int dayOfWeek(QDate date) const
+int dayOfWeek( QDate date ) const
 */
 HB_FUNC_STATIC( QCALENDAR_DAYOFWEEK )
 {
@@ -610,15 +583,7 @@ HB_FUNC_STATIC( QCALENDAR_DAYOFWEEK )
 }
 
 /*
-QString monthName(const QLocale &locale, int month, int year = Unspecified, QLocale::FormatType format=QLocale::LongFormat) const
-*/
-
-/*
-QString standaloneMonthName(const QLocale &locale, int month, int year = Unspecified, QLocale::FormatType format = QLocale::LongFormat) const
-*/
-
-/*
-QString weekDayName(const QLocale &locale, int day, QLocale::FormatType format = QLocale::LongFormat) const
+QString weekDayName( const QLocale & locale, int day, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QCALENDAR_WEEKDAYNAME )
 {
@@ -628,7 +593,7 @@ HB_FUNC_STATIC( QCALENDAR_WEEKDAYNAME )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQLOCALE(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQLOCALE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RQSTRING( obj->weekDayName( *PQLOCALE(1), PINT(2), ISNIL(3)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(3) ) );
@@ -644,7 +609,7 @@ HB_FUNC_STATIC( QCALENDAR_WEEKDAYNAME )
 }
 
 /*
-QString standaloneWeekDayName(const QLocale &locale, int day, QLocale::FormatType format=QLocale::LongFormat) const
+QString standaloneWeekDayName( const QLocale & locale, int day, QLocale::FormatType format=QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QCALENDAR_STANDALONEWEEKDAYNAME )
 {
@@ -654,7 +619,7 @@ HB_FUNC_STATIC( QCALENDAR_STANDALONEWEEKDAYNAME )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQLOCALE(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQLOCALE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RQSTRING( obj->standaloneWeekDayName( *PQLOCALE(1), PINT(2), ISNIL(3)? (QLocale::FormatType) QLocale::LongFormat : (QLocale::FormatType) hb_parni(3) ) );
@@ -668,10 +633,6 @@ HB_FUNC_STATIC( QCALENDAR_STANDALONEWEEKDAYNAME )
   }
 #endif
 }
-
-/*
-QString dateTimeToString(QStringView format, const QDateTime &datetime, const QDate &dateOnly, const QTime &timeOnly, const QLocale &locale) const
-*/
 
 /*
 static QStringList availableCalendars()

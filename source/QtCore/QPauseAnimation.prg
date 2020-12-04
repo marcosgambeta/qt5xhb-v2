@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QPauseAnimation ( QObject * parent = nullptr )
+QPauseAnimation( QObject * parent = nullptr )
 */
 void QPauseAnimation_new1()
 {
@@ -60,7 +60,7 @@ void QPauseAnimation_new1()
 }
 
 /*
-QPauseAnimation ( int msecs, QObject * parent = nullptr )
+QPauseAnimation( int msecs, QObject * parent = nullptr )
 */
 void QPauseAnimation_new2()
 {
@@ -68,18 +68,13 @@ void QPauseAnimation_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPauseAnimation ( QObject * parent = nullptr )
-[2]QPauseAnimation ( int msecs, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPauseAnimation_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QPauseAnimation_new2();
   }
@@ -109,7 +104,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 }
 
 /*
-void setDuration ( int msecs )
+void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {

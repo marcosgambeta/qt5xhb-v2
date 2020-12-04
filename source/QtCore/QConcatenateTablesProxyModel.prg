@@ -79,7 +79,7 @@ RETURN
 #include <QtCore/QSize>
 
 /*
-explicit QConcatenateTablesProxyModel( QObject * parent = nullptr )
+QConcatenateTablesProxyModel( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_NEW )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SETDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
@@ -282,14 +282,6 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_SETDATA )
   }
 #endif
 }
-
-/*
-QMap<int, QVariant> itemData(const QModelIndex &proxyIndex) const override
-*/
-
-/*
-bool setItemData(const QModelIndex &index, const QMap<int, QVariant> &roles) override
-*/
 
 /*
 Qt::ItemFlags flags( const QModelIndex & index ) const override
@@ -408,7 +400,7 @@ HB_FUNC_STATIC( QCONCATENATETABLESPROXYMODEL_HEADERDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );

@@ -81,7 +81,7 @@ void QLine_new1()
 }
 
 /*
-QLine(const QPoint & p1, const QPoint & p2)
+QLine( const QPoint & p1, const QPoint & p2 )
 */
 void QLine_new2()
 {
@@ -90,19 +90,13 @@ void QLine_new2()
 }
 
 /*
-QLine(int x1, int y1, int x2, int y2)
+QLine( int x1, int y1, int x2, int y2 )
 */
 void QLine_new3()
 {
   auto obj = new QLine( PINT(1), PINT(2), PINT(3), PINT(4) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QLine()
-[2]QLine(const QPoint & p1, const QPoint & p2)
-[3]QLine(int x1, int y1, int x2, int y2)
-*/
 
 HB_FUNC_STATIC( QLINE_NEW )
 {
@@ -360,7 +354,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
 }
 
 /*
-void setP1(const QPoint & p1)
+void setP1( const QPoint & p1 )
 */
 HB_FUNC_STATIC( QLINE_SETP1 )
 {
@@ -386,7 +380,7 @@ HB_FUNC_STATIC( QLINE_SETP1 )
 }
 
 /*
-void setP2(const QPoint & p2)
+void setP2( const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETP2 )
 {
@@ -412,7 +406,7 @@ HB_FUNC_STATIC( QLINE_SETP2 )
 }
 
 /*
-void setLine(int x1, int y1, int x2, int y2)
+void setLine( int x1, int y1, int x2, int y2 )
 */
 HB_FUNC_STATIC( QLINE_SETLINE )
 {
@@ -438,7 +432,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
 }
 
 /*
-void setPoints(const QPoint & p1, const QPoint & p2)
+void setPoints( const QPoint & p1, const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
@@ -464,7 +458,7 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
 }
 
 /*
-void translate(const QPoint & offset)
+void translate( const QPoint & offset )
 */
 void QLine_translate1()
 {
@@ -479,7 +473,7 @@ void QLine_translate1()
 }
 
 /*
-void translate(int dx, int dy)
+void translate( int dx, int dy )
 */
 void QLine_translate2()
 {
@@ -492,11 +486,6 @@ void QLine_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate(const QPoint & offset)
-[2]void translate(int dx, int dy)
-*/
 
 HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
@@ -515,7 +504,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 }
 
 /*
-QLine translated(const QPoint & offset) const
+QLine translated( const QPoint & offset ) const
 */
 void QLine_translated1()
 {
@@ -529,7 +518,7 @@ void QLine_translated1()
 }
 
 /*
-QLine translated(int dx, int dy) const
+QLine translated( int dx, int dy ) const
 */
 void QLine_translated2()
 {
@@ -541,11 +530,6 @@ void QLine_translated2()
     Qt5xHb::createReturnClass( ptr, "QLINE", true );
   }
 }
-
-/*
-[1]QLine translated(const QPoint & offset) const
-[2]QLine translated(int dx, int dy) const
-*/
 
 HB_FUNC_STATIC( QLINE_TRANSLATED )
 {

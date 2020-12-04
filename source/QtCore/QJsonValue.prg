@@ -86,7 +86,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QJsonValue(Type type = Null)
+QJsonValue( QJsonValue::Type type = QJsonValue::Null )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 }
 
 /*
-QJsonValue(bool b)
+QJsonValue( bool b )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 }
 
 /*
-QJsonValue(double n)
+QJsonValue( double n )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 }
 
 /*
-QJsonValue(const QString & s)
+QJsonValue( const QString & s )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
@@ -122,11 +122,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 }
 
 /*
-QJsonValue(QLatin1String s)
-*/
-
-/*
-QJsonValue(const QJsonArray & a)
+QJsonValue( const QJsonArray & a )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 {
@@ -135,7 +131,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 }
 
 /*
-QJsonValue(const QJsonObject & o)
+QJsonValue( const QJsonObject & o )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 {
@@ -144,7 +140,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 }
 
 /*
-QJsonValue(const QJsonValue & other)
+QJsonValue( const QJsonValue & other )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 {
@@ -153,7 +149,7 @@ HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 }
 
 /*
-QJsonValue(int n)
+QJsonValue( int n )
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 {
@@ -161,21 +157,9 @@ HB_FUNC_STATIC( QJSONVALUE_NEW9 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QJsonValue(Type type = Null)
-[2]QJsonValue(bool b)
-[3]QJsonValue(double n)
-[4]QJsonValue(const QString & s)
-[5]QJsonValue(QLatin1String s)
-[6]QJsonValue(const QJsonArray & a)
-[7]QJsonValue(const QJsonObject & o)
-[8]QJsonValue(const QJsonValue & other)
-[9]QJsonValue(int n)
-*/
-
 HB_FUNC_STATIC( QJSONVALUE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     HB_FUNC_EXEC( QJSONVALUE_NEW1 );
   }
@@ -396,7 +380,7 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
 }
 
 /*
-QJsonArray toArray(const QJsonArray & defaultValue) const
+QJsonArray toArray( const QJsonArray & defaultValue ) const
 */
 void QJsonValue_toArray1()
 {
@@ -423,11 +407,6 @@ void QJsonValue_toArray2()
   }
 }
 
-/*
-[1]QJsonArray toArray(const QJsonArray & defaultValue) const
-[2]QJsonArray toArray() const
-*/
-
 HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 {
   if( ISNUMPAR(1) && ISQJSONARRAY(1) )
@@ -445,7 +424,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 }
 
 /*
-bool toBool(bool defaultValue = false) const
+bool toBool( bool defaultValue = false ) const
 */
 HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
 {
@@ -454,7 +433,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->toBool( OPBOOL(1,false) ) );
@@ -469,7 +448,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOBOOL )
 }
 
 /*
-double toDouble(double defaultValue = 0) const
+double toDouble( double defaultValue = 0 ) const
 */
 HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
 {
@@ -478,7 +457,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RDOUBLE( obj->toDouble( OPDOUBLE(1,0) ) );
@@ -493,7 +472,7 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
 }
 
 /*
-QJsonObject toObject(const QJsonObject & defaultValue) const
+QJsonObject toObject( const QJsonObject & defaultValue ) const
 */
 void QJsonValue_toObject1()
 {
@@ -520,11 +499,6 @@ void QJsonValue_toObject2()
   }
 }
 
-/*
-[1]QJsonObject toObject(const QJsonObject & defaultValue) const
-[2]QJsonObject toObject() const
-*/
-
 HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 {
   if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
@@ -542,7 +516,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 }
 
 /*
-QString toString(const QString & defaultValue = QString()) const
+QString toString( const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
 {
@@ -551,7 +525,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( OPQSTRING(1,QString()) ) );
@@ -591,7 +565,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOVARIANT )
 }
 
 /*
-Type type() const
+QJsonValue::Type type() const
 */
 HB_FUNC_STATIC( QJSONVALUE_TYPE )
 {
@@ -615,7 +589,7 @@ HB_FUNC_STATIC( QJSONVALUE_TYPE )
 }
 
 /*
-static QJsonValue fromVariant(const QVariant & variant)
+static QJsonValue fromVariant( const QVariant & variant )
 */
 HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
 {

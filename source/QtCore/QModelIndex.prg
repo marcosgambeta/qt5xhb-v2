@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QModelIndex ()
+QModelIndex()
 */
 void QModelIndex_new1()
 {
@@ -78,18 +78,13 @@ void QModelIndex_new1()
 }
 
 /*
-QModelIndex ( const QModelIndex & other )
+QModelIndex( const QModelIndex & other )
 */
 void QModelIndex_new2()
 {
   auto obj = new QModelIndex( *PQMODELINDEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QModelIndex ()
-[2]QModelIndex ( const QModelIndex & other )
-*/
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
@@ -125,7 +120,7 @@ HB_FUNC_STATIC( QMODELINDEX_DELETE )
 }
 
 /*
-QModelIndex child(int row, int column) const
+QModelIndex child( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
@@ -174,7 +169,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 }
 
 /*
-QVariant data(int role = Qt::DisplayRole) const
+QVariant data( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_DATA )
 {
@@ -183,7 +178,7 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
@@ -369,7 +364,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
 }
 
 /*
-QModelIndex sibling(int row, int column) const
+QModelIndex sibling( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {

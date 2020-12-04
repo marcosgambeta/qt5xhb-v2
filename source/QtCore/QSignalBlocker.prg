@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
+QSignalBlocker( QObject * o ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
 {
@@ -78,15 +78,6 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
   }
 #endif
 }
-
-/*
-explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
-*/
-
-/*
-[1]explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
-[2]explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
-*/
 
 /*
 ~QSignalBlocker()

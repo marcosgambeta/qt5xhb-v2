@@ -73,7 +73,7 @@ void QPointF_new1()
 }
 
 /*
-QPointF(const QPoint & point)
+QPointF( const QPoint & point )
 */
 void QPointF_new2()
 {
@@ -82,19 +82,13 @@ void QPointF_new2()
 }
 
 /*
-QPointF(qreal xpos, qreal ypos)
+QPointF( qreal xpos, qreal ypos )
 */
 void QPointF_new3()
 {
   auto obj = new QPointF( PQREAL(1), PQREAL(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPointF()
-[2]QPointF(const QPoint & point)
-[3]QPointF(qreal xpos, qreal ypos)
-*/
 
 HB_FUNC_STATIC( QPOINTF_NEW )
 {
@@ -182,7 +176,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 }
 
 /*
-void setX(qreal x)
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
@@ -208,7 +202,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
 }
 
 /*
-void setY(qreal y)
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {

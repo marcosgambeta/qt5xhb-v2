@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QThreadPool(QObject *parent = nullptr)
+QThreadPool( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 }
 
 /*
-void start(QRunnable *runnable, int priority = 0)
+void start( QRunnable * runnable, int priority = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_START )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQRUNNABLE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQRUNNABLE(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->start( PQRUNNABLE(1), OPINT(2,0) );
@@ -127,9 +127,8 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
 /*
 void QThreadPool::start(std::function<void ()> functionToRun, int priority = 0)
 */
-
 /*
-bool tryStart(QRunnable *runnable)
+bool tryStart( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
@@ -155,7 +154,6 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 /*
 bool QThreadPool::tryStart(std::function<void ()> functionToRun)
 */
-
 /*
 int expiryTimeout() const
 */
@@ -181,7 +179,7 @@ HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 }
 
 /*
-void setExpiryTimeout(int expiryTimeout)
+void setExpiryTimeout( int expiryTimeout )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
@@ -231,7 +229,7 @@ HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 }
 
 /*
-void setMaxThreadCount(int maxThreadCount)
+void setMaxThreadCount( int maxThreadCount )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
@@ -333,7 +331,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 }
 
 /*
-bool waitForDone(int msecs = -1)
+bool waitForDone( int msecs = -1 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
@@ -342,7 +340,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForDone( OPINT(1,-1) ) );
@@ -385,7 +383,7 @@ HB_FUNC_STATIC( QTHREADPOOL_CLEAR )
 }
 
 /*
-static QThreadPool *globalInstance()
+static QThreadPool * globalInstance()
 */
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
@@ -405,7 +403,7 @@ HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 }
 
 /*
-bool tryTake(QRunnable *runnable)
+bool tryTake( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYTAKE )
 {
@@ -457,7 +455,7 @@ HB_FUNC_STATIC( QTHREADPOOL_STACKSIZE )
 }
 
 /*
-void setStackSize(uint stackSize)
+void setStackSize( uint stackSize )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETSTACKSIZE )
 {

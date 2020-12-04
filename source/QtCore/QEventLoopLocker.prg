@@ -65,7 +65,7 @@ void QEventLoopLocker_new1()
 }
 
 /*
-QEventLoopLocker(QEventLoop * loop)
+QEventLoopLocker( QEventLoop * loop )
 */
 void QEventLoopLocker_new2()
 {
@@ -74,19 +74,13 @@ void QEventLoopLocker_new2()
 }
 
 /*
-QEventLoopLocker(QThread * thread)
+QEventLoopLocker( QThread * thread )
 */
 void QEventLoopLocker_new3()
 {
   auto obj = new QEventLoopLocker( PQTHREAD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QEventLoopLocker()
-[2]QEventLoopLocker(QEventLoop * loop)
-[3]QEventLoopLocker(QThread * thread)
-*/
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {

@@ -75,23 +75,13 @@ void QUuid_new1()
 }
 
 /*
-QUuid(const QByteArray & text)
+QUuid( const QByteArray & text )
 */
 void QUuid_new2()
 {
   auto obj = new QUuid( *PQBYTEARRAY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QUuid(const GUID & guid)
-*/
-
-/*
-[1]QUuid()
-[2]QUuid(const QByteArray & text)
-[3]QUuid(const GUID & guid) // TODO: implementar metodo
-*/
 
 HB_FUNC_STATIC( QUUID_NEW )
 {
@@ -273,7 +263,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
 }
 
 /*
-static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
+static QUuid createUuidV3( const QUuid & ns, const QByteArray & baseData )
 */
 void QUuid_createUuidV31()
 {
@@ -282,18 +272,13 @@ void QUuid_createUuidV31()
 }
 
 /*
-static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
+static QUuid createUuidV3( const QUuid & ns, const QString & baseData )
 */
 void QUuid_createUuidV32()
 {
   auto ptr = new QUuid( QUuid::createUuidV3( *PQUUID(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
-
-/*
-[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
-[2]QUuid createUuidV3(const QUuid & ns, const QString & baseData)
-*/
 
 HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 {
@@ -312,7 +297,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 }
 
 /*
-static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
+static QUuid createUuidV5( const QUuid & ns, const QByteArray & baseData )
 */
 void QUuid_createUuidV51()
 {
@@ -321,18 +306,13 @@ void QUuid_createUuidV51()
 }
 
 /*
-static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
+static QUuid createUuidV5( const QUuid & ns, const QString & baseData )
 */
 void QUuid_createUuidV52()
 {
   auto ptr = new QUuid( QUuid::createUuidV5( *PQUUID(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
-
-/*
-[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
-[2]QUuid createUuidV5(const QUuid & ns, const QString & baseData)
-*/
 
 HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 {
@@ -351,7 +331,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 }
 
 /*
-static QUuid fromRfc4122(const QByteArray & bytes)
+static QUuid fromRfc4122( const QByteArray & bytes )
 */
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {

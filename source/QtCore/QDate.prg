@@ -82,7 +82,7 @@ RETURN
 #endif
 
 /*
-QDate ()
+QDate()
 */
 void QDate_new1()
 {
@@ -91,18 +91,13 @@ void QDate_new1()
 }
 
 /*
-QDate ( int y, int m, int d )
+QDate( int y, int m, int d )
 */
 void QDate_new2()
 {
   auto obj = new QDate( PINT(1), PINT(2), PINT(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDate ()
-[2]QDate ( int y, int m, int d )
-*/
 
 HB_FUNC_STATIC( QDATE_NEW )
 {
@@ -138,7 +133,7 @@ HB_FUNC_STATIC( QDATE_DELETE )
 }
 
 /*
-QDate addDays ( int ndays ) const
+QDate addDays( int ndays ) const
 */
 HB_FUNC_STATIC( QDATE_ADDDAYS )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
 }
 
 /*
-QDate addMonths ( int nmonths ) const
+QDate addMonths( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATE_ADDMONTHS )
 {
@@ -188,7 +183,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
 }
 
 /*
-QDate addYears ( int nyears ) const
+QDate addYears( int nyears ) const
 */
 HB_FUNC_STATIC( QDATE_ADDYEARS )
 {
@@ -213,7 +208,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
 }
 
 /*
-int day () const
+int day() const
 */
 HB_FUNC_STATIC( QDATE_DAY )
 {
@@ -237,7 +232,7 @@ HB_FUNC_STATIC( QDATE_DAY )
 }
 
 /*
-int dayOfWeek () const
+int dayOfWeek() const
 */
 HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 {
@@ -261,7 +256,7 @@ HB_FUNC_STATIC( QDATE_DAYOFWEEK )
 }
 
 /*
-int dayOfYear () const
+int dayOfYear() const
 */
 HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 {
@@ -285,7 +280,7 @@ HB_FUNC_STATIC( QDATE_DAYOFYEAR )
 }
 
 /*
-int daysInMonth () const
+int daysInMonth() const
 */
 HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 {
@@ -309,7 +304,7 @@ HB_FUNC_STATIC( QDATE_DAYSINMONTH )
 }
 
 /*
-int daysInYear () const
+int daysInYear() const
 */
 HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 {
@@ -333,7 +328,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 }
 
 /*
-int daysTo ( const QDate & d ) const
+int daysTo( const QDate & d ) const
 */
 HB_FUNC_STATIC( QDATE_DAYSTO )
 {
@@ -357,7 +352,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
 }
 
 /*
-void getDate ( int * year, int * month, int * day )
+void getDate( int * year, int * month, int * day )
 */
 HB_FUNC_STATIC( QDATE_GETDATE )
 {
@@ -389,7 +384,7 @@ HB_FUNC_STATIC( QDATE_GETDATE )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDATE_ISNULL )
 {
@@ -413,7 +408,7 @@ HB_FUNC_STATIC( QDATE_ISNULL )
 }
 
 /*
-int month () const
+int month() const
 */
 HB_FUNC_STATIC( QDATE_MONTH )
 {
@@ -437,7 +432,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
 }
 
 /*
-bool setDate ( int year, int month, int day )
+bool setDate( int year, int month, int day )
 */
 HB_FUNC_STATIC( QDATE_SETDATE )
 {
@@ -461,7 +456,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
 }
 
 /*
-int toJulianDay () const
+int toJulianDay() const
 */
 HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 {
@@ -485,7 +480,7 @@ HB_FUNC_STATIC( QDATE_TOJULIANDAY )
 }
 
 /*
-QString toString ( const QString & format ) const
+QString toString( const QString & format ) const
 */
 void QDate_toString1()
 {
@@ -498,7 +493,7 @@ void QDate_toString1()
 }
 
 /*
-QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDate_toString2()
 {
@@ -510,18 +505,13 @@ void QDate_toString2()
   }
 }
 
-/*
-[1]QString toString ( const QString & format ) const
-[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
-*/
-
 HB_FUNC_STATIC( QDATE_TOSTRING )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QDate_toString1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QDate_toString2();
   }
@@ -532,7 +522,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 }
 
 /*
-int weekNumber ( int * yearNumber = nullptr ) const
+int weekNumber( int * yearNumber = nullptr ) const
 */
 HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 {
@@ -541,7 +531,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       int par1;
@@ -558,7 +548,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 }
 
 /*
-int year () const
+int year() const
 */
 HB_FUNC_STATIC( QDATE_YEAR )
 {
@@ -582,7 +572,7 @@ HB_FUNC_STATIC( QDATE_YEAR )
 }
 
 /*
-static QDate currentDate ()
+static QDate currentDate()
 */
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
@@ -602,7 +592,7 @@ HB_FUNC_STATIC( QDATE_CURRENTDATE )
 }
 
 /*
-static QDate fromJulianDay ( int jd )
+static QDate fromJulianDay( int jd )
 */
 HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
@@ -622,7 +612,7 @@ HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 }
 
 /*
-static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+static QDate fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
 void QDate_fromString1()
 {
@@ -631,7 +621,7 @@ void QDate_fromString1()
 }
 
 /*
-static QDate fromString ( const QString & string, const QString & format )
+static QDate fromString( const QString & string, const QString & format )
 */
 void QDate_fromString2()
 {
@@ -639,14 +629,9 @@ void QDate_fromString2()
   Qt5xHb::createReturnClass( ptr, "QDATE", true );
 }
 
-/*
-[1]QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-[2]QDate fromString ( const QString & string, const QString & format )
-*/
-
 HB_FUNC_STATIC( QDATE_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDate_fromString1();
   }
@@ -661,7 +646,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
 }
 
 /*
-static bool isLeapYear ( int year )
+static bool isLeapYear( int year )
 */
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
@@ -680,7 +665,7 @@ HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 void QDate_isValid1()
 {
@@ -693,17 +678,12 @@ void QDate_isValid1()
 }
 
 /*
-static bool isValid ( int year, int month, int day )
+static bool isValid( int year, int month, int day )
 */
 void QDate_isValid2()
 {
   RBOOL( QDate::isValid( PINT(1), PINT(2), PINT(3) ) );
 }
-
-/*
-[1]bool isValid () const
-[2]bool isValid ( int year, int month, int day )
-*/
 
 HB_FUNC_STATIC( QDATE_ISVALID )
 {
@@ -722,7 +702,7 @@ HB_FUNC_STATIC( QDATE_ISVALID )
 }
 
 /*
-static QString longDayName ( int weekday )
+static QString longDayName( int weekday )
 */
 void QDate_longDayName1()
 {
@@ -730,17 +710,12 @@ void QDate_longDayName1()
 }
 
 /*
-static QString longDayName ( int weekday, MonthNameType type )
+static QString longDayName( int weekday, QDate::MonthNameType type )
 */
 void QDate_longDayName2()
 {
   RQSTRING( QDate::longDayName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
-
-/*
-[1]QString longDayName ( int weekday )
-[2]QString longDayName ( int weekday, MonthNameType type )
-*/
 
 HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 {
@@ -759,7 +734,7 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
 }
 
 /*
-static QString longMonthName ( int month )
+static QString longMonthName( int month )
 */
 void QDate_longMonthName1()
 {
@@ -767,17 +742,12 @@ void QDate_longMonthName1()
 }
 
 /*
-static QString longMonthName ( int month, MonthNameType type )
+static QString longMonthName( int month, QDate::MonthNameType type )
 */
 void QDate_longMonthName2()
 {
   RQSTRING( QDate::longMonthName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
-
-/*
-[1]QString longMonthName ( int month )
-[2]QString longMonthName ( int month, MonthNameType type )
-*/
 
 HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 {
@@ -796,7 +766,7 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
 }
 
 /*
-static QString shortDayName ( int weekday )
+static QString shortDayName( int weekday )
 */
 void QDate_shortDayName1()
 {
@@ -804,17 +774,12 @@ void QDate_shortDayName1()
 }
 
 /*
-static QString shortDayName ( int weekday, MonthNameType type )
+static QString shortDayName( int weekday, QDate::MonthNameType type )
 */
 void QDate_shortDayName2()
 {
   RQSTRING( QDate::shortDayName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
-
-/*
-[1]QString shortDayName ( int weekday )
-[2]QString shortDayName ( int weekday, MonthNameType type )
-*/
 
 HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 {
@@ -833,7 +798,7 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
 }
 
 /*
-static QString shortMonthName ( int month )
+static QString shortMonthName( int month )
 */
 void QDate_shortMonthName1()
 {
@@ -841,17 +806,12 @@ void QDate_shortMonthName1()
 }
 
 /*
-static QString shortMonthName ( int month, MonthNameType type )
+static QString shortMonthName( int month, QDate::MonthNameType type )
 */
 void QDate_shortMonthName2()
 {
   RQSTRING( QDate::shortMonthName( PINT(1), (QDate::MonthNameType) hb_parni(2) ) );
 }
-
-/*
-[1]QString shortMonthName ( int month )
-[2]QString shortMonthName ( int month, MonthNameType type )
-*/
 
 HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
 {

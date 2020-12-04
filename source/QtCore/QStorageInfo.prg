@@ -89,7 +89,7 @@ void QStorageInfo_new1()
 }
 
 /*
-explicit QStorageInfo(const QString &path)
+QStorageInfo( const QString & path )
 */
 void QStorageInfo_new2()
 {
@@ -100,7 +100,7 @@ void QStorageInfo_new2()
 }
 
 /*
-explicit QStorageInfo(const QDir &dir)
+QStorageInfo( const QDir & dir )
 */
 void QStorageInfo_new3()
 {
@@ -111,7 +111,7 @@ void QStorageInfo_new3()
 }
 
 /*
-QStorageInfo(const QStorageInfo &other)
+QStorageInfo( const QStorageInfo & other )
 */
 void QStorageInfo_new4()
 {
@@ -120,13 +120,6 @@ void QStorageInfo_new4()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QStorageInfo()
-[2]explicit QStorageInfo(const QString &path)
-[3]explicit QStorageInfo(const QDir &dir)
-[4]QStorageInfo(const QStorageInfo &other)
-*/
 
 HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 {
@@ -172,7 +165,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DELETE )
 }
 
 /*
-void swap(QStorageInfo &other)
+void swap( QStorageInfo & other )
 */
 HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
 {
@@ -200,7 +193,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
 }
 
 /*
-void setPath(const QString &path)
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
 {

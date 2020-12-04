@@ -98,7 +98,7 @@ RETURN
 #endif
 
 /*
-QChar ()
+QChar()
 */
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
@@ -107,27 +107,25 @@ HB_FUNC_STATIC( QCHAR_NEW1 )
 }
 
 /*
-QChar ( char ch )
+QChar( char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
-  char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  QChar * o = new QChar ( par1 );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QChar( PCHAR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
-QChar ( uchar ch )
+QChar( uchar ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
-  uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  QChar * o = new QChar ( par1 );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QChar( PUCHAR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
-QChar ( QLatin1Char ch )
+QChar( QLatin1Char ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
@@ -136,18 +134,16 @@ HB_FUNC_STATIC( QCHAR_NEW4 )
 }
 
 /*
-QChar ( uchar cell, uchar row )
+QChar( uchar cell, uchar row )
 */
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
-  uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
-  uchar par2 = ISCHAR(2)? (uchar) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
-  QChar * o = new QChar ( par1, par2 );
-  Qt5xHb::returnNewObject( o, false );
+  auto obj = new QChar( PUCHAR(1), PUCHAR(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
-QChar ( ushort code )
+QChar( ushort code )
 */
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
@@ -156,7 +152,7 @@ HB_FUNC_STATIC( QCHAR_NEW6 )
 }
 
 /*
-QChar ( short code )
+QChar( short code )
 */
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
@@ -165,7 +161,7 @@ HB_FUNC_STATIC( QCHAR_NEW7 )
 }
 
 /*
-QChar ( uint code )
+QChar( uint code )
 */
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
@@ -174,7 +170,7 @@ HB_FUNC_STATIC( QCHAR_NEW8 )
 }
 
 /*
-QChar ( int code )
+QChar( int code )
 */
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
@@ -183,7 +179,7 @@ HB_FUNC_STATIC( QCHAR_NEW9 )
 }
 
 /*
-QChar ( SpecialCharacter ch )
+QChar( QChar::SpecialCharacter ch )
 */
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
@@ -191,20 +187,7 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[01]QChar ()
-[02]QChar ( char ch )
-[03]QChar ( uchar ch )
-[04]QChar ( QLatin1Char ch )
-[05]QChar ( uchar cell, uchar row )
-[06]QChar ( ushort code )
-[07]QChar ( short code )
-[08]QChar ( uint code )
-[09]QChar ( int code )
-[10]QChar ( SpecialCharacter ch )
-*/
-
-HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
+HB_FUNC_STATIC( QCHAR_NEW )
 {
   HB_FUNC_EXEC( QCHAR_NEW1 );
 }
@@ -227,7 +210,7 @@ HB_FUNC_STATIC( QCHAR_DELETE )
 }
 
 /*
-Category category () const
+QChar::Category category() const
 */
 HB_FUNC_STATIC( QCHAR_CATEGORY )
 {
@@ -251,7 +234,7 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
 }
 
 /*
-uchar cell () const
+uchar cell() const
 */
 HB_FUNC_STATIC( QCHAR_CELL )
 {
@@ -275,7 +258,7 @@ HB_FUNC_STATIC( QCHAR_CELL )
 }
 
 /*
-unsigned char combiningClass () const
+unsigned char combiningClass() const
 */
 HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 {
@@ -299,7 +282,7 @@ HB_FUNC_STATIC( QCHAR_COMBININGCLASS )
 }
 
 /*
-Decomposition decompositionTag () const
+QChar::Decomposition decompositionTag() const
 */
 HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 {
@@ -323,7 +306,7 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 }
 
 /*
-int digitValue () const
+int digitValue() const
 */
 HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 {
@@ -347,7 +330,7 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 }
 
 /*
-Direction direction () const
+QChar::Direction direction() const
 */
 HB_FUNC_STATIC( QCHAR_DIRECTION )
 {
@@ -371,7 +354,7 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 }
 
 /*
-bool hasMirrored () const
+bool hasMirrored() const
 */
 HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 {
@@ -395,7 +378,7 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 }
 
 /*
-bool isDigit () const
+bool isDigit() const
 */
 HB_FUNC_STATIC( QCHAR_ISDIGIT )
 {
@@ -419,7 +402,7 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
 }
 
 /*
-bool isHighSurrogate () const
+bool isHighSurrogate() const
 */
 HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 {
@@ -443,7 +426,7 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 }
 
 /*
-bool isLetter () const
+bool isLetter() const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTER )
 {
@@ -467,7 +450,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
 }
 
 /*
-bool isLetterOrNumber () const
+bool isLetterOrNumber() const
 */
 HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 {
@@ -491,7 +474,7 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 }
 
 /*
-bool isLowSurrogate () const
+bool isLowSurrogate() const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 {
@@ -515,7 +498,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 }
 
 /*
-bool isLower () const
+bool isLower() const
 */
 HB_FUNC_STATIC( QCHAR_ISLOWER )
 {
@@ -539,7 +522,7 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
 }
 
 /*
-bool isMark () const
+bool isMark() const
 */
 HB_FUNC_STATIC( QCHAR_ISMARK )
 {
@@ -563,7 +546,7 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QCHAR_ISNULL )
 {
@@ -587,7 +570,7 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
 }
 
 /*
-bool isNumber () const
+bool isNumber() const
 */
 HB_FUNC_STATIC( QCHAR_ISNUMBER )
 {
@@ -611,7 +594,7 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
 }
 
 /*
-bool isPrint () const
+bool isPrint() const
 */
 HB_FUNC_STATIC( QCHAR_ISPRINT )
 {
@@ -635,7 +618,7 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
 }
 
 /*
-bool isPunct () const
+bool isPunct() const
 */
 HB_FUNC_STATIC( QCHAR_ISPUNCT )
 {
@@ -659,7 +642,7 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
 }
 
 /*
-bool isSpace () const
+bool isSpace() const
 */
 HB_FUNC_STATIC( QCHAR_ISSPACE )
 {
@@ -683,7 +666,7 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
 }
 
 /*
-bool isSymbol () const
+bool isSymbol() const
 */
 HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 {
@@ -707,7 +690,7 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 }
 
 /*
-bool isTitleCase () const
+bool isTitleCase() const
 */
 HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 {
@@ -731,7 +714,7 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 }
 
 /*
-bool isUpper () const
+bool isUpper() const
 */
 HB_FUNC_STATIC( QCHAR_ISUPPER )
 {
@@ -755,7 +738,7 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
 }
 
 /*
-Joining joining () const
+QChar::Joining joining() const
 */
 HB_FUNC_STATIC( QCHAR_JOINING )
 {
@@ -779,7 +762,7 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 }
 
 /*
-QChar mirroredChar () const
+QChar mirroredChar() const
 */
 HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 {
@@ -804,7 +787,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 }
 
 /*
-uchar row () const
+uchar row() const
 */
 HB_FUNC_STATIC( QCHAR_ROW )
 {
@@ -828,7 +811,7 @@ HB_FUNC_STATIC( QCHAR_ROW )
 }
 
 /*
-QChar toCaseFolded () const
+QChar toCaseFolded() const
 */
 HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 {
@@ -853,7 +836,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 }
 
 /*
-char toLatin1 () const
+char toLatin1() const
 */
 HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 {
@@ -877,7 +860,7 @@ HB_FUNC_STATIC( QCHAR_TOLATIN1 )
 }
 
 /*
-QChar toLower () const
+QChar toLower() const
 */
 HB_FUNC_STATIC( QCHAR_TOLOWER )
 {
@@ -902,7 +885,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
 }
 
 /*
-QChar toTitleCase () const
+QChar toTitleCase() const
 */
 HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 {
@@ -927,7 +910,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 }
 
 /*
-QChar toUpper () const
+QChar toUpper() const
 */
 HB_FUNC_STATIC( QCHAR_TOUPPER )
 {
@@ -952,7 +935,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
 }
 
 /*
-ushort unicode () const
+ushort unicode() const
 */
 HB_FUNC_STATIC( QCHAR_UNICODE )
 {
@@ -976,7 +959,7 @@ HB_FUNC_STATIC( QCHAR_UNICODE )
 }
 
 /*
-UnicodeVersion unicodeVersion () const
+QChar::UnicodeVersion unicodeVersion() const
 */
 HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
 {

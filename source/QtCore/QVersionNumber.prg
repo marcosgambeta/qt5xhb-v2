@@ -35,6 +35,7 @@ CLASS QVersionNumber
    METHOD toString
    METHOD commonPrefix
    METHOD compare
+   METHOD fromString
 
    METHOD newFrom
    METHOD newFromObject
@@ -73,7 +74,7 @@ RETURN
 #endif
 
 /*
-QVersionNumber(int maj, int min, int mic)
+QVersionNumber( int maj, int min, int mic )
 */
 void QVersionNumber_new1()
 {
@@ -84,7 +85,7 @@ void QVersionNumber_new1()
 }
 
 /*
-QVersionNumber(int maj, int min)
+QVersionNumber( int maj, int min )
 */
 void QVersionNumber_new2()
 {
@@ -95,7 +96,7 @@ void QVersionNumber_new2()
 }
 
 /*
-QVersionNumber(int maj)
+QVersionNumber( int maj )
 */
 void QVersionNumber_new3()
 {
@@ -104,18 +105,6 @@ void QVersionNumber_new3()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-QVersionNumber(std::initializer_list<int> args)
-*/
-
-/*
-QVersionNumber(QVector<int> &&seg)
-*/
-
-/*
-QVersionNumber(const QVector<int> &seg)
-*/
 
 /*
 QVersionNumber()
@@ -127,14 +116,6 @@ void QVersionNumber_new7()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-//[1]QVersionNumber(int maj, int min, int mic)
-//[2]QVersionNumber(int maj, int min)
-//[3]QVersionNumber(int maj)
-//[4]QVersionNumber(std::initializer_list<int> args)
-//[5]QVersionNumber(QVector<int> &&seg)
-//[6]QVersionNumber(const QVector<int> &seg)
-//[7]QVersionNumber()
 
 HB_FUNC( QVERSIONNUMBER_NEW )
 {
@@ -232,7 +213,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_ISNULL )
 }
 
 /*
-bool isPrefixOf(const QVersionNumber &other) const
+bool isPrefixOf( const QVersionNumber & other ) const
 */
 HB_FUNC_STATIC( QVERSIONNUMBER_ISPREFIXOF )
 {
@@ -363,7 +344,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_NORMALIZED )
 }
 
 /*
-int segmentAt(int index) const
+int segmentAt( int index ) const
 */
 HB_FUNC_STATIC( QVERSIONNUMBER_SEGMENTAT )
 {
@@ -475,7 +456,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_TOSTRING )
 }
 
 /*
-static QVersionNumber commonPrefix(const QVersionNumber &v1, const QVersionNumber &v2)
+static QVersionNumber commonPrefix( const QVersionNumber & v1, const QVersionNumber & v2 )
 */
 HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
 {
@@ -497,7 +478,7 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMMONPREFIX )
 }
 
 /*
-static int compare(const QVersionNumber &v1, const QVersionNumber &v2)
+static int compare( const QVersionNumber & v1, const QVersionNumber & v2 )
 */
 HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
 {
@@ -518,16 +499,28 @@ HB_FUNC_STATIC( QVERSIONNUMBER_COMPARE )
 }
 
 /*
-static QVersionNumber fromString(const QString &string, int *suffixIndex = nullptr)
+static QVersionNumber fromString( const QString & string, int * suffixIndex = nullptr )
 */
-
-/*
-static QVersionNumber fromString(QLatin1String string, int *suffixIndex = nullptr)
-*/
-
-/*
-static QVersionNumber fromString(QStringView string, int *suffixIndex = nullptr)
-*/
+HB_FUNC_STATIC( QVERSIONNUMBER_FROMSTRING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+#endif
+    int par2;
+    auto ptr = new QVersionNumber( QVersionNumber::fromString( PQSTRING(1), &par2 ) );
+    Qt5xHb::createReturnClass( ptr, "QVERSIONNUMBER", true );
+    hb_storni( par2, 2 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
 
 HB_FUNC_STATIC( QVERSIONNUMBER_NEWFROM )
 {

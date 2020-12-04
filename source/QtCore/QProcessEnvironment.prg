@@ -75,18 +75,13 @@ void QProcessEnvironment_new1()
 }
 
 /*
-QProcessEnvironment(const QProcessEnvironment &other)
+QProcessEnvironment( const QProcessEnvironment & other )
 */
 void QProcessEnvironment_new2()
 {
   auto obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QProcessEnvironment()
-[2]QProcessEnvironment(const QProcessEnvironment &other)
-*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 }
 
 /*
-void swap(QProcessEnvironment &other)
+void swap( QProcessEnvironment & other )
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SWAP )
 {
@@ -198,7 +193,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 }
 
 /*
-bool contains(const QString &name) const
+bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
@@ -222,7 +217,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 }
 
 /*
-void insert(const QString &name, const QString &value)
+void insert( const QString & name, const QString & value )
 */
 void QProcessEnvironment_insert1()
 {
@@ -237,7 +232,7 @@ void QProcessEnvironment_insert1()
 }
 
 /*
-void insert(const QProcessEnvironment &e)
+void insert( const QProcessEnvironment & e )
 */
 void QProcessEnvironment_insert2()
 {
@@ -250,11 +245,6 @@ void QProcessEnvironment_insert2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insert(const QString &name, const QString &value)
-[2]void insert(const QProcessEnvironment &e)
-*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
@@ -273,7 +263,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 }
 
 /*
-void remove(const QString &name)
+void remove( const QString & name )
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
@@ -299,7 +289,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 }
 
 /*
-QString value(const QString &name, const QString &defaultValue = QString()) const
+QString value( const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
@@ -308,7 +298,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->value( PQSTRING(1), OPQSTRING(2,QString()) ) );

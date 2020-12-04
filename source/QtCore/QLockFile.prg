@@ -28,6 +28,7 @@ CLASS QLockFile
    METHOD setStaleLockTime
    METHOD staleLockTime
    METHOD isLocked
+   METHOD getLockInfo
    METHOD removeStaleLockFile
 
    METHOD newFrom
@@ -67,7 +68,7 @@ RETURN
 #endif
 
 /*
-QLockFile(const QString &fileName)
+QLockFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QLOCKFILE_NEW )
 {
@@ -130,7 +131,7 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
 }
 
 /*
-bool tryLock(int timeout = 0)
+bool tryLock( int timeout = 0 )
 */
 HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
 {
@@ -140,7 +141,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->tryLock( OPINT(1,0) ) );
@@ -184,7 +185,7 @@ HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
 }
 
 /*
-void setStaleLockTime(int)
+void setStaleLockTime( int )
 */
 HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
 {
@@ -264,8 +265,32 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
 }
 
 /*
-bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
+bool getLockInfo( qint64 * pid, QString * hostname, QString * appname ) const
 */
+HB_FUNC_STATIC( QLOCKFILE_GETLOCKINFO )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  auto obj = (QLockFile *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(3) && ISNUM(1) )
+    {
+#endif
+      qint64 par1;
+      RBOOL( obj->getLockInfo( &par1, nullptr, nullptr ) );
+      hb_stornll( par1, 1 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 bool removeStaleLockFile()

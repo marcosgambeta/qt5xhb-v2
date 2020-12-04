@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QFinalState(QState * parent = nullptr)
+QFinalState( QState * parent = nullptr )
 */
 HB_FUNC_STATIC( QFINALSTATE_NEW )
 {

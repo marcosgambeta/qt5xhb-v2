@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QPluginLoader ( QObject * parent = nullptr )
+QPluginLoader( QObject * parent = nullptr )
 */
 void QPluginLoader_new1()
 {
@@ -69,7 +69,7 @@ void QPluginLoader_new1()
 }
 
 /*
-QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
+QPluginLoader( const QString & fileName, QObject * parent = nullptr )
 */
 void QPluginLoader_new2()
 {
@@ -77,18 +77,13 @@ void QPluginLoader_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPluginLoader ( QObject * parent = nullptr )
-[2]QPluginLoader ( const QString & fileName, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPluginLoader_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QPluginLoader_new2();
   }
@@ -118,7 +113,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 }
 
 /*
-QObject * instance ()
+QObject * instance()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
@@ -191,7 +186,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 }
 
 /*
-bool isLoaded () const
+bool isLoaded() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 }
 
 /*
-bool load ()
+bool load()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
@@ -239,7 +234,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 }
 
 /*
-QLibrary::LoadHints loadHints () const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
@@ -263,7 +258,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
@@ -289,7 +284,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 }
 
 /*
-void setLoadHints ( QLibrary::LoadHints loadHints )
+void setLoadHints( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
@@ -315,7 +310,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 }
 
 /*
-bool unload ()
+bool unload()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
@@ -339,7 +334,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 }
 
 /*
-QObjectList staticInstances ()
+QObjectList staticInstances()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
 {
