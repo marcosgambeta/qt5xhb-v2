@@ -76,7 +76,7 @@ RETURN
 #include <QtNetwork/QTcpSocket>
 
 /*
-explicit QTcpServer(QObject *parent = nullptr)
+QTcpServer( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTCPSERVER_NEW )
 {
@@ -90,10 +90,6 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = nullptr) [protected]
-*/
 
 /*
 virtual ~QTcpServer()
@@ -118,7 +114,7 @@ HB_FUNC_STATIC( QTCPSERVER_DELETE )
 }
 
 /*
-bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
+bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 */
 HB_FUNC_STATIC( QTCPSERVER_LISTEN )
 {
@@ -127,7 +123,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
@@ -192,7 +188,7 @@ HB_FUNC_STATIC( QTCPSERVER_ISLISTENING )
 }
 
 /*
-void setMaxPendingConnections(int numConnections)
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -315,7 +311,7 @@ HB_FUNC_STATIC( QTCPSERVER_SOCKETDESCRIPTOR )
 }
 
 /*
-bool setSocketDescriptor(qintptr socketDescriptor)
+bool setSocketDescriptor( qintptr socketDescriptor )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 {
@@ -339,7 +335,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 }
 
 /*
-bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
+bool waitForNewConnection( int msec = 0, bool * timedOut = nullptr )
 */
 HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
 {
@@ -348,7 +344,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -389,7 +385,7 @@ HB_FUNC_STATIC( QTCPSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-virtual QTcpSocket *nextPendingConnection()
+virtual QTcpSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
 {
@@ -514,7 +510,7 @@ HB_FUNC_STATIC( QTCPSERVER_RESUMEACCEPTING )
 }
 
 /*
-void setProxy(const QNetworkProxy &networkProxy)
+void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
 {
@@ -563,14 +559,6 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
 #endif
   }
 }
-
-/*
-virtual void incomingConnection(qintptr handle) [protected]
-*/
-
-/*
-void addPendingConnection(QTcpSocket* socket) [protected]
-*/
 
 /*
 void acceptError( QAbstractSocket::SocketError socketError )

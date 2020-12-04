@@ -70,7 +70,7 @@ RETURN
 #endif
 
 /*
-QNetworkConfiguration ()
+QNetworkConfiguration()
 */
 void QNetworkConfiguration_new1()
 {
@@ -79,18 +79,13 @@ void QNetworkConfiguration_new1()
 }
 
 /*
-QNetworkConfiguration ( const QNetworkConfiguration & other )
+QNetworkConfiguration( const QNetworkConfiguration & other )
 */
 void QNetworkConfiguration_new2()
 {
   auto obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkConfiguration ()
-[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_DELETE )
 }
 
 /*
-BearerType bearerType () const
+QNetworkConfiguration::BearerType bearerType() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPE )
 }
 
 /*
-BearerType bearerTypeFamily() const
+QNetworkConfiguration::BearerType bearerTypeFamily() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
 {
@@ -179,7 +174,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPEFAMILY )
 }
 
 /*
-QString bearerTypeName () const
+QString bearerTypeName() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 {
@@ -203,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_BEARERTYPENAME )
 }
 
 /*
-QList<QNetworkConfiguration> children () const
+QList<QNetworkConfiguration> children() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 {
@@ -255,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CHILDREN )
 }
 
 /*
-QString identifier () const
+QString identifier() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 {
@@ -279,7 +274,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_IDENTIFIER )
 }
 
 /*
-bool isRoamingAvailable () const
+bool isRoamingAvailable() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 {
@@ -303,7 +298,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISROAMINGAVAILABLE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 {
@@ -327,7 +322,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_ISVALID )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 {
@@ -351,7 +346,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_NAME )
 }
 
 /*
-Purpose purpose () const
+QNetworkConfiguration::Purpose purpose() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 {
@@ -375,7 +370,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_PURPOSE )
 }
 
 /*
-StateFlags state () const
+QNetworkConfiguration::StateFlags state() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 {
@@ -399,7 +394,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_STATE )
 }
 
 /*
-Type type () const
+QNetworkConfiguration::Type type() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 {
@@ -423,7 +418,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_TYPE )
 }
 
 /*
-void swap(QNetworkConfiguration &other) Q_DECL_NOTHROW
+void swap( QNetworkConfiguration & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SWAP )
 {
@@ -475,7 +470,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATION_CONNECTTIMEOUT )
 }
 
 /*
-bool setConnectTimeout(int timeout)
+bool setConnectTimeout( int timeout )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_SETCONNECTTIMEOUT )
 {

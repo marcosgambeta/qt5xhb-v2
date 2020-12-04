@@ -109,7 +109,7 @@ RETURN
 #include <QtNetwork/QSslError>
 
 /*
-explicit QNetworkAccessManager(QObject *parent = nullptr)
+QNetworkAccessManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETE )
 }
 
 /*
-NetworkAccessibility networkAccessible() const
+QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 }
 
 /*
-void setNetworkAccessible(NetworkAccessibility accessible)
+void setNetworkAccessible( QNetworkAccessManager::NetworkAccessibility accessible )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXY )
 }
 
 /*
-void setProxy(const QNetworkProxy &proxy)
+void setProxy( const QNetworkProxy & proxy )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 }
 
 /*
-QNetworkProxyFactory *proxyFactory() const
+QNetworkProxyFactory * proxyFactory() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 }
 
 /*
-void setProxyFactory(QNetworkProxyFactory *factory)
+void setProxyFactory( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
 }
 
 /*
-QAbstractNetworkCache *cache() const
+QAbstractNetworkCache * cache() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CACHE )
 }
 
 /*
-void setCache(QAbstractNetworkCache *cache)
+void setCache( QAbstractNetworkCache * cache )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 }
 
 /*
-QNetworkCookieJar *cookieJar() const
+QNetworkCookieJar * cookieJar() const
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 }
 
 /*
-void setCookieJar(QNetworkCookieJar *cookieJar)
+void setCookieJar( QNetworkCookieJar * cookieJar )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 }
 
 /*
-void setStrictTransportSecurityEnabled(bool enabled)
+void setStrictTransportSecurityEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETSTRICTTRANSPORTSECURITYENABLED )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYENABLED )
 }
 
 /*
-void enableStrictTransportSecurityStore(bool enabled, const QString &storeDir = QString())
+void enableStrictTransportSecurityStore( bool enabled, const QString & storeDir = QString() )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISLOG(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->enableStrictTransportSecurityStore( PBOOL(1), OPQSTRING(2,QString()) );
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ISSTRICTTRANSPORTSECURITYSTOREENABLED )
 }
 
 /*
-void addStrictTransportSecurityHosts(const QVector<QHstsPolicy> &knownHosts)
+void addStrictTransportSecurityHosts( const QVector<QHstsPolicy> & knownHosts )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS )
 {
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_STRICTTRANSPORTSECURITYHOSTS )
 }
 
 /*
-QNetworkReply *head(const QNetworkRequest &request)
+QNetworkReply * head( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 {
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 }
 
 /*
-QNetworkReply *get(const QNetworkRequest &request)
+QNetworkReply * get( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 }
 
 /*
-QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
+QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
 */
 void QNetworkAccessManager_post1()
 {
@@ -742,7 +742,7 @@ void QNetworkAccessManager_post1()
 }
 
 /*
-QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
+QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
 */
 void QNetworkAccessManager_post2()
 {
@@ -756,7 +756,7 @@ void QNetworkAccessManager_post2()
 }
 
 /*
-QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+QNetworkReply * post( const QNetworkRequest & request, QHttpMultiPart * multiPart )
 */
 void QNetworkAccessManager_post3()
 {
@@ -768,12 +768,6 @@ void QNetworkAccessManager_post3()
     Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
   }
 }
-
-/*
-[1]QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
-[2]QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
-[3]QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
-*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -796,7 +790,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 }
 
 /*
-QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
+QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
 */
 void QNetworkAccessManager_put1()
 {
@@ -810,7 +804,7 @@ void QNetworkAccessManager_put1()
 }
 
 /*
-QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
+QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
 */
 void QNetworkAccessManager_put2()
 {
@@ -824,7 +818,7 @@ void QNetworkAccessManager_put2()
 }
 
 /*
-QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+QNetworkReply * put( const QNetworkRequest & request, QHttpMultiPart * multiPart )
 */
 void QNetworkAccessManager_put3()
 {
@@ -836,12 +830,6 @@ void QNetworkAccessManager_put3()
     Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
   }
 }
-
-/*
-[1]QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
-[2]QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
-[3]QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
-*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
@@ -864,7 +852,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 }
 
 /*
-QNetworkReply *deleteResource(const QNetworkRequest &request)
+QNetworkReply * deleteResource( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 {
@@ -889,7 +877,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 }
 
 /*
-QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
+QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = nullptr )
 */
 void QNetworkAccessManager_sendCustomRequest1()
 {
@@ -903,7 +891,7 @@ void QNetworkAccessManager_sendCustomRequest1()
 }
 
 /*
-QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
+QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, const QByteArray & data )
 */
 void QNetworkAccessManager_sendCustomRequest2()
 {
@@ -919,7 +907,7 @@ void QNetworkAccessManager_sendCustomRequest2()
 }
 
 /*
-QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
+QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QHttpMultiPart * multiPart )
 */
 void QNetworkAccessManager_sendCustomRequest3()
 {
@@ -933,12 +921,6 @@ void QNetworkAccessManager_sendCustomRequest3()
   }
 #endif
 }
-
-/*
-[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = nullptr)
-[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
-[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
-*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {
@@ -961,7 +943,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 }
 
 /*
-void setConfiguration(const QNetworkConfiguration &config)
+void setConfiguration( const QNetworkConfiguration & config )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 {
@@ -1037,7 +1019,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ACTIVECONFIGURATION )
 }
 
 /*
-void connectToHostEncrypted(const QString &hostName, quint16 port = 443, const QSslConfiguration &sslConfiguration = QSslConfiguration::defaultConfiguration())
+void connectToHostEncrypted( const QString & hostName, quint16 port = 443, const QSslConfiguration & sslConfiguration = QSslConfiguration::defaultConfiguration() )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED )
 {
@@ -1047,7 +1029,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && (ISQSSLCONFIGURATION(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQSSLCONFIGURATION(3)||ISNIL(3)) )
     {
 #endif
       obj->connectToHostEncrypted( PQSTRING(1), OPQUINT16(2,443), ISNIL(3)? QSslConfiguration::defaultConfiguration() : *(QSslConfiguration *) Qt5xHb::itemGetPtr(3) );
@@ -1065,7 +1047,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED )
 }
 
 /*
-void connectToHost(const QString &hostName, quint16 port = 80)
+void connectToHost( const QString & hostName, quint16 port = 80 )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOST )
 {
@@ -1075,7 +1057,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOST )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->connectToHost( PQSTRING(1), OPQUINT16(2,80) );
@@ -1093,7 +1075,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOST )
 }
 
 /*
-void setRedirectPolicy(QNetworkRequest::RedirectPolicy policy)
+void setRedirectPolicy( QNetworkRequest::RedirectPolicy policy )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETREDIRECTPOLICY )
 {
@@ -1145,14 +1127,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_REDIRECTPOLICY )
   }
 #endif
 }
-
-/*
-virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = nullptr) [protected]
-*/
-
-/*
-QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
-*/
 
 /*
 void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )

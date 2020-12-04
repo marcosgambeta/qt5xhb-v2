@@ -69,18 +69,13 @@ void QDnsDomainNameRecord_new1()
 }
 
 /*
-QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
+QDnsDomainNameRecord( const QDnsDomainNameRecord & other )
 */
 void QDnsDomainNameRecord_new2()
 {
   auto obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDnsDomainNameRecord()
-[2]QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
-*/
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 {
@@ -143,7 +138,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
 }
 
 /*
-void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
+void swap( QDnsDomainNameRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
 {

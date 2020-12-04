@@ -70,7 +70,7 @@ RETURN
 #include <QtNetwork/QLocalSocket>
 
 /*
-explicit QLocalServer(QObject *parent = nullptr)
+QLocalServer( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 }
 
 /*
-SocketOptions socketOptions() const
+QLocalServer::SocketOptions socketOptions() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
 }
 
 /*
-void setSocketOptions(SocketOptions options)
+void setSocketOptions( QLocalServer::SocketOptions options )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETSOCKETOPTIONS )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 }
 
 /*
-bool listen(const QString &name)
+bool listen( const QString & name )
 */
 void QLocalServer_listen1()
 {
@@ -269,7 +269,7 @@ void QLocalServer_listen1()
 }
 
 /*
-bool listen(qintptr socketDescriptor)
+bool listen( qintptr socketDescriptor )
 */
 void QLocalServer_listen2()
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-virtual QLocalSocket *nextPendingConnection()
+virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 }
 
 /*
-static bool removeServer(const QString &name)
+static bool removeServer( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 }
 
 /*
-void setMaxPendingConnections(int numConnections)
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 }
 
 /*
-bool waitForNewConnection(int msec = 0, bool *timedOut = nullptr)
+bool waitForNewConnection( int msec = 0, bool * timedOut = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -519,10 +519,6 @@ HB_FUNC_STATIC( QLOCALSERVER_SOCKETDESCRIPTOR )
   }
 #endif
 }
-
-/*
-virtual void incomingConnection(quintptr socketDescriptor) [protected]
-*/
 
 /*
 void newConnection()

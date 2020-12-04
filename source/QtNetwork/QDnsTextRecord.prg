@@ -70,18 +70,13 @@ void QDnsTextRecord_new1()
 }
 
 /*
-QDnsTextRecord(const QDnsTextRecord & other)
+QDnsTextRecord( const QDnsTextRecord & other )
 */
 void QDnsTextRecord_new2()
 {
   auto obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDnsTextRecord()
-[2]QDnsTextRecord(const QDnsTextRecord & other)
-*/
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {
@@ -144,7 +139,7 @@ HB_FUNC_STATIC( QDNSTEXTRECORD_NAME )
 }
 
 /*
-void swap(QDnsTextRecord &other) Q_DECL_NOTHROW
+void swap( QDnsTextRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSTEXTRECORD_SWAP )
 {

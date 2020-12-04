@@ -64,7 +64,7 @@ RETURN
 #include <QtNetwork/QNetworkInterface>
 
 /*
-explicit QUdpSocket(QObject *parent = nullptr)
+QUdpSocket( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 }
 
 /*
-bool joinMulticastGroup(const QHostAddress &groupAddress)
+bool joinMulticastGroup( const QHostAddress & groupAddress )
 */
 void QUdpSocket_joinMulticastGroup1()
 {
@@ -115,7 +115,7 @@ void QUdpSocket_joinMulticastGroup1()
 }
 
 /*
-bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+bool joinMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
 */
 void QUdpSocket_joinMulticastGroup2()
 {
@@ -126,11 +126,6 @@ void QUdpSocket_joinMulticastGroup2()
     RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
-
-/*
-[1]bool joinMulticastGroup(const QHostAddress &groupAddress)
-[2]bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 {
@@ -149,7 +144,7 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 }
 
 /*
-bool leaveMulticastGroup(const QHostAddress &groupAddress)
+bool leaveMulticastGroup( const QHostAddress & groupAddress )
 */
 void QUdpSocket_leaveMulticastGroup1()
 {
@@ -162,7 +157,7 @@ void QUdpSocket_leaveMulticastGroup1()
 }
 
 /*
-bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+bool leaveMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
 */
 void QUdpSocket_leaveMulticastGroup2()
 {
@@ -173,11 +168,6 @@ void QUdpSocket_leaveMulticastGroup2()
     RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
-
-/*
-[1]bool leaveMulticastGroup(const QHostAddress &groupAddress)
-[2]bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 {
@@ -221,7 +211,7 @@ HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
 }
 
 /*
-void setMulticastInterface(const QNetworkInterface &iface)
+void setMulticastInterface( const QNetworkInterface & iface )
 */
 HB_FUNC_STATIC( QUDPSOCKET_SETMULTICASTINTERFACE )
 {
@@ -295,7 +285,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 }
 
 /*
-QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
+QNetworkDatagram receiveDatagram( qint64 maxSize = -1 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 {
@@ -305,7 +295,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QNetworkDatagram( obj->receiveDatagram( OPQINT64(1,-1) ) );
@@ -326,7 +316,7 @@ qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = nullptr, qui
 */
 
 /*
-qint64 writeDatagram(const QNetworkDatagram &datagram)
+qint64 writeDatagram( const QNetworkDatagram & datagram )
 */
 void QUdpSocket_writeDatagram1()
 {
@@ -341,7 +331,7 @@ void QUdpSocket_writeDatagram1()
 }
 
 /*
-qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
+qint64 writeDatagram( const char * data, qint64 len, const QHostAddress & host, quint16 port )
 */
 void QUdpSocket_writeDatagram2()
 {
@@ -354,7 +344,7 @@ void QUdpSocket_writeDatagram2()
 }
 
 /*
-qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
+qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
 void QUdpSocket_writeDatagram3()
 {
@@ -365,12 +355,6 @@ void QUdpSocket_writeDatagram3()
     RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
-
-/*
-[1]qint64 writeDatagram(const QNetworkDatagram &datagram)
-[2]qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
-[3]qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {

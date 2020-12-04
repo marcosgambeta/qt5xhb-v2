@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-explicit QSctpServer(QObject *parent = nullptr)
+QSctpServer(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSCTPSERVER_NEW )
 {
@@ -194,9 +194,5 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
 #endif
 #endif
 }
-
-/*
-void incomingConnection(qintptr handle) Q_DECL_OVERRIDE [protected]
-*/
 
 #pragma ENDDUMP

@@ -73,7 +73,7 @@ RETURN
 #endif
 
 /*
-explicit QHostInfo(int lookupId = -1)
+QHostInfo( int lookupId = -1 )
 */
 void QHostInfo_new1()
 {
@@ -82,7 +82,7 @@ void QHostInfo_new1()
 }
 
 /*
-QHostInfo ( const QHostInfo & other )
+QHostInfo( const QHostInfo & other )
 */
 void QHostInfo_new2()
 {
@@ -90,14 +90,9 @@ void QHostInfo_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QHostInfo(int lookupId = -1)
-[2]QHostInfo ( const QHostInfo & other )
-*/
-
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QHostInfo_new1();
   }
@@ -132,7 +127,7 @@ HB_FUNC_STATIC( QHOSTINFO_DELETE )
 }
 
 /*
-void swap(QHostInfo &other) Q_DECL_NOTHROW
+void swap( QHostInfo & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHOSTINFO_SWAP )
 {
@@ -184,7 +179,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
 }
 
 /*
-void setHostName(const QString &name)
+void setHostName( const QString & name )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
 {
@@ -262,7 +257,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
 }
 
 /*
-void setAddresses(const QList<QHostAddress> &addresses)
+void setAddresses( const QList<QHostAddress> & addresses )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 {
@@ -295,7 +290,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
 }
 
 /*
-HostInfoError error() const
+QHostInfo::HostInfoError error() const
 */
 HB_FUNC_STATIC( QHOSTINFO_ERROR )
 {
@@ -319,7 +314,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
 }
 
 /*
-void setError(HostInfoError error)
+void setError( QHostInfo::HostInfoError error )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERROR )
 {
@@ -369,7 +364,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
 }
 
 /*
-void setErrorString(const QString &errorString)
+void setErrorString( const QString & errorString )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 {
@@ -395,7 +390,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
 }
 
 /*
-void setLookupId(int id)
+void setLookupId( int id )
 */
 HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
 {
@@ -445,7 +440,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
 }
 
 /*
-static int lookupHost(const QString &name, QObject *receiver, const char *member)
+static int lookupHost( const QString & name, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 {
@@ -464,7 +459,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
 }
 
 /*
-static void abortHostLookup(int lookupId)
+static void abortHostLookup( int lookupId )
 */
 HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 {
@@ -485,7 +480,7 @@ HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
 }
 
 /*
-static QHostInfo fromName(const QString &name)
+static QHostInfo fromName( const QString & name )
 */
 HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
 {
@@ -541,10 +536,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
   }
 #endif
 }
-
-/*
-static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) [private]
-*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEWFROM )
 {

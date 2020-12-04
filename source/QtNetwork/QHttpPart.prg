@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QHttpPart ()
+QHttpPart()
 */
 void QHttpPart_new1()
 {
@@ -70,18 +70,13 @@ void QHttpPart_new1()
 }
 
 /*
-QHttpPart ( const QHttpPart & other )
+QHttpPart( const QHttpPart & other )
 */
 void QHttpPart_new2()
 {
   auto obj = new QHttpPart( *PQHTTPPART(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QHttpPart ()
-[2]QHttpPart ( const QHttpPart & other )
-*/
 
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {
@@ -120,7 +115,7 @@ HB_FUNC_STATIC( QHTTPPART_DELETE )
 }
 
 /*
-void setBody ( const QByteArray & body )
+void setBody( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
 }
 
 /*
-void setBodyDevice ( QIODevice * device )
+void setBodyDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 }
 
 /*
-void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
+void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
@@ -198,7 +193,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 }
 
 /*
-void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
+void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue )
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
@@ -224,7 +219,7 @@ HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 }
 
 /*
-void swap(QHttpPart &other) Q_DECL_NOTHROW
+void swap( QHttpPart & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHTTPPART_SWAP )
 {

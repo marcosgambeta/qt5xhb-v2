@@ -82,7 +82,7 @@ RETURN
 #include <QtNetwork/QSslConfiguration>
 
 /*
-explicit QNetworkRequest ( const QUrl & url = QUrl() )
+QNetworkRequest( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1()
 {
@@ -91,18 +91,13 @@ void QNetworkRequest_new1()
 }
 
 /*
-QNetworkRequest ( const QNetworkRequest & other )
+QNetworkRequest( const QNetworkRequest & other )
 */
 void QNetworkRequest_new2()
 {
   auto obj = new QNetworkRequest( *PQNETWORKREQUEST(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
-[2]QNetworkRequest ( const QNetworkRequest & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
 }
 
 /*
-QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
+QVariant attribute( QNetworkRequest::Attribute code, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
 }
 
 /*
-bool hasRawHeader ( const QByteArray & headerName ) const
+bool hasRawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HASRAWHEADER )
 }
 
 /*
-QVariant header ( KnownHeaders header ) const
+QVariant header( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
 {
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_HEADER )
 }
 
 /*
-QObject * originatingObject () const
+QObject * originatingObject() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 {
@@ -240,7 +235,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_ORIGINATINGOBJECT )
 }
 
 /*
-Priority priority () const
+QNetworkRequest::Priority priority() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
 {
@@ -264,7 +259,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_PRIORITY )
 }
 
 /*
-QByteArray rawHeader ( const QByteArray & headerName ) const
+QByteArray rawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
 {
@@ -289,7 +284,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADER )
 }
 
 /*
-QList<QByteArray> rawHeaderList () const
+QList<QByteArray> rawHeaderList() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 {
@@ -341,7 +336,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_RAWHEADERLIST )
 }
 
 /*
-void setAttribute ( Attribute code, const QVariant & value )
+void setAttribute( QNetworkRequest::Attribute code, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
 {
@@ -367,7 +362,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETATTRIBUTE )
 }
 
 /*
-void setHeader ( KnownHeaders header, const QVariant & value )
+void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
 {
@@ -393,7 +388,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETHEADER )
 }
 
 /*
-void setOriginatingObject ( QObject * object )
+void setOriginatingObject( QObject * object )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
 {
@@ -419,7 +414,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETORIGINATINGOBJECT )
 }
 
 /*
-void setPriority ( Priority priority )
+void setPriority( QNetworkRequest::Priority priority )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
 {
@@ -445,7 +440,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETPRIORITY )
 }
 
 /*
-void setRawHeader ( const QByteArray & headerName, const QByteArray & value )
+void setRawHeader( const QByteArray & headerName, const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 {
@@ -471,7 +466,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETRAWHEADER )
 }
 
 /*
-void setSslConfiguration ( const QSslConfiguration & configuration )
+void setSslConfiguration( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
 {
@@ -497,7 +492,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETSSLCONFIGURATION )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
 {
@@ -523,7 +518,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SETURL )
 }
 
 /*
-QSslConfiguration sslConfiguration () const
+QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 {
@@ -548,7 +543,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_SSLCONFIGURATION )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_URL )
 {
@@ -573,7 +568,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_URL )
 }
 
 /*
-void swap(QNetworkRequest &other) Q_DECL_NOTHROW
+void swap( QNetworkRequest & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SWAP )
 {
@@ -625,7 +620,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_MAXIMUMREDIRECTSALLOWED )
 }
 
 /*
-void setMaximumRedirectsAllowed(int maximumRedirectsAllowed)
+void setMaximumRedirectsAllowed( int maximumRedirectsAllowed )
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_SETMAXIMUMREDIRECTSALLOWED )
 {

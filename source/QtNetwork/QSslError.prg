@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QSslError ()
+QSslError()
 */
 void QSslError_new1()
 {
@@ -70,7 +70,7 @@ void QSslError_new1()
 }
 
 /*
-QSslError ( SslError error )
+QSslError( QSslError::SslError error )
 */
 void QSslError_new2()
 {
@@ -79,7 +79,7 @@ void QSslError_new2()
 }
 
 /*
-QSslError ( SslError error, const QSslCertificate & certificate )
+QSslError( QSslError::SslError error, const QSslCertificate & certificate )
 */
 void QSslError_new3()
 {
@@ -88,20 +88,13 @@ void QSslError_new3()
 }
 
 /*
-QSslError ( const QSslError & other )
+QSslError( const QSslError & other )
 */
 void QSslError_new4()
 {
   auto obj = new QSslError( *PQSSLERROR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslError ()
-[2]QSslError ( SslError error )
-[3]QSslError ( SslError error, const QSslCertificate & certificate )
-[4]QSslError ( const QSslError & other )
-*/
 
 HB_FUNC_STATIC( QSSLERROR_NEW )
 {
@@ -148,7 +141,7 @@ HB_FUNC_STATIC( QSSLERROR_DELETE )
 }
 
 /*
-QSslCertificate certificate () const
+QSslCertificate certificate() const
 */
 HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
@@ -173,7 +166,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 }
 
 /*
-SslError error () const
+QSslError::SslError error() const
 */
 HB_FUNC_STATIC( QSSLERROR_ERROR )
 {
@@ -197,7 +190,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {
@@ -221,7 +214,7 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 }
 
 /*
-void swap(QSslError &other) Q_DECL_NOTHROW
+void swap( QSslError & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLERROR_SWAP )
 {

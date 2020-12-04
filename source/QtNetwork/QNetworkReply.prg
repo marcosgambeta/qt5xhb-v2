@@ -87,14 +87,6 @@ RETURN
 #include <QtNetwork/QSslConfiguration>
 
 /*
-explicit QNetworkReply(QObject *parent = nullptr) [protected]
-*/
-
-/*
-QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
-*/
-
-/*
 ~QNetworkReply()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
@@ -167,7 +159,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISSEQUENTIAL )
 }
 
 /*
-qint64 readBufferSize () const
+qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
@@ -191,7 +183,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 }
 
 /*
-virtual void setReadBufferSize ( qint64 size )
+virtual void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
@@ -217,7 +209,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 }
 
 /*
-QNetworkAccessManager * manager () const
+QNetworkAccessManager * manager() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
@@ -242,7 +234,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 }
 
 /*
-QNetworkAccessManager::Operation operation () const
+QNetworkAccessManager::Operation operation() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
@@ -266,7 +258,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 }
 
 /*
-QNetworkRequest request () const
+QNetworkRequest request() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
@@ -291,7 +283,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 }
 
 /*
-NetworkError error () const
+QNetworkReply::NetworkError error() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
@@ -315,7 +307,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 }
 
 /*
-bool isFinished () const
+bool isFinished() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
@@ -339,7 +331,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 }
 
 /*
-bool isRunning () const
+bool isRunning() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
@@ -363,7 +355,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
@@ -388,7 +380,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
 }
 
 /*
-QVariant header ( QNetworkRequest::KnownHeaders header ) const
+QVariant header( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
@@ -413,7 +405,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 }
 
 /*
-bool hasRawHeader ( const QByteArray & headerName ) const
+bool hasRawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
@@ -437,7 +429,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 }
 
 /*
-QList<QByteArray> rawHeaderList () const
+QList<QByteArray> rawHeaderList() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
@@ -489,7 +481,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 }
 
 /*
-QByteArray rawHeader ( const QByteArray & headerName ) const
+QByteArray rawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
@@ -516,9 +508,8 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 /*
 const QList<RawHeaderPair>& rawHeaderPairs() const;
 */
-
 /*
-QVariant attribute ( QNetworkRequest::Attribute code ) const
+QVariant attribute( QNetworkRequest::Attribute code ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
@@ -543,7 +534,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 }
 
 /*
-QSslConfiguration sslConfiguration () const
+QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
@@ -568,7 +559,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 }
 
 /*
-void setSslConfiguration ( const QSslConfiguration & configuration )
+void setSslConfiguration( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
@@ -594,7 +585,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 }
 
 /*
-virtual void abort () = 0 (slot)
+virtual void abort() = 0
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
@@ -620,7 +611,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 }
 
 /*
-void ignoreSslErrors ( const QList<QSslError> & errors )
+void ignoreSslErrors( const QList<QSslError> & errors )
 */
 void QNetworkReply_ignoreSslErrors1()
 {
@@ -642,7 +633,7 @@ void QNetworkReply_ignoreSslErrors1()
 }
 
 /*
-virtual void ignoreSslErrors () (slot)
+virtual void ignoreSslErrors()
 */
 void QNetworkReply_ignoreSslErrors2()
 {
@@ -676,54 +667,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-virtual qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void setOperation(QNetworkAccessManager::Operation operation) [protected]
-*/
-
-/*
-void setRequest(const QNetworkRequest &request) [protected]
-*/
-
-/*
-void setError(NetworkError errorCode, const QString &errorString) [protected]
-*/
-
-/*
-void setFinished(bool) [protected]
-*/
-
-/*
-void setUrl(const QUrl &url) [protected]
-*/
-
-/*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value) [protected]
-*/
-
-/*
-void setRawHeader(const QByteArray &headerName, const QByteArray &value) [protected]
-*/
-
-/*
-void setAttribute(QNetworkRequest::Attribute code, const QVariant &value) [protected]
-*/
-
-/*
-virtual void sslConfigurationImplementation(QSslConfiguration &) const [protected]
-*/
-
-/*
-virtual void setSslConfigurationImplementation(const QSslConfiguration &) [protected]
-*/
-
-/*
-virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) [protected]
-*/
 
 /*
 void downloadProgress( qint64 bytesReceived, qint64 bytesTotal )

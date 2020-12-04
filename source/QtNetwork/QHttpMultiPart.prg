@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QHttpMultiPart(QObject *parent = nullptr)
+QHttpMultiPart( QObject * parent = nullptr )
 */
 void QHttpMultiPart_new1()
 {
@@ -63,7 +63,7 @@ void QHttpMultiPart_new1()
 }
 
 /*
-explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
+QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = nullptr )
 */
 void QHttpMultiPart_new2()
 {
@@ -71,18 +71,13 @@ void QHttpMultiPart_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QHttpMultiPart(QObject *parent = nullptr)
-[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QHttpMultiPart_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QHttpMultiPart_new2();
   }
@@ -115,7 +110,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 }
 
 /*
-void append ( const QHttpPart & httpPart )
+void append( const QHttpPart & httpPart )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 }
 
 /*
-QByteArray boundary () const
+QByteArray boundary() const
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 }
 
 /*
-void setBoundary ( const QByteArray & boundary )
+void setBoundary( const QByteArray & boundary )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
@@ -192,7 +187,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 }
 
 /*
-void setContentType ( ContentType contentType )
+void setContentType( QHttpMultiPart::ContentType contentType )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {

@@ -72,18 +72,13 @@ void QDnsServiceRecord_new1()
 }
 
 /*
-QDnsServiceRecord(const QDnsServiceRecord & other)
+QDnsServiceRecord( const QDnsServiceRecord & other )
 */
 void QDnsServiceRecord_new2()
 {
   auto obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDnsServiceRecord()
-[2]QDnsServiceRecord(const QDnsServiceRecord & other)
-*/
 
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 {
@@ -194,7 +189,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 }
 
 /*
-void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
+void swap( QDnsServiceRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {

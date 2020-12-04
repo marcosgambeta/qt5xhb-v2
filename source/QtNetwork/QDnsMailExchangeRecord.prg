@@ -70,18 +70,13 @@ void QDnsMailExchangeRecord_new1()
 }
 
 /*
-QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
 */
 void QDnsMailExchangeRecord_new2()
 {
   auto obj = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDnsMailExchangeRecord()
-[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
-*/
 
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 {
@@ -192,7 +187,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
 }
 
 /*
-void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
+void swap( QDnsMailExchangeRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
 {

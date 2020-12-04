@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QNetworkAddressEntry ()
+QNetworkAddressEntry()
 */
 void QNetworkAddressEntry_new1()
 {
@@ -75,18 +75,13 @@ void QNetworkAddressEntry_new1()
 }
 
 /*
-QNetworkAddressEntry ( const QNetworkAddressEntry & other )
+QNetworkAddressEntry( const QNetworkAddressEntry & other )
 */
 void QNetworkAddressEntry_new2()
 {
   auto obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkAddressEntry ()
-[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
@@ -125,7 +120,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 }
 
 /*
-QHostAddress broadcast () const
+QHostAddress broadcast() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 {
@@ -150,7 +145,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 }
 
 /*
-QHostAddress ip () const
+QHostAddress ip() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 {
@@ -175,7 +170,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 }
 
 /*
-QHostAddress netmask () const
+QHostAddress netmask() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 {
@@ -200,7 +195,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 }
 
 /*
-int prefixLength () const
+int prefixLength() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 {
@@ -224,7 +219,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 }
 
 /*
-void setBroadcast ( const QHostAddress & newBroadcast )
+void setBroadcast( const QHostAddress & newBroadcast )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 {
@@ -250,7 +245,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 }
 
 /*
-void setIp ( const QHostAddress & newIp )
+void setIp( const QHostAddress & newIp )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 {
@@ -276,7 +271,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 }
 
 /*
-void setNetmask ( const QHostAddress & newNetmask )
+void setNetmask( const QHostAddress & newNetmask )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 {
@@ -302,7 +297,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 }
 
 /*
-void setPrefixLength ( int length )
+void setPrefixLength( int length )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
 {
@@ -328,7 +323,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
 }
 
 /*
-void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
+void swap( QNetworkAddressEntry & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SWAP )
 {

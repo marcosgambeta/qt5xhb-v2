@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QLocalSocket(QObject *parent = nullptr)
+QLocalSocket( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 }
 
 /*
-void connectToServer(OpenMode openMode = ReadWrite)
+void connectToServer( QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QLocalSocket_connectToServer1()
 {
@@ -131,7 +131,7 @@ void QLocalSocket_connectToServer1()
 }
 
 /*
-void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
+void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QLocalSocket_connectToServer2()
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 }
 
 /*
-void setServerName(const QString &name)
+void setServerName( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETSERVERNAME )
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 }
 
 /*
-virtual bool open(OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE
+virtual bool open( QIODevice::OpenMode openMode = QIODevice::ReadWrite ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_OPEN )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_OPEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->open( ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) ) );
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 }
 
 /*
-LocalSocketError error() const
+QLocalSocket::LocalSocketError error() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 }
 
 /*
-void setReadBufferSize(qint64 size)
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 }
 
 /*
-bool setSocketDescriptor(qintptr socketDescriptor, LocalSocketState socketState = ConnectedState, OpenMode openMode = ReadWrite)
+bool setSocketDescriptor( qintptr socketDescriptor, QLocalSocket::LocalSocketState socketState = QLocalSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SETSOCKETDESCRIPTOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QLocalSocket::LocalSocketState) QLocalSocket::ConnectedState : (QLocalSocket::LocalSocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SOCKETDESCRIPTOR )
 }
 
 /*
-LocalSocketState state() const
+QLocalSocket::LocalSocketState state() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 }
 
 /*
-bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForBytesWritten( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 }
 
 /*
-bool waitForConnected(int msecs = 30000)
+bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 }
 
 /*
-bool waitForDisconnected(int msecs = 30000)
+bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 }
 
 /*
-bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForReadyRead( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -727,14 +727,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 #endif
   }
 }
-
-/*
-virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
-*/
 
 /*
 void connected()

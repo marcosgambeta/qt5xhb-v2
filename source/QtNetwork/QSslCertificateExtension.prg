@@ -72,18 +72,13 @@ void QSslCertificateExtension_new1()
 }
 
 /*
-QSslCertificateExtension(const QSslCertificateExtension &other)
+QSslCertificateExtension( const QSslCertificateExtension & other )
 */
 void QSslCertificateExtension_new2()
 {
   auto obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslCertificateExtension()
-[2]QSslCertificateExtension(const QSslCertificateExtension &other)
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_DELETE )
 }
 
 /*
-void swap(QSslCertificateExtension &other) Q_DECL_NOTHROW
+void swap( QSslCertificateExtension & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
 {

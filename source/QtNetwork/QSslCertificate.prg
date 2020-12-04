@@ -92,7 +92,7 @@ RETURN
 #include <QtNetwork/QSslKey>
 
 /*
-explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslCertificate_new1()
 {
@@ -101,7 +101,7 @@ void QSslCertificate_new1()
 }
 
 /*
-explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslCertificate_new2()
 {
@@ -110,7 +110,7 @@ void QSslCertificate_new2()
 }
 
 /*
-QSslCertificate ( const QSslCertificate & other )
+QSslCertificate( const QSslCertificate & other )
 */
 void QSslCertificate_new3()
 {
@@ -118,19 +118,13 @@ void QSslCertificate_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-[2]explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-[3]QSslCertificate ( const QSslCertificate & other )
-*/
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslCertificate_new1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslCertificate_new2();
   }
@@ -165,7 +159,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DELETE )
 }
 
 /*
-void swap(QSslCertificate &other) Q_DECL_NOTHROW
+void swap( QSslCertificate & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SWAP )
 {
@@ -191,7 +185,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SWAP )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
 {
@@ -291,7 +285,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 {
@@ -317,7 +311,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 }
 
 /*
-QByteArray version () const
+QByteArray version() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 {
@@ -342,7 +336,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 }
 
 /*
-QByteArray serialNumber () const
+QByteArray serialNumber() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 {
@@ -367,7 +361,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 }
 
 /*
-QByteArray digest(QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5) const
+QByteArray digest( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
@@ -376,7 +370,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QByteArray( obj->digest( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
@@ -392,7 +386,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 }
 
 /*
-QStringList issuerInfo ( SubjectInfo subject ) const
+QStringList issuerInfo( QSslCertificate::SubjectInfo subject ) const
 */
 void QSslCertificate_issuerInfo1()
 {
@@ -405,7 +399,7 @@ void QSslCertificate_issuerInfo1()
 }
 
 /*
-QStringList issuerInfo ( const QByteArray & attribute ) const
+QStringList issuerInfo( const QByteArray & attribute ) const
 */
 void QSslCertificate_issuerInfo2()
 {
@@ -416,11 +410,6 @@ void QSslCertificate_issuerInfo2()
     RQSTRINGLIST( obj->issuerInfo( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QStringList issuerInfo ( SubjectInfo subject ) const
-[2]QStringList issuerInfo ( const QByteArray & tag ) const
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
@@ -439,7 +428,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 }
 
 /*
-QStringList subjectInfo ( SubjectInfo subject ) const
+QStringList subjectInfo( QSslCertificate::SubjectInfo subject ) const
 */
 void QSslCertificate_subjectInfo1()
 {
@@ -452,7 +441,7 @@ void QSslCertificate_subjectInfo1()
 }
 
 /*
-QStringList subjectInfo ( const QByteArray & attribute ) const
+QStringList subjectInfo( const QByteArray & attribute ) const
 */
 void QSslCertificate_subjectInfo2()
 {
@@ -463,11 +452,6 @@ void QSslCertificate_subjectInfo2()
     RQSTRINGLIST( obj->subjectInfo( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QStringList subjectInfo(SubjectInfo subject) const
-[2]QStringList subjectInfo(const QByteArray & attribute) const
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {
@@ -592,13 +576,11 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
 /*
 QMultiMap<QSsl::AlternateNameEntryType, QString> alternateSubjectNames() const
 */
-
 /*
 QMultiMap<QSsl::AlternativeNameEntryType, QString> subjectAlternativeNames() const
 */
-
 /*
-QDateTime effectiveDate () const
+QDateTime effectiveDate() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 {
@@ -623,7 +605,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
 }
 
 /*
-QDateTime expiryDate () const
+QDateTime expiryDate() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 {
@@ -648,7 +630,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
 }
 
 /*
-QSslKey publicKey () const
+QSslKey publicKey() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
 {
@@ -725,7 +707,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
 }
 
 /*
-QByteArray toPem () const
+QByteArray toPem() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 {
@@ -750,7 +732,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
 }
 
 /*
-QByteArray toDer () const
+QByteArray toDer() const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
 {
@@ -799,12 +781,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
 }
 
 /*
-static QList<QSslCertificate> fromPath(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+static QList<QSslCertificate> fromPath( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromPath( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) );
@@ -846,12 +828,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 }
 
 /*
-static QList<QSslCertificate> fromDevice(QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem)
+static QList<QSslCertificate> fromDevice( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromDevice( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
@@ -893,12 +875,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 }
 
 /*
-static QList<QSslCertificate> fromData(const QByteArray &data, QSsl::EncodingFormat format = QSsl::Pem)
+static QList<QSslCertificate> fromData( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromData( *PQBYTEARRAY(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
@@ -940,12 +922,12 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 }
 
 /*
-static QList<QSslError> verify(QList<QSslCertificate> certificateChain, const QString &hostName = QString())
+static QList<QSslError> verify( QList<QSslCertificate> certificateChain, const QString & hostName = QString() )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> par1;
@@ -996,7 +978,6 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
 /*
 static bool importPkcs12(QIODevice *device, QSslKey *key, QSslCertificate *cert, QList<QSslCertificate> *caCertificates = nullptr, const QByteArray &passPhrase=QByteArray())
 */
-
 /*
 Qt::HANDLE handle() const
 */

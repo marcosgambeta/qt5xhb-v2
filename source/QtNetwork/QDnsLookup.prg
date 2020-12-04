@@ -80,7 +80,7 @@ RETURN
 #include <QtNetwork/QHostAddress>
 
 /*
-explicit QDnsLookup(QObject *parent = nullptr)
+QDnsLookup( QObject * parent = nullptr )
 */
 void QDnsLookup_new1()
 {
@@ -89,7 +89,7 @@ void QDnsLookup_new1()
 }
 
 /*
-QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
+QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
 */
 void QDnsLookup_new2()
 {
@@ -98,7 +98,7 @@ void QDnsLookup_new2()
 }
 
 /*
-QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
+QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
 */
 void QDnsLookup_new3()
 {
@@ -107,12 +107,6 @@ void QDnsLookup_new3()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QDnsLookup(QObject *parent = nullptr)
-[2]QDnsLookup(Type type, const QString &name, QObject *parent = nullptr)
-[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {
@@ -157,7 +151,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
 }
 
 /*
-Error error() const
+QDnsLookup::Error error() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
 {
@@ -229,7 +223,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 {
@@ -255,7 +249,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 }
 
 /*
-Type type() const
+QDnsLookup::Type type() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 {
@@ -279,7 +273,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 }
 
 /*
-void setType(QDnsLookup::Type)
+void setType( QDnsLookup::Type )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
 {
@@ -332,7 +326,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
 }
 
 /*
-void setNameserver(const QHostAddress &nameserver)
+void setNameserver( const QHostAddress & nameserver )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
 {
@@ -748,7 +742,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
 }
 
 /*
-void abort() (slot)
+void abort()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 {
@@ -774,7 +768,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 }
 
 /*
-void lookup() (slot)
+void lookup()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
 {

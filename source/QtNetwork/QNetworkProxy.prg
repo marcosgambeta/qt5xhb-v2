@@ -81,7 +81,7 @@ RETURN
 #endif
 
 /*
-QNetworkProxy ()
+QNetworkProxy()
 */
 void QNetworkProxy_new1()
 {
@@ -90,7 +90,7 @@ void QNetworkProxy_new1()
 }
 
 /*
-QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
+QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 */
 void QNetworkProxy_new2()
 {
@@ -99,7 +99,7 @@ void QNetworkProxy_new2()
 }
 
 /*
-QNetworkProxy ( const QNetworkProxy & other )
+QNetworkProxy( const QNetworkProxy & other )
 */
 void QNetworkProxy_new3()
 {
@@ -107,19 +107,13 @@ void QNetworkProxy_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QNetworkProxy ()
-[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-[3]QNetworkProxy ( const QNetworkProxy & other )
-*/
-
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QNetworkProxy_new1();
   }
-  else if( ISBETWEEN(1,5) && ISNUM(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTCHAR(4) && ISOPTCHAR(5) )
+  else if( ISBETWEEN(1,5) && ISNUM(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
     QNetworkProxy_new2();
   }
@@ -154,7 +148,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_DELETE )
 }
 
 /*
-void setType ( QNetworkProxy::ProxyType type )
+void setType( QNetworkProxy::ProxyType type )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
 {
@@ -180,7 +174,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETTYPE )
 }
 
 /*
-QNetworkProxy::ProxyType type () const
+QNetworkProxy::ProxyType type() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 {
@@ -204,7 +198,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_TYPE )
 }
 
 /*
-void setCapabilities ( Capabilities capabilities )
+void setCapabilities( QNetworkProxy::Capabilities capabilities )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
 {
@@ -230,7 +224,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETCAPABILITIES )
 }
 
 /*
-Capabilities capabilities () const
+QNetworkProxy::Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 {
@@ -254,7 +248,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_CAPABILITIES )
 }
 
 /*
-bool isCachingProxy () const
+bool isCachingProxy() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 {
@@ -278,7 +272,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISCACHINGPROXY )
 }
 
 /*
-bool isTransparentProxy () const
+bool isTransparentProxy() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 {
@@ -302,7 +296,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_ISTRANSPARENTPROXY )
 }
 
 /*
-void setUser ( const QString & userName )
+void setUser( const QString & userName )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 {
@@ -328,7 +322,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETUSER )
 }
 
 /*
-QString user () const
+QString user() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_USER )
 {
@@ -352,7 +346,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_USER )
 }
 
 /*
-void setPassword ( const QString & password )
+void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 {
@@ -378,7 +372,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPASSWORD )
 }
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 {
@@ -402,7 +396,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PASSWORD )
 }
 
 /*
-void setHostName ( const QString & hostName )
+void setHostName( const QString & hostName )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
 {
@@ -428,7 +422,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHOSTNAME )
 }
 
 /*
-QString hostName () const
+QString hostName() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 {
@@ -452,7 +446,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HOSTNAME )
 }
 
 /*
-void setPort ( quint16 port )
+void setPort( quint16 port )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 {
@@ -478,7 +472,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETPORT )
 }
 
 /*
-quint16 port () const
+quint16 port() const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 {
@@ -502,7 +496,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_PORT )
 }
 
 /*
-static void setApplicationProxy ( const QNetworkProxy & proxy )
+static void setApplicationProxy( const QNetworkProxy & proxy )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
@@ -523,7 +517,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 }
 
 /*
-static QNetworkProxy applicationProxy ()
+static QNetworkProxy applicationProxy()
 */
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
@@ -543,7 +537,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 }
 
 /*
-QVariant header(QNetworkRequest::KnownHeaders header) const
+QVariant header( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
 {
@@ -568,7 +562,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_HEADER )
 }
 
 /*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
+void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETHEADER )
 {
@@ -594,7 +588,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETHEADER )
 }
 
 /*
-bool hasRawHeader(const QByteArray &headerName) const
+bool hasRawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_HASRAWHEADER )
 {
@@ -670,7 +664,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADERLIST )
 }
 
 /*
-QByteArray rawHeader(const QByteArray &headerName) const
+QByteArray rawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
 {
@@ -695,7 +689,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_RAWHEADER )
 }
 
 /*
-void setRawHeader(const QByteArray &headerName, const QByteArray &value)
+void setRawHeader( const QByteArray & headerName, const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SETRAWHEADER )
 {
@@ -721,7 +715,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_SETRAWHEADER )
 }
 
 /*
-void swap(QNetworkProxy &other) Q_DECL_NOTHROW
+void swap( QNetworkProxy & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKPROXY_SWAP )
 {

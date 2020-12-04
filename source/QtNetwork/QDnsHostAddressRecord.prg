@@ -72,18 +72,13 @@ void QDnsHostAddressRecord_new1()
 }
 
 /*
-QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
+QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
 */
 void QDnsHostAddressRecord_new2()
 {
   auto obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDnsHostAddressRecord()
-[2]QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
-*/
 
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 }
 
 /*
-void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
+void swap( QDnsHostAddressRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {

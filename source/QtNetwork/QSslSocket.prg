@@ -134,7 +134,7 @@ RETURN
 #include <QtNetwork/QSslPreSharedKeyAuthenticator>
 
 /*
-explicit QSslSocket(QObject *parent = nullptr)
+QSslSocket( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSSLSOCKET_NEW )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSSLSOCKET_RESUME )
 }
 
 /*
-void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+void connectToHostEncrypted( const QString & hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol )
 */
 void QSslSocket_connectToHostEncrypted1()
 {
@@ -213,7 +213,7 @@ void QSslSocket_connectToHostEncrypted1()
 }
 
 /*
-void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+void connectToHostEncrypted( const QString & hostName, quint16 port, const QString & sslPeerName, QIODevice::OpenMode mode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol )
 */
 void QSslSocket_connectToHostEncrypted2()
 {
@@ -234,11 +234,11 @@ void QSslSocket_connectToHostEncrypted2()
 
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
-  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QSslSocket_connectToHostEncrypted1();
   }
-  else if( ISBETWEEN(3,5) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(3,5) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QSslSocket_connectToHostEncrypted2();
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 }
 
 /*
-bool setSocketDescriptor(qintptr socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite) Q_DECL_OVERRIDE
+bool setSocketDescriptor( qintptr socketDescriptor, QAbstractSocket::SocketState state = QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
 }
 
 /*
-void connectToHost(const QString &hostName, quint16 port, OpenMode openMode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol) Q_DECL_OVERRIDE
+void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOST )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOST )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DISCONNECTFROMHOST )
 }
 
 /*
-virtual void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value) Q_DECL_OVERRIDE
+virtual void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
 }
 
 /*
-virtual QVariant socketOption(QAbstractSocket::SocketOption option) Q_DECL_OVERRIDE
+virtual QVariant socketOption( QAbstractSocket::SocketOption option ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
 }
 
 /*
-SslMode mode() const
+QSslSocket::SslMode mode() const
 */
 HB_FUNC_STATIC( QSSLSOCKET_MODE )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
 }
 
 /*
-void setProtocol(QSsl::SslProtocol protocol)
+void setProtocol( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
 }
 
 /*
-void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
+void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYMODE )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYDEPTH )
 }
 
 /*
-void setPeerVerifyDepth(int depth)
+void setPeerVerifyDepth( int depth )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYNAME )
 }
 
 /*
-void setPeerVerifyName(const QString &hostName)
+void setPeerVerifyName( const QString & hostName )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYNAME )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ABORT )
 }
 
 /*
-void setReadBufferSize(qint64 size) Q_DECL_OVERRIDE
+void setReadBufferSize( qint64 size ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETREADBUFFERSIZE )
 {
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
 }
 
 /*
-void setSslConfiguration(const QSslConfiguration &config)
+void setSslConfiguration( const QSslConfiguration & config )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
 {
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
 }
 
 /*
-void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
+void setLocalCertificateChain( const QList<QSslCertificate> & localChain )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
 {
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
 }
 
 /*
-void setLocalCertificate(const QSslCertificate &certificate)
+void setLocalCertificate( const QSslCertificate & certificate )
 */
 void QSslSocket_setLocalCertificate1()
 {
@@ -1025,7 +1025,7 @@ void QSslSocket_setLocalCertificate1()
 }
 
 /*
-void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
+void setLocalCertificate( const QString & fileName, QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslSocket_setLocalCertificate2()
 {
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
   {
     QSslSocket_setLocalCertificate1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslSocket_setLocalCertificate2();
   }
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
 }
 
 /*
-void setPrivateKey(const QSslKey &key)
+void setPrivateKey( const QSslKey & key )
 */
 void QSslSocket_setPrivateKey1()
 {
@@ -1229,7 +1229,7 @@ void QSslSocket_setPrivateKey1()
 }
 
 /*
-void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
+void setPrivateKey( const QString & fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray & passPhrase = QByteArray() )
 */
 void QSslSocket_setPrivateKey2()
 {
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
   {
     QSslSocket_setPrivateKey1();
   }
-  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTQBYTEARRAY(4) )
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && ISOPTQBYTEARRAY(4) )
   {
     QSslSocket_setPrivateKey2();
   }
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 }
 
 /*
-void setCiphers(const QList<QSslCipher> &ciphers)
+void setCiphers( const QList<QSslCipher> & ciphers )
 */
 void QSslSocket_setCiphers1()
 {
@@ -1364,7 +1364,7 @@ void QSslSocket_setCiphers1()
 }
 
 /*
-void setCiphers(const QString &ciphers)
+void setCiphers( const QString & ciphers )
 */
 void QSslSocket_setCiphers2()
 {
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 }
 
 /*
-static void setDefaultCiphers(const QList<QSslCipher> &ciphers)
+static void setDefaultCiphers( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 {
@@ -1522,7 +1522,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 }
 
 /*
-bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+bool addCaCertificates( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 */
 void QSslSocket_addCaCertificates1()
 {
@@ -1535,7 +1535,7 @@ void QSslSocket_addCaCertificates1()
 }
 
 /*
-void addCaCertificates(const QList<QSslCertificate> &certificates)
+void addCaCertificates( const QList<QSslCertificate> & certificates )
 */
 void QSslSocket_addCaCertificates2()
 {
@@ -1563,7 +1563,7 @@ void QSslSocket_addCaCertificates2()
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSslSocket_addCaCertificates1();
   }
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 }
 
 /*
-void addCaCertificate(const QSslCertificate &certificate)
+void addCaCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
 {
@@ -1604,7 +1604,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
 }
 
 /*
-void setCaCertificates(const QList<QSslCertificate> &certificates)
+void setCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 {
@@ -1689,7 +1689,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
 }
 
 /*
-static void addDefaultCaCertificate(const QSslCertificate &certificate)
+static void addDefaultCaCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
 {
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
 }
 
 /*
-static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+static bool addDefaultCaCertificates( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 */
 void QSslSocket_addDefaultCaCertificates1()
 {
@@ -1718,7 +1718,7 @@ void QSslSocket_addDefaultCaCertificates1()
 }
 
 /*
-static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
+static void addDefaultCaCertificates( const QList<QSslCertificate> & certificates )
 */
 void QSslSocket_addDefaultCaCertificates2()
 {
@@ -1741,7 +1741,7 @@ void QSslSocket_addDefaultCaCertificates2()
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSslSocket_addDefaultCaCertificates1();
   }
@@ -1756,7 +1756,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 }
 
 /*
-static void setDefaultCaCertificates(const QList<QSslCertificate> &certificates)
+static void setDefaultCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 {
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
 }
 
 /*
-bool waitForConnected(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForConnected( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
 {
@@ -1887,7 +1887,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
@@ -1902,7 +1902,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
 }
 
 /*
-bool waitForEncrypted(int msecs = 30000)
+bool waitForEncrypted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
 {
@@ -1911,7 +1911,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForEncrypted( OPINT(1,30000) ) );
@@ -1926,7 +1926,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
 }
 
 /*
-bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForReadyRead( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
 {
@@ -1935,7 +1935,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -1950,7 +1950,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
 }
 
 /*
-bool waitForBytesWritten(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForBytesWritten( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
 {
@@ -1959,7 +1959,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -1974,7 +1974,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
 }
 
 /*
-bool waitForDisconnected(int msecs = 30000) Q_DECL_OVERRIDE
+bool waitForDisconnected( int msecs = 30000 ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
 {
@@ -1983,7 +1983,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );
@@ -2149,7 +2149,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING )
 }
 
 /*
-void ignoreSslErrors(const QList<QSslError> &errors)
+void ignoreSslErrors( const QList<QSslError> & errors )
 */
 void QSslSocket_ignoreSslErrors1()
 {
@@ -2171,7 +2171,7 @@ void QSslSocket_ignoreSslErrors1()
 }
 
 /*
-void ignoreSslErrors() (slot)
+void ignoreSslErrors()
 */
 void QSslSocket_ignoreSslErrors2()
 {
@@ -2187,7 +2187,7 @@ void QSslSocket_ignoreSslErrors2()
 
 /*
 [1]void ignoreSslErrors(const QList<QSslError> &errors)
-[2]void ignoreSslErrors() (slot)
+[2]void ignoreSslErrors() 
 */
 
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
@@ -2207,7 +2207,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 }
 
 /*
-void startClientEncryption() (slot)
+void startClientEncryption() 
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 {
@@ -2233,7 +2233,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 }
 
 /*
-void startServerEncryption() (slot)
+void startServerEncryption() 
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 {
@@ -2257,14 +2257,6 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
-*/
 
 /*
 void encrypted()
@@ -2513,7 +2505,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 }
 
 /*
-void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator *authenticator )
+void preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthenticator * authenticator )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ONPRESHAREDKEYAUTHENTICATIONREQUIRED )
 {

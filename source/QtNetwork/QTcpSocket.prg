@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-explicit QTcpSocket(QObject *parent = nullptr)
+QTcpSocket( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
@@ -63,14 +63,6 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
-QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = nullptr) [protected]
-*/
 
 /*
 virtual ~QTcpSocket()
