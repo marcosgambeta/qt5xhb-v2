@@ -65,7 +65,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeEngine>
 
 /*
-QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+QDeclarativeContext( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
 void QDeclarativeContext_new1()
 {
@@ -74,7 +74,7 @@ void QDeclarativeContext_new1()
 }
 
 /*
-QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
+QDeclarativeContext( QDeclarativeContext * parentContext, QObject * parent = nullptr )
 */
 void QDeclarativeContext_new2()
 {
@@ -82,18 +82,13 @@ void QDeclarativeContext_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = nullptr )
-[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QDeclarativeContext_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QDeclarativeContext_new2();
   }
@@ -123,7 +118,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
 }
 
 /*
-QUrl baseUrl () const
+QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
@@ -148,7 +143,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 }
 
 /*
-QObject * contextObject () const
+QObject * contextObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
@@ -173,7 +168,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 }
 
 /*
-QVariant contextProperty ( const QString & name ) const
+QVariant contextProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
@@ -198,7 +193,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 }
 
 /*
-QDeclarativeEngine * engine () const
+QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
@@ -223,7 +218,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 {
@@ -247,7 +242,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 }
 
 /*
-QDeclarativeContext * parentContext () const
+QDeclarativeContext * parentContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {
@@ -272,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 }
 
 /*
-QUrl resolvedUrl ( const QUrl & src )
+QUrl resolvedUrl( const QUrl & src )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
@@ -297,7 +292,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 }
 
 /*
-void setBaseUrl ( const QUrl & baseUrl )
+void setBaseUrl( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
@@ -323,7 +318,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 }
 
 /*
-void setContextObject ( QObject * object )
+void setContextObject( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {
@@ -349,7 +344,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 }
 
 /*
-void setContextProperty ( const QString & name, QObject * value )
+void setContextProperty( const QString & name, QObject * value )
 */
 void QDeclarativeContext_setContextProperty1()
 {
@@ -364,7 +359,7 @@ void QDeclarativeContext_setContextProperty1()
 }
 
 /*
-void setContextProperty ( const QString & name, const QVariant & value )
+void setContextProperty( const QString & name, const QVariant & value )
 */
 void QDeclarativeContext_setContextProperty2()
 {
@@ -377,11 +372,6 @@ void QDeclarativeContext_setContextProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setContextProperty ( const QString & name, QObject * value )
-[2]void setContextProperty ( const QString & name, const QVariant & value )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {

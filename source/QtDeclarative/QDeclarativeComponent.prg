@@ -72,7 +72,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
+QDeclarativeComponent( QDeclarativeEngine * engine, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new1()
 {
@@ -81,7 +81,7 @@ void QDeclarativeComponent_new1()
 }
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
+QDeclarativeComponent( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new2()
 {
@@ -90,7 +90,7 @@ void QDeclarativeComponent_new2()
 }
 
 /*
-QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
+QDeclarativeComponent( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
 */
 void QDeclarativeComponent_new3()
 {
@@ -98,23 +98,17 @@ void QDeclarativeComponent_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = nullptr )
-[2]QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, QObject * parent = nullptr )
-[3]QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QDeclarativeComponent_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QDeclarativeComponent_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QDeclarativeComponent_new3();
   }
@@ -144,7 +138,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 }
 
 /*
-virtual QObject * beginCreate ( QDeclarativeContext * context )
+virtual QObject * beginCreate( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
@@ -169,7 +163,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 }
 
 /*
-virtual void completeCreate ()
+virtual void completeCreate()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
@@ -195,7 +189,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 }
 
 /*
-virtual QObject * create ( QDeclarativeContext * context = nullptr )
+virtual QObject * create( QDeclarativeContext * context = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
@@ -220,7 +214,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 }
 
 /*
-QDeclarativeContext * creationContext () const
+QDeclarativeContext * creationContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
@@ -245,7 +239,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 }
 
 /*
-QList<QDeclarativeError> errors () const
+QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
@@ -297,7 +291,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 }
 
 /*
-bool isError () const
+bool isError() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
@@ -321,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 }
 
 /*
-bool isLoading () const
+bool isLoading() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
@@ -345,7 +339,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
@@ -369,7 +363,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 }
 
 /*
-bool isReady () const
+bool isReady() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
@@ -393,7 +387,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 }
 
 /*
-void loadUrl ( const QUrl & url )
+void loadUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
@@ -419,7 +413,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 }
 
 /*
-qreal progress () const
+qreal progress() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
@@ -443,7 +437,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 }
 
 /*
-void setData ( const QByteArray & data, const QUrl & url )
+void setData( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
@@ -469,7 +463,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 }
 
 /*
-Status status () const
+QDeclarativeComponent::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
@@ -493,7 +487,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
