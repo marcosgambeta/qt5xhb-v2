@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oLabel
@@ -24,23 +24,24 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oLabel := QLabel():new("Exemplo de criação de arquivo PDF"):show()
+   oLabel := QLabel():new( "Exemplo de criação de arquivo PDF" )
+   oLabel:show()
 
-   oPrinter := QPrinter():new(QPrinter_HighResolution)
+   oPrinter := QPrinter():new( QPrinter_HighResolution )
 
-   oPrinter:setOutputFileName("testpdf.pdf")
+   oPrinter:setOutputFileName( "testpdf.pdf" )
 
    oPainter := QPainter():new()
 
-   oPainter:begin(oPrinter)
+   oPainter:begin( oPrinter )
 
    FOR nPage := 1 TO 5
 
-      oPainter:drawText(10,10,"Página "+strzero(nPage,3))
+      oPainter:drawText( 10, 10, "Página " + strzero( nPage, 3 ) )
 
-      oPainter:drawRect(0+100,0+100,oPrinter:width()-100,oPrinter:height()-100)
+      oPainter:drawRect( 0 + 100, 0 + 100, oPrinter:width() - 100, oPrinter:height() - 100 )
 
-      oPainter:drawEllipse(0+100,0+100,oPrinter:width()-100,oPrinter:height()-100)
+      oPainter:drawEllipse( 0 + 100, 0 + 100, oPrinter:width() - 100, oPrinter:height() - 100 )
 
       IF nPage <> 5
          oPrinter:newPage()
@@ -49,9 +50,9 @@ PROCEDURE Main ()
    NEXT nPage
 
    oPainter:end()
-   
+
    oPainter:delete()
-   
+
    oPrinter:delete()
 
    oApp:exec()

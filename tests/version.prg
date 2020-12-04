@@ -16,7 +16,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    CLS
 

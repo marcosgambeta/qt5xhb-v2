@@ -23,9 +23,9 @@ PROCEDURE Main()
 
    oWindow := QMainWindow():new()
 
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle( "Teste" )
 
-   oWindow:resize(640,480)
+   oWindow:resize( 640, 480 )
 
    oWindow:show()
 

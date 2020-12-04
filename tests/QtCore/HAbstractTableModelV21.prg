@@ -24,15 +24,15 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(800,600)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 800, 600 )
 
    oModel := myModel():new()
 
-   oView := QTableView():new(oWindow)
-   oView:move(10,10)
-   oView:resize(800-20,600-20)
-   oView:setModel(oModel)
+   oView := QTableView():new( oWindow )
+   oView:move( 10, 10 )
+   oView:resize( 800 - 20, 600 - 20 )
+   oView:setModel( oModel )
 
    oWindow:show()
 
@@ -57,13 +57,13 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new(...) CLASS myModel
+METHOD new( ... ) CLASS myModel
 
-   ::super:new(...)
+   ::super:new( ... )
 
-   ::setRowCountCB( {|...|::rowCount(...)} )
-   ::setColumnCountCB( {|...|::columnCount(...)} )
-   ::setDataCB( {|...|::data(...)} )
+   ::setRowCountCB( {|...|::rowCount( ... )} )
+   ::setColumnCountCB( {|...|::columnCount( ... )} )
+   ::setDataCB( {|...|::data( ... )} )
 
 RETURN self
 
@@ -73,7 +73,7 @@ RETURN 100
 METHOD columnCount() CLASS myModel
 RETURN 10
 
-METHOD data(oIndex, nRole) CLASS myModel
+METHOD data( oIndex, nRole ) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL nRow := oIndex:row()
@@ -82,7 +82,7 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new("Célula "+alltrim(str(nRow))+","+alltrim(str((nColumn))))
+         oVariant := QVariant():new( "Célula " + alltrim( str( nRow ) ) + "," + alltrim( str( nColumn ) ) )
       ENDIF
 
    ENDIF

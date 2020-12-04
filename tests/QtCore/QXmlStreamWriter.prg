@@ -19,17 +19,17 @@ PROCEDURE Main()
    LOCAL oFile
    LOCAL oStream
 
-   oFile := QFile():new("QXmlStreamWriter.xml")
+   oFile := QFile():new( "QXmlStreamWriter.xml" )
 
-   if oFile:open( hb_bitor(QIODevice_WriteOnly,QIODevice_Text) )
+   if oFile:open( hb_bitor( QIODevice_WriteOnly, QIODevice_Text ) )
 
-      oStream := QXmlStreamWriter():new(oFile)
-      oStream:setAutoFormatting(.T.)
+      oStream := QXmlStreamWriter():new( oFile )
+      oStream:setAutoFormatting( .T. )
       oStream:writeStartDocument()
 
-      oStream:writeStartElement("element")
-      oStream:writeAttribute("attribute", "value of the attribute")
-      oStream:writeTextElement("text", "value of the text")
+      oStream:writeStartElement( "element" )
+      oStream:writeAttribute( "attribute", "value of the attribute" )
+      oStream:writeTextElement( "text", "value of the text" )
       oStream:writeEndElement()
 
       oStream:writeEndDocument()

@@ -28,23 +28,23 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(800,600)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 800, 600 )
 
-   aDados := array(100,100)
+   aDados := array( 100, 100 )
 
    FOR nRow := 0 TO 99
       FOR nColumn := 0 TO 99
-         aDados[nRow+1,nColumn+1] := alltrim(str(nRow))+","+alltrim(str(nColumn))
+         aDados[ nRow + 1, nColumn + 1 ] := alltrim( str( nRow ) ) + "," + alltrim( str( nColumn ) )
       NEXT nColumn
    NEXT nRow
 
    oModel := myModel():new()
 
-   oView := QTableView():new(oWindow)
-   oView:move(10,10)
-   oView:resize(800-20,600-20)
-   oView:setModel(oModel)
+   oView := QTableView():new( oWindow )
+   oView:move( 10, 10 )
+   oView:resize( 800 - 20, 600 - 20 )
+   oView:setModel( oModel )
    oView:resizeRowsToContents()
    oView:resizeColumnsToContents()
 
@@ -74,26 +74,26 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new(...) CLASS myModel
+METHOD new( ... ) CLASS myModel
 
-   ::super:new(...)
+   ::super:new( ... )
 
-   ::setRowCountCB( {|...|::rowCount(...)} )
-   ::setColumnCountCB( {|...|::columnCount(...)} )
-   ::setDataCB( {|...|::data(...)} )
-   ::setHeaderDataCB( {|...|::headerData(...)} )
-   ::setFlagsCB( {|...|::flags(...)} )
-   ::setSetDataCB( {|...|::setData(...)} )
+   ::setRowCountCB( {|...|::rowCount( ... )} )
+   ::setColumnCountCB( {|...|::columnCount( ... )} )
+   ::setDataCB( {|...|::data( ... )} )
+   ::setHeaderDataCB( {|...|::headerData( ... )} )
+   ::setFlagsCB( {|...|::flags( ... )} )
+   ::setSetDataCB( {|...|::setData( ... )} )
 
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN len(aDados)
+RETURN len( aDados )
 
 METHOD columnCount() CLASS myModel
-RETURN len(aDados[1])
+RETURN len( aDados[ 1 ] )
 
-METHOD data(oIndex, nRole) CLASS myModel
+METHOD data( oIndex, nRole ) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL nRow := oIndex:row()
@@ -102,28 +102,28 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(aDados[nRow+1,nColumn+1])
+         oVariant := QVariant():new( aDados[ nRow + 1, nColumn + 1 ] )
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(aDados[nRow+1,nColumn+1])
+         oVariant := QVariant():new( aDados[ nRow + 1, nColumn + 1 ] )
       ENDIF
 
    ENDIF
 
 RETURN oVariant
 
-METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
+METHOD headerData( nSection, nOrientation, nRole ) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna "+alltrim(str(nSection)))
+      oVariant := QVariant():new( "Coluna " + alltrim( str( nSection ) ) )
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha "+alltrim(str(nSection)))
+      oVariant := QVariant():new( "Linha " + alltrim( str( nSection ) ) )
    ENDIF
 
 RETURN oVariant
 
-METHOD flags(oIndex) CLASS myModel
+METHOD flags( oIndex ) CLASS myModel
 
    LOCAL nFlags := Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled
    LOCAL nRow := oIndex:row()
@@ -131,7 +131,7 @@ METHOD flags(oIndex) CLASS myModel
 
 RETURN nFlags
 
-METHOD setData(oIndex, oVariant, nRole) CLASS myModel
+METHOD setData( oIndex, oVariant, nRole ) CLASS myModel
 
    LOCAL lSuccess := .F.
    LOCAL nRow := oIndex:row()
@@ -144,8 +144,8 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
 
          cValue := oVariant:toString()
 
-         IF !empty(cValue)
-            aDados[nRow+1,nColumn+1] := oVariant:toString()
+         IF !empty( cValue )
+            aDados[ nRow + 1, nColumn + 1 ] := oVariant:toString()
             lSuccess := .T.
          ENDIF
 

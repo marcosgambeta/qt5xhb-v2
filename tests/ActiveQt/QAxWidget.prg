@@ -20,12 +20,16 @@ PROCEDURE Main()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Teste"):resize(800,600)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 800, 600 )
 
-   oAxWidget := QAxWidget():new("Shell.Explorer.2",oWindow):move(10,10):resize(1024-20,768-20)
-   oAxWidget:dynamiccall("Navigate(const QString&)",QVariant():new("https://github.com/marcosgambeta/Qt5xHb"))
+   oAxWidget := QAxWidget():new( "Shell.Explorer.2", oWindow )
+   oAxWidget:move( 10, 10 )
+   oAxWidget:resize( 1024 - 20, 768 - 20 )
+   oAxWidget:dynamiccall( "Navigate(const QString&)", QVariant():new( "https://github.com/marcosgambeta/qt5xhb-cpp11" ) )
 
-   oWindow:onResizeEvent({||oAxWidget:resize(oWindow:width()-20,oWindow:height()-20)})
+   oWindow:onResizeEvent( {||oAxWidget:resize( oWindow:width() - 20, oWindow:height() - 20 )} )
 
    oWindow:show()
 

@@ -22,11 +22,15 @@ PROCEDURE Main()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Test"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle( "Test" )
+   oWindow:resize( 640, 480 )
 
-   oLabel := QLabel():new("QLabel",oWindow):move(20,20):setFont(QFont():new("Arial Bold",48))
+   oLabel := QLabel():new( "QLabel", oWindow )
+   oLabel:move( 20, 20 )
+   oLabel:setFont( QFont():new( "Arial Bold", 48 ) )
 
-   oLabel:setGraphicsEffect(QGraphicsDropShadowEffect():new())
+   oLabel:setGraphicsEffect( QGraphicsDropShadowEffect():new() )
 
    oWindow:show()
 

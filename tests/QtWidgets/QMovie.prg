@@ -26,28 +26,28 @@ PROCEDURE Main()
 
    // cria uma janela
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
-   oWindow:show()
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
 
    // cria um label
-   oLabel := QLabel():new(oWindow)
-   oLabel:move(20,20)
-   oLabel:resize(120,90)
-   oLabel:show()
+   oLabel := QLabel():new( oWindow )
+   oLabel:move( 20, 20 )
+   oLabel:resize( 120, 90 )
 
    // cria um objeto da classe QMovie,
    // usando o arquivo impressora.gif
    // (GIF animado)
-   oMovie := QMovie():new("..\images\impressora.gif")
+   oMovie := QMovie():new( "..\images\impressora.gif" )
 
    ? oMovie:isValid()
 
    // liga o objeto QLabel ao objeto QMovie
-   oLabel:setMovie(oMovie)
+   oLabel:setMovie( oMovie )
 
    // inicia a animação
    oMovie:start()
+
+   oWindow:show()
 
    // inicia o loop de eventos
    oApp:exec()

@@ -27,29 +27,30 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize(640,480)
+   oWindow:resize( 640, 480 )
+
+   oButton := QPushButton():new( "Mostrar janela de diálogo", oWindow )
+   oButton:move( 20, 20 )
+   oButton:show()
+   ? oButton:onClicked( {||dialog( oWindow )} )
+
    oWindow:show()
 
-   oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
-   oButton:move(20,20)
-   oButton:show()
-   ? oButton:onClicked({||dialog(oWindow)})
-
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
 
-STATIC FUNCTION dialog(oWindow)
+STATIC FUNCTION dialog( oWindow )
 
    LOCAL oFileDialog
 
-   oFileDialog := QFileDialog():new(oWindow)
+   oFileDialog := QFileDialog():new( oWindow )
 
-   ? oFileDialog:onFileSelected({|oSender,cFile|qout(oSender:classname()),qout(cFile)})
+   ? oFileDialog:onFileSelected( {|oSender,cFile|qout( oSender:classname() ),qout( cFile )} )
 
    oFileDialog:exec()
 

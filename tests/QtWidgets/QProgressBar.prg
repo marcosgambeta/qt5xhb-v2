@@ -23,20 +23,20 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
+
+   oProgressBar := QProgressBar():new( oWindow )
+   oProgressBar:move( 20, 20 )
+   oProgressBar:setTooltip( "Eu sou um QProgressBar" )
+   oProgressBar:setValue( 50 )
+
    oWindow:show()
 
-   oProgressBar := QProgressBar():new(oWindow)
-   oProgressBar:move(20,20)
-   oProgressBar:setTooltip("Eu sou um QProgressBar")
-   oProgressBar:setValue(50)
-   oProgressBar:show()
-
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

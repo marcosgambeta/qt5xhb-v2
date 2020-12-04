@@ -16,7 +16,7 @@
 
 PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oMainWindow
    LOCAL oStatusBar
 
@@ -26,14 +26,14 @@ PROCEDURE Main()
 
    oStatusBar := oMainWindow:statusBar()
 
-   oStatusBar:showMessage("teste")
+   oStatusBar:showMessage( "teste" )
 
    oMainWindow:show()
 
    oApp:exec()
-   
+
    oMainWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

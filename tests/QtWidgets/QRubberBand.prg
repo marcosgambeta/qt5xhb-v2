@@ -16,7 +16,7 @@
 
 PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oWindow
    LOCAL oRubberBand
 
@@ -24,17 +24,16 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oRubberBand := QRubberBand():new(QRubberBand_Rectangle,oWindow)
-   oRubberBand:move(20,20)
-   oRubberBand:resize(100,100)
-   oRubberBand:show()
+   oRubberBand := QRubberBand():new( QRubberBand_Rectangle, oWindow )
+   oRubberBand:move( 20, 20 )
+   oRubberBand:resize( 100, 100 )
 
    oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
