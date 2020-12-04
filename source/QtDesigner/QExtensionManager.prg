@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QExtensionManager ( QObject * parent = nullptr )
+QExtensionManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 }
 
 /*
-virtual QObject * extension ( QObject * object, const QString & iid ) const
+virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 }
 
 /*
-virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING(2,QString()) );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 }
 
 /*
-virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQABSTRACTEXTENSIONFACTORY(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING(2,QString()) );
