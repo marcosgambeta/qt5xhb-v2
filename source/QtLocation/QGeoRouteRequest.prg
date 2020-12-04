@@ -81,7 +81,7 @@ RETURN
 #include <QtPositioning/QGeoRectangle>
 
 /*
-explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
+QGeoRouteRequest( const QList<QGeoCoordinate> & waypoints = QList<QGeoCoordinate>() )
 */
 void QGeoRouteRequest_new1 ()
 {
@@ -100,7 +100,7 @@ void QGeoRouteRequest_new1 ()
 }
 
 /*
-QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
+QGeoRouteRequest( const QGeoCoordinate & origin, const QGeoCoordinate & destination )
 */
 void QGeoRouteRequest_new2()
 {
@@ -111,7 +111,7 @@ void QGeoRouteRequest_new2()
 }
 
 /*
-QGeoRouteRequest(const QGeoRouteRequest &other)
+QGeoRouteRequest( const QGeoRouteRequest & other )
 */
 void QGeoRouteRequest_new3()
 {
@@ -120,12 +120,6 @@ void QGeoRouteRequest_new3()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
-[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
-[3]QGeoRouteRequest(const QGeoRouteRequest &other)
-*/
 
 HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 {
@@ -167,7 +161,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_DELETE )
 }
 
 /*
-void setWaypoints(const QList<QGeoCoordinate> &waypoints)
+void setWaypoints( const QList<QGeoCoordinate> & waypoints )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETWAYPOINTS )
 {
@@ -256,7 +250,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_WAYPOINTS )
 }
 
 /*
-void setExcludeAreas(const QList<QGeoRectangle> &areas)
+void setExcludeAreas( const QList<QGeoRectangle> & areas )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETEXCLUDEAREAS )
 {
@@ -345,7 +339,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_EXCLUDEAREAS )
 }
 
 /*
-void setNumberAlternativeRoutes(int alternatives)
+void setNumberAlternativeRoutes( int alternatives )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETNUMBERALTERNATIVEROUTES )
 {
@@ -399,7 +393,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_NUMBERALTERNATIVEROUTES )
 }
 
 /*
-void setTravelModes(TravelModes travelModes)
+void setTravelModes( QGeoRouteRequest::TravelModes travelModes )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETTRAVELMODES )
 {
@@ -427,7 +421,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETTRAVELMODES )
 }
 
 /*
-TravelModes travelModes() const
+QGeoRouteRequest::TravelModes travelModes() const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_TRAVELMODES )
 {
@@ -453,7 +447,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_TRAVELMODES )
 }
 
 /*
-void setFeatureWeight(FeatureType featureType, FeatureWeight featureWeight)
+void setFeatureWeight( QGeoRouteRequest::FeatureType featureType, QGeoRouteRequest::FeatureWeight featureWeight)
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETFEATUREWEIGHT )
 {
@@ -481,7 +475,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETFEATUREWEIGHT )
 }
 
 /*
-FeatureWeight featureWeight(FeatureType featureType) const
+QGeoRouteRequest::FeatureWeight featureWeight( QGeoRouteRequest::FeatureType featureType ) const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATUREWEIGHT )
 {
@@ -507,7 +501,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATUREWEIGHT )
 }
 
 /*
-QList<FeatureType> featureTypes() const
+QList<QGeoRouteRequest::FeatureType> featureTypes() const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATURETYPES )
 {
@@ -541,7 +535,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_FEATURETYPES )
 }
 
 /*
-void setRouteOptimization(RouteOptimizations optimization)
+void setRouteOptimization( QGeoRouteRequest::RouteOptimizations optimization )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETROUTEOPTIMIZATION )
 {
@@ -569,7 +563,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETROUTEOPTIMIZATION )
 }
 
 /*
-RouteOptimizations routeOptimization() const
+QGeoRouteRequest::RouteOptimizations routeOptimization() const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_ROUTEOPTIMIZATION )
 {
@@ -595,7 +589,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_ROUTEOPTIMIZATION )
 }
 
 /*
-void setSegmentDetail(SegmentDetail segmentDetail)
+void setSegmentDetail( QGeoRouteRequest::SegmentDetail segmentDetail )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETSEGMENTDETAIL )
 {
@@ -623,7 +617,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETSEGMENTDETAIL )
 }
 
 /*
-SegmentDetail segmentDetail() const
+QGeoRouteRequest::SegmentDetail segmentDetail() const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SEGMENTDETAIL )
 {
@@ -649,7 +643,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SEGMENTDETAIL )
 }
 
 /*
-void setManeuverDetail(ManeuverDetail maneuverDetail)
+void setManeuverDetail( QGeoRouteRequest::ManeuverDetail maneuverDetail )
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_SETMANEUVERDETAIL )
 {
@@ -677,7 +671,7 @@ HB_FUNC_STATIC( QGEOROUTEREQUEST_SETMANEUVERDETAIL )
 }
 
 /*
-ManeuverDetail maneuverDetail() const
+QGeoRouteRequest::ManeuverDetail maneuverDetail() const
 */
 HB_FUNC_STATIC( QGEOROUTEREQUEST_MANEUVERDETAIL )
 {

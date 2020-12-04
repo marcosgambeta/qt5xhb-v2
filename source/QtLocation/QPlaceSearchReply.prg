@@ -62,7 +62,7 @@ RETURN
 #include <QtLocation/QPlaceSearchRequest>
 
 /*
-explicit QPlaceSearchReply(QObject *parent = nullptr)
+QPlaceSearchReply( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPLACESEARCHREPLY_NEW )
 {

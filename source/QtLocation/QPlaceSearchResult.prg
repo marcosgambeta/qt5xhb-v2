@@ -79,7 +79,7 @@ void QPlaceSearchResult_new1()
 }
 
 /*
-QPlaceSearchResult(const QPlaceSearchResult &other)
+QPlaceSearchResult( const QPlaceSearchResult & other )
 */
 void QPlaceSearchResult_new2()
 {
@@ -88,11 +88,6 @@ void QPlaceSearchResult_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceSearchResult()
-[2]QPlaceSearchResult(const QPlaceSearchResult &other)
-*/
 
 HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 {
@@ -130,7 +125,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_DELETE )
 }
 
 /*
-SearchResultType type() const
+QPlaceSearchResult::SearchResultType type() const
 */
 HB_FUNC_STATIC( QPLACESEARCHRESULT_TYPE )
 {
@@ -182,7 +177,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_TITLE )
 }
 
 /*
-void setTitle(const QString &title)
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QPLACESEARCHRESULT_SETTITLE )
 {
@@ -237,7 +232,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
 }
 
 /*
-void setIcon(const QPlaceIcon &icon)
+void setIcon( const QPlaceIcon & icon )
 */
 HB_FUNC_STATIC( QPLACESEARCHRESULT_SETICON )
 {

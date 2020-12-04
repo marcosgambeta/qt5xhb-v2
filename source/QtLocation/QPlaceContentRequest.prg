@@ -83,7 +83,7 @@ void QPlaceContentRequest_new1()
 }
 
 /*
-QPlaceContentRequest(const QPlaceContentRequest &other)
+QPlaceContentRequest( const QPlaceContentRequest & other )
 */
 void QPlaceContentRequest_new2()
 {
@@ -92,11 +92,6 @@ void QPlaceContentRequest_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceContentRequest()
-[2]QPlaceContentRequest(const QPlaceContentRequest &other)
-*/
 
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 {
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
 }
 
 /*
-void setContentType(QPlaceContent::Type type)
+void setContentType( QPlaceContent::Type type )
 */
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
 {
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
 }
 
 /*
-void setPlaceId(const QString &identifier)
+void setPlaceId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETPLACEID )
 {
@@ -269,7 +264,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
 }
 
 /*
-void setContentContext(const QVariant &context)
+void setContentContext( const QVariant & context )
 */
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
 {
@@ -323,7 +318,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
 }
 
 /*
-void setLimit(int limit)
+void setLimit( int limit )
 */
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETLIMIT )
 {

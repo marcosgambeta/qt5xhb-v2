@@ -76,7 +76,7 @@ void QPlaceMatchRequest_new1()
 }
 
 /*
-QPlaceMatchRequest(const QPlaceMatchRequest &other)
+QPlaceMatchRequest( const QPlaceMatchRequest & other )
 */
 void QPlaceMatchRequest_new2()
 {
@@ -85,11 +85,6 @@ void QPlaceMatchRequest_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceMatchRequest()
-[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
-*/
 
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 {
@@ -181,7 +176,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
 }
 
 /*
-void setPlaces(const QList<QPlace> places)
+void setPlaces( const QList<QPlace> places )
 */
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
 {
@@ -216,7 +211,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
 }
 
 /*
-void setResults(const QList<QPlaceSearchResult> &results)
+void setResults( const QList<QPlaceSearchResult> & results )
 */
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 {

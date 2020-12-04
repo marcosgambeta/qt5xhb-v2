@@ -95,7 +95,7 @@ void QPlaceSearchRequest_new1()
 }
 
 /*
-QPlaceSearchRequest(const QPlaceSearchRequest &other)
+QPlaceSearchRequest( const QPlaceSearchRequest & other )
 */
 void QPlaceSearchRequest_new2()
 {
@@ -104,11 +104,6 @@ void QPlaceSearchRequest_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceSearchRequest()
-[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
-*/
 
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
 }
 
 /*
-void setSearchTerm(const QString &term)
+void setSearchTerm( const QString & term )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHTERM )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
 }
 
 /*
-void setCategory(const QPlaceCategory &category)
+void setCategory( const QPlaceCategory & category )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
 {
@@ -282,7 +277,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
 }
 
 /*
-void setCategories(const QList<QPlaceCategory> &categories)
+void setCategories( const QList<QPlaceCategory> & categories )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORIES )
 {
@@ -344,7 +339,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
 }
 
 /*
-void setSearchArea(const QGeoShape &area)
+void setSearchArea( const QGeoShape & area )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHAREA )
 {
@@ -398,7 +393,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
 }
 
 /*
-void setRecommendationId(const QString &recommendationId)
+void setRecommendationId( const QString & recommendationId )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRECOMMENDATIONID )
 {
@@ -453,7 +448,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
 }
 
 /*
-void setSearchContext(const QVariant &context)
+void setSearchContext( const QVariant & context )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHCONTEXT )
 {
@@ -507,7 +502,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_VISIBILITYSCOPE )
 }
 
 /*
-void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
+void setVisibilityScope( QLocation::VisibilityScope visibilityScopes )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
 {
@@ -535,7 +530,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
 }
 
 /*
-RelevanceHint relevanceHint() const
+QPlaceSearchRequest::RelevanceHint relevanceHint() const
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
 {
@@ -561,7 +556,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
 }
 
 /*
-void setRelevanceHint(RelevanceHint hint)
+void setRelevanceHint( QPlaceSearchRequest::RelevanceHint hint )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRELEVANCEHINT )
 {
@@ -615,7 +610,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
 }
 
 /*
-void setLimit(int limit)
+void setLimit( int limit )
 */
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETLIMIT )
 {

@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceSearchSuggestionReply(QObject *parent = nullptr)
+QPlaceSearchSuggestionReply( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
 }
 
 /*
-Type type() const
+QPlaceReply::Type type() const
 */
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_TYPE )
 {

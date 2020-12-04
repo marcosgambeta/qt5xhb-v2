@@ -76,7 +76,7 @@ void QPlaceAttribute_new1()
 }
 
 /*
-QPlaceAttribute(const QPlaceAttribute &other)
+QPlaceAttribute( const QPlaceAttribute & other )
 */
 void QPlaceAttribute_new2()
 {
@@ -85,11 +85,6 @@ void QPlaceAttribute_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceAttribute()
-[2]QPlaceAttribute(const QPlaceAttribute &other)
-*/
 
 HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
 }
 
 /*
-void setLabel(const QString &label)
+void setLabel( const QString & label )
 */
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETLABEL )
 {
@@ -207,7 +202,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETTEXT )
 {

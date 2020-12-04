@@ -69,7 +69,7 @@ void QPlaceImage_new1()
 }
 
 /*
-QPlaceImage(const QPlaceContent &other)
+QPlaceImage( const QPlaceContent & other )
 */
 void QPlaceImage_new2()
 {
@@ -78,11 +78,6 @@ void QPlaceImage_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceImage()
-[2]QPlaceImage(const QPlaceContent &other)
-*/
 
 HB_FUNC_STATIC( QPLACEIMAGE_NEW )
 {
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_URL )
 }
 
 /*
-void setUrl(const QUrl &url)
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
 {
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
 }
 
 /*
-void setImageId(const QString &identifier)
+void setImageId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
 {
@@ -255,7 +250,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
 }
 
 /*
-void setMimeType(const QString &data)
+void setMimeType( const QString & data )
 */
 HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
 {

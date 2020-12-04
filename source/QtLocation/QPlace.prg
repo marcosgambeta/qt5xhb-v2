@@ -119,7 +119,7 @@ void QPlace_new1()
 }
 
 /*
-QPlace(const QPlace &other)
+QPlace( const QPlace & other )
 */
 void QPlace_new2()
 {
@@ -128,11 +128,6 @@ void QPlace_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlace()
-[2]QPlace(const QPlace &other)
-*/
 
 HB_FUNC_STATIC( QPLACE_NEW )
 {
@@ -224,7 +219,7 @@ HB_FUNC_STATIC( QPLACE_CATEGORIES )
 }
 
 /*
-void setCategories(const QList<QPlaceCategory> &categories)
+void setCategories( const QList<QPlaceCategory> & categories )
 */
 HB_FUNC_STATIC( QPLACE_SETCATEGORIES )
 {
@@ -259,7 +254,7 @@ HB_FUNC_STATIC( QPLACE_SETCATEGORIES )
 }
 
 /*
-void setCategory(const QPlaceCategory &category)
+void setCategory( const QPlaceCategory & category )
 */
 HB_FUNC_STATIC( QPLACE_SETCATEGORY )
 {
@@ -314,7 +309,7 @@ HB_FUNC_STATIC( QPLACE_LOCATION )
 }
 
 /*
-void setLocation(const QGeoLocation &location)
+void setLocation( const QGeoLocation & location )
 */
 HB_FUNC_STATIC( QPLACE_SETLOCATION )
 {
@@ -369,7 +364,7 @@ HB_FUNC_STATIC( QPLACE_RATINGS )
 }
 
 /*
-void setRatings(const QPlaceRatings &ratings)
+void setRatings( const QPlaceRatings & ratings )
 */
 HB_FUNC_STATIC( QPLACE_SETRATINGS )
 {
@@ -424,7 +419,7 @@ HB_FUNC_STATIC( QPLACE_SUPPLIER )
 }
 
 /*
-void setSupplier(const QPlaceSupplier &supplier)
+void setSupplier( const QPlaceSupplier & supplier )
 */
 HB_FUNC_STATIC( QPLACE_SETSUPPLIER )
 {
@@ -478,7 +473,7 @@ HB_FUNC_STATIC( QPLACE_ATTRIBUTION )
 }
 
 /*
-void setAttribution(const QString &attribution)
+void setAttribution( const QString & attribution )
 */
 HB_FUNC_STATIC( QPLACE_SETATTRIBUTION )
 {
@@ -533,7 +528,7 @@ HB_FUNC_STATIC( QPLACE_ICON )
 }
 
 /*
-void setIcon(const QPlaceIcon &icon)
+void setIcon( const QPlaceIcon & icon )
 */
 HB_FUNC_STATIC( QPLACE_SETICON )
 {
@@ -561,7 +556,7 @@ HB_FUNC_STATIC( QPLACE_SETICON )
 }
 
 /*
-int totalContentCount(QPlaceContent::Type type) const
+int totalContentCount( QPlaceContent::Type type ) const
 */
 HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
 {
@@ -587,7 +582,7 @@ HB_FUNC_STATIC( QPLACE_TOTALCONTENTCOUNT )
 }
 
 /*
-void setTotalContentCount(QPlaceContent::Type type, int total)
+void setTotalContentCount( QPlaceContent::Type type, int total )
 */
 HB_FUNC_STATIC( QPLACE_SETTOTALCONTENTCOUNT )
 {
@@ -641,7 +636,7 @@ HB_FUNC_STATIC( QPLACE_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QPLACE_SETNAME )
 {
@@ -695,7 +690,7 @@ HB_FUNC_STATIC( QPLACE_PLACEID )
 }
 
 /*
-void setPlaceId(const QString &identifier)
+void setPlaceId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACE_SETPLACEID )
 {
@@ -854,7 +849,7 @@ HB_FUNC_STATIC( QPLACE_DETAILSFETCHED )
 }
 
 /*
-void setDetailsFetched(bool fetched)
+void setDetailsFetched( bool fetched )
 */
 HB_FUNC_STATIC( QPLACE_SETDETAILSFETCHED )
 {
@@ -908,7 +903,7 @@ HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTETYPES )
 }
 
 /*
-QPlaceAttribute extendedAttribute(const QString &attributeType) const
+QPlaceAttribute extendedAttribute( const QString & attributeType ) const
 */
 HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTE )
 {
@@ -935,7 +930,7 @@ HB_FUNC_STATIC( QPLACE_EXTENDEDATTRIBUTE )
 }
 
 /*
-void setExtendedAttribute(const QString &attributeType, const QPlaceAttribute &attribute)
+void setExtendedAttribute( const QString & attributeType, const QPlaceAttribute & attribute )
 */
 HB_FUNC_STATIC( QPLACE_SETEXTENDEDATTRIBUTE )
 {
@@ -963,7 +958,7 @@ HB_FUNC_STATIC( QPLACE_SETEXTENDEDATTRIBUTE )
 }
 
 /*
-void removeExtendedAttribute(const QString &attributeType)
+void removeExtendedAttribute( const QString & attributeType )
 */
 HB_FUNC_STATIC( QPLACE_REMOVEEXTENDEDATTRIBUTE )
 {
@@ -1017,7 +1012,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTTYPES )
 }
 
 /*
-QList<QPlaceContactDetail> contactDetails(const QString &contactType) const
+QList<QPlaceContactDetail> contactDetails( const QString & contactType ) const
 */
 HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
 {
@@ -1071,7 +1066,7 @@ HB_FUNC_STATIC( QPLACE_CONTACTDETAILS )
 }
 
 /*
-void setContactDetails(const QString &contactType, QList<QPlaceContactDetail> details)
+void setContactDetails( const QString & contactType, QList<QPlaceContactDetail> details )
 */
 HB_FUNC_STATIC( QPLACE_SETCONTACTDETAILS )
 {
@@ -1106,7 +1101,7 @@ HB_FUNC_STATIC( QPLACE_SETCONTACTDETAILS )
 }
 
 /*
-void appendContactDetail(const QString &contactType, const QPlaceContactDetail &detail)
+void appendContactDetail( const QString & contactType, const QPlaceContactDetail & detail )
 */
 HB_FUNC_STATIC( QPLACE_APPENDCONTACTDETAIL )
 {
@@ -1134,7 +1129,7 @@ HB_FUNC_STATIC( QPLACE_APPENDCONTACTDETAIL )
 }
 
 /*
-void removeContactDetails(const QString &contactType)
+void removeContactDetails( const QString & contactType )
 */
 HB_FUNC_STATIC( QPLACE_REMOVECONTACTDETAILS )
 {
@@ -1188,7 +1183,7 @@ HB_FUNC_STATIC( QPLACE_VISIBILITY )
 }
 
 /*
-void setVisibility(QLocation::Visibility visibility)
+void setVisibility( QLocation::Visibility visibility )
 */
 HB_FUNC_STATIC( QPLACE_SETVISIBILITY )
 {

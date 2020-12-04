@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceReply(QObject *parent = nullptr)
+QPlaceReply( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPLACEREPLY_NEW )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
 }
 
 /*
-virtual Type type() const
+virtual QPlaceReply::Type type() const
 */
 HB_FUNC_STATIC( QPLACEREPLY_TYPE )
 {

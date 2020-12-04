@@ -79,7 +79,7 @@ void QPlaceIcon_new1()
 }
 
 /*
-QPlaceIcon(const QPlaceIcon &other)
+QPlaceIcon( const QPlaceIcon & other )
 */
 void QPlaceIcon_new2()
 {
@@ -88,11 +88,6 @@ void QPlaceIcon_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceIcon()
-[2]QPlaceIcon(const QPlaceIcon &other)
-*/
 
 HB_FUNC_STATIC( QPLACEICON_NEW )
 {
@@ -130,7 +125,7 @@ HB_FUNC_STATIC( QPLACEICON_DELETE )
 }
 
 /*
-QUrl url(const QSize &size = QSize()) const
+QUrl url( const QSize & size = QSize() ) const
 */
 HB_FUNC_STATIC( QPLACEICON_URL )
 {
@@ -157,7 +152,7 @@ HB_FUNC_STATIC( QPLACEICON_URL )
 }
 
 /*
-QPlaceManager *manager() const
+QPlaceManager * manager() const
 */
 HB_FUNC_STATIC( QPLACEICON_MANAGER )
 {
@@ -184,7 +179,7 @@ HB_FUNC_STATIC( QPLACEICON_MANAGER )
 }
 
 /*
-void setManager(QPlaceManager *manager)
+void setManager( QPlaceManager * manager )
 */
 HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
 {

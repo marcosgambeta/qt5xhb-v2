@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceDetailsReply(QObject *parent = nullptr)
+QPlaceDetailsReply( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPLACEDETAILSREPLY_NEW )
 {

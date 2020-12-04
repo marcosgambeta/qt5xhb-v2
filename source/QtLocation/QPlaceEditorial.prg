@@ -68,7 +68,7 @@ void QPlaceEditorial_new1()
 }
 
 /*
-QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
+QPlaceEditorial( const QPlaceContent & other )
 */
 void QPlaceEditorial_new2()
 {
@@ -77,11 +77,6 @@ void QPlaceEditorial_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPlaceEditorial()
-[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
-*/
 
 HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 {
@@ -145,7 +140,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETTEXT )
 {
@@ -199,7 +194,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_TITLE )
 }
 
 /*
-void setTitle(const QString &data)
+void setTitle( const QString & data )
 */
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETTITLE )
 {
@@ -253,7 +248,7 @@ HB_FUNC_STATIC( QPLACEEDITORIAL_LANGUAGE )
 }
 
 /*
-void setLanguage(const QString &data)
+void setLanguage( const QString & data )
 */
 HB_FUNC_STATIC( QPLACEEDITORIAL_SETLANGUAGE )
 {

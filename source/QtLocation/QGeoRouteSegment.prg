@@ -88,7 +88,7 @@ void QGeoRouteSegment_new1()
 }
 
 /*
-QGeoRouteSegment(const QGeoRouteSegment &other)
+QGeoRouteSegment( const QGeoRouteSegment & other )
 */
 void QGeoRouteSegment_new2()
 {
@@ -97,11 +97,6 @@ void QGeoRouteSegment_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QGeoRouteSegment()
-[2]QGeoRouteSegment(const QGeoRouteSegment &other)
-*/
 
 HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_ISVALID )
 }
 
 /*
-void setNextRouteSegment(const QGeoRouteSegment &routeSegment)
+void setNextRouteSegment( const QGeoRouteSegment & routeSegment )
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_SETNEXTROUTESEGMENT )
 {
@@ -220,7 +215,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_NEXTROUTESEGMENT )
 }
 
 /*
-void setTravelTime(int secs)
+void setTravelTime( int secs )
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_SETTRAVELTIME )
 {
@@ -274,7 +269,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_TRAVELTIME )
 }
 
 /*
-void setDistance(qreal distance)
+void setDistance( qreal distance )
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_SETDISTANCE )
 {
@@ -328,7 +323,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_DISTANCE )
 }
 
 /*
-void setPath(const QList<QGeoCoordinate> &path)
+void setPath( const QList<QGeoCoordinate> & path )
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_SETPATH )
 {
@@ -417,7 +412,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_PATH )
 }
 
 /*
-void setManeuver(const QGeoManeuver &maneuver)
+void setManeuver( const QGeoManeuver & maneuver )
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_SETMANEUVER )
 {
@@ -472,7 +467,7 @@ HB_FUNC_STATIC( QGEOROUTESEGMENT_MANEUVER )
 }
 
 /*
-bool QGeoRouteSegment::isLegLastSegment() const
+bool isLegLastSegment() const
 */
 HB_FUNC_STATIC( QGEOROUTESEGMENT_ISLEGLASTSEGMENT )
 {

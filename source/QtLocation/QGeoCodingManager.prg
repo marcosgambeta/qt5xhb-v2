@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 }
 
 /*
-QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
+QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds = QGeoShape() )
 */
 void QGeoCodingManager_geocode1()
 {
@@ -154,7 +154,7 @@ void QGeoCodingManager_geocode1()
 }
 
 /*
-QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
+QGeoCodeReply * geocode( const QString & searchString, int limit = -1, int offset = 0, const QGeoShape & bounds = QGeoShape() )
 */
 void QGeoCodingManager_geocode2()
 {
@@ -168,11 +168,6 @@ void QGeoCodingManager_geocode2()
   }
 #endif
 }
-
-/*
-[1]QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
-[2]QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
-*/
 
 HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 {
@@ -191,7 +186,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 }
 
 /*
-QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds = QGeoShape())
+QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const QGeoShape & bounds = QGeoShape() )
 */
 HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
 {
@@ -218,7 +213,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
 {
