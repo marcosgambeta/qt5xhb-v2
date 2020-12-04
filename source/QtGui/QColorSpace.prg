@@ -82,7 +82,7 @@ void QColorSpace_new1()
 }
 
 /*
-QColorSpace(NamedColorSpace namedColorSpace)
+QColorSpace( QColorSpace::NamedColorSpace namedColorSpace )
 */
 void QColorSpace_new2()
 {
@@ -93,7 +93,7 @@ void QColorSpace_new2()
 }
 
 /*
-QColorSpace(Primaries primaries, TransferFunction fun, float gamma = 0.0f)
+QColorSpace( QColorSpace::Primaries primaries, QColorSpace::TransferFunction fun, float gamma = 0.0f )
 */
 void QColorSpace_new3()
 {
@@ -104,7 +104,7 @@ void QColorSpace_new3()
 }
 
 /*
-QColorSpace(Primaries primaries, float gamma)
+QColorSpace( QColorSpace::Primaries primaries, float gamma )
 */
 void QColorSpace_new4()
 {
@@ -115,7 +115,7 @@ void QColorSpace_new4()
 }
 
 /*
-QColorSpace(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &bluePoint, TransferFunction fun, float gamma = 0.0f)
+QColorSpace( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint, QColorSpace::TransferFunction fun, float gamma = 0.0f )
 */
 void QColorSpace_new5()
 {
@@ -126,7 +126,7 @@ void QColorSpace_new5()
 }
 
 /*
-QColorSpace(const QColorSpace &colorSpace)
+QColorSpace( const QColorSpace & colorSpace )
 */
 void QColorSpace_new6()
 {
@@ -135,20 +135,6 @@ void QColorSpace_new6()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-QColorSpace(QColorSpace &&colorSpace) noexcept
-*/
-
-/*
-[1]QColorSpace()
-[2]QColorSpace(NamedColorSpace namedColorSpace)
-[3]QColorSpace(Primaries primaries, TransferFunction fun, float gamma = 0.0f)
-[4]QColorSpace(Primaries primaries, float gamma)
-[5]QColorSpace(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &bluePoint, TransferFunction fun, float gamma = 0.0f)
-[6]QColorSpace(const QColorSpace &colorSpace)
-[7]QColorSpace(QColorSpace &&colorSpace) noexcept
-*/
 
 HB_FUNC_STATIC( QCOLORSPACE_NEW )
 {
@@ -205,7 +191,7 @@ HB_FUNC_STATIC( QCOLORSPACE_DELETE )
 }
 
 /*
-void swap(QColorSpace &colorSpace) noexcept
+void swap( QColorSpace & colorSpace ) noexcept
 */
 HB_FUNC_STATIC( QCOLORSPACE_SWAP )
 {
@@ -233,7 +219,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SWAP )
 }
 
 /*
-Primaries primaries() const noexcept
+QColorSpace::Primaries primaries() const noexcept
 */
 HB_FUNC_STATIC( QCOLORSPACE_PRIMARIES )
 {
@@ -259,7 +245,7 @@ HB_FUNC_STATIC( QCOLORSPACE_PRIMARIES )
 }
 
 /*
-TransferFunction transferFunction() const noexcept
+QColorSpace::TransferFunction transferFunction() const noexcept
 */
 HB_FUNC_STATIC( QCOLORSPACE_TRANSFERFUNCTION )
 {
@@ -311,7 +297,7 @@ HB_FUNC_STATIC( QCOLORSPACE_GAMMA )
 }
 
 /*
-void setTransferFunction(TransferFunction transferFunction, float gamma = 0.0f)
+void setTransferFunction( QColorSpace::TransferFunction transferFunction, float gamma = 0.0f )
 */
 HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
 {
@@ -321,7 +307,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) );
@@ -339,7 +325,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
 }
 
 /*
-QColorSpace withTransferFunction(TransferFunction transferFunction, float gamma = 0.0f) const
+QColorSpace withTransferFunction( QColorSpace::TransferFunction transferFunction, float gamma = 0.0f ) const
 */
 HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
 {
@@ -349,7 +335,7 @@ HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QColorSpace( obj->withTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) ) );
@@ -366,7 +352,7 @@ HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
 }
 
 /*
-void setPrimaries(Primaries primariesId)
+void setPrimaries( QColorSpace::Primaries primariesId )
 */
 void QColorSpace_setPrimaries1()
 {
@@ -383,7 +369,7 @@ void QColorSpace_setPrimaries1()
 }
 
 /*
-void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &bluePoint)
+void setPrimaries( const QPointF & whitePoint, const QPointF & redPoint, const QPointF & greenPoint, const QPointF & bluePoint )
 */
 void QColorSpace_setPrimaries2()
 {
@@ -398,11 +384,6 @@ void QColorSpace_setPrimaries2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setPrimaries(Primaries primariesId)
-[2]void setPrimaries(const QPointF &whitePoint, const QPointF &redPoint, const QPointF &greenPoint, const QPointF &bluePoint)
-*/
 
 HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 {
@@ -447,7 +428,7 @@ HB_FUNC_STATIC( QCOLORSPACE_ISVALID )
 }
 
 /*
-static QColorSpace fromIccProfile(const QByteArray &iccProfile)
+static QColorSpace fromIccProfile( const QByteArray & iccProfile )
 */
 HB_FUNC_STATIC( QCOLORSPACE_FROMICCPROFILE )
 {
@@ -494,10 +475,6 @@ HB_FUNC_STATIC( QCOLORSPACE_ICCPROFILE )
   }
 #endif
 }
-
-/*
-QColorTransform transformationToColorSpace(const QColorSpace &colorspace) const
-*/
 
 HB_FUNC_STATIC( QCOLORSPACE_NEWFROM )
 {

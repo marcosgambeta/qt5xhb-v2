@@ -49,11 +49,11 @@ RETURN
 #endif
 
 /*
-QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
+QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride = false )
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
   {
     auto obj = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
     Qt5xHb::returnNewObject( obj, false );

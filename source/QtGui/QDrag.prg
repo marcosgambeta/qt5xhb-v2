@@ -73,7 +73,7 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-QDrag(QObject * dragSource)
+QDrag( QObject * dragSource )
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDRAG_DEFAULTACTION )
 }
 
 /*
-QPixmap dragCursor(Qt::DropAction action) const
+QPixmap dragCursor( Qt::DropAction action ) const
 */
 HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
 }
 
 /*
-Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
+Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
 */
 void QDrag_exec1()
 {
@@ -170,7 +170,7 @@ void QDrag_exec1()
 }
 
 /*
-Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
+Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
 */
 void QDrag_exec2()
 {
@@ -182,14 +182,9 @@ void QDrag_exec2()
   }
 }
 
-/*
-[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
-*/
-
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QDrag_exec1();
   }
@@ -279,7 +274,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
 }
 
 /*
-void setDragCursor(const QPixmap & cursor, Qt::DropAction action)
+void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
 {
@@ -305,7 +300,7 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
 }
 
 /*
-void setHotSpot(const QPoint & hotspot)
+void setHotSpot( const QPoint & hotspot )
 */
 HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
 {
@@ -331,7 +326,7 @@ HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
 }
 
 /*
-void setMimeData(QMimeData * data)
+void setMimeData( QMimeData * data )
 */
 HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
 {
@@ -357,7 +352,7 @@ HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
 }
 
 /*
-void setPixmap(const QPixmap & pixmap)
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QDRAG_SETPIXMAP )
 {

@@ -148,7 +148,7 @@ void QStandardItem_new1()
 }
 
 /*
-QStandardItem(const QString &text)
+QStandardItem( const QString & text )
 */
 void QStandardItem_new2()
 {
@@ -157,7 +157,7 @@ void QStandardItem_new2()
 }
 
 /*
-QStandardItem(const QIcon &icon, const QString &text)
+QStandardItem( const QIcon & icon, const QString & text )
 */
 void QStandardItem_new3()
 {
@@ -166,20 +166,13 @@ void QStandardItem_new3()
 }
 
 /*
-QStandardItem(int rows, int columns = 1)
+QStandardItem( int rows, int columns = 1 )
 */
 void QStandardItem_new4()
 {
   auto obj = new QStandardItem( PINT(1), OPINT(2,1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QStandardItem()
-[2]QStandardItem(const QString &text)
-[3]QStandardItem(const QIcon &icon, const QString &text)
-[4]QStandardItem(int rows, int columns = 1)
-*/
 
 HB_FUNC_STATIC(QSTANDARDITEM_NEW )
 {
@@ -195,7 +188,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW )
   {
     QStandardItem_new3();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QStandardItem_new4();
   }
@@ -223,7 +216,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 }
 
 /*
-virtual QVariant data(int role = Qt::UserRole + 1) const
+virtual QVariant data( int role = Qt::UserRole + 1 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 {
@@ -232,10 +225,10 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
-      auto ptr = new QVariant( obj->data( OPINT(1,Qt::UserRole+1) ) );
+      auto ptr = new QVariant( obj->data( OPINT(1,Qt::UserRole + 1) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -248,7 +241,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 }
 
 /*
-virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
+virtual void setData( const QVariant & value, int role = Qt::UserRole + 1 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 {
@@ -257,10 +250,10 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVARIANT(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
-      obj->setData( *PQVARIANT(1), OPINT(2,Qt::UserRole+1) );
+      obj->setData( *PQVARIANT(1), OPINT(2,Qt::UserRole + 1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +291,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
 {
@@ -349,7 +342,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ICON )
 }
 
 /*
-void setIcon(const QIcon &icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
 {
@@ -399,7 +392,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
 }
 
 /*
-void setToolTip(const QString &toolTip)
+void setToolTip( const QString & toolTip )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
 {
@@ -449,7 +442,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
 }
 
 /*
-void setStatusTip(const QString &statusTip)
+void setStatusTip( const QString & statusTip )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
 {
@@ -499,7 +492,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
 }
 
 /*
-void setWhatsThis(const QString &whatsThis)
+void setWhatsThis( const QString & whatsThis )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
 {
@@ -550,7 +543,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
 }
 
 /*
-void setSizeHint(const QSize &sizeHint)
+void setSizeHint( const QSize & sizeHint )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
 {
@@ -601,7 +594,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FONT )
 }
 
 /*
-void setFont(const QFont &font)
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
 {
@@ -651,7 +644,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
 }
 
 /*
-void setTextAlignment(Qt::Alignment textAlignment)
+void setTextAlignment( Qt::Alignment textAlignment )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
 {
@@ -702,7 +695,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
 }
 
 /*
-void setBackground(const QBrush &brush)
+void setBackground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
 {
@@ -753,7 +746,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
 }
 
 /*
-void setForeground(const QBrush &brush)
+void setForeground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
 {
@@ -803,7 +796,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
 }
 
 /*
-void setCheckState(Qt::CheckState checkState)
+void setCheckState( Qt::CheckState checkState )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
 {
@@ -853,7 +846,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
 }
 
 /*
-void setAccessibleText(const QString &accessibleText)
+void setAccessibleText( const QString & accessibleText )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
 {
@@ -903,7 +896,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 }
 
 /*
-void setAccessibleDescription(const QString &accessibleDescription)
+void setAccessibleDescription( const QString & accessibleDescription )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
 {
@@ -953,7 +946,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
 }
 
 /*
-void setFlags(Qt::ItemFlags flags)
+void setFlags( Qt::ItemFlags flags )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
 {
@@ -1003,7 +996,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
 }
 
 /*
-void setEnabled(bool enabled)
+void setEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
 {
@@ -1053,7 +1046,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
 }
 
 /*
-void setEditable(bool editable)
+void setEditable( bool editable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
 {
@@ -1103,7 +1096,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
 }
 
 /*
-void setSelectable(bool selectable)
+void setSelectable( bool selectable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
 {
@@ -1153,7 +1146,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
 }
 
 /*
-void setCheckable(bool checkable)
+void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
 {
@@ -1203,7 +1196,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
 }
 
 /*
-void setTristate(bool tristate)
+void setTristate( bool tristate )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
 {
@@ -1253,7 +1246,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
 }
 
 /*
-void setDragEnabled(bool dragEnabled)
+void setDragEnabled( bool dragEnabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
 {
@@ -1303,7 +1296,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
 }
 
 /*
-void setDropEnabled(bool dropEnabled)
+void setDropEnabled( bool dropEnabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 {
@@ -1329,7 +1322,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 }
 
 /*
-QStandardItem *parent() const
+QStandardItem * parent() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 {
@@ -1427,7 +1420,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
 }
 
 /*
-QStandardItemModel *model() const
+QStandardItemModel * model() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 {
@@ -1476,7 +1469,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
 }
 
 /*
-void setRowCount(int rows)
+void setRowCount( int rows )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
 {
@@ -1526,7 +1519,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount(int columns)
+void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
 {
@@ -1576,7 +1569,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
 }
 
 /*
-QStandardItem *child(int row, int column = 0) const
+QStandardItem * child( int row, int column = 0 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 {
@@ -1585,7 +1578,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QStandardItem * ptr = obj->child( PINT(1), OPINT(2,0) );
@@ -1601,7 +1594,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 }
 
 /*
-void setChild(int row, int column, QStandardItem *item)
+void setChild( int row, int column, QStandardItem * item )
 */
 void QStandardItem_setChild1()
 {
@@ -1616,7 +1609,7 @@ void QStandardItem_setChild1()
 }
 
 /*
-void setChild(int row, QStandardItem *item)
+void setChild( int row, QStandardItem * item )
 */
 void QStandardItem_setChild2()
 {
@@ -1629,11 +1622,6 @@ void QStandardItem_setChild2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setChild(int row, int column, QStandardItem *item)
-[2]void setChild(int row, QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 {
@@ -1652,7 +1640,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 }
 
 /*
-void insertRow(int row, const QList<QStandardItem*> &items)
+void insertRow( int row, const QList<QStandardItem *> & items )
 */
 void QStandardItem_insertRow1()
 {
@@ -1674,7 +1662,7 @@ void QStandardItem_insertRow1()
 }
 
 /*
-void insertRow(int row, QStandardItem *item)
+void insertRow( int row, QStandardItem * item )
 */
 void QStandardItem_insertRow2()
 {
@@ -1687,11 +1675,6 @@ void QStandardItem_insertRow2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertRow(int row, const QList<QStandardItem*> &items)
-[2]void insertRow(int row, QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 {
@@ -1710,7 +1693,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 }
 
 /*
-void insertColumn(int column, const QList<QStandardItem*> &items)
+void insertColumn( int column, const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 {
@@ -1743,7 +1726,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 }
 
 /*
-void insertRows(int row, const QList<QStandardItem*> &items)
+void insertRows( int row, const QList<QStandardItem *> & items )
 */
 void QStandardItem_insertRows1()
 {
@@ -1765,7 +1748,7 @@ void QStandardItem_insertRows1()
 }
 
 /*
-void insertRows(int row, int count)
+void insertRows( int row, int count )
 */
 void QStandardItem_insertRows2()
 {
@@ -1778,11 +1761,6 @@ void QStandardItem_insertRows2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertRows(int row, const QList<QStandardItem*> &items)
-[2]void insertRows(int row, int count)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 {
@@ -1801,7 +1779,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 }
 
 /*
-void insertColumns(int column, int count)
+void insertColumns( int column, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
 {
@@ -1827,7 +1805,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
 }
 
 /*
-void removeRow(int row)
+void removeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
 {
@@ -1853,7 +1831,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
 }
 
 /*
-void removeColumn(int column)
+void removeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
 {
@@ -1879,7 +1857,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
 }
 
 /*
-void removeRows(int row, int count)
+void removeRows( int row, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
 {
@@ -1905,7 +1883,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
 }
 
 /*
-void removeColumns(int column, int count)
+void removeColumns( int column, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 {
@@ -1931,7 +1909,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 }
 
 /*
-void appendRow(const QList<QStandardItem*> &items)
+void appendRow( const QList<QStandardItem *> & items )
 */
 void QStandardItem_appendRow1()
 {
@@ -1953,7 +1931,7 @@ void QStandardItem_appendRow1()
 }
 
 /*
-void appendRow(QStandardItem *item)
+void appendRow( QStandardItem * item )
 */
 void QStandardItem_appendRow2()
 {
@@ -1966,11 +1944,6 @@ void QStandardItem_appendRow2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void appendRow(const QList<QStandardItem*> &items)
-[2]void appendRow(QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 {
@@ -1989,7 +1962,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 }
 
 /*
-void appendRows(const QList<QStandardItem*> &items)
+void appendRows( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 {
@@ -2022,7 +1995,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 }
 
 /*
-void appendColumn(const QList<QStandardItem*> &items)
+void appendColumn( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 {
@@ -2055,7 +2028,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 }
 
 /*
-QStandardItem *takeChild(int row, int column = 0)
+QStandardItem * takeChild( int row, int column = 0 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 {
@@ -2064,7 +2037,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QStandardItem * ptr = obj->takeChild( PINT(1), OPINT(2,0) );
@@ -2080,7 +2053,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 }
 
 /*
-QList<QStandardItem*> takeRow(int row)
+QList<QStandardItem *> takeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 {
@@ -2128,7 +2101,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 }
 
 /*
-QList<QStandardItem*> takeColumn(int column)
+QList<QStandardItem *> takeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 {
@@ -2176,7 +2149,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 }
 
 /*
-void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
+void sortChildren( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 {
@@ -2185,7 +2158,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->sortChildren( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
@@ -2202,7 +2175,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 }
 
 /*
-virtual QStandardItem *clone() const
+virtual QStandardItem * clone() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 {
@@ -2251,7 +2224,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
 }
 
 /*
-virtual void read(QDataStream &in)
+virtual void read( QDataStream & in )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_READ )
 {
@@ -2277,7 +2250,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_READ )
 }
 
 /*
-virtual void write(QDataStream &out) const
+virtual void write( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
 {
@@ -2303,7 +2276,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
 }
 
 /*
-void QStandardItem::clearData()
+void clearData()
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CLEARDATA )
 {

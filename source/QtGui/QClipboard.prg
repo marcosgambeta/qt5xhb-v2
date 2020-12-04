@@ -73,7 +73,7 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-void clear ( Mode mode = Clipboard )
+void clear( QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->clear( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 }
 
 /*
-QImage image ( Mode mode = Clipboard ) const
+QImage image( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QImage( obj->image( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 }
 
 /*
-const QMimeData * mimeData ( Mode mode = Clipboard ) const
+const QMimeData * mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       const QMimeData * ptr = obj->mimeData( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 }
 
 /*
-bool ownsClipboard () const
+bool ownsClipboard() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 }
 
 /*
-bool ownsFindBuffer () const
+bool ownsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 }
 
 /*
-bool ownsSelection () const
+bool ownsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 }
 
 /*
-QPixmap pixmap ( Mode mode = Clipboard ) const
+QPixmap pixmap( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 }
 
 /*
-void setImage ( const QImage & image, Mode mode = Clipboard )
+void setImage( const QImage & image, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setImage( *PQIMAGE(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 }
 
 /*
-void setMimeData ( QMimeData * src, Mode mode = Clipboard )
+void setMimeData( QMimeData * src, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setMimeData( PQMIMEDATA(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap, Mode mode = Clipboard )
+void setPixmap( const QPixmap & pixmap, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setPixmap( *PQPIXMAP(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 }
 
 /*
-void setText ( const QString & text, Mode mode = Clipboard )
+void setText( const QString & text, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setText( PQSTRING(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 }
 
 /*
-bool supportsFindBuffer () const
+bool supportsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 }
 
 /*
-bool supportsSelection () const
+bool supportsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 }
 
 /*
-QString text ( Mode mode = Clipboard ) const
+QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 void QClipboard_text1()
 {
@@ -411,32 +411,27 @@ void QClipboard_text1()
 }
 
 /*
-QString text ( QString & subtype, Mode mode = Clipboard ) const
+QString text( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
-void QClipboard_text2 ()
+void QClipboard_text2()
 {
   auto obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
-  if( obj )
+  if( obj != nullptr )
   {
-    QString par1 = PQSTRING(1);
-    RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
-    hb_storc( QSTRINGTOSTRING(par1), 1 );
+    QString par1 = hb_parc(1);
+    RQSTRING( obj->text( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
+    hb_storc( QSTRINGTOSTRING(par1), 1);
   }
 }
 
-/*
-[1]QString text ( Mode mode = Clipboard ) const
-[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
-*/
-
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QClipboard_text1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QClipboard_text2();
   }

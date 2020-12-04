@@ -144,7 +144,7 @@ RETURN
 #include <QtGui/QTextOption>
 
 /*
-QTextDocument(QObject *parent = nullptr)
+QTextDocument( QObject * parent = nullptr )
 */
 void QTextDocument_new1()
 {
@@ -153,7 +153,7 @@ void QTextDocument_new1()
 }
 
 /*
-QTextDocument(const QString &text, QObject *parent = nullptr)
+QTextDocument( const QString & text, QObject * parent = nullptr )
 */
 void QTextDocument_new2()
 {
@@ -161,18 +161,13 @@ void QTextDocument_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QTextDocument(QObject *parent = nullptr)
-[2]QTextDocument(const QString &text, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTextDocument_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QTextDocument_new2();
   }
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 }
 
 /*
-QTextDocument *clone(QObject *parent = nullptr) const
+QTextDocument * clone( QObject * parent = nullptr ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 {
@@ -277,7 +272,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
 }
 
 /*
-void setUndoRedoEnabled(bool enable)
+void setUndoRedoEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
 {
@@ -447,7 +442,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
 }
 
 /*
-void setDocumentLayout(QAbstractTextDocumentLayout *layout)
+void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
 {
@@ -473,7 +468,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
 }
 
 /*
-QAbstractTextDocumentLayout *documentLayout() const
+QAbstractTextDocumentLayout * documentLayout() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 {
@@ -498,7 +493,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 }
 
 /*
-void setMetaInformation(MetaInformation info, const QString &)
+void setMetaInformation( QTextDocument::MetaInformation info, const QString & )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
 {
@@ -524,7 +519,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
 }
 
 /*
-QString metaInformation(MetaInformation info) const
+QString metaInformation( QTextDocument::MetaInformation info ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
 {
@@ -548,7 +543,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
 }
 
 /*
-QString toHtml(const QByteArray &encoding = QByteArray()) const
+QString toHtml( const QByteArray & encoding = QByteArray() ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 {
@@ -572,7 +567,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 }
 
 /*
-void setHtml(const QString &html)
+void setHtml( const QString & html )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
 {
@@ -622,7 +617,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
 }
 
 /*
-void setPlainText(const QString &text)
+void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
 {
@@ -648,7 +643,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
 }
 
 /*
-QChar characterAt(int pos) const
+QChar characterAt( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
 {
@@ -673,7 +668,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
 }
 
 /*
-QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
+QTextCursor find( const QString & subString, int from = 0, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find1()
 {
@@ -687,7 +682,7 @@ void QTextDocument_find1()
 }
 
 /*
-QTextCursor find(const QString &subString, const QTextCursor &from, FindFlags options = 0) const
+QTextCursor find( const QString & subString, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find2()
 {
@@ -701,7 +696,7 @@ void QTextDocument_find2()
 }
 
 /*
-QTextCursor find(const QRegExp &expr, int from = 0, FindFlags options = 0) const
+QTextCursor find( const QRegExp & expr, int from = 0, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find3()
 {
@@ -715,7 +710,7 @@ void QTextDocument_find3()
 }
 
 /*
-QTextCursor find(const QRegExp &expr, const QTextCursor &from, FindFlags options = 0) const
+QTextCursor find( const QRegExp & expr, const QTextCursor & from, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find4()
 {
@@ -728,28 +723,21 @@ void QTextDocument_find4()
   }
 }
 
-/*
-[1]QTextCursor find(const QString &subString, int from = 0, FindFlags options = 0) const
-[2]QTextCursor find(const QString &subString, const QTextCursor &from, FindFlags options = 0) const
-[3]QTextCursor find(const QRegExp &expr, int from = 0, FindFlags options = 0) const
-[4]QTextCursor find(const QRegExp &expr, const QTextCursor &from, FindFlags options = 0) const
-*/
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find1();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQTEXTCURSOR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find2();
   }
-  else if( ISBETWEEN(1,3) && ISQREGEXP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find3();
   }
-  else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find4();
   }
@@ -760,7 +748,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 }
 
 /*
-QTextFrame *frameAt(int pos) const
+QTextFrame * frameAt( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
 {
@@ -785,7 +773,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FRAMEAT )
 }
 
 /*
-QTextFrame *rootFrame() const
+QTextFrame * rootFrame() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
 {
@@ -810,7 +798,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
 }
 
 /*
-QTextObject *object(int objectIndex) const
+QTextObject * object( int objectIndex ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
 {
@@ -835,7 +823,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
 }
 
 /*
-QTextObject *objectForFormat(const QTextFormat &) const
+QTextObject * objectForFormat( const QTextFormat & ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
 {
@@ -860,7 +848,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
 }
 
 /*
-QTextBlock findBlock(int pos) const
+QTextBlock findBlock( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
 {
@@ -885,7 +873,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
 }
 
 /*
-QTextBlock findBlockByNumber(int blockNumber) const
+QTextBlock findBlockByNumber( int blockNumber ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
 {
@@ -910,7 +898,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
 }
 
 /*
-QTextBlock findBlockByLineNumber(int blockNumber) const
+QTextBlock findBlockByLineNumber( int blockNumber ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
 {
@@ -1035,7 +1023,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 }
 
 /*
-void setPageSize(const QSizeF &size)
+void setPageSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
 {
@@ -1086,7 +1074,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
 }
 
 /*
-void setDefaultFont(const QFont &font)
+void setDefaultFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
 {
@@ -1185,7 +1173,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
 }
 
 /*
-void print(QPagedPaintDevice *printer) const
+void print( QPagedPaintDevice * printer ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
 {
@@ -1211,7 +1199,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
 }
 
 /*
-QVariant resource(int type, const QUrl &name) const
+QVariant resource( int type, const QUrl & name ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 {
@@ -1236,7 +1224,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 }
 
 /*
-void addResource(int type, const QUrl &name, const QVariant &resource)
+void addResource( int type, const QUrl & name, const QVariant & resource )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
 {
@@ -1262,7 +1250,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
 }
 
 /*
-void markContentsDirty(int from, int length)
+void markContentsDirty( int from, int length )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
 {
@@ -1288,7 +1276,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
 }
 
 /*
-void setUseDesignMetrics(bool b)
+void setUseDesignMetrics( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
 {
@@ -1338,7 +1326,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
 }
 
 /*
-void drawContents(QPainter *painter, const QRectF &rect = QRectF())
+void drawContents( QPainter * painter, const QRectF & rect = QRectF() )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 {
@@ -1364,7 +1352,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 }
 
 /*
-void setTextWidth(qreal width)
+void setTextWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
 {
@@ -1462,7 +1450,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
 }
 
 /*
-void setIndentWidth(qreal width)
+void setIndentWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
 {
@@ -1512,7 +1500,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
 }
 
 /*
-void setDocumentMargin(qreal margin)
+void setDocumentMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
 {
@@ -1661,7 +1649,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
 }
 
 /*
-void setDefaultStyleSheet(const QString &sheet)
+void setDefaultStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
 {
@@ -1711,7 +1699,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
 }
 
 /*
-void clearUndoRedoStacks(Stacks historyToClear = UndoAndRedoStacks)
+void clearUndoRedoStacks( QTextDocument::Stacks historyToClear = QTextDocument::UndoAndRedoStacks )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
 {
@@ -1720,7 +1708,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->clearUndoRedoStacks( ISNIL(1)? (QTextDocument::Stacks) QTextDocument::UndoAndRedoStacks : (QTextDocument::Stacks) hb_parni(1) );
@@ -1761,7 +1749,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
 }
 
 /*
-void setMaximumBlockCount(int maximum)
+void setMaximumBlockCount( int maximum )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
 {
@@ -1812,7 +1800,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
 }
 
 /*
-void setDefaultTextOption(const QTextOption &option)
+void setDefaultTextOption( const QTextOption & option )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
 {
@@ -1862,7 +1850,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
 }
 
 /*
-void setDefaultCursorMoveStyle(Qt::CursorMoveStyle style)
+void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
 {
@@ -1888,7 +1876,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
 }
 
 /*
-void undo(QTextCursor *cursor)
+void undo( QTextCursor * cursor )
 */
 void QTextDocument_undo1()
 {
@@ -1917,11 +1905,6 @@ void QTextDocument_undo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void undo(QTextCursor *cursor)
-[2]void undo()
-*/
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
@@ -1939,7 +1922,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 }
 
 /*
-void redo(QTextCursor *cursor)
+void redo( QTextCursor * cursor )
 */
 void QTextDocument_redo1()
 {
@@ -1968,11 +1951,6 @@ void QTextDocument_redo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void redo(QTextCursor *cursor)
-[2]void redo()
-*/
-
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
@@ -1990,11 +1968,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 }
 
 /*
-void appendUndoItem(QAbstractUndoItem *)
-*/
-
-/*
-void setModified(bool m = true)
+void setModified( bool m = true )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 {
@@ -2003,7 +1977,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setModified( OPBOOL(1,true) );
@@ -2020,11 +1994,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 }
 
 /*
-QTextDocumentPrivate *docHandle() const
-*/
-
-/*
-void QTextDocument::setMarkdown(const QString &markdown, QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub)
+void setMarkdown( const QString & markdown, QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMARKDOWN )
 {
@@ -2034,7 +2004,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMARKDOWN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setMarkdown( PQSTRING(1), ISNIL(2)? (QTextDocument::MarkdownFeatures) QTextDocument::MarkdownDialectGitHub : (QTextDocument::MarkdownFeatures) hb_parni(2) );
@@ -2052,7 +2022,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMARKDOWN )
 }
 
 /*
-QString QTextDocument::toMarkdown(QTextDocument::MarkdownFeatures features = MarkdownDialectGitHub) const
+QString toMarkdown( QTextDocument::MarkdownFeatures features = QTextDocument::MarkdownDialectGitHub ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOMARKDOWN )
 {
@@ -2062,7 +2032,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TOMARKDOWN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toMarkdown( ISNIL(1)? (QTextDocument::MarkdownFeatures) QTextDocument::MarkdownDialectGitHub : (QTextDocument::MarkdownFeatures) hb_parni(1) ) );

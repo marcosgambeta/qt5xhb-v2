@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QRegularExpressionValidator(QObject *parent = nullptr)
+QRegularExpressionValidator( QObject * parent = nullptr )
 */
 void QRegularExpressionValidator_new1()
 {
@@ -69,7 +69,7 @@ void QRegularExpressionValidator_new1()
 }
 
 /*
-QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
+QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = nullptr )
 */
 void QRegularExpressionValidator_new2()
 {
@@ -79,18 +79,13 @@ void QRegularExpressionValidator_new2()
 #endif
 }
 
-/*
-[1]QRegularExpressionValidator(QObject *parent = nullptr)
-[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QRegularExpressionValidator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QRegularExpressionValidator_new2();
   }
@@ -149,7 +144,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 }
 
 /*
-void setRegularExpression(const QRegularExpression &re)
+void setRegularExpression( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {

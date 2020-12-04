@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QInputMethodEvent ()
+QInputMethodEvent()
 */
 void QInputMethodEvent_new1()
 {
@@ -61,23 +61,13 @@ void QInputMethodEvent_new1()
 }
 
 /*
-QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-*/
-
-/*
-QInputMethodEvent ( const QInputMethodEvent & other )
+QInputMethodEvent( const QInputMethodEvent & other )
 */
 void QInputMethodEvent_new3()
 {
   auto obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QInputMethodEvent ()
-[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-[3]QInputMethodEvent ( const QInputMethodEvent & other )
-*/
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
@@ -113,7 +103,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 }
 
 /*
-const QString & commitString () const
+const QString & commitString() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 {
@@ -137,7 +127,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_COMMITSTRING )
 }
 
 /*
-const QString & preeditString () const
+const QString & preeditString() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 {
@@ -161,7 +151,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_PREEDITSTRING )
 }
 
 /*
-int replacementLength () const
+int replacementLength() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
@@ -185,7 +175,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 }
 
 /*
-int replacementStart () const
+int replacementStart() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
@@ -209,7 +199,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 }
 
 /*
-void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
+void setCommitString( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
@@ -218,7 +208,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setCommitString( PQSTRING(1), OPINT(2,0), OPINT(3,0) );

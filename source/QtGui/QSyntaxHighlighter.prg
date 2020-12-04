@@ -55,11 +55,10 @@ RETURN
 #include <QtGui/QTextDocument>
 
 /*
-explicit QSyntaxHighlighter(QObject *parent)
+QSyntaxHighlighter(QObject *parent)
 */
-
 /*
-explicit QSyntaxHighlighter(QTextDocument *parent)
+QSyntaxHighlighter(QTextDocument *parent)
 */
 
 /*
@@ -85,7 +84,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 }
 
 /*
-void setDocument(QTextDocument *doc)
+void setDocument( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 }
 
 /*
-QTextDocument *document() const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
@@ -162,7 +161,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 }
 
 /*
-void rehighlightBlock(const QTextBlock &block)
+void rehighlightBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {

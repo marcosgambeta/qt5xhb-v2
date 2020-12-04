@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QOpenGLDebugLogger(QObject *parent = nullptr)
+QOpenGLDebugLogger( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_NEW )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ISLOGGING )
 }
 
 /*
-LoggingMode loggingMode() const
+QOpenGLDebugLogger::LoggingMode loggingMode() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGGINGMODE )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH )
 }
 
 /*
-void pushGroup(const QString &name,GLuint id = 0,QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource)
+void pushGroup( const QString & name, GLuint id = 0, QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->pushGroup( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Source) QOpenGLDebugMessage::ApplicationSource : (QOpenGLDebugMessage::Source) hb_parni(3) );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_POPGROUP )
 }
 
 /*
-void logMessage(const QOpenGLDebugMessage &debugMessage)
+void logMessage( const QOpenGLDebugMessage & debugMessage )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
 }
 
 /*
-void startLogging(LoggingMode loggingMode = AsynchronousLogging)
+void startLogging( QOpenGLDebugLogger::LoggingMode loggingMode = QOpenGLDebugLogger::AsynchronousLogging )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->startLogging( ISNIL(1)? (QOpenGLDebugLogger::LoggingMode) QOpenGLDebugLogger::AsynchronousLogging : (QOpenGLDebugLogger::LoggingMode) hb_parni(1) );

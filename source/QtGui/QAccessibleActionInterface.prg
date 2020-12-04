@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_ACTIONNAMES )
 }
 
 /*
-virtual QString localizedActionName(const QString &name) const
+virtual QString localizedActionName( const QString & name ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONNAME )
 }
 
 /*
-virtual QString localizedActionDescription(const QString &name) const
+virtual QString localizedActionDescription( const QString & name ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_LOCALIZEDACTIONDESCRIPTION )
 }
 
 /*
-virtual void doAction(const QString &actionName) = 0
+virtual void doAction( const QString & actionName ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DOACTION )
 }
 
 /*
-virtual QStringList keyBindingsForAction(const QString &actionName) const = 0
+virtual QStringList keyBindingsForAction( const QString & actionName ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_KEYBINDINGSFORACTION )
 }
 
 /*
-static const QString &pressAction()
+static const QString & pressAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_PRESSACTION )
 }
 
 /*
-static const QString &increaseAction()
+static const QString & increaseAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_INCREASEACTION )
 }
 
 /*
-static const QString &decreaseAction()
+static const QString & decreaseAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_DECREASEACTION )
 }
 
 /*
-static const QString &showMenuAction()
+static const QString & showMenuAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SHOWMENUACTION )
 }
 
 /*
-static const QString &setFocusAction()
+static const QString & setFocusAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_SETFOCUSACTION )
 }
 
 /*
-static const QString &toggleAction()
+static const QString & toggleAction()
 */
 HB_FUNC_STATIC( QACCESSIBLEACTIONINTERFACE_TOGGLEACTION )
 {

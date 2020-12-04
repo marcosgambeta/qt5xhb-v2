@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QFontMetricsF ( const QFont & font )
+QFontMetricsF( const QFont & font )
 */
 void QFontMetricsF_new1()
 {
@@ -87,7 +87,7 @@ void QFontMetricsF_new1()
 }
 
 /*
-QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
+QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetricsF_new2()
 {
@@ -96,7 +96,7 @@ void QFontMetricsF_new2()
 }
 
 /*
-QFontMetricsF ( const QFontMetrics & fontMetrics )
+QFontMetricsF( const QFontMetrics & fontMetrics )
 */
 void QFontMetricsF_new3()
 {
@@ -105,7 +105,7 @@ void QFontMetricsF_new3()
 }
 
 /*
-QFontMetricsF ( const QFontMetricsF & fm )
+QFontMetricsF( const QFontMetricsF & fm )
 */
 void QFontMetricsF_new4()
 {
@@ -113,20 +113,13 @@ void QFontMetricsF_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QFontMetricsF ( const QFont & font )
-[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
-[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
-[4]QFontMetricsF ( const QFontMetricsF & fm )
-*/
-
 HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
     QFontMetricsF_new1();
   }
-  else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) ) // TODO: implementar ISQPAINTDEVICE
+  else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) )
   {
     QFontMetricsF_new2();
   }
@@ -162,7 +155,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DELETE )
 }
 
 /*
-qreal ascent () const
+qreal ascent() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 {
@@ -186,7 +179,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ASCENT )
 }
 
 /*
-qreal averageCharWidth () const
+qreal averageCharWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 {
@@ -210,7 +203,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 }
 
 /*
-QRectF boundingRect ( const QString & text ) const
+QRectF boundingRect( const QString & text ) const
 */
 void QFontMetricsF_boundingRect1()
 {
@@ -224,7 +217,7 @@ void QFontMetricsF_boundingRect1()
 }
 
 /*
-QRectF boundingRect ( QChar ch ) const
+QRectF boundingRect( QChar ch ) const
 */
 void QFontMetricsF_boundingRect2()
 {
@@ -238,7 +231,7 @@ void QFontMetricsF_boundingRect2()
 }
 
 /*
-QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 */
 void QFontMetricsF_boundingRect3()
 {
@@ -253,12 +246,6 @@ void QFontMetricsF_boundingRect3()
   }
 }
 
-/*
-[1]QRectF boundingRect ( const QString & text ) const
-[2]QRectF boundingRect ( QChar ch ) const
-[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
-*/
-
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -269,7 +256,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
   {
     QFontMetricsF_boundingRect2();
   }
-  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTARRAY(5) )
+  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && ISOPTARRAY(5) )
   {
     QFontMetricsF_boundingRect3();
   }
@@ -280,7 +267,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 }
 
 /*
-qreal descent () const
+qreal descent() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 {
@@ -304,7 +291,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_DESCENT )
 }
 
 /*
-QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
+QString elidedText( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
 {
@@ -313,7 +300,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RQSTRING( obj->elidedText( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PQREAL(3), OPINT(4,0) ) );
@@ -328,7 +315,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
 }
 
 /*
-qreal height () const
+qreal height() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 {
@@ -352,7 +339,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_HEIGHT )
 }
 
 /*
-bool inFontUcs4 ( uint ch ) const
+bool inFontUcs4( uint ch ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
 {
@@ -376,7 +363,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
 }
 
 /*
-qreal leading () const
+qreal leading() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 {
@@ -400,7 +387,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEADING )
 }
 
 /*
-qreal lineSpacing () const
+qreal lineSpacing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 {
@@ -424,7 +411,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINESPACING )
 }
 
 /*
-qreal lineWidth () const
+qreal lineWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 {
@@ -448,7 +435,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LINEWIDTH )
 }
 
 /*
-qreal maxWidth () const
+qreal maxWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 {
@@ -472,7 +459,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MAXWIDTH )
 }
 
 /*
-qreal minLeftBearing () const
+qreal minLeftBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 {
@@ -496,7 +483,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINLEFTBEARING )
 }
 
 /*
-qreal minRightBearing () const
+qreal minRightBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 {
@@ -520,7 +507,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_MINRIGHTBEARING )
 }
 
 /*
-qreal overlinePos () const
+qreal overlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 {
@@ -544,7 +531,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_OVERLINEPOS )
 }
 
 /*
-QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
+QSizeF size( int flags, const QString & text, int tabStops = 0, int * tabArray = nullptr ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 {
@@ -553,7 +540,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       int par4;
@@ -571,7 +558,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
 }
 
 /*
-qreal strikeOutPos () const
+qreal strikeOutPos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 {
@@ -595,7 +582,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_STRIKEOUTPOS )
 }
 
 /*
-QRectF tightBoundingRect ( const QString & text ) const
+QRectF tightBoundingRect( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
 {
@@ -620,7 +607,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
 }
 
 /*
-qreal underlinePos () const
+qreal underlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 {
@@ -644,7 +631,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 }
 
 /*
-qreal width ( const QString & text ) const
+qreal width( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {
@@ -668,7 +655,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 }
 
 /*
-qreal xHeight () const
+qreal xHeight() const
 */
 HB_FUNC_STATIC( QFONTMETRICSF_XHEIGHT )
 {

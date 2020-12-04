@@ -52,7 +52,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QActionEvent ( int type, QAction * action, QAction * before = nullptr )
+QActionEvent( int type, QAction * action, QAction * before = nullptr )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 }
 
 /*
-QAction * action () const
+QAction * action() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 }
 
 /*
-QAction * before () const
+QAction * before() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {

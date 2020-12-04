@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/QVector>
 
 /*
-explicit QOpenGLTimeMonitor(QObject *parent = nullptr)
+QOpenGLTimeMonitor(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLTIMEMONITOR_NEW )
 {

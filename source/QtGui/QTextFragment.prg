@@ -66,10 +66,6 @@ RETURN
 #endif
 
 /*
-QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
-*/
-
-/*
 QTextFragment()
 */
 void QTextFragment_new2()
@@ -79,19 +75,13 @@ void QTextFragment_new2()
 }
 
 /*
-QTextFragment(const QTextFragment &o)
+QTextFragment( const QTextFragment & o )
 */
 void QTextFragment_new3()
 {
   auto obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
-[2]QTextFragment()
-[3]QTextFragment(const QTextFragment &o)
-*/
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
@@ -199,7 +189,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 }
 
 /*
-bool contains(int position) const
+bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
@@ -296,7 +286,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 }
 
 /*
-QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
+QList<QGlyphRun> glyphRuns( int from = -1, int length = -1 ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
@@ -305,7 +295,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QList<QGlyphRun> list = obj->glyphRuns( OPINT(1,-1), OPINT(2,-1) );

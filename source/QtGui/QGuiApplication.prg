@@ -109,12 +109,30 @@ CLASS QGuiApplication INHERIT QCoreApplication
    METHOD styleHints
    METHOD topLevelAt
    METHOD topLevelWindows
+   METHOD applicationState
+   METHOD highDpiScaleFactorRoundingPolicy
+   METHOD isFallbackSessionManagementEnabled
+   METHOD isSavingSession
+   METHOD screenAt
+   METHOD setFallbackSessionManagementEnabled
+   METHOD setHighDpiScaleFactorRoundingPolicy
+   METHOD sync
+   METHOD desktopFileName
+   METHOD setDesktopFileName
 
+   METHOD onApplicationStateChanged
+   METHOD onCommitDataRequest
    METHOD onFocusObjectChanged
    METHOD onFocusWindowChanged
+   METHOD onFontChanged
    METHOD onFontDatabaseChanged
    METHOD onLastWindowClosed
+   METHOD onLayoutDirectionChanged
+   METHOD onPaletteChanged
+   METHOD onPrimaryScreenChanged
+   METHOD onSaveStateRequest
    METHOD onScreenAdded
+   METHOD onScreenRemoved
 
    DESTRUCTOR destroyObject
 
@@ -184,7 +202,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 }
 
 /*
-virtual bool notify(QObject * object, QEvent * event)
+virtual bool notify( QObject * object, QEvent * event )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
@@ -270,7 +288,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
 }
 
 /*
-static void changeOverrideCursor(const QCursor & cursor)
+static void changeOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
 {
@@ -603,10 +621,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
 }
 
 /*
-static QPlatformNativeInterface * platformNativeInterface()
-*/
-
-/*
 static QScreen * primaryScreen()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
@@ -729,7 +743,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 }
 
 /*
-static void setApplicationDisplayName(const QString & name)
+static void setApplicationDisplayName( const QString & name )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 {
@@ -750,7 +764,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 }
 
 /*
-static void setDesktopSettingsAware(bool on)
+static void setDesktopSettingsAware( bool on )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
@@ -771,7 +785,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 }
 
 /*
-static void setFont(const QFont & font)
+static void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 {
@@ -792,7 +806,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 }
 
 /*
-static void setLayoutDirection(Qt::LayoutDirection direction)
+static void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
@@ -813,7 +827,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 }
 
 /*
-static void setOverrideCursor(const QCursor & cursor)
+static void setOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 {
@@ -834,7 +848,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 }
 
 /*
-static void setPalette(const QPalette & pal)
+static void setPalette( const QPalette & pal )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 {
@@ -855,7 +869,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 }
 
 /*
-static void setQuitOnLastWindowClosed(bool quit)
+static void setQuitOnLastWindowClosed( bool quit )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
@@ -896,7 +910,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
 }
 
 /*
-static QWindow * topLevelAt(const QPoint & pos)
+static QWindow * topLevelAt( const QPoint & pos )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {
@@ -956,6 +970,366 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELWINDOWS )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
+}
+
+/*
+static Qt::ApplicationState applicationState()
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONSTATE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(0) )
+  {
+#endif
+    RENUM( QGuiApplication::applicationState() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static Qt::HighDpiScaleFactorRoundingPolicy highDpiScaleFactorRoundingPolicy()
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_HIGHDPISCALEFACTORROUNDINGPOLICY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(0) )
+  {
+#endif
+    RENUM( QGuiApplication::highDpiScaleFactorRoundingPolicy() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static bool isFallbackSessionManagementEnabled()
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ISFALLBACKSESSIONMANAGEMENTENABLED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(0) )
+  {
+#endif
+    RBOOL( QGuiApplication::isFallbackSessionManagementEnabled() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+bool isSavingSession() const
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ISSAVINGSESSION )
+{
+  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isSavingSession() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
+/*
+static QScreen * screenAt( const QPoint & point )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_SCREENAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(1) && ISQPOINT(1) )
+  {
+#endif
+    QScreen * ptr = QGuiApplication::screenAt( *PQPOINT(1) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static void setFallbackSessionManagementEnabled( bool enabled )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_SETFALLBACKSESSIONMANAGEMENTENABLED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(1) && ISLOG(1) )
+  {
+#endif
+    QGuiApplication::setFallbackSessionManagementEnabled( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+static void setHighDpiScaleFactorRoundingPolicy( Qt::HighDpiScaleFactorRoundingPolicy policy )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_SETHIGHDPISCALEFACTORROUNDINGPOLICY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+#endif
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy( (Qt::HighDpiScaleFactorRoundingPolicy) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+static void sync()
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_SYNC )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(0) )
+  {
+#endif
+    QGuiApplication::sync();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QString desktopFileName()
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_DESKTOPFILENAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->desktopFileName() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
+
+/*
+void setDesktopFileName( const QString & name )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPFILENAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+  auto obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+#endif
+      obj->setDesktopFileName( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+void applicationStateChanged( Qt::ApplicationState state )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONAPPLICATIONSTATECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("applicationStateChanged(Qt::ApplicationState)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::applicationStateChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (Qt::ApplicationState arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void commitDataRequest( QSessionManager & manager )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONCOMMITDATAREQUEST )
+{
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("commitDataRequest(QSessionManager)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::commitDataRequest, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QSessionManager & arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) &arg1, "QSESSIONMANAGER" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
 }
 
 /*
@@ -1083,6 +1457,72 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONFOCUSWINDOWCHANGED )
 }
 
 /*
+void fontChanged( const QFont & font )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("fontChanged(QFont)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::fontChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (const QFont & arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QFONT" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
 void fontDatabaseChanged()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONFONTDATABASECHANGED )
@@ -1203,6 +1643,266 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONLASTWINDOWCLOSED )
 }
 
 /*
+void layoutDirectionChanged( Qt::LayoutDirection direction )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONLAYOUTDIRECTIONCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("layoutDirectionChanged(Qt::LayoutDirection)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::layoutDirectionChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (Qt::LayoutDirection arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, (int) arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void paletteChanged( const QPalette & palette )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONPALETTECHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("paletteChanged(QPalette)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::paletteChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (const QPalette & arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_object( (void *) &arg1, "QPALETTE" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void primaryScreenChanged( QScreen * screen )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONPRIMARYSCREENCHANGED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("primaryScreenChanged(QScreen*)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::primaryScreenChanged, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QScreen * arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QSCREEN" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void saveStateRequest( QSessionManager & manager )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONSAVESTATEREQUEST )
+{
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("saveStateRequest(QSessionManager)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::saveStateRequest, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QSessionManager & arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) &arg1, "QSESSIONMANAGER" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+}
+
+/*
 void screenAdded( QScreen * screen )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
@@ -1262,6 +1962,72 @@ HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENADDED )
   {
     hb_retl( false );
   }
+}
+
+/*
+void screenRemoved( QScreen * screen )
+*/
+HB_FUNC_STATIC( QGUIAPPLICATION_ONSCREENREMOVED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  auto sender = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("screenRemoved(QScreen*)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QGuiApplication::screenRemoved, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QScreen * arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QGUIAPPLICATION" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QSCREEN" );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
 }
 
 #pragma ENDDUMP

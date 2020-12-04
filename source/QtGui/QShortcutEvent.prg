@@ -51,11 +51,11 @@ RETURN
 #endif
 
 /*
-QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
+QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
-  if( ISBETWEEN(2,3) && ISQKEYSEQUENCE(1) && ISNUM(2) && ISOPTLOG(3) )
+  if( ISBETWEEN(2,3) && ISQKEYSEQUENCE(1) && ISNUM(2) && (ISLOG(3)||ISNIL(3)) )
   {
     auto obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
     Qt5xHb::returnNewObject( obj, false );
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 }
 
 /*
-const QKeySequence &key() const
+const QKeySequence & key() const
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {

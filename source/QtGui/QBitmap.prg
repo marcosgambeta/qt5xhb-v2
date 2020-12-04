@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QBitmap ()
+QBitmap()
 */
 void QBitmap_new1()
 {
@@ -64,7 +64,7 @@ void QBitmap_new1()
 }
 
 /*
-QBitmap ( const QPixmap & pixmap )
+QBitmap( const QPixmap & pixmap )
 */
 void QBitmap_new2()
 {
@@ -73,7 +73,7 @@ void QBitmap_new2()
 }
 
 /*
-QBitmap ( int width, int height )
+QBitmap( int width, int height )
 */
 void QBitmap_new3()
 {
@@ -82,7 +82,7 @@ void QBitmap_new3()
 }
 
 /*
-QBitmap ( const QSize & size )
+QBitmap( const QSize & size )
 */
 void QBitmap_new4()
 {
@@ -91,21 +91,13 @@ void QBitmap_new4()
 }
 
 /*
-QBitmap ( const QString & fileName, const char * format = nullptr )
+QBitmap( const QString & fileName, const char * format = nullptr )
 */
 void QBitmap_new5()
 {
   auto obj = new QBitmap( PQSTRING(1), OPCONSTCHAR(2,nullptr) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QBitmap ()
-[2]QBitmap ( const QPixmap & pixmap )
-[3]QBitmap ( int width, int height )
-[4]QBitmap ( const QSize & size )
-[5]QBitmap ( const QString & fileName, const char * format = nullptr )
-*/
 
 HB_FUNC_STATIC( QBITMAP_NEW )
 {
@@ -125,7 +117,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
   {
     QBitmap_new4();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QBitmap_new5();
   }
@@ -153,7 +145,7 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
@@ -179,7 +171,7 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
 }
 
 /*
-QBitmap transformed ( const QTransform & matrix ) const
+QBitmap transformed( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
@@ -204,12 +196,12 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 }
 
 /*
-static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISQSIZE(1) && ISCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQSIZE(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     auto ptr = new QBitmap( QBitmap::fromData( *PQSIZE(1), PCONSTUCHAR(2), ISNIL(3)? (QImage::Format) QImage::Format_MonoLSB : (QImage::Format) hb_parni(3) ) );
@@ -224,12 +216,12 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
 }
 
 /*
-static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QBitmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     auto ptr = new QBitmap( QBitmap::fromImage( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
@@ -242,10 +234,6 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   }
 #endif
 }
-
-/*
-static QBitmap QBitmap::fromImage(QImage &&image, Qt::ImageConversionFlags flags = Qt::AutoColor)
-*/
 
 /*
 QVariant toVariant()

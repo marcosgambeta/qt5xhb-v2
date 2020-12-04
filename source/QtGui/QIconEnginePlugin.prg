@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 }
 
 /*
-virtual QIconEngine * create(const QString & filename = QString()) = 0
+virtual QIconEngine * create( const QString & filename = QString() ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       QIconEngine * ptr = obj->create( OPQSTRING(1,QString()) );

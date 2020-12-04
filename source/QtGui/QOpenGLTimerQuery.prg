@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-explicit QOpenGLTimerQuery(QObject *parent = nullptr)
+QOpenGLTimerQuery(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QOPENGLTIMERQUERY_NEW )
 {

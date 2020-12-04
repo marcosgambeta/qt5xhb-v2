@@ -80,7 +80,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QBrush ()
+QBrush()
 */
 void QBrush_new1()
 {
@@ -89,7 +89,7 @@ void QBrush_new1()
 }
 
 /*
-QBrush ( Qt::BrushStyle style )
+QBrush( Qt::BrushStyle style )
 */
 void QBrush_new2()
 {
@@ -98,7 +98,7 @@ void QBrush_new2()
 }
 
 /*
-QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
+QBrush( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new3()
 {
@@ -107,7 +107,7 @@ void QBrush_new3()
 }
 
 /*
-QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
+QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new4()
 {
@@ -116,7 +116,7 @@ void QBrush_new4()
 }
 
 /*
-QBrush ( const QColor & color, const QPixmap & pixmap )
+QBrush( const QColor & color, const QPixmap & pixmap )
 */
 void QBrush_new5()
 {
@@ -125,7 +125,7 @@ void QBrush_new5()
 }
 
 /*
-QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
+QBrush( Qt::GlobalColor color, const QPixmap & pixmap )
 */
 void QBrush_new6()
 {
@@ -134,7 +134,7 @@ void QBrush_new6()
 }
 
 /*
-QBrush ( const QPixmap & pixmap )
+QBrush( const QPixmap & pixmap )
 */
 void QBrush_new7()
 {
@@ -143,7 +143,7 @@ void QBrush_new7()
 }
 
 /*
-QBrush ( const QImage & image )
+QBrush( const QImage & image )
 */
 void QBrush_new8()
 {
@@ -152,7 +152,7 @@ void QBrush_new8()
 }
 
 /*
-QBrush ( const QBrush & other )
+QBrush( const QBrush & other )
 */
 void QBrush_new9()
 {
@@ -161,26 +161,13 @@ void QBrush_new9()
 }
 
 /*
-QBrush ( const QGradient & gradient )
+QBrush( const QGradient & gradient )
 */
 void QBrush_new10()
 {
   auto obj = new QBrush( *PQGRADIENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[ 1]QBrush ()
-[ 2]QBrush ( Qt::BrushStyle style )
-[ 3]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
-[ 4]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
-[ 5]QBrush ( const QColor & color, const QPixmap & pixmap )
-[ 6]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
-[ 7]QBrush ( const QPixmap & pixmap )
-[ 8]QBrush ( const QImage & image )
-[ 9]QBrush ( const QBrush & other )
-[10]QBrush ( const QGradient & gradient )
-*/
 
 HB_FUNC_STATIC( QBRUSH_NEW )
 {
@@ -192,11 +179,11 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new2();
   }
-  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QBrush_new3();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QBrush_new4();
   }
@@ -260,7 +247,7 @@ HB_FUNC_STATIC( QBRUSH_DELETE )
 }
 
 /*
-const QColor & color () const
+const QColor & color() const
 */
 HB_FUNC_STATIC( QBRUSH_COLOR )
 {
@@ -285,7 +272,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
 }
 
 /*
-const QGradient * gradient () const
+const QGradient * gradient() const
 */
 HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
@@ -310,7 +297,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
 }
 
 /*
-bool isOpaque () const
+bool isOpaque() const
 */
 HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 {
@@ -334,7 +321,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 }
 
 /*
-const QMatrix & matrix () const // TODO: revisar e corrigir(?)
+const QMatrix & matrix() const
 */
 HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
@@ -359,7 +346,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 void QBrush_setColor1()
 {
@@ -374,7 +361,7 @@ void QBrush_setColor1()
 }
 
 /*
-void setColor ( Qt::GlobalColor color )
+void setColor( Qt::GlobalColor color )
 */
 void QBrush_setColor2()
 {
@@ -387,11 +374,6 @@ void QBrush_setColor2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setColor ( const QColor & color )
-[2]void setColor ( Qt::GlobalColor color )
-*/
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {
@@ -410,7 +392,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 }
 
 /*
-void setMatrix ( const QMatrix & matrix )
+void setMatrix( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
@@ -436,7 +418,7 @@ HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 }
 
 /*
-void setStyle ( Qt::BrushStyle style )
+void setStyle( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
@@ -462,7 +444,7 @@ HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 }
 
 /*
-void setTexture ( const QPixmap & pixmap )
+void setTexture( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
@@ -488,7 +470,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 }
 
 /*
-void setTextureImage ( const QImage & image )
+void setTextureImage( const QImage & image )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
@@ -514,7 +496,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 }
 
 /*
-void setTransform ( const QTransform & matrix )
+void setTransform( const QTransform & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {
@@ -540,7 +522,7 @@ HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 }
 
 /*
-Qt::BrushStyle style () const
+Qt::BrushStyle style() const
 */
 HB_FUNC_STATIC( QBRUSH_STYLE )
 {
@@ -564,7 +546,7 @@ HB_FUNC_STATIC( QBRUSH_STYLE )
 }
 
 /*
-QPixmap texture () const
+QPixmap texture() const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTURE )
 {
@@ -589,7 +571,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
 }
 
 /*
-QImage textureImage () const
+QImage textureImage() const
 */
 HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 {
@@ -614,7 +596,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QBRUSH_TRANSFORM )
 {

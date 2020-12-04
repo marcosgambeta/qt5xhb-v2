@@ -183,7 +183,7 @@ RETURN
 #include <QtGui/QScreen>
 
 /*
-QWindow(QScreen * screen = nullptr)
+QWindow( QScreen * screen = nullptr )
 */
 void QWindow_new1()
 {
@@ -192,22 +192,13 @@ void QWindow_new1()
 }
 
 /*
-QWindow(QWindow * parent)
+QWindow( QWindow * parent )
 */
 void QWindow_new2()
 {
   auto obj = new QWindow( PQWINDOW(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-QWindow(QWindowPrivate &dd, QWindow *parent) [protected]
-*/
-
-/*
-[1]explicit QWindow(QScreen *screen = nullptr)
-[2]explicit QWindow(QWindow *parent)
-*/
 
 HB_FUNC_STATIC( QWINDOW_NEW )
 {
@@ -272,7 +263,7 @@ HB_FUNC_STATIC( QWINDOW_TITLE )
 }
 
 /*
-void setTitle(const QString &) [slot]
+void setTitle( const QString & ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETTITLE )
 {
@@ -322,7 +313,7 @@ HB_FUNC_STATIC( QWINDOW_MODALITY )
 }
 
 /*
-void setModality(Qt::WindowModality modality)
+void setModality( Qt::WindowModality modality )
 */
 HB_FUNC_STATIC( QWINDOW_SETMODALITY )
 {
@@ -372,7 +363,7 @@ HB_FUNC_STATIC( QWINDOW_FLAGS )
 }
 
 /*
-void setFlags(Qt::WindowFlags flags)
+void setFlags( Qt::WindowFlags flags )
 */
 HB_FUNC_STATIC( QWINDOW_SETFLAGS )
 {
@@ -422,7 +413,7 @@ HB_FUNC_STATIC( QWINDOW_X )
 }
 
 /*
-void setX(int arg) [slot]
+void setX( int arg ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETX )
 {
@@ -472,7 +463,7 @@ HB_FUNC_STATIC( QWINDOW_Y )
 }
 
 /*
-void setY(int arg) [slot]
+void setY( int arg ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETY )
 {
@@ -522,7 +513,7 @@ HB_FUNC_STATIC( QWINDOW_WIDTH )
 }
 
 /*
-void setWidth(int arg) [slot]
+void setWidth( int arg ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETWIDTH )
 {
@@ -572,7 +563,7 @@ HB_FUNC_STATIC( QWINDOW_HEIGHT )
 }
 
 /*
-void setHeight(int arg) [slot]
+void setHeight( int arg ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETHEIGHT )
 {
@@ -622,7 +613,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMWIDTH )
 }
 
 /*
-void setMinimumWidth(int w) [slot]
+void setMinimumWidth( int w ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETMINIMUMWIDTH )
 {
@@ -672,7 +663,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMHEIGHT )
 }
 
 /*
-void setMinimumHeight(int h) [slot]
+void setMinimumHeight( int h ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETMINIMUMHEIGHT )
 {
@@ -722,7 +713,7 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMWIDTH )
 }
 
 /*
-void setMaximumWidth(int w) [slot]
+void setMaximumWidth( int w ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETMAXIMUMWIDTH )
 {
@@ -772,7 +763,7 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMHEIGHT )
 }
 
 /*
-void setMaximumHeight(int h) [slot]
+void setMaximumHeight( int h ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETMAXIMUMHEIGHT )
 {
@@ -822,7 +813,7 @@ HB_FUNC_STATIC( QWINDOW_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible) [slot]
+void setVisible( bool visible ) 
 */
 HB_FUNC_STATIC( QWINDOW_SETVISIBLE )
 {
@@ -874,7 +865,7 @@ HB_FUNC_STATIC( QWINDOW_ISACTIVE )
 }
 
 /*
-Visibility visibility() const
+QWindow::Visibility visibility() const
 */
 HB_FUNC_STATIC( QWINDOW_VISIBILITY )
 {
@@ -900,7 +891,7 @@ HB_FUNC_STATIC( QWINDOW_VISIBILITY )
 }
 
 /*
-void setVisibility(Visibility v)
+void setVisibility( QWindow::Visibility v )
 */
 HB_FUNC_STATIC( QWINDOW_SETVISIBILITY )
 {
@@ -952,7 +943,7 @@ HB_FUNC_STATIC( QWINDOW_CONTENTORIENTATION )
 }
 
 /*
-void reportContentOrientationChange(Qt::ScreenOrientation orientation)
+void reportContentOrientationChange( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QWINDOW_REPORTCONTENTORIENTATIONCHANGE )
 {
@@ -1004,7 +995,7 @@ HB_FUNC_STATIC( QWINDOW_OPACITY )
 }
 
 /*
-void setOpacity(qreal level)
+void setOpacity( qreal level )
 */
 HB_FUNC_STATIC( QWINDOW_SETOPACITY )
 {
@@ -1236,7 +1227,7 @@ HB_FUNC_STATIC( QWINDOW_GEOMETRY )
 }
 
 /*
-bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) const
+bool isAncestorOf( const QWindow * child, QWindow::AncestorMode mode = QWindow::IncludeTransients ) const
 */
 HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
 {
@@ -1245,7 +1236,7 @@ HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWINDOW(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQWINDOW(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isAncestorOf( PQWINDOW(1), ISNIL(2)? (QWindow::AncestorMode) QWindow::IncludeTransients : (QWindow::AncestorMode) hb_parni(2) ) );
@@ -1332,7 +1323,7 @@ HB_FUNC_STATIC( QWINDOW_ISTOPLEVEL )
 }
 
 /*
-QPoint mapFromGlobal(const QPoint & pos) const
+QPoint mapFromGlobal( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
 {
@@ -1357,7 +1348,7 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
 }
 
 /*
-QPoint mapToGlobal(const QPoint & pos) const
+QPoint mapToGlobal( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
 {
@@ -1432,7 +1423,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
 }
 
 /*
-QWindow *parent(AncestorMode mode) const
+QWindow * parent( QWindow::AncestorMode mode ) const
 */
 void QWindow_parent1()
 {
@@ -1460,11 +1451,6 @@ void QWindow_parent2()
     Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
   }
 }
-
-/*
-[1]QWindow *parent(AncestorMode mode) const
-[2]QWindow * parent() const
-*/
 
 HB_FUNC_STATIC( QWINDOW_PARENT )
 {
@@ -1508,7 +1494,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
 }
 
 /*
-void resize(const QSize & newSize)
+void resize( const QSize & newSize )
 */
 void QWindow_resize1()
 {
@@ -1523,7 +1509,7 @@ void QWindow_resize1()
 }
 
 /*
-void resize(int w, int h)
+void resize( int w, int h )
 */
 void QWindow_resize2()
 {
@@ -1536,11 +1522,6 @@ void QWindow_resize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void resize(const QSize & newSize)
-[2]void resize(int w, int h)
-*/
 
 HB_FUNC_STATIC( QWINDOW_RESIZE )
 {
@@ -1584,7 +1565,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
 }
 
 /*
-void setBaseSize(const QSize & size)
+void setBaseSize( const QSize & size )
 */
 HB_FUNC_STATIC( QWINDOW_SETBASESIZE )
 {
@@ -1638,7 +1619,7 @@ HB_FUNC_STATIC( QWINDOW_SETCURSOR )
 }
 
 /*
-void setFormat(const QSurfaceFormat & format)
+void setFormat( const QSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QWINDOW_SETFORMAT )
 {
@@ -1664,7 +1645,7 @@ HB_FUNC_STATIC( QWINDOW_SETFORMAT )
 }
 
 /*
-void setGeometry(int posx, int posy, int w, int h) [slot]
+void setGeometry( int posx, int posy, int w, int h )
 */
 void QWindow_setGeometry1()
 {
@@ -1679,7 +1660,7 @@ void QWindow_setGeometry1()
 }
 
 /*
-void setGeometry(const QRect & rect) [slot]
+void setGeometry( const QRect & rect )
 */
 void QWindow_setGeometry2()
 {
@@ -1692,11 +1673,6 @@ void QWindow_setGeometry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setGeometry(int posx, int posy, int w, int h)
-[2]void setGeometry(const QRect & rect)
-*/
 
 HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 {
@@ -1715,7 +1691,7 @@ HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 }
 
 /*
-bool setKeyboardGrabEnabled(bool grab)
+bool setKeyboardGrabEnabled( bool grab )
 */
 HB_FUNC_STATIC( QWINDOW_SETKEYBOARDGRABENABLED )
 {
@@ -1739,7 +1715,7 @@ HB_FUNC_STATIC( QWINDOW_SETKEYBOARDGRABENABLED )
 }
 
 /*
-void setMaximumSize(const QSize & size)
+void setMaximumSize( const QSize & size )
 */
 HB_FUNC_STATIC( QWINDOW_SETMAXIMUMSIZE )
 {
@@ -1765,7 +1741,7 @@ HB_FUNC_STATIC( QWINDOW_SETMAXIMUMSIZE )
 }
 
 /*
-void setMinimumSize(const QSize & size)
+void setMinimumSize( const QSize & size )
 */
 HB_FUNC_STATIC( QWINDOW_SETMINIMUMSIZE )
 {
@@ -1791,7 +1767,7 @@ HB_FUNC_STATIC( QWINDOW_SETMINIMUMSIZE )
 }
 
 /*
-bool setMouseGrabEnabled(bool grab)
+bool setMouseGrabEnabled( bool grab )
 */
 HB_FUNC_STATIC( QWINDOW_SETMOUSEGRABENABLED )
 {
@@ -1815,7 +1791,7 @@ HB_FUNC_STATIC( QWINDOW_SETMOUSEGRABENABLED )
 }
 
 /*
-void setParent(QWindow * parent)
+void setParent( QWindow * parent )
 */
 HB_FUNC_STATIC( QWINDOW_SETPARENT )
 {
@@ -1841,7 +1817,7 @@ HB_FUNC_STATIC( QWINDOW_SETPARENT )
 }
 
 /*
-void setScreen(QScreen * newScreen)
+void setScreen( QScreen * newScreen )
 */
 HB_FUNC_STATIC( QWINDOW_SETSCREEN )
 {
@@ -1867,7 +1843,7 @@ HB_FUNC_STATIC( QWINDOW_SETSCREEN )
 }
 
 /*
-void setSizeIncrement(const QSize & size)
+void setSizeIncrement( const QSize & size )
 */
 HB_FUNC_STATIC( QWINDOW_SETSIZEINCREMENT )
 {
@@ -1893,7 +1869,7 @@ HB_FUNC_STATIC( QWINDOW_SETSIZEINCREMENT )
 }
 
 /*
-void setSurfaceType(SurfaceType surfaceType)
+void setSurfaceType( QSurface::SurfaceType surfaceType )
 */
 HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
 {
@@ -1919,7 +1895,7 @@ HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
 }
 
 /*
-void setTransientParent(QWindow * parent)
+void setTransientParent( QWindow * parent )
 */
 HB_FUNC_STATIC( QWINDOW_SETTRANSIENTPARENT )
 {
@@ -2097,7 +2073,7 @@ HB_FUNC_STATIC( QWINDOW_SIZE )
 }
 
 /*
-virtual SurfaceType surfaceType() const override
+virtual QSurface::SurfaceType surfaceType() const override
 */
 HB_FUNC_STATIC( QWINDOW_SURFACETYPE )
 {
@@ -2121,7 +2097,7 @@ HB_FUNC_STATIC( QWINDOW_SURFACETYPE )
 }
 
 /*
-bool close() [slot]
+bool close() 
 */
 HB_FUNC_STATIC( QWINDOW_CLOSE )
 {
@@ -2145,7 +2121,7 @@ HB_FUNC_STATIC( QWINDOW_CLOSE )
 }
 
 /*
-void hide() [slot]
+void hide() 
 */
 HB_FUNC_STATIC( QWINDOW_HIDE )
 {
@@ -2171,7 +2147,7 @@ HB_FUNC_STATIC( QWINDOW_HIDE )
 }
 
 /*
-void lower() [slot]
+void lower() 
 */
 HB_FUNC_STATIC( QWINDOW_LOWER )
 {
@@ -2197,7 +2173,7 @@ HB_FUNC_STATIC( QWINDOW_LOWER )
 }
 
 /*
-void raise() [slot]
+void raise() 
 */
 HB_FUNC_STATIC( QWINDOW_RAISE )
 {
@@ -2223,7 +2199,7 @@ HB_FUNC_STATIC( QWINDOW_RAISE )
 }
 
 /*
-void show() [slot]
+void show() 
 */
 HB_FUNC_STATIC( QWINDOW_SHOW )
 {
@@ -2249,7 +2225,7 @@ HB_FUNC_STATIC( QWINDOW_SHOW )
 }
 
 /*
-void showFullScreen() [slot]
+void showFullScreen() 
 */
 HB_FUNC_STATIC( QWINDOW_SHOWFULLSCREEN )
 {
@@ -2275,7 +2251,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWFULLSCREEN )
 }
 
 /*
-void showMaximized() [slot]
+void showMaximized() 
 */
 HB_FUNC_STATIC( QWINDOW_SHOWMAXIMIZED )
 {
@@ -2301,7 +2277,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWMAXIMIZED )
 }
 
 /*
-void showMinimized() [slot]
+void showMinimized() 
 */
 HB_FUNC_STATIC( QWINDOW_SHOWMINIMIZED )
 {
@@ -2327,7 +2303,7 @@ HB_FUNC_STATIC( QWINDOW_SHOWMINIMIZED )
 }
 
 /*
-void showNormal() [slot]
+void showNormal() 
 */
 HB_FUNC_STATIC( QWINDOW_SHOWNORMAL )
 {
@@ -2378,7 +2354,7 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
 }
 
 /*
-void setPosition(const QPoint & pt)
+void setPosition( const QPoint & pt )
 */
 void QWindow_setPosition1()
 {
@@ -2393,7 +2369,7 @@ void QWindow_setPosition1()
 }
 
 /*
-void setPosition(int posx, int posy)
+void setPosition( int posx, int posy )
 */
 void QWindow_setPosition2()
 {
@@ -2406,11 +2382,6 @@ void QWindow_setPosition2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPosition(const QPoint & pt)
-[2]void setPosition(int posx, int posy)
-*/
 
 HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 {
@@ -2429,7 +2400,7 @@ HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 }
 
 /*
-Q_REVISION(3) void requestUpdate() [slot]
+Q_REVISION(3) void requestUpdate() 
 */
 HB_FUNC_STATIC( QWINDOW_REQUESTUPDATE )
 {
@@ -2481,7 +2452,7 @@ HB_FUNC_STATIC( QWINDOW_WINID )
 }
 
 /*
-void setFlag(Qt::WindowType, bool on = true)
+void setFlag( Qt::WindowType, bool on = true )
 */
 HB_FUNC_STATIC( QWINDOW_SETFLAG )
 {
@@ -2491,7 +2462,7 @@ HB_FUNC_STATIC( QWINDOW_SETFLAG )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setFlag( (Qt::WindowType) hb_parni(1), OPBOOL(2,true) );
@@ -2533,7 +2504,7 @@ HB_FUNC_STATIC( QWINDOW_TYPE )
 }
 
 /*
-void setMask(const QRegion &region)
+void setMask( const QRegion & region )
 */
 HB_FUNC_STATIC( QWINDOW_SETMASK )
 {
@@ -2634,7 +2605,7 @@ HB_FUNC_STATIC( QWINDOW_WINDOWSTATES )
 }
 
 /*
-void setWindowState(Qt::WindowState state)
+void setWindowState( Qt::WindowState state )
 */
 HB_FUNC_STATIC( QWINDOW_SETWINDOWSTATE )
 {
@@ -2660,7 +2631,7 @@ HB_FUNC_STATIC( QWINDOW_SETWINDOWSTATE )
 }
 
 /*
-void setWindowStates(Qt::WindowStates states)
+void setWindowStates( Qt::WindowStates states )
 */
 HB_FUNC_STATIC( QWINDOW_SETWINDOWSTATES )
 {
@@ -2713,7 +2684,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEPOSITION )
 }
 
 /*
-void setFramePosition(const QPoint &point)
+void setFramePosition( const QPoint & point )
 */
 HB_FUNC_STATIC( QWINDOW_SETFRAMEPOSITION )
 {
@@ -2739,7 +2710,7 @@ HB_FUNC_STATIC( QWINDOW_SETFRAMEPOSITION )
 }
 
 /*
-void setFilePath(const QString &filePath)
+void setFilePath( const QString & filePath )
 */
 HB_FUNC_STATIC( QWINDOW_SETFILEPATH )
 {
@@ -2789,7 +2760,7 @@ HB_FUNC_STATIC( QWINDOW_FILEPATH )
 }
 
 /*
-void setIcon(const QIcon &icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QWINDOW_SETICON )
 {
@@ -2840,11 +2811,7 @@ HB_FUNC_STATIC( QWINDOW_ICON )
 }
 
 /*
-QPlatformWindow *handle() const
-*/
-
-/*
-virtual QAccessibleInterface *accessibleRoot() const
+virtual QAccessibleInterface * accessibleRoot() const
 */
 HB_FUNC_STATIC( QWINDOW_ACCESSIBLEROOT )
 {
@@ -2869,7 +2836,7 @@ HB_FUNC_STATIC( QWINDOW_ACCESSIBLEROOT )
 }
 
 /*
-static QWindow *fromWinId(WId id)
+static QWindow * fromWinId( WId id )
 */
 HB_FUNC_STATIC( QWINDOW_FROMWINID )
 {
@@ -2891,13 +2858,11 @@ HB_FUNC_STATIC( QWINDOW_FROMWINID )
 /*
 void setVulkanInstance(QVulkanInstance *instance)
 */
-
 /*
 QVulkanInstance *vulkanInstance() const
 */
-
 /*
-Q_REVISION(1) void requestActivate() [slot]
+Q_REVISION(1) void requestActivate() 
 */
 HB_FUNC_STATIC( QWINDOW_REQUESTACTIVATE )
 {
@@ -2923,7 +2888,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTACTIVATE )
 }
 
 /*
-Q_REVISION(1) void alert(int msec) [slot]
+Q_REVISION(1) void alert( int msec ) 
 */
 HB_FUNC_STATIC( QWINDOW_ALERT )
 {
@@ -2949,82 +2914,6 @@ HB_FUNC_STATIC( QWINDOW_ALERT )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-virtual void exposeEvent(QExposeEvent *) [protected]
-*/
-
-/*
-virtual void resizeEvent(QResizeEvent *) [protected]
-*/
-
-/*
-virtual void moveEvent(QMoveEvent *) [protected]
-*/
-
-/*
-virtual void focusInEvent(QFocusEvent *) [protected]
-*/
-
-/*
-virtual void focusOutEvent(QFocusEvent *) [protected]
-*/
-
-/*
-virtual void showEvent(QShowEvent *) [protected]
-*/
-
-/*
-virtual void hideEvent(QHideEvent *) [protected]
-*/
-
-/*
-virtual bool event(QEvent *) override [protected]
-*/
-
-/*
-virtual void keyPressEvent(QKeyEvent *) [protected]
-*/
-
-/*
-virtual void keyReleaseEvent(QKeyEvent *) [protected]
-*/
-
-/*
-virtual void mousePressEvent(QMouseEvent *) [protected]
-*/
-
-/*
-virtual void mouseReleaseEvent(QMouseEvent *) [protected]
-*/
-
-/*
-virtual void mouseDoubleClickEvent(QMouseEvent *) [protected]
-*/
-
-/*
-virtual void mouseMoveEvent(QMouseEvent *) [protected]
-*/
-
-/*
-virtual void wheelEvent(QWheelEvent *) [protected]
-*/
-
-/*
-virtual void touchEvent(QTouchEvent *) [protected]
-*/
-
-/*
-virtual void tabletEvent(QTabletEvent *) [protected]
-*/
-
-/*
-virtual bool nativeEvent(const QByteArray &eventType, void *message, long *result) [protected]
-*/
-
-/*
-QPlatformSurface *surfaceHandle() const override [private]
-*/
 
 /*
 void activeChanged()
@@ -3091,7 +2980,7 @@ HB_FUNC_STATIC( QWINDOW_ONACTIVECHANGED )
 }
 
 /*
-void contentOrientationChanged(Qt::ScreenOrientation orientation)
+void contentOrientationChanged( Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 {
@@ -3153,7 +3042,7 @@ HB_FUNC_STATIC( QWINDOW_ONCONTENTORIENTATIONCHANGED )
 }
 
 /*
-void focusObjectChanged(QObject *object)
+void focusObjectChanged( QObject * object )
 */
 HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 {
@@ -3215,7 +3104,7 @@ HB_FUNC_STATIC( QWINDOW_ONFOCUSOBJECTCHANGED )
 }
 
 /*
-void heightChanged(int arg)
+void heightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 {
@@ -3277,7 +3166,7 @@ HB_FUNC_STATIC( QWINDOW_ONHEIGHTCHANGED )
 }
 
 /*
-void maximumHeightChanged(int arg)
+void maximumHeightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 {
@@ -3339,7 +3228,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMHEIGHTCHANGED )
 }
 
 /*
-void maximumWidthChanged(int arg)
+void maximumWidthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 {
@@ -3401,7 +3290,7 @@ HB_FUNC_STATIC( QWINDOW_ONMAXIMUMWIDTHCHANGED )
 }
 
 /*
-void minimumHeightChanged(int arg)
+void minimumHeightChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 {
@@ -3463,7 +3352,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMHEIGHTCHANGED )
 }
 
 /*
-void minimumWidthChanged(int arg)
+void minimumWidthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 {
@@ -3525,7 +3414,7 @@ HB_FUNC_STATIC( QWINDOW_ONMINIMUMWIDTHCHANGED )
 }
 
 /*
-void modalityChanged(Qt::WindowModality modality)
+void modalityChanged( Qt::WindowModality modality )
 */
 HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 {
@@ -3587,7 +3476,7 @@ HB_FUNC_STATIC( QWINDOW_ONMODALITYCHANGED )
 }
 
 /*
-void opacityChanged(qreal opacity)
+void opacityChanged( qreal opacity )
 */
 HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 {
@@ -3653,7 +3542,7 @@ HB_FUNC_STATIC( QWINDOW_ONOPACITYCHANGED )
 }
 
 /*
-void screenChanged(QScreen *screen)
+void screenChanged( QScreen * screen )
 */
 HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 {
@@ -3715,7 +3604,7 @@ HB_FUNC_STATIC( QWINDOW_ONSCREENCHANGED )
 }
 
 /*
-void visibilityChanged(QWindow::Visibility visibility)
+void visibilityChanged( QWindow::Visibility visibility )
 */
 HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 {
@@ -3781,7 +3670,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBILITYCHANGED )
 }
 
 /*
-void visibleChanged(bool arg)
+void visibleChanged( bool arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 {
@@ -3843,7 +3732,7 @@ HB_FUNC_STATIC( QWINDOW_ONVISIBLECHANGED )
 }
 
 /*
-void widthChanged(int arg)
+void widthChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 {
@@ -3905,7 +3794,7 @@ HB_FUNC_STATIC( QWINDOW_ONWIDTHCHANGED )
 }
 
 /*
-void windowStateChanged(Qt::WindowState windowState)
+void windowStateChanged( Qt::WindowState windowState )
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 {
@@ -3967,7 +3856,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWSTATECHANGED )
 }
 
 /*
-void windowTitleChanged(const QString &title)
+void windowTitleChanged( const QString & title )
 */
 HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 {
@@ -4029,7 +3918,7 @@ HB_FUNC_STATIC( QWINDOW_ONWINDOWTITLECHANGED )
 }
 
 /*
-void xChanged(int arg)
+void xChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 {
@@ -4091,7 +3980,7 @@ HB_FUNC_STATIC( QWINDOW_ONXCHANGED )
 }
 
 /*
-void yChanged(int arg)
+void yChanged( int arg )
 */
 HB_FUNC_STATIC( QWINDOW_ONYCHANGED )
 {

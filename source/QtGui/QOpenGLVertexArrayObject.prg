@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QOpenGLVertexArrayObject(QObject* parent = nullptr)
+QOpenGLVertexArrayObject( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOPENGLVERTEXARRAYOBJECT_NEW )
 {

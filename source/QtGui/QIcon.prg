@@ -79,7 +79,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QIcon ()
+QIcon()
 */
 void QIcon_new1()
 {
@@ -88,7 +88,7 @@ void QIcon_new1()
 }
 
 /*
-QIcon ( const QPixmap & pixmap )
+QIcon( const QPixmap & pixmap )
 */
 void QIcon_new2()
 {
@@ -97,7 +97,7 @@ void QIcon_new2()
 }
 
 /*
-QIcon ( const QIcon & other )
+QIcon( const QIcon & other )
 */
 void QIcon_new3()
 {
@@ -106,22 +106,13 @@ void QIcon_new3()
 }
 
 /*
-QIcon ( const QString & fileName )
+QIcon( const QString & fileName )
 */
 void QIcon_new4()
 {
   auto obj = new QIcon( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QIcon ()
-[2]QIcon ( const QPixmap & pixmap )
-[3]QIcon ( const QIcon & other )
-[4]QIcon ( const QString & fileName )
-[5]QIcon ( QIconEngine * engine ) // TODO: implementar
-[6]QIcon ( QIconEngineV2 * engine ) // TODO: implementar
-*/
 
 HB_FUNC_STATIC( QICON_NEW )
 {
@@ -165,7 +156,7 @@ HB_FUNC_STATIC( QICON_DELETE )
 }
 
 /*
-QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QSize actualSize( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
@@ -174,7 +165,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QSize( obj->actualSize( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
@@ -190,7 +181,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
 }
 
 /*
-void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
+void addFile( const QString & fileName, const QSize & size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
@@ -199,7 +190,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->addFile( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
@@ -216,7 +207,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
 }
 
 /*
-void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
+void addPixmap( const QPixmap & pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
@@ -225,7 +216,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->addPixmap( *PQPIXMAP(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) );
@@ -242,7 +233,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
 }
 
 /*
-QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
+QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
@@ -251,7 +242,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
@@ -294,7 +285,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
@@ -318,7 +309,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
@@ -342,7 +333,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
@@ -366,7 +357,7 @@ HB_FUNC_STATIC( QICON_NAME )
 }
 
 /*
-void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint1()
 {
@@ -381,7 +372,7 @@ void QIcon_paint1()
 }
 
 /*
-void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint2()
 {
@@ -395,18 +386,13 @@ void QIcon_paint2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-*/
-
 HB_FUNC_STATIC( QICON_PAINT )
 {
-  if( ISBETWEEN(2,5) && ISQPAINTER(1) && ISQRECT(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(2,5) && ISQPAINTER(1) && ISQRECT(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QIcon_paint1();
   }
-  else if( ISBETWEEN(5,8) && ISQPAINTER(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTNUM(8) )
+  else if( ISBETWEEN(5,8) && ISQPAINTER(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
     QIcon_paint2();
   }
@@ -417,7 +403,7 @@ HB_FUNC_STATIC( QICON_PAINT )
 }
 
 /*
-QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap1()
 {
@@ -431,7 +417,7 @@ void QIcon_pixmap1()
 }
 
 /*
-QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap2()
 {
@@ -445,7 +431,7 @@ void QIcon_pixmap2()
 }
 
 /*
-QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap3()
 {
@@ -458,23 +444,17 @@ void QIcon_pixmap3()
   }
 }
 
-/*
-[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
-[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
-[3]QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
-*/
-
 HB_FUNC_STATIC( QICON_PIXMAP )
 {
-  if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QIcon_pixmap1();
   }
-  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QIcon_pixmap2();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QIcon_pixmap3();
   }
@@ -485,7 +465,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 
 /*
-static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
+static QIcon fromTheme( const QString & name, const QIcon & fallback = QIcon() )
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
@@ -505,7 +485,7 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
 }
 
 /*
-static bool hasThemeIcon ( const QString & name )
+static bool hasThemeIcon( const QString & name )
 */
 HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
@@ -524,7 +504,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 }
 
 /*
-static void setThemeName ( const QString & name )
+static void setThemeName( const QString & name )
 */
 HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
@@ -545,7 +525,7 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
 }
 
 /*
-static void setThemeSearchPaths ( const QStringList & paths )
+static void setThemeSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
@@ -566,7 +546,7 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 }
 
 /*
-static QString themeName ()
+static QString themeName()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
@@ -585,7 +565,7 @@ HB_FUNC_STATIC( QICON_THEMENAME )
 }
 
 /*
-static QStringList themeSearchPaths ()
+static QStringList themeSearchPaths()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
@@ -604,7 +584,7 @@ HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 }
 
 /*
-static QString QIcon::fallbackThemeName()
+static QString fallbackThemeName()
 */
 HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 {
@@ -625,7 +605,7 @@ HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 }
 
 /*
-static void QIcon::setFallbackThemeName(const QString &name)
+static void setFallbackThemeName( const QString & name )
 */
 HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
 {

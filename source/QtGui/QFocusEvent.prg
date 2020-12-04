@@ -50,11 +50,11 @@ RETURN
 #endif
 
 /*
-QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
+QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     auto obj = new QFocusEvent( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 }
 
 /*
-bool gotFocus () const
+bool gotFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 }
 
 /*
-bool lostFocus () const
+bool lostFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 }
 
 /*
-Qt::FocusReason reason () const
+Qt::FocusReason reason() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
