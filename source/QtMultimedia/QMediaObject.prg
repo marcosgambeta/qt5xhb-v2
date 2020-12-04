@@ -70,14 +70,6 @@ RETURN
 #include <QtMultimedia/QMediaService>
 
 /*
-QMediaObject(QObject *parent, QMediaService *service) [protected]
-*/
-
-/*
-QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) [protected]
-*/
-
-/*
 ~QMediaObject()
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
@@ -124,7 +116,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
 }
 
 /*
-void setNotifyInterval(int milliSeconds)
+void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
 {
@@ -198,7 +190,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
 }
 
 /*
-virtual bool bind(QObject * object)
+virtual bool bind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
 {
@@ -270,7 +262,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
 }
 
 /*
-QVariant metaData(const QString & key) const
+QVariant metaData( const QString & key ) const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
 {
@@ -320,7 +312,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
 }
 
 /*
-virtual void unbind(QObject * object)
+virtual void unbind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 {
@@ -344,18 +336,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-void addPropertyWatch(QByteArray const &name) [protected]
-*/
-
-/*
-void removePropertyWatch(QByteArray const &name) [protected]
-*/
-
-/*
-void setupControls() [private]
-*/
 
 /*
 void availabilityChanged( bool available )

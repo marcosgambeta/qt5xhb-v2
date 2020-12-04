@@ -86,7 +86,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QVideoFrame ()
+QVideoFrame()
 */
 void QVideoFrame_new1()
 {
@@ -95,7 +95,7 @@ void QVideoFrame_new1()
 }
 
 /*
-QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
+QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
 */
 void QVideoFrame_new2()
 {
@@ -104,7 +104,7 @@ void QVideoFrame_new2()
 }
 
 /*
-QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
+QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
 */
 void QVideoFrame_new3()
 {
@@ -113,7 +113,7 @@ void QVideoFrame_new3()
 }
 
 /*
-QVideoFrame ( const QImage & image )
+QVideoFrame( const QImage & image )
 */
 void QVideoFrame_new4()
 {
@@ -122,21 +122,13 @@ void QVideoFrame_new4()
 }
 
 /*
-QVideoFrame ( const QVideoFrame & other )
+QVideoFrame( const QVideoFrame & other )
 */
 void QVideoFrame_new5()
 {
   auto obj = new QVideoFrame( *PQVIDEOFRAME(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVideoFrame ()
-[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-[4]QVideoFrame ( const QImage & image )
-[5]QVideoFrame ( const QVideoFrame & other )
-*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
@@ -189,28 +181,18 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 /*
 uchar * bits ()
 */
-
 /*
 uchar *bits(int plane)
 */
-
 /*
 const uchar * bits () const
 */
-
 /*
 const uchar *bits(int plane) const
 */
 
 /*
-[1]uchar *bits()
-[2]uchar *bits(int plane)
-[3]const uchar *bits() const
-[4]const uchar *bits(int plane) const
-*/
-
-/*
-int bytesPerLine () const
+int bytesPerLine() const
 */
 void QVideoFrame_bytesPerLine1()
 {
@@ -223,7 +205,7 @@ void QVideoFrame_bytesPerLine1()
 }
 
 /*
-int bytesPerLine(int plane) const
+int bytesPerLine( int plane ) const
 */
 void QVideoFrame_bytesPerLine2()
 {
@@ -234,11 +216,6 @@ void QVideoFrame_bytesPerLine2()
     RINT( obj->bytesPerLine( PINT(1) ) );
   }
 }
-
-/*
-[1]int bytesPerLine () const
-[2]int bytesPerLine(int plane) const
-*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {
@@ -257,7 +234,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 }
 
 /*
-qint64 endTime () const
+qint64 endTime() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
 {
@@ -281,7 +258,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ENDTIME )
 }
 
 /*
-FieldType fieldType () const
+QVideoFrame::FieldType fieldType() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
 {
@@ -305,7 +282,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_FIELDTYPE )
 }
 
 /*
-QVariant handle () const
+QVariant handle() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
 {
@@ -330,7 +307,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLE )
 }
 
 /*
-QAbstractVideoBuffer::HandleType handleType () const
+QAbstractVideoBuffer::HandleType handleType() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
 {
@@ -354,7 +331,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HANDLETYPE )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
 {
@@ -378,7 +355,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_HEIGHT )
 }
 
 /*
-bool isMapped () const
+bool isMapped() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
 {
@@ -402,7 +379,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISMAPPED )
 }
 
 /*
-bool isReadable () const
+bool isReadable() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
 {
@@ -426,7 +403,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISREADABLE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
 {
@@ -450,7 +427,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISVALID )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
 {
@@ -474,7 +451,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
 }
 
 /*
-bool map ( QAbstractVideoBuffer::MapMode mode )
+bool map( QAbstractVideoBuffer::MapMode mode )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAP )
 {
@@ -498,7 +475,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
 }
 
 /*
-QAbstractVideoBuffer::MapMode mapMode () const
+QAbstractVideoBuffer::MapMode mapMode() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
 {
@@ -522,7 +499,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPMODE )
 }
 
 /*
-int mappedBytes () const
+int mappedBytes() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
 {
@@ -546,7 +523,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAPPEDBYTES )
 }
 
 /*
-PixelFormat pixelFormat () const
+QVideoFrame::PixelFormat pixelFormat() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
 {
@@ -570,7 +547,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
 }
 
 /*
-void setEndTime ( qint64 time )
+void setEndTime( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
 {
@@ -596,7 +573,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
 }
 
 /*
-void setFieldType ( FieldType field )
+void setFieldType( QVideoFrame::FieldType field )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
 {
@@ -622,7 +599,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
 }
 
 /*
-void setStartTime ( qint64 time )
+void setStartTime( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
 {
@@ -648,7 +625,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
 {
@@ -673,7 +650,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SIZE )
 }
 
 /*
-qint64 startTime () const
+qint64 startTime() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
 {
@@ -697,7 +674,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_STARTTIME )
 }
 
 /*
-void unmap ()
+void unmap()
 */
 HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
 {
@@ -723,7 +700,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_UNMAP )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
 {
@@ -771,11 +748,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PLANECOUNT )
 }
 
 /*
-QVariantMap availableMetaData() const
-*/
-
-/*
-QVariant metaData(const QString &key) const
+QVariant metaData( const QString & key ) const
 */
 HB_FUNC_STATIC( QVIDEOFRAME_METADATA )
 {
@@ -800,7 +773,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_METADATA )
 }
 
 /*
-void setMetaData(const QString &key, const QVariant &value)
+void setMetaData( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETMETADATA )
 {
@@ -826,7 +799,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETMETADATA )
 }
 
 /*
-static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
+static QImage::Format imageFormatFromPixelFormat( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
@@ -845,7 +818,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 }
 
 /*
-static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
+static QVideoFrame::PixelFormat pixelFormatFromImageFormat( QImage::Format format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {

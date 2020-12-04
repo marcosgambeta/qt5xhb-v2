@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-explicit QRadioData(QMediaObject *mediaObject, QObject *parent = nullptr)
+QRadioData( QMediaObject * mediaObject, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONID )
 }
 
 /*
-ProgramType programType() const
+QRadioData::ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 }
 
 /*
-void setAlternativeFrequenciesEnabled(bool enabled)
+void setAlternativeFrequenciesEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 }
 
 /*
-QMediaObject *mediaObject() const override
+QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 }
 
 /*
-Error error() const
+QRadioData::Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {
@@ -372,10 +372,6 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
 #endif
   }
 }
-
-/*
-bool setMediaObject(QMediaObject *) override [protected]
-*/
 
 /*
 void stationIdChanged( QString stationId )

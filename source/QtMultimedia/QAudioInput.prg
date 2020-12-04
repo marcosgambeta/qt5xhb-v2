@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+QAudioInput( const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
 */
 void QAudioInput_new1()
 {
@@ -81,7 +81,7 @@ void QAudioInput_new1()
 }
 
 /*
-explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
+QAudioInput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
 */
 void QAudioInput_new2()
 {
@@ -89,18 +89,13 @@ void QAudioInput_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
-[2]explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat &format = QAudioFormat(), QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QAudioInput_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QAudioInput_new2();
   }
@@ -133,7 +128,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 }
 
 /*
-int bufferSize () const
+int bufferSize() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
 {
@@ -157,7 +152,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
 }
 
 /*
-int bytesReady () const
+int bytesReady() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
 {
@@ -181,7 +176,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
 }
 
 /*
-qint64 elapsedUSecs () const
+qint64 elapsedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
 {
@@ -205,7 +200,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
 }
 
 /*
-QAudio::Error error () const
+QAudio::Error error() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
 {
@@ -229,7 +224,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
 }
 
 /*
-QAudioFormat format () const
+QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
 }
 
 /*
-int notifyInterval () const
+int notifyInterval() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
 {
@@ -278,7 +273,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
 }
 
 /*
-int periodSize () const
+int periodSize() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
 {
@@ -302,7 +297,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
 }
 
 /*
-qint64 processedUSecs () const
+qint64 processedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
 {
@@ -326,7 +321,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_RESET )
 {
@@ -352,7 +347,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESET )
 }
 
 /*
-void resume ()
+void resume()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 {
@@ -378,7 +373,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 }
 
 /*
-void setBufferSize ( int bytes )
+void setBufferSize( int bytes )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 {
@@ -404,7 +399,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 }
 
 /*
-void setNotifyInterval ( int milliSeconds )
+void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 {
@@ -430,7 +425,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 }
 
 /*
-void start ( QIODevice * device )
+void start( QIODevice * device )
 */
 void QAudioInput_start1()
 {
@@ -445,7 +440,7 @@ void QAudioInput_start1()
 }
 
 /*
-QIODevice * start ()
+QIODevice * start()
 */
 void QAudioInput_start2()
 {
@@ -457,11 +452,6 @@ void QAudioInput_start2()
     Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
   }
 }
-
-/*
-[1]void start ( QIODevice * device )
-[2]QIODevice * start ()
-*/
 
 HB_FUNC_STATIC( QAUDIOINPUT_START )
 {
@@ -480,7 +470,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
 }
 
 /*
-QAudio::State state () const
+QAudio::State state() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_STATE )
 {
@@ -504,7 +494,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_STATE )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_STOP )
 {
@@ -530,7 +520,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_STOP )
 }
 
 /*
-void suspend ()
+void suspend()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
 {
@@ -556,7 +546,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
 }
 
 /*
-void setVolume(qreal volume)
+void setVolume( qreal volume )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETVOLUME )
 {
@@ -606,7 +596,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_VOLUME )
 }
 
 /*
-void stateChanged(QAudio::State)
+void stateChanged( QAudio::State )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
 {

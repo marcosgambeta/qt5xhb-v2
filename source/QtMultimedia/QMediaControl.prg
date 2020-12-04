@@ -48,14 +48,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
-explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QMediaControl()
 */
 HB_FUNC_STATIC( QMEDIACONTROL_DELETE )

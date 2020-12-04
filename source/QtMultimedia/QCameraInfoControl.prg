@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraInfoControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QCameraInfoControl()
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
@@ -82,7 +78,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 }
 
 /*
-virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
+virtual QCamera::Position cameraPosition( const QString & deviceName ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 {
@@ -108,7 +104,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 }
 
 /*
-virtual int cameraOrientation(const QString &deviceName) const = 0
+virtual int cameraOrientation( const QString & deviceName ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
 {

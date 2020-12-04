@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 }
 
 /*
-QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
+QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 }
 
 /*
-QMediaServiceProviderHint(const QByteArray &device)
+QMediaServiceProviderHint( const QByteArray & device )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 }
 
 /*
-QMediaServiceProviderHint(QCamera::Position position)
+QMediaServiceProviderHint( QCamera::Position position )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 }
 
 /*
-QMediaServiceProviderHint(Features features)
+QMediaServiceProviderHint( QMediaServiceProviderHint::Features features )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
@@ -115,22 +115,13 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 }
 
 /*
-QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
+QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
 {
   auto obj = new QMediaServiceProviderHint( *PQMEDIASERVICEPROVIDERHINT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QMediaServiceProviderHint()
-[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
-[3]QMediaServiceProviderHint(const QByteArray &device)
-[4]QMediaServiceProviderHint(QCamera::Position position)
-[5]QMediaServiceProviderHint(Features features)
-[6]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
-*/
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 {
@@ -205,7 +196,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_ISNULL )
 }
 
 /*
-Type type() const
+QMediaServiceProviderHint::Type type() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
 {
@@ -302,7 +293,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
 }
 
 /*
-Features features() const
+QMediaServiceProviderHint::Features features() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
 {

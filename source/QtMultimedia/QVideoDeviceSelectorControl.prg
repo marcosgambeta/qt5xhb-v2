@@ -58,10 +58,6 @@ RETURN
 #endif
 
 /*
-explicit QVideoDeviceSelectorControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QVideoDeviceSelectorControl()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )
@@ -132,7 +128,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
 }
 
 /*
-virtual QString deviceDescription(int index) const = 0
+virtual QString deviceDescription( int index ) const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
 {
@@ -156,7 +152,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
 }
 
 /*
-virtual QString deviceName(int index) const = 0
+virtual QString deviceName( int index ) const = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
 {
@@ -204,7 +200,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
 }
 
 /*
-virtual void setSelectedDevice(int index) = 0
+virtual void setSelectedDevice( int index ) = 0
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
 {

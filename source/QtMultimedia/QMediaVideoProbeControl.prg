@@ -53,10 +53,6 @@ RETURN
 #include <QtMultimedia/QVideoFrame>
 
 /*
-explicit QMediaVideoProbeControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QMediaVideoProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )

@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureBufferFormatControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QCameraCaptureBufferFormatControl()
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )
@@ -103,7 +99,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_BUFFERFORMAT )
 }
 
 /*
-virtual void setBufferFormat(QVideoFrame::PixelFormat format) = 0
+virtual void setBufferFormat( QVideoFrame::PixelFormat format ) = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_SETBUFFERFORMAT )
 {

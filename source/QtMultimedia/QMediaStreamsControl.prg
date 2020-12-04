@@ -57,10 +57,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaStreamsControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QMediaStreamsControl()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )
@@ -83,7 +79,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )
 }
 
 /*
-virtual bool isActive(int streamNumber) = 0
+virtual bool isActive( int streamNumber ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
 {
@@ -107,7 +103,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
 }
 
 /*
-virtual QVariant metaData(int streamNumber, const QString & key) = 0
+virtual QVariant metaData( int streamNumber, const QString & key ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
 {
@@ -132,7 +128,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
 }
 
 /*
-virtual void setActive(int streamNumber, bool state) = 0
+virtual void setActive( int streamNumber, bool state ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
 {
@@ -182,7 +178,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
 }
 
 /*
-virtual StreamType streamType(int streamNumber) = 0
+virtual QMediaStreamsControl::StreamType streamType( int streamNumber ) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
 {

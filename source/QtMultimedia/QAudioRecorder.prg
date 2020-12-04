@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioRecorder(QObject *parent = nullptr)
+QAudioRecorder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
 }
 
 /*
-void setAudioInput(const QString & name)
+void setAudioInput( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 }
 
 /*
-QString audioInputDescription(const QString & name) const
+QString audioInputDescription( const QString & name ) const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
 {

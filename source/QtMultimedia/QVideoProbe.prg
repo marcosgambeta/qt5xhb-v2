@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QVideoProbe(QObject *parent = nullptr)
+QVideoProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 }
 
 /*
-bool setSource(QMediaObject * source)
+bool setSource( QMediaObject * source )
 */
 void QVideoProbe_setSource1()
 {
@@ -129,7 +129,7 @@ void QVideoProbe_setSource1()
 }
 
 /*
-bool setSource(QMediaRecorder * source)
+bool setSource( QMediaRecorder * source )
 */
 void QVideoProbe_setSource2()
 {
@@ -140,11 +140,6 @@ void QVideoProbe_setSource2()
     RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
   }
 }
-
-/*
-[1]bool setSource(QMediaObject * source)
-[2]bool setSource(QMediaRecorder * mediaRecorder)
-*/
 
 HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 {

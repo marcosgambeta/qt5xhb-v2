@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioDecoder(QObject *parent = nullptr)
+QAudioDecoder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIODECODER_NEW )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEFILENAME )
 }
 
 /*
-void setSourceFilename(const QString & fileName)
+void setSourceFilename( const QString & fileName )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
 }
 
 /*
-State state() const
+QAudioDecoder::State state() const
 */
 HB_FUNC_STATIC( QAUDIODECODER_STATE )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QAUDIODECODER_AUDIOFORMAT )
 }
 
 /*
-void setAudioFormat(const QAudioFormat & format)
+void setAudioFormat( const QAudioFormat & format )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETAUDIOFORMAT )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QAUDIODECODER_DURATION )
 }
 
 /*
-Error error() const
+QAudioDecoder::Error error() const
 */
 HB_FUNC_STATIC( QAUDIODECODER_ERROR )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEDEVICE )
 }
 
 /*
-void setSourceDevice(QIODevice * device)
+void setSourceDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEDEVICE )
 {
@@ -489,12 +489,12 @@ HB_FUNC_STATIC( QAUDIODECODER_STOP )
 }
 
 /*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
+static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const QStringList & codecs = QStringList() )
 */
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTARRAY(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISARRAY(2)||ISNIL(2)) )
   {
 #endif
     RENUM( QAudioDecoder::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
@@ -510,7 +510,6 @@ HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 /*
 bool bind(QObject *) override
 */
-
 /*
 void unbind(QObject *) override
 */

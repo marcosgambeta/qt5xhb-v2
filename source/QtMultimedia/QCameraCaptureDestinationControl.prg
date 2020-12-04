@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureDestinationControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QCameraCaptureDestinationControl()
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
@@ -103,7 +99,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
 }
 
 /*
-virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinations destination) const = 0
+virtual bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations destination ) const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 {
@@ -127,7 +123,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 }
 
 /*
-virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations destination) = 0
+virtual void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination ) = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
 {

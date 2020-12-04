@@ -88,10 +88,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaPlayerControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QMediaPlayerControl()
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DELETE )
@@ -457,7 +453,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_POSITION )
 }
 
 /*
-virtual void setMedia(const QMediaContent & media, QIODevice * stream) = 0
+virtual void setMedia( const QMediaContent & media, QIODevice * stream ) = 0
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMEDIA )
 {
@@ -483,7 +479,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMEDIA )
 }
 
 /*
-virtual void setMuted(bool mute) = 0
+virtual void setMuted( bool mute ) = 0
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMUTED )
 {
@@ -509,7 +505,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETMUTED )
 }
 
 /*
-virtual void setPlaybackRate(qreal rate) = 0
+virtual void setPlaybackRate( qreal rate ) = 0
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPLAYBACKRATE )
 {
@@ -535,7 +531,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPLAYBACKRATE )
 }
 
 /*
-virtual void setPosition(qint64 position) = 0
+virtual void setPosition( qint64 position ) = 0
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPOSITION )
 {
@@ -561,7 +557,7 @@ HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETPOSITION )
 }
 
 /*
-virtual void setVolume(int volume) = 0
+virtual void setVolume( int volume ) = 0
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_SETVOLUME )
 {

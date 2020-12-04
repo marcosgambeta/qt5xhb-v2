@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioProbe(QObject * parent = nullptr)
+QAudioProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 }
 
 /*
-bool setSource(QMediaObject * source)
+bool setSource( QMediaObject * source )
 */
 void QAudioProbe_setSource1()
 {
@@ -129,7 +129,7 @@ void QAudioProbe_setSource1()
 }
 
 /*
-bool setSource(QMediaRecorder * source)
+bool setSource( QMediaRecorder * source )
 */
 void QAudioProbe_setSource2()
 {

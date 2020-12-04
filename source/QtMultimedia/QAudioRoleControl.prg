@@ -57,10 +57,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioRoleControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAudioRoleControl()
 */
 HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )
@@ -111,7 +107,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
 }
 
 /*
-virtual void setAudioRole(QAudio::Role role) = 0
+virtual void setAudioRole( QAudio::Role role ) = 0
 */
 HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
 {
@@ -173,7 +169,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
 }
 
 /*
-void audioRoleChanged(QAudio::Role role)
+void audioRoleChanged( QAudio::Role role )
 */
 HB_FUNC_STATIC( QAUDIOROLECONTROL_ONAUDIOROLECHANGED )
 {

@@ -86,7 +86,7 @@ RETURN
 #endif
 
 /*
-explicit QMediaPlaylist(QObject * parent = nullptr)
+QMediaPlaylist( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_NEW )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_DELETE )
 }
 
 /*
-PlaybackMode playbackMode() const
+QMediaPlaylist::PlaybackMode playbackMode() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
 }
 
 /*
-void setPlaybackMode(PlaybackMode mode)
+void setPlaybackMode( QMediaPlaylist::PlaybackMode mode )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTINDEX )
 }
 
 /*
-void setCurrentIndex(int index)
+void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
 }
 
 /*
-bool addMedia(const QMediaContent & content)
+bool addMedia( const QMediaContent & content )
 */
 void QMediaPlaylist_addMedia1()
 {
@@ -262,7 +262,7 @@ void QMediaPlaylist_addMedia1()
 }
 
 /*
-bool addMedia(const QList<QMediaContent> & items)
+bool addMedia( const QList<QMediaContent> & items )
 */
 void QMediaPlaylist_addMedia2()
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CLEAR )
 }
 
 /*
-Error error() const
+QMediaPlaylist::Error error() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ERROR )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
 }
 
 /*
-bool insertMedia(int pos, const QMediaContent & content)
+bool insertMedia( int pos, const QMediaContent & content )
 */
 void QMediaPlaylist_insertMedia1()
 {
@@ -388,7 +388,7 @@ void QMediaPlaylist_insertMedia1()
 }
 
 /*
-bool insertMedia(int pos, const QList<QMediaContent> & items)
+bool insertMedia( int pos, const QList<QMediaContent> & items )
 */
 void QMediaPlaylist_insertMedia2()
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
 }
 
 /*
-void load(const QNetworkRequest & request, const char * format = nullptr)
+void load( const QNetworkRequest & request, const char * format = nullptr )
 */
 void QMediaPlaylist_load1()
 {
@@ -492,7 +492,7 @@ void QMediaPlaylist_load1()
 }
 
 /*
-void load(const QUrl & location, const char * format = nullptr)
+void load( const QUrl & location, const char * format = nullptr )
 */
 void QMediaPlaylist_load2()
 {
@@ -507,7 +507,7 @@ void QMediaPlaylist_load2()
 }
 
 /*
-void load(QIODevice * device, const char * format = nullptr)
+void load( QIODevice * device, const char * format = nullptr )
 */
 void QMediaPlaylist_load3()
 {
@@ -529,15 +529,15 @@ void QMediaPlaylist_load3()
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
-  if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load2();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load3();
   }
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 }
 
 /*
-QMediaContent media(int index) const
+QMediaContent media( int index ) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIACOUNT )
 }
 
 /*
-int nextIndex(int steps = 1) const
+int nextIndex( int steps = 1 ) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RINT( obj->nextIndex( OPINT(1,1) ) );
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
 }
 
 /*
-int previousIndex(int steps = 1) const
+int previousIndex( int steps = 1 ) const
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RINT( obj->previousIndex( OPINT(1,1) ) );
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
 }
 
 /*
-bool removeMedia(int pos)
+bool removeMedia( int pos )
 */
 void QMediaPlaylist_removeMedia1()
 {
@@ -658,7 +658,7 @@ void QMediaPlaylist_removeMedia1()
 }
 
 /*
-bool removeMedia(int start, int end)
+bool removeMedia( int start, int end )
 */
 void QMediaPlaylist_removeMedia2()
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 }
 
 /*
-bool save(const QUrl & location, const char * format = nullptr)
+bool save( const QUrl & location, const char * format = nullptr )
 */
 void QMediaPlaylist_save1()
 {
@@ -705,7 +705,7 @@ void QMediaPlaylist_save1()
 }
 
 /*
-bool save(QIODevice * device, const char * format)
+bool save( QIODevice * device, const char * format )
 */
 void QMediaPlaylist_save2()
 {
@@ -724,7 +724,7 @@ void QMediaPlaylist_save2()
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 {
-  if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_save1();
   }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 }
 
 /*
-virtual QMediaObject *mediaObject() const override
+virtual QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SHUFFLE )
 }
 
 /*
-bool moveMedia(int from, int to)
+bool moveMedia( int from, int to )
 */
 HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 {
@@ -866,10 +866,6 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
   }
 #endif
 }
-
-/*
-bool setMediaObject(QMediaObject *object) override [protected]
-*/
 
 /*
 void currentIndexChanged( int position )

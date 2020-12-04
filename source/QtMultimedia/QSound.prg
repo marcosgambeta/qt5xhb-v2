@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QSound(const QString& filename, QObject* parent = nullptr)
+QSound( const QString & filename, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 }
 
 /*
-void setLoops(int)
+void setLoops( int )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
@@ -257,7 +257,7 @@ void QSound_play1()
 }
 
 /*
-static void play(const QString& filename)
+static void play( const QString & filename )
 */
 void QSound_play2()
 {
@@ -286,9 +286,5 @@ HB_FUNC_STATIC( QSOUND_PLAY )
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-void deleteOnComplete() (slot) [private]
-*/
 
 #pragma ENDDUMP

@@ -70,15 +70,7 @@ RETURN
 #endif
 
 /*
-QCameraFocus(QCamera *camera) [private]
-*/
-
-/*
-~QCameraFocus() [private]
-*/
-
-/*
-FocusModes focusMode() const
+QCameraFocus::FocusModes focusMode() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
 {
@@ -102,7 +94,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )
 }
 
 /*
-void setFocusMode(FocusModes mode)
+void setFocusMode( QCameraFocus::FocusModes mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
 {
@@ -128,7 +120,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSMODE )
 }
 
 /*
-FocusPointMode focusPointMode() const
+QCameraFocus::FocusPointMode focusPointMode() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
 {
@@ -152,7 +144,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSPOINTMODE )
 }
 
 /*
-void setFocusPointMode(FocusPointMode mode)
+void setFocusPointMode( QCameraFocus::FocusPointMode mode )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETFOCUSPOINTMODE )
 {
@@ -203,7 +195,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_CUSTOMFOCUSPOINT )
 }
 
 /*
-void setCustomFocusPoint(const QPointF & point)
+void setCustomFocusPoint( const QPointF & point )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_SETCUSTOMFOCUSPOINT )
 {
@@ -353,7 +345,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISAVAILABLE )
 }
 
 /*
-bool isFocusModeSupported(FocusModes mode) const
+bool isFocusModeSupported( QCameraFocus::FocusModes mode ) const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
 {
@@ -377,7 +369,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSMODESUPPORTED )
 }
 
 /*
-bool isFocusPointModeSupported(FocusPointMode mode) const
+bool isFocusPointModeSupported( QCameraFocus::FocusPointMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ISFOCUSPOINTMODESUPPORTED )
 {
@@ -449,7 +441,7 @@ HB_FUNC_STATIC( QCAMERAFOCUS_MAXIMUMOPTICALZOOM )
 }
 
 /*
-void zoomTo(qreal opticalZoom, qreal digitalZoom)
+void zoomTo( qreal opticalZoom, qreal digitalZoom )
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_ZOOMTO )
 {

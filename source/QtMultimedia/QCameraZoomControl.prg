@@ -62,10 +62,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraZoomControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QCameraZoomControl()
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )
@@ -232,7 +228,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
 }
 
 /*
-virtual void zoomTo(qreal optical, qreal digital) = 0
+virtual void zoomTo( qreal optical, qreal digital ) = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
 {

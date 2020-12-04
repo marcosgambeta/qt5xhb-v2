@@ -82,18 +82,13 @@ void QVideoEncoderSettings_new1()
 }
 
 /*
-QVideoEncoderSettings(const QVideoEncoderSettings & other)
+QVideoEncoderSettings( const QVideoEncoderSettings & other )
 */
 void QVideoEncoderSettings_new2()
 {
   auto obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVideoEncoderSettings()
-[2]QVideoEncoderSettings(const QVideoEncoderSettings & other)
-*/
 
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 {
@@ -204,7 +199,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGMODE )
 }
 
 /*
-QVariant encodingOption(const QString & option) const
+QVariant encodingOption( const QString & option ) const
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGOPTION )
 {
@@ -227,10 +222,6 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_ENCODINGOPTION )
 #endif
   }
 }
-
-/*
-QVariantMap encodingOptions() const
-*/
 
 /*
 qreal frameRate() const
@@ -330,7 +321,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_RESOLUTION )
 }
 
 /*
-void setBitRate(int bitrate)
+void setBitRate( int bitrate )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETBITRATE )
 {
@@ -356,7 +347,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETBITRATE )
 }
 
 /*
-void setCodec(const QString & codec)
+void setCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETCODEC )
 {
@@ -382,7 +373,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETCODEC )
 }
 
 /*
-void setEncodingMode(QMultimedia::EncodingMode mode)
+void setEncodingMode( QMultimedia::EncodingMode mode )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGMODE )
 {
@@ -408,7 +399,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGMODE )
 }
 
 /*
-void setEncodingOption(const QString & option, const QVariant & value)
+void setEncodingOption( const QString & option, const QVariant & value )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGOPTION )
 {
@@ -434,11 +425,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETENCODINGOPTION )
 }
 
 /*
-void setEncodingOptions(const QVariantMap &options)
-*/
-
-/*
-void setFrameRate(qreal rate)
+void setFrameRate( qreal rate )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETFRAMERATE )
 {
@@ -464,7 +451,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETFRAMERATE )
 }
 
 /*
-void setQuality(QMultimedia::EncodingQuality quality)
+void setQuality( QMultimedia::EncodingQuality quality )
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
 {
@@ -490,7 +477,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
 }
 
 /*
-void setResolution(const QSize & resolution)
+void setResolution( const QSize & resolution )
 */
 void QVideoEncoderSettings_setResolution1()
 {
@@ -505,7 +492,7 @@ void QVideoEncoderSettings_setResolution1()
 }
 
 /*
-void setResolution(int width, int height)
+void setResolution( int width, int height )
 */
 void QVideoEncoderSettings_setResolution2()
 {
@@ -518,11 +505,6 @@ void QVideoEncoderSettings_setResolution2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setResolution(const QSize & resolution)
-[2]void setResolution(int width, int height)
-*/
 
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION )
 {

@@ -81,18 +81,13 @@ void QAudioEncoderSettings_new1()
 }
 
 /*
-QAudioEncoderSettings(const QAudioEncoderSettings & other)
+QAudioEncoderSettings( const QAudioEncoderSettings & other )
 */
 void QAudioEncoderSettings_new2()
 {
   auto obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAudioEncoderSettings()
-[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
-*/
 
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 {
@@ -227,7 +222,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGMODE )
 }
 
 /*
-QVariant encodingOption(const QString & option) const
+QVariant encodingOption( const QString & option ) const
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGOPTION )
 {
@@ -250,10 +245,6 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_ENCODINGOPTION )
 #endif
   }
 }
-
-/*
-QVariantMap encodingOptions() const
-*/
 
 /*
 bool isNull() const
@@ -328,7 +319,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SAMPLERATE )
 }
 
 /*
-void setBitRate(int bitrate)
+void setBitRate( int bitrate )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
 {
@@ -354,7 +345,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETBITRATE )
 }
 
 /*
-void setChannelCount(int channels)
+void setChannelCount( int channels )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
 {
@@ -380,7 +371,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCHANNELCOUNT )
 }
 
 /*
-void setCodec(const QString & codec)
+void setCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCODEC )
 {
@@ -406,7 +397,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETCODEC )
 }
 
 /*
-void setEncodingMode(QMultimedia::EncodingMode mode)
+void setEncodingMode( QMultimedia::EncodingMode mode )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
 {
@@ -432,7 +423,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGMODE )
 }
 
 /*
-void setEncodingOption(const QString & option, const QVariant & value)
+void setEncodingOption( const QString & option, const QVariant & value )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGOPTION )
 {
@@ -458,11 +449,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETENCODINGOPTION )
 }
 
 /*
-void setEncodingOptions(const QVariantMap &options)
-*/
-
-/*
-void setQuality(QMultimedia::EncodingQuality quality)
+void setQuality( QMultimedia::EncodingQuality quality )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
 {
@@ -488,7 +475,7 @@ HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETQUALITY )
 }
 
 /*
-void setSampleRate(int rate)
+void setSampleRate( int rate )
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_SETSAMPLERATE )
 {

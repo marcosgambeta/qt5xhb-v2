@@ -80,7 +80,7 @@ virtual QMediaService* create(QString const& key) = 0
 */
 
 /*
-virtual void release(QMediaService *service) = 0
+virtual void release( QMediaService * service ) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_RELEASE )
 {

@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QAbstractPlanarVideoBuffer(HandleType type) (abstract)
+QAbstractPlanarVideoBuffer( QAbstractVideoBuffer::HandleType type ) [ABSTRACT]
 */
 
 /*
@@ -74,13 +74,5 @@ HB_FUNC_STATIC( QABSTRACTPLANARVIDEOBUFFER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-uchar *map(MapMode mode, int *numBytes, int *bytesPerLine) override;
-*/
-
-/*
-virtual int map(MapMode mode, int *numBytes, int bytesPerLine[4], uchar *data[4]) = 0;
-*/
 
 #pragma ENDDUMP

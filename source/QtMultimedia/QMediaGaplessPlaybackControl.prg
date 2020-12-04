@@ -58,10 +58,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaGaplessPlaybackControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QMediaGaplessPlaybackControl()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
@@ -157,7 +153,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
 }
 
 /*
-virtual void setCrossfadeTime(qreal crossfadeTime) = 0
+virtual void setCrossfadeTime( qreal crossfadeTime ) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 {
@@ -183,7 +179,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 }
 
 /*
-virtual void setNextMedia(const QMediaContent & media) = 0
+virtual void setNextMedia( const QMediaContent & media ) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
 {

@@ -85,10 +85,6 @@ RETURN
 #endif
 
 /*
-explicit QRadioTunerControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QRadioTunerControl()
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )
@@ -159,7 +155,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
 }
 
 /*
-virtual void setBand(QRadioTuner::Band b) = 0
+virtual void setBand( QRadioTuner::Band b ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
 {
@@ -185,7 +181,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
 }
 
 /*
-virtual bool isBandSupported(QRadioTuner::Band b) const = 0
+virtual bool isBandSupported( QRadioTuner::Band b ) const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
 {
@@ -233,7 +229,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
 }
 
 /*
-virtual int frequencyStep(QRadioTuner::Band b) const = 0
+virtual int frequencyStep( QRadioTuner::Band b ) const = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
 {
@@ -257,7 +253,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
 }
 
 /*
-virtual void setFrequency(int frequency) = 0
+virtual void setFrequency( int frequency ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETFREQUENCY )
 {
@@ -331,7 +327,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
 }
 
 /*
-virtual void setStereoMode(QRadioTuner::StereoMode mode) = 0
+virtual void setStereoMode( QRadioTuner::StereoMode mode ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
 {
@@ -405,7 +401,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
 }
 
 /*
-virtual void setVolume(int volume) = 0
+virtual void setVolume( int volume ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETVOLUME )
 {
@@ -455,7 +451,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
 }
 
 /*
-virtual void setMuted(bool muted) = 0
+virtual void setMuted( bool muted ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETMUTED )
 {
@@ -581,7 +577,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
 }
 
 /*
-virtual void searchAllStations(QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast) = 0
+virtual void searchAllStations( QRadioTuner::SearchMode searchMode = QRadioTuner::SearchFast ) = 0
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
 {
@@ -590,7 +586,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->searchAllStations( ISNIL(1)? (QRadioTuner::SearchMode) QRadioTuner::SearchFast : (QRadioTuner::SearchMode) hb_parni(1) );
@@ -731,10 +727,6 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 #endif
   }
 }
-
-/*
-virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
-*/
 
 /*
 void stateChanged( QRadioTuner::State state )

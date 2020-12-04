@@ -74,11 +74,7 @@ void QAudioBuffer_new1()
 }
 
 /*
-QAudioBuffer(QAbstractAudioBuffer *provider)
-*/
-
-/*
-QAudioBuffer(const QAudioBuffer & other)
+QAudioBuffer( const QAudioBuffer & other )
 */
 void QAudioBuffer_new2()
 {
@@ -87,7 +83,7 @@ void QAudioBuffer_new2()
 }
 
 /*
-QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
+QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
 */
 void QAudioBuffer_new3()
 {
@@ -96,20 +92,13 @@ void QAudioBuffer_new3()
 }
 
 /*
-QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
+QAudioBuffer( int numFrames, const QAudioFormat & format, qint64 startTime = -1 )
 */
 void QAudioBuffer_new4()
 {
   auto obj = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAudioBuffer()
-[2]QAudioBuffer(const QAudioBuffer & other)
-[3]QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
-[4]QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
-*/
 
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {
@@ -121,11 +110,11 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
   {
     QAudioBuffer_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QAudioBuffer_new3();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQAUDIOFORMAT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QAudioBuffer_new4();
   }
@@ -180,13 +169,11 @@ HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
 }
 
 /*
-const void* constData() const
+const void * constData() const
 */
-
 /*
 const void* data() const
 */
-
 /*
 void * data()
 */

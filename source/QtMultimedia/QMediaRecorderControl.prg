@@ -70,10 +70,6 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-explicit QMediaRecorderControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QMediaRecorderControl()
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DELETE )
@@ -195,7 +191,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_OUTPUTLOCATION )
 }
 
 /*
-virtual bool setOutputLocation(const QUrl & location) = 0
+virtual bool setOutputLocation( const QUrl & location ) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETOUTPUTLOCATION )
 {
@@ -291,7 +287,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_VOLUME )
 }
 
 /*
-virtual void setMuted(bool muted) = 0
+virtual void setMuted( bool muted ) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
 {
@@ -317,7 +313,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
 }
 
 /*
-virtual void setState(QMediaRecorder::State state) = 0
+virtual void setState( QMediaRecorder::State state ) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
 {
@@ -343,7 +339,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
 }
 
 /*
-virtual void setVolume(qreal gain) = 0
+virtual void setVolume( qreal gain ) = 0
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
 {

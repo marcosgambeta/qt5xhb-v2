@@ -92,7 +92,7 @@ void QMediaResource_new1()
 }
 
 /*
-QMediaResource(const QUrl & url, const QString & mimeType = QString())
+QMediaResource( const QUrl & url, const QString & mimeType = QString() )
 */
 void QMediaResource_new2()
 {
@@ -101,7 +101,7 @@ void QMediaResource_new2()
 }
 
 /*
-QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
+QMediaResource( const QNetworkRequest & request, const QString & mimeType = QString() )
 */
 void QMediaResource_new3()
 {
@@ -110,7 +110,7 @@ void QMediaResource_new3()
 }
 
 /*
-QMediaResource(const QMediaResource & other)
+QMediaResource( const QMediaResource & other )
 */
 void QMediaResource_new4()
 {
@@ -118,24 +118,17 @@ void QMediaResource_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QMediaResource()
-[2]QMediaResource(const QUrl & url, const QString & mimeType = QString())
-[3]QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
-[4]QMediaResource(const QMediaResource & other)
-*/
-
 HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QMediaResource_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaResource_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaResource_new3();
   }
@@ -412,7 +405,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SAMPLERATE )
 }
 
 /*
-void setAudioBitRate(int rate)
+void setAudioBitRate( int rate )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
 {
@@ -438,7 +431,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
 }
 
 /*
-void setAudioCodec(const QString & codec)
+void setAudioCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
 {
@@ -464,7 +457,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
 }
 
 /*
-void setChannelCount(int channels)
+void setChannelCount( int channels )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
 {
@@ -490,7 +483,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
 }
 
 /*
-void setDataSize(const qint64 size)
+void setDataSize( const qint64 size )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
 {
@@ -516,7 +509,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
 }
 
 /*
-void setLanguage(const QString & language)
+void setLanguage( const QString & language )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
 {
@@ -542,7 +535,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
 }
 
 /*
-void setResolution(const QSize & resolution)
+void setResolution( const QSize & resolution )
 */
 void QMediaResource_setResolution1()
 {
@@ -557,7 +550,7 @@ void QMediaResource_setResolution1()
 }
 
 /*
-void setResolution(int width, int height)
+void setResolution( int width, int height )
 */
 void QMediaResource_setResolution2()
 {
@@ -570,11 +563,6 @@ void QMediaResource_setResolution2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setResolution(const QSize & resolution)
-[2]void setResolution(int width, int height)
-*/
 
 HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 {
@@ -593,7 +581,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETRESOLUTION )
 }
 
 /*
-void setSampleRate(int frequency)
+void setSampleRate( int frequency )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
 {
@@ -619,7 +607,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
 }
 
 /*
-void setVideoBitRate(int rate)
+void setVideoBitRate( int rate )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
 {
@@ -645,7 +633,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
 }
 
 /*
-void setVideoCodec(const QString & codec)
+void setVideoCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOCODEC )
 {

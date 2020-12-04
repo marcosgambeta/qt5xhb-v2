@@ -74,7 +74,7 @@ RETURN
 #endif
 
 /*
-explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
 */
 void QAudioOutput_new1()
 {
@@ -83,7 +83,7 @@ void QAudioOutput_new1()
 }
 
 /*
-explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
+QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
 */
 void QAudioOutput_new2()
 {
@@ -91,18 +91,13 @@ void QAudioOutput_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
-[2]explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QAudioOutput_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QAudioOutput_new2();
   }
@@ -404,7 +399,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 }
 
 /*
-void setBufferSize(int bytes)
+void setBufferSize( int bytes )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 {
@@ -430,7 +425,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 }
 
 /*
-void setCategory(const QString & category)
+void setCategory( const QString & category )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 {
@@ -456,7 +451,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 }
 
 /*
-void setNotifyInterval(int milliSeconds)
+void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 {
@@ -482,7 +477,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 }
 
 /*
-void setVolume(qreal volume)
+void setVolume( qreal volume )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
 {
@@ -508,7 +503,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
 }
 
 /*
-void start(QIODevice * device)
+void start( QIODevice * device )
 */
 void QAudioOutput_start1()
 {
@@ -535,11 +530,6 @@ void QAudioOutput_start2()
     Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
   }
 }
-
-/*
-[1]void start(QIODevice * device)
-[2]QIODevice * start()
-*/
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 {

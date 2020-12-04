@@ -55,10 +55,6 @@ RETURN
 #endif
 
 /*
-explicit QImageEncoderControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QImageEncoderControl()
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_DELETE )
@@ -105,7 +101,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
 }
 
 /*
-virtual QString imageCodecDescription(const QString &codecName) const = 0
+virtual QString imageCodecDescription( const QString & codecName ) const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
 {
@@ -129,7 +125,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
 }
 
 /*
-virtual QList<QSize> supportedResolutions(const QImageEncoderSettings &settings,bool *continuous = nullptr) const = 0
+virtual QList<QSize> supportedResolutions( const QImageEncoderSettings & settings, bool * continuous = nullptr ) const = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
 {
@@ -138,7 +134,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIMAGEENCODERSETTINGS(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISQIMAGEENCODERSETTINGS(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -208,7 +204,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
 }
 
 /*
-virtual void setImageSettings(const QImageEncoderSettings &settings) = 0
+virtual void setImageSettings( const QImageEncoderSettings & settings ) = 0
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
 {

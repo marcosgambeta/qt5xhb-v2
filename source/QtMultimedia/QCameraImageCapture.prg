@@ -81,7 +81,7 @@ RETURN
 #endif
 
 /*
-explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = nullptr)
+QCameraImageCapture( QMediaObject * mediaObject, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
 }
 
 /*
-CaptureDestinations captureDestination() const
+QCameraImageCapture::CaptureDestinations captureDestination() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
 }
 
 /*
-Error error() const
+QCameraImageCapture::Error error() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
 }
 
 /*
-QString imageCodecDescription(const QString & codecName) const
+QString imageCodecDescription( const QString & codecName ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
 }
 
 /*
-bool isCaptureDestinationSupported(CaptureDestinations destination) const
+bool isCaptureDestinationSupported( QCameraImageCapture::CaptureDestinations destination ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
 }
 
 /*
-QMediaObject *mediaObject() const override
+QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
 }
 
 /*
-void setBufferFormat(const QVideoFrame::PixelFormat format)
+void setBufferFormat( const QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBufferFormat( (QVideoFrame::PixelFormat) hb_parni(1) );
+      obj->setBufferFormat( (const QVideoFrame::PixelFormat) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
 }
 
 /*
-void setCaptureDestination(CaptureDestinations destination)
+void setCaptureDestination( QCameraImageCapture::CaptureDestinations destination )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
 }
 
 /*
-void setEncodingSettings(const QImageEncoderSettings & settings)
+void setEncodingSettings( const QImageEncoderSettings & settings )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
 }
 
 /*
-QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr) const
+QList<QSize> supportedResolutions( const QImageEncoderSettings & settings = QImageEncoderSettings(), bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQIMAGEENCODERSETTINGS(1)||ISNIL(1)) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && (ISQIMAGEENCODERSETTINGS(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
 }
 
 /*
-int capture(const QString & location = QString())
+int capture( const QString & location = QString() )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
 {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RINT( obj->capture( OPQSTRING(1,QString()) ) );
@@ -621,10 +621,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
 #endif
   }
 }
-
-/*
-bool setMediaObject(QMediaObject *) override [protected]
-*/
 
 /*
 void bufferFormatChanged( QVideoFrame::PixelFormat format )

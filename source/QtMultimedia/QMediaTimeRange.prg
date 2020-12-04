@@ -79,7 +79,7 @@ void QMediaTimeRange_new1()
 }
 
 /*
-QMediaTimeRange(qint64 start, qint64 end)
+QMediaTimeRange( qint64 start, qint64 end )
 */
 void QMediaTimeRange_new2()
 {
@@ -88,7 +88,7 @@ void QMediaTimeRange_new2()
 }
 
 /*
-QMediaTimeRange(const QMediaTimeInterval & interval)
+QMediaTimeRange( const QMediaTimeInterval & interval )
 */
 void QMediaTimeRange_new3()
 {
@@ -97,20 +97,13 @@ void QMediaTimeRange_new3()
 }
 
 /*
-QMediaTimeRange(const QMediaTimeRange & range)
+QMediaTimeRange( const QMediaTimeRange & range )
 */
 void QMediaTimeRange_new4()
 {
   auto obj = new QMediaTimeRange( *PQMEDIATIMERANGE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QMediaTimeRange()
-[2]QMediaTimeRange(qint64 start, qint64 end)
-[3]QMediaTimeRange(const QMediaTimeInterval & interval)
-[4]QMediaTimeRange(const QMediaTimeRange & range)
-*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 {
@@ -157,7 +150,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
 }
 
 /*
-void addInterval(const QMediaTimeInterval & interval)
+void addInterval( const QMediaTimeInterval & interval )
 */
 void QMediaTimeRange_addInterval1()
 {
@@ -172,7 +165,7 @@ void QMediaTimeRange_addInterval1()
 }
 
 /*
-void addInterval(qint64 start, qint64 end)
+void addInterval( qint64 start, qint64 end )
 */
 void QMediaTimeRange_addInterval2()
 {
@@ -185,11 +178,6 @@ void QMediaTimeRange_addInterval2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addInterval(const QMediaTimeInterval & interval)
-[2]void addInterval(qint64 start, qint64 end)
-*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 {
@@ -208,7 +196,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 }
 
 /*
-void addTimeRange(const QMediaTimeRange & range)
+void addTimeRange( const QMediaTimeRange & range )
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDTIMERANGE )
 {
@@ -260,7 +248,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_CLEAR )
 }
 
 /*
-bool contains(qint64 time) const
+bool contains( qint64 time ) const
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_CONTAINS )
 {
@@ -432,7 +420,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
 }
 
 /*
-void removeInterval(const QMediaTimeInterval & interval)
+void removeInterval( const QMediaTimeInterval & interval )
 */
 void QMediaTimeRange_removeInterval1()
 {
@@ -447,7 +435,7 @@ void QMediaTimeRange_removeInterval1()
 }
 
 /*
-void removeInterval(qint64 start, qint64 end)
+void removeInterval( qint64 start, qint64 end )
 */
 void QMediaTimeRange_removeInterval2()
 {
@@ -460,11 +448,6 @@ void QMediaTimeRange_removeInterval2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void removeInterval(const QMediaTimeInterval & interval)
-[2]void removeInterval(qint64 start, qint64 end)
-*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 {
@@ -483,7 +466,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 }
 
 /*
-void removeTimeRange(const QMediaTimeRange & range)
+void removeTimeRange( const QMediaTimeRange & range )
 */
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVETIMERANGE )
 {

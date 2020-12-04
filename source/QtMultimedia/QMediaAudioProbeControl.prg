@@ -53,10 +53,6 @@ RETURN
 #include <QtMultimedia/QAudioBuffer>
 
 /*
-explicit QMediaAudioProbeControl(QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QMediaAudioProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )
