@@ -75,7 +75,7 @@ void QGeoShape_new1()
 }
 
 /*
-QGeoShape(const QGeoShape &other)
+QGeoShape( const QGeoShape & other )
 */
 void QGeoShape_new2()
 {
@@ -84,11 +84,6 @@ void QGeoShape_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QGeoShape()
-[2]QGeoShape(const QGeoShape &other)
-*/
 
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
@@ -126,7 +121,7 @@ HB_FUNC_STATIC( QGEOSHAPE_DELETE )
 }
 
 /*
-ShapeType type() const
+QGeoShape::ShapeType type() const
 */
 HB_FUNC_STATIC( QGEOSHAPE_TYPE )
 {
@@ -204,7 +199,7 @@ HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
 }
 
 /*
-bool contains(const QGeoCoordinate &coordinate) const
+bool contains( const QGeoCoordinate & coordinate ) const
 */
 HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
 {

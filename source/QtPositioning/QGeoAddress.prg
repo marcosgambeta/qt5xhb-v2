@@ -94,7 +94,7 @@ void QGeoAddress_new1()
 }
 
 /*
-QGeoAddress(const QGeoAddress &other)
+QGeoAddress( const QGeoAddress & other )
 */
 void QGeoAddress_new2()
 {
@@ -103,11 +103,6 @@ void QGeoAddress_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QGeoAddress()
-[2]QGeoAddress(const QGeoAddress &other)
-*/
 
 HB_FUNC_STATIC( QGEOADDRESS_NEW )
 {
@@ -171,7 +166,7 @@ HB_FUNC_STATIC( QGEOADDRESS_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETTEXT )
 {
@@ -225,7 +220,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRY )
 }
 
 /*
-void setCountry(const QString &country)
+void setCountry( const QString & country )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRY )
 {
@@ -279,7 +274,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTRYCODE )
 }
 
 /*
-void setCountryCode(const QString &countryCode)
+void setCountryCode( const QString & countryCode )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTRYCODE )
 {
@@ -333,7 +328,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STATE )
 }
 
 /*
-void setState(const QString &state)
+void setState( const QString & state )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETSTATE )
 {
@@ -387,7 +382,7 @@ HB_FUNC_STATIC( QGEOADDRESS_COUNTY )
 }
 
 /*
-void setCounty(const QString &county)
+void setCounty( const QString & county )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETCOUNTY )
 {
@@ -441,7 +436,7 @@ HB_FUNC_STATIC( QGEOADDRESS_CITY )
 }
 
 /*
-void setCity(const QString &city)
+void setCity( const QString & city )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETCITY )
 {
@@ -495,7 +490,7 @@ HB_FUNC_STATIC( QGEOADDRESS_DISTRICT )
 }
 
 /*
-void setDistrict(const QString &district)
+void setDistrict( const QString & district )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETDISTRICT )
 {
@@ -549,7 +544,7 @@ HB_FUNC_STATIC( QGEOADDRESS_POSTALCODE )
 }
 
 /*
-void setPostalCode(const QString &postalCode)
+void setPostalCode( const QString & postalCode )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETPOSTALCODE )
 {
@@ -603,7 +598,7 @@ HB_FUNC_STATIC( QGEOADDRESS_STREET )
 }
 
 /*
-void setStreet(const QString &street)
+void setStreet( const QString & street )
 */
 HB_FUNC_STATIC( QGEOADDRESS_SETSTREET )
 {

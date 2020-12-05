@@ -81,7 +81,7 @@ void QGeoSatelliteInfo_new1()
 }
 
 /*
-QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
+QGeoSatelliteInfo( const QGeoSatelliteInfo & other )
 */
 void QGeoSatelliteInfo_new2()
 {
@@ -90,11 +90,6 @@ void QGeoSatelliteInfo_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QGeoSatelliteInfo()
-[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-*/
 
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {
@@ -132,7 +127,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_DELETE )
 }
 
 /*
-void setSatelliteSystem(SatelliteSystem system)
+void setSatelliteSystem( QGeoSatelliteInfo::SatelliteSystem system )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
 {
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
 }
 
 /*
-SatelliteSystem satelliteSystem() const
+QGeoSatelliteInfo::SatelliteSystem satelliteSystem() const
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
 {
@@ -186,7 +181,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
 }
 
 /*
-void setSatelliteIdentifier(int satId)
+void setSatelliteIdentifier( int satId )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER )
 {
@@ -240,7 +235,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
 }
 
 /*
-void setSignalStrength(int signalStrength)
+void setSignalStrength( int signalStrength )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSIGNALSTRENGTH )
 {
@@ -294,7 +289,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
 }
 
 /*
-void setAttribute(Attribute attribute, qreal value)
+void setAttribute( QGeoSatelliteInfo::Attribute attribute, qreal value )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
 }
 
 /*
-qreal attribute(Attribute attribute) const
+qreal attribute( QGeoSatelliteInfo::Attribute attribute ) const
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
 {
@@ -348,7 +343,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
 }
 
 /*
-void removeAttribute(Attribute attribute)
+void removeAttribute( QGeoSatelliteInfo::Attribute attribute )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
 {
@@ -376,7 +371,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
 }
 
 /*
-bool hasAttribute(Attribute attribute) const
+bool hasAttribute( QGeoSatelliteInfo::Attribute attribute ) const
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
 {

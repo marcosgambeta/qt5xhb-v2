@@ -69,7 +69,7 @@ void QGeoCircle_new1()
 }
 
 /*
-QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
+QGeoCircle( const QGeoCoordinate & center, qreal radius = -1.0 )
 */
 void QGeoCircle_new2()
 {
@@ -80,7 +80,7 @@ void QGeoCircle_new2()
 }
 
 /*
-QGeoCircle(const QGeoCircle &other)
+QGeoCircle( const QGeoCircle & other )
 */
 void QGeoCircle_new3()
 {
@@ -91,7 +91,7 @@ void QGeoCircle_new3()
 }
 
 /*
-QGeoCircle(const QGeoShape &other)
+QGeoCircle( const QGeoShape & other )
 */
 void QGeoCircle_new4()
 {
@@ -101,20 +101,13 @@ void QGeoCircle_new4()
 #endif
 }
 
-/*
-[1]QGeoCircle()
-[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-[3]QGeoCircle(const QGeoCircle &other)
-[4]QGeoCircle(const QGeoShape &other)
-*/
-
 HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QGeoCircle_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGeoCircle_new2();
   }
@@ -152,7 +145,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_DELETE )
 }
 
 /*
-void setCenter(const QGeoCoordinate &center)
+void setCenter( const QGeoCoordinate & center )
 */
 HB_FUNC_STATIC( QGEOCIRCLE_SETCENTER )
 {
@@ -207,7 +200,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_CENTER )
 }
 
 /*
-void setRadius(qreal radius)
+void setRadius( qreal radius )
 */
 HB_FUNC_STATIC( QGEOCIRCLE_SETRADIUS )
 {
@@ -261,7 +254,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_RADIUS )
 }
 
 /*
-void translate(double degreesLatitude, double degreesLongitude)
+void translate( double degreesLatitude, double degreesLongitude )
 */
 HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
 {
@@ -289,7 +282,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
 }
 
 /*
-QGeoCircle translated(double degreesLatitude, double degreesLongitude) const
+QGeoCircle translated( double degreesLatitude, double degreesLongitude ) const
 */
 HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
 {
