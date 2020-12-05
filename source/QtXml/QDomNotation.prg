@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QDomNotation ()
+QDomNotation()
 */
 void QDomNotation_new1()
 {
@@ -59,18 +59,13 @@ void QDomNotation_new1()
 }
 
 /*
-QDomNotation ( const QDomNotation & x )
+QDomNotation( const QDomNotation & x )
 */
 void QDomNotation_new2()
 {
-  auto obj = new QDomNotation();
+  auto obj = new QDomNotation( *PQDOMNOTATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNotation ()
-[2]QDomNotation ( const QDomNotation & x )
-*/
 
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
@@ -106,7 +101,7 @@ HB_FUNC_STATIC( QDOMNOTATION_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
@@ -130,7 +125,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
@@ -154,7 +149,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {

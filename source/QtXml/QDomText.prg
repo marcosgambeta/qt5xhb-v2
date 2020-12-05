@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QDomText ()
+QDomText()
 */
 void QDomText_new1()
 {
@@ -58,18 +58,13 @@ void QDomText_new1()
 }
 
 /*
-QDomText ( const QDomText & x )
+QDomText( const QDomText & x )
 */
 void QDomText_new2()
 {
   auto obj = new QDomText( *PQDOMTEXT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomText ()
-[2]QDomText ( const QDomText & x )
-*/
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
@@ -105,7 +100,7 @@ HB_FUNC_STATIC( QDOMTEXT_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 }
 
 /*
-QDomText splitText ( int offset )
+QDomText splitText( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {

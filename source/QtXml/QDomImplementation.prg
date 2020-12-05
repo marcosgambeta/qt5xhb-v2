@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QDomImplementation ()
+QDomImplementation()
 */
 void QDomImplementation_new1()
 {
@@ -73,18 +73,13 @@ void QDomImplementation_new1()
 }
 
 /*
-QDomImplementation ( const QDomImplementation & x )
+QDomImplementation( const QDomImplementation & x )
 */
 void QDomImplementation_new2()
 {
   auto obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomImplementation ()
-[2]QDomImplementation ( const QDomImplementation & x )
-*/
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
@@ -120,7 +115,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 }
 
 /*
-QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
+QDomDocument createDocument( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
@@ -145,7 +140,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 }
 
 /*
-QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
+QDomDocumentType createDocumentType( const QString & qName, const QString & publicId, const QString & systemId )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
@@ -170,7 +165,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 }
 
 /*
-bool hasFeature ( const QString & feature, const QString & version ) const
+bool hasFeature( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
@@ -194,7 +189,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 }
 
 /*
-bool isNull ()
+bool isNull()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 {
@@ -218,7 +213,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_ISNULL )
 }
 
 /*
-static InvalidDataPolicy invalidDataPolicy ()
+static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 {
@@ -237,7 +232,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 }
 
 /*
-static void setInvalidDataPolicy ( InvalidDataPolicy policy )
+static void setInvalidDataPolicy( QDomImplementation::InvalidDataPolicy policy )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {

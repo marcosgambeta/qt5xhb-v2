@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomComment ()
+QDomComment()
 */
 void QDomComment_new1()
 {
@@ -57,18 +57,13 @@ void QDomComment_new1()
 }
 
 /*
-QDomComment ( const QDomComment & x )
+QDomComment( const QDomComment & x )
 */
 void QDomComment_new2()
 {
   auto obj = new QDomComment( *PQDOMCOMMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomComment ()
-[2]QDomComment ( const QDomComment & x )
-*/
 
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
@@ -104,7 +99,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () cons
+QDomNode::NodeType nodeType() cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {

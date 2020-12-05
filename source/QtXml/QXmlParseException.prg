@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
 void QXmlParseException_new1()
 {
@@ -70,7 +70,7 @@ void QXmlParseException_new1()
 }
 
 /*
-QXmlParseException ( const QXmlParseException & other )
+QXmlParseException( const QXmlParseException & other )
 */
 void QXmlParseException_new2()
 {
@@ -78,14 +78,9 @@ void QXmlParseException_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-[2]QXmlParseException ( const QXmlParseException & other )
-*/
-
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {
-  if( ISBETWEEN(0,5) && ISOPTCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTCHAR(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(0,5) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QXmlParseException_new1();
   }
@@ -117,7 +112,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 }
 
 /*
-int columnNumber () const
+int columnNumber() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 }
 
 /*
-QString message () const
+QString message() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
@@ -213,7 +208,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {

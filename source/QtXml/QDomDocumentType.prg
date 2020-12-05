@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QDomDocumentType ()
+QDomDocumentType()
 */
 void QDomDocumentType_new1()
 {
@@ -64,18 +64,13 @@ void QDomDocumentType_new1()
 }
 
 /*
-QDomDocumentType ( const QDomDocumentType & n )
+QDomDocumentType( const QDomDocumentType & n )
 */
 void QDomDocumentType_new2()
 {
   auto obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomDocumentType ()
-[2]QDomDocumentType ( const QDomDocumentType & n )
-*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
@@ -111,7 +106,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_DELETE )
 }
 
 /*
-QDomNamedNodeMap entities () const
+QDomNamedNodeMap entities() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
@@ -136,7 +131,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 }
 
 /*
-QString internalSubset () const
+QString internalSubset() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
@@ -184,7 +179,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
@@ -208,7 +203,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 }
 
 /*
-QDomNamedNodeMap notations () const
+QDomNamedNodeMap notations() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
@@ -233,7 +228,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
@@ -257,7 +252,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {

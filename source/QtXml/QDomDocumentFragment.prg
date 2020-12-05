@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomDocumentFragment ()
+QDomDocumentFragment()
 */
 void QDomDocumentFragment_new1()
 {
@@ -57,18 +57,13 @@ void QDomDocumentFragment_new1()
 }
 
 /*
-QDomDocumentFragment ( const QDomDocumentFragment & x )
+QDomDocumentFragment( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
   auto obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomDocumentFragment ()
-[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
-*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
@@ -104,7 +99,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {

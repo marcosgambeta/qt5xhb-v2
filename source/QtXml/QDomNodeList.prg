@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QDomNodeList ()
+QDomNodeList()
 */
 void QDomNodeList_new1()
 {
@@ -72,18 +72,13 @@ void QDomNodeList_new1()
 }
 
 /*
-QDomNodeList ( const QDomNodeList & n )
+QDomNodeList( const QDomNodeList & n )
 */
 void QDomNodeList_new2()
 {
   auto obj = new QDomNodeList( *PQDOMNODELIST(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNodeList ()
-[2]QDomNodeList ( const QDomNodeList & n )
-*/
 
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
@@ -119,7 +114,7 @@ HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 }
 
 /*
-QDomNode at ( int index ) const
+QDomNode at( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
@@ -144,7 +139,7 @@ HB_FUNC_STATIC( QDOMNODELIST_AT )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 {
@@ -168,7 +163,7 @@ HB_FUNC_STATIC( QDOMNODELIST_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 {
@@ -192,7 +187,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 }
 
 /*
-QDomNode item ( int index ) const
+QDomNode item( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {
@@ -217,7 +212,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 }
 
 /*
-uint length () const
+uint length() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 {
@@ -241,7 +236,7 @@ HB_FUNC_STATIC( QDOMNODELIST_LENGTH )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QDOMNODELIST_SIZE )
 {

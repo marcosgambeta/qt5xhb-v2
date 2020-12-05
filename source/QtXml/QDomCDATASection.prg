@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomCDATASection ()
+QDomCDATASection()
 */
 void QDomCDATASection_new1()
 {
@@ -57,18 +57,13 @@ void QDomCDATASection_new1()
 }
 
 /*
-QDomCDATASection ( const QDomCDATASection & x )
+QDomCDATASection( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
   auto obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomCDATASection ()
-[2]QDomCDATASection ( const QDomCDATASection & x )
-*/
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
@@ -104,7 +99,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
