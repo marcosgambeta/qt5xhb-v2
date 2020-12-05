@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
+QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
 */
 void QSqlIndex_new1()
 {
@@ -63,7 +63,7 @@ void QSqlIndex_new1()
 }
 
 /*
-QSqlIndex ( const QSqlIndex & other )
+QSqlIndex( const QSqlIndex & other )
 */
 void QSqlIndex_new2()
 {
@@ -71,14 +71,9 @@ void QSqlIndex_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
-[2]QSqlIndex ( const QSqlIndex & other )
-*/
-
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlIndex_new1();
   }
@@ -110,7 +105,7 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 }
 
 /*
-void append ( const QSqlField & field )
+void append( const QSqlField & field )
 */
 void QSqlIndex_append1()
 {
@@ -125,7 +120,7 @@ void QSqlIndex_append1()
 }
 
 /*
-void append ( const QSqlField & field, bool desc )
+void append( const QSqlField & field, bool desc )
 */
 void QSqlIndex_append2()
 {
@@ -138,11 +133,6 @@ void QSqlIndex_append2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void append ( const QSqlField & field )
-[2]void append ( const QSqlField & field, bool desc )
-*/
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {
@@ -161,7 +151,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
 }
 
 /*
-QString cursorName () const
+QString cursorName() const
 */
 HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
@@ -185,7 +175,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 }
 
 /*
-void setCursorName ( const QString & cursorName )
+void setCursorName( const QString & cursorName )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
@@ -211,7 +201,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 }
 
 /*
-bool isDescending ( int i ) const
+bool isDescending( int i ) const
 */
 HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
@@ -235,7 +225,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 }
 
 /*
-void setDescending ( int i, bool desc )
+void setDescending( int i, bool desc )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
@@ -261,7 +251,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
@@ -285,7 +275,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
 }
 
 /*
-void setName ( const QString & name )
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {

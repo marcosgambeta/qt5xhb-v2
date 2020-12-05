@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-explicit QSqlRelationalTableModel ( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )
+QSqlRelationalTableModel( QObject * parent = nullptr, QSqlDatabase db = QSqlDatabase() )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 }
 
 /*
-QSqlRelation relation ( int column ) const
+QSqlRelation relation( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 }
 
 /*
-virtual QSqlTableModel * relationModel ( int column ) const
+virtual QSqlTableModel * relationModel( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 }
 
 /*
-virtual void setRelation ( int column, const QSqlRelation & relation )
+virtual void setRelation( int column, const QSqlRelation & relation )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_CLEAR )
 }
 
 /*
-QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
 }
 
 /*
-bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
 }
 
 /*
-bool select ()
+bool select()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SELECT )
 }
 
 /*
-bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 }
 
 /*
-void setTable ( const QString & table )
+void setTable( const QString & table )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 }
 
 /*
-void revertRow ( int row )
+void revertRow( int row )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
 {

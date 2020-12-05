@@ -107,7 +107,7 @@ RETURN
 #include <QtSql/QSqlRecord>
 
 /*
-QSqlDatabase ()
+QSqlDatabase()
 */
 void QSqlDatabase_new1()
 {
@@ -116,18 +116,13 @@ void QSqlDatabase_new1()
 }
 
 /*
-QSqlDatabase ( const QSqlDatabase & other )
+QSqlDatabase( const QSqlDatabase & other )
 */
 void QSqlDatabase_new2()
 {
   auto obj = new QSqlDatabase( *PQSQLDATABASE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlDatabase ()
-[2]QSqlDatabase ( const QSqlDatabase & other )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DELETE )
 }
 
 /*
-void close ()
+void close()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 {
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLOSE )
 }
 
 /*
-bool commit ()
+bool commit()
 */
 HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 {
@@ -213,7 +208,7 @@ HB_FUNC_STATIC( QSQLDATABASE_COMMIT )
 }
 
 /*
-QString connectOptions () const
+QString connectOptions() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 {
@@ -237,7 +232,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTOPTIONS )
 }
 
 /*
-void setConnectOptions ( const QString & options = QString() )
+void setConnectOptions( const QString & options = QString() )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 {
@@ -246,7 +241,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       obj->setConnectOptions( OPQSTRING(1,QString()) );
@@ -263,7 +258,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 }
 
 /*
-QString connectionName () const
+QString connectionName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 {
@@ -287,7 +282,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAME )
 }
 
 /*
-QString databaseName () const
+QString databaseName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 {
@@ -311,7 +306,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASENAME )
 }
 
 /*
-void setDatabaseName ( const QString & name )
+void setDatabaseName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 {
@@ -337,7 +332,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 }
 
 /*
-QSqlDriver * driver () const
+QSqlDriver * driver() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 {
@@ -362,7 +357,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
 }
 
 /*
-QString driverName () const
+QString driverName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 {
@@ -386,7 +381,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 }
 
 /*
-QSqlQuery exec ( const QString & query = QString() ) const
+QSqlQuery exec( const QString & query = QString() ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 {
@@ -395,7 +390,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       auto ptr = new QSqlQuery( obj->exec( OPQSTRING(1,QString()) ) );
@@ -411,7 +406,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 }
 
 /*
-QString hostName () const
+QString hostName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 {
@@ -435,7 +430,7 @@ HB_FUNC_STATIC( QSQLDATABASE_HOSTNAME )
 }
 
 /*
-void setHostName ( const QString & host )
+void setHostName( const QString & host )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 {
@@ -461,7 +456,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 }
 
 /*
-bool isOpen () const
+bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 {
@@ -485,7 +480,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPEN )
 }
 
 /*
-bool isOpenError () const
+bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 {
@@ -509,7 +504,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISOPENERROR )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 {
@@ -533,7 +528,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISVALID )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 {
@@ -558,7 +553,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
 }
 
 /*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
+QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 {
@@ -582,7 +577,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 }
 
 /*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
+void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 {
@@ -608,7 +603,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 }
 
 /*
-bool open ()
+bool open()
 */
 void QSqlDatabase_open1()
 {
@@ -621,7 +616,7 @@ void QSqlDatabase_open1()
 }
 
 /*
-bool open ( const QString & user, const QString & password )
+bool open( const QString & user, const QString & password )
 */
 void QSqlDatabase_open2()
 {
@@ -632,11 +627,6 @@ void QSqlDatabase_open2()
     RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]bool open ()
-[2]bool open ( const QString & user, const QString & password )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
@@ -655,7 +645,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 }
 
 /*
-QString password () const
+QString password() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 {
@@ -679,7 +669,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PASSWORD )
 }
 
 /*
-void setPassword ( const QString & password )
+void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 {
@@ -705,7 +695,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 }
 
 /*
-int port () const
+int port() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PORT )
 {
@@ -729,7 +719,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
 }
 
 /*
-void setPort ( int port )
+void setPort( int port )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 {
@@ -755,7 +745,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 }
 
 /*
-QSqlIndex primaryIndex ( const QString & tablename ) const
+QSqlIndex primaryIndex( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 {
@@ -780,7 +770,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 }
 
 /*
-QSqlRecord record ( const QString & tablename ) const
+QSqlRecord record( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 {
@@ -805,7 +795,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 }
 
 /*
-bool rollback ()
+bool rollback()
 */
 HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 {
@@ -829,7 +819,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 }
 
 /*
-QStringList tables ( QSql::TableType type = QSql::Tables ) const
+QStringList tables( QSql::TableType type = QSql::Tables ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 {
@@ -838,7 +828,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->tables( ISNIL(1)? (QSql::TableType) QSql::Tables : (QSql::TableType) hb_parni(1) ) );
@@ -853,7 +843,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 }
 
 /*
-bool transaction ()
+bool transaction()
 */
 HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 {
@@ -877,7 +867,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TRANSACTION )
 }
 
 /*
-QString userName () const
+QString userName() const
 */
 HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 {
@@ -901,7 +891,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 }
 
 /*
-void setUserName ( const QString & name )
+void setUserName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 {
@@ -927,38 +917,30 @@ HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 }
 
 /*
-static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
+static QSqlDatabase addDatabase( const QString & type, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
-void QSqlDatabase_addDatabase1 ()
+void QSqlDatabase_addDatabase1()
 {
-  QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
+  auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING(1), OPQSTRING(2,QLatin1String( QSqlDatabase::defaultConnection )) ) );
+  Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
 }
 
 /*
-static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+static QSqlDatabase addDatabase( QSqlDriver * driver, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
-void QSqlDatabase_addDatabase2 ()
+void QSqlDatabase_addDatabase2()
 {
-  QSqlDriver * par1 = (QSqlDriver *) Qt5xHb::itemGetPtr(1);
-  QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
+  auto ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING(2,QLatin1String( QSqlDatabase::defaultConnection )) ) );
+  Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
 }
-
-/*
-[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlDatabase_addDatabase1();
   }
-  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlDatabase_addDatabase2();
   }
@@ -969,7 +951,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 }
 
 /*
-static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
+static QSqlDatabase cloneDatabase( const QSqlDatabase & other, const QString & connectionName )
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
@@ -989,7 +971,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 }
 
 /*
-static QStringList connectionNames ()
+static QStringList connectionNames()
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
@@ -1008,40 +990,46 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 }
 
 /*
-static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
+static bool contains( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
-  if( ISOPTCHAR(1) )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
   {
-    QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
-    RBOOL( QSqlDatabase::contains ( par1 ) );
+#endif
+    RBOOL( QSqlDatabase::contains( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
-static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
+static QSqlDatabase database( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ), bool open = true )
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-  if( ISOPTCHAR(1) && ISOPTLOG(2) )
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
   {
-    QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
-    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
+#endif
+    auto ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING(1,QLatin1String( QSqlDatabase::defaultConnection )), OPBOOL(2,true) ) );
+    Qt5xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
-static QStringList drivers ()
+static QStringList drivers()
 */
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
@@ -1060,7 +1048,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 }
 
 /*
-static bool isDriverAvailable ( const QString & name )
+static bool isDriverAvailable( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
@@ -1079,7 +1067,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 }
 
 /*
-static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * creator )
+static void registerSqlDriver( const QString & name, QSqlDriverCreatorBase * creator )
 */
 HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
@@ -1100,7 +1088,7 @@ HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 }
 
 /*
-static void removeDatabase ( const QString & connectionName )
+static void removeDatabase( const QString & connectionName )
 */
 HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {

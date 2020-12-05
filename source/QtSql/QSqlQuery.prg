@@ -99,7 +99,7 @@ RETURN
 #include <QtSql/QSqlRecord>
 
 /*
-explicit QSqlQuery ( QSqlResult * result )
+QSqlQuery( QSqlResult * result )
 */
 void QSqlQuery_new1()
 {
@@ -108,7 +108,7 @@ void QSqlQuery_new1()
 }
 
 /*
-explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
 void QSqlQuery_new2()
 {
@@ -117,7 +117,7 @@ void QSqlQuery_new2()
 }
 
 /*
-explicit QSqlQuery ( QSqlDatabase db )
+QSqlQuery( QSqlDatabase db )
 */
 void QSqlQuery_new3()
 {
@@ -126,7 +126,7 @@ void QSqlQuery_new3()
 }
 
 /*
-QSqlQuery ( const QSqlQuery & other )
+QSqlQuery( const QSqlQuery & other )
 */
 void QSqlQuery_new4()
 {
@@ -134,20 +134,13 @@ void QSqlQuery_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QSqlQuery ( QSqlResult * result )
-[2]explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-[3]explicit QSqlQuery ( QSqlDatabase db )
-[4]QSqlQuery ( const QSqlQuery & other )
-*/
-
 HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
   if( ISNUMPAR(1) && ISQSQLRESULT(1) )
   {
     QSqlQuery_new1();
   }
-  else if( ISBETWEEN(1,2) && ISOPTCHAR(1) && (ISQSQLDATABASE(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISCHAR(1)||ISNIL(1)) && (ISQSQLDATABASE(2)||ISNIL(2)) )
   {
     QSqlQuery_new2();
   }
@@ -183,7 +176,7 @@ HB_FUNC_STATIC( QSQLQUERY_DELETE )
 }
 
 /*
-void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
+void addBindValue( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 {
@@ -192,7 +185,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVARIANT(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->addBindValue( *PQVARIANT(1), ISNIL(2)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(2) );
@@ -209,7 +202,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 }
 
 /*
-int at () const
+int at() const
 */
 HB_FUNC_STATIC( QSQLQUERY_AT )
 {
@@ -233,7 +226,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 }
 
 /*
-void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 void QSqlQuery_bindValue1()
 {
@@ -248,7 +241,7 @@ void QSqlQuery_bindValue1()
 }
 
 /*
-void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 void QSqlQuery_bindValue2()
 {
@@ -262,18 +255,13 @@ void QSqlQuery_bindValue2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
-
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QSqlQuery_bindValue1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QSqlQuery_bindValue2();
   }
@@ -284,7 +272,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 }
 
 /*
-QVariant boundValue ( const QString & placeholder ) const
+QVariant boundValue( const QString & placeholder ) const
 */
 void QSqlQuery_boundValue1()
 {
@@ -298,7 +286,7 @@ void QSqlQuery_boundValue1()
 }
 
 /*
-QVariant boundValue ( int pos ) const
+QVariant boundValue( int pos ) const
 */
 void QSqlQuery_boundValue2()
 {
@@ -310,11 +298,6 @@ void QSqlQuery_boundValue2()
     Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant boundValue ( const QString & placeholder ) const
-[2]QVariant boundValue ( int pos ) const
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
@@ -333,7 +316,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 {
@@ -359,7 +342,7 @@ HB_FUNC_STATIC( QSQLQUERY_CLEAR )
 }
 
 /*
-const QSqlDriver * driver () const
+const QSqlDriver * driver() const
 */
 HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 {
@@ -384,7 +367,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 }
 
 /*
-bool exec ( const QString & query )
+bool exec( const QString & query )
 */
 void QSqlQuery_exec1()
 {
@@ -397,7 +380,7 @@ void QSqlQuery_exec1()
 }
 
 /*
-bool exec ()
+bool exec()
 */
 void QSqlQuery_exec2()
 {
@@ -408,11 +391,6 @@ void QSqlQuery_exec2()
     RBOOL( obj->exec() );
   }
 }
-
-/*
-[1]bool exec ( const QString & query )
-[2]bool exec ()
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {
@@ -431,7 +409,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
 }
 
 /*
-bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
+bool execBatch( QSqlQuery::BatchExecutionMode mode = QSqlQuery::ValuesAsRows )
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 {
@@ -440,7 +418,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->execBatch( ISNIL(1)? (QSqlQuery::BatchExecutionMode) QSqlQuery::ValuesAsRows : (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
@@ -455,7 +433,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 }
 
 /*
-QString executedQuery () const
+QString executedQuery() const
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 {
@@ -479,7 +457,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECUTEDQUERY )
 }
 
 /*
-void finish ()
+void finish()
 */
 HB_FUNC_STATIC( QSQLQUERY_FINISH )
 {
@@ -505,7 +483,7 @@ HB_FUNC_STATIC( QSQLQUERY_FINISH )
 }
 
 /*
-bool first ()
+bool first()
 */
 HB_FUNC_STATIC( QSQLQUERY_FIRST )
 {
@@ -529,7 +507,7 @@ HB_FUNC_STATIC( QSQLQUERY_FIRST )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 {
@@ -553,7 +531,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISACTIVE )
 }
 
 /*
-bool isForwardOnly () const
+bool isForwardOnly() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 {
@@ -577,7 +555,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 }
 
 /*
-void setForwardOnly ( bool forward )
+void setForwardOnly( bool forward )
 */
 HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 {
@@ -603,7 +581,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 }
 
 /*
-bool isNull ( int field ) const
+bool isNull( int field ) const
 */
 void QSqlQuery_isNull1()
 {
@@ -616,7 +594,7 @@ void QSqlQuery_isNull1()
 }
 
 /*
-bool isNull(const QString &name) const
+bool isNull( const QString & name ) const
 */
 void QSqlQuery_isNull2()
 {
@@ -629,11 +607,6 @@ void QSqlQuery_isNull2()
   }
 #endif
 }
-
-/*
-[1]bool isNull ( int field ) const
-[2]bool isNull(const QString &name) const
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 {
@@ -652,7 +625,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 }
 
 /*
-bool isSelect () const
+bool isSelect() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 {
@@ -676,7 +649,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISSELECT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 {
@@ -700,7 +673,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISVALID )
 }
 
 /*
-bool last ()
+bool last()
 */
 HB_FUNC_STATIC( QSQLQUERY_LAST )
 {
@@ -724,7 +697,7 @@ HB_FUNC_STATIC( QSQLQUERY_LAST )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 {
@@ -749,7 +722,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTERROR )
 }
 
 /*
-QVariant lastInsertId () const
+QVariant lastInsertId() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 {
@@ -774,7 +747,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTINSERTID )
 }
 
 /*
-QString lastQuery () const
+QString lastQuery() const
 */
 HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 {
@@ -798,7 +771,7 @@ HB_FUNC_STATIC( QSQLQUERY_LASTQUERY )
 }
 
 /*
-bool next ()
+bool next()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXT )
 {
@@ -822,7 +795,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXT )
 }
 
 /*
-bool nextResult ()
+bool nextResult()
 */
 HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 {
@@ -846,7 +819,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEXTRESULT )
 }
 
 /*
-int numRowsAffected () const
+int numRowsAffected() const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 {
@@ -870,7 +843,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMROWSAFFECTED )
 }
 
 /*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy () const
+QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 {
@@ -894,7 +867,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 }
 
 /*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
+void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
 HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 {
@@ -920,7 +893,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 }
 
 /*
-bool prepare ( const QString & query )
+bool prepare( const QString & query )
 */
 HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 {
@@ -944,7 +917,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 }
 
 /*
-bool previous ()
+bool previous()
 */
 HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 {
@@ -968,7 +941,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREVIOUS )
 }
 
 /*
-QSqlRecord record () const
+QSqlRecord record() const
 */
 HB_FUNC_STATIC( QSQLQUERY_RECORD )
 {
@@ -993,7 +966,7 @@ HB_FUNC_STATIC( QSQLQUERY_RECORD )
 }
 
 /*
-const QSqlResult * result () const
+const QSqlResult * result() const
 */
 HB_FUNC_STATIC( QSQLQUERY_RESULT )
 {
@@ -1018,7 +991,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
 }
 
 /*
-bool seek ( int index, bool relative = false )
+bool seek( int index, bool relative = false )
 */
 HB_FUNC_STATIC( QSQLQUERY_SEEK )
 {
@@ -1027,7 +1000,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->seek( PINT(1), OPBOOL(2,false) ) );
@@ -1042,7 +1015,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QSQLQUERY_SIZE )
 {
@@ -1066,7 +1039,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
 }
 
 /*
-QVariant value ( int index ) const
+QVariant value( int index ) const
 */
 void QSqlQuery_value1()
 {
@@ -1080,7 +1053,7 @@ void QSqlQuery_value1()
 }
 
 /*
-QVariant value(const QString& name) const
+QVariant value( const QString & name ) const
 */
 void QSqlQuery_value2()
 {
@@ -1092,11 +1065,6 @@ void QSqlQuery_value2()
     Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant value ( int index ) const
-[2]QVariant value(const QString& name) const
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_VALUE )
 {
