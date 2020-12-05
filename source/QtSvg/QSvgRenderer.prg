@@ -68,7 +68,7 @@ RETURN
 #endif
 
 /*
-QSvgRenderer ( QObject * parent = nullptr )
+QSvgRenderer( QObject * parent = nullptr )
 */
 void QSvgRenderer_new1()
 {
@@ -77,7 +77,7 @@ void QSvgRenderer_new1()
 }
 
 /*
-QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
+QSvgRenderer( const QString & filename, QObject * parent = nullptr )
 */
 void QSvgRenderer_new2()
 {
@@ -86,7 +86,7 @@ void QSvgRenderer_new2()
 }
 
 /*
-QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
+QSvgRenderer( const QByteArray & contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new3()
 {
@@ -95,7 +95,7 @@ void QSvgRenderer_new3()
 }
 
 /*
-QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
+QSvgRenderer( QXmlStreamReader * contents, QObject * parent = nullptr )
 */
 void QSvgRenderer_new4()
 {
@@ -103,28 +103,21 @@ void QSvgRenderer_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSvgRenderer ( QObject * parent = nullptr )
-[2]QSvgRenderer ( const QString & filename, QObject * parent = nullptr )
-[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = nullptr )
-[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSvgRenderer_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSvgRenderer_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSvgRenderer_new3();
   }
-  else if( ISBETWEEN(1,2) && ISQXMLSTREAMREADER(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSvgRenderer_new4();
   }
@@ -154,7 +147,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 }
 
 /*
-bool animated () const
+bool animated() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
@@ -178,7 +171,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 }
 
 /*
-QRectF boundsOnElement ( const QString & id ) const
+QRectF boundsOnElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
@@ -203,7 +196,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 }
 
 /*
-QSize defaultSize () const
+QSize defaultSize() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
@@ -228,7 +221,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 }
 
 /*
-bool elementExists ( const QString & id ) const
+bool elementExists( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
@@ -252,7 +245,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 }
 
 /*
-int framesPerSecond () const
+int framesPerSecond() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
@@ -276,7 +269,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
@@ -300,7 +293,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 }
 
 /*
-QMatrix matrixForElement ( const QString & id ) const
+QMatrix matrixForElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
@@ -325,7 +318,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 }
 
 /*
-void setFramesPerSecond ( int num )
+void setFramesPerSecond( int num )
 */
 HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {
@@ -351,7 +344,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 }
 
 /*
-void setViewBox ( const QRect & viewbox )
+void setViewBox( const QRect & viewbox )
 */
 void QSvgRenderer_setViewBox1()
 {
@@ -366,7 +359,7 @@ void QSvgRenderer_setViewBox1()
 }
 
 /*
-void setViewBox ( const QRectF & viewbox )
+void setViewBox( const QRectF & viewbox )
 */
 void QSvgRenderer_setViewBox2()
 {
@@ -379,11 +372,6 @@ void QSvgRenderer_setViewBox2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setViewBox ( const QRect & viewbox )
-[2]void setViewBox ( const QRectF & viewbox )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 {
@@ -402,7 +390,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 }
 
 /*
-QRect viewBox () const
+QRect viewBox() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
@@ -427,7 +415,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 }
 
 /*
-QRectF viewBoxF () const
+QRectF viewBoxF() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
@@ -452,7 +440,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 }
 
 /*
-bool load ( const QString & filename )
+bool load( const QString & filename )
 */
 void QSvgRenderer_load1()
 {
@@ -465,7 +453,7 @@ void QSvgRenderer_load1()
 }
 
 /*
-bool load ( const QByteArray & contents )
+bool load( const QByteArray & contents )
 */
 void QSvgRenderer_load2()
 {
@@ -478,7 +466,7 @@ void QSvgRenderer_load2()
 }
 
 /*
-bool load ( QXmlStreamReader * contents )
+bool load( QXmlStreamReader * contents )
 */
 void QSvgRenderer_load3()
 {
@@ -489,12 +477,6 @@ void QSvgRenderer_load3()
     RBOOL( obj->load( PQXMLSTREAMREADER(1) ) );
   }
 }
-
-/*
-[1]bool load ( const QString & filename )
-[2]bool load ( const QByteArray & contents )
-[3]bool load ( QXmlStreamReader * contents )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 {
@@ -517,7 +499,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 }
 
 /*
-void render ( QPainter * painter )
+void render( QPainter * painter )
 */
 void QSvgRenderer_render1()
 {
@@ -532,7 +514,7 @@ void QSvgRenderer_render1()
 }
 
 /*
-void render ( QPainter * painter, const QRectF & bounds )
+void render( QPainter * painter, const QRectF & bounds )
 */
 void QSvgRenderer_render2()
 {
@@ -547,7 +529,7 @@ void QSvgRenderer_render2()
 }
 
 /*
-void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
+void render( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 */
 void QSvgRenderer_render3()
 {
@@ -560,12 +542,6 @@ void QSvgRenderer_render3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render ( QPainter * painter )
-[2]void render ( QPainter * painter, const QRectF & bounds )
-[3]void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 {

@@ -56,7 +56,7 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 
 /*
-QSvgWidget ( QWidget * parent = nullptr )
+QSvgWidget( QWidget * parent = nullptr )
 */
 void QSvgWidget_new1()
 {
@@ -65,7 +65,7 @@ void QSvgWidget_new1()
 }
 
 /*
-QSvgWidget ( const QString & file, QWidget * parent = nullptr )
+QSvgWidget( const QString & file, QWidget * parent = nullptr )
 */
 void QSvgWidget_new2()
 {
@@ -73,18 +73,13 @@ void QSvgWidget_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSvgWidget ( QWidget * parent = nullptr )
-[2]QSvgWidget ( const QString & file, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QSvgWidget_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QSvgWidget_new2();
   }
@@ -114,7 +109,7 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 }
 
 /*
-QSvgRenderer * renderer () const
+QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 }
 
 /*
-void load ( const QString & file )
+void load( const QString & file )
 */
 void QSvgWidget_load1()
 {
@@ -179,7 +174,7 @@ void QSvgWidget_load1()
 }
 
 /*
-void load ( const QByteArray & contents )
+void load( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {
@@ -192,11 +187,6 @@ void QSvgWidget_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QString & file )
-[2]void load ( const QByteArray & contents )
-*/
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
