@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QWebEngineUrlSchemeHandler(QObject *parent = nullptr)
+QWebEngineUrlSchemeHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_NEW )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_DELETE )
 }
 
 /*
-virtual void requestStarted(QWebEngineUrlRequestJob*) = 0
+virtual void requestStarted( QWebEngineUrlRequestJob * ) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLSCHEMEHANDLER_REQUESTSTARTED )
 {

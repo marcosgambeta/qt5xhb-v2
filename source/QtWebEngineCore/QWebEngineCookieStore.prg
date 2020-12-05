@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QWebEngineCookieStore(QObject *parent = nullptr) [private]
-*/
-
-/*
 virtual ~QWebEngineCookieStore()
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
@@ -82,7 +78,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETE )
 }
 
 /*
-void setCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
+void setCookie( const QNetworkCookie & cookie, const QUrl & origin = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
 {
@@ -108,7 +104,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
 }
 
 /*
-void deleteCookie(const QNetworkCookie &cookie, const QUrl &origin = QUrl())
+void deleteCookie( const QNetworkCookie & cookie, const QUrl & origin = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
 {
@@ -212,7 +208,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_LOADALLCOOKIES )
 }
 
 /*
-void cookieAdded(const QNetworkCookie &cookie)
+void cookieAdded( const QNetworkCookie & cookie )
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 {
@@ -274,7 +270,7 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEADDED )
 }
 
 /*
-void cookieRemoved(const QNetworkCookie &cookie)
+void cookieRemoved( const QNetworkCookie & cookie )
 */
 HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_ONCOOKIEREMOVED )
 {

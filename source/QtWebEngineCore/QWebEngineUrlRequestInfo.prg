@@ -65,15 +65,7 @@ RETURN
 #endif
 
 /*
-QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfoPrivate *p) [private]
-*/
-
-/*
-~QWebEngineUrlRequestInfo() [private]
-*/
-
-/*
-ResourceType resourceType() const
+QWebEngineUrlRequestInfo::ResourceType resourceType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_RESOURCETYPE )
 {
@@ -97,7 +89,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_RESOURCETYPE )
 }
 
 /*
-NavigationType navigationType() const
+QWebEngineUrlRequestInfo::NavigationType navigationType() const
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_NAVIGATIONTYPE )
 {
@@ -220,7 +212,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_CHANGED )
 }
 
 /*
-void block(bool shouldBlock)
+void block( bool shouldBlock )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_BLOCK )
 {
@@ -246,7 +238,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_BLOCK )
 }
 
 /*
-void redirect(const QUrl &url)
+void redirect( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
 {
@@ -272,7 +264,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_REDIRECT )
 }
 
 /*
-void setHttpHeader(const QByteArray &name, const QByteArray &value)
+void setHttpHeader( const QByteArray & name, const QByteArray & value )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINFO_SETHTTPHEADER )
 {

@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-explicit QWebEngineUrlRequestInterceptor(QObject *p = nullptr)
+QWebEngineUrlRequestInterceptor( QObject * p = nullptr )
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
 {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_NEW )
 }
 
 /*
-virtual void interceptRequest(QWebEngineUrlRequestInfo &info) = 0
+virtual void interceptRequest( QWebEngineUrlRequestInfo & info ) = 0
 */
 HB_FUNC_STATIC( QWEBENGINEURLREQUESTINTERCEPTOR_INTERCEPTREQUEST )
 {
