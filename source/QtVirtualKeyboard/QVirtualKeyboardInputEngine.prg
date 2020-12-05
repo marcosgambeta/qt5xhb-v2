@@ -26,6 +26,7 @@ CLASS QVirtualKeyboardInputEngine INHERIT QObject
    METHOD inputMethod
    METHOD setInputMethod
    METHOD inputModes
+   METHOD inputMode
    METHOD setInputMode
    METHOD patternRecognitionModes
    METHOD wordCandidateListModel
@@ -81,10 +82,6 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
 #include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
 #include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
-
-/*
-explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr) [private]
-*/
 
 /*
 ~QVirtualKeyboardInputEngine()
@@ -157,7 +154,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PREVIOUSKEY )
 }
 
 /*
-QVirtualKeyboardAbstractInputMethod *inputMethod() const
+QVirtualKeyboardAbstractInputMethod * inputMethod() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
 {
@@ -182,7 +179,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
 }
 
 /*
-void setInputMethod(QVirtualKeyboardAbstractInputMethod *inputMethod)
+void setInputMethod( QVirtualKeyboardAbstractInputMethod * inputMethod )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMETHOD )
 {
@@ -233,11 +230,31 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
 }
 
 /*
-InputMode inputMode() const
+QVirtualKeyboardInputEngine::InputMode inputMode() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODE )
+{
+  auto obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->inputMode() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-void setInputMode(InputMode inputMode)
+void setInputMode( QVirtualKeyboardInputEngine::InputMode inputMode )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE )
 {
@@ -288,7 +305,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
 }
 
 /*
-QVirtualKeyboardSelectionListModel *wordCandidateListModel() const
+QVirtualKeyboardSelectionListModel * wordCandidateListModel() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
 {
@@ -337,11 +354,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTVISIBLEHINT )
 }
 
 /*
-void init() [private]
-*/
-
-/*
-Q_INVOKABLE bool virtualKeyPress(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool repeat)
+Q_INVOKABLE bool virtualKeyPress( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool repeat )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYPRESS )
 {
@@ -391,7 +404,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCANCEL )
 }
 
 /*
-Q_INVOKABLE bool virtualKeyRelease(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
+Q_INVOKABLE bool virtualKeyRelease( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
 {
@@ -415,7 +428,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
 }
 
 /*
-Q_INVOKABLE bool virtualKeyClick(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
+Q_INVOKABLE bool virtualKeyClick( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
 {
@@ -439,7 +452,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
 }
 
 /*
-QVirtualKeyboardInputContext *inputContext() const
+QVirtualKeyboardInputContext * inputContext() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
 {
@@ -464,11 +477,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
 }
 
 /*
-Q_INVOKABLE QVirtualKeyboardTrace *traceBegin(int traceId, PatternRecognitionMode patternRecognitionMode, const QVariantMap &traceCaptureDeviceInfo, const QVariantMap &traceScreenInfo)
-*/
-
-/*
-Q_INVOKABLE bool traceEnd(QVirtualKeyboardTrace *trace)
+Q_INVOKABLE bool traceEnd( QVirtualKeyboardTrace * trace )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_TRACEEND )
 {
@@ -492,11 +501,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_TRACEEND )
 }
 
 /*
-Q_INVOKABLE bool reselect(int cursorPosition, const ReselectFlags &reselectFlags)
-*/
-
-/*
-bool clickPreeditText(int cursorPosition)
+bool clickPreeditText( int cursorPosition )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
 {
@@ -518,30 +523,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
 #endif
   }
 }
-
-/*
-void reset() [private] [slot]
-*/
-
-/*
-void update() [private] [slot]
-*/
-
-/*
-void shiftChanged() [private] [slot]
-*/
-
-/*
-void updateSelectionListModels() [private] [slot]
-*/
-
-/*
-void updateInputModes() [private] [slot]
-*/
-
-/*
-void timerEvent(QTimerEvent *timerEvent) [protected]
-*/
 
 /*
 void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat )

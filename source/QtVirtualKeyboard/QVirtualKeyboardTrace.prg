@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-explicit QVirtualKeyboardTrace(QObject *parent = nullptr)
+QVirtualKeyboardTrace( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_TRACEID )
 }
 
 /*
-void setTraceId(int id)
+void setTraceId( int id )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELS )
 }
 
 /*
-void setChannels(const QStringList &channels)
+void setChannels( const QStringList & channels )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISFINAL )
 }
 
 /*
-void setFinal(bool final)
+void setFinal( bool final )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ISCANCELED )
 }
 
 /*
-void setCanceled(bool canceled)
+void setCanceled( bool canceled )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_OPACITY )
 }
 
 /*
-void setOpacity(qreal opacity)
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
 }
 
 /*
-Q_INVOKABLE QVariantList points(int pos = 0, int count = -1) const
+Q_INVOKABLE QVariantList points( int pos = 0, int count = -1 ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QVariantList list = obj->points( OPINT(1,0), OPINT(2,-1) );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
 }
 
 /*
-Q_INVOKABLE int addPoint(const QPointF &point)
+Q_INVOKABLE int addPoint( const QPointF & point )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ADDPOINT )
 }
 
 /*
-Q_INVOKABLE void setChannelData(const QString &channel, int index, const QVariant &data)
+Q_INVOKABLE void setChannelData( const QString & channel, int index, const QVariant & data )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
 }
 
 /*
-Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int count = -1) const
+Q_INVOKABLE QVariantList channelData( const QString & channel, int pos = 0, int count = -1 ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QVariantList list = obj->channelData( PQSTRING(1), OPINT(2,0), OPINT(3,-1) );

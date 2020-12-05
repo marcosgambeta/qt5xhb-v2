@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 }
 
 /*
-virtual void registerTypes(const char *uri) const
+virtual void registerTypes( const char * uri ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
 {

@@ -92,7 +92,7 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardInputEngine>
 
 /*
-explicit QVirtualKeyboardInputContext(QObject *parent = nullptr)
+QVirtualKeyboardInputContext( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_NEW )
 {
@@ -298,10 +298,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT )
 }
 
 /*
-void setPreeditText(const QString &text, QList<QInputMethodEvent::Attribute> attributes = QList<QInputMethodEvent::Attribute>(), int replaceFrom = 0, int replaceLength = 0)
-*/
-
-/*
 QString surroundingText() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT )
@@ -424,7 +420,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING )
 }
 
 /*
-void setAnimating(bool isAnimating)
+void setAnimating( bool isAnimating )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING )
 {
@@ -474,7 +470,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE )
 }
 
 /*
-QVirtualKeyboardInputEngine *inputEngine() const
+QVirtualKeyboardInputEngine * inputEngine() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
 {
@@ -573,13 +569,11 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT )
 /*
 QVirtualKeyboardInputContextPrivate *priv() const
 */
-
 /*
 QList<QInputMethodEvent::Attribute> preeditTextAttributes() const
 */
-
 /*
-Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modifiers = 0)
+Q_INVOKABLE void sendKeyClick( int key, const QString & text, int modifiers = 0 )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
 {
@@ -588,7 +582,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->sendKeyClick( PINT(1), PQSTRING(2), OPINT(3,0) );
@@ -620,7 +614,7 @@ void QVirtualKeyboardInputContext_commit1()
 }
 
 /*
-Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
 */
 void QVirtualKeyboardInputContext_commit2()
 {
@@ -633,11 +627,6 @@ void QVirtualKeyboardInputContext_commit2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]Q_INVOKABLE void commit()
-[2]Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
-*/
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
@@ -682,7 +671,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR )
 }
 
 /*
-Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
+Q_INVOKABLE void setSelectionOnFocusObject( const QPointF & anchorPos, const QPointF & cursorPos )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
 {

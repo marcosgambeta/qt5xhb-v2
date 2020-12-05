@@ -63,10 +63,6 @@ RETURN
 #include <QtVirtualKeyboard/QVirtualKeyboardAbstractInputMethod>
 
 /*
-explicit QVirtualKeyboardSelectionListModel(QObject *parent = nullptr) [private]
-*/
-
-/*
 ~QVirtualKeyboardSelectionListModel()
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DELETE )
@@ -113,7 +109,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_COUNT )
 }
 
 /*
-void setDataSource(QVirtualKeyboardAbstractInputMethod *dataSource, Type type)
+void setDataSource( QVirtualKeyboardAbstractInputMethod * dataSource, QVirtualKeyboardSelectionListModel::Type type )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE )
 {
@@ -139,7 +135,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE )
 }
 
 /*
-QVirtualKeyboardAbstractInputMethod *dataSource() const
+QVirtualKeyboardAbstractInputMethod * dataSource() const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE )
 {
@@ -164,7 +160,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATASOURCE )
 }
 
 /*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT )
 {
@@ -188,7 +184,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT )
 }
 
 /*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA )
 {
@@ -197,7 +193,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -213,11 +209,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA )
 }
 
 /*
-QHash<int,QByteArray> roleNames() const
-*/
-
-/*
-Q_INVOKABLE void selectItem(int index)
+Q_INVOKABLE void selectItem( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM )
 {
@@ -243,7 +235,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM )
 }
 
 /*
-Q_INVOKABLE void removeItem(int index)
+Q_INVOKABLE void removeItem( int index )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM )
 {
@@ -270,14 +262,6 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM )
 
 /*
 Q_INVOKABLE QVariant dataAt(int index, Role role = Role::Display) const
-*/
-
-/*
-void selectionListChanged(Type type) [protected] [slot]
-*/
-
-/*
-void selectionListActiveItemChanged(Type type, int index) [protected] [slot]
 */
 
 /*
