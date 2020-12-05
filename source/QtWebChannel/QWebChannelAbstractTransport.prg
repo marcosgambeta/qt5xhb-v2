@@ -57,7 +57,7 @@ RETURN
 #include <QtCore/QJsonObject>
 
 /*
-explicit QWebChannelAbstractTransport(QObject *parent = nullptr) (abstract)
+QWebChannelAbstractTransport(QObject *parent = nullptr) [ABSTRACT]
 */
 
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 }
 
 /*
-virtual void sendMessage(const QJsonObject &message) = 0
+virtual void sendMessage( const QJsonObject & message ) = 0
 */
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 {
