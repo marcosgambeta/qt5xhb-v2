@@ -14,6 +14,7 @@
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QBYTEARRAY
+REQUEST QSENSORFILTER
 REQUEST QSENSORREADING
 #endif
 
@@ -41,6 +42,7 @@ CLASS QSensor INHERIT QObject
    METHOD error
    METHOD addFilter
    METHOD removeFilter
+   METHOD filters
    METHOD reading
    METHOD isFeatureSupported
    METHOD axesOrientationMode
@@ -109,7 +111,7 @@ RETURN
 #endif
 
 /*
-QSensor(const QByteArray &type, QObject *parent = nullptr)
+QSensor( const QByteArray & type, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSENSOR_NEW )
 {
@@ -175,7 +177,7 @@ HB_FUNC_STATIC( QSENSOR_IDENTIFIER )
 }
 
 /*
-void setIdentifier(const QByteArray &identifier)
+void setIdentifier( const QByteArray & identifier )
 */
 HB_FUNC_STATIC( QSENSOR_SETIDENTIFIER )
 {
@@ -308,7 +310,7 @@ HB_FUNC_STATIC( QSENSOR_ISBUSY )
 }
 
 /*
-void setActive(bool active)
+void setActive( bool active )
 */
 HB_FUNC_STATIC( QSENSOR_SETACTIVE )
 {
@@ -388,7 +390,7 @@ HB_FUNC_STATIC( QSENSOR_ISALWAYSON )
 }
 
 /*
-void setAlwaysOn(bool alwaysOn)
+void setAlwaysOn( bool alwaysOn )
 */
 HB_FUNC_STATIC( QSENSOR_SETALWAYSON )
 {
@@ -442,7 +444,7 @@ HB_FUNC_STATIC( QSENSOR_SKIPDUPLICATES )
 }
 
 /*
-void setSkipDuplicates(bool skipDuplicates)
+void setSkipDuplicates( bool skipDuplicates )
 */
 HB_FUNC_STATIC( QSENSOR_SETSKIPDUPLICATES )
 {
@@ -472,7 +474,6 @@ HB_FUNC_STATIC( QSENSOR_SETSKIPDUPLICATES )
 /*
 qrangelist availableDataRates() const
 */
-
 /*
 int dataRate() const
 */
@@ -500,7 +501,7 @@ HB_FUNC_STATIC( QSENSOR_DATARATE )
 }
 
 /*
-void setDataRate(int rate)
+void setDataRate( int rate )
 */
 HB_FUNC_STATIC( QSENSOR_SETDATARATE )
 {
@@ -530,7 +531,6 @@ HB_FUNC_STATIC( QSENSOR_SETDATARATE )
 /*
 qoutputrangelist outputRanges() const
 */
-
 /*
 int outputRange() const
 */
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSENSOR_OUTPUTRANGE )
 }
 
 /*
-void setOutputRange(int index)
+void setOutputRange( int index )
 */
 HB_FUNC_STATIC( QSENSOR_SETOUTPUTRANGE )
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QSENSOR_ERROR )
 }
 
 /*
-void addFilter(QSensorFilter *filter)
+void addFilter( QSensorFilter * filter )
 */
 HB_FUNC_STATIC( QSENSOR_ADDFILTER )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QSENSOR_ADDFILTER )
 }
 
 /*
-void removeFilter(QSensorFilter *filter)
+void removeFilter( QSensorFilter * filter )
 */
 HB_FUNC_STATIC( QSENSOR_REMOVEFILTER )
 {
@@ -694,11 +694,57 @@ HB_FUNC_STATIC( QSENSOR_REMOVEFILTER )
 }
 
 /*
-QList<QSensorFilter*> filters() const
+QList<QSensorFilter *> filters() const
 */
+HB_FUNC_STATIC( QSENSOR_FILTERS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+  auto obj = (QSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QList<QSensorFilter *> list = obj->filters();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSENSORFILTER" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      if( pDynSym )
+      {
+        for( auto i = 0; i < list.count(); i++ )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( nullptr );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( nullptr );
+          hb_itemPutPtr( pItem, (QSensorFilter *) list[i] );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, nullptr, "QSENSORFILTER", HB_ERR_ARGS_BASEPARAMS );
+      }
+      hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
-QSensorReading *reading() const
+QSensorReading * reading() const
 */
 HB_FUNC_STATIC( QSENSOR_READING )
 {
@@ -725,7 +771,7 @@ HB_FUNC_STATIC( QSENSOR_READING )
 }
 
 /*
-bool isFeatureSupported(Feature feature) const
+bool isFeatureSupported( QSensor::Feature feature ) const
 */
 HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
 {
@@ -751,7 +797,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
 }
 
 /*
-AxesOrientationMode axesOrientationMode() const
+QSensor::AxesOrientationMode axesOrientationMode() const
 */
 HB_FUNC_STATIC( QSENSOR_AXESORIENTATIONMODE )
 {
@@ -777,7 +823,7 @@ HB_FUNC_STATIC( QSENSOR_AXESORIENTATIONMODE )
 }
 
 /*
-void setAxesOrientationMode(AxesOrientationMode axesOrientationMode)
+void setAxesOrientationMode( QSensor::AxesOrientationMode axesOrientationMode )
 */
 HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
 {
@@ -831,7 +877,7 @@ HB_FUNC_STATIC( QSENSOR_CURRENTORIENTATION )
 }
 
 /*
-void setCurrentOrientation(int currentOrientation)
+void setCurrentOrientation( int currentOrientation )
 */
 HB_FUNC_STATIC( QSENSOR_SETCURRENTORIENTATION )
 {
@@ -885,7 +931,7 @@ HB_FUNC_STATIC( QSENSOR_USERORIENTATION )
 }
 
 /*
-void setUserOrientation(int userOrientation)
+void setUserOrientation( int userOrientation )
 */
 HB_FUNC_STATIC( QSENSOR_SETUSERORIENTATION )
 {
@@ -939,7 +985,7 @@ HB_FUNC_STATIC( QSENSOR_MAXBUFFERSIZE )
 }
 
 /*
-void setMaxBufferSize(int maxBufferSize)
+void setMaxBufferSize( int maxBufferSize )
 */
 HB_FUNC_STATIC( QSENSOR_SETMAXBUFFERSIZE )
 {
@@ -993,7 +1039,7 @@ HB_FUNC_STATIC( QSENSOR_EFFICIENTBUFFERSIZE )
 }
 
 /*
-void setEfficientBufferSize(int efficientBufferSize)
+void setEfficientBufferSize( int efficientBufferSize )
 */
 HB_FUNC_STATIC( QSENSOR_SETEFFICIENTBUFFERSIZE )
 {
@@ -1047,7 +1093,7 @@ HB_FUNC_STATIC( QSENSOR_BUFFERSIZE )
 }
 
 /*
-void setBufferSize(int bufferSize)
+void setBufferSize( int bufferSize )
 */
 HB_FUNC_STATIC( QSENSOR_SETBUFFERSIZE )
 {
@@ -1178,7 +1224,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 }
 
 /*
-static QList<QByteArray> sensorsForType(const QByteArray &type)
+static QList<QByteArray> sensorsForType( const QByteArray & type )
 */
 HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 {
@@ -1227,7 +1273,7 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 }
 
 /*
-static QByteArray defaultSensorForType(const QByteArray &type)
+static QByteArray defaultSensorForType( const QByteArray & type )
 */
 HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 {

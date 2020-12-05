@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QPressureSensor(QObject *parent = nullptr)
+QPressureSensor( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPRESSURESENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPRESSURESENSOR_DELETE )
 }
 
 /*
-QPressureReading *reading() const
+QPressureReading * reading() const
 */
 HB_FUNC_STATIC( QPRESSURESENSOR_READING )
 {

@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QOrientationSensor(QObject *parent = nullptr)
+QOrientationSensor( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QORIENTATIONSENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_DELETE )
 }
 
 /*
-QOrientationReading *reading() const
+QOrientationReading * reading() const
 */
 HB_FUNC_STATIC( QORIENTATIONSENSOR_READING )
 {

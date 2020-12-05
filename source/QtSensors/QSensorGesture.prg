@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QSensorGesture(const QStringList &ids, QObject *parent = nullptr)
+QSensorGesture( const QStringList & ids, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 {

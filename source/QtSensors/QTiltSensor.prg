@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QTiltSensor(QObject *parent = nullptr)
+QTiltSensor( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTILTSENSOR_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTILTSENSOR_DELETE )
 }
 
 /*
-QTiltReading *reading() const
+QTiltReading * reading() const
 */
 HB_FUNC_STATIC( QTILTSENSOR_READING )
 {

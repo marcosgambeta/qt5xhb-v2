@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QIRProximitySensor(QObject *parent = nullptr)
+QIRProximitySensor( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QIRPROXIMITYSENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QIRPROXIMITYSENSOR_DELETE )
 }
 
 /*
-QIRProximityReading *reading() const
+QIRProximityReading * reading() const
 */
 HB_FUNC_STATIC( QIRPROXIMITYSENSOR_READING )
 {

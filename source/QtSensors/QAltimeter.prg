@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QAltimeter(QObject *parent = nullptr)
+QAltimeter( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QALTIMETER_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QALTIMETER_DELETE )
 }
 
 /*
-QAltimeterReading *reading() const
+QAltimeterReading * reading() const
 */
 HB_FUNC_STATIC( QALTIMETER_READING )
 {

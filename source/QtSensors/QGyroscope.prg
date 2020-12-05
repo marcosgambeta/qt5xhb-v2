@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QGyroscope(QObject *parent = nullptr)
+QGyroscope( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGYROSCOPE_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QGYROSCOPE_DELETE )
 }
 
 /*
-QGyroscopeReading *reading() const
+QGyroscopeReading * reading() const
 */
 HB_FUNC_STATIC( QGYROSCOPE_READING )
 {
