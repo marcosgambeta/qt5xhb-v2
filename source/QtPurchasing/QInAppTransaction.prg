@@ -60,10 +60,6 @@ RETURN
 #include <QtPurchasing/QInAppProduct>
 
 /*
-explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QInAppTransaction()
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
@@ -86,7 +82,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 }
 
 /*
-TransactionStatus status() const
+QInAppTransaction::TransactionStatus status() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 {
@@ -110,7 +106,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
 }
 
 /*
-QInAppProduct *product() const
+QInAppProduct * product() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
 {
@@ -159,7 +155,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
 }
 
 /*
-virtual FailureReason failureReason() const
+virtual QInAppTransaction::FailureReason failureReason() const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
 {
@@ -258,7 +254,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
 }
 
 /*
-Q_INVOKABLE virtual QString platformProperty(const QString &propertyName) const
+Q_INVOKABLE virtual QString platformProperty( const QString & propertyName ) const
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
 {

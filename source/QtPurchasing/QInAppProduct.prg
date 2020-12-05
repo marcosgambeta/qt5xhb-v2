@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QInAppProduct(const QString &price, const QString &title, const QString &description, ProductType productType, const QString &identifier, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QInAppProduct()
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
@@ -104,7 +100,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 }
 
 /*
-ProductType productType() const
+QInAppProduct::ProductType productType() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 {

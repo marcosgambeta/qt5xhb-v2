@@ -60,7 +60,7 @@ RETURN
 #include <QtPurchasing/QInAppTransaction>
 
 /*
-explicit QInAppStore(QObject *parent = nullptr)
+QInAppStore( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 }
 
 /*
-Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const QString &identifier)
+Q_INVOKABLE void registerProduct( QInAppProduct::ProductType productType, const QString & identifier )
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 }
 
 /*
-Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
+Q_INVOKABLE QInAppProduct * registeredProduct( const QString & identifier ) const
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 }
 
 /*
-Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString &value)
+Q_INVOKABLE void setPlatformProperty( const QString & propertyName, const QString & value )
 */
 HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 {
@@ -199,18 +199,6 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-void registerPendingProducts() [private] (slot)
-*/
-
-/*
-void registerProduct(QInAppProduct *) [private] (slot)
-*/
-
-/*
-void setupBackend() [private]
-*/
 
 /*
 void productRegistered( QInAppProduct * product )
