@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusTcpClient(QObject *parent = nullptr)
+QModbusTcpClient( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSTCPCLIENT_NEW )
 {
@@ -69,10 +69,6 @@ HB_FUNC_STATIC( QMODBUSTCPCLIENT_NEW )
   }
 #endif
 }
-
-/*
-QModbusTcpClient(QModbusTcpClientPrivate &dd, QObject *parent = nullptr) [protected]
-*/
 
 /*
 ~QModbusTcpClient()
@@ -97,13 +93,5 @@ HB_FUNC_STATIC( QMODBUSTCPCLIENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-bool open() override [protected]
-*/
-
-/*
-void close() override [protected]
-*/
 
 #pragma ENDDUMP

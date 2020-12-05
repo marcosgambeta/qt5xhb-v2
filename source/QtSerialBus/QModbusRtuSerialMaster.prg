@@ -17,7 +17,9 @@
 
 CLASS QModbusRtuSerialMaster INHERIT QModbusClient
 
+   METHOD new
    METHOD delete
+   METHOD interFrameDelay
 
    DESTRUCTOR destroyObject
 
@@ -52,11 +54,22 @@ RETURN
 #endif
 
 /*
-explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
+QModbusRtuSerialMaster( QObject * parent = nullptr )
 */
-/*
-QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) [protected]
-*/
+HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    auto obj = new QModbusRtuSerialMaster( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 ~QModbusRtuSerialMaster()
@@ -85,17 +98,31 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
 /*
 int interFrameDelay() const
 */
+HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusRtuSerialMaster *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->interFrameDelay() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 void setInterFrameDelay(int microseconds)
-*/
-
-/*
-void close() override [protected]
-*/
-
-/*
-bool open() override [protected]
 */
 
 #pragma ENDDUMP

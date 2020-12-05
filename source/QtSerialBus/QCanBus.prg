@@ -57,11 +57,7 @@ RETURN
 #endif
 
 /*
-QCanBus(QObject *parent = nullptr) [private]
-*/
-
-/*
-static QCanBus *instance()
+static QCanBus * instance()
 */
 HB_FUNC_STATIC( QCANBUS_INSTANCE )
 {
@@ -109,7 +105,7 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
 }
 
 /*
-QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
+QList<QCanBusDeviceInfo> availableDevices( const QString & plugin, QString * errorMessage = nullptr ) const
 */
 HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 {
@@ -119,7 +115,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), nullptr );
@@ -163,7 +159,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 }
 
 /*
-QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName, QString *errorMessage = nullptr) const
+QCanBusDevice * createDevice( const QString & plugin, const QString & interfaceName, QString * errorMessage = nullptr ) const
 */
 HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
 {
@@ -173,7 +169,7 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
     {
 #endif
       QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), nullptr );

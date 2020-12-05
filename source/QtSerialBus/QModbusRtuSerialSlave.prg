@@ -17,7 +17,9 @@
 
 CLASS QModbusRtuSerialSlave INHERIT QModbusServer
 
+   METHOD new
    METHOD delete
+   METHOD processesBroadcast
 
    DESTRUCTOR destroyObject
 
@@ -52,11 +54,22 @@ RETURN
 #endif
 
 /*
-explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
+QModbusRtuSerialSlave( QObject * parent = nullptr )
 */
-/*
-QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
-*/
+HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    auto obj = new QModbusRtuSerialSlave( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 ~QModbusRtuSerialSlave()
@@ -85,17 +98,27 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
 /*
 bool processesBroadcast() const override
 */
+HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusRtuSerialSlave *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-bool open() override [protected]
-*/
-
-/*
-void close() override [protected]
-*/
-
-/*
-QModbusResponse processRequest(const QModbusPdu &request) override [protected]
-*/
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->processesBroadcast() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 #pragma ENDDUMP

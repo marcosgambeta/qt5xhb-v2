@@ -17,7 +17,13 @@
 
 CLASS QModbusDevice INHERIT QObject
 
+   METHOD new
    METHOD delete
+   METHOD connectDevice
+   METHOD disconnectDevice
+   METHOD state
+   METHOD error
+   METHOD errorString
 
    METHOD onErrorOccurred
    METHOD onStateChanged
@@ -55,11 +61,22 @@ RETURN
 #endif
 
 /*
-explicit QModbusDevice(QObject *parent = nullptr)
+QModbusDevice( QObject * parent = nullptr )
 */
-/*
-QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
-*/
+HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    auto obj = new QModbusDevice( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 ~QModbusDevice()
@@ -88,46 +105,140 @@ HB_FUNC_STATIC( QMODBUSDEVICE_DELETE )
 /*
 QVariant connectionParameter(int parameter) const
 */
-
 /*
 void setConnectionParameter(int parameter, const QVariant &value)
 */
-
 /*
 bool connectDevice()
 */
+HB_FUNC_STATIC( QMODBUSDEVICE_CONNECTDEVICE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->connectDevice() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 void disconnectDevice()
 */
+HB_FUNC_STATIC( QMODBUSDEVICE_DISCONNECTDEVICE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->disconnectDevice();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
-State state() const
+QModbusDevice::State state() const
 */
+HB_FUNC_STATIC( QMODBUSDEVICE_STATE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->state() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
-Error error() const
+QModbusDevice::Error error() const
 */
+HB_FUNC_STATIC( QMODBUSDEVICE_ERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->error() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 QString errorString() const
 */
+HB_FUNC_STATIC( QMODBUSDEVICE_ERRORSTRING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-void setState(QModbusDevice::State newState) [protected]
-*/
-
-/*
-void setError(const QString &errorText, QModbusDevice::Error error) [protected]
-*/
-
-/*
-virtual bool open() = 0 [protected]
-*/
-
-/*
-virtual void close() = 0 [protected]
-*/
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->errorString() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 void errorOccurred( QModbusDevice::Error error )

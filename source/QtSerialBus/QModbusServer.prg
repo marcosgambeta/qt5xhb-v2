@@ -17,7 +17,10 @@
 
 CLASS QModbusServer INHERIT QModbusDevice
 
+   METHOD new
    METHOD delete
+   METHOD serverAddress
+   METHOD processesBroadcast
 
    METHOD onDataWritten
 
@@ -54,11 +57,22 @@ RETURN
 #endif
 
 /*
-explicit QModbusServer(QObject *parent = nullptr)
+QModbusServer( QObject * parent = nullptr )
 */
-/*
-QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
-*/
+HB_FUNC_STATIC( QMODBUSSERVER_NEW )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  {
+    auto obj = new QModbusServer( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 /*
 ~QModbusServer()
@@ -87,57 +101,78 @@ HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
 /*
 int serverAddress() const
 */
+HB_FUNC_STATIC( QMODBUSSERVER_SERVERADDRESS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->serverAddress() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 void setServerAddress(int serverAddress)
 */
-
 /*
 virtual bool setMap(const QModbusDataUnitMap &map)
 */
-
 /*
 virtual bool processesBroadcast() const
 */
+HB_FUNC_STATIC( QMODBUSSERVER_PROCESSESBROADCAST )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QModbusServer *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->processesBroadcast() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 virtual QVariant value(int option) const
 */
-
 /*
 virtual bool setValue(int option, const QVariant &value)
 */
-
 /*
 bool data(QModbusDataUnit *newData) const
 */
-
 /*
 bool setData(const QModbusDataUnit &unit)
 */
-
 /*
 bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
 */
-
 /*
 bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
-*/
-
-/*
-virtual bool writeData(const QModbusDataUnit &unit) [protected]
-*/
-
-/*
-virtual bool readData(QModbusDataUnit *newData) const [protected]
-*/
-
-/*
-virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
-*/
-
-/*
-virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 */
 
 /*

@@ -78,11 +78,7 @@ RETURN
 #include <QtCore/QVector>
 
 /*
-explicit QCanBusDevice(QObject *parent = nullptr) [abstract]
-*/
-
-/*
-virtual void setConfigurationParameter(int key, const QVariant &value)
+virtual void setConfigurationParameter( int key, const QVariant & value )
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_SETCONFIGURATIONPARAMETER )
 {
@@ -110,7 +106,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_SETCONFIGURATIONPARAMETER )
 }
 
 /*
-QVariant configurationParameter(int key) const
+QVariant configurationParameter( int key ) const
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_CONFIGURATIONPARAMETER )
 {
@@ -171,7 +167,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CONFIGURATIONKEYS )
 }
 
 /*
-virtual bool writeFrame(const QCanBusFrame &frame) = 0
+virtual bool writeFrame( const QCanBusFrame & frame ) = 0
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_WRITEFRAME )
 {
@@ -276,7 +272,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_FRAMESTOWRITE )
 }
 
 /*
-virtual bool waitForFramesWritten(int msecs)
+virtual bool waitForFramesWritten( int msecs )
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_WAITFORFRAMESWRITTEN )
 {
@@ -302,7 +298,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_WAITFORFRAMESWRITTEN )
 }
 
 /*
-virtual bool waitForFramesReceived(int msecs)
+virtual bool waitForFramesReceived( int msecs )
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_WAITFORFRAMESRECEIVED )
 {
@@ -382,7 +378,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_DISCONNECTDEVICE )
 }
 
 /*
-CanBusDeviceState state() const
+QCanBusDevice::CanBusDeviceState state() const
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_STATE )
 {
@@ -408,7 +404,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_STATE )
 }
 
 /*
-CanBusError error() const
+QCanBusDevice::CanBusError error() const
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_ERROR )
 {
@@ -460,7 +456,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_ERRORSTRING )
 }
 
 /*
-virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
+virtual QString interpretErrorFrame( const QCanBusFrame & errorFrame ) = 0
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_INTERPRETERRORFRAME )
 {
@@ -486,7 +482,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_INTERPRETERRORFRAME )
 }
 
 /*
-void QCanBusDevice::clear(QCanBusDevice::Directions direction)
+void clear( QCanBusDevice::Directions direction )
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_CLEAR )
 {
@@ -514,7 +510,7 @@ HB_FUNC_STATIC( QCANBUSDEVICE_CLEAR )
 }
 
 /*
-QVector<QCanBusFrame> QCanBusDevice::readAllFrames()
+QVector<QCanBusFrame> readAllFrames()
 */
 HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
 {

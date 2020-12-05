@@ -13,12 +13,15 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QCANBUSDEVICE
 #endif
 
 CLASS QCanBusFactory
 
    DATA pointer
    DATA self_destruction INIT .F.
+
+   METHOD createDevice
 
    METHOD newFrom
    METHOD newFromObject
@@ -57,12 +60,31 @@ RETURN
 #endif
 
 /*
-virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
+virtual QCanBusDevice * createDevice( const QString & interfaceName, QString * errorMessage ) const = 0
 */
+HB_FUNC_STATIC( QCANBUSFACTORY_CREATEDEVICE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  auto obj = (QCanBusFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-virtual ~QCanBusFactory() [protected]
-*/
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) )
+    {
+#endif
+      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), nullptr );
+      Qt5xHb::createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 HB_FUNC_STATIC( QCANBUSFACTORY_NEWFROM )
 {

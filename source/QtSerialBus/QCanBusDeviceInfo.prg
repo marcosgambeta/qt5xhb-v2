@@ -69,9 +69,8 @@ RETURN
 /*
 QCanBusDeviceInfo() = delete
 */
-
 /*
-QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
+QCanBusDeviceInfo( const QCanBusDeviceInfo & other )
 */
 void QCanBusDeviceInfo_new2()
 {
@@ -80,15 +79,6 @@ void QCanBusDeviceInfo_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
-*/
-
-/*
-[1]QCanBusDeviceInfo() = delete
-[2]QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-*/
 
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
@@ -125,7 +115,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_DELETE )
 }
 
 /*
-void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
+void swap( QCanBusDeviceInfo & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_SWAP )
 {
@@ -231,7 +221,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_ISVIRTUAL )
 }
 
 /*
-int QCanBusDeviceInfo::channel() const
+int channel() const
 */
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_CHANNEL )
 {
@@ -257,7 +247,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_CHANNEL )
 }
 
 /*
-QString QCanBusDeviceInfo::description() const
+QString description() const
 */
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_DESCRIPTION )
 {
@@ -283,7 +273,7 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_DESCRIPTION )
 }
 
 /*
-QString QCanBusDeviceInfo::serialNumber() const
+QString serialNumber() const
 */
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_SERIALNUMBER )
 {
