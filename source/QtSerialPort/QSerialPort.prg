@@ -103,7 +103,7 @@ RETURN
 #endif
 
 /*
-QSerialPort(QObject *parent = nullptr)
+QSerialPort( QObject * parent = nullptr )
 */
 void QSerialPort_new1()
 {
@@ -114,7 +114,7 @@ void QSerialPort_new1()
 }
 
 /*
-QSerialPort(const QString &name, QObject *parent = nullptr)
+QSerialPort( const QString & name, QObject * parent = nullptr )
 */
 void QSerialPort_new2()
 {
@@ -125,7 +125,7 @@ void QSerialPort_new2()
 }
 
 /*
-QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
+QSerialPort( const QSerialPortInfo & info, QObject * parent = nullptr )
 */
 void QSerialPort_new3()
 {
@@ -135,24 +135,18 @@ void QSerialPort_new3()
 #endif
 }
 
-/*
-[1]QSerialPort(QObject *parent = nullptr)
-[2]QSerialPort(const QString &name, QObject *parent = nullptr)
-[3]QSerialPort(const QSerialPortInfo &info, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSerialPort_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSerialPort_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQSERIALPORTINFO(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQSERIALPORTINFO(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSerialPort_new3();
   }
@@ -185,7 +179,7 @@ HB_FUNC_STATIC( QSERIALPORT_DELETE )
 }
 
 /*
-void setPortName(const QString &name)
+void setPortName( const QString & name )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETPORTNAME )
 {
@@ -239,7 +233,7 @@ HB_FUNC_STATIC( QSERIALPORT_PORTNAME )
 }
 
 /*
-void setPort(const QSerialPortInfo &info)
+void setPort( const QSerialPortInfo & info )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETPORT )
 {
@@ -267,7 +261,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPORT )
 }
 
 /*
-bool open(OpenMode mode) Q_DECL_OVERRIDE
+bool open( QIODevice::OpenMode mode ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSERIALPORT_OPEN )
 {
@@ -321,7 +315,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLOSE )
 }
 
 /*
-void setSettingsRestoredOnClose(bool restore)
+void setSettingsRestoredOnClose( bool restore )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETSETTINGSRESTOREDONCLOSE )
 {
@@ -375,7 +369,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETTINGSRESTOREDONCLOSE )
 }
 
 /*
-bool setBaudRate(qint32 baudRate, Directions dir = AllDirections)
+bool setBaudRate( qint32 baudRate, QSerialPort::Directions dir = QSerialPort::AllDirections )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
 {
@@ -385,7 +379,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->setBaudRate( PQINT32(1), ISNIL(2)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(2) ) );
@@ -401,7 +395,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
 }
 
 /*
-qint32 baudRate(Directions dir = AllDirections) const
+qint32 baudRate( QSerialPort::Directions dir = QSerialPort::AllDirections ) const
 */
 HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
 {
@@ -411,7 +405,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQINT32( obj->baudRate( ISNIL(1)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(1) ) );
@@ -427,7 +421,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
 }
 
 /*
-bool setDataBits(DataBits dataBits)
+bool setDataBits( QSerialPort::DataBits dataBits )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
 {
@@ -453,7 +447,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATABITS )
 }
 
 /*
-DataBits dataBits() const
+QSerialPort::DataBits dataBits() const
 */
 HB_FUNC_STATIC( QSERIALPORT_DATABITS )
 {
@@ -479,7 +473,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATABITS )
 }
 
 /*
-bool setParity(Parity parity)
+bool setParity( QSerialPort::Parity parity )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
 {
@@ -505,7 +499,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETPARITY )
 }
 
 /*
-Parity parity() const
+QSerialPort::Parity parity() const
 */
 HB_FUNC_STATIC( QSERIALPORT_PARITY )
 {
@@ -531,7 +525,7 @@ HB_FUNC_STATIC( QSERIALPORT_PARITY )
 }
 
 /*
-bool setStopBits(StopBits stopBits)
+bool setStopBits( QSerialPort::StopBits stopBits )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
 {
@@ -557,7 +551,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETSTOPBITS )
 }
 
 /*
-StopBits stopBits() const
+QSerialPort::StopBits stopBits() const
 */
 HB_FUNC_STATIC( QSERIALPORT_STOPBITS )
 {
@@ -583,7 +577,7 @@ HB_FUNC_STATIC( QSERIALPORT_STOPBITS )
 }
 
 /*
-bool setFlowControl(FlowControl flow)
+bool setFlowControl( QSerialPort::FlowControl flow )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
 {
@@ -609,7 +603,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETFLOWCONTROL )
 }
 
 /*
-FlowControl flowControl() const
+QSerialPort::FlowControl flowControl() const
 */
 HB_FUNC_STATIC( QSERIALPORT_FLOWCONTROL )
 {
@@ -635,7 +629,7 @@ HB_FUNC_STATIC( QSERIALPORT_FLOWCONTROL )
 }
 
 /*
-bool setDataTerminalReady(bool set)
+bool setDataTerminalReady( bool set )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETDATATERMINALREADY )
 {
@@ -687,7 +681,7 @@ HB_FUNC_STATIC( QSERIALPORT_ISDATATERMINALREADY )
 }
 
 /*
-bool setRequestToSend(bool set)
+bool setRequestToSend( bool set )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETREQUESTTOSEND )
 {
@@ -739,7 +733,7 @@ HB_FUNC_STATIC( QSERIALPORT_ISREQUESTTOSEND )
 }
 
 /*
-PinoutSignals pinoutSignals()
+QSerialPort::PinoutSignals pinoutSignals()
 */
 HB_FUNC_STATIC( QSERIALPORT_PINOUTSIGNALS )
 {
@@ -791,7 +785,7 @@ HB_FUNC_STATIC( QSERIALPORT_FLUSH )
 }
 
 /*
-bool clear(Directions dir = AllDirections)
+bool clear( QSerialPort::Directions dir = QSerialPort::AllDirections )
 */
 HB_FUNC_STATIC( QSERIALPORT_CLEAR )
 {
@@ -801,7 +795,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEAR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->clear( ISNIL(1)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(1) ) );
@@ -843,7 +837,7 @@ HB_FUNC_STATIC( QSERIALPORT_ATEND )
 }
 
 /*
-bool setDataErrorPolicy(DataErrorPolicy policy = IgnorePolicy)
+bool setDataErrorPolicy( QSerialPort::DataErrorPolicy policy = QSerialPort::IgnorePolicy )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
 {
@@ -853,7 +847,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->setDataErrorPolicy( ISNIL(1)? (QSerialPort::DataErrorPolicy) QSerialPort::IgnorePolicy : (QSerialPort::DataErrorPolicy) hb_parni(1) ) );
@@ -869,7 +863,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
 }
 
 /*
-DataErrorPolicy dataErrorPolicy() const
+QSerialPort::DataErrorPolicy dataErrorPolicy() const
 */
 HB_FUNC_STATIC( QSERIALPORT_DATAERRORPOLICY )
 {
@@ -895,7 +889,7 @@ HB_FUNC_STATIC( QSERIALPORT_DATAERRORPOLICY )
 }
 
 /*
-SerialPortError error() const
+QSerialPort::SerialPortError error() const
 */
 HB_FUNC_STATIC( QSERIALPORT_ERROR )
 {
@@ -975,7 +969,7 @@ HB_FUNC_STATIC( QSERIALPORT_READBUFFERSIZE )
 }
 
 /*
-void setReadBufferSize(qint64 size)
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETREADBUFFERSIZE )
 {
@@ -1107,7 +1101,7 @@ HB_FUNC_STATIC( QSERIALPORT_CANREADLINE )
 }
 
 /*
-bool waitForReadyRead(int msecs) Q_DECL_OVERRIDE
+bool waitForReadyRead( int msecs ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSERIALPORT_WAITFORREADYREAD )
 {
@@ -1133,7 +1127,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORREADYREAD )
 }
 
 /*
-bool waitForBytesWritten(int msecs) Q_DECL_OVERRIDE
+bool waitForBytesWritten( int msecs ) Q_DECL_OVERRIDE
 */
 HB_FUNC_STATIC( QSERIALPORT_WAITFORBYTESWRITTEN )
 {
@@ -1159,7 +1153,7 @@ HB_FUNC_STATIC( QSERIALPORT_WAITFORBYTESWRITTEN )
 }
 
 /*
-bool sendBreak(int duration = 0)
+bool sendBreak( int duration = 0 )
 */
 HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
 {
@@ -1169,7 +1163,7 @@ HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->sendBreak( OPINT(1,0) ) );
@@ -1185,7 +1179,7 @@ HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
 }
 
 /*
-bool setBreakEnabled(bool set = true)
+bool setBreakEnabled( bool set = true )
 */
 HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
 {
@@ -1195,7 +1189,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBREAKENABLED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->setBreakEnabled( OPBOOL(1,true) ) );

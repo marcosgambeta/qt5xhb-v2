@@ -87,7 +87,7 @@ void QSerialPortInfo_new1()
 }
 
 /*
-QSerialPortInfo(const QSerialPort &port)
+QSerialPortInfo( const QSerialPort & port )
 */
 void QSerialPortInfo_new2()
 {
@@ -98,7 +98,7 @@ void QSerialPortInfo_new2()
 }
 
 /*
-QSerialPortInfo(const QString &name)
+QSerialPortInfo( const QString & name )
 */
 void QSerialPortInfo_new3()
 {
@@ -109,7 +109,7 @@ void QSerialPortInfo_new3()
 }
 
 /*
-QSerialPortInfo(const QSerialPortInfo &other)
+QSerialPortInfo( const QSerialPortInfo & other )
 */
 void QSerialPortInfo_new4()
 {
@@ -118,13 +118,6 @@ void QSerialPortInfo_new4()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QSerialPortInfo()
-[2]QSerialPortInfo(const QSerialPort &port)
-[3]QSerialPortInfo(const QString &name)
-[4]QSerialPortInfo(const QSerialPortInfo &other)
-*/
 
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 {
@@ -172,7 +165,7 @@ HB_FUNC_STATIC( QSERIALPORTINFO_DELETE )
 }
 
 /*
-void swap(QSerialPortInfo &other)
+void swap( QSerialPortInfo & other )
 */
 HB_FUNC_STATIC( QSERIALPORTINFO_SWAP )
 {
