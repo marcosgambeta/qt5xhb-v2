@@ -80,10 +80,6 @@ HB_FUNC_STATIC( QTEXTTOSPEECHPLUGIN_DELETE )
 #endif
 }
 
-/*
-virtual QTextToSpeechEngine *createTextToSpeechEngine(const QVariantMap &parameters, QObject *parent, QString *errorString) const
-*/
-
 HB_FUNC_STATIC( QTEXTTOSPEECHPLUGIN_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

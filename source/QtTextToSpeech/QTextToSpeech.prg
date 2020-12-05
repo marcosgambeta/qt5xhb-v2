@@ -84,7 +84,7 @@ RETURN
 #include <QtTextToSpeech/QVoice>
 
 /*
-explicit QTextToSpeech(QObject *parent = nullptr)
+QTextToSpeech( QObject * parent = nullptr )
 */
 void QTextToSpeech_new1()
 {
@@ -95,7 +95,7 @@ void QTextToSpeech_new1()
 }
 
 /*
-explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
+QTextToSpeech( const QString & engine, QObject * parent = nullptr )
 */
 void QTextToSpeech_new2()
 {
@@ -105,18 +105,13 @@ void QTextToSpeech_new2()
 #endif
 }
 
-/*
-[1]explicit QTextToSpeech(QObject *parent = nullptr)
-[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTextToSpeech_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QTextToSpeech_new2();
   }
@@ -127,7 +122,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 }
 
 /*
-State state() const
+QTextToSpeech::State state() const
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_STATE )
 {
@@ -180,7 +175,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_LOCALE )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETLOCALE )
 {
@@ -235,7 +230,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOICE )
 }
 
 /*
-void setVoice(const QVoice &voice)
+void setVoice( const QVoice & voice )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOICE )
 {
@@ -289,7 +284,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_RATE )
 }
 
 /*
-void setRate(double rate)
+void setRate( double rate )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETRATE )
 {
@@ -343,7 +338,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_PITCH )
 }
 
 /*
-void setPitch(double pitch)
+void setPitch( double pitch )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETPITCH )
 {
@@ -397,7 +392,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_VOLUME )
 }
 
 /*
-void setVolume(double volume)
+void setVolume( double volume )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SETVOLUME )
 {
@@ -554,7 +549,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECH_AVAILABLEENGINES )
 }
 
 /*
-void say(const QString &text)
+void say( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTTOSPEECH_SAY )
 {

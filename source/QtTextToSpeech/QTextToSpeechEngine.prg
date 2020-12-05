@@ -77,7 +77,7 @@ RETURN
 #include <QtTextToSpeech/QVoice>
 
 /*
-explicit QTextToSpeechEngine(QObject *parent = nullptr) (abstract)
+QTextToSpeechEngine(QObject *parent = nullptr) [ABSTRACT]
 */
 
 /*
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_AVAILABLEVOICES )
 }
 
 /*
-virtual void say(const QString &text) = 0
+virtual void say( const QString & text ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SAY )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_RATE )
 }
 
 /*
-virtual bool setRate(double rate) = 0
+virtual bool setRate( double rate ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETRATE )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_PITCH )
 }
 
 /*
-virtual bool setPitch(double pitch) = 0
+virtual bool setPitch( double pitch ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETPITCH )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_LOCALE )
 }
 
 /*
-virtual bool setLocale(const QLocale &locale) = 0
+virtual bool setLocale( const QLocale & locale ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETLOCALE )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOLUME )
 }
 
 /*
-virtual bool setVolume(double volume) = 0
+virtual bool setVolume( double volume ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOLUME )
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_VOICE )
 }
 
 /*
-virtual bool setVoice(const QVoice &voice) = 0
+virtual bool setVoice( const QVoice & voice ) = 0
 */
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOICE )
 {
@@ -611,14 +611,6 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STATE )
   }
 #endif
 }
-
-/*
-static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Age age, const QVariant &data) [protected]
-*/
-
-/*
-static QVariant voiceData(const QVoice &voice) [protected]
-*/
 
 /*
 void stateChanged( QTextToSpeech::State state )

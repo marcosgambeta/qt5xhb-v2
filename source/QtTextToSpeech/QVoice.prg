@@ -76,7 +76,7 @@ void QVoice_new1()
 }
 
 /*
-QVoice(const QVoice &other)
+QVoice( const QVoice & other )
 */
 void QVoice_new2()
 {
@@ -85,16 +85,6 @@ void QVoice_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
-*/
-
-/*
-[1]QVoice()
-[2]QVoice(const QVoice &other)
-[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
-*/
 
 HB_FUNC_STATIC( QVOICE_NEW )
 {
@@ -161,7 +151,7 @@ HB_FUNC_STATIC( QVOICE_NAME )
 }
 
 /*
-Gender gender() const
+QVoice::Gender gender() const
 */
 HB_FUNC_STATIC( QVOICE_GENDER )
 {
@@ -187,7 +177,7 @@ HB_FUNC_STATIC( QVOICE_GENDER )
 }
 
 /*
-Age age() const
+QVoice::Age age() const
 */
 HB_FUNC_STATIC( QVOICE_AGE )
 {
@@ -213,7 +203,7 @@ HB_FUNC_STATIC( QVOICE_AGE )
 }
 
 /*
-static QString genderName(QVoice::Gender gender)
+static QString genderName( QVoice::Gender gender )
 */
 HB_FUNC_STATIC( QVOICE_GENDERNAME )
 {
@@ -234,7 +224,7 @@ HB_FUNC_STATIC( QVOICE_GENDERNAME )
 }
 
 /*
-static QString ageName(QVoice::Age age)
+static QString ageName( QVoice::Age age )
 */
 HB_FUNC_STATIC( QVOICE_AGENAME )
 {
@@ -253,26 +243,6 @@ HB_FUNC_STATIC( QVOICE_AGENAME )
 #endif
 #endif
 }
-
-/*
-void setName(const QString &name) [private]
-*/
-
-/*
-void setGender(Gender gender) [private]
-*/
-
-/*
-void setAge(Age age) [private]
-*/
-
-/*
-void setData(const QVariant &data) [private]
-*/
-
-/*
-QVariant data() const [private]
-*/
 
 HB_FUNC_STATIC( QVOICE_NEWFROM )
 {
