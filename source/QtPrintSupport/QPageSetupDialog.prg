@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QPageSetupDialog ( QPrinter * printer, QWidget * parent = nullptr )
+QPageSetupDialog( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new1()
 {
@@ -64,7 +64,7 @@ void QPageSetupDialog_new1()
 }
 
 /*
-QPageSetupDialog ( QWidget * parent = nullptr )
+QPageSetupDialog( QWidget * parent = nullptr )
 */
 void QPageSetupDialog_new2()
 {
@@ -72,18 +72,13 @@ void QPageSetupDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPageSetupDialog(QPrinter *printer, QWidget *parent = nullptr)
-[2]QPageSetupDialog(QWidget *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && ISOPTQWIDGET(2) )
+  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QPageSetupDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QPageSetupDialog_new2();
   }
@@ -113,7 +108,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open(  QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 }
 
 /*
-void done(int result)
+void done( int result )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 {

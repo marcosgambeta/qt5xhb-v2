@@ -63,7 +63,7 @@ RETURN
 #include <QtPrintSupport/QPrinter>
 
 /*
-QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
+QPrintDialog( QPrinter * printer, QWidget * parent = nullptr )
 */
 void QPrintDialog_new1()
 {
@@ -72,7 +72,7 @@ void QPrintDialog_new1()
 }
 
 /*
-QPrintDialog ( QWidget * parent = nullptr )
+QPrintDialog( QWidget * parent = nullptr )
 */
 void QPrintDialog_new2()
 {
@@ -80,18 +80,13 @@ void QPrintDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPrintDialog ( QPrinter * printer, QWidget * parent = nullptr )
-[2]QPrintDialog ( QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && ISOPTQWIDGET(2) )
+  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QPrintDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QPrintDialog_new2();
   }
@@ -121,7 +116,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 }
 
 /*
-PrintDialogOptions options () const
+QAbstractPrintDialog::PrintDialogOptions options() const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
@@ -171,7 +166,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
@@ -196,7 +191,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 }
 
 /*
-void setOption ( PrintDialogOption option, bool on = true )
+void setOption( QPrintDialog::PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
@@ -205,7 +200,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setOption( (QPrintDialog::PrintDialogOption) hb_parni(1), OPBOOL(2,true) );
@@ -222,7 +217,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 }
 
 /*
-void setOptions ( PrintDialogOptions options )
+void setOptions( QPrintDialog::PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
@@ -248,7 +243,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 }
 
 /*
-bool testOption ( PrintDialogOption option ) const
+bool testOption( QPrintDialog::PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
@@ -272,7 +267,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 }
 
 /*
-void done ( int result )
+void done( int result )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
@@ -298,7 +293,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 }
 
 /*
-int exec ()
+int exec()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
@@ -365,7 +360,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
       {
 
         QMetaObject::Connection connection = QObject::connect(sender, 
-                                                              QOverload<QPrinter*>::of(&QPrintDialog::accepted), 
+                                                              QOverload<QPrinter *>::of(&QPrintDialog::accepted), 
                                                               [sender, indexOfCodeBlock]
                                                               (QPrinter * arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );

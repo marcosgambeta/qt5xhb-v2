@@ -58,7 +58,7 @@ RETURN
 #include <QtPrintSupport/QPrinter>
 
 /*
-explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new1()
 {
@@ -67,7 +67,7 @@ void QPrintPreviewDialog_new1()
 }
 
 /*
-explicit QPrintPreviewDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new2()
 {
@@ -75,18 +75,13 @@ void QPrintPreviewDialog_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-[2]explicit QPrintPreviewDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
-*/
-
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQPRINTER(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QPrintPreviewDialog_new1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QPrintPreviewDialog_new2();
   }
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
@@ -167,7 +162,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 }
 
 /*
-virtual void done ( int result )
+virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
@@ -193,7 +188,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {
