@@ -77,7 +77,7 @@ RETURN
 #endif
 
 /*
-QGLContext ( const QGLFormat & format )
+QGLContext( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
+GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLContext_bindTexture1()
 {
@@ -123,7 +123,7 @@ void QGLContext_bindTexture1()
 }
 
 /*
-GLuint bindTexture ( const QString & fileName )
+GLuint bindTexture( const QString & fileName )
 */
 void QGLContext_bindTexture2()
 {
@@ -136,7 +136,7 @@ void QGLContext_bindTexture2()
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLContext_bindTexture3()
 {
@@ -149,7 +149,7 @@ void QGLContext_bindTexture3()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLContext_bindTexture4()
 {
@@ -162,7 +162,7 @@ void QGLContext_bindTexture4()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLContext_bindTexture5()
 {
@@ -192,11 +192,11 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   {
     QGLContext_bindTexture2();
   }
-  else if( ISBETWEEN(1,3) && ISQIMAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_bindTexture3();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_bindTexture4();
   }
@@ -211,11 +211,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 }
 
 /*
-virtual bool create ( const QGLContext * shareContext = nullptr ) [private]
-*/
-
-/*
-void deleteTexture ( GLuint id )
+void deleteTexture( GLuint id )
 */
 HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 {
@@ -241,7 +237,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 }
 
 /*
-QPaintDevice * device () const
+QPaintDevice * device() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 {
@@ -266,7 +262,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 }
 
 /*
-virtual void doneCurrent ()
+virtual void doneCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 {
@@ -292,7 +288,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 }
 
 /*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLContext_drawTexture1()
 {
@@ -307,7 +303,7 @@ void QGLContext_drawTexture1()
 }
 
 /*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLContext_drawTexture2()
 {
@@ -328,11 +324,11 @@ void QGLContext_drawTexture2()
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_drawTexture2();
   }
@@ -343,7 +339,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 }
 
 /*
-QGLFormat format () const
+QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 {
@@ -368,7 +364,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 }
 
 /*
-bool isSharing () const
+bool isSharing() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 {
@@ -392,7 +388,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 {
@@ -416,7 +412,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 }
 
 /*
-virtual void makeCurrent ()
+virtual void makeCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 {
@@ -442,7 +438,7 @@ HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 }
 
 /*
-QColor overlayTransparentColor () const
+QColor overlayTransparentColor() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 {
@@ -467,7 +463,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 }
 
 /*
-QGLFormat requestedFormat () const
+QGLFormat requestedFormat() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 {
@@ -492,7 +488,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QGLCONTEXT_RESET )
 {
@@ -518,7 +514,7 @@ HB_FUNC_STATIC( QGLCONTEXT_RESET )
 }
 
 /*
-void setFormat ( const QGLFormat & format )
+void setFormat( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 {
@@ -544,7 +540,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 }
 
 /*
-virtual void swapBuffers () const
+virtual void swapBuffers() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 {
@@ -570,7 +566,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 }
 
 /*
-static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
+static bool areSharing( const QGLContext * context1, const QGLContext * context2 )
 */
 HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
@@ -589,7 +585,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 }
 
 /*
-static const QGLContext * currentContext ()
+static const QGLContext * currentContext()
 */
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
@@ -609,7 +605,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 }
 
 /*
-static void setTextureCacheLimit ( int size )
+static void setTextureCacheLimit( int size )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
@@ -630,7 +626,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 }
 
 /*
-static int textureCacheLimit ()
+static int textureCacheLimit()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {

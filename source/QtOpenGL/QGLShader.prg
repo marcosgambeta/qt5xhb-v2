@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
+QGLShader( QGLShader::ShaderType type, QObject * parent = nullptr )
 */
 void QGLShader_new1()
 {
@@ -69,7 +69,7 @@ void QGLShader_new1()
 }
 
 /*
-QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
+QGLShader( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
 */
 void QGLShader_new2()
 {
@@ -77,18 +77,13 @@ void QGLShader_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = nullptr )
-[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QGLShader_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QGLShader_new2();
   }
@@ -118,7 +113,7 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
 }
 
 /*
-bool compileSourceCode ( const char * source )
+bool compileSourceCode( const char * source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 }
 
 /*
-bool compileSourceCode ( const QByteArray & source )
+bool compileSourceCode( const QByteArray & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 }
 
 /*
-bool compileSourceCode ( const QString & source )
+bool compileSourceCode( const QString & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 {
@@ -189,12 +184,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
   }
 }
 
-/*
-[1]bool compileSourceCode ( const char * source )
-[2]bool compileSourceCode ( const QByteArray & source )
-[3]bool compileSourceCode ( const QString & source )
-*/
-
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -212,7 +201,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 }
 
 /*
-bool compileSourceFile ( const QString & fileName )
+bool compileSourceFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 {
@@ -236,7 +225,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 }
 
 /*
-bool isCompiled () const
+bool isCompiled() const
 */
 HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 {
@@ -260,7 +249,7 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 }
 
 /*
-QString log () const
+QString log() const
 */
 HB_FUNC_STATIC( QGLSHADER_LOG )
 {
@@ -284,7 +273,7 @@ HB_FUNC_STATIC( QGLSHADER_LOG )
 }
 
 /*
-GLuint shaderId () const
+GLuint shaderId() const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERID )
 {
@@ -308,7 +297,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERID )
 }
 
 /*
-QGLShader::ShaderType shaderType () const
+QGLShader::ShaderType shaderType() const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 {
@@ -332,7 +321,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 }
 
 /*
-QByteArray sourceCode () const
+QByteArray sourceCode() const
 */
 HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 {
@@ -355,9 +344,5 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 #endif
   }
 }
-
-/*
-static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = nullptr ) [private]
-*/
 
 #pragma ENDDUMP

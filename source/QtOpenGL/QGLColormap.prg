@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QGLColormap ()
+QGLColormap()
 */
 void QGLColormap_new1()
 {
@@ -73,18 +73,13 @@ void QGLColormap_new1()
 }
 
 /*
-QGLColormap ( const QGLColormap & map )
+QGLColormap( const QGLColormap & map )
 */
 void QGLColormap_new2()
 {
   auto obj = new QGLColormap( *PQGLCOLORMAP(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLColormap ()
-[2]QGLColormap ( const QGLColormap & map )
-*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
@@ -120,7 +115,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 }
 
 /*
-QColor entryColor ( int idx ) const
+QColor entryColor( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
@@ -145,7 +140,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 }
 
 /*
-QRgb entryRgb ( int idx ) const
+QRgb entryRgb( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
@@ -169,7 +164,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 }
 
 /*
-int find ( QRgb color ) const
+int find( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
@@ -193,7 +188,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 }
 
 /*
-int findNearest ( QRgb color ) const
+int findNearest( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
@@ -217,7 +212,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
@@ -245,7 +240,7 @@ void setEntries ( int count, const QRgb * colors, int base = 0 )
 */
 
 /*
-void setEntry ( int idx, QRgb color )
+void setEntry( int idx, QRgb color )
 */
 void QGLColormap_setEntry1()
 {
@@ -260,7 +255,7 @@ void QGLColormap_setEntry1()
 }
 
 /*
-void setEntry ( int idx, const QColor & color )
+void setEntry( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2()
 {
@@ -273,11 +268,6 @@ void QGLColormap_setEntry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setEntry ( int idx, QRgb color )
-[2]void setEntry ( int idx, const QColor & color )
-*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
@@ -296,7 +286,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {

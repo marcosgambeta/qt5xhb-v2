@@ -71,7 +71,7 @@ RETURN
 #endif
 
 /*
-QGLBuffer ()
+QGLBuffer()
 */
 void QGLBuffer_new1()
 {
@@ -80,7 +80,7 @@ void QGLBuffer_new1()
 }
 
 /*
-QGLBuffer ( QGLBuffer::Type type )
+QGLBuffer( QGLBuffer::Type type )
 */
 void QGLBuffer_new2()
 {
@@ -89,19 +89,13 @@ void QGLBuffer_new2()
 }
 
 /*
-QGLBuffer ( const QGLBuffer & other )
+QGLBuffer( const QGLBuffer & other )
 */
 void QGLBuffer_new3()
 {
   auto obj = new QGLBuffer( *PQGLBUFFER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLBuffer ()
-[2]QGLBuffer ( QGLBuffer::Type type )
-[3]QGLBuffer ( const QGLBuffer & other )
-*/
 
 HB_FUNC_STATIC( QGLBUFFER_NEW )
 {
@@ -141,7 +135,7 @@ HB_FUNC_STATIC( QGLBUFFER_DELETE )
 }
 
 /*
-void allocate ( const void * data, int count )
+void allocate( const void * data, int count )
 */
 void QGLBuffer_allocate1()
 {
@@ -156,7 +150,7 @@ void QGLBuffer_allocate1()
 }
 
 /*
-void allocate ( int count )
+void allocate( int count )
 */
 void QGLBuffer_allocate2()
 {
@@ -169,11 +163,6 @@ void QGLBuffer_allocate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void allocate ( const void * data, int count )
-[2]void allocate ( int count )
-*/
 
 HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 {
@@ -192,7 +181,7 @@ HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 }
 
 /*
-bool bind ()
+bool bind()
 */
 HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
@@ -216,7 +205,7 @@ HB_FUNC_STATIC( QGLBUFFER_BIND )
 }
 
 /*
-GLuint bufferId () const
+GLuint bufferId() const
 */
 HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
@@ -240,7 +229,7 @@ HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 }
 
 /*
-bool create ()
+bool create()
 */
 HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
@@ -264,7 +253,7 @@ HB_FUNC_STATIC( QGLBUFFER_CREATE )
 }
 
 /*
-void destroy ()
+void destroy()
 */
 HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
@@ -290,7 +279,7 @@ HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 }
 
 /*
-bool isCreated () const
+bool isCreated() const
 */
 HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
@@ -314,7 +303,7 @@ HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 }
 
 /*
-void * map ( QGLBuffer::Access access )
+void * map( QGLBuffer::Access access )
 */
 HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
@@ -338,7 +327,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
 }
 
 /*
-bool read ( int offset, void * data, int count )
+bool read( int offset, void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_READ )
 {
@@ -362,7 +351,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
 }
 
 /*
-void release ()
+void release()
 */
 void QGLBuffer_release1()
 {
@@ -377,7 +366,7 @@ void QGLBuffer_release1()
 }
 
 /*
-static void release ( QGLBuffer::Type type )
+static void release( QGLBuffer::Type type )
 */
 void QGLBuffer_release2()
 {
@@ -385,11 +374,6 @@ void QGLBuffer_release2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void release ()
-[2]void release ( QGLBuffer::Type type )
-*/
 
 HB_FUNC_STATIC( QGLBUFFER_RELEASE )
 {
@@ -408,7 +392,7 @@ HB_FUNC_STATIC( QGLBUFFER_RELEASE )
 }
 
 /*
-void setUsagePattern ( QGLBuffer::UsagePattern value )
+void setUsagePattern( QGLBuffer::UsagePattern value )
 */
 HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
@@ -434,7 +418,7 @@ HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
@@ -458,7 +442,7 @@ HB_FUNC_STATIC( QGLBUFFER_SIZE )
 }
 
 /*
-QGLBuffer::Type type () const
+QGLBuffer::Type type() const
 */
 HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
@@ -482,7 +466,7 @@ HB_FUNC_STATIC( QGLBUFFER_TYPE )
 }
 
 /*
-bool unmap ()
+bool unmap()
 */
 HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
@@ -506,7 +490,7 @@ HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 }
 
 /*
-QGLBuffer::UsagePattern usagePattern () const
+QGLBuffer::UsagePattern usagePattern() const
 */
 HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
@@ -530,7 +514,7 @@ HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 }
 
 /*
-void write ( int offset, const void * data, int count )
+void write( int offset, const void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_WRITE )
 {

@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QGLFramebufferObjectFormat ()
+QGLFramebufferObjectFormat()
 */
 void QGLFramebufferObjectFormat_new1()
 {
@@ -64,18 +64,13 @@ void QGLFramebufferObjectFormat_new1()
 }
 
 /*
-QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
+QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
 */
 void QGLFramebufferObjectFormat_new2()
 {
   auto obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLFramebufferObjectFormat ()
-[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
-*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
@@ -111,7 +106,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 }
 
 /*
-QGLFramebufferObject::Attachment attachment () const
+QGLFramebufferObject::Attachment attachment() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 }
 
 /*
-GLenum internalTextureFormat () const
+GLenum internalTextureFormat() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 {
@@ -159,7 +154,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
 }
 
 /*
-int samples () const
+int samples() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 {
@@ -183,7 +178,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 }
 
 /*
-void setAttachment ( QGLFramebufferObject::Attachment attachment )
+void setAttachment( QGLFramebufferObject::Attachment attachment )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 {
@@ -209,7 +204,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 }
 
 /*
-void setInternalTextureFormat ( GLenum internalTextureFormat )
+void setInternalTextureFormat( GLenum internalTextureFormat )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 {
@@ -235,7 +230,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 }
 
 /*
-void setSamples ( int samples )
+void setSamples( int samples )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 {
@@ -261,7 +256,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 }
 
 /*
-void setTextureTarget ( GLenum target )
+void setTextureTarget( GLenum target )
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 {
@@ -287,7 +282,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 }
 
 /*
-GLenum textureTarget () const
+GLenum textureTarget() const
 */
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
 {
