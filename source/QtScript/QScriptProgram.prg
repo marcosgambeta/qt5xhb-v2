@@ -69,7 +69,7 @@ void QScriptProgram_new1()
 }
 
 /*
-QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
+QScriptProgram( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
 */
 void QScriptProgram_new2()
 {
@@ -78,7 +78,7 @@ void QScriptProgram_new2()
 }
 
 /*
-QScriptProgram(const QScriptProgram & other)
+QScriptProgram( const QScriptProgram & other )
 */
 void QScriptProgram_new3()
 {
@@ -86,19 +86,13 @@ void QScriptProgram_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QScriptProgram()
-[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
-[3]QScriptProgram(const QScriptProgram & other)
-*/
-
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QScriptProgram_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QScriptProgram_new2();
   }
