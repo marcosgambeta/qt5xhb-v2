@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuthOobReplyHandler(QObject *parent = nullptr)
+QOAuthOobReplyHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
 {
@@ -117,13 +117,5 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
   }
 #endif
 }
-
-/*
-void networkReplyFinished(QNetworkReply *reply) override [protected]
-*/
-
-/*
-QVariantMap parseResponse(const QByteArray &response) [private]
-*/
 
 #pragma ENDDUMP

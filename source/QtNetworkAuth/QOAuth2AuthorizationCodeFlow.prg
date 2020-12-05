@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new1()
 {
@@ -71,7 +71,7 @@ void QOAuth2AuthorizationCodeFlow_new1()
 }
 
 /*
-explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new2()
 {
@@ -82,7 +82,7 @@ void QOAuth2AuthorizationCodeFlow_new2()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new3()
 {
@@ -93,7 +93,7 @@ void QOAuth2AuthorizationCodeFlow_new3()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QUrl & authorizationUrl, const QUrl & accessTokenUrl, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new4()
 {
@@ -104,7 +104,7 @@ void QOAuth2AuthorizationCodeFlow_new4()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, const QUrl & authorizationUrl, const QUrl & accessTokenUrl, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new5()
 {
@@ -113,14 +113,6 @@ void QOAuth2AuthorizationCodeFlow_new5()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
-[2]explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *parent = nullptr)
-[3]QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, QNetworkAccessManager *manager, QObject *parent = nullptr)
-[4]QOAuth2AuthorizationCodeFlow(const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
-[5]QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
 {
@@ -202,7 +194,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
 }
 
 /*
-void setAccessTokenUrl(const QUrl &accessTokenUrl)
+void setAccessTokenUrl( const QUrl & accessTokenUrl )
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 {
@@ -230,7 +222,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 }
 
 /*
-void grant() override (slot)
+void grant() override
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 {
@@ -258,7 +250,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 }
 
 /*
-void refreshAccessToken() (slot)
+void refreshAccessToken()
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 {
@@ -284,18 +276,6 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-void requestAccessToken(const QString &code) [protected]
-*/
-
-/*
-void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
-*/
 
 /*
 void accessTokenUrlChanged( const QUrl & accessTokenUrl )

@@ -73,7 +73,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuth1(QObject *parent = nullptr)
+QOAuth1( QObject * parent = nullptr )
 */
 void QOAuth1_new1()
 {
@@ -84,7 +84,7 @@ void QOAuth1_new1()
 }
 
 /*
-explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth1( QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth1_new2()
 {
@@ -95,13 +95,15 @@ void QOAuth1_new2()
 }
 
 /*
-QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth1( const QString & clientIdentifier, const QString & clientSharedSecret, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
-
-/*
-[1]explicit QOAuth1(QObject *parent = nullptr)
-[2]explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
-*/
+void QOAuth1_new3()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = new QOAuth1( PQSTRING(1), PQSTRING(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
+#endif
+}
 
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
@@ -112,6 +114,10 @@ HB_FUNC_STATIC( QOAUTH1_NEW )
   else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QOAuth1_new2();
+  }
+  else if( ISBETWEEN(3,4) && ISCHAR(1) && ISCHAR(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  {
+    QOAuth1_new3();
   }
   else
   {
@@ -167,7 +173,7 @@ HB_FUNC_STATIC( QOAUTH1_CLIENTSHAREDSECRET )
 }
 
 /*
-void setClientSharedSecret(const QString &clientSharedSecret)
+void setClientSharedSecret( const QString & clientSharedSecret )
 */
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 {
@@ -195,15 +201,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
 }
 
 /*
-QPair<QString, QString> clientCredentials() const
-*/
-
-/*
-void setClientCredentials(const QPair<QString, QString> &clientCredentials)
-*/
-
-/*
-void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
+void setClientCredentials( const QString & clientIdentifier, const QString & clientSharedSecret )
 */
 HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 {
@@ -229,11 +227,6 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
-[2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
-*/
 
 /*
 QString tokenSecret() const
@@ -262,7 +255,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
 }
 
 /*
-void setTokenSecret(const QString &tokenSecret)
+void setTokenSecret( const QString & tokenSecret )
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 {
@@ -290,15 +283,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
 }
 
 /*
-QPair<QString, QString> tokenCredentials() const
-*/
-
-/*
-void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
-*/
-
-/*
-void setTokenCredentials(const QString &token, const QString &tokenSecret)
+void setTokenCredentials( const QString & token, const QString & tokenSecret )
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
 {
@@ -324,11 +309,6 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
-[2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
-*/
 
 /*
 QUrl temporaryCredentialsUrl() const
@@ -358,7 +338,7 @@ HB_FUNC_STATIC( QOAUTH1_TEMPORARYCREDENTIALSURL )
 }
 
 /*
-void setTemporaryCredentialsUrl(const QUrl &url)
+void setTemporaryCredentialsUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QOAUTH1_SETTEMPORARYCREDENTIALSURL )
 {
@@ -413,7 +393,7 @@ HB_FUNC_STATIC( QOAUTH1_TOKENCREDENTIALSURL )
 }
 
 /*
-void setTokenCredentialsUrl(const QUrl &url)
+void setTokenCredentialsUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 {
@@ -441,11 +421,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALSURL )
 }
 
 /*
-SignatureMethod signatureMethod() const
-*/
-
-/*
-void setSignatureMethod(SignatureMethod value)
+void setSignatureMethod( QOAuth1::SignatureMethod value )
 */
 HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 {
@@ -473,27 +449,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
 }
 
 /*
-QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-QNetworkReply *get(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-QNetworkReply *post(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-QNetworkReply *put(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-QNetworkReply *deleteResource(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-void grant() override (slot)
+void grant() override
 */
 HB_FUNC_STATIC( QOAUTH1_GRANT )
 {
@@ -521,7 +477,7 @@ HB_FUNC_STATIC( QOAUTH1_GRANT )
 }
 
 /*
-void continueGrantWithVerifier(const QString &verifier) (slot)
+void continueGrantWithVerifier( const QString & verifier )
 */
 HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 {
@@ -547,26 +503,6 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QNetworkReply *requestTemporaryCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-QNetworkReply *requestTokenCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QPair<QString, QString> &temporaryToken, const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-void setup(QNetworkRequest *request, const QVariantMap &signingParameters, QNetworkAccessManager::Operation operation) [protected]
-*/
-
-/*
-static QByteArray nonce() [protected]
-*/
-
-/*
-static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) [protected]
-*/
 
 /*
 void clientSharedSecretChanged( const QString & credential )

@@ -57,14 +57,6 @@ RETURN
 #endif
 
 /*
-explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
-*/
-
-/*
-QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstractOAuthReplyHandler()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
@@ -115,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 }
 
 /*
-virtual void networkReplyFinished(QNetworkReply *reply) = 0 (slot)
+virtual void networkReplyFinished( QNetworkReply * reply ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 {
@@ -209,10 +201,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 }
 
 /*
-void callbackReceived( const QVariantMap & values )
-*/
-
-/*
 void replyDataReceived( const QByteArray & data )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
@@ -277,9 +265,5 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONREPLYDATARECEIVED )
   hb_retl( false );
 #endif
 }
-
-/*
-void tokensReceived( const QVariantMap & tokens )
-*/
 
 #pragma ENDDUMP

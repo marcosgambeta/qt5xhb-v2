@@ -25,8 +25,10 @@ CLASS QAbstractOAuth INHERIT QObject
    METHOD setClientIdentifier
    METHOD token
    METHOD setToken
+   METHOD status
    METHOD authorizationUrl
    METHOD setAuthorizationUrl
+   METHOD contentType
    METHOD setContentType
    METHOD networkAccessManager
    METHOD setNetworkAccessManager
@@ -82,10 +84,6 @@ RETURN
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 /*
-explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstractOAuth()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_DELETE )
@@ -136,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
 }
 
 /*
-void setClientIdentifier(const QString &clientIdentifier)
+void setClientIdentifier( const QString & clientIdentifier )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
 {
@@ -190,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
 }
 
 /*
-void setToken(const QString &token)
+void setToken( const QString & token )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 {
@@ -218,8 +216,30 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 }
 
 /*
-Status status() const
+QAbstractOAuth::Status status() const
 */
+HB_FUNC_STATIC( QABSTRACTOAUTH_STATUS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QAbstractOAuth *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->status() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
 QUrl authorizationUrl() const
@@ -249,7 +269,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
 }
 
 /*
-void setAuthorizationUrl(const QUrl &url)
+void setAuthorizationUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
 {
@@ -277,15 +297,33 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
 }
 
 /*
-QVariantMap extraTokens() const
+QAbstractOAuth::ContentType contentType() const
 */
+HB_FUNC_STATIC( QABSTRACTOAUTH_CONTENTTYPE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  auto obj = (QAbstractOAuth *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj != nullptr )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->contentType() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, nullptr, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+#endif
+}
 
 /*
-ContentType contentType() const
-*/
-
-/*
-void setContentType(ContentType contentType)
+void setContentType( QAbstractOAuth::ContentType contentType )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
 {
@@ -313,7 +351,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
 }
 
 /*
-QNetworkAccessManager *networkAccessManager() const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
 {
@@ -340,7 +378,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
 }
 
 /*
-void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
+void setNetworkAccessManager( QNetworkAccessManager * networkAccessManager )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
 {
@@ -368,7 +406,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
 }
 
 /*
-QAbstractOAuthReplyHandler *replyHandler() const
+QAbstractOAuthReplyHandler * replyHandler() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
 {
@@ -395,7 +433,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
 }
 
 /*
-void setReplyHandler(QAbstractOAuthReplyHandler *handler)
+void setReplyHandler( QAbstractOAuthReplyHandler * handler )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
 {
@@ -423,35 +461,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
 }
 
 /*
-Q_INVOKABLE virtual QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-*/
-
-/*
-Q_INVOKABLE virtual QNetworkReply *get(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-*/
-
-/*
-Q_INVOKABLE virtual QNetworkReply *post(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-*/
-
-/*
-Q_INVOKABLE virtual QNetworkReply *put(const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-*/
-
-/*
-Q_INVOKABLE virtual QNetworkReply *deleteResource( const QUrl &url, const QVariantMap &parameters = QVariantMap()) = 0
-*/
-
-/*
-ModifyParametersFunction modifyParametersFunction() const
-*/
-
-/*
-void setModifyParametersFunction(const ModifyParametersFunction &modifyParametersFunction)
-*/
-
-/*
-virtual void grant() = 0 (slot)
+virtual void grant() = 0
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 {
@@ -477,22 +487,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void setStatus(Status status) [protected]
-*/
-
-/*
-QString callback() const [protected]
-*/
-
-/*
-virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters) [protected]
-*/
-
-/*
-static QByteArray generateRandomString(quint8 length) [protected]
-*/
 
 /*
 void clientIdentifierChanged( const QString & clientIdentifier )
@@ -759,10 +753,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 }
 
 /*
-void extraTokensChanged( const QVariantMap & tokens )
-*/
-
-/*
 void contentTypeChanged( QAbstractOAuth::ContentType contentType )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONCONTENTTYPECHANGED )
@@ -849,7 +839,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_ONREQUESTFAILED )
         QMetaObject::Connection connection = QObject::connect(sender, 
                                                               &QAbstractOAuth::requestFailed, 
                                                               [sender, indexOfCodeBlock]
-                                                              (QAbstractOAuth::Error arg1) {
+                                                              (const QAbstractOAuth::Error arg1) {
           PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
 
           if( cb != nullptr )

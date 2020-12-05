@@ -79,15 +79,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuth1Signature(const QUrl &url = QUrl(), HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-*/
-
-/*
-QOAuth1Signature(const QUrl &url, const QString &clientSharedKey, const QString &tokenSecret, HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-*/
-
-/*
-QOAuth1Signature(const QOAuth1Signature &other)
+QOAuth1Signature( const QOAuth1Signature & other )
 */
 void QOAuth1Signature_new3()
 {
@@ -96,17 +88,6 @@ void QOAuth1Signature_new3()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-QOAuth1Signature(QOAuth1Signature &&other)
-*/
-
-/*
-[1]explicit QOAuth1Signature(const QUrl &url = QUrl(), HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-[2]QOAuth1Signature(const QUrl &url, const QString &clientSharedKey, const QString &tokenSecret, HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-[3]QOAuth1Signature(const QOAuth1Signature &other)
-[4]QOAuth1Signature(QOAuth1Signature &&other)
-*/
 
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 {
@@ -143,11 +124,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
 }
 
 /*
-HttpRequestMethod httpRequestMethod() const
-*/
-
-/*
-void setHttpRequestMethod(HttpRequestMethod method)
+void setHttpRequestMethod( QOAuth1Signature::HttpRequestMethod method )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD )
 {
@@ -202,7 +179,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
 }
 
 /*
-void setUrl(const QUrl &url)
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
 {
@@ -230,15 +207,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
 }
 
 /*
-QVariantMap parameters() const
-*/
-
-/*
-void setParameters(const QVariantMap &parameters)
-*/
-
-/*
-void addRequestBody(const QUrlQuery &body)
+void addRequestBody( const QUrlQuery & body )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
 {
@@ -266,7 +235,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
 }
 
 /*
-void insert(const QString &key, const QVariant &value)
+void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_INSERT )
 {
@@ -328,7 +297,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
 }
 
 /*
-QVariant take(const QString &key)
+QVariant take( const QString & key )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
 {
@@ -355,7 +324,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
 }
 
 /*
-QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
+QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
 {
@@ -408,7 +377,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_CLIENTSHAREDKEY )
 }
 
 /*
-void setClientSharedKey(const QString &secret)
+void setClientSharedKey( const QString & secret )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY )
 {
@@ -462,7 +431,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TOKENSECRET )
 }
 
 /*
-void setTokenSecret(const QString &secret)
+void setTokenSecret( const QString & secret )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETTOKENSECRET )
 {
@@ -560,7 +529,7 @@ void QOAuth1Signature_plainText1()
 }
 
 /*
-static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
+static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
 */
 void QOAuth1Signature_plainText2()
 {
@@ -569,11 +538,6 @@ void QOAuth1Signature_plainText2()
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
 }
-
-/*
-[1]QByteArray plainText() const
-[2]static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
-*/
 
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 {
@@ -592,7 +556,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 }
 
 /*
-void swap(QOAuth1Signature &other)
+void swap( QOAuth1Signature & other )
 */
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SWAP )
 {
