@@ -70,7 +70,7 @@ RETURN
 #include <QtQuick/QQuickItem>
 
 /*
-QQuickView(QWindow * parent = nullptr)
+QQuickView( QWindow * parent = nullptr )
 */
 void QQuickView_new1()
 {
@@ -79,7 +79,7 @@ void QQuickView_new1()
 }
 
 /*
-QQuickView(QQmlEngine * engine, QWindow * parent)
+QQuickView( QQmlEngine * engine, QWindow * parent )
 */
 void QQuickView_new2()
 {
@@ -88,19 +88,13 @@ void QQuickView_new2()
 }
 
 /*
-QQuickView(const QUrl & source, QWindow * parent = nullptr)
+QQuickView( const QUrl & source, QWindow * parent = nullptr )
 */
 void QQuickView_new3()
 {
   auto obj = new QQuickView( *PQURL(1), OPQWINDOW(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QQuickView(QWindow * parent = nullptr)
-[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-[3]QQuickView(const QUrl & source, QWindow * parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
@@ -192,7 +186,7 @@ HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
 }
 
 /*
-ResizeMode resizeMode() const
+QQuickView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
 {
@@ -266,7 +260,7 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
 }
 
 /*
-void setResizeMode(ResizeMode)
+void setResizeMode( QQuickView::ResizeMode )
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
 {
@@ -317,7 +311,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
 }
 
 /*
-Status status() const
+QQuickView::Status status() const
 */
 HB_FUNC_STATIC( QQUICKVIEW_STATUS )
 {
@@ -341,7 +335,7 @@ HB_FUNC_STATIC( QQUICKVIEW_STATUS )
 }
 
 /*
-void setSource(const QUrl & url)
+void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
 {

@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
 }
 
 /*
-void setColor(const QColor & color)
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_SETCOLOR )
 {

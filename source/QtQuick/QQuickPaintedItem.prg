@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_OPAQUEPAINTING )
 }
 
 /*
-virtual void paint(QPainter * painter) = 0
+virtual void paint( QPainter * painter ) = 0
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PAINT )
 }
 
 /*
-PerformanceHints performanceHints() const
+QQuickPaintedItem::PerformanceHints performanceHints() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_PERFORMANCEHINTS )
 }
 
 /*
-RenderTarget renderTarget() const
+QQuickPaintedItem::RenderTarget renderTarget() const
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_RENDERTARGET )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_RESETCONTENTSSIZE )
 }
 
 /*
-void setAntialiasing(bool enable)
+void setAntialiasing( bool enable )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
 }
 
 /*
-void setContentsScale(qreal)
+void setContentsScale( qreal )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
 }
 
 /*
-void setContentsSize(const QSize &)
+void setContentsSize( const QSize & )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSIZE )
 }
 
 /*
-void setFillColor(const QColor &)
+void setFillColor( const QColor & )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
 }
 
 /*
-void setMipmap(bool enable)
+void setMipmap( bool enable )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
 }
 
 /*
-void setOpaquePainting(bool opaque)
+void setOpaquePainting( bool opaque )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
 }
 
 /*
-void setPerformanceHint(PerformanceHint hint, bool enabled = true)
+void setPerformanceHint( QQuickPaintedItem::PerformanceHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setPerformanceHint( (QQuickPaintedItem::PerformanceHint) hb_parni(1), OPBOOL(2,true) );
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
 }
 
 /*
-void setPerformanceHints(PerformanceHints hints)
+void setPerformanceHints( QQuickPaintedItem::PerformanceHints hints )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
 }
 
 /*
-void setRenderTarget(RenderTarget target)
+void setRenderTarget( QQuickPaintedItem::RenderTarget target )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
 }
 
 /*
-void update(const QRect & rect = QRect())
+void update( const QRect & rect = QRect() )
 */
 HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
 {

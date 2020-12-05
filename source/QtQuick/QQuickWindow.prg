@@ -94,7 +94,7 @@ RETURN
 #include <QtQuick/QSGTexture>
 
 /*
-QQuickWindow(QWindow * parent = nullptr)
+QQuickWindow( QWindow * parent = nullptr )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_NEW )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CONTENTITEM )
 }
 
 /*
-QSGTexture * createTextureFromId(uint id, const QSize & size, CreateTextureOptions options = CreateTextureOption( 0 )) const
+QSGTexture * createTextureFromId( uint id, const QSize & size, QQuickWindow::CreateTextureOptions options = QQuickWindow::CreateTextureOption( 0 ) ) const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQSIZE(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISQSIZE(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QSGTexture * ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), ISNIL(3)? (QQuickWindow::CreateTextureOptions) QQuickWindow::CreateTextureOption( 0 ) : (QQuickWindow::CreateTextureOptions) hb_parni(3) );
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
 }
 
 /*
-QSGTexture * createTextureFromImage(const QImage & image) const
+QSGTexture * createTextureFromImage( const QImage & image ) const
 */
 HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMIMAGE )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_RENDERTARGETSIZE )
 }
 
 /*
-bool sendEvent(QQuickItem * item, QEvent * e)
+bool sendEvent( QQuickItem * item, QEvent * e )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SENDEVENT )
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SENDEVENT )
 }
 
 /*
-void setClearBeforeRendering(bool enabled)
+void setClearBeforeRendering( bool enabled )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
 }
 
 /*
-void setColor(const QColor & color)
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETCOLOR )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETCOLOR )
 }
 
 /*
-void setPersistentOpenGLContext(bool persistent)
+void setPersistentOpenGLContext( bool persistent )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
 }
 
 /*
-void setPersistentSceneGraph(bool persistent)
+void setPersistentSceneGraph( bool persistent )
 */
 HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
 }
 
 /*
-void setRenderTarget(QOpenGLFramebufferObject * fbo)
+void setRenderTarget( QOpenGLFramebufferObject * fbo )
 */
 void QQuickWindow_setRenderTarget1()
 {
@@ -643,7 +643,7 @@ void QQuickWindow_setRenderTarget1()
 }
 
 /*
-void setRenderTarget(uint fboId, const QSize & size)
+void setRenderTarget( uint fboId, const QSize & size )
 */
 void QQuickWindow_setRenderTarget2()
 {
