@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QQmlApplicationEngine(QObject *parent=nullptr)
+QQmlApplicationEngine( QObject * parent = nullptr )
 */
 void QQmlApplicationEngine_new1()
 {
@@ -70,7 +70,7 @@ void QQmlApplicationEngine_new1()
 }
 
 /*
-QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
+QQmlApplicationEngine( const QUrl & url, QObject * parent = nullptr )
 */
 void QQmlApplicationEngine_new2()
 {
@@ -81,7 +81,7 @@ void QQmlApplicationEngine_new2()
 }
 
 /*
-QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
+QQmlApplicationEngine( const QString & filePath, QObject * parent = nullptr )
 */
 void QQmlApplicationEngine_new3()
 {
@@ -90,12 +90,6 @@ void QQmlApplicationEngine_new3()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]QQmlApplicationEngine(QObject *parent=nullptr)
-[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=nullptr)
-[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=nullptr)
-*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
@@ -139,7 +133,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
 }
 
 /*
-QList<QObject*> rootObjects()
+QList<QObject *> rootObjects()
 */
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 {
@@ -189,7 +183,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 }
 
 /*
-void load(const QUrl &url)
+void load( const QUrl & url )
 */
 void QQmlApplicationEngine_load1()
 {
@@ -206,7 +200,7 @@ void QQmlApplicationEngine_load1()
 }
 
 /*
-void load(const QString &filePath)
+void load( const QString & filePath )
 */
 void QQmlApplicationEngine_load2()
 {
@@ -221,11 +215,6 @@ void QQmlApplicationEngine_load2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void load(const QUrl &url)
-[2]void load(const QString &filePath)
-*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {
@@ -244,7 +233,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 }
 
 /*
-void loadData(const QByteArray &data, const QUrl &url = QUrl())
+void loadData( const QByteArray & data, const QUrl & url = QUrl() )
 */
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 {

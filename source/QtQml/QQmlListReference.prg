@@ -78,18 +78,13 @@ void QQmlListReference_new1()
 }
 
 /*
-QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
+QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = nullptr )
 */
 void QQmlListReference_new2()
 {
   auto obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,nullptr) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QQmlListReference()
-[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = nullptr)
-*/
 
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
@@ -125,7 +120,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 }
 
 /*
-bool append(QObject * object) const
+bool append( QObject * object ) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 {
@@ -149,7 +144,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 }
 
 /*
-QObject * at(int index) const
+QObject * at( int index ) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 {

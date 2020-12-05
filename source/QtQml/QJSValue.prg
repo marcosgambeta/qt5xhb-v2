@@ -98,7 +98,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QJSValue(SpecialValue value = UndefinedValue)
+QJSValue( QJSValue::SpecialValue value = QJSValue::UndefinedValue )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW1 )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW1 )
 }
 
 /*
-QJSValue(const QJSValue & other)
+QJSValue( const QJSValue & other )
 */
 void QJSValue_new2()
 {
@@ -116,7 +116,7 @@ void QJSValue_new2()
 }
 
 /*
-QJSValue(bool value)
+QJSValue( bool value )
 */
 void QJSValue_new3()
 {
@@ -125,7 +125,7 @@ void QJSValue_new3()
 }
 
 /*
-QJSValue(int value)
+QJSValue( int value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW4 )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW4 )
 }
 
 /*
-QJSValue(uint value)
+QJSValue( uint value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW5 )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW5 )
 }
 
 /*
-QJSValue(double value)
+QJSValue( double value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW6 )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW6 )
 }
 
 /*
-QJSValue(const QString & value)
+QJSValue( const QString & value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW7 )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QJSVALUE_NEW7 )
 }
 
 /*
-QJSValue(const QLatin1String & value)
+QJSValue( const QLatin1String & value )
 */
 void QJSValue_new8()
 {
@@ -170,7 +170,7 @@ void QJSValue_new8()
 }
 
 /*
-QJSValue(const char * value)
+QJSValue( const char * value )
 */
 HB_FUNC_STATIC( QJSVALUE_NEW9 )
 {
@@ -178,26 +178,11 @@ HB_FUNC_STATIC( QJSVALUE_NEW9 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QJSValue(SpecialValue value = UndefinedValue)
-[2]QJSValue(const QJSValue & other)
-[3]QJSValue(bool value)
-[4]QJSValue(int value)
-[5]QJSValue(uint value)
-[6]QJSValue(double value)
-[7]QJSValue(const QString & value)
-[8]QJSValue(const QLatin1String & value)
-[9]QJSValue(const char * value)
-*/
-
 HB_FUNC_STATIC( QJSVALUE_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QJSVALUE_NEW1 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW4 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW5 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW6 );
   }
   else if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
@@ -210,7 +195,6 @@ HB_FUNC_STATIC( QJSVALUE_NEW )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     HB_FUNC_EXEC( QJSVALUE_NEW7 );
-    //HB_FUNC_EXEC( QJSVALUE_NEW9 );
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   {
@@ -240,7 +224,7 @@ HB_FUNC_STATIC( QJSVALUE_DELETE )
 }
 
 /*
-bool deleteProperty(const QString & name)
+bool deleteProperty( const QString & name )
 */
 HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
 {
@@ -264,7 +248,7 @@ HB_FUNC_STATIC( QJSVALUE_DELETEPROPERTY )
 }
 
 /*
-bool equals(const QJSValue & other) const
+bool equals( const QJSValue & other ) const
 */
 HB_FUNC_STATIC( QJSVALUE_EQUALS )
 {
@@ -288,7 +272,7 @@ HB_FUNC_STATIC( QJSVALUE_EQUALS )
 }
 
 /*
-bool hasOwnProperty(const QString & name) const
+bool hasOwnProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
 {
@@ -312,7 +296,7 @@ HB_FUNC_STATIC( QJSVALUE_HASOWNPROPERTY )
 }
 
 /*
-bool hasProperty(const QString & name) const
+bool hasProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QJSVALUE_HASPROPERTY )
 {
@@ -648,7 +632,7 @@ HB_FUNC_STATIC( QJSVALUE_ISVARIANT )
 }
 
 /*
-QJSValue property(const QString & name) const
+QJSValue property( const QString & name ) const
 */
 void QJSValue_property1()
 {
@@ -662,7 +646,7 @@ void QJSValue_property1()
 }
 
 /*
-QJSValue property(quint32 arrayIndex) const
+QJSValue property( quint32 arrayIndex ) const
 */
 void QJSValue_property2()
 {
@@ -674,11 +658,6 @@ void QJSValue_property2()
     Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
   }
 }
-
-/*
-[1]QJSValue property(const QString & name) const
-[2]QJSValue property(quint32 arrayIndex) const
-*/
 
 HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
@@ -722,7 +701,7 @@ HB_FUNC_STATIC( QJSVALUE_PROTOTYPE )
 }
 
 /*
-void setProperty(const QString & name, const QJSValue & value)
+void setProperty( const QString & name, const QJSValue & value )
 */
 void QJSValue_setProperty1()
 {
@@ -737,7 +716,7 @@ void QJSValue_setProperty1()
 }
 
 /*
-void setProperty(quint32 arrayIndex, const QJSValue & value)
+void setProperty( quint32 arrayIndex, const QJSValue & value )
 */
 void QJSValue_setProperty2()
 {
@@ -750,11 +729,6 @@ void QJSValue_setProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setProperty(const QString & name, const QJSValue & value)
-[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
-*/
 
 HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {
@@ -773,7 +747,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 }
 
 /*
-void setPrototype(const QJSValue & prototype)
+void setPrototype( const QJSValue & prototype )
 */
 HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
 {
@@ -799,7 +773,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROTOTYPE )
 }
 
 /*
-bool strictlyEquals(const QJSValue & other) const
+bool strictlyEquals( const QJSValue & other ) const
 */
 HB_FUNC_STATIC( QJSVALUE_STRICTLYEQUALS )
 {

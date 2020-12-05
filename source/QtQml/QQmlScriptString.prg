@@ -71,18 +71,13 @@ void QQmlScriptString_new1()
 }
 
 /*
-QQmlScriptString(const QQmlScriptString & other)
+QQmlScriptString( const QQmlScriptString & other )
 */
 void QQmlScriptString_new2()
 {
   auto obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QQmlScriptString()
-[2]QQmlScriptString(const QQmlScriptString & other)
-*/
 
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
@@ -118,7 +113,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 }
 
 /*
-bool booleanLiteral(bool * ok) const
+bool booleanLiteral( bool * ok ) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 {
@@ -216,7 +211,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
 }
 
 /*
-qreal numberLiteral(bool * ok) const
+qreal numberLiteral( bool * ok ) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 {

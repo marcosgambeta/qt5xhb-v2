@@ -83,7 +83,7 @@ void QQmlExpression_new1()
 }
 
 /*
-QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
+QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr )
 */
 void QQmlExpression_new2()
 {
@@ -92,7 +92,7 @@ void QQmlExpression_new2()
 }
 
 /*
-QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
+QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr )
 */
 void QQmlExpression_new3()
 {
@@ -100,23 +100,17 @@ void QQmlExpression_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QQmlExpression()
-[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = nullptr)
-[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = nullptr, QObject * scope = nullptr, QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QQmlExpression_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(3,4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QQmlExpression_new2();
   }
-  else if( ISBETWEEN(1,4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2)||ISNIL(2)) && ISOPTQOBJECT(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(1,4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QQmlExpression_new3();
   }
@@ -271,7 +265,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate(bool * valueIsUndefined = nullptr)
+QVariant evaluate( bool * valueIsUndefined = nullptr )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 {
@@ -280,7 +274,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -419,7 +413,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
 }
 
 /*
-void setExpression(const QString & expression)
+void setExpression( const QString & expression )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 {
@@ -445,7 +439,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 }
 
 /*
-void setNotifyOnValueChanged(bool notifyOnChange)
+void setNotifyOnValueChanged( bool notifyOnChange )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 {
@@ -471,7 +465,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 }
 
 /*
-void setSourceLocation(const QString & url, int line, int column = 0)
+void setSourceLocation( const QString & url, int line, int column = 0 )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
 {
@@ -480,7 +474,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );

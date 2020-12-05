@@ -66,7 +66,7 @@ RETURN
 #include <QtQml/QQmlEngine>
 
 /*
-QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
+QQmlContext( QQmlEngine * engine, QObject * parent = nullptr )
 */
 void QQmlContext_new1()
 {
@@ -75,7 +75,7 @@ void QQmlContext_new1()
 }
 
 /*
-QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
+QQmlContext( QQmlContext * parentContext, QObject * parent = nullptr )
 */
 void QQmlContext_new2()
 {
@@ -83,18 +83,13 @@ void QQmlContext_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QQmlContext(QQmlEngine * engine, QObject * parent = nullptr)
-[2]QQmlContext(QQmlContext * parentContext, QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QQmlContext_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QQmlContext_new2();
   }
@@ -174,7 +169,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTOBJECT )
 }
 
 /*
-QVariant contextProperty(const QString & name) const
+QVariant contextProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
 {
@@ -248,7 +243,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_ISVALID )
 }
 
 /*
-QString nameForObject(QObject * object) const
+QString nameForObject( QObject * object ) const
 */
 HB_FUNC_STATIC( QQMLCONTEXT_NAMEFOROBJECT )
 {
@@ -297,7 +292,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_PARENTCONTEXT )
 }
 
 /*
-QUrl resolvedUrl(const QUrl & src)
+QUrl resolvedUrl( const QUrl & src )
 */
 HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_RESOLVEDURL )
 }
 
 /*
-void setBaseUrl(const QUrl & baseUrl)
+void setBaseUrl( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
 {
@@ -348,7 +343,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETBASEURL )
 }
 
 /*
-void setContextObject(QObject * object)
+void setContextObject( QObject * object )
 */
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 {
@@ -374,7 +369,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTOBJECT )
 }
 
 /*
-void setContextProperty(const QString & name, QObject * value)
+void setContextProperty( const QString & name, QObject * value )
 */
 void QQmlContext_setContextProperty1()
 {
@@ -389,7 +384,7 @@ void QQmlContext_setContextProperty1()
 }
 
 /*
-void setContextProperty(const QString & name, const QVariant & value)
+void setContextProperty( const QString & name, const QVariant & value )
 */
 void QQmlContext_setContextProperty2()
 {
@@ -402,11 +397,6 @@ void QQmlContext_setContextProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setContextProperty(const QString & name, QObject * value)
-[2]void setContextProperty(const QString & name, const QVariant & value)
-*/
 
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {
