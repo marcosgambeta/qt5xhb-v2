@@ -105,7 +105,7 @@ RETURN
 #endif
 
 /*
-QQuickWebEngineProfile(QObject *parent = nullptr)
+QQuickWebEngineProfile( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
 {
@@ -121,10 +121,6 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
   }
 #endif
 }
-
-/*
-QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = nullptr) [private]
-*/
 
 /*
 ~QQuickWebEngineProfile()
@@ -177,7 +173,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_STORAGENAME )
 }
 
 /*
-void setStorageName(const QString &name)
+void setStorageName( const QString & name )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSTORAGENAME )
 {
@@ -231,7 +227,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISOFFTHERECORD )
 }
 
 /*
-void setOffTheRecord(bool offTheRecord)
+void setOffTheRecord( bool offTheRecord )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETOFFTHERECORD )
 {
@@ -285,7 +281,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH )
 }
 
 /*
-void setPersistentStoragePath(const QString &path)
+void setPersistentStoragePath( const QString & path )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH )
 {
@@ -339,7 +335,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CACHEPATH )
 }
 
 /*
-void setCachePath(const QString &path)
+void setCachePath( const QString & path )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETCACHEPATH )
 {
@@ -393,7 +389,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPUSERAGENT )
 }
 
 /*
-void setHttpUserAgent(const QString &userAgent)
+void setHttpUserAgent( const QString & userAgent )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT )
 {
@@ -421,7 +417,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT )
 }
 
 /*
-HttpCacheType httpCacheType() const
+QQuickWebEngineProfile::HttpCacheType httpCacheType() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHETYPE )
 {
@@ -447,7 +443,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHETYPE )
 }
 
 /*
-void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
+void setHttpCacheType( QQuickWebEngineProfile::HttpCacheType )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE )
 {
@@ -501,7 +497,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE )
 }
 
 /*
-void setHttpAcceptLanguage(const QString &httpAcceptLanguage)
+void setHttpAcceptLanguage( const QString & httpAcceptLanguage )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE )
 {
@@ -529,7 +525,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE )
 }
 
 /*
-PersistentCookiesPolicy persistentCookiesPolicy() const
+QQuickWebEngineProfile::PersistentCookiesPolicy persistentCookiesPolicy() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY )
 {
@@ -555,7 +551,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY )
 }
 
 /*
-void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
+void setPersistentCookiesPolicy( QQuickWebEngineProfile::PersistentCookiesPolicy )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY )
 {
@@ -609,7 +605,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHEMAXIMUMSIZE )
 }
 
 /*
-void setHttpCacheMaximumSize(int maxSize)
+void setHttpCacheMaximumSize( int maxSize )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHEMAXIMUMSIZE )
 {
@@ -663,7 +659,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES )
 }
 
 /*
-void setSpellCheckLanguages(const QStringList &languages)
+void setSpellCheckLanguages( const QStringList & languages )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES )
 {
@@ -717,7 +713,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED )
 }
 
 /*
-void setSpellCheckEnabled(bool enabled)
+void setSpellCheckEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED )
 {
@@ -745,11 +741,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED )
 }
 
 /*
-QQmlListProperty<QQuickWebEngineScript> userScripts()
-*/
-
-/*
-QWebEngineCookieStore *cookieStore() const
+QWebEngineCookieStore * cookieStore() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
 {
@@ -776,7 +768,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
 }
 
 /*
-void setRequestInterceptor(QWebEngineUrlRequestInterceptor *interceptor)
+void setRequestInterceptor( QWebEngineUrlRequestInterceptor * interceptor )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR )
 {
@@ -804,7 +796,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR )
 }
 
 /*
-const QWebEngineUrlSchemeHandler *urlSchemeHandler(const QByteArray &) const
+const QWebEngineUrlSchemeHandler * urlSchemeHandler( const QByteArray & ) const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
 {
@@ -831,7 +823,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
 }
 
 /*
-void installUrlSchemeHandler(const QByteArray &scheme, QWebEngineUrlSchemeHandler *)
+void installUrlSchemeHandler( const QByteArray & scheme, QWebEngineUrlSchemeHandler * )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER )
 {
@@ -859,7 +851,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER )
 }
 
 /*
-void removeUrlScheme(const QByteArray &scheme)
+void removeUrlScheme( const QByteArray & scheme )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME )
 {
@@ -887,7 +879,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME )
 }
 
 /*
-void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
+void removeUrlSchemeHandler( QWebEngineUrlSchemeHandler * )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEMEHANDLER )
 {
@@ -971,7 +963,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CLEARHTTPCACHE )
 }
 
 /*
-static QQuickWebEngineProfile *defaultProfile()
+static QQuickWebEngineProfile * defaultProfile()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
 {
@@ -991,14 +983,6 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
 #endif
 #endif
 }
-
-/*
-void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) [private]
-*/
-
-/*
-QQuickWebEngineSettings *settings() const [private]
-*/
 
 /*
 void cachePathChanged()
@@ -1063,14 +1047,6 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ONCACHEPATHCHANGED )
   hb_retl( false );
 #endif
 }
-
-/*
-void downloadFinished( QQuickWebEngineDownloadItem * download )
-*/
-
-/*
-void downloadRequested( QQuickWebEngineDownloadItem * download )
-*/
 
 /*
 void httpAcceptLanguageChanged()
