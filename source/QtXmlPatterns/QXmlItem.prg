@@ -65,7 +65,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QXmlItem ()
+QXmlItem()
 */
 void QXmlItem_new1()
 {
@@ -74,7 +74,7 @@ void QXmlItem_new1()
 }
 
 /*
-QXmlItem ( const QXmlItem & other )
+QXmlItem( const QXmlItem & other )
 */
 void QXmlItem_new2()
 {
@@ -83,7 +83,7 @@ void QXmlItem_new2()
 }
 
 /*
-QXmlItem ( const QXmlNodeModelIndex & node )
+QXmlItem( const QXmlNodeModelIndex & node )
 */
 void QXmlItem_new3()
 {
@@ -92,20 +92,13 @@ void QXmlItem_new3()
 }
 
 /*
-QXmlItem ( const QVariant & atomicValue )
+QXmlItem( const QVariant & atomicValue )
 */
 void QXmlItem_new4()
 {
   auto obj = new QXmlItem( *PQVARIANT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlItem ()
-[2]QXmlItem ( const QXmlItem & other )
-[3]QXmlItem ( const QXmlNodeModelIndex & node )
-[4]QXmlItem ( const QVariant & atomicValue )
-*/
 
 HB_FUNC_STATIC( QXMLITEM_NEW )
 {
@@ -149,7 +142,7 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
 }
 
 /*
-bool isAtomicValue () const
+bool isAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
@@ -173,7 +166,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 }
 
 /*
-bool isNode () const
+bool isNode() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
@@ -197,7 +190,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
@@ -221,7 +214,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
 }
 
 /*
-QVariant toAtomicValue () const
+QVariant toAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
@@ -246,7 +239,7 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 }
 
 /*
-QXmlNodeModelIndex toNodeModelIndex () const
+QXmlNodeModelIndex toNodeModelIndex() const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {

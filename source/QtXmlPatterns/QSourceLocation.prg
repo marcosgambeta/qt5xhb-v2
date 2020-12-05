@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QSourceLocation ()
+QSourceLocation()
 */
 void QSourceLocation_new1()
 {
@@ -73,7 +73,7 @@ void QSourceLocation_new1()
 }
 
 /*
-QSourceLocation ( const QSourceLocation & other )
+QSourceLocation( const QSourceLocation & other )
 */
 void QSourceLocation_new2()
 {
@@ -82,19 +82,13 @@ void QSourceLocation_new2()
 }
 
 /*
-QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
 */
 void QSourceLocation_new3()
 {
   auto obj = new QSourceLocation( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSourceLocation ()
-[2]QSourceLocation ( const QSourceLocation & other )
-[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
-*/
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {
@@ -106,7 +100,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   {
     QSourceLocation_new2();
   }
-  else if( ISBETWEEN(1,3) && ISQURL(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQURL(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSourceLocation_new3();
   }
@@ -134,7 +128,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 }
 
 /*
-qint64 column () const
+qint64 column() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 {
@@ -158,7 +152,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 {
@@ -182,7 +176,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 }
 
 /*
-qint64 line () const
+qint64 line() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 {
@@ -206,7 +200,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 }
 
 /*
-void setColumn ( qint64 newColumn )
+void setColumn( qint64 newColumn )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 {
@@ -232,7 +226,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 }
 
 /*
-void setLine ( qint64 newLine )
+void setLine( qint64 newLine )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 {
@@ -258,7 +252,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 }
 
 /*
-void setUri ( const QUrl & newUri )
+void setUri( const QUrl & newUri )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 {
@@ -284,7 +278,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 }
 
 /*
-QUrl uri () const
+QUrl uri() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_URI )
 {

@@ -76,7 +76,7 @@ RETURN
 #include <QtXmlPatterns/QXmlSchema>
 
 /*
-QXmlSchemaValidator ()
+QXmlSchemaValidator()
 */
 void QXmlSchemaValidator_new1()
 {
@@ -85,18 +85,13 @@ void QXmlSchemaValidator_new1()
 }
 
 /*
-QXmlSchemaValidator ( const QXmlSchema & schema )
+QXmlSchemaValidator( const QXmlSchema & schema )
 */
 void QXmlSchemaValidator_new2()
 {
   auto obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlSchemaValidator ()
-[2]QXmlSchemaValidator ( const QXmlSchema & schema )
-*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
@@ -132,7 +127,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_DELETE )
 }
 
 /*
-QAbstractMessageHandler * messageHandler () const
+QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 {
@@ -157,7 +152,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_MESSAGEHANDLER )
 }
 
 /*
-QXmlNamePool namePool () const
+QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 {
@@ -182,7 +177,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NAMEPOOL )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 {
@@ -207,7 +202,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER )
 }
 
 /*
-QXmlSchema schema () const
+QXmlSchema schema() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 {
@@ -232,7 +227,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 }
 
 /*
-void setMessageHandler ( QAbstractMessageHandler * handler )
+void setMessageHandler( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 {
@@ -258,7 +253,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 {
@@ -284,7 +279,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setSchema ( const QXmlSchema & schema )
+void setSchema( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 {
@@ -310,7 +305,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 }
 
 /*
-void setUriResolver ( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 {
@@ -336,7 +331,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 }
 
 /*
-const QAbstractUriResolver * uriResolver () const
+const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 {
@@ -361,7 +356,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
 }
 
 /*
-bool validate ( const QUrl & source ) const
+bool validate( const QUrl & source ) const
 */
 void QXmlSchemaValidator_validate1()
 {
@@ -374,7 +369,7 @@ void QXmlSchemaValidator_validate1()
 }
 
 /*
-bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+bool validate( QIODevice * source, const QUrl & documentUri = QUrl() ) const
 */
 void QXmlSchemaValidator_validate2()
 {
@@ -387,7 +382,7 @@ void QXmlSchemaValidator_validate2()
 }
 
 /*
-bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+bool validate( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
 */
 void QXmlSchemaValidator_validate3()
 {
@@ -398,12 +393,6 @@ void QXmlSchemaValidator_validate3()
     RBOOL( obj->validate( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
   }
 }
-
-/*
-[1]bool validate ( const QUrl & source ) const
-[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
-*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {

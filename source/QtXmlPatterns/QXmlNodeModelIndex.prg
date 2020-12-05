@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QXmlNodeModelIndex ()
+QXmlNodeModelIndex()
 */
 void QXmlNodeModelIndex_new1()
 {
@@ -71,18 +71,13 @@ void QXmlNodeModelIndex_new1()
 }
 
 /*
-QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
+QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
 */
 void QXmlNodeModelIndex_new2()
 {
   auto obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlNodeModelIndex ()
-[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
-*/
 
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
@@ -118,7 +113,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DELETE )
 }
 
 /*
-qint64 additionalData () const
+qint64 additionalData() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 }
 
 /*
-qint64 data () const
+qint64 data() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 }
 
 /*
-void * internalPointer () const
+void * internalPointer() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 }
 
 /*
-const QAbstractXmlNodeModel * model () const
+const QAbstractXmlNodeModel * model() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
