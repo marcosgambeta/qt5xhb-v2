@@ -68,7 +68,7 @@ RETURN
 #include <QtWinExtras/QWinTaskbarProgress>
 
 /*
-explicit QWinTaskbarButton(QObject *parent = nullptr)
+QWinTaskbarButton( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_NEW )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_DELETE )
 }
 
 /*
-QWindow *window() const
+QWindow * window() const
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
 }
 
 /*
-void setWindow(QWindow *window)
+void setWindow( QWindow * window )
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETWINDOW )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
 }
 
 /*
-void setOverlayIcon(const QIcon &icon)
+void setOverlayIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYICON )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
 }
 
 /*
-void setOverlayAccessibleDescription(const QString &description)
+void setOverlayAccessibleDescription( const QString & description )
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION )
 }
 
 /*
-QWinTaskbarProgress *progress() const
+QWinTaskbarProgress * progress() const
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
 }
 
 /*
-bool eventFilter(QObject *, QEvent *)
+bool eventFilter( QObject *, QEvent * )
 */
 HB_FUNC_STATIC( QWINTASKBARBUTTON_EVENTFILTER )
 {
