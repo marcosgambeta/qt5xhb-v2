@@ -67,7 +67,7 @@ RETURN
 #include <QtCore/QString>
 
 /*
-explicit QWebSocketCorsAuthenticator(const QString &origin)
+QWebSocketCorsAuthenticator( const QString & origin )
 */
 void QWebSocketCorsAuthenticator_new1()
 {
@@ -78,7 +78,7 @@ void QWebSocketCorsAuthenticator_new1()
 }
 
 /*
-explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
 */
 void QWebSocketCorsAuthenticator_new2()
 {
@@ -87,11 +87,6 @@ void QWebSocketCorsAuthenticator_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
-[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
-*/
 
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_DELETE )
 }
 
 /*
-void swap(QWebSocketCorsAuthenticator &other)
+void swap( QWebSocketCorsAuthenticator & other )
 */
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
 {
@@ -209,7 +204,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
 }
 
 /*
-void setAllowed(bool allowed)
+void setAllowed( bool allowed )
 */
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
 {

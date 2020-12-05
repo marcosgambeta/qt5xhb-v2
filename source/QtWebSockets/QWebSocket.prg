@@ -110,12 +110,12 @@ RETURN
 #include <QtWebSockets/QMaskGenerator>
 
 /*
-explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = nullptr)
+QWebSocket( const QString & origin = QString(), QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBSOCKET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( ISBETWEEN(0,3) && ISOPTCHAR(1) && ISOPTNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(0,3) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     auto obj = new QWebSocket( OPQSTRING(1,QString()), ISNIL(2)? (QWebSocketProtocol::Version) QWebSocketProtocol::VersionLatest : (QWebSocketProtocol::Version) hb_parni(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QWEBSOCKET_PROXY )
 }
 
 /*
-void setProxy(const QNetworkProxy &networkProxy)
+void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPROXY )
 }
 
 /*
-const QMaskGenerator *maskGenerator() const
+const QMaskGenerator * maskGenerator() const
 */
 HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QWEBSOCKET_MASKGENERATOR )
 }
 
 /*
-void setMaskGenerator(const QMaskGenerator *maskGenerator)
+void setMaskGenerator( const QMaskGenerator * maskGenerator )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SETMASKGENERATOR )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QWEBSOCKET_READBUFFERSIZE )
 }
 
 /*
-void setReadBufferSize(qint64 size)
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SETREADBUFFERSIZE )
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QWEBSOCKET_RESUME )
 }
 
 /*
-void setPauseMode(QAbstractSocket::PauseModes pauseMode)
+void setPauseMode( QAbstractSocket::PauseModes pauseMode )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSEREASON )
 }
 
 /*
-qint64 sendTextMessage(const QString &message)
+qint64 sendTextMessage( const QString & message )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
 }
 
 /*
-qint64 sendBinaryMessage(const QByteArray &data)
+qint64 sendBinaryMessage( const QByteArray & data )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
 }
 
 /*
-void ignoreSslErrors(const QList<QSslError> &errors)
+void ignoreSslErrors( const QList<QSslError> & errors )
 */
 void QWebSocket_ignoreSslErrors1()
 {
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SSLCONFIGURATION )
 }
 
 /*
-void setSslConfiguration(const QSslConfiguration &sslConfiguration)
+void setSslConfiguration( const QSslConfiguration & sslConfiguration )
 */
 HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETSSLCONFIGURATION )
 }
 
 /*
-void close(QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal,const QString &reason = QString())
+void close( QWebSocketProtocol::CloseCode closeCode = QWebSocketProtocol::CloseCodeNormal, const QString & reason = QString() )
 */
 HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
 {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->close( ISNIL(1)? (QWebSocketProtocol::CloseCode) QWebSocketProtocol::CloseCodeNormal : (QWebSocketProtocol::CloseCode) hb_parni(1), OPQSTRING(2,QString()) );
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
 }
 
 /*
-void open(const QUrl &url)
+void open( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBSOCKET_OPEN )
 {
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QWEBSOCKET_OPEN )
 }
 
 /*
-void ping(const QByteArray &payload = QByteArray())
+void ping( const QByteArray & payload = QByteArray() )
 */
 HB_FUNC_STATIC( QWEBSOCKET_PING )
 {
