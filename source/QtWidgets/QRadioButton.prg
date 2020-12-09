@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QRadioButton ( QWidget * parent = nullptr )
+QRadioButton( QWidget * parent = nullptr )
 */
 void QRadioButton_new1()
 {
@@ -61,7 +61,7 @@ void QRadioButton_new1()
 }
 
 /*
-explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
+QRadioButton( const QString & text, QWidget * parent = nullptr )
 */
 void QRadioButton_new2()
 {
@@ -69,18 +69,13 @@ void QRadioButton_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QRadioButton ( QWidget * parent = nullptr )
-[2]explicit QRadioButton ( const QString & text, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QRadioButton_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QRadioButton_new2();
   }
@@ -110,7 +105,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
 {

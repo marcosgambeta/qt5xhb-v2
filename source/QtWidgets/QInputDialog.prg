@@ -105,11 +105,11 @@ RETURN
 #endif
 
 /*
-QInputDialog ( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
+QInputDialog( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     auto obj = new QInputDialog( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DELETE )
 }
 
 /*
-QString cancelButtonText () const
+QString cancelButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 }
 
 /*
-void setCancelButtonText ( const QString & text )
+void setCancelButtonText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
 }
 
 /*
-QStringList comboBoxItems () const
+QStringList comboBoxItems() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 }
 
 /*
-void setComboBoxItems ( const QStringList & items )
+void setComboBoxItems( const QStringList & items )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
 }
 
 /*
-int doubleDecimals () const
+int doubleDecimals() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 }
 
 /*
-void setDoubleDecimals ( int decimals )
+void setDoubleDecimals( int decimals )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
 }
 
 /*
-double doubleMaximum () const
+double doubleMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 }
 
 /*
-void setDoubleMaximum ( double max )
+void setDoubleMaximum( double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
 }
 
 /*
-double doubleMinimum () const
+double doubleMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 }
 
 /*
-void setDoubleMinimum ( double min )
+void setDoubleMinimum( double min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
 }
 
 /*
-double doubleValue () const
+double doubleValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 }
 
 /*
-void setDoubleValue ( double value )
+void setDoubleValue( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
 }
 
 /*
-InputMode inputMode () const
+QInputDialog::InputMode inputMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 }
 
 /*
-void setInputMode ( InputMode mode )
+void setInputMode( QInputDialog::InputMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
 }
 
 /*
-int intMaximum () const
+int intMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 }
 
 /*
-void setIntMaximum ( int max )
+void setIntMaximum( int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
 }
 
 /*
-int intMinimum () const
+int intMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 }
 
 /*
-void setIntMinimum ( int min )
+void setIntMinimum( int min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
 }
 
 /*
-int intStep () const
+int intStep() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 }
 
 /*
-void setIntStep ( int step )
+void setIntStep( int step )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
 }
 
 /*
-int intValue () const
+int intValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 }
 
 /*
-void setIntValue ( int value )
+void setIntValue( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
 }
 
 /*
-bool isComboBoxEditable () const
+bool isComboBoxEditable() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 {
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 }
 
 /*
-void setComboBoxEditable ( bool editable )
+void setComboBoxEditable( bool editable )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
 }
 
 /*
-QString labelText () const
+QString labelText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 }
 
 /*
-void setLabelText ( const QString & text )
+void setLabelText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
 }
 
 /*
-QString okButtonText () const
+QString okButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 }
 
 /*
-void setOkButtonText ( const QString & text )
+void setOkButtonText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
 {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
 {
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
 }
 
 /*
-InputDialogOptions options () const
+QInputDialog::InputDialogOptions options() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 }
 
 /*
-void setOptions ( InputDialogOptions options )
+void setOptions( QInputDialog::InputDialogOptions options )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
 {
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
 }
 
 /*
-void setDoubleRange ( double min, double max )
+void setDoubleRange( double min, double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
 {
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
 }
 
 /*
-void setIntRange ( int min, int max )
+void setIntRange( int min, int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
 {
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
 }
 
 /*
-void setOption ( InputDialogOption option, bool on = true )
+void setOption( QInputDialog::InputDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setOption( (QInputDialog::InputDialogOption) hb_parni(1), OPBOOL(2,true) );
@@ -994,7 +994,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
 }
 
 /*
-bool testOption ( InputDialogOption option ) const
+bool testOption( QInputDialog::InputDialogOption option ) const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
 {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
 }
 
 /*
-QLineEdit::EchoMode textEchoMode () const
+QLineEdit::EchoMode textEchoMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 }
 
 /*
-void setTextEchoMode ( QLineEdit::EchoMode mode )
+void setTextEchoMode( QLineEdit::EchoMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 }
 
 /*
-QString textValue () const
+QString textValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 {
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 }
 
 /*
-void setTextValue ( const QString & text )
+void setTextValue( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
 {
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
 }
 
 /*
-void done ( int result )
+void done( int result )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DONE )
 {
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DONE )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
 {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 {
@@ -1220,12 +1220,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 }
 
 /*
-static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
+static double getDouble( QWidget * parent, const QString & title, const QString & label, double value = 0, double minValue = -2147483647, double maxValue = 2147483647, int decimals = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTLOG(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISLOG(8)||ISNIL(8)) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1241,12 +1241,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 }
 
 /*
-static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0)
+static int getInt( QWidget * parent, const QString & title, const QString & label, int value = 0, int minValue = -2147483647, int maxValue = 2147483647, int step = 1, bool * ok = nullptr, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTLOG(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISLOG(8)||ISNIL(8)) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1262,12 +1262,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 }
 
 /*
-static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getItem( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISARRAY(4) && ISOPTNUM(5) && ISOPTLOG(6) && ISOPTLOG(7) && ISOPTNUM(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(4,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISARRAY(4) && (ISNUM(5)||ISNIL(5)) && (ISLOG(6)||ISNIL(6)) && (ISLOG(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par7;
@@ -1283,12 +1283,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 }
 
 /*
-static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getText( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode echo = QLineEdit::Normal, const QString & text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTCHAR(5) && ISOPTLOG(6) && ISOPTNUM(7) && ISOPTNUM(8) )
+  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) && (ISLOG(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
 #endif
     bool par6;
@@ -1304,12 +1304,12 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 }
 
 /*
-static QString getMultiLineText(QWidget *parent, const QString &title, const QString &label, const QString &text = QString(), bool *ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone)
+static QString getMultiLineText( QWidget * parent, const QString & title, const QString & label, const QString & text = QString(), bool * ok = nullptr, Qt::WindowFlags flags = 0, Qt::InputMethodHints inputMethodHints = Qt::ImhNone )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) && ISOPTNUM(7) )
+  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) && (ISLOG(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
   {
 #endif
     bool par5;

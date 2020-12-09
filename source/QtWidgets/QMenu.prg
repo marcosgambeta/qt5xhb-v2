@@ -93,7 +93,7 @@ RETURN
 #endif
 
 /*
-explicit QMenu ( QWidget * parent = nullptr )
+QMenu( QWidget * parent = nullptr )
 */
 void QMenu_new1()
 {
@@ -102,7 +102,7 @@ void QMenu_new1()
 }
 
 /*
-explicit QMenu ( const QString & title, QWidget * parent = nullptr )
+QMenu( const QString & title, QWidget * parent = nullptr )
 */
 void QMenu_new2()
 {
@@ -110,18 +110,13 @@ void QMenu_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QMenu ( QWidget * parent = nullptr )
-[2]explicit QMenu ( const QString & title, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QMENU_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QMenu_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QMenu_new2();
   }
@@ -151,7 +146,7 @@ HB_FUNC_STATIC( QMENU_DELETE )
 }
 
 /*
-QAction * actionAt ( const QPoint & pt ) const
+QAction * actionAt( const QPoint & pt ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONAT )
 {
@@ -176,7 +171,7 @@ HB_FUNC_STATIC( QMENU_ACTIONAT )
 }
 
 /*
-QRect actionGeometry ( QAction * act ) const
+QRect actionGeometry( QAction * act ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 {
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 }
 
 /*
-QAction * activeAction () const
+QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 {
@@ -226,7 +221,7 @@ HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 }
 
 /*
-void setActiveAction ( QAction * act )
+void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 {
@@ -252,7 +247,7 @@ HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QMenu_addAction1()
 {
@@ -266,7 +261,7 @@ void QMenu_addAction1()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QMenu_addAction2()
 {
@@ -280,7 +275,7 @@ void QMenu_addAction2()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
 void QMenu_addAction3()
 {
@@ -294,7 +289,7 @@ void QMenu_addAction3()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
 */
 void QMenu_addAction4()
 {
@@ -308,7 +303,7 @@ void QMenu_addAction4()
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QMenu_addAction5()
 {
@@ -321,14 +316,6 @@ void QMenu_addAction5()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]QAction * addAction ( const QString & text )
-[2]QAction * addAction ( const QIcon & icon, const QString & text )
-[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-[5]void addAction ( QAction * action )
-*/
 
 HB_FUNC_STATIC( QMENU_ADDACTION )
 {
@@ -359,7 +346,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
 }
 
 /*
-QAction * addMenu ( QMenu * menu )
+QAction * addMenu( QMenu * menu )
 */
 void QMenu_addMenu1()
 {
@@ -373,7 +360,7 @@ void QMenu_addMenu1()
 }
 
 /*
-QMenu * addMenu ( const QString & title )
+QMenu * addMenu( const QString & title )
 */
 void QMenu_addMenu2()
 {
@@ -387,7 +374,7 @@ void QMenu_addMenu2()
 }
 
 /*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
+QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenu_addMenu3()
 {
@@ -399,12 +386,6 @@ void QMenu_addMenu3()
     Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
   }
 }
-
-/*
-[1]QAction * addMenu ( QMenu * menu )
-[2]QMenu * addMenu ( const QString & title )
-[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
 
 HB_FUNC_STATIC( QMENU_ADDMENU )
 {
@@ -427,7 +408,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 {
@@ -452,7 +433,7 @@ HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QMENU_CLEAR )
 {
@@ -478,7 +459,7 @@ HB_FUNC_STATIC( QMENU_CLEAR )
 }
 
 /*
-QAction * defaultAction () const
+QAction * defaultAction() const
 */
 HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 {
@@ -503,7 +484,7 @@ HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 }
 
 /*
-void setDefaultAction ( QAction * act )
+void setDefaultAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 {
@@ -529,7 +510,7 @@ HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 }
 
 /*
-QAction * exec ()
+QAction * exec()
 */
 void QMenu_exec1()
 {
@@ -543,7 +524,7 @@ void QMenu_exec1()
 }
 
 /*
-QAction * exec ( const QPoint & pos, QAction * at = nullptr )
+QAction * exec( const QPoint & pos, QAction * at = nullptr )
 */
 void QMenu_exec2()
 {
@@ -557,7 +538,7 @@ void QMenu_exec2()
 }
 
 /*
-static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
+static QAction * exec( QList<QAction *> actions, const QPoint & pos, QAction * at = 0, QWidget * parent = 0 )
 */
 void QMenu_exec3()
 {
@@ -568,15 +549,9 @@ void QMenu_exec3()
   {
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QAction * ptr = QMenu::exec( par1, *PQPOINT(2), OPQACTION(3,nullptr), OPQWIDGET(4,nullptr) );
+  QAction * ptr = QMenu::exec( par1, *PQPOINT(2), OPQACTION(3,0), OPQWIDGET(4,0) );
   Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 }
-
-/*
-[1]QAction * exec ()
-[2]QAction * exec ( const QPoint & pos, QAction * at = 0 )
-[3]static QAction *exec(QList<QAction*> actions, const QPoint &pos, QAction *at=0, QWidget *parent=0)
-*/
 
 HB_FUNC_STATIC( QMENU_EXEC )
 {
@@ -584,11 +559,11 @@ HB_FUNC_STATIC( QMENU_EXEC )
   {
     QMenu_exec1();
   }
-  else if( ISBETWEEN(1,2) && ISQPOINT(1) && ISOPTQACTION(2) )
+  else if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
   {
     QMenu_exec2();
   }
-  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && ISOPTQACTION(3) && ISOPTQWIDGET(4) )
+  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) && (ISQWIDGET(4)||ISNIL(4)) )
   {
     QMenu_exec3();
   }
@@ -599,7 +574,7 @@ HB_FUNC_STATIC( QMENU_EXEC )
 }
 
 /*
-void hideTearOffMenu ()
+void hideTearOffMenu()
 */
 HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 {
@@ -625,7 +600,7 @@ HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QMENU_ICON )
 {
@@ -650,7 +625,7 @@ HB_FUNC_STATIC( QMENU_ICON )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QMENU_SETICON )
 {
@@ -676,7 +651,7 @@ HB_FUNC_STATIC( QMENU_SETICON )
 }
 
 /*
-QAction * insertMenu ( QAction * before, QMenu * menu )
+QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENU_INSERTMENU )
 {
@@ -701,7 +676,7 @@ HB_FUNC_STATIC( QMENU_INSERTMENU )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 {
@@ -726,7 +701,7 @@ HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QMENU_ISEMPTY )
 {
@@ -750,7 +725,7 @@ HB_FUNC_STATIC( QMENU_ISEMPTY )
 }
 
 /*
-bool isTearOffEnabled () const
+bool isTearOffEnabled() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 {
@@ -774,7 +749,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 }
 
 /*
-void setTearOffEnabled ( bool )
+void setTearOffEnabled( bool )
 */
 HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
@@ -800,7 +775,7 @@ HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 }
 
 /*
-bool isTearOffMenuVisible () const
+bool isTearOffMenuVisible() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 {
@@ -824,7 +799,7 @@ HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 }
 
 /*
-QAction * menuAction () const
+QAction * menuAction() const
 */
 HB_FUNC_STATIC( QMENU_MENUACTION )
 {
@@ -849,7 +824,7 @@ HB_FUNC_STATIC( QMENU_MENUACTION )
 }
 
 /*
-void popup ( const QPoint & pos, QAction * at = nullptr )
+void popup( const QPoint & pos, QAction * at = nullptr )
 */
 HB_FUNC_STATIC( QMENU_POPUP )
 {
@@ -875,7 +850,7 @@ HB_FUNC_STATIC( QMENU_POPUP )
 }
 
 /*
-bool separatorsCollapsible () const
+bool separatorsCollapsible() const
 */
 HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 {
@@ -899,7 +874,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 }
 
 /*
-void setSeparatorsCollapsible ( bool collapse )
+void setSeparatorsCollapsible( bool collapse )
 */
 HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
@@ -925,7 +900,7 @@ HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QMENU_TITLE )
 {
@@ -949,7 +924,7 @@ HB_FUNC_STATIC( QMENU_TITLE )
 }
 
 /*
-void setTitle ( const QString & title )
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QMENU_SETTITLE )
 {
@@ -975,7 +950,7 @@ HB_FUNC_STATIC( QMENU_SETTITLE )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENU_SIZEHINT )
 {
@@ -1026,7 +1001,7 @@ HB_FUNC_STATIC( QMENU_WCEMENU )
 }
 
 /*
-QAction * addSection ( const QString & text )
+QAction * addSection( const QString & text )
 */
 void QMenu_addSection1()
 {
@@ -1042,7 +1017,7 @@ void QMenu_addSection1()
 }
 
 /*
-QAction *addSection(const QIcon &icon, const QString &text)
+QAction * addSection( const QIcon & icon, const QString & text )
 */
 void QMenu_addSection2()
 {
@@ -1056,11 +1031,6 @@ void QMenu_addSection2()
   }
 #endif
 }
-
-/*
-[1]QAction *addSection(const QString &text)
-[2]QAction *addSection(const QIcon &icon, const QString &text)
-*/
 
 HB_FUNC_STATIC( QMENU_ADDSECTION )
 {
@@ -1081,7 +1051,7 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
 }
 
 /*
-QAction *insertSection(QAction *before, const QString &text)
+QAction * insertSection( QAction * before, const QString & text )
 */
 void QMenu_insertSection1()
 {
@@ -1097,7 +1067,7 @@ void QMenu_insertSection1()
 }
 
 /*
-QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
+QAction * insertSection( QAction * before, const QIcon & icon, const QString & text )
 */
 void QMenu_insertSection2()
 {
@@ -1111,11 +1081,6 @@ void QMenu_insertSection2()
   }
 #endif
 }
-
-/*
-[1]QAction *insertSection(QAction *before, const QString &text)
-[2]QAction *insertSection(QAction *before, const QIcon &icon, const QString &text)
-*/
 
 HB_FUNC_STATIC( QMENU_INSERTSECTION )
 {
@@ -1136,7 +1101,7 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
 }
 
 /*
-void setNoReplayFor(QWidget *widget)
+void setNoReplayFor( QWidget * widget )
 */
 HB_FUNC_STATIC( QMENU_SETNOREPLAYFOR )
 {
@@ -1218,7 +1183,7 @@ HB_FUNC_STATIC( QMENU_TOOLTIPSVISIBLE )
 }
 
 /*
-void setToolTipsVisible(bool visible)
+void setToolTipsVisible( bool visible )
 */
 HB_FUNC_STATIC( QMENU_SETTOOLTIPSVISIBLE )
 {

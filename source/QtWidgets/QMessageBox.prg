@@ -102,7 +102,7 @@ RETURN
 #include <QtWidgets/QPushButton>
 
 /*
-explicit QMessageBox ( QWidget * parent = nullptr )
+QMessageBox( QWidget * parent = nullptr )
 */
 void QMessageBox_new1()
 {
@@ -111,7 +111,7 @@ void QMessageBox_new1()
 }
 
 /*
-QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
 void QMessageBox_new2()
 {
@@ -119,18 +119,13 @@ void QMessageBox_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QMessageBox ( QWidget * parent = nullptr )
-[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = nullptr, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
-*/
-
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QMessageBox_new1();
   }
-  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTQWIDGET(5) && ISOPTNUM(6) )
+  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
     QMessageBox_new2();
   }
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button, ButtonRole role )
+void addButton( QAbstractButton * button, QMessageBox::ButtonRole role )
 */
 void QMessageBox_addButton1()
 {
@@ -175,7 +170,7 @@ void QMessageBox_addButton1()
 }
 
 /*
-QPushButton * addButton ( const QString & text, ButtonRole role )
+QPushButton * addButton( const QString & text, QMessageBox::ButtonRole role )
 */
 void QMessageBox_addButton2()
 {
@@ -189,7 +184,7 @@ void QMessageBox_addButton2()
 }
 
 /*
-QPushButton * addButton ( StandardButton button )
+QPushButton * addButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_addButton3()
 {
@@ -201,12 +196,6 @@ void QMessageBox_addButton3()
     Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
   }
 }
-
-/*
-[1]void addButton ( QAbstractButton * button, ButtonRole role )
-[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-[3]QPushButton * addButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
@@ -229,7 +218,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button ( StandardButton which ) const
+QAbstractButton * button( QMessageBox::StandardButton which ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 {
@@ -254,7 +243,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 }
 
 /*
-ButtonRole buttonRole ( QAbstractButton * button ) const
+QMessageBox::ButtonRole buttonRole( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 {
@@ -278,7 +267,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 {
@@ -326,7 +315,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
 }
 
 /*
-QAbstractButton * clickedButton () const
+QAbstractButton * clickedButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 {
@@ -351,7 +340,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
 }
 
 /*
-QPushButton * defaultButton () const
+QPushButton * defaultButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
 {
@@ -430,7 +419,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 }
 
 /*
-QAbstractButton * escapeButton () const
+QAbstractButton * escapeButton() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 {
@@ -455,7 +444,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
 }
 
 /*
-Icon icon () const
+QMessageBox::Icon icon() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 {
@@ -479,7 +468,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICON )
 }
 
 /*
-void setIcon ( Icon )
+void setIcon( QMessageBox::Icon )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 {
@@ -505,7 +494,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 }
 
 /*
-QPixmap iconPixmap () const
+QPixmap iconPixmap() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 {
@@ -530,7 +519,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
 }
 
 /*
-void setIconPixmap ( const QPixmap & pixmap )
+void setIconPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 {
@@ -556,7 +545,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 }
 
 /*
-QString informativeText () const
+QString informativeText() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 {
@@ -580,7 +569,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 }
 
 /*
-void setInformativeText ( const QString & text )
+void setInformativeText( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 {
@@ -606,7 +595,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 {
@@ -632,7 +621,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 {
@@ -658,7 +647,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 }
 
 /*
-void setDefaultButton ( QPushButton * button )
+void setDefaultButton( QPushButton * button )
 */
 void QMessageBox_setDefaultButton1()
 {
@@ -673,7 +662,7 @@ void QMessageBox_setDefaultButton1()
 }
 
 /*
-void setDefaultButton ( StandardButton button )
+void setDefaultButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_setDefaultButton2()
 {
@@ -686,11 +675,6 @@ void QMessageBox_setDefaultButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setDefaultButton ( QPushButton * button )
-[2]void setDefaultButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 {
@@ -709,7 +693,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 }
 
 /*
-void setEscapeButton ( QAbstractButton * button )
+void setEscapeButton( QAbstractButton * button )
 */
 void QMessageBox_setEscapeButton1()
 {
@@ -724,7 +708,7 @@ void QMessageBox_setEscapeButton1()
 }
 
 /*
-void setEscapeButton ( StandardButton button )
+void setEscapeButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_setEscapeButton2()
 {
@@ -737,11 +721,6 @@ void QMessageBox_setEscapeButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setEscapeButton ( QAbstractButton * button )
-[2]void setEscapeButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 {
@@ -760,7 +739,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 }
 
 /*
-void setWindowModality ( Qt::WindowModality windowModality )
+void setWindowModality( Qt::WindowModality windowModality )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 {
@@ -786,7 +765,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 }
 
 /*
-void setWindowTitle ( const QString & title )
+void setWindowTitle( const QString & title )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 {
@@ -812,7 +791,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 }
 
 /*
-StandardButton standardButton ( QAbstractButton * button ) const
+QMessageBox::StandardButton standardButton( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 {
@@ -836,7 +815,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 }
 
 /*
-StandardButtons standardButtons () const
+QMessageBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 {
@@ -860,7 +839,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTONS )
 }
 
 /*
-void setStandardButtons ( StandardButtons buttons )
+void setStandardButtons( QMessageBox::StandardButtons buttons )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 {
@@ -886,7 +865,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 {
@@ -910,7 +889,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXT )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 {
@@ -936,7 +915,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 }
 
 /*
-Qt::TextFormat textFormat () const
+Qt::TextFormat textFormat() const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 {
@@ -960,7 +939,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 }
 
 /*
-void setTextFormat ( Qt::TextFormat format )
+void setTextFormat( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 {
@@ -1014,7 +993,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 }
 
 /*
-int exec ()
+int exec()
 */
 HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 {
@@ -1038,7 +1017,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 }
 
 /*
-static void about ( QWidget * parent, const QString & title, const QString & text )
+static void about( QWidget * parent, const QString & title, const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 {
@@ -1059,12 +1038,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 }
 
 /*
-static void aboutQt ( QWidget * parent, const QString & title = QString() )
+static void aboutQt( QWidget * parent, const QString & title = QString() )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     QMessageBox::aboutQt( PQWIDGET(1), OPQSTRING(2,QString()) );
@@ -1080,12 +1059,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 }
 
 /*
-static StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton critical( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::critical( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1099,12 +1078,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 }
 
 /*
-static StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton information( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::information( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1118,12 +1097,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 }
 
 /*
-static StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton question( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::question( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1137,12 +1116,12 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 }
 
 /*
-static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton warning( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::warning( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1180,7 +1159,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTINTERACTIONFLAGS )
 }
 
 /*
-void setTextInteractionFlags (Qt::TextInteractionFlags flags)
+void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTINTERACTIONFLAGS )
 {
@@ -1231,7 +1210,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CHECKBOX )
 }
 
 /*
-void setCheckBox (QCheckBox *cb)
+void setCheckBox( QCheckBox * cb )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
 {
@@ -1257,7 +1236,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETCHECKBOX )
 }
 
 /*
-static QPixmap standardIcon(Icon icon)
+static QPixmap standardIcon( QMessageBox::Icon icon )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDICON )
 {
@@ -1277,7 +1256,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_STANDARDICON )
 }
 
 /*
-QString buttonText(int button) const
+QString buttonText( int button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
 {
@@ -1301,7 +1280,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONTEXT )
 }
 
 /*
-void setButtonText(int button, const QString &text)
+void setButtonText( int button, const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETBUTTONTEXT )
 {
