@@ -69,7 +69,7 @@ RETURN
 #include <QtWidgets/QPushButton>
 
 /*
-QDialogButtonBox ( QWidget * parent = nullptr )
+QDialogButtonBox( QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new1()
 {
@@ -78,7 +78,7 @@ void QDialogButtonBox_new1()
 }
 
 /*
-QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
+QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new2()
 {
@@ -87,7 +87,7 @@ void QDialogButtonBox_new2()
 }
 
 /*
-QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
+QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
 */
 void QDialogButtonBox_new3()
 {
@@ -95,23 +95,17 @@ void QDialogButtonBox_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QDialogButtonBox ( QWidget * parent = nullptr )
-[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = nullptr )
-[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QDialogButtonBox_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QDialogButtonBox_new2();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTQWIDGET(3) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QDialogButtonBox_new3();
   }
@@ -141,7 +135,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button, ButtonRole role )
+void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton1()
 {
@@ -156,7 +150,7 @@ void QDialogButtonBox_addButton1()
 }
 
 /*
-QPushButton * addButton ( const QString & text, ButtonRole role )
+QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton2()
 {
@@ -170,7 +164,7 @@ void QDialogButtonBox_addButton2()
 }
 
 /*
-QPushButton * addButton ( StandardButton button )
+QPushButton * addButton( QDialogButtonBox::StandardButton button )
 */
 void QDialogButtonBox_addButton3()
 {
@@ -182,12 +176,6 @@ void QDialogButtonBox_addButton3()
     Qt5xHb::createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
   }
 }
-
-/*
-[1]void addButton ( QAbstractButton * button, ButtonRole role )
-[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-[3]QPushButton * addButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {
@@ -210,7 +198,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 }
 
 /*
-QPushButton * button ( StandardButton which ) const
+QPushButton * button( QDialogButtonBox::StandardButton which ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
@@ -235,7 +223,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 }
 
 /*
-ButtonRole buttonRole ( QAbstractButton * button ) const
+QDialogButtonBox::ButtonRole buttonRole( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
@@ -259,7 +247,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 }
 
 /*
-bool centerButtons () const
+bool centerButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
@@ -283,7 +271,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
@@ -309,7 +297,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
@@ -333,7 +321,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
@@ -359,7 +347,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 }
 
 /*
-void setCenterButtons ( bool center )
+void setCenterButtons( bool center )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
@@ -385,7 +373,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
@@ -411,7 +399,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 }
 
 /*
-void setStandardButtons ( StandardButtons buttons )
+void setStandardButtons( QDialogButtonBox::StandardButtons buttons )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
@@ -437,7 +425,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 }
 
 /*
-StandardButton standardButton ( QAbstractButton * button ) const
+QDialogButtonBox::StandardButton standardButton( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
@@ -461,7 +449,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 }
 
 /*
-StandardButtons standardButtons () const
+QDialogButtonBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {

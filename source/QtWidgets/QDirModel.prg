@@ -89,7 +89,7 @@ RETURN
 #endif
 
 /*
-QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
+QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = nullptr )
 */
 void QDirModel_new1()
 {
@@ -98,7 +98,7 @@ void QDirModel_new1()
 }
 
 /*
-QDirModel(QObject *parent = nullptr)
+QDirModel( QObject * parent = nullptr )
 */
 void QDirModel_new2()
 {
@@ -106,18 +106,13 @@ void QDirModel_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = nullptr)
-[2]QDirModel(QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
-  if( ISBETWEEN(3,4) && ISARRAY(1) && ISNUM(2) && ISNUM(3) && ISOPTQOBJECT(4) )
+  if( ISBETWEEN(3,4) && ISARRAY(1) && ISNUM(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QDirModel_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QDirModel_new2();
   }
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
 }
 
 /*
-QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
+QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 void QDirModel_index1()
 {
@@ -161,7 +156,7 @@ void QDirModel_index1()
 }
 
 /*
-QModelIndex index(const QString &path, int column = 0) const
+QModelIndex index( const QString & path, int column = 0 ) const
 */
 void QDirModel_index2()
 {
@@ -174,18 +169,13 @@ void QDirModel_index2()
   }
 }
 
-/*
-[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-[2]QModelIndex index(const QString &path, int column = 0) const
-*/
-
 HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {
   if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
   {
     QDirModel_index1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDirModel_index2();
   }
@@ -196,7 +186,7 @@ HB_FUNC_STATIC( QDIRMODEL_INDEX )
 }
 
 /*
-QModelIndex parent(const QModelIndex &child) const
+QModelIndex parent( const QModelIndex & child ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_PARENT )
 {
@@ -221,7 +211,7 @@ HB_FUNC_STATIC( QDIRMODEL_PARENT )
 }
 
 /*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
 {
@@ -245,7 +235,7 @@ HB_FUNC_STATIC( QDIRMODEL_ROWCOUNT )
 }
 
 /*
-int columnCount(const QModelIndex &parent = QModelIndex()) const
+int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
 {
@@ -269,7 +259,7 @@ HB_FUNC_STATIC( QDIRMODEL_COLUMNCOUNT )
 }
 
 /*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_DATA )
 {
@@ -278,7 +268,7 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -294,7 +284,7 @@ HB_FUNC_STATIC( QDIRMODEL_DATA )
 }
 
 /*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
+bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETDATA )
 {
@@ -303,7 +293,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
@@ -318,7 +308,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETDATA )
 }
 
 /*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
 {
@@ -327,7 +317,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       auto ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
@@ -343,7 +333,7 @@ HB_FUNC_STATIC( QDIRMODEL_HEADERDATA )
 }
 
 /*
-bool hasChildren(const QModelIndex &index = QModelIndex()) const
+bool hasChildren( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
 {
@@ -367,7 +357,7 @@ HB_FUNC_STATIC( QDIRMODEL_HASCHILDREN )
 }
 
 /*
-Qt::ItemFlags flags(const QModelIndex &index) const
+Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_FLAGS )
 {
@@ -391,7 +381,7 @@ HB_FUNC_STATIC( QDIRMODEL_FLAGS )
 }
 
 /*
-void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
+void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QDIRMODEL_SORT )
 {
@@ -400,7 +390,7 @@ HB_FUNC_STATIC( QDIRMODEL_SORT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->sort( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
@@ -465,7 +455,7 @@ HB_FUNC_STATIC( QDIRMODEL_SUPPORTEDDROPACTIONS )
 }
 
 /*
-void setIconProvider(QFileIconProvider *provider)
+void setIconProvider( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
 {
@@ -491,7 +481,7 @@ HB_FUNC_STATIC( QDIRMODEL_SETICONPROVIDER )
 }
 
 /*
-QFileIconProvider *iconProvider() const
+QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
 {
@@ -516,7 +506,7 @@ HB_FUNC_STATIC( QDIRMODEL_ICONPROVIDER )
 }
 
 /*
-void setNameFilters(const QStringList &filters)
+void setNameFilters( const QStringList & filters )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETNAMEFILTERS )
 {
@@ -566,7 +556,7 @@ HB_FUNC_STATIC( QDIRMODEL_NAMEFILTERS )
 }
 
 /*
-void setFilter(QDir::Filters filters)
+void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETFILTER )
 {
@@ -616,7 +606,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILTER )
 }
 
 /*
-void setSorting(QDir::SortFlags sort)
+void setSorting( QDir::SortFlags sort )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETSORTING )
 {
@@ -666,7 +656,7 @@ HB_FUNC_STATIC( QDIRMODEL_SORTING )
 }
 
 /*
-void setResolveSymlinks(bool enable)
+void setResolveSymlinks( bool enable )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETRESOLVESYMLINKS )
 {
@@ -716,7 +706,7 @@ HB_FUNC_STATIC( QDIRMODEL_RESOLVESYMLINKS )
 }
 
 /*
-void setReadOnly(bool enable)
+void setReadOnly( bool enable )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETREADONLY )
 {
@@ -766,7 +756,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISREADONLY )
 }
 
 /*
-void setLazyChildCount(bool enable)
+void setLazyChildCount( bool enable )
 */
 HB_FUNC_STATIC( QDIRMODEL_SETLAZYCHILDCOUNT )
 {
@@ -816,7 +806,7 @@ HB_FUNC_STATIC( QDIRMODEL_LAZYCHILDCOUNT )
 }
 
 /*
-bool isDir(const QModelIndex &index) const
+bool isDir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_ISDIR )
 {
@@ -840,7 +830,7 @@ HB_FUNC_STATIC( QDIRMODEL_ISDIR )
 }
 
 /*
-QModelIndex mkdir(const QModelIndex &parent, const QString &name)
+QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 */
 HB_FUNC_STATIC( QDIRMODEL_MKDIR )
 {
@@ -865,7 +855,7 @@ HB_FUNC_STATIC( QDIRMODEL_MKDIR )
 }
 
 /*
-bool rmdir(const QModelIndex &index)
+bool rmdir( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDIRMODEL_RMDIR )
 {
@@ -889,7 +879,7 @@ HB_FUNC_STATIC( QDIRMODEL_RMDIR )
 }
 
 /*
-bool remove(const QModelIndex &index)
+bool remove( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDIRMODEL_REMOVE )
 {
@@ -913,7 +903,7 @@ HB_FUNC_STATIC( QDIRMODEL_REMOVE )
 }
 
 /*
-QString filePath(const QModelIndex &index) const
+QString filePath( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
 {
@@ -937,7 +927,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEPATH )
 }
 
 /*
-QString fileName(const QModelIndex &index) const
+QString fileName( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_FILENAME )
 {
@@ -961,7 +951,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILENAME )
 }
 
 /*
-QIcon fileIcon(const QModelIndex &index) const
+QIcon fileIcon( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_FILEICON )
 {
@@ -986,7 +976,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEICON )
 }
 
 /*
-QFileInfo fileInfo(const QModelIndex &index) const
+QFileInfo fileInfo( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
 {
@@ -1011,7 +1001,7 @@ HB_FUNC_STATIC( QDIRMODEL_FILEINFO )
 }
 
 /*
-void refresh(const QModelIndex &parent = QModelIndex())
+void refresh( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QDIRMODEL_REFRESH )
 {

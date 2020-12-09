@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
 }
 
 /*
-const QRect availableGeometry ( int screen = -1 ) const
+const QRect availableGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_availableGeometry1()
 {
@@ -94,7 +94,7 @@ void QDesktopWidget_availableGeometry1()
 }
 
 /*
-const QRect availableGeometry ( const QWidget * widget ) const
+const QRect availableGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_availableGeometry2()
 {
@@ -108,7 +108,7 @@ void QDesktopWidget_availableGeometry2()
 }
 
 /*
-const QRect availableGeometry ( const QPoint & p ) const
+const QRect availableGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_availableGeometry3()
 {
@@ -121,15 +121,9 @@ void QDesktopWidget_availableGeometry3()
   }
 }
 
-/*
-[1]const QRect availableGeometry ( int screen = -1 ) const
-[2]const QRect availableGeometry ( const QWidget * widget ) const
-[3]const QRect availableGeometry ( const QPoint & p ) const
-*/
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QDesktopWidget_availableGeometry1();
   }
@@ -148,7 +142,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 }
 
 /*
-bool isVirtualDesktop () const
+bool isVirtualDesktop() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
@@ -172,7 +166,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 }
 
 /*
-int primaryScreen () const
+int primaryScreen() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
@@ -196,7 +190,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 }
 
 /*
-QWidget * screen ( int screen = -1 )
+QWidget * screen( int screen = -1 )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
@@ -205,7 +199,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QWidget * ptr = obj->screen( OPINT(1,-1) );
@@ -221,7 +215,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 }
 
 /*
-int screenCount () const
+int screenCount() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
@@ -245,7 +239,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 }
 
 /*
-const QRect screenGeometry ( int screen = -1 ) const
+const QRect screenGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_screenGeometry1()
 {
@@ -259,7 +253,7 @@ void QDesktopWidget_screenGeometry1()
 }
 
 /*
-const QRect screenGeometry ( const QWidget * widget ) const
+const QRect screenGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_screenGeometry2()
 {
@@ -273,7 +267,7 @@ void QDesktopWidget_screenGeometry2()
 }
 
 /*
-const QRect screenGeometry ( const QPoint & p ) const
+const QRect screenGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_screenGeometry3()
 {
@@ -286,15 +280,9 @@ void QDesktopWidget_screenGeometry3()
   }
 }
 
-/*
-[1]const QRect screenGeometry ( int screen = -1 ) const
-[2]const QRect screenGeometry ( const QWidget * widget ) const
-[3]const QRect screenGeometry ( const QPoint & p ) const
-*/
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QDesktopWidget_screenGeometry1();
   }
@@ -313,7 +301,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 }
 
 /*
-int screenNumber ( const QWidget * widget = nullptr ) const
+int screenNumber( const QWidget * widget = nullptr ) const
 */
 void QDesktopWidget_screenNumber1()
 {
@@ -326,7 +314,7 @@ void QDesktopWidget_screenNumber1()
 }
 
 /*
-int screenNumber ( const QPoint & point ) const
+int screenNumber( const QPoint & point ) const
 */
 void QDesktopWidget_screenNumber2()
 {
@@ -338,14 +326,9 @@ void QDesktopWidget_screenNumber2()
   }
 }
 
-/*
-[1]int screenNumber ( const QWidget * widget = 0 ) const
-[2]int screenNumber ( const QPoint & point ) const
-*/
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QDesktopWidget_screenNumber1();
   }

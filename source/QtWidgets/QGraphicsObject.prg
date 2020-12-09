@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_DELETE )
 }
 
 /*
-void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
+void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->grabGesture( (Qt::GestureType) hb_parni(1), ISNIL(2)? (Qt::GestureFlags) Qt::GestureFlags() : (Qt::GestureFlags) hb_parni(2) );
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 }
 
 /*
-void ungrabGesture ( Qt::GestureType gesture )
+void ungrabGesture( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {

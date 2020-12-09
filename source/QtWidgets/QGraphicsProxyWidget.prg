@@ -58,11 +58,11 @@ RETURN
 #endif
 
 /*
-QGraphicsProxyWidget ( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = 0 )
+QGraphicsProxyWidget( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     auto obj = new QGraphicsProxyWidget( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
 }
 
 /*
-QGraphicsProxyWidget * createProxyForChildWidget ( QWidget * child )
+QGraphicsProxyWidget * createProxyForChildWidget( QWidget * child )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 }
 
 /*
-QRectF subWidgetRect ( const QWidget * widget ) const
+QRectF subWidgetRect( const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 }
 
 /*
-virtual void setGeometry ( const QRectF & rect )
+virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
 {
