@@ -115,7 +115,7 @@ RETURN
 #include <QtWebKitWidgets/QWebFrame>
 
 /*
-QWebElement ()
+QWebElement()
 */
 void QWebElement_new1()
 {
@@ -124,18 +124,13 @@ void QWebElement_new1()
 }
 
 /*
-QWebElement ( const QWebElement & other )
+QWebElement( const QWebElement & other )
 */
 void QWebElement_new2()
 {
   auto obj = new QWebElement( *PQWEBELEMENT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QWebElement ()
-[2]QWebElement ( const QWebElement & other )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
@@ -171,7 +166,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DELETE )
 }
 
 /*
-void addClass ( const QString & name )
+void addClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
 {
@@ -197,7 +192,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
 }
 
 /*
-void appendInside ( const QString & markup )
+void appendInside( const QString & markup )
 */
 void QWebElement_appendInside1()
 {
@@ -212,7 +207,7 @@ void QWebElement_appendInside1()
 }
 
 /*
-void appendInside ( const QWebElement & element )
+void appendInside( const QWebElement & element )
 */
 void QWebElement_appendInside2()
 {
@@ -225,11 +220,6 @@ void QWebElement_appendInside2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void appendInside ( const QString & markup )
-[2]void appendInside ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
@@ -248,7 +238,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 }
 
 /*
-void appendOutside ( const QString & markup )
+void appendOutside( const QString & markup )
 */
 void QWebElement_appendOutside1()
 {
@@ -263,7 +253,7 @@ void QWebElement_appendOutside1()
 }
 
 /*
-void appendOutside ( const QWebElement & element )
+void appendOutside( const QWebElement & element )
 */
 void QWebElement_appendOutside2()
 {
@@ -276,11 +266,6 @@ void QWebElement_appendOutside2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void appendOutside ( const QString & markup )
-[2]void appendOutside ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
@@ -299,7 +284,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 }
 
 /*
-QString attribute ( const QString & name, const QString & defaultValue = QString() ) const
+QString attribute( const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 {
@@ -308,7 +293,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -323,7 +308,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 }
 
 /*
-QString attributeNS ( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
+QString attributeNS( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 {
@@ -332,7 +317,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
     {
 #endif
       RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
@@ -347,7 +332,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 }
 
 /*
-QStringList attributeNames ( const QString & namespaceUri = QString() ) const
+QStringList attributeNames( const QString & namespaceUri = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 {
@@ -356,7 +341,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->attributeNames( OPQSTRING(1,QString()) ) );
@@ -371,7 +356,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 }
 
 /*
-QStringList classes () const
+QStringList classes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 {
@@ -395,7 +380,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 }
 
 /*
-QWebElement clone () const
+QWebElement clone() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 {
@@ -420,7 +405,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 }
 
 /*
-QWebElement document () const
+QWebElement document() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 {
@@ -445,7 +430,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 }
 
 /*
-void encloseContentsWith ( const QWebElement & element )
+void encloseContentsWith( const QWebElement & element )
 */
 void QWebElement_encloseContentsWith1()
 {
@@ -460,7 +445,7 @@ void QWebElement_encloseContentsWith1()
 }
 
 /*
-void encloseContentsWith ( const QString & markup )
+void encloseContentsWith( const QString & markup )
 */
 void QWebElement_encloseContentsWith2()
 {
@@ -473,11 +458,6 @@ void QWebElement_encloseContentsWith2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void encloseContentsWith ( const QWebElement & element )
-[2]void encloseContentsWith ( const QString & markup )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
@@ -496,7 +476,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 }
 
 /*
-void encloseWith ( const QString & markup )
+void encloseWith( const QString & markup )
 */
 void QWebElement_encloseWith1()
 {
@@ -511,7 +491,7 @@ void QWebElement_encloseWith1()
 }
 
 /*
-void encloseWith ( const QWebElement & element )
+void encloseWith( const QWebElement & element )
 */
 void QWebElement_encloseWith2()
 {
@@ -524,11 +504,6 @@ void QWebElement_encloseWith2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void encloseWith ( const QString & markup )
-[2]void encloseWith ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
@@ -547,7 +522,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 }
 
 /*
-QVariant evaluateJavaScript ( const QString & scriptSource )
+QVariant evaluateJavaScript( const QString & scriptSource )
 */
 HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 {
@@ -572,7 +547,7 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 }
 
 /*
-QWebElementCollection findAll ( const QString & selectorQuery ) const
+QWebElementCollection findAll( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 {
@@ -597,7 +572,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 }
 
 /*
-QWebElement findFirst ( const QString & selectorQuery ) const
+QWebElement findFirst( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 {
@@ -622,7 +597,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 }
 
 /*
-QWebElement firstChild () const
+QWebElement firstChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 {
@@ -647,7 +622,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 }
 
 /*
-QRect geometry () const
+QRect geometry() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 {
@@ -672,7 +647,7 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 }
 
 /*
-bool hasAttribute ( const QString & name ) const
+bool hasAttribute( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 {
@@ -696,7 +671,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 }
 
 /*
-bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
+bool hasAttributeNS( const QString & namespaceUri, const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 {
@@ -720,7 +695,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 }
 
 /*
-bool hasAttributes () const
+bool hasAttributes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 {
@@ -744,7 +719,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 }
 
 /*
-bool hasClass ( const QString & name ) const
+bool hasClass( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 {
@@ -768,7 +743,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 {
@@ -792,7 +767,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 {
@@ -816,7 +791,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 }
 
 /*
-QWebElement lastChild () const
+QWebElement lastChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 {
@@ -841,7 +816,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 }
 
 /*
-QString localName () const
+QString localName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 {
@@ -865,7 +840,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 }
 
 /*
-QString namespaceUri () const
+QString namespaceUri() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 {
@@ -889,7 +864,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 }
 
 /*
-QWebElement nextSibling () const
+QWebElement nextSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 {
@@ -914,7 +889,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 }
 
 /*
-QWebElement parent () const
+QWebElement parent() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 {
@@ -939,7 +914,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 {
@@ -963,7 +938,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 }
 
 /*
-void prependInside ( const QString & markup )
+void prependInside( const QString & markup )
 */
 void QWebElement_prependInside1()
 {
@@ -978,7 +953,7 @@ void QWebElement_prependInside1()
 }
 
 /*
-void prependInside ( const QWebElement & element )
+void prependInside( const QWebElement & element )
 */
 void QWebElement_prependInside2()
 {
@@ -991,11 +966,6 @@ void QWebElement_prependInside2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void prependInside ( const QString & markup )
-[2]void prependInside ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
@@ -1014,7 +984,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 }
 
 /*
-void prependOutside ( const QString & markup )
+void prependOutside( const QString & markup )
 */
 void QWebElement_prependOutside1()
 {
@@ -1029,7 +999,7 @@ void QWebElement_prependOutside1()
 }
 
 /*
-void prependOutside ( const QWebElement & element )
+void prependOutside( const QWebElement & element )
 */
 void QWebElement_prependOutside2()
 {
@@ -1042,11 +1012,6 @@ void QWebElement_prependOutside2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void prependOutside ( const QString & markup )
-[2]void prependOutside ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
@@ -1065,7 +1030,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 }
 
 /*
-QWebElement previousSibling () const
+QWebElement previousSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 {
@@ -1090,7 +1055,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 }
 
 /*
-void removeAllChildren ()
+void removeAllChildren()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 {
@@ -1116,7 +1081,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 }
 
 /*
-void removeAttribute ( const QString & name )
+void removeAttribute( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 {
@@ -1142,7 +1107,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 }
 
 /*
-void removeAttributeNS ( const QString & namespaceUri, const QString & name )
+void removeAttributeNS( const QString & namespaceUri, const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 {
@@ -1168,7 +1133,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 }
 
 /*
-void removeClass ( const QString & name )
+void removeClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 {
@@ -1194,7 +1159,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 }
 
 /*
-void removeFromDocument ()
+void removeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
 {
@@ -1220,7 +1185,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
 }
 
 /*
-void render ( QPainter * painter )
+void render( QPainter * painter )
 */
 void QWebElement_render1()
 {
@@ -1235,7 +1200,7 @@ void QWebElement_render1()
 }
 
 /*
-void render ( QPainter * painter, const QRect & clip )
+void render( QPainter * painter, const QRect & clip )
 */
 void QWebElement_render2()
 {
@@ -1248,11 +1213,6 @@ void QWebElement_render2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render ( QPainter * painter )
-[2]void render ( QPainter * painter, const QRect & clip )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
@@ -1271,7 +1231,7 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 }
 
 /*
-void replace ( const QString & markup )
+void replace( const QString & markup )
 */
 void QWebElement_replace1()
 {
@@ -1286,7 +1246,7 @@ void QWebElement_replace1()
 }
 
 /*
-void replace ( const QWebElement & element )
+void replace( const QWebElement & element )
 */
 void QWebElement_replace2()
 {
@@ -1299,11 +1259,6 @@ void QWebElement_replace2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void replace ( const QString & markup )
-[2]void replace ( const QWebElement & element )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
@@ -1322,7 +1277,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 }
 
 /*
-void setAttribute ( const QString & name, const QString & value )
+void setAttribute( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 {
@@ -1348,7 +1303,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 }
 
 /*
-void setAttributeNS ( const QString & namespaceUri, const QString & name, const QString & value )
+void setAttributeNS( const QString & namespaceUri, const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 {
@@ -1374,7 +1329,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 }
 
 /*
-void setFocus ()
+void setFocus()
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 {
@@ -1400,7 +1355,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 }
 
 /*
-void setInnerXml ( const QString & markup )
+void setInnerXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 {
@@ -1426,7 +1381,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 }
 
 /*
-void setOuterXml ( const QString & markup )
+void setOuterXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 {
@@ -1452,7 +1407,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 }
 
 /*
-void setPlainText ( const QString & text )
+void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 {
@@ -1478,7 +1433,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 }
 
 /*
-void setStyleProperty ( const QString & name, const QString & value )
+void setStyleProperty( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 {
@@ -1504,7 +1459,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 }
 
 /*
-QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
+QString styleProperty( const QString & name, QWebElement::StyleResolveStrategy strategy ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 {
@@ -1528,7 +1483,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 }
 
 /*
-QString tagName () const
+QString tagName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 {
@@ -1552,7 +1507,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 }
 
 /*
-QWebElement & takeFromDocument ()
+QWebElement & takeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 {
@@ -1577,7 +1532,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 }
 
 /*
-QString toInnerXml () const
+QString toInnerXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 {
@@ -1601,7 +1556,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 }
 
 /*
-QString toOuterXml () const
+QString toOuterXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 {
@@ -1625,7 +1580,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 }
 
 /*
-QString toPlainText () const
+QString toPlainText() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 {
@@ -1649,7 +1604,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 }
 
 /*
-void toggleClass ( const QString & name )
+void toggleClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 {
@@ -1675,7 +1630,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 }
 
 /*
-QWebFrame * webFrame () const
+QWebFrame * webFrame() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
 {

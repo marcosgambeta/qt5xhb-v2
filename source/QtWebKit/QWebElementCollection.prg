@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QWebElementCollection ()
+QWebElementCollection()
 */
 void QWebElementCollection_new1()
 {
@@ -72,7 +72,7 @@ void QWebElementCollection_new1()
 }
 
 /*
-QWebElementCollection ( const QWebElement & contextElement, const QString & query )
+QWebElementCollection( const QWebElement & contextElement, const QString & query )
 */
 void QWebElementCollection_new2()
 {
@@ -81,19 +81,13 @@ void QWebElementCollection_new2()
 }
 
 /*
-QWebElementCollection ( const QWebElementCollection & other )
+QWebElementCollection( const QWebElementCollection & other )
 */
 void QWebElementCollection_new3()
 {
   auto obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QWebElementCollection ()
-[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
-[3]QWebElementCollection ( const QWebElementCollection & other )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
@@ -133,7 +127,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 }
 
 /*
-void append ( const QWebElementCollection & other )
+void append( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
@@ -159,7 +153,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 }
 
 /*
-QWebElement at ( int i ) const
+QWebElement at( int i ) const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
@@ -184,7 +178,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
@@ -208,7 +202,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 }
 
 /*
-QWebElement first () const
+QWebElement first() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
@@ -233,7 +227,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 }
 
 /*
-QWebElement last () const
+QWebElement last() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
@@ -258,7 +252,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 }
 
 /*
-QList<QWebElement> toList () const
+QList<QWebElement> toList() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
