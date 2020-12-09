@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QUndoCommand(QUndoCommand * parent = nullptr)
+QUndoCommand( QUndoCommand * parent = nullptr )
 */
 void QUndoCommand_new1()
 {
@@ -74,18 +74,13 @@ void QUndoCommand_new1()
 }
 
 /*
-QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
+QUndoCommand( const QString & text, QUndoCommand * parent = nullptr )
 */
 void QUndoCommand_new2()
 {
   auto obj = new QUndoCommand( PQSTRING(1), ISNIL(2)? nullptr : (QUndoCommand *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QUndoCommand(QUndoCommand * parent = nullptr)
-[2]QUndoCommand(const QString & text, QUndoCommand * parent = nullptr)
-*/
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {
@@ -145,7 +140,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ACTIONTEXT )
 }
 
 /*
-const QUndoCommand * child(int index) const
+const QUndoCommand * child( int index ) const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
@@ -218,7 +213,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 }
 
 /*
-virtual bool mergeWith(const QUndoCommand * command)
+virtual bool mergeWith( const QUndoCommand * command )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
@@ -268,7 +263,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 }
 
 /*
-void setText(const QString & text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {

@@ -84,7 +84,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QUndoStack(QObject * parent = nullptr)
+QUndoStack( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 }
 
 /*
-void beginMacro(const QString & text)
+void beginMacro( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 }
 
 /*
-const QUndoCommand * command(int index) const
+const QUndoCommand * command( int index ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 }
 
 /*
-QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQOBJECT(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 }
 
 /*
-QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQOBJECT(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 }
 
 /*
-void push(QUndoCommand * cmd)
+void push( QUndoCommand * cmd )
 */
 HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 }
 
 /*
-void setUndoLimit(int limit)
+void setUndoLimit( int limit )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 }
 
 /*
-QString text(int idx) const
+QString text( int idx ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
 }
 
 /*
-void setActive(bool active = true)
+void setActive( bool active = true )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setActive( OPBOOL(1,true) );
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 }
 
 /*
-void setIndex(int idx)
+void setIndex( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {

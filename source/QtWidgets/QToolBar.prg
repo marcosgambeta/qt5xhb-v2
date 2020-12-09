@@ -87,7 +87,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QToolBar ( const QString & title, QWidget * parent = nullptr )
+QToolBar( const QString & title, QWidget * parent = nullptr )
 */
 void QToolBar_new1()
 {
@@ -96,7 +96,7 @@ void QToolBar_new1()
 }
 
 /*
-QToolBar ( QWidget * parent = nullptr )
+QToolBar( QWidget * parent = nullptr )
 */
 void QToolBar_new2()
 {
@@ -104,18 +104,13 @@ void QToolBar_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QToolBar ( const QString & title, QWidget * parent = nullptr )
-[2]QToolBar ( QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QToolBar_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QToolBar_new2();
   }
@@ -145,7 +140,7 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
 }
 
 /*
-QAction * actionAt ( int x, int y ) const
+QAction * actionAt( int x, int y ) const
 */
 void QToolBar_actionAt1()
 {
@@ -159,7 +154,7 @@ void QToolBar_actionAt1()
 }
 
 /*
-QAction * actionAt ( const QPoint & p ) const
+QAction * actionAt( const QPoint & p ) const
 */
 void QToolBar_actionAt2()
 {
@@ -171,11 +166,6 @@ void QToolBar_actionAt2()
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]QAction * actionAt ( int x, int y ) const
-[2]QAction * actionAt ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
@@ -194,7 +184,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QToolBar_addAction1()
 {
@@ -209,7 +199,7 @@ void QToolBar_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QToolBar_addAction2()
 {
@@ -223,7 +213,7 @@ void QToolBar_addAction2()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QToolBar_addAction3()
 {
@@ -237,7 +227,7 @@ void QToolBar_addAction3()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member )
 */
 void QToolBar_addAction4()
 {
@@ -251,7 +241,7 @@ void QToolBar_addAction4()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
 void QToolBar_addAction5()
 {
@@ -263,14 +253,6 @@ void QToolBar_addAction5()
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]void addAction ( QAction * action )
-[2]QAction * addAction ( const QString & text )
-[3]QAction * addAction ( const QIcon & icon, const QString & text )
-[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
-*/
 
 HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {
@@ -301,7 +283,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 {
@@ -326,7 +308,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 }
 
 /*
-QAction * addWidget ( QWidget * widget )
+QAction * addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 {
@@ -351,7 +333,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 }
 
 /*
-Qt::ToolBarAreas allowedAreas () const
+Qt::ToolBarAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 {
@@ -375,7 +357,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 {
@@ -401,7 +383,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 {
@@ -426,7 +408,7 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 {
@@ -451,7 +433,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 }
 
 /*
-QAction * insertWidget ( QAction * before, QWidget * widget )
+QAction * insertWidget( QAction * before, QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 {
@@ -476,7 +458,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 }
 
 /*
-bool isAreaAllowed ( Qt::ToolBarArea area ) const
+bool isAreaAllowed( Qt::ToolBarArea area ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 {
@@ -500,7 +482,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 }
 
 /*
-bool isFloatable () const
+bool isFloatable() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 {
@@ -524,7 +506,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
 }
 
 /*
-bool isFloating () const
+bool isFloating() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 {
@@ -548,7 +530,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
 }
 
 /*
-bool isMovable () const
+bool isMovable() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 {
@@ -572,7 +554,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 {
@@ -596,7 +578,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 }
 
 /*
-void setAllowedAreas ( Qt::ToolBarAreas areas )
+void setAllowedAreas( Qt::ToolBarAreas areas )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 {
@@ -622,7 +604,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 }
 
 /*
-void setFloatable ( bool floatable )
+void setFloatable( bool floatable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 {
@@ -648,7 +630,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 }
 
 /*
-void setMovable ( bool movable )
+void setMovable( bool movable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 {
@@ -674,7 +656,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 {
@@ -700,7 +682,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 }
 
 /*
-QAction * toggleViewAction () const
+QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 {
@@ -725,7 +707,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
 }
 
 /*
-Qt::ToolButtonStyle toolButtonStyle () const
+Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 {
@@ -749,7 +731,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 }
 
 /*
-QWidget * widgetForAction ( QAction * action ) const
+QWidget * widgetForAction( QAction * action ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 {
@@ -774,7 +756,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 }
 
 /*
-void setIconSize ( const QSize & iconSize )
+void setIconSize( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 {
@@ -800,7 +782,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 }
 
 /*
-void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
+void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 {

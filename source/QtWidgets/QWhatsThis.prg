@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 }
 
 /*
-static QAction * createAction(QObject * parent = nullptr)
+static QAction * createAction( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 }
 
 /*
-static void showText(const QPoint & pos, const QString & text, QWidget * w = nullptr)
+static void showText( const QPoint & pos, const QString & text, QWidget * w = nullptr )
 */
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {

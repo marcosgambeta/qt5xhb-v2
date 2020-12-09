@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QTimeEdit ( QWidget * parent = nullptr )
+QTimeEdit( QWidget * parent = nullptr )
 */
 void QTimeEdit_new1()
 {
@@ -58,7 +58,7 @@ void QTimeEdit_new1()
 }
 
 /*
-QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
+QTimeEdit( const QTime & time, QWidget * parent = nullptr )
 */
 void QTimeEdit_new2()
 {
@@ -66,18 +66,13 @@ void QTimeEdit_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QTimeEdit ( QWidget * parent = nullptr )
-[2]QTimeEdit ( const QTime & time, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QTimeEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQTIME(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QTimeEdit_new2();
   }

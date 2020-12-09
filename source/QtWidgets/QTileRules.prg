@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
+QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
 */
 void QTileRules_new1()
 {
@@ -65,7 +65,7 @@ void QTileRules_new1()
 }
 
 /*
-QTileRules(Qt::TileRule rule = Qt::StretchTile)
+QTileRules( Qt::TileRule rule = Qt::StretchTile )
 */
 void QTileRules_new2()
 {
@@ -73,18 +73,13 @@ void QTileRules_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
-[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
-*/
-
 HB_FUNC_STATIC( QTILERULES_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     QTileRules_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QTileRules_new2();
   }

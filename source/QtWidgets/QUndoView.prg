@@ -63,7 +63,7 @@ RETURN
 #include <QtWidgets/QUndoStack>
 
 /*
-QUndoView ( QWidget * parent = nullptr )
+QUndoView( QWidget * parent = nullptr )
 */
 void QUndoView_new1()
 {
@@ -72,7 +72,7 @@ void QUndoView_new1()
 }
 
 /*
-QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
+QUndoView( QUndoStack * stack, QWidget * parent = nullptr )
 */
 void QUndoView_new2()
 {
@@ -81,7 +81,7 @@ void QUndoView_new2()
 }
 
 /*
-QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
+QUndoView( QUndoGroup * group, QWidget * parent = nullptr )
 */
 void QUndoView_new3()
 {
@@ -89,23 +89,17 @@ void QUndoView_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QUndoView ( QWidget * parent = nullptr )
-[2]QUndoView ( QUndoStack * stack, QWidget * parent = nullptr )
-[3]QUndoView ( QUndoGroup * group, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QUndoView_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQUNDOSTACK(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQUNDOSTACK(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QUndoView_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQUNDOGROUP(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQUNDOGROUP(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QUndoView_new3();
   }
@@ -135,7 +129,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 }
 
 /*
-QIcon cleanIcon () const
+QIcon cleanIcon() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
@@ -160,7 +154,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 }
 
 /*
-QString emptyLabel () const
+QString emptyLabel() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
@@ -184,7 +178,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 }
 
 /*
-QUndoGroup * group () const
+QUndoGroup * group() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
@@ -209,7 +203,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 }
 
 /*
-void setCleanIcon ( const QIcon & icon )
+void setCleanIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
@@ -235,7 +229,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 }
 
 /*
-void setEmptyLabel ( const QString & label )
+void setEmptyLabel( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
@@ -261,7 +255,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 }
 
 /*
-QUndoStack * stack () const
+QUndoStack * stack() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
@@ -286,7 +280,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 }
 
 /*
-void setGroup ( QUndoGroup * group )
+void setGroup( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
@@ -312,7 +306,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 }
 
 /*
-void setStack ( QUndoStack * stack )
+void setStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {

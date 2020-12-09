@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
+QTreeWidgetItemIterator( const QTreeWidgetItemIterator & it )
 */
 void QTreeWidgetItemIterator_new1()
 {
@@ -65,7 +65,7 @@ void QTreeWidgetItemIterator_new1()
 }
 
 /*
-QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
+QTreeWidgetItemIterator( QTreeWidget * widget, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
 */
 void QTreeWidgetItemIterator_new2()
 {
@@ -74,7 +74,7 @@ void QTreeWidgetItemIterator_new2()
 }
 
 /*
-QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
+QTreeWidgetItemIterator( QTreeWidgetItem * item, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
 */
 void QTreeWidgetItemIterator_new3()
 {
@@ -82,23 +82,17 @@ void QTreeWidgetItemIterator_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
-[2]QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
-[3]QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
-*/
-
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1) )
   {
     QTreeWidgetItemIterator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTreeWidgetItemIterator_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTreeWidgetItemIterator_new3();
   }
