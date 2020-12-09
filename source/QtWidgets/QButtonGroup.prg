@@ -37,6 +37,12 @@ CLASS QButtonGroup INHERIT QObject
    METHOD onButtonPressed2
    METHOD onButtonReleased1
    METHOD onButtonReleased2
+   METHOD onButtonToggled1
+   METHOD onButtonToggled2
+   METHOD onIdClicked
+   METHOD onIdPressed
+   METHOD onIdReleased
+   METHOD onIdToggled
 
    DESTRUCTOR destroyObject
 
@@ -69,7 +75,7 @@ RETURN
 #include <QtWidgets/QAbstractButton>
 
 /*
-QButtonGroup ( QObject * parent = nullptr )
+QButtonGroup( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
@@ -104,7 +110,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button )
+void addButton( QAbstractButton * button )
 */
 void QButtonGroup_addButton1()
 {
@@ -119,7 +125,7 @@ void QButtonGroup_addButton1()
 }
 
 /*
-void addButton ( QAbstractButton * button, int id )
+void addButton( QAbstractButton * button, int id )
 */
 void QButtonGroup_addButton2()
 {
@@ -132,11 +138,6 @@ void QButtonGroup_addButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addButton ( QAbstractButton * button )
-[2]void addButton ( QAbstractButton * button, int id )
-*/
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
@@ -155,7 +156,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button ( int id ) const
+QAbstractButton * button( int id ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
@@ -180,7 +181,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
@@ -228,7 +229,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 }
 
 /*
-QAbstractButton * checkedButton () const
+QAbstractButton * checkedButton() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
@@ -253,7 +254,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 }
 
 /*
-int checkedId () const
+int checkedId() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
@@ -277,7 +278,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 }
 
 /*
-bool exclusive () const
+bool exclusive() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
@@ -301,7 +302,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 }
 
 /*
-int id ( QAbstractButton * button ) const
+int id( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
@@ -325,7 +326,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
@@ -351,7 +352,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 }
 
 /*
-void setExclusive ( bool )
+void setExclusive( bool )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
@@ -377,7 +378,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setId ( QAbstractButton * button, int id )
+void setId( QAbstractButton * button, int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {
@@ -777,9 +778,403 @@ HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 /*
 void buttonToggled( QAbstractButton * button, bool checked )
 */
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED1 )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(QAbstractButton*,bool)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<QAbstractButton *,bool>::of(&QButtonGroup::buttonToggled), 
+                                                              [sender, indexOfCodeBlock]
+                                                              (QAbstractButton * arg1, bool arg2) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = Qt5xHb::Signals_return_qobject( (QObject *) arg1, "QABSTRACTBUTTON" );
+            PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 /*
 void buttonToggled( int id, bool checked )
 */
+HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONTOGGLED2 )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("buttonToggled(int,bool)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              QOverload<int,bool>::of(&QButtonGroup::buttonToggled), 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1, bool arg2) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void idClicked( int id )
+*/
+HB_FUNC_STATIC( QBUTTONGROUP_ONIDCLICKED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("idClicked(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QButtonGroup::idClicked, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void idPressed( int id )
+*/
+HB_FUNC_STATIC( QBUTTONGROUP_ONIDPRESSED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("idPressed(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QButtonGroup::idPressed, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void idReleased( int id )
+*/
+HB_FUNC_STATIC( QBUTTONGROUP_ONIDRELEASED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("idReleased(int)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QButtonGroup::idReleased, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            hb_vmEvalBlockV( cb, 2, pSender, pArg1 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
+
+/*
+void idToggled( int id, bool checked )
+*/
+HB_FUNC_STATIC( QBUTTONGROUP_ONIDTOGGLED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+  auto sender = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( sender != nullptr )
+  {
+    int indexOfSignal = sender->metaObject()->indexOfSignal("idToggled(int,bool)");
+    int indexOfCodeBlock = -1;
+
+    if( hb_pcount() == 1 )
+    {
+      if( Qt5xHb::Signals_connection( sender, indexOfSignal, indexOfCodeBlock ) )
+      {
+
+        QMetaObject::Connection connection = QObject::connect(sender, 
+                                                              &QButtonGroup::idToggled, 
+                                                              [sender, indexOfCodeBlock]
+                                                              (int arg1, bool arg2) {
+          PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( indexOfCodeBlock );
+
+          if( cb != nullptr )
+          {
+            PHB_ITEM pSender = Qt5xHb::Signals_return_qobject( (QObject *) sender, "QBUTTONGROUP" );
+            PHB_ITEM pArg1 = hb_itemPutNI( nullptr, arg1 );
+            PHB_ITEM pArg2 = hb_itemPutL( nullptr, arg2 );
+            hb_vmEvalBlockV( cb, 3, pSender, pArg1, pArg2 );
+            hb_itemRelease( pSender );
+            hb_itemRelease( pArg1 );
+            hb_itemRelease( pArg2 );
+          }
+
+        });
+
+        Qt5xHb::Signals_store_connection( indexOfCodeBlock, connection );
+
+        hb_retl( true );
+      }
+      else
+      {
+        hb_retl( false );
+      }
+    }
+    else if( hb_pcount() == 0 )
+    {
+      Qt5xHb::Signals_disconnection( sender, indexOfSignal );
+
+      QObject::disconnect( Qt5xHb::Signals_get_connection( sender, indexOfSignal ) );
+
+      hb_retl( true );
+    }
+    else
+    {
+      hb_retl( false );
+    }
+  }
+  else
+  {
+    hb_retl( false );
+  }
+#else
+  hb_retl( false );
+#endif
+}
 
 #pragma ENDDUMP

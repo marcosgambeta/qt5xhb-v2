@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-explicit QCheckBox ( QWidget * parent = nullptr )
+QCheckBox( QWidget * parent = nullptr )
 */
 void QCheckBox_new1()
 {
@@ -67,7 +67,7 @@ void QCheckBox_new1()
 }
 
 /*
-explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
+QCheckBox( const QString & text, QWidget * parent = nullptr )
 */
 void QCheckBox_new2()
 {
@@ -75,18 +75,13 @@ void QCheckBox_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QCheckBox ( QWidget * parent = nullptr )
-[2]explicit QCheckBox ( const QString & text, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QCheckBox_new1 ();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QCheckBox_new2 ();
   }
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
 }
 
 /*
-Qt::CheckState checkState () const
+Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 }
 
 /*
-bool isTristate () const
+bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 }
 
 /*
-void setCheckState ( Qt::CheckState state )
+void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 }
 
 /*
-void setTristate ( bool y = true )
+void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
@@ -199,7 +194,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setTristate( OPBOOL(1,true) );
@@ -216,7 +211,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
@@ -241,7 +236,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {

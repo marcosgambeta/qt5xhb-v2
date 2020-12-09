@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QCommandLinkButton ( QWidget * parent = nullptr )
+QCommandLinkButton( QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new1()
 {
@@ -62,7 +62,7 @@ void QCommandLinkButton_new1()
 }
 
 /*
-QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
+QCommandLinkButton( const QString & text, QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new2()
 {
@@ -71,7 +71,7 @@ void QCommandLinkButton_new2()
 }
 
 /*
-QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
+QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = nullptr )
 */
 void QCommandLinkButton_new3()
 {
@@ -79,23 +79,17 @@ void QCommandLinkButton_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QCommandLinkButton ( QWidget * parent = nullptr )
-[2]QCommandLinkButton ( const QString & text, QWidget * parent = nullptr )
-[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QCommandLinkButton_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QCommandLinkButton_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTQWIDGET(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QCommandLinkButton_new3();
   }
@@ -125,7 +119,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
@@ -149,7 +143,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
@@ -175,7 +169,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
@@ -199,7 +193,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 }
 
 /*
-void setFlat ( bool )
+void setFlat( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
