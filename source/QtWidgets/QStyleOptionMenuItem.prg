@@ -78,23 +78,13 @@ void QStyleOptionMenuItem_new1()
 }
 
 /*
-QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
+QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
 */
 void QStyleOptionMenuItem_new2()
 {
   auto obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionMenuItem(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionMenuItem()
-[2]QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
-[3]QStyleOptionMenuItem(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {
@@ -131,6 +121,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MENUITEMTYPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENUITEMTYPE )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -169,6 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_CHECKTYPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETCHECKTYPE )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -207,6 +199,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_CHECKED )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETCHECKED )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -245,6 +238,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MENUHASCHECKABLEITEMS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENUHASCHECKABLEITEMS )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -284,6 +278,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MENURECT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENURECT )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -322,6 +317,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETTEXT )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -361,6 +357,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETICON )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -399,6 +396,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MAXICONWIDTH )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMAXICONWIDTH )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -437,6 +435,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_TABWIDTH )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETTABWIDTH )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -476,6 +475,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_FONT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETFONT )
 {
   auto obj = (QStyleOptionMenuItem *) Qt5xHb::itemGetPtrStackSelfItem();

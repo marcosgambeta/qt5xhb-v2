@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
+QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
 */
 void QStyleOptionComplex_new1()
 {
@@ -60,7 +60,7 @@ void QStyleOptionComplex_new1()
 }
 
 /*
-QStyleOptionComplex(const QStyleOptionComplex &other)
+QStyleOptionComplex( const QStyleOptionComplex & other )
 */
 void QStyleOptionComplex_new2()
 {
@@ -68,14 +68,9 @@ void QStyleOptionComplex_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
-[2]QStyleOptionComplex(const QStyleOptionComplex &other)
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QStyleOptionComplex_new1();
   }
@@ -125,6 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
   auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -163,6 +159,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
   auto obj = (QStyleOptionComplex *) Qt5xHb::itemGetPtrStackSelfItem();

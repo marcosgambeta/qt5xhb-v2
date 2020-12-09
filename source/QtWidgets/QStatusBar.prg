@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QStatusBar ( QWidget * parent = nullptr )
+QStatusBar( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 }
 
 /*
-void addPermanentWidget ( QWidget * widget, int stretch = 0 )
+void addPermanentWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->addPermanentWidget( PQWIDGET(1), OPINT(2,0) );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 }
 
 /*
-void addWidget ( QWidget * widget, int stretch = 0 )
+void addWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->addWidget( PQWIDGET(1), OPINT(2,0) );
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 }
 
 /*
-QString currentMessage () const
+QString currentMessage() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 }
 
 /*
-int insertPermanentWidget ( int index, QWidget * widget, int stretch = 0 )
+int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RINT( obj->insertPermanentWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 }
 
 /*
-int insertWidget ( int index, QWidget * widget, int stretch = 0 )
+int insertWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RINT( obj->insertWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 }
 
 /*
-bool isSizeGripEnabled () const
+bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 }
 
 /*
-void removeWidget ( QWidget * widget )
+void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 }
 
 /*
-void setSizeGripEnabled ( bool )
+void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 }
 
 /*
-void clearMessage ()
+void clearMessage()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 }
 
 /*
-void showMessage ( const QString & message, int timeout = 0 )
+void showMessage( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), OPINT(2,0) );

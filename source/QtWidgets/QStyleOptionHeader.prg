@@ -74,23 +74,13 @@ void QStyleOptionHeader_new1()
 }
 
 /*
-QStyleOptionHeader(const QStyleOptionHeader &other)
+QStyleOptionHeader( const QStyleOptionHeader & other )
 */
 void QStyleOptionHeader_new2()
 {
   auto obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionHeader(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionHeader()
-[2]QStyleOptionHeader(const QStyleOptionHeader &other)
-[3]QStyleOptionHeader(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {
@@ -127,6 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SECTION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSECTION )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -165,6 +156,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXT )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -203,6 +195,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXTALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -242,6 +235,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICON )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -280,6 +274,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICONALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -318,6 +313,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_POSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -356,6 +352,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SELECTEDPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -394,6 +391,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SORTINDICATOR )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -432,6 +430,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ORIENTATION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
 {
   auto obj = (QStyleOptionHeader *) Qt5xHb::itemGetPtrStackSelfItem();

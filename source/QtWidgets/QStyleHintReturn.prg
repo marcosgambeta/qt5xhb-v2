@@ -56,11 +56,11 @@ RETURN
 #endif
 
 /*
-QStyleHintReturn(int version = QStyleOption::Version, int type = SH_Default)
+QStyleHintReturn( int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default )
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     auto obj = new QStyleHintReturn( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
     Qt5xHb::returnNewObject( obj, true );

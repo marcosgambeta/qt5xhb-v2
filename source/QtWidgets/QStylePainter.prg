@@ -63,7 +63,7 @@ void QStylePainter_new1()
 }
 
 /*
-explicit QStylePainter(QWidget *w)
+QStylePainter( QWidget * w )
 */
 void QStylePainter_new2()
 {
@@ -72,19 +72,13 @@ void QStylePainter_new2()
 }
 
 /*
-QStylePainter(QPaintDevice *pd, QWidget *w)
+QStylePainter( QPaintDevice * pd, QWidget * w )
 */
 void QStylePainter_new3()
 {
   auto obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStylePainter()
-[2]explicit QStylePainter(QWidget *w)
-[3]QStylePainter(QPaintDevice *pd, QWidget *w)
-*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 {
@@ -107,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 }
 
 /*
-bool begin(QWidget *w)
+bool begin( QWidget * w )
 */
 void QStylePainter_begin1()
 {
@@ -120,7 +114,7 @@ void QStylePainter_begin1()
 }
 
 /*
-bool begin(QPaintDevice *pd, QWidget *w)
+bool begin( QPaintDevice * pd, QWidget * w )
 */
 void QStylePainter_begin2()
 {
@@ -131,11 +125,6 @@ void QStylePainter_begin2()
     RBOOL( obj->begin( PQPAINTDEVICE(1), PQWIDGET(2) ) );
   }
 }
-
-/*
-[1]bool begin(QWidget *w)
-[2]bool begin(QPaintDevice *pd, QWidget *w)
-*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 {
@@ -154,7 +143,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 }
 
 /*
-void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption &opt)
+void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption & opt )
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 {
@@ -180,7 +169,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 }
 
 /*
-void drawControl(QStyle::ControlElement ce, const QStyleOption &opt)
+void drawControl( QStyle::ControlElement ce, const QStyleOption & opt )
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 {
@@ -206,7 +195,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 }
 
 /*
-void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex &opt)
+void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex & opt )
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 {
@@ -232,7 +221,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 }
 
 /*
-void drawItemText(const QRect &r, int flags, const QPalette &pal, bool enabled, const QString &text, QPalette::ColorRole textRole = QPalette::NoRole)
+void drawItemText( const QRect & r, int flags, const QPalette & pal, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole )
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 {
@@ -241,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && ISOPTNUM(6) )
+    if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && (ISNUM(6)||ISNIL(6)) )
     {
 #endif
       obj->drawItemText( *PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), ISNIL(6)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(6) );
@@ -258,7 +247,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 }
 
 /*
-void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
+void drawItemPixmap( const QRect & r, int flags, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 {
@@ -284,7 +273,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 }
 
 /*
-QStyle *style() const
+QStyle * style() const
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
 {

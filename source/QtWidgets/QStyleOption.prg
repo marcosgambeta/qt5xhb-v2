@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
+QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )
 */
 void QStyleOption_new1()
 {
@@ -87,7 +87,7 @@ void QStyleOption_new1()
 }
 
 /*
-QStyleOption(const QStyleOption &other)
+QStyleOption( const QStyleOption & other )
 */
 void QStyleOption_new2()
 {
@@ -95,14 +95,9 @@ void QStyleOption_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
-[2]QStyleOption(const QStyleOption &other)
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QStyleOption_new1();
   }
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 }
 
 /*
-void init(const QWidget *w)
+void init( const QWidget * w )
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 }
 
 /*
-void initFrom(const QWidget *w)
+void initFrom( const QWidget * w )
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {
@@ -207,6 +202,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_VERSION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETVERSION )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -245,6 +241,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_TYPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETTYPE )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -283,6 +280,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STATE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETSTATE )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -321,6 +319,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DIRECTION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETDIRECTION )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -360,6 +359,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_RECT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETRECT )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -399,6 +399,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_FONTMETRICS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETFONTMETRICS )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -438,6 +439,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_PALETTE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETPALETTE )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -477,6 +479,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_STYLEOBJECT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTION_SETSTYLEOBJECT )
 {
   auto obj = (QStyleOption *) Qt5xHb::itemGetPtrStackSelfItem();

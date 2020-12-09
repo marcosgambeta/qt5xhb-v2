@@ -94,23 +94,13 @@ void QStyleOptionViewItem_new1()
 }
 
 /*
-QStyleOptionViewItem(const QStyleOptionViewItem &other)
+QStyleOptionViewItem( const QStyleOptionViewItem & other )
 */
 void QStyleOptionViewItem_new2()
 {
   auto obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionViewItem(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionViewItem()
-[2]QStyleOptionViewItem(const QStyleOptionViewItem &other) : QStyleOption(Version, Type)
-[3]QStyleOptionViewItem(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {
@@ -147,6 +137,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -185,6 +176,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -223,6 +215,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -261,6 +254,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -300,6 +294,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -339,6 +334,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFONT )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -377,6 +373,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -415,6 +412,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FEATURES )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFEATURES )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -454,6 +452,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_LOCALE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETLOCALE )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -493,6 +492,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_WIDGET )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETWIDGET )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -532,6 +532,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_INDEX )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETINDEX )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -570,6 +571,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_CHECKSTATE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETCHECKSTATE )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -609,6 +611,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETICON )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -647,6 +650,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXT )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -685,6 +689,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_VIEWITEMPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -724,6 +729,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_BACKGROUNDBRUSH )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETBACKGROUNDBRUSH )
 {
   auto obj = (QStyleOptionViewItem *) Qt5xHb::itemGetPtrStackSelfItem();

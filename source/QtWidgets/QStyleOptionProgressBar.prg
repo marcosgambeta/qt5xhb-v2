@@ -73,23 +73,13 @@ void QStyleOptionProgressBar_new1()
 }
 
 /*
-QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
+QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
 */
 void QStyleOptionProgressBar_new2()
 {
   auto obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionProgressBar(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionProgressBar()
-[2]QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
-[3]QStyleOptionProgressBar(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
@@ -126,6 +116,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MINIMUM )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMINIMUM )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -164,6 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MAXIMUM )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -202,6 +194,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_PROGRESS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETPROGRESS )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -240,6 +233,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXT )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -278,6 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -316,6 +311,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -354,6 +350,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_ORIENTATION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETORIENTATION )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -392,6 +389,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_INVERTEDAPPEARANCE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETINVERTEDAPPEARANCE )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -430,6 +428,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_BOTTOMTOTOP )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETBOTTOMTOTOP )
 {
   auto obj = (QStyleOptionProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();

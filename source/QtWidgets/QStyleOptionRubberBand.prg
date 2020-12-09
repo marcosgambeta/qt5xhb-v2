@@ -59,23 +59,13 @@ void QStyleOptionRubberBand_new1()
 }
 
 /*
-QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
+QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
 */
 void QStyleOptionRubberBand_new2()
 {
   auto obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionRubberBand(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionRubberBand()
-[2]QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
-[3]QStyleOptionRubberBand(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {
@@ -112,6 +102,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 {
   auto obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -150,6 +141,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
 {
   auto obj = (QStyleOptionRubberBand *) Qt5xHb::itemGetPtrStackSelfItem();

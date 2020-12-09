@@ -64,23 +64,13 @@ void QStyleOptionTabBarBase_new1()
 }
 
 /*
-QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
+QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
 */
 void QStyleOptionTabBarBase_new2()
 {
   auto obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionTabBarBase(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionTabBarBase()
-[2]QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
-[3]QStyleOptionTabBarBase(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
@@ -117,6 +107,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 {
   auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -156,6 +147,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 {
   auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -195,6 +187,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 {
   auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -233,6 +226,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_DOCUMENTMODE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETDOCUMENTMODE )
 {
   auto obj = (QStyleOptionTabBarBase *) Qt5xHb::itemGetPtrStackSelfItem();

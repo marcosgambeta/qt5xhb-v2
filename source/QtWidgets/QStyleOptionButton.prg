@@ -65,23 +65,13 @@ void QStyleOptionButton_new1()
 }
 
 /*
-QStyleOptionButton(const QStyleOptionButton &other)
+QStyleOptionButton( const QStyleOptionButton & other )
 */
 void QStyleOptionButton_new2()
 {
   auto obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionButton(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionButton()
-[2]QStyleOptionButton(const QStyleOptionButton &other) : QStyleOption(Version, Type)
-[3]QStyleOptionButton(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {
@@ -118,6 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
 {
   auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -156,6 +147,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
 {
   auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -195,6 +187,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
 {
   auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -234,6 +227,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
 {
   auto obj = (QStyleOptionButton *) Qt5xHb::itemGetPtrStackSelfItem();

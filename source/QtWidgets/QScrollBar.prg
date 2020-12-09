@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QScrollBar ( QWidget * parent = nullptr )
+QScrollBar( QWidget * parent = nullptr )
 */
 void QScrollBar_new1()
 {
@@ -61,7 +61,7 @@ void QScrollBar_new1()
 }
 
 /*
-QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
+QScrollBar( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QScrollBar_new2()
 {
@@ -69,18 +69,13 @@ void QScrollBar_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QScrollBar ( QWidget * parent = nullptr )
-[2]QScrollBar ( Qt::Orientation orientation, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QScrollBar_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QScrollBar_new2();
   }
@@ -110,7 +105,7 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 }
 
 /*
-virtual bool event ( QEvent * event )
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
@@ -134,7 +129,7 @@ HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {

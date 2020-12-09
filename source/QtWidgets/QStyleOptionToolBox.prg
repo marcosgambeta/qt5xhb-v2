@@ -64,23 +64,13 @@ void QStyleOptionToolBox_new1()
 }
 
 /*
-QStyleOptionToolBox(const QStyleOptionToolBox &other)
+QStyleOptionToolBox( const QStyleOptionToolBox & other )
 */
 void QStyleOptionToolBox_new2()
 {
   auto obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionToolBox(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionToolBox()
-[2]QStyleOptionToolBox(const QStyleOptionToolBox &other)
-[3]QStyleOptionToolBox(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {
@@ -117,6 +107,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 {
   auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -156,6 +147,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
 {
   auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -194,6 +186,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_POSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETPOSITION )
 {
   auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -232,6 +225,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SELECTEDPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETSELECTEDPOSITION )
 {
   auto obj = (QStyleOptionToolBox *) Qt5xHb::itemGetPtrStackSelfItem();

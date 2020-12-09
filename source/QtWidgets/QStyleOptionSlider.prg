@@ -79,23 +79,13 @@ void QStyleOptionSlider_new1()
 }
 
 /*
-QStyleOptionSlider(const QStyleOptionSlider &other)
+QStyleOptionSlider( const QStyleOptionSlider & other )
 */
 void QStyleOptionSlider_new2()
 {
   auto obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionSlider(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionSlider()
-[2]QStyleOptionSlider(const QStyleOptionSlider &other)
-[3]QStyleOptionSlider(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {
@@ -132,6 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_ORIENTATION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETORIENTATION )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -170,6 +161,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MINIMUM )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMINIMUM )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -208,6 +200,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MAXIMUM )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMAXIMUM )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -246,6 +239,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKPOSITION )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -284,6 +278,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKINTERVAL )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKINTERVAL )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -322,6 +317,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_UPSIDEDOWN )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETUPSIDEDOWN )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -360,6 +356,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERPOSITION )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERPOSITION )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -398,6 +395,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERVALUE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERVALUE )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -436,6 +434,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SINGLESTEP )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSINGLESTEP )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -474,6 +473,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_PAGESTEP )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETPAGESTEP )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -512,6 +512,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NOTCHTARGET )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETNOTCHTARGET )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -550,6 +551,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_DIALWRAPPING )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETDIALWRAPPING )
 {
   auto obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();

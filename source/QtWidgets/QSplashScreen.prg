@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
@@ -67,7 +67,7 @@ void QSplashScreen_new1()
 }
 
 /*
-QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new2()
 {
@@ -75,18 +75,13 @@ void QSplashScreen_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
-
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QSplashScreen_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||ISNIL(2)) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSplashScreen_new2();
   }
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 }
 
 /*
-void finish ( QWidget * mainWin )
+void finish( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 }
 
 /*
-const QPixmap pixmap () const
+const QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
@@ -167,7 +162,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap )
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
@@ -193,7 +188,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 }
 
 /*
-void repaint ()
+void repaint()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
@@ -219,7 +214,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 }
 
 /*
-void clearMessage ()
+void clearMessage()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
@@ -245,7 +240,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 }
 
 /*
-void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
+void showMessage( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && (ISQCOLOR(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQCOLOR(3)||ISNIL(3)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), OPINT(2,Qt::AlignLeft), ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );

@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QSlider ( QWidget * parent = nullptr )
+QSlider( QWidget * parent = nullptr )
 */
 void QSlider_new1()
 {
@@ -66,7 +66,7 @@ void QSlider_new1()
 }
 
 /*
-QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
+QSlider( Qt::Orientation orientation, QWidget * parent = nullptr )
 */
 void QSlider_new2()
 {
@@ -74,18 +74,13 @@ void QSlider_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSlider ( QWidget * parent = nullptr )
-[2]QSlider ( Qt::Orientation orientation, QWidget * parent = nullptr )
-*/
-
 HB_FUNC_STATIC( QSLIDER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QSlider_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QSlider_new2();
   }
@@ -115,7 +110,7 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 }
 
 /*
-int tickInterval () const
+int tickInterval() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 }
 
 /*
-void setTickInterval ( int ti )
+void setTickInterval( int ti )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 }
 
 /*
-TickPosition tickPosition () const
+QSlider::TickPosition tickPosition() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 }
 
 /*
-void setTickPosition ( TickPosition position )
+void setTickPosition( QSlider::TickPosition position )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 }
 
 /*
-virtual bool event ( QEvent * event )
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSLIDER_EVENT )
 {
@@ -239,7 +234,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
@@ -264,7 +259,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {

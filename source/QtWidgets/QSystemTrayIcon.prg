@@ -71,7 +71,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-QSystemTrayIcon(QObject * parent = nullptr)
+QSystemTrayIcon( QObject * parent = nullptr )
 */
 void QSystemTrayIcon_new1()
 {
@@ -80,7 +80,7 @@ void QSystemTrayIcon_new1()
 }
 
 /*
-QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
+QSystemTrayIcon( const QIcon & icon, QObject * parent = nullptr )
 */
 void QSystemTrayIcon_new2()
 {
@@ -88,18 +88,13 @@ void QSystemTrayIcon_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSystemTrayIcon(QObject * parent = nullptr)
-[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSystemTrayIcon_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSystemTrayIcon_new2();
   }
@@ -228,7 +223,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 }
 
 /*
-void setContextMenu(QMenu * menu)
+void setContextMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 }
 
 /*
-void setIcon(const QIcon & icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
@@ -280,7 +275,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 }
 
 /*
-void setToolTip(const QString & tip)
+void setToolTip( const QString & tip )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
@@ -306,7 +301,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 }
 
 /*
-void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
+void showMessage( const QString & title, const QString & message, QSystemTrayIcon::MessageIcon icon = QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000 )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
@@ -315,7 +310,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QSystemTrayIcon::MessageIcon) QSystemTrayIcon::Information : (QSystemTrayIcon::MessageIcon) hb_parni(3), OPINT(4,10000) );
@@ -382,7 +377,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {

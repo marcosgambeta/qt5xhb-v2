@@ -75,23 +75,13 @@ void QStyleOptionToolButton_new1()
 }
 
 /*
-QStyleOptionToolButton(const QStyleOptionToolButton &other)
+QStyleOptionToolButton( const QStyleOptionToolButton & other )
 */
 void QStyleOptionToolButton_new2()
 {
   auto obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionToolButton(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionToolButton()
-[2]QStyleOptionToolButton(const QStyleOptionToolButton &other)
-[3]QStyleOptionToolButton(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {
@@ -128,6 +118,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFEATURES )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -167,6 +158,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICON )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -206,6 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICONSIZE )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -244,6 +237,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTEXT )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -282,6 +276,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -320,6 +315,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -359,6 +355,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETPOS )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -398,6 +395,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFONT )
 {
   auto obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();

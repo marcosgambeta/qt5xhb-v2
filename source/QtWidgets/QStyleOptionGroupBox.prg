@@ -68,23 +68,13 @@ void QStyleOptionGroupBox_new1()
 }
 
 /*
-QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
+QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
 */
 void QStyleOptionGroupBox_new2()
 {
   auto obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionGroupBox(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionGroupBox()
-[2]QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
-[3]QStyleOptionGroupBox(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
@@ -121,6 +111,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -159,6 +150,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -197,6 +189,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -236,6 +229,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -274,6 +268,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -312,6 +307,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
     }
   }
 }
+
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
   auto obj = (QStyleOptionGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
