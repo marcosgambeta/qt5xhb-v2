@@ -430,7 +430,7 @@ void QPixmap_fill3()
 
 HB_FUNC_STATIC( QPIXMAP_FILL )
 {
-  if( ISBETWEEN(0,1) && (ISQCOLOR(1)||ISCHAR(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQCOLOR(1)||HB_ISCHAR(1)||HB_ISNIL(1)) )
   {
     QPixmap_fill1();
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       auto ptr = new QBitmap( obj->createMaskFromColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), HB_ISNIL(2)? (Qt::MaskMode) Qt::MaskInColor : (Qt::MaskMode) hb_parni(2) ) );

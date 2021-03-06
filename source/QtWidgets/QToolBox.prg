@@ -133,7 +133,7 @@ void QToolBox_addItem2()
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
-  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) )
+  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     QToolBox_addItem1();
   }
@@ -272,7 +272,7 @@ void QToolBox_insertItem2()
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && HB_ISCHAR(4) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||HB_ISCHAR(3)) && HB_ISCHAR(4) )
   {
     QToolBox_insertItem1();
   }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setItemIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );

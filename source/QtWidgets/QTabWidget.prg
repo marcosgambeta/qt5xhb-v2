@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
   {
     QTabWidget_addTab1();
   }
-  else if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) )
+  else if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     QTabWidget_addTab2();
   }
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
   {
     QTabWidget_insertTab1();
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && HB_ISCHAR(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||HB_ISCHAR(3)) && HB_ISCHAR(4) )
   {
     QTabWidget_insertTab2();
   }
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETTABICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setTabIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );

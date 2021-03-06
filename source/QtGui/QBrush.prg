@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new2();
   }
-  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QBrush_new3();
   }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new4();
   }
-  else if( ISNUMPAR(2) && (ISQCOLOR(1)||ISCHAR(1)) && ISQPIXMAP(2) )
+  else if( ISNUMPAR(2) && (ISQCOLOR(1)||HB_ISCHAR(1)) && ISQPIXMAP(2) )
   {
     QBrush_new5();
   }
@@ -377,7 +377,7 @@ void QBrush_setColor2()
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {
-  if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+  if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
     QBrush_setColor1();
   }

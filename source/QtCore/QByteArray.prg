@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISNUM(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (HB_ISNUM(1)||HB_ISCHAR(1)) )
     {
 #endif
       QByteArray * ptr = &obj->append( PCHAR(1) );
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->append( PINT(1), PCHAR(2) );
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QByteArray * ptr = &obj->fill( PCHAR(1), OPINT(2,-1) );
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RINT( obj->indexOf( PCHAR(1), OPINT(2,0) ) );
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->insert( PINT(1), PCHAR(2) );
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RINT( obj->lastIndexOf( PCHAR(1), OPINT(2,-1) ) );
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISLOG(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISLOG(3)||HB_ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->leftJustified( PINT(1), OPCHAR(2,' '), OPBOOL(3,false) ) );
@@ -1867,7 +1867,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && (HB_ISNUM(1)||ISCHAR(1)) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR(2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && ISQBYTEARRAY(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), *PQBYTEARRAY(2) );
@@ -1892,7 +1892,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && (HB_ISNUM(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+    if( ISNUMPAR(2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PQSTRING(2) );
@@ -1917,7 +1917,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && (HB_ISNUM(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+    if( ISNUMPAR(2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PCONSTCHAR(2) );
@@ -1942,7 +1942,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && (HB_ISNUM(1)||ISCHAR(1)) && (HB_ISNUM(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && (HB_ISNUM(1)||HB_ISCHAR(1)) && (HB_ISNUM(2)||HB_ISCHAR(2)) )
     {
 #endif
       QByteArray * ptr = &obj->replace( PCHAR(1), PCHAR(2) );
@@ -2108,7 +2108,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISLOG(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISLOG(3)||HB_ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->rightJustified( PINT(1), OPCHAR(2,' '), OPBOOL(3,false) ) );
@@ -2283,7 +2283,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) );
@@ -2308,7 +2308,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QByteArray * ptr = &obj->setNum( PFLOAT(1), OPCHAR(2,'g'), OPINT(3,6) );
@@ -2419,7 +2419,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISNUM(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (HB_ISNUM(1)||HB_ISCHAR(1)) )
     {
 #endif
       QList<QByteArray> list = obj->split( PCHAR(1) );
@@ -2761,7 +2761,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,3) && (ISQBYTEARRAY(1)||HB_ISNIL(1)) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||ISCHAR(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(0,3) && (ISQBYTEARRAY(1)||HB_ISNIL(1)) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISCHAR(3)||HB_ISNIL(3)) )
     {
 #endif
       auto ptr = new QByteArray( obj->toPercentEncoding( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPCHAR(3,'%') ) );
@@ -3044,7 +3044,7 @@ static QByteArray fromPercentEncoding( const QByteArray & input, char percent = 
 HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::fromPercentEncoding( *PQBYTEARRAY(1), OPCHAR(2,'%') ) );
@@ -3164,7 +3164,7 @@ static QByteArray number( double n, char f = 'g', int prec = 6 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     auto ptr = new QByteArray( QByteArray::number( PDOUBLE(1), OPCHAR(2,'g'), OPINT(3,6) ) );
@@ -3196,7 +3196,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER4 );
   }
-  else if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_NUMBER5 );
   }

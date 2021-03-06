@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QIMAGE_FILL )
   {
     QImage_fill2();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
     QImage_fill3();
   }

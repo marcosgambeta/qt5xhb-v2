@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISNUM(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (HB_ISNUM(1)||HB_ISCHAR(1)) )
     {
 #endif
       RBOOL( obj->putChar( PCHAR(1) ) );
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (HB_ISNUM(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (HB_ISNUM(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->ungetChar( PCHAR(1) );

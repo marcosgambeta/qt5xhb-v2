@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_NEW )
   {
     QColorDialog_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QColorDialog_new2();
   }
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setCurrentColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );

@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QACTION_NEW )
   {
     QAction_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QAction_new3();
   }
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );

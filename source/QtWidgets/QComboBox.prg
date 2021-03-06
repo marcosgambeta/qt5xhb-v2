@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
   {
     QComboBox_addItem1();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
   {
     QComboBox_addItem2();
   }
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
   {
     QComboBox_insertItem1();
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4)||HB_ISNIL(4)) )
   {
     QComboBox_insertItem2();
   }
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setItemIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );

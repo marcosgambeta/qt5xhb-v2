@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
   {
     QMenuBar_addMenu2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QMenuBar_addMenu3();
   }

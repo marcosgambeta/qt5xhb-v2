@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
@@ -1746,7 +1746,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUNDCOLOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setBackgroundColor( PINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
@@ -1797,7 +1797,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXTCOLOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setTextColor( PINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );

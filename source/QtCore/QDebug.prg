@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBEQUOTE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QDebug * ptr = &obj->maybeQuote( OPCHAR(1,'"') );

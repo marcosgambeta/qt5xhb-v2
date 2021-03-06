@@ -1814,7 +1814,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
   {
     QLineEdit_addAction1();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISNUM(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISNUM(2) )
   {
     QLineEdit_addAction2();
   }

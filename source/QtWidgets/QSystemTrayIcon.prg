@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
   {
     QSystemTrayIcon_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQICON(1)||ISCHAR(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQICON(1)||HB_ISCHAR(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QSystemTrayIcon_new2();
   }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );

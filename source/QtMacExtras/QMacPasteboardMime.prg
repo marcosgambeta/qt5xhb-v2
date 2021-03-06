@@ -74,7 +74,7 @@ QMacPasteboardMime( char )
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && (HB_ISNUM(1)||ISCHAR(1)) )
+  if( ISNUMPAR(1) && (HB_ISNUM(1)||HB_ISCHAR(1)) )
   {
     auto obj = new QMacPasteboardMime( PCHAR(1) );
     Qt5xHb::returnNewObject( obj, true );

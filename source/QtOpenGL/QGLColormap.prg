@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
   {
     QGLColormap_setEntry1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
     QGLColormap_setEntry2();
   }

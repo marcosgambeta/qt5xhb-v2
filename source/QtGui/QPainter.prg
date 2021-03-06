@@ -2702,11 +2702,11 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   {
     QPainter_fillRect5();
   }
-  else if( ISNUMPAR(2) && ISQRECT(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR(2) && ISQRECT(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
     QPainter_fillRect6();
   }
-  else if( ISNUMPAR(2) && ISQRECTF(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR(2) && ISQRECTF(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
     QPainter_fillRect7();
   }
@@ -2714,7 +2714,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   {
     QPainter_fillRect8();
   }
-  else if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQCOLOR(5)||ISCHAR(5)) )
+  else if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQCOLOR(5)||HB_ISCHAR(5)) )
   {
     QPainter_fillRect9();
   }
@@ -3584,7 +3584,7 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
   {
     QPainter_setPen1();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
     QPainter_setPen2();
   }
