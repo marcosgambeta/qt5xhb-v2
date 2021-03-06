@@ -115,9 +115,9 @@ QWebSocket( const QString & origin = QString(), QWebSocketProtocol::Version vers
 HB_FUNC_STATIC( QWEBSOCKET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( ISBETWEEN(0,3) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(0,3) && (HB_ISCHAR(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    auto obj = new QWebSocket( OPQSTRING(1,QString()), ISNIL(2)? (QWebSocketProtocol::Version) QWebSocketProtocol::VersionLatest : (QWebSocketProtocol::Version) hb_parni(2), OPQOBJECT(3,nullptr) );
+    auto obj = new QWebSocket( OPQSTRING(1,QString()), HB_ISNIL(2)? (QWebSocketProtocol::Version) QWebSocketProtocol::VersionLatest : (QWebSocketProtocol::Version) hb_parni(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETREADBUFFERSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setReadBufferSize( PQINT64(1) );
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SETPAUSEMODE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPauseMode( (QAbstractSocket::PauseModes) hb_parni(1) );
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDTEXTMESSAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQINT64( obj->sendTextMessage( PQSTRING(1) ) );
@@ -941,7 +941,7 @@ void QWebSocket_ignoreSslErrors2()
 
 HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QWebSocket_ignoreSslErrors1();
   }
@@ -1021,10 +1021,10 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->close( ISNIL(1)? (QWebSocketProtocol::CloseCode) QWebSocketProtocol::CloseCodeNormal : (QWebSocketProtocol::CloseCode) hb_parni(1), OPQSTRING(2,QString()) );
+      obj->close( HB_ISNIL(1)? (QWebSocketProtocol::CloseCode) QWebSocketProtocol::CloseCodeNormal : (QWebSocketProtocol::CloseCode) hb_parni(1), OPQSTRING(2,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1077,10 +1077,10 @@ HB_FUNC_STATIC( QWEBSOCKET_PING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||HB_ISNIL(1)) )
     {
 #endif
-      obj->ping( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
+      obj->ping( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
