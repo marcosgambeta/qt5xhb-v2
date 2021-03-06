@@ -120,11 +120,11 @@ HB_FUNC_STATIC( QANDROIDINTENT_NEW )
   {
     QAndroidIntent_new2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QAndroidIntent_new3();
   }
-  else if( ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2) )
   {
     QAndroidIntent_new4();
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
     {
 #endif
       obj->putExtra( PQSTRING(1), *PQBYTEARRAY(2) );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_EXTRABYTES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       auto ptr = new QByteArray( obj->extraBytes( PQSTRING(1) ) );
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_PUTEXTRA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       obj->putExtra( PQSTRING(1), *PQVARIANT(2) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QANDROIDINTENT_EXTRAVARIANT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       auto ptr = new QVariant( obj->extraVariant( PQSTRING(1) ) );
