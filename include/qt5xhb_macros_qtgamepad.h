@@ -21,8 +21,8 @@
 #define PQGAMEPADKEYNAVIGATION(n)                           (QGamepadKeyNavigation *) Qt5xHb::itemGetPtr(n)
 #define PQGAMEPADMANAGER(n)                                 (QGamepadManager *) Qt5xHb::itemGetPtr(n)
 
-#define OPQGAMEPAD(n,v)                                     ISNIL(n)? v : (QGamepad *) Qt5xHb::itemGetPtr(n)
-#define OPQGAMEPADKEYNAVIGATION(n,v)                        ISNIL(n)? v : (QGamepadKeyNavigation *) Qt5xHb::itemGetPtr(n)
-#define OPQGAMEPADMANAGER(n,v)                              ISNIL(n)? v : (QGamepadManager *) Qt5xHb::itemGetPtr(n)
+#define OPQGAMEPAD(n,v)                                     HB_ISNIL(n)? v : (QGamepad *) Qt5xHb::itemGetPtr(n)
+#define OPQGAMEPADKEYNAVIGATION(n,v)                        HB_ISNIL(n)? v : (QGamepadKeyNavigation *) Qt5xHb::itemGetPtr(n)
+#define OPQGAMEPADMANAGER(n,v)                              HB_ISNIL(n)? v : (QGamepadManager *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTGAMEPAD_H */

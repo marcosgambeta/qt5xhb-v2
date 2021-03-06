@@ -17,6 +17,6 @@
 
 #define PQMACPASTEBOARDMIME(n)                              (QMacPasteboardMime *) Qt5xHb::itemGetPtr(n)
 
-#define OPQMACPASTEBOARDMIME(n,v)                           ISNIL(n)? v : (QMacPasteboardMime *) Qt5xHb::itemGetPtr(n)
+#define OPQMACPASTEBOARDMIME(n,v)                           HB_ISNIL(n)? v : (QMacPasteboardMime *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTMACEXTRAS_H */

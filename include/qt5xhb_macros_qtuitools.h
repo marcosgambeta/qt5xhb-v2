@@ -17,6 +17,6 @@
 
 #define PQUILOADER(n)                                       (QUiLoader *) Qt5xHb::itemGetPtr(n)
 
-#define OPQUILOADER(n,v)                                    ISNIL(n)? v : (QUiLoader *) Qt5xHb::itemGetPtr(n)
+#define OPQUILOADER(n,v)                                    HB_ISNIL(n)? v : (QUiLoader *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTUITOOLS_H */

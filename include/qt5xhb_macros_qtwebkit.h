@@ -33,14 +33,14 @@
 #define PQWEBSECURITYORIGIN(n)                              (QWebSecurityOrigin *) Qt5xHb::itemGetPtr(n)
 #define PQWEBSETTINGS(n)                                    (QWebSettings *) Qt5xHb::itemGetPtr(n)
 
-#define OPQWEBDATABASE(n,v)                                 ISNIL(n)? v : (QWebDatabase *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBELEMENT(n,v)                                  ISNIL(n)? v : (QWebElement *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBELEMENTCOLLECTION(n,v)                        ISNIL(n)? v : (QWebElementCollection *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBHISTORY(n,v)                                  ISNIL(n)? v : (QWebHistory *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBHISTORYINTERFACE(n,v)                         ISNIL(n)? v : (QWebHistoryInterface *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBHISTORYITEM(n,v)                              ISNIL(n)? v : (QWebHistoryItem *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBPLUGINFACTORY(n,v)                            ISNIL(n)? v : (QWebPluginFactory *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBSECURITYORIGIN(n,v)                           ISNIL(n)? v : (QWebSecurityOrigin *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBSETTINGS(n,v)                                 ISNIL(n)? v : (QWebSettings *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBDATABASE(n,v)                                 HB_ISNIL(n)? v : (QWebDatabase *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBELEMENT(n,v)                                  HB_ISNIL(n)? v : (QWebElement *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBELEMENTCOLLECTION(n,v)                        HB_ISNIL(n)? v : (QWebElementCollection *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBHISTORY(n,v)                                  HB_ISNIL(n)? v : (QWebHistory *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBHISTORYINTERFACE(n,v)                         HB_ISNIL(n)? v : (QWebHistoryInterface *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBHISTORYITEM(n,v)                              HB_ISNIL(n)? v : (QWebHistoryItem *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBPLUGINFACTORY(n,v)                            HB_ISNIL(n)? v : (QWebPluginFactory *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBSECURITYORIGIN(n,v)                           HB_ISNIL(n)? v : (QWebSecurityOrigin *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBSETTINGS(n,v)                                 HB_ISNIL(n)? v : (QWebSettings *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBKIT_H */

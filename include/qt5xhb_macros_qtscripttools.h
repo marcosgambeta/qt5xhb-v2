@@ -17,6 +17,6 @@
 
 #define PQSCRIPTENGINEDEBUGGER(n)                           (QScriptEngineDebugger *) Qt5xHb::itemGetPtr(n)
 
-#define OPQSCRIPTENGINEDEBUGGER(n,v)                        ISNIL(n)? v : (QScriptEngineDebugger *) Qt5xHb::itemGetPtr(n)
+#define OPQSCRIPTENGINEDEBUGGER(n,v)                        HB_ISNIL(n)? v : (QScriptEngineDebugger *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSCRIPTTOOLS_H */

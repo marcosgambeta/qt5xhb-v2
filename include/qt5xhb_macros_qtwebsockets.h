@@ -23,9 +23,9 @@
 #define PQWEBSOCKETCORSAUTHENTICATOR(n)                     (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtr(n)
 #define PQWEBSOCKETSERVER(n)                                (QWebSocketServer *) Qt5xHb::itemGetPtr(n)
 
-#define OPQMASKGENERATOR(n,v)                               ISNIL(n)? v : (QMaskGenerator *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBSOCKET(n,v)                                   ISNIL(n)? v : (QWebSocket *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBSOCKETCORSAUTHENTICATOR(n,v)                  ISNIL(n)? v : (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBSOCKETSERVER(n,v)                             ISNIL(n)? v : (QWebSocketServer *) Qt5xHb::itemGetPtr(n)
+#define OPQMASKGENERATOR(n,v)                               HB_ISNIL(n)? v : (QMaskGenerator *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBSOCKET(n,v)                                   HB_ISNIL(n)? v : (QWebSocket *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBSOCKETCORSAUTHENTICATOR(n,v)                  HB_ISNIL(n)? v : (QWebSocketCorsAuthenticator *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBSOCKETSERVER(n,v)                             HB_ISNIL(n)? v : (QWebSocketServer *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBSOCKETS_H */

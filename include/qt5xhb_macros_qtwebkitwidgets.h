@@ -27,11 +27,11 @@
 #define PQWEBPAGE(n)                                        (QWebPage *) Qt5xHb::itemGetPtr(n)
 #define PQWEBVIEW(n)                                        (QWebView *) Qt5xHb::itemGetPtr(n)
 
-#define OPQGRAPHICSWEBVIEW(n,v)                             ISNIL(n)? v : (QGraphicsWebView *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBFRAME(n,v)                                    ISNIL(n)? v : (QWebFrame *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBHITTESTRESULT(n,v)                            ISNIL(n)? v : (QWebHitTestResult *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBINSPECTOR(n,v)                                ISNIL(n)? v : (QWebInspector *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBPAGE(n,v)                                     ISNIL(n)? v : (QWebPage *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBVIEW(n,v)                                     ISNIL(n)? v : (QWebView *) Qt5xHb::itemGetPtr(n)
+#define OPQGRAPHICSWEBVIEW(n,v)                             HB_ISNIL(n)? v : (QGraphicsWebView *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBFRAME(n,v)                                    HB_ISNIL(n)? v : (QWebFrame *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBHITTESTRESULT(n,v)                            HB_ISNIL(n)? v : (QWebHitTestResult *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBINSPECTOR(n,v)                                HB_ISNIL(n)? v : (QWebInspector *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBPAGE(n,v)                                     HB_ISNIL(n)? v : (QWebPage *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBVIEW(n,v)                                     HB_ISNIL(n)? v : (QWebView *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBKITWIDGETS_H */

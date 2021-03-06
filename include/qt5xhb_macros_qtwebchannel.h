@@ -21,8 +21,8 @@
 #define PQWEBCHANNEL(n)                                     (QWebChannel *) Qt5xHb::itemGetPtr(n)
 #define PQWEBCHANNELABSTRACTTRANSPORT(n)                    (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtr(n)
 
-#define OPQQMLWEBCHANNEL(n,v)                               ISNIL(n)? v : (QQmlWebChannel *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBCHANNEL(n,v)                                  ISNIL(n)? v : (QWebChannel *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBCHANNELABSTRACTTRANSPORT(n,v)                 ISNIL(n)? v : (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtr(n)
+#define OPQQMLWEBCHANNEL(n,v)                               HB_ISNIL(n)? v : (QQmlWebChannel *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBCHANNEL(n,v)                                  HB_ISNIL(n)? v : (QWebChannel *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBCHANNELABSTRACTTRANSPORT(n,v)                 HB_ISNIL(n)? v : (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBCHANNEL_H */

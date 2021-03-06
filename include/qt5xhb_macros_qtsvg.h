@@ -23,9 +23,9 @@
 #define PQSVGRENDERER(n)                                    (QSvgRenderer *) Qt5xHb::itemGetPtr(n)
 #define PQSVGWIDGET(n)                                      (QSvgWidget *) Qt5xHb::itemGetPtr(n)
 
-#define OPQGRAPHICSSVGITEM(n,v)                             ISNIL(n)? v : (QGraphicsSvgItem *) Qt5xHb::itemGetPtr(n)
-#define OPQSVGGENERATOR(n,v)                                ISNIL(n)? v : (QSvgGenerator *) Qt5xHb::itemGetPtr(n)
-#define OPQSVGRENDERER(n,v)                                 ISNIL(n)? v : (QSvgRenderer *) Qt5xHb::itemGetPtr(n)
-#define OPQSVGWIDGET(n,v)                                   ISNIL(n)? v : (QSvgWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQGRAPHICSSVGITEM(n,v)                             HB_ISNIL(n)? v : (QGraphicsSvgItem *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGGENERATOR(n,v)                                HB_ISNIL(n)? v : (QSvgGenerator *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGRENDERER(n,v)                                 HB_ISNIL(n)? v : (QSvgRenderer *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGWIDGET(n,v)                                   HB_ISNIL(n)? v : (QSvgWidget *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSVG_H */

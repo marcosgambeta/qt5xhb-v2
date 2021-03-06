@@ -27,11 +27,11 @@
 #define PQVIRTUALKEYBOARDSELECTIONLISTMODEL(n)              (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtr(n)
 #define PQVIRTUALKEYBOARDTRACE(n)                           (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtr(n)
 
-#define OPQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(n,v)          ISNIL(n)? v : (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtr(n)
-#define OPQVIRTUALKEYBOARDEXTENSIONPLUGIN(n,v)              ISNIL(n)? v : (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtr(n)
-#define OPQVIRTUALKEYBOARDINPUTCONTEXT(n,v)                 ISNIL(n)? v : (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtr(n)
-#define OPQVIRTUALKEYBOARDINPUTENGINE(n,v)                  ISNIL(n)? v : (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtr(n)
-#define OPQVIRTUALKEYBOARDSELECTIONLISTMODEL(n,v)           ISNIL(n)? v : (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtr(n)
-#define OPQVIRTUALKEYBOARDTRACE(n,v)                        ISNIL(n)? v : (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(n,v)          HB_ISNIL(n)? v : (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDEXTENSIONPLUGIN(n,v)              HB_ISNIL(n)? v : (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDINPUTCONTEXT(n,v)                 HB_ISNIL(n)? v : (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDINPUTENGINE(n,v)                  HB_ISNIL(n)? v : (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDSELECTIONLISTMODEL(n,v)           HB_ISNIL(n)? v : (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtr(n)
+#define OPQVIRTUALKEYBOARDTRACE(n,v)                        HB_ISNIL(n)? v : (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTVIRTUALKEYBOARD_H */

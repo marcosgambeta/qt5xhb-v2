@@ -23,9 +23,9 @@
 #define PQVIDEOWIDGET(n)                                    (QVideoWidget *) Qt5xHb::itemGetPtr(n)
 #define PQVIDEOWIDGETCONTROL(n)                             (QVideoWidgetControl *) Qt5xHb::itemGetPtr(n)
 
-#define OPQCAMERAVIEWFINDER(n,v)                            ISNIL(n)? v : (QCameraViewfinder *) Qt5xHb::itemGetPtr(n)
-#define OPQGRAPHICSVIDEOITEM(n,v)                           ISNIL(n)? v : (QGraphicsVideoItem *) Qt5xHb::itemGetPtr(n)
-#define OPQVIDEOWIDGET(n,v)                                 ISNIL(n)? v : (QVideoWidget *) Qt5xHb::itemGetPtr(n)
-#define OPQVIDEOWIDGETCONTROL(n,v)                          ISNIL(n)? v : (QVideoWidgetControl *) Qt5xHb::itemGetPtr(n)
+#define OPQCAMERAVIEWFINDER(n,v)                            HB_ISNIL(n)? v : (QCameraViewfinder *) Qt5xHb::itemGetPtr(n)
+#define OPQGRAPHICSVIDEOITEM(n,v)                           HB_ISNIL(n)? v : (QGraphicsVideoItem *) Qt5xHb::itemGetPtr(n)
+#define OPQVIDEOWIDGET(n,v)                                 HB_ISNIL(n)? v : (QVideoWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQVIDEOWIDGETCONTROL(n,v)                          HB_ISNIL(n)? v : (QVideoWidgetControl *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H */

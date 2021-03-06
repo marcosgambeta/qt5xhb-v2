@@ -33,14 +33,14 @@
 #define PQAXSELECT(n)                                       (QAxSelect *) Qt5xHb::itemGetPtr(n)
 #define PQAXWIDGET(n)                                       (QAxWidget *) Qt5xHb::itemGetPtr(n)
 
-#define OPQAXBASE(n,v)                                      ISNIL(n)? v : (QAxBase *) Qt5xHb::itemGetPtr(n)
-#define OPQAXBINDABLE(n,v)                                  ISNIL(n)? v : (QAxBindable *) Qt5xHb::itemGetPtr(n)
-#define OPQAXFACTORY(n,v)                                   ISNIL(n)? v : (QAxFactory *) Qt5xHb::itemGetPtr(n)
-#define OPQAXOBJECT(n,v)                                    ISNIL(n)? v : (QAxObject *) Qt5xHb::itemGetPtr(n)
-#define OPQAXSCRIPT(n,v)                                    ISNIL(n)? v : (QAxScript *) Qt5xHb::itemGetPtr(n)
-#define OPQAXSCRIPTENGINE(n,v)                              ISNIL(n)? v : (QAxScriptEngine *) Qt5xHb::itemGetPtr(n)
-#define OPQAXSCRIPTMANAGER(n,v)                             ISNIL(n)? v : (QAxScriptManager *) Qt5xHb::itemGetPtr(n)
-#define OPQAXSELECT(n,v)                                    ISNIL(n)? v : (QAxSelect *) Qt5xHb::itemGetPtr(n)
-#define OPQAXWIDGET(n,v)                                    ISNIL(n)? v : (QAxWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQAXBASE(n,v)                                      HB_ISNIL(n)? v : (QAxBase *) Qt5xHb::itemGetPtr(n)
+#define OPQAXBINDABLE(n,v)                                  HB_ISNIL(n)? v : (QAxBindable *) Qt5xHb::itemGetPtr(n)
+#define OPQAXFACTORY(n,v)                                   HB_ISNIL(n)? v : (QAxFactory *) Qt5xHb::itemGetPtr(n)
+#define OPQAXOBJECT(n,v)                                    HB_ISNIL(n)? v : (QAxObject *) Qt5xHb::itemGetPtr(n)
+#define OPQAXSCRIPT(n,v)                                    HB_ISNIL(n)? v : (QAxScript *) Qt5xHb::itemGetPtr(n)
+#define OPQAXSCRIPTENGINE(n,v)                              HB_ISNIL(n)? v : (QAxScriptEngine *) Qt5xHb::itemGetPtr(n)
+#define OPQAXSCRIPTMANAGER(n,v)                             HB_ISNIL(n)? v : (QAxScriptManager *) Qt5xHb::itemGetPtr(n)
+#define OPQAXSELECT(n,v)                                    HB_ISNIL(n)? v : (QAxSelect *) Qt5xHb::itemGetPtr(n)
+#define OPQAXWIDGET(n,v)                                    HB_ISNIL(n)? v : (QAxWidget *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_ACTIVEQT_H */

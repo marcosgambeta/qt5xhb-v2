@@ -17,6 +17,6 @@
 
 #define PQQUICKWIDGET(n)                                    (QQuickWidget *) Qt5xHb::itemGetPtr(n)
 
-#define OPQQUICKWIDGET(n,v)                                 ISNIL(n)? v : (QQuickWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQQUICKWIDGET(n,v)                                 HB_ISNIL(n)? v : (QQuickWidget *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTQUICKWIDGETS_H */

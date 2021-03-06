@@ -21,8 +21,8 @@
 #define PQINAPPSTORE(n)                                     (QInAppStore *) Qt5xHb::itemGetPtr(n)
 #define PQINAPPTRANSACTION(n)                               (QInAppTransaction *) Qt5xHb::itemGetPtr(n)
 
-#define OPQINAPPPRODUCT(n,v)                                ISNIL(n)? v : (QInAppProduct *) Qt5xHb::itemGetPtr(n)
-#define OPQINAPPSTORE(n,v)                                  ISNIL(n)? v : (QInAppStore *) Qt5xHb::itemGetPtr(n)
-#define OPQINAPPTRANSACTION(n,v)                            ISNIL(n)? v : (QInAppTransaction *) Qt5xHb::itemGetPtr(n)
+#define OPQINAPPPRODUCT(n,v)                                HB_ISNIL(n)? v : (QInAppProduct *) Qt5xHb::itemGetPtr(n)
+#define OPQINAPPSTORE(n,v)                                  HB_ISNIL(n)? v : (QInAppStore *) Qt5xHb::itemGetPtr(n)
+#define OPQINAPPTRANSACTION(n,v)                            HB_ISNIL(n)? v : (QInAppTransaction *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTPURCHASING_H */

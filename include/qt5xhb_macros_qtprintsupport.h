@@ -31,13 +31,13 @@
 #define PQPRINTPREVIEWDIALOG(n)                             (QPrintPreviewDialog *) Qt5xHb::itemGetPtr(n)
 #define PQPRINTPREVIEWWIDGET(n)                             (QPrintPreviewWidget *) Qt5xHb::itemGetPtr(n)
 
-#define OPQABSTRACTPRINTDIALOG(n,v)                         ISNIL(n)? v : (QAbstractPrintDialog *) Qt5xHb::itemGetPtr(n)
-#define OPQPAGESETUPDIALOG(n,v)                             ISNIL(n)? v : (QPageSetupDialog *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTDIALOG(n,v)                                 ISNIL(n)? v : (QPrintDialog *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTENGINE(n,v)                                 ISNIL(n)? v : (QPrintEngine *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTER(n,v)                                     ISNIL(n)? v : (QPrinter *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTERINFO(n,v)                                 ISNIL(n)? v : (QPrinterInfo *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTPREVIEWDIALOG(n,v)                          ISNIL(n)? v : (QPrintPreviewDialog *) Qt5xHb::itemGetPtr(n)
-#define OPQPRINTPREVIEWWIDGET(n,v)                          ISNIL(n)? v : (QPrintPreviewWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQABSTRACTPRINTDIALOG(n,v)                         HB_ISNIL(n)? v : (QAbstractPrintDialog *) Qt5xHb::itemGetPtr(n)
+#define OPQPAGESETUPDIALOG(n,v)                             HB_ISNIL(n)? v : (QPageSetupDialog *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTDIALOG(n,v)                                 HB_ISNIL(n)? v : (QPrintDialog *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTENGINE(n,v)                                 HB_ISNIL(n)? v : (QPrintEngine *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTER(n,v)                                     HB_ISNIL(n)? v : (QPrinter *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTERINFO(n,v)                                 HB_ISNIL(n)? v : (QPrinterInfo *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTPREVIEWDIALOG(n,v)                          HB_ISNIL(n)? v : (QPrintPreviewDialog *) Qt5xHb::itemGetPtr(n)
+#define OPQPRINTPREVIEWWIDGET(n,v)                          HB_ISNIL(n)? v : (QPrintPreviewWidget *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTPRINTSUPPORT_H */

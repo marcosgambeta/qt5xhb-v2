@@ -18,21 +18,21 @@
 
 #ifndef __XHARBOUR__
 #include "hbapicls.h"
-#define ISNIL HB_ISNIL
-#define ISLOG HB_ISLOG
-#define ISNUM HB_ISNUM
-#define ISCHAR HB_ISCHAR
-#define ISPOINTER HB_ISPOINTER
-#define ISOBJECT HB_ISOBJECT
-#define ISARRAY HB_ISARRAY
+//#define ISNIL HB_ISNIL
+//#define ISLOG HB_ISLOG
+//#define ISNUM HB_ISNUM
+//#define ISCHAR HB_ISCHAR
+//#define ISPOINTER HB_ISPOINTER
+//#define ISOBJECT HB_ISOBJECT
+//#define ISARRAY HB_ISARRAY
 #endif
 
-#define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
-#define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
-#define ISOPTCHAR(n) (ISCHAR(n)||ISNIL(n))
-#define ISOPTPOINTER(n) (ISPOINTER(n)||ISNIL(n))
-#define ISOPTOBJECT(n) (ISOBJECT(n)||ISNIL(n))
-#define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
+#define ISOPTLOG(n) (HB_ISLOG(n)||HB_ISNIL(n))
+#define ISOPTNUM(n) (HB_ISNUM(n)||HB_ISNIL(n))
+#define ISOPTCHAR(n) (HB_ISCHAR(n)||HB_ISNIL(n))
+#define ISOPTPOINTER(n) (HB_ISPOINTER(n)||HB_ISNIL(n))
+#define ISOPTOBJECT(n) (HB_ISOBJECT(n)||HB_ISNIL(n))
+#define ISOPTARRAY(n) (HB_ISARRAY(n)||HB_ISNIL(n))
 
 // TOCHECK: for xHarbour compatibility
 #ifdef __XHARBOUR__

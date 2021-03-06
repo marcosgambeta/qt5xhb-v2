@@ -19,7 +19,7 @@
 #define PQSERIALPORT(n)                                     (QSerialPort *) Qt5xHb::itemGetPtr(n)
 #define PQSERIALPORTINFO(n)                                 (QSerialPortInfo *) Qt5xHb::itemGetPtr(n)
 
-#define OPQSERIALPORT(n,v)                                  ISNIL(n)? v : (QSerialPort *) Qt5xHb::itemGetPtr(n)
-#define OPQSERIALPORTINFO(n,v)                              ISNIL(n)? v : (QSerialPortInfo *) Qt5xHb::itemGetPtr(n)
+#define OPQSERIALPORT(n,v)                                  HB_ISNIL(n)? v : (QSerialPort *) Qt5xHb::itemGetPtr(n)
+#define OPQSERIALPORTINFO(n,v)                              HB_ISNIL(n)? v : (QSerialPortInfo *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSERIALPORT_H */

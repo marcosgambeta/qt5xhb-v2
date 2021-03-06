@@ -27,11 +27,11 @@
 #define PQWEBENGINESETTINGS(n)                              (QWebEngineSettings *) Qt5xHb::itemGetPtr(n)
 #define PQWEBENGINEVIEW(n)                                  (QWebEngineView *) Qt5xHb::itemGetPtr(n)
 
-#define OPQWEBENGINECERTIFICATEERROR(n,v)                   ISNIL(n)? v : (QWebEngineCertificateError *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBENGINEHISTORY(n,v)                            ISNIL(n)? v : (QWebEngineHistory *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBENGINEHISTORYITEM(n,v)                        ISNIL(n)? v : (QWebEngineHistoryItem *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBENGINEPAGE(n,v)                               ISNIL(n)? v : (QWebEnginePage *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBENGINESETTINGS(n,v)                           ISNIL(n)? v : (QWebEngineSettings *) Qt5xHb::itemGetPtr(n)
-#define OPQWEBENGINEVIEW(n,v)                               ISNIL(n)? v : (QWebEngineView *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINECERTIFICATEERROR(n,v)                   HB_ISNIL(n)? v : (QWebEngineCertificateError *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINEHISTORY(n,v)                            HB_ISNIL(n)? v : (QWebEngineHistory *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINEHISTORYITEM(n,v)                        HB_ISNIL(n)? v : (QWebEngineHistoryItem *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINEPAGE(n,v)                               HB_ISNIL(n)? v : (QWebEnginePage *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINESETTINGS(n,v)                           HB_ISNIL(n)? v : (QWebEngineSettings *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBENGINEVIEW(n,v)                               HB_ISNIL(n)? v : (QWebEngineView *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBENGINEWIDGETS_H */

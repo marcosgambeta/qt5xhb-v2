@@ -21,8 +21,8 @@
 #define PQQUICKWEBENGINESCRIPT(n)                           (QQuickWebEngineScript *) Qt5xHb::itemGetPtr(n)
 #define PQTWEBENGINE(n)                                     (QtWebEngine *) Qt5xHb::itemGetPtr(n)
 
-#define OPQQUICKWEBENGINEPROFILE(n,v)                       ISNIL(n)? v : (QQuickWebEngineProfile *) Qt5xHb::itemGetPtr(n)
-#define OPQQUICKWEBENGINESCRIPT(n,v)                        ISNIL(n)? v : (QQuickWebEngineScript *) Qt5xHb::itemGetPtr(n)
-#define OPQTWEBENGINE(n,v)                                  ISNIL(n)? v : (QtWebEngine *) Qt5xHb::itemGetPtr(n)
+#define OPQQUICKWEBENGINEPROFILE(n,v)                       HB_ISNIL(n)? v : (QQuickWebEngineProfile *) Qt5xHb::itemGetPtr(n)
+#define OPQQUICKWEBENGINESCRIPT(n,v)                        HB_ISNIL(n)? v : (QQuickWebEngineScript *) Qt5xHb::itemGetPtr(n)
+#define OPQTWEBENGINE(n,v)                                  HB_ISNIL(n)? v : (QtWebEngine *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBENGINE_H */

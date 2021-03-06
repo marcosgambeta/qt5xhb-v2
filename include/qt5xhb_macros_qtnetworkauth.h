@@ -31,13 +31,13 @@
 #define PQOAUTHHTTPSERVERREPLYHANDLER(n)                    (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtr(n)
 #define PQOAUTHOOBREPLYHANDLER(n)                           (QOAuthOobReplyHandler *) Qt5xHb::itemGetPtr(n)
 
-#define OPQABSTRACTOAUTH(n,v)                               ISNIL(n)? v : (QAbstractOAuth *) Qt5xHb::itemGetPtr(n)
-#define OPQABSTRACTOAUTH2(n,v)                              ISNIL(n)? v : (QAbstractOAuth2 *) Qt5xHb::itemGetPtr(n)
-#define OPQABSTRACTOAUTHREPLYHANDLER(n,v)                   ISNIL(n)? v : (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtr(n)
-#define OPQOAUTH1(n,v)                                      ISNIL(n)? v : (QOAuth1 *) Qt5xHb::itemGetPtr(n)
-#define OPQOAUTH1SIGNATURE(n,v)                             ISNIL(n)? v : (QOAuth1Signature *) Qt5xHb::itemGetPtr(n)
-#define OPQOAUTH2AUTHORIZATIONCODEFLOW(n,v)                 ISNIL(n)? v : (QOAuth2AuthorizationCodeFlow *) Qt5xHb::itemGetPtr(n)
-#define OPQOAUTHHTTPSERVERREPLYHANDLER(n,v)                 ISNIL(n)? v : (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtr(n)
-#define OPQOAUTHOOBREPLYHANDLER(n,v)                        ISNIL(n)? v : (QOAuthOobReplyHandler *) Qt5xHb::itemGetPtr(n)
+#define OPQABSTRACTOAUTH(n,v)                               HB_ISNIL(n)? v : (QAbstractOAuth *) Qt5xHb::itemGetPtr(n)
+#define OPQABSTRACTOAUTH2(n,v)                              HB_ISNIL(n)? v : (QAbstractOAuth2 *) Qt5xHb::itemGetPtr(n)
+#define OPQABSTRACTOAUTHREPLYHANDLER(n,v)                   HB_ISNIL(n)? v : (QAbstractOAuthReplyHandler *) Qt5xHb::itemGetPtr(n)
+#define OPQOAUTH1(n,v)                                      HB_ISNIL(n)? v : (QOAuth1 *) Qt5xHb::itemGetPtr(n)
+#define OPQOAUTH1SIGNATURE(n,v)                             HB_ISNIL(n)? v : (QOAuth1Signature *) Qt5xHb::itemGetPtr(n)
+#define OPQOAUTH2AUTHORIZATIONCODEFLOW(n,v)                 HB_ISNIL(n)? v : (QOAuth2AuthorizationCodeFlow *) Qt5xHb::itemGetPtr(n)
+#define OPQOAUTHHTTPSERVERREPLYHANDLER(n,v)                 HB_ISNIL(n)? v : (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtr(n)
+#define OPQOAUTHOOBREPLYHANDLER(n,v)                        HB_ISNIL(n)? v : (QOAuthOobReplyHandler *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTNETWORKAUTH_H */

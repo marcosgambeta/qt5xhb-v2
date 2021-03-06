@@ -23,9 +23,9 @@
 #define PQTEXTTOSPEECHPLUGIN(n)                             (QTextToSpeechPlugin *) Qt5xHb::itemGetPtr(n)
 #define PQVOICE(n)                                          (QVoice *) Qt5xHb::itemGetPtr(n)
 
-#define OPQTEXTTOSPEECH(n,v)                                ISNIL(n)? v : (QTextToSpeech *) Qt5xHb::itemGetPtr(n)
-#define OPQTEXTTOSPEECHENGINE(n,v)                          ISNIL(n)? v : (QTextToSpeechEngine *) Qt5xHb::itemGetPtr(n)
-#define OPQTEXTTOSPEECHPLUGIN(n,v)                          ISNIL(n)? v : (QTextToSpeechPlugin *) Qt5xHb::itemGetPtr(n)
-#define OPQVOICE(n,v)                                       ISNIL(n)? v : (QVoice *) Qt5xHb::itemGetPtr(n)
+#define OPQTEXTTOSPEECH(n,v)                                HB_ISNIL(n)? v : (QTextToSpeech *) Qt5xHb::itemGetPtr(n)
+#define OPQTEXTTOSPEECHENGINE(n,v)                          HB_ISNIL(n)? v : (QTextToSpeechEngine *) Qt5xHb::itemGetPtr(n)
+#define OPQTEXTTOSPEECHPLUGIN(n,v)                          HB_ISNIL(n)? v : (QTextToSpeechPlugin *) Qt5xHb::itemGetPtr(n)
+#define OPQVOICE(n,v)                                       HB_ISNIL(n)? v : (QVoice *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTTEXTTOSPEECH_H */
