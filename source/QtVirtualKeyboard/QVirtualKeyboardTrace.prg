@@ -76,7 +76,7 @@ QVirtualKeyboardTrace( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QVirtualKeyboardTrace( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETTRACEID )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTraceId( PINT(1) );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setChannels( PQSTRINGLIST(1) );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETFINAL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFinal( PBOOL(1) );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCANCELED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setCanceled( PBOOL(1) );
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETOPACITY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOpacity( PQREAL(1) );
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_POINTS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QVariantList list = obj->points( OPINT(1,0), OPINT(2,-1) );
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_SETCHANNELDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISQVARIANT(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQVARIANT(3) )
     {
 #endif
       obj->setChannelData( PQSTRING(1), PINT(2), *PQVARIANT(3) );
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_CHANNELDATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QVariantList list = obj->channelData( PQSTRING(1), OPINT(2,0), OPINT(3,-1) );

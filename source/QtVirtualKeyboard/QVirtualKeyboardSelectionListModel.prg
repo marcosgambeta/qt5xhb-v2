@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SETDATASOURCE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setDataSource( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1), (QVirtualKeyboardSelectionListModel::Type) hb_parni(2) );
@@ -169,10 +169,10 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ROWCOUNT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_DATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       auto ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_SELECTITEM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->selectItem( PINT(1) );
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_REMOVEITEM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->removeItem( PINT(1) );

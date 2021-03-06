@@ -96,7 +96,7 @@ QVirtualKeyboardInputContext( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QVirtualKeyboardInputContext( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAnimating( PBOOL(1) );
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->sendKeyClick( PINT(1), PQSTRING(2), OPINT(3,0) );
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
   {
     QVirtualKeyboardInputContext_commit1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QVirtualKeyboardInputContext_commit2();
   }
