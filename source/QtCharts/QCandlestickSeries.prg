@@ -117,7 +117,7 @@ QCandlestickSeries( QObject * parent = nullptr )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QCandlestickSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaximumColumnWidth( PQREAL(1) );
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMinimumColumnWidth( PQREAL(1) );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBodyWidth( PQREAL(1) );
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setBodyOutlineVisible( PBOOL(1) );
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCapsWidth( PQREAL(1) );
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setCapsVisible( PBOOL(1) );
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIncreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setIncreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setDecreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setDecreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
   {
     QCandlestickSeries_append1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QCandlestickSeries_append2();
   }
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
   {
     QCandlestickSeries_remove1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QCandlestickSeries_remove2();
   }
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQCANDLESTICKSET(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQCANDLESTICKSET(2) )
     {
 #endif
       RBOOL( obj->insert( PINT(1), PQCANDLESTICKSET(2) ) );

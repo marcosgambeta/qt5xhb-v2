@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBarWidth( PQREAL(1) );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setLabelsFormat( PQSTRING(1) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLabelsAngle( PQREAL(1) );
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLabelsPosition( (QAbstractBarSeries::LabelsPosition) hb_parni(1) );
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
   {
     QAbstractBarSeries_append1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QAbstractBarSeries_append2();
   }
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQBARSET(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBARSET(2) )
     {
 #endif
       RBOOL( obj->insert( PINT(1), PQBARSET(2) ) );
