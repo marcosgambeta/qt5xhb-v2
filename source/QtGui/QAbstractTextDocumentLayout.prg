@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QTextObjectInterface * ptr = obj->handlerForObject( PINT(1) );
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
     {
 #endif
       RINT( obj->hitTest( *PQPOINTF(1), (Qt::HitTestAccuracy) hb_parni(2) ) );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
     {
 #endif
       obj->registerHandler( PINT(1), PQOBJECT(2) );

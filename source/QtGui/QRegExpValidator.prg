@@ -72,11 +72,11 @@ void QRegExpValidator_new2()
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QRegExpValidator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QRegExpValidator_new2();
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       QString par1 = hb_parc(1);

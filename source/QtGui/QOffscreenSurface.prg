@@ -70,7 +70,7 @@ QOffscreenSurface( QScreen * screen = nullptr )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSCREEN(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQSCREEN(1)||HB_ISNIL(1)) )
   {
     auto obj = new QOffscreenSurface( OPQSCREEN(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );

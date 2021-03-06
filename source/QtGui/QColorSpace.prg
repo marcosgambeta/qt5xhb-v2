@@ -142,19 +142,19 @@ HB_FUNC_STATIC( QCOLORSPACE_NEW )
   {
     QColorSpace_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QColorSpace_new2();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3) )
+  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3) )
   {
     QColorSpace_new3();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QColorSpace_new4();
   }
-  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && HB_ISNUM(5) && (HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QColorSpace_new5();
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETTRANSFERFUNCTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QCOLORSPACE_WITHTRANSFERFUNCTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       auto ptr = new QColorSpace( obj->withTransferFunction( (QColorSpace::TransferFunction) hb_parni(1), OPFLOAT(2,0.0f) ) );
@@ -387,7 +387,7 @@ void QColorSpace_setPrimaries2()
 
 HB_FUNC_STATIC( QCOLORSPACE_SETPRIMARIES )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QColorSpace_setPrimaries1();
   }
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QCOLORSPACE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QCOLORSPACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
