@@ -116,7 +116,7 @@ QSensor( const QByteArray & type, QObject * parent = nullptr )
 HB_FUNC_STATIC( QSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     auto obj = new QSensor( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSENSOR_SETACTIVE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setActive( PBOOL(1) );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSENSOR_SETALWAYSON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAlwaysOn( PBOOL(1) );
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QSENSOR_SETSKIPDUPLICATES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSkipDuplicates( PBOOL(1) );
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QSENSOR_SETDATARATE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDataRate( PINT(1) );
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QSENSOR_SETOUTPUTRANGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOutputRange( PINT(1) );
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QSENSOR_ISFEATURESUPPORTED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isFeatureSupported( (QSensor::Feature) hb_parni(1) ) );
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QSENSOR_SETAXESORIENTATIONMODE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAxesOrientationMode( (QSensor::AxesOrientationMode) hb_parni(1) );
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QSENSOR_SETCURRENTORIENTATION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCurrentOrientation( PINT(1) );
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QSENSOR_SETUSERORIENTATION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setUserOrientation( PINT(1) );
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QSENSOR_SETMAXBUFFERSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaxBufferSize( PINT(1) );
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QSENSOR_SETEFFICIENTBUFFERSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setEfficientBufferSize( PINT(1) );
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QSENSOR_SETBUFFERSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBufferSize( PINT(1) );

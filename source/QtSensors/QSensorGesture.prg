@@ -64,7 +64,7 @@ QSensorGesture( const QStringList & ids, QObject * parent = nullptr )
 HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     auto obj = new QSensorGesture( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
