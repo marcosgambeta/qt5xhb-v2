@@ -75,7 +75,7 @@ explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpReq
 */
 HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW1 )
 {
-  auto obj = new QWebEngineHttpRequest( ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
+  auto obj = new QWebEngineHttpRequest( HB_ISNIL(1)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (const QWebEngineHttpRequest::Method &) QWebEngineHttpRequest::Get : (const QWebEngineHttpRequest::Method &) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_SETMETHOD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMethod( (QWebEngineHttpRequest::Method) hb_parni(1) );

@@ -87,10 +87,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_SETCOOKIE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->setCookie( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QWEBENGINECOOKIESTORE_DELETECOOKIE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQNETWORKCOOKIE(1) && (ISQURL(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->deleteCookie( *PQNETWORKCOOKIE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->deleteCookie( *PQNETWORKCOOKIE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
