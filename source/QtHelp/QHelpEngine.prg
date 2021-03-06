@@ -67,7 +67,7 @@ QHelpEngine( const QString & collectionFile, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     auto obj = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
