@@ -170,15 +170,15 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
   {
     QQmlProperty_new4();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QQmlProperty_new5();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLCONTEXT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3) )
   {
     QQmlProperty_new6();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLENGINE(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3) )
   {
     QQmlProperty_new7();
   }
@@ -237,11 +237,11 @@ void QQmlProperty_connectNotifySignal2()
 
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QQmlProperty_connectNotifySignal1();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
   {
     QQmlProperty_connectNotifySignal2();
   }
@@ -685,15 +685,15 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
   {
     QQmlProperty_read1();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QQmlProperty_read2();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLCONTEXT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLCONTEXT(3) )
   {
     QQmlProperty_read3();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQQMLENGINE(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQQMLENGINE(3) )
   {
     QQmlProperty_read4();
   }
@@ -794,15 +794,15 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
   {
     QQmlProperty_write1();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) )
   {
     QQmlProperty_write2();
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4) )
+  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLCONTEXT(4) )
   {
     QQmlProperty_write3();
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4) )
+  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQQMLENGINE(4) )
   {
     QQmlProperty_write4();
   }
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
