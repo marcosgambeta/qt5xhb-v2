@@ -76,11 +76,11 @@ void QDBusServer_new2()
 
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QDBusServer_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QDBusServer_new2();
   }

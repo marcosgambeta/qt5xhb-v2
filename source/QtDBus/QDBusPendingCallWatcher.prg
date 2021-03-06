@@ -57,7 +57,7 @@ QDBusPendingCallWatcher( const QDBusPendingCall & call, QObject * parent = nullp
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDBUSPENDINGCALL(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQDBUSPENDINGCALL(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     auto obj = new QDBusPendingCallWatcher( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
