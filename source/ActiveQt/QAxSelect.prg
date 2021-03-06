@@ -55,9 +55,9 @@ QAxSelect( QWidget * parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags()
 */
 HB_FUNC_STATIC( QAXSELECT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    auto obj = new QAxSelect( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QAxSelect( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
