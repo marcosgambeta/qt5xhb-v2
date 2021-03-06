@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSizePolicy( (QSizePolicy::Policy) hb_parni(1) );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSpacing( PQREAL(1) );

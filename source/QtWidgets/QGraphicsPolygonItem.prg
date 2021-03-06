@@ -65,7 +65,7 @@ QGraphicsPolygonItem( QGraphicsItem * parent = nullptr )
 */
 void QGraphicsPolygonItem_new1()
 {
-  auto obj = new QGraphicsPolygonItem( ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  auto obj = new QGraphicsPolygonItem( HB_ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -74,17 +74,17 @@ QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = nullpt
 */
 void QGraphicsPolygonItem_new2()
 {
-  auto obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  auto obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), HB_ISNIL(2)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
   {
     QGraphicsPolygonItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
   {
     QGraphicsPolygonItem_new2();
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFillRule( (Qt::FillRule) hb_parni(1) );
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,nullptr) );

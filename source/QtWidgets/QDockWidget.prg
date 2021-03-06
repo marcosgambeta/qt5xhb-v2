@@ -75,7 +75,7 @@ QDockWidget( const QString & title, QWidget * parent = nullptr, Qt::WindowFlags 
 */
 void QDockWidget_new1()
 {
-  auto obj = new QDockWidget( PQSTRING(1), OPQWIDGET(2,nullptr), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  auto obj = new QDockWidget( PQSTRING(1), OPQWIDGET(2,nullptr), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -84,17 +84,17 @@ QDockWidget( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new2()
 {
-  auto obj = new QDockWidget( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  auto obj = new QDockWidget( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QDockWidget_new1();
   }
-  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QDockWidget_new2();
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isAreaAllowed( (Qt::DockWidgetArea) hb_parni(1) ) );
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAllowedAreas( (Qt::DockWidgetAreas) hb_parni(1) );
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFeatures( (QDockWidget::DockWidgetFeatures) hb_parni(1) );
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFloating( PBOOL(1) );

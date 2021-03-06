@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTEXT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       obj->text= PQSTRING(1);
     }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->titleBarState= PINT(1);
     }
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->titleBarFlags= (Qt::WindowFlags) hb_parni(1);
     }

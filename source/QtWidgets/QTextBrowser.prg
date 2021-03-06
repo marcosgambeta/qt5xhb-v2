@@ -83,7 +83,7 @@ QTextBrowser( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     auto obj = new QTextBrowser( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->historyTitle( PINT(1) ) );
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       auto ptr = new QUrl( obj->historyUrl( PINT(1) ) );
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setOpenExternalLinks( PBOOL(1) );
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setOpenLinks( PBOOL(1) );
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setSearchPaths( PQSTRINGLIST(1) );
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQURL(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
     {
 #endif
       auto ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );

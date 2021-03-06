@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->displayAlignment= (Qt::Alignment) hb_parni(1);
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->decorationAlignment= (Qt::Alignment) hb_parni(1);
     }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->textElideMode= (Qt::TextElideMode) hb_parni(1);
     }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->decorationPosition= (QStyleOptionViewItem::Position) hb_parni(1);
     }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
       obj->showDecorationSelected= PBOOL(1);
     }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETFEATURES )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->features= (QStyleOptionViewItem::ViewItemFeatures) hb_parni(1);
     }
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETCHECKSTATE )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->checkState= (Qt::CheckState) hb_parni(1);
     }
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETTEXT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       obj->text= PQSTRING(1);
     }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_SETVIEWITEMPOSITION )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->viewItemPosition= (QStyleOptionViewItem::ViewItemPosition) hb_parni(1);
     }

@@ -77,9 +77,9 @@ QDialog( QWidget * parent = nullptr, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    auto obj = new QDialog( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QDialog( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSizeGripEnabled( PBOOL(1) );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setModal( PBOOL(1) );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setResult( PINT(1) );
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->done( PINT(1) );
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOrientation( (Qt::Orientation) hb_parni(1) );
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->showExtension( PBOOL(1) );

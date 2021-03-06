@@ -56,7 +56,7 @@ QFocusFrame( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     auto obj = new QFocusFrame( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );

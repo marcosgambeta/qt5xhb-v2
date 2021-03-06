@@ -108,9 +108,9 @@ QWizard( QWidget * parent = nullptr, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    auto obj = new QWizard( OPQWIDGET(1,nullptr), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    auto obj = new QWizard( OPQWIDGET(1,nullptr), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAbstractButton * ptr = obj->button( (QWizard::WizardButton) hb_parni(1) );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTON )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQABSTRACTBUTTON(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTBUTTON(2) )
     {
 #endif
       obj->setButton( (QWizard::WizardButton) hb_parni(1), PQABSTRACTBUTTON(2) );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->buttonText( (QWizard::WizardButton) hb_parni(1) ) );
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setButtonText( (QWizard::WizardButton) hb_parni(1), PQSTRING(2) );
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       auto ptr = new QVariant( obj->field( PQSTRING(1) ) );
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->hasVisitedPage( PINT(1) ) );
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTIONS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOptions( (QWizard::WizardOptions) hb_parni(1) );
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QWizardPage * ptr = obj->page( PINT(1) );
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       auto ptr = new QPixmap( obj->pixmap( (QWizard::WizardPixmap) hb_parni(1) ) );
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QWIZARD_REMOVEPAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->removePage( PINT(1) );
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QWizard::WizardButton> par1;
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QWIZARD_SETDEFAULTPROPERTY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
       obj->setDefaultProperty( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3) );
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       obj->setField( PQSTRING(1), *PQVARIANT(2) );
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setOption( (QWizard::WizardOption) hb_parni(1), OPBOOL(2,true) );
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QWIZARD_SETPAGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQWIZARDPAGE(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIZARDPAGE(2) )
     {
 #endif
       obj->setPage( PINT(1), PQWIZARDPAGE(2) );
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QWIZARD_SETPIXMAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQPIXMAP(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
     {
 #endif
       obj->setPixmap( (QWizard::WizardPixmap) hb_parni(1), *PQPIXMAP(2) );
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QWIZARD_SETSTARTID )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setStartId( PINT(1) );
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QWIZARD_SETSUBTITLEFORMAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSubTitleFormat( (Qt::TextFormat) hb_parni(1) );
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->testOption( (QWizard::WizardOption) hb_parni(1) ) );
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QWIZARD_SETTITLEFORMAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTitleFormat( (Qt::TextFormat) hb_parni(1) );
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QWIZARD_SETWIZARDSTYLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setWizardStyle( (QWizard::WizardStyle) hb_parni(1) );
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QWIZARD_SETVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );

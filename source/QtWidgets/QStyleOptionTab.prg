@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->shape= (QTabBar::Shape) hb_parni(1);
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETTEXT )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       obj->text= PQSTRING(1);
     }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETROW )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->row= PINT(1);
     }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->position= (QStyleOptionTab::TabPosition) hb_parni(1);
     }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->selectedPosition= (QStyleOptionTab::SelectedPosition) hb_parni(1);
     }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->cornerWidgets= (QStyleOptionTab::CornerWidgets) hb_parni(1);
     }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETDOCUMENTMODE )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
       obj->documentMode= PBOOL(1);
     }
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETFEATURES )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->features= (QStyleOptionTab::TabFeatures) hb_parni(1);
     }

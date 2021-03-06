@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 
   if( obj != nullptr )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->levelOfDetail= PQREAL(1);
     }

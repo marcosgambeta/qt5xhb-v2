@@ -72,7 +72,7 @@ QSpinBox( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     auto obj = new QSpinBox( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaximum( PINT(1) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMinimum( PINT(1) );
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setPrefix( PQSTRING(1) );
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setRange( PINT(1), PINT(2) );
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSingleStep( PINT(1) );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setSuffix( PQSTRING(1) );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setValue( PINT(1) );
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QSPINBOX_SETDISPLAYINTEGERBASE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDisplayIntegerBase( PINT(1) );

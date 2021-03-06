@@ -45,7 +45,7 @@ HHeaderView( Qt::Orientation orientation, QWidget *parent = nullptr )
 */
 HB_FUNC_STATIC( HHEADERVIEW_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     auto obj = new HHeaderView( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );

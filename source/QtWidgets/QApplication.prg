@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setStyleSheet( PQSTRING(1) );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
   {
     QApplication_font2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QApplication_font3();
   }
@@ -795,7 +795,7 @@ static bool isEffectEnabled ( Qt::UIEffect effect )
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     RBOOL( QApplication::isEffectEnabled( (Qt::UIEffect) hb_parni(1) ) );
@@ -985,7 +985,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
   {
     QApplication_palette2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QApplication_palette3();
   }
@@ -1081,7 +1081,7 @@ static void setColorSpec ( int spec )
 HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setColorSpec( PINT(1) );
@@ -1102,7 +1102,7 @@ static void setCursorFlashTime ( int )
 HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setCursorFlashTime( PINT(1) );
@@ -1123,7 +1123,7 @@ static void setDesktopSettingsAware ( bool on )
 HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
 #endif
     QApplication::setDesktopSettingsAware( PBOOL(1) );
@@ -1144,7 +1144,7 @@ static void setDoubleClickInterval ( int )
 HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setDoubleClickInterval( PINT(1) );
@@ -1165,7 +1165,7 @@ static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && ISOPTLOG(2) )
   {
 #endif
     QApplication::setEffectEnabled( (Qt::UIEffect) hb_parni(1), OPBOOL(2,true) );
@@ -1228,7 +1228,7 @@ static void setKeyboardInputInterval ( int )
 HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setKeyboardInputInterval( PINT(1) );
@@ -1249,7 +1249,7 @@ static void setLayoutDirection ( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setLayoutDirection( (Qt::LayoutDirection) hb_parni(1) );
@@ -1312,7 +1312,7 @@ static void setQuitOnLastWindowClosed ( bool quit )
 HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
 #endif
     QApplication::setQuitOnLastWindowClosed( PBOOL(1) );
@@ -1333,7 +1333,7 @@ static void setStartDragDistance ( int l )
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setStartDragDistance( PINT(1) );
@@ -1354,7 +1354,7 @@ static void setStartDragTime ( int ms )
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setStartDragTime( PINT(1) );
@@ -1395,11 +1395,11 @@ void QApplication_setStyle2()
 
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
-  if( ISNUMPAR(1) && ISOBJECT(1) )
+  if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
     QApplication_setStyle1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QApplication_setStyle2();
   }
@@ -1415,7 +1415,7 @@ static void setWheelScrollLines ( int )
 HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QApplication::setWheelScrollLines( PINT(1) );
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
   if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
   {
 #endif
-    QApplication::setWindowIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+    QApplication::setWindowIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
   {
     QApplication_topLevelAt1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QApplication_topLevelAt2();
   }
@@ -1639,7 +1639,7 @@ HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
   {
     QApplication_widgetAt1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QApplication_widgetAt2();
   }

@@ -73,7 +73,7 @@ QColumnView( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     auto obj = new QColumnView( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<int> par1;
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setResizeGripsVisible( PBOOL(1) );
@@ -299,10 +299,10 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX(1), ISNIL(2)? (QColumnView::ScrollHint) QColumnView::EnsureVisible : (QColumnView::ScrollHint) hb_parni(2) );
+      obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2)? (QColumnView::ScrollHint) QColumnView::EnsureVisible : (QColumnView::ScrollHint) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
