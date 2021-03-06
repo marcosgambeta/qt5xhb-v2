@@ -136,11 +136,11 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEW )
   {
     QVideoFrame_new1();
   }
-  else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && ISNUM(3)  )
+  else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3)  )
   {
     QVideoFrame_new2();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QVideoFrame_new3();
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
   {
     QVideoFrame_bytesPerLine1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QVideoFrame_bytesPerLine2();
   }
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->map( (QAbstractVideoBuffer::MapMode) hb_parni(1) ) );
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setEndTime( PQINT64(1) );
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFieldType( (QVideoFrame::FieldType) hb_parni(1) );
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setStartTime( PQINT64(1) );
@@ -757,7 +757,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_METADATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       auto ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
@@ -782,7 +782,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETMETADATA )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       obj->setMetaData( PQSTRING(1), *PQVARIANT(2) );
@@ -804,7 +804,7 @@ static QImage::Format imageFormatFromPixelFormat( QVideoFrame::PixelFormat forma
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     RENUM( QVideoFrame::imageFormatFromPixelFormat( (QVideoFrame::PixelFormat) hb_parni(1) ) );
@@ -823,7 +823,7 @@ static QVideoFrame::PixelFormat pixelFormatFromImageFormat( QImage::Format forma
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     RENUM( QVideoFrame::pixelFormatFromImageFormat( (QImage::Format) hb_parni(1) ) );
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -61,7 +61,7 @@ QAudioRecorder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QAudioRecorder( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setAudioInput( PQSTRING(1) );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRING( obj->audioInputDescription( PQSTRING(1) ) );

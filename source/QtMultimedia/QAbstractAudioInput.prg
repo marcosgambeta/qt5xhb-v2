@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_SETBUFFERSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBufferSize( PINT(1) );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_SETNOTIFYINTERVAL )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setNotifyInterval( PINT(1) );
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_SETVOLUME )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setVolume( PQREAL(1) );
