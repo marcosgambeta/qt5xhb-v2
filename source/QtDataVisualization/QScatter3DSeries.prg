@@ -90,11 +90,11 @@ void QScatter3DSeries_new2()
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QScatter3DSeries_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQSCATTERDATAPROXY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQSCATTERDATAPROXY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QScatter3DSeries_new2();
   }
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSelectedItem( PINT(1) );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setItemSize( PFLOAT(1) );

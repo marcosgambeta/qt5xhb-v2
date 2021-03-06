@@ -103,11 +103,11 @@ void QSurface3DSeries_new2()
 
 HB_FUNC_STATIC( QSURFACE3DSERIES_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QSurface3DSeries_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQSURFACEDATAPROXY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQSURFACEDATAPROXY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QSurface3DSeries_new2();
   }
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFlatShadingEnabled( PBOOL(1) );
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDrawMode( (QSurface3DSeries::DrawFlags) hb_parni(1) );
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTextureFile( PQSTRING(1) );

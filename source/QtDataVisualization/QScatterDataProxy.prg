@@ -79,7 +79,7 @@ QScatterDataProxy( QObject * parent = nullptr )
 HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QScatterDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       const QScatterDataItem * ptr = obj->itemAt( PINT(1) );
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
       obj->setItem( PINT(1), *PQSCATTERDATAITEM(2) );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
       obj->insertItem( PINT(1), *PQSCATTERDATAITEM(2) );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->removeItems( PINT(1), PINT(2) );
