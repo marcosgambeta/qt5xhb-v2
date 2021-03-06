@@ -64,7 +64,7 @@ QPlaceContentReply( QObject * parent = nullptr )
 HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     auto obj = new QPlaceContentReply( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
