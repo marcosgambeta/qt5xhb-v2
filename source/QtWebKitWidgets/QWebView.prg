@@ -108,7 +108,7 @@ QWebView( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     auto obj = new QWebView( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTextSizeMultiplier( PQREAL(1) );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setZoomFactor( PQREAL(1) );
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setRenderHints( (QPainter::RenderHints) hb_parni(1) );
@@ -497,10 +497,10 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->findText( PQSTRING(1), ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
+      RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,7 +560,7 @@ void QWebView_load2()
 
   if( obj != nullptr )
   {
-    obj->load( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) );
+    obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), HB_ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   {
     QWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && ISOPTQBYTEARRAY(3) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && ISOPTQBYTEARRAY(3) )
   {
     QWebView_load2();
   }
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAction * ptr = obj->pageAction( (QWebPage::WebAction) hb_parni(1) );
@@ -648,10 +648,10 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) && (ISQURL(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
+      obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,10 +674,10 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQURL(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQURL(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->setHtml( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->setHtml( PQSTRING(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setRenderHint( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerPageAction( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       auto ptr = new QVariant( obj->inputMethodQuery( (Qt::InputMethodQuery) hb_parni(1) ) );
