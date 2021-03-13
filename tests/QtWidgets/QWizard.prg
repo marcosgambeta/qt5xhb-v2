@@ -2,7 +2,7 @@
 
   Qt5xHb/C++11 Project - Test Program
 
-  Copyright (C) 2020 Marcos Antonio Gambeta
+  Copyright (C) 2021 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
