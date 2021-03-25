@@ -62,7 +62,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -86,12 +86,12 @@ virtual QString id() const = 0
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->id() );
@@ -112,12 +112,12 @@ virtual bool isActive() = 0
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isActive() );
@@ -138,12 +138,12 @@ void startBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STARTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startBackend();
@@ -166,12 +166,12 @@ void stopBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STOPBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stopBackend();
@@ -194,12 +194,12 @@ void createBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->createBackend();
@@ -222,12 +222,12 @@ QStringList gestureSignals() const
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorGestureRecognizer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->gestureSignals() );

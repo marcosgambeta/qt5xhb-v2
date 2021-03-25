@@ -59,7 +59,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -83,12 +83,12 @@ quint64 timestamp() const
 HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT64( obj->timestamp() );
@@ -109,15 +109,15 @@ void setTimestamp( quint64 timestamp )
 HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTimestamp( PQUINT64(1) );
+      obj->setTimestamp( PQUINT64( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,12 +137,12 @@ int valueCount() const
 HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->valueCount() );
@@ -163,15 +163,15 @@ QVariant value( int index ) const
 HB_FUNC_STATIC( QSENSORREADING_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSensorReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->value( PINT(1) ) );
+      auto ptr = new QVariant( obj->value( PINT( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -64,9 +64,9 @@ QSensorGesture( const QStringList & ids, QObject * parent = nullptr )
 HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(1,2) && HB_ISARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QSensorGesture( PQSTRINGLIST(1), OPQOBJECT(2,nullptr) );
+    auto obj = new QSensorGesture( PQSTRINGLIST( 1 ), OPQOBJECT( 2, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 HB_FUNC_STATIC( QSENSORGESTURE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ bool isActive()
 HB_FUNC_STATIC( QSENSORGESTURE_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isActive() );
@@ -129,12 +129,12 @@ QStringList validIds() const
 HB_FUNC_STATIC( QSENSORGESTURE_VALIDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->validIds() );
@@ -155,12 +155,12 @@ QStringList invalidIds() const
 HB_FUNC_STATIC( QSENSORGESTURE_INVALIDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->invalidIds() );
@@ -181,12 +181,12 @@ QStringList gestureSignals() const
 HB_FUNC_STATIC( QSENSORGESTURE_GESTURESIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->gestureSignals() );
@@ -207,12 +207,12 @@ void startDetection()
 HB_FUNC_STATIC( QSENSORGESTURE_STARTDETECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startDetection();
@@ -235,12 +235,12 @@ void stopDetection()
 HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorGesture * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stopDetection();

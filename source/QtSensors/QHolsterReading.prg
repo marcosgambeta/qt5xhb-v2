@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHolsterReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,12 +80,12 @@ bool holstered() const
 HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHolsterReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->holstered() );
@@ -106,15 +106,15 @@ void setHolstered( bool holstered )
 HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QHolsterReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setHolstered( PBOOL(1) );
+      obj->setHolstered( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

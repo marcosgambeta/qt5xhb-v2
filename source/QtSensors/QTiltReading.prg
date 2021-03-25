@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC( QTILTREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTiltReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -82,12 +82,12 @@ qreal yRotation() const
 HB_FUNC_STATIC( QTILTREADING_YROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTiltReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->yRotation() );
@@ -108,15 +108,15 @@ void setYRotation( qreal y )
 HB_FUNC_STATIC( QTILTREADING_SETYROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTiltReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setYRotation( PQREAL(1) );
+      obj->setYRotation( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,12 +136,12 @@ qreal xRotation() const
 HB_FUNC_STATIC( QTILTREADING_XROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTiltReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->xRotation() );
@@ -162,15 +162,15 @@ void setXRotation( qreal x )
 HB_FUNC_STATIC( QTILTREADING_SETXROTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QTiltReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QTiltReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setXRotation( PQREAL(1) );
+      obj->setXRotation( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

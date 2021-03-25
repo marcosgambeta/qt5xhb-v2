@@ -60,9 +60,9 @@ QAmbientTemperatureSensor( QObject * parent = nullptr )
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QAmbientTemperatureSensor( OPQOBJECT(1,nullptr) );
+    auto obj = new QAmbientTemperatureSensor( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_NEW )
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientTemperatureSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAmbientTemperatureSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -99,12 +99,12 @@ QAmbientTemperatureReading * reading() const
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientTemperatureSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAmbientTemperatureSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAmbientTemperatureReading * ptr = obj->reading();

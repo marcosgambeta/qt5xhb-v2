@@ -64,9 +64,9 @@ QRotationSensor( QObject * parent = nullptr )
 HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QRotationSensor( OPQOBJECT(1,nullptr) );
+    auto obj = new QRotationSensor( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRotationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QRotationReading * reading() const
 HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRotationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRotationReading * ptr = obj->reading();
@@ -130,12 +130,12 @@ bool hasZ() const
 HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRotationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasZ() );
@@ -156,15 +156,15 @@ void setHasZ( bool hasZ )
 HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QRotationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setHasZ( PBOOL(1) );
+      obj->setHasZ( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

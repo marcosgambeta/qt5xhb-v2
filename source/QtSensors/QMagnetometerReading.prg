@@ -59,7 +59,7 @@ RETURN
 HB_FUNC_STATIC( QMAGNETOMETERREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -83,12 +83,12 @@ qreal x() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->x() );
@@ -109,15 +109,15 @@ void setX( qreal x )
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setX( PQREAL(1) );
+      obj->setX( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,12 +137,12 @@ qreal y() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->y() );
@@ -163,15 +163,15 @@ void setY( qreal y )
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setY( PQREAL(1) );
+      obj->setY( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,12 +191,12 @@ qreal z() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->z() );
@@ -217,15 +217,15 @@ void setZ( qreal z )
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setZ( PQREAL(1) );
+      obj->setZ( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,12 +245,12 @@ qreal calibrationLevel() const
 HB_FUNC_STATIC( QMAGNETOMETERREADING_CALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->calibrationLevel() );
@@ -271,15 +271,15 @@ void setCalibrationLevel( qreal calibrationLevel )
 HB_FUNC_STATIC( QMAGNETOMETERREADING_SETCALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometerReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometerReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCalibrationLevel( PQREAL(1) );
+      obj->setCalibrationLevel( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

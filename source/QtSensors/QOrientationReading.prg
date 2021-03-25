@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOrientationReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,12 +80,12 @@ QOrientationReading::Orientation orientation() const
 HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOrientationReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -106,15 +106,15 @@ void setOrientation( QOrientationReading::Orientation orientation )
 HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOrientationReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (QOrientationReading::Orientation) hb_parni(1) );
+      obj->setOrientation( static_cast<QOrientationReading::Orientation>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

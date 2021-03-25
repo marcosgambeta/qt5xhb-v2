@@ -69,7 +69,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QSensorManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSensorManager * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -92,10 +92,10 @@ HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISQSENSORBACKENDFACTORY(3) )
+  if( ISNUMPAR( 3 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) && ISQSENSORBACKENDFACTORY( 3 ) )
   {
 #endif
-    QSensorManager::registerBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2), PQSENSORBACKENDFACTORY(3) );
+    QSensorManager::registerBackend( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ), PQSENSORBACKENDFACTORY( 3 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -115,10 +115,10 @@ HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) )
   {
 #endif
-    QSensorManager::unregisterBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    QSensorManager::unregisterBackend( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -138,10 +138,10 @@ HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) )
   {
 #endif
-    RBOOL( QSensorManager::isBackendRegistered( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+    RBOOL( QSensorManager::isBackendRegistered( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQSENSOR(1) )
+  if( ISNUMPAR( 1 ) && ISQSENSOR( 1 ) )
   {
 #endif
-    QSensorBackend * ptr = QSensorManager::createBackend( PQSENSOR(1) );
+    QSensorBackend * ptr = QSensorManager::createBackend( PQSENSOR( 1 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QSENSORBACKEND" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -181,10 +181,10 @@ HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQBYTEARRAY( 2 ) )
   {
 #endif
-    QSensorManager::setDefaultBackend( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    QSensorManager::setDefaultBackend( *PQBYTEARRAY( 1 ), *PQBYTEARRAY( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -201,18 +201,18 @@ HB_FUNC_STATIC( QSENSORMANAGER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -239,16 +239,16 @@ HB_FUNC_STATIC( QSENSORMANAGER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSENSORMANAGER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QSENSORMANAGER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

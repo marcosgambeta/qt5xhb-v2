@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QLIGHTREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLightReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -77,12 +77,12 @@ qreal lux() const
 HB_FUNC_STATIC( QLIGHTREADING_LUX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLightReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->lux() );
@@ -103,15 +103,15 @@ void setLux( qreal lux )
 HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QLightReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QLightReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setLux( PQREAL(1) );
+      obj->setLux( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

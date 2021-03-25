@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAmbientTemperatureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,12 +80,12 @@ qreal temperature() const
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAmbientTemperatureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->temperature() );
@@ -106,15 +106,15 @@ void setTemperature( qreal temperature )
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QAmbientTemperatureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setTemperature( PQREAL(1) );
+      obj->setTemperature( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

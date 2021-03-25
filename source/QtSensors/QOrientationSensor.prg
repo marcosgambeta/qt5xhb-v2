@@ -60,9 +60,9 @@ QOrientationSensor( QObject * parent = nullptr )
 HB_FUNC_STATIC( QORIENTATIONSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QOrientationSensor( OPQOBJECT(1,nullptr) );
+    auto obj = new QOrientationSensor( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_NEW )
 HB_FUNC_STATIC( QORIENTATIONSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOrientationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -99,12 +99,12 @@ QOrientationReading * reading() const
 HB_FUNC_STATIC( QORIENTATIONSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QOrientationSensor * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QOrientationReading * ptr = obj->reading();

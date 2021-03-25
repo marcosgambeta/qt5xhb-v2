@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC( QCOMPASSREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompassReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCompassReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -82,12 +82,12 @@ qreal azimuth() const
 HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompassReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCompassReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->azimuth() );
@@ -108,15 +108,15 @@ void setAzimuth( qreal azimuth )
 HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompassReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCompassReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setAzimuth( PQREAL(1) );
+      obj->setAzimuth( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,12 +136,12 @@ qreal calibrationLevel() const
 HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompassReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCompassReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->calibrationLevel() );
@@ -162,15 +162,15 @@ void setCalibrationLevel( qreal calibrationLevel )
 HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QCompassReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QCompassReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setCalibrationLevel( PQREAL(1) );
+      obj->setCalibrationLevel( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

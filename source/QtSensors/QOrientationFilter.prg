@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QORIENTATIONFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationFilter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOrientationFilter * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -75,15 +75,15 @@ virtual bool filter( QOrientationReading * reading ) = 0
 HB_FUNC_STATIC( QORIENTATIONFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QOrientationFilter *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QOrientationFilter * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQORIENTATIONREADING(1) )
+    if( ISNUMPAR( 1 ) && ISQORIENTATIONREADING( 1 ) )
     {
 #endif
-      RBOOL( obj->filter( PQORIENTATIONREADING(1) ) );
+      RBOOL( obj->filter( PQORIENTATIONREADING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

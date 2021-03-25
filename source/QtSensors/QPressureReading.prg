@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QPRESSUREREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPressureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,12 +80,12 @@ qreal pressure() const
 HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPressureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->pressure() );
@@ -106,15 +106,15 @@ void setPressure( qreal pressure )
 HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QPressureReading *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QPressureReading * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setPressure( PQREAL(1) );
+      obj->setPressure( PQREAL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

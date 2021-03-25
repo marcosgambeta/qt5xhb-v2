@@ -64,9 +64,9 @@ QMagnetometer( QObject * parent = nullptr )
 HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QMagnetometer( OPQOBJECT(1,nullptr) );
+    auto obj = new QMagnetometer( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -103,12 +103,12 @@ QMagnetometerReading * reading() const
 HB_FUNC_STATIC( QMAGNETOMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMagnetometerReading * ptr = obj->reading();
@@ -130,12 +130,12 @@ bool returnGeoValues() const
 HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->returnGeoValues() );
@@ -156,15 +156,15 @@ void setReturnGeoValues( bool returnGeoValues )
 HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  auto obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QMagnetometer * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setReturnGeoValues( PBOOL(1) );
+      obj->setReturnGeoValues( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
