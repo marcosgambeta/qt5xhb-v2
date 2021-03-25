@@ -80,9 +80,9 @@ QWinJumpListItem( QWinJumpListItem::Type type )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    auto obj = new QWinJumpListItem( (QWinJumpListItem::Type) hb_parni(1) );
+    auto obj = new QWinJumpListItem( static_cast<QWinJumpListItem::Type>( hb_parni( 1 ) ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -117,12 +117,12 @@ QWinJumpListItem::Type type() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -143,15 +143,15 @@ void setType( QWinJumpListItem::Type type )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setType( (QWinJumpListItem::Type) hb_parni(1) );
+      obj->setType( static_cast<QWinJumpListItem::Type>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,12 +171,12 @@ QString filePath() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->filePath() );
@@ -197,15 +197,15 @@ void setFilePath( const QString & filePath )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setFilePath( PQSTRING(1) );
+      obj->setFilePath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,12 +225,12 @@ QString workingDirectory() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->workingDirectory() );
@@ -251,15 +251,15 @@ void setWorkingDirectory( const QString & workingDirectory )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setWorkingDirectory( PQSTRING(1) );
+      obj->setWorkingDirectory( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,12 +279,12 @@ QIcon icon() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QIcon( obj->icon() );
@@ -306,15 +306,15 @@ void setIcon( const QIcon & icon )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt5xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,12 +334,12 @@ QString title() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -360,15 +360,15 @@ void setTitle( const QString & title )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setTitle( PQSTRING(1) );
+      obj->setTitle( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,12 +388,12 @@ QString description() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->description() );
@@ -414,15 +414,15 @@ void setDescription( const QString & description )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setDescription( PQSTRING(1) );
+      obj->setDescription( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,12 +442,12 @@ QStringList arguments() const
 HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->arguments() );
@@ -468,15 +468,15 @@ void setArguments( const QStringList & arguments )
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETARGUMENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  auto obj = (QWinJumpListItem *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QWinJumpListItem * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setArguments( PQSTRINGLIST(1) );
+      obj->setArguments( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,18 +494,18 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( nullptr, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( nullptr, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( nullptr, false );
@@ -532,16 +532,16 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( static_cast< bool >( hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) ) );
 }
 
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( nullptr, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
