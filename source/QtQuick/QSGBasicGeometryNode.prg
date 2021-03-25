@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_DELETE )
 {
-  auto obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSGBasicGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -70,12 +70,12 @@ QSGGeometry * geometry()
 */
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
 {
-  auto obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSGBasicGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSGGeometry * ptr = obj->geometry();
@@ -95,15 +95,15 @@ void setGeometry( QSGGeometry * geometry )
 */
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
 {
-  auto obj = (QSGBasicGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QSGBasicGeometryNode * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSGGEOMETRY(1) )
+    if( ISNUMPAR( 1 ) && ISQSGGEOMETRY( 1 ) )
     {
 #endif
-      obj->setGeometry( PQSGGEOMETRY(1) );
+      obj->setGeometry( PQSGGEOMETRY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

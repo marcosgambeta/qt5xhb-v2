@@ -59,9 +59,9 @@ QQuickImageProvider( QQmlImageProviderBase::ImageType type, QQmlImageProviderBas
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    auto obj = new QQuickImageProvider( (QQmlImageProviderBase::ImageType) hb_parni(1), HB_ISNIL(2)? (QQmlImageProviderBase::Flags) 0 : (QQmlImageProviderBase::Flags) hb_parni(2) );
+    auto obj = new QQuickImageProvider( static_cast<QQmlImageProviderBase::ImageType>( hb_parni( 1 ) ), HB_ISNIL( 2 ) ? static_cast< QQmlImageProviderBase::Flags >( 0 ) : static_cast< QQmlImageProviderBase::Flags >( hb_parni( 2 ) ) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -92,12 +92,12 @@ virtual QQmlImageProviderBase::Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->flags() );
@@ -116,12 +116,12 @@ virtual QQmlImageProviderBase::ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->imageType() );
@@ -140,15 +140,15 @@ virtual QImage requestImage( const QString & id, QSize * size, const QSize & req
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQSIZE( 2 ) && ISQSIZE( 3 ) )
     {
 #endif
-      auto ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QImage( obj->requestImage( PQSTRING( 1 ), PQSIZE( 2 ), *PQSIZE( 3 ) ) );
       Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,15 +165,15 @@ virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & r
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQSIZE( 2 ) && ISQSIZE( 3 ) )
     {
 #endif
-      auto ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      auto ptr = new QPixmap( obj->requestPixmap( PQSTRING( 1 ), PQSIZE( 2 ), *PQSIZE( 3 ) ) );
       Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -190,15 +190,15 @@ virtual QQuickTextureFactory * requestTexture( const QString & id, QSize * size,
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
 {
-  auto obj = (QQuickImageProvider *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickImageProvider * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQSIZE( 2 ) && ISQSIZE( 3 ) )
     {
 #endif
-      QQuickTextureFactory * ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );
+      QQuickTextureFactory * ptr = obj->requestTexture( PQSTRING( 1 ), PQSIZE( 2 ), *PQSIZE( 3 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QQUICKTEXTUREFACTORY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

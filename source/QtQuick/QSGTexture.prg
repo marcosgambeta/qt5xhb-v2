@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGTEXTURE_DELETE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -91,12 +91,12 @@ virtual void bind() = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_BIND )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->bind();
@@ -117,15 +117,15 @@ QRectF convertToNormalizedSourceRect( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      auto ptr = new QRectF( obj->convertToNormalizedSourceRect( *PQRECTF(1) ) );
+      auto ptr = new QRectF( obj->convertToNormalizedSourceRect( *PQRECTF( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -142,12 +142,12 @@ QSGTexture::Filtering filtering() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_FILTERING )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->filtering() );
@@ -166,12 +166,12 @@ virtual bool hasAlphaChannel() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_HASALPHACHANNEL )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasAlphaChannel() );
@@ -190,12 +190,12 @@ virtual bool hasMipmaps() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_HASMIPMAPS )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasMipmaps() );
@@ -214,12 +214,12 @@ QSGTexture::WrapMode horizontalWrapMode() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_HORIZONTALWRAPMODE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->horizontalWrapMode() );
@@ -238,12 +238,12 @@ virtual bool isAtlasTexture() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_ISATLASTEXTURE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAtlasTexture() );
@@ -262,12 +262,12 @@ QSGTexture::Filtering mipmapFiltering() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_MIPMAPFILTERING )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->mipmapFiltering() );
@@ -286,12 +286,12 @@ virtual QRectF normalizedTextureSubRect() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_NORMALIZEDTEXTURESUBRECT )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QRectF( obj->normalizedTextureSubRect() );
@@ -311,12 +311,12 @@ virtual QSGTexture * removedFromAtlas() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSGTexture * ptr = obj->removedFromAtlas();
@@ -336,15 +336,15 @@ void setFiltering( QSGTexture::Filtering filter )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETFILTERING )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setFiltering( (QSGTexture::Filtering) hb_parni(1) );
+      obj->setFiltering( static_cast<QSGTexture::Filtering>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,15 +362,15 @@ void setHorizontalWrapMode( QSGTexture::WrapMode hwrap )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETHORIZONTALWRAPMODE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setHorizontalWrapMode( (QSGTexture::WrapMode) hb_parni(1) );
+      obj->setHorizontalWrapMode( static_cast<QSGTexture::WrapMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,15 +388,15 @@ void setMipmapFiltering( QSGTexture::Filtering filter )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETMIPMAPFILTERING )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setMipmapFiltering( (QSGTexture::Filtering) hb_parni(1) );
+      obj->setMipmapFiltering( static_cast<QSGTexture::Filtering>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,15 +414,15 @@ void setVerticalWrapMode( QSGTexture::WrapMode vwrap )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETVERTICALWRAPMODE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setVerticalWrapMode( (QSGTexture::WrapMode) hb_parni(1) );
+      obj->setVerticalWrapMode( static_cast<QSGTexture::WrapMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,12 +440,12 @@ virtual int textureId() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_TEXTUREID )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->textureId() );
@@ -464,12 +464,12 @@ virtual QSize textureSize() const = 0
 */
 HB_FUNC_STATIC( QSGTEXTURE_TEXTURESIZE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->textureSize() );
@@ -489,15 +489,15 @@ void updateBindOptions( bool force = false )
 */
 HB_FUNC_STATIC( QSGTEXTURE_UPDATEBINDOPTIONS )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->updateBindOptions( OPBOOL(1,false) );
+      obj->updateBindOptions( OPBOOL( 1, false ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,12 +515,12 @@ QSGTexture::WrapMode verticalWrapMode() const
 */
 HB_FUNC_STATIC( QSGTEXTURE_VERTICALWRAPMODE )
 {
-  auto obj = (QSGTexture *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QSGTexture * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->verticalWrapMode() );

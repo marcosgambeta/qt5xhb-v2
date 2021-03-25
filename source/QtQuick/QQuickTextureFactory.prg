@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 {
-  auto obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
@@ -80,15 +80,15 @@ virtual QSGTexture * createTexture( QQuickWindow * window ) const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 {
-  auto obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQQUICKWINDOW(1) )
+    if( ISNUMPAR( 1 ) && ISQQUICKWINDOW( 1 ) )
     {
 #endif
-      QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW(1) );
+      QSGTexture * ptr = obj->createTexture( PQQUICKWINDOW( 1 ) );
       Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,12 +105,12 @@ virtual QImage image() const
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_IMAGE )
 {
-  auto obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QImage( obj->image() );
@@ -130,12 +130,12 @@ virtual int textureByteCount() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTUREBYTECOUNT )
 {
-  auto obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->textureByteCount() );
@@ -154,12 +154,12 @@ virtual QSize textureSize() const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_TEXTURESIZE )
 {
-  auto obj = (QQuickTextureFactory *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = static_cast< QQuickTextureFactory * >( Qt5xHb::itemGetPtrStackSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->textureSize() );
