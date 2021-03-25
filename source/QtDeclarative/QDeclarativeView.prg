@@ -77,7 +77,7 @@ QDeclarativeView( QWidget * parent = nullptr )
 */
 void QDeclarativeView_new1()
 {
-  auto obj = new QDeclarativeView( OPQWIDGET(1,nullptr) );
+  auto obj = new QDeclarativeView( OPQWIDGET( 1, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -86,17 +86,17 @@ QDeclarativeView( const QUrl & source, QWidget * parent = nullptr )
 */
 void QDeclarativeView_new2()
 {
-  auto obj = new QDeclarativeView( *PQURL(1), OPQWIDGET(2,nullptr) );
+  auto obj = new QDeclarativeView( *PQURL( 1 ), OPQWIDGET( 2, nullptr ) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDeclarativeView_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDeclarativeView_new2();
   }
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -130,12 +130,12 @@ QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
@@ -155,17 +155,17 @@ QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( auto i = 0; i < list.count(); i++ )
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
           PHB_ITEM pObject = hb_itemNew( nullptr );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( nullptr );
-          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QDeclarativeError * >( new QDeclarativeError( list[ i ] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( nullptr );
@@ -207,12 +207,12 @@ QSize initialSize() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QSize( obj->initialSize() );
@@ -232,12 +232,12 @@ QDeclarativeView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->resizeMode() );
@@ -256,12 +256,12 @@ QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext();
@@ -281,12 +281,12 @@ QGraphicsObject * rootObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QGraphicsObject * ptr = obj->rootObject();
@@ -306,15 +306,15 @@ void setResizeMode( QDeclarativeView::ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
-      obj->setResizeMode( (QDeclarativeView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode( static_cast<QDeclarativeView::ResizeMode>( hb_parni( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,15 +332,15 @@ void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,12 +358,12 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->source() );
@@ -383,12 +383,12 @@ QDeclarativeView::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
-  auto obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeView * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->status() );

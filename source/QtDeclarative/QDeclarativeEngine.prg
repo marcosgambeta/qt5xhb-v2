@@ -89,9 +89,9 @@ QDeclarativeEngine( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QDeclarativeEngine( OPQOBJECT(1,nullptr) );
+    auto obj = new QDeclarativeEngine( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -124,15 +124,15 @@ void addImageProvider( const QString & providerId, QDeclarativeImageProvider * p
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQDECLARATIVEIMAGEPROVIDER(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQDECLARATIVEIMAGEPROVIDER( 2 ) )
     {
 #endif
-      obj->addImageProvider( PQSTRING(1), PQDECLARATIVEIMAGEPROVIDER(2) );
+      obj->addImageProvider( PQSTRING( 1 ), PQDECLARATIVEIMAGEPROVIDER( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,15 +150,15 @@ void addImportPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->addImportPath( PQSTRING(1) );
+      obj->addImportPath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,15 +176,15 @@ void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->addPluginPath( PQSTRING(1) );
+      obj->addPluginPath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,12 +202,12 @@ QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       auto ptr = new QUrl( obj->baseUrl() );
@@ -227,12 +227,12 @@ void clearComponentCache()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearComponentCache();
@@ -253,15 +253,15 @@ QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      QDeclarativeImageProvider * ptr = obj->imageProvider( PQSTRING(1) );
+      QDeclarativeImageProvider * ptr = obj->imageProvider( PQSTRING( 1 ) );
       Qt5xHb::createReturnClass( ptr, "QDECLARATIVEIMAGEPROVIDER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -278,12 +278,12 @@ QStringList importPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->importPathList() );
@@ -302,12 +302,12 @@ QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
@@ -327,12 +327,12 @@ QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory();
@@ -352,12 +352,12 @@ QString offlineStoragePath() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->offlineStoragePath() );
@@ -376,12 +376,12 @@ bool outputWarningsToStandardError() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->outputWarningsToStandardError() );
@@ -400,12 +400,12 @@ QStringList pluginPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->pluginPathList() );
@@ -424,15 +424,15 @@ void removeImageProvider( const QString & providerId )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->removeImageProvider( PQSTRING(1) );
+      obj->removeImageProvider( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,12 +450,12 @@ QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext();
@@ -475,15 +475,15 @@ void setBaseUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setBaseUrl( *PQURL(1) );
+      obj->setBaseUrl( *PQURL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,15 +501,15 @@ void setImportPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setImportPathList( PQSTRINGLIST(1) );
+      obj->setImportPathList( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -527,15 +527,15 @@ void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * f
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDECLARATIVENETWORKACCESSMANAGERFACTORY(1) )
+    if( ISNUMPAR( 1 ) && ISQDECLARATIVENETWORKACCESSMANAGERFACTORY( 1 ) )
     {
 #endif
-      obj->setNetworkAccessManagerFactory( PQDECLARATIVENETWORKACCESSMANAGERFACTORY(1) );
+      obj->setNetworkAccessManagerFactory( PQDECLARATIVENETWORKACCESSMANAGERFACTORY( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,15 +553,15 @@ void setOfflineStoragePath( const QString & dir )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->setOfflineStoragePath( PQSTRING(1) );
+      obj->setOfflineStoragePath( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,15 +579,15 @@ void setOutputWarningsToStandardError( bool enabled )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
-      obj->setOutputWarningsToStandardError( PBOOL(1) );
+      obj->setOutputWarningsToStandardError( PBOOL( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,15 +605,15 @@ void setPluginPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 {
-  auto obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativeEngine * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
-      obj->setPluginPathList( PQSTRINGLIST(1) );
+      obj->setPluginPathList( PQSTRINGLIST( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,10 +632,10 @@ static QDeclarativeContext * contextForObject( const QObject * object )
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
 #endif
-    QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject( PQOBJECT(1) );
+    QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject( PQOBJECT( 1 ) );
     Qt5xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -652,10 +652,10 @@ static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
 #endif
-    RENUM( QDeclarativeEngine::objectOwnership( PQOBJECT(1) ) );
+    RENUM( QDeclarativeEngine::objectOwnership( PQOBJECT( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -671,10 +671,10 @@ static void setContextForObject( QObject * object, QDeclarativeContext * context
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISQDECLARATIVECONTEXT( 2 ) )
   {
 #endif
-    QDeclarativeEngine::setContextForObject( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
+    QDeclarativeEngine::setContextForObject( PQOBJECT( 1 ), PQDECLARATIVECONTEXT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -692,10 +692,10 @@ static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwne
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
 #endif
-    QDeclarativeEngine::setObjectOwnership( PQOBJECT(1), (QDeclarativeEngine::ObjectOwnership) hb_parni(2) );
+    QDeclarativeEngine::setObjectOwnership( PQOBJECT( 1 ), static_cast<QDeclarativeEngine::ObjectOwnership>( hb_parni( 2 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

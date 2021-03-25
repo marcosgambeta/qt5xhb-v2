@@ -64,9 +64,9 @@ QDeclarativePropertyMap( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    auto obj = new QDeclarativePropertyMap( OPQOBJECT(1,nullptr) );
+    auto obj = new QDeclarativePropertyMap( OPQOBJECT( 1, nullptr ) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
@@ -99,15 +99,15 @@ void clear( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      obj->clear( PQSTRING(1) );
+      obj->clear( PQSTRING( 1 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,15 +125,15 @@ bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING( 1 ) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,12 +149,12 @@ int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -173,15 +173,15 @@ void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->insert( PQSTRING(1), *PQVARIANT(2) );
+      obj->insert( PQSTRING( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,12 +199,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -223,12 +223,12 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );
@@ -247,12 +247,12 @@ int size() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->size() );
@@ -271,15 +271,15 @@ QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {
-  auto obj = (QDeclarativePropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
+  auto obj = qobject_cast< QDeclarativePropertyMap * >( Qt5xHb::getQObjectPointerFromSelfItem() );
 
   if( obj != nullptr )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
-      auto ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      auto ptr = new QVariant( obj->value( PQSTRING( 1 ) ) );
       Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
